@@ -1,0 +1,11 @@
+# PartsGetEdgesResponse200Edges
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | ID of an edge | [optional] 
+**vertices** | [**PartsGetEdgesResponse200Vertices**](PartsGetEdgesResponse200Vertices.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
