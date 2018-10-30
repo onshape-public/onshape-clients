@@ -1,3 +1,6 @@
+# THIS IS AN UNSTABLE PACKAGE
+
+
 # onshape_client
 
 This is the official Python SDK for the Onshape API. 
@@ -50,8 +53,8 @@ pipenv install --dev
 To continuously update the client so that it stays up to date with the current API, we employ Travis to run swagger-codegen, tag a release, and then push the released client to pypi. More specifically, this happens in the order below:
 
 1. Push any commit to Master - this can either be done by someone updating the client generation logic OR by an automated tool to keep the repo in sync with the API.
-2. Travis kicks off a build that generates a client and commits, tags, and pushes the client back to the repo. This type of build is tagged as a "swagger-build" because the main task is running swagger-codegen to generate the new client.
-3. Travis then gets kicked off again from the commit it made in step two. This time, the build is tagged, and therefore becomes a "release build" because it's main job is to publish and deploy the client to the appropriate package repository.
+2. Travis kicks off a build that generates a client and commits, tags, and pushes the client back to the repo. This type of build is tagged as a "swagger_build" because the main task is running swagger-codegen to generate the new client.
+3. Travis then gets kicked off again from the commit it made in step two. This time, the build is tagged, and therefore becomes a "release_build" because it's main job is to publish and deploy the client to the appropriate package repository.
 
 ## Tests
 
