@@ -1,5 +1,4 @@
 language: python
-os: osx
 python:
 - '2.7'
 - '3.2'
@@ -9,7 +8,6 @@ python:
 before_install:
 - openssl aes-256-cbc -K $encrypted_748edd81b0f1_key -iv $encrypted_748edd81b0f1_iv
   -in .onshape_client_config.yaml.enc -out .onshape_client_config.yaml -d
-- brew install swagger-codegen
 - .travis/generate_client.sh
 install:
 - pip install pipenv
@@ -18,6 +16,10 @@ script:
 - pipenv run pytest --cov=./
 # Push and tag the build if this isn't already an auto-generated Travis build
 - .travis/git_push.sh -t $TRAVIS_BUILD_NUMBER
+deploy:
+  provider: pypi
+  user: "Your username"
+  password: "Your password"
 env:
   global:
     secure: GM3yNK/W5PeoB2gLCTyY9AEG0fbUK3njvd+J/2r1EhJoel5kp+SpinNmV1+248JRgzn4I8m6pNeekSWA/vMsjqvgqDq2CPEwY4P+T4TLL8+3HW03wJ7xNDEVHpMVbplvkh0x4YyssDRU+Q4xswAzaiG40uHRVLAG1EN03UcdLIMo66fHkd5/dYz+FnJJb+MkcVOkrfXu3WRxxkDKBGoIzKjZDJT1r8/eR7dELjFpj1gBYy1M2tjev65NUA7zgMvaMIiFed2W3SrvF7+XUkNNWF/rX17P3JsUf6UD5rhJswS2mKed2GwVq2VxDmxJRDwDx5aahIo+MtA6c3DkZIW6qoYiFVV7kJF4ziH7BjapoG6Gag/wc7YiVLAGv9dsqpGvlb9S+6xUjdV1jdAyWnBgciuomjf+bbmU1LHNBHUltAzjMIvLVEhhDR8r7GlQ53QZZ9Tw9Da8+sPLIhUBnt+Tm1B79cHOfG+J/GKiICNmUOGKqlQT8FZhOkziZHY+TcBCcY5up0Uxz99gGqTnYB7YZtyaB1HqGVpjJT4xEEzhGmaWmArVr4IdcSoMVn3F8ES3OaDw7kMbhFltKhsfUjZz1m8LilRk9nq/69yneeRP9ZYZm0A0a6+HDbYztEge+aVICC0tr/1fxTfzcGX13By2So3lbffGrhTf9BmegIClKeo=
