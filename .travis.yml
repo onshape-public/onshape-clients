@@ -1,16 +1,42 @@
-# ref: https://docs.travis-ci.com/user/languages/python
 language: python
 python:
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  #- "3.5-dev" # 3.5 development branch
-  #- "nightly" # points to the latest development branch e.g. 3.6-dev
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
-script: nosetests
-test:
-  pytest
+- '2.7'
+- '3.2'
+- '3.3'
+- '3.4'
+- '3.5'
+before_install:
+- openssl aes-256-cbc -K $encrypted_748edd81b0f1_key -iv $encrypted_748edd81b0f1_iv
+  -in .onshape_client_config.yaml.enc -out .onshape_client_config.yaml -d
+install:
+- pip install pipenv
+- pipenv install --dev
+script:
+- "./generate_client.sh"
+- pipenv run pytest --cov=./
+before_deploy:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git push -q https://$TAGPERM@github.com/RlonRyan/JBasicX --tags
+- ls -R
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure:
+    - redacted
+  file:
+  - README.md
+  - dist/JBasicX-Main-0.1.0.zip
+  - dist/JBasicX-Test Output-0.1.0.zip
+  on:
+    tags: false
+    all_branches: true
+branches:
+  only:
+  - "/^*-v[0-9]/"
+env:
+  global:
+    secure: GM3yNK/W5PeoB2gLCTyY9AEG0fbUK3njvd+J/2r1EhJoel5kp+SpinNmV1+248JRgzn4I8m6pNeekSWA/vMsjqvgqDq2CPEwY4P+T4TLL8+3HW03wJ7xNDEVHpMVbplvkh0x4YyssDRU+Q4xswAzaiG40uHRVLAG1EN03UcdLIMo66fHkd5/dYz+FnJJb+MkcVOkrfXu3WRxxkDKBGoIzKjZDJT1r8/eR7dELjFpj1gBYy1M2tjev65NUA7zgMvaMIiFed2W3SrvF7+XUkNNWF/rX17P3JsUf6UD5rhJswS2mKed2GwVq2VxDmxJRDwDx5aahIo+MtA6c3DkZIW6qoYiFVV7kJF4ziH7BjapoG6Gag/wc7YiVLAGv9dsqpGvlb9S+6xUjdV1jdAyWnBgciuomjf+bbmU1LHNBHUltAzjMIvLVEhhDR8r7GlQ53QZZ9Tw9Da8+sPLIhUBnt+Tm1B79cHOfG+J/GKiICNmUOGKqlQT8FZhOkziZHY+TcBCcY5up0Uxz99gGqTnYB7YZtyaB1HqGVpjJT4xEEzhGmaWmArVr4IdcSoMVn3F8ES3OaDw7kMbhFltKhsfUjZz1m8LilRk9nq/69yneeRP9ZYZm0A0a6+HDbYztEge+aVICC0tr/1fxTfzcGX13By2So3lbffGrhTf9BmegIClKeo=
