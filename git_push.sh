@@ -31,7 +31,7 @@ git add .
 # Commits the tracked changes and prepares them to be pushed to a remote repository. 
 git commit -m "$release_note"
 
-git tag "0.0.0a186"
+git tag "0.0.0a186" -a -m 'auto-pushed from Travis build'
 
 # Sets the new remote
 git_remote='https://github.com/onshape-public/python-client.git'
