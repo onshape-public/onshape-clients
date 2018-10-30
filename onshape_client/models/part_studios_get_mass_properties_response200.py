@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from onshape_client.models.part_studios_get_mass_properties_response200_bodies import PartStudiosGetMassPropertiesResponse200Bodies  # noqa: F401,E501
+from onshape_client.models.body import Body  # noqa: F401,E501
 
 
 class PartStudiosGetMassPropertiesResponse200(object):
@@ -34,7 +34,7 @@ class PartStudiosGetMassPropertiesResponse200(object):
     """
     swagger_types = {
         'microversion_id': 'str',
-        'bodies': 'PartStudiosGetMassPropertiesResponse200Bodies'
+        'bodies': 'dict(str, Body)'
     }
 
     attribute_map = {
@@ -81,9 +81,10 @@ class PartStudiosGetMassPropertiesResponse200(object):
     def bodies(self):
         """Gets the bodies of this PartStudiosGetMassPropertiesResponse200.  # noqa: E501
 
+        Object containing parts with mass properties, with the keys being the part             ID or \"-all-\" for a set of parts considered together  # noqa: E501
 
         :return: The bodies of this PartStudiosGetMassPropertiesResponse200.  # noqa: E501
-        :rtype: PartStudiosGetMassPropertiesResponse200Bodies
+        :rtype: dict(str, Body)
         """
         return self._bodies
 
@@ -91,9 +92,10 @@ class PartStudiosGetMassPropertiesResponse200(object):
     def bodies(self, bodies):
         """Sets the bodies of this PartStudiosGetMassPropertiesResponse200.
 
+        Object containing parts with mass properties, with the keys being the part             ID or \"-all-\" for a set of parts considered together  # noqa: E501
 
         :param bodies: The bodies of this PartStudiosGetMassPropertiesResponse200.  # noqa: E501
-        :type: PartStudiosGetMassPropertiesResponse200Bodies
+        :type: dict(str, Body)
         """
 
         self._bodies = bodies

@@ -16,8 +16,8 @@ import re  # noqa: F401
 
 import six
 
-from onshape_client.models.parts_get_parts_in_partstudio_response200_appearance import PartsGetPartsInPartstudioResponse200Appearance  # noqa: F401,E501
-from onshape_client.models.parts_update_part_metadata_response200_material import PartsUpdatePartMetadataResponse200Material  # noqa: F401,E501
+from onshape_client.models.part_appearance import PartAppearance  # noqa: F401,E501
+from onshape_client.models.part_material import PartMaterial  # noqa: F401,E501
 
 
 class PartsGetPartsInPartstudioResponse200Parts(object):
@@ -38,8 +38,8 @@ class PartsGetPartsInPartstudioResponse200Parts(object):
         'name': 'str',
         'part_id': 'str',
         'part_query': 'str',
-        'material': 'PartsUpdatePartMetadataResponse200Material',
-        'appearance': 'PartsGetPartsInPartstudioResponse200Appearance',
+        'material': 'PartMaterial',
+        'appearance': 'PartAppearance',
         'microversion_id': 'str',
         'custom_properties': 'object',
         'is_mesh': 'bool',
@@ -198,7 +198,7 @@ class PartsGetPartsInPartstudioResponse200Parts(object):
 
 
         :return: The material of this PartsGetPartsInPartstudioResponse200Parts.  # noqa: E501
-        :rtype: PartsUpdatePartMetadataResponse200Material
+        :rtype: PartMaterial
         """
         return self._material
 
@@ -208,7 +208,7 @@ class PartsGetPartsInPartstudioResponse200Parts(object):
 
 
         :param material: The material of this PartsGetPartsInPartstudioResponse200Parts.  # noqa: E501
-        :type: PartsUpdatePartMetadataResponse200Material
+        :type: PartMaterial
         """
 
         self._material = material
@@ -219,7 +219,7 @@ class PartsGetPartsInPartstudioResponse200Parts(object):
 
 
         :return: The appearance of this PartsGetPartsInPartstudioResponse200Parts.  # noqa: E501
-        :rtype: PartsGetPartsInPartstudioResponse200Appearance
+        :rtype: PartAppearance
         """
         return self._appearance
 
@@ -229,7 +229,7 @@ class PartsGetPartsInPartstudioResponse200Parts(object):
 
 
         :param appearance: The appearance of this PartsGetPartsInPartstudioResponse200Parts.  # noqa: E501
-        :type: PartsGetPartsInPartstudioResponse200Appearance
+        :type: PartAppearance
         """
 
         self._appearance = appearance

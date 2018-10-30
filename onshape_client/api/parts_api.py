@@ -1519,7 +1519,7 @@ class PartsApi(object):
         :param bool with_thumbnails: Whether or not to include thumbnails (not supported for           microversion)
         :param str link_document_id: Id of document that links to the document being accessed.     This may provide additional access rights to the document. Allowed only with version (v) path parameter.
         :param bool include_property_defaults: If true, include metadata schema property       defaults in response
-        :return: PartsGetPartsResponse200
+        :return: list[Part]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1546,7 +1546,7 @@ class PartsApi(object):
         :param bool with_thumbnails: Whether or not to include thumbnails (not supported for           microversion)
         :param str link_document_id: Id of document that links to the document being accessed.     This may provide additional access rights to the document. Allowed only with version (v) path parameter.
         :param bool include_property_defaults: If true, include metadata schema property       defaults in response
-        :return: PartsGetPartsResponse200
+        :return: list[Part]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1622,7 +1622,7 @@ class PartsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='PartsGetPartsResponse200',  # noqa: E501
+            response_type='list[Part]',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),

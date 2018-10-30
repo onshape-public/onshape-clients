@@ -806,7 +806,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_parts**
-> PartsGetPartsResponse200 get_parts(wvm_char, did, wvm, with_thumbnails=with_thumbnails, link_document_id=link_document_id, include_property_defaults=include_property_defaults)
+> list[Part] get_parts(wvm_char, did, wvm, with_thumbnails=with_thumbnails, link_document_id=link_document_id, include_property_defaults=include_property_defaults)
 
 Get Parts
 
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PartsGetPartsResponse200**](PartsGetPartsResponse200.md)
+[**list[Part]**](Part.md)
 
 ### Authorization
 

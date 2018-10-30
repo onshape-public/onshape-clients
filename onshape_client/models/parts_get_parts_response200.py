@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from onshape_client.models.parts_get_parts_response200_parts import PartsGetPartsResponse200Parts  # noqa: F401,E501
+from onshape_client.models.parts_get_parts_in_partstudio_response200_parts import PartsGetPartsInPartstudioResponse200Parts  # noqa: F401,E501
 
 
 class PartsGetPartsResponse200(object):
@@ -33,7 +33,7 @@ class PartsGetPartsResponse200(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'parts': 'list[PartsGetPartsResponse200Parts]'
+        'parts': 'list[PartsGetPartsInPartstudioResponse200Parts]'
     }
 
     attribute_map = {
@@ -56,7 +56,7 @@ class PartsGetPartsResponse200(object):
         Parts list  # noqa: E501
 
         :return: The parts of this PartsGetPartsResponse200.  # noqa: E501
-        :rtype: list[PartsGetPartsResponse200Parts]
+        :rtype: list[PartsGetPartsInPartstudioResponse200Parts]
         """
         return self._parts
 
@@ -67,7 +67,7 @@ class PartsGetPartsResponse200(object):
         Parts list  # noqa: E501
 
         :param parts: The parts of this PartsGetPartsResponse200.  # noqa: E501
-        :type: list[PartsGetPartsResponse200Parts]
+        :type: list[PartsGetPartsInPartstudioResponse200Parts]
         """
 
         self._parts = parts
