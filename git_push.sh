@@ -31,6 +31,8 @@ git add .
 # Commits the tracked changes and prepares them to be pushed to a remote repository. 
 git commit -m "$release_note"
 
+git tag -l "0.0.0a186"
+
 # Sets the new remote
 git_remote='https://github.com/onshape-public/python-client.git'
 if [ "$git_remote" = "" ]; then # git remote not defined
@@ -48,5 +50,5 @@ git pull origin master
 
 # Pushes (Forces) the changes in the local repository up to the remote repository
 echo "Git pushing to https://github.com/${git_user_id}/${git_repo_id}.git"
-git push origin master 2>&1 | grep -v 'To https'
+git push origin master 2>&1  --follow-tags | grep -v 'To https'
 
