@@ -16,7 +16,7 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | ack -o '(?<=build_type:)\w+')"
+  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | grep -oP '(?<=build_type:)\w+')"
   - pipenv run pytest --cov=./
   - |
     if [ "$build_type" = "swagger_build" ]; then
