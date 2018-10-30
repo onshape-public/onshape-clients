@@ -3,9 +3,35 @@
 #
 # Usage example: /bin/sh ./git_push.sh wing328 swagger-petstore-perl "minor update"
 
-git_user_id=$1
-git_repo_id=$2
-release_note=$3
+# parse options
+while getopts ":t:u:r:n:" opt; do
+  case $opt in
+    t)
+      echo "-t was triggered, Parameter: $OPTARG" >&2
+      tag_name=$OPTARG
+      ;;
+    u)
+      echo "-u was triggered, Parameter: $OPTARG" >&2
+      git_user_id=$OPTARG
+      ;;
+    r)
+      echo "-r was triggered, Parameter: $OPTARG" >&2
+      git_repo_id=$OPTARG
+      ;;
+    n)
+      echo "-n was triggered, Parameter: $OPTARG" >&2
+      release_note=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
 
 if [ "$git_user_id" = "" ]; then
     git_user_id="onshape-public"
@@ -18,8 +44,13 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Minor update"
+    release_note="Auto built by Travis"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
+fi
+
+if [ "$tag_name" = "" ]; then
+    tag_name="no_tag_set"
+    echo "[INFO] No command tag_name provided - Set \$tag_name to $tag_name"
 fi
 
 # Initialize the local directory as a Git repository
@@ -31,7 +62,7 @@ git add .
 # Commits the tracked changes and prepares them to be pushed to a remote repository. 
 git commit -m "$release_note"
 
-git tag "0.0.0a186" -a -m 'auto-pushed from Travis build'
+git tag $tag_name -a -m 'auto-pushed from Travis build'
 
 # Sets the new remote
 git_remote='https://github.com/onshape-public/python-client.git'

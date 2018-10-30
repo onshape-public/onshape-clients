@@ -1,4 +1,9 @@
 #!/bin/bash
+set -ev
+if [ "${TRAVIS_COMMIT_MESSAGE}" = "Auto built by Travis" ]; then
+  echo "Travis has already generated the latest client - skipping client generation step"
+  exit 0
+fi
 fileToCopy=apiDataAll.jsonAuto.yaml
 #  - "DOWNLOAD THE RELEVANT API DEFINITION"
 #cp /Users/ethankeller/onshape/api-generator/api_data/$fileToCopy /Users/ethankeller/onshape/python-client

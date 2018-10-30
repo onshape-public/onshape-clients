@@ -45,6 +45,14 @@ cd python-client
 pipenv install --dev
 ```
 
+## Continuous integration
+
+To continuously update the client so that it stays up to date with the current API, we employ Travis to run swagger-codegen, tag a release, and then push the released client to pypi. More specifically, this happens in the order below:
+
+1. Push any commit to Master - this can either be done by someone updating the client generation logic OR by an automated tool to keep the repo in sync with the API.
+2. Travis kicks off a build that generates a client and commits, tags, and pushes the client back to the repo. This type of build is tagged as a "swagger-build" because the main task is running swagger-codegen to generate the new client.
+3. Travis then gets kicked off again from the commit it made in step two. This time, the build is tagged, and therefore becomes a "release build" because it's main job is to publish and deploy the client to the appropriate package repository.
+
 ## Tests
 
 To run tests, you need to configure your test suite to do these things:
