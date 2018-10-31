@@ -54,7 +54,7 @@ if [ "$release_note" = "" ]; then
 fi
 
 if [ "$tag_name" = "" ]; then
-    tag_name="built automatically by Travis"
+    tag_name=$TRAVIS_BUILD_NUMBER
     echo "[INFO] No command tag_name provided - Set \$tag_name to $tag_name"
 fi
 
