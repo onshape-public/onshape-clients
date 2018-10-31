@@ -1,3 +1,4 @@
+git checkout master
 git status
 git init .
 tag_name="Auto-$TRAVIS_BUILD_NUMBER"
