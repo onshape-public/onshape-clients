@@ -20,3 +20,8 @@ def test_get_mass_properties(configuration):
     parts_instance = onshape_client.PartsApi(onshape_client.ApiClient(configuration=configuration))
     data = parts_instance.get_mass_properties('w', '2d47b6abec9d1de1d2538372', '39e483948767f72c97d2792f', '0639ea3c439aa0947744d29a', 'JHD')
     assert 0.000946 < data.bodies['JHD'].volume[1] < 0.000947
+
+def test_get_user_settings_current_logged_in_user(configuration):
+    user_instance = onshape_client.UsersApi(onshape_client.ApiClient(configuration=configuration))
+    data = user_instance.get_user_settings_current_logged_in_user()
+    assert data.default_units.to_dict() == {'units': {'key': None, 'value': None}}
