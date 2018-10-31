@@ -1,6 +1,8 @@
 language: python
 python:
 - '3.5'
+services:
+  - docker
 before_install:
   #  parse the build_type into a variable
 #  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | grep -oP '(?<=build_type:)\w+')"
@@ -13,7 +15,7 @@ install:
   - pipenv install --dev
 script:
   - pipenv run pytest --cov=./
-  - if $build_swagger; then .travis/git_push.sh; fi;
+  - if $build_swagger; then echo "[INFO] Building the swagger client because build_swagger is set to $build_swagger"; .travis/git_push.sh; fi;
 deploy:
   provider: pypi
   user: ethan92492
@@ -23,7 +25,5 @@ deploy:
     tags: true
   server: https://test.pypi.org/
 env:
-  global:
-    secure: GM3yNK/W5PeoB2gLCTyY9AEG0fbUK3njvd+J/2r1EhJoel5kp+SpinNmV1+248JRgzn4I8m6pNeekSWA/vMsjqvgqDq2CPEwY4P+T4TLL8+3HW03wJ7xNDEVHpMVbplvkh0x4YyssDRU+Q4xswAzaiG40uHRVLAG1EN03UcdLIMo66fHkd5/dYz+FnJJb+MkcVOkrfXu3WRxxkDKBGoIzKjZDJT1r8/eR7dELjFpj1gBYy1M2tjev65NUA7zgMvaMIiFed2W3SrvF7+XUkNNWF/rX17P3JsUf6UD5rhJswS2mKed2GwVq2VxDmxJRDwDx5aahIo+MtA6c3DkZIW6qoYiFVV7kJF4ziH7BjapoG6Gag/wc7YiVLAGv9dsqpGvlb9S+6xUjdV1jdAyWnBgciuomjf+bbmU1LHNBHUltAzjMIvLVEhhDR8r7GlQ53QZZ9Tw9Da8+sPLIhUBnt+Tm1B79cHOfG+J/GKiICNmUOGKqlQT8FZhOkziZHY+TcBCcY5up0Uxz99gGqTnYB7YZtyaB1HqGVpjJT4xEEzhGmaWmArVr4IdcSoMVn3F8ES3OaDw7kMbhFltKhsfUjZz1m8LilRk9nq/69yneeRP9ZYZm0A0a6+HDbYztEge+aVICC0tr/1fxTfzcGX13By2So3lbffGrhTf9BmegIClKeo=
   matrix:
     - build_swagger= commit_message =~ /build_swagger/
