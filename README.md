@@ -1,5 +1,8 @@
 # THIS IS AN UNSTABLE PACKAGE
 
+The onshape openAPI definition this client is generated may not correspond exactly to the API implementation. This means that the model deserialization WILL FAIL with some of the endpoints. If you have found such an issue, please report it within this repo's issues and we will promptly fix the error and upload a new definition and client.
+
+
 
 # onshape_client
 
@@ -32,10 +35,6 @@ doc_instance = onshape_client.DocumentsApi(onshape_client.ApiClient(configuratio
 api_response = doc_instance.get_documents()
 pprint(api_response)
 
-# Call and print the results of the get Documents endpoint asynchronously
-api_response = doc_instance.get_documents()
-pprint(api_response)
-
 ```
 
 
@@ -53,8 +52,12 @@ pipenv install --dev
 To continuously update the client so that it stays up to date with the current API, we employ Travis to run swagger-codegen, tag a release, and then push the released client to pypi. More specifically, this happens in the order below:
 
 1. Push any commit to Master - this can either be done by someone updating the client generation logic OR by an automated tool to keep the repo in sync with the API.
-2. Travis kicks off a build that generates a client and commits, tags, and pushes the client back to the repo. This type of build is tagged as a "swagger_build" because the main task is running swagger-codegen to generate the new client.
+2. If the commit message contains the text "build_swagger", Travis kicks off a build that generates a client and commits, tags, and pushes the client back to the repo. This type of build is labeled a "build_swagger" build because the main task is running swagger-codegen to generate the new client.
 3. Travis then gets kicked off again from the commit it made in step two. This time, the build is tagged, and therefore becomes a "release_build" because it's main job is to publish and deploy the client to the appropriate package repository.
+
+## Generate the client locally
+
+The client can be generated using a local copy of swagger-codegen by running the .travis/generate_client.sh script. 
 
 ## Tests
 
@@ -71,7 +74,7 @@ To quickly specify another stack than the default, include the `stack` flag like
 
 ## Quirks
 
-By default, the Swagger codegen python client generator does not support some things, which makes it necessary for us to modify the resulting client using a short script. The script lives in the "script" key in Travis. All changes the script makes are documented here:
+By default, the Swagger codegen python client generator does not support some things, which makes it necessary for us to modify the resulting client using a short script. The script lives in ".travis/generate_client.sh". All changes the script makes are documented here:
 
 * Remove the group name from the operationID of each of the operations so that the resulting methods are simpler (Swagger Codegen uses the operationID to form the method names)
 * Change wrong import statements such as `from onshape_client.models.documents_share_document_response200_entries1 import DocumentsShareDocumentResponse200Entries1` to `from onshape_client.models.documents_share_document_response200_entries_1 import DocumentsShareDocumentResponse200Entries1` to accomodate models that have multiple objects with the same name. 

@@ -1,15 +1,19 @@
 language: python
 sudo: required
 python:
+- '2.7'
+- '3.4'
 - '3.5'
+- '3.6'
 services:
   - docker
 install:
 - pip install pipenv
 - pipenv install --dev
 before_script:
+#  Only build and push the generated client if the commit message includes "build_swagger" and the python version is 3.5
   - |
-    if [[ $TRAVIS_COMMIT_MESSAGE = *build_swagger* ]]; then
+    if [[ $TRAVIS_COMMIT_MESSAGE = *build_swagger* && $TRAVIS_PYTHON_VERSION = 3.5 ]]; then
       echo "[INFO] Generating and pushing the client"
       .travis/generate_client.sh && .travis/git_push.sh
     fi;
