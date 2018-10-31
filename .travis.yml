@@ -1,17 +1,9 @@
 language: python
+sudo: required
 python:
 - '3.5'
 services:
   - docker
-stages:
-  - before_install
-  - install
-  - name: generate_client
-    if: commit_message=~/build_swagger/
-  - name: push_client
-    if: commit_message=~/build_swagger/
-  - test_client
-  - deploy
 before_install:
   #  parse the build_type into a variable
 #  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | grep -oP '(?<=build_type:)\w+')"
@@ -21,6 +13,7 @@ before_install:
 install:
   - pip install pipenv
   - pipenv install --dev
+script: pipenv run pytest --cov=./
 deploy:
   provider: pypi
   user: ethan92492
@@ -31,18 +24,8 @@ deploy:
   server: https://test.pypi.org/
 jobs:
   include:
-    - stage: generate_client
-      script: ".travis/generate_client.sh"
-    - stage: push_client
+    - stage: generate_and_push_client
       script:
-      - echo "[INFO] Building the swagger client because build_swagger is set to $build_swagger";
-      - git add .
-      - git commit -m "Auto built by swagger"
-      - git tag "Auto-$TRAVIS_BUILD_NUMBER" -a -m 'auto-pushed from Travis build $TRAVIS_BUILD_WEB_URL'
-      - git remote add origin https://ethan92429:${GIT_TOKEN}@github.com/onshape-public/python-client.git
-      - git push --follow-tags origin master 2>&1 | grep -v 'To https'
-    - stage: test_client
-      script: pipenv run pytest --cov=./
-env:
-  matrix:
-    - build_swagger=(commit_message=~/build_swagger/)
+      - ".travis/generate_client.sh"
+      - ".travis/git_push.sh"
+      if: commit_message=~/build_swagger/
