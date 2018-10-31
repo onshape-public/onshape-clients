@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 1.0.0
+  version: 1.87
   title: Onshape API
   description: Onshape API
   termsOfService: https://www.onshape.com/legal/terms-of-use
