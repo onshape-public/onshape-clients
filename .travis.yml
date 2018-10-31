@@ -4,6 +4,9 @@ python:
 - '3.5'
 services:
   - docker
+stages:
+- name: generate_and_push_client
+  if: commit_message=~/build_swagger/
 before_install:
   #  parse the build_type into a variable
 #  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | grep -oP '(?<=build_type:)\w+')"
@@ -28,4 +31,3 @@ jobs:
       script:
       - ".travis/generate_client.sh"
       - ".travis/git_push.sh"
-      if: commit_message=~/build_swagger/
