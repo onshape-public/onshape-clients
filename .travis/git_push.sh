@@ -4,34 +4,39 @@
 # Usage example: /bin/sh ./git_push.sh wing328 swagger-petstore-perl "minor update"
 
 # parse options
-while getopts ":t:u:r:n:" opt; do
-  case $opt in
-    t)
-      echo "-t was triggered, Parameter: $OPTARG" >&2
-      tag_name=$OPTARG
-      ;;
-    u)
-      echo "-u was triggered, Parameter: $OPTARG" >&2
-      git_user_id=$OPTARG
-      ;;
-    r)
-      echo "-r was triggered, Parameter: $OPTARG" >&2
-      git_repo_id=$OPTARG
-      ;;
-    n)
-      echo "-n was triggered, Parameter: $OPTARG" >&2
-      release_note=$OPTARG
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      exit 1
-      ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2
-      exit 1
-      ;;
-  esac
-done
+#while getopts ":t:u:r:n:" opt; do
+#  case $opt in
+#    t)
+#      echo "-t was triggered, Parameter: $OPTARG" >&2
+#      tag_name=$OPTARG
+#      ;;
+#    u)
+#      echo "-u was triggered, Parameter: $OPTARG" >&2
+#      git_user_id=$OPTARG
+#      ;;
+#    r)
+#      echo "-r was triggered, Parameter: $OPTARG" >&2
+#      git_repo_id=$OPTARG
+#      ;;
+#    n)
+#      echo "-n was triggered, Parameter: $OPTARG" >&2
+#      release_note=$OPTARG
+#      ;;
+#    \?)
+#      echo "Invalid option: -$OPTARG" >&2
+#      exit 1
+#      ;;
+#    :)
+#      echo "Option -$OPTARG requires an argument." >&2
+#      exit 1
+#      ;;
+#  esac
+#done
+
+git_user_id=$1
+git_repo_id=$2
+release_note=$3
+tag_name=$4
 
 if [ "$git_user_id" = "" ]; then
     git_user_id="onshape-public"
@@ -49,7 +54,7 @@ if [ "$release_note" = "" ]; then
 fi
 
 if [ "$tag_name" = "" ]; then
-    tag_name="no_tag_set"
+    tag_name="built automatically by Travis"
     echo "[INFO] No command tag_name provided - Set \$tag_name to $tag_name"
 fi
 

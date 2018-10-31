@@ -4,7 +4,7 @@ from onshape_client.configuration import Configuration
 from pathlib import Path
 
 yaml = YAML()
-path = '../.onshape_client_config.yaml'
+path = '.onshape_client_config.yaml'
 onshape_client_config = yaml.load(Path(path))
 
 @pytest.fixture(scope="module")
