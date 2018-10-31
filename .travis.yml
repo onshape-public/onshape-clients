@@ -8,9 +8,6 @@ stages:
 - name: generate_and_push_client
   if: commit_message=~/build_swagger/
 before_install:
-  #  parse the build_type into a variable
-#  - build_type="$(echo $TRAVIS_COMMIT_MESSAGE | grep -oP '(?<=build_type:)\w+')"
-#  - "echo 'the build type is: ${build_type}'"
   - openssl aes-256-cbc -K $encrypted_748edd81b0f1_key -iv $encrypted_748edd81b0f1_iv
     -in .onshape_client_config.yaml.enc -out .onshape_client_config.yaml -d
 install:
