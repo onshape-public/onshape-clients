@@ -1,3 +1,5 @@
+git status
+git init .
 tag_name="Auto-$TRAVIS_BUILD_NUMBER"
 echo "[INFO] Pushing the client with the tag:$tag_name";
 git add .

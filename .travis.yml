@@ -11,8 +11,7 @@ before_script:
   - |
     if [[ $TRAVIS_COMMIT_MESSAGE = *build_swagger* ]]; then
       echo "[INFO] Generating and pushing the client"
-      .travis/generate_client.sh
-      .travis/git_push.sh
+      .travis/generate_client.sh && .travis/git_push.sh
     fi;
 script:
 - openssl aes-256-cbc -K $encrypted_748edd81b0f1_key -iv $encrypted_748edd81b0f1_iv
