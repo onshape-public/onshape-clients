@@ -35,6 +35,9 @@ doc_instance = onshape_client.DocumentsApi(onshape_client.ApiClient(configuratio
 api_response = doc_instance.get_documents()
 pprint(api_response)
 
+# Call and print the results of the get Documents endpoint asynchronously
+thread = doc_instance.get_documents(async=True)
+result = thread.get()
 ```
 
 
