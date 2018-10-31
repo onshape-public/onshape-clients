@@ -1,8 +1,6 @@
 language: python
 python:
 - '2.7'
-- '3.2'
-- '3.3'
 - '3.4'
 - '3.5'
 before_install:
@@ -20,7 +18,7 @@ script:
   - |
     if [ "$build_swagger" ]; then
       .travis/git_push.sh -t $TRAVIS_BUILD_NUMBER -n "An automated Travis release build_type:swagger_build"
-    fi"
+    fi
 deploy:
   provider: pypi
   user: ethan92492

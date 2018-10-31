@@ -15,6 +15,7 @@ python-dateutil = ">=2.5.3"
 pathlib = "*"
 pytest = "*"
 "pathlib2" = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "2.7"
