@@ -1,0 +1,50 @@
+# BTDrawingParams
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**location** | [**BTElementLocationParams**](BTElementLocationParams.md) |  | [optional] 
+**size** | **str** |  | [optional] 
+**language** | **str** |  | [optional] 
+**revision** | **str** |  | [optional] 
+**decimal_separator** | **str** |  | [optional] 
+**part_query** | **str** |  | [optional] 
+**part_id** | **str** |  | [optional] 
+**element_microversion_id** | **str** |  | [optional] 
+**units** | **str** |  | [optional] 
+**external_document_id** | **str** |  | [optional] 
+**external_document_version_id** | **str** |  | [optional] 
+**element_configuration** | **str** |  | [optional] 
+**template_document_id** | **str** |  | [optional] 
+**template_workspace_id** | **str** |  | [optional] 
+**template_name** | **str** |  | [optional] 
+**template_args** | **list[str]** |  | [optional] 
+**template_element_id** | **str** |  | [optional] 
+**drawing_name** | **str** |  | [optional] 
+**projection** | **str** |  | [optional] 
+**standard** | **str** |  | [optional] 
+**border** | **bool** |  | [optional] 
+**titleblock** | **bool** |  | [optional] 
+**number_horizontal_zones** | **int** |  | [optional] 
+**number_vertical_zones** | **int** |  | [optional] 
+**start_zones** | **str** |  | [optional] 
+**is_sketch_only** | **bool** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**sketch_id** | **str** |  | [optional] 
+**sketch_ids** | **list[str]** |  | [optional] 
+**views** | **str** |  | [optional] 
+**compute_intersection** | **bool** |  | [optional] 
+**document_microversion_id** | **str** |  | [optional] 
+**hidden_lines** | **str** |  | [optional] 
+**include_surfaces** | **bool** |  | [optional] 
+**is_surface** | **bool** |  | [optional] 
+**pure_sketch** | **bool** |  | [optional] 
+**part_number** | **str** |  | [optional] 
+**template_version_id** | **str** |  | [optional] 
+**model_type** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

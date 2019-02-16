@@ -1,0 +1,13 @@
+export * from './accountsApi';
+import { AccountsApi } from './accountsApi';
+export * from './appElementsApi';
+import { AppElementsApi } from './appElementsApi';
+export * from './defaultApi';
+import { DefaultApi } from './defaultApi';
+export * from './documentsApi';
+import { DocumentsApi } from './documentsApi';
+export * from './endpointsApi';
+import { EndpointsApi } from './endpointsApi';
+export * from './partsApi';
+import { PartsApi } from './partsApi';
+export const APIS = [AccountsApi, AppElementsApi, DefaultApi, DocumentsApi, EndpointsApi, PartsApi];

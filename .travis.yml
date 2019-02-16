@@ -1,0 +1,30 @@
+language: python
+sudo: required
+python:
+- '3.5'
+- '3.6'
+services:
+  - docker
+install:
+- pip install pipenv
+- pipenv install --dev
+before_script:
+#  Only build and push the generated client if the commit message includes "build_swagger" and the python version is 3.5
+  - |
+    if [[ $TRAVIS_COMMIT_MESSAGE = *build_swagger* && $TRAVIS_PYTHON_VERSION = 3.5 ]]; then
+      echo "[INFO] Generating and pushing the client"
+      .travis/generate_client.sh && .travis/git_push.sh
+    fi;
+script:
+- openssl aes-256-cbc -K $encrypted_748edd81b0f1_key -iv $encrypted_748edd81b0f1_iv
+  -in .onshape_client_config.yaml.enc -out .onshape_client_config.yaml -d
+- pipenv run pytest --cov=./
+deploy:
+  provider: pypi
+  user: ethan92492
+  password:
+    secure: VrvP9Gml6iZ8gogaKRqpasx0XTIouH54tP7mLU9mub5sVYmpOCYOwAlWoEp2gesthyww40UiFb2fE6C/T0uzDOfivRcdsn5As1R+n+i0ZE26HyGdn13uBSp/kKQy1xHUQGc7xf7Ri3RmiePiR2piLhHnC/KQygVZzzRfO3HiRrt43dci/8QY7vsZi2sdqmzraZ69M/coVq+tfwWYyLkPbLfwwQBfSlTXG/HCwdp0A4l3e+m+YWzWmFG5/vntwRMkNUPbBLKFokj1MlNRDhn+gdymneDShedub1Ggm8zG7d88yNH+lq9UpmSOKd6SqNOrDosX/R/J6DAqYr40qo8MbwuY142vObU/CRtN52f+Sm5xjV9lA1LX9V9oTye2WKBD+3205h1+TO0m5dlOvxlVNAk4eWS2seEV2rtUD3H2YH1xVDEom7Ynfk9yDcREgkPsXEtL24rIcq+aY7DUNhidk0Pm6jxGhPR4AcKbXU9lxyP2H6N/T7cRoFkAhZaFttalAALbs3ESZHKg6oCol5nKJ6bPCAk7+DY4WTn4xXG0YsXOa+ggz+iO49JItYreIWZccb7KPW/b4P68NbQQNs/s/3MNJwUYzkDRWeeNnZdXNHfQWe38S1DrvOBqKy2d5YNw+jXNr1yRe3BfqH7hYlVD3AxiQ/jWjeXAFVLSjqGfCsM=
+  on:
+    tags: true
+    condition: $TRAVIS_PYTHON_VERSION = 3.5
+  server: https://test.pypi.org/legacy/

@@ -1,0 +1,9 @@
+{
+  "packageName": "onshape_client",
+  "projectName": "onshape_client",
+  "packageVersion": "0.0.0",
+  "packageUrl": "",
+  "sortParamsByRequiredFlag": true,
+  "hideGenerationTimestamp": true,
+  "library": "urllib3"
+}
