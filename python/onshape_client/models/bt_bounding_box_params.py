@@ -32,192 +32,66 @@ class BTBoundingBoxParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'part_query': 'str',
-        'part_id': 'str',
-        'include_wire_bodies': 'bool',
-        'display_state_id': 'str',
-        'element_microversion_id': 'str',
-        'include_hidden': 'bool',
         'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
-        'sketch_id': 'str'
+        'include_hidden': 'bool',
+        'sketch_id': 'str',
+        'element_microversion_id': 'str',
+        'part_id': 'str',
+        'include_wire_bodies': 'bool',
+        'display_state_id': 'str',
+        'part_query': 'str'
     }
 
     attribute_map = {
-        'part_query': 'partQuery',
-        'part_id': 'partId',
-        'include_wire_bodies': 'includeWireBodies',
-        'display_state_id': 'displayStateId',
-        'element_microversion_id': 'elementMicroversionId',
-        'include_hidden': 'includeHidden',
         'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
-        'sketch_id': 'sketchId'
+        'include_hidden': 'includeHidden',
+        'sketch_id': 'sketchId',
+        'element_microversion_id': 'elementMicroversionId',
+        'part_id': 'partId',
+        'include_wire_bodies': 'includeWireBodies',
+        'display_state_id': 'displayStateId',
+        'part_query': 'partQuery'
     }
 
-    def __init__(self, part_query=None, part_id=None, include_wire_bodies=None, display_state_id=None, element_microversion_id=None, include_hidden=None, document_id=None, workspace_id=None, element_id=None, sketch_id=None):  # noqa: E501
+    def __init__(self, document_id=None, workspace_id=None, element_id=None, include_hidden=None, sketch_id=None, element_microversion_id=None, part_id=None, include_wire_bodies=None, display_state_id=None, part_query=None):  # noqa: E501
         """BTBoundingBoxParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._part_query = None
-        self._part_id = None
-        self._include_wire_bodies = None
-        self._display_state_id = None
-        self._element_microversion_id = None
-        self._include_hidden = None
         self._document_id = None
         self._workspace_id = None
         self._element_id = None
+        self._include_hidden = None
         self._sketch_id = None
+        self._element_microversion_id = None
+        self._part_id = None
+        self._include_wire_bodies = None
+        self._display_state_id = None
+        self._part_query = None
         self.discriminator = None
 
-        if part_query is not None:
-            self.part_query = part_query
-        if part_id is not None:
-            self.part_id = part_id
-        if include_wire_bodies is not None:
-            self.include_wire_bodies = include_wire_bodies
-        if display_state_id is not None:
-            self.display_state_id = display_state_id
-        if element_microversion_id is not None:
-            self.element_microversion_id = element_microversion_id
-        if include_hidden is not None:
-            self.include_hidden = include_hidden
         if document_id is not None:
             self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
+        if include_hidden is not None:
+            self.include_hidden = include_hidden
         if sketch_id is not None:
             self.sketch_id = sketch_id
-
-    @property
-    def part_query(self):
-        """Gets the part_query of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The part_query of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_query
-
-    @part_query.setter
-    def part_query(self, part_query):
-        """Sets the part_query of this BTBoundingBoxParams.
-
-
-        :param part_query: The part_query of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_query = part_query
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The part_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTBoundingBoxParams.
-
-
-        :param part_id: The part_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
-    def include_wire_bodies(self):
-        """Gets the include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_wire_bodies
-
-    @include_wire_bodies.setter
-    def include_wire_bodies(self, include_wire_bodies):
-        """Sets the include_wire_bodies of this BTBoundingBoxParams.
-
-
-        :param include_wire_bodies: The include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_wire_bodies = include_wire_bodies
-
-    @property
-    def display_state_id(self):
-        """Gets the display_state_id of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The display_state_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_state_id
-
-    @display_state_id.setter
-    def display_state_id(self, display_state_id):
-        """Sets the display_state_id of this BTBoundingBoxParams.
-
-
-        :param display_state_id: The display_state_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._display_state_id = display_state_id
-
-    @property
-    def element_microversion_id(self):
-        """Gets the element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_microversion_id
-
-    @element_microversion_id.setter
-    def element_microversion_id(self, element_microversion_id):
-        """Sets the element_microversion_id of this BTBoundingBoxParams.
-
-
-        :param element_microversion_id: The element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_microversion_id = element_microversion_id
-
-    @property
-    def include_hidden(self):
-        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_hidden
-
-    @include_hidden.setter
-    def include_hidden(self, include_hidden):
-        """Sets the include_hidden of this BTBoundingBoxParams.
-
-
-        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_hidden = include_hidden
+        if element_microversion_id is not None:
+            self.element_microversion_id = element_microversion_id
+        if part_id is not None:
+            self.part_id = part_id
+        if include_wire_bodies is not None:
+            self.include_wire_bodies = include_wire_bodies
+        if display_state_id is not None:
+            self.display_state_id = display_state_id
+        if part_query is not None:
+            self.part_query = part_query
 
     @property
     def document_id(self):
@@ -283,6 +157,27 @@ class BTBoundingBoxParams(object):
         self._element_id = element_id
 
     @property
+    def include_hidden(self):
+        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_hidden
+
+    @include_hidden.setter
+    def include_hidden(self, include_hidden):
+        """Sets the include_hidden of this BTBoundingBoxParams.
+
+
+        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_hidden = include_hidden
+
+    @property
     def sketch_id(self):
         """Gets the sketch_id of this BTBoundingBoxParams.  # noqa: E501
 
@@ -302,6 +197,111 @@ class BTBoundingBoxParams(object):
         """
 
         self._sketch_id = sketch_id
+
+    @property
+    def element_microversion_id(self):
+        """Gets the element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_microversion_id
+
+    @element_microversion_id.setter
+    def element_microversion_id(self, element_microversion_id):
+        """Sets the element_microversion_id of this BTBoundingBoxParams.
+
+
+        :param element_microversion_id: The element_microversion_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_microversion_id = element_microversion_id
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The part_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTBoundingBoxParams.
+
+
+        :param part_id: The part_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
+
+    @property
+    def include_wire_bodies(self):
+        """Gets the include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_wire_bodies
+
+    @include_wire_bodies.setter
+    def include_wire_bodies(self, include_wire_bodies):
+        """Sets the include_wire_bodies of this BTBoundingBoxParams.
+
+
+        :param include_wire_bodies: The include_wire_bodies of this BTBoundingBoxParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_wire_bodies = include_wire_bodies
+
+    @property
+    def display_state_id(self):
+        """Gets the display_state_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The display_state_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_state_id
+
+    @display_state_id.setter
+    def display_state_id(self, display_state_id):
+        """Sets the display_state_id of this BTBoundingBoxParams.
+
+
+        :param display_state_id: The display_state_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._display_state_id = display_state_id
+
+    @property
+    def part_query(self):
+        """Gets the part_query of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The part_query of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_query
+
+    @part_query.setter
+    def part_query(self, part_query):
+        """Sets the part_query of this BTBoundingBoxParams.
+
+
+        :param part_query: The part_query of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_query = part_query
 
     def to_dict(self):
         """Returns the model properties as a dict"""

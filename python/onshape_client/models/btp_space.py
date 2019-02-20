@@ -35,9 +35,9 @@ class BTPSpace(object):
         'text': 'str',
         'lines': 'list[str]',
         'changeable_child_field_indices': 'list[int]',
-        'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
+        'node_id': 'str',
         'node_id_raw': 'BTObjectId',
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
@@ -51,9 +51,9 @@ class BTPSpace(object):
         'text': 'text',
         'lines': 'lines',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
-        'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
+        'node_id': 'nodeId',
         'node_id_raw': 'nodeIdRaw',
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
@@ -63,15 +63,15 @@ class BTPSpace(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, text=None, lines=None, changeable_child_field_indices=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, text=None, lines=None, changeable_child_field_indices=None, child_map_indices=None, atomic_child_indices=None, node_id=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTPSpace - a model defined in OpenAPI"""  # noqa: E501
 
         self._text = None
         self._lines = None
         self._changeable_child_field_indices = None
-        self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
+        self._node_id = None
         self._node_id_raw = None
         self._first_child_field = None
         self._child_list_indices = None
@@ -87,12 +87,12 @@ class BTPSpace(object):
             self.lines = lines
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
-        if node_id is not None:
-            self.node_id = node_id
         if child_map_indices is not None:
             self.child_map_indices = child_map_indices
         if atomic_child_indices is not None:
             self.atomic_child_indices = atomic_child_indices
+        if node_id is not None:
+            self.node_id = node_id
         if node_id_raw is not None:
             self.node_id_raw = node_id_raw
         if first_child_field is not None:
@@ -172,27 +172,6 @@ class BTPSpace(object):
         self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
-    def node_id(self):
-        """Gets the node_id of this BTPSpace.  # noqa: E501
-
-
-        :return: The node_id of this BTPSpace.  # noqa: E501
-        :rtype: str
-        """
-        return self._node_id
-
-    @node_id.setter
-    def node_id(self, node_id):
-        """Sets the node_id of this BTPSpace.
-
-
-        :param node_id: The node_id of this BTPSpace.  # noqa: E501
-        :type: str
-        """
-
-        self._node_id = node_id
-
-    @property
     def child_map_indices(self):
         """Gets the child_map_indices of this BTPSpace.  # noqa: E501
 
@@ -233,6 +212,27 @@ class BTPSpace(object):
         """
 
         self._atomic_child_indices = atomic_child_indices
+
+    @property
+    def node_id(self):
+        """Gets the node_id of this BTPSpace.  # noqa: E501
+
+
+        :return: The node_id of this BTPSpace.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_id
+
+    @node_id.setter
+    def node_id(self, node_id):
+        """Sets the node_id of this BTPSpace.
+
+
+        :param node_id: The node_id of this BTPSpace.  # noqa: E501
+        :type: str
+        """
+
+        self._node_id = node_id
 
     @property
     def node_id_raw(self):

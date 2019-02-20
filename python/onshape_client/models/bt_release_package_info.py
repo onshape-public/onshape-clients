@@ -40,11 +40,11 @@ class BTReleasePackageInfo(object):
         'items': 'list[BTReleasePackageItemInfo]',
         'package_thumbnail': 'str',
         'description': 'str',
-        'workspace_id': 'str',
-        'is_obsoletion': 'bool',
         'version_id': 'str',
         'document_id': 'str',
         'company_id': 'str',
+        'workspace_id': 'str',
+        'is_obsoletion': 'bool',
         'workflow': 'BTWorkflowInfo',
         'is_frozen': 'bool',
         'revision_rule_id': 'str',
@@ -65,11 +65,11 @@ class BTReleasePackageInfo(object):
         'items': 'items',
         'package_thumbnail': 'packageThumbnail',
         'description': 'description',
-        'workspace_id': 'workspaceId',
-        'is_obsoletion': 'isObsoletion',
         'version_id': 'versionId',
         'document_id': 'documentId',
         'company_id': 'companyId',
+        'workspace_id': 'workspaceId',
+        'is_obsoletion': 'isObsoletion',
         'workflow': 'workflow',
         'is_frozen': 'isFrozen',
         'revision_rule_id': 'revisionRuleId',
@@ -81,7 +81,7 @@ class BTReleasePackageInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, properties=None, is_setup=None, detailed=None, column_names=None, comments=None, items=None, package_thumbnail=None, description=None, workspace_id=None, is_obsoletion=None, version_id=None, document_id=None, company_id=None, workflow=None, is_frozen=None, revision_rule_id=None, linked_version_ids=None, is_discarded=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, properties=None, is_setup=None, detailed=None, column_names=None, comments=None, items=None, package_thumbnail=None, description=None, version_id=None, document_id=None, company_id=None, workspace_id=None, is_obsoletion=None, workflow=None, is_frozen=None, revision_rule_id=None, linked_version_ids=None, is_discarded=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTReleasePackageInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._properties = None
@@ -92,11 +92,11 @@ class BTReleasePackageInfo(object):
         self._items = None
         self._package_thumbnail = None
         self._description = None
-        self._workspace_id = None
-        self._is_obsoletion = None
         self._version_id = None
         self._document_id = None
         self._company_id = None
+        self._workspace_id = None
+        self._is_obsoletion = None
         self._workflow = None
         self._is_frozen = None
         self._revision_rule_id = None
@@ -124,16 +124,16 @@ class BTReleasePackageInfo(object):
             self.package_thumbnail = package_thumbnail
         if description is not None:
             self.description = description
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
-        if is_obsoletion is not None:
-            self.is_obsoletion = is_obsoletion
         if version_id is not None:
             self.version_id = version_id
         if document_id is not None:
             self.document_id = document_id
         if company_id is not None:
             self.company_id = company_id
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if is_obsoletion is not None:
+            self.is_obsoletion = is_obsoletion
         if workflow is not None:
             self.workflow = workflow
         if is_frozen is not None:
@@ -322,48 +322,6 @@ class BTReleasePackageInfo(object):
         self._description = description
 
     @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTReleasePackageInfo.  # noqa: E501
-
-
-        :return: The workspace_id of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._workspace_id
-
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTReleasePackageInfo.
-
-
-        :param workspace_id: The workspace_id of this BTReleasePackageInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._workspace_id = workspace_id
-
-    @property
-    def is_obsoletion(self):
-        """Gets the is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
-
-
-        :return: The is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_obsoletion
-
-    @is_obsoletion.setter
-    def is_obsoletion(self, is_obsoletion):
-        """Sets the is_obsoletion of this BTReleasePackageInfo.
-
-
-        :param is_obsoletion: The is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_obsoletion = is_obsoletion
-
-    @property
     def version_id(self):
         """Gets the version_id of this BTReleasePackageInfo.  # noqa: E501
 
@@ -425,6 +383,48 @@ class BTReleasePackageInfo(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def workspace_id(self):
+        """Gets the workspace_id of this BTReleasePackageInfo.  # noqa: E501
+
+
+        :return: The workspace_id of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._workspace_id
+
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTReleasePackageInfo.
+
+
+        :param workspace_id: The workspace_id of this BTReleasePackageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._workspace_id = workspace_id
+
+    @property
+    def is_obsoletion(self):
+        """Gets the is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
+
+
+        :return: The is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_obsoletion
+
+    @is_obsoletion.setter
+    def is_obsoletion(self, is_obsoletion):
+        """Sets the is_obsoletion of this BTReleasePackageInfo.
+
+
+        :param is_obsoletion: The is_obsoletion of this BTReleasePackageInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_obsoletion = is_obsoletion
 
     @property
     def workflow(self):

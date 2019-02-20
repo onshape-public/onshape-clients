@@ -35,12 +35,12 @@ class BTVersionOrWorkspaceParams(object):
         'name': 'str',
         'description': 'str',
         'microversion_id': 'str',
-        'read_only': 'bool',
-        'is_release': 'bool',
-        'from_history': 'bool',
         'version_id': 'str',
         'document_id': 'str',
         'workspace_id': 'str',
+        'read_only': 'bool',
+        'is_release': 'bool',
+        'from_history': 'bool',
         'client_interaction_mode': 'str'
     }
 
@@ -48,27 +48,27 @@ class BTVersionOrWorkspaceParams(object):
         'name': 'name',
         'description': 'description',
         'microversion_id': 'microversionId',
-        'read_only': 'readOnly',
-        'is_release': 'isRelease',
-        'from_history': 'fromHistory',
         'version_id': 'versionId',
         'document_id': 'documentId',
         'workspace_id': 'workspaceId',
+        'read_only': 'readOnly',
+        'is_release': 'isRelease',
+        'from_history': 'fromHistory',
         'client_interaction_mode': 'clientInteractionMode'
     }
 
-    def __init__(self, name=None, description=None, microversion_id=None, read_only=None, is_release=None, from_history=None, version_id=None, document_id=None, workspace_id=None, client_interaction_mode=None):  # noqa: E501
+    def __init__(self, name=None, description=None, microversion_id=None, version_id=None, document_id=None, workspace_id=None, read_only=None, is_release=None, from_history=None, client_interaction_mode=None):  # noqa: E501
         """BTVersionOrWorkspaceParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
         self._microversion_id = None
-        self._read_only = None
-        self._is_release = None
-        self._from_history = None
         self._version_id = None
         self._document_id = None
         self._workspace_id = None
+        self._read_only = None
+        self._is_release = None
+        self._from_history = None
         self._client_interaction_mode = None
         self.discriminator = None
 
@@ -78,18 +78,18 @@ class BTVersionOrWorkspaceParams(object):
             self.description = description
         if microversion_id is not None:
             self.microversion_id = microversion_id
-        if read_only is not None:
-            self.read_only = read_only
-        if is_release is not None:
-            self.is_release = is_release
-        if from_history is not None:
-            self.from_history = from_history
         if version_id is not None:
             self.version_id = version_id
         if document_id is not None:
             self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
+        if read_only is not None:
+            self.read_only = read_only
+        if is_release is not None:
+            self.is_release = is_release
+        if from_history is not None:
+            self.from_history = from_history
         if client_interaction_mode is not None:
             self.client_interaction_mode = client_interaction_mode
 
@@ -157,69 +157,6 @@ class BTVersionOrWorkspaceParams(object):
         self._microversion_id = microversion_id
 
     @property
-    def read_only(self):
-        """Gets the read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._read_only
-
-    @read_only.setter
-    def read_only(self, read_only):
-        """Sets the read_only of this BTVersionOrWorkspaceParams.
-
-
-        :param read_only: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._read_only = read_only
-
-    @property
-    def is_release(self):
-        """Gets the is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_release
-
-    @is_release.setter
-    def is_release(self, is_release):
-        """Sets the is_release of this BTVersionOrWorkspaceParams.
-
-
-        :param is_release: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_release = is_release
-
-    @property
-    def from_history(self):
-        """Gets the from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._from_history
-
-    @from_history.setter
-    def from_history(self, from_history):
-        """Sets the from_history of this BTVersionOrWorkspaceParams.
-
-
-        :param from_history: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._from_history = from_history
-
-    @property
     def version_id(self):
         """Gets the version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
 
@@ -281,6 +218,69 @@ class BTVersionOrWorkspaceParams(object):
         """
 
         self._workspace_id = workspace_id
+
+    @property
+    def read_only(self):
+        """Gets the read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._read_only
+
+    @read_only.setter
+    def read_only(self, read_only):
+        """Sets the read_only of this BTVersionOrWorkspaceParams.
+
+
+        :param read_only: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._read_only = read_only
+
+    @property
+    def is_release(self):
+        """Gets the is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_release
+
+    @is_release.setter
+    def is_release(self, is_release):
+        """Sets the is_release of this BTVersionOrWorkspaceParams.
+
+
+        :param is_release: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_release = is_release
+
+    @property
+    def from_history(self):
+        """Gets the from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._from_history
+
+    @from_history.setter
+    def from_history(self, from_history):
+        """Sets the from_history of this BTVersionOrWorkspaceParams.
+
+
+        :param from_history: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._from_history = from_history
 
     @property
     def client_interaction_mode(self):

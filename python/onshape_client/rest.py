@@ -22,7 +22,7 @@ import ssl
 import certifi
 # python 2 and python 3 compatibility library
 import six
-from six.moves.urllib.parse import urlencode, urlparse
+from six.moves.urllib.parse import urlencode, urlparse, parse_qs
 
 try:
     import urllib3
@@ -142,9 +142,7 @@ class RESTClientObject(object):
         post_params = post_params or {}
         headers = headers or {}
 
-        # Ethan added this to build the necessary authentication headers
-        from onshape_client.apikey_headers import make_headers
-        headers.update(make_headers(method, urlparse(url).path[1:], self._access_key, self._secret_key))
+
 
         timeout = None
         if _request_timeout:
@@ -155,8 +153,21 @@ class RESTClientObject(object):
                 timeout = urllib3.Timeout(
                     connect=_request_timeout[0], read=_request_timeout[1])
 
+
         if 'Content-Type' not in headers:
             headers['Content-Type'] = 'application/json'
+
+        # Ethan added this to build the necessary authentication headers
+        from onshape_client.apikey_headers import add_auth_headers
+
+        # if not query_params and len(urlparse(url).query) > 0:
+        #     query_param_string = urlparse(url).query
+        #     query_params = parse_qs(query_param_string)
+        # else:
+        #     query_param_string = urlencode(query_params)
+
+        add_auth_headers(method, urlparse(url).path, self._access_key, self._secret_key, headers=headers, query_params=query_params)
+
 
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
@@ -216,7 +227,9 @@ class RESTClientObject(object):
                                               fields=query_params,
                                               preload_content=_preload_content,
                                               timeout=timeout,
-                                              headers=headers)
+                                              headers=headers,
+                                              # Ethan added this one line to stop automatic redirects
+                                              retries=urllib3.Retry(total=False, redirect=False, raise_on_redirect=False))
         except urllib3.exceptions.SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)
@@ -231,6 +244,18 @@ class RESTClientObject(object):
 
             # log response body
             logger.debug("response body: %s", r.data)
+
+        # Ethan added the below clause to handle redirects correctly:
+        if 300 <= r.status <= 399:
+            # parse location
+            location_string = r.getheaders()["Location"]
+            location = urlparse(location_string)
+            new_url = location.scheme + '://' + location.netloc + location.path
+            logger.debug('request redirected to: ' + location_string)
+            parsed_qs = parse_qs(location.query)
+            for q in parsed_qs:
+                parsed_qs[q] = parsed_qs[q][0]
+            return self.request(method, new_url, headers=headers, query_params=parsed_qs)
 
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)

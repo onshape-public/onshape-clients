@@ -34,34 +34,34 @@ class NextCharge(object):
     openapi_types = {
         'total': 'int',
         'interval': 'str',
-        'amount': 'int',
-        'current_period_end': 'datetime'
+        'current_period_end': 'datetime',
+        'amount': 'int'
     }
 
     attribute_map = {
         'total': 'total',
         'interval': 'interval',
-        'amount': 'amount',
-        'current_period_end': 'currentPeriodEnd'
+        'current_period_end': 'currentPeriodEnd',
+        'amount': 'amount'
     }
 
-    def __init__(self, total=None, interval=None, amount=None, current_period_end=None):  # noqa: E501
+    def __init__(self, total=None, interval=None, current_period_end=None, amount=None):  # noqa: E501
         """NextCharge - a model defined in OpenAPI"""  # noqa: E501
 
         self._total = None
         self._interval = None
-        self._amount = None
         self._current_period_end = None
+        self._amount = None
         self.discriminator = None
 
         if total is not None:
             self.total = total
         if interval is not None:
             self.interval = interval
-        if amount is not None:
-            self.amount = amount
         if current_period_end is not None:
             self.current_period_end = current_period_end
+        if amount is not None:
+            self.amount = amount
 
     @property
     def total(self):
@@ -106,27 +106,6 @@ class NextCharge(object):
         self._interval = interval
 
     @property
-    def amount(self):
-        """Gets the amount of this NextCharge.  # noqa: E501
-
-
-        :return: The amount of this NextCharge.  # noqa: E501
-        :rtype: int
-        """
-        return self._amount
-
-    @amount.setter
-    def amount(self, amount):
-        """Sets the amount of this NextCharge.
-
-
-        :param amount: The amount of this NextCharge.  # noqa: E501
-        :type: int
-        """
-
-        self._amount = amount
-
-    @property
     def current_period_end(self):
         """Gets the current_period_end of this NextCharge.  # noqa: E501
 
@@ -146,6 +125,27 @@ class NextCharge(object):
         """
 
         self._current_period_end = current_period_end
+
+    @property
+    def amount(self):
+        """Gets the amount of this NextCharge.  # noqa: E501
+
+
+        :return: The amount of this NextCharge.  # noqa: E501
+        :rtype: int
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this NextCharge.
+
+
+        :param amount: The amount of this NextCharge.  # noqa: E501
+        :type: int
+        """
+
+        self._amount = amount
 
     def to_dict(self):
         """Returns the model properties as a dict"""

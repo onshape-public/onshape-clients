@@ -42,9 +42,9 @@ class BTNotice(object):
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
         'try_node': 'BTNodeReference',
-        'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
+        'node_id': 'str',
         'node_id_raw': 'BTObjectId',
         'type_id': 'int',
         'export_type_name': 'str',
@@ -63,9 +63,9 @@ class BTNotice(object):
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
         'try_node': 'tryNode',
-        'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
+        'node_id': 'nodeId',
         'node_id_raw': 'nodeIdRaw',
         'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
@@ -73,7 +73,7 @@ class BTNotice(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, location_infos=None, message=None, stack_trace=None, type=None, level=None, parameter_id=None, changeable_child_field_indices=None, first_child_field=None, child_list_indices=None, try_node=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, location_infos=None, message=None, stack_trace=None, type=None, level=None, parameter_id=None, changeable_child_field_indices=None, first_child_field=None, child_list_indices=None, try_node=None, child_map_indices=None, atomic_child_indices=None, node_id=None, node_id_raw=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTNotice - a model defined in OpenAPI"""  # noqa: E501
 
         self._location_infos = None
@@ -86,9 +86,9 @@ class BTNotice(object):
         self._first_child_field = None
         self._child_list_indices = None
         self._try_node = None
-        self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
+        self._node_id = None
         self._node_id_raw = None
         self._type_id = None
         self._export_type_name = None
@@ -116,12 +116,12 @@ class BTNotice(object):
             self.child_list_indices = child_list_indices
         if try_node is not None:
             self.try_node = try_node
-        if node_id is not None:
-            self.node_id = node_id
         if child_map_indices is not None:
             self.child_map_indices = child_map_indices
         if atomic_child_indices is not None:
             self.atomic_child_indices = atomic_child_indices
+        if node_id is not None:
+            self.node_id = node_id
         if node_id_raw is not None:
             self.node_id_raw = node_id_raw
         if type_id is not None:
@@ -356,27 +356,6 @@ class BTNotice(object):
         self._try_node = try_node
 
     @property
-    def node_id(self):
-        """Gets the node_id of this BTNotice.  # noqa: E501
-
-
-        :return: The node_id of this BTNotice.  # noqa: E501
-        :rtype: str
-        """
-        return self._node_id
-
-    @node_id.setter
-    def node_id(self, node_id):
-        """Sets the node_id of this BTNotice.
-
-
-        :param node_id: The node_id of this BTNotice.  # noqa: E501
-        :type: str
-        """
-
-        self._node_id = node_id
-
-    @property
     def child_map_indices(self):
         """Gets the child_map_indices of this BTNotice.  # noqa: E501
 
@@ -417,6 +396,27 @@ class BTNotice(object):
         """
 
         self._atomic_child_indices = atomic_child_indices
+
+    @property
+    def node_id(self):
+        """Gets the node_id of this BTNotice.  # noqa: E501
+
+
+        :return: The node_id of this BTNotice.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_id
+
+    @node_id.setter
+    def node_id(self, node_id):
+        """Sets the node_id of this BTNotice.
+
+
+        :param node_id: The node_id of this BTNotice.  # noqa: E501
+        :type: str
+        """
+
+        self._node_id = node_id
 
     @property
     def node_id_raw(self):

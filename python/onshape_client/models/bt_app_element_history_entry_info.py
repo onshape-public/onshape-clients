@@ -33,30 +33,30 @@ class BTAppElementHistoryEntryInfo(object):
     """
     openapi_types = {
         'description': 'str',
-        'change_id': 'str',
-        'created_at': 'datetime'
+        'created_at': 'datetime',
+        'change_id': 'str'
     }
 
     attribute_map = {
         'description': 'description',
-        'change_id': 'changeId',
-        'created_at': 'createdAt'
+        'created_at': 'createdAt',
+        'change_id': 'changeId'
     }
 
-    def __init__(self, description=None, change_id=None, created_at=None):  # noqa: E501
+    def __init__(self, description=None, created_at=None, change_id=None):  # noqa: E501
         """BTAppElementHistoryEntryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
-        self._change_id = None
         self._created_at = None
+        self._change_id = None
         self.discriminator = None
 
         if description is not None:
             self.description = description
-        if change_id is not None:
-            self.change_id = change_id
         if created_at is not None:
             self.created_at = created_at
+        if change_id is not None:
+            self.change_id = change_id
 
     @property
     def description(self):
@@ -80,27 +80,6 @@ class BTAppElementHistoryEntryInfo(object):
         self._description = description
 
     @property
-    def change_id(self):
-        """Gets the change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
-
-
-        :return: The change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._change_id
-
-    @change_id.setter
-    def change_id(self, change_id):
-        """Sets the change_id of this BTAppElementHistoryEntryInfo.
-
-
-        :param change_id: The change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._change_id = change_id
-
-    @property
     def created_at(self):
         """Gets the created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTAppElementHistoryEntryInfo(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def change_id(self):
+        """Gets the change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
+
+
+        :return: The change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._change_id
+
+    @change_id.setter
+    def change_id(self, change_id):
+        """Sets the change_id of this BTAppElementHistoryEntryInfo.
+
+
+        :param change_id: The change_id of this BTAppElementHistoryEntryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._change_id = change_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

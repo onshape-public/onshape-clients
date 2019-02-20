@@ -36,8 +36,8 @@ class BTCompanyParams(object):
         'id': 'str',
         'address': 'BTAddressInfo',
         'description': 'str',
-        'domain_prefix': 'str',
-        'owner_id': 'str'
+        'owner_id': 'str',
+        'domain_prefix': 'str'
     }
 
     attribute_map = {
@@ -45,19 +45,19 @@ class BTCompanyParams(object):
         'id': 'id',
         'address': 'address',
         'description': 'description',
-        'domain_prefix': 'domainPrefix',
-        'owner_id': 'ownerId'
+        'owner_id': 'ownerId',
+        'domain_prefix': 'domainPrefix'
     }
 
-    def __init__(self, name=None, id=None, address=None, description=None, domain_prefix=None, owner_id=None):  # noqa: E501
+    def __init__(self, name=None, id=None, address=None, description=None, owner_id=None, domain_prefix=None):  # noqa: E501
         """BTCompanyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
         self._address = None
         self._description = None
-        self._domain_prefix = None
         self._owner_id = None
+        self._domain_prefix = None
         self.discriminator = None
 
         if name is not None:
@@ -68,10 +68,10 @@ class BTCompanyParams(object):
             self.address = address
         if description is not None:
             self.description = description
-        if domain_prefix is not None:
-            self.domain_prefix = domain_prefix
         if owner_id is not None:
             self.owner_id = owner_id
+        if domain_prefix is not None:
+            self.domain_prefix = domain_prefix
 
     @property
     def name(self):
@@ -158,27 +158,6 @@ class BTCompanyParams(object):
         self._description = description
 
     @property
-    def domain_prefix(self):
-        """Gets the domain_prefix of this BTCompanyParams.  # noqa: E501
-
-
-        :return: The domain_prefix of this BTCompanyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_prefix
-
-    @domain_prefix.setter
-    def domain_prefix(self, domain_prefix):
-        """Sets the domain_prefix of this BTCompanyParams.
-
-
-        :param domain_prefix: The domain_prefix of this BTCompanyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._domain_prefix = domain_prefix
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this BTCompanyParams.  # noqa: E501
 
@@ -198,6 +177,27 @@ class BTCompanyParams(object):
         """
 
         self._owner_id = owner_id
+
+    @property
+    def domain_prefix(self):
+        """Gets the domain_prefix of this BTCompanyParams.  # noqa: E501
+
+
+        :return: The domain_prefix of this BTCompanyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_prefix
+
+    @domain_prefix.setter
+    def domain_prefix(self, domain_prefix):
+        """Sets the domain_prefix of this BTCompanyParams.
+
+
+        :param domain_prefix: The domain_prefix of this BTCompanyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._domain_prefix = domain_prefix
 
     def to_dict(self):
         """Returns the model properties as a dict"""

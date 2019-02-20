@@ -32,36 +32,57 @@ class BTViewDataInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'view_matrix': 'list[float]',
         'is_perspective': 'bool',
-        'camera_viewport': 'list[float]',
         'angle': 'float',
-        'view_matrix': 'list[float]'
+        'camera_viewport': 'list[float]'
     }
 
     attribute_map = {
+        'view_matrix': 'viewMatrix',
         'is_perspective': 'isPerspective',
-        'camera_viewport': 'cameraViewport',
         'angle': 'angle',
-        'view_matrix': 'viewMatrix'
+        'camera_viewport': 'cameraViewport'
     }
 
-    def __init__(self, is_perspective=None, camera_viewport=None, angle=None, view_matrix=None):  # noqa: E501
+    def __init__(self, view_matrix=None, is_perspective=None, angle=None, camera_viewport=None):  # noqa: E501
         """BTViewDataInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_perspective = None
-        self._camera_viewport = None
-        self._angle = None
         self._view_matrix = None
+        self._is_perspective = None
+        self._angle = None
+        self._camera_viewport = None
         self.discriminator = None
 
-        if is_perspective is not None:
-            self.is_perspective = is_perspective
-        if camera_viewport is not None:
-            self.camera_viewport = camera_viewport
-        if angle is not None:
-            self.angle = angle
         if view_matrix is not None:
             self.view_matrix = view_matrix
+        if is_perspective is not None:
+            self.is_perspective = is_perspective
+        if angle is not None:
+            self.angle = angle
+        if camera_viewport is not None:
+            self.camera_viewport = camera_viewport
+
+    @property
+    def view_matrix(self):
+        """Gets the view_matrix of this BTViewDataInfo.  # noqa: E501
+
+
+        :return: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._view_matrix
+
+    @view_matrix.setter
+    def view_matrix(self, view_matrix):
+        """Sets the view_matrix of this BTViewDataInfo.
+
+
+        :param view_matrix: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._view_matrix = view_matrix
 
     @property
     def is_perspective(self):
@@ -85,27 +106,6 @@ class BTViewDataInfo(object):
         self._is_perspective = is_perspective
 
     @property
-    def camera_viewport(self):
-        """Gets the camera_viewport of this BTViewDataInfo.  # noqa: E501
-
-
-        :return: The camera_viewport of this BTViewDataInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._camera_viewport
-
-    @camera_viewport.setter
-    def camera_viewport(self, camera_viewport):
-        """Sets the camera_viewport of this BTViewDataInfo.
-
-
-        :param camera_viewport: The camera_viewport of this BTViewDataInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._camera_viewport = camera_viewport
-
-    @property
     def angle(self):
         """Gets the angle of this BTViewDataInfo.  # noqa: E501
 
@@ -127,25 +127,25 @@ class BTViewDataInfo(object):
         self._angle = angle
 
     @property
-    def view_matrix(self):
-        """Gets the view_matrix of this BTViewDataInfo.  # noqa: E501
+    def camera_viewport(self):
+        """Gets the camera_viewport of this BTViewDataInfo.  # noqa: E501
 
 
-        :return: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :return: The camera_viewport of this BTViewDataInfo.  # noqa: E501
         :rtype: list[float]
         """
-        return self._view_matrix
+        return self._camera_viewport
 
-    @view_matrix.setter
-    def view_matrix(self, view_matrix):
-        """Sets the view_matrix of this BTViewDataInfo.
+    @camera_viewport.setter
+    def camera_viewport(self, camera_viewport):
+        """Sets the camera_viewport of this BTViewDataInfo.
 
 
-        :param view_matrix: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :param camera_viewport: The camera_viewport of this BTViewDataInfo.  # noqa: E501
         :type: list[float]
         """
 
-        self._view_matrix = view_matrix
+        self._camera_viewport = camera_viewport
 
     def to_dict(self):
         """Returns the model properties as a dict"""

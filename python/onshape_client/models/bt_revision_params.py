@@ -33,11 +33,11 @@ class BTRevisionParams(object):
     """
     openapi_types = {
         'revision': 'str',
-        'element_type': 'int',
         'version_id': 'str',
         'document_id': 'str',
         'company_id': 'str',
         'element_id': 'str',
+        'element_type': 'int',
         'part_number': 'str',
         'insertable_id': 'str',
         'release_id': 'str'
@@ -45,25 +45,25 @@ class BTRevisionParams(object):
 
     attribute_map = {
         'revision': 'revision',
-        'element_type': 'elementType',
         'version_id': 'versionId',
         'document_id': 'documentId',
         'company_id': 'companyId',
         'element_id': 'elementId',
+        'element_type': 'elementType',
         'part_number': 'partNumber',
         'insertable_id': 'insertableId',
         'release_id': 'releaseId'
     }
 
-    def __init__(self, revision=None, element_type=None, version_id=None, document_id=None, company_id=None, element_id=None, part_number=None, insertable_id=None, release_id=None):  # noqa: E501
+    def __init__(self, revision=None, version_id=None, document_id=None, company_id=None, element_id=None, element_type=None, part_number=None, insertable_id=None, release_id=None):  # noqa: E501
         """BTRevisionParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._revision = None
-        self._element_type = None
         self._version_id = None
         self._document_id = None
         self._company_id = None
         self._element_id = None
+        self._element_type = None
         self._part_number = None
         self._insertable_id = None
         self._release_id = None
@@ -71,8 +71,6 @@ class BTRevisionParams(object):
 
         if revision is not None:
             self.revision = revision
-        if element_type is not None:
-            self.element_type = element_type
         if version_id is not None:
             self.version_id = version_id
         if document_id is not None:
@@ -81,6 +79,8 @@ class BTRevisionParams(object):
             self.company_id = company_id
         if element_id is not None:
             self.element_id = element_id
+        if element_type is not None:
+            self.element_type = element_type
         if part_number is not None:
             self.part_number = part_number
         if insertable_id is not None:
@@ -108,27 +108,6 @@ class BTRevisionParams(object):
         """
 
         self._revision = revision
-
-    @property
-    def element_type(self):
-        """Gets the element_type of this BTRevisionParams.  # noqa: E501
-
-
-        :return: The element_type of this BTRevisionParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._element_type
-
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTRevisionParams.
-
-
-        :param element_type: The element_type of this BTRevisionParams.  # noqa: E501
-        :type: int
-        """
-
-        self._element_type = element_type
 
     @property
     def version_id(self):
@@ -213,6 +192,27 @@ class BTRevisionParams(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def element_type(self):
+        """Gets the element_type of this BTRevisionParams.  # noqa: E501
+
+
+        :return: The element_type of this BTRevisionParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTRevisionParams.
+
+
+        :param element_type: The element_type of this BTRevisionParams.  # noqa: E501
+        :type: int
+        """
+
+        self._element_type = element_type
 
     @property
     def part_number(self):

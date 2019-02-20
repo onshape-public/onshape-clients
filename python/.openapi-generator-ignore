@@ -24,6 +24,8 @@
 
 onshape_client/rest.py
 onshape_client/configuration.py
+onshape_client/apikey_headers.py
 README.md
 test/*
+example_programs/*
 tox.ini

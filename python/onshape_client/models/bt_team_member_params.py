@@ -32,31 +32,52 @@ class BTTeamMemberParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'team_id': 'str',
         'email': 'str',
-        'admin': 'bool',
-        'team_id': 'str'
+        'admin': 'bool'
     }
 
     attribute_map = {
+        'team_id': 'teamId',
         'email': 'email',
-        'admin': 'admin',
-        'team_id': 'teamId'
+        'admin': 'admin'
     }
 
-    def __init__(self, email=None, admin=None, team_id=None):  # noqa: E501
+    def __init__(self, team_id=None, email=None, admin=None):  # noqa: E501
         """BTTeamMemberParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._team_id = None
         self._email = None
         self._admin = None
-        self._team_id = None
         self.discriminator = None
 
+        if team_id is not None:
+            self.team_id = team_id
         if email is not None:
             self.email = email
         if admin is not None:
             self.admin = admin
-        if team_id is not None:
-            self.team_id = team_id
+
+    @property
+    def team_id(self):
+        """Gets the team_id of this BTTeamMemberParams.  # noqa: E501
+
+
+        :return: The team_id of this BTTeamMemberParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._team_id
+
+    @team_id.setter
+    def team_id(self, team_id):
+        """Sets the team_id of this BTTeamMemberParams.
+
+
+        :param team_id: The team_id of this BTTeamMemberParams.  # noqa: E501
+        :type: str
+        """
+
+        self._team_id = team_id
 
     @property
     def email(self):
@@ -99,27 +120,6 @@ class BTTeamMemberParams(object):
         """
 
         self._admin = admin
-
-    @property
-    def team_id(self):
-        """Gets the team_id of this BTTeamMemberParams.  # noqa: E501
-
-
-        :return: The team_id of this BTTeamMemberParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._team_id
-
-    @team_id.setter
-    def team_id(self, team_id):
-        """Sets the team_id of this BTTeamMemberParams.
-
-
-        :param team_id: The team_id of this BTTeamMemberParams.  # noqa: E501
-        :type: str
-        """
-
-        self._team_id = team_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

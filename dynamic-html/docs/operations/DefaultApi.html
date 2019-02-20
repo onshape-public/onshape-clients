@@ -1,0 +1,1555 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  <h2><a name="addFeature1"></a>addFeature1</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTFeatureDefinitionResponse"><a href="">BTFeatureDefinitionResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">String(string)</span>
+      
+      <p class="param-description">feature The serialized feature definition</p>
+	  </li>
+  </ul>
+  <h2><a name="createPartStudio"></a>createPartStudio</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/w/{wid}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTDocumentElementInfo"><a href="">BTDocumentElementInfo</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">BTModelElementParams</span>
+      <span class="param-type">BTModelElementParams(BTModelElementParams)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="exportPS1"></a>exportPS1</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/parasolid</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">partIds</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">version</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Parasolid version</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">includeExportIds</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether topolgy ids should be exported as parasolid attributes</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="exportStl1"></a>exportStl1</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/stl</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">partIds</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">mode</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Type of file: text, binary</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">grouping</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether parts should be exported as a group or individually in a .zip file</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">scale</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Scale for measurements.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">units</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of base unit (meter, centimeter, millimeter, inch, foot, or yard)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">angleTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Angle tolerance (in radians). This specifies the limit on the sum of the angular deviations of a tessellation chord from the tangent vectors at two chord endpoints. The specified value must be less than PI/2. This parameter currently has a default value chosen based on the complexity of the parts being tessellated.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">chordTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Chord tolerance (in meters). This specifies the limit on the maximum deviation of a tessellation chord from the true surface/edge. This parameter currently has a default value chosen based on the size and complexity of the parts being tessellated.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">maxFacetWidth</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Max facet width. This specifies the limit on the size of any side of a tessellation facet.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">minFacetWidth</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Max facet width. This specifies the limit on the size of any side of a tessellation facet.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getBodyDetails2"></a>getBodyDetails2</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTExportModelBodiesResponse"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getBoundingBoxes2"></a>getBoundingBoxes2</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTBoundingBox"><a href="">BTBoundingBox</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">includeHidden</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether or not to include bounding boxes for hidden parts.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">includeWireBodies</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether to include wire bodies in the bounding box.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getEdges2"></a>getEdges2</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatededges</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTExportTessellatedEdgesResponse"><a href="">BTExportTessellatedEdgesResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">angleTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">chordTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">partId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">edgeId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="getFaces2"></a>getFaces2</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatedfaces</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTExportTessellatedFacesResponse"><a href="">BTExportTessellatedFacesResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">angleTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Angle tolerance (in radians). This specifies the limit on the sum of the angular deviations of a tessellation chord from the tangent vectors at two chord endpoints. The specified value must be less than PI/2. This parameter currently has a default value chosen based on the complexity of the parts being tessellated.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">chordTolerance</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Chord tolerance (in meters). This specifies the limit on the maximum deviation of a tessellation chord from the true surface/edge. This parameter currently has a default value chosen based on the size and complexity of the parts being tessellated.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">maxFacetWidth</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Max facet width. This specifies the limit on the size of any side of a tessellation facet.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputVertexNormals</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">If true, output vertex normals corresponding to surface normals at facet vertex points.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputFacetNormals</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Output facet normals.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputTextureCoordinates</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Output texture coordinates.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputIndexTable</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Output index table.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">partId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description">IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">faceId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description">IDs of the faces to tessellate (repeat query param to add more than one, i.e. faceId&#x3D;JHK&amp;faceId&#x3D;JHD)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputErrorFaces</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether or not to output faces that cause an error</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getFeatures"></a>getFeatures</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTFeatureListResponse"><a href="">BTFeatureListResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">featureId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description">ID of a feature; repeat query param to add more than one</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">noSketchGeometry</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether or not to output simple sketch info without geometry</p>
+	  </li>
+  </ul>
+  <h2><a name="getMassProperties"></a>getMassProperties</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTMassPropResponse"><a href="">BTMassPropResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">partId</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description">IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">massAsGroup</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">If true, specified parts will be evaluated as a single object instead of individually</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getNamedViews2"></a>getNamedViews2</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/e/{eid}/namedViews</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTNamedViewsInfo"><a href="">BTNamedViewsInfo</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">skipPerspective</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether views with a perspective projection should be omitted.</p>
+	  </li>
+  </ul>
+  <h2><a name="getOpenApi"></a>getOpenApi</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/openapi</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="OpenAPI"><a href="">OpenAPI</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">fileType</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The type of file to return. Defaults to JSON.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">excludedTags</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">If an operation contains an excluded tag, it is not returned from this endpoint.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">includedTags</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Return at most all the operations with tags included in includedTags. If not given, this will default to all tags.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">documentationStatus</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description">Only return endpoints that have the specified document status. Default is to return all the keys the user should have access to.</p>
+	  </li>
+  </ul>
+  <h2><a name="getShadedViews1"></a>getShadedViews1</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTShadedRenderDocumentResponse"><a href="">BTShadedRenderDocumentResponse</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">viewMatrix</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">12-number view matrix (comma-separated), or one of the following named views: top, bottom, front, back, left, right The 12 entries in the view matrix form three rows and four columns, which is a linear transformation applied to the model itself. The matrix&#39;s first three columns maps the coordinate axes of the model to the coordinate axes of the view, and the fourth column translates the origin (in meters). The view coordinates have x pointing right, y pointing up, and z pointing towards the viewer, while a front view of the model has x pointing right, y pointing away from the viewer, and z pointing up. For example, the identity matrix viewMatrix&#x3D;1,0,0,0,0,1,0,0,0,0,1,0 corresponds to the top view, and viewMatrix&#x3D;0.612,0.612,0,0,-0.354,0.354,0.707,0,0.707,-0.707,0.707,0 corresponds (approximately) to the isometric view. The first three columns of the view matrix should be orthonormal and have a positive determinant.  If this is not the case, view behavior may be undefined.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputHeight</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Output image height (in pixels)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outputWidth</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Output image width (in pixels)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">pixelSize</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description">Height and width represented by each pixel (in meters). If the value is 0, the display will be sized to fit the output image dimensions.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">edges</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The treatment to be applied to edges in the display. Options are show: show visible edges, hide: hide visible edges.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">showAllParts</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether or not all parts should be shown in the element, regardless of user setting. If false, the visibility setting made by the user will be reflected in the image. If true, all parts will be shown.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">includeSurfaces</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Whether or not surfaces should be shown in the element. It is applicable only when showAllParts is true. If false, surfaces will be excluded. If true, all surfaces will be shown.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">useAntiAliasing</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">If true, an anti-aliasing factor will be used to smooth model boundaries in the final image result. If false, the image will be rasterized at the given resolution. Setting to true can have negative performance implications with respect to rendering time and memory usage. If a high-resolution image is requested and anti-aliasing is turned on, the server may not be able to fulfill the request.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">configuration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Configuration string.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">linkDocumentId</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.</p>
+	  </li>
+  </ul>
+  <h2><a name="getTranslatorFormats4"></a>getTranslatorFormats4</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/w/{wid}/e/{eid}/translationformats</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTModelFormatInfo"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">checkContent</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">    Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format.</p>
+	  </li>
+  </ul>
+  <h2><a name="translateFormat5"></a>translateFormat5</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTTranslationRequestInfo"><a href="">BTTranslationRequestInfo</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wv</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v corresponding to whether a workspace or version was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w) or Version (v).</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">BTTranslateFormatParams</span>
+      <span class="param-type">BTTranslateFormatParams(BTTranslateFormatParams)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="translateIds1"></a>translateIds1</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://localhost/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="BTIdTranslationInfo"><a href="">BTIdTranslationInfo</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">did</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Document ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">One of w or v or m corresponding to whether a workspace or version or microversion was entered.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">wvmid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Workspace (w), Version (v) or Microversion (m) ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">eid</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Element ID.</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">BTIdTranslationParams</span>
+      <span class="param-type">BTIdTranslationParams(BTIdTranslationParams)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+</div>

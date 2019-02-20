@@ -33,30 +33,30 @@ class BTPartIdParams(object):
     """
     openapi_types = {
         'ids': 'list[str]',
-        'link_document_id': 'str',
-        'configuration': 'str'
+        'configuration': 'str',
+        'link_document_id': 'str'
     }
 
     attribute_map = {
         'ids': 'ids',
-        'link_document_id': 'linkDocumentId',
-        'configuration': 'configuration'
+        'configuration': 'configuration',
+        'link_document_id': 'linkDocumentId'
     }
 
-    def __init__(self, ids=None, link_document_id=None, configuration=None):  # noqa: E501
+    def __init__(self, ids=None, configuration=None, link_document_id=None):  # noqa: E501
         """BTPartIdParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._ids = None
-        self._link_document_id = None
         self._configuration = None
+        self._link_document_id = None
         self.discriminator = None
 
         if ids is not None:
             self.ids = ids
-        if link_document_id is not None:
-            self.link_document_id = link_document_id
         if configuration is not None:
             self.configuration = configuration
+        if link_document_id is not None:
+            self.link_document_id = link_document_id
 
     @property
     def ids(self):
@@ -80,27 +80,6 @@ class BTPartIdParams(object):
         self._ids = ids
 
     @property
-    def link_document_id(self):
-        """Gets the link_document_id of this BTPartIdParams.  # noqa: E501
-
-
-        :return: The link_document_id of this BTPartIdParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._link_document_id
-
-    @link_document_id.setter
-    def link_document_id(self, link_document_id):
-        """Sets the link_document_id of this BTPartIdParams.
-
-
-        :param link_document_id: The link_document_id of this BTPartIdParams.  # noqa: E501
-        :type: str
-        """
-
-        self._link_document_id = link_document_id
-
-    @property
     def configuration(self):
         """Gets the configuration of this BTPartIdParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTPartIdParams(object):
         """
 
         self._configuration = configuration
+
+    @property
+    def link_document_id(self):
+        """Gets the link_document_id of this BTPartIdParams.  # noqa: E501
+
+
+        :return: The link_document_id of this BTPartIdParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._link_document_id
+
+    @link_document_id.setter
+    def link_document_id(self, link_document_id):
+        """Sets the link_document_id of this BTPartIdParams.
+
+
+        :param link_document_id: The link_document_id of this BTPartIdParams.  # noqa: E501
+        :type: str
+        """
+
+        self._link_document_id = link_document_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

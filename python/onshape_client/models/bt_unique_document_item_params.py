@@ -33,48 +33,44 @@ class BTUniqueDocumentItemParams(object):
     """
     openapi_types = {
         'revision': 'str',
-        'part_id': 'str',
-        'element_type': 'str',
         'version_id': 'str',
         'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
+        'element_type': 'str',
         'part_number': 'str',
+        'part_id': 'str',
         'api_configuration': 'str'
     }
 
     attribute_map = {
         'revision': 'revision',
-        'part_id': 'partId',
-        'element_type': 'elementType',
         'version_id': 'versionId',
         'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
+        'element_type': 'elementType',
         'part_number': 'partNumber',
+        'part_id': 'partId',
         'api_configuration': 'apiConfiguration'
     }
 
-    def __init__(self, revision=None, part_id=None, element_type=None, version_id=None, document_id=None, workspace_id=None, element_id=None, part_number=None, api_configuration=None):  # noqa: E501
+    def __init__(self, revision=None, version_id=None, document_id=None, workspace_id=None, element_id=None, element_type=None, part_number=None, part_id=None, api_configuration=None):  # noqa: E501
         """BTUniqueDocumentItemParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._revision = None
-        self._part_id = None
-        self._element_type = None
         self._version_id = None
         self._document_id = None
         self._workspace_id = None
         self._element_id = None
+        self._element_type = None
         self._part_number = None
+        self._part_id = None
         self._api_configuration = None
         self.discriminator = None
 
         if revision is not None:
             self.revision = revision
-        if part_id is not None:
-            self.part_id = part_id
-        if element_type is not None:
-            self.element_type = element_type
         if version_id is not None:
             self.version_id = version_id
         if document_id is not None:
@@ -83,8 +79,12 @@ class BTUniqueDocumentItemParams(object):
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
+        if element_type is not None:
+            self.element_type = element_type
         if part_number is not None:
             self.part_number = part_number
+        if part_id is not None:
+            self.part_id = part_id
         if api_configuration is not None:
             self.api_configuration = api_configuration
 
@@ -108,48 +108,6 @@ class BTUniqueDocumentItemParams(object):
         """
 
         self._revision = revision
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTUniqueDocumentItemParams.  # noqa: E501
-
-
-        :return: The part_id of this BTUniqueDocumentItemParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTUniqueDocumentItemParams.
-
-
-        :param part_id: The part_id of this BTUniqueDocumentItemParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
-    def element_type(self):
-        """Gets the element_type of this BTUniqueDocumentItemParams.  # noqa: E501
-
-
-        :return: The element_type of this BTUniqueDocumentItemParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_type
-
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTUniqueDocumentItemParams.
-
-
-        :param element_type: The element_type of this BTUniqueDocumentItemParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_type = element_type
 
     @property
     def version_id(self):
@@ -236,6 +194,27 @@ class BTUniqueDocumentItemParams(object):
         self._element_id = element_id
 
     @property
+    def element_type(self):
+        """Gets the element_type of this BTUniqueDocumentItemParams.  # noqa: E501
+
+
+        :return: The element_type of this BTUniqueDocumentItemParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTUniqueDocumentItemParams.
+
+
+        :param element_type: The element_type of this BTUniqueDocumentItemParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_type = element_type
+
+    @property
     def part_number(self):
         """Gets the part_number of this BTUniqueDocumentItemParams.  # noqa: E501
 
@@ -255,6 +234,27 @@ class BTUniqueDocumentItemParams(object):
         """
 
         self._part_number = part_number
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTUniqueDocumentItemParams.  # noqa: E501
+
+
+        :return: The part_id of this BTUniqueDocumentItemParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTUniqueDocumentItemParams.
+
+
+        :param part_id: The part_id of this BTUniqueDocumentItemParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
 
     @property
     def api_configuration(self):

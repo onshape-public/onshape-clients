@@ -33,10 +33,10 @@ class BTFriendInfo(object):
     """
     openapi_types = {
         'image_url': 'str',
-        'token': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
+        'token': 'str',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -45,24 +45,24 @@ class BTFriendInfo(object):
 
     attribute_map = {
         'image_url': 'imageUrl',
-        'token': 'token',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
+        'token': 'token',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, image_url=None, token=None, first_name=None, last_name=None, email=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, image_url=None, first_name=None, last_name=None, email=None, token=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTFriendInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._image_url = None
-        self._token = None
         self._first_name = None
         self._last_name = None
         self._email = None
+        self._token = None
         self._name = None
         self._id = None
         self._href = None
@@ -71,14 +71,14 @@ class BTFriendInfo(object):
 
         if image_url is not None:
             self.image_url = image_url
-        if token is not None:
-            self.token = token
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if email is not None:
             self.email = email
+        if token is not None:
+            self.token = token
         if name is not None:
             self.name = name
         if id is not None:
@@ -108,27 +108,6 @@ class BTFriendInfo(object):
         """
 
         self._image_url = image_url
-
-    @property
-    def token(self):
-        """Gets the token of this BTFriendInfo.  # noqa: E501
-
-
-        :return: The token of this BTFriendInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._token
-
-    @token.setter
-    def token(self, token):
-        """Sets the token of this BTFriendInfo.
-
-
-        :param token: The token of this BTFriendInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._token = token
 
     @property
     def first_name(self):
@@ -192,6 +171,27 @@ class BTFriendInfo(object):
         """
 
         self._email = email
+
+    @property
+    def token(self):
+        """Gets the token of this BTFriendInfo.  # noqa: E501
+
+
+        :return: The token of this BTFriendInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._token
+
+    @token.setter
+    def token(self, token):
+        """Sets the token of this BTFriendInfo.
+
+
+        :param token: The token of this BTFriendInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._token = token
 
     @property
     def name(self):

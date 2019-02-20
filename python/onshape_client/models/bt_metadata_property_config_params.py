@@ -33,9 +33,6 @@ class BTMetadataPropertyConfigParams(object):
     """
     openapi_types = {
         'default_value': 'str',
-        'pattern': 'str',
-        'display_name': 'str',
-        'required': 'bool',
         'publish_state': 'int',
         'schema_id': 'str',
         'property_id': 'str',
@@ -48,14 +45,14 @@ class BTMetadataPropertyConfigParams(object):
         'min_count': 'int',
         'max_count': 'int',
         'multiline': 'bool',
-        'enum_values': 'list[dict(str, str)]'
+        'enum_values': 'list[dict(str, str)]',
+        'display_name': 'str',
+        'required': 'bool',
+        'pattern': 'str'
     }
 
     attribute_map = {
         'default_value': 'defaultValue',
-        'pattern': 'pattern',
-        'display_name': 'displayName',
-        'required': 'required',
         'publish_state': 'publishState',
         'schema_id': 'schemaId',
         'property_id': 'propertyId',
@@ -68,16 +65,16 @@ class BTMetadataPropertyConfigParams(object):
         'min_count': 'minCount',
         'max_count': 'maxCount',
         'multiline': 'multiline',
-        'enum_values': 'enumValues'
+        'enum_values': 'enumValues',
+        'display_name': 'displayName',
+        'required': 'required',
+        'pattern': 'pattern'
     }
 
-    def __init__(self, default_value=None, pattern=None, display_name=None, required=None, publish_state=None, schema_id=None, property_id=None, min_length=None, max_length=None, min_value=None, max_value=None, min_date=None, max_date=None, min_count=None, max_count=None, multiline=None, enum_values=None):  # noqa: E501
+    def __init__(self, default_value=None, publish_state=None, schema_id=None, property_id=None, min_length=None, max_length=None, min_value=None, max_value=None, min_date=None, max_date=None, min_count=None, max_count=None, multiline=None, enum_values=None, display_name=None, required=None, pattern=None):  # noqa: E501
         """BTMetadataPropertyConfigParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._default_value = None
-        self._pattern = None
-        self._display_name = None
-        self._required = None
         self._publish_state = None
         self._schema_id = None
         self._property_id = None
@@ -91,16 +88,13 @@ class BTMetadataPropertyConfigParams(object):
         self._max_count = None
         self._multiline = None
         self._enum_values = None
+        self._display_name = None
+        self._required = None
+        self._pattern = None
         self.discriminator = None
 
         if default_value is not None:
             self.default_value = default_value
-        if pattern is not None:
-            self.pattern = pattern
-        if display_name is not None:
-            self.display_name = display_name
-        if required is not None:
-            self.required = required
         if publish_state is not None:
             self.publish_state = publish_state
         if schema_id is not None:
@@ -127,6 +121,12 @@ class BTMetadataPropertyConfigParams(object):
             self.multiline = multiline
         if enum_values is not None:
             self.enum_values = enum_values
+        if display_name is not None:
+            self.display_name = display_name
+        if required is not None:
+            self.required = required
+        if pattern is not None:
+            self.pattern = pattern
 
     @property
     def default_value(self):
@@ -148,69 +148,6 @@ class BTMetadataPropertyConfigParams(object):
         """
 
         self._default_value = default_value
-
-    @property
-    def pattern(self):
-        """Gets the pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
-
-
-        :return: The pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._pattern
-
-    @pattern.setter
-    def pattern(self, pattern):
-        """Sets the pattern of this BTMetadataPropertyConfigParams.
-
-
-        :param pattern: The pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :type: str
-        """
-
-        self._pattern = pattern
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
-
-
-        :return: The display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTMetadataPropertyConfigParams.
-
-
-        :param display_name: The display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
-    def required(self):
-        """Gets the required of this BTMetadataPropertyConfigParams.  # noqa: E501
-
-
-        :return: The required of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._required
-
-    @required.setter
-    def required(self, required):
-        """Sets the required of this BTMetadataPropertyConfigParams.
-
-
-        :param required: The required of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._required = required
 
     @property
     def publish_state(self):
@@ -484,6 +421,69 @@ class BTMetadataPropertyConfigParams(object):
         """
 
         self._enum_values = enum_values
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
+
+
+        :return: The display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTMetadataPropertyConfigParams.
+
+
+        :param display_name: The display_name of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
+
+    @property
+    def required(self):
+        """Gets the required of this BTMetadataPropertyConfigParams.  # noqa: E501
+
+
+        :return: The required of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._required
+
+    @required.setter
+    def required(self, required):
+        """Sets the required of this BTMetadataPropertyConfigParams.
+
+
+        :param required: The required of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._required = required
+
+    @property
+    def pattern(self):
+        """Gets the pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
+
+
+        :return: The pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._pattern
+
+    @pattern.setter
+    def pattern(self, pattern):
+        """Sets the pattern of this BTMetadataPropertyConfigParams.
+
+
+        :param pattern: The pattern of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :type: str
+        """
+
+        self._pattern = pattern
 
     def to_dict(self):
         """Returns the model properties as a dict"""

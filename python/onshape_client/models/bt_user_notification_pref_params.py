@@ -34,34 +34,34 @@ class BTUserNotificationPrefParams(object):
     openapi_types = {
         'type': 'int',
         'level': 'int',
-        'object_type': 'int',
-        'object_id': 'str'
+        'object_id': 'str',
+        'object_type': 'int'
     }
 
     attribute_map = {
         'type': 'type',
         'level': 'level',
-        'object_type': 'objectType',
-        'object_id': 'objectId'
+        'object_id': 'objectId',
+        'object_type': 'objectType'
     }
 
-    def __init__(self, type=None, level=None, object_type=None, object_id=None):  # noqa: E501
+    def __init__(self, type=None, level=None, object_id=None, object_type=None):  # noqa: E501
         """BTUserNotificationPrefParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
         self._level = None
-        self._object_type = None
         self._object_id = None
+        self._object_type = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
         if level is not None:
             self.level = level
-        if object_type is not None:
-            self.object_type = object_type
         if object_id is not None:
             self.object_id = object_id
+        if object_type is not None:
+            self.object_type = object_type
 
     @property
     def type(self):
@@ -106,27 +106,6 @@ class BTUserNotificationPrefParams(object):
         self._level = level
 
     @property
-    def object_type(self):
-        """Gets the object_type of this BTUserNotificationPrefParams.  # noqa: E501
-
-
-        :return: The object_type of this BTUserNotificationPrefParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._object_type
-
-    @object_type.setter
-    def object_type(self, object_type):
-        """Sets the object_type of this BTUserNotificationPrefParams.
-
-
-        :param object_type: The object_type of this BTUserNotificationPrefParams.  # noqa: E501
-        :type: int
-        """
-
-        self._object_type = object_type
-
-    @property
     def object_id(self):
         """Gets the object_id of this BTUserNotificationPrefParams.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTUserNotificationPrefParams(object):
         """
 
         self._object_id = object_id
+
+    @property
+    def object_type(self):
+        """Gets the object_type of this BTUserNotificationPrefParams.  # noqa: E501
+
+
+        :return: The object_type of this BTUserNotificationPrefParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._object_type
+
+    @object_type.setter
+    def object_type(self, object_type):
+        """Sets the object_type of this BTUserNotificationPrefParams.
+
+
+        :param object_type: The object_type of this BTUserNotificationPrefParams.  # noqa: E501
+        :type: int
+        """
+
+        self._object_type = object_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

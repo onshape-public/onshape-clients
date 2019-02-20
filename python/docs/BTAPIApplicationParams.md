@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**internal_grant_on_demand** | **bool** |  | [optional] 
+**client_id** | **str** |  | [optional] 
+**scope_names** | **list[str]** |  | [optional] 
 **base_href** | **str** |  | [optional] 
 **supports_collaboration** | **bool** |  | [optional] 
 **developer_id** | **str** |  | [optional] 
@@ -16,11 +19,8 @@ Name | Type | Description | Notes
 **supports_merge** | **bool** |  | [optional] 
 **admin_team_id** | **str** |  | [optional] 
 **hidden_from_plus_menu** | **bool** |  | [optional] 
-**developer_email** | **str** |  | [optional] 
-**internal_grant_on_demand** | **bool** |  | [optional] 
-**client_id** | **str** |  | [optional] 
-**scope_names** | **list[str]** |  | [optional] 
 **store_entry_is_public** | **bool** |  | [optional] 
+**developer_email** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

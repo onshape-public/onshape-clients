@@ -33,9 +33,6 @@ class ContentItem(object):
     """
     openapi_types = {
         'link': 'str',
-        'position': 'str',
-        'width': 'int',
-        'height': 'int',
         'title': 'str',
         'content_id': 'str',
         'item_title': 'str',
@@ -45,14 +42,14 @@ class ContentItem(object):
         'pause_points': 'list[float]',
         'anchor': 'str',
         'vertical_offset': 'int',
-        'horizontal_offset': 'int'
+        'horizontal_offset': 'int',
+        'width': 'int',
+        'height': 'int',
+        'position': 'str'
     }
 
     attribute_map = {
         'link': 'link',
-        'position': 'position',
-        'width': 'width',
-        'height': 'height',
         'title': 'title',
         'content_id': 'contentId',
         'item_title': 'itemTitle',
@@ -62,16 +59,16 @@ class ContentItem(object):
         'pause_points': 'pausePoints',
         'anchor': 'anchor',
         'vertical_offset': 'verticalOffset',
-        'horizontal_offset': 'horizontalOffset'
+        'horizontal_offset': 'horizontalOffset',
+        'width': 'width',
+        'height': 'height',
+        'position': 'position'
     }
 
-    def __init__(self, link=None, position=None, width=None, height=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None):  # noqa: E501
+    def __init__(self, link=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, width=None, height=None, position=None):  # noqa: E501
         """ContentItem - a model defined in OpenAPI"""  # noqa: E501
 
         self._link = None
-        self._position = None
-        self._width = None
-        self._height = None
         self._title = None
         self._content_id = None
         self._item_title = None
@@ -82,16 +79,13 @@ class ContentItem(object):
         self._anchor = None
         self._vertical_offset = None
         self._horizontal_offset = None
+        self._width = None
+        self._height = None
+        self._position = None
         self.discriminator = None
 
         if link is not None:
             self.link = link
-        if position is not None:
-            self.position = position
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
         if title is not None:
             self.title = title
         if content_id is not None:
@@ -112,6 +106,12 @@ class ContentItem(object):
             self.vertical_offset = vertical_offset
         if horizontal_offset is not None:
             self.horizontal_offset = horizontal_offset
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if position is not None:
+            self.position = position
 
     @property
     def link(self):
@@ -133,69 +133,6 @@ class ContentItem(object):
         """
 
         self._link = link
-
-    @property
-    def position(self):
-        """Gets the position of this ContentItem.  # noqa: E501
-
-
-        :return: The position of this ContentItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._position
-
-    @position.setter
-    def position(self, position):
-        """Sets the position of this ContentItem.
-
-
-        :param position: The position of this ContentItem.  # noqa: E501
-        :type: str
-        """
-
-        self._position = position
-
-    @property
-    def width(self):
-        """Gets the width of this ContentItem.  # noqa: E501
-
-
-        :return: The width of this ContentItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._width
-
-    @width.setter
-    def width(self, width):
-        """Sets the width of this ContentItem.
-
-
-        :param width: The width of this ContentItem.  # noqa: E501
-        :type: int
-        """
-
-        self._width = width
-
-    @property
-    def height(self):
-        """Gets the height of this ContentItem.  # noqa: E501
-
-
-        :return: The height of this ContentItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._height
-
-    @height.setter
-    def height(self, height):
-        """Sets the height of this ContentItem.
-
-
-        :param height: The height of this ContentItem.  # noqa: E501
-        :type: int
-        """
-
-        self._height = height
 
     @property
     def title(self):
@@ -406,6 +343,69 @@ class ContentItem(object):
         """
 
         self._horizontal_offset = horizontal_offset
+
+    @property
+    def width(self):
+        """Gets the width of this ContentItem.  # noqa: E501
+
+
+        :return: The width of this ContentItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        """Sets the width of this ContentItem.
+
+
+        :param width: The width of this ContentItem.  # noqa: E501
+        :type: int
+        """
+
+        self._width = width
+
+    @property
+    def height(self):
+        """Gets the height of this ContentItem.  # noqa: E501
+
+
+        :return: The height of this ContentItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        """Sets the height of this ContentItem.
+
+
+        :param height: The height of this ContentItem.  # noqa: E501
+        :type: int
+        """
+
+        self._height = height
+
+    @property
+    def position(self):
+        """Gets the position of this ContentItem.  # noqa: E501
+
+
+        :return: The position of this ContentItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._position
+
+    @position.setter
+    def position(self, position):
+        """Sets the position of this ContentItem.
+
+
+        :param position: The position of this ContentItem.  # noqa: E501
+        :type: str
+        """
+
+        self._position = position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

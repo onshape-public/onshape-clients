@@ -33,35 +33,35 @@ class Definition(object):
     """
     openapi_types = {
         'name': 'str',
-        'sort_order': 'int',
         'description': 'str',
-        'code': 'int'
+        'code': 'int',
+        'sort_order': 'int'
     }
 
     attribute_map = {
         'name': 'name',
-        'sort_order': 'sortOrder',
         'description': 'description',
-        'code': 'code'
+        'code': 'code',
+        'sort_order': 'sortOrder'
     }
 
-    def __init__(self, name=None, sort_order=None, description=None, code=None):  # noqa: E501
+    def __init__(self, name=None, description=None, code=None, sort_order=None):  # noqa: E501
         """Definition - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
-        self._sort_order = None
         self._description = None
         self._code = None
+        self._sort_order = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if sort_order is not None:
-            self.sort_order = sort_order
         if description is not None:
             self.description = description
         if code is not None:
             self.code = code
+        if sort_order is not None:
+            self.sort_order = sort_order
 
     @property
     def name(self):
@@ -83,27 +83,6 @@ class Definition(object):
         """
 
         self._name = name
-
-    @property
-    def sort_order(self):
-        """Gets the sort_order of this Definition.  # noqa: E501
-
-
-        :return: The sort_order of this Definition.  # noqa: E501
-        :rtype: int
-        """
-        return self._sort_order
-
-    @sort_order.setter
-    def sort_order(self, sort_order):
-        """Sets the sort_order of this Definition.
-
-
-        :param sort_order: The sort_order of this Definition.  # noqa: E501
-        :type: int
-        """
-
-        self._sort_order = sort_order
 
     @property
     def description(self):
@@ -146,6 +125,27 @@ class Definition(object):
         """
 
         self._code = code
+
+    @property
+    def sort_order(self):
+        """Gets the sort_order of this Definition.  # noqa: E501
+
+
+        :return: The sort_order of this Definition.  # noqa: E501
+        :rtype: int
+        """
+        return self._sort_order
+
+    @sort_order.setter
+    def sort_order(self, sort_order):
+        """Sets the sort_order of this Definition.
+
+
+        :param sort_order: The sort_order of this Definition.  # noqa: E501
+        :type: int
+        """
+
+        self._sort_order = sort_order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

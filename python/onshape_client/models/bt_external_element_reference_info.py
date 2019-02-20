@@ -32,57 +32,36 @@ class BTExternalElementReferenceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'element_microversion_id': 'str',
         'version_id': 'str',
         'document_id': 'str',
-        'element_id': 'str'
+        'element_id': 'str',
+        'element_microversion_id': 'str'
     }
 
     attribute_map = {
-        'element_microversion_id': 'elementMicroversionId',
         'version_id': 'versionId',
         'document_id': 'documentId',
-        'element_id': 'elementId'
+        'element_id': 'elementId',
+        'element_microversion_id': 'elementMicroversionId'
     }
 
-    def __init__(self, element_microversion_id=None, version_id=None, document_id=None, element_id=None):  # noqa: E501
+    def __init__(self, version_id=None, document_id=None, element_id=None, element_microversion_id=None):  # noqa: E501
         """BTExternalElementReferenceInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._element_microversion_id = None
         self._version_id = None
         self._document_id = None
         self._element_id = None
+        self._element_microversion_id = None
         self.discriminator = None
 
-        if element_microversion_id is not None:
-            self.element_microversion_id = element_microversion_id
         if version_id is not None:
             self.version_id = version_id
         if document_id is not None:
             self.document_id = document_id
         if element_id is not None:
             self.element_id = element_id
-
-    @property
-    def element_microversion_id(self):
-        """Gets the element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
-
-
-        :return: The element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_microversion_id
-
-    @element_microversion_id.setter
-    def element_microversion_id(self, element_microversion_id):
-        """Sets the element_microversion_id of this BTExternalElementReferenceInfo.
-
-
-        :param element_microversion_id: The element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._element_microversion_id = element_microversion_id
+        if element_microversion_id is not None:
+            self.element_microversion_id = element_microversion_id
 
     @property
     def version_id(self):
@@ -146,6 +125,27 @@ class BTExternalElementReferenceInfo(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def element_microversion_id(self):
+        """Gets the element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
+
+
+        :return: The element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_microversion_id
+
+    @element_microversion_id.setter
+    def element_microversion_id(self, element_microversion_id):
+        """Sets the element_microversion_id of this BTExternalElementReferenceInfo.
+
+
+        :param element_microversion_id: The element_microversion_id of this BTExternalElementReferenceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._element_microversion_id = element_microversion_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

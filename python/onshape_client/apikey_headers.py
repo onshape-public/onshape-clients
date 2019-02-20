@@ -11,10 +11,10 @@ import base64
 import urllib
 import datetime
 import six
-from six.moves.urllib.parse import urlencode
+from six.moves.urllib.parse import urlencode, quote_plus
 
 
-def make_headers(method, path, access_key, secret_key, query={}, headers={}):
+def add_auth_headers(method, path, access_key, secret_key, query_params={}, headers={}):
     '''
     Creates a headers object to sign the request
 
@@ -28,27 +28,21 @@ def make_headers(method, path, access_key, secret_key, query={}, headers={}):
         - dict: Dictionary containing all headers
     '''
     method = method.lower()
-    path = "/" + path
     date = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
     nonce = _make_nonce()
-    ctype = headers.get('Content-Type') if headers.get('Content-Type') else 'application/json'
+    ctype = headers['Content-Type']
 
-    auth = _make_auth(method, date, nonce, path, access_key, secret_key, query=query, ctype=ctype)
+    auth = _make_auth(method, date, nonce, path, access_key, secret_key, query_string=urlencode(query_params), ctype=ctype)
 
     req_headers = {
-        'Content-Type': 'application/json',
         'Date': date,
         'On-Nonce': nonce,
-        'Authorization': auth,
-        'User-Agent': 'Onshape Python Sample App',
-        'Accept': 'application/json'
+        'Authorization': auth
     }
 
-    # add in user-defined headers
-    for h in headers:
-        req_headers[h] = headers[h]
+    headers.update(req_headers)
 
-    return req_headers
+    return headers
 
 
 def _make_nonce():
@@ -68,7 +62,7 @@ def _make_nonce():
     return nonce
 
 
-def _make_auth(method, date, nonce, path, access_key, secret_key, query={}, ctype='application/json'):
+def _make_auth(method, date, nonce, path, access_key, secret_key, query_string="", ctype='application/json'):
     '''
     Create the request signature to authenticate
 
@@ -81,20 +75,12 @@ def _make_auth(method, date, nonce, path, access_key, secret_key, query={}, ctyp
         - ctype (str, default='application/json'): HTTP Content-Type
     '''
 
-    query = urlencode(query)
+    # query = urlencode(query)
 
     hmac_str = (method + '\n' + nonce + '\n' + date + '\n' + ctype + '\n' + path +
-                '\n' + query + '\n').lower().encode('utf-8')
+                '\n' + query_string + '\n').lower().encode('UTF_8')
 
     signature = base64.b64encode(hmac.new(secret_key, hmac_str, digestmod=hashlib.sha256).digest())
-    auth = 'On ' + access_key.decode('utf-8') + ':HmacSHA256:' + signature.decode('utf-8')
-
-    # if self._logging:
-    #     utils.log({
-    #         'query': query,
-    #         'hmac_str': hmac_str,
-    #         'signature': signature,
-    #         'auth': auth
-    #     })
+    auth = 'On ' + access_key.decode('UTF_8') + ':HmacSHA256:' + signature.decode('UTF_8')
 
     return auth

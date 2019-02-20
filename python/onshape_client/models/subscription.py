@@ -53,8 +53,8 @@ class Subscription(object):
         'tax_percent': 'float',
         'trial_end': 'int',
         'trial_start': 'int',
-        'customer_object': 'Customer',
-        'subscription_items': 'SubscriptionItemCollection'
+        'subscription_items': 'SubscriptionItemCollection',
+        'customer_object': 'Customer'
     }
 
     attribute_map = {
@@ -79,11 +79,11 @@ class Subscription(object):
         'tax_percent': 'taxPercent',
         'trial_end': 'trialEnd',
         'trial_start': 'trialStart',
-        'customer_object': 'customerObject',
-        'subscription_items': 'subscriptionItems'
+        'subscription_items': 'subscriptionItems',
+        'customer_object': 'customerObject'
     }
 
-    def __init__(self, id=None, object=None, application_fee_percent=None, billing=None, cancel_at_period_end=None, canceled_at=None, created=None, current_period_end=None, current_period_start=None, customer=None, days_until_due=None, discount=None, ended_at=None, metadata=None, plan=None, quantity=None, start=None, status=None, tax_percent=None, trial_end=None, trial_start=None, customer_object=None, subscription_items=None):  # noqa: E501
+    def __init__(self, id=None, object=None, application_fee_percent=None, billing=None, cancel_at_period_end=None, canceled_at=None, created=None, current_period_end=None, current_period_start=None, customer=None, days_until_due=None, discount=None, ended_at=None, metadata=None, plan=None, quantity=None, start=None, status=None, tax_percent=None, trial_end=None, trial_start=None, subscription_items=None, customer_object=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -107,8 +107,8 @@ class Subscription(object):
         self._tax_percent = None
         self._trial_end = None
         self._trial_start = None
-        self._customer_object = None
         self._subscription_items = None
+        self._customer_object = None
         self.discriminator = None
 
         if id is not None:
@@ -153,10 +153,10 @@ class Subscription(object):
             self.trial_end = trial_end
         if trial_start is not None:
             self.trial_start = trial_start
-        if customer_object is not None:
-            self.customer_object = customer_object
         if subscription_items is not None:
             self.subscription_items = subscription_items
+        if customer_object is not None:
+            self.customer_object = customer_object
 
     @property
     def id(self):
@@ -600,27 +600,6 @@ class Subscription(object):
         self._trial_start = trial_start
 
     @property
-    def customer_object(self):
-        """Gets the customer_object of this Subscription.  # noqa: E501
-
-
-        :return: The customer_object of this Subscription.  # noqa: E501
-        :rtype: Customer
-        """
-        return self._customer_object
-
-    @customer_object.setter
-    def customer_object(self, customer_object):
-        """Sets the customer_object of this Subscription.
-
-
-        :param customer_object: The customer_object of this Subscription.  # noqa: E501
-        :type: Customer
-        """
-
-        self._customer_object = customer_object
-
-    @property
     def subscription_items(self):
         """Gets the subscription_items of this Subscription.  # noqa: E501
 
@@ -640,6 +619,27 @@ class Subscription(object):
         """
 
         self._subscription_items = subscription_items
+
+    @property
+    def customer_object(self):
+        """Gets the customer_object of this Subscription.  # noqa: E501
+
+
+        :return: The customer_object of this Subscription.  # noqa: E501
+        :rtype: Customer
+        """
+        return self._customer_object
+
+    @customer_object.setter
+    def customer_object(self, customer_object):
+        """Sets the customer_object of this Subscription.
+
+
+        :param customer_object: The customer_object of this Subscription.  # noqa: E501
+        :type: Customer
+        """
+
+        self._customer_object = customer_object
 
     def to_dict(self):
         """Returns the model properties as a dict"""

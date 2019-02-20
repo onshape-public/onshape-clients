@@ -32,47 +32,26 @@ class BTDocumentMigrateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'cluster_id': 'str',
-        'document_id': 'str'
+        'document_id': 'str',
+        'cluster_id': 'str'
     }
 
     attribute_map = {
-        'cluster_id': 'clusterId',
-        'document_id': 'documentId'
+        'document_id': 'documentId',
+        'cluster_id': 'clusterId'
     }
 
-    def __init__(self, cluster_id=None, document_id=None):  # noqa: E501
+    def __init__(self, document_id=None, cluster_id=None):  # noqa: E501
         """BTDocumentMigrateParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._cluster_id = None
         self._document_id = None
+        self._cluster_id = None
         self.discriminator = None
 
-        if cluster_id is not None:
-            self.cluster_id = cluster_id
         if document_id is not None:
             self.document_id = document_id
-
-    @property
-    def cluster_id(self):
-        """Gets the cluster_id of this BTDocumentMigrateParams.  # noqa: E501
-
-
-        :return: The cluster_id of this BTDocumentMigrateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._cluster_id
-
-    @cluster_id.setter
-    def cluster_id(self, cluster_id):
-        """Sets the cluster_id of this BTDocumentMigrateParams.
-
-
-        :param cluster_id: The cluster_id of this BTDocumentMigrateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._cluster_id = cluster_id
+        if cluster_id is not None:
+            self.cluster_id = cluster_id
 
     @property
     def document_id(self):
@@ -94,6 +73,27 @@ class BTDocumentMigrateParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def cluster_id(self):
+        """Gets the cluster_id of this BTDocumentMigrateParams.  # noqa: E501
+
+
+        :return: The cluster_id of this BTDocumentMigrateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._cluster_id
+
+    @cluster_id.setter
+    def cluster_id(self, cluster_id):
+        """Sets the cluster_id of this BTDocumentMigrateParams.
+
+
+        :param cluster_id: The cluster_id of this BTDocumentMigrateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._cluster_id = cluster_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

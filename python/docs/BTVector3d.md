@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**x** | **float** |  | [optional] 
 **y** | **float** |  | [optional] 
+**x** | **float** |  | [optional] 
 **z** | **float** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

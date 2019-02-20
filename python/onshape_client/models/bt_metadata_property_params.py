@@ -36,7 +36,6 @@ class BTMetadataPropertyParams(object):
         'name': 'str',
         'id': 'str',
         'description': 'str',
-        'namespace': 'str',
         'owner_id': 'str',
         'property_config_param_list': 'list[BTMetadataPropertyConfigParams]',
         'value_type': 'int',
@@ -45,7 +44,8 @@ class BTMetadataPropertyParams(object):
         'blob_mime_type': 'str',
         'editable_in_version': 'bool',
         'editable_in_microversion': 'bool',
-        'search_boost': 'float'
+        'search_boost': 'float',
+        'namespace': 'str'
     }
 
     attribute_map = {
@@ -53,7 +53,6 @@ class BTMetadataPropertyParams(object):
         'name': 'name',
         'id': 'id',
         'description': 'description',
-        'namespace': 'namespace',
         'owner_id': 'ownerId',
         'property_config_param_list': 'propertyConfigParamList',
         'value_type': 'valueType',
@@ -62,17 +61,17 @@ class BTMetadataPropertyParams(object):
         'blob_mime_type': 'blobMimeType',
         'editable_in_version': 'editableInVersion',
         'editable_in_microversion': 'editableInMicroversion',
-        'search_boost': 'searchBoost'
+        'search_boost': 'searchBoost',
+        'namespace': 'namespace'
     }
 
-    def __init__(self, array=None, name=None, id=None, description=None, namespace=None, owner_id=None, property_config_param_list=None, value_type=None, owner_type_ordinal=None, object_def_name=None, blob_mime_type=None, editable_in_version=None, editable_in_microversion=None, search_boost=None):  # noqa: E501
+    def __init__(self, array=None, name=None, id=None, description=None, owner_id=None, property_config_param_list=None, value_type=None, owner_type_ordinal=None, object_def_name=None, blob_mime_type=None, editable_in_version=None, editable_in_microversion=None, search_boost=None, namespace=None):  # noqa: E501
         """BTMetadataPropertyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._array = None
         self._name = None
         self._id = None
         self._description = None
-        self._namespace = None
         self._owner_id = None
         self._property_config_param_list = None
         self._value_type = None
@@ -82,6 +81,7 @@ class BTMetadataPropertyParams(object):
         self._editable_in_version = None
         self._editable_in_microversion = None
         self._search_boost = None
+        self._namespace = None
         self.discriminator = None
 
         if array is not None:
@@ -92,8 +92,6 @@ class BTMetadataPropertyParams(object):
             self.id = id
         if description is not None:
             self.description = description
-        if namespace is not None:
-            self.namespace = namespace
         if owner_id is not None:
             self.owner_id = owner_id
         if property_config_param_list is not None:
@@ -112,6 +110,8 @@ class BTMetadataPropertyParams(object):
             self.editable_in_microversion = editable_in_microversion
         if search_boost is not None:
             self.search_boost = search_boost
+        if namespace is not None:
+            self.namespace = namespace
 
     @property
     def array(self):
@@ -196,27 +196,6 @@ class BTMetadataPropertyParams(object):
         """
 
         self._description = description
-
-    @property
-    def namespace(self):
-        """Gets the namespace of this BTMetadataPropertyParams.  # noqa: E501
-
-
-        :return: The namespace of this BTMetadataPropertyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMetadataPropertyParams.
-
-
-        :param namespace: The namespace of this BTMetadataPropertyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
 
     @property
     def owner_id(self):
@@ -406,6 +385,27 @@ class BTMetadataPropertyParams(object):
         """
 
         self._search_boost = search_boost
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTMetadataPropertyParams.  # noqa: E501
+
+
+        :return: The namespace of this BTMetadataPropertyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMetadataPropertyParams.
+
+
+        :param namespace: The namespace of this BTMetadataPropertyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **orientation** | **bool** |  | [optional] 
-**area** | **float** |  | [optional] 
 **surface** | [**BTSurfaceDescription**](BTSurfaceDescription.md) |  | [optional] 
 **loops** | [**list[BTExportModelLoop]**](BTExportModelLoop.md) |  | [optional] 
+**area** | **float** |  | [optional] 
 **box** | [**BTBoundingBox**](BTBoundingBox.md) |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

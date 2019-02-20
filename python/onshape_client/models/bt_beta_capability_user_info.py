@@ -38,12 +38,12 @@ class BTBetaCapabilityUserInfo(object):
         'approved_at': 'datetime',
         'removed_at': 'datetime',
         'source': 'int',
-        'first_name': 'str',
-        'last_name': 'str',
-        'email': 'str',
         'is_guest': 'bool',
         'is_light': 'bool',
         'global_permissions': 'GlobalPermissionInfo',
+        'first_name': 'str',
+        'last_name': 'str',
+        'email': 'str',
         'last_login_time': 'datetime',
         'company': 'BTCompanySummaryInfo',
         'state': 'int',
@@ -61,12 +61,12 @@ class BTBetaCapabilityUserInfo(object):
         'approved_at': 'approvedAt',
         'removed_at': 'removedAt',
         'source': 'source',
-        'first_name': 'firstName',
-        'last_name': 'lastName',
-        'email': 'email',
         'is_guest': 'isGuest',
         'is_light': 'isLight',
         'global_permissions': 'globalPermissions',
+        'first_name': 'firstName',
+        'last_name': 'lastName',
+        'email': 'email',
         'last_login_time': 'lastLoginTime',
         'company': 'company',
         'state': 'state',
@@ -77,7 +77,7 @@ class BTBetaCapabilityUserInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, capability_state=None, created_at=None, plan_id=None, approved_at=None, removed_at=None, source=None, first_name=None, last_name=None, email=None, is_guest=None, is_light=None, global_permissions=None, last_login_time=None, company=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, capability_state=None, created_at=None, plan_id=None, approved_at=None, removed_at=None, source=None, is_guest=None, is_light=None, global_permissions=None, first_name=None, last_name=None, email=None, last_login_time=None, company=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._capability_state = None
@@ -86,12 +86,12 @@ class BTBetaCapabilityUserInfo(object):
         self._approved_at = None
         self._removed_at = None
         self._source = None
-        self._first_name = None
-        self._last_name = None
-        self._email = None
         self._is_guest = None
         self._is_light = None
         self._global_permissions = None
+        self._first_name = None
+        self._last_name = None
+        self._email = None
         self._last_login_time = None
         self._company = None
         self._state = None
@@ -114,18 +114,18 @@ class BTBetaCapabilityUserInfo(object):
             self.removed_at = removed_at
         if source is not None:
             self.source = source
-        if first_name is not None:
-            self.first_name = first_name
-        if last_name is not None:
-            self.last_name = last_name
-        if email is not None:
-            self.email = email
         if is_guest is not None:
             self.is_guest = is_guest
         if is_light is not None:
             self.is_light = is_light
         if global_permissions is not None:
             self.global_permissions = global_permissions
+        if first_name is not None:
+            self.first_name = first_name
+        if last_name is not None:
+            self.last_name = last_name
+        if email is not None:
+            self.email = email
         if last_login_time is not None:
             self.last_login_time = last_login_time
         if company is not None:
@@ -270,69 +270,6 @@ class BTBetaCapabilityUserInfo(object):
         self._source = source
 
     @property
-    def first_name(self):
-        """Gets the first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._first_name
-
-    @first_name.setter
-    def first_name(self, first_name):
-        """Sets the first_name of this BTBetaCapabilityUserInfo.
-
-
-        :param first_name: The first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._first_name = first_name
-
-    @property
-    def last_name(self):
-        """Gets the last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        """Sets the last_name of this BTBetaCapabilityUserInfo.
-
-
-        :param last_name: The last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._last_name = last_name
-
-    @property
-    def email(self):
-        """Gets the email of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTBetaCapabilityUserInfo.
-
-
-        :param email: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
     def is_guest(self):
         """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -394,6 +331,69 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._global_permissions = global_permissions
+
+    @property
+    def first_name(self):
+        """Gets the first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        """Sets the first_name of this BTBetaCapabilityUserInfo.
+
+
+        :param first_name: The first_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._first_name = first_name
+
+    @property
+    def last_name(self):
+        """Gets the last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        """Sets the last_name of this BTBetaCapabilityUserInfo.
+
+
+        :param last_name: The last_name of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._last_name = last_name
+
+    @property
+    def email(self):
+        """Gets the email of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTBetaCapabilityUserInfo.
+
+
+        :param email: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def last_login_time(self):

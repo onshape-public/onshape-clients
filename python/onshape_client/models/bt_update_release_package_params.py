@@ -33,30 +33,30 @@ class BTUpdateReleasePackageParams(object):
     """
     openapi_types = {
         'properties': 'list[BTPropertyValueParam]',
-        'item_ids': 'list[str]',
-        'items': 'list[BTReleasePackageItemParams]'
+        'items': 'list[BTReleasePackageItemParams]',
+        'item_ids': 'list[str]'
     }
 
     attribute_map = {
         'properties': 'properties',
-        'item_ids': 'itemIds',
-        'items': 'items'
+        'items': 'items',
+        'item_ids': 'itemIds'
     }
 
-    def __init__(self, properties=None, item_ids=None, items=None):  # noqa: E501
+    def __init__(self, properties=None, items=None, item_ids=None):  # noqa: E501
         """BTUpdateReleasePackageParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._properties = None
-        self._item_ids = None
         self._items = None
+        self._item_ids = None
         self.discriminator = None
 
         if properties is not None:
             self.properties = properties
-        if item_ids is not None:
-            self.item_ids = item_ids
         if items is not None:
             self.items = items
+        if item_ids is not None:
+            self.item_ids = item_ids
 
     @property
     def properties(self):
@@ -80,27 +80,6 @@ class BTUpdateReleasePackageParams(object):
         self._properties = properties
 
     @property
-    def item_ids(self):
-        """Gets the item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
-
-
-        :return: The item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._item_ids
-
-    @item_ids.setter
-    def item_ids(self, item_ids):
-        """Sets the item_ids of this BTUpdateReleasePackageParams.
-
-
-        :param item_ids: The item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._item_ids = item_ids
-
-    @property
     def items(self):
         """Gets the items of this BTUpdateReleasePackageParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTUpdateReleasePackageParams(object):
         """
 
         self._items = items
+
+    @property
+    def item_ids(self):
+        """Gets the item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
+
+
+        :return: The item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._item_ids
+
+    @item_ids.setter
+    def item_ids(self, item_ids):
+        """Sets the item_ids of this BTUpdateReleasePackageParams.
+
+
+        :param item_ids: The item_ids of this BTUpdateReleasePackageParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._item_ids = item_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

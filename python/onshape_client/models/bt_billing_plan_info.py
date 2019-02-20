@@ -39,13 +39,13 @@ class BTBillingPlanInfo(object):
         'hidden': 'bool',
         'onshape_plan': 'bool',
         'description': 'str',
+        'application_id': 'str',
         'company_plan': 'bool',
         'interval': 'str',
+        'deprecated': 'bool',
+        'plan_type': 'int',
         'consumable_quantity': 'int',
         'amount_cents': 'int',
-        'application_id': 'str',
-        'plan_type': 'int',
-        'deprecated': 'bool',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -60,20 +60,20 @@ class BTBillingPlanInfo(object):
         'hidden': 'hidden',
         'onshape_plan': 'onshapePlan',
         'description': 'description',
+        'application_id': 'applicationId',
         'company_plan': 'companyPlan',
         'interval': 'interval',
+        'deprecated': 'deprecated',
+        'plan_type': 'planType',
         'consumable_quantity': 'consumableQuantity',
         'amount_cents': 'amountCents',
-        'application_id': 'applicationId',
-        'plan_type': 'planType',
-        'deprecated': 'deprecated',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, discount_info=None, group=None, client_id=None, trial_period_days=None, hidden=None, onshape_plan=None, description=None, company_plan=None, interval=None, consumable_quantity=None, amount_cents=None, application_id=None, plan_type=None, deprecated=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, discount_info=None, group=None, client_id=None, trial_period_days=None, hidden=None, onshape_plan=None, description=None, application_id=None, company_plan=None, interval=None, deprecated=None, plan_type=None, consumable_quantity=None, amount_cents=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBillingPlanInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._discount_info = None
@@ -83,13 +83,13 @@ class BTBillingPlanInfo(object):
         self._hidden = None
         self._onshape_plan = None
         self._description = None
+        self._application_id = None
         self._company_plan = None
         self._interval = None
+        self._deprecated = None
+        self._plan_type = None
         self._consumable_quantity = None
         self._amount_cents = None
-        self._application_id = None
-        self._plan_type = None
-        self._deprecated = None
         self._name = None
         self._id = None
         self._href = None
@@ -110,20 +110,20 @@ class BTBillingPlanInfo(object):
             self.onshape_plan = onshape_plan
         if description is not None:
             self.description = description
+        if application_id is not None:
+            self.application_id = application_id
         if company_plan is not None:
             self.company_plan = company_plan
         if interval is not None:
             self.interval = interval
+        if deprecated is not None:
+            self.deprecated = deprecated
+        if plan_type is not None:
+            self.plan_type = plan_type
         if consumable_quantity is not None:
             self.consumable_quantity = consumable_quantity
         if amount_cents is not None:
             self.amount_cents = amount_cents
-        if application_id is not None:
-            self.application_id = application_id
-        if plan_type is not None:
-            self.plan_type = plan_type
-        if deprecated is not None:
-            self.deprecated = deprecated
         if name is not None:
             self.name = name
         if id is not None:
@@ -281,6 +281,27 @@ class BTBillingPlanInfo(object):
         self._description = description
 
     @property
+    def application_id(self):
+        """Gets the application_id of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The application_id of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._application_id
+
+    @application_id.setter
+    def application_id(self, application_id):
+        """Sets the application_id of this BTBillingPlanInfo.
+
+
+        :param application_id: The application_id of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._application_id = application_id
+
+    @property
     def company_plan(self):
         """Gets the company_plan of this BTBillingPlanInfo.  # noqa: E501
 
@@ -323,6 +344,48 @@ class BTBillingPlanInfo(object):
         self._interval = interval
 
     @property
+    def deprecated(self):
+        """Gets the deprecated of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The deprecated of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._deprecated
+
+    @deprecated.setter
+    def deprecated(self, deprecated):
+        """Sets the deprecated of this BTBillingPlanInfo.
+
+
+        :param deprecated: The deprecated of this BTBillingPlanInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._deprecated = deprecated
+
+    @property
+    def plan_type(self):
+        """Gets the plan_type of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The plan_type of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._plan_type
+
+    @plan_type.setter
+    def plan_type(self, plan_type):
+        """Sets the plan_type of this BTBillingPlanInfo.
+
+
+        :param plan_type: The plan_type of this BTBillingPlanInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._plan_type = plan_type
+
+    @property
     def consumable_quantity(self):
         """Gets the consumable_quantity of this BTBillingPlanInfo.  # noqa: E501
 
@@ -363,69 +426,6 @@ class BTBillingPlanInfo(object):
         """
 
         self._amount_cents = amount_cents
-
-    @property
-    def application_id(self):
-        """Gets the application_id of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The application_id of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._application_id
-
-    @application_id.setter
-    def application_id(self, application_id):
-        """Sets the application_id of this BTBillingPlanInfo.
-
-
-        :param application_id: The application_id of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._application_id = application_id
-
-    @property
-    def plan_type(self):
-        """Gets the plan_type of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The plan_type of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._plan_type
-
-    @plan_type.setter
-    def plan_type(self, plan_type):
-        """Sets the plan_type of this BTBillingPlanInfo.
-
-
-        :param plan_type: The plan_type of this BTBillingPlanInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._plan_type = plan_type
-
-    @property
-    def deprecated(self):
-        """Gets the deprecated of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The deprecated of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._deprecated
-
-    @deprecated.setter
-    def deprecated(self, deprecated):
-        """Sets the deprecated of this BTBillingPlanInfo.
-
-
-        :param deprecated: The deprecated of this BTBillingPlanInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._deprecated = deprecated
 
     @property
     def name(self):

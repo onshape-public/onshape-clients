@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_read_only** | **bool** |  | [optional] 
 **can_delete** | **bool** |  | [optional] 
+**is_read_only** | **bool** |  | [optional] 
 **parent** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**microversion** | **str** |  | [optional] 
 **creator** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
+**thumbnail** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
+**created_at** | **datetime** |  | [optional] 
 **modified_at** | **datetime** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
 **last_modifier** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
-**thumbnail** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
+**microversion** | **str** |  | [optional] 
 **parents** | [**list[BTVersionInfo]**](BTVersionInfo.md) |  | [optional] 
 **override_date** | **datetime** |  | [optional] 
 **name** | **str** |  | [optional] 

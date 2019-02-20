@@ -39,11 +39,11 @@ class BTMetadataPropertyInfo(object):
         'validator': 'BTMetadataPropertyValidatorInfo',
         'required': 'bool',
         'property_source': 'int',
-        'property_id': 'str',
-        'editable': 'bool',
         'schema_id': 'str',
         'value_type': 'str',
+        'property_id': 'str',
         'enum_values': 'list[BTMetadataEnumValueInfo]',
+        'editable': 'bool',
         'ui_hints': 'BTMetadataPropertyUiHintsInfo'
     }
 
@@ -55,15 +55,15 @@ class BTMetadataPropertyInfo(object):
         'validator': 'validator',
         'required': 'required',
         'property_source': 'propertySource',
-        'property_id': 'propertyId',
-        'editable': 'editable',
         'schema_id': 'schemaId',
         'value_type': 'valueType',
+        'property_id': 'propertyId',
         'enum_values': 'enumValues',
+        'editable': 'editable',
         'ui_hints': 'uiHints'
     }
 
-    def __init__(self, name=None, default_value=None, initial_value=None, dirty=None, validator=None, required=None, property_source=None, property_id=None, editable=None, schema_id=None, value_type=None, enum_values=None, ui_hints=None):  # noqa: E501
+    def __init__(self, name=None, default_value=None, initial_value=None, dirty=None, validator=None, required=None, property_source=None, schema_id=None, value_type=None, property_id=None, enum_values=None, editable=None, ui_hints=None):  # noqa: E501
         """BTMetadataPropertyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
@@ -73,11 +73,11 @@ class BTMetadataPropertyInfo(object):
         self._validator = None
         self._required = None
         self._property_source = None
-        self._property_id = None
-        self._editable = None
         self._schema_id = None
         self._value_type = None
+        self._property_id = None
         self._enum_values = None
+        self._editable = None
         self._ui_hints = None
         self.discriminator = None
 
@@ -95,16 +95,16 @@ class BTMetadataPropertyInfo(object):
             self.required = required
         if property_source is not None:
             self.property_source = property_source
-        if property_id is not None:
-            self.property_id = property_id
-        if editable is not None:
-            self.editable = editable
         if schema_id is not None:
             self.schema_id = schema_id
         if value_type is not None:
             self.value_type = value_type
+        if property_id is not None:
+            self.property_id = property_id
         if enum_values is not None:
             self.enum_values = enum_values
+        if editable is not None:
+            self.editable = editable
         if ui_hints is not None:
             self.ui_hints = ui_hints
 
@@ -256,48 +256,6 @@ class BTMetadataPropertyInfo(object):
         self._property_source = property_source
 
     @property
-    def property_id(self):
-        """Gets the property_id of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The property_id of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._property_id
-
-    @property_id.setter
-    def property_id(self, property_id):
-        """Sets the property_id of this BTMetadataPropertyInfo.
-
-
-        :param property_id: The property_id of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._property_id = property_id
-
-    @property
-    def editable(self):
-        """Gets the editable of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The editable of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._editable
-
-    @editable.setter
-    def editable(self, editable):
-        """Sets the editable of this BTMetadataPropertyInfo.
-
-
-        :param editable: The editable of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._editable = editable
-
-    @property
     def schema_id(self):
         """Gets the schema_id of this BTMetadataPropertyInfo.  # noqa: E501
 
@@ -340,6 +298,27 @@ class BTMetadataPropertyInfo(object):
         self._value_type = value_type
 
     @property
+    def property_id(self):
+        """Gets the property_id of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The property_id of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._property_id
+
+    @property_id.setter
+    def property_id(self, property_id):
+        """Sets the property_id of this BTMetadataPropertyInfo.
+
+
+        :param property_id: The property_id of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._property_id = property_id
+
+    @property
     def enum_values(self):
         """Gets the enum_values of this BTMetadataPropertyInfo.  # noqa: E501
 
@@ -359,6 +338,27 @@ class BTMetadataPropertyInfo(object):
         """
 
         self._enum_values = enum_values
+
+    @property
+    def editable(self):
+        """Gets the editable of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The editable of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._editable
+
+    @editable.setter
+    def editable(self, editable):
+        """Sets the editable of this BTMetadataPropertyInfo.
+
+
+        :param editable: The editable of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._editable = editable
 
     @property
     def ui_hints(self):

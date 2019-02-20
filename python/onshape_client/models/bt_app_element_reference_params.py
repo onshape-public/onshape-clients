@@ -32,81 +32,85 @@ class BTAppElementReferenceParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'update_sketch_info': 'bool',
         'revision': 'str',
         'target_document_id': 'str',
         'target_element_id': 'str',
-        'target_configuration': 'str',
+        'target_version_id': 'str',
+        'pure_sketch': 'bool',
         'is_sketch_only': 'bool',
         'transaction_id': 'str',
         'parent_change_id': 'str',
         'sketch_id': 'str',
         'sketch_ids': 'list[str]',
         'id_tag': 'str',
-        'target_version_id': 'str',
-        'pure_sketch': 'bool',
+        'part_number': 'str',
+        'target_configuration': 'str',
+        'return_error': 'bool',
+        'has_document_microversions': 'bool',
         'target_microversion_id': 'str',
         'id_tag_microversion_id': 'str',
-        'has_document_microversions': 'bool',
-        'part_number': 'str',
-        'return_error': 'bool',
-        'track_new_versions': 'bool',
-        'update_sketch_info': 'bool'
+        'track_new_versions': 'bool'
     }
 
     attribute_map = {
+        'update_sketch_info': 'updateSketchInfo',
         'revision': 'revision',
         'target_document_id': 'targetDocumentId',
         'target_element_id': 'targetElementId',
-        'target_configuration': 'targetConfiguration',
+        'target_version_id': 'targetVersionId',
+        'pure_sketch': 'pureSketch',
         'is_sketch_only': 'isSketchOnly',
         'transaction_id': 'transactionId',
         'parent_change_id': 'parentChangeId',
         'sketch_id': 'sketchId',
         'sketch_ids': 'sketchIds',
         'id_tag': 'idTag',
-        'target_version_id': 'targetVersionId',
-        'pure_sketch': 'pureSketch',
+        'part_number': 'partNumber',
+        'target_configuration': 'targetConfiguration',
+        'return_error': 'returnError',
+        'has_document_microversions': 'hasDocumentMicroversions',
         'target_microversion_id': 'targetMicroversionId',
         'id_tag_microversion_id': 'idTagMicroversionId',
-        'has_document_microversions': 'hasDocumentMicroversions',
-        'part_number': 'partNumber',
-        'return_error': 'returnError',
-        'track_new_versions': 'trackNewVersions',
-        'update_sketch_info': 'updateSketchInfo'
+        'track_new_versions': 'trackNewVersions'
     }
 
-    def __init__(self, revision=None, target_document_id=None, target_element_id=None, target_configuration=None, is_sketch_only=None, transaction_id=None, parent_change_id=None, sketch_id=None, sketch_ids=None, id_tag=None, target_version_id=None, pure_sketch=None, target_microversion_id=None, id_tag_microversion_id=None, has_document_microversions=None, part_number=None, return_error=None, track_new_versions=None, update_sketch_info=None):  # noqa: E501
+    def __init__(self, update_sketch_info=None, revision=None, target_document_id=None, target_element_id=None, target_version_id=None, pure_sketch=None, is_sketch_only=None, transaction_id=None, parent_change_id=None, sketch_id=None, sketch_ids=None, id_tag=None, part_number=None, target_configuration=None, return_error=None, has_document_microversions=None, target_microversion_id=None, id_tag_microversion_id=None, track_new_versions=None):  # noqa: E501
         """BTAppElementReferenceParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._update_sketch_info = None
         self._revision = None
         self._target_document_id = None
         self._target_element_id = None
-        self._target_configuration = None
+        self._target_version_id = None
+        self._pure_sketch = None
         self._is_sketch_only = None
         self._transaction_id = None
         self._parent_change_id = None
         self._sketch_id = None
         self._sketch_ids = None
         self._id_tag = None
-        self._target_version_id = None
-        self._pure_sketch = None
+        self._part_number = None
+        self._target_configuration = None
+        self._return_error = None
+        self._has_document_microversions = None
         self._target_microversion_id = None
         self._id_tag_microversion_id = None
-        self._has_document_microversions = None
-        self._part_number = None
-        self._return_error = None
         self._track_new_versions = None
-        self._update_sketch_info = None
         self.discriminator = None
 
+        if update_sketch_info is not None:
+            self.update_sketch_info = update_sketch_info
         if revision is not None:
             self.revision = revision
         if target_document_id is not None:
             self.target_document_id = target_document_id
         if target_element_id is not None:
             self.target_element_id = target_element_id
-        if target_configuration is not None:
-            self.target_configuration = target_configuration
+        if target_version_id is not None:
+            self.target_version_id = target_version_id
+        if pure_sketch is not None:
+            self.pure_sketch = pure_sketch
         if is_sketch_only is not None:
             self.is_sketch_only = is_sketch_only
         if transaction_id is not None:
@@ -119,24 +123,41 @@ class BTAppElementReferenceParams(object):
             self.sketch_ids = sketch_ids
         if id_tag is not None:
             self.id_tag = id_tag
-        if target_version_id is not None:
-            self.target_version_id = target_version_id
-        if pure_sketch is not None:
-            self.pure_sketch = pure_sketch
+        if part_number is not None:
+            self.part_number = part_number
+        if target_configuration is not None:
+            self.target_configuration = target_configuration
+        if return_error is not None:
+            self.return_error = return_error
+        if has_document_microversions is not None:
+            self.has_document_microversions = has_document_microversions
         if target_microversion_id is not None:
             self.target_microversion_id = target_microversion_id
         if id_tag_microversion_id is not None:
             self.id_tag_microversion_id = id_tag_microversion_id
-        if has_document_microversions is not None:
-            self.has_document_microversions = has_document_microversions
-        if part_number is not None:
-            self.part_number = part_number
-        if return_error is not None:
-            self.return_error = return_error
         if track_new_versions is not None:
             self.track_new_versions = track_new_versions
-        if update_sketch_info is not None:
-            self.update_sketch_info = update_sketch_info
+
+    @property
+    def update_sketch_info(self):
+        """Gets the update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
+
+
+        :return: The update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._update_sketch_info
+
+    @update_sketch_info.setter
+    def update_sketch_info(self, update_sketch_info):
+        """Sets the update_sketch_info of this BTAppElementReferenceParams.
+
+
+        :param update_sketch_info: The update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._update_sketch_info = update_sketch_info
 
     @property
     def revision(self):
@@ -202,25 +223,46 @@ class BTAppElementReferenceParams(object):
         self._target_element_id = target_element_id
 
     @property
-    def target_configuration(self):
-        """Gets the target_configuration of this BTAppElementReferenceParams.  # noqa: E501
+    def target_version_id(self):
+        """Gets the target_version_id of this BTAppElementReferenceParams.  # noqa: E501
 
 
-        :return: The target_configuration of this BTAppElementReferenceParams.  # noqa: E501
+        :return: The target_version_id of this BTAppElementReferenceParams.  # noqa: E501
         :rtype: str
         """
-        return self._target_configuration
+        return self._target_version_id
 
-    @target_configuration.setter
-    def target_configuration(self, target_configuration):
-        """Sets the target_configuration of this BTAppElementReferenceParams.
+    @target_version_id.setter
+    def target_version_id(self, target_version_id):
+        """Sets the target_version_id of this BTAppElementReferenceParams.
 
 
-        :param target_configuration: The target_configuration of this BTAppElementReferenceParams.  # noqa: E501
+        :param target_version_id: The target_version_id of this BTAppElementReferenceParams.  # noqa: E501
         :type: str
         """
 
-        self._target_configuration = target_configuration
+        self._target_version_id = target_version_id
+
+    @property
+    def pure_sketch(self):
+        """Gets the pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+
+
+        :return: The pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._pure_sketch
+
+    @pure_sketch.setter
+    def pure_sketch(self, pure_sketch):
+        """Sets the pure_sketch of this BTAppElementReferenceParams.
+
+
+        :param pure_sketch: The pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._pure_sketch = pure_sketch
 
     @property
     def is_sketch_only(self):
@@ -349,46 +391,88 @@ class BTAppElementReferenceParams(object):
         self._id_tag = id_tag
 
     @property
-    def target_version_id(self):
-        """Gets the target_version_id of this BTAppElementReferenceParams.  # noqa: E501
+    def part_number(self):
+        """Gets the part_number of this BTAppElementReferenceParams.  # noqa: E501
 
 
-        :return: The target_version_id of this BTAppElementReferenceParams.  # noqa: E501
+        :return: The part_number of this BTAppElementReferenceParams.  # noqa: E501
         :rtype: str
         """
-        return self._target_version_id
+        return self._part_number
 
-    @target_version_id.setter
-    def target_version_id(self, target_version_id):
-        """Sets the target_version_id of this BTAppElementReferenceParams.
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTAppElementReferenceParams.
 
 
-        :param target_version_id: The target_version_id of this BTAppElementReferenceParams.  # noqa: E501
+        :param part_number: The part_number of this BTAppElementReferenceParams.  # noqa: E501
         :type: str
         """
 
-        self._target_version_id = target_version_id
+        self._part_number = part_number
 
     @property
-    def pure_sketch(self):
-        """Gets the pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+    def target_configuration(self):
+        """Gets the target_configuration of this BTAppElementReferenceParams.  # noqa: E501
 
 
-        :return: The pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+        :return: The target_configuration of this BTAppElementReferenceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_configuration
+
+    @target_configuration.setter
+    def target_configuration(self, target_configuration):
+        """Sets the target_configuration of this BTAppElementReferenceParams.
+
+
+        :param target_configuration: The target_configuration of this BTAppElementReferenceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._target_configuration = target_configuration
+
+    @property
+    def return_error(self):
+        """Gets the return_error of this BTAppElementReferenceParams.  # noqa: E501
+
+
+        :return: The return_error of this BTAppElementReferenceParams.  # noqa: E501
         :rtype: bool
         """
-        return self._pure_sketch
+        return self._return_error
 
-    @pure_sketch.setter
-    def pure_sketch(self, pure_sketch):
-        """Sets the pure_sketch of this BTAppElementReferenceParams.
+    @return_error.setter
+    def return_error(self, return_error):
+        """Sets the return_error of this BTAppElementReferenceParams.
 
 
-        :param pure_sketch: The pure_sketch of this BTAppElementReferenceParams.  # noqa: E501
+        :param return_error: The return_error of this BTAppElementReferenceParams.  # noqa: E501
         :type: bool
         """
 
-        self._pure_sketch = pure_sketch
+        self._return_error = return_error
+
+    @property
+    def has_document_microversions(self):
+        """Gets the has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
+
+
+        :return: The has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_document_microversions
+
+    @has_document_microversions.setter
+    def has_document_microversions(self, has_document_microversions):
+        """Sets the has_document_microversions of this BTAppElementReferenceParams.
+
+
+        :param has_document_microversions: The has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_document_microversions = has_document_microversions
 
     @property
     def target_microversion_id(self):
@@ -433,69 +517,6 @@ class BTAppElementReferenceParams(object):
         self._id_tag_microversion_id = id_tag_microversion_id
 
     @property
-    def has_document_microversions(self):
-        """Gets the has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
-
-
-        :return: The has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_document_microversions
-
-    @has_document_microversions.setter
-    def has_document_microversions(self, has_document_microversions):
-        """Sets the has_document_microversions of this BTAppElementReferenceParams.
-
-
-        :param has_document_microversions: The has_document_microversions of this BTAppElementReferenceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_document_microversions = has_document_microversions
-
-    @property
-    def part_number(self):
-        """Gets the part_number of this BTAppElementReferenceParams.  # noqa: E501
-
-
-        :return: The part_number of this BTAppElementReferenceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTAppElementReferenceParams.
-
-
-        :param part_number: The part_number of this BTAppElementReferenceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def return_error(self):
-        """Gets the return_error of this BTAppElementReferenceParams.  # noqa: E501
-
-
-        :return: The return_error of this BTAppElementReferenceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._return_error
-
-    @return_error.setter
-    def return_error(self, return_error):
-        """Sets the return_error of this BTAppElementReferenceParams.
-
-
-        :param return_error: The return_error of this BTAppElementReferenceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._return_error = return_error
-
-    @property
     def track_new_versions(self):
         """Gets the track_new_versions of this BTAppElementReferenceParams.  # noqa: E501
 
@@ -515,27 +536,6 @@ class BTAppElementReferenceParams(object):
         """
 
         self._track_new_versions = track_new_versions
-
-    @property
-    def update_sketch_info(self):
-        """Gets the update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
-
-
-        :return: The update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._update_sketch_info
-
-    @update_sketch_info.setter
-    def update_sketch_info(self, update_sketch_info):
-        """Sets the update_sketch_info of this BTAppElementReferenceParams.
-
-
-        :param update_sketch_info: The update_sketch_info of this BTAppElementReferenceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._update_sketch_info = update_sketch_info
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**namespace** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
 **property_config_param_list** | [**list[BTMetadataPropertyConfigParams]**](BTMetadataPropertyConfigParams.md) |  | [optional] 
 **value_type** | **int** |  | [optional] 
@@ -17,6 +16,7 @@ Name | Type | Description | Notes
 **editable_in_version** | **bool** |  | [optional] 
 **editable_in_microversion** | **bool** |  | [optional] 
 **search_boost** | **float** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

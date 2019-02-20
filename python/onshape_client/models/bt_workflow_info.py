@@ -34,58 +34,58 @@ class BTWorkflowInfo(object):
     openapi_types = {
         'actions': 'list[BTActionInfo]',
         'state': 'BTWorkflowStateInfo',
-        'rejected_by': 'list[str]',
         'is_setup': 'bool',
+        'rejected_by': 'list[str]',
         'approved_by': 'list[str]',
         'is_frozen': 'bool',
         'is_initial_state': 'bool',
         'approver_ids': 'list[str]',
         'notifier_ids': 'list[str]',
         'workflow_id': 'str',
-        'is_discarded': 'bool',
-        'metadata_state': 'str'
+        'metadata_state': 'str',
+        'is_discarded': 'bool'
     }
 
     attribute_map = {
         'actions': 'actions',
         'state': 'state',
-        'rejected_by': 'rejectedBy',
         'is_setup': 'isSetup',
+        'rejected_by': 'rejectedBy',
         'approved_by': 'approvedBy',
         'is_frozen': 'isFrozen',
         'is_initial_state': 'isInitialState',
         'approver_ids': 'approverIds',
         'notifier_ids': 'notifierIds',
         'workflow_id': 'workflowId',
-        'is_discarded': 'isDiscarded',
-        'metadata_state': 'metadataState'
+        'metadata_state': 'metadataState',
+        'is_discarded': 'isDiscarded'
     }
 
-    def __init__(self, actions=None, state=None, rejected_by=None, is_setup=None, approved_by=None, is_frozen=None, is_initial_state=None, approver_ids=None, notifier_ids=None, workflow_id=None, is_discarded=None, metadata_state=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, is_setup=None, rejected_by=None, approved_by=None, is_frozen=None, is_initial_state=None, approver_ids=None, notifier_ids=None, workflow_id=None, metadata_state=None, is_discarded=None):  # noqa: E501
         """BTWorkflowInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
         self._state = None
-        self._rejected_by = None
         self._is_setup = None
+        self._rejected_by = None
         self._approved_by = None
         self._is_frozen = None
         self._is_initial_state = None
         self._approver_ids = None
         self._notifier_ids = None
         self._workflow_id = None
-        self._is_discarded = None
         self._metadata_state = None
+        self._is_discarded = None
         self.discriminator = None
 
         if actions is not None:
             self.actions = actions
         if state is not None:
             self.state = state
-        if rejected_by is not None:
-            self.rejected_by = rejected_by
         if is_setup is not None:
             self.is_setup = is_setup
+        if rejected_by is not None:
+            self.rejected_by = rejected_by
         if approved_by is not None:
             self.approved_by = approved_by
         if is_frozen is not None:
@@ -98,10 +98,10 @@ class BTWorkflowInfo(object):
             self.notifier_ids = notifier_ids
         if workflow_id is not None:
             self.workflow_id = workflow_id
-        if is_discarded is not None:
-            self.is_discarded = is_discarded
         if metadata_state is not None:
             self.metadata_state = metadata_state
+        if is_discarded is not None:
+            self.is_discarded = is_discarded
 
     @property
     def actions(self):
@@ -146,27 +146,6 @@ class BTWorkflowInfo(object):
         self._state = state
 
     @property
-    def rejected_by(self):
-        """Gets the rejected_by of this BTWorkflowInfo.  # noqa: E501
-
-
-        :return: The rejected_by of this BTWorkflowInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._rejected_by
-
-    @rejected_by.setter
-    def rejected_by(self, rejected_by):
-        """Sets the rejected_by of this BTWorkflowInfo.
-
-
-        :param rejected_by: The rejected_by of this BTWorkflowInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._rejected_by = rejected_by
-
-    @property
     def is_setup(self):
         """Gets the is_setup of this BTWorkflowInfo.  # noqa: E501
 
@@ -186,6 +165,27 @@ class BTWorkflowInfo(object):
         """
 
         self._is_setup = is_setup
+
+    @property
+    def rejected_by(self):
+        """Gets the rejected_by of this BTWorkflowInfo.  # noqa: E501
+
+
+        :return: The rejected_by of this BTWorkflowInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._rejected_by
+
+    @rejected_by.setter
+    def rejected_by(self, rejected_by):
+        """Sets the rejected_by of this BTWorkflowInfo.
+
+
+        :param rejected_by: The rejected_by of this BTWorkflowInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._rejected_by = rejected_by
 
     @property
     def approved_by(self):
@@ -314,27 +314,6 @@ class BTWorkflowInfo(object):
         self._workflow_id = workflow_id
 
     @property
-    def is_discarded(self):
-        """Gets the is_discarded of this BTWorkflowInfo.  # noqa: E501
-
-
-        :return: The is_discarded of this BTWorkflowInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_discarded
-
-    @is_discarded.setter
-    def is_discarded(self, is_discarded):
-        """Sets the is_discarded of this BTWorkflowInfo.
-
-
-        :param is_discarded: The is_discarded of this BTWorkflowInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_discarded = is_discarded
-
-    @property
     def metadata_state(self):
         """Gets the metadata_state of this BTWorkflowInfo.  # noqa: E501
 
@@ -354,6 +333,27 @@ class BTWorkflowInfo(object):
         """
 
         self._metadata_state = metadata_state
+
+    @property
+    def is_discarded(self):
+        """Gets the is_discarded of this BTWorkflowInfo.  # noqa: E501
+
+
+        :return: The is_discarded of this BTWorkflowInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_discarded
+
+    @is_discarded.setter
+    def is_discarded(self, is_discarded):
+        """Sets the is_discarded of this BTWorkflowInfo.
+
+
+        :param is_discarded: The is_discarded of this BTWorkflowInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_discarded = is_discarded
 
     def to_dict(self):
         """Returns the model properties as a dict"""

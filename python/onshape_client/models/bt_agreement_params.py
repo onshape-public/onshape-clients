@@ -34,26 +34,26 @@ class BTAgreementParams(object):
     openapi_types = {
         'name': 'str',
         'content': 'str',
-        'options': 'list[str]',
         'version': 'int',
+        'options': 'list[str]',
         'reapply': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
         'content': 'content',
-        'options': 'options',
         'version': 'version',
+        'options': 'options',
         'reapply': 'reapply'
     }
 
-    def __init__(self, name=None, content=None, options=None, version=None, reapply=None):  # noqa: E501
+    def __init__(self, name=None, content=None, version=None, options=None, reapply=None):  # noqa: E501
         """BTAgreementParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._content = None
-        self._options = None
         self._version = None
+        self._options = None
         self._reapply = None
         self.discriminator = None
 
@@ -61,10 +61,10 @@ class BTAgreementParams(object):
             self.name = name
         if content is not None:
             self.content = content
-        if options is not None:
-            self.options = options
         if version is not None:
             self.version = version
+        if options is not None:
+            self.options = options
         if reapply is not None:
             self.reapply = reapply
 
@@ -111,27 +111,6 @@ class BTAgreementParams(object):
         self._content = content
 
     @property
-    def options(self):
-        """Gets the options of this BTAgreementParams.  # noqa: E501
-
-
-        :return: The options of this BTAgreementParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._options
-
-    @options.setter
-    def options(self, options):
-        """Sets the options of this BTAgreementParams.
-
-
-        :param options: The options of this BTAgreementParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._options = options
-
-    @property
     def version(self):
         """Gets the version of this BTAgreementParams.  # noqa: E501
 
@@ -151,6 +130,27 @@ class BTAgreementParams(object):
         """
 
         self._version = version
+
+    @property
+    def options(self):
+        """Gets the options of this BTAgreementParams.  # noqa: E501
+
+
+        :return: The options of this BTAgreementParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """Sets the options of this BTAgreementParams.
+
+
+        :param options: The options of this BTAgreementParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._options = options
 
     @property
     def reapply(self):

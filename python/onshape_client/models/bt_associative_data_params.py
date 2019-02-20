@@ -33,7 +33,6 @@ class BTAssociativeDataParams(object):
     """
     openapi_types = {
         'type': 'str',
-        'data': 'list[BTNameValuePair]',
         'microversion_id': 'str',
         'document_microversion': 'str',
         'associative_data_id': 'str',
@@ -46,12 +45,12 @@ class BTAssociativeDataParams(object):
         'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
+        'data': 'list[BTNameValuePair]',
         'id_tag': 'str'
     }
 
     attribute_map = {
         'type': 'type',
-        'data': 'data',
         'microversion_id': 'microversionId',
         'document_microversion': 'documentMicroversion',
         'associative_data_id': 'associativeDataId',
@@ -64,14 +63,14 @@ class BTAssociativeDataParams(object):
         'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
+        'data': 'data',
         'id_tag': 'idTag'
     }
 
-    def __init__(self, type=None, data=None, microversion_id=None, document_microversion=None, associative_data_id=None, operation=None, view_id=None, occurrence_id=None, is_hidden_base_view=None, configuration=None, version_id=None, document_id=None, workspace_id=None, element_id=None, id_tag=None):  # noqa: E501
+    def __init__(self, type=None, microversion_id=None, document_microversion=None, associative_data_id=None, operation=None, view_id=None, occurrence_id=None, is_hidden_base_view=None, configuration=None, version_id=None, document_id=None, workspace_id=None, element_id=None, data=None, id_tag=None):  # noqa: E501
         """BTAssociativeDataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
-        self._data = None
         self._microversion_id = None
         self._document_microversion = None
         self._associative_data_id = None
@@ -84,13 +83,12 @@ class BTAssociativeDataParams(object):
         self._document_id = None
         self._workspace_id = None
         self._element_id = None
+        self._data = None
         self._id_tag = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
-        if data is not None:
-            self.data = data
         if microversion_id is not None:
             self.microversion_id = microversion_id
         if document_microversion is not None:
@@ -115,6 +113,8 @@ class BTAssociativeDataParams(object):
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
+        if data is not None:
+            self.data = data
         if id_tag is not None:
             self.id_tag = id_tag
 
@@ -144,27 +144,6 @@ class BTAssociativeDataParams(object):
             )
 
         self._type = type
-
-    @property
-    def data(self):
-        """Gets the data of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The data of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: list[BTNameValuePair]
-        """
-        return self._data
-
-    @data.setter
-    def data(self, data):
-        """Sets the data of this BTAssociativeDataParams.
-
-
-        :param data: The data of this BTAssociativeDataParams.  # noqa: E501
-        :type: list[BTNameValuePair]
-        """
-
-        self._data = data
 
     @property
     def microversion_id(self):
@@ -423,6 +402,27 @@ class BTAssociativeDataParams(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def data(self):
+        """Gets the data of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The data of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: list[BTNameValuePair]
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this BTAssociativeDataParams.
+
+
+        :param data: The data of this BTAssociativeDataParams.  # noqa: E501
+        :type: list[BTNameValuePair]
+        """
+
+        self._data = data
 
     @property
     def id_tag(self):

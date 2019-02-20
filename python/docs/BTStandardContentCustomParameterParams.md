@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_driving_configuration** | **bool** |  | [optional] 
-**parameter_value** | **str** |  | [optional] 
-**owner_type** | **int** |  | [optional] 
 **parameter_type** | **int** |  | [optional] 
-**parameter_name** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**is_driving_configuration** | **bool** |  | [optional] 
 **property_id** | **str** |  | [optional] 
+**owner_type** | **int** |  | [optional] 
+**parameter_value** | **str** |  | [optional] 
+**parameter_name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
 **standard** | **str** |  | [optional] 

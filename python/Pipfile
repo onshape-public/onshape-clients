@@ -4,11 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+codecov = "*"
+v = {editable = true,version = "*"}
+coverage = "*"
+pytest = "*"
+pytest-cov = "*"
+onshape-client = {editable = true,path = "."}
 
 [packages]
 requests = "*"
 pytest = "*"
-onshape-client = {editable = true,path = "."}
 ruamel-yaml = "*"
 
 [requires]

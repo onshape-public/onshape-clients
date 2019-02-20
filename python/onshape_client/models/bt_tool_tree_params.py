@@ -36,11 +36,7 @@ class BTToolTreeParams(object):
         'priority': 'int',
         'id': 'str',
         'active': 'bool',
-        'namespace': 'str',
-        'icon': 'str',
-        'owner_type': 'int',
         'owner_id': 'str',
-        'capability': 'str',
         'node_type': 'int',
         'tool_name': 'str',
         'tooltip_key': 'str',
@@ -55,7 +51,11 @@ class BTToolTreeParams(object):
         'collection_name': 'str',
         'icon_initials': 'str',
         'context_menu': 'str',
-        'is_newer_version_available': 'bool'
+        'is_newer_version_available': 'bool',
+        'capability': 'str',
+        'icon': 'str',
+        'owner_type': 'int',
+        'namespace': 'str'
     }
 
     attribute_map = {
@@ -63,11 +63,7 @@ class BTToolTreeParams(object):
         'priority': 'priority',
         'id': 'id',
         'active': 'active',
-        'namespace': 'namespace',
-        'icon': 'icon',
-        'owner_type': 'ownerType',
         'owner_id': 'ownerId',
-        'capability': 'capability',
         'node_type': 'nodeType',
         'tool_name': 'toolName',
         'tooltip_key': 'tooltipKey',
@@ -82,21 +78,21 @@ class BTToolTreeParams(object):
         'collection_name': 'collectionName',
         'icon_initials': 'iconInitials',
         'context_menu': 'contextMenu',
-        'is_newer_version_available': 'isNewerVersionAvailable'
+        'is_newer_version_available': 'isNewerVersionAvailable',
+        'capability': 'capability',
+        'icon': 'icon',
+        'owner_type': 'ownerType',
+        'namespace': 'namespace'
     }
 
-    def __init__(self, context=None, priority=None, id=None, active=None, namespace=None, icon=None, owner_type=None, owner_id=None, capability=None, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, use_history=None, mini=None, collection_name=None, icon_initials=None, context_menu=None, is_newer_version_available=None):  # noqa: E501
+    def __init__(self, context=None, priority=None, id=None, active=None, owner_id=None, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, use_history=None, mini=None, collection_name=None, icon_initials=None, context_menu=None, is_newer_version_available=None, capability=None, icon=None, owner_type=None, namespace=None):  # noqa: E501
         """BTToolTreeParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._context = None
         self._priority = None
         self._id = None
         self._active = None
-        self._namespace = None
-        self._icon = None
-        self._owner_type = None
         self._owner_id = None
-        self._capability = None
         self._node_type = None
         self._tool_name = None
         self._tooltip_key = None
@@ -112,6 +108,10 @@ class BTToolTreeParams(object):
         self._icon_initials = None
         self._context_menu = None
         self._is_newer_version_available = None
+        self._capability = None
+        self._icon = None
+        self._owner_type = None
+        self._namespace = None
         self.discriminator = None
 
         if context is not None:
@@ -122,16 +122,8 @@ class BTToolTreeParams(object):
             self.id = id
         if active is not None:
             self.active = active
-        if namespace is not None:
-            self.namespace = namespace
-        if icon is not None:
-            self.icon = icon
-        if owner_type is not None:
-            self.owner_type = owner_type
         if owner_id is not None:
             self.owner_id = owner_id
-        if capability is not None:
-            self.capability = capability
         if node_type is not None:
             self.node_type = node_type
         if tool_name is not None:
@@ -162,6 +154,14 @@ class BTToolTreeParams(object):
             self.context_menu = context_menu
         if is_newer_version_available is not None:
             self.is_newer_version_available = is_newer_version_available
+        if capability is not None:
+            self.capability = capability
+        if icon is not None:
+            self.icon = icon
+        if owner_type is not None:
+            self.owner_type = owner_type
+        if namespace is not None:
+            self.namespace = namespace
 
     @property
     def context(self):
@@ -248,69 +248,6 @@ class BTToolTreeParams(object):
         self._active = active
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The namespace of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTToolTreeParams.
-
-
-        :param namespace: The namespace of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
-    def icon(self):
-        """Gets the icon of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The icon of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._icon
-
-    @icon.setter
-    def icon(self, icon):
-        """Sets the icon of this BTToolTreeParams.
-
-
-        :param icon: The icon of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._icon = icon
-
-    @property
-    def owner_type(self):
-        """Gets the owner_type of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTToolTreeParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTToolTreeParams.
-
-
-        :param owner_type: The owner_type of this BTToolTreeParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this BTToolTreeParams.  # noqa: E501
 
@@ -330,27 +267,6 @@ class BTToolTreeParams(object):
         """
 
         self._owner_id = owner_id
-
-    @property
-    def capability(self):
-        """Gets the capability of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The capability of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._capability
-
-    @capability.setter
-    def capability(self, capability):
-        """Sets the capability of this BTToolTreeParams.
-
-
-        :param capability: The capability of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._capability = capability
 
     @property
     def node_type(self):
@@ -666,6 +582,90 @@ class BTToolTreeParams(object):
         """
 
         self._is_newer_version_available = is_newer_version_available
+
+    @property
+    def capability(self):
+        """Gets the capability of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The capability of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._capability
+
+    @capability.setter
+    def capability(self, capability):
+        """Sets the capability of this BTToolTreeParams.
+
+
+        :param capability: The capability of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._capability = capability
+
+    @property
+    def icon(self):
+        """Gets the icon of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The icon of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._icon
+
+    @icon.setter
+    def icon(self, icon):
+        """Sets the icon of this BTToolTreeParams.
+
+
+        :param icon: The icon of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._icon = icon
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTToolTreeParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTToolTreeParams.
+
+
+        :param owner_type: The owner_type of this BTToolTreeParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The namespace of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTToolTreeParams.
+
+
+        :param namespace: The namespace of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
 
     def to_dict(self):
         """Returns the model properties as a dict"""

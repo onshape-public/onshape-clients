@@ -35,26 +35,26 @@ class BTESDocumentHit(object):
         'name': 'str',
         'type': 'str',
         'document_id': 'str',
-        'source_map': 'dict(str, object)',
-        'highlighted_fields': 'dict(str, list[str])'
+        'highlighted_fields': 'dict(str, list[str])',
+        'source_map': 'dict(str, object)'
     }
 
     attribute_map = {
         'name': 'name',
         'type': 'type',
         'document_id': 'documentId',
-        'source_map': 'sourceMap',
-        'highlighted_fields': 'highlightedFields'
+        'highlighted_fields': 'highlightedFields',
+        'source_map': 'sourceMap'
     }
 
-    def __init__(self, name=None, type=None, document_id=None, source_map=None, highlighted_fields=None):  # noqa: E501
+    def __init__(self, name=None, type=None, document_id=None, highlighted_fields=None, source_map=None):  # noqa: E501
         """BTESDocumentHit - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._type = None
         self._document_id = None
-        self._source_map = None
         self._highlighted_fields = None
+        self._source_map = None
         self.discriminator = None
 
         if name is not None:
@@ -63,10 +63,10 @@ class BTESDocumentHit(object):
             self.type = type
         if document_id is not None:
             self.document_id = document_id
-        if source_map is not None:
-            self.source_map = source_map
         if highlighted_fields is not None:
             self.highlighted_fields = highlighted_fields
+        if source_map is not None:
+            self.source_map = source_map
 
     @property
     def name(self):
@@ -132,27 +132,6 @@ class BTESDocumentHit(object):
         self._document_id = document_id
 
     @property
-    def source_map(self):
-        """Gets the source_map of this BTESDocumentHit.  # noqa: E501
-
-
-        :return: The source_map of this BTESDocumentHit.  # noqa: E501
-        :rtype: dict(str, object)
-        """
-        return self._source_map
-
-    @source_map.setter
-    def source_map(self, source_map):
-        """Sets the source_map of this BTESDocumentHit.
-
-
-        :param source_map: The source_map of this BTESDocumentHit.  # noqa: E501
-        :type: dict(str, object)
-        """
-
-        self._source_map = source_map
-
-    @property
     def highlighted_fields(self):
         """Gets the highlighted_fields of this BTESDocumentHit.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTESDocumentHit(object):
         """
 
         self._highlighted_fields = highlighted_fields
+
+    @property
+    def source_map(self):
+        """Gets the source_map of this BTESDocumentHit.  # noqa: E501
+
+
+        :return: The source_map of this BTESDocumentHit.  # noqa: E501
+        :rtype: dict(str, object)
+        """
+        return self._source_map
+
+    @source_map.setter
+    def source_map(self, source_map):
+        """Sets the source_map of this BTESDocumentHit.
+
+
+        :param source_map: The source_map of this BTESDocumentHit.  # noqa: E501
+        :type: dict(str, object)
+        """
+
+        self._source_map = source_map
 
     def to_dict(self):
         """Returns the model properties as a dict"""

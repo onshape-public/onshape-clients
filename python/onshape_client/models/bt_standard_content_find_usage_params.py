@@ -33,40 +33,40 @@ class BTStandardContentFindUsageParams(object):
     """
     openapi_types = {
         'parameters': 'list[BTStandardContentParameterDefinition]',
-        'component_document_id': 'str',
-        'used_from_in_days': 'str',
         'user_id': 'str',
-        'company_id': 'str'
+        'company_id': 'str',
+        'component_document_id': 'str',
+        'used_from_in_days': 'str'
     }
 
     attribute_map = {
         'parameters': 'parameters',
-        'component_document_id': 'componentDocumentId',
-        'used_from_in_days': 'usedFromInDays',
         'user_id': 'userId',
-        'company_id': 'companyId'
+        'company_id': 'companyId',
+        'component_document_id': 'componentDocumentId',
+        'used_from_in_days': 'usedFromInDays'
     }
 
-    def __init__(self, parameters=None, component_document_id=None, used_from_in_days=None, user_id=None, company_id=None):  # noqa: E501
+    def __init__(self, parameters=None, user_id=None, company_id=None, component_document_id=None, used_from_in_days=None):  # noqa: E501
         """BTStandardContentFindUsageParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameters = None
-        self._component_document_id = None
-        self._used_from_in_days = None
         self._user_id = None
         self._company_id = None
+        self._component_document_id = None
+        self._used_from_in_days = None
         self.discriminator = None
 
         if parameters is not None:
             self.parameters = parameters
-        if component_document_id is not None:
-            self.component_document_id = component_document_id
-        if used_from_in_days is not None:
-            self.used_from_in_days = used_from_in_days
         if user_id is not None:
             self.user_id = user_id
         if company_id is not None:
             self.company_id = company_id
+        if component_document_id is not None:
+            self.component_document_id = component_document_id
+        if used_from_in_days is not None:
+            self.used_from_in_days = used_from_in_days
 
     @property
     def parameters(self):
@@ -88,48 +88,6 @@ class BTStandardContentFindUsageParams(object):
         """
 
         self._parameters = parameters
-
-    @property
-    def component_document_id(self):
-        """Gets the component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
-
-
-        :return: The component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._component_document_id
-
-    @component_document_id.setter
-    def component_document_id(self, component_document_id):
-        """Sets the component_document_id of this BTStandardContentFindUsageParams.
-
-
-        :param component_document_id: The component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
-        :type: str
-        """
-
-        self._component_document_id = component_document_id
-
-    @property
-    def used_from_in_days(self):
-        """Gets the used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
-
-
-        :return: The used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._used_from_in_days
-
-    @used_from_in_days.setter
-    def used_from_in_days(self, used_from_in_days):
-        """Sets the used_from_in_days of this BTStandardContentFindUsageParams.
-
-
-        :param used_from_in_days: The used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
-        :type: str
-        """
-
-        self._used_from_in_days = used_from_in_days
 
     @property
     def user_id(self):
@@ -172,6 +130,48 @@ class BTStandardContentFindUsageParams(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def component_document_id(self):
+        """Gets the component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
+
+
+        :return: The component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._component_document_id
+
+    @component_document_id.setter
+    def component_document_id(self, component_document_id):
+        """Sets the component_document_id of this BTStandardContentFindUsageParams.
+
+
+        :param component_document_id: The component_document_id of this BTStandardContentFindUsageParams.  # noqa: E501
+        :type: str
+        """
+
+        self._component_document_id = component_document_id
+
+    @property
+    def used_from_in_days(self):
+        """Gets the used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
+
+
+        :return: The used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._used_from_in_days
+
+    @used_from_in_days.setter
+    def used_from_in_days(self, used_from_in_days):
+        """Sets the used_from_in_days of this BTStandardContentFindUsageParams.
+
+
+        :param used_from_in_days: The used_from_in_days of this BTStandardContentFindUsageParams.  # noqa: E501
+        :type: str
+        """
+
+        self._used_from_in_days = used_from_in_days
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,7 +36,6 @@ class BTInAppMessageParams(object):
         'context': 'int',
         'content': 'list[Content]',
         'description': 'str',
-        'content_type': 'int',
         'start_date': 'datetime',
         'end_date': 'datetime',
         'rule_id': 'str',
@@ -45,7 +44,8 @@ class BTInAppMessageParams(object):
         'billing_plan_ids': 'list[str]',
         'domain_type': 'int',
         'show_once': 'bool',
-        'display_order': 'int'
+        'display_order': 'int',
+        'content_type': 'int'
     }
 
     attribute_map = {
@@ -53,7 +53,6 @@ class BTInAppMessageParams(object):
         'context': 'context',
         'content': 'content',
         'description': 'description',
-        'content_type': 'contentType',
         'start_date': 'startDate',
         'end_date': 'endDate',
         'rule_id': 'ruleId',
@@ -62,17 +61,17 @@ class BTInAppMessageParams(object):
         'billing_plan_ids': 'billingPlanIds',
         'domain_type': 'domainType',
         'show_once': 'showOnce',
-        'display_order': 'displayOrder'
+        'display_order': 'displayOrder',
+        'content_type': 'contentType'
     }
 
-    def __init__(self, name=None, context=None, content=None, description=None, content_type=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None):  # noqa: E501
+    def __init__(self, name=None, context=None, content=None, description=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None, content_type=None):  # noqa: E501
         """BTInAppMessageParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._context = None
         self._content = None
         self._description = None
-        self._content_type = None
         self._start_date = None
         self._end_date = None
         self._rule_id = None
@@ -82,6 +81,7 @@ class BTInAppMessageParams(object):
         self._domain_type = None
         self._show_once = None
         self._display_order = None
+        self._content_type = None
         self.discriminator = None
 
         if name is not None:
@@ -92,8 +92,6 @@ class BTInAppMessageParams(object):
             self.content = content
         if description is not None:
             self.description = description
-        if content_type is not None:
-            self.content_type = content_type
         if start_date is not None:
             self.start_date = start_date
         if end_date is not None:
@@ -112,6 +110,8 @@ class BTInAppMessageParams(object):
             self.show_once = show_once
         if display_order is not None:
             self.display_order = display_order
+        if content_type is not None:
+            self.content_type = content_type
 
     @property
     def name(self):
@@ -196,27 +196,6 @@ class BTInAppMessageParams(object):
         """
 
         self._description = description
-
-    @property
-    def content_type(self):
-        """Gets the content_type of this BTInAppMessageParams.  # noqa: E501
-
-
-        :return: The content_type of this BTInAppMessageParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._content_type
-
-    @content_type.setter
-    def content_type(self, content_type):
-        """Sets the content_type of this BTInAppMessageParams.
-
-
-        :param content_type: The content_type of this BTInAppMessageParams.  # noqa: E501
-        :type: int
-        """
-
-        self._content_type = content_type
 
     @property
     def start_date(self):
@@ -406,6 +385,27 @@ class BTInAppMessageParams(object):
         """
 
         self._display_order = display_order
+
+    @property
+    def content_type(self):
+        """Gets the content_type of this BTInAppMessageParams.  # noqa: E501
+
+
+        :return: The content_type of this BTInAppMessageParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._content_type
+
+    @content_type.setter
+    def content_type(self, content_type):
+        """Sets the content_type of this BTInAppMessageParams.
+
+
+        :param content_type: The content_type of this BTInAppMessageParams.  # noqa: E501
+        :type: int
+        """
+
+        self._content_type = content_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

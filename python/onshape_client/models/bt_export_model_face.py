@@ -34,9 +34,9 @@ class BTExportModelFace(object):
     openapi_types = {
         'id': 'str',
         'orientation': 'bool',
-        'area': 'float',
         'surface': 'BTSurfaceDescription',
         'loops': 'list[BTExportModelLoop]',
+        'area': 'float',
         'box': 'BTBoundingBox',
         'type_id': 'int',
         'export_type_name': 'str',
@@ -47,9 +47,9 @@ class BTExportModelFace(object):
     attribute_map = {
         'id': 'id',
         'orientation': 'orientation',
-        'area': 'area',
         'surface': 'surface',
         'loops': 'loops',
+        'area': 'area',
         'box': 'box',
         'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
@@ -57,14 +57,14 @@ class BTExportModelFace(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, id=None, orientation=None, area=None, surface=None, loops=None, box=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, id=None, orientation=None, surface=None, loops=None, area=None, box=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportModelFace - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._orientation = None
-        self._area = None
         self._surface = None
         self._loops = None
+        self._area = None
         self._box = None
         self._type_id = None
         self._export_type_name = None
@@ -76,12 +76,12 @@ class BTExportModelFace(object):
             self.id = id
         if orientation is not None:
             self.orientation = orientation
-        if area is not None:
-            self.area = area
         if surface is not None:
             self.surface = surface
         if loops is not None:
             self.loops = loops
+        if area is not None:
+            self.area = area
         if box is not None:
             self.box = box
         if type_id is not None:
@@ -136,27 +136,6 @@ class BTExportModelFace(object):
         self._orientation = orientation
 
     @property
-    def area(self):
-        """Gets the area of this BTExportModelFace.  # noqa: E501
-
-
-        :return: The area of this BTExportModelFace.  # noqa: E501
-        :rtype: float
-        """
-        return self._area
-
-    @area.setter
-    def area(self, area):
-        """Sets the area of this BTExportModelFace.
-
-
-        :param area: The area of this BTExportModelFace.  # noqa: E501
-        :type: float
-        """
-
-        self._area = area
-
-    @property
     def surface(self):
         """Gets the surface of this BTExportModelFace.  # noqa: E501
 
@@ -197,6 +176,27 @@ class BTExportModelFace(object):
         """
 
         self._loops = loops
+
+    @property
+    def area(self):
+        """Gets the area of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The area of this BTExportModelFace.  # noqa: E501
+        :rtype: float
+        """
+        return self._area
+
+    @area.setter
+    def area(self, area):
+        """Sets the area of this BTExportModelFace.
+
+
+        :param area: The area of this BTExportModelFace.  # noqa: E501
+        :type: float
+        """
+
+        self._area = area
 
     @property
     def box(self):

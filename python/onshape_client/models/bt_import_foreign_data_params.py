@@ -33,120 +33,110 @@ class BTImportForeignDataParams(object):
     """
     openapi_types = {
         'size': 'int',
+        'filename': 'str',
+        'owner_id': 'str',
+        'document_id': 'str',
+        'media_type': 'str',
+        'owner_type': 'str',
         'file_format': 'str',
         'public_document': 'bool',
         'notify_user': 'bool',
-        'owner_type': 'str',
-        'filename': 'str',
-        'document_id': 'str',
-        'media_type': 'str',
-        'owner_id': 'str',
-        'foreign_id': 'str',
-        'upload_id': 'str',
         'project_id': 'str',
         'parent_id': 'str',
-        'update_existing_import_features': 'bool',
-        'blob_microversion_id': 'str',
-        'original_foreign_id': 'str',
-        'blob_element_id': 'str',
-        'specify_units': 'bool',
+        'foreign_id': 'str',
+        'upload_id': 'str',
         'split_assemblies_into_multiple_documents': 'bool',
         'flatten_assemblies': 'bool',
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
-        'unit': 'str'
+        'unit': 'str',
+        'specify_units': 'bool',
+        'update_existing_import_features': 'bool',
+        'blob_microversion_id': 'str',
+        'original_foreign_id': 'str',
+        'blob_element_id': 'str'
     }
 
     attribute_map = {
         'size': 'size',
+        'filename': 'filename',
+        'owner_id': 'ownerId',
+        'document_id': 'documentId',
+        'media_type': 'mediaType',
+        'owner_type': 'ownerType',
         'file_format': 'fileFormat',
         'public_document': 'publicDocument',
         'notify_user': 'notifyUser',
-        'owner_type': 'ownerType',
-        'filename': 'filename',
-        'document_id': 'documentId',
-        'media_type': 'mediaType',
-        'owner_id': 'ownerId',
-        'foreign_id': 'foreignId',
-        'upload_id': 'uploadId',
         'project_id': 'projectId',
         'parent_id': 'parentId',
-        'update_existing_import_features': 'updateExistingImportFeatures',
-        'blob_microversion_id': 'blobMicroversionId',
-        'original_foreign_id': 'originalForeignId',
-        'blob_element_id': 'blobElementId',
-        'specify_units': 'specifyUnits',
+        'foreign_id': 'foreignId',
+        'upload_id': 'uploadId',
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',
         'flatten_assemblies': 'flattenAssemblies',
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
-        'unit': 'unit'
+        'unit': 'unit',
+        'specify_units': 'specifyUnits',
+        'update_existing_import_features': 'updateExistingImportFeatures',
+        'blob_microversion_id': 'blobMicroversionId',
+        'original_foreign_id': 'originalForeignId',
+        'blob_element_id': 'blobElementId'
     }
 
-    def __init__(self, size=None, file_format=None, public_document=None, notify_user=None, owner_type=None, filename=None, document_id=None, media_type=None, owner_id=None, foreign_id=None, upload_id=None, project_id=None, parent_id=None, update_existing_import_features=None, blob_microversion_id=None, original_foreign_id=None, blob_element_id=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, unit=None):  # noqa: E501
+    def __init__(self, size=None, filename=None, owner_id=None, document_id=None, media_type=None, owner_type=None, file_format=None, public_document=None, notify_user=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, unit=None, specify_units=None, update_existing_import_features=None, blob_microversion_id=None, original_foreign_id=None, blob_element_id=None):  # noqa: E501
         """BTImportForeignDataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._size = None
+        self._filename = None
+        self._owner_id = None
+        self._document_id = None
+        self._media_type = None
+        self._owner_type = None
         self._file_format = None
         self._public_document = None
         self._notify_user = None
-        self._owner_type = None
-        self._filename = None
-        self._document_id = None
-        self._media_type = None
-        self._owner_id = None
-        self._foreign_id = None
-        self._upload_id = None
         self._project_id = None
         self._parent_id = None
-        self._update_existing_import_features = None
-        self._blob_microversion_id = None
-        self._original_foreign_id = None
-        self._blob_element_id = None
-        self._specify_units = None
+        self._foreign_id = None
+        self._upload_id = None
         self._split_assemblies_into_multiple_documents = None
         self._flatten_assemblies = None
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
         self._unit = None
+        self._specify_units = None
+        self._update_existing_import_features = None
+        self._blob_microversion_id = None
+        self._original_foreign_id = None
+        self._blob_element_id = None
         self.discriminator = None
 
         if size is not None:
             self.size = size
+        if filename is not None:
+            self.filename = filename
+        if owner_id is not None:
+            self.owner_id = owner_id
+        if document_id is not None:
+            self.document_id = document_id
+        if media_type is not None:
+            self.media_type = media_type
+        if owner_type is not None:
+            self.owner_type = owner_type
         if file_format is not None:
             self.file_format = file_format
         if public_document is not None:
             self.public_document = public_document
         if notify_user is not None:
             self.notify_user = notify_user
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if filename is not None:
-            self.filename = filename
-        if document_id is not None:
-            self.document_id = document_id
-        if media_type is not None:
-            self.media_type = media_type
-        if owner_id is not None:
-            self.owner_id = owner_id
-        if foreign_id is not None:
-            self.foreign_id = foreign_id
-        if upload_id is not None:
-            self.upload_id = upload_id
         if project_id is not None:
             self.project_id = project_id
         if parent_id is not None:
             self.parent_id = parent_id
-        if update_existing_import_features is not None:
-            self.update_existing_import_features = update_existing_import_features
-        if blob_microversion_id is not None:
-            self.blob_microversion_id = blob_microversion_id
-        if original_foreign_id is not None:
-            self.original_foreign_id = original_foreign_id
-        if blob_element_id is not None:
-            self.blob_element_id = blob_element_id
-        if specify_units is not None:
-            self.specify_units = specify_units
+        if foreign_id is not None:
+            self.foreign_id = foreign_id
+        if upload_id is not None:
+            self.upload_id = upload_id
         if split_assemblies_into_multiple_documents is not None:
             self.split_assemblies_into_multiple_documents = split_assemblies_into_multiple_documents
         if flatten_assemblies is not None:
@@ -157,6 +147,16 @@ class BTImportForeignDataParams(object):
             self.allow_faulty_parts = allow_faulty_parts
         if unit is not None:
             self.unit = unit
+        if specify_units is not None:
+            self.specify_units = specify_units
+        if update_existing_import_features is not None:
+            self.update_existing_import_features = update_existing_import_features
+        if blob_microversion_id is not None:
+            self.blob_microversion_id = blob_microversion_id
+        if original_foreign_id is not None:
+            self.original_foreign_id = original_foreign_id
+        if blob_element_id is not None:
+            self.blob_element_id = blob_element_id
 
     @property
     def size(self):
@@ -178,6 +178,117 @@ class BTImportForeignDataParams(object):
         """
 
         self._size = size
+
+    @property
+    def filename(self):
+        """Gets the filename of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The filename of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._filename
+
+    @filename.setter
+    def filename(self, filename):
+        """Sets the filename of this BTImportForeignDataParams.
+
+
+        :param filename: The filename of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._filename = filename
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTImportForeignDataParams.
+
+
+        :param owner_id: The owner_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The document_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTImportForeignDataParams.
+
+
+        :param document_id: The document_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def media_type(self):
+        """Gets the media_type of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The media_type of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._media_type
+
+    @media_type.setter
+    def media_type(self, media_type):
+        """Sets the media_type of this BTImportForeignDataParams.
+
+
+        :param media_type: The media_type of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._media_type = media_type
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTImportForeignDataParams.
+
+
+        :param owner_type: The owner_type of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["USER", "COMPANY", "ONSHAPE"]  # noqa: E501
+        if owner_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `owner_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(owner_type, allowed_values)
+            )
+
+        self._owner_type = owner_type
 
     @property
     def file_format(self):
@@ -249,159 +360,6 @@ class BTImportForeignDataParams(object):
         self._notify_user = notify_user
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTImportForeignDataParams.
-
-
-        :param owner_type: The owner_type of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["USER", "COMPANY", "ONSHAPE"]  # noqa: E501
-        if owner_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `owner_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(owner_type, allowed_values)
-            )
-
-        self._owner_type = owner_type
-
-    @property
-    def filename(self):
-        """Gets the filename of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The filename of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._filename
-
-    @filename.setter
-    def filename(self, filename):
-        """Sets the filename of this BTImportForeignDataParams.
-
-
-        :param filename: The filename of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._filename = filename
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The document_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTImportForeignDataParams.
-
-
-        :param document_id: The document_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def media_type(self):
-        """Gets the media_type of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The media_type of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._media_type
-
-    @media_type.setter
-    def media_type(self, media_type):
-        """Sets the media_type of this BTImportForeignDataParams.
-
-
-        :param media_type: The media_type of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._media_type = media_type
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTImportForeignDataParams.
-
-
-        :param owner_id: The owner_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
-
-    @property
-    def foreign_id(self):
-        """Gets the foreign_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The foreign_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._foreign_id
-
-    @foreign_id.setter
-    def foreign_id(self, foreign_id):
-        """Sets the foreign_id of this BTImportForeignDataParams.
-
-
-        :param foreign_id: The foreign_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._foreign_id = foreign_id
-
-    @property
-    def upload_id(self):
-        """Gets the upload_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The upload_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._upload_id
-
-    @upload_id.setter
-    def upload_id(self, upload_id):
-        """Sets the upload_id of this BTImportForeignDataParams.
-
-
-        :param upload_id: The upload_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._upload_id = upload_id
-
-    @property
     def project_id(self):
         """Gets the project_id of this BTImportForeignDataParams.  # noqa: E501
 
@@ -444,109 +402,46 @@ class BTImportForeignDataParams(object):
         self._parent_id = parent_id
 
     @property
-    def update_existing_import_features(self):
-        """Gets the update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
+    def foreign_id(self):
+        """Gets the foreign_id of this BTImportForeignDataParams.  # noqa: E501
 
 
-        :return: The update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._update_existing_import_features
-
-    @update_existing_import_features.setter
-    def update_existing_import_features(self, update_existing_import_features):
-        """Sets the update_existing_import_features of this BTImportForeignDataParams.
-
-
-        :param update_existing_import_features: The update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._update_existing_import_features = update_existing_import_features
-
-    @property
-    def blob_microversion_id(self):
-        """Gets the blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
+        :return: The foreign_id of this BTImportForeignDataParams.  # noqa: E501
         :rtype: str
         """
-        return self._blob_microversion_id
+        return self._foreign_id
 
-    @blob_microversion_id.setter
-    def blob_microversion_id(self, blob_microversion_id):
-        """Sets the blob_microversion_id of this BTImportForeignDataParams.
+    @foreign_id.setter
+    def foreign_id(self, foreign_id):
+        """Sets the foreign_id of this BTImportForeignDataParams.
 
 
-        :param blob_microversion_id: The blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
+        :param foreign_id: The foreign_id of this BTImportForeignDataParams.  # noqa: E501
         :type: str
         """
 
-        self._blob_microversion_id = blob_microversion_id
+        self._foreign_id = foreign_id
 
     @property
-    def original_foreign_id(self):
-        """Gets the original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+    def upload_id(self):
+        """Gets the upload_id of this BTImportForeignDataParams.  # noqa: E501
 
 
-        :return: The original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :return: The upload_id of this BTImportForeignDataParams.  # noqa: E501
         :rtype: str
         """
-        return self._original_foreign_id
+        return self._upload_id
 
-    @original_foreign_id.setter
-    def original_foreign_id(self, original_foreign_id):
-        """Sets the original_foreign_id of this BTImportForeignDataParams.
+    @upload_id.setter
+    def upload_id(self, upload_id):
+        """Sets the upload_id of this BTImportForeignDataParams.
 
 
-        :param original_foreign_id: The original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :param upload_id: The upload_id of this BTImportForeignDataParams.  # noqa: E501
         :type: str
         """
 
-        self._original_foreign_id = original_foreign_id
-
-    @property
-    def blob_element_id(self):
-        """Gets the blob_element_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The blob_element_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._blob_element_id
-
-    @blob_element_id.setter
-    def blob_element_id(self, blob_element_id):
-        """Sets the blob_element_id of this BTImportForeignDataParams.
-
-
-        :param blob_element_id: The blob_element_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._blob_element_id = blob_element_id
-
-    @property
-    def specify_units(self):
-        """Gets the specify_units of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The specify_units of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._specify_units
-
-    @specify_units.setter
-    def specify_units(self, specify_units):
-        """Sets the specify_units of this BTImportForeignDataParams.
-
-
-        :param specify_units: The specify_units of this BTImportForeignDataParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._specify_units = specify_units
+        self._upload_id = upload_id
 
     @property
     def split_assemblies_into_multiple_documents(self):
@@ -652,6 +547,111 @@ class BTImportForeignDataParams(object):
         """
 
         self._unit = unit
+
+    @property
+    def specify_units(self):
+        """Gets the specify_units of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The specify_units of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._specify_units
+
+    @specify_units.setter
+    def specify_units(self, specify_units):
+        """Sets the specify_units of this BTImportForeignDataParams.
+
+
+        :param specify_units: The specify_units of this BTImportForeignDataParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._specify_units = specify_units
+
+    @property
+    def update_existing_import_features(self):
+        """Gets the update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._update_existing_import_features
+
+    @update_existing_import_features.setter
+    def update_existing_import_features(self, update_existing_import_features):
+        """Sets the update_existing_import_features of this BTImportForeignDataParams.
+
+
+        :param update_existing_import_features: The update_existing_import_features of this BTImportForeignDataParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._update_existing_import_features = update_existing_import_features
+
+    @property
+    def blob_microversion_id(self):
+        """Gets the blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._blob_microversion_id
+
+    @blob_microversion_id.setter
+    def blob_microversion_id(self, blob_microversion_id):
+        """Sets the blob_microversion_id of this BTImportForeignDataParams.
+
+
+        :param blob_microversion_id: The blob_microversion_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._blob_microversion_id = blob_microversion_id
+
+    @property
+    def original_foreign_id(self):
+        """Gets the original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_foreign_id
+
+    @original_foreign_id.setter
+    def original_foreign_id(self, original_foreign_id):
+        """Sets the original_foreign_id of this BTImportForeignDataParams.
+
+
+        :param original_foreign_id: The original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._original_foreign_id = original_foreign_id
+
+    @property
+    def blob_element_id(self):
+        """Gets the blob_element_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The blob_element_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._blob_element_id
+
+    @blob_element_id.setter
+    def blob_element_id(self, blob_element_id):
+        """Sets the blob_element_id of this BTImportForeignDataParams.
+
+
+        :param blob_element_id: The blob_element_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._blob_element_id = blob_element_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

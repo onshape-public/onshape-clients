@@ -32,46 +32,56 @@ class GlobalPermissionInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'access_reports': 'bool',
-        'create_project': 'bool',
-        'approve_releases': 'bool',
-        'create_releases': 'bool',
-        'share_for_anonymous_access': 'bool',
+        'admin_enterprise': 'bool',
         'manage_rbac': 'bool',
         'manage_users': 'bool',
         'manage_guest_users': 'bool',
         'delete_permanently': 'bool',
-        'admin_enterprise': 'bool'
+        'access_reports': 'bool',
+        'create_project': 'bool',
+        'approve_releases': 'bool',
+        'create_releases': 'bool',
+        'share_for_anonymous_access': 'bool'
     }
 
     attribute_map = {
-        'access_reports': 'accessReports',
-        'create_project': 'createProject',
-        'approve_releases': 'approveReleases',
-        'create_releases': 'createReleases',
-        'share_for_anonymous_access': 'shareForAnonymousAccess',
+        'admin_enterprise': 'adminEnterprise',
         'manage_rbac': 'manageRbac',
         'manage_users': 'manageUsers',
         'manage_guest_users': 'manageGuestUsers',
         'delete_permanently': 'deletePermanently',
-        'admin_enterprise': 'adminEnterprise'
+        'access_reports': 'accessReports',
+        'create_project': 'createProject',
+        'approve_releases': 'approveReleases',
+        'create_releases': 'createReleases',
+        'share_for_anonymous_access': 'shareForAnonymousAccess'
     }
 
-    def __init__(self, access_reports=None, create_project=None, approve_releases=None, create_releases=None, share_for_anonymous_access=None, manage_rbac=None, manage_users=None, manage_guest_users=None, delete_permanently=None, admin_enterprise=None):  # noqa: E501
+    def __init__(self, admin_enterprise=None, manage_rbac=None, manage_users=None, manage_guest_users=None, delete_permanently=None, access_reports=None, create_project=None, approve_releases=None, create_releases=None, share_for_anonymous_access=None):  # noqa: E501
         """GlobalPermissionInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._admin_enterprise = None
+        self._manage_rbac = None
+        self._manage_users = None
+        self._manage_guest_users = None
+        self._delete_permanently = None
         self._access_reports = None
         self._create_project = None
         self._approve_releases = None
         self._create_releases = None
         self._share_for_anonymous_access = None
-        self._manage_rbac = None
-        self._manage_users = None
-        self._manage_guest_users = None
-        self._delete_permanently = None
-        self._admin_enterprise = None
         self.discriminator = None
 
+        if admin_enterprise is not None:
+            self.admin_enterprise = admin_enterprise
+        if manage_rbac is not None:
+            self.manage_rbac = manage_rbac
+        if manage_users is not None:
+            self.manage_users = manage_users
+        if manage_guest_users is not None:
+            self.manage_guest_users = manage_guest_users
+        if delete_permanently is not None:
+            self.delete_permanently = delete_permanently
         if access_reports is not None:
             self.access_reports = access_reports
         if create_project is not None:
@@ -82,16 +92,111 @@ class GlobalPermissionInfo(object):
             self.create_releases = create_releases
         if share_for_anonymous_access is not None:
             self.share_for_anonymous_access = share_for_anonymous_access
-        if manage_rbac is not None:
-            self.manage_rbac = manage_rbac
-        if manage_users is not None:
-            self.manage_users = manage_users
-        if manage_guest_users is not None:
-            self.manage_guest_users = manage_guest_users
-        if delete_permanently is not None:
-            self.delete_permanently = delete_permanently
-        if admin_enterprise is not None:
-            self.admin_enterprise = admin_enterprise
+
+    @property
+    def admin_enterprise(self):
+        """Gets the admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
+
+
+        :return: The admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._admin_enterprise
+
+    @admin_enterprise.setter
+    def admin_enterprise(self, admin_enterprise):
+        """Sets the admin_enterprise of this GlobalPermissionInfo.
+
+
+        :param admin_enterprise: The admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._admin_enterprise = admin_enterprise
+
+    @property
+    def manage_rbac(self):
+        """Gets the manage_rbac of this GlobalPermissionInfo.  # noqa: E501
+
+
+        :return: The manage_rbac of this GlobalPermissionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_rbac
+
+    @manage_rbac.setter
+    def manage_rbac(self, manage_rbac):
+        """Sets the manage_rbac of this GlobalPermissionInfo.
+
+
+        :param manage_rbac: The manage_rbac of this GlobalPermissionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._manage_rbac = manage_rbac
+
+    @property
+    def manage_users(self):
+        """Gets the manage_users of this GlobalPermissionInfo.  # noqa: E501
+
+
+        :return: The manage_users of this GlobalPermissionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_users
+
+    @manage_users.setter
+    def manage_users(self, manage_users):
+        """Sets the manage_users of this GlobalPermissionInfo.
+
+
+        :param manage_users: The manage_users of this GlobalPermissionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._manage_users = manage_users
+
+    @property
+    def manage_guest_users(self):
+        """Gets the manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
+
+
+        :return: The manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_guest_users
+
+    @manage_guest_users.setter
+    def manage_guest_users(self, manage_guest_users):
+        """Sets the manage_guest_users of this GlobalPermissionInfo.
+
+
+        :param manage_guest_users: The manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._manage_guest_users = manage_guest_users
+
+    @property
+    def delete_permanently(self):
+        """Gets the delete_permanently of this GlobalPermissionInfo.  # noqa: E501
+
+
+        :return: The delete_permanently of this GlobalPermissionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._delete_permanently
+
+    @delete_permanently.setter
+    def delete_permanently(self, delete_permanently):
+        """Sets the delete_permanently of this GlobalPermissionInfo.
+
+
+        :param delete_permanently: The delete_permanently of this GlobalPermissionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._delete_permanently = delete_permanently
 
     @property
     def access_reports(self):
@@ -197,111 +302,6 @@ class GlobalPermissionInfo(object):
         """
 
         self._share_for_anonymous_access = share_for_anonymous_access
-
-    @property
-    def manage_rbac(self):
-        """Gets the manage_rbac of this GlobalPermissionInfo.  # noqa: E501
-
-
-        :return: The manage_rbac of this GlobalPermissionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._manage_rbac
-
-    @manage_rbac.setter
-    def manage_rbac(self, manage_rbac):
-        """Sets the manage_rbac of this GlobalPermissionInfo.
-
-
-        :param manage_rbac: The manage_rbac of this GlobalPermissionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._manage_rbac = manage_rbac
-
-    @property
-    def manage_users(self):
-        """Gets the manage_users of this GlobalPermissionInfo.  # noqa: E501
-
-
-        :return: The manage_users of this GlobalPermissionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._manage_users
-
-    @manage_users.setter
-    def manage_users(self, manage_users):
-        """Sets the manage_users of this GlobalPermissionInfo.
-
-
-        :param manage_users: The manage_users of this GlobalPermissionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._manage_users = manage_users
-
-    @property
-    def manage_guest_users(self):
-        """Gets the manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
-
-
-        :return: The manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._manage_guest_users
-
-    @manage_guest_users.setter
-    def manage_guest_users(self, manage_guest_users):
-        """Sets the manage_guest_users of this GlobalPermissionInfo.
-
-
-        :param manage_guest_users: The manage_guest_users of this GlobalPermissionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._manage_guest_users = manage_guest_users
-
-    @property
-    def delete_permanently(self):
-        """Gets the delete_permanently of this GlobalPermissionInfo.  # noqa: E501
-
-
-        :return: The delete_permanently of this GlobalPermissionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._delete_permanently
-
-    @delete_permanently.setter
-    def delete_permanently(self, delete_permanently):
-        """Sets the delete_permanently of this GlobalPermissionInfo.
-
-
-        :param delete_permanently: The delete_permanently of this GlobalPermissionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._delete_permanently = delete_permanently
-
-    @property
-    def admin_enterprise(self):
-        """Gets the admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
-
-
-        :return: The admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._admin_enterprise
-
-    @admin_enterprise.setter
-    def admin_enterprise(self, admin_enterprise):
-        """Sets the admin_enterprise of this GlobalPermissionInfo.
-
-
-        :param admin_enterprise: The admin_enterprise of this GlobalPermissionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._admin_enterprise = admin_enterprise
 
     def to_dict(self):
         """Returns the model properties as a dict"""

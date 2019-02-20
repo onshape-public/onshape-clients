@@ -33,38 +33,38 @@ class ConfigurationInfoEntry(object):
     """
     openapi_types = {
         'parameter_display_value': 'str',
-        'explicit': 'bool',
         'parameter_id': 'str',
         'parameter_value': 'str',
+        'explicit': 'bool',
         'parameter_name': 'str'
     }
 
     attribute_map = {
         'parameter_display_value': 'parameterDisplayValue',
-        'explicit': 'explicit',
         'parameter_id': 'parameterId',
         'parameter_value': 'parameterValue',
+        'explicit': 'explicit',
         'parameter_name': 'parameterName'
     }
 
-    def __init__(self, parameter_display_value=None, explicit=None, parameter_id=None, parameter_value=None, parameter_name=None):  # noqa: E501
+    def __init__(self, parameter_display_value=None, parameter_id=None, parameter_value=None, explicit=None, parameter_name=None):  # noqa: E501
         """ConfigurationInfoEntry - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameter_display_value = None
-        self._explicit = None
         self._parameter_id = None
         self._parameter_value = None
+        self._explicit = None
         self._parameter_name = None
         self.discriminator = None
 
         if parameter_display_value is not None:
             self.parameter_display_value = parameter_display_value
-        if explicit is not None:
-            self.explicit = explicit
         if parameter_id is not None:
             self.parameter_id = parameter_id
         if parameter_value is not None:
             self.parameter_value = parameter_value
+        if explicit is not None:
+            self.explicit = explicit
         if parameter_name is not None:
             self.parameter_name = parameter_name
 
@@ -88,27 +88,6 @@ class ConfigurationInfoEntry(object):
         """
 
         self._parameter_display_value = parameter_display_value
-
-    @property
-    def explicit(self):
-        """Gets the explicit of this ConfigurationInfoEntry.  # noqa: E501
-
-
-        :return: The explicit of this ConfigurationInfoEntry.  # noqa: E501
-        :rtype: bool
-        """
-        return self._explicit
-
-    @explicit.setter
-    def explicit(self, explicit):
-        """Sets the explicit of this ConfigurationInfoEntry.
-
-
-        :param explicit: The explicit of this ConfigurationInfoEntry.  # noqa: E501
-        :type: bool
-        """
-
-        self._explicit = explicit
 
     @property
     def parameter_id(self):
@@ -151,6 +130,27 @@ class ConfigurationInfoEntry(object):
         """
 
         self._parameter_value = parameter_value
+
+    @property
+    def explicit(self):
+        """Gets the explicit of this ConfigurationInfoEntry.  # noqa: E501
+
+
+        :return: The explicit of this ConfigurationInfoEntry.  # noqa: E501
+        :rtype: bool
+        """
+        return self._explicit
+
+    @explicit.setter
+    def explicit(self, explicit):
+        """Sets the explicit of this ConfigurationInfoEntry.
+
+
+        :param explicit: The explicit of this ConfigurationInfoEntry.  # noqa: E501
+        :type: bool
+        """
+
+        self._explicit = explicit
 
     @property
     def parameter_name(self):

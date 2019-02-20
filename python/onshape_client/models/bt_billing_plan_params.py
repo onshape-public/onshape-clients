@@ -35,47 +35,47 @@ class BTBillingPlanParams(object):
         'name': 'str',
         'description': 'str',
         'group': 'str',
+        'application_id': 'str',
         'plan_id': 'str',
         'client_id': 'str',
         'interval': 'str',
-        'consumable_quantity': 'int',
+        'plan_type': 'int',
         'trial_period_days': 'int',
+        'consumable_quantity': 'int',
         'amount_cents': 'int',
-        'hidden': 'bool',
-        'application_id': 'str',
-        'plan_type': 'int'
+        'hidden': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
         'description': 'description',
         'group': 'group',
+        'application_id': 'applicationId',
         'plan_id': 'planId',
         'client_id': 'clientId',
         'interval': 'interval',
-        'consumable_quantity': 'consumableQuantity',
+        'plan_type': 'planType',
         'trial_period_days': 'trialPeriodDays',
+        'consumable_quantity': 'consumableQuantity',
         'amount_cents': 'amountCents',
-        'hidden': 'hidden',
-        'application_id': 'applicationId',
-        'plan_type': 'planType'
+        'hidden': 'hidden'
     }
 
-    def __init__(self, name=None, description=None, group=None, plan_id=None, client_id=None, interval=None, consumable_quantity=None, trial_period_days=None, amount_cents=None, hidden=None, application_id=None, plan_type=None):  # noqa: E501
+    def __init__(self, name=None, description=None, group=None, application_id=None, plan_id=None, client_id=None, interval=None, plan_type=None, trial_period_days=None, consumable_quantity=None, amount_cents=None, hidden=None):  # noqa: E501
         """BTBillingPlanParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
         self._group = None
+        self._application_id = None
         self._plan_id = None
         self._client_id = None
         self._interval = None
-        self._consumable_quantity = None
+        self._plan_type = None
         self._trial_period_days = None
+        self._consumable_quantity = None
         self._amount_cents = None
         self._hidden = None
-        self._application_id = None
-        self._plan_type = None
         self.discriminator = None
 
         if name is not None:
@@ -84,24 +84,24 @@ class BTBillingPlanParams(object):
             self.description = description
         if group is not None:
             self.group = group
+        if application_id is not None:
+            self.application_id = application_id
         if plan_id is not None:
             self.plan_id = plan_id
         if client_id is not None:
             self.client_id = client_id
         if interval is not None:
             self.interval = interval
-        if consumable_quantity is not None:
-            self.consumable_quantity = consumable_quantity
+        if plan_type is not None:
+            self.plan_type = plan_type
         if trial_period_days is not None:
             self.trial_period_days = trial_period_days
+        if consumable_quantity is not None:
+            self.consumable_quantity = consumable_quantity
         if amount_cents is not None:
             self.amount_cents = amount_cents
         if hidden is not None:
             self.hidden = hidden
-        if application_id is not None:
-            self.application_id = application_id
-        if plan_type is not None:
-            self.plan_type = plan_type
 
     @property
     def name(self):
@@ -167,6 +167,27 @@ class BTBillingPlanParams(object):
         self._group = group
 
     @property
+    def application_id(self):
+        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._application_id
+
+    @application_id.setter
+    def application_id(self, application_id):
+        """Sets the application_id of this BTBillingPlanParams.
+
+
+        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._application_id = application_id
+
+    @property
     def plan_id(self):
         """Gets the plan_id of this BTBillingPlanParams.  # noqa: E501
 
@@ -230,25 +251,25 @@ class BTBillingPlanParams(object):
         self._interval = interval
 
     @property
-    def consumable_quantity(self):
-        """Gets the consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+    def plan_type(self):
+        """Gets the plan_type of this BTBillingPlanParams.  # noqa: E501
 
 
-        :return: The consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+        :return: The plan_type of this BTBillingPlanParams.  # noqa: E501
         :rtype: int
         """
-        return self._consumable_quantity
+        return self._plan_type
 
-    @consumable_quantity.setter
-    def consumable_quantity(self, consumable_quantity):
-        """Sets the consumable_quantity of this BTBillingPlanParams.
+    @plan_type.setter
+    def plan_type(self, plan_type):
+        """Sets the plan_type of this BTBillingPlanParams.
 
 
-        :param consumable_quantity: The consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+        :param plan_type: The plan_type of this BTBillingPlanParams.  # noqa: E501
         :type: int
         """
 
-        self._consumable_quantity = consumable_quantity
+        self._plan_type = plan_type
 
     @property
     def trial_period_days(self):
@@ -270,6 +291,27 @@ class BTBillingPlanParams(object):
         """
 
         self._trial_period_days = trial_period_days
+
+    @property
+    def consumable_quantity(self):
+        """Gets the consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._consumable_quantity
+
+    @consumable_quantity.setter
+    def consumable_quantity(self, consumable_quantity):
+        """Sets the consumable_quantity of this BTBillingPlanParams.
+
+
+        :param consumable_quantity: The consumable_quantity of this BTBillingPlanParams.  # noqa: E501
+        :type: int
+        """
+
+        self._consumable_quantity = consumable_quantity
 
     @property
     def amount_cents(self):
@@ -312,48 +354,6 @@ class BTBillingPlanParams(object):
         """
 
         self._hidden = hidden
-
-    @property
-    def application_id(self):
-        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._application_id
-
-    @application_id.setter
-    def application_id(self, application_id):
-        """Sets the application_id of this BTBillingPlanParams.
-
-
-        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._application_id = application_id
-
-    @property
-    def plan_type(self):
-        """Gets the plan_type of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The plan_type of this BTBillingPlanParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._plan_type
-
-    @plan_type.setter
-    def plan_type(self, plan_type):
-        """Sets the plan_type of this BTBillingPlanParams.
-
-
-        :param plan_type: The plan_type of this BTBillingPlanParams.  # noqa: E501
-        :type: int
-        """
-
-        self._plan_type = plan_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,7 +33,6 @@ class BTNotificationParams(object):
     """
     openapi_types = {
         'id': 'str',
-        'user_id': 'str',
         'acknowledged': 'bool',
         'expanded': 'bool',
         'campaign_id': 'str',
@@ -42,12 +41,12 @@ class BTNotificationParams(object):
         'notification_level': 'str',
         'deliver_at': 'datetime',
         'event_key': 'str',
+        'user_id': 'str',
         'message_params': 'list[object]'
     }
 
     attribute_map = {
         'id': 'id',
-        'user_id': 'userId',
         'acknowledged': 'acknowledged',
         'expanded': 'expanded',
         'campaign_id': 'campaignId',
@@ -56,14 +55,14 @@ class BTNotificationParams(object):
         'notification_level': 'notificationLevel',
         'deliver_at': 'deliverAt',
         'event_key': 'eventKey',
+        'user_id': 'userId',
         'message_params': 'messageParams'
     }
 
-    def __init__(self, id=None, user_id=None, acknowledged=None, expanded=None, campaign_id=None, message_id=None, message_params_array=None, notification_level=None, deliver_at=None, event_key=None, message_params=None):  # noqa: E501
+    def __init__(self, id=None, acknowledged=None, expanded=None, campaign_id=None, message_id=None, message_params_array=None, notification_level=None, deliver_at=None, event_key=None, user_id=None, message_params=None):  # noqa: E501
         """BTNotificationParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._user_id = None
         self._acknowledged = None
         self._expanded = None
         self._campaign_id = None
@@ -72,13 +71,12 @@ class BTNotificationParams(object):
         self._notification_level = None
         self._deliver_at = None
         self._event_key = None
+        self._user_id = None
         self._message_params = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if user_id is not None:
-            self.user_id = user_id
         if acknowledged is not None:
             self.acknowledged = acknowledged
         if expanded is not None:
@@ -95,6 +93,8 @@ class BTNotificationParams(object):
             self.deliver_at = deliver_at
         if event_key is not None:
             self.event_key = event_key
+        if user_id is not None:
+            self.user_id = user_id
         if message_params is not None:
             self.message_params = message_params
 
@@ -118,27 +118,6 @@ class BTNotificationParams(object):
         """
 
         self._id = id
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTNotificationParams.  # noqa: E501
-
-
-        :return: The user_id of this BTNotificationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTNotificationParams.
-
-
-        :param user_id: The user_id of this BTNotificationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
 
     @property
     def acknowledged(self):
@@ -313,6 +292,27 @@ class BTNotificationParams(object):
         """
 
         self._event_key = event_key
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTNotificationParams.  # noqa: E501
+
+
+        :return: The user_id of this BTNotificationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTNotificationParams.
+
+
+        :param user_id: The user_id of this BTNotificationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     @property
     def message_params(self):

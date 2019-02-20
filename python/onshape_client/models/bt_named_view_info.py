@@ -32,83 +32,41 @@ class BTNamedViewInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'camera_viewport': 'list[float]',
-        'angle': 'float',
         'view_matrix': 'list[float]',
         'perspective': 'bool',
+        'angle': 'float',
+        'camera_viewport': 'list[float]',
         'section_planes': 'list[BTSectionPlaneInfo]'
     }
 
     attribute_map = {
-        'camera_viewport': 'cameraViewport',
-        'angle': 'angle',
         'view_matrix': 'viewMatrix',
         'perspective': 'perspective',
+        'angle': 'angle',
+        'camera_viewport': 'cameraViewport',
         'section_planes': 'sectionPlanes'
     }
 
-    def __init__(self, camera_viewport=None, angle=None, view_matrix=None, perspective=None, section_planes=None):  # noqa: E501
+    def __init__(self, view_matrix=None, perspective=None, angle=None, camera_viewport=None, section_planes=None):  # noqa: E501
         """BTNamedViewInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._camera_viewport = None
-        self._angle = None
         self._view_matrix = None
         self._perspective = None
+        self._angle = None
+        self._camera_viewport = None
         self._section_planes = None
         self.discriminator = None
 
-        if camera_viewport is not None:
-            self.camera_viewport = camera_viewport
-        if angle is not None:
-            self.angle = angle
         if view_matrix is not None:
             self.view_matrix = view_matrix
         if perspective is not None:
             self.perspective = perspective
+        if angle is not None:
+            self.angle = angle
+        if camera_viewport is not None:
+            self.camera_viewport = camera_viewport
         if section_planes is not None:
             self.section_planes = section_planes
-
-    @property
-    def camera_viewport(self):
-        """Gets the camera_viewport of this BTNamedViewInfo.  # noqa: E501
-
-
-        :return: The camera_viewport of this BTNamedViewInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._camera_viewport
-
-    @camera_viewport.setter
-    def camera_viewport(self, camera_viewport):
-        """Sets the camera_viewport of this BTNamedViewInfo.
-
-
-        :param camera_viewport: The camera_viewport of this BTNamedViewInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._camera_viewport = camera_viewport
-
-    @property
-    def angle(self):
-        """Gets the angle of this BTNamedViewInfo.  # noqa: E501
-
-
-        :return: The angle of this BTNamedViewInfo.  # noqa: E501
-        :rtype: float
-        """
-        return self._angle
-
-    @angle.setter
-    def angle(self, angle):
-        """Sets the angle of this BTNamedViewInfo.
-
-
-        :param angle: The angle of this BTNamedViewInfo.  # noqa: E501
-        :type: float
-        """
-
-        self._angle = angle
 
     @property
     def view_matrix(self):
@@ -151,6 +109,48 @@ class BTNamedViewInfo(object):
         """
 
         self._perspective = perspective
+
+    @property
+    def angle(self):
+        """Gets the angle of this BTNamedViewInfo.  # noqa: E501
+
+
+        :return: The angle of this BTNamedViewInfo.  # noqa: E501
+        :rtype: float
+        """
+        return self._angle
+
+    @angle.setter
+    def angle(self, angle):
+        """Sets the angle of this BTNamedViewInfo.
+
+
+        :param angle: The angle of this BTNamedViewInfo.  # noqa: E501
+        :type: float
+        """
+
+        self._angle = angle
+
+    @property
+    def camera_viewport(self):
+        """Gets the camera_viewport of this BTNamedViewInfo.  # noqa: E501
+
+
+        :return: The camera_viewport of this BTNamedViewInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._camera_viewport
+
+    @camera_viewport.setter
+    def camera_viewport(self, camera_viewport):
+        """Sets the camera_viewport of this BTNamedViewInfo.
+
+
+        :param camera_viewport: The camera_viewport of this BTNamedViewInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._camera_viewport = camera_viewport
 
     @property
     def section_planes(self):

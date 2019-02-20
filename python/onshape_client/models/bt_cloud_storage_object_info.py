@@ -34,10 +34,10 @@ class BTCloudStorageObjectInfo(object):
     openapi_types = {
         'modified_by_id': 'str',
         'mime_type': 'str',
-        'thumbnail_info': 'BTThumbnailInfo',
         'cloud_storage_provider': 'int',
         'parent_id': 'str',
         'cloud_storage_account_id': 'str',
+        'thumbnail_info': 'BTThumbnailInfo',
         'cloud_storage_object_id': 'str',
         'size_bytes': 'int',
         'web_view_link': 'str',
@@ -51,12 +51,12 @@ class BTCloudStorageObjectInfo(object):
         'can_move': 'bool',
         'has_pending_owner': 'bool',
         'description': 'str',
-        'is_enterprise_owned': 'bool',
-        'modified_at': 'datetime',
+        'project_id': 'str',
         'created_at': 'datetime',
+        'modified_at': 'datetime',
         'created_by': 'BTUserBasicSummaryInfo',
         'modified_by': 'BTUserBasicSummaryInfo',
-        'project_id': 'str',
+        'is_enterprise_owned': 'bool',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -66,10 +66,10 @@ class BTCloudStorageObjectInfo(object):
     attribute_map = {
         'modified_by_id': 'modifiedById',
         'mime_type': 'mimeType',
-        'thumbnail_info': 'thumbnailInfo',
         'cloud_storage_provider': 'cloudStorageProvider',
         'parent_id': 'parentId',
         'cloud_storage_account_id': 'cloudStorageAccountId',
+        'thumbnail_info': 'thumbnailInfo',
         'cloud_storage_object_id': 'cloudStorageObjectId',
         'size_bytes': 'sizeBytes',
         'web_view_link': 'webViewLink',
@@ -83,27 +83,27 @@ class BTCloudStorageObjectInfo(object):
         'can_move': 'canMove',
         'has_pending_owner': 'hasPendingOwner',
         'description': 'description',
-        'is_enterprise_owned': 'isEnterpriseOwned',
-        'modified_at': 'modifiedAt',
+        'project_id': 'projectId',
         'created_at': 'createdAt',
+        'modified_at': 'modifiedAt',
         'created_by': 'createdBy',
         'modified_by': 'modifiedBy',
-        'project_id': 'projectId',
+        'is_enterprise_owned': 'isEnterpriseOwned',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, modified_by_id=None, mime_type=None, thumbnail_info=None, cloud_storage_provider=None, parent_id=None, cloud_storage_account_id=None, cloud_storage_object_id=None, size_bytes=None, web_view_link=None, icon_link=None, created_by_id=None, owner=None, tree_href=None, resource_type=None, is_mutable=None, is_container=None, can_move=None, has_pending_owner=None, description=None, is_enterprise_owned=None, modified_at=None, created_at=None, created_by=None, modified_by=None, project_id=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, modified_by_id=None, mime_type=None, cloud_storage_provider=None, parent_id=None, cloud_storage_account_id=None, thumbnail_info=None, cloud_storage_object_id=None, size_bytes=None, web_view_link=None, icon_link=None, created_by_id=None, owner=None, tree_href=None, resource_type=None, is_mutable=None, is_container=None, can_move=None, has_pending_owner=None, description=None, project_id=None, created_at=None, modified_at=None, created_by=None, modified_by=None, is_enterprise_owned=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTCloudStorageObjectInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._modified_by_id = None
         self._mime_type = None
-        self._thumbnail_info = None
         self._cloud_storage_provider = None
         self._parent_id = None
         self._cloud_storage_account_id = None
+        self._thumbnail_info = None
         self._cloud_storage_object_id = None
         self._size_bytes = None
         self._web_view_link = None
@@ -117,12 +117,12 @@ class BTCloudStorageObjectInfo(object):
         self._can_move = None
         self._has_pending_owner = None
         self._description = None
-        self._is_enterprise_owned = None
-        self._modified_at = None
+        self._project_id = None
         self._created_at = None
+        self._modified_at = None
         self._created_by = None
         self._modified_by = None
-        self._project_id = None
+        self._is_enterprise_owned = None
         self._name = None
         self._id = None
         self._href = None
@@ -133,14 +133,14 @@ class BTCloudStorageObjectInfo(object):
             self.modified_by_id = modified_by_id
         if mime_type is not None:
             self.mime_type = mime_type
-        if thumbnail_info is not None:
-            self.thumbnail_info = thumbnail_info
         if cloud_storage_provider is not None:
             self.cloud_storage_provider = cloud_storage_provider
         if parent_id is not None:
             self.parent_id = parent_id
         if cloud_storage_account_id is not None:
             self.cloud_storage_account_id = cloud_storage_account_id
+        if thumbnail_info is not None:
+            self.thumbnail_info = thumbnail_info
         if cloud_storage_object_id is not None:
             self.cloud_storage_object_id = cloud_storage_object_id
         if size_bytes is not None:
@@ -167,18 +167,18 @@ class BTCloudStorageObjectInfo(object):
             self.has_pending_owner = has_pending_owner
         if description is not None:
             self.description = description
-        if is_enterprise_owned is not None:
-            self.is_enterprise_owned = is_enterprise_owned
-        if modified_at is not None:
-            self.modified_at = modified_at
+        if project_id is not None:
+            self.project_id = project_id
         if created_at is not None:
             self.created_at = created_at
+        if modified_at is not None:
+            self.modified_at = modified_at
         if created_by is not None:
             self.created_by = created_by
         if modified_by is not None:
             self.modified_by = modified_by
-        if project_id is not None:
-            self.project_id = project_id
+        if is_enterprise_owned is not None:
+            self.is_enterprise_owned = is_enterprise_owned
         if name is not None:
             self.name = name
         if id is not None:
@@ -229,27 +229,6 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._mime_type = mime_type
-
-    @property
-    def thumbnail_info(self):
-        """Gets the thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
-        """
-        return self._thumbnail_info
-
-    @thumbnail_info.setter
-    def thumbnail_info(self, thumbnail_info):
-        """Sets the thumbnail_info of this BTCloudStorageObjectInfo.
-
-
-        :param thumbnail_info: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: BTThumbnailInfo
-        """
-
-        self._thumbnail_info = thumbnail_info
 
     @property
     def cloud_storage_provider(self):
@@ -313,6 +292,27 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._cloud_storage_account_id = cloud_storage_account_id
+
+    @property
+    def thumbnail_info(self):
+        """Gets the thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail_info
+
+    @thumbnail_info.setter
+    def thumbnail_info(self, thumbnail_info):
+        """Sets the thumbnail_info of this BTCloudStorageObjectInfo.
+
+
+        :param thumbnail_info: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail_info = thumbnail_info
 
     @property
     def cloud_storage_object_id(self):
@@ -588,46 +588,25 @@ class BTCloudStorageObjectInfo(object):
         self._description = description
 
     @property
-    def is_enterprise_owned(self):
-        """Gets the is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
+    def project_id(self):
+        """Gets the project_id of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: bool
+        :return: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._is_enterprise_owned
+        return self._project_id
 
-    @is_enterprise_owned.setter
-    def is_enterprise_owned(self, is_enterprise_owned):
-        """Sets the is_enterprise_owned of this BTCloudStorageObjectInfo.
-
-
-        :param is_enterprise_owned: The is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_enterprise_owned = is_enterprise_owned
-
-    @property
-    def modified_at(self):
-        """Gets the modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTCloudStorageObjectInfo.
 
 
-        :return: The modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._modified_at
-
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTCloudStorageObjectInfo.
-
-
-        :param modified_at: The modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: datetime
+        :param project_id: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
         """
 
-        self._modified_at = modified_at
+        self._project_id = project_id
 
     @property
     def created_at(self):
@@ -649,6 +628,27 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def modified_at(self):
+        """Gets the modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._modified_at
+
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTCloudStorageObjectInfo.
+
+
+        :param modified_at: The modified_at of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._modified_at = modified_at
 
     @property
     def created_by(self):
@@ -693,25 +693,25 @@ class BTCloudStorageObjectInfo(object):
         self._modified_by = modified_by
 
     @property
-    def project_id(self):
-        """Gets the project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+    def is_enterprise_owned(self):
+        """Gets the is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
+        :return: The is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._project_id
+        return self._is_enterprise_owned
 
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTCloudStorageObjectInfo.
+    @is_enterprise_owned.setter
+    def is_enterprise_owned(self, is_enterprise_owned):
+        """Sets the is_enterprise_owned of this BTCloudStorageObjectInfo.
 
 
-        :param project_id: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
+        :param is_enterprise_owned: The is_enterprise_owned of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._project_id = project_id
+        self._is_enterprise_owned = is_enterprise_owned
 
     @property
     def name(self):

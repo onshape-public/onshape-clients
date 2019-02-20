@@ -33,33 +33,33 @@ class BTListResponseBTBetaCapabilityUserInfo(object):
     """
     openapi_types = {
         'next': 'str',
-        'items': 'list[BTBetaCapabilityUserInfo]',
         'href': 'str',
+        'items': 'list[BTBetaCapabilityUserInfo]',
         'previous': 'str'
     }
 
     attribute_map = {
         'next': 'next',
-        'items': 'items',
         'href': 'href',
+        'items': 'items',
         'previous': 'previous'
     }
 
-    def __init__(self, next=None, items=None, href=None, previous=None):  # noqa: E501
+    def __init__(self, next=None, href=None, items=None, previous=None):  # noqa: E501
         """BTListResponseBTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._next = None
-        self._items = None
         self._href = None
+        self._items = None
         self._previous = None
         self.discriminator = None
 
         if next is not None:
             self.next = next
-        if items is not None:
-            self.items = items
         if href is not None:
             self.href = href
+        if items is not None:
+            self.items = items
         if previous is not None:
             self.previous = previous
 
@@ -85,27 +85,6 @@ class BTListResponseBTBetaCapabilityUserInfo(object):
         self._next = next
 
     @property
-    def items(self):
-        """Gets the items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: list[BTBetaCapabilityUserInfo]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTListResponseBTBetaCapabilityUserInfo.
-
-
-        :param items: The items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
-        :type: list[BTBetaCapabilityUserInfo]
-        """
-
-        self._items = items
-
-    @property
     def href(self):
         """Gets the href of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTListResponseBTBetaCapabilityUserInfo(object):
         """
 
         self._href = href
+
+    @property
+    def items(self):
+        """Gets the items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: list[BTBetaCapabilityUserInfo]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTListResponseBTBetaCapabilityUserInfo.
+
+
+        :param items: The items of this BTListResponseBTBetaCapabilityUserInfo.  # noqa: E501
+        :type: list[BTBetaCapabilityUserInfo]
+        """
+
+        self._items = items
 
     @property
     def previous(self):

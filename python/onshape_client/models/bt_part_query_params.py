@@ -32,31 +32,52 @@ class BTPartQueryParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'configuration': 'str',
         'link_document_id': 'str',
-        'queries': 'list[str]',
-        'configuration': 'str'
+        'queries': 'list[str]'
     }
 
     attribute_map = {
+        'configuration': 'configuration',
         'link_document_id': 'linkDocumentId',
-        'queries': 'queries',
-        'configuration': 'configuration'
+        'queries': 'queries'
     }
 
-    def __init__(self, link_document_id=None, queries=None, configuration=None):  # noqa: E501
+    def __init__(self, configuration=None, link_document_id=None, queries=None):  # noqa: E501
         """BTPartQueryParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._configuration = None
         self._link_document_id = None
         self._queries = None
-        self._configuration = None
         self.discriminator = None
 
+        if configuration is not None:
+            self.configuration = configuration
         if link_document_id is not None:
             self.link_document_id = link_document_id
         if queries is not None:
             self.queries = queries
-        if configuration is not None:
-            self.configuration = configuration
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this BTPartQueryParams.  # noqa: E501
+
+
+        :return: The configuration of this BTPartQueryParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTPartQueryParams.
+
+
+        :param configuration: The configuration of this BTPartQueryParams.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration = configuration
 
     @property
     def link_document_id(self):
@@ -99,27 +120,6 @@ class BTPartQueryParams(object):
         """
 
         self._queries = queries
-
-    @property
-    def configuration(self):
-        """Gets the configuration of this BTPartQueryParams.  # noqa: E501
-
-
-        :return: The configuration of this BTPartQueryParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTPartQueryParams.
-
-
-        :param configuration: The configuration of this BTPartQueryParams.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

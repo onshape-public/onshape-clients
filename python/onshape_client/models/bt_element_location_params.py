@@ -32,31 +32,52 @@ class BTElementLocationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'element_id': 'str',
         'position': 'int',
-        'group_id': 'str',
-        'element_id': 'str'
+        'group_id': 'str'
     }
 
     attribute_map = {
+        'element_id': 'elementId',
         'position': 'position',
-        'group_id': 'groupId',
-        'element_id': 'elementId'
+        'group_id': 'groupId'
     }
 
-    def __init__(self, position=None, group_id=None, element_id=None):  # noqa: E501
+    def __init__(self, element_id=None, position=None, group_id=None):  # noqa: E501
         """BTElementLocationParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._element_id = None
         self._position = None
         self._group_id = None
-        self._element_id = None
         self.discriminator = None
 
+        if element_id is not None:
+            self.element_id = element_id
         if position is not None:
             self.position = position
         if group_id is not None:
             self.group_id = group_id
-        if element_id is not None:
-            self.element_id = element_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTElementLocationParams.  # noqa: E501
+
+
+        :return: The element_id of this BTElementLocationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTElementLocationParams.
+
+
+        :param element_id: The element_id of this BTElementLocationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
 
     @property
     def position(self):
@@ -99,27 +120,6 @@ class BTElementLocationParams(object):
         """
 
         self._group_id = group_id
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTElementLocationParams.  # noqa: E501
-
-
-        :return: The element_id of this BTElementLocationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTElementLocationParams.
-
-
-        :param element_id: The element_id of this BTElementLocationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

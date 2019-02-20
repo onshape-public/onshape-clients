@@ -35,12 +35,12 @@ class BTStandardContentHierarchyInfo(object):
         'type': 'str',
         'existing_versions': 'list[VersionSpecs]',
         'category': 'str',
+        'default_workspace': 'str',
         'standard': 'str',
+        'document_type': 'int',
         'types': 'str',
         'production_version_id': 'str',
         'test_version_id': 'str',
-        'document_type': 'int',
-        'default_workspace': 'str',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -51,30 +51,30 @@ class BTStandardContentHierarchyInfo(object):
         'type': 'type',
         'existing_versions': 'existingVersions',
         'category': 'category',
+        'default_workspace': 'defaultWorkspace',
         'standard': 'standard',
+        'document_type': 'documentType',
         'types': 'types',
         'production_version_id': 'productionVersionId',
         'test_version_id': 'testVersionId',
-        'document_type': 'documentType',
-        'default_workspace': 'defaultWorkspace',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, type=None, existing_versions=None, category=None, standard=None, types=None, production_version_id=None, test_version_id=None, document_type=None, default_workspace=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, type=None, existing_versions=None, category=None, default_workspace=None, standard=None, document_type=None, types=None, production_version_id=None, test_version_id=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTStandardContentHierarchyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
         self._existing_versions = None
         self._category = None
+        self._default_workspace = None
         self._standard = None
+        self._document_type = None
         self._types = None
         self._production_version_id = None
         self._test_version_id = None
-        self._document_type = None
-        self._default_workspace = None
         self._name = None
         self._id = None
         self._href = None
@@ -87,18 +87,18 @@ class BTStandardContentHierarchyInfo(object):
             self.existing_versions = existing_versions
         if category is not None:
             self.category = category
+        if default_workspace is not None:
+            self.default_workspace = default_workspace
         if standard is not None:
             self.standard = standard
+        if document_type is not None:
+            self.document_type = document_type
         if types is not None:
             self.types = types
         if production_version_id is not None:
             self.production_version_id = production_version_id
         if test_version_id is not None:
             self.test_version_id = test_version_id
-        if document_type is not None:
-            self.document_type = document_type
-        if default_workspace is not None:
-            self.default_workspace = default_workspace
         if name is not None:
             self.name = name
         if id is not None:
@@ -172,6 +172,27 @@ class BTStandardContentHierarchyInfo(object):
         self._category = category
 
     @property
+    def default_workspace(self):
+        """Gets the default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_workspace
+
+    @default_workspace.setter
+    def default_workspace(self, default_workspace):
+        """Sets the default_workspace of this BTStandardContentHierarchyInfo.
+
+
+        :param default_workspace: The default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._default_workspace = default_workspace
+
+    @property
     def standard(self):
         """Gets the standard of this BTStandardContentHierarchyInfo.  # noqa: E501
 
@@ -191,6 +212,27 @@ class BTStandardContentHierarchyInfo(object):
         """
 
         self._standard = standard
+
+    @property
+    def document_type(self):
+        """Gets the document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._document_type
+
+    @document_type.setter
+    def document_type(self, document_type):
+        """Sets the document_type of this BTStandardContentHierarchyInfo.
+
+
+        :param document_type: The document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._document_type = document_type
 
     @property
     def types(self):
@@ -254,48 +296,6 @@ class BTStandardContentHierarchyInfo(object):
         """
 
         self._test_version_id = test_version_id
-
-    @property
-    def document_type(self):
-        """Gets the document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._document_type
-
-    @document_type.setter
-    def document_type(self, document_type):
-        """Sets the document_type of this BTStandardContentHierarchyInfo.
-
-
-        :param document_type: The document_type of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._document_type = document_type
-
-    @property
-    def default_workspace(self):
-        """Gets the default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_workspace
-
-    @default_workspace.setter
-    def default_workspace(self, default_workspace):
-        """Sets the default_workspace of this BTStandardContentHierarchyInfo.
-
-
-        :param default_workspace: The default_workspace of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._default_workspace = default_workspace
 
     @property
     def name(self):

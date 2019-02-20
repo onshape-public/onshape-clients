@@ -34,8 +34,8 @@ class BTThumbnailSizeInfo(object):
     openapi_types = {
         'size': 'str',
         'sheet_name': 'str',
-        'media_type': 'str',
         'href': 'str',
+        'media_type': 'str',
         'unique_id': 'str',
         'view_orientation': 'str',
         'render_mode': 'str'
@@ -44,20 +44,20 @@ class BTThumbnailSizeInfo(object):
     attribute_map = {
         'size': 'size',
         'sheet_name': 'sheetName',
-        'media_type': 'mediaType',
         'href': 'href',
+        'media_type': 'mediaType',
         'unique_id': 'uniqueId',
         'view_orientation': 'viewOrientation',
         'render_mode': 'renderMode'
     }
 
-    def __init__(self, size=None, sheet_name=None, media_type=None, href=None, unique_id=None, view_orientation=None, render_mode=None):  # noqa: E501
+    def __init__(self, size=None, sheet_name=None, href=None, media_type=None, unique_id=None, view_orientation=None, render_mode=None):  # noqa: E501
         """BTThumbnailSizeInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._size = None
         self._sheet_name = None
-        self._media_type = None
         self._href = None
+        self._media_type = None
         self._unique_id = None
         self._view_orientation = None
         self._render_mode = None
@@ -67,10 +67,10 @@ class BTThumbnailSizeInfo(object):
             self.size = size
         if sheet_name is not None:
             self.sheet_name = sheet_name
-        if media_type is not None:
-            self.media_type = media_type
         if href is not None:
             self.href = href
+        if media_type is not None:
+            self.media_type = media_type
         if unique_id is not None:
             self.unique_id = unique_id
         if view_orientation is not None:
@@ -121,27 +121,6 @@ class BTThumbnailSizeInfo(object):
         self._sheet_name = sheet_name
 
     @property
-    def media_type(self):
-        """Gets the media_type of this BTThumbnailSizeInfo.  # noqa: E501
-
-
-        :return: The media_type of this BTThumbnailSizeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._media_type
-
-    @media_type.setter
-    def media_type(self, media_type):
-        """Sets the media_type of this BTThumbnailSizeInfo.
-
-
-        :param media_type: The media_type of this BTThumbnailSizeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._media_type = media_type
-
-    @property
     def href(self):
         """Gets the href of this BTThumbnailSizeInfo.  # noqa: E501
 
@@ -161,6 +140,27 @@ class BTThumbnailSizeInfo(object):
         """
 
         self._href = href
+
+    @property
+    def media_type(self):
+        """Gets the media_type of this BTThumbnailSizeInfo.  # noqa: E501
+
+
+        :return: The media_type of this BTThumbnailSizeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._media_type
+
+    @media_type.setter
+    def media_type(self, media_type):
+        """Sets the media_type of this BTThumbnailSizeInfo.
+
+
+        :param media_type: The media_type of this BTThumbnailSizeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._media_type = media_type
 
     @property
     def unique_id(self):

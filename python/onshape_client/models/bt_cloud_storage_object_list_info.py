@@ -33,33 +33,33 @@ class BTCloudStorageObjectListInfo(object):
     """
     openapi_types = {
         'next': 'str',
-        'items': 'list[BTCloudStorageObjectInfo]',
         'href': 'str',
+        'items': 'list[BTCloudStorageObjectInfo]',
         'path_to_root': 'list[CloudObjectPathSegment]'
     }
 
     attribute_map = {
         'next': 'next',
-        'items': 'items',
         'href': 'href',
+        'items': 'items',
         'path_to_root': 'pathToRoot'
     }
 
-    def __init__(self, next=None, items=None, href=None, path_to_root=None):  # noqa: E501
+    def __init__(self, next=None, href=None, items=None, path_to_root=None):  # noqa: E501
         """BTCloudStorageObjectListInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._next = None
-        self._items = None
         self._href = None
+        self._items = None
         self._path_to_root = None
         self.discriminator = None
 
         if next is not None:
             self.next = next
-        if items is not None:
-            self.items = items
         if href is not None:
             self.href = href
+        if items is not None:
+            self.items = items
         if path_to_root is not None:
             self.path_to_root = path_to_root
 
@@ -85,27 +85,6 @@ class BTCloudStorageObjectListInfo(object):
         self._next = next
 
     @property
-    def items(self):
-        """Gets the items of this BTCloudStorageObjectListInfo.  # noqa: E501
-
-
-        :return: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :rtype: list[BTCloudStorageObjectInfo]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTCloudStorageObjectListInfo.
-
-
-        :param items: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :type: list[BTCloudStorageObjectInfo]
-        """
-
-        self._items = items
-
-    @property
     def href(self):
         """Gets the href of this BTCloudStorageObjectListInfo.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTCloudStorageObjectListInfo(object):
         """
 
         self._href = href
+
+    @property
+    def items(self):
+        """Gets the items of this BTCloudStorageObjectListInfo.  # noqa: E501
+
+
+        :return: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :rtype: list[BTCloudStorageObjectInfo]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTCloudStorageObjectListInfo.
+
+
+        :param items: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :type: list[BTCloudStorageObjectInfo]
+        """
+
+        self._items = items
 
     @property
     def path_to_root(self):

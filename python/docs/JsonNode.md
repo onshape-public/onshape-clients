@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **array** | **bool** |  | [optional] 
 **null** | **bool** |  | [optional] 
-**float** | **bool** |  | [optional] 
-**textual** | **bool** |  | [optional] 
 **node_type** | **str** |  | [optional] 
+**float** | **bool** |  | [optional] 
 **object** | **bool** |  | [optional] 
+**textual** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 
 **missing_node** | **bool** |  | [optional] 

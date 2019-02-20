@@ -33,13 +33,13 @@ class BTFeatureScriptEvalResponse(object):
     """
     openapi_types = {
         'result': 'BTFSValue',
-        'console': 'str',
         'notices': 'list[BTNotice]',
+        'console': 'str',
         'bel_script_library_version': 'BTBelScriptLibraryVersion',
         'source_microversion': 'str',
         'reject_microversion_skew': 'bool',
-        'library_version': 'int',
         'serialization_version': 'str',
+        'library_version': 'int',
         'microversion_skew': 'bool',
         'type_id': 'int',
         'export_type_name': 'str',
@@ -49,13 +49,13 @@ class BTFeatureScriptEvalResponse(object):
 
     attribute_map = {
         'result': 'result',
-        'console': 'console',
         'notices': 'notices',
+        'console': 'console',
         'bel_script_library_version': 'belScriptLibraryVersion',
         'source_microversion': 'sourceMicroversion',
         'reject_microversion_skew': 'rejectMicroversionSkew',
-        'library_version': 'libraryVersion',
         'serialization_version': 'serializationVersion',
+        'library_version': 'libraryVersion',
         'microversion_skew': 'microversionSkew',
         'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
@@ -63,17 +63,17 @@ class BTFeatureScriptEvalResponse(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, result=None, console=None, notices=None, bel_script_library_version=None, source_microversion=None, reject_microversion_skew=None, library_version=None, serialization_version=None, microversion_skew=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, result=None, notices=None, console=None, bel_script_library_version=None, source_microversion=None, reject_microversion_skew=None, serialization_version=None, library_version=None, microversion_skew=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTFeatureScriptEvalResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._result = None
-        self._console = None
         self._notices = None
+        self._console = None
         self._bel_script_library_version = None
         self._source_microversion = None
         self._reject_microversion_skew = None
-        self._library_version = None
         self._serialization_version = None
+        self._library_version = None
         self._microversion_skew = None
         self._type_id = None
         self._export_type_name = None
@@ -83,20 +83,20 @@ class BTFeatureScriptEvalResponse(object):
 
         if result is not None:
             self.result = result
-        if console is not None:
-            self.console = console
         if notices is not None:
             self.notices = notices
+        if console is not None:
+            self.console = console
         if bel_script_library_version is not None:
             self.bel_script_library_version = bel_script_library_version
         if source_microversion is not None:
             self.source_microversion = source_microversion
         if reject_microversion_skew is not None:
             self.reject_microversion_skew = reject_microversion_skew
-        if library_version is not None:
-            self.library_version = library_version
         if serialization_version is not None:
             self.serialization_version = serialization_version
+        if library_version is not None:
+            self.library_version = library_version
         if microversion_skew is not None:
             self.microversion_skew = microversion_skew
         if type_id is not None:
@@ -130,27 +130,6 @@ class BTFeatureScriptEvalResponse(object):
         self._result = result
 
     @property
-    def console(self):
-        """Gets the console of this BTFeatureScriptEvalResponse.  # noqa: E501
-
-
-        :return: The console of this BTFeatureScriptEvalResponse.  # noqa: E501
-        :rtype: str
-        """
-        return self._console
-
-    @console.setter
-    def console(self, console):
-        """Sets the console of this BTFeatureScriptEvalResponse.
-
-
-        :param console: The console of this BTFeatureScriptEvalResponse.  # noqa: E501
-        :type: str
-        """
-
-        self._console = console
-
-    @property
     def notices(self):
         """Gets the notices of this BTFeatureScriptEvalResponse.  # noqa: E501
 
@@ -170,6 +149,27 @@ class BTFeatureScriptEvalResponse(object):
         """
 
         self._notices = notices
+
+    @property
+    def console(self):
+        """Gets the console of this BTFeatureScriptEvalResponse.  # noqa: E501
+
+
+        :return: The console of this BTFeatureScriptEvalResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._console
+
+    @console.setter
+    def console(self, console):
+        """Sets the console of this BTFeatureScriptEvalResponse.
+
+
+        :param console: The console of this BTFeatureScriptEvalResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._console = console
 
     @property
     def bel_script_library_version(self):
@@ -235,27 +235,6 @@ class BTFeatureScriptEvalResponse(object):
         self._reject_microversion_skew = reject_microversion_skew
 
     @property
-    def library_version(self):
-        """Gets the library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
-
-
-        :return: The library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._library_version
-
-    @library_version.setter
-    def library_version(self, library_version):
-        """Sets the library_version of this BTFeatureScriptEvalResponse.
-
-
-        :param library_version: The library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._library_version = library_version
-
-    @property
     def serialization_version(self):
         """Gets the serialization_version of this BTFeatureScriptEvalResponse.  # noqa: E501
 
@@ -275,6 +254,27 @@ class BTFeatureScriptEvalResponse(object):
         """
 
         self._serialization_version = serialization_version
+
+    @property
+    def library_version(self):
+        """Gets the library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
+
+
+        :return: The library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
+        :rtype: int
+        """
+        return self._library_version
+
+    @library_version.setter
+    def library_version(self, library_version):
+        """Sets the library_version of this BTFeatureScriptEvalResponse.
+
+
+        :param library_version: The library_version of this BTFeatureScriptEvalResponse.  # noqa: E501
+        :type: int
+        """
+
+        self._library_version = library_version
 
     @property
     def microversion_skew(self):

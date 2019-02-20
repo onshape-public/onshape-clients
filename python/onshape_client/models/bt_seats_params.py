@@ -32,52 +32,31 @@ class BTSeatsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'light_seats': 'int',
         'user_id': 'str',
-        'seats': 'int'
+        'seats': 'int',
+        'light_seats': 'int'
     }
 
     attribute_map = {
-        'light_seats': 'lightSeats',
         'user_id': 'userId',
-        'seats': 'seats'
+        'seats': 'seats',
+        'light_seats': 'lightSeats'
     }
 
-    def __init__(self, light_seats=None, user_id=None, seats=None):  # noqa: E501
+    def __init__(self, user_id=None, seats=None, light_seats=None):  # noqa: E501
         """BTSeatsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._light_seats = None
         self._user_id = None
         self._seats = None
+        self._light_seats = None
         self.discriminator = None
 
-        if light_seats is not None:
-            self.light_seats = light_seats
         if user_id is not None:
             self.user_id = user_id
         if seats is not None:
             self.seats = seats
-
-    @property
-    def light_seats(self):
-        """Gets the light_seats of this BTSeatsParams.  # noqa: E501
-
-
-        :return: The light_seats of this BTSeatsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._light_seats
-
-    @light_seats.setter
-    def light_seats(self, light_seats):
-        """Sets the light_seats of this BTSeatsParams.
-
-
-        :param light_seats: The light_seats of this BTSeatsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._light_seats = light_seats
+        if light_seats is not None:
+            self.light_seats = light_seats
 
     @property
     def user_id(self):
@@ -120,6 +99,27 @@ class BTSeatsParams(object):
         """
 
         self._seats = seats
+
+    @property
+    def light_seats(self):
+        """Gets the light_seats of this BTSeatsParams.  # noqa: E501
+
+
+        :return: The light_seats of this BTSeatsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._light_seats
+
+    @light_seats.setter
+    def light_seats(self, light_seats):
+        """Sets the light_seats of this BTSeatsParams.
+
+
+        :param light_seats: The light_seats of this BTSeatsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._light_seats = light_seats
 
     def to_dict(self):
         """Returns the model properties as a dict"""
