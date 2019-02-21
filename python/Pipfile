@@ -5,11 +5,12 @@ verify_ssl = true
 
 [dev-packages]
 codecov = "*"
-v = {editable = true,version = "*"}
+v = {version = "*",editable = true}
 coverage = "*"
 pytest = "*"
 pytest-cov = "*"
-onshape-client = {editable = true,path = "."}
+onshape-client = {path = ".",editable = true}
+twine = "*"
 
 [packages]
 requests = "*"
