@@ -36,25 +36,50 @@ def get_encoded_config_map(config_map):
     r = elements_instance.encode_configuration_map(did, eid, params, _preload_content=False)
     return json.loads(r.data.decode("UTF-8"))["queryParam"]
 
-# Set the part to be updated (on prod):
+def make_configured_part_href():
+    return configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "/p/" + pid + "?" + get_encoded_config_map(config_not_encoded)
+
+def make_configured_assembly_href():
+    return configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "?" + get_encoded_config_map(config_not_encoded)
+
+# # Update a configured part property (on prod):
+# did = "624cda69347788edc2259a64"
+# wid = "c09ce0ce9af4ea6f69323ab7"
+# eid = "dc87b9f4e12d68e447d2d49a"
+# pid = "JHD"
+# config_not_encoded=[{"parameterId":"sizeCube", "parameterValue":"8 in"}, {"parameterId":"edgeCube", "parameterValue": "Chamfered"}]
+# new_val="8in_chamfered"
+# property_id="57f3fb8efa3416c06701d60d"
+# href=make_configured_part_href()
+
+# # Update a configured part property (on local):
+# did = "d24ccec8a0da89a9c09f67e5"
+# wid = "b4c392939cdab5d849e6deff"
+# eid = "ddd0c66c3158e715c421ac06"
+# pid = "JHD"
+# config_not_encoded=[{"parameterId":"sizeCube", "parameterValue":"8in"}]
+# new_val="8in_chamfered"
+# property_id="57f3fb8efa3416c06701d60d"
+# href=make_configured_part_href()
+
+# Update a configured element property (on prod):
 did = "624cda69347788edc2259a64"
 wid = "c09ce0ce9af4ea6f69323ab7"
-eid = "dc87b9f4e12d68e447d2d49a"
-pid = "JHD"
-config_not_encoded=[{"parameterId":"sizeCube", "parameterValue":"8 in"}, {"parameterId":"edgeCube", "parameterValue": "Chamfered"}]
-new_val="8in_chamfered"
-property_id="57f3fb8efa3416c06701d60d"
+eid = "d252e442e4cb6c22e49f4754"
+config_not_encoded=[{"parameterId":"size", "parameterValue":"8 in"}]
+new_val="new_description"
+property_id="57f3fb8efa3416c06701d60e"
+href=make_configured_assembly_href()
 
-# # Set the part to be updated (on local):
-# did = "1f9cdecdb284fa6637dd61ef"
-# wid = "d6e568784bba9f54530813a8"
-# eid = "ddb2bc4c6dcdf90d67660de8"
+# # Update a configured element property (on local):
+# did = "d24ccec8a0da89a9c09f67e5"
+# wid = "b4c392939cdab5d849e6deff"
+# eid = "759abc99e78c39823d4f48ed"
 # pid = "JHD"
-# config_not_encoded=[{"parameterId":"sizeCube", "parameterValue":"8in"}, {"parameterId":"edgeCube", "parameterValue": "chamfered"}]
-# new_val="8in_chamfered2"
-# property_id="57f3fb8efa3416c06701d60d"
-
-href=configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "/p/" + pid + "?" + get_encoded_config_map(config_not_encoded)
+# config_not_encoded=[{"parameterId":"sizeCube", "parameterValue":"8 in"}]
+# new_val="new_description"
+# property_id="57f3fb8efa3416c06701d60e"
+# href=make_configured_assembly_href()
 
 body={
     'items': [
