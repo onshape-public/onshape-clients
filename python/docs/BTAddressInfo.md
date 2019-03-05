@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 **address** | **str** |  | [optional] 
+**country** | **str** |  | [optional] 
 **city** | **str** |  | [optional] 
 **state_code** | **str** |  | [optional] 
-**country** | **str** |  | [optional] 
 **country_code** | **str** |  | [optional] 
 **zip** | **str** |  | [optional] 
 

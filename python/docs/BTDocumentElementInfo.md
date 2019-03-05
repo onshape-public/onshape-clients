@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **length_units** | **str** |  | [optional] 
 **angle_units** | **str** |  | [optional] 
 **mass_units** | **str** |  | [optional] 
-**filename** | **str** |  | [optional] 
-**microversion_id** | **str** |  | [optional] 
-**thumbnail_info** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
 **element_type** | **str** |  | [optional] 
+**filename** | **str** |  | [optional] 
+**thumbnail_info** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
 **data_type** | **str** |  | [optional] 
-**foreign_data_id** | **str** |  | [optional] 
 **thumbnails** | **str** |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
+**foreign_data_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

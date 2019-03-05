@@ -5,7 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 codecov = "*"
-v = {version = "*",editable = true}
+v = {editable = true,version = "*"}
 coverage = "*"
 pytest = "*"
 pytest-cov = "*"

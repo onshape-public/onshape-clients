@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actions** | [**list[BTActionInfo]**](BTActionInfo.md) |  | [optional] 
 **state** | [**BTWorkflowStateInfo**](BTWorkflowStateInfo.md) |  | [optional] 
-**is_setup** | **bool** |  | [optional] 
 **rejected_by** | **list[str]** |  | [optional] 
+**is_setup** | **bool** |  | [optional] 
 **approved_by** | **list[str]** |  | [optional] 
 **is_frozen** | **bool** |  | [optional] 
 **is_initial_state** | **bool** |  | [optional] 

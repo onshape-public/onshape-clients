@@ -7,7 +7,6 @@ function test() {
 function deploy() {
     cd $1 && ./deploy.sh && cd ..
 }
-
 # Import secret vars:
 source ./secrets.sh
 

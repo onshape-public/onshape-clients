@@ -1,17 +1,22 @@
 # onshape_client.PartStudiosApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_feature1**](PartStudiosApi.md#add_feature1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
+[**compare_part_studios1**](PartStudiosApi.md#compare_part_studios1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare | Compare Part Studios
 [**create_part_studio**](PartStudiosApi.md#create_part_studio) | **POST** /api/partstudios/d/{did}/w/{wid} | Create Part Studio
+[**delete_feature**](PartStudiosApi.md#delete_feature) | **DELETE** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Delete Feature
+[**eval_feature_script**](PartStudiosApi.md#eval_feature_script) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript | Evaluate FeatureScript
 [**export_ps1**](PartStudiosApi.md#export_ps1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/parasolid | Export Part Studio to Parasolid
 [**export_stl1**](PartStudiosApi.md#export_stl1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/stl | Export Part Studio to STL
 [**get_body_details2**](PartStudiosApi.md#get_body_details2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails | Array of body information
 [**get_bounding_boxes2**](PartStudiosApi.md#get_bounding_boxes2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | Mass properties of parts or a PartStudio.
+[**get_configuration4**](PartStudiosApi.md#get_configuration4) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
 [**get_edges2**](PartStudiosApi.md#get_edges2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatededges | Tesselated edges from a PartStudio.
 [**get_faces2**](PartStudiosApi.md#get_faces2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatedfaces | Tesselated faces of the parts in the Part Studio.
+[**get_feature_specs**](PartStudiosApi.md#get_feature_specs) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Specs
 [**get_features**](PartStudiosApi.md#get_features) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Get Feature List
 [**get_mass_properties**](PartStudiosApi.md#get_mass_properties) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties | Mass properties of parts or a PartStudio.
 [**get_named_views2**](PartStudiosApi.md#get_named_views2) | **GET** /api/partstudios/d/{did}/e/{eid}/namedViews | Get Named Views
@@ -19,6 +24,10 @@ Method | HTTP request | Description
 [**get_translator_formats4**](PartStudiosApi.md#get_translator_formats4) | **GET** /api/partstudios/d/{did}/w/{wid}/e/{eid}/translationformats | Get Translation Formats
 [**translate_format5**](PartStudiosApi.md#translate_format5) | **POST** /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Part Studio translation
 [**translate_ids1**](PartStudiosApi.md#translate_ids1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations | Id Translations
+[**update_configuration3**](PartStudiosApi.md#update_configuration3) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
+[**update_feature**](PartStudiosApi.md#update_feature) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Update Feature
+[**update_features1**](PartStudiosApi.md#update_features1) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/updates | Update Features
+[**update_rollback**](PartStudiosApi.md#update_rollback) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/rollback | Update Feature Rollback
 
 
 # **add_feature1**
@@ -81,6 +90,76 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **compare_part_studios1**
+> BTRootDiffInfo compare_part_studios1(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
+
+Compare Part Studios
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
+eid = 'eid_example' # str | Element ID.
+workspace_id = 'workspace_id_example' # str |  (optional)
+version_id = 'version_id_example' # str |  (optional)
+microversion_id = 'microversion_id_example' # str |  (optional)
+source_configuration = 'source_configuration_example' # str |  (optional)
+target_configuration = 'target_configuration_example' # str |  (optional)
+link_document_id = 'link_document_id_example' # str |  (optional)
+
+try:
+    # Compare Part Studios
+    api_response = api_instance.compare_part_studios1(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->compare_part_studios1: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
+ **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
+ **eid** | **str**| Element ID. | 
+ **workspace_id** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
+ **microversion_id** | **str**|  | [optional] 
+ **source_configuration** | **str**|  | [optional] 
+ **target_configuration** | **str**|  | [optional] 
+ **link_document_id** | **str**|  | [optional] 
+
+### Return type
+
+[**BTRootDiffInfo**](BTRootDiffInfo.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_part_studio**
 > BTDocumentElementInfo create_part_studio(did, wid, bt_model_element_params)
 
@@ -125,6 +204,125 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BTDocumentElementInfo**](BTDocumentElementInfo.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_feature**
+> delete_feature(did, wid, eid, fid)
+
+Delete Feature
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wid = 'wid_example' # str | Workspace ID.
+eid = 'eid_example' # str | Element ID.
+fid = 'fid_example' # str | The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure
+
+try:
+    # Delete Feature
+    api_instance.delete_feature(did, wid, eid, fid)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->delete_feature: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wid** | **str**| Workspace ID. | 
+ **eid** | **str**| Element ID. | 
+ **fid** | **str**| The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **eval_feature_script**
+> BTFeatureScriptEvalResponse eval_feature_script(did, wvm, wvmid, eid, eid2, bt_feature_script_eval_call=bt_feature_script_eval_call)
+
+Evaluate FeatureScript
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
+eid = 'eid_example' # str | Element ID.
+eid2 = 'eid_example' # str | Configuration string.
+bt_feature_script_eval_call = onshape_client.BTFeatureScriptEvalCall() # BTFeatureScriptEvalCall |  (optional)
+
+try:
+    # Evaluate FeatureScript
+    api_response = api_instance.eval_feature_script(did, wvm, wvmid, eid, eid2, bt_feature_script_eval_call=bt_feature_script_eval_call)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->eval_feature_script: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
+ **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
+ **eid** | **str**| Element ID. | 
+ **eid2** | **str**| Configuration string. | 
+ **bt_feature_script_eval_call** | [**BTFeatureScriptEvalCall**](BTFeatureScriptEvalCall.md)|  | [optional] 
+
+### Return type
+
+[**BTFeatureScriptEvalResponse**](BTFeatureScriptEvalResponse.md)
 
 ### Authorization
 
@@ -411,6 +609,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_configuration4**
+> get_configuration4(did, wvm, wvmid, eid)
+
+Get Configuration
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | 
+wvm = 'wvm_example' # str | 
+wvmid = 'wvmid_example' # str | 
+eid = 'eid_example' # str | 
+
+try:
+    # Get Configuration
+    api_instance.get_configuration4(did, wvm, wvmid, eid)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->get_configuration4: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **wvm** | **str**|  | 
+ **wvmid** | **str**|  | 
+ **eid** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_edges2**
 > BTExportTessellatedEdgesResponse get_edges2(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, part_id=part_id, edge_id=edge_id, configuration=configuration, link_document_id=link_document_id)
 
@@ -560,6 +815,63 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_feature_specs**
+> get_feature_specs(did, wvm, wvmid, eid)
+
+Get Feature Specs
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
+eid = 'eid_example' # str | Element ID.
+
+try:
+    # Get Feature Specs
+    api_instance.get_feature_specs(did, wvm, wvmid, eid)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->get_feature_specs: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
+ **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
+ **eid** | **str**| Element ID. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -996,6 +1308,238 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json;charset=UTF-8
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_configuration3**
+> update_configuration3(did, wvm, wvmid, eid, body=body)
+
+Update Configuration
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | 
+wvm = 'wvm_example' # str | 
+wvmid = 'wvmid_example' # str | 
+eid = 'eid_example' # str | 
+body = 'body_example' # str |  (optional)
+
+try:
+    # Update Configuration
+    api_instance.update_configuration3(did, wvm, wvmid, eid, body=body)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->update_configuration3: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **wvm** | **str**|  | 
+ **wvmid** | **str**|  | 
+ **eid** | **str**|  | 
+ **body** | **str**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_feature**
+> update_feature(did, wid, eid, fid, body=body)
+
+Update Feature
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wid = 'wid_example' # str | Workspace ID.
+eid = 'eid_example' # str | Element ID.
+fid = 'fid_example' # str | The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure
+body = 'body_example' # str | feature The serialized feature definition (optional)
+
+try:
+    # Update Feature
+    api_instance.update_feature(did, wid, eid, fid, body=body)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->update_feature: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wid** | **str**| Workspace ID. | 
+ **eid** | **str**| Element ID. | 
+ **fid** | **str**| The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure | 
+ **body** | **str**| feature The serialized feature definition | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_features1**
+> update_features1(did, wid, eid, body=body)
+
+Update Features
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wid = 'wid_example' # str | Workspace ID.
+eid = 'eid_example' # str | Element ID.
+body = 'body_example' # str | feature The serialized feature definition (optional)
+
+try:
+    # Update Features
+    api_instance.update_features1(did, wid, eid, body=body)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->update_features1: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wid** | **str**| Workspace ID. | 
+ **eid** | **str**| Element ID. | 
+ **body** | **str**| feature The serialized feature definition | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_rollback**
+> update_rollback(did, wid, eid, body=body)
+
+Update Feature Rollback
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.PartStudiosApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | Document ID.
+wid = 'wid_example' # str | Workspace ID.
+eid = 'eid_example' # str | Element ID.
+body = 'body_example' # str | The index at which the rollback index should be placed. Features      *   with entry index (0-based) higher than or equal to this value are rolled back.  The value -1 is treated      *   as an alias for \"end of feature list\".  Otherwise the value must be in the range 0 to the number of      *   entries in the feature list (optional)
+
+try:
+    # Update Feature Rollback
+    api_instance.update_rollback(did, wid, eid, body=body)
+except ApiException as e:
+    print("Exception when calling PartStudiosApi->update_rollback: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**| Document ID. | 
+ **wid** | **str**| Workspace ID. | 
+ **eid** | **str**| Element ID. | 
+ **body** | **str**| The index at which the rollback index should be placed. Features      *   with entry index (0-based) higher than or equal to this value are rolled back.  The value -1 is treated      *   as an alias for \&quot;end of feature list\&quot;.  Otherwise the value must be in the range 0 to the number of      *   entries in the feature list | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

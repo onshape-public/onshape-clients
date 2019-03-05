@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**element_type** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
-**version_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
-**element_type** | **str** |  | [optional] 
 **part_number** | **str** |  | [optional] 
+**version_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
 **api_configuration** | **str** |  | [optional] 
 

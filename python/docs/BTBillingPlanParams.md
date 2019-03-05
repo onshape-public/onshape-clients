@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
 **group** | **str** |  | [optional] 
-**application_id** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
 **client_id** | **str** |  | [optional] 
+**application_id** | **str** |  | [optional] 
 **interval** | **str** |  | [optional] 
 **plan_type** | **int** |  | [optional] 
 **trial_period_days** | **int** |  | [optional] 

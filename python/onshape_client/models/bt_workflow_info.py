@@ -34,8 +34,8 @@ class BTWorkflowInfo(object):
     openapi_types = {
         'actions': 'list[BTActionInfo]',
         'state': 'BTWorkflowStateInfo',
-        'is_setup': 'bool',
         'rejected_by': 'list[str]',
+        'is_setup': 'bool',
         'approved_by': 'list[str]',
         'is_frozen': 'bool',
         'is_initial_state': 'bool',
@@ -49,8 +49,8 @@ class BTWorkflowInfo(object):
     attribute_map = {
         'actions': 'actions',
         'state': 'state',
-        'is_setup': 'isSetup',
         'rejected_by': 'rejectedBy',
+        'is_setup': 'isSetup',
         'approved_by': 'approvedBy',
         'is_frozen': 'isFrozen',
         'is_initial_state': 'isInitialState',
@@ -61,13 +61,13 @@ class BTWorkflowInfo(object):
         'is_discarded': 'isDiscarded'
     }
 
-    def __init__(self, actions=None, state=None, is_setup=None, rejected_by=None, approved_by=None, is_frozen=None, is_initial_state=None, approver_ids=None, notifier_ids=None, workflow_id=None, metadata_state=None, is_discarded=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, rejected_by=None, is_setup=None, approved_by=None, is_frozen=None, is_initial_state=None, approver_ids=None, notifier_ids=None, workflow_id=None, metadata_state=None, is_discarded=None):  # noqa: E501
         """BTWorkflowInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
         self._state = None
-        self._is_setup = None
         self._rejected_by = None
+        self._is_setup = None
         self._approved_by = None
         self._is_frozen = None
         self._is_initial_state = None
@@ -82,10 +82,10 @@ class BTWorkflowInfo(object):
             self.actions = actions
         if state is not None:
             self.state = state
-        if is_setup is not None:
-            self.is_setup = is_setup
         if rejected_by is not None:
             self.rejected_by = rejected_by
+        if is_setup is not None:
+            self.is_setup = is_setup
         if approved_by is not None:
             self.approved_by = approved_by
         if is_frozen is not None:
@@ -146,27 +146,6 @@ class BTWorkflowInfo(object):
         self._state = state
 
     @property
-    def is_setup(self):
-        """Gets the is_setup of this BTWorkflowInfo.  # noqa: E501
-
-
-        :return: The is_setup of this BTWorkflowInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_setup
-
-    @is_setup.setter
-    def is_setup(self, is_setup):
-        """Sets the is_setup of this BTWorkflowInfo.
-
-
-        :param is_setup: The is_setup of this BTWorkflowInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_setup = is_setup
-
-    @property
     def rejected_by(self):
         """Gets the rejected_by of this BTWorkflowInfo.  # noqa: E501
 
@@ -186,6 +165,27 @@ class BTWorkflowInfo(object):
         """
 
         self._rejected_by = rejected_by
+
+    @property
+    def is_setup(self):
+        """Gets the is_setup of this BTWorkflowInfo.  # noqa: E501
+
+
+        :return: The is_setup of this BTWorkflowInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_setup
+
+    @is_setup.setter
+    def is_setup(self, is_setup):
+        """Sets the is_setup of this BTWorkflowInfo.
+
+
+        :param is_setup: The is_setup of this BTWorkflowInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_setup = is_setup
 
     @property
     def approved_by(self):

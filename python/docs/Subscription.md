@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **tax_percent** | **float** |  | [optional] 
 **trial_end** | **int** |  | [optional] 
 **trial_start** | **int** |  | [optional] 
-**subscription_items** | [**SubscriptionItemCollection**](SubscriptionItemCollection.md) |  | [optional] 
 **customer_object** | [**Customer**](Customer.md) |  | [optional] 
+**subscription_items** | [**SubscriptionItemCollection**](SubscriptionItemCollection.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

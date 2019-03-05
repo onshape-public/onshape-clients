@@ -13,7 +13,7 @@ import six
 
 # Get the YAML file that contains the configuration params
 yaml = YAML()
-path = '.onshape_client_config.yaml'
+path = '../onshape_client_config.yaml'
 onshape_client_config = yaml.load(Path(path))
 
 # Load the API keys and URL into the configuration

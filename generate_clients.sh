@@ -3,7 +3,7 @@ GLOBAL_VERSION=3.3.4
 
 # Var
 EXECUTABLE="./openapi-generator-cli.jar"
-OAS_CONFIG="http://localhost.dev.onshape.com:8080/api/openapi"
+OAS_CONFIG="http://localhost.dev.onshape.com:8082/api/openapi"
 GENERATE="java -jar $EXECUTABLE generate -i $OAS_CONFIG"
 
 function downloadJarIfNeeded() {

@@ -33,65 +33,65 @@ class BTActionInfo(object):
     """
     openapi_types = {
         'method': 'str',
-        'label': 'str',
         'tooltip': 'str',
-        'action': 'str',
         'is_approver_action': 'bool',
         'show_if_approvers': 'bool',
         'show_if_no_approvers': 'bool',
+        'always_allow': 'bool',
+        'label': 'str',
+        'action': 'str',
         'ui_hint': 'str',
-        'is_admin_override': 'bool',
-        'always_allow': 'bool'
+        'is_admin_override': 'bool'
     }
 
     attribute_map = {
         'method': 'method',
-        'label': 'label',
         'tooltip': 'tooltip',
-        'action': 'action',
         'is_approver_action': 'isApproverAction',
         'show_if_approvers': 'showIfApprovers',
         'show_if_no_approvers': 'showIfNoApprovers',
+        'always_allow': 'alwaysAllow',
+        'label': 'label',
+        'action': 'action',
         'ui_hint': 'uiHint',
-        'is_admin_override': 'isAdminOverride',
-        'always_allow': 'alwaysAllow'
+        'is_admin_override': 'isAdminOverride'
     }
 
-    def __init__(self, method=None, label=None, tooltip=None, action=None, is_approver_action=None, show_if_approvers=None, show_if_no_approvers=None, ui_hint=None, is_admin_override=None, always_allow=None):  # noqa: E501
+    def __init__(self, method=None, tooltip=None, is_approver_action=None, show_if_approvers=None, show_if_no_approvers=None, always_allow=None, label=None, action=None, ui_hint=None, is_admin_override=None):  # noqa: E501
         """BTActionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._method = None
-        self._label = None
         self._tooltip = None
-        self._action = None
         self._is_approver_action = None
         self._show_if_approvers = None
         self._show_if_no_approvers = None
+        self._always_allow = None
+        self._label = None
+        self._action = None
         self._ui_hint = None
         self._is_admin_override = None
-        self._always_allow = None
         self.discriminator = None
 
         if method is not None:
             self.method = method
-        if label is not None:
-            self.label = label
         if tooltip is not None:
             self.tooltip = tooltip
-        if action is not None:
-            self.action = action
         if is_approver_action is not None:
             self.is_approver_action = is_approver_action
         if show_if_approvers is not None:
             self.show_if_approvers = show_if_approvers
         if show_if_no_approvers is not None:
             self.show_if_no_approvers = show_if_no_approvers
+        if always_allow is not None:
+            self.always_allow = always_allow
+        if label is not None:
+            self.label = label
+        if action is not None:
+            self.action = action
         if ui_hint is not None:
             self.ui_hint = ui_hint
         if is_admin_override is not None:
             self.is_admin_override = is_admin_override
-        if always_allow is not None:
-            self.always_allow = always_allow
 
     @property
     def method(self):
@@ -115,27 +115,6 @@ class BTActionInfo(object):
         self._method = method
 
     @property
-    def label(self):
-        """Gets the label of this BTActionInfo.  # noqa: E501
-
-
-        :return: The label of this BTActionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._label
-
-    @label.setter
-    def label(self, label):
-        """Sets the label of this BTActionInfo.
-
-
-        :param label: The label of this BTActionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._label = label
-
-    @property
     def tooltip(self):
         """Gets the tooltip of this BTActionInfo.  # noqa: E501
 
@@ -155,27 +134,6 @@ class BTActionInfo(object):
         """
 
         self._tooltip = tooltip
-
-    @property
-    def action(self):
-        """Gets the action of this BTActionInfo.  # noqa: E501
-
-
-        :return: The action of this BTActionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._action
-
-    @action.setter
-    def action(self, action):
-        """Sets the action of this BTActionInfo.
-
-
-        :param action: The action of this BTActionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._action = action
 
     @property
     def is_approver_action(self):
@@ -241,6 +199,69 @@ class BTActionInfo(object):
         self._show_if_no_approvers = show_if_no_approvers
 
     @property
+    def always_allow(self):
+        """Gets the always_allow of this BTActionInfo.  # noqa: E501
+
+
+        :return: The always_allow of this BTActionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._always_allow
+
+    @always_allow.setter
+    def always_allow(self, always_allow):
+        """Sets the always_allow of this BTActionInfo.
+
+
+        :param always_allow: The always_allow of this BTActionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._always_allow = always_allow
+
+    @property
+    def label(self):
+        """Gets the label of this BTActionInfo.  # noqa: E501
+
+
+        :return: The label of this BTActionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this BTActionInfo.
+
+
+        :param label: The label of this BTActionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._label = label
+
+    @property
+    def action(self):
+        """Gets the action of this BTActionInfo.  # noqa: E501
+
+
+        :return: The action of this BTActionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._action
+
+    @action.setter
+    def action(self, action):
+        """Sets the action of this BTActionInfo.
+
+
+        :param action: The action of this BTActionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._action = action
+
+    @property
     def ui_hint(self):
         """Gets the ui_hint of this BTActionInfo.  # noqa: E501
 
@@ -281,27 +302,6 @@ class BTActionInfo(object):
         """
 
         self._is_admin_override = is_admin_override
-
-    @property
-    def always_allow(self):
-        """Gets the always_allow of this BTActionInfo.  # noqa: E501
-
-
-        :return: The always_allow of this BTActionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._always_allow
-
-    @always_allow.setter
-    def always_allow(self, always_allow):
-        """Sets the always_allow of this BTActionInfo.
-
-
-        :param always_allow: The always_allow of this BTActionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._always_allow = always_allow
 
     def to_dict(self):
         """Returns the model properties as a dict"""
