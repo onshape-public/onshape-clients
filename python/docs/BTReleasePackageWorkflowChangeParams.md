@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workspace_id** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
 **release_package_id** | **str** |  | [optional] 
 **workflow_state** | **str** |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 

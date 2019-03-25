@@ -32,224 +32,161 @@ class BTMImport(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        '_import': 'BTPModuleId',
-        'imported_external_document_id': 'str',
-        'namespace_field_index': 'int',
         'imported_microversion_id': 'BTMicroversionId',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
+        '_import': 'BTPModuleId',
         'imported_workspace_element_id': 'str',
         'revision_data': 'BTRevisionCustomData',
         'element_import': 'bool',
-        'combined_namespace': 'str',
+        'imported_external_document_id': 'str',
+        'namespace_field_index': 'int',
         'namespace': 'str',
         'node_id': 'str',
+        'combined_namespace': 'str',
         'for_export': 'bool',
         'import_microversion': 'str',
         'path': 'str',
-        'changeable_child_field_indices': 'list[int]',
         'version': 'str',
-        'child_locations': 'dict(str, BTInsertionLocation)',
-        'source_parse_tree_nodes': 'dict(str, list[BTNodeReference])',
+        'changeable_child_field_indices': 'list[int]',
         'child_nodes': 'dict(str, BTNodeReference)',
         'has_user_code': 'bool',
+        'child_locations': 'dict(str, BTInsertionLocation)',
+        'source_parse_tree_nodes': 'dict(str, list[BTNodeReference])',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
+        'node_id_raw': 'BTObjectId',
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
-        'node_id_raw': 'BTObjectId',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        '_import': 'import',
-        'imported_external_document_id': 'importedExternalDocumentId',
-        'namespace_field_index': 'namespaceFieldIndex',
         'imported_microversion_id': 'importedMicroversionId',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
+        '_import': 'import',
         'imported_workspace_element_id': 'importedWorkspaceElementId',
         'revision_data': 'revisionData',
         'element_import': 'elementImport',
-        'combined_namespace': 'combinedNamespace',
+        'imported_external_document_id': 'importedExternalDocumentId',
+        'namespace_field_index': 'namespaceFieldIndex',
         'namespace': 'namespace',
         'node_id': 'nodeId',
+        'combined_namespace': 'combinedNamespace',
         'for_export': 'forExport',
         'import_microversion': 'importMicroversion',
         'path': 'path',
-        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'version': 'version',
-        'child_locations': 'childLocations',
-        'source_parse_tree_nodes': 'sourceParseTreeNodes',
+        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'child_nodes': 'childNodes',
         'has_user_code': 'hasUserCode',
+        'child_locations': 'childLocations',
+        'source_parse_tree_nodes': 'sourceParseTreeNodes',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
+        'node_id_raw': 'nodeIdRaw',
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
-        'node_id_raw': 'nodeIdRaw',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, _import=None, imported_external_document_id=None, namespace_field_index=None, imported_microversion_id=None, external_document_with_version_and_element_id=None, imported_workspace_element_id=None, revision_data=None, element_import=None, combined_namespace=None, namespace=None, node_id=None, for_export=None, import_microversion=None, path=None, changeable_child_field_indices=None, version=None, child_locations=None, source_parse_tree_nodes=None, child_nodes=None, has_user_code=None, child_map_indices=None, atomic_child_indices=None, first_child_field=None, child_list_indices=None, node_id_raw=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, imported_microversion_id=None, external_document_with_version_and_element_id=None, _import=None, imported_workspace_element_id=None, revision_data=None, element_import=None, imported_external_document_id=None, namespace_field_index=None, namespace=None, node_id=None, combined_namespace=None, for_export=None, import_microversion=None, path=None, version=None, changeable_child_field_indices=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTMImport - a model defined in OpenAPI"""  # noqa: E501
 
-        self.__import = None
-        self._imported_external_document_id = None
-        self._namespace_field_index = None
         self._imported_microversion_id = None
         self._external_document_with_version_and_element_id = None
+        self.__import = None
         self._imported_workspace_element_id = None
         self._revision_data = None
         self._element_import = None
-        self._combined_namespace = None
+        self._imported_external_document_id = None
+        self._namespace_field_index = None
         self._namespace = None
         self._node_id = None
+        self._combined_namespace = None
         self._for_export = None
         self._import_microversion = None
         self._path = None
-        self._changeable_child_field_indices = None
         self._version = None
-        self._child_locations = None
-        self._source_parse_tree_nodes = None
+        self._changeable_child_field_indices = None
         self._child_nodes = None
         self._has_user_code = None
+        self._child_locations = None
+        self._source_parse_tree_nodes = None
         self._child_map_indices = None
         self._atomic_child_indices = None
+        self._node_id_raw = None
         self._first_child_field = None
         self._child_list_indices = None
-        self._node_id_raw = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if _import is not None:
-            self._import = _import
-        if imported_external_document_id is not None:
-            self.imported_external_document_id = imported_external_document_id
-        if namespace_field_index is not None:
-            self.namespace_field_index = namespace_field_index
         if imported_microversion_id is not None:
             self.imported_microversion_id = imported_microversion_id
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
+        if _import is not None:
+            self._import = _import
         if imported_workspace_element_id is not None:
             self.imported_workspace_element_id = imported_workspace_element_id
         if revision_data is not None:
             self.revision_data = revision_data
         if element_import is not None:
             self.element_import = element_import
-        if combined_namespace is not None:
-            self.combined_namespace = combined_namespace
+        if imported_external_document_id is not None:
+            self.imported_external_document_id = imported_external_document_id
+        if namespace_field_index is not None:
+            self.namespace_field_index = namespace_field_index
         if namespace is not None:
             self.namespace = namespace
         if node_id is not None:
             self.node_id = node_id
+        if combined_namespace is not None:
+            self.combined_namespace = combined_namespace
         if for_export is not None:
             self.for_export = for_export
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if path is not None:
             self.path = path
-        if changeable_child_field_indices is not None:
-            self.changeable_child_field_indices = changeable_child_field_indices
         if version is not None:
             self.version = version
-        if child_locations is not None:
-            self.child_locations = child_locations
-        if source_parse_tree_nodes is not None:
-            self.source_parse_tree_nodes = source_parse_tree_nodes
+        if changeable_child_field_indices is not None:
+            self.changeable_child_field_indices = changeable_child_field_indices
         if child_nodes is not None:
             self.child_nodes = child_nodes
         if has_user_code is not None:
             self.has_user_code = has_user_code
+        if child_locations is not None:
+            self.child_locations = child_locations
+        if source_parse_tree_nodes is not None:
+            self.source_parse_tree_nodes = source_parse_tree_nodes
         if child_map_indices is not None:
             self.child_map_indices = child_map_indices
         if atomic_child_indices is not None:
             self.atomic_child_indices = atomic_child_indices
+        if node_id_raw is not None:
+            self.node_id_raw = node_id_raw
         if first_child_field is not None:
             self.first_child_field = first_child_field
         if child_list_indices is not None:
             self.child_list_indices = child_list_indices
-        if node_id_raw is not None:
-            self.node_id_raw = node_id_raw
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
-
-    @property
-    def _import(self):
-        """Gets the _import of this BTMImport.  # noqa: E501
-
-
-        :return: The _import of this BTMImport.  # noqa: E501
-        :rtype: BTPModuleId
-        """
-        return self.__import
-
-    @_import.setter
-    def _import(self, _import):
-        """Sets the _import of this BTMImport.
-
-
-        :param _import: The _import of this BTMImport.  # noqa: E501
-        :type: BTPModuleId
-        """
-
-        self.__import = _import
-
-    @property
-    def imported_external_document_id(self):
-        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
-
-
-        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_external_document_id
-
-    @imported_external_document_id.setter
-    def imported_external_document_id(self, imported_external_document_id):
-        """Sets the imported_external_document_id of this BTMImport.
-
-
-        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_external_document_id = imported_external_document_id
-
-    @property
-    def namespace_field_index(self):
-        """Gets the namespace_field_index of this BTMImport.  # noqa: E501
-
-
-        :return: The namespace_field_index of this BTMImport.  # noqa: E501
-        :rtype: int
-        """
-        return self._namespace_field_index
-
-    @namespace_field_index.setter
-    def namespace_field_index(self, namespace_field_index):
-        """Sets the namespace_field_index of this BTMImport.
-
-
-        :param namespace_field_index: The namespace_field_index of this BTMImport.  # noqa: E501
-        :type: int
-        """
-
-        self._namespace_field_index = namespace_field_index
 
     @property
     def imported_microversion_id(self):
@@ -292,6 +229,27 @@ class BTMImport(object):
         """
 
         self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
+
+    @property
+    def _import(self):
+        """Gets the _import of this BTMImport.  # noqa: E501
+
+
+        :return: The _import of this BTMImport.  # noqa: E501
+        :rtype: BTPModuleId
+        """
+        return self.__import
+
+    @_import.setter
+    def _import(self, _import):
+        """Sets the _import of this BTMImport.
+
+
+        :param _import: The _import of this BTMImport.  # noqa: E501
+        :type: BTPModuleId
+        """
+
+        self.__import = _import
 
     @property
     def imported_workspace_element_id(self):
@@ -357,25 +315,46 @@ class BTMImport(object):
         self._element_import = element_import
 
     @property
-    def combined_namespace(self):
-        """Gets the combined_namespace of this BTMImport.  # noqa: E501
+    def imported_external_document_id(self):
+        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
 
 
-        :return: The combined_namespace of this BTMImport.  # noqa: E501
+        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
         :rtype: str
         """
-        return self._combined_namespace
+        return self._imported_external_document_id
 
-    @combined_namespace.setter
-    def combined_namespace(self, combined_namespace):
-        """Sets the combined_namespace of this BTMImport.
+    @imported_external_document_id.setter
+    def imported_external_document_id(self, imported_external_document_id):
+        """Sets the imported_external_document_id of this BTMImport.
 
 
-        :param combined_namespace: The combined_namespace of this BTMImport.  # noqa: E501
+        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
         :type: str
         """
 
-        self._combined_namespace = combined_namespace
+        self._imported_external_document_id = imported_external_document_id
+
+    @property
+    def namespace_field_index(self):
+        """Gets the namespace_field_index of this BTMImport.  # noqa: E501
+
+
+        :return: The namespace_field_index of this BTMImport.  # noqa: E501
+        :rtype: int
+        """
+        return self._namespace_field_index
+
+    @namespace_field_index.setter
+    def namespace_field_index(self, namespace_field_index):
+        """Sets the namespace_field_index of this BTMImport.
+
+
+        :param namespace_field_index: The namespace_field_index of this BTMImport.  # noqa: E501
+        :type: int
+        """
+
+        self._namespace_field_index = namespace_field_index
 
     @property
     def namespace(self):
@@ -418,6 +397,27 @@ class BTMImport(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def combined_namespace(self):
+        """Gets the combined_namespace of this BTMImport.  # noqa: E501
+
+
+        :return: The combined_namespace of this BTMImport.  # noqa: E501
+        :rtype: str
+        """
+        return self._combined_namespace
+
+    @combined_namespace.setter
+    def combined_namespace(self, combined_namespace):
+        """Sets the combined_namespace of this BTMImport.
+
+
+        :param combined_namespace: The combined_namespace of this BTMImport.  # noqa: E501
+        :type: str
+        """
+
+        self._combined_namespace = combined_namespace
 
     @property
     def for_export(self):
@@ -483,27 +483,6 @@ class BTMImport(object):
         self._path = path
 
     @property
-    def changeable_child_field_indices(self):
-        """Gets the changeable_child_field_indices of this BTMImport.  # noqa: E501
-
-
-        :return: The changeable_child_field_indices of this BTMImport.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._changeable_child_field_indices
-
-    @changeable_child_field_indices.setter
-    def changeable_child_field_indices(self, changeable_child_field_indices):
-        """Sets the changeable_child_field_indices of this BTMImport.
-
-
-        :param changeable_child_field_indices: The changeable_child_field_indices of this BTMImport.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._changeable_child_field_indices = changeable_child_field_indices
-
-    @property
     def version(self):
         """Gets the version of this BTMImport.  # noqa: E501
 
@@ -525,46 +504,25 @@ class BTMImport(object):
         self._version = version
 
     @property
-    def child_locations(self):
-        """Gets the child_locations of this BTMImport.  # noqa: E501
+    def changeable_child_field_indices(self):
+        """Gets the changeable_child_field_indices of this BTMImport.  # noqa: E501
 
 
-        :return: The child_locations of this BTMImport.  # noqa: E501
-        :rtype: dict(str, BTInsertionLocation)
+        :return: The changeable_child_field_indices of this BTMImport.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._child_locations
+        return self._changeable_child_field_indices
 
-    @child_locations.setter
-    def child_locations(self, child_locations):
-        """Sets the child_locations of this BTMImport.
-
-
-        :param child_locations: The child_locations of this BTMImport.  # noqa: E501
-        :type: dict(str, BTInsertionLocation)
-        """
-
-        self._child_locations = child_locations
-
-    @property
-    def source_parse_tree_nodes(self):
-        """Gets the source_parse_tree_nodes of this BTMImport.  # noqa: E501
+    @changeable_child_field_indices.setter
+    def changeable_child_field_indices(self, changeable_child_field_indices):
+        """Sets the changeable_child_field_indices of this BTMImport.
 
 
-        :return: The source_parse_tree_nodes of this BTMImport.  # noqa: E501
-        :rtype: dict(str, list[BTNodeReference])
-        """
-        return self._source_parse_tree_nodes
-
-    @source_parse_tree_nodes.setter
-    def source_parse_tree_nodes(self, source_parse_tree_nodes):
-        """Sets the source_parse_tree_nodes of this BTMImport.
-
-
-        :param source_parse_tree_nodes: The source_parse_tree_nodes of this BTMImport.  # noqa: E501
-        :type: dict(str, list[BTNodeReference])
+        :param changeable_child_field_indices: The changeable_child_field_indices of this BTMImport.  # noqa: E501
+        :type: list[int]
         """
 
-        self._source_parse_tree_nodes = source_parse_tree_nodes
+        self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
     def child_nodes(self):
@@ -609,6 +567,48 @@ class BTMImport(object):
         self._has_user_code = has_user_code
 
     @property
+    def child_locations(self):
+        """Gets the child_locations of this BTMImport.  # noqa: E501
+
+
+        :return: The child_locations of this BTMImport.  # noqa: E501
+        :rtype: dict(str, BTInsertionLocation)
+        """
+        return self._child_locations
+
+    @child_locations.setter
+    def child_locations(self, child_locations):
+        """Sets the child_locations of this BTMImport.
+
+
+        :param child_locations: The child_locations of this BTMImport.  # noqa: E501
+        :type: dict(str, BTInsertionLocation)
+        """
+
+        self._child_locations = child_locations
+
+    @property
+    def source_parse_tree_nodes(self):
+        """Gets the source_parse_tree_nodes of this BTMImport.  # noqa: E501
+
+
+        :return: The source_parse_tree_nodes of this BTMImport.  # noqa: E501
+        :rtype: dict(str, list[BTNodeReference])
+        """
+        return self._source_parse_tree_nodes
+
+    @source_parse_tree_nodes.setter
+    def source_parse_tree_nodes(self, source_parse_tree_nodes):
+        """Sets the source_parse_tree_nodes of this BTMImport.
+
+
+        :param source_parse_tree_nodes: The source_parse_tree_nodes of this BTMImport.  # noqa: E501
+        :type: dict(str, list[BTNodeReference])
+        """
+
+        self._source_parse_tree_nodes = source_parse_tree_nodes
+
+    @property
     def child_map_indices(self):
         """Gets the child_map_indices of this BTMImport.  # noqa: E501
 
@@ -649,6 +649,27 @@ class BTMImport(object):
         """
 
         self._atomic_child_indices = atomic_child_indices
+
+    @property
+    def node_id_raw(self):
+        """Gets the node_id_raw of this BTMImport.  # noqa: E501
+
+
+        :return: The node_id_raw of this BTMImport.  # noqa: E501
+        :rtype: BTObjectId
+        """
+        return self._node_id_raw
+
+    @node_id_raw.setter
+    def node_id_raw(self, node_id_raw):
+        """Sets the node_id_raw of this BTMImport.
+
+
+        :param node_id_raw: The node_id_raw of this BTMImport.  # noqa: E501
+        :type: BTObjectId
+        """
+
+        self._node_id_raw = node_id_raw
 
     @property
     def first_child_field(self):
@@ -693,25 +714,25 @@ class BTMImport(object):
         self._child_list_indices = child_list_indices
 
     @property
-    def node_id_raw(self):
-        """Gets the node_id_raw of this BTMImport.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTMImport.  # noqa: E501
 
 
-        :return: The node_id_raw of this BTMImport.  # noqa: E501
-        :rtype: BTObjectId
+        :return: The type_id of this BTMImport.  # noqa: E501
+        :rtype: int
         """
-        return self._node_id_raw
+        return self._type_id
 
-    @node_id_raw.setter
-    def node_id_raw(self, node_id_raw):
-        """Sets the node_id_raw of this BTMImport.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTMImport.
 
 
-        :param node_id_raw: The node_id_raw of this BTMImport.  # noqa: E501
-        :type: BTObjectId
+        :param type_id: The type_id of this BTMImport.  # noqa: E501
+        :type: int
         """
 
-        self._node_id_raw = node_id_raw
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -775,27 +796,6 @@ class BTMImport(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTMImport.  # noqa: E501
-
-
-        :return: The type_id of this BTMImport.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTMImport.
-
-
-        :param type_id: The type_id of this BTMImport.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

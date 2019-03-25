@@ -32,52 +32,52 @@ class ProratedCharges(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'amount': 'int',
+        'date': 'datetime',
         'description': 'str',
-        'date': 'datetime'
+        'amount': 'int'
     }
 
     attribute_map = {
-        'amount': 'amount',
+        'date': 'date',
         'description': 'description',
-        'date': 'date'
+        'amount': 'amount'
     }
 
-    def __init__(self, amount=None, description=None, date=None):  # noqa: E501
+    def __init__(self, date=None, description=None, amount=None):  # noqa: E501
         """ProratedCharges - a model defined in OpenAPI"""  # noqa: E501
 
-        self._amount = None
-        self._description = None
         self._date = None
+        self._description = None
+        self._amount = None
         self.discriminator = None
 
-        if amount is not None:
-            self.amount = amount
-        if description is not None:
-            self.description = description
         if date is not None:
             self.date = date
+        if description is not None:
+            self.description = description
+        if amount is not None:
+            self.amount = amount
 
     @property
-    def amount(self):
-        """Gets the amount of this ProratedCharges.  # noqa: E501
+    def date(self):
+        """Gets the date of this ProratedCharges.  # noqa: E501
 
 
-        :return: The amount of this ProratedCharges.  # noqa: E501
-        :rtype: int
+        :return: The date of this ProratedCharges.  # noqa: E501
+        :rtype: datetime
         """
-        return self._amount
+        return self._date
 
-    @amount.setter
-    def amount(self, amount):
-        """Sets the amount of this ProratedCharges.
+    @date.setter
+    def date(self, date):
+        """Sets the date of this ProratedCharges.
 
 
-        :param amount: The amount of this ProratedCharges.  # noqa: E501
-        :type: int
+        :param date: The date of this ProratedCharges.  # noqa: E501
+        :type: datetime
         """
 
-        self._amount = amount
+        self._date = date
 
     @property
     def description(self):
@@ -101,25 +101,25 @@ class ProratedCharges(object):
         self._description = description
 
     @property
-    def date(self):
-        """Gets the date of this ProratedCharges.  # noqa: E501
+    def amount(self):
+        """Gets the amount of this ProratedCharges.  # noqa: E501
 
 
-        :return: The date of this ProratedCharges.  # noqa: E501
-        :rtype: datetime
+        :return: The amount of this ProratedCharges.  # noqa: E501
+        :rtype: int
         """
-        return self._date
+        return self._amount
 
-    @date.setter
-    def date(self, date):
-        """Sets the date of this ProratedCharges.
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this ProratedCharges.
 
 
-        :param date: The date of this ProratedCharges.  # noqa: E501
-        :type: datetime
+        :param amount: The amount of this ProratedCharges.  # noqa: E501
+        :type: int
         """
 
-        self._date = date
+        self._amount = amount
 
     def to_dict(self):
         """Returns the model properties as a dict"""

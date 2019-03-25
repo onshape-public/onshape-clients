@@ -35,26 +35,26 @@ class BTRepairContextParams(object):
         'old_occurrences': 'list[BTOccurrence]',
         'new_occurrences': 'list[BTOccurrence]',
         'context_assembly_id': 'str',
-        'context_id': 'str',
-        'description': 'str'
+        'description': 'str',
+        'context_id': 'str'
     }
 
     attribute_map = {
         'old_occurrences': 'oldOccurrences',
         'new_occurrences': 'newOccurrences',
         'context_assembly_id': 'contextAssemblyId',
-        'context_id': 'contextId',
-        'description': 'description'
+        'description': 'description',
+        'context_id': 'contextId'
     }
 
-    def __init__(self, old_occurrences=None, new_occurrences=None, context_assembly_id=None, context_id=None, description=None):  # noqa: E501
+    def __init__(self, old_occurrences=None, new_occurrences=None, context_assembly_id=None, description=None, context_id=None):  # noqa: E501
         """BTRepairContextParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._old_occurrences = None
         self._new_occurrences = None
         self._context_assembly_id = None
-        self._context_id = None
         self._description = None
+        self._context_id = None
         self.discriminator = None
 
         if old_occurrences is not None:
@@ -63,10 +63,10 @@ class BTRepairContextParams(object):
             self.new_occurrences = new_occurrences
         if context_assembly_id is not None:
             self.context_assembly_id = context_assembly_id
-        if context_id is not None:
-            self.context_id = context_id
         if description is not None:
             self.description = description
+        if context_id is not None:
+            self.context_id = context_id
 
     @property
     def old_occurrences(self):
@@ -132,27 +132,6 @@ class BTRepairContextParams(object):
         self._context_assembly_id = context_assembly_id
 
     @property
-    def context_id(self):
-        """Gets the context_id of this BTRepairContextParams.  # noqa: E501
-
-
-        :return: The context_id of this BTRepairContextParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._context_id
-
-    @context_id.setter
-    def context_id(self, context_id):
-        """Sets the context_id of this BTRepairContextParams.
-
-
-        :param context_id: The context_id of this BTRepairContextParams.  # noqa: E501
-        :type: str
-        """
-
-        self._context_id = context_id
-
-    @property
     def description(self):
         """Gets the description of this BTRepairContextParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTRepairContextParams(object):
         """
 
         self._description = description
+
+    @property
+    def context_id(self):
+        """Gets the context_id of this BTRepairContextParams.  # noqa: E501
+
+
+        :return: The context_id of this BTRepairContextParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._context_id
+
+    @context_id.setter
+    def context_id(self, context_id):
+        """Sets the context_id of this BTRepairContextParams.
+
+
+        :param context_id: The context_id of this BTRepairContextParams.  # noqa: E501
+        :type: str
+        """
+
+        self._context_id = context_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

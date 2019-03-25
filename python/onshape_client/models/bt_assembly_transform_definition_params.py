@@ -32,31 +32,52 @@ class BTAssemblyTransformDefinitionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'transform': 'list[float]',
         'occurrences': 'list[BTOccurrence]',
-        'is_relative': 'bool',
-        'transform': 'list[float]'
+        'is_relative': 'bool'
     }
 
     attribute_map = {
+        'transform': 'transform',
         'occurrences': 'occurrences',
-        'is_relative': 'isRelative',
-        'transform': 'transform'
+        'is_relative': 'isRelative'
     }
 
-    def __init__(self, occurrences=None, is_relative=None, transform=None):  # noqa: E501
+    def __init__(self, transform=None, occurrences=None, is_relative=None):  # noqa: E501
         """BTAssemblyTransformDefinitionParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._transform = None
         self._occurrences = None
         self._is_relative = None
-        self._transform = None
         self.discriminator = None
 
+        if transform is not None:
+            self.transform = transform
         if occurrences is not None:
             self.occurrences = occurrences
         if is_relative is not None:
             self.is_relative = is_relative
-        if transform is not None:
-            self.transform = transform
+
+    @property
+    def transform(self):
+        """Gets the transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+
+
+        :return: The transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._transform
+
+    @transform.setter
+    def transform(self, transform):
+        """Sets the transform of this BTAssemblyTransformDefinitionParams.
+
+
+        :param transform: The transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._transform = transform
 
     @property
     def occurrences(self):
@@ -99,27 +120,6 @@ class BTAssemblyTransformDefinitionParams(object):
         """
 
         self._is_relative = is_relative
-
-    @property
-    def transform(self):
-        """Gets the transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-
-
-        :return: The transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._transform
-
-    @transform.setter
-    def transform(self, transform):
-        """Sets the transform of this BTAssemblyTransformDefinitionParams.
-
-
-        :param transform: The transform of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._transform = transform
 
     def to_dict(self):
         """Returns the model properties as a dict"""

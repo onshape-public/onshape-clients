@@ -7,10 +7,8 @@ Name | Type | Description | Notes
 **priority** | **int** |  | [optional] 
 **id** | **str** |  | [optional] 
 **active** | **bool** |  | [optional] 
-**owner_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
-**icon** | **str** |  | [optional] 
-**owner_type** | **int** |  | [optional] 
+**owner_id** | **str** |  | [optional] 
 **capability** | **str** |  | [optional] 
 **node_type** | **int** |  | [optional] 
 **tool_name** | **str** |  | [optional] 
@@ -27,6 +25,8 @@ Name | Type | Description | Notes
 **icon_initials** | **str** |  | [optional] 
 **context_menu** | **str** |  | [optional] 
 **is_newer_version_available** | **bool** |  | [optional] 
+**icon** | **str** |  | [optional] 
+**owner_type** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

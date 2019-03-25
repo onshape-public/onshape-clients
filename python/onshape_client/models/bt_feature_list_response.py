@@ -32,117 +32,96 @@ class BTFeatureListResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'feature_states': 'dict(str, BTFeatureState)',
         'is_complete': 'bool',
-        'rollback_index': 'int',
+        'feature_states': 'dict(str, BTFeatureState)',
+        'features': 'list[BTMFeature]',
         'default_features': 'list[BTMFeature]',
         'imports': 'list[BTMImport]',
-        'features': 'list[BTMFeature]',
+        'rollback_index': 'int',
         'bel_script_library_version': 'BTBelScriptLibraryVersion',
-        'library_version': 'int',
         'serialization_version': 'str',
+        'library_version': 'int',
+        'source_microversion': 'str',
         'reject_microversion_skew': 'bool',
         'microversion_skew': 'bool',
-        'source_microversion': 'str',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'feature_states': 'featureStates',
         'is_complete': 'isComplete',
-        'rollback_index': 'rollbackIndex',
+        'feature_states': 'featureStates',
+        'features': 'features',
         'default_features': 'defaultFeatures',
         'imports': 'imports',
-        'features': 'features',
+        'rollback_index': 'rollbackIndex',
         'bel_script_library_version': 'belScriptLibraryVersion',
-        'library_version': 'libraryVersion',
         'serialization_version': 'serializationVersion',
+        'library_version': 'libraryVersion',
+        'source_microversion': 'sourceMicroversion',
         'reject_microversion_skew': 'rejectMicroversionSkew',
         'microversion_skew': 'microversionSkew',
-        'source_microversion': 'sourceMicroversion',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, feature_states=None, is_complete=None, rollback_index=None, default_features=None, imports=None, features=None, bel_script_library_version=None, library_version=None, serialization_version=None, reject_microversion_skew=None, microversion_skew=None, source_microversion=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, is_complete=None, feature_states=None, features=None, default_features=None, imports=None, rollback_index=None, bel_script_library_version=None, serialization_version=None, library_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTFeatureListResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._feature_states = None
         self._is_complete = None
-        self._rollback_index = None
+        self._feature_states = None
+        self._features = None
         self._default_features = None
         self._imports = None
-        self._features = None
+        self._rollback_index = None
         self._bel_script_library_version = None
-        self._library_version = None
         self._serialization_version = None
+        self._library_version = None
+        self._source_microversion = None
         self._reject_microversion_skew = None
         self._microversion_skew = None
-        self._source_microversion = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if feature_states is not None:
-            self.feature_states = feature_states
         if is_complete is not None:
             self.is_complete = is_complete
-        if rollback_index is not None:
-            self.rollback_index = rollback_index
+        if feature_states is not None:
+            self.feature_states = feature_states
+        if features is not None:
+            self.features = features
         if default_features is not None:
             self.default_features = default_features
         if imports is not None:
             self.imports = imports
-        if features is not None:
-            self.features = features
+        if rollback_index is not None:
+            self.rollback_index = rollback_index
         if bel_script_library_version is not None:
             self.bel_script_library_version = bel_script_library_version
-        if library_version is not None:
-            self.library_version = library_version
         if serialization_version is not None:
             self.serialization_version = serialization_version
+        if library_version is not None:
+            self.library_version = library_version
+        if source_microversion is not None:
+            self.source_microversion = source_microversion
         if reject_microversion_skew is not None:
             self.reject_microversion_skew = reject_microversion_skew
         if microversion_skew is not None:
             self.microversion_skew = microversion_skew
-        if source_microversion is not None:
-            self.source_microversion = source_microversion
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
-
-    @property
-    def feature_states(self):
-        """Gets the feature_states of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The feature_states of this BTFeatureListResponse.  # noqa: E501
-        :rtype: dict(str, BTFeatureState)
-        """
-        return self._feature_states
-
-    @feature_states.setter
-    def feature_states(self, feature_states):
-        """Sets the feature_states of this BTFeatureListResponse.
-
-
-        :param feature_states: The feature_states of this BTFeatureListResponse.  # noqa: E501
-        :type: dict(str, BTFeatureState)
-        """
-
-        self._feature_states = feature_states
 
     @property
     def is_complete(self):
@@ -166,25 +145,46 @@ class BTFeatureListResponse(object):
         self._is_complete = is_complete
 
     @property
-    def rollback_index(self):
-        """Gets the rollback_index of this BTFeatureListResponse.  # noqa: E501
+    def feature_states(self):
+        """Gets the feature_states of this BTFeatureListResponse.  # noqa: E501
 
 
-        :return: The rollback_index of this BTFeatureListResponse.  # noqa: E501
-        :rtype: int
+        :return: The feature_states of this BTFeatureListResponse.  # noqa: E501
+        :rtype: dict(str, BTFeatureState)
         """
-        return self._rollback_index
+        return self._feature_states
 
-    @rollback_index.setter
-    def rollback_index(self, rollback_index):
-        """Sets the rollback_index of this BTFeatureListResponse.
+    @feature_states.setter
+    def feature_states(self, feature_states):
+        """Sets the feature_states of this BTFeatureListResponse.
 
 
-        :param rollback_index: The rollback_index of this BTFeatureListResponse.  # noqa: E501
-        :type: int
+        :param feature_states: The feature_states of this BTFeatureListResponse.  # noqa: E501
+        :type: dict(str, BTFeatureState)
         """
 
-        self._rollback_index = rollback_index
+        self._feature_states = feature_states
+
+    @property
+    def features(self):
+        """Gets the features of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The features of this BTFeatureListResponse.  # noqa: E501
+        :rtype: list[BTMFeature]
+        """
+        return self._features
+
+    @features.setter
+    def features(self, features):
+        """Sets the features of this BTFeatureListResponse.
+
+
+        :param features: The features of this BTFeatureListResponse.  # noqa: E501
+        :type: list[BTMFeature]
+        """
+
+        self._features = features
 
     @property
     def default_features(self):
@@ -229,25 +229,25 @@ class BTFeatureListResponse(object):
         self._imports = imports
 
     @property
-    def features(self):
-        """Gets the features of this BTFeatureListResponse.  # noqa: E501
+    def rollback_index(self):
+        """Gets the rollback_index of this BTFeatureListResponse.  # noqa: E501
 
 
-        :return: The features of this BTFeatureListResponse.  # noqa: E501
-        :rtype: list[BTMFeature]
+        :return: The rollback_index of this BTFeatureListResponse.  # noqa: E501
+        :rtype: int
         """
-        return self._features
+        return self._rollback_index
 
-    @features.setter
-    def features(self, features):
-        """Sets the features of this BTFeatureListResponse.
+    @rollback_index.setter
+    def rollback_index(self, rollback_index):
+        """Sets the rollback_index of this BTFeatureListResponse.
 
 
-        :param features: The features of this BTFeatureListResponse.  # noqa: E501
-        :type: list[BTMFeature]
+        :param rollback_index: The rollback_index of this BTFeatureListResponse.  # noqa: E501
+        :type: int
         """
 
-        self._features = features
+        self._rollback_index = rollback_index
 
     @property
     def bel_script_library_version(self):
@@ -271,6 +271,27 @@ class BTFeatureListResponse(object):
         self._bel_script_library_version = bel_script_library_version
 
     @property
+    def serialization_version(self):
+        """Gets the serialization_version of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._serialization_version
+
+    @serialization_version.setter
+    def serialization_version(self, serialization_version):
+        """Sets the serialization_version of this BTFeatureListResponse.
+
+
+        :param serialization_version: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._serialization_version = serialization_version
+
+    @property
     def library_version(self):
         """Gets the library_version of this BTFeatureListResponse.  # noqa: E501
 
@@ -292,25 +313,25 @@ class BTFeatureListResponse(object):
         self._library_version = library_version
 
     @property
-    def serialization_version(self):
-        """Gets the serialization_version of this BTFeatureListResponse.  # noqa: E501
+    def source_microversion(self):
+        """Gets the source_microversion of this BTFeatureListResponse.  # noqa: E501
 
 
-        :return: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :return: The source_microversion of this BTFeatureListResponse.  # noqa: E501
         :rtype: str
         """
-        return self._serialization_version
+        return self._source_microversion
 
-    @serialization_version.setter
-    def serialization_version(self, serialization_version):
-        """Sets the serialization_version of this BTFeatureListResponse.
+    @source_microversion.setter
+    def source_microversion(self, source_microversion):
+        """Sets the source_microversion of this BTFeatureListResponse.
 
 
-        :param serialization_version: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :param source_microversion: The source_microversion of this BTFeatureListResponse.  # noqa: E501
         :type: str
         """
 
-        self._serialization_version = serialization_version
+        self._source_microversion = source_microversion
 
     @property
     def reject_microversion_skew(self):
@@ -355,25 +376,25 @@ class BTFeatureListResponse(object):
         self._microversion_skew = microversion_skew
 
     @property
-    def source_microversion(self):
-        """Gets the source_microversion of this BTFeatureListResponse.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTFeatureListResponse.  # noqa: E501
 
 
-        :return: The source_microversion of this BTFeatureListResponse.  # noqa: E501
-        :rtype: str
+        :return: The type_id of this BTFeatureListResponse.  # noqa: E501
+        :rtype: int
         """
-        return self._source_microversion
+        return self._type_id
 
-    @source_microversion.setter
-    def source_microversion(self, source_microversion):
-        """Sets the source_microversion of this BTFeatureListResponse.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTFeatureListResponse.
 
 
-        :param source_microversion: The source_microversion of this BTFeatureListResponse.  # noqa: E501
-        :type: str
+        :param type_id: The type_id of this BTFeatureListResponse.  # noqa: E501
+        :type: int
         """
 
-        self._source_microversion = source_microversion
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -437,27 +458,6 @@ class BTFeatureListResponse(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The type_id of this BTFeatureListResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTFeatureListResponse.
-
-
-        :param type_id: The type_id of this BTFeatureListResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

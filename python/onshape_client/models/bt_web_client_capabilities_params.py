@@ -33,6 +33,7 @@ class BTWebClientCapabilitiesParams(object):
     """
     openapi_types = {
         'oes_standard_derivatives_': 'bool',
+        'vendor': 'str',
         'depth_texture': 'bool',
         'renderer': 'str',
         'angle_instanced_arrays': 'bool',
@@ -48,12 +49,12 @@ class BTWebClientCapabilitiesParams(object):
         'has3d_mouse': 'bool',
         'screen_width': 'int',
         'screen_height': 'int',
-        'device_pixel_ratio': 'float',
-        'vendor': 'str'
+        'device_pixel_ratio': 'float'
     }
 
     attribute_map = {
         'oes_standard_derivatives_': 'oesStandardDerivatives_',
+        'vendor': 'vendor',
         'depth_texture': 'depthTexture',
         'renderer': 'renderer',
         'angle_instanced_arrays': 'angleInstancedArrays',
@@ -69,14 +70,14 @@ class BTWebClientCapabilitiesParams(object):
         'has3d_mouse': 'has3dMouse',
         'screen_width': 'screenWidth',
         'screen_height': 'screenHeight',
-        'device_pixel_ratio': 'devicePixelRatio',
-        'vendor': 'vendor'
+        'device_pixel_ratio': 'devicePixelRatio'
     }
 
-    def __init__(self, oes_standard_derivatives_=None, depth_texture=None, renderer=None, angle_instanced_arrays=None, ext_texture_filter_anisotropic=None, oes_element_index_uint=None, oes_texture_float=None, oes_texture_float_linear=None, oes_texture_half_float=None, oes_texture_half_float_linear=None, oes_vertex_array_object=None, compressed_texture_s3tc=None, draw_buffers=None, has3d_mouse=None, screen_width=None, screen_height=None, device_pixel_ratio=None, vendor=None):  # noqa: E501
+    def __init__(self, oes_standard_derivatives_=None, vendor=None, depth_texture=None, renderer=None, angle_instanced_arrays=None, ext_texture_filter_anisotropic=None, oes_element_index_uint=None, oes_texture_float=None, oes_texture_float_linear=None, oes_texture_half_float=None, oes_texture_half_float_linear=None, oes_vertex_array_object=None, compressed_texture_s3tc=None, draw_buffers=None, has3d_mouse=None, screen_width=None, screen_height=None, device_pixel_ratio=None):  # noqa: E501
         """BTWebClientCapabilitiesParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._oes_standard_derivatives_ = None
+        self._vendor = None
         self._depth_texture = None
         self._renderer = None
         self._angle_instanced_arrays = None
@@ -93,11 +94,12 @@ class BTWebClientCapabilitiesParams(object):
         self._screen_width = None
         self._screen_height = None
         self._device_pixel_ratio = None
-        self._vendor = None
         self.discriminator = None
 
         if oes_standard_derivatives_ is not None:
             self.oes_standard_derivatives_ = oes_standard_derivatives_
+        if vendor is not None:
+            self.vendor = vendor
         if depth_texture is not None:
             self.depth_texture = depth_texture
         if renderer is not None:
@@ -130,8 +132,6 @@ class BTWebClientCapabilitiesParams(object):
             self.screen_height = screen_height
         if device_pixel_ratio is not None:
             self.device_pixel_ratio = device_pixel_ratio
-        if vendor is not None:
-            self.vendor = vendor
 
     @property
     def oes_standard_derivatives_(self):
@@ -153,6 +153,27 @@ class BTWebClientCapabilitiesParams(object):
         """
 
         self._oes_standard_derivatives_ = oes_standard_derivatives_
+
+    @property
+    def vendor(self):
+        """Gets the vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
+
+
+        :return: The vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._vendor
+
+    @vendor.setter
+    def vendor(self, vendor):
+        """Sets the vendor of this BTWebClientCapabilitiesParams.
+
+
+        :param vendor: The vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
+        :type: str
+        """
+
+        self._vendor = vendor
 
     @property
     def depth_texture(self):
@@ -489,27 +510,6 @@ class BTWebClientCapabilitiesParams(object):
         """
 
         self._device_pixel_ratio = device_pixel_ratio
-
-    @property
-    def vendor(self):
-        """Gets the vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
-
-
-        :return: The vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._vendor
-
-    @vendor.setter
-    def vendor(self, vendor):
-        """Sets the vendor of this BTWebClientCapabilitiesParams.
-
-
-        :param vendor: The vendor of this BTWebClientCapabilitiesParams.  # noqa: E501
-        :type: str
-        """
-
-        self._vendor = vendor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

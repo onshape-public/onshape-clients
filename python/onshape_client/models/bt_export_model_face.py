@@ -33,65 +33,65 @@ class BTExportModelFace(object):
     """
     openapi_types = {
         'id': 'str',
+        'orientation': 'bool',
         'box': 'BTBoundingBox',
+        'area': 'float',
         'surface': 'BTSurfaceDescription',
         'loops': 'list[BTExportModelLoop]',
-        'area': 'float',
-        'orientation': 'bool',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
+        'orientation': 'orientation',
         'box': 'box',
+        'area': 'area',
         'surface': 'surface',
         'loops': 'loops',
-        'area': 'area',
-        'orientation': 'orientation',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, id=None, box=None, surface=None, loops=None, area=None, orientation=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, id=None, orientation=None, box=None, area=None, surface=None, loops=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportModelFace - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
+        self._orientation = None
         self._box = None
+        self._area = None
         self._surface = None
         self._loops = None
-        self._area = None
-        self._orientation = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if orientation is not None:
+            self.orientation = orientation
         if box is not None:
             self.box = box
+        if area is not None:
+            self.area = area
         if surface is not None:
             self.surface = surface
         if loops is not None:
             self.loops = loops
-        if area is not None:
-            self.area = area
-        if orientation is not None:
-            self.orientation = orientation
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def id(self):
@@ -115,6 +115,27 @@ class BTExportModelFace(object):
         self._id = id
 
     @property
+    def orientation(self):
+        """Gets the orientation of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The orientation of this BTExportModelFace.  # noqa: E501
+        :rtype: bool
+        """
+        return self._orientation
+
+    @orientation.setter
+    def orientation(self, orientation):
+        """Sets the orientation of this BTExportModelFace.
+
+
+        :param orientation: The orientation of this BTExportModelFace.  # noqa: E501
+        :type: bool
+        """
+
+        self._orientation = orientation
+
+    @property
     def box(self):
         """Gets the box of this BTExportModelFace.  # noqa: E501
 
@@ -134,6 +155,27 @@ class BTExportModelFace(object):
         """
 
         self._box = box
+
+    @property
+    def area(self):
+        """Gets the area of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The area of this BTExportModelFace.  # noqa: E501
+        :rtype: float
+        """
+        return self._area
+
+    @area.setter
+    def area(self, area):
+        """Sets the area of this BTExportModelFace.
+
+
+        :param area: The area of this BTExportModelFace.  # noqa: E501
+        :type: float
+        """
+
+        self._area = area
 
     @property
     def surface(self):
@@ -178,46 +220,25 @@ class BTExportModelFace(object):
         self._loops = loops
 
     @property
-    def area(self):
-        """Gets the area of this BTExportModelFace.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTExportModelFace.  # noqa: E501
 
 
-        :return: The area of this BTExportModelFace.  # noqa: E501
-        :rtype: float
+        :return: The type_id of this BTExportModelFace.  # noqa: E501
+        :rtype: int
         """
-        return self._area
+        return self._type_id
 
-    @area.setter
-    def area(self, area):
-        """Sets the area of this BTExportModelFace.
-
-
-        :param area: The area of this BTExportModelFace.  # noqa: E501
-        :type: float
-        """
-
-        self._area = area
-
-    @property
-    def orientation(self):
-        """Gets the orientation of this BTExportModelFace.  # noqa: E501
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTExportModelFace.
 
 
-        :return: The orientation of this BTExportModelFace.  # noqa: E501
-        :rtype: bool
-        """
-        return self._orientation
-
-    @orientation.setter
-    def orientation(self, orientation):
-        """Sets the orientation of this BTExportModelFace.
-
-
-        :param orientation: The orientation of this BTExportModelFace.  # noqa: E501
-        :type: bool
+        :param type_id: The type_id of this BTExportModelFace.  # noqa: E501
+        :type: int
         """
 
-        self._orientation = orientation
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -281,27 +302,6 @@ class BTExportModelFace(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTExportModelFace.  # noqa: E501
-
-
-        :return: The type_id of this BTExportModelFace.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTExportModelFace.
-
-
-        :param type_id: The type_id of this BTExportModelFace.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,55 +33,55 @@ class BTExportModelEdge(object):
     """
     openapi_types = {
         'id': 'str',
+        'curve': 'BTCurveDescription',
         'geometry': 'BTExportModelEdgeGeometry',
         'vertices': 'list[str]',
-        'curve': 'BTCurveDescription',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
+        'curve': 'curve',
         'geometry': 'geometry',
         'vertices': 'vertices',
-        'curve': 'curve',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, id=None, geometry=None, vertices=None, curve=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, id=None, curve=None, geometry=None, vertices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportModelEdge - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
+        self._curve = None
         self._geometry = None
         self._vertices = None
-        self._curve = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if curve is not None:
+            self.curve = curve
         if geometry is not None:
             self.geometry = geometry
         if vertices is not None:
             self.vertices = vertices
-        if curve is not None:
-            self.curve = curve
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def id(self):
@@ -103,6 +103,27 @@ class BTExportModelEdge(object):
         """
 
         self._id = id
+
+    @property
+    def curve(self):
+        """Gets the curve of this BTExportModelEdge.  # noqa: E501
+
+
+        :return: The curve of this BTExportModelEdge.  # noqa: E501
+        :rtype: BTCurveDescription
+        """
+        return self._curve
+
+    @curve.setter
+    def curve(self, curve):
+        """Sets the curve of this BTExportModelEdge.
+
+
+        :param curve: The curve of this BTExportModelEdge.  # noqa: E501
+        :type: BTCurveDescription
+        """
+
+        self._curve = curve
 
     @property
     def geometry(self):
@@ -147,25 +168,25 @@ class BTExportModelEdge(object):
         self._vertices = vertices
 
     @property
-    def curve(self):
-        """Gets the curve of this BTExportModelEdge.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTExportModelEdge.  # noqa: E501
 
 
-        :return: The curve of this BTExportModelEdge.  # noqa: E501
-        :rtype: BTCurveDescription
+        :return: The type_id of this BTExportModelEdge.  # noqa: E501
+        :rtype: int
         """
-        return self._curve
+        return self._type_id
 
-    @curve.setter
-    def curve(self, curve):
-        """Sets the curve of this BTExportModelEdge.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTExportModelEdge.
 
 
-        :param curve: The curve of this BTExportModelEdge.  # noqa: E501
-        :type: BTCurveDescription
+        :param type_id: The type_id of this BTExportModelEdge.  # noqa: E501
+        :type: int
         """
 
-        self._curve = curve
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -229,27 +250,6 @@ class BTExportModelEdge(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTExportModelEdge.  # noqa: E501
-
-
-        :return: The type_id of this BTExportModelEdge.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTExportModelEdge.
-
-
-        :param type_id: The type_id of this BTExportModelEdge.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

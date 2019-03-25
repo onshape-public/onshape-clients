@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
+**script** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
-**script** | **str** |  | [optional] 
 **revision_list** | **list[str]** |  | [optional] 
 **rule_type** | **int** |  | [optional] 
 **validation_regex** | **str** |  | [optional] 

@@ -33,62 +33,68 @@ class BTAssociativeDataParams(object):
     """
     openapi_types = {
         'type': 'str',
+        'view_id': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'configuration': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'microversion_id': 'str',
-        'version_id': 'str',
-        'document_id': 'str',
         'id_tag': 'str',
-        'data': 'list[BTNameValuePair]',
         'document_microversion': 'str',
         'associative_data_id': 'str',
         'operation': 'str',
-        'view_id': 'str',
         'occurrence_id': 'str',
-        'is_hidden_base_view': 'bool'
+        'is_hidden_base_view': 'bool',
+        'data': 'list[BTNameValuePair]'
     }
 
     attribute_map = {
         'type': 'type',
+        'view_id': 'viewId',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'configuration': 'configuration',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'microversion_id': 'microversionId',
-        'version_id': 'versionId',
-        'document_id': 'documentId',
         'id_tag': 'idTag',
-        'data': 'data',
         'document_microversion': 'documentMicroversion',
         'associative_data_id': 'associativeDataId',
         'operation': 'operation',
-        'view_id': 'viewId',
         'occurrence_id': 'occurrenceId',
-        'is_hidden_base_view': 'isHiddenBaseView'
+        'is_hidden_base_view': 'isHiddenBaseView',
+        'data': 'data'
     }
 
-    def __init__(self, type=None, configuration=None, workspace_id=None, element_id=None, microversion_id=None, version_id=None, document_id=None, id_tag=None, data=None, document_microversion=None, associative_data_id=None, operation=None, view_id=None, occurrence_id=None, is_hidden_base_view=None):  # noqa: E501
+    def __init__(self, type=None, view_id=None, version_id=None, document_id=None, configuration=None, workspace_id=None, element_id=None, microversion_id=None, id_tag=None, document_microversion=None, associative_data_id=None, operation=None, occurrence_id=None, is_hidden_base_view=None, data=None):  # noqa: E501
         """BTAssociativeDataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
+        self._view_id = None
+        self._version_id = None
+        self._document_id = None
         self._configuration = None
         self._workspace_id = None
         self._element_id = None
         self._microversion_id = None
-        self._version_id = None
-        self._document_id = None
         self._id_tag = None
-        self._data = None
         self._document_microversion = None
         self._associative_data_id = None
         self._operation = None
-        self._view_id = None
         self._occurrence_id = None
         self._is_hidden_base_view = None
+        self._data = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
+        if view_id is not None:
+            self.view_id = view_id
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if configuration is not None:
             self.configuration = configuration
         if workspace_id is not None:
@@ -97,26 +103,20 @@ class BTAssociativeDataParams(object):
             self.element_id = element_id
         if microversion_id is not None:
             self.microversion_id = microversion_id
-        if version_id is not None:
-            self.version_id = version_id
-        if document_id is not None:
-            self.document_id = document_id
         if id_tag is not None:
             self.id_tag = id_tag
-        if data is not None:
-            self.data = data
         if document_microversion is not None:
             self.document_microversion = document_microversion
         if associative_data_id is not None:
             self.associative_data_id = associative_data_id
         if operation is not None:
             self.operation = operation
-        if view_id is not None:
-            self.view_id = view_id
         if occurrence_id is not None:
             self.occurrence_id = occurrence_id
         if is_hidden_base_view is not None:
             self.is_hidden_base_view = is_hidden_base_view
+        if data is not None:
+            self.data = data
 
     @property
     def type(self):
@@ -144,6 +144,69 @@ class BTAssociativeDataParams(object):
             )
 
         self._type = type
+
+    @property
+    def view_id(self):
+        """Gets the view_id of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The view_id of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_id
+
+    @view_id.setter
+    def view_id(self, view_id):
+        """Sets the view_id of this BTAssociativeDataParams.
+
+
+        :param view_id: The view_id of this BTAssociativeDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._view_id = view_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTAssociativeDataParams.
+
+
+        :param version_id: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAssociativeDataParams.
+
+
+        :param document_id: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def configuration(self):
@@ -230,48 +293,6 @@ class BTAssociativeDataParams(object):
         self._microversion_id = microversion_id
 
     @property
-    def version_id(self):
-        """Gets the version_id of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The version_id of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTAssociativeDataParams.
-
-
-        :param version_id: The version_id of this BTAssociativeDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The document_id of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAssociativeDataParams.
-
-
-        :param document_id: The document_id of this BTAssociativeDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
     def id_tag(self):
         """Gets the id_tag of this BTAssociativeDataParams.  # noqa: E501
 
@@ -291,27 +312,6 @@ class BTAssociativeDataParams(object):
         """
 
         self._id_tag = id_tag
-
-    @property
-    def data(self):
-        """Gets the data of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The data of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: list[BTNameValuePair]
-        """
-        return self._data
-
-    @data.setter
-    def data(self, data):
-        """Sets the data of this BTAssociativeDataParams.
-
-
-        :param data: The data of this BTAssociativeDataParams.  # noqa: E501
-        :type: list[BTNameValuePair]
-        """
-
-        self._data = data
 
     @property
     def document_microversion(self):
@@ -383,27 +383,6 @@ class BTAssociativeDataParams(object):
         self._operation = operation
 
     @property
-    def view_id(self):
-        """Gets the view_id of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The view_id of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_id
-
-    @view_id.setter
-    def view_id(self, view_id):
-        """Sets the view_id of this BTAssociativeDataParams.
-
-
-        :param view_id: The view_id of this BTAssociativeDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._view_id = view_id
-
-    @property
     def occurrence_id(self):
         """Gets the occurrence_id of this BTAssociativeDataParams.  # noqa: E501
 
@@ -444,6 +423,27 @@ class BTAssociativeDataParams(object):
         """
 
         self._is_hidden_base_view = is_hidden_base_view
+
+    @property
+    def data(self):
+        """Gets the data of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The data of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: list[BTNameValuePair]
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this BTAssociativeDataParams.
+
+
+        :param data: The data of this BTAssociativeDataParams.  # noqa: E501
+        :type: list[BTNameValuePair]
+        """
+
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,89 +34,89 @@ class BTVersionInfo(object):
     openapi_types = {
         'parent': 'str',
         'type': 'str',
-        'override_date': 'datetime',
         'description': 'str',
-        'thumbnail': 'BTThumbnailInfo',
-        'created_at': 'datetime',
         'modified_at': 'datetime',
+        'document_id': 'str',
+        'created_at': 'datetime',
         'last_modifier': 'BTUserBasicSummaryInfo',
         'microversion': 'str',
-        'document_id': 'str',
+        'thumbnail': 'BTThumbnailInfo',
         'creator': 'BTUserBasicSummaryInfo',
+        'override_date': 'datetime',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
         'parent': 'parent',
         'type': 'type',
-        'override_date': 'overrideDate',
         'description': 'description',
-        'thumbnail': 'thumbnail',
-        'created_at': 'createdAt',
         'modified_at': 'modifiedAt',
+        'document_id': 'documentId',
+        'created_at': 'createdAt',
         'last_modifier': 'lastModifier',
         'microversion': 'microversion',
-        'document_id': 'documentId',
+        'thumbnail': 'thumbnail',
         'creator': 'creator',
+        'override_date': 'overrideDate',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, parent=None, type=None, override_date=None, description=None, thumbnail=None, created_at=None, modified_at=None, last_modifier=None, microversion=None, document_id=None, creator=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, parent=None, type=None, description=None, modified_at=None, document_id=None, created_at=None, last_modifier=None, microversion=None, thumbnail=None, creator=None, override_date=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTVersionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._parent = None
         self._type = None
-        self._override_date = None
         self._description = None
-        self._thumbnail = None
-        self._created_at = None
         self._modified_at = None
+        self._document_id = None
+        self._created_at = None
         self._last_modifier = None
         self._microversion = None
-        self._document_id = None
+        self._thumbnail = None
         self._creator = None
+        self._override_date = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if parent is not None:
             self.parent = parent
         if type is not None:
             self.type = type
-        if override_date is not None:
-            self.override_date = override_date
         if description is not None:
             self.description = description
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
-        if created_at is not None:
-            self.created_at = created_at
         if modified_at is not None:
             self.modified_at = modified_at
+        if document_id is not None:
+            self.document_id = document_id
+        if created_at is not None:
+            self.created_at = created_at
         if last_modifier is not None:
             self.last_modifier = last_modifier
         if microversion is not None:
             self.microversion = microversion
-        if document_id is not None:
-            self.document_id = document_id
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
         if creator is not None:
             self.creator = creator
+        if override_date is not None:
+            self.override_date = override_date
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def parent(self):
@@ -161,27 +161,6 @@ class BTVersionInfo(object):
         self._type = type
 
     @property
-    def override_date(self):
-        """Gets the override_date of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The override_date of this BTVersionInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._override_date
-
-    @override_date.setter
-    def override_date(self, override_date):
-        """Sets the override_date of this BTVersionInfo.
-
-
-        :param override_date: The override_date of this BTVersionInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._override_date = override_date
-
-    @property
     def description(self):
         """Gets the description of this BTVersionInfo.  # noqa: E501
 
@@ -203,25 +182,46 @@ class BTVersionInfo(object):
         self._description = description
 
     @property
-    def thumbnail(self):
-        """Gets the thumbnail of this BTVersionInfo.  # noqa: E501
+    def modified_at(self):
+        """Gets the modified_at of this BTVersionInfo.  # noqa: E501
 
 
-        :return: The thumbnail of this BTVersionInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
+        :return: The modified_at of this BTVersionInfo.  # noqa: E501
+        :rtype: datetime
         """
-        return self._thumbnail
+        return self._modified_at
 
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this BTVersionInfo.
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTVersionInfo.
 
 
-        :param thumbnail: The thumbnail of this BTVersionInfo.  # noqa: E501
-        :type: BTThumbnailInfo
+        :param modified_at: The modified_at of this BTVersionInfo.  # noqa: E501
+        :type: datetime
         """
 
-        self._thumbnail = thumbnail
+        self._modified_at = modified_at
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTVersionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTVersionInfo.
+
+
+        :param document_id: The document_id of this BTVersionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def created_at(self):
@@ -243,27 +243,6 @@ class BTVersionInfo(object):
         """
 
         self._created_at = created_at
-
-    @property
-    def modified_at(self):
-        """Gets the modified_at of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The modified_at of this BTVersionInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._modified_at
-
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTVersionInfo.
-
-
-        :param modified_at: The modified_at of this BTVersionInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._modified_at = modified_at
 
     @property
     def last_modifier(self):
@@ -308,25 +287,25 @@ class BTVersionInfo(object):
         self._microversion = microversion
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTVersionInfo.  # noqa: E501
+    def thumbnail(self):
+        """Gets the thumbnail of this BTVersionInfo.  # noqa: E501
 
 
-        :return: The document_id of this BTVersionInfo.  # noqa: E501
-        :rtype: str
+        :return: The thumbnail of this BTVersionInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
         """
-        return self._document_id
+        return self._thumbnail
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTVersionInfo.
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this BTVersionInfo.
 
 
-        :param document_id: The document_id of this BTVersionInfo.  # noqa: E501
-        :type: str
+        :param thumbnail: The thumbnail of this BTVersionInfo.  # noqa: E501
+        :type: BTThumbnailInfo
         """
 
-        self._document_id = document_id
+        self._thumbnail = thumbnail
 
     @property
     def creator(self):
@@ -348,6 +327,27 @@ class BTVersionInfo(object):
         """
 
         self._creator = creator
+
+    @property
+    def override_date(self):
+        """Gets the override_date of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The override_date of this BTVersionInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._override_date
+
+    @override_date.setter
+    def override_date(self, override_date):
+        """Sets the override_date of this BTVersionInfo.
+
+
+        :param override_date: The override_date of this BTVersionInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._override_date = override_date
 
     @property
     def name(self):
@@ -392,27 +392,6 @@ class BTVersionInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTVersionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTVersionInfo.
-
-
-        :param view_ref: The view_ref of this BTVersionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTVersionInfo.  # noqa: E501
 
@@ -432,6 +411,27 @@ class BTVersionInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTVersionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTVersionInfo.
+
+
+        :param view_ref: The view_ref of this BTVersionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,50 +33,50 @@ class BTExportTessellatedFacesResponse(object):
     """
     openapi_types = {
         'bodies': 'list[BTExportTessellatedFacesBody]',
-        'facet_points': 'list[BTVector3d]',
         'error_enum': 'str',
+        'facet_points': 'list[BTVector3d]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'bodies': 'bodies',
-        'facet_points': 'facetPoints',
         'error_enum': 'errorEnum',
+        'facet_points': 'facetPoints',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, bodies=None, facet_points=None, error_enum=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, bodies=None, error_enum=None, facet_points=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportTessellatedFacesResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._bodies = None
-        self._facet_points = None
         self._error_enum = None
+        self._facet_points = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if bodies is not None:
             self.bodies = bodies
-        if facet_points is not None:
-            self.facet_points = facet_points
         if error_enum is not None:
             self.error_enum = error_enum
+        if facet_points is not None:
+            self.facet_points = facet_points
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def bodies(self):
@@ -100,27 +100,6 @@ class BTExportTessellatedFacesResponse(object):
         """
 
         self._bodies = bodies
-
-    @property
-    def facet_points(self):
-        """Gets the facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
-
-
-        :return: The facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
-        :rtype: list[BTVector3d]
-        """
-        return self._facet_points
-
-    @facet_points.setter
-    def facet_points(self, facet_points):
-        """Sets the facet_points of this BTExportTessellatedFacesResponse.
-
-
-        :param facet_points: The facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
-        :type: list[BTVector3d]
-        """
-
-        self._facet_points = facet_points
 
     @property
     def error_enum(self):
@@ -148,6 +127,48 @@ class BTExportTessellatedFacesResponse(object):
             )
 
         self._error_enum = error_enum
+
+    @property
+    def facet_points(self):
+        """Gets the facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
+
+
+        :return: The facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :rtype: list[BTVector3d]
+        """
+        return self._facet_points
+
+    @facet_points.setter
+    def facet_points(self, facet_points):
+        """Sets the facet_points of this BTExportTessellatedFacesResponse.
+
+
+        :param facet_points: The facet_points of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :type: list[BTVector3d]
+        """
+
+        self._facet_points = facet_points
+
+    @property
+    def type_id(self):
+        """Gets the type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
+
+
+        :return: The type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :rtype: int
+        """
+        return self._type_id
+
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTExportTessellatedFacesResponse.
+
+
+        :param type_id: The type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :type: int
+        """
+
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -211,27 +232,6 @@ class BTExportTessellatedFacesResponse(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
-
-
-        :return: The type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTExportTessellatedFacesResponse.
-
-
-        :param type_id: The type_id of this BTExportTessellatedFacesResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

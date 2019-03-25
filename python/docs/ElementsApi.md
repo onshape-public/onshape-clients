@@ -4,6 +4,7 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**copy_element_from_source_document1**](ElementsApi.md#copy_element_from_source_document1) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | 
 [**decode_configuration**](ElementsApi.md#decode_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid} | 
 [**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | 
 [**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | 
@@ -19,6 +20,60 @@ Method | HTTP request | Description
 [**update_references1**](ElementsApi.md#update_references1) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | 
 [**upload_file2**](ElementsApi.md#upload_file2) | **POST** /api/elements/upload/{did} | 
 
+
+# **copy_element_from_source_document1**
+> copy_element_from_source_document1(did, wid, bt_copy_element_params)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.ElementsApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | 
+wid = 'wid_example' # str | 
+bt_copy_element_params = onshape_client.BTCopyElementParams() # BTCopyElementParams | 
+
+try:
+    api_instance.copy_element_from_source_document1(did, wid, bt_copy_element_params)
+except ApiException as e:
+    print("Exception when calling ElementsApi->copy_element_from_source_document1: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **wid** | **str**|  | 
+ **bt_copy_element_params** | [**BTCopyElementParams**](BTCopyElementParams.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **decode_configuration**
 > decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)

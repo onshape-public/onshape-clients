@@ -36,9 +36,9 @@ class BTAppElementModifyInfo(object):
         'transaction_id': 'str',
         'parent_change_id': 'str',
         'change_id': 'str',
-        'error_description': 'str',
         'error_code': 'int',
-        'error_value': 'str'
+        'error_value': 'str',
+        'error_description': 'str'
     }
 
     attribute_map = {
@@ -46,21 +46,21 @@ class BTAppElementModifyInfo(object):
         'transaction_id': 'transactionId',
         'parent_change_id': 'parentChangeId',
         'change_id': 'changeId',
-        'error_description': 'errorDescription',
         'error_code': 'errorCode',
-        'error_value': 'errorValue'
+        'error_value': 'errorValue',
+        'error_description': 'errorDescription'
     }
 
-    def __init__(self, element_id=None, transaction_id=None, parent_change_id=None, change_id=None, error_description=None, error_code=None, error_value=None):  # noqa: E501
+    def __init__(self, element_id=None, transaction_id=None, parent_change_id=None, change_id=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
         """BTAppElementModifyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._element_id = None
         self._transaction_id = None
         self._parent_change_id = None
         self._change_id = None
-        self._error_description = None
         self._error_code = None
         self._error_value = None
+        self._error_description = None
         self.discriminator = None
 
         if element_id is not None:
@@ -71,12 +71,12 @@ class BTAppElementModifyInfo(object):
             self.parent_change_id = parent_change_id
         if change_id is not None:
             self.change_id = change_id
-        if error_description is not None:
-            self.error_description = error_description
         if error_code is not None:
             self.error_code = error_code
         if error_value is not None:
             self.error_value = error_value
+        if error_description is not None:
+            self.error_description = error_description
 
     @property
     def element_id(self):
@@ -163,27 +163,6 @@ class BTAppElementModifyInfo(object):
         self._change_id = change_id
 
     @property
-    def error_description(self):
-        """Gets the error_description of this BTAppElementModifyInfo.  # noqa: E501
-
-
-        :return: The error_description of this BTAppElementModifyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_description
-
-    @error_description.setter
-    def error_description(self, error_description):
-        """Sets the error_description of this BTAppElementModifyInfo.
-
-
-        :param error_description: The error_description of this BTAppElementModifyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._error_description = error_description
-
-    @property
     def error_code(self):
         """Gets the error_code of this BTAppElementModifyInfo.  # noqa: E501
 
@@ -230,6 +209,27 @@ class BTAppElementModifyInfo(object):
             )
 
         self._error_value = error_value
+
+    @property
+    def error_description(self):
+        """Gets the error_description of this BTAppElementModifyInfo.  # noqa: E501
+
+
+        :return: The error_description of this BTAppElementModifyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_description
+
+    @error_description.setter
+    def error_description(self, error_description):
+        """Sets the error_description of this BTAppElementModifyInfo.
+
+
+        :param error_description: The error_description of this BTAppElementModifyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._error_description = error_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,44 +32,44 @@ class BTPurchaseUserInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user': 'BTUserBasicSummaryInfo',
         'purchase': 'BTPurchaseInfo',
+        'user': 'BTUserBasicSummaryInfo',
         'consumed_quantity': 'int',
         'purchase_state': 'int',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
-        'user': 'user',
         'purchase': 'purchase',
+        'user': 'user',
         'consumed_quantity': 'consumedQuantity',
         'purchase_state': 'purchaseState',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, user=None, purchase=None, consumed_quantity=None, purchase_state=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, purchase=None, user=None, consumed_quantity=None, purchase_state=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTPurchaseUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user = None
         self._purchase = None
+        self._user = None
         self._consumed_quantity = None
         self._purchase_state = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
-        if user is not None:
-            self.user = user
         if purchase is not None:
             self.purchase = purchase
+        if user is not None:
+            self.user = user
         if consumed_quantity is not None:
             self.consumed_quantity = consumed_quantity
         if purchase_state is not None:
@@ -78,31 +78,10 @@ class BTPurchaseUserInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
-
-    @property
-    def user(self):
-        """Gets the user of this BTPurchaseUserInfo.  # noqa: E501
-
-
-        :return: The user of this BTPurchaseUserInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._user
-
-    @user.setter
-    def user(self, user):
-        """Sets the user of this BTPurchaseUserInfo.
-
-
-        :param user: The user of this BTPurchaseUserInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._user = user
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def purchase(self):
@@ -124,6 +103,27 @@ class BTPurchaseUserInfo(object):
         """
 
         self._purchase = purchase
+
+    @property
+    def user(self):
+        """Gets the user of this BTPurchaseUserInfo.  # noqa: E501
+
+
+        :return: The user of this BTPurchaseUserInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this BTPurchaseUserInfo.
+
+
+        :param user: The user of this BTPurchaseUserInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._user = user
 
     @property
     def consumed_quantity(self):
@@ -210,27 +210,6 @@ class BTPurchaseUserInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTPurchaseUserInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTPurchaseUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTPurchaseUserInfo.
-
-
-        :param view_ref: The view_ref of this BTPurchaseUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTPurchaseUserInfo.  # noqa: E501
 
@@ -250,6 +229,27 @@ class BTPurchaseUserInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTPurchaseUserInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTPurchaseUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTPurchaseUserInfo.
+
+
+        :param view_ref: The view_ref of this BTPurchaseUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

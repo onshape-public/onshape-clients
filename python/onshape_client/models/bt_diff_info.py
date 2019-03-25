@@ -33,45 +33,45 @@ class BTDiffInfo(object):
     """
     openapi_types = {
         'type': 'str',
+        'source_id': 'str',
+        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'target_id': 'str',
         'source_value': 'str',
-        'target_value': 'str',
-        'source_id': 'str',
-        'collection_changes': 'dict(str, list[BTDiffInfo])'
+        'target_value': 'str'
     }
 
     attribute_map = {
         'type': 'type',
+        'source_id': 'sourceId',
+        'collection_changes': 'collectionChanges',
         'target_id': 'targetId',
         'source_value': 'sourceValue',
-        'target_value': 'targetValue',
-        'source_id': 'sourceId',
-        'collection_changes': 'collectionChanges'
+        'target_value': 'targetValue'
     }
 
-    def __init__(self, type=None, target_id=None, source_value=None, target_value=None, source_id=None, collection_changes=None):  # noqa: E501
+    def __init__(self, type=None, source_id=None, collection_changes=None, target_id=None, source_value=None, target_value=None):  # noqa: E501
         """BTDiffInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
+        self._source_id = None
+        self._collection_changes = None
         self._target_id = None
         self._source_value = None
         self._target_value = None
-        self._source_id = None
-        self._collection_changes = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
+        if source_id is not None:
+            self.source_id = source_id
+        if collection_changes is not None:
+            self.collection_changes = collection_changes
         if target_id is not None:
             self.target_id = target_id
         if source_value is not None:
             self.source_value = source_value
         if target_value is not None:
             self.target_value = target_value
-        if source_id is not None:
-            self.source_id = source_id
-        if collection_changes is not None:
-            self.collection_changes = collection_changes
 
     @property
     def type(self):
@@ -99,6 +99,48 @@ class BTDiffInfo(object):
             )
 
         self._type = type
+
+    @property
+    def source_id(self):
+        """Gets the source_id of this BTDiffInfo.  # noqa: E501
+
+
+        :return: The source_id of this BTDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_id
+
+    @source_id.setter
+    def source_id(self, source_id):
+        """Sets the source_id of this BTDiffInfo.
+
+
+        :param source_id: The source_id of this BTDiffInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._source_id = source_id
+
+    @property
+    def collection_changes(self):
+        """Gets the collection_changes of this BTDiffInfo.  # noqa: E501
+
+
+        :return: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :rtype: dict(str, list[BTDiffInfo])
+        """
+        return self._collection_changes
+
+    @collection_changes.setter
+    def collection_changes(self, collection_changes):
+        """Sets the collection_changes of this BTDiffInfo.
+
+
+        :param collection_changes: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :type: dict(str, list[BTDiffInfo])
+        """
+
+        self._collection_changes = collection_changes
 
     @property
     def target_id(self):
@@ -162,48 +204,6 @@ class BTDiffInfo(object):
         """
 
         self._target_value = target_value
-
-    @property
-    def source_id(self):
-        """Gets the source_id of this BTDiffInfo.  # noqa: E501
-
-
-        :return: The source_id of this BTDiffInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_id
-
-    @source_id.setter
-    def source_id(self, source_id):
-        """Sets the source_id of this BTDiffInfo.
-
-
-        :param source_id: The source_id of this BTDiffInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._source_id = source_id
-
-    @property
-    def collection_changes(self):
-        """Gets the collection_changes of this BTDiffInfo.  # noqa: E501
-
-
-        :return: The collection_changes of this BTDiffInfo.  # noqa: E501
-        :rtype: dict(str, list[BTDiffInfo])
-        """
-        return self._collection_changes
-
-    @collection_changes.setter
-    def collection_changes(self, collection_changes):
-        """Sets the collection_changes of this BTDiffInfo.
-
-
-        :param collection_changes: The collection_changes of this BTDiffInfo.  # noqa: E501
-        :type: dict(str, list[BTDiffInfo])
-        """
-
-        self._collection_changes = collection_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

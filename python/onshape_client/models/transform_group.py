@@ -32,47 +32,26 @@ class TransformGroup(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'instances': 'list[BTAssemblyInstanceDefinitionParams]',
-        'transform': 'list[float]'
+        'transform': 'list[float]',
+        'instances': 'list[BTAssemblyInstanceDefinitionParams]'
     }
 
     attribute_map = {
-        'instances': 'instances',
-        'transform': 'transform'
+        'transform': 'transform',
+        'instances': 'instances'
     }
 
-    def __init__(self, instances=None, transform=None):  # noqa: E501
+    def __init__(self, transform=None, instances=None):  # noqa: E501
         """TransformGroup - a model defined in OpenAPI"""  # noqa: E501
 
-        self._instances = None
         self._transform = None
+        self._instances = None
         self.discriminator = None
 
-        if instances is not None:
-            self.instances = instances
         if transform is not None:
             self.transform = transform
-
-    @property
-    def instances(self):
-        """Gets the instances of this TransformGroup.  # noqa: E501
-
-
-        :return: The instances of this TransformGroup.  # noqa: E501
-        :rtype: list[BTAssemblyInstanceDefinitionParams]
-        """
-        return self._instances
-
-    @instances.setter
-    def instances(self, instances):
-        """Sets the instances of this TransformGroup.
-
-
-        :param instances: The instances of this TransformGroup.  # noqa: E501
-        :type: list[BTAssemblyInstanceDefinitionParams]
-        """
-
-        self._instances = instances
+        if instances is not None:
+            self.instances = instances
 
     @property
     def transform(self):
@@ -94,6 +73,27 @@ class TransformGroup(object):
         """
 
         self._transform = transform
+
+    @property
+    def instances(self):
+        """Gets the instances of this TransformGroup.  # noqa: E501
+
+
+        :return: The instances of this TransformGroup.  # noqa: E501
+        :rtype: list[BTAssemblyInstanceDefinitionParams]
+        """
+        return self._instances
+
+    @instances.setter
+    def instances(self, instances):
+        """Sets the instances of this TransformGroup.
+
+
+        :param instances: The instances of this TransformGroup.  # noqa: E501
+        :type: list[BTAssemblyInstanceDefinitionParams]
+        """
+
+        self._instances = instances
 
     def to_dict(self):
         """Returns the model properties as a dict"""

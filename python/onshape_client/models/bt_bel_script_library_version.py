@@ -32,62 +32,41 @@ class BTBelScriptLibraryVersion(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'version_number': 'int',
         'major': 'int',
         'minor': 'int',
         'valid': 'bool',
+        'version_number': 'int',
         'point': 'int'
     }
 
     attribute_map = {
-        'version_number': 'versionNumber',
         'major': 'major',
         'minor': 'minor',
         'valid': 'valid',
+        'version_number': 'versionNumber',
         'point': 'point'
     }
 
-    def __init__(self, version_number=None, major=None, minor=None, valid=None, point=None):  # noqa: E501
+    def __init__(self, major=None, minor=None, valid=None, version_number=None, point=None):  # noqa: E501
         """BTBelScriptLibraryVersion - a model defined in OpenAPI"""  # noqa: E501
 
-        self._version_number = None
         self._major = None
         self._minor = None
         self._valid = None
+        self._version_number = None
         self._point = None
         self.discriminator = None
 
-        if version_number is not None:
-            self.version_number = version_number
         if major is not None:
             self.major = major
         if minor is not None:
             self.minor = minor
         if valid is not None:
             self.valid = valid
+        if version_number is not None:
+            self.version_number = version_number
         if point is not None:
             self.point = point
-
-    @property
-    def version_number(self):
-        """Gets the version_number of this BTBelScriptLibraryVersion.  # noqa: E501
-
-
-        :return: The version_number of this BTBelScriptLibraryVersion.  # noqa: E501
-        :rtype: int
-        """
-        return self._version_number
-
-    @version_number.setter
-    def version_number(self, version_number):
-        """Sets the version_number of this BTBelScriptLibraryVersion.
-
-
-        :param version_number: The version_number of this BTBelScriptLibraryVersion.  # noqa: E501
-        :type: int
-        """
-
-        self._version_number = version_number
 
     @property
     def major(self):
@@ -151,6 +130,27 @@ class BTBelScriptLibraryVersion(object):
         """
 
         self._valid = valid
+
+    @property
+    def version_number(self):
+        """Gets the version_number of this BTBelScriptLibraryVersion.  # noqa: E501
+
+
+        :return: The version_number of this BTBelScriptLibraryVersion.  # noqa: E501
+        :rtype: int
+        """
+        return self._version_number
+
+    @version_number.setter
+    def version_number(self, version_number):
+        """Sets the version_number of this BTBelScriptLibraryVersion.
+
+
+        :param version_number: The version_number of this BTBelScriptLibraryVersion.  # noqa: E501
+        :type: int
+        """
+
+        self._version_number = version_number
 
     @property
     def point(self):

@@ -42,14 +42,14 @@ class BTBillingPlanInfo(object):
         'company_plan': 'bool',
         'application_id': 'str',
         'deprecated': 'bool',
-        'interval': 'str',
         'plan_type': 'int',
         'consumable_quantity': 'int',
         'amount_cents': 'int',
+        'interval': 'str',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
@@ -63,17 +63,17 @@ class BTBillingPlanInfo(object):
         'company_plan': 'companyPlan',
         'application_id': 'applicationId',
         'deprecated': 'deprecated',
-        'interval': 'interval',
         'plan_type': 'planType',
         'consumable_quantity': 'consumableQuantity',
         'amount_cents': 'amountCents',
+        'interval': 'interval',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, discount_info=None, group=None, client_id=None, trial_period_days=None, hidden=None, onshape_plan=None, description=None, company_plan=None, application_id=None, deprecated=None, interval=None, plan_type=None, consumable_quantity=None, amount_cents=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, discount_info=None, group=None, client_id=None, trial_period_days=None, hidden=None, onshape_plan=None, description=None, company_plan=None, application_id=None, deprecated=None, plan_type=None, consumable_quantity=None, amount_cents=None, interval=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBillingPlanInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._discount_info = None
@@ -86,14 +86,14 @@ class BTBillingPlanInfo(object):
         self._company_plan = None
         self._application_id = None
         self._deprecated = None
-        self._interval = None
         self._plan_type = None
         self._consumable_quantity = None
         self._amount_cents = None
+        self._interval = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if discount_info is not None:
@@ -116,22 +116,22 @@ class BTBillingPlanInfo(object):
             self.application_id = application_id
         if deprecated is not None:
             self.deprecated = deprecated
-        if interval is not None:
-            self.interval = interval
         if plan_type is not None:
             self.plan_type = plan_type
         if consumable_quantity is not None:
             self.consumable_quantity = consumable_quantity
         if amount_cents is not None:
             self.amount_cents = amount_cents
+        if interval is not None:
+            self.interval = interval
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def discount_info(self):
@@ -344,27 +344,6 @@ class BTBillingPlanInfo(object):
         self._deprecated = deprecated
 
     @property
-    def interval(self):
-        """Gets the interval of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The interval of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._interval
-
-    @interval.setter
-    def interval(self, interval):
-        """Sets the interval of this BTBillingPlanInfo.
-
-
-        :param interval: The interval of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._interval = interval
-
-    @property
     def plan_type(self):
         """Gets the plan_type of this BTBillingPlanInfo.  # noqa: E501
 
@@ -428,6 +407,27 @@ class BTBillingPlanInfo(object):
         self._amount_cents = amount_cents
 
     @property
+    def interval(self):
+        """Gets the interval of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The interval of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._interval
+
+    @interval.setter
+    def interval(self, interval):
+        """Sets the interval of this BTBillingPlanInfo.
+
+
+        :param interval: The interval of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._interval = interval
+
+    @property
     def name(self):
         """Gets the name of this BTBillingPlanInfo.  # noqa: E501
 
@@ -470,27 +470,6 @@ class BTBillingPlanInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTBillingPlanInfo.
-
-
-        :param view_ref: The view_ref of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTBillingPlanInfo.  # noqa: E501
 
@@ -510,6 +489,27 @@ class BTBillingPlanInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTBillingPlanInfo.
+
+
+        :param view_ref: The view_ref of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,57 +32,36 @@ class BTListResponseBTCloudStorageProviderObjectInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'previous': 'str',
         'next': 'str',
         'items': 'list[BTCloudStorageProviderObjectInfo]',
-        'href': 'str'
+        'href': 'str',
+        'previous': 'str'
     }
 
     attribute_map = {
-        'previous': 'previous',
         'next': 'next',
         'items': 'items',
-        'href': 'href'
+        'href': 'href',
+        'previous': 'previous'
     }
 
-    def __init__(self, previous=None, next=None, items=None, href=None):  # noqa: E501
+    def __init__(self, next=None, items=None, href=None, previous=None):  # noqa: E501
         """BTListResponseBTCloudStorageProviderObjectInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._previous = None
         self._next = None
         self._items = None
         self._href = None
+        self._previous = None
         self.discriminator = None
 
-        if previous is not None:
-            self.previous = previous
         if next is not None:
             self.next = next
         if items is not None:
             self.items = items
         if href is not None:
             self.href = href
-
-    @property
-    def previous(self):
-        """Gets the previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
-
-
-        :return: The previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._previous
-
-    @previous.setter
-    def previous(self, previous):
-        """Sets the previous of this BTListResponseBTCloudStorageProviderObjectInfo.
-
-
-        :param previous: The previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._previous = previous
+        if previous is not None:
+            self.previous = previous
 
     @property
     def next(self):
@@ -146,6 +125,27 @@ class BTListResponseBTCloudStorageProviderObjectInfo(object):
         """
 
         self._href = href
+
+    @property
+    def previous(self):
+        """Gets the previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
+
+
+        :return: The previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._previous
+
+    @previous.setter
+    def previous(self, previous):
+        """Sets the previous of this BTListResponseBTCloudStorageProviderObjectInfo.
+
+
+        :param previous: The previous of this BTListResponseBTCloudStorageProviderObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._previous = previous
 
     def to_dict(self):
         """Returns the model properties as a dict"""

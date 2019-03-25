@@ -34,34 +34,34 @@ class BTCapabilityRuleParams(object):
     openapi_types = {
         'name': 'str',
         'id': 'str',
-        'description': 'str',
-        'script': 'str'
+        'script': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'id': 'id',
-        'description': 'description',
-        'script': 'script'
+        'script': 'script',
+        'description': 'description'
     }
 
-    def __init__(self, name=None, id=None, description=None, script=None):  # noqa: E501
+    def __init__(self, name=None, id=None, script=None, description=None):  # noqa: E501
         """BTCapabilityRuleParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
-        self._description = None
         self._script = None
+        self._description = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if description is not None:
-            self.description = description
         if script is not None:
             self.script = script
+        if description is not None:
+            self.description = description
 
     @property
     def name(self):
@@ -106,27 +106,6 @@ class BTCapabilityRuleParams(object):
         self._id = id
 
     @property
-    def description(self):
-        """Gets the description of this BTCapabilityRuleParams.  # noqa: E501
-
-
-        :return: The description of this BTCapabilityRuleParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTCapabilityRuleParams.
-
-
-        :param description: The description of this BTCapabilityRuleParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def script(self):
         """Gets the script of this BTCapabilityRuleParams.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTCapabilityRuleParams(object):
         """
 
         self._script = script
+
+    @property
+    def description(self):
+        """Gets the description of this BTCapabilityRuleParams.  # noqa: E501
+
+
+        :return: The description of this BTCapabilityRuleParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTCapabilityRuleParams.
+
+
+        :param description: The description of this BTCapabilityRuleParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

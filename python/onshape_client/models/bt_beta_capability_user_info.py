@@ -32,102 +32,102 @@ class BTBetaCapabilityUserInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'removed_at': 'datetime',
         'capability_state': 'int',
         'created_at': 'datetime',
         'plan_id': 'str',
+        'removed_at': 'datetime',
         'approved_at': 'datetime',
-        'is_light': 'bool',
-        'last_login_time': 'datetime',
         'source': 'int',
+        'is_guest': 'bool',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
-        'is_guest': 'bool',
+        'is_light': 'bool',
         'global_permissions': 'GlobalPermissionInfo',
+        'last_login_time': 'datetime',
         'company': 'BTCompanySummaryInfo',
         'state': 'int',
         'image': 'str',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
-        'removed_at': 'removedAt',
         'capability_state': 'capabilityState',
         'created_at': 'createdAt',
         'plan_id': 'planId',
+        'removed_at': 'removedAt',
         'approved_at': 'approvedAt',
-        'is_light': 'isLight',
-        'last_login_time': 'lastLoginTime',
         'source': 'source',
+        'is_guest': 'isGuest',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
-        'is_guest': 'isGuest',
+        'is_light': 'isLight',
         'global_permissions': 'globalPermissions',
+        'last_login_time': 'lastLoginTime',
         'company': 'company',
         'state': 'state',
         'image': 'image',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, removed_at=None, capability_state=None, created_at=None, plan_id=None, approved_at=None, is_light=None, last_login_time=None, source=None, first_name=None, last_name=None, email=None, is_guest=None, global_permissions=None, company=None, state=None, image=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, capability_state=None, created_at=None, plan_id=None, removed_at=None, approved_at=None, source=None, is_guest=None, first_name=None, last_name=None, email=None, is_light=None, global_permissions=None, last_login_time=None, company=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._removed_at = None
         self._capability_state = None
         self._created_at = None
         self._plan_id = None
+        self._removed_at = None
         self._approved_at = None
-        self._is_light = None
-        self._last_login_time = None
         self._source = None
+        self._is_guest = None
         self._first_name = None
         self._last_name = None
         self._email = None
-        self._is_guest = None
+        self._is_light = None
         self._global_permissions = None
+        self._last_login_time = None
         self._company = None
         self._state = None
         self._image = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
-        if removed_at is not None:
-            self.removed_at = removed_at
         if capability_state is not None:
             self.capability_state = capability_state
         if created_at is not None:
             self.created_at = created_at
         if plan_id is not None:
             self.plan_id = plan_id
+        if removed_at is not None:
+            self.removed_at = removed_at
         if approved_at is not None:
             self.approved_at = approved_at
-        if is_light is not None:
-            self.is_light = is_light
-        if last_login_time is not None:
-            self.last_login_time = last_login_time
         if source is not None:
             self.source = source
+        if is_guest is not None:
+            self.is_guest = is_guest
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if email is not None:
             self.email = email
-        if is_guest is not None:
-            self.is_guest = is_guest
+        if is_light is not None:
+            self.is_light = is_light
         if global_permissions is not None:
             self.global_permissions = global_permissions
+        if last_login_time is not None:
+            self.last_login_time = last_login_time
         if company is not None:
             self.company = company
         if state is not None:
@@ -138,31 +138,10 @@ class BTBetaCapabilityUserInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
-
-    @property
-    def removed_at(self):
-        """Gets the removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._removed_at
-
-    @removed_at.setter
-    def removed_at(self, removed_at):
-        """Sets the removed_at of this BTBetaCapabilityUserInfo.
-
-
-        :param removed_at: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._removed_at = removed_at
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def capability_state(self):
@@ -228,6 +207,27 @@ class BTBetaCapabilityUserInfo(object):
         self._plan_id = plan_id
 
     @property
+    def removed_at(self):
+        """Gets the removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._removed_at
+
+    @removed_at.setter
+    def removed_at(self, removed_at):
+        """Sets the removed_at of this BTBetaCapabilityUserInfo.
+
+
+        :param removed_at: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._removed_at = removed_at
+
+    @property
     def approved_at(self):
         """Gets the approved_at of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -249,48 +249,6 @@ class BTBetaCapabilityUserInfo(object):
         self._approved_at = approved_at
 
     @property
-    def is_light(self):
-        """Gets the is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_light
-
-    @is_light.setter
-    def is_light(self, is_light):
-        """Sets the is_light of this BTBetaCapabilityUserInfo.
-
-
-        :param is_light: The is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_light = is_light
-
-    @property
-    def last_login_time(self):
-        """Gets the last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_login_time
-
-    @last_login_time.setter
-    def last_login_time(self, last_login_time):
-        """Sets the last_login_time of this BTBetaCapabilityUserInfo.
-
-
-        :param last_login_time: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._last_login_time = last_login_time
-
-    @property
     def source(self):
         """Gets the source of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -310,6 +268,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._source = source
+
+    @property
+    def is_guest(self):
+        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_guest
+
+    @is_guest.setter
+    def is_guest(self, is_guest):
+        """Sets the is_guest of this BTBetaCapabilityUserInfo.
+
+
+        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_guest = is_guest
 
     @property
     def first_name(self):
@@ -375,25 +354,25 @@ class BTBetaCapabilityUserInfo(object):
         self._email = email
 
     @property
-    def is_guest(self):
-        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+    def is_light(self):
+        """Gets the is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
 
 
-        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :return: The is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._is_guest
+        return self._is_light
 
-    @is_guest.setter
-    def is_guest(self, is_guest):
-        """Sets the is_guest of this BTBetaCapabilityUserInfo.
+    @is_light.setter
+    def is_light(self, is_light):
+        """Sets the is_light of this BTBetaCapabilityUserInfo.
 
 
-        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :param is_light: The is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
         :type: bool
         """
 
-        self._is_guest = is_guest
+        self._is_light = is_light
 
     @property
     def global_permissions(self):
@@ -415,6 +394,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._global_permissions = global_permissions
+
+    @property
+    def last_login_time(self):
+        """Gets the last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_login_time
+
+    @last_login_time.setter
+    def last_login_time(self, last_login_time):
+        """Sets the last_login_time of this BTBetaCapabilityUserInfo.
+
+
+        :param last_login_time: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._last_login_time = last_login_time
 
     @property
     def company(self):
@@ -522,27 +522,6 @@ class BTBetaCapabilityUserInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTBetaCapabilityUserInfo.
-
-
-        :param view_ref: The view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -562,6 +541,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTBetaCapabilityUserInfo.
+
+
+        :param view_ref: The view_ref of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

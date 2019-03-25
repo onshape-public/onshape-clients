@@ -32,149 +32,139 @@ class BTPModuleId(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'short_descriptor': 'str',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
         'external_document_with_version': 'BTDocumentWithVersionId',
         'dbimport_string': 'str',
-        'version_and_microversion': 'str',
-        'external_import': 'bool',
-        'imported_document_id': 'str',
-        'legacy': 'bool',
         'imported_element_id': 'str',
         'element_import': 'bool',
         'potentially_valid': 'bool',
         'valid_legacy_version': 'bool',
         'path_version': 'str',
         'imported_version_id': 'str',
+        'version_and_microversion': 'str',
+        'external_import': 'bool',
+        'imported_document_id': 'str',
+        'legacy': 'bool',
+        'short_descriptor': 'str',
         'path': 'BTPLiteralString',
-        'first_child_field': 'int',
+        'version': 'BTPLiteralString',
+        'microversion': 'str',
         'changeable_child_field_indices': 'list[int]',
+        'first_child_field': 'int',
         'space_before_path': 'BTPSpace',
         'space_after_path': 'BTPSpace',
         'space_before_version': 'BTPSpace',
         'space_after_version': 'BTPSpace',
-        'version': 'BTPLiteralString',
-        'microversion': 'str',
         'atomic': 'bool',
         'start_source_location': 'int',
         'end_source_location': 'int',
         'documentation_type': 'str',
         'space_before': 'BTPSpace',
-        'space_after': 'BTPSpace',
         'space_default': 'bool',
+        'space_after': 'BTPSpace',
         'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
-        'child_list_indices': 'list[int]',
         'node_id_raw': 'BTObjectId',
+        'child_list_indices': 'list[int]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'short_descriptor': 'shortDescriptor',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
         'external_document_with_version': 'externalDocumentWithVersion',
         'dbimport_string': 'dbimportString',
-        'version_and_microversion': 'versionAndMicroversion',
-        'external_import': 'externalImport',
-        'imported_document_id': 'importedDocumentId',
-        'legacy': 'legacy',
         'imported_element_id': 'importedElementId',
         'element_import': 'elementImport',
         'potentially_valid': 'potentiallyValid',
         'valid_legacy_version': 'validLegacyVersion',
         'path_version': 'pathVersion',
         'imported_version_id': 'importedVersionId',
+        'version_and_microversion': 'versionAndMicroversion',
+        'external_import': 'externalImport',
+        'imported_document_id': 'importedDocumentId',
+        'legacy': 'legacy',
+        'short_descriptor': 'shortDescriptor',
         'path': 'path',
-        'first_child_field': 'firstChildField',
+        'version': 'version',
+        'microversion': 'microversion',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
+        'first_child_field': 'firstChildField',
         'space_before_path': 'spaceBeforePath',
         'space_after_path': 'spaceAfterPath',
         'space_before_version': 'spaceBeforeVersion',
         'space_after_version': 'spaceAfterVersion',
-        'version': 'version',
-        'microversion': 'microversion',
         'atomic': 'atomic',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
         'documentation_type': 'documentationType',
         'space_before': 'spaceBefore',
-        'space_after': 'spaceAfter',
         'space_default': 'spaceDefault',
+        'space_after': 'spaceAfter',
         'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
-        'child_list_indices': 'childListIndices',
         'node_id_raw': 'nodeIdRaw',
+        'child_list_indices': 'childListIndices',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, short_descriptor=None, external_document_with_version_and_element_id=None, external_document_with_version=None, dbimport_string=None, version_and_microversion=None, external_import=None, imported_document_id=None, legacy=None, imported_element_id=None, element_import=None, potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, path=None, first_child_field=None, changeable_child_field_indices=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, version=None, microversion=None, atomic=None, start_source_location=None, end_source_location=None, documentation_type=None, space_before=None, space_after=None, space_default=None, node_id=None, child_map_indices=None, atomic_child_indices=None, child_list_indices=None, node_id_raw=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, external_document_with_version_and_element_id=None, external_document_with_version=None, dbimport_string=None, imported_element_id=None, element_import=None, potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, version_and_microversion=None, external_import=None, imported_document_id=None, legacy=None, short_descriptor=None, path=None, version=None, microversion=None, changeable_child_field_indices=None, first_child_field=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, atomic=None, start_source_location=None, end_source_location=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTPModuleId - a model defined in OpenAPI"""  # noqa: E501
 
-        self._short_descriptor = None
         self._external_document_with_version_and_element_id = None
         self._external_document_with_version = None
         self._dbimport_string = None
-        self._version_and_microversion = None
-        self._external_import = None
-        self._imported_document_id = None
-        self._legacy = None
         self._imported_element_id = None
         self._element_import = None
         self._potentially_valid = None
         self._valid_legacy_version = None
         self._path_version = None
         self._imported_version_id = None
+        self._version_and_microversion = None
+        self._external_import = None
+        self._imported_document_id = None
+        self._legacy = None
+        self._short_descriptor = None
         self._path = None
-        self._first_child_field = None
+        self._version = None
+        self._microversion = None
         self._changeable_child_field_indices = None
+        self._first_child_field = None
         self._space_before_path = None
         self._space_after_path = None
         self._space_before_version = None
         self._space_after_version = None
-        self._version = None
-        self._microversion = None
         self._atomic = None
         self._start_source_location = None
         self._end_source_location = None
         self._documentation_type = None
         self._space_before = None
-        self._space_after = None
         self._space_default = None
+        self._space_after = None
         self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
-        self._child_list_indices = None
         self._node_id_raw = None
+        self._child_list_indices = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if short_descriptor is not None:
-            self.short_descriptor = short_descriptor
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
         if external_document_with_version is not None:
             self.external_document_with_version = external_document_with_version
         if dbimport_string is not None:
             self.dbimport_string = dbimport_string
-        if version_and_microversion is not None:
-            self.version_and_microversion = version_and_microversion
-        if external_import is not None:
-            self.external_import = external_import
-        if imported_document_id is not None:
-            self.imported_document_id = imported_document_id
-        if legacy is not None:
-            self.legacy = legacy
         if imported_element_id is not None:
             self.imported_element_id = imported_element_id
         if element_import is not None:
@@ -187,12 +177,26 @@ class BTPModuleId(object):
             self.path_version = path_version
         if imported_version_id is not None:
             self.imported_version_id = imported_version_id
+        if version_and_microversion is not None:
+            self.version_and_microversion = version_and_microversion
+        if external_import is not None:
+            self.external_import = external_import
+        if imported_document_id is not None:
+            self.imported_document_id = imported_document_id
+        if legacy is not None:
+            self.legacy = legacy
+        if short_descriptor is not None:
+            self.short_descriptor = short_descriptor
         if path is not None:
             self.path = path
-        if first_child_field is not None:
-            self.first_child_field = first_child_field
+        if version is not None:
+            self.version = version
+        if microversion is not None:
+            self.microversion = microversion
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
+        if first_child_field is not None:
+            self.first_child_field = first_child_field
         if space_before_path is not None:
             self.space_before_path = space_before_path
         if space_after_path is not None:
@@ -201,10 +205,6 @@ class BTPModuleId(object):
             self.space_before_version = space_before_version
         if space_after_version is not None:
             self.space_after_version = space_after_version
-        if version is not None:
-            self.version = version
-        if microversion is not None:
-            self.microversion = microversion
         if atomic is not None:
             self.atomic = atomic
         if start_source_location is not None:
@@ -215,49 +215,28 @@ class BTPModuleId(object):
             self.documentation_type = documentation_type
         if space_before is not None:
             self.space_before = space_before
-        if space_after is not None:
-            self.space_after = space_after
         if space_default is not None:
             self.space_default = space_default
+        if space_after is not None:
+            self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
         if child_map_indices is not None:
             self.child_map_indices = child_map_indices
         if atomic_child_indices is not None:
             self.atomic_child_indices = atomic_child_indices
-        if child_list_indices is not None:
-            self.child_list_indices = child_list_indices
         if node_id_raw is not None:
             self.node_id_raw = node_id_raw
+        if child_list_indices is not None:
+            self.child_list_indices = child_list_indices
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
-
-    @property
-    def short_descriptor(self):
-        """Gets the short_descriptor of this BTPModuleId.  # noqa: E501
-
-
-        :return: The short_descriptor of this BTPModuleId.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_descriptor
-
-    @short_descriptor.setter
-    def short_descriptor(self, short_descriptor):
-        """Sets the short_descriptor of this BTPModuleId.
-
-
-        :param short_descriptor: The short_descriptor of this BTPModuleId.  # noqa: E501
-        :type: str
-        """
-
-        self._short_descriptor = short_descriptor
 
     @property
     def external_document_with_version_and_element_id(self):
@@ -321,90 +300,6 @@ class BTPModuleId(object):
         """
 
         self._dbimport_string = dbimport_string
-
-    @property
-    def version_and_microversion(self):
-        """Gets the version_and_microversion of this BTPModuleId.  # noqa: E501
-
-
-        :return: The version_and_microversion of this BTPModuleId.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_and_microversion
-
-    @version_and_microversion.setter
-    def version_and_microversion(self, version_and_microversion):
-        """Sets the version_and_microversion of this BTPModuleId.
-
-
-        :param version_and_microversion: The version_and_microversion of this BTPModuleId.  # noqa: E501
-        :type: str
-        """
-
-        self._version_and_microversion = version_and_microversion
-
-    @property
-    def external_import(self):
-        """Gets the external_import of this BTPModuleId.  # noqa: E501
-
-
-        :return: The external_import of this BTPModuleId.  # noqa: E501
-        :rtype: bool
-        """
-        return self._external_import
-
-    @external_import.setter
-    def external_import(self, external_import):
-        """Sets the external_import of this BTPModuleId.
-
-
-        :param external_import: The external_import of this BTPModuleId.  # noqa: E501
-        :type: bool
-        """
-
-        self._external_import = external_import
-
-    @property
-    def imported_document_id(self):
-        """Gets the imported_document_id of this BTPModuleId.  # noqa: E501
-
-
-        :return: The imported_document_id of this BTPModuleId.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_document_id
-
-    @imported_document_id.setter
-    def imported_document_id(self, imported_document_id):
-        """Sets the imported_document_id of this BTPModuleId.
-
-
-        :param imported_document_id: The imported_document_id of this BTPModuleId.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_document_id = imported_document_id
-
-    @property
-    def legacy(self):
-        """Gets the legacy of this BTPModuleId.  # noqa: E501
-
-
-        :return: The legacy of this BTPModuleId.  # noqa: E501
-        :rtype: bool
-        """
-        return self._legacy
-
-    @legacy.setter
-    def legacy(self, legacy):
-        """Sets the legacy of this BTPModuleId.
-
-
-        :param legacy: The legacy of this BTPModuleId.  # noqa: E501
-        :type: bool
-        """
-
-        self._legacy = legacy
 
     @property
     def imported_element_id(self):
@@ -533,6 +428,111 @@ class BTPModuleId(object):
         self._imported_version_id = imported_version_id
 
     @property
+    def version_and_microversion(self):
+        """Gets the version_and_microversion of this BTPModuleId.  # noqa: E501
+
+
+        :return: The version_and_microversion of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_and_microversion
+
+    @version_and_microversion.setter
+    def version_and_microversion(self, version_and_microversion):
+        """Sets the version_and_microversion of this BTPModuleId.
+
+
+        :param version_and_microversion: The version_and_microversion of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._version_and_microversion = version_and_microversion
+
+    @property
+    def external_import(self):
+        """Gets the external_import of this BTPModuleId.  # noqa: E501
+
+
+        :return: The external_import of this BTPModuleId.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_import
+
+    @external_import.setter
+    def external_import(self, external_import):
+        """Sets the external_import of this BTPModuleId.
+
+
+        :param external_import: The external_import of this BTPModuleId.  # noqa: E501
+        :type: bool
+        """
+
+        self._external_import = external_import
+
+    @property
+    def imported_document_id(self):
+        """Gets the imported_document_id of this BTPModuleId.  # noqa: E501
+
+
+        :return: The imported_document_id of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._imported_document_id
+
+    @imported_document_id.setter
+    def imported_document_id(self, imported_document_id):
+        """Sets the imported_document_id of this BTPModuleId.
+
+
+        :param imported_document_id: The imported_document_id of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._imported_document_id = imported_document_id
+
+    @property
+    def legacy(self):
+        """Gets the legacy of this BTPModuleId.  # noqa: E501
+
+
+        :return: The legacy of this BTPModuleId.  # noqa: E501
+        :rtype: bool
+        """
+        return self._legacy
+
+    @legacy.setter
+    def legacy(self, legacy):
+        """Sets the legacy of this BTPModuleId.
+
+
+        :param legacy: The legacy of this BTPModuleId.  # noqa: E501
+        :type: bool
+        """
+
+        self._legacy = legacy
+
+    @property
+    def short_descriptor(self):
+        """Gets the short_descriptor of this BTPModuleId.  # noqa: E501
+
+
+        :return: The short_descriptor of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_descriptor
+
+    @short_descriptor.setter
+    def short_descriptor(self, short_descriptor):
+        """Sets the short_descriptor of this BTPModuleId.
+
+
+        :param short_descriptor: The short_descriptor of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._short_descriptor = short_descriptor
+
+    @property
     def path(self):
         """Gets the path of this BTPModuleId.  # noqa: E501
 
@@ -554,25 +554,46 @@ class BTPModuleId(object):
         self._path = path
 
     @property
-    def first_child_field(self):
-        """Gets the first_child_field of this BTPModuleId.  # noqa: E501
+    def version(self):
+        """Gets the version of this BTPModuleId.  # noqa: E501
 
 
-        :return: The first_child_field of this BTPModuleId.  # noqa: E501
-        :rtype: int
+        :return: The version of this BTPModuleId.  # noqa: E501
+        :rtype: BTPLiteralString
         """
-        return self._first_child_field
+        return self._version
 
-    @first_child_field.setter
-    def first_child_field(self, first_child_field):
-        """Sets the first_child_field of this BTPModuleId.
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTPModuleId.
 
 
-        :param first_child_field: The first_child_field of this BTPModuleId.  # noqa: E501
-        :type: int
+        :param version: The version of this BTPModuleId.  # noqa: E501
+        :type: BTPLiteralString
         """
 
-        self._first_child_field = first_child_field
+        self._version = version
+
+    @property
+    def microversion(self):
+        """Gets the microversion of this BTPModuleId.  # noqa: E501
+
+
+        :return: The microversion of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion
+
+    @microversion.setter
+    def microversion(self, microversion):
+        """Sets the microversion of this BTPModuleId.
+
+
+        :param microversion: The microversion of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion = microversion
 
     @property
     def changeable_child_field_indices(self):
@@ -594,6 +615,27 @@ class BTPModuleId(object):
         """
 
         self._changeable_child_field_indices = changeable_child_field_indices
+
+    @property
+    def first_child_field(self):
+        """Gets the first_child_field of this BTPModuleId.  # noqa: E501
+
+
+        :return: The first_child_field of this BTPModuleId.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_child_field
+
+    @first_child_field.setter
+    def first_child_field(self, first_child_field):
+        """Sets the first_child_field of this BTPModuleId.
+
+
+        :param first_child_field: The first_child_field of this BTPModuleId.  # noqa: E501
+        :type: int
+        """
+
+        self._first_child_field = first_child_field
 
     @property
     def space_before_path(self):
@@ -678,48 +720,6 @@ class BTPModuleId(object):
         """
 
         self._space_after_version = space_after_version
-
-    @property
-    def version(self):
-        """Gets the version of this BTPModuleId.  # noqa: E501
-
-
-        :return: The version of this BTPModuleId.  # noqa: E501
-        :rtype: BTPLiteralString
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTPModuleId.
-
-
-        :param version: The version of this BTPModuleId.  # noqa: E501
-        :type: BTPLiteralString
-        """
-
-        self._version = version
-
-    @property
-    def microversion(self):
-        """Gets the microversion of this BTPModuleId.  # noqa: E501
-
-
-        :return: The microversion of this BTPModuleId.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion
-
-    @microversion.setter
-    def microversion(self, microversion):
-        """Sets the microversion of this BTPModuleId.
-
-
-        :param microversion: The microversion of this BTPModuleId.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion = microversion
 
     @property
     def atomic(self):
@@ -833,27 +833,6 @@ class BTPModuleId(object):
         self._space_before = space_before
 
     @property
-    def space_after(self):
-        """Gets the space_after of this BTPModuleId.  # noqa: E501
-
-
-        :return: The space_after of this BTPModuleId.  # noqa: E501
-        :rtype: BTPSpace
-        """
-        return self._space_after
-
-    @space_after.setter
-    def space_after(self, space_after):
-        """Sets the space_after of this BTPModuleId.
-
-
-        :param space_after: The space_after of this BTPModuleId.  # noqa: E501
-        :type: BTPSpace
-        """
-
-        self._space_after = space_after
-
-    @property
     def space_default(self):
         """Gets the space_default of this BTPModuleId.  # noqa: E501
 
@@ -873,6 +852,27 @@ class BTPModuleId(object):
         """
 
         self._space_default = space_default
+
+    @property
+    def space_after(self):
+        """Gets the space_after of this BTPModuleId.  # noqa: E501
+
+
+        :return: The space_after of this BTPModuleId.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_after
+
+    @space_after.setter
+    def space_after(self, space_after):
+        """Sets the space_after of this BTPModuleId.
+
+
+        :param space_after: The space_after of this BTPModuleId.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_after = space_after
 
     @property
     def node_id(self):
@@ -938,6 +938,27 @@ class BTPModuleId(object):
         self._atomic_child_indices = atomic_child_indices
 
     @property
+    def node_id_raw(self):
+        """Gets the node_id_raw of this BTPModuleId.  # noqa: E501
+
+
+        :return: The node_id_raw of this BTPModuleId.  # noqa: E501
+        :rtype: BTObjectId
+        """
+        return self._node_id_raw
+
+    @node_id_raw.setter
+    def node_id_raw(self, node_id_raw):
+        """Sets the node_id_raw of this BTPModuleId.
+
+
+        :param node_id_raw: The node_id_raw of this BTPModuleId.  # noqa: E501
+        :type: BTObjectId
+        """
+
+        self._node_id_raw = node_id_raw
+
+    @property
     def child_list_indices(self):
         """Gets the child_list_indices of this BTPModuleId.  # noqa: E501
 
@@ -959,25 +980,25 @@ class BTPModuleId(object):
         self._child_list_indices = child_list_indices
 
     @property
-    def node_id_raw(self):
-        """Gets the node_id_raw of this BTPModuleId.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTPModuleId.  # noqa: E501
 
 
-        :return: The node_id_raw of this BTPModuleId.  # noqa: E501
-        :rtype: BTObjectId
+        :return: The type_id of this BTPModuleId.  # noqa: E501
+        :rtype: int
         """
-        return self._node_id_raw
+        return self._type_id
 
-    @node_id_raw.setter
-    def node_id_raw(self, node_id_raw):
-        """Sets the node_id_raw of this BTPModuleId.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTPModuleId.
 
 
-        :param node_id_raw: The node_id_raw of this BTPModuleId.  # noqa: E501
-        :type: BTObjectId
+        :param type_id: The type_id of this BTPModuleId.  # noqa: E501
+        :type: int
         """
 
-        self._node_id_raw = node_id_raw
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -1041,27 +1062,6 @@ class BTPModuleId(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTPModuleId.  # noqa: E501
-
-
-        :return: The type_id of this BTPModuleId.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTPModuleId.
-
-
-        :param type_id: The type_id of this BTPModuleId.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

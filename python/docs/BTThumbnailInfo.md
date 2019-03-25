@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**secondary_sizes** | **list[list[BTThumbnailSizeInfo]]** |  | [optional] 
 **sizes** | [**list[BTThumbnailSizeInfo]**](BTThumbnailSizeInfo.md) |  | [optional] 
+**secondary_sizes** | **list[list[BTThumbnailSizeInfo]]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 

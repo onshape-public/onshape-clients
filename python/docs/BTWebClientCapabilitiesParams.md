@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **oes_standard_derivatives_** | **bool** |  | [optional] 
+**vendor** | **str** |  | [optional] 
 **depth_texture** | **bool** |  | [optional] 
 **renderer** | **str** |  | [optional] 
 **angle_instanced_arrays** | **bool** |  | [optional] 
@@ -20,7 +21,6 @@ Name | Type | Description | Notes
 **screen_width** | **int** |  | [optional] 
 **screen_height** | **int** |  | [optional] 
 **device_pixel_ratio** | **float** |  | [optional] 
-**vendor** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

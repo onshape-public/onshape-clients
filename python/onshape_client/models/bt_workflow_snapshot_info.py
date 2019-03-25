@@ -34,64 +34,64 @@ class BTWorkflowSnapshotInfo(object):
     openapi_types = {
         'actions': 'list[BTWorkflowActionInfo]',
         'state': 'BTWorkflowStateInfo',
-        'metadata_state': 'str',
+        'is_setup': 'bool',
         'approver_ids': 'list[str]',
         'notifier_ids': 'list[str]',
         'rejected_by': 'list[str]',
-        'is_setup': 'bool',
         'approved_by': 'list[str]',
         'is_frozen': 'bool',
-        'is_discarded': 'bool'
+        'is_discarded': 'bool',
+        'metadata_state': 'str'
     }
 
     attribute_map = {
         'actions': 'actions',
         'state': 'state',
-        'metadata_state': 'metadataState',
+        'is_setup': 'isSetup',
         'approver_ids': 'approverIds',
         'notifier_ids': 'notifierIds',
         'rejected_by': 'rejectedBy',
-        'is_setup': 'isSetup',
         'approved_by': 'approvedBy',
         'is_frozen': 'isFrozen',
-        'is_discarded': 'isDiscarded'
+        'is_discarded': 'isDiscarded',
+        'metadata_state': 'metadataState'
     }
 
-    def __init__(self, actions=None, state=None, metadata_state=None, approver_ids=None, notifier_ids=None, rejected_by=None, is_setup=None, approved_by=None, is_frozen=None, is_discarded=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, rejected_by=None, approved_by=None, is_frozen=None, is_discarded=None, metadata_state=None):  # noqa: E501
         """BTWorkflowSnapshotInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
         self._state = None
-        self._metadata_state = None
+        self._is_setup = None
         self._approver_ids = None
         self._notifier_ids = None
         self._rejected_by = None
-        self._is_setup = None
         self._approved_by = None
         self._is_frozen = None
         self._is_discarded = None
+        self._metadata_state = None
         self.discriminator = None
 
         if actions is not None:
             self.actions = actions
         if state is not None:
             self.state = state
-        if metadata_state is not None:
-            self.metadata_state = metadata_state
+        if is_setup is not None:
+            self.is_setup = is_setup
         if approver_ids is not None:
             self.approver_ids = approver_ids
         if notifier_ids is not None:
             self.notifier_ids = notifier_ids
         if rejected_by is not None:
             self.rejected_by = rejected_by
-        if is_setup is not None:
-            self.is_setup = is_setup
         if approved_by is not None:
             self.approved_by = approved_by
         if is_frozen is not None:
             self.is_frozen = is_frozen
         if is_discarded is not None:
             self.is_discarded = is_discarded
+        if metadata_state is not None:
+            self.metadata_state = metadata_state
 
     @property
     def actions(self):
@@ -136,25 +136,25 @@ class BTWorkflowSnapshotInfo(object):
         self._state = state
 
     @property
-    def metadata_state(self):
-        """Gets the metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
+    def is_setup(self):
+        """Gets the is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
 
 
-        :return: The metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: str
+        :return: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._metadata_state
+        return self._is_setup
 
-    @metadata_state.setter
-    def metadata_state(self, metadata_state):
-        """Sets the metadata_state of this BTWorkflowSnapshotInfo.
+    @is_setup.setter
+    def is_setup(self, is_setup):
+        """Sets the is_setup of this BTWorkflowSnapshotInfo.
 
 
-        :param metadata_state: The metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: str
+        :param is_setup: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._metadata_state = metadata_state
+        self._is_setup = is_setup
 
     @property
     def approver_ids(self):
@@ -220,27 +220,6 @@ class BTWorkflowSnapshotInfo(object):
         self._rejected_by = rejected_by
 
     @property
-    def is_setup(self):
-        """Gets the is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_setup
-
-    @is_setup.setter
-    def is_setup(self, is_setup):
-        """Sets the is_setup of this BTWorkflowSnapshotInfo.
-
-
-        :param is_setup: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_setup = is_setup
-
-    @property
     def approved_by(self):
         """Gets the approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
 
@@ -302,6 +281,27 @@ class BTWorkflowSnapshotInfo(object):
         """
 
         self._is_discarded = is_discarded
+
+    @property
+    def metadata_state(self):
+        """Gets the metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._metadata_state
+
+    @metadata_state.setter
+    def metadata_state(self, metadata_state):
+        """Sets the metadata_state of this BTWorkflowSnapshotInfo.
+
+
+        :param metadata_state: The metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._metadata_state = metadata_state
 
     def to_dict(self):
         """Returns the model properties as a dict"""

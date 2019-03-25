@@ -32,62 +32,62 @@ class BTDocumentMicroversionInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'element_type': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'microversion_id': 'str',
-        'document_id': 'str',
+        'element_type': 'str',
         'current_configuration': 'str'
     }
 
     attribute_map = {
-        'element_type': 'elementType',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'microversion_id': 'microversionId',
-        'document_id': 'documentId',
+        'element_type': 'elementType',
         'current_configuration': 'currentConfiguration'
     }
 
-    def __init__(self, element_type=None, workspace_id=None, microversion_id=None, document_id=None, current_configuration=None):  # noqa: E501
+    def __init__(self, document_id=None, workspace_id=None, microversion_id=None, element_type=None, current_configuration=None):  # noqa: E501
         """BTDocumentMicroversionInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._element_type = None
+        self._document_id = None
         self._workspace_id = None
         self._microversion_id = None
-        self._document_id = None
+        self._element_type = None
         self._current_configuration = None
         self.discriminator = None
 
-        if element_type is not None:
-            self.element_type = element_type
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if microversion_id is not None:
             self.microversion_id = microversion_id
-        if document_id is not None:
-            self.document_id = document_id
+        if element_type is not None:
+            self.element_type = element_type
         if current_configuration is not None:
             self.current_configuration = current_configuration
 
     @property
-    def element_type(self):
-        """Gets the element_type of this BTDocumentMicroversionInfo.  # noqa: E501
+    def document_id(self):
+        """Gets the document_id of this BTDocumentMicroversionInfo.  # noqa: E501
 
 
-        :return: The element_type of this BTDocumentMicroversionInfo.  # noqa: E501
+        :return: The document_id of this BTDocumentMicroversionInfo.  # noqa: E501
         :rtype: str
         """
-        return self._element_type
+        return self._document_id
 
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTDocumentMicroversionInfo.
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTDocumentMicroversionInfo.
 
 
-        :param element_type: The element_type of this BTDocumentMicroversionInfo.  # noqa: E501
+        :param document_id: The document_id of this BTDocumentMicroversionInfo.  # noqa: E501
         :type: str
         """
 
-        self._element_type = element_type
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -132,25 +132,25 @@ class BTDocumentMicroversionInfo(object):
         self._microversion_id = microversion_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTDocumentMicroversionInfo.  # noqa: E501
+    def element_type(self):
+        """Gets the element_type of this BTDocumentMicroversionInfo.  # noqa: E501
 
 
-        :return: The document_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :return: The element_type of this BTDocumentMicroversionInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document_id
+        return self._element_type
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTDocumentMicroversionInfo.
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTDocumentMicroversionInfo.
 
 
-        :param document_id: The document_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :param element_type: The element_type of this BTDocumentMicroversionInfo.  # noqa: E501
         :type: str
         """
 
-        self._document_id = document_id
+        self._element_type = element_type
 
     @property
     def current_configuration(self):

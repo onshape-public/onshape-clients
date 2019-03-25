@@ -33,50 +33,50 @@ class BTExportTessellatedFacesFace(object):
     """
     openapi_types = {
         'id': 'str',
-        'facets': 'list[BTExportTessellatedFacesFacet]',
         'error_message': 'str',
+        'facets': 'list[BTExportTessellatedFacesFacet]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
-        'facets': 'facets',
         'error_message': 'errorMessage',
+        'facets': 'facets',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, id=None, facets=None, error_message=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, id=None, error_message=None, facets=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportTessellatedFacesFace - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._facets = None
         self._error_message = None
+        self._facets = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if facets is not None:
-            self.facets = facets
         if error_message is not None:
             self.error_message = error_message
+        if facets is not None:
+            self.facets = facets
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def id(self):
@@ -100,6 +100,27 @@ class BTExportTessellatedFacesFace(object):
         self._id = id
 
     @property
+    def error_message(self):
+        """Gets the error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+
+
+        :return: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_message
+
+    @error_message.setter
+    def error_message(self, error_message):
+        """Sets the error_message of this BTExportTessellatedFacesFace.
+
+
+        :param error_message: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+        :type: str
+        """
+
+        self._error_message = error_message
+
+    @property
     def facets(self):
         """Gets the facets of this BTExportTessellatedFacesFace.  # noqa: E501
 
@@ -121,25 +142,25 @@ class BTExportTessellatedFacesFace(object):
         self._facets = facets
 
     @property
-    def error_message(self):
-        """Gets the error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTExportTessellatedFacesFace.  # noqa: E501
 
 
-        :return: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
-        :rtype: str
+        :return: The type_id of this BTExportTessellatedFacesFace.  # noqa: E501
+        :rtype: int
         """
-        return self._error_message
+        return self._type_id
 
-    @error_message.setter
-    def error_message(self, error_message):
-        """Sets the error_message of this BTExportTessellatedFacesFace.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTExportTessellatedFacesFace.
 
 
-        :param error_message: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
-        :type: str
+        :param type_id: The type_id of this BTExportTessellatedFacesFace.  # noqa: E501
+        :type: int
         """
 
-        self._error_message = error_message
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -203,27 +224,6 @@ class BTExportTessellatedFacesFace(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTExportTessellatedFacesFace.  # noqa: E501
-
-
-        :return: The type_id of this BTExportTessellatedFacesFace.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTExportTessellatedFacesFace.
-
-
-        :param type_id: The type_id of this BTExportTessellatedFacesFace.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

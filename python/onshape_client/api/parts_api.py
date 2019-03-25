@@ -163,6 +163,140 @@ class PartsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_parts_wmve(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        """Get parts from an element.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_parts_wmve(did, wvm, wvmid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: Document ID. (required)
+        :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
+        :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
+        :param str eid: Element ID. (required)
+        :param bool with_thumbnails: Whether or not to include thumbnails (not supported for microversion)
+        :param bool include_property_defaults: If true, include metadata schema property defaults in response
+        :param str configuration: Configuration string.
+        :param str link_document_id: Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.
+        :return: list[BTPartMetadataInfo]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_parts_wmve_with_http_info(did, wvm, wvmid, eid, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_parts_wmve_with_http_info(did, wvm, wvmid, eid, **kwargs)  # noqa: E501
+            return data
+
+    def get_parts_wmve_with_http_info(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        """Get parts from an element.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_parts_wmve_with_http_info(did, wvm, wvmid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: Document ID. (required)
+        :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
+        :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
+        :param str eid: Element ID. (required)
+        :param bool with_thumbnails: Whether or not to include thumbnails (not supported for microversion)
+        :param bool include_property_defaults: If true, include metadata schema property defaults in response
+        :param str configuration: Configuration string.
+        :param str link_document_id: Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.
+        :return: list[BTPartMetadataInfo]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wvm', 'wvmid', 'eid', 'with_thumbnails', 'include_property_defaults', 'configuration', 'link_document_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_parts_wmve" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ValueError("Missing the required parameter `did` when calling `get_parts_wmve`")  # noqa: E501
+        # verify the required parameter 'wvm' is set
+        if ('wvm' not in local_var_params or
+                local_var_params['wvm'] is None):
+            raise ValueError("Missing the required parameter `wvm` when calling `get_parts_wmve`")  # noqa: E501
+        # verify the required parameter 'wvmid' is set
+        if ('wvmid' not in local_var_params or
+                local_var_params['wvmid'] is None):
+            raise ValueError("Missing the required parameter `wvmid` when calling `get_parts_wmve`")  # noqa: E501
+        # verify the required parameter 'eid' is set
+        if ('eid' not in local_var_params or
+                local_var_params['eid'] is None):
+            raise ValueError("Missing the required parameter `eid` when calling `get_parts_wmve`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wvm' in local_var_params:
+            path_params['wvm'] = local_var_params['wvm']  # noqa: E501
+        if 'wvmid' in local_var_params:
+            path_params['wvmid'] = local_var_params['wvmid']  # noqa: E501
+        if 'eid' in local_var_params:
+            path_params['eid'] = local_var_params['eid']  # noqa: E501
+
+        query_params = []
+        if 'with_thumbnails' in local_var_params:
+            query_params.append(('withThumbnails', local_var_params['with_thumbnails']))  # noqa: E501
+        if 'include_property_defaults' in local_var_params:
+            query_params.append(('includePropertyDefaults', local_var_params['include_property_defaults']))  # noqa: E501
+        if 'configuration' in local_var_params:
+            query_params.append(('configuration', local_var_params['configuration']))  # noqa: E501
+        if 'link_document_id' in local_var_params:
+            query_params.append(('linkDocumentId', local_var_params['link_document_id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1', 'application/json;charset=UTF-8; qs=0.9'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[BTPartMetadataInfo]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_parts_wmv(self, did, wvm, wvmid, **kwargs):  # noqa: E501
         """Part metadata batch update.  # noqa: E501
 

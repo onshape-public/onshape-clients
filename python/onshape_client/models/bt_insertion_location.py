@@ -35,41 +35,41 @@ class BTInsertionLocation(object):
         'order_preserving': 'bool',
         'adjacent_to_node': 'bool',
         'node_id': 'str',
+        'node_id_raw': 'BTObjectId',
         'child_field_index': 'int',
         'before': 'bool',
-        'node_id_raw': 'BTObjectId',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'order_preserving': 'orderPreserving',
         'adjacent_to_node': 'adjacentToNode',
         'node_id': 'nodeId',
+        'node_id_raw': 'nodeIdRaw',
         'child_field_index': 'childFieldIndex',
         'before': 'before',
-        'node_id_raw': 'nodeIdRaw',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, order_preserving=None, adjacent_to_node=None, node_id=None, child_field_index=None, before=None, node_id_raw=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, order_preserving=None, adjacent_to_node=None, node_id=None, node_id_raw=None, child_field_index=None, before=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTInsertionLocation - a model defined in OpenAPI"""  # noqa: E501
 
         self._order_preserving = None
         self._adjacent_to_node = None
         self._node_id = None
+        self._node_id_raw = None
         self._child_field_index = None
         self._before = None
-        self._node_id_raw = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if order_preserving is not None:
@@ -78,20 +78,20 @@ class BTInsertionLocation(object):
             self.adjacent_to_node = adjacent_to_node
         if node_id is not None:
             self.node_id = node_id
+        if node_id_raw is not None:
+            self.node_id_raw = node_id_raw
         if child_field_index is not None:
             self.child_field_index = child_field_index
         if before is not None:
             self.before = before
-        if node_id_raw is not None:
-            self.node_id_raw = node_id_raw
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def order_preserving(self):
@@ -157,6 +157,27 @@ class BTInsertionLocation(object):
         self._node_id = node_id
 
     @property
+    def node_id_raw(self):
+        """Gets the node_id_raw of this BTInsertionLocation.  # noqa: E501
+
+
+        :return: The node_id_raw of this BTInsertionLocation.  # noqa: E501
+        :rtype: BTObjectId
+        """
+        return self._node_id_raw
+
+    @node_id_raw.setter
+    def node_id_raw(self, node_id_raw):
+        """Sets the node_id_raw of this BTInsertionLocation.
+
+
+        :param node_id_raw: The node_id_raw of this BTInsertionLocation.  # noqa: E501
+        :type: BTObjectId
+        """
+
+        self._node_id_raw = node_id_raw
+
+    @property
     def child_field_index(self):
         """Gets the child_field_index of this BTInsertionLocation.  # noqa: E501
 
@@ -199,25 +220,25 @@ class BTInsertionLocation(object):
         self._before = before
 
     @property
-    def node_id_raw(self):
-        """Gets the node_id_raw of this BTInsertionLocation.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTInsertionLocation.  # noqa: E501
 
 
-        :return: The node_id_raw of this BTInsertionLocation.  # noqa: E501
-        :rtype: BTObjectId
+        :return: The type_id of this BTInsertionLocation.  # noqa: E501
+        :rtype: int
         """
-        return self._node_id_raw
+        return self._type_id
 
-    @node_id_raw.setter
-    def node_id_raw(self, node_id_raw):
-        """Sets the node_id_raw of this BTInsertionLocation.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTInsertionLocation.
 
 
-        :param node_id_raw: The node_id_raw of this BTInsertionLocation.  # noqa: E501
-        :type: BTObjectId
+        :param type_id: The type_id of this BTInsertionLocation.  # noqa: E501
+        :type: int
         """
 
-        self._node_id_raw = node_id_raw
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -281,27 +302,6 @@ class BTInsertionLocation(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTInsertionLocation.  # noqa: E501
-
-
-        :return: The type_id of this BTInsertionLocation.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTInsertionLocation.
-
-
-        :param type_id: The type_id of this BTInsertionLocation.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

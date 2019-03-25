@@ -32,49 +32,51 @@ class BTOccurrence(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'full_path_as_string': 'str',
         'root_occurrence': 'bool',
         'tail_instance_id': 'str',
         'head_instance_id': 'str',
         'occurrence_without_head': 'BTOccurrence',
         'occurrence_without_tail': 'BTOccurrence',
-        'full_path_as_string': 'str',
         'path': 'list[str]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
+        'full_path_as_string': 'fullPathAsString',
         'root_occurrence': 'rootOccurrence',
         'tail_instance_id': 'tailInstanceId',
         'head_instance_id': 'headInstanceId',
         'occurrence_without_head': 'occurrenceWithoutHead',
         'occurrence_without_tail': 'occurrenceWithoutTail',
-        'full_path_as_string': 'fullPathAsString',
         'path': 'path',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, root_occurrence=None, tail_instance_id=None, head_instance_id=None, occurrence_without_head=None, occurrence_without_tail=None, full_path_as_string=None, path=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, full_path_as_string=None, root_occurrence=None, tail_instance_id=None, head_instance_id=None, occurrence_without_head=None, occurrence_without_tail=None, path=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTOccurrence - a model defined in OpenAPI"""  # noqa: E501
 
+        self._full_path_as_string = None
         self._root_occurrence = None
         self._tail_instance_id = None
         self._head_instance_id = None
         self._occurrence_without_head = None
         self._occurrence_without_tail = None
-        self._full_path_as_string = None
         self._path = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
+        if full_path_as_string is not None:
+            self.full_path_as_string = full_path_as_string
         if root_occurrence is not None:
             self.root_occurrence = root_occurrence
         if tail_instance_id is not None:
@@ -85,18 +87,37 @@ class BTOccurrence(object):
             self.occurrence_without_head = occurrence_without_head
         if occurrence_without_tail is not None:
             self.occurrence_without_tail = occurrence_without_tail
-        if full_path_as_string is not None:
-            self.full_path_as_string = full_path_as_string
         if path is not None:
             self.path = path
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
+
+    @property
+    def full_path_as_string(self):
+        """Gets the full_path_as_string of this BTOccurrence.  # noqa: E501
+
+
+        :return: The full_path_as_string of this BTOccurrence.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_path_as_string
+
+    @full_path_as_string.setter
+    def full_path_as_string(self, full_path_as_string):
+        """Sets the full_path_as_string of this BTOccurrence.
+
+
+        :param full_path_as_string: The full_path_as_string of this BTOccurrence.  # noqa: E501
+        :type: str
+        """
+
+        self._full_path_as_string = full_path_as_string
 
     @property
     def root_occurrence(self):
@@ -204,27 +225,6 @@ class BTOccurrence(object):
         self._occurrence_without_tail = occurrence_without_tail
 
     @property
-    def full_path_as_string(self):
-        """Gets the full_path_as_string of this BTOccurrence.  # noqa: E501
-
-
-        :return: The full_path_as_string of this BTOccurrence.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_path_as_string
-
-    @full_path_as_string.setter
-    def full_path_as_string(self, full_path_as_string):
-        """Sets the full_path_as_string of this BTOccurrence.
-
-
-        :param full_path_as_string: The full_path_as_string of this BTOccurrence.  # noqa: E501
-        :type: str
-        """
-
-        self._full_path_as_string = full_path_as_string
-
-    @property
     def path(self):
         """Gets the path of this BTOccurrence.  # noqa: E501
 
@@ -244,6 +244,27 @@ class BTOccurrence(object):
         """
 
         self._path = path
+
+    @property
+    def type_id(self):
+        """Gets the type_id of this BTOccurrence.  # noqa: E501
+
+
+        :return: The type_id of this BTOccurrence.  # noqa: E501
+        :rtype: int
+        """
+        return self._type_id
+
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTOccurrence.
+
+
+        :param type_id: The type_id of this BTOccurrence.  # noqa: E501
+        :type: int
+        """
+
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -307,27 +328,6 @@ class BTOccurrence(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTOccurrence.  # noqa: E501
-
-
-        :return: The type_id of this BTOccurrence.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTOccurrence.
-
-
-        :param type_id: The type_id of this BTOccurrence.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,49 +32,49 @@ class BTRevisionRuleInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'script': 'str',
         'description': 'str',
         'company_id': 'str',
-        'script': 'str',
         'revision_list': 'list[str]',
         'rule_type': 'int',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
+        'script': 'script',
         'description': 'description',
         'company_id': 'companyId',
-        'script': 'script',
         'revision_list': 'revisionList',
         'rule_type': 'ruleType',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, description=None, company_id=None, script=None, revision_list=None, rule_type=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, script=None, description=None, company_id=None, revision_list=None, rule_type=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTRevisionRuleInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._script = None
         self._description = None
         self._company_id = None
-        self._script = None
         self._revision_list = None
         self._rule_type = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
+        if script is not None:
+            self.script = script
         if description is not None:
             self.description = description
         if company_id is not None:
             self.company_id = company_id
-        if script is not None:
-            self.script = script
         if revision_list is not None:
             self.revision_list = revision_list
         if rule_type is not None:
@@ -83,10 +83,31 @@ class BTRevisionRuleInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
+
+    @property
+    def script(self):
+        """Gets the script of this BTRevisionRuleInfo.  # noqa: E501
+
+
+        :return: The script of this BTRevisionRuleInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._script
+
+    @script.setter
+    def script(self, script):
+        """Sets the script of this BTRevisionRuleInfo.
+
+
+        :param script: The script of this BTRevisionRuleInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._script = script
 
     @property
     def description(self):
@@ -129,27 +150,6 @@ class BTRevisionRuleInfo(object):
         """
 
         self._company_id = company_id
-
-    @property
-    def script(self):
-        """Gets the script of this BTRevisionRuleInfo.  # noqa: E501
-
-
-        :return: The script of this BTRevisionRuleInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._script
-
-    @script.setter
-    def script(self, script):
-        """Sets the script of this BTRevisionRuleInfo.
-
-
-        :param script: The script of this BTRevisionRuleInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._script = script
 
     @property
     def revision_list(self):
@@ -236,27 +236,6 @@ class BTRevisionRuleInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTRevisionRuleInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTRevisionRuleInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTRevisionRuleInfo.
-
-
-        :param view_ref: The view_ref of this BTRevisionRuleInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTRevisionRuleInfo.  # noqa: E501
 
@@ -276,6 +255,27 @@ class BTRevisionRuleInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTRevisionRuleInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTRevisionRuleInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTRevisionRuleInfo.
+
+
+        :param view_ref: The view_ref of this BTRevisionRuleInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

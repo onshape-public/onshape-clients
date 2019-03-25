@@ -36,11 +36,11 @@ class BTDeviceInfo(object):
         'description': 'str',
         'client_type': 'str',
         'version': 'BTUserAgentVersion',
+        'device_name': 'str',
+        'operating_system': 'str',
         'device_type': 'str',
         'browser': 'str',
-        'manufacturer': 'str',
-        'device_name': 'str',
-        'operating_system': 'str'
+        'manufacturer': 'str'
     }
 
     attribute_map = {
@@ -48,25 +48,25 @@ class BTDeviceInfo(object):
         'description': 'description',
         'client_type': 'clientType',
         'version': 'version',
+        'device_name': 'deviceName',
+        'operating_system': 'operatingSystem',
         'device_type': 'deviceType',
         'browser': 'browser',
-        'manufacturer': 'manufacturer',
-        'device_name': 'deviceName',
-        'operating_system': 'operatingSystem'
+        'manufacturer': 'manufacturer'
     }
 
-    def __init__(self, mobile=None, description=None, client_type=None, version=None, device_type=None, browser=None, manufacturer=None, device_name=None, operating_system=None):  # noqa: E501
+    def __init__(self, mobile=None, description=None, client_type=None, version=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None):  # noqa: E501
         """BTDeviceInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._mobile = None
         self._description = None
         self._client_type = None
         self._version = None
+        self._device_name = None
+        self._operating_system = None
         self._device_type = None
         self._browser = None
         self._manufacturer = None
-        self._device_name = None
-        self._operating_system = None
         self.discriminator = None
 
         if mobile is not None:
@@ -77,16 +77,16 @@ class BTDeviceInfo(object):
             self.client_type = client_type
         if version is not None:
             self.version = version
+        if device_name is not None:
+            self.device_name = device_name
+        if operating_system is not None:
+            self.operating_system = operating_system
         if device_type is not None:
             self.device_type = device_type
         if browser is not None:
             self.browser = browser
         if manufacturer is not None:
             self.manufacturer = manufacturer
-        if device_name is not None:
-            self.device_name = device_name
-        if operating_system is not None:
-            self.operating_system = operating_system
 
     @property
     def mobile(self):
@@ -179,6 +179,54 @@ class BTDeviceInfo(object):
         self._version = version
 
     @property
+    def device_name(self):
+        """Gets the device_name of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The device_name of this BTDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_name
+
+    @device_name.setter
+    def device_name(self, device_name):
+        """Sets the device_name of this BTDeviceInfo.
+
+
+        :param device_name: The device_name of this BTDeviceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._device_name = device_name
+
+    @property
+    def operating_system(self):
+        """Gets the operating_system of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The operating_system of this BTDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._operating_system
+
+    @operating_system.setter
+    def operating_system(self, operating_system):
+        """Sets the operating_system of this BTDeviceInfo.
+
+
+        :param operating_system: The operating_system of this BTDeviceInfo.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["WINDOWS", "WINDOWS_10", "WINDOWS_81", "WINDOWS_8", "WINDOWS_7", "WINDOWS_VISTA", "WINDOWS_2000", "WINDOWS_XP", "WINDOWS_10_MOBILE", "WINDOWS_PHONE8_1", "WINDOWS_PHONE8", "WINDOWS_MOBILE7", "WINDOWS_MOBILE", "WINDOWS_98", "XBOX_OS", "ONSHAPE", "ONSHAPE_ANDROID", "ONSHAPE_ANDROID_7", "ONSHAPE_ANDROID_6", "ONSHAPE_ANDROID_5", "ONSHAPE_ANDROID_4", "ONSHAPE_ANDROID_TABLET", "ONSHAPE_ANDROID_7_TABLET", "ONSHAPE_ANDROID_6_TABLET", "ONSHAPE_ANDROID_5_TABLET", "ONSHAPE_ANDROID_4_TABLET", "ONSHAPE_IPHONE", "ONSHAPE_IPHONE_10", "ONSHAPE_IPHONE_9", "ONSHAPE_IPHONE_8_4", "ONSHAPE_IPHONE_8_3", "ONSHAPE_IPHONE_8_2", "ONSHAPE_IPHONE_8_1", "ONSHAPE_IPHONE_8", "ONSHAPE_IPHONE_7", "ONSHAPE_IPAD", "ONSHAPE_IPAD_10", "ONSHAPE_IPAD_9", "ONSHAPE_IPAD_8_4", "ONSHAPE_IPAD_8_3", "ONSHAPE_IPAD_8_2", "ONSHAPE_IPAD_8_1", "ONSHAPE_IPAD_8", "ONSHAPE_IPAD_7", "ONSHAPE_IPOD", "ONSHAPE_IPOD_10", "ONSHAPE_IPOD_9", "ONSHAPE_IPOD_8_4", "ONSHAPE_IPOD_8_3", "ONSHAPE_IPOD_8_2", "ONSHAPE_IPOD_8_1", "ONSHAPE_IPOD_8", "ONSHAPE_IPOD_7", "ANDROID", "ANDROID7", "ANDROID7_TABLET", "ANDROID6", "ANDROID6_TABLET", "ANDROID5", "ANDROID5_TABLET", "ANDROID4", "ANDROID4_TABLET", "ANDROID4_WEARABLE", "ANDROID3_TABLET", "ANDROID2", "ANDROID2_TABLET", "ANDROID1", "ANDROID_MOBILE", "ANDROID_TABLET", "CHROME_OS", "WEBOS", "PALM", "MEEGO", "IOS", "iOS10_IPHONE", "iOS9_IPHONE", "iOS8_4_IPHONE", "iOS8_3_IPHONE", "iOS8_2_IPHONE", "iOS8_1_IPHONE", "iOS8_IPHONE", "iOS7_IPHONE", "iOS6_IPHONE", "iOS5_IPHONE", "iOS4_IPHONE", "MAC_OS_X_IPAD", "iOS10_IPAD", "iOS9_IPAD", "iOS8_4_IPAD", "iOS8_3_IPAD", "iOS8_2_IPAD", "iOS8_1_IPAD", "iOS8_IPAD", "iOS7_IPAD", "iOS6_IPAD", "MAC_OS_X_IPHONE", "MAC_OS_X_IPOD", "MAC_OS_X", "MAC_OS", "MAEMO", "BADA", "GOOGLE_TV", "KINDLE", "KINDLE3", "KINDLE2", "LINUX", "UBUNTU", "UBUNTU_TOUCH_MOBILE", "SYMBIAN", "SYMBIAN9", "SYMBIAN8", "SYMBIAN7", "SYMBIAN6", "SERIES40", "SONY_ERICSSON", "SUN_OS", "PSP", "WII", "BLACKBERRY", "BLACKBERRY7", "BLACKBERRY6", "BLACKBERRY_TABLET", "ROKU", "PROXY", "UNKNOWN_MOBILE", "UNKNOWN_TABLET", "UNKNOWN"]  # noqa: E501
+        if operating_system not in allowed_values:
+            raise ValueError(
+                "Invalid value for `operating_system` ({0}), must be one of {1}"  # noqa: E501
+                .format(operating_system, allowed_values)
+            )
+
+        self._operating_system = operating_system
+
+    @property
     def device_type(self):
         """Gets the device_type of this BTDeviceInfo.  # noqa: E501
 
@@ -246,54 +294,6 @@ class BTDeviceInfo(object):
         """
 
         self._manufacturer = manufacturer
-
-    @property
-    def device_name(self):
-        """Gets the device_name of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The device_name of this BTDeviceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_name
-
-    @device_name.setter
-    def device_name(self, device_name):
-        """Sets the device_name of this BTDeviceInfo.
-
-
-        :param device_name: The device_name of this BTDeviceInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._device_name = device_name
-
-    @property
-    def operating_system(self):
-        """Gets the operating_system of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The operating_system of this BTDeviceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._operating_system
-
-    @operating_system.setter
-    def operating_system(self, operating_system):
-        """Sets the operating_system of this BTDeviceInfo.
-
-
-        :param operating_system: The operating_system of this BTDeviceInfo.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["WINDOWS", "WINDOWS_10", "WINDOWS_81", "WINDOWS_8", "WINDOWS_7", "WINDOWS_VISTA", "WINDOWS_2000", "WINDOWS_XP", "WINDOWS_10_MOBILE", "WINDOWS_PHONE8_1", "WINDOWS_PHONE8", "WINDOWS_MOBILE7", "WINDOWS_MOBILE", "WINDOWS_98", "XBOX_OS", "ONSHAPE", "ONSHAPE_ANDROID", "ONSHAPE_ANDROID_7", "ONSHAPE_ANDROID_6", "ONSHAPE_ANDROID_5", "ONSHAPE_ANDROID_4", "ONSHAPE_ANDROID_TABLET", "ONSHAPE_ANDROID_7_TABLET", "ONSHAPE_ANDROID_6_TABLET", "ONSHAPE_ANDROID_5_TABLET", "ONSHAPE_ANDROID_4_TABLET", "ONSHAPE_IPHONE", "ONSHAPE_IPHONE_10", "ONSHAPE_IPHONE_9", "ONSHAPE_IPHONE_8_4", "ONSHAPE_IPHONE_8_3", "ONSHAPE_IPHONE_8_2", "ONSHAPE_IPHONE_8_1", "ONSHAPE_IPHONE_8", "ONSHAPE_IPHONE_7", "ONSHAPE_IPAD", "ONSHAPE_IPAD_10", "ONSHAPE_IPAD_9", "ONSHAPE_IPAD_8_4", "ONSHAPE_IPAD_8_3", "ONSHAPE_IPAD_8_2", "ONSHAPE_IPAD_8_1", "ONSHAPE_IPAD_8", "ONSHAPE_IPAD_7", "ONSHAPE_IPOD", "ONSHAPE_IPOD_10", "ONSHAPE_IPOD_9", "ONSHAPE_IPOD_8_4", "ONSHAPE_IPOD_8_3", "ONSHAPE_IPOD_8_2", "ONSHAPE_IPOD_8_1", "ONSHAPE_IPOD_8", "ONSHAPE_IPOD_7", "ANDROID", "ANDROID7", "ANDROID7_TABLET", "ANDROID6", "ANDROID6_TABLET", "ANDROID5", "ANDROID5_TABLET", "ANDROID4", "ANDROID4_TABLET", "ANDROID4_WEARABLE", "ANDROID3_TABLET", "ANDROID2", "ANDROID2_TABLET", "ANDROID1", "ANDROID_MOBILE", "ANDROID_TABLET", "CHROME_OS", "WEBOS", "PALM", "MEEGO", "IOS", "iOS10_IPHONE", "iOS9_IPHONE", "iOS8_4_IPHONE", "iOS8_3_IPHONE", "iOS8_2_IPHONE", "iOS8_1_IPHONE", "iOS8_IPHONE", "iOS7_IPHONE", "iOS6_IPHONE", "iOS5_IPHONE", "iOS4_IPHONE", "MAC_OS_X_IPAD", "iOS10_IPAD", "iOS9_IPAD", "iOS8_4_IPAD", "iOS8_3_IPAD", "iOS8_2_IPAD", "iOS8_1_IPAD", "iOS8_IPAD", "iOS7_IPAD", "iOS6_IPAD", "MAC_OS_X_IPHONE", "MAC_OS_X_IPOD", "MAC_OS_X", "MAC_OS", "MAEMO", "BADA", "GOOGLE_TV", "KINDLE", "KINDLE3", "KINDLE2", "LINUX", "UBUNTU", "UBUNTU_TOUCH_MOBILE", "SYMBIAN", "SYMBIAN9", "SYMBIAN8", "SYMBIAN7", "SYMBIAN6", "SERIES40", "SONY_ERICSSON", "SUN_OS", "PSP", "WII", "BLACKBERRY", "BLACKBERRY7", "BLACKBERRY6", "BLACKBERRY_TABLET", "ROKU", "PROXY", "UNKNOWN_MOBILE", "UNKNOWN_TABLET", "UNKNOWN"]  # noqa: E501
-        if operating_system not in allowed_values:
-            raise ValueError(
-                "Invalid value for `operating_system` ({0}), must be one of {1}"  # noqa: E501
-                .format(operating_system, allowed_values)
-            )
-
-        self._operating_system = operating_system
 
     def to_dict(self):
         """Returns the model properties as a dict"""

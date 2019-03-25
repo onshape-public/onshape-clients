@@ -35,26 +35,26 @@ class BTUploadParams(object):
         'name': 'str',
         'state': 'str',
         'element_id': 'str',
-        'document_name': 'str',
-        'cloud_storage_account_id': 'str'
+        'cloud_storage_account_id': 'str',
+        'document_name': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'state': 'state',
         'element_id': 'elementId',
-        'document_name': 'documentName',
-        'cloud_storage_account_id': 'cloudStorageAccountId'
+        'cloud_storage_account_id': 'cloudStorageAccountId',
+        'document_name': 'documentName'
     }
 
-    def __init__(self, name=None, state=None, element_id=None, document_name=None, cloud_storage_account_id=None):  # noqa: E501
+    def __init__(self, name=None, state=None, element_id=None, cloud_storage_account_id=None, document_name=None):  # noqa: E501
         """BTUploadParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._state = None
         self._element_id = None
-        self._document_name = None
         self._cloud_storage_account_id = None
+        self._document_name = None
         self.discriminator = None
 
         if name is not None:
@@ -63,10 +63,10 @@ class BTUploadParams(object):
             self.state = state
         if element_id is not None:
             self.element_id = element_id
-        if document_name is not None:
-            self.document_name = document_name
         if cloud_storage_account_id is not None:
             self.cloud_storage_account_id = cloud_storage_account_id
+        if document_name is not None:
+            self.document_name = document_name
 
     @property
     def name(self):
@@ -132,27 +132,6 @@ class BTUploadParams(object):
         self._element_id = element_id
 
     @property
-    def document_name(self):
-        """Gets the document_name of this BTUploadParams.  # noqa: E501
-
-
-        :return: The document_name of this BTUploadParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_name
-
-    @document_name.setter
-    def document_name(self, document_name):
-        """Sets the document_name of this BTUploadParams.
-
-
-        :param document_name: The document_name of this BTUploadParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_name = document_name
-
-    @property
     def cloud_storage_account_id(self):
         """Gets the cloud_storage_account_id of this BTUploadParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTUploadParams(object):
         """
 
         self._cloud_storage_account_id = cloud_storage_account_id
+
+    @property
+    def document_name(self):
+        """Gets the document_name of this BTUploadParams.  # noqa: E501
+
+
+        :return: The document_name of this BTUploadParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_name
+
+    @document_name.setter
+    def document_name(self, document_name):
+        """Sets the document_name of this BTUploadParams.
+
+
+        :param document_name: The document_name of this BTUploadParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_name = document_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

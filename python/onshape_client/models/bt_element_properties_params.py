@@ -33,30 +33,30 @@ class BTElementPropertiesParams(object):
     """
     openapi_types = {
         'properties': 'dict(str, str)',
-        'api_configuration': 'str',
-        'element_id': 'str'
+        'element_id': 'str',
+        'api_configuration': 'str'
     }
 
     attribute_map = {
         'properties': 'properties',
-        'api_configuration': 'apiConfiguration',
-        'element_id': 'elementId'
+        'element_id': 'elementId',
+        'api_configuration': 'apiConfiguration'
     }
 
-    def __init__(self, properties=None, api_configuration=None, element_id=None):  # noqa: E501
+    def __init__(self, properties=None, element_id=None, api_configuration=None):  # noqa: E501
         """BTElementPropertiesParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._properties = None
-        self._api_configuration = None
         self._element_id = None
+        self._api_configuration = None
         self.discriminator = None
 
         if properties is not None:
             self.properties = properties
-        if api_configuration is not None:
-            self.api_configuration = api_configuration
         if element_id is not None:
             self.element_id = element_id
+        if api_configuration is not None:
+            self.api_configuration = api_configuration
 
     @property
     def properties(self):
@@ -80,27 +80,6 @@ class BTElementPropertiesParams(object):
         self._properties = properties
 
     @property
-    def api_configuration(self):
-        """Gets the api_configuration of this BTElementPropertiesParams.  # noqa: E501
-
-
-        :return: The api_configuration of this BTElementPropertiesParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._api_configuration
-
-    @api_configuration.setter
-    def api_configuration(self, api_configuration):
-        """Sets the api_configuration of this BTElementPropertiesParams.
-
-
-        :param api_configuration: The api_configuration of this BTElementPropertiesParams.  # noqa: E501
-        :type: str
-        """
-
-        self._api_configuration = api_configuration
-
-    @property
     def element_id(self):
         """Gets the element_id of this BTElementPropertiesParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTElementPropertiesParams(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def api_configuration(self):
+        """Gets the api_configuration of this BTElementPropertiesParams.  # noqa: E501
+
+
+        :return: The api_configuration of this BTElementPropertiesParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_configuration
+
+    @api_configuration.setter
+    def api_configuration(self, api_configuration):
+        """Sets the api_configuration of this BTElementPropertiesParams.
+
+
+        :param api_configuration: The api_configuration of this BTElementPropertiesParams.  # noqa: E501
+        :type: str
+        """
+
+        self._api_configuration = api_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,9 +35,9 @@ class BTPartMaterialPropertyInfo(object):
         'name': 'str',
         'value': 'str',
         'type': 'str',
+        'display_name': 'str',
         'description': 'str',
         'category': 'str',
-        'display_name': 'str',
         'units': 'str'
     }
 
@@ -45,21 +45,21 @@ class BTPartMaterialPropertyInfo(object):
         'name': 'name',
         'value': 'value',
         'type': 'type',
+        'display_name': 'displayName',
         'description': 'description',
         'category': 'category',
-        'display_name': 'displayName',
         'units': 'units'
     }
 
-    def __init__(self, name=None, value=None, type=None, description=None, category=None, display_name=None, units=None):  # noqa: E501
+    def __init__(self, name=None, value=None, type=None, display_name=None, description=None, category=None, units=None):  # noqa: E501
         """BTPartMaterialPropertyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._value = None
         self._type = None
+        self._display_name = None
         self._description = None
         self._category = None
-        self._display_name = None
         self._units = None
         self.discriminator = None
 
@@ -69,12 +69,12 @@ class BTPartMaterialPropertyInfo(object):
             self.value = value
         if type is not None:
             self.type = type
+        if display_name is not None:
+            self.display_name = display_name
         if description is not None:
             self.description = description
         if category is not None:
             self.category = category
-        if display_name is not None:
-            self.display_name = display_name
         if units is not None:
             self.units = units
 
@@ -142,6 +142,27 @@ class BTPartMaterialPropertyInfo(object):
         self._type = type
 
     @property
+    def display_name(self):
+        """Gets the display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
+
+
+        :return: The display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTPartMaterialPropertyInfo.
+
+
+        :param display_name: The display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
+
+    @property
     def description(self):
         """Gets the description of this BTPartMaterialPropertyInfo.  # noqa: E501
 
@@ -182,27 +203,6 @@ class BTPartMaterialPropertyInfo(object):
         """
 
         self._category = category
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
-
-
-        :return: The display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTPartMaterialPropertyInfo.
-
-
-        :param display_name: The display_name of this BTPartMaterialPropertyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
 
     @property
     def units(self):

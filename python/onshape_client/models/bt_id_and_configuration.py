@@ -35,32 +35,32 @@ class BTIdAndConfiguration(object):
         'configuration': 'dict(str, BTFSValue)',
         'id': 'str',
         'configuration_is_null': 'bool',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'configuration': 'configuration',
         'id': 'id',
         'configuration_is_null': 'configurationIsNull',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, configuration=None, id=None, configuration_is_null=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, configuration=None, id=None, configuration_is_null=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTIdAndConfiguration - a model defined in OpenAPI"""  # noqa: E501
 
         self._configuration = None
         self._id = None
         self._configuration_is_null = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if configuration is not None:
@@ -69,14 +69,14 @@ class BTIdAndConfiguration(object):
             self.id = id
         if configuration_is_null is not None:
             self.configuration_is_null = configuration_is_null
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def configuration(self):
@@ -142,6 +142,27 @@ class BTIdAndConfiguration(object):
         self._configuration_is_null = configuration_is_null
 
     @property
+    def type_id(self):
+        """Gets the type_id of this BTIdAndConfiguration.  # noqa: E501
+
+
+        :return: The type_id of this BTIdAndConfiguration.  # noqa: E501
+        :rtype: int
+        """
+        return self._type_id
+
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTIdAndConfiguration.
+
+
+        :param type_id: The type_id of this BTIdAndConfiguration.  # noqa: E501
+        :type: int
+        """
+
+        self._type_id = type_id
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTIdAndConfiguration.  # noqa: E501
 
@@ -203,27 +224,6 @@ class BTIdAndConfiguration(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTIdAndConfiguration.  # noqa: E501
-
-
-        :return: The type_id of this BTIdAndConfiguration.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTIdAndConfiguration.
-
-
-        :param type_id: The type_id of this BTIdAndConfiguration.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

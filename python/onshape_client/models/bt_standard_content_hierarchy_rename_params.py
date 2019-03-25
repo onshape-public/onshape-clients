@@ -34,38 +34,38 @@ class BTStandardContentHierarchyRenameParams(object):
     openapi_types = {
         'rename_to': 'str',
         'type': 'str',
-        'category': 'str',
         'types': 'str',
         'component_document_id': 'str',
         'disable_production': 'bool',
         'production_version_id': 'str',
         'test_version_id': 'str',
+        'category': 'str',
         'standard': 'str'
     }
 
     attribute_map = {
         'rename_to': 'renameTo',
         'type': 'type',
-        'category': 'category',
         'types': 'types',
         'component_document_id': 'componentDocumentId',
         'disable_production': 'disableProduction',
         'production_version_id': 'productionVersionId',
         'test_version_id': 'testVersionId',
+        'category': 'category',
         'standard': 'standard'
     }
 
-    def __init__(self, rename_to=None, type=None, category=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None, standard=None):  # noqa: E501
+    def __init__(self, rename_to=None, type=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None, category=None, standard=None):  # noqa: E501
         """BTStandardContentHierarchyRenameParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._rename_to = None
         self._type = None
-        self._category = None
         self._types = None
         self._component_document_id = None
         self._disable_production = None
         self._production_version_id = None
         self._test_version_id = None
+        self._category = None
         self._standard = None
         self.discriminator = None
 
@@ -73,8 +73,6 @@ class BTStandardContentHierarchyRenameParams(object):
             self.rename_to = rename_to
         if type is not None:
             self.type = type
-        if category is not None:
-            self.category = category
         if types is not None:
             self.types = types
         if component_document_id is not None:
@@ -85,6 +83,8 @@ class BTStandardContentHierarchyRenameParams(object):
             self.production_version_id = production_version_id
         if test_version_id is not None:
             self.test_version_id = test_version_id
+        if category is not None:
+            self.category = category
         if standard is not None:
             self.standard = standard
 
@@ -129,27 +129,6 @@ class BTStandardContentHierarchyRenameParams(object):
         """
 
         self._type = type
-
-    @property
-    def category(self):
-        """Gets the category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
-
-
-        :return: The category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTStandardContentHierarchyRenameParams.
-
-
-        :param category: The category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
-        :type: str
-        """
-
-        self._category = category
 
     @property
     def types(self):
@@ -255,6 +234,27 @@ class BTStandardContentHierarchyRenameParams(object):
         """
 
         self._test_version_id = test_version_id
+
+    @property
+    def category(self):
+        """Gets the category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
+
+
+        :return: The category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTStandardContentHierarchyRenameParams.
+
+
+        :param category: The category of this BTStandardContentHierarchyRenameParams.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
 
     @property
     def standard(self):

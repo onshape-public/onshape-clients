@@ -33,30 +33,30 @@ class BTSectionPlaneInfo(object):
     """
     openapi_types = {
         'center': 'list[float]',
-        'tangent': 'list[float]',
-        'normal': 'list[float]'
+        'normal': 'list[float]',
+        'tangent': 'list[float]'
     }
 
     attribute_map = {
         'center': 'center',
-        'tangent': 'tangent',
-        'normal': 'normal'
+        'normal': 'normal',
+        'tangent': 'tangent'
     }
 
-    def __init__(self, center=None, tangent=None, normal=None):  # noqa: E501
+    def __init__(self, center=None, normal=None, tangent=None):  # noqa: E501
         """BTSectionPlaneInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._center = None
-        self._tangent = None
         self._normal = None
+        self._tangent = None
         self.discriminator = None
 
         if center is not None:
             self.center = center
-        if tangent is not None:
-            self.tangent = tangent
         if normal is not None:
             self.normal = normal
+        if tangent is not None:
+            self.tangent = tangent
 
     @property
     def center(self):
@@ -80,27 +80,6 @@ class BTSectionPlaneInfo(object):
         self._center = center
 
     @property
-    def tangent(self):
-        """Gets the tangent of this BTSectionPlaneInfo.  # noqa: E501
-
-
-        :return: The tangent of this BTSectionPlaneInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._tangent
-
-    @tangent.setter
-    def tangent(self, tangent):
-        """Sets the tangent of this BTSectionPlaneInfo.
-
-
-        :param tangent: The tangent of this BTSectionPlaneInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._tangent = tangent
-
-    @property
     def normal(self):
         """Gets the normal of this BTSectionPlaneInfo.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTSectionPlaneInfo(object):
         """
 
         self._normal = normal
+
+    @property
+    def tangent(self):
+        """Gets the tangent of this BTSectionPlaneInfo.  # noqa: E501
+
+
+        :return: The tangent of this BTSectionPlaneInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._tangent
+
+    @tangent.setter
+    def tangent(self, tangent):
+        """Sets the tangent of this BTSectionPlaneInfo.
+
+
+        :param tangent: The tangent of this BTSectionPlaneInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._tangent = tangent
 
     def to_dict(self):
         """Returns the model properties as a dict"""

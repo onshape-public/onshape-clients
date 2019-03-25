@@ -32,10 +32,11 @@ class BTModelTessellationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'document_id': 'str',
         'configuration': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
-        'document_id': 'str',
+        'element_microversion_id': 'str',
         'part_ids': 'list[str]',
         'part_query': 'str',
         'angle_tolerance': 'float',
@@ -47,15 +48,15 @@ class BTModelTessellationParams(object):
         'output_index_table': 'bool',
         'entity_ids': 'list[str]',
         'output_error_faces': 'bool',
-        'part_id': 'str',
-        'element_microversion_id': 'str'
+        'part_id': 'str'
     }
 
     attribute_map = {
+        'document_id': 'documentId',
         'configuration': 'configuration',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
-        'document_id': 'documentId',
+        'element_microversion_id': 'elementMicroversionId',
         'part_ids': 'partIds',
         'part_query': 'partQuery',
         'angle_tolerance': 'angleTolerance',
@@ -67,17 +68,17 @@ class BTModelTessellationParams(object):
         'output_index_table': 'outputIndexTable',
         'entity_ids': 'entityIds',
         'output_error_faces': 'outputErrorFaces',
-        'part_id': 'partId',
-        'element_microversion_id': 'elementMicroversionId'
+        'part_id': 'partId'
     }
 
-    def __init__(self, configuration=None, workspace_id=None, element_id=None, document_id=None, part_ids=None, part_query=None, angle_tolerance=None, chord_tolerance=None, max_facet_width=None, output_vertex_normals=None, output_facet_normals=None, output_texture_coordinates=None, output_index_table=None, entity_ids=None, output_error_faces=None, part_id=None, element_microversion_id=None):  # noqa: E501
+    def __init__(self, document_id=None, configuration=None, workspace_id=None, element_id=None, element_microversion_id=None, part_ids=None, part_query=None, angle_tolerance=None, chord_tolerance=None, max_facet_width=None, output_vertex_normals=None, output_facet_normals=None, output_texture_coordinates=None, output_index_table=None, entity_ids=None, output_error_faces=None, part_id=None):  # noqa: E501
         """BTModelTessellationParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._document_id = None
         self._configuration = None
         self._workspace_id = None
         self._element_id = None
-        self._document_id = None
+        self._element_microversion_id = None
         self._part_ids = None
         self._part_query = None
         self._angle_tolerance = None
@@ -90,17 +91,18 @@ class BTModelTessellationParams(object):
         self._entity_ids = None
         self._output_error_faces = None
         self._part_id = None
-        self._element_microversion_id = None
         self.discriminator = None
 
+        if document_id is not None:
+            self.document_id = document_id
         if configuration is not None:
             self.configuration = configuration
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
-        if document_id is not None:
-            self.document_id = document_id
+        if element_microversion_id is not None:
+            self.element_microversion_id = element_microversion_id
         if part_ids is not None:
             self.part_ids = part_ids
         if part_query is not None:
@@ -125,8 +127,27 @@ class BTModelTessellationParams(object):
             self.output_error_faces = output_error_faces
         if part_id is not None:
             self.part_id = part_id
-        if element_microversion_id is not None:
-            self.element_microversion_id = element_microversion_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTModelTessellationParams.  # noqa: E501
+
+
+        :return: The document_id of this BTModelTessellationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTModelTessellationParams.
+
+
+        :param document_id: The document_id of this BTModelTessellationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def configuration(self):
@@ -192,25 +213,25 @@ class BTModelTessellationParams(object):
         self._element_id = element_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTModelTessellationParams.  # noqa: E501
+    def element_microversion_id(self):
+        """Gets the element_microversion_id of this BTModelTessellationParams.  # noqa: E501
 
 
-        :return: The document_id of this BTModelTessellationParams.  # noqa: E501
+        :return: The element_microversion_id of this BTModelTessellationParams.  # noqa: E501
         :rtype: str
         """
-        return self._document_id
+        return self._element_microversion_id
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTModelTessellationParams.
+    @element_microversion_id.setter
+    def element_microversion_id(self, element_microversion_id):
+        """Sets the element_microversion_id of this BTModelTessellationParams.
 
 
-        :param document_id: The document_id of this BTModelTessellationParams.  # noqa: E501
+        :param element_microversion_id: The element_microversion_id of this BTModelTessellationParams.  # noqa: E501
         :type: str
         """
 
-        self._document_id = document_id
+        self._element_microversion_id = element_microversion_id
 
     @property
     def part_ids(self):
@@ -463,27 +484,6 @@ class BTModelTessellationParams(object):
         """
 
         self._part_id = part_id
-
-    @property
-    def element_microversion_id(self):
-        """Gets the element_microversion_id of this BTModelTessellationParams.  # noqa: E501
-
-
-        :return: The element_microversion_id of this BTModelTessellationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_microversion_id
-
-    @element_microversion_id.setter
-    def element_microversion_id(self, element_microversion_id):
-        """Sets the element_microversion_id of this BTModelTessellationParams.
-
-
-        :param element_microversion_id: The element_microversion_id of this BTModelTessellationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_microversion_id = element_microversion_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

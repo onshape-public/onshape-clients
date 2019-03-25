@@ -34,44 +34,44 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
     openapi_types = {
         'permission_set': 'BTPermissionSet',
         'path_to_root': 'list[PathSegment]',
-        'previous': 'str',
         'next': 'str',
         'items': 'list[BTGlobalTreeNodeInfo]',
-        'href': 'str'
+        'href': 'str',
+        'previous': 'str'
     }
 
     attribute_map = {
         'permission_set': 'permissionSet',
         'path_to_root': 'pathToRoot',
-        'previous': 'previous',
         'next': 'next',
         'items': 'items',
-        'href': 'href'
+        'href': 'href',
+        'previous': 'previous'
     }
 
-    def __init__(self, permission_set=None, path_to_root=None, previous=None, next=None, items=None, href=None):  # noqa: E501
+    def __init__(self, permission_set=None, path_to_root=None, next=None, items=None, href=None, previous=None):  # noqa: E501
         """BTGlobalTreeNodeWithChildrenInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._permission_set = None
         self._path_to_root = None
-        self._previous = None
         self._next = None
         self._items = None
         self._href = None
+        self._previous = None
         self.discriminator = None
 
         if permission_set is not None:
             self.permission_set = permission_set
         if path_to_root is not None:
             self.path_to_root = path_to_root
-        if previous is not None:
-            self.previous = previous
         if next is not None:
             self.next = next
         if items is not None:
             self.items = items
         if href is not None:
             self.href = href
+        if previous is not None:
+            self.previous = previous
 
     @property
     def permission_set(self):
@@ -114,27 +114,6 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
         """
 
         self._path_to_root = path_to_root
-
-    @property
-    def previous(self):
-        """Gets the previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-
-
-        :return: The previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._previous
-
-    @previous.setter
-    def previous(self, previous):
-        """Sets the previous of this BTGlobalTreeNodeWithChildrenInfo.
-
-
-        :param previous: The previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._previous = previous
 
     @property
     def next(self):
@@ -198,6 +177,27 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
         """
 
         self._href = href
+
+    @property
+    def previous(self):
+        """Gets the previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+
+
+        :return: The previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._previous
+
+    @previous.setter
+    def previous(self, previous):
+        """Sets the previous of this BTGlobalTreeNodeWithChildrenInfo.
+
+
+        :param previous: The previous of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._previous = previous
 
     def to_dict(self):
         """Returns the model properties as a dict"""

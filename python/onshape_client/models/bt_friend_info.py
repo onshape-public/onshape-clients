@@ -32,61 +32,82 @@ class BTFriendInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'token': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
-        'token': 'str',
         'image_url': 'str',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
+        'token': 'token',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
-        'token': 'token',
         'image_url': 'imageUrl',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, first_name=None, last_name=None, email=None, token=None, image_url=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, token=None, first_name=None, last_name=None, email=None, image_url=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTFriendInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._token = None
         self._first_name = None
         self._last_name = None
         self._email = None
-        self._token = None
         self._image_url = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
+        if token is not None:
+            self.token = token
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if email is not None:
             self.email = email
-        if token is not None:
-            self.token = token
         if image_url is not None:
             self.image_url = image_url
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
+
+    @property
+    def token(self):
+        """Gets the token of this BTFriendInfo.  # noqa: E501
+
+
+        :return: The token of this BTFriendInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._token
+
+    @token.setter
+    def token(self, token):
+        """Sets the token of this BTFriendInfo.
+
+
+        :param token: The token of this BTFriendInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._token = token
 
     @property
     def first_name(self):
@@ -152,27 +173,6 @@ class BTFriendInfo(object):
         self._email = email
 
     @property
-    def token(self):
-        """Gets the token of this BTFriendInfo.  # noqa: E501
-
-
-        :return: The token of this BTFriendInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._token
-
-    @token.setter
-    def token(self, token):
-        """Sets the token of this BTFriendInfo.
-
-
-        :param token: The token of this BTFriendInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._token = token
-
-    @property
     def image_url(self):
         """Gets the image_url of this BTFriendInfo.  # noqa: E501
 
@@ -236,27 +236,6 @@ class BTFriendInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTFriendInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTFriendInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTFriendInfo.
-
-
-        :param view_ref: The view_ref of this BTFriendInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTFriendInfo.  # noqa: E501
 
@@ -276,6 +255,27 @@ class BTFriendInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTFriendInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTFriendInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTFriendInfo.
+
+
+        :param view_ref: The view_ref of this BTFriendInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

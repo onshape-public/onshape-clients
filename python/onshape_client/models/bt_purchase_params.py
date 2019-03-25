@@ -32,55 +32,55 @@ class BTPurchaseParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'reseller_name': 'str',
-        'user_id': 'str',
         'password': 'str',
+        'payment_type': 'int',
+        'user_id': 'str',
         'email': 'str',
         'plan_id': 'str',
         'seats': 'int',
         'domain_prefix': 'str',
-        'payment_type': 'int',
         'trial_period_days': 'int',
         'light_seats': 'int',
-        'allow_deprecated_plan': 'bool'
+        'allow_deprecated_plan': 'bool',
+        'reseller_name': 'str'
     }
 
     attribute_map = {
-        'reseller_name': 'resellerName',
-        'user_id': 'userId',
         'password': 'password',
+        'payment_type': 'paymentType',
+        'user_id': 'userId',
         'email': 'email',
         'plan_id': 'planId',
         'seats': 'seats',
         'domain_prefix': 'domainPrefix',
-        'payment_type': 'paymentType',
         'trial_period_days': 'trialPeriodDays',
         'light_seats': 'lightSeats',
-        'allow_deprecated_plan': 'allowDeprecatedPlan'
+        'allow_deprecated_plan': 'allowDeprecatedPlan',
+        'reseller_name': 'resellerName'
     }
 
-    def __init__(self, reseller_name=None, user_id=None, password=None, email=None, plan_id=None, seats=None, domain_prefix=None, payment_type=None, trial_period_days=None, light_seats=None, allow_deprecated_plan=None):  # noqa: E501
+    def __init__(self, password=None, payment_type=None, user_id=None, email=None, plan_id=None, seats=None, domain_prefix=None, trial_period_days=None, light_seats=None, allow_deprecated_plan=None, reseller_name=None):  # noqa: E501
         """BTPurchaseParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._reseller_name = None
-        self._user_id = None
         self._password = None
+        self._payment_type = None
+        self._user_id = None
         self._email = None
         self._plan_id = None
         self._seats = None
         self._domain_prefix = None
-        self._payment_type = None
         self._trial_period_days = None
         self._light_seats = None
         self._allow_deprecated_plan = None
+        self._reseller_name = None
         self.discriminator = None
 
-        if reseller_name is not None:
-            self.reseller_name = reseller_name
-        if user_id is not None:
-            self.user_id = user_id
         if password is not None:
             self.password = password
+        if payment_type is not None:
+            self.payment_type = payment_type
+        if user_id is not None:
+            self.user_id = user_id
         if email is not None:
             self.email = email
         if plan_id is not None:
@@ -89,56 +89,14 @@ class BTPurchaseParams(object):
             self.seats = seats
         if domain_prefix is not None:
             self.domain_prefix = domain_prefix
-        if payment_type is not None:
-            self.payment_type = payment_type
         if trial_period_days is not None:
             self.trial_period_days = trial_period_days
         if light_seats is not None:
             self.light_seats = light_seats
         if allow_deprecated_plan is not None:
             self.allow_deprecated_plan = allow_deprecated_plan
-
-    @property
-    def reseller_name(self):
-        """Gets the reseller_name of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The reseller_name of this BTPurchaseParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._reseller_name
-
-    @reseller_name.setter
-    def reseller_name(self, reseller_name):
-        """Sets the reseller_name of this BTPurchaseParams.
-
-
-        :param reseller_name: The reseller_name of this BTPurchaseParams.  # noqa: E501
-        :type: str
-        """
-
-        self._reseller_name = reseller_name
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The user_id of this BTPurchaseParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTPurchaseParams.
-
-
-        :param user_id: The user_id of this BTPurchaseParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if reseller_name is not None:
+            self.reseller_name = reseller_name
 
     @property
     def password(self):
@@ -160,6 +118,48 @@ class BTPurchaseParams(object):
         """
 
         self._password = password
+
+    @property
+    def payment_type(self):
+        """Gets the payment_type of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The payment_type of this BTPurchaseParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """Sets the payment_type of this BTPurchaseParams.
+
+
+        :param payment_type: The payment_type of this BTPurchaseParams.  # noqa: E501
+        :type: int
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The user_id of this BTPurchaseParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTPurchaseParams.
+
+
+        :param user_id: The user_id of this BTPurchaseParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     @property
     def email(self):
@@ -246,27 +246,6 @@ class BTPurchaseParams(object):
         self._domain_prefix = domain_prefix
 
     @property
-    def payment_type(self):
-        """Gets the payment_type of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The payment_type of this BTPurchaseParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """Sets the payment_type of this BTPurchaseParams.
-
-
-        :param payment_type: The payment_type of this BTPurchaseParams.  # noqa: E501
-        :type: int
-        """
-
-        self._payment_type = payment_type
-
-    @property
     def trial_period_days(self):
         """Gets the trial_period_days of this BTPurchaseParams.  # noqa: E501
 
@@ -328,6 +307,27 @@ class BTPurchaseParams(object):
         """
 
         self._allow_deprecated_plan = allow_deprecated_plan
+
+    @property
+    def reseller_name(self):
+        """Gets the reseller_name of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The reseller_name of this BTPurchaseParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._reseller_name
+
+    @reseller_name.setter
+    def reseller_name(self, reseller_name):
+        """Sets the reseller_name of this BTPurchaseParams.
+
+
+        :param reseller_name: The reseller_name of this BTPurchaseParams.  # noqa: E501
+        :type: str
+        """
+
+        self._reseller_name = reseller_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

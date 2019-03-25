@@ -32,47 +32,26 @@ class BTCommentSubscriptionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_id': 'str',
-        'subscribed': 'bool'
+        'subscribed': 'bool',
+        'document_id': 'str'
     }
 
     attribute_map = {
-        'document_id': 'documentId',
-        'subscribed': 'subscribed'
+        'subscribed': 'subscribed',
+        'document_id': 'documentId'
     }
 
-    def __init__(self, document_id=None, subscribed=None):  # noqa: E501
+    def __init__(self, subscribed=None, document_id=None):  # noqa: E501
         """BTCommentSubscriptionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._document_id = None
         self._subscribed = None
+        self._document_id = None
         self.discriminator = None
 
-        if document_id is not None:
-            self.document_id = document_id
         if subscribed is not None:
             self.subscribed = subscribed
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTCommentSubscriptionParams.  # noqa: E501
-
-
-        :return: The document_id of this BTCommentSubscriptionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTCommentSubscriptionParams.
-
-
-        :param document_id: The document_id of this BTCommentSubscriptionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        if document_id is not None:
+            self.document_id = document_id
 
     @property
     def subscribed(self):
@@ -94,6 +73,27 @@ class BTCommentSubscriptionParams(object):
         """
 
         self._subscribed = subscribed
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTCommentSubscriptionParams.  # noqa: E501
+
+
+        :return: The document_id of this BTCommentSubscriptionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTCommentSubscriptionParams.
+
+
+        :param document_id: The document_id of this BTCommentSubscriptionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

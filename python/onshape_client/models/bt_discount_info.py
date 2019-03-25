@@ -32,80 +32,74 @@ class BTDiscountInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'trial_end_date': 'str',
-        'used_at': 'datetime',
-        'account_balance': 'int',
-        'owner_id': 'str',
+        'expires_at': 'datetime',
         'created_at': 'datetime',
         'plan_id': 'str',
         'created_by': 'BTUserSummaryInfo',
-        'expires_at': 'datetime',
+        'owner_id': 'str',
         'percent_off': 'int',
         'amount_off': 'int',
         'coupon_type': 'int',
         'coupon_valid_months': 'int',
+        'used_at': 'datetime',
+        'trial_end_date': 'str',
+        'account_balance': 'int',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
-        'trial_end_date': 'trialEndDate',
-        'used_at': 'usedAt',
-        'account_balance': 'accountBalance',
-        'owner_id': 'ownerId',
+        'expires_at': 'expiresAt',
         'created_at': 'createdAt',
         'plan_id': 'planId',
         'created_by': 'createdBy',
-        'expires_at': 'expiresAt',
+        'owner_id': 'ownerId',
         'percent_off': 'percentOff',
         'amount_off': 'amountOff',
         'coupon_type': 'couponType',
         'coupon_valid_months': 'couponValidMonths',
+        'used_at': 'usedAt',
+        'trial_end_date': 'trialEndDate',
+        'account_balance': 'accountBalance',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, trial_end_date=None, used_at=None, account_balance=None, owner_id=None, created_at=None, plan_id=None, created_by=None, expires_at=None, percent_off=None, amount_off=None, coupon_type=None, coupon_valid_months=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, expires_at=None, created_at=None, plan_id=None, created_by=None, owner_id=None, percent_off=None, amount_off=None, coupon_type=None, coupon_valid_months=None, used_at=None, trial_end_date=None, account_balance=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTDiscountInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._trial_end_date = None
-        self._used_at = None
-        self._account_balance = None
-        self._owner_id = None
+        self._expires_at = None
         self._created_at = None
         self._plan_id = None
         self._created_by = None
-        self._expires_at = None
+        self._owner_id = None
         self._percent_off = None
         self._amount_off = None
         self._coupon_type = None
         self._coupon_valid_months = None
+        self._used_at = None
+        self._trial_end_date = None
+        self._account_balance = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
-        if trial_end_date is not None:
-            self.trial_end_date = trial_end_date
-        if used_at is not None:
-            self.used_at = used_at
-        if account_balance is not None:
-            self.account_balance = account_balance
-        if owner_id is not None:
-            self.owner_id = owner_id
+        if expires_at is not None:
+            self.expires_at = expires_at
         if created_at is not None:
             self.created_at = created_at
         if plan_id is not None:
             self.plan_id = plan_id
         if created_by is not None:
             self.created_by = created_by
-        if expires_at is not None:
-            self.expires_at = expires_at
+        if owner_id is not None:
+            self.owner_id = owner_id
         if percent_off is not None:
             self.percent_off = percent_off
         if amount_off is not None:
@@ -114,98 +108,41 @@ class BTDiscountInfo(object):
             self.coupon_type = coupon_type
         if coupon_valid_months is not None:
             self.coupon_valid_months = coupon_valid_months
+        if used_at is not None:
+            self.used_at = used_at
+        if trial_end_date is not None:
+            self.trial_end_date = trial_end_date
+        if account_balance is not None:
+            self.account_balance = account_balance
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
-    def trial_end_date(self):
-        """Gets the trial_end_date of this BTDiscountInfo.  # noqa: E501
+    def expires_at(self):
+        """Gets the expires_at of this BTDiscountInfo.  # noqa: E501
 
 
-        :return: The trial_end_date of this BTDiscountInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._trial_end_date
-
-    @trial_end_date.setter
-    def trial_end_date(self, trial_end_date):
-        """Sets the trial_end_date of this BTDiscountInfo.
-
-
-        :param trial_end_date: The trial_end_date of this BTDiscountInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._trial_end_date = trial_end_date
-
-    @property
-    def used_at(self):
-        """Gets the used_at of this BTDiscountInfo.  # noqa: E501
-
-
-        :return: The used_at of this BTDiscountInfo.  # noqa: E501
+        :return: The expires_at of this BTDiscountInfo.  # noqa: E501
         :rtype: datetime
         """
-        return self._used_at
+        return self._expires_at
 
-    @used_at.setter
-    def used_at(self, used_at):
-        """Sets the used_at of this BTDiscountInfo.
+    @expires_at.setter
+    def expires_at(self, expires_at):
+        """Sets the expires_at of this BTDiscountInfo.
 
 
-        :param used_at: The used_at of this BTDiscountInfo.  # noqa: E501
+        :param expires_at: The expires_at of this BTDiscountInfo.  # noqa: E501
         :type: datetime
         """
 
-        self._used_at = used_at
-
-    @property
-    def account_balance(self):
-        """Gets the account_balance of this BTDiscountInfo.  # noqa: E501
-
-
-        :return: The account_balance of this BTDiscountInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._account_balance
-
-    @account_balance.setter
-    def account_balance(self, account_balance):
-        """Sets the account_balance of this BTDiscountInfo.
-
-
-        :param account_balance: The account_balance of this BTDiscountInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._account_balance = account_balance
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTDiscountInfo.  # noqa: E501
-
-
-        :return: The owner_id of this BTDiscountInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTDiscountInfo.
-
-
-        :param owner_id: The owner_id of this BTDiscountInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
+        self._expires_at = expires_at
 
     @property
     def created_at(self):
@@ -271,25 +208,25 @@ class BTDiscountInfo(object):
         self._created_by = created_by
 
     @property
-    def expires_at(self):
-        """Gets the expires_at of this BTDiscountInfo.  # noqa: E501
+    def owner_id(self):
+        """Gets the owner_id of this BTDiscountInfo.  # noqa: E501
 
 
-        :return: The expires_at of this BTDiscountInfo.  # noqa: E501
-        :rtype: datetime
+        :return: The owner_id of this BTDiscountInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._expires_at
+        return self._owner_id
 
-    @expires_at.setter
-    def expires_at(self, expires_at):
-        """Sets the expires_at of this BTDiscountInfo.
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTDiscountInfo.
 
 
-        :param expires_at: The expires_at of this BTDiscountInfo.  # noqa: E501
-        :type: datetime
+        :param owner_id: The owner_id of this BTDiscountInfo.  # noqa: E501
+        :type: str
         """
 
-        self._expires_at = expires_at
+        self._owner_id = owner_id
 
     @property
     def percent_off(self):
@@ -376,6 +313,69 @@ class BTDiscountInfo(object):
         self._coupon_valid_months = coupon_valid_months
 
     @property
+    def used_at(self):
+        """Gets the used_at of this BTDiscountInfo.  # noqa: E501
+
+
+        :return: The used_at of this BTDiscountInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._used_at
+
+    @used_at.setter
+    def used_at(self, used_at):
+        """Sets the used_at of this BTDiscountInfo.
+
+
+        :param used_at: The used_at of this BTDiscountInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._used_at = used_at
+
+    @property
+    def trial_end_date(self):
+        """Gets the trial_end_date of this BTDiscountInfo.  # noqa: E501
+
+
+        :return: The trial_end_date of this BTDiscountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._trial_end_date
+
+    @trial_end_date.setter
+    def trial_end_date(self, trial_end_date):
+        """Sets the trial_end_date of this BTDiscountInfo.
+
+
+        :param trial_end_date: The trial_end_date of this BTDiscountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._trial_end_date = trial_end_date
+
+    @property
+    def account_balance(self):
+        """Gets the account_balance of this BTDiscountInfo.  # noqa: E501
+
+
+        :return: The account_balance of this BTDiscountInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._account_balance
+
+    @account_balance.setter
+    def account_balance(self, account_balance):
+        """Sets the account_balance of this BTDiscountInfo.
+
+
+        :param account_balance: The account_balance of this BTDiscountInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._account_balance = account_balance
+
+    @property
     def name(self):
         """Gets the name of this BTDiscountInfo.  # noqa: E501
 
@@ -418,27 +418,6 @@ class BTDiscountInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTDiscountInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTDiscountInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTDiscountInfo.
-
-
-        :param view_ref: The view_ref of this BTDiscountInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTDiscountInfo.  # noqa: E501
 
@@ -458,6 +437,27 @@ class BTDiscountInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTDiscountInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTDiscountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTDiscountInfo.
+
+
+        :param view_ref: The view_ref of this BTDiscountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

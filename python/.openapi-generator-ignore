@@ -23,8 +23,12 @@
 #!docs/README.md
 
 onshape_client/rest.py
+onshape_client/shared.py
 onshape_client/configuration.py
 onshape_client/apikey_headers.py
+onshape_client/onshape_url.py
+onshape_client/client.py
+onshape_client/utility.py
 README.md
 test/*
 example_programs/*

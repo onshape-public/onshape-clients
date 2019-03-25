@@ -33,6 +33,116 @@ class DocumentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def get_current_microversion(self, did, wv, wvid, **kwargs):  # noqa: E501
+        """get_current_microversion  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_current_microversion(did, wv, wvid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wv: (required)
+        :param str wvid: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_current_microversion_with_http_info(did, wv, wvid, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_current_microversion_with_http_info(did, wv, wvid, **kwargs)  # noqa: E501
+            return data
+
+    def get_current_microversion_with_http_info(self, did, wv, wvid, **kwargs):  # noqa: E501
+        """get_current_microversion  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_current_microversion_with_http_info(did, wv, wvid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wv: (required)
+        :param str wvid: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wv', 'wvid']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_current_microversion" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ValueError("Missing the required parameter `did` when calling `get_current_microversion`")  # noqa: E501
+        # verify the required parameter 'wv' is set
+        if ('wv' not in local_var_params or
+                local_var_params['wv'] is None):
+            raise ValueError("Missing the required parameter `wv` when calling `get_current_microversion`")  # noqa: E501
+        # verify the required parameter 'wvid' is set
+        if ('wvid' not in local_var_params or
+                local_var_params['wvid'] is None):
+            raise ValueError("Missing the required parameter `wvid` when calling `get_current_microversion`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wv' in local_var_params:
+            path_params['wv'] = local_var_params['wv']  # noqa: E501
+        if 'wvid' in local_var_params:
+            path_params['wvid'] = local_var_params['wvid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1', 'application/json;charset=UTF-8; qs=0.9'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/{wv}/{wvid}/currentmicroversion', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_documents(self, **kwargs):  # noqa: E501
         """Get Documents  # noqa: E501
 
@@ -156,6 +266,214 @@ class DocumentsApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='BTGlobalTreeNodeListResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def merge_into_workspace(self, did, wid, bt_version_or_workspace_info, **kwargs):  # noqa: E501
+        """Merge into workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.merge_into_workspace(did, wid, bt_version_or_workspace_info, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTVersionOrWorkspaceInfo bt_version_or_workspace_info: (required)
+        :return: BTDocumentMergeInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.merge_into_workspace_with_http_info(did, wid, bt_version_or_workspace_info, **kwargs)  # noqa: E501
+        else:
+            (data) = self.merge_into_workspace_with_http_info(did, wid, bt_version_or_workspace_info, **kwargs)  # noqa: E501
+            return data
+
+    def merge_into_workspace_with_http_info(self, did, wid, bt_version_or_workspace_info, **kwargs):  # noqa: E501
+        """Merge into workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.merge_into_workspace_with_http_info(did, wid, bt_version_or_workspace_info, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTVersionOrWorkspaceInfo bt_version_or_workspace_info: (required)
+        :return: BTDocumentMergeInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'bt_version_or_workspace_info']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method merge_into_workspace" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ValueError("Missing the required parameter `did` when calling `merge_into_workspace`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ValueError("Missing the required parameter `wid` when calling `merge_into_workspace`")  # noqa: E501
+        # verify the required parameter 'bt_version_or_workspace_info' is set
+        if ('bt_version_or_workspace_info' not in local_var_params or
+                local_var_params['bt_version_or_workspace_info'] is None):
+            raise ValueError("Missing the required parameter `bt_version_or_workspace_info` when calling `merge_into_workspace`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_version_or_workspace_info' in local_var_params:
+            body_params = local_var_params['bt_version_or_workspace_info']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v2+json;charset=UTF-8; qs=0.2'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/workspaces/{wid}/merge', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='BTDocumentMergeInfo',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def restore_document(self, did, **kwargs):  # noqa: E501
+        """Restore Document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.restore_document(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :return: BTDocumentMergeInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.restore_document_with_http_info(did, **kwargs)  # noqa: E501
+        else:
+            (data) = self.restore_document_with_http_info(did, **kwargs)  # noqa: E501
+            return data
+
+    def restore_document_with_http_info(self, did, **kwargs):  # noqa: E501
+        """Restore Document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.restore_document_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :return: BTDocumentMergeInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method restore_document" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ValueError("Missing the required parameter `did` when calling `restore_document`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v2+json;charset=UTF-8; qs=0.2'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/restore', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='BTDocumentMergeInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

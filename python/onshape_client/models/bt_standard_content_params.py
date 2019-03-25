@@ -33,37 +33,35 @@ class BTStandardContentParams(object):
     """
     openapi_types = {
         'parameters': 'list[BTStandardContentParameterDefinition]',
-        'save_custom_properties': 'bool',
         'parameters_id': 'str',
         'parameters_id_version': 'str',
         'target_document_id': 'str',
-        'target_element_id': 'str'
+        'target_element_id': 'str',
+        'save_custom_properties': 'bool'
     }
 
     attribute_map = {
         'parameters': 'parameters',
-        'save_custom_properties': 'saveCustomProperties',
         'parameters_id': 'parametersId',
         'parameters_id_version': 'parametersIdVersion',
         'target_document_id': 'targetDocumentId',
-        'target_element_id': 'targetElementId'
+        'target_element_id': 'targetElementId',
+        'save_custom_properties': 'saveCustomProperties'
     }
 
-    def __init__(self, parameters=None, save_custom_properties=None, parameters_id=None, parameters_id_version=None, target_document_id=None, target_element_id=None):  # noqa: E501
+    def __init__(self, parameters=None, parameters_id=None, parameters_id_version=None, target_document_id=None, target_element_id=None, save_custom_properties=None):  # noqa: E501
         """BTStandardContentParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameters = None
-        self._save_custom_properties = None
         self._parameters_id = None
         self._parameters_id_version = None
         self._target_document_id = None
         self._target_element_id = None
+        self._save_custom_properties = None
         self.discriminator = None
 
         if parameters is not None:
             self.parameters = parameters
-        if save_custom_properties is not None:
-            self.save_custom_properties = save_custom_properties
         if parameters_id is not None:
             self.parameters_id = parameters_id
         if parameters_id_version is not None:
@@ -72,6 +70,8 @@ class BTStandardContentParams(object):
             self.target_document_id = target_document_id
         if target_element_id is not None:
             self.target_element_id = target_element_id
+        if save_custom_properties is not None:
+            self.save_custom_properties = save_custom_properties
 
     @property
     def parameters(self):
@@ -93,27 +93,6 @@ class BTStandardContentParams(object):
         """
 
         self._parameters = parameters
-
-    @property
-    def save_custom_properties(self):
-        """Gets the save_custom_properties of this BTStandardContentParams.  # noqa: E501
-
-
-        :return: The save_custom_properties of this BTStandardContentParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._save_custom_properties
-
-    @save_custom_properties.setter
-    def save_custom_properties(self, save_custom_properties):
-        """Sets the save_custom_properties of this BTStandardContentParams.
-
-
-        :param save_custom_properties: The save_custom_properties of this BTStandardContentParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._save_custom_properties = save_custom_properties
 
     @property
     def parameters_id(self):
@@ -198,6 +177,27 @@ class BTStandardContentParams(object):
         """
 
         self._target_element_id = target_element_id
+
+    @property
+    def save_custom_properties(self):
+        """Gets the save_custom_properties of this BTStandardContentParams.  # noqa: E501
+
+
+        :return: The save_custom_properties of this BTStandardContentParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._save_custom_properties
+
+    @save_custom_properties.setter
+    def save_custom_properties(self, save_custom_properties):
+        """Sets the save_custom_properties of this BTStandardContentParams.
+
+
+        :param save_custom_properties: The save_custom_properties of this BTStandardContentParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._save_custom_properties = save_custom_properties
 
     def to_dict(self):
         """Returns the model properties as a dict"""

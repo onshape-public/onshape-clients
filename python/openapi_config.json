@@ -1,7 +1,7 @@
 {
   "packageName": "onshape_client",
   "projectName": "onshape_client",
-  "packageVersion": "0.0.4",
+  "packageVersion": "0.0.8",
   "packageUrl": "",
   "sortParamsByRequiredFlag": true,
   "hideGenerationTimestamp": true,

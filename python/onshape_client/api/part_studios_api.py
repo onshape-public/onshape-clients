@@ -529,12 +529,12 @@ class PartStudiosApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def eval_feature_script(self, did, wvm, wvmid, eid, eid2, **kwargs):  # noqa: E501
+    def eval_feature_script(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
         """Evaluate FeatureScript  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.eval_feature_script(did, wvm, wvmid, eid, eid2, async_req=True)
+        >>> thread = api.eval_feature_script(did, wvm, wvmid, eid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -542,7 +542,7 @@ class PartStudiosApi(object):
         :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
         :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
         :param str eid: Element ID. (required)
-        :param str eid2: Configuration string. (required)
+        :param str configuration: Configuration string.
         :param BTFeatureScriptEvalCall bt_feature_script_eval_call:
         :return: BTFeatureScriptEvalResponse
                  If the method is called asynchronously,
@@ -550,17 +550,17 @@ class PartStudiosApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.eval_feature_script_with_http_info(did, wvm, wvmid, eid, eid2, **kwargs)  # noqa: E501
+            return self.eval_feature_script_with_http_info(did, wvm, wvmid, eid, **kwargs)  # noqa: E501
         else:
-            (data) = self.eval_feature_script_with_http_info(did, wvm, wvmid, eid, eid2, **kwargs)  # noqa: E501
+            (data) = self.eval_feature_script_with_http_info(did, wvm, wvmid, eid, **kwargs)  # noqa: E501
             return data
 
-    def eval_feature_script_with_http_info(self, did, wvm, wvmid, eid, eid2, **kwargs):  # noqa: E501
+    def eval_feature_script_with_http_info(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
         """Evaluate FeatureScript  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.eval_feature_script_with_http_info(did, wvm, wvmid, eid, eid2, async_req=True)
+        >>> thread = api.eval_feature_script_with_http_info(did, wvm, wvmid, eid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -568,7 +568,7 @@ class PartStudiosApi(object):
         :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
         :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
         :param str eid: Element ID. (required)
-        :param str eid2: Configuration string. (required)
+        :param str configuration: Configuration string.
         :param BTFeatureScriptEvalCall bt_feature_script_eval_call:
         :return: BTFeatureScriptEvalResponse
                  If the method is called asynchronously,
@@ -577,7 +577,7 @@ class PartStudiosApi(object):
 
         local_var_params = locals()
 
-        all_params = ['did', 'wvm', 'wvmid', 'eid', 'eid2', 'bt_feature_script_eval_call']  # noqa: E501
+        all_params = ['did', 'wvm', 'wvmid', 'eid', 'configuration', 'bt_feature_script_eval_call']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -607,10 +607,6 @@ class PartStudiosApi(object):
         if ('eid' not in local_var_params or
                 local_var_params['eid'] is None):
             raise ValueError("Missing the required parameter `eid` when calling `eval_feature_script`")  # noqa: E501
-        # verify the required parameter 'eid2' is set
-        if ('eid2' not in local_var_params or
-                local_var_params['eid2'] is None):
-            raise ValueError("Missing the required parameter `eid2` when calling `eval_feature_script`")  # noqa: E501
 
         collection_formats = {}
 
@@ -623,10 +619,10 @@ class PartStudiosApi(object):
             path_params['wvmid'] = local_var_params['wvmid']  # noqa: E501
         if 'eid' in local_var_params:
             path_params['eid'] = local_var_params['eid']  # noqa: E501
-        if 'eid2' in local_var_params:
-            path_params['eid'] = local_var_params['eid2']  # noqa: E501
 
         query_params = []
+        if 'configuration' in local_var_params:
+            query_params.append(('configuration', local_var_params['configuration']))  # noqa: E501
 
         header_params = {}
 

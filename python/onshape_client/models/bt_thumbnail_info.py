@@ -32,57 +32,36 @@ class BTThumbnailInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'secondary_sizes': 'list[list[BTThumbnailSizeInfo]]',
         'sizes': 'list[BTThumbnailSizeInfo]',
+        'secondary_sizes': 'list[list[BTThumbnailSizeInfo]]',
         'id': 'str',
         'href': 'str'
     }
 
     attribute_map = {
-        'secondary_sizes': 'secondarySizes',
         'sizes': 'sizes',
+        'secondary_sizes': 'secondarySizes',
         'id': 'id',
         'href': 'href'
     }
 
-    def __init__(self, secondary_sizes=None, sizes=None, id=None, href=None):  # noqa: E501
+    def __init__(self, sizes=None, secondary_sizes=None, id=None, href=None):  # noqa: E501
         """BTThumbnailInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._secondary_sizes = None
         self._sizes = None
+        self._secondary_sizes = None
         self._id = None
         self._href = None
         self.discriminator = None
 
-        if secondary_sizes is not None:
-            self.secondary_sizes = secondary_sizes
         if sizes is not None:
             self.sizes = sizes
+        if secondary_sizes is not None:
+            self.secondary_sizes = secondary_sizes
         if id is not None:
             self.id = id
         if href is not None:
             self.href = href
-
-    @property
-    def secondary_sizes(self):
-        """Gets the secondary_sizes of this BTThumbnailInfo.  # noqa: E501
-
-
-        :return: The secondary_sizes of this BTThumbnailInfo.  # noqa: E501
-        :rtype: list[list[BTThumbnailSizeInfo]]
-        """
-        return self._secondary_sizes
-
-    @secondary_sizes.setter
-    def secondary_sizes(self, secondary_sizes):
-        """Sets the secondary_sizes of this BTThumbnailInfo.
-
-
-        :param secondary_sizes: The secondary_sizes of this BTThumbnailInfo.  # noqa: E501
-        :type: list[list[BTThumbnailSizeInfo]]
-        """
-
-        self._secondary_sizes = secondary_sizes
 
     @property
     def sizes(self):
@@ -104,6 +83,27 @@ class BTThumbnailInfo(object):
         """
 
         self._sizes = sizes
+
+    @property
+    def secondary_sizes(self):
+        """Gets the secondary_sizes of this BTThumbnailInfo.  # noqa: E501
+
+
+        :return: The secondary_sizes of this BTThumbnailInfo.  # noqa: E501
+        :rtype: list[list[BTThumbnailSizeInfo]]
+        """
+        return self._secondary_sizes
+
+    @secondary_sizes.setter
+    def secondary_sizes(self, secondary_sizes):
+        """Sets the secondary_sizes of this BTThumbnailInfo.
+
+
+        :param secondary_sizes: The secondary_sizes of this BTThumbnailInfo.  # noqa: E501
+        :type: list[list[BTThumbnailSizeInfo]]
+        """
+
+        self._secondary_sizes = secondary_sizes
 
     @property
     def id(self):

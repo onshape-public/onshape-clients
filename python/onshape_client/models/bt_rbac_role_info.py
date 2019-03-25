@@ -33,50 +33,50 @@ class BTRbacRoleInfo(object):
     """
     openapi_types = {
         'active': 'bool',
-        'predefined_role': 'int',
         'description': 'str',
+        'predefined_role': 'int',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
         'active': 'active',
-        'predefined_role': 'predefinedRole',
         'description': 'description',
+        'predefined_role': 'predefinedRole',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, active=None, predefined_role=None, description=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, active=None, description=None, predefined_role=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTRbacRoleInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._active = None
-        self._predefined_role = None
         self._description = None
+        self._predefined_role = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if active is not None:
             self.active = active
-        if predefined_role is not None:
-            self.predefined_role = predefined_role
         if description is not None:
             self.description = description
+        if predefined_role is not None:
+            self.predefined_role = predefined_role
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def active(self):
@@ -100,27 +100,6 @@ class BTRbacRoleInfo(object):
         self._active = active
 
     @property
-    def predefined_role(self):
-        """Gets the predefined_role of this BTRbacRoleInfo.  # noqa: E501
-
-
-        :return: The predefined_role of this BTRbacRoleInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._predefined_role
-
-    @predefined_role.setter
-    def predefined_role(self, predefined_role):
-        """Sets the predefined_role of this BTRbacRoleInfo.
-
-
-        :param predefined_role: The predefined_role of this BTRbacRoleInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._predefined_role = predefined_role
-
-    @property
     def description(self):
         """Gets the description of this BTRbacRoleInfo.  # noqa: E501
 
@@ -140,6 +119,27 @@ class BTRbacRoleInfo(object):
         """
 
         self._description = description
+
+    @property
+    def predefined_role(self):
+        """Gets the predefined_role of this BTRbacRoleInfo.  # noqa: E501
+
+
+        :return: The predefined_role of this BTRbacRoleInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._predefined_role
+
+    @predefined_role.setter
+    def predefined_role(self, predefined_role):
+        """Sets the predefined_role of this BTRbacRoleInfo.
+
+
+        :param predefined_role: The predefined_role of this BTRbacRoleInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._predefined_role = predefined_role
 
     @property
     def name(self):
@@ -184,27 +184,6 @@ class BTRbacRoleInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTRbacRoleInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTRbacRoleInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTRbacRoleInfo.
-
-
-        :param view_ref: The view_ref of this BTRbacRoleInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTRbacRoleInfo.  # noqa: E501
 
@@ -224,6 +203,27 @@ class BTRbacRoleInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTRbacRoleInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTRbacRoleInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTRbacRoleInfo.
+
+
+        :param view_ref: The view_ref of this BTRbacRoleInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

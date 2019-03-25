@@ -33,6 +33,120 @@ class ElementsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def copy_element_from_source_document1(self, did, wid, bt_copy_element_params, **kwargs):  # noqa: E501
+        """copy_element_from_source_document1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.copy_element_from_source_document1(did, wid, bt_copy_element_params, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTCopyElementParams bt_copy_element_params: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.copy_element_from_source_document1_with_http_info(did, wid, bt_copy_element_params, **kwargs)  # noqa: E501
+        else:
+            (data) = self.copy_element_from_source_document1_with_http_info(did, wid, bt_copy_element_params, **kwargs)  # noqa: E501
+            return data
+
+    def copy_element_from_source_document1_with_http_info(self, did, wid, bt_copy_element_params, **kwargs):  # noqa: E501
+        """copy_element_from_source_document1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.copy_element_from_source_document1_with_http_info(did, wid, bt_copy_element_params, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTCopyElementParams bt_copy_element_params: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'bt_copy_element_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method copy_element_from_source_document1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ValueError("Missing the required parameter `did` when calling `copy_element_from_source_document1`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ValueError("Missing the required parameter `wid` when calling `copy_element_from_source_document1`")  # noqa: E501
+        # verify the required parameter 'bt_copy_element_params' is set
+        if ('bt_copy_element_params' not in local_var_params or
+                local_var_params['bt_copy_element_params'] is None):
+            raise ValueError("Missing the required parameter `bt_copy_element_params` when calling `copy_element_from_source_document1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_copy_element_params' in local_var_params:
+            body_params = local_var_params['bt_copy_element_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=UTF-8'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/elements/copyelement/{did}/workspace/{wid}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def decode_configuration(self, did, wvm, wvmid, eid, cid, **kwargs):  # noqa: E501
         """decode_configuration  # noqa: E501
 

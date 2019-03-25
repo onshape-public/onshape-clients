@@ -33,35 +33,35 @@ class BTUserUsagesSummary(object):
     """
     openapi_types = {
         'owner_name': 'str',
-        'count': 'int',
         'owner_id': 'str',
-        'owner_type': 'str'
+        'owner_type': 'str',
+        'count': 'int'
     }
 
     attribute_map = {
         'owner_name': 'ownerName',
-        'count': 'count',
         'owner_id': 'ownerId',
-        'owner_type': 'ownerType'
+        'owner_type': 'ownerType',
+        'count': 'count'
     }
 
-    def __init__(self, owner_name=None, count=None, owner_id=None, owner_type=None):  # noqa: E501
+    def __init__(self, owner_name=None, owner_id=None, owner_type=None, count=None):  # noqa: E501
         """BTUserUsagesSummary - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner_name = None
-        self._count = None
         self._owner_id = None
         self._owner_type = None
+        self._count = None
         self.discriminator = None
 
         if owner_name is not None:
             self.owner_name = owner_name
-        if count is not None:
-            self.count = count
         if owner_id is not None:
             self.owner_id = owner_id
         if owner_type is not None:
             self.owner_type = owner_type
+        if count is not None:
+            self.count = count
 
     @property
     def owner_name(self):
@@ -83,27 +83,6 @@ class BTUserUsagesSummary(object):
         """
 
         self._owner_name = owner_name
-
-    @property
-    def count(self):
-        """Gets the count of this BTUserUsagesSummary.  # noqa: E501
-
-
-        :return: The count of this BTUserUsagesSummary.  # noqa: E501
-        :rtype: int
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """Sets the count of this BTUserUsagesSummary.
-
-
-        :param count: The count of this BTUserUsagesSummary.  # noqa: E501
-        :type: int
-        """
-
-        self._count = count
 
     @property
     def owner_id(self):
@@ -146,6 +125,27 @@ class BTUserUsagesSummary(object):
         """
 
         self._owner_type = owner_type
+
+    @property
+    def count(self):
+        """Gets the count of this BTUserUsagesSummary.  # noqa: E501
+
+
+        :return: The count of this BTUserUsagesSummary.  # noqa: E501
+        :rtype: int
+        """
+        return self._count
+
+    @count.setter
+    def count(self, count):
+        """Sets the count of this BTUserUsagesSummary.
+
+
+        :param count: The count of this BTUserUsagesSummary.  # noqa: E501
+        :type: int
+        """
+
+        self._count = count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

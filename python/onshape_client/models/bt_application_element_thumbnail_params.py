@@ -32,38 +32,34 @@ class BTApplicationElementThumbnailParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'image_width': 'int',
-        'image_height': 'int',
         'description': 'str',
         'is_primary': 'bool',
         'unique_id': 'str',
-        'base64_encoded_image': 'str'
+        'base64_encoded_image': 'str',
+        'image_width': 'int',
+        'image_height': 'int'
     }
 
     attribute_map = {
-        'image_width': 'imageWidth',
-        'image_height': 'imageHeight',
         'description': 'description',
         'is_primary': 'isPrimary',
         'unique_id': 'uniqueId',
-        'base64_encoded_image': 'base64EncodedImage'
+        'base64_encoded_image': 'base64EncodedImage',
+        'image_width': 'imageWidth',
+        'image_height': 'imageHeight'
     }
 
-    def __init__(self, image_width=None, image_height=None, description=None, is_primary=None, unique_id=None, base64_encoded_image=None):  # noqa: E501
+    def __init__(self, description=None, is_primary=None, unique_id=None, base64_encoded_image=None, image_width=None, image_height=None):  # noqa: E501
         """BTApplicationElementThumbnailParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._image_width = None
-        self._image_height = None
         self._description = None
         self._is_primary = None
         self._unique_id = None
         self._base64_encoded_image = None
+        self._image_width = None
+        self._image_height = None
         self.discriminator = None
 
-        if image_width is not None:
-            self.image_width = image_width
-        if image_height is not None:
-            self.image_height = image_height
         if description is not None:
             self.description = description
         if is_primary is not None:
@@ -72,48 +68,10 @@ class BTApplicationElementThumbnailParams(object):
             self.unique_id = unique_id
         if base64_encoded_image is not None:
             self.base64_encoded_image = base64_encoded_image
-
-    @property
-    def image_width(self):
-        """Gets the image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
-
-
-        :return: The image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._image_width
-
-    @image_width.setter
-    def image_width(self, image_width):
-        """Sets the image_width of this BTApplicationElementThumbnailParams.
-
-
-        :param image_width: The image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
-        :type: int
-        """
-
-        self._image_width = image_width
-
-    @property
-    def image_height(self):
-        """Gets the image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
-
-
-        :return: The image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._image_height
-
-    @image_height.setter
-    def image_height(self, image_height):
-        """Sets the image_height of this BTApplicationElementThumbnailParams.
-
-
-        :param image_height: The image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
-        :type: int
-        """
-
-        self._image_height = image_height
+        if image_width is not None:
+            self.image_width = image_width
+        if image_height is not None:
+            self.image_height = image_height
 
     @property
     def description(self):
@@ -198,6 +156,48 @@ class BTApplicationElementThumbnailParams(object):
         """
 
         self._base64_encoded_image = base64_encoded_image
+
+    @property
+    def image_width(self):
+        """Gets the image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
+
+
+        :return: The image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._image_width
+
+    @image_width.setter
+    def image_width(self, image_width):
+        """Sets the image_width of this BTApplicationElementThumbnailParams.
+
+
+        :param image_width: The image_width of this BTApplicationElementThumbnailParams.  # noqa: E501
+        :type: int
+        """
+
+        self._image_width = image_width
+
+    @property
+    def image_height(self):
+        """Gets the image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
+
+
+        :return: The image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._image_height
+
+    @image_height.setter
+    def image_height(self, image_height):
+        """Sets the image_height of this BTApplicationElementThumbnailParams.
+
+
+        :param image_height: The image_height of this BTApplicationElementThumbnailParams.  # noqa: E501
+        :type: int
+        """
+
+        self._image_height = image_height
 
     def to_dict(self):
         """Returns the model properties as a dict"""

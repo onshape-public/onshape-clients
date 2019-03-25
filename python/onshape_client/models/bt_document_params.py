@@ -33,7 +33,6 @@ class BTDocumentParams(object):
     """
     openapi_types = {
         'name': 'str',
-        'owner_email': 'str',
         'generate_unknown_messages': 'bool',
         'is_empty_content': 'bool',
         'description': 'str',
@@ -41,15 +40,15 @@ class BTDocumentParams(object):
         'owner_id': 'str',
         'project_id': 'str',
         'parent_id': 'str',
-        'owner_type': 'int',
-        'beta_capability_ids': 'list[str]',
         'is_public': 'bool',
-        'not_revision_managed': 'bool'
+        'beta_capability_ids': 'list[str]',
+        'not_revision_managed': 'bool',
+        'owner_type': 'int',
+        'owner_email': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'owner_email': 'ownerEmail',
         'generate_unknown_messages': 'generateUnknownMessages',
         'is_empty_content': 'isEmptyContent',
         'description': 'description',
@@ -57,17 +56,17 @@ class BTDocumentParams(object):
         'owner_id': 'ownerId',
         'project_id': 'projectId',
         'parent_id': 'parentId',
-        'owner_type': 'ownerType',
-        'beta_capability_ids': 'betaCapabilityIds',
         'is_public': 'isPublic',
-        'not_revision_managed': 'notRevisionManaged'
+        'beta_capability_ids': 'betaCapabilityIds',
+        'not_revision_managed': 'notRevisionManaged',
+        'owner_type': 'ownerType',
+        'owner_email': 'ownerEmail'
     }
 
-    def __init__(self, name=None, owner_email=None, generate_unknown_messages=None, is_empty_content=None, description=None, tags=None, owner_id=None, project_id=None, parent_id=None, owner_type=None, beta_capability_ids=None, is_public=None, not_revision_managed=None):  # noqa: E501
+    def __init__(self, name=None, generate_unknown_messages=None, is_empty_content=None, description=None, tags=None, owner_id=None, project_id=None, parent_id=None, is_public=None, beta_capability_ids=None, not_revision_managed=None, owner_type=None, owner_email=None):  # noqa: E501
         """BTDocumentParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
-        self._owner_email = None
         self._generate_unknown_messages = None
         self._is_empty_content = None
         self._description = None
@@ -75,16 +74,15 @@ class BTDocumentParams(object):
         self._owner_id = None
         self._project_id = None
         self._parent_id = None
-        self._owner_type = None
-        self._beta_capability_ids = None
         self._is_public = None
+        self._beta_capability_ids = None
         self._not_revision_managed = None
+        self._owner_type = None
+        self._owner_email = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if owner_email is not None:
-            self.owner_email = owner_email
         if generate_unknown_messages is not None:
             self.generate_unknown_messages = generate_unknown_messages
         if is_empty_content is not None:
@@ -99,14 +97,16 @@ class BTDocumentParams(object):
             self.project_id = project_id
         if parent_id is not None:
             self.parent_id = parent_id
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if beta_capability_ids is not None:
-            self.beta_capability_ids = beta_capability_ids
         if is_public is not None:
             self.is_public = is_public
+        if beta_capability_ids is not None:
+            self.beta_capability_ids = beta_capability_ids
         if not_revision_managed is not None:
             self.not_revision_managed = not_revision_managed
+        if owner_type is not None:
+            self.owner_type = owner_type
+        if owner_email is not None:
+            self.owner_email = owner_email
 
     @property
     def name(self):
@@ -128,27 +128,6 @@ class BTDocumentParams(object):
         """
 
         self._name = name
-
-    @property
-    def owner_email(self):
-        """Gets the owner_email of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The owner_email of this BTDocumentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_email
-
-    @owner_email.setter
-    def owner_email(self, owner_email):
-        """Sets the owner_email of this BTDocumentParams.
-
-
-        :param owner_email: The owner_email of this BTDocumentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_email = owner_email
 
     @property
     def generate_unknown_messages(self):
@@ -298,25 +277,25 @@ class BTDocumentParams(object):
         self._parent_id = parent_id
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
+    def is_public(self):
+        """Gets the is_public of this BTDocumentParams.  # noqa: E501
 
 
-        :return: The owner_type of this BTDocumentParams.  # noqa: E501
-        :rtype: int
+        :return: The is_public of this BTDocumentParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._owner_type
+        return self._is_public
 
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTDocumentParams.
+    @is_public.setter
+    def is_public(self, is_public):
+        """Sets the is_public of this BTDocumentParams.
 
 
-        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
-        :type: int
+        :param is_public: The is_public of this BTDocumentParams.  # noqa: E501
+        :type: bool
         """
 
-        self._owner_type = owner_type
+        self._is_public = is_public
 
     @property
     def beta_capability_ids(self):
@@ -340,27 +319,6 @@ class BTDocumentParams(object):
         self._beta_capability_ids = beta_capability_ids
 
     @property
-    def is_public(self):
-        """Gets the is_public of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The is_public of this BTDocumentParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_public
-
-    @is_public.setter
-    def is_public(self, is_public):
-        """Sets the is_public of this BTDocumentParams.
-
-
-        :param is_public: The is_public of this BTDocumentParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_public = is_public
-
-    @property
     def not_revision_managed(self):
         """Gets the not_revision_managed of this BTDocumentParams.  # noqa: E501
 
@@ -380,6 +338,48 @@ class BTDocumentParams(object):
         """
 
         self._not_revision_managed = not_revision_managed
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTDocumentParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTDocumentParams.
+
+
+        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
+
+    @property
+    def owner_email(self):
+        """Gets the owner_email of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The owner_email of this BTDocumentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_email
+
+    @owner_email.setter
+    def owner_email(self, owner_email):
+        """Sets the owner_email of this BTDocumentParams.
+
+
+        :param owner_email: The owner_email of this BTDocumentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_email = owner_email
 
     def to_dict(self):
         """Returns the model properties as a dict"""

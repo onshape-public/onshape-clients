@@ -32,166 +32,61 @@ class BTStandardContentUsageSummary(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'top_used_components_by_latest_versions': 'dict(str, BTComponentUsagesSummary)',
-        'top_used_components_by_workspaces': 'dict(str, BTComponentUsagesSummary)',
-        'top_users_by_latest_versions': 'dict(str, BTUserUsagesSummary)',
-        'top_users_by_workspaces': 'dict(str, BTUserUsagesSummary)',
-        'top_components_used_along_with_by_latest_versions': 'dict(str, BTComponentUsagesSummary)',
         'workspace_use_count': 'int',
+        'top_used_components_by_workspaces': 'dict(str, BTComponentUsagesSummary)',
         'latest_version_use_count': 'int',
+        'top_used_components_by_latest_versions': 'dict(str, BTComponentUsagesSummary)',
         'version_use_count': 'int',
+        'top_components_used_along_with_by_latest_versions': 'dict(str, BTComponentUsagesSummary)',
+        'top_users_by_workspaces': 'dict(str, BTUserUsagesSummary)',
+        'top_users_by_latest_versions': 'dict(str, BTUserUsagesSummary)',
         'top_users_summary_done': 'bool'
     }
 
     attribute_map = {
-        'top_used_components_by_latest_versions': 'topUsedComponentsByLatestVersions',
-        'top_used_components_by_workspaces': 'topUsedComponentsByWorkspaces',
-        'top_users_by_latest_versions': 'topUsersByLatestVersions',
-        'top_users_by_workspaces': 'topUsersByWorkspaces',
-        'top_components_used_along_with_by_latest_versions': 'topComponentsUsedAlongWithByLatestVersions',
         'workspace_use_count': 'workspaceUseCount',
+        'top_used_components_by_workspaces': 'topUsedComponentsByWorkspaces',
         'latest_version_use_count': 'latestVersionUseCount',
+        'top_used_components_by_latest_versions': 'topUsedComponentsByLatestVersions',
         'version_use_count': 'versionUseCount',
+        'top_components_used_along_with_by_latest_versions': 'topComponentsUsedAlongWithByLatestVersions',
+        'top_users_by_workspaces': 'topUsersByWorkspaces',
+        'top_users_by_latest_versions': 'topUsersByLatestVersions',
         'top_users_summary_done': 'topUsersSummaryDone'
     }
 
-    def __init__(self, top_used_components_by_latest_versions=None, top_used_components_by_workspaces=None, top_users_by_latest_versions=None, top_users_by_workspaces=None, top_components_used_along_with_by_latest_versions=None, workspace_use_count=None, latest_version_use_count=None, version_use_count=None, top_users_summary_done=None):  # noqa: E501
+    def __init__(self, workspace_use_count=None, top_used_components_by_workspaces=None, latest_version_use_count=None, top_used_components_by_latest_versions=None, version_use_count=None, top_components_used_along_with_by_latest_versions=None, top_users_by_workspaces=None, top_users_by_latest_versions=None, top_users_summary_done=None):  # noqa: E501
         """BTStandardContentUsageSummary - a model defined in OpenAPI"""  # noqa: E501
 
-        self._top_used_components_by_latest_versions = None
-        self._top_used_components_by_workspaces = None
-        self._top_users_by_latest_versions = None
-        self._top_users_by_workspaces = None
-        self._top_components_used_along_with_by_latest_versions = None
         self._workspace_use_count = None
+        self._top_used_components_by_workspaces = None
         self._latest_version_use_count = None
+        self._top_used_components_by_latest_versions = None
         self._version_use_count = None
+        self._top_components_used_along_with_by_latest_versions = None
+        self._top_users_by_workspaces = None
+        self._top_users_by_latest_versions = None
         self._top_users_summary_done = None
         self.discriminator = None
 
-        if top_used_components_by_latest_versions is not None:
-            self.top_used_components_by_latest_versions = top_used_components_by_latest_versions
-        if top_used_components_by_workspaces is not None:
-            self.top_used_components_by_workspaces = top_used_components_by_workspaces
-        if top_users_by_latest_versions is not None:
-            self.top_users_by_latest_versions = top_users_by_latest_versions
-        if top_users_by_workspaces is not None:
-            self.top_users_by_workspaces = top_users_by_workspaces
-        if top_components_used_along_with_by_latest_versions is not None:
-            self.top_components_used_along_with_by_latest_versions = top_components_used_along_with_by_latest_versions
         if workspace_use_count is not None:
             self.workspace_use_count = workspace_use_count
+        if top_used_components_by_workspaces is not None:
+            self.top_used_components_by_workspaces = top_used_components_by_workspaces
         if latest_version_use_count is not None:
             self.latest_version_use_count = latest_version_use_count
+        if top_used_components_by_latest_versions is not None:
+            self.top_used_components_by_latest_versions = top_used_components_by_latest_versions
         if version_use_count is not None:
             self.version_use_count = version_use_count
+        if top_components_used_along_with_by_latest_versions is not None:
+            self.top_components_used_along_with_by_latest_versions = top_components_used_along_with_by_latest_versions
+        if top_users_by_workspaces is not None:
+            self.top_users_by_workspaces = top_users_by_workspaces
+        if top_users_by_latest_versions is not None:
+            self.top_users_by_latest_versions = top_users_by_latest_versions
         if top_users_summary_done is not None:
             self.top_users_summary_done = top_users_summary_done
-
-    @property
-    def top_used_components_by_latest_versions(self):
-        """Gets the top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-
-
-        :return: The top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :rtype: dict(str, BTComponentUsagesSummary)
-        """
-        return self._top_used_components_by_latest_versions
-
-    @top_used_components_by_latest_versions.setter
-    def top_used_components_by_latest_versions(self, top_used_components_by_latest_versions):
-        """Sets the top_used_components_by_latest_versions of this BTStandardContentUsageSummary.
-
-
-        :param top_used_components_by_latest_versions: The top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :type: dict(str, BTComponentUsagesSummary)
-        """
-
-        self._top_used_components_by_latest_versions = top_used_components_by_latest_versions
-
-    @property
-    def top_used_components_by_workspaces(self):
-        """Gets the top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-
-
-        :return: The top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-        :rtype: dict(str, BTComponentUsagesSummary)
-        """
-        return self._top_used_components_by_workspaces
-
-    @top_used_components_by_workspaces.setter
-    def top_used_components_by_workspaces(self, top_used_components_by_workspaces):
-        """Sets the top_used_components_by_workspaces of this BTStandardContentUsageSummary.
-
-
-        :param top_used_components_by_workspaces: The top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-        :type: dict(str, BTComponentUsagesSummary)
-        """
-
-        self._top_used_components_by_workspaces = top_used_components_by_workspaces
-
-    @property
-    def top_users_by_latest_versions(self):
-        """Gets the top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-
-
-        :return: The top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :rtype: dict(str, BTUserUsagesSummary)
-        """
-        return self._top_users_by_latest_versions
-
-    @top_users_by_latest_versions.setter
-    def top_users_by_latest_versions(self, top_users_by_latest_versions):
-        """Sets the top_users_by_latest_versions of this BTStandardContentUsageSummary.
-
-
-        :param top_users_by_latest_versions: The top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :type: dict(str, BTUserUsagesSummary)
-        """
-
-        self._top_users_by_latest_versions = top_users_by_latest_versions
-
-    @property
-    def top_users_by_workspaces(self):
-        """Gets the top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-
-
-        :return: The top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-        :rtype: dict(str, BTUserUsagesSummary)
-        """
-        return self._top_users_by_workspaces
-
-    @top_users_by_workspaces.setter
-    def top_users_by_workspaces(self, top_users_by_workspaces):
-        """Sets the top_users_by_workspaces of this BTStandardContentUsageSummary.
-
-
-        :param top_users_by_workspaces: The top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
-        :type: dict(str, BTUserUsagesSummary)
-        """
-
-        self._top_users_by_workspaces = top_users_by_workspaces
-
-    @property
-    def top_components_used_along_with_by_latest_versions(self):
-        """Gets the top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-
-
-        :return: The top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :rtype: dict(str, BTComponentUsagesSummary)
-        """
-        return self._top_components_used_along_with_by_latest_versions
-
-    @top_components_used_along_with_by_latest_versions.setter
-    def top_components_used_along_with_by_latest_versions(self, top_components_used_along_with_by_latest_versions):
-        """Sets the top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.
-
-
-        :param top_components_used_along_with_by_latest_versions: The top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
-        :type: dict(str, BTComponentUsagesSummary)
-        """
-
-        self._top_components_used_along_with_by_latest_versions = top_components_used_along_with_by_latest_versions
 
     @property
     def workspace_use_count(self):
@@ -215,6 +110,27 @@ class BTStandardContentUsageSummary(object):
         self._workspace_use_count = workspace_use_count
 
     @property
+    def top_used_components_by_workspaces(self):
+        """Gets the top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+
+
+        :return: The top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+        :rtype: dict(str, BTComponentUsagesSummary)
+        """
+        return self._top_used_components_by_workspaces
+
+    @top_used_components_by_workspaces.setter
+    def top_used_components_by_workspaces(self, top_used_components_by_workspaces):
+        """Sets the top_used_components_by_workspaces of this BTStandardContentUsageSummary.
+
+
+        :param top_used_components_by_workspaces: The top_used_components_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+        :type: dict(str, BTComponentUsagesSummary)
+        """
+
+        self._top_used_components_by_workspaces = top_used_components_by_workspaces
+
+    @property
     def latest_version_use_count(self):
         """Gets the latest_version_use_count of this BTStandardContentUsageSummary.  # noqa: E501
 
@@ -236,6 +152,27 @@ class BTStandardContentUsageSummary(object):
         self._latest_version_use_count = latest_version_use_count
 
     @property
+    def top_used_components_by_latest_versions(self):
+        """Gets the top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+
+
+        :return: The top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :rtype: dict(str, BTComponentUsagesSummary)
+        """
+        return self._top_used_components_by_latest_versions
+
+    @top_used_components_by_latest_versions.setter
+    def top_used_components_by_latest_versions(self, top_used_components_by_latest_versions):
+        """Sets the top_used_components_by_latest_versions of this BTStandardContentUsageSummary.
+
+
+        :param top_used_components_by_latest_versions: The top_used_components_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :type: dict(str, BTComponentUsagesSummary)
+        """
+
+        self._top_used_components_by_latest_versions = top_used_components_by_latest_versions
+
+    @property
     def version_use_count(self):
         """Gets the version_use_count of this BTStandardContentUsageSummary.  # noqa: E501
 
@@ -255,6 +192,69 @@ class BTStandardContentUsageSummary(object):
         """
 
         self._version_use_count = version_use_count
+
+    @property
+    def top_components_used_along_with_by_latest_versions(self):
+        """Gets the top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+
+
+        :return: The top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :rtype: dict(str, BTComponentUsagesSummary)
+        """
+        return self._top_components_used_along_with_by_latest_versions
+
+    @top_components_used_along_with_by_latest_versions.setter
+    def top_components_used_along_with_by_latest_versions(self, top_components_used_along_with_by_latest_versions):
+        """Sets the top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.
+
+
+        :param top_components_used_along_with_by_latest_versions: The top_components_used_along_with_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :type: dict(str, BTComponentUsagesSummary)
+        """
+
+        self._top_components_used_along_with_by_latest_versions = top_components_used_along_with_by_latest_versions
+
+    @property
+    def top_users_by_workspaces(self):
+        """Gets the top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+
+
+        :return: The top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+        :rtype: dict(str, BTUserUsagesSummary)
+        """
+        return self._top_users_by_workspaces
+
+    @top_users_by_workspaces.setter
+    def top_users_by_workspaces(self, top_users_by_workspaces):
+        """Sets the top_users_by_workspaces of this BTStandardContentUsageSummary.
+
+
+        :param top_users_by_workspaces: The top_users_by_workspaces of this BTStandardContentUsageSummary.  # noqa: E501
+        :type: dict(str, BTUserUsagesSummary)
+        """
+
+        self._top_users_by_workspaces = top_users_by_workspaces
+
+    @property
+    def top_users_by_latest_versions(self):
+        """Gets the top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+
+
+        :return: The top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :rtype: dict(str, BTUserUsagesSummary)
+        """
+        return self._top_users_by_latest_versions
+
+    @top_users_by_latest_versions.setter
+    def top_users_by_latest_versions(self, top_users_by_latest_versions):
+        """Sets the top_users_by_latest_versions of this BTStandardContentUsageSummary.
+
+
+        :param top_users_by_latest_versions: The top_users_by_latest_versions of this BTStandardContentUsageSummary.  # noqa: E501
+        :type: dict(str, BTUserUsagesSummary)
+        """
+
+        self._top_users_by_latest_versions = top_users_by_latest_versions
 
     @property
     def top_users_summary_done(self):

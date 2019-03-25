@@ -39,15 +39,15 @@ class BTPDMMetadataParams(object):
         'revision': 'str',
         'configuration': 'str',
         'element_id': 'str',
-        'part_number': 'str',
-        'custom_properties': 'list[BTNameValuePair]',
         'project': 'str',
         'part_id': 'str',
+        'custom_properties': 'list[BTNameValuePair]',
         'vendor': 'str',
         'product_line': 'str',
         'title1': 'str',
         'title2': 'str',
-        'title3': 'str'
+        'title3': 'str',
+        'part_number': 'str'
     }
 
     attribute_map = {
@@ -58,18 +58,18 @@ class BTPDMMetadataParams(object):
         'revision': 'revision',
         'configuration': 'configuration',
         'element_id': 'elementId',
-        'part_number': 'partNumber',
-        'custom_properties': 'customProperties',
         'project': 'project',
         'part_id': 'partId',
+        'custom_properties': 'customProperties',
         'vendor': 'vendor',
         'product_line': 'productLine',
         'title1': 'title1',
         'title2': 'title2',
-        'title3': 'title3'
+        'title3': 'title3',
+        'part_number': 'partNumber'
     }
 
-    def __init__(self, name=None, id=None, state=None, description=None, revision=None, configuration=None, element_id=None, part_number=None, custom_properties=None, project=None, part_id=None, vendor=None, product_line=None, title1=None, title2=None, title3=None):  # noqa: E501
+    def __init__(self, name=None, id=None, state=None, description=None, revision=None, configuration=None, element_id=None, project=None, part_id=None, custom_properties=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_number=None):  # noqa: E501
         """BTPDMMetadataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
@@ -79,15 +79,15 @@ class BTPDMMetadataParams(object):
         self._revision = None
         self._configuration = None
         self._element_id = None
-        self._part_number = None
-        self._custom_properties = None
         self._project = None
         self._part_id = None
+        self._custom_properties = None
         self._vendor = None
         self._product_line = None
         self._title1 = None
         self._title2 = None
         self._title3 = None
+        self._part_number = None
         self.discriminator = None
 
         if name is not None:
@@ -104,14 +104,12 @@ class BTPDMMetadataParams(object):
             self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
-        if part_number is not None:
-            self.part_number = part_number
-        if custom_properties is not None:
-            self.custom_properties = custom_properties
         if project is not None:
             self.project = project
         if part_id is not None:
             self.part_id = part_id
+        if custom_properties is not None:
+            self.custom_properties = custom_properties
         if vendor is not None:
             self.vendor = vendor
         if product_line is not None:
@@ -122,6 +120,8 @@ class BTPDMMetadataParams(object):
             self.title2 = title2
         if title3 is not None:
             self.title3 = title3
+        if part_number is not None:
+            self.part_number = part_number
 
     @property
     def name(self):
@@ -277,48 +277,6 @@ class BTPDMMetadataParams(object):
         self._element_id = element_id
 
     @property
-    def part_number(self):
-        """Gets the part_number of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The part_number of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTPDMMetadataParams.
-
-
-        :param part_number: The part_number of this BTPDMMetadataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def custom_properties(self):
-        """Gets the custom_properties of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The custom_properties of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: list[BTNameValuePair]
-        """
-        return self._custom_properties
-
-    @custom_properties.setter
-    def custom_properties(self, custom_properties):
-        """Sets the custom_properties of this BTPDMMetadataParams.
-
-
-        :param custom_properties: The custom_properties of this BTPDMMetadataParams.  # noqa: E501
-        :type: list[BTNameValuePair]
-        """
-
-        self._custom_properties = custom_properties
-
-    @property
     def project(self):
         """Gets the project of this BTPDMMetadataParams.  # noqa: E501
 
@@ -359,6 +317,27 @@ class BTPDMMetadataParams(object):
         """
 
         self._part_id = part_id
+
+    @property
+    def custom_properties(self):
+        """Gets the custom_properties of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The custom_properties of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: list[BTNameValuePair]
+        """
+        return self._custom_properties
+
+    @custom_properties.setter
+    def custom_properties(self, custom_properties):
+        """Sets the custom_properties of this BTPDMMetadataParams.
+
+
+        :param custom_properties: The custom_properties of this BTPDMMetadataParams.  # noqa: E501
+        :type: list[BTNameValuePair]
+        """
+
+        self._custom_properties = custom_properties
 
     @property
     def vendor(self):
@@ -464,6 +443,27 @@ class BTPDMMetadataParams(object):
         """
 
         self._title3 = title3
+
+    @property
+    def part_number(self):
+        """Gets the part_number of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The part_number of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_number
+
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTPDMMetadataParams.
+
+
+        :param part_number: The part_number of this BTPDMMetadataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_number = part_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

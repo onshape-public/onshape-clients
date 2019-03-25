@@ -75,6 +75,11 @@ def _make_auth(method, date, nonce, path, access_key, secret_key, query_string="
         - ctype (str, default='application/json'): HTTP Content-Type
     '''
 
+    if isinstance(secret_key, str):
+        secret_key = secret_key.encode('utf-8')
+    if isinstance(access_key, str):
+        access_key = access_key.encode('utf-8')
+
     # query = urlencode(query)
 
     hmac_str = (method + '\n' + nonce + '\n' + date + '\n' + ctype + '\n' + path +

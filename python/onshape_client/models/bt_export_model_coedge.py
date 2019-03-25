@@ -32,46 +32,67 @@ class BTExportModelCoedge(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'edge_id': 'str',
         'orientation': 'bool',
+        'edge_id': 'str',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'edge_id': 'edgeId',
         'orientation': 'orientation',
+        'edge_id': 'edgeId',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, edge_id=None, orientation=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, orientation=None, edge_id=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTExportModelCoedge - a model defined in OpenAPI"""  # noqa: E501
 
-        self._edge_id = None
         self._orientation = None
+        self._edge_id = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if edge_id is not None:
-            self.edge_id = edge_id
         if orientation is not None:
             self.orientation = orientation
+        if edge_id is not None:
+            self.edge_id = edge_id
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
+
+    @property
+    def orientation(self):
+        """Gets the orientation of this BTExportModelCoedge.  # noqa: E501
+
+
+        :return: The orientation of this BTExportModelCoedge.  # noqa: E501
+        :rtype: bool
+        """
+        return self._orientation
+
+    @orientation.setter
+    def orientation(self, orientation):
+        """Sets the orientation of this BTExportModelCoedge.
+
+
+        :param orientation: The orientation of this BTExportModelCoedge.  # noqa: E501
+        :type: bool
+        """
+
+        self._orientation = orientation
 
     @property
     def edge_id(self):
@@ -95,25 +116,25 @@ class BTExportModelCoedge(object):
         self._edge_id = edge_id
 
     @property
-    def orientation(self):
-        """Gets the orientation of this BTExportModelCoedge.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTExportModelCoedge.  # noqa: E501
 
 
-        :return: The orientation of this BTExportModelCoedge.  # noqa: E501
-        :rtype: bool
+        :return: The type_id of this BTExportModelCoedge.  # noqa: E501
+        :rtype: int
         """
-        return self._orientation
+        return self._type_id
 
-    @orientation.setter
-    def orientation(self, orientation):
-        """Sets the orientation of this BTExportModelCoedge.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTExportModelCoedge.
 
 
-        :param orientation: The orientation of this BTExportModelCoedge.  # noqa: E501
-        :type: bool
+        :param type_id: The type_id of this BTExportModelCoedge.  # noqa: E501
+        :type: int
         """
 
-        self._orientation = orientation
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -177,27 +198,6 @@ class BTExportModelCoedge(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTExportModelCoedge.  # noqa: E501
-
-
-        :return: The type_id of this BTExportModelCoedge.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTExportModelCoedge.
-
-
-        :param type_id: The type_id of this BTExportModelCoedge.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

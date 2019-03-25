@@ -36,10 +36,17 @@ class BTUserParams(object):
         'message': 'str',
         'id': 'str',
         'state': 'int',
-        'upgrade_to_education_plan': 'bool',
         'source': 'int',
-        'description': 'str',
         'password': 'str',
+        'token': 'str',
+        'description': 'str',
+        'recaptcha': 'str',
+        'invite_friend_request': 'bool',
+        'approve_user': 'bool',
+        'cad_system_at_signup': 'str',
+        'company_plan': 'bool',
+        'eula_accepted': 'bool',
+        'country_code': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
@@ -47,16 +54,9 @@ class BTUserParams(object):
         'plan_id': 'str',
         'seats': 'int',
         'role': 'int',
-        'token': 'str',
-        'approve_user': 'bool',
-        'cad_system_at_signup': 'str',
-        'company_plan': 'bool',
-        'eula_accepted': 'bool',
         'forum_id': 'str',
-        'country_code': 'str',
         'phone_number': 'str',
-        'recaptcha': 'str',
-        'invite_friend_request': 'bool'
+        'upgrade_to_education_plan': 'bool'
     }
 
     attribute_map = {
@@ -64,10 +64,17 @@ class BTUserParams(object):
         'message': 'message',
         'id': 'id',
         'state': 'state',
-        'upgrade_to_education_plan': 'upgradeToEducationPlan',
         'source': 'source',
-        'description': 'description',
         'password': 'password',
+        'token': 'token',
+        'description': 'description',
+        'recaptcha': 'recaptcha',
+        'invite_friend_request': 'inviteFriendRequest',
+        'approve_user': 'approveUser',
+        'cad_system_at_signup': 'cadSystemAtSignup',
+        'company_plan': 'companyPlan',
+        'eula_accepted': 'eulaAccepted',
+        'country_code': 'countryCode',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
@@ -75,29 +82,29 @@ class BTUserParams(object):
         'plan_id': 'planId',
         'seats': 'seats',
         'role': 'role',
-        'token': 'token',
-        'approve_user': 'approveUser',
-        'cad_system_at_signup': 'cadSystemAtSignup',
-        'company_plan': 'companyPlan',
-        'eula_accepted': 'eulaAccepted',
         'forum_id': 'forumId',
-        'country_code': 'countryCode',
         'phone_number': 'phoneNumber',
-        'recaptcha': 'recaptcha',
-        'invite_friend_request': 'inviteFriendRequest'
+        'upgrade_to_education_plan': 'upgradeToEducationPlan'
     }
 
-    def __init__(self, name=None, message=None, id=None, state=None, upgrade_to_education_plan=None, source=None, description=None, password=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, role=None, token=None, approve_user=None, cad_system_at_signup=None, company_plan=None, eula_accepted=None, forum_id=None, country_code=None, phone_number=None, recaptcha=None, invite_friend_request=None):  # noqa: E501
+    def __init__(self, name=None, message=None, id=None, state=None, source=None, password=None, token=None, description=None, recaptcha=None, invite_friend_request=None, approve_user=None, cad_system_at_signup=None, company_plan=None, eula_accepted=None, country_code=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, role=None, forum_id=None, phone_number=None, upgrade_to_education_plan=None):  # noqa: E501
         """BTUserParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._message = None
         self._id = None
         self._state = None
-        self._upgrade_to_education_plan = None
         self._source = None
-        self._description = None
         self._password = None
+        self._token = None
+        self._description = None
+        self._recaptcha = None
+        self._invite_friend_request = None
+        self._approve_user = None
+        self._cad_system_at_signup = None
+        self._company_plan = None
+        self._eula_accepted = None
+        self._country_code = None
         self._first_name = None
         self._last_name = None
         self._email = None
@@ -105,16 +112,9 @@ class BTUserParams(object):
         self._plan_id = None
         self._seats = None
         self._role = None
-        self._token = None
-        self._approve_user = None
-        self._cad_system_at_signup = None
-        self._company_plan = None
-        self._eula_accepted = None
         self._forum_id = None
-        self._country_code = None
         self._phone_number = None
-        self._recaptcha = None
-        self._invite_friend_request = None
+        self._upgrade_to_education_plan = None
         self.discriminator = None
 
         if name is not None:
@@ -125,14 +125,28 @@ class BTUserParams(object):
             self.id = id
         if state is not None:
             self.state = state
-        if upgrade_to_education_plan is not None:
-            self.upgrade_to_education_plan = upgrade_to_education_plan
         if source is not None:
             self.source = source
-        if description is not None:
-            self.description = description
         if password is not None:
             self.password = password
+        if token is not None:
+            self.token = token
+        if description is not None:
+            self.description = description
+        if recaptcha is not None:
+            self.recaptcha = recaptcha
+        if invite_friend_request is not None:
+            self.invite_friend_request = invite_friend_request
+        if approve_user is not None:
+            self.approve_user = approve_user
+        if cad_system_at_signup is not None:
+            self.cad_system_at_signup = cad_system_at_signup
+        if company_plan is not None:
+            self.company_plan = company_plan
+        if eula_accepted is not None:
+            self.eula_accepted = eula_accepted
+        if country_code is not None:
+            self.country_code = country_code
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -147,26 +161,12 @@ class BTUserParams(object):
             self.seats = seats
         if role is not None:
             self.role = role
-        if token is not None:
-            self.token = token
-        if approve_user is not None:
-            self.approve_user = approve_user
-        if cad_system_at_signup is not None:
-            self.cad_system_at_signup = cad_system_at_signup
-        if company_plan is not None:
-            self.company_plan = company_plan
-        if eula_accepted is not None:
-            self.eula_accepted = eula_accepted
         if forum_id is not None:
             self.forum_id = forum_id
-        if country_code is not None:
-            self.country_code = country_code
         if phone_number is not None:
             self.phone_number = phone_number
-        if recaptcha is not None:
-            self.recaptcha = recaptcha
-        if invite_friend_request is not None:
-            self.invite_friend_request = invite_friend_request
+        if upgrade_to_education_plan is not None:
+            self.upgrade_to_education_plan = upgrade_to_education_plan
 
     @property
     def name(self):
@@ -253,27 +253,6 @@ class BTUserParams(object):
         self._state = state
 
     @property
-    def upgrade_to_education_plan(self):
-        """Gets the upgrade_to_education_plan of this BTUserParams.  # noqa: E501
-
-
-        :return: The upgrade_to_education_plan of this BTUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._upgrade_to_education_plan
-
-    @upgrade_to_education_plan.setter
-    def upgrade_to_education_plan(self, upgrade_to_education_plan):
-        """Sets the upgrade_to_education_plan of this BTUserParams.
-
-
-        :param upgrade_to_education_plan: The upgrade_to_education_plan of this BTUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._upgrade_to_education_plan = upgrade_to_education_plan
-
-    @property
     def source(self):
         """Gets the source of this BTUserParams.  # noqa: E501
 
@@ -293,6 +272,48 @@ class BTUserParams(object):
         """
 
         self._source = source
+
+    @property
+    def password(self):
+        """Gets the password of this BTUserParams.  # noqa: E501
+
+
+        :return: The password of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this BTUserParams.
+
+
+        :param password: The password of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
+
+    @property
+    def token(self):
+        """Gets the token of this BTUserParams.  # noqa: E501
+
+
+        :return: The token of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._token
+
+    @token.setter
+    def token(self, token):
+        """Sets the token of this BTUserParams.
+
+
+        :param token: The token of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._token = token
 
     @property
     def description(self):
@@ -316,25 +337,151 @@ class BTUserParams(object):
         self._description = description
 
     @property
-    def password(self):
-        """Gets the password of this BTUserParams.  # noqa: E501
+    def recaptcha(self):
+        """Gets the recaptcha of this BTUserParams.  # noqa: E501
 
 
-        :return: The password of this BTUserParams.  # noqa: E501
+        :return: The recaptcha of this BTUserParams.  # noqa: E501
         :rtype: str
         """
-        return self._password
+        return self._recaptcha
 
-    @password.setter
-    def password(self, password):
-        """Sets the password of this BTUserParams.
+    @recaptcha.setter
+    def recaptcha(self, recaptcha):
+        """Sets the recaptcha of this BTUserParams.
 
 
-        :param password: The password of this BTUserParams.  # noqa: E501
+        :param recaptcha: The recaptcha of this BTUserParams.  # noqa: E501
         :type: str
         """
 
-        self._password = password
+        self._recaptcha = recaptcha
+
+    @property
+    def invite_friend_request(self):
+        """Gets the invite_friend_request of this BTUserParams.  # noqa: E501
+
+
+        :return: The invite_friend_request of this BTUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._invite_friend_request
+
+    @invite_friend_request.setter
+    def invite_friend_request(self, invite_friend_request):
+        """Sets the invite_friend_request of this BTUserParams.
+
+
+        :param invite_friend_request: The invite_friend_request of this BTUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._invite_friend_request = invite_friend_request
+
+    @property
+    def approve_user(self):
+        """Gets the approve_user of this BTUserParams.  # noqa: E501
+
+
+        :return: The approve_user of this BTUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._approve_user
+
+    @approve_user.setter
+    def approve_user(self, approve_user):
+        """Sets the approve_user of this BTUserParams.
+
+
+        :param approve_user: The approve_user of this BTUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._approve_user = approve_user
+
+    @property
+    def cad_system_at_signup(self):
+        """Gets the cad_system_at_signup of this BTUserParams.  # noqa: E501
+
+
+        :return: The cad_system_at_signup of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._cad_system_at_signup
+
+    @cad_system_at_signup.setter
+    def cad_system_at_signup(self, cad_system_at_signup):
+        """Sets the cad_system_at_signup of this BTUserParams.
+
+
+        :param cad_system_at_signup: The cad_system_at_signup of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._cad_system_at_signup = cad_system_at_signup
+
+    @property
+    def company_plan(self):
+        """Gets the company_plan of this BTUserParams.  # noqa: E501
+
+
+        :return: The company_plan of this BTUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._company_plan
+
+    @company_plan.setter
+    def company_plan(self, company_plan):
+        """Sets the company_plan of this BTUserParams.
+
+
+        :param company_plan: The company_plan of this BTUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._company_plan = company_plan
+
+    @property
+    def eula_accepted(self):
+        """Gets the eula_accepted of this BTUserParams.  # noqa: E501
+
+
+        :return: The eula_accepted of this BTUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._eula_accepted
+
+    @eula_accepted.setter
+    def eula_accepted(self, eula_accepted):
+        """Sets the eula_accepted of this BTUserParams.
+
+
+        :param eula_accepted: The eula_accepted of this BTUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._eula_accepted = eula_accepted
+
+    @property
+    def country_code(self):
+        """Gets the country_code of this BTUserParams.  # noqa: E501
+
+
+        :return: The country_code of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._country_code
+
+    @country_code.setter
+    def country_code(self, country_code):
+        """Sets the country_code of this BTUserParams.
+
+
+        :param country_code: The country_code of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._country_code = country_code
 
     @property
     def first_name(self):
@@ -484,111 +631,6 @@ class BTUserParams(object):
         self._role = role
 
     @property
-    def token(self):
-        """Gets the token of this BTUserParams.  # noqa: E501
-
-
-        :return: The token of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._token
-
-    @token.setter
-    def token(self, token):
-        """Sets the token of this BTUserParams.
-
-
-        :param token: The token of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._token = token
-
-    @property
-    def approve_user(self):
-        """Gets the approve_user of this BTUserParams.  # noqa: E501
-
-
-        :return: The approve_user of this BTUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._approve_user
-
-    @approve_user.setter
-    def approve_user(self, approve_user):
-        """Sets the approve_user of this BTUserParams.
-
-
-        :param approve_user: The approve_user of this BTUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._approve_user = approve_user
-
-    @property
-    def cad_system_at_signup(self):
-        """Gets the cad_system_at_signup of this BTUserParams.  # noqa: E501
-
-
-        :return: The cad_system_at_signup of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._cad_system_at_signup
-
-    @cad_system_at_signup.setter
-    def cad_system_at_signup(self, cad_system_at_signup):
-        """Sets the cad_system_at_signup of this BTUserParams.
-
-
-        :param cad_system_at_signup: The cad_system_at_signup of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._cad_system_at_signup = cad_system_at_signup
-
-    @property
-    def company_plan(self):
-        """Gets the company_plan of this BTUserParams.  # noqa: E501
-
-
-        :return: The company_plan of this BTUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._company_plan
-
-    @company_plan.setter
-    def company_plan(self, company_plan):
-        """Sets the company_plan of this BTUserParams.
-
-
-        :param company_plan: The company_plan of this BTUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._company_plan = company_plan
-
-    @property
-    def eula_accepted(self):
-        """Gets the eula_accepted of this BTUserParams.  # noqa: E501
-
-
-        :return: The eula_accepted of this BTUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._eula_accepted
-
-    @eula_accepted.setter
-    def eula_accepted(self, eula_accepted):
-        """Sets the eula_accepted of this BTUserParams.
-
-
-        :param eula_accepted: The eula_accepted of this BTUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._eula_accepted = eula_accepted
-
-    @property
     def forum_id(self):
         """Gets the forum_id of this BTUserParams.  # noqa: E501
 
@@ -608,27 +650,6 @@ class BTUserParams(object):
         """
 
         self._forum_id = forum_id
-
-    @property
-    def country_code(self):
-        """Gets the country_code of this BTUserParams.  # noqa: E501
-
-
-        :return: The country_code of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._country_code
-
-    @country_code.setter
-    def country_code(self, country_code):
-        """Sets the country_code of this BTUserParams.
-
-
-        :param country_code: The country_code of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._country_code = country_code
 
     @property
     def phone_number(self):
@@ -652,46 +673,25 @@ class BTUserParams(object):
         self._phone_number = phone_number
 
     @property
-    def recaptcha(self):
-        """Gets the recaptcha of this BTUserParams.  # noqa: E501
+    def upgrade_to_education_plan(self):
+        """Gets the upgrade_to_education_plan of this BTUserParams.  # noqa: E501
 
 
-        :return: The recaptcha of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._recaptcha
-
-    @recaptcha.setter
-    def recaptcha(self, recaptcha):
-        """Sets the recaptcha of this BTUserParams.
-
-
-        :param recaptcha: The recaptcha of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._recaptcha = recaptcha
-
-    @property
-    def invite_friend_request(self):
-        """Gets the invite_friend_request of this BTUserParams.  # noqa: E501
-
-
-        :return: The invite_friend_request of this BTUserParams.  # noqa: E501
+        :return: The upgrade_to_education_plan of this BTUserParams.  # noqa: E501
         :rtype: bool
         """
-        return self._invite_friend_request
+        return self._upgrade_to_education_plan
 
-    @invite_friend_request.setter
-    def invite_friend_request(self, invite_friend_request):
-        """Sets the invite_friend_request of this BTUserParams.
+    @upgrade_to_education_plan.setter
+    def upgrade_to_education_plan(self, upgrade_to_education_plan):
+        """Sets the upgrade_to_education_plan of this BTUserParams.
 
 
-        :param invite_friend_request: The invite_friend_request of this BTUserParams.  # noqa: E501
+        :param upgrade_to_education_plan: The upgrade_to_education_plan of this BTUserParams.  # noqa: E501
         :type: bool
         """
 
-        self._invite_friend_request = invite_friend_request
+        self._upgrade_to_education_plan = upgrade_to_education_plan
 
     def to_dict(self):
         """Returns the model properties as a dict"""

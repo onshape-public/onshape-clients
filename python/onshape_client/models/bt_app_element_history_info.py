@@ -33,35 +33,35 @@ class BTAppElementHistoryInfo(object):
     """
     openapi_types = {
         'changes': 'list[BTAppElementHistoryEntryInfo]',
-        'error_description': 'str',
         'error_code': 'int',
-        'error_value': 'str'
+        'error_value': 'str',
+        'error_description': 'str'
     }
 
     attribute_map = {
         'changes': 'changes',
-        'error_description': 'errorDescription',
         'error_code': 'errorCode',
-        'error_value': 'errorValue'
+        'error_value': 'errorValue',
+        'error_description': 'errorDescription'
     }
 
-    def __init__(self, changes=None, error_description=None, error_code=None, error_value=None):  # noqa: E501
+    def __init__(self, changes=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
         """BTAppElementHistoryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._changes = None
-        self._error_description = None
         self._error_code = None
         self._error_value = None
+        self._error_description = None
         self.discriminator = None
 
         if changes is not None:
             self.changes = changes
-        if error_description is not None:
-            self.error_description = error_description
         if error_code is not None:
             self.error_code = error_code
         if error_value is not None:
             self.error_value = error_value
+        if error_description is not None:
+            self.error_description = error_description
 
     @property
     def changes(self):
@@ -83,27 +83,6 @@ class BTAppElementHistoryInfo(object):
         """
 
         self._changes = changes
-
-    @property
-    def error_description(self):
-        """Gets the error_description of this BTAppElementHistoryInfo.  # noqa: E501
-
-
-        :return: The error_description of this BTAppElementHistoryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_description
-
-    @error_description.setter
-    def error_description(self, error_description):
-        """Sets the error_description of this BTAppElementHistoryInfo.
-
-
-        :param error_description: The error_description of this BTAppElementHistoryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._error_description = error_description
 
     @property
     def error_code(self):
@@ -152,6 +131,27 @@ class BTAppElementHistoryInfo(object):
             )
 
         self._error_value = error_value
+
+    @property
+    def error_description(self):
+        """Gets the error_description of this BTAppElementHistoryInfo.  # noqa: E501
+
+
+        :return: The error_description of this BTAppElementHistoryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_description
+
+    @error_description.setter
+    def error_description(self, error_description):
+        """Sets the error_description of this BTAppElementHistoryInfo.
+
+
+        :param error_description: The error_description of this BTAppElementHistoryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._error_description = error_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

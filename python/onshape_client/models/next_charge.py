@@ -32,57 +32,36 @@ class NextCharge(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'current_period_end': 'datetime',
         'total': 'int',
+        'interval': 'str',
         'amount': 'int',
-        'interval': 'str'
+        'current_period_end': 'datetime'
     }
 
     attribute_map = {
-        'current_period_end': 'currentPeriodEnd',
         'total': 'total',
+        'interval': 'interval',
         'amount': 'amount',
-        'interval': 'interval'
+        'current_period_end': 'currentPeriodEnd'
     }
 
-    def __init__(self, current_period_end=None, total=None, amount=None, interval=None):  # noqa: E501
+    def __init__(self, total=None, interval=None, amount=None, current_period_end=None):  # noqa: E501
         """NextCharge - a model defined in OpenAPI"""  # noqa: E501
 
-        self._current_period_end = None
         self._total = None
-        self._amount = None
         self._interval = None
+        self._amount = None
+        self._current_period_end = None
         self.discriminator = None
 
-        if current_period_end is not None:
-            self.current_period_end = current_period_end
         if total is not None:
             self.total = total
-        if amount is not None:
-            self.amount = amount
         if interval is not None:
             self.interval = interval
-
-    @property
-    def current_period_end(self):
-        """Gets the current_period_end of this NextCharge.  # noqa: E501
-
-
-        :return: The current_period_end of this NextCharge.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._current_period_end
-
-    @current_period_end.setter
-    def current_period_end(self, current_period_end):
-        """Sets the current_period_end of this NextCharge.
-
-
-        :param current_period_end: The current_period_end of this NextCharge.  # noqa: E501
-        :type: datetime
-        """
-
-        self._current_period_end = current_period_end
+        if amount is not None:
+            self.amount = amount
+        if current_period_end is not None:
+            self.current_period_end = current_period_end
 
     @property
     def total(self):
@@ -106,6 +85,27 @@ class NextCharge(object):
         self._total = total
 
     @property
+    def interval(self):
+        """Gets the interval of this NextCharge.  # noqa: E501
+
+
+        :return: The interval of this NextCharge.  # noqa: E501
+        :rtype: str
+        """
+        return self._interval
+
+    @interval.setter
+    def interval(self, interval):
+        """Sets the interval of this NextCharge.
+
+
+        :param interval: The interval of this NextCharge.  # noqa: E501
+        :type: str
+        """
+
+        self._interval = interval
+
+    @property
     def amount(self):
         """Gets the amount of this NextCharge.  # noqa: E501
 
@@ -127,25 +127,25 @@ class NextCharge(object):
         self._amount = amount
 
     @property
-    def interval(self):
-        """Gets the interval of this NextCharge.  # noqa: E501
+    def current_period_end(self):
+        """Gets the current_period_end of this NextCharge.  # noqa: E501
 
 
-        :return: The interval of this NextCharge.  # noqa: E501
-        :rtype: str
+        :return: The current_period_end of this NextCharge.  # noqa: E501
+        :rtype: datetime
         """
-        return self._interval
+        return self._current_period_end
 
-    @interval.setter
-    def interval(self, interval):
-        """Sets the interval of this NextCharge.
+    @current_period_end.setter
+    def current_period_end(self, current_period_end):
+        """Sets the current_period_end of this NextCharge.
 
 
-        :param interval: The interval of this NextCharge.  # noqa: E501
-        :type: str
+        :param current_period_end: The current_period_end of this NextCharge.  # noqa: E501
+        :type: datetime
         """
 
-        self._interval = interval
+        self._current_period_end = current_period_end
 
     def to_dict(self):
         """Returns the model properties as a dict"""

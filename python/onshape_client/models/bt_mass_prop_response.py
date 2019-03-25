@@ -32,46 +32,67 @@ class BTMassPropResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'bodies': 'dict(str, BTMassProperties)',
         'microversion_id': 'str',
+        'bodies': 'dict(str, BTMassProperties)',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'bodies': 'bodies',
         'microversion_id': 'microversionId',
+        'bodies': 'bodies',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, bodies=None, microversion_id=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, microversion_id=None, bodies=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTMassPropResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._bodies = None
         self._microversion_id = None
+        self._bodies = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if bodies is not None:
-            self.bodies = bodies
         if microversion_id is not None:
             self.microversion_id = microversion_id
+        if bodies is not None:
+            self.bodies = bodies
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTMassPropResponse.  # noqa: E501
+
+
+        :return: The microversion_id of this BTMassPropResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTMassPropResponse.
+
+
+        :param microversion_id: The microversion_id of this BTMassPropResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
 
     @property
     def bodies(self):
@@ -95,25 +116,25 @@ class BTMassPropResponse(object):
         self._bodies = bodies
 
     @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTMassPropResponse.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTMassPropResponse.  # noqa: E501
 
 
-        :return: The microversion_id of this BTMassPropResponse.  # noqa: E501
-        :rtype: str
+        :return: The type_id of this BTMassPropResponse.  # noqa: E501
+        :rtype: int
         """
-        return self._microversion_id
+        return self._type_id
 
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTMassPropResponse.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTMassPropResponse.
 
 
-        :param microversion_id: The microversion_id of this BTMassPropResponse.  # noqa: E501
-        :type: str
+        :param type_id: The type_id of this BTMassPropResponse.  # noqa: E501
+        :type: int
         """
 
-        self._microversion_id = microversion_id
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -177,27 +198,6 @@ class BTMassPropResponse(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTMassPropResponse.  # noqa: E501
-
-
-        :return: The type_id of this BTMassPropResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTMassPropResponse.
-
-
-        :param type_id: The type_id of this BTMassPropResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

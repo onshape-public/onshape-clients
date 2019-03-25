@@ -37,20 +37,20 @@ class BTWorkspacePartParams(object):
         'revision': 'str',
         'configuration': 'str',
         'element_id': 'str',
-        'part_number': 'str',
-        'custom_properties': 'list[BTNameValuePair]',
         'project': 'str',
-        'part_id': 'str',
         'connection_id': 'str',
         'material': 'BTMaterialParams',
+        'custom_properties': 'list[BTNameValuePair]',
         'vendor': 'str',
         'product_line': 'str',
         'title1': 'str',
         'title2': 'str',
         'title3': 'str',
-        'appearance': 'BTPartAppearanceParams',
+        'part_id': 'str',
+        'part_number': 'str',
         'custom_property_definitions': 'list[BTCustomPropertyDefinitionParams]',
-        'apply_update_to_all_configurations': 'bool'
+        'apply_update_to_all_configurations': 'bool',
+        'appearance': 'BTPartAppearanceParams'
     }
 
     attribute_map = {
@@ -59,23 +59,23 @@ class BTWorkspacePartParams(object):
         'revision': 'revision',
         'configuration': 'configuration',
         'element_id': 'elementId',
-        'part_number': 'partNumber',
-        'custom_properties': 'customProperties',
         'project': 'project',
-        'part_id': 'partId',
         'connection_id': 'connectionId',
         'material': 'material',
+        'custom_properties': 'customProperties',
         'vendor': 'vendor',
         'product_line': 'productLine',
         'title1': 'title1',
         'title2': 'title2',
         'title3': 'title3',
-        'appearance': 'appearance',
+        'part_id': 'partId',
+        'part_number': 'partNumber',
         'custom_property_definitions': 'customPropertyDefinitions',
-        'apply_update_to_all_configurations': 'applyUpdateToAllConfigurations'
+        'apply_update_to_all_configurations': 'applyUpdateToAllConfigurations',
+        'appearance': 'appearance'
     }
 
-    def __init__(self, name=None, description=None, revision=None, configuration=None, element_id=None, part_number=None, custom_properties=None, project=None, part_id=None, connection_id=None, material=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, appearance=None, custom_property_definitions=None, apply_update_to_all_configurations=None):  # noqa: E501
+    def __init__(self, name=None, description=None, revision=None, configuration=None, element_id=None, project=None, connection_id=None, material=None, custom_properties=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_id=None, part_number=None, custom_property_definitions=None, apply_update_to_all_configurations=None, appearance=None):  # noqa: E501
         """BTWorkspacePartParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
@@ -83,20 +83,20 @@ class BTWorkspacePartParams(object):
         self._revision = None
         self._configuration = None
         self._element_id = None
-        self._part_number = None
-        self._custom_properties = None
         self._project = None
-        self._part_id = None
         self._connection_id = None
         self._material = None
+        self._custom_properties = None
         self._vendor = None
         self._product_line = None
         self._title1 = None
         self._title2 = None
         self._title3 = None
-        self._appearance = None
+        self._part_id = None
+        self._part_number = None
         self._custom_property_definitions = None
         self._apply_update_to_all_configurations = None
+        self._appearance = None
         self.discriminator = None
 
         if name is not None:
@@ -109,18 +109,14 @@ class BTWorkspacePartParams(object):
             self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
-        if part_number is not None:
-            self.part_number = part_number
-        if custom_properties is not None:
-            self.custom_properties = custom_properties
         if project is not None:
             self.project = project
-        if part_id is not None:
-            self.part_id = part_id
         if connection_id is not None:
             self.connection_id = connection_id
         if material is not None:
             self.material = material
+        if custom_properties is not None:
+            self.custom_properties = custom_properties
         if vendor is not None:
             self.vendor = vendor
         if product_line is not None:
@@ -131,12 +127,16 @@ class BTWorkspacePartParams(object):
             self.title2 = title2
         if title3 is not None:
             self.title3 = title3
-        if appearance is not None:
-            self.appearance = appearance
+        if part_id is not None:
+            self.part_id = part_id
+        if part_number is not None:
+            self.part_number = part_number
         if custom_property_definitions is not None:
             self.custom_property_definitions = custom_property_definitions
         if apply_update_to_all_configurations is not None:
             self.apply_update_to_all_configurations = apply_update_to_all_configurations
+        if appearance is not None:
+            self.appearance = appearance
 
     @property
     def name(self):
@@ -244,48 +244,6 @@ class BTWorkspacePartParams(object):
         self._element_id = element_id
 
     @property
-    def part_number(self):
-        """Gets the part_number of this BTWorkspacePartParams.  # noqa: E501
-
-
-        :return: The part_number of this BTWorkspacePartParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTWorkspacePartParams.
-
-
-        :param part_number: The part_number of this BTWorkspacePartParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def custom_properties(self):
-        """Gets the custom_properties of this BTWorkspacePartParams.  # noqa: E501
-
-
-        :return: The custom_properties of this BTWorkspacePartParams.  # noqa: E501
-        :rtype: list[BTNameValuePair]
-        """
-        return self._custom_properties
-
-    @custom_properties.setter
-    def custom_properties(self, custom_properties):
-        """Sets the custom_properties of this BTWorkspacePartParams.
-
-
-        :param custom_properties: The custom_properties of this BTWorkspacePartParams.  # noqa: E501
-        :type: list[BTNameValuePair]
-        """
-
-        self._custom_properties = custom_properties
-
-    @property
     def project(self):
         """Gets the project of this BTWorkspacePartParams.  # noqa: E501
 
@@ -305,27 +263,6 @@ class BTWorkspacePartParams(object):
         """
 
         self._project = project
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTWorkspacePartParams.  # noqa: E501
-
-
-        :return: The part_id of this BTWorkspacePartParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTWorkspacePartParams.
-
-
-        :param part_id: The part_id of this BTWorkspacePartParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
 
     @property
     def connection_id(self):
@@ -368,6 +305,27 @@ class BTWorkspacePartParams(object):
         """
 
         self._material = material
+
+    @property
+    def custom_properties(self):
+        """Gets the custom_properties of this BTWorkspacePartParams.  # noqa: E501
+
+
+        :return: The custom_properties of this BTWorkspacePartParams.  # noqa: E501
+        :rtype: list[BTNameValuePair]
+        """
+        return self._custom_properties
+
+    @custom_properties.setter
+    def custom_properties(self, custom_properties):
+        """Sets the custom_properties of this BTWorkspacePartParams.
+
+
+        :param custom_properties: The custom_properties of this BTWorkspacePartParams.  # noqa: E501
+        :type: list[BTNameValuePair]
+        """
+
+        self._custom_properties = custom_properties
 
     @property
     def vendor(self):
@@ -475,25 +433,46 @@ class BTWorkspacePartParams(object):
         self._title3 = title3
 
     @property
-    def appearance(self):
-        """Gets the appearance of this BTWorkspacePartParams.  # noqa: E501
+    def part_id(self):
+        """Gets the part_id of this BTWorkspacePartParams.  # noqa: E501
 
 
-        :return: The appearance of this BTWorkspacePartParams.  # noqa: E501
-        :rtype: BTPartAppearanceParams
+        :return: The part_id of this BTWorkspacePartParams.  # noqa: E501
+        :rtype: str
         """
-        return self._appearance
+        return self._part_id
 
-    @appearance.setter
-    def appearance(self, appearance):
-        """Sets the appearance of this BTWorkspacePartParams.
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTWorkspacePartParams.
 
 
-        :param appearance: The appearance of this BTWorkspacePartParams.  # noqa: E501
-        :type: BTPartAppearanceParams
+        :param part_id: The part_id of this BTWorkspacePartParams.  # noqa: E501
+        :type: str
         """
 
-        self._appearance = appearance
+        self._part_id = part_id
+
+    @property
+    def part_number(self):
+        """Gets the part_number of this BTWorkspacePartParams.  # noqa: E501
+
+
+        :return: The part_number of this BTWorkspacePartParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_number
+
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTWorkspacePartParams.
+
+
+        :param part_number: The part_number of this BTWorkspacePartParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_number = part_number
 
     @property
     def custom_property_definitions(self):
@@ -536,6 +515,27 @@ class BTWorkspacePartParams(object):
         """
 
         self._apply_update_to_all_configurations = apply_update_to_all_configurations
+
+    @property
+    def appearance(self):
+        """Gets the appearance of this BTWorkspacePartParams.  # noqa: E501
+
+
+        :return: The appearance of this BTWorkspacePartParams.  # noqa: E501
+        :rtype: BTPartAppearanceParams
+        """
+        return self._appearance
+
+    @appearance.setter
+    def appearance(self, appearance):
+        """Sets the appearance of this BTWorkspacePartParams.
+
+
+        :param appearance: The appearance of this BTWorkspacePartParams.  # noqa: E501
+        :type: BTPartAppearanceParams
+        """
+
+        self._appearance = appearance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

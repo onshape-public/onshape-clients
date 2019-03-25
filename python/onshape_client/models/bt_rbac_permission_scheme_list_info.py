@@ -33,40 +33,40 @@ class BTRbacPermissionSchemeListInfo(object):
     """
     openapi_types = {
         'default_index': 'int',
-        'previous': 'str',
         'next': 'str',
         'items': 'list[BTRbacPermissionSchemeInfo]',
-        'href': 'str'
+        'href': 'str',
+        'previous': 'str'
     }
 
     attribute_map = {
         'default_index': 'defaultIndex',
-        'previous': 'previous',
         'next': 'next',
         'items': 'items',
-        'href': 'href'
+        'href': 'href',
+        'previous': 'previous'
     }
 
-    def __init__(self, default_index=None, previous=None, next=None, items=None, href=None):  # noqa: E501
+    def __init__(self, default_index=None, next=None, items=None, href=None, previous=None):  # noqa: E501
         """BTRbacPermissionSchemeListInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._default_index = None
-        self._previous = None
         self._next = None
         self._items = None
         self._href = None
+        self._previous = None
         self.discriminator = None
 
         if default_index is not None:
             self.default_index = default_index
-        if previous is not None:
-            self.previous = previous
         if next is not None:
             self.next = next
         if items is not None:
             self.items = items
         if href is not None:
             self.href = href
+        if previous is not None:
+            self.previous = previous
 
     @property
     def default_index(self):
@@ -88,27 +88,6 @@ class BTRbacPermissionSchemeListInfo(object):
         """
 
         self._default_index = default_index
-
-    @property
-    def previous(self):
-        """Gets the previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-
-
-        :return: The previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._previous
-
-    @previous.setter
-    def previous(self, previous):
-        """Sets the previous of this BTRbacPermissionSchemeListInfo.
-
-
-        :param previous: The previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._previous = previous
 
     @property
     def next(self):
@@ -172,6 +151,27 @@ class BTRbacPermissionSchemeListInfo(object):
         """
 
         self._href = href
+
+    @property
+    def previous(self):
+        """Gets the previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+
+
+        :return: The previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._previous
+
+    @previous.setter
+    def previous(self, previous):
+        """Sets the previous of this BTRbacPermissionSchemeListInfo.
+
+
+        :param previous: The previous of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._previous = previous
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,72 +32,51 @@ class BTBetaCapabilityImportInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'failed': 'list[str]',
         'existing': 'list[str]',
+        'failed': 'list[str]',
         'succeeded': 'list[str]',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
-        'failed': 'failed',
         'existing': 'existing',
+        'failed': 'failed',
         'succeeded': 'succeeded',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, failed=None, existing=None, succeeded=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, existing=None, failed=None, succeeded=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityImportInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._failed = None
         self._existing = None
+        self._failed = None
         self._succeeded = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
-        if failed is not None:
-            self.failed = failed
         if existing is not None:
             self.existing = existing
+        if failed is not None:
+            self.failed = failed
         if succeeded is not None:
             self.succeeded = succeeded
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
-
-    @property
-    def failed(self):
-        """Gets the failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-
-
-        :return: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._failed
-
-    @failed.setter
-    def failed(self, failed):
-        """Sets the failed of this BTBetaCapabilityImportInfo.
-
-
-        :param failed: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._failed = failed
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def existing(self):
@@ -119,6 +98,27 @@ class BTBetaCapabilityImportInfo(object):
         """
 
         self._existing = existing
+
+    @property
+    def failed(self):
+        """Gets the failed of this BTBetaCapabilityImportInfo.  # noqa: E501
+
+
+        :return: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._failed
+
+    @failed.setter
+    def failed(self, failed):
+        """Sets the failed of this BTBetaCapabilityImportInfo.
+
+
+        :param failed: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._failed = failed
 
     @property
     def succeeded(self):
@@ -184,27 +184,6 @@ class BTBetaCapabilityImportInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTBetaCapabilityImportInfo.
-
-
-        :param view_ref: The view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityImportInfo.  # noqa: E501
 
@@ -224,6 +203,27 @@ class BTBetaCapabilityImportInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTBetaCapabilityImportInfo.
+
+
+        :param view_ref: The view_ref of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

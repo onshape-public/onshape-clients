@@ -32,46 +32,67 @@ class BTShadedRenderDocumentResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'image_data': 'list[str]',
         'status': 'BTNodeStatus',
+        'image_data': 'list[str]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'image_data': 'imageData',
         'status': 'status',
+        'image_data': 'imageData',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, image_data=None, status=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, status=None, image_data=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTShadedRenderDocumentResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._image_data = None
         self._status = None
+        self._image_data = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if image_data is not None:
-            self.image_data = image_data
         if status is not None:
             self.status = status
+        if image_data is not None:
+            self.image_data = image_data
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
+
+    @property
+    def status(self):
+        """Gets the status of this BTShadedRenderDocumentResponse.  # noqa: E501
+
+
+        :return: The status of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :rtype: BTNodeStatus
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this BTShadedRenderDocumentResponse.
+
+
+        :param status: The status of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :type: BTNodeStatus
+        """
+
+        self._status = status
 
     @property
     def image_data(self):
@@ -95,25 +116,25 @@ class BTShadedRenderDocumentResponse(object):
         self._image_data = image_data
 
     @property
-    def status(self):
-        """Gets the status of this BTShadedRenderDocumentResponse.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
 
 
-        :return: The status of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :rtype: BTNodeStatus
+        :return: The type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :rtype: int
         """
-        return self._status
+        return self._type_id
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this BTShadedRenderDocumentResponse.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTShadedRenderDocumentResponse.
 
 
-        :param status: The status of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :type: BTNodeStatus
+        :param type_id: The type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :type: int
         """
 
-        self._status = status
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -177,27 +198,6 @@ class BTShadedRenderDocumentResponse(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
-
-
-        :return: The type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTShadedRenderDocumentResponse.
-
-
-        :param type_id: The type_id of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

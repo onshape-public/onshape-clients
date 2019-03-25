@@ -34,8 +34,8 @@ class BTMetricParams(object):
     openapi_types = {
         'system_id': 'str',
         'property_map': 'dict(str, object)',
-        'element_id': 'str',
         'document_id': 'str',
+        'element_id': 'str',
         'event_type': 'int',
         'event_name': 'str',
         'event_namespace': 'str',
@@ -45,21 +45,21 @@ class BTMetricParams(object):
     attribute_map = {
         'system_id': 'systemId',
         'property_map': 'propertyMap',
-        'element_id': 'elementId',
         'document_id': 'documentId',
+        'element_id': 'elementId',
         'event_type': 'eventType',
         'event_name': 'eventName',
         'event_namespace': 'eventNamespace',
         'event_time': 'eventTime'
     }
 
-    def __init__(self, system_id=None, property_map=None, element_id=None, document_id=None, event_type=None, event_name=None, event_namespace=None, event_time=None):  # noqa: E501
+    def __init__(self, system_id=None, property_map=None, document_id=None, element_id=None, event_type=None, event_name=None, event_namespace=None, event_time=None):  # noqa: E501
         """BTMetricParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._system_id = None
         self._property_map = None
-        self._element_id = None
         self._document_id = None
+        self._element_id = None
         self._event_type = None
         self._event_name = None
         self._event_namespace = None
@@ -70,10 +70,10 @@ class BTMetricParams(object):
             self.system_id = system_id
         if property_map is not None:
             self.property_map = property_map
-        if element_id is not None:
-            self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
+        if element_id is not None:
+            self.element_id = element_id
         if event_type is not None:
             self.event_type = event_type
         if event_name is not None:
@@ -126,27 +126,6 @@ class BTMetricParams(object):
         self._property_map = property_map
 
     @property
-    def element_id(self):
-        """Gets the element_id of this BTMetricParams.  # noqa: E501
-
-
-        :return: The element_id of this BTMetricParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTMetricParams.
-
-
-        :param element_id: The element_id of this BTMetricParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
     def document_id(self):
         """Gets the document_id of this BTMetricParams.  # noqa: E501
 
@@ -166,6 +145,27 @@ class BTMetricParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTMetricParams.  # noqa: E501
+
+
+        :return: The element_id of this BTMetricParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTMetricParams.
+
+
+        :param element_id: The element_id of this BTMetricParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
 
     @property
     def event_type(self):

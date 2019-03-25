@@ -34,57 +34,57 @@ class BTBetaCapabilityInfo(object):
     openapi_types = {
         'eula': 'str',
         'welcome_html': 'str',
-        'upgradable': 'bool',
         'user_state': 'int',
         'description': 'str',
+        'upgradable': 'bool',
         'user_based': 'bool',
         'self_service_disabled': 'bool',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
         'eula': 'eula',
         'welcome_html': 'welcomeHTML',
-        'upgradable': 'upgradable',
         'user_state': 'userState',
         'description': 'description',
+        'upgradable': 'upgradable',
         'user_based': 'userBased',
         'self_service_disabled': 'selfServiceDisabled',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, eula=None, welcome_html=None, upgradable=None, user_state=None, description=None, user_based=None, self_service_disabled=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, eula=None, welcome_html=None, user_state=None, description=None, upgradable=None, user_based=None, self_service_disabled=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._eula = None
         self._welcome_html = None
-        self._upgradable = None
         self._user_state = None
         self._description = None
+        self._upgradable = None
         self._user_based = None
         self._self_service_disabled = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if eula is not None:
             self.eula = eula
         if welcome_html is not None:
             self.welcome_html = welcome_html
-        if upgradable is not None:
-            self.upgradable = upgradable
         if user_state is not None:
             self.user_state = user_state
         if description is not None:
             self.description = description
+        if upgradable is not None:
+            self.upgradable = upgradable
         if user_based is not None:
             self.user_based = user_based
         if self_service_disabled is not None:
@@ -93,10 +93,10 @@ class BTBetaCapabilityInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def eula(self):
@@ -141,27 +141,6 @@ class BTBetaCapabilityInfo(object):
         self._welcome_html = welcome_html
 
     @property
-    def upgradable(self):
-        """Gets the upgradable of this BTBetaCapabilityInfo.  # noqa: E501
-
-
-        :return: The upgradable of this BTBetaCapabilityInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._upgradable
-
-    @upgradable.setter
-    def upgradable(self, upgradable):
-        """Sets the upgradable of this BTBetaCapabilityInfo.
-
-
-        :param upgradable: The upgradable of this BTBetaCapabilityInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._upgradable = upgradable
-
-    @property
     def user_state(self):
         """Gets the user_state of this BTBetaCapabilityInfo.  # noqa: E501
 
@@ -202,6 +181,27 @@ class BTBetaCapabilityInfo(object):
         """
 
         self._description = description
+
+    @property
+    def upgradable(self):
+        """Gets the upgradable of this BTBetaCapabilityInfo.  # noqa: E501
+
+
+        :return: The upgradable of this BTBetaCapabilityInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._upgradable
+
+    @upgradable.setter
+    def upgradable(self, upgradable):
+        """Sets the upgradable of this BTBetaCapabilityInfo.
+
+
+        :param upgradable: The upgradable of this BTBetaCapabilityInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._upgradable = upgradable
 
     @property
     def user_based(self):
@@ -288,27 +288,6 @@ class BTBetaCapabilityInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTBetaCapabilityInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTBetaCapabilityInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTBetaCapabilityInfo.
-
-
-        :param view_ref: The view_ref of this BTBetaCapabilityInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityInfo.  # noqa: E501
 
@@ -328,6 +307,27 @@ class BTBetaCapabilityInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTBetaCapabilityInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTBetaCapabilityInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTBetaCapabilityInfo.
+
+
+        :param view_ref: The view_ref of this BTBetaCapabilityInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

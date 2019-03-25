@@ -5,42 +5,25 @@ exportstl
 Demos 307 redirects with the Onshape API
 '''
 
-from onshape_client.configuration import Configuration
+
 import onshape_client
-from pathlib import Path
-from ruamel.yaml import YAML
 from onshape_client.models.bt_configuration_params import BTConfigurationParams
-import six
+from onshape_client.shared import Client
 import json
 
-# Get the YAML file that contains the configuration params
-yaml = YAML()
-path = '../.onshape_client_config.yaml'
-onshape_client_config = yaml.load(Path(path))
-
-# Load the API keys and URL into the configuration
-configuration = Configuration()
-conf = onshape_client_config[onshape_client_config['default']]
-configuration.api_key['SECRET_KEY'] = conf['api_keys']['secret_key'].encode('utf-8')
-configuration.api_key['ACCESS_KEY'] = conf['api_keys']['access_key'].encode('utf-8')
-configuration.host = conf['baseUrl']
-
-apiClient = onshape_client.ApiClient(configuration=configuration)
-# Create the API instance with the configuration
-metadata_instance = onshape_client.api.MetadataApi(apiClient)
+client = Client()
 
 def get_encoded_config_map(config_map):
     params=BTConfigurationParams(parameters=config_map)
     # Get the desired configuration
-    elements_instance = onshape_client.api.ElementsApi(apiClient)
-    r = elements_instance.encode_configuration_map(did, eid, params, _preload_content=False)
+    r = client.ElementsApi.encode_configuration_map(did, eid, params, _preload_content=False)
     return json.loads(r.data.decode("UTF-8"))["queryParam"]
 
-def make_configured_part_href():
-    return configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "/p/" + pid + "?" + get_encoded_config_map(config_not_encoded)
+def make_configured_part_href(config_not_encoded):
+    return client.configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "/p/" + pid + "?" + get_encoded_config_map(config_not_encoded)
 
-def make_configured_assembly_href():
-    return configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "?" + get_encoded_config_map(config_not_encoded)
+def make_configured_assembly_href(config_not_encoded):
+    return client.configuration.host + "/api/metadata/d/" + did + "/w/" + wid + "/e/" + eid + "?" + get_encoded_config_map(config_not_encoded)
 
 # # Update a configured part property (on prod):
 # did = "624cda69347788edc2259a64"
@@ -66,10 +49,15 @@ def make_configured_assembly_href():
 did = "624cda69347788edc2259a64"
 wid = "c09ce0ce9af4ea6f69323ab7"
 eid = "d252e442e4cb6c22e49f4754"
-config_not_encoded=[{"parameterId":"size", "parameterValue":"8 in"}]
-new_val="new_description"
+config_not_encoded=[{"parameterId":"size", "parameterValue":"2 in"}, {"parameterId":"bool", "parameterValue":False}, {"parameterId":"List_EwLwXQKstmDIZM", "parameterValue":"another"}]
+config_not_encoded1=[{"parameterId":"size", "parameterValue":"2 in"}, {"parameterId":"bool", "parameterValue":True}, {"parameterId":"List_EwLwXQKstmDIZM", "parameterValue":"another"}]
+config_not_encoded2=[{"parameterId":"size", "parameterValue":"2 in"}, {"parameterId":"bool", "parameterValue":False}, {"parameterId":"List_EwLwXQKstmDIZM", "parameterValue":"that"}]
+config_not_encoded3=[{"parameterId":"size", "parameterValue":"2 in"}, {"parameterId":"bool", "parameterValue":True}, {"parameterId":"List_EwLwXQKstmDIZM", "parameterValue":"that"}]
+new_val="new_description_False_another"
 property_id="57f3fb8efa3416c06701d60e"
-href=make_configured_assembly_href()
+href=make_configured_assembly_href(config_not_encoded)
+available_config = client.ElementsApi.get_configuration3(did, "w", wid, eid, _preload_content=False)
+print(available_config)
 
 # # Update a configured element property (on local):
 # did = "d24ccec8a0da89a9c09f67e5"
@@ -81,20 +69,28 @@ href=make_configured_assembly_href()
 # property_id="57f3fb8efa3416c06701d60e"
 # href=make_configured_assembly_href()
 
-body={
-    'items': [
-        {
-            "properties": [
-                {
-                    "value": new_val,
-                    "propertyId": property_id
+def update_metadata_for_config(href, new_val):
+    body={
+        'items': [
+            {
+                "properties": [
+                    {
+                        "value": new_val,
+                        "propertyId": property_id
 
-                }
-            ],
-            "href": href
-        }
-    ]
-}
+                    }
+                ],
+                "href": href
+            }
+        ]
+    }
 
-# Try to update a configured part Studio's element metadata.
-mu = metadata_instance.update_wv_metadata(did, "w", wid, body, _preload_content=False)
+    # Try to update a configured part Studio's element metadata.
+    mu = client.MetadataApi.update_wv_metadata(did, "w", wid, body, _preload_content=False)
+    print("url: " + mu._request_url)
+    print("body: " + json.dumps(body))
+
+update_metadata_for_config(make_configured_assembly_href(config_not_encoded), new_val)
+update_metadata_for_config(make_configured_assembly_href(config_not_encoded1), new_val)
+update_metadata_for_config(make_configured_assembly_href(config_not_encoded2), new_val)
+update_metadata_for_config(make_configured_assembly_href(config_not_encoded3), new_val)

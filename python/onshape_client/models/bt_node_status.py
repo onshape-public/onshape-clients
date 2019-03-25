@@ -34,59 +34,59 @@ class BTNodeStatus(object):
     openapi_types = {
         'error': 'bool',
         'status_type': 'str',
-        'faulty_parameters': 'list[str]',
-        'status_msg': 'str',
         'status_enum': 'str',
+        'status_msg': 'str',
+        'faulty_parameters': 'list[str]',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'error': 'error',
         'status_type': 'statusType',
-        'faulty_parameters': 'faultyParameters',
-        'status_msg': 'statusMsg',
         'status_enum': 'statusEnum',
+        'status_msg': 'statusMsg',
+        'faulty_parameters': 'faultyParameters',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, error=None, status_type=None, faulty_parameters=None, status_msg=None, status_enum=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, error=None, status_type=None, status_enum=None, status_msg=None, faulty_parameters=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTNodeStatus - a model defined in OpenAPI"""  # noqa: E501
 
         self._error = None
         self._status_type = None
-        self._faulty_parameters = None
-        self._status_msg = None
         self._status_enum = None
+        self._status_msg = None
+        self._faulty_parameters = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
         if error is not None:
             self.error = error
         if status_type is not None:
             self.status_type = status_type
-        if faulty_parameters is not None:
-            self.faulty_parameters = faulty_parameters
-        if status_msg is not None:
-            self.status_msg = status_msg
         if status_enum is not None:
             self.status_enum = status_enum
+        if status_msg is not None:
+            self.status_msg = status_msg
+        if faulty_parameters is not None:
+            self.faulty_parameters = faulty_parameters
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
 
     @property
     def error(self):
@@ -137,48 +137,6 @@ class BTNodeStatus(object):
         self._status_type = status_type
 
     @property
-    def faulty_parameters(self):
-        """Gets the faulty_parameters of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The faulty_parameters of this BTNodeStatus.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._faulty_parameters
-
-    @faulty_parameters.setter
-    def faulty_parameters(self, faulty_parameters):
-        """Sets the faulty_parameters of this BTNodeStatus.
-
-
-        :param faulty_parameters: The faulty_parameters of this BTNodeStatus.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._faulty_parameters = faulty_parameters
-
-    @property
-    def status_msg(self):
-        """Gets the status_msg of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The status_msg of this BTNodeStatus.  # noqa: E501
-        :rtype: str
-        """
-        return self._status_msg
-
-    @status_msg.setter
-    def status_msg(self, status_msg):
-        """Sets the status_msg of this BTNodeStatus.
-
-
-        :param status_msg: The status_msg of this BTNodeStatus.  # noqa: E501
-        :type: str
-        """
-
-        self._status_msg = status_msg
-
-    @property
     def status_enum(self):
         """Gets the status_enum of this BTNodeStatus.  # noqa: E501
 
@@ -204,6 +162,69 @@ class BTNodeStatus(object):
             )
 
         self._status_enum = status_enum
+
+    @property
+    def status_msg(self):
+        """Gets the status_msg of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The status_msg of this BTNodeStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._status_msg
+
+    @status_msg.setter
+    def status_msg(self, status_msg):
+        """Sets the status_msg of this BTNodeStatus.
+
+
+        :param status_msg: The status_msg of this BTNodeStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._status_msg = status_msg
+
+    @property
+    def faulty_parameters(self):
+        """Gets the faulty_parameters of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The faulty_parameters of this BTNodeStatus.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._faulty_parameters
+
+    @faulty_parameters.setter
+    def faulty_parameters(self, faulty_parameters):
+        """Sets the faulty_parameters of this BTNodeStatus.
+
+
+        :param faulty_parameters: The faulty_parameters of this BTNodeStatus.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._faulty_parameters = faulty_parameters
+
+    @property
+    def type_id(self):
+        """Gets the type_id of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The type_id of this BTNodeStatus.  # noqa: E501
+        :rtype: int
+        """
+        return self._type_id
+
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTNodeStatus.
+
+
+        :param type_id: The type_id of this BTNodeStatus.  # noqa: E501
+        :type: int
+        """
+
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -267,27 +288,6 @@ class BTNodeStatus(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The type_id of this BTNodeStatus.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTNodeStatus.
-
-
-        :param type_id: The type_id of this BTNodeStatus.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

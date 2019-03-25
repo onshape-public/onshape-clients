@@ -33,30 +33,30 @@ class BTModelFormatInfo(object):
     """
     openapi_types = {
         'name': 'str',
-        'could_be_assembly': 'bool',
-        'translator_name': 'str'
+        'translator_name': 'str',
+        'could_be_assembly': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
-        'could_be_assembly': 'couldBeAssembly',
-        'translator_name': 'translatorName'
+        'translator_name': 'translatorName',
+        'could_be_assembly': 'couldBeAssembly'
     }
 
-    def __init__(self, name=None, could_be_assembly=None, translator_name=None):  # noqa: E501
+    def __init__(self, name=None, translator_name=None, could_be_assembly=None):  # noqa: E501
         """BTModelFormatInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
-        self._could_be_assembly = None
         self._translator_name = None
+        self._could_be_assembly = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if could_be_assembly is not None:
-            self.could_be_assembly = could_be_assembly
         if translator_name is not None:
             self.translator_name = translator_name
+        if could_be_assembly is not None:
+            self.could_be_assembly = could_be_assembly
 
     @property
     def name(self):
@@ -80,27 +80,6 @@ class BTModelFormatInfo(object):
         self._name = name
 
     @property
-    def could_be_assembly(self):
-        """Gets the could_be_assembly of this BTModelFormatInfo.  # noqa: E501
-
-
-        :return: The could_be_assembly of this BTModelFormatInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._could_be_assembly
-
-    @could_be_assembly.setter
-    def could_be_assembly(self, could_be_assembly):
-        """Sets the could_be_assembly of this BTModelFormatInfo.
-
-
-        :param could_be_assembly: The could_be_assembly of this BTModelFormatInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._could_be_assembly = could_be_assembly
-
-    @property
     def translator_name(self):
         """Gets the translator_name of this BTModelFormatInfo.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTModelFormatInfo(object):
         """
 
         self._translator_name = translator_name
+
+    @property
+    def could_be_assembly(self):
+        """Gets the could_be_assembly of this BTModelFormatInfo.  # noqa: E501
+
+
+        :return: The could_be_assembly of this BTModelFormatInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._could_be_assembly
+
+    @could_be_assembly.setter
+    def could_be_assembly(self, could_be_assembly):
+        """Sets the could_be_assembly of this BTModelFormatInfo.
+
+
+        :param could_be_assembly: The could_be_assembly of this BTModelFormatInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._could_be_assembly = could_be_assembly
 
     def to_dict(self):
         """Returns the model properties as a dict"""

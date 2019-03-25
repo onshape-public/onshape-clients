@@ -274,7 +274,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **eval_feature_script**
-> BTFeatureScriptEvalResponse eval_feature_script(did, wvm, wvmid, eid, eid2, bt_feature_script_eval_call=bt_feature_script_eval_call)
+> BTFeatureScriptEvalResponse eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call=bt_feature_script_eval_call)
 
 Evaluate FeatureScript
 
@@ -298,12 +298,12 @@ did = 'did_example' # str | Document ID.
 wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
 wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
 eid = 'eid_example' # str | Element ID.
-eid2 = 'eid_example' # str | Configuration string.
+configuration = 'configuration_example' # str | Configuration string. (optional)
 bt_feature_script_eval_call = onshape_client.BTFeatureScriptEvalCall() # BTFeatureScriptEvalCall |  (optional)
 
 try:
     # Evaluate FeatureScript
-    api_response = api_instance.eval_feature_script(did, wvm, wvmid, eid, eid2, bt_feature_script_eval_call=bt_feature_script_eval_call)
+    api_response = api_instance.eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call=bt_feature_script_eval_call)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PartStudiosApi->eval_feature_script: %s\n" % e)
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
  **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
  **eid** | **str**| Element ID. | 
- **eid2** | **str**| Configuration string. | 
+ **configuration** | **str**| Configuration string. | [optional] 
  **bt_feature_script_eval_call** | [**BTFeatureScriptEvalCall**](BTFeatureScriptEvalCall.md)|  | [optional] 
 
 ### Return type

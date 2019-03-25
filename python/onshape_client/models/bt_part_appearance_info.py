@@ -32,52 +32,31 @@ class BTPartAppearanceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_generated': 'bool',
         'color': 'BTColorInfo',
-        'opacity': 'int'
+        'opacity': 'int',
+        'is_generated': 'bool'
     }
 
     attribute_map = {
-        'is_generated': 'isGenerated',
         'color': 'color',
-        'opacity': 'opacity'
+        'opacity': 'opacity',
+        'is_generated': 'isGenerated'
     }
 
-    def __init__(self, is_generated=None, color=None, opacity=None):  # noqa: E501
+    def __init__(self, color=None, opacity=None, is_generated=None):  # noqa: E501
         """BTPartAppearanceInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_generated = None
         self._color = None
         self._opacity = None
+        self._is_generated = None
         self.discriminator = None
 
-        if is_generated is not None:
-            self.is_generated = is_generated
         if color is not None:
             self.color = color
         if opacity is not None:
             self.opacity = opacity
-
-    @property
-    def is_generated(self):
-        """Gets the is_generated of this BTPartAppearanceInfo.  # noqa: E501
-
-
-        :return: The is_generated of this BTPartAppearanceInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_generated
-
-    @is_generated.setter
-    def is_generated(self, is_generated):
-        """Sets the is_generated of this BTPartAppearanceInfo.
-
-
-        :param is_generated: The is_generated of this BTPartAppearanceInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_generated = is_generated
+        if is_generated is not None:
+            self.is_generated = is_generated
 
     @property
     def color(self):
@@ -120,6 +99,27 @@ class BTPartAppearanceInfo(object):
         """
 
         self._opacity = opacity
+
+    @property
+    def is_generated(self):
+        """Gets the is_generated of this BTPartAppearanceInfo.  # noqa: E501
+
+
+        :return: The is_generated of this BTPartAppearanceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_generated
+
+    @is_generated.setter
+    def is_generated(self, is_generated):
+        """Sets the is_generated of this BTPartAppearanceInfo.
+
+
+        :param is_generated: The is_generated of this BTPartAppearanceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_generated = is_generated
 
     def to_dict(self):
         """Returns the model properties as a dict"""

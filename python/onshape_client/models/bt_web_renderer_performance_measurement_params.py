@@ -32,36 +32,57 @@ class BTWebRendererPerformanceMeasurementParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'vendor': 'str',
         'renderer': 'str',
         'triangles_per_second': 'float',
-        'lines_per_second': 'float',
-        'vendor': 'str'
+        'lines_per_second': 'float'
     }
 
     attribute_map = {
+        'vendor': 'vendor',
         'renderer': 'renderer',
         'triangles_per_second': 'trianglesPerSecond',
-        'lines_per_second': 'linesPerSecond',
-        'vendor': 'vendor'
+        'lines_per_second': 'linesPerSecond'
     }
 
-    def __init__(self, renderer=None, triangles_per_second=None, lines_per_second=None, vendor=None):  # noqa: E501
+    def __init__(self, vendor=None, renderer=None, triangles_per_second=None, lines_per_second=None):  # noqa: E501
         """BTWebRendererPerformanceMeasurementParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._vendor = None
         self._renderer = None
         self._triangles_per_second = None
         self._lines_per_second = None
-        self._vendor = None
         self.discriminator = None
 
+        if vendor is not None:
+            self.vendor = vendor
         if renderer is not None:
             self.renderer = renderer
         if triangles_per_second is not None:
             self.triangles_per_second = triangles_per_second
         if lines_per_second is not None:
             self.lines_per_second = lines_per_second
-        if vendor is not None:
-            self.vendor = vendor
+
+    @property
+    def vendor(self):
+        """Gets the vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
+
+
+        :return: The vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._vendor
+
+    @vendor.setter
+    def vendor(self, vendor):
+        """Sets the vendor of this BTWebRendererPerformanceMeasurementParams.
+
+
+        :param vendor: The vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._vendor = vendor
 
     @property
     def renderer(self):
@@ -125,27 +146,6 @@ class BTWebRendererPerformanceMeasurementParams(object):
         """
 
         self._lines_per_second = lines_per_second
-
-    @property
-    def vendor(self):
-        """Gets the vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
-
-
-        :return: The vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._vendor
-
-    @vendor.setter
-    def vendor(self, vendor):
-        """Sets the vendor of this BTWebRendererPerformanceMeasurementParams.
-
-
-        :param vendor: The vendor of this BTWebRendererPerformanceMeasurementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._vendor = vendor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

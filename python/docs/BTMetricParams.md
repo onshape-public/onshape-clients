@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **system_id** | **str** |  | [optional] 
 **property_map** | **dict(str, object)** |  | [optional] 
-**element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
 **event_type** | **int** |  | [optional] 
 **event_name** | **str** |  | [optional] 
 **event_namespace** | **str** |  | [optional] 

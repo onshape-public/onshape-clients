@@ -39,8 +39,8 @@ class BTPlanSubscriberInfo(object):
         'image': 'str',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
@@ -51,11 +51,11 @@ class BTPlanSubscriberInfo(object):
         'image': 'image',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, state=None, first_name=None, last_name=None, email=None, image=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, state=None, first_name=None, last_name=None, email=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTPlanSubscriberInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._state = None
@@ -65,8 +65,8 @@ class BTPlanSubscriberInfo(object):
         self._image = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if state is not None:
@@ -83,10 +83,10 @@ class BTPlanSubscriberInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def state(self):
@@ -236,27 +236,6 @@ class BTPlanSubscriberInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTPlanSubscriberInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTPlanSubscriberInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTPlanSubscriberInfo.
-
-
-        :param view_ref: The view_ref of this BTPlanSubscriberInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTPlanSubscriberInfo.  # noqa: E501
 
@@ -276,6 +255,27 @@ class BTPlanSubscriberInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTPlanSubscriberInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTPlanSubscriberInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTPlanSubscriberInfo.
+
+
+        :param view_ref: The view_ref of this BTPlanSubscriberInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

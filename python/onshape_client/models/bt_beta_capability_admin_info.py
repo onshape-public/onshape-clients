@@ -33,71 +33,73 @@ class BTBetaCapabilityAdminInfo(object):
     """
     openapi_types = {
         'capability_name': 'str',
+        'user_count': 'int',
         'approvals_per_hour': 'float',
         'auto_approve': 'bool',
         'auto_approve_paid': 'bool',
         'auto_approve_onshape': 'bool',
         'self_service_disabled': 'bool',
-        'user_count': 'int',
         'user_limit': 'int',
         'eula': 'str',
         'welcome_html': 'str',
-        'upgradable': 'bool',
         'user_state': 'int',
         'description': 'str',
+        'upgradable': 'bool',
         'user_based': 'bool',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
         'capability_name': 'capabilityName',
+        'user_count': 'userCount',
         'approvals_per_hour': 'approvalsPerHour',
         'auto_approve': 'autoApprove',
         'auto_approve_paid': 'autoApprovePaid',
         'auto_approve_onshape': 'autoApproveOnshape',
         'self_service_disabled': 'selfServiceDisabled',
-        'user_count': 'userCount',
         'user_limit': 'userLimit',
         'eula': 'eula',
         'welcome_html': 'welcomeHTML',
-        'upgradable': 'upgradable',
         'user_state': 'userState',
         'description': 'description',
+        'upgradable': 'upgradable',
         'user_based': 'userBased',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
-    def __init__(self, capability_name=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, self_service_disabled=None, user_count=None, user_limit=None, eula=None, welcome_html=None, upgradable=None, user_state=None, description=None, user_based=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, capability_name=None, user_count=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, self_service_disabled=None, user_limit=None, eula=None, welcome_html=None, user_state=None, description=None, upgradable=None, user_based=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityAdminInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._capability_name = None
+        self._user_count = None
         self._approvals_per_hour = None
         self._auto_approve = None
         self._auto_approve_paid = None
         self._auto_approve_onshape = None
         self._self_service_disabled = None
-        self._user_count = None
         self._user_limit = None
         self._eula = None
         self._welcome_html = None
-        self._upgradable = None
         self._user_state = None
         self._description = None
+        self._upgradable = None
         self._user_based = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = None
 
         if capability_name is not None:
             self.capability_name = capability_name
+        if user_count is not None:
+            self.user_count = user_count
         if approvals_per_hour is not None:
             self.approvals_per_hour = approvals_per_hour
         if auto_approve is not None:
@@ -108,30 +110,28 @@ class BTBetaCapabilityAdminInfo(object):
             self.auto_approve_onshape = auto_approve_onshape
         if self_service_disabled is not None:
             self.self_service_disabled = self_service_disabled
-        if user_count is not None:
-            self.user_count = user_count
         if user_limit is not None:
             self.user_limit = user_limit
         if eula is not None:
             self.eula = eula
         if welcome_html is not None:
             self.welcome_html = welcome_html
-        if upgradable is not None:
-            self.upgradable = upgradable
         if user_state is not None:
             self.user_state = user_state
         if description is not None:
             self.description = description
+        if upgradable is not None:
+            self.upgradable = upgradable
         if user_based is not None:
             self.user_based = user_based
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def capability_name(self):
@@ -153,6 +153,27 @@ class BTBetaCapabilityAdminInfo(object):
         """
 
         self._capability_name = capability_name
+
+    @property
+    def user_count(self):
+        """Gets the user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
+
+
+        :return: The user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_count
+
+    @user_count.setter
+    def user_count(self, user_count):
+        """Sets the user_count of this BTBetaCapabilityAdminInfo.
+
+
+        :param user_count: The user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._user_count = user_count
 
     @property
     def approvals_per_hour(self):
@@ -260,27 +281,6 @@ class BTBetaCapabilityAdminInfo(object):
         self._self_service_disabled = self_service_disabled
 
     @property
-    def user_count(self):
-        """Gets the user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
-
-
-        :return: The user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._user_count
-
-    @user_count.setter
-    def user_count(self, user_count):
-        """Sets the user_count of this BTBetaCapabilityAdminInfo.
-
-
-        :param user_count: The user_count of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._user_count = user_count
-
-    @property
     def user_limit(self):
         """Gets the user_limit of this BTBetaCapabilityAdminInfo.  # noqa: E501
 
@@ -344,27 +344,6 @@ class BTBetaCapabilityAdminInfo(object):
         self._welcome_html = welcome_html
 
     @property
-    def upgradable(self):
-        """Gets the upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
-
-
-        :return: The upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._upgradable
-
-    @upgradable.setter
-    def upgradable(self, upgradable):
-        """Sets the upgradable of this BTBetaCapabilityAdminInfo.
-
-
-        :param upgradable: The upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._upgradable = upgradable
-
-    @property
     def user_state(self):
         """Gets the user_state of this BTBetaCapabilityAdminInfo.  # noqa: E501
 
@@ -405,6 +384,27 @@ class BTBetaCapabilityAdminInfo(object):
         """
 
         self._description = description
+
+    @property
+    def upgradable(self):
+        """Gets the upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
+
+
+        :return: The upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._upgradable
+
+    @upgradable.setter
+    def upgradable(self, upgradable):
+        """Sets the upgradable of this BTBetaCapabilityAdminInfo.
+
+
+        :param upgradable: The upgradable of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._upgradable = upgradable
 
     @property
     def user_based(self):
@@ -470,27 +470,6 @@ class BTBetaCapabilityAdminInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTBetaCapabilityAdminInfo.
-
-
-        :param view_ref: The view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityAdminInfo.  # noqa: E501
 
@@ -510,6 +489,27 @@ class BTBetaCapabilityAdminInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTBetaCapabilityAdminInfo.
+
+
+        :param view_ref: The view_ref of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def to_dict(self):
         """Returns the model properties as a dict"""

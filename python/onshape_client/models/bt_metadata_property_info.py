@@ -35,50 +35,50 @@ class BTMetadataPropertyInfo(object):
         'name': 'str',
         'default_value': 'object',
         'initial_value': 'object',
-        'schema_id': 'str',
-        'ui_hints': 'BTMetadataPropertyUiHintsInfo',
-        'dirty': 'bool',
-        'property_source': 'int',
-        'validator': 'BTMetadataPropertyValidatorInfo',
         'required': 'bool',
-        'value_type': 'str',
+        'dirty': 'bool',
         'property_id': 'str',
         'enum_values': 'list[BTMetadataEnumValueInfo]',
-        'editable': 'bool'
+        'schema_id': 'str',
+        'value_type': 'str',
+        'validator': 'BTMetadataPropertyValidatorInfo',
+        'editable': 'bool',
+        'property_source': 'int',
+        'ui_hints': 'BTMetadataPropertyUiHintsInfo'
     }
 
     attribute_map = {
         'name': 'name',
         'default_value': 'defaultValue',
         'initial_value': 'initialValue',
-        'schema_id': 'schemaId',
-        'ui_hints': 'uiHints',
-        'dirty': 'dirty',
-        'property_source': 'propertySource',
-        'validator': 'validator',
         'required': 'required',
-        'value_type': 'valueType',
+        'dirty': 'dirty',
         'property_id': 'propertyId',
         'enum_values': 'enumValues',
-        'editable': 'editable'
+        'schema_id': 'schemaId',
+        'value_type': 'valueType',
+        'validator': 'validator',
+        'editable': 'editable',
+        'property_source': 'propertySource',
+        'ui_hints': 'uiHints'
     }
 
-    def __init__(self, name=None, default_value=None, initial_value=None, schema_id=None, ui_hints=None, dirty=None, property_source=None, validator=None, required=None, value_type=None, property_id=None, enum_values=None, editable=None):  # noqa: E501
+    def __init__(self, name=None, default_value=None, initial_value=None, required=None, dirty=None, property_id=None, enum_values=None, schema_id=None, value_type=None, validator=None, editable=None, property_source=None, ui_hints=None):  # noqa: E501
         """BTMetadataPropertyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._default_value = None
         self._initial_value = None
-        self._schema_id = None
-        self._ui_hints = None
-        self._dirty = None
-        self._property_source = None
-        self._validator = None
         self._required = None
-        self._value_type = None
+        self._dirty = None
         self._property_id = None
         self._enum_values = None
+        self._schema_id = None
+        self._value_type = None
+        self._validator = None
         self._editable = None
+        self._property_source = None
+        self._ui_hints = None
         self.discriminator = None
 
         if name is not None:
@@ -87,26 +87,26 @@ class BTMetadataPropertyInfo(object):
             self.default_value = default_value
         if initial_value is not None:
             self.initial_value = initial_value
-        if schema_id is not None:
-            self.schema_id = schema_id
-        if ui_hints is not None:
-            self.ui_hints = ui_hints
-        if dirty is not None:
-            self.dirty = dirty
-        if property_source is not None:
-            self.property_source = property_source
-        if validator is not None:
-            self.validator = validator
         if required is not None:
             self.required = required
-        if value_type is not None:
-            self.value_type = value_type
+        if dirty is not None:
+            self.dirty = dirty
         if property_id is not None:
             self.property_id = property_id
         if enum_values is not None:
             self.enum_values = enum_values
+        if schema_id is not None:
+            self.schema_id = schema_id
+        if value_type is not None:
+            self.value_type = value_type
+        if validator is not None:
+            self.validator = validator
         if editable is not None:
             self.editable = editable
+        if property_source is not None:
+            self.property_source = property_source
+        if ui_hints is not None:
+            self.ui_hints = ui_hints
 
     @property
     def name(self):
@@ -172,111 +172,6 @@ class BTMetadataPropertyInfo(object):
         self._initial_value = initial_value
 
     @property
-    def schema_id(self):
-        """Gets the schema_id of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The schema_id of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._schema_id
-
-    @schema_id.setter
-    def schema_id(self, schema_id):
-        """Sets the schema_id of this BTMetadataPropertyInfo.
-
-
-        :param schema_id: The schema_id of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._schema_id = schema_id
-
-    @property
-    def ui_hints(self):
-        """Gets the ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: BTMetadataPropertyUiHintsInfo
-        """
-        return self._ui_hints
-
-    @ui_hints.setter
-    def ui_hints(self, ui_hints):
-        """Sets the ui_hints of this BTMetadataPropertyInfo.
-
-
-        :param ui_hints: The ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: BTMetadataPropertyUiHintsInfo
-        """
-
-        self._ui_hints = ui_hints
-
-    @property
-    def dirty(self):
-        """Gets the dirty of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The dirty of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._dirty
-
-    @dirty.setter
-    def dirty(self, dirty):
-        """Sets the dirty of this BTMetadataPropertyInfo.
-
-
-        :param dirty: The dirty of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._dirty = dirty
-
-    @property
-    def property_source(self):
-        """Gets the property_source of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The property_source of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._property_source
-
-    @property_source.setter
-    def property_source(self, property_source):
-        """Sets the property_source of this BTMetadataPropertyInfo.
-
-
-        :param property_source: The property_source of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._property_source = property_source
-
-    @property
-    def validator(self):
-        """Gets the validator of this BTMetadataPropertyInfo.  # noqa: E501
-
-
-        :return: The validator of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: BTMetadataPropertyValidatorInfo
-        """
-        return self._validator
-
-    @validator.setter
-    def validator(self, validator):
-        """Sets the validator of this BTMetadataPropertyInfo.
-
-
-        :param validator: The validator of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: BTMetadataPropertyValidatorInfo
-        """
-
-        self._validator = validator
-
-    @property
     def required(self):
         """Gets the required of this BTMetadataPropertyInfo.  # noqa: E501
 
@@ -298,25 +193,25 @@ class BTMetadataPropertyInfo(object):
         self._required = required
 
     @property
-    def value_type(self):
-        """Gets the value_type of this BTMetadataPropertyInfo.  # noqa: E501
+    def dirty(self):
+        """Gets the dirty of this BTMetadataPropertyInfo.  # noqa: E501
 
 
-        :return: The value_type of this BTMetadataPropertyInfo.  # noqa: E501
-        :rtype: str
+        :return: The dirty of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._value_type
+        return self._dirty
 
-    @value_type.setter
-    def value_type(self, value_type):
-        """Sets the value_type of this BTMetadataPropertyInfo.
+    @dirty.setter
+    def dirty(self, dirty):
+        """Sets the dirty of this BTMetadataPropertyInfo.
 
 
-        :param value_type: The value_type of this BTMetadataPropertyInfo.  # noqa: E501
-        :type: str
+        :param dirty: The dirty of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._value_type = value_type
+        self._dirty = dirty
 
     @property
     def property_id(self):
@@ -361,6 +256,69 @@ class BTMetadataPropertyInfo(object):
         self._enum_values = enum_values
 
     @property
+    def schema_id(self):
+        """Gets the schema_id of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The schema_id of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._schema_id
+
+    @schema_id.setter
+    def schema_id(self, schema_id):
+        """Sets the schema_id of this BTMetadataPropertyInfo.
+
+
+        :param schema_id: The schema_id of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._schema_id = schema_id
+
+    @property
+    def value_type(self):
+        """Gets the value_type of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The value_type of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._value_type
+
+    @value_type.setter
+    def value_type(self, value_type):
+        """Sets the value_type of this BTMetadataPropertyInfo.
+
+
+        :param value_type: The value_type of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._value_type = value_type
+
+    @property
+    def validator(self):
+        """Gets the validator of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The validator of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: BTMetadataPropertyValidatorInfo
+        """
+        return self._validator
+
+    @validator.setter
+    def validator(self, validator):
+        """Sets the validator of this BTMetadataPropertyInfo.
+
+
+        :param validator: The validator of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: BTMetadataPropertyValidatorInfo
+        """
+
+        self._validator = validator
+
+    @property
     def editable(self):
         """Gets the editable of this BTMetadataPropertyInfo.  # noqa: E501
 
@@ -380,6 +338,48 @@ class BTMetadataPropertyInfo(object):
         """
 
         self._editable = editable
+
+    @property
+    def property_source(self):
+        """Gets the property_source of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The property_source of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._property_source
+
+    @property_source.setter
+    def property_source(self, property_source):
+        """Sets the property_source of this BTMetadataPropertyInfo.
+
+
+        :param property_source: The property_source of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._property_source = property_source
+
+    @property
+    def ui_hints(self):
+        """Gets the ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
+
+
+        :return: The ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
+        :rtype: BTMetadataPropertyUiHintsInfo
+        """
+        return self._ui_hints
+
+    @ui_hints.setter
+    def ui_hints(self, ui_hints):
+        """Sets the ui_hints of this BTMetadataPropertyInfo.
+
+
+        :param ui_hints: The ui_hints of this BTMetadataPropertyInfo.  # noqa: E501
+        :type: BTMetadataPropertyUiHintsInfo
+        """
+
+        self._ui_hints = ui_hints
 
     def to_dict(self):
         """Returns the model properties as a dict"""

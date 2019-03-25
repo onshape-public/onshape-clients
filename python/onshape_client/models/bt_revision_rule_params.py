@@ -33,9 +33,9 @@ class BTRevisionRuleParams(object):
     """
     openapi_types = {
         'name': 'str',
+        'script': 'str',
         'description': 'str',
         'company_id': 'str',
-        'script': 'str',
         'revision_list': 'list[str]',
         'rule_type': 'int',
         'validation_regex': 'str'
@@ -43,21 +43,21 @@ class BTRevisionRuleParams(object):
 
     attribute_map = {
         'name': 'name',
+        'script': 'script',
         'description': 'description',
         'company_id': 'companyId',
-        'script': 'script',
         'revision_list': 'revisionList',
         'rule_type': 'ruleType',
         'validation_regex': 'validationRegex'
     }
 
-    def __init__(self, name=None, description=None, company_id=None, script=None, revision_list=None, rule_type=None, validation_regex=None):  # noqa: E501
+    def __init__(self, name=None, script=None, description=None, company_id=None, revision_list=None, rule_type=None, validation_regex=None):  # noqa: E501
         """BTRevisionRuleParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
+        self._script = None
         self._description = None
         self._company_id = None
-        self._script = None
         self._revision_list = None
         self._rule_type = None
         self._validation_regex = None
@@ -65,12 +65,12 @@ class BTRevisionRuleParams(object):
 
         if name is not None:
             self.name = name
+        if script is not None:
+            self.script = script
         if description is not None:
             self.description = description
         if company_id is not None:
             self.company_id = company_id
-        if script is not None:
-            self.script = script
         if revision_list is not None:
             self.revision_list = revision_list
         if rule_type is not None:
@@ -98,6 +98,27 @@ class BTRevisionRuleParams(object):
         """
 
         self._name = name
+
+    @property
+    def script(self):
+        """Gets the script of this BTRevisionRuleParams.  # noqa: E501
+
+
+        :return: The script of this BTRevisionRuleParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._script
+
+    @script.setter
+    def script(self, script):
+        """Sets the script of this BTRevisionRuleParams.
+
+
+        :param script: The script of this BTRevisionRuleParams.  # noqa: E501
+        :type: str
+        """
+
+        self._script = script
 
     @property
     def description(self):
@@ -140,27 +161,6 @@ class BTRevisionRuleParams(object):
         """
 
         self._company_id = company_id
-
-    @property
-    def script(self):
-        """Gets the script of this BTRevisionRuleParams.  # noqa: E501
-
-
-        :return: The script of this BTRevisionRuleParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._script
-
-    @script.setter
-    def script(self, script):
-        """Sets the script of this BTRevisionRuleParams.
-
-
-        :param script: The script of this BTRevisionRuleParams.  # noqa: E501
-        :type: str
-        """
-
-        self._script = script
 
     @property
     def revision_list(self):

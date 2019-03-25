@@ -35,8 +35,8 @@ class BTBetaCapabilityParams(object):
         'name': 'str',
         'id': 'str',
         'description': 'str',
-        'eula': 'str',
         'capability': 'str',
+        'eula': 'str',
         'approvals_per_hour': 'float',
         'auto_approve': 'bool',
         'auto_approve_paid': 'bool',
@@ -52,8 +52,8 @@ class BTBetaCapabilityParams(object):
         'name': 'name',
         'id': 'id',
         'description': 'description',
-        'eula': 'eula',
         'capability': 'capability',
+        'eula': 'eula',
         'approvals_per_hour': 'approvalsPerHour',
         'auto_approve': 'autoApprove',
         'auto_approve_paid': 'autoApprovePaid',
@@ -65,14 +65,14 @@ class BTBetaCapabilityParams(object):
         'welcome_html': 'welcomeHTML'
     }
 
-    def __init__(self, name=None, id=None, description=None, eula=None, capability=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, upgradable=None, user_based=None, self_service_disabled=None, user_limit=None, welcome_html=None):  # noqa: E501
+    def __init__(self, name=None, id=None, description=None, capability=None, eula=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, upgradable=None, user_based=None, self_service_disabled=None, user_limit=None, welcome_html=None):  # noqa: E501
         """BTBetaCapabilityParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
         self._description = None
-        self._eula = None
         self._capability = None
+        self._eula = None
         self._approvals_per_hour = None
         self._auto_approve = None
         self._auto_approve_paid = None
@@ -90,10 +90,10 @@ class BTBetaCapabilityParams(object):
             self.id = id
         if description is not None:
             self.description = description
-        if eula is not None:
-            self.eula = eula
         if capability is not None:
             self.capability = capability
+        if eula is not None:
+            self.eula = eula
         if approvals_per_hour is not None:
             self.approvals_per_hour = approvals_per_hour
         if auto_approve is not None:
@@ -177,27 +177,6 @@ class BTBetaCapabilityParams(object):
         self._description = description
 
     @property
-    def eula(self):
-        """Gets the eula of this BTBetaCapabilityParams.  # noqa: E501
-
-
-        :return: The eula of this BTBetaCapabilityParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._eula
-
-    @eula.setter
-    def eula(self, eula):
-        """Sets the eula of this BTBetaCapabilityParams.
-
-
-        :param eula: The eula of this BTBetaCapabilityParams.  # noqa: E501
-        :type: str
-        """
-
-        self._eula = eula
-
-    @property
     def capability(self):
         """Gets the capability of this BTBetaCapabilityParams.  # noqa: E501
 
@@ -217,6 +196,27 @@ class BTBetaCapabilityParams(object):
         """
 
         self._capability = capability
+
+    @property
+    def eula(self):
+        """Gets the eula of this BTBetaCapabilityParams.  # noqa: E501
+
+
+        :return: The eula of this BTBetaCapabilityParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._eula
+
+    @eula.setter
+    def eula(self, eula):
+        """Sets the eula of this BTBetaCapabilityParams.
+
+
+        :param eula: The eula of this BTBetaCapabilityParams.  # noqa: E501
+        :type: str
+        """
+
+        self._eula = eula
 
     @property
     def approvals_per_hour(self):

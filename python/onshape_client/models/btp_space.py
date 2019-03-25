@@ -32,59 +32,59 @@ class BTPSpace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'lines': 'list[str]',
         'text': 'str',
+        'lines': 'list[str]',
         'changeable_child_field_indices': 'list[int]',
         'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
+        'node_id_raw': 'BTObjectId',
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
-        'node_id_raw': 'BTObjectId',
+        'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
-        'unknown_class': 'bool',
-        'type_id': 'int'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'lines': 'lines',
         'text': 'text',
+        'lines': 'lines',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
         'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
+        'node_id_raw': 'nodeIdRaw',
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
-        'node_id_raw': 'nodeIdRaw',
+        'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
-        'unknown_class': 'unknownClass',
-        'type_id': 'typeId'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, lines=None, text=None, changeable_child_field_indices=None, node_id=None, child_map_indices=None, atomic_child_indices=None, first_child_field=None, child_list_indices=None, node_id_raw=None, export_type_name=None, connection_source=None, unknown_class=None, type_id=None):  # noqa: E501
+    def __init__(self, text=None, lines=None, changeable_child_field_indices=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTPSpace - a model defined in OpenAPI"""  # noqa: E501
 
-        self._lines = None
         self._text = None
+        self._lines = None
         self._changeable_child_field_indices = None
         self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
+        self._node_id_raw = None
         self._first_child_field = None
         self._child_list_indices = None
-        self._node_id_raw = None
+        self._type_id = None
         self._export_type_name = None
         self._connection_source = None
         self._unknown_class = None
-        self._type_id = None
         self.discriminator = None
 
-        if lines is not None:
-            self.lines = lines
         if text is not None:
             self.text = text
+        if lines is not None:
+            self.lines = lines
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
         if node_id is not None:
@@ -93,41 +93,20 @@ class BTPSpace(object):
             self.child_map_indices = child_map_indices
         if atomic_child_indices is not None:
             self.atomic_child_indices = atomic_child_indices
+        if node_id_raw is not None:
+            self.node_id_raw = node_id_raw
         if first_child_field is not None:
             self.first_child_field = first_child_field
         if child_list_indices is not None:
             self.child_list_indices = child_list_indices
-        if node_id_raw is not None:
-            self.node_id_raw = node_id_raw
+        if type_id is not None:
+            self.type_id = type_id
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if connection_source is not None:
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if type_id is not None:
-            self.type_id = type_id
-
-    @property
-    def lines(self):
-        """Gets the lines of this BTPSpace.  # noqa: E501
-
-
-        :return: The lines of this BTPSpace.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._lines
-
-    @lines.setter
-    def lines(self, lines):
-        """Sets the lines of this BTPSpace.
-
-
-        :param lines: The lines of this BTPSpace.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._lines = lines
 
     @property
     def text(self):
@@ -149,6 +128,27 @@ class BTPSpace(object):
         """
 
         self._text = text
+
+    @property
+    def lines(self):
+        """Gets the lines of this BTPSpace.  # noqa: E501
+
+
+        :return: The lines of this BTPSpace.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._lines
+
+    @lines.setter
+    def lines(self, lines):
+        """Sets the lines of this BTPSpace.
+
+
+        :param lines: The lines of this BTPSpace.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._lines = lines
 
     @property
     def changeable_child_field_indices(self):
@@ -235,6 +235,27 @@ class BTPSpace(object):
         self._atomic_child_indices = atomic_child_indices
 
     @property
+    def node_id_raw(self):
+        """Gets the node_id_raw of this BTPSpace.  # noqa: E501
+
+
+        :return: The node_id_raw of this BTPSpace.  # noqa: E501
+        :rtype: BTObjectId
+        """
+        return self._node_id_raw
+
+    @node_id_raw.setter
+    def node_id_raw(self, node_id_raw):
+        """Sets the node_id_raw of this BTPSpace.
+
+
+        :param node_id_raw: The node_id_raw of this BTPSpace.  # noqa: E501
+        :type: BTObjectId
+        """
+
+        self._node_id_raw = node_id_raw
+
+    @property
     def first_child_field(self):
         """Gets the first_child_field of this BTPSpace.  # noqa: E501
 
@@ -277,25 +298,25 @@ class BTPSpace(object):
         self._child_list_indices = child_list_indices
 
     @property
-    def node_id_raw(self):
-        """Gets the node_id_raw of this BTPSpace.  # noqa: E501
+    def type_id(self):
+        """Gets the type_id of this BTPSpace.  # noqa: E501
 
 
-        :return: The node_id_raw of this BTPSpace.  # noqa: E501
-        :rtype: BTObjectId
+        :return: The type_id of this BTPSpace.  # noqa: E501
+        :rtype: int
         """
-        return self._node_id_raw
+        return self._type_id
 
-    @node_id_raw.setter
-    def node_id_raw(self, node_id_raw):
-        """Sets the node_id_raw of this BTPSpace.
+    @type_id.setter
+    def type_id(self, type_id):
+        """Sets the type_id of this BTPSpace.
 
 
-        :param node_id_raw: The node_id_raw of this BTPSpace.  # noqa: E501
-        :type: BTObjectId
+        :param type_id: The type_id of this BTPSpace.  # noqa: E501
+        :type: int
         """
 
-        self._node_id_raw = node_id_raw
+        self._type_id = type_id
 
     @property
     def export_type_name(self):
@@ -359,27 +380,6 @@ class BTPSpace(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def type_id(self):
-        """Gets the type_id of this BTPSpace.  # noqa: E501
-
-
-        :return: The type_id of this BTPSpace.  # noqa: E501
-        :rtype: int
-        """
-        return self._type_id
-
-    @type_id.setter
-    def type_id(self, type_id):
-        """Sets the type_id of this BTPSpace.
-
-
-        :param type_id: The type_id of this BTPSpace.  # noqa: E501
-        :type: int
-        """
-
-        self._type_id = type_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

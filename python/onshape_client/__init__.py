@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.0.4"
+__version__ = "0.0.8"
 
 # import apis into sdk package
 from onshape_client.api.accounts_api import AccountsApi
@@ -149,6 +149,7 @@ from onshape_client.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.models.bt_document_info import BTDocumentInfo
 from onshape_client.models.bt_document_label_info import BTDocumentLabelInfo
 from onshape_client.models.bt_document_label_params import BTDocumentLabelParams
+from onshape_client.models.bt_document_merge_info import BTDocumentMergeInfo
 from onshape_client.models.bt_document_microversion_info import BTDocumentMicroversionInfo
 from onshape_client.models.bt_document_migrate_params import BTDocumentMigrateParams
 from onshape_client.models.bt_document_options_params import BTDocumentOptionsParams

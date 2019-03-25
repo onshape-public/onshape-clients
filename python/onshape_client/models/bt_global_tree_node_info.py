@@ -33,44 +33,44 @@ class BTGlobalTreeNodeInfo(object):
     """
     openapi_types = {
         'owner': 'BTOwnerInfo',
-        'has_pending_owner': 'bool',
-        'tree_href': 'str',
-        'resource_type': 'str',
-        'is_mutable': 'bool',
-        'is_container': 'bool',
-        'can_move': 'bool',
         'description': 'str',
-        'project_id': 'str',
+        'tree_href': 'str',
+        'is_mutable': 'bool',
+        'resource_type': 'str',
+        'modified_at': 'datetime',
         'created_at': 'datetime',
         'created_by': 'BTUserBasicSummaryInfo',
         'modified_by': 'BTUserBasicSummaryInfo',
-        'modified_at': 'datetime',
+        'project_id': 'str',
+        'can_move': 'bool',
+        'is_container': 'bool',
         'is_enterprise_owned': 'bool',
+        'has_pending_owner': 'bool',
         'name': 'str',
         'id': 'str',
-        'view_ref': 'str',
-        'href': 'str'
+        'href': 'str',
+        'view_ref': 'str'
     }
 
     attribute_map = {
         'owner': 'owner',
-        'has_pending_owner': 'hasPendingOwner',
-        'tree_href': 'treeHref',
-        'resource_type': 'resourceType',
-        'is_mutable': 'isMutable',
-        'is_container': 'isContainer',
-        'can_move': 'canMove',
         'description': 'description',
-        'project_id': 'projectId',
+        'tree_href': 'treeHref',
+        'is_mutable': 'isMutable',
+        'resource_type': 'resourceType',
+        'modified_at': 'modifiedAt',
         'created_at': 'createdAt',
         'created_by': 'createdBy',
         'modified_by': 'modifiedBy',
-        'modified_at': 'modifiedAt',
+        'project_id': 'projectId',
+        'can_move': 'canMove',
+        'is_container': 'isContainer',
         'is_enterprise_owned': 'isEnterpriseOwned',
+        'has_pending_owner': 'hasPendingOwner',
         'name': 'name',
         'id': 'id',
-        'view_ref': 'viewRef',
-        'href': 'href'
+        'href': 'href',
+        'view_ref': 'viewRef'
     }
 
     discriminator_value_class_map = {
@@ -84,65 +84,65 @@ class BTGlobalTreeNodeInfo(object):
         'BTDocumentInfo': 'BTDocumentInfo'
     }
 
-    def __init__(self, owner=None, has_pending_owner=None, tree_href=None, resource_type=None, is_mutable=None, is_container=None, can_move=None, description=None, project_id=None, created_at=None, created_by=None, modified_by=None, modified_at=None, is_enterprise_owned=None, name=None, id=None, view_ref=None, href=None):  # noqa: E501
+    def __init__(self, owner=None, description=None, tree_href=None, is_mutable=None, resource_type=None, modified_at=None, created_at=None, created_by=None, modified_by=None, project_id=None, can_move=None, is_container=None, is_enterprise_owned=None, has_pending_owner=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTGlobalTreeNodeInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner = None
-        self._has_pending_owner = None
-        self._tree_href = None
-        self._resource_type = None
-        self._is_mutable = None
-        self._is_container = None
-        self._can_move = None
         self._description = None
-        self._project_id = None
+        self._tree_href = None
+        self._is_mutable = None
+        self._resource_type = None
+        self._modified_at = None
         self._created_at = None
         self._created_by = None
         self._modified_by = None
-        self._modified_at = None
+        self._project_id = None
+        self._can_move = None
+        self._is_container = None
         self._is_enterprise_owned = None
+        self._has_pending_owner = None
         self._name = None
         self._id = None
-        self._view_ref = None
         self._href = None
+        self._view_ref = None
         self.discriminator = 'jsonType'
 
         if owner is not None:
             self.owner = owner
-        if has_pending_owner is not None:
-            self.has_pending_owner = has_pending_owner
-        if tree_href is not None:
-            self.tree_href = tree_href
-        if resource_type is not None:
-            self.resource_type = resource_type
-        if is_mutable is not None:
-            self.is_mutable = is_mutable
-        if is_container is not None:
-            self.is_container = is_container
-        if can_move is not None:
-            self.can_move = can_move
         if description is not None:
             self.description = description
-        if project_id is not None:
-            self.project_id = project_id
+        if tree_href is not None:
+            self.tree_href = tree_href
+        if is_mutable is not None:
+            self.is_mutable = is_mutable
+        if resource_type is not None:
+            self.resource_type = resource_type
+        if modified_at is not None:
+            self.modified_at = modified_at
         if created_at is not None:
             self.created_at = created_at
         if created_by is not None:
             self.created_by = created_by
         if modified_by is not None:
             self.modified_by = modified_by
-        if modified_at is not None:
-            self.modified_at = modified_at
+        if project_id is not None:
+            self.project_id = project_id
+        if can_move is not None:
+            self.can_move = can_move
+        if is_container is not None:
+            self.is_container = is_container
         if is_enterprise_owned is not None:
             self.is_enterprise_owned = is_enterprise_owned
+        if has_pending_owner is not None:
+            self.has_pending_owner = has_pending_owner
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if view_ref is not None:
-            self.view_ref = view_ref
         if href is not None:
             self.href = href
+        if view_ref is not None:
+            self.view_ref = view_ref
 
     @property
     def owner(self):
@@ -166,25 +166,25 @@ class BTGlobalTreeNodeInfo(object):
         self._owner = owner
 
     @property
-    def has_pending_owner(self):
-        """Gets the has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
+    def description(self):
+        """Gets the description of this BTGlobalTreeNodeInfo.  # noqa: E501
 
 
-        :return: The has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: bool
+        :return: The description of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._has_pending_owner
+        return self._description
 
-    @has_pending_owner.setter
-    def has_pending_owner(self, has_pending_owner):
-        """Sets the has_pending_owner of this BTGlobalTreeNodeInfo.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTGlobalTreeNodeInfo.
 
 
-        :param has_pending_owner: The has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: bool
+        :param description: The description of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: str
         """
 
-        self._has_pending_owner = has_pending_owner
+        self._description = description
 
     @property
     def tree_href(self):
@@ -208,27 +208,6 @@ class BTGlobalTreeNodeInfo(object):
         self._tree_href = tree_href
 
     @property
-    def resource_type(self):
-        """Gets the resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
-
-
-        :return: The resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._resource_type
-
-    @resource_type.setter
-    def resource_type(self, resource_type):
-        """Sets the resource_type of this BTGlobalTreeNodeInfo.
-
-
-        :param resource_type: The resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._resource_type = resource_type
-
-    @property
     def is_mutable(self):
         """Gets the is_mutable of this BTGlobalTreeNodeInfo.  # noqa: E501
 
@@ -250,88 +229,46 @@ class BTGlobalTreeNodeInfo(object):
         self._is_mutable = is_mutable
 
     @property
-    def is_container(self):
-        """Gets the is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
+    def resource_type(self):
+        """Gets the resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
 
 
-        :return: The is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_container
-
-    @is_container.setter
-    def is_container(self, is_container):
-        """Sets the is_container of this BTGlobalTreeNodeInfo.
-
-
-        :param is_container: The is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_container = is_container
-
-    @property
-    def can_move(self):
-        """Gets the can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
-
-
-        :return: The can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._can_move
-
-    @can_move.setter
-    def can_move(self, can_move):
-        """Sets the can_move of this BTGlobalTreeNodeInfo.
-
-
-        :param can_move: The can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._can_move = can_move
-
-    @property
-    def description(self):
-        """Gets the description of this BTGlobalTreeNodeInfo.  # noqa: E501
-
-
-        :return: The description of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :return: The resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._resource_type
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTGlobalTreeNodeInfo.
+    @resource_type.setter
+    def resource_type(self, resource_type):
+        """Sets the resource_type of this BTGlobalTreeNodeInfo.
 
 
-        :param description: The description of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :param resource_type: The resource_type of this BTGlobalTreeNodeInfo.  # noqa: E501
         :type: str
         """
 
-        self._description = description
+        self._resource_type = resource_type
 
     @property
-    def project_id(self):
-        """Gets the project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
+    def modified_at(self):
+        """Gets the modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
 
 
-        :return: The project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: str
+        :return: The modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: datetime
         """
-        return self._project_id
+        return self._modified_at
 
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTGlobalTreeNodeInfo.
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTGlobalTreeNodeInfo.
 
 
-        :param project_id: The project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: str
+        :param modified_at: The modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: datetime
         """
 
-        self._project_id = project_id
+        self._modified_at = modified_at
 
     @property
     def created_at(self):
@@ -397,25 +334,67 @@ class BTGlobalTreeNodeInfo(object):
         self._modified_by = modified_by
 
     @property
-    def modified_at(self):
-        """Gets the modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
+    def project_id(self):
+        """Gets the project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
 
 
-        :return: The modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: datetime
+        :return: The project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._modified_at
+        return self._project_id
 
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTGlobalTreeNodeInfo.
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTGlobalTreeNodeInfo.
 
 
-        :param modified_at: The modified_at of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: datetime
+        :param project_id: The project_id of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: str
         """
 
-        self._modified_at = modified_at
+        self._project_id = project_id
+
+    @property
+    def can_move(self):
+        """Gets the can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
+
+
+        :return: The can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_move
+
+    @can_move.setter
+    def can_move(self, can_move):
+        """Sets the can_move of this BTGlobalTreeNodeInfo.
+
+
+        :param can_move: The can_move of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_move = can_move
+
+    @property
+    def is_container(self):
+        """Gets the is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
+
+
+        :return: The is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_container
+
+    @is_container.setter
+    def is_container(self, is_container):
+        """Sets the is_container of this BTGlobalTreeNodeInfo.
+
+
+        :param is_container: The is_container of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_container = is_container
 
     @property
     def is_enterprise_owned(self):
@@ -437,6 +416,27 @@ class BTGlobalTreeNodeInfo(object):
         """
 
         self._is_enterprise_owned = is_enterprise_owned
+
+    @property
+    def has_pending_owner(self):
+        """Gets the has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
+
+
+        :return: The has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_pending_owner
+
+    @has_pending_owner.setter
+    def has_pending_owner(self, has_pending_owner):
+        """Sets the has_pending_owner of this BTGlobalTreeNodeInfo.
+
+
+        :param has_pending_owner: The has_pending_owner of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_pending_owner = has_pending_owner
 
     @property
     def name(self):
@@ -481,27 +481,6 @@ class BTGlobalTreeNodeInfo(object):
         self._id = id
 
     @property
-    def view_ref(self):
-        """Gets the view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
-
-
-        :return: The view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_ref
-
-    @view_ref.setter
-    def view_ref(self, view_ref):
-        """Sets the view_ref of this BTGlobalTreeNodeInfo.
-
-
-        :param view_ref: The view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._view_ref = view_ref
-
-    @property
     def href(self):
         """Gets the href of this BTGlobalTreeNodeInfo.  # noqa: E501
 
@@ -521,6 +500,27 @@ class BTGlobalTreeNodeInfo(object):
         """
 
         self._href = href
+
+    @property
+    def view_ref(self):
+        """Gets the view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
+
+
+        :return: The view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_ref
+
+    @view_ref.setter
+    def view_ref(self, view_ref):
+        """Sets the view_ref of this BTGlobalTreeNodeInfo.
+
+
+        :param view_ref: The view_ref of this BTGlobalTreeNodeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._view_ref = view_ref
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

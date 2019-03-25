@@ -33,30 +33,30 @@ class BTComponentUsagesSummary(object):
     """
     openapi_types = {
         'hierarchy_': 'BTStandardContentHierarchy',
-        'count': 'int',
-        'hierarchy': 'BTStandardContentHierarchy'
+        'hierarchy': 'BTStandardContentHierarchy',
+        'count': 'int'
     }
 
     attribute_map = {
         'hierarchy_': 'hierarchy_',
-        'count': 'count',
-        'hierarchy': 'hierarchy'
+        'hierarchy': 'hierarchy',
+        'count': 'count'
     }
 
-    def __init__(self, hierarchy_=None, count=None, hierarchy=None):  # noqa: E501
+    def __init__(self, hierarchy_=None, hierarchy=None, count=None):  # noqa: E501
         """BTComponentUsagesSummary - a model defined in OpenAPI"""  # noqa: E501
 
         self._hierarchy_ = None
-        self._count = None
         self._hierarchy = None
+        self._count = None
         self.discriminator = None
 
         if hierarchy_ is not None:
             self.hierarchy_ = hierarchy_
-        if count is not None:
-            self.count = count
         if hierarchy is not None:
             self.hierarchy = hierarchy
+        if count is not None:
+            self.count = count
 
     @property
     def hierarchy_(self):
@@ -80,27 +80,6 @@ class BTComponentUsagesSummary(object):
         self._hierarchy_ = hierarchy_
 
     @property
-    def count(self):
-        """Gets the count of this BTComponentUsagesSummary.  # noqa: E501
-
-
-        :return: The count of this BTComponentUsagesSummary.  # noqa: E501
-        :rtype: int
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """Sets the count of this BTComponentUsagesSummary.
-
-
-        :param count: The count of this BTComponentUsagesSummary.  # noqa: E501
-        :type: int
-        """
-
-        self._count = count
-
-    @property
     def hierarchy(self):
         """Gets the hierarchy of this BTComponentUsagesSummary.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTComponentUsagesSummary(object):
         """
 
         self._hierarchy = hierarchy
+
+    @property
+    def count(self):
+        """Gets the count of this BTComponentUsagesSummary.  # noqa: E501
+
+
+        :return: The count of this BTComponentUsagesSummary.  # noqa: E501
+        :rtype: int
+        """
+        return self._count
+
+    @count.setter
+    def count(self, count):
+        """Sets the count of this BTComponentUsagesSummary.
+
+
+        :param count: The count of this BTComponentUsagesSummary.  # noqa: E501
+        :type: int
+        """
+
+        self._count = count
 
     def to_dict(self):
         """Returns the model properties as a dict"""
