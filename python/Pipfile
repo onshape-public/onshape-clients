@@ -5,18 +5,15 @@ verify_ssl = true
 
 [dev-packages]
 codecov = "*"
-v = {version = "*",editable = true}
+v = {editable = true,version = "*"}
 coverage = "*"
 pytest = "*"
 pytest-cov = "*"
-onshape-client = {editable = true,path = "."}
 twine = "*"
 
 [packages]
 requests = "*"
 pytest = "*"
-ruamel-yaml = "*"
-urlparse = "*"
 
 [requires]
 python_version = "3.5"
