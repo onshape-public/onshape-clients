@@ -2,6 +2,7 @@
 name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
+# This is really only for dev packages. Any normally required package should be installed by setup.py in onshape_client
 
 [dev-packages]
 codecov = "*"
@@ -11,6 +12,9 @@ pytest = "*"
 pytest-cov = "*"
 twine = "*"
 onshape-client = {editable = true,path = "."}
+sphinx = "*"
+sphinx-rtd-theme = "*"
+sphinx-ext-doctest = "*"
 
 [packages]
 
