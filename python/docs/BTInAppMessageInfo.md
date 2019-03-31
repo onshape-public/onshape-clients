@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **context** | **int** |  | [optional] 
 **content** | [**list[BTInAppMessageContent]**](BTInAppMessageContent.md) |  | [optional] 
-**content_type** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**content_type** | **int** |  | [optional] 
 **start_date** | **datetime** |  | [optional] 
 **end_date** | **datetime** |  | [optional] 
 **rule_id** | **str** |  | [optional] 

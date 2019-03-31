@@ -41,8 +41,8 @@ class FormDataBodyPart(object):
         'providers': 'object',
         'name': 'str',
         'value': 'str',
-        'form_data_content_disposition': 'FormDataContentDisposition',
         'simple': 'bool',
+        'form_data_content_disposition': 'FormDataContentDisposition',
         'parameterized_headers': 'BodyPartHeaders'
     }
 
@@ -56,12 +56,12 @@ class FormDataBodyPart(object):
         'providers': 'providers',
         'name': 'name',
         'value': 'value',
-        'form_data_content_disposition': 'formDataContentDisposition',
         'simple': 'simple',
+        'form_data_content_disposition': 'formDataContentDisposition',
         'parameterized_headers': 'parameterizedHeaders'
     }
 
-    def __init__(self, content_disposition=None, entity=None, headers=None, media_type=None, message_body_workers=None, parent=None, providers=None, name=None, value=None, form_data_content_disposition=None, simple=None, parameterized_headers=None):  # noqa: E501
+    def __init__(self, content_disposition=None, entity=None, headers=None, media_type=None, message_body_workers=None, parent=None, providers=None, name=None, value=None, simple=None, form_data_content_disposition=None, parameterized_headers=None):  # noqa: E501
         """FormDataBodyPart - a model defined in OpenAPI"""  # noqa: E501
 
         self._content_disposition = None
@@ -73,8 +73,8 @@ class FormDataBodyPart(object):
         self._providers = None
         self._name = None
         self._value = None
-        self._form_data_content_disposition = None
         self._simple = None
+        self._form_data_content_disposition = None
         self._parameterized_headers = None
         self.discriminator = None
 
@@ -96,10 +96,10 @@ class FormDataBodyPart(object):
             self.name = name
         if value is not None:
             self.value = value
-        if form_data_content_disposition is not None:
-            self.form_data_content_disposition = form_data_content_disposition
         if simple is not None:
             self.simple = simple
+        if form_data_content_disposition is not None:
+            self.form_data_content_disposition = form_data_content_disposition
         if parameterized_headers is not None:
             self.parameterized_headers = parameterized_headers
 
@@ -293,27 +293,6 @@ class FormDataBodyPart(object):
         self._value = value
 
     @property
-    def form_data_content_disposition(self):
-        """Gets the form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
-
-
-        :return: The form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
-        :rtype: FormDataContentDisposition
-        """
-        return self._form_data_content_disposition
-
-    @form_data_content_disposition.setter
-    def form_data_content_disposition(self, form_data_content_disposition):
-        """Sets the form_data_content_disposition of this FormDataBodyPart.
-
-
-        :param form_data_content_disposition: The form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
-        :type: FormDataContentDisposition
-        """
-
-        self._form_data_content_disposition = form_data_content_disposition
-
-    @property
     def simple(self):
         """Gets the simple of this FormDataBodyPart.  # noqa: E501
 
@@ -333,6 +312,27 @@ class FormDataBodyPart(object):
         """
 
         self._simple = simple
+
+    @property
+    def form_data_content_disposition(self):
+        """Gets the form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
+
+
+        :return: The form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
+        :rtype: FormDataContentDisposition
+        """
+        return self._form_data_content_disposition
+
+    @form_data_content_disposition.setter
+    def form_data_content_disposition(self, form_data_content_disposition):
+        """Sets the form_data_content_disposition of this FormDataBodyPart.
+
+
+        :param form_data_content_disposition: The form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
+        :type: FormDataContentDisposition
+        """
+
+        self._form_data_content_disposition = form_data_content_disposition
 
     @property
     def parameterized_headers(self):

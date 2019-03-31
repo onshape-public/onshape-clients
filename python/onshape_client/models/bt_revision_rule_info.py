@@ -32,11 +32,11 @@ class BTRevisionRuleInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'script': 'str',
         'description': 'str',
         'company_id': 'str',
         'revision_list': 'list[str]',
         'rule_type': 'int',
+        'script': 'str',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -44,33 +44,31 @@ class BTRevisionRuleInfo(object):
     }
 
     attribute_map = {
-        'script': 'script',
         'description': 'description',
         'company_id': 'companyId',
         'revision_list': 'revisionList',
         'rule_type': 'ruleType',
+        'script': 'script',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, script=None, description=None, company_id=None, revision_list=None, rule_type=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, description=None, company_id=None, revision_list=None, rule_type=None, script=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTRevisionRuleInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._script = None
         self._description = None
         self._company_id = None
         self._revision_list = None
         self._rule_type = None
+        self._script = None
         self._name = None
         self._id = None
         self._href = None
         self._view_ref = None
         self.discriminator = None
 
-        if script is not None:
-            self.script = script
         if description is not None:
             self.description = description
         if company_id is not None:
@@ -79,6 +77,8 @@ class BTRevisionRuleInfo(object):
             self.revision_list = revision_list
         if rule_type is not None:
             self.rule_type = rule_type
+        if script is not None:
+            self.script = script
         if name is not None:
             self.name = name
         if id is not None:
@@ -87,27 +87,6 @@ class BTRevisionRuleInfo(object):
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
-
-    @property
-    def script(self):
-        """Gets the script of this BTRevisionRuleInfo.  # noqa: E501
-
-
-        :return: The script of this BTRevisionRuleInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._script
-
-    @script.setter
-    def script(self, script):
-        """Sets the script of this BTRevisionRuleInfo.
-
-
-        :param script: The script of this BTRevisionRuleInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._script = script
 
     @property
     def description(self):
@@ -192,6 +171,27 @@ class BTRevisionRuleInfo(object):
         """
 
         self._rule_type = rule_type
+
+    @property
+    def script(self):
+        """Gets the script of this BTRevisionRuleInfo.  # noqa: E501
+
+
+        :return: The script of this BTRevisionRuleInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._script
+
+    @script.setter
+    def script(self, script):
+        """Sets the script of this BTRevisionRuleInfo.
+
+
+        :param script: The script of this BTRevisionRuleInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._script = script
 
     @property
     def name(self):

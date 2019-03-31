@@ -32,8 +32,8 @@ class BTDocumentVersionElementIds(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'version_id': 'str',
         'document_id': 'str',
+        'version_id': 'str',
         'element_id': 'str',
         'type_id': 'int',
         'export_type_name': 'str',
@@ -42,8 +42,8 @@ class BTDocumentVersionElementIds(object):
     }
 
     attribute_map = {
-        'version_id': 'versionId',
         'document_id': 'documentId',
+        'version_id': 'versionId',
         'element_id': 'elementId',
         'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
@@ -51,11 +51,11 @@ class BTDocumentVersionElementIds(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, version_id=None, document_id=None, element_id=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, document_id=None, version_id=None, element_id=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTDocumentVersionElementIds - a model defined in OpenAPI"""  # noqa: E501
 
-        self._version_id = None
         self._document_id = None
+        self._version_id = None
         self._element_id = None
         self._type_id = None
         self._export_type_name = None
@@ -63,10 +63,10 @@ class BTDocumentVersionElementIds(object):
         self._unknown_class = None
         self.discriminator = None
 
-        if version_id is not None:
-            self.version_id = version_id
         if document_id is not None:
             self.document_id = document_id
+        if version_id is not None:
+            self.version_id = version_id
         if element_id is not None:
             self.element_id = element_id
         if type_id is not None:
@@ -77,27 +77,6 @@ class BTDocumentVersionElementIds(object):
             self.connection_source = connection_source
         if unknown_class is not None:
             self.unknown_class = unknown_class
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTDocumentVersionElementIds.  # noqa: E501
-
-
-        :return: The version_id of this BTDocumentVersionElementIds.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTDocumentVersionElementIds.
-
-
-        :param version_id: The version_id of this BTDocumentVersionElementIds.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
 
     @property
     def document_id(self):
@@ -119,6 +98,27 @@ class BTDocumentVersionElementIds(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTDocumentVersionElementIds.  # noqa: E501
+
+
+        :return: The version_id of this BTDocumentVersionElementIds.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTDocumentVersionElementIds.
+
+
+        :param version_id: The version_id of this BTDocumentVersionElementIds.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
 
     @property
     def element_id(self):

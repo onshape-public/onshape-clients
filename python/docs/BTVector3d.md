@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **values** | **list[float]** |  | [optional] 
 **y** | **float** |  | [optional] 
-**x** | **float** |  | [optional] 
 **z** | **float** |  | [optional] 
+**x** | **float** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **export_type_name** | **str** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 

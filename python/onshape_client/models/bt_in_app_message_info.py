@@ -34,8 +34,8 @@ class BTInAppMessageInfo(object):
     openapi_types = {
         'context': 'int',
         'content': 'list[BTInAppMessageContent]',
-        'content_type': 'int',
         'description': 'str',
+        'content_type': 'int',
         'start_date': 'datetime',
         'end_date': 'datetime',
         'rule_id': 'str',
@@ -55,8 +55,8 @@ class BTInAppMessageInfo(object):
     attribute_map = {
         'context': 'context',
         'content': 'content',
-        'content_type': 'contentType',
         'description': 'description',
+        'content_type': 'contentType',
         'start_date': 'startDate',
         'end_date': 'endDate',
         'rule_id': 'ruleId',
@@ -73,13 +73,13 @@ class BTInAppMessageInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, context=None, content=None, content_type=None, description=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None, content_index=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, context=None, content=None, description=None, content_type=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None, content_index=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTInAppMessageInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._context = None
         self._content = None
-        self._content_type = None
         self._description = None
+        self._content_type = None
         self._start_date = None
         self._end_date = None
         self._rule_id = None
@@ -100,10 +100,10 @@ class BTInAppMessageInfo(object):
             self.context = context
         if content is not None:
             self.content = content
-        if content_type is not None:
-            self.content_type = content_type
         if description is not None:
             self.description = description
+        if content_type is not None:
+            self.content_type = content_type
         if start_date is not None:
             self.start_date = start_date
         if end_date is not None:
@@ -176,27 +176,6 @@ class BTInAppMessageInfo(object):
         self._content = content
 
     @property
-    def content_type(self):
-        """Gets the content_type of this BTInAppMessageInfo.  # noqa: E501
-
-
-        :return: The content_type of this BTInAppMessageInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._content_type
-
-    @content_type.setter
-    def content_type(self, content_type):
-        """Sets the content_type of this BTInAppMessageInfo.
-
-
-        :param content_type: The content_type of this BTInAppMessageInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._content_type = content_type
-
-    @property
     def description(self):
         """Gets the description of this BTInAppMessageInfo.  # noqa: E501
 
@@ -216,6 +195,27 @@ class BTInAppMessageInfo(object):
         """
 
         self._description = description
+
+    @property
+    def content_type(self):
+        """Gets the content_type of this BTInAppMessageInfo.  # noqa: E501
+
+
+        :return: The content_type of this BTInAppMessageInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._content_type
+
+    @content_type.setter
+    def content_type(self, content_type):
+        """Sets the content_type of this BTInAppMessageInfo.
+
+
+        :param content_type: The content_type of this BTInAppMessageInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._content_type = content_type
 
     @property
     def start_date(self):

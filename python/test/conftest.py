@@ -1,27 +1,20 @@
 import pytest
-from ruamel.yaml import YAML
-from onshape_client.configuration import Configuration
-from pathlib import Path
+from onshape_client.client import Client
+from onshape_client.onshape_url import OnshapeElement
 
-yaml = YAML()
-path = '.onshape_client_config.yaml'
-onshape_client_config = yaml.load(Path(path))
+@pytest.fixture
+def client():
+    return Client()
 
-@pytest.fixture(scope="module")
-def configuration():
-    """Return an onshape_client configuration."""
-    configuration = Configuration()
-    # flag will eventually be passed from the command line
-    flag = None
-    if not flag:
-        try:
-            conf_key = onshape_client_config['default']
-        except KeyError:
-            raise KeyError("Please include a 'default' key to signify a default configuration within {}.".format(path))
-    else:
-        conf_key = flag
-    conf = onshape_client_config[conf_key]
-    configuration.api_key['SECRET_KEY'] = conf['api_keys']['secret_key'].encode('utf-8')
-    configuration.api_key['ACCESS_KEY'] = conf['api_keys']['access_key'].encode('utf-8')
-    configuration.host = conf['baseUrl']
-    return configuration
+@pytest.fixture
+def configurable_cube():
+    return OnshapeElement("https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90")
+
+@pytest.fixture
+def configurable_cubes():
+    versions=[]
+    versions.append(OnshapeElement("https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/2c9608e8e443574edf757851/e/69c9eedda86512966b20bc90"))
+    versions.append(OnshapeElement("https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/e21a30638b85226b651e74f9/e/69c9eedda86512966b20bc90"))
+    versions.append(OnshapeElement("https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90"))
+    versions.append(OnshapeElement("https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/aaa25d18038e06f0b2964e2d/e/69c9eedda86512966b20bc90"))
+    return versions

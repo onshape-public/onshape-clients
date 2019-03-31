@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mobile** | **bool** |  | [optional] 
 **description** | **str** |  | [optional] 
-**client_type** | **str** |  | [optional] 
 **version** | [**BTUserAgentVersion**](BTUserAgentVersion.md) |  | [optional] 
+**client_type** | **str** |  | [optional] 
 **device_name** | **str** |  | [optional] 
 **operating_system** | **str** |  | [optional] 
 **device_type** | **str** |  | [optional] 

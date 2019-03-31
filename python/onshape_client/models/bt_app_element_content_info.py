@@ -32,62 +32,41 @@ class BTAppElementContentInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'change_id': 'str',
         'data': 'list[BTAppElementContentEntryInfo]',
+        'change_id': 'str',
         'error_code': 'int',
         'error_value': 'str',
         'error_description': 'str'
     }
 
     attribute_map = {
-        'change_id': 'changeId',
         'data': 'data',
+        'change_id': 'changeId',
         'error_code': 'errorCode',
         'error_value': 'errorValue',
         'error_description': 'errorDescription'
     }
 
-    def __init__(self, change_id=None, data=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
+    def __init__(self, data=None, change_id=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
         """BTAppElementContentInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._change_id = None
         self._data = None
+        self._change_id = None
         self._error_code = None
         self._error_value = None
         self._error_description = None
         self.discriminator = None
 
-        if change_id is not None:
-            self.change_id = change_id
         if data is not None:
             self.data = data
+        if change_id is not None:
+            self.change_id = change_id
         if error_code is not None:
             self.error_code = error_code
         if error_value is not None:
             self.error_value = error_value
         if error_description is not None:
             self.error_description = error_description
-
-    @property
-    def change_id(self):
-        """Gets the change_id of this BTAppElementContentInfo.  # noqa: E501
-
-
-        :return: The change_id of this BTAppElementContentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._change_id
-
-    @change_id.setter
-    def change_id(self, change_id):
-        """Sets the change_id of this BTAppElementContentInfo.
-
-
-        :param change_id: The change_id of this BTAppElementContentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._change_id = change_id
 
     @property
     def data(self):
@@ -109,6 +88,27 @@ class BTAppElementContentInfo(object):
         """
 
         self._data = data
+
+    @property
+    def change_id(self):
+        """Gets the change_id of this BTAppElementContentInfo.  # noqa: E501
+
+
+        :return: The change_id of this BTAppElementContentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._change_id
+
+    @change_id.setter
+    def change_id(self, change_id):
+        """Sets the change_id of this BTAppElementContentInfo.
+
+
+        :param change_id: The change_id of this BTAppElementContentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._change_id = change_id
 
     @property
     def error_code(self):

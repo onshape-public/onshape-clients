@@ -36,9 +36,9 @@ class BTCopyDocumentParams(object):
         'project_id': 'str',
         'parent_id': 'str',
         'is_public': 'bool',
+        'new_name': 'str',
         'beta_capability_ids': 'list[str]',
-        'owner_type_index': 'int',
-        'new_name': 'str'
+        'owner_type_index': 'int'
     }
 
     attribute_map = {
@@ -46,21 +46,21 @@ class BTCopyDocumentParams(object):
         'project_id': 'projectId',
         'parent_id': 'parentId',
         'is_public': 'isPublic',
+        'new_name': 'newName',
         'beta_capability_ids': 'betaCapabilityIds',
-        'owner_type_index': 'ownerTypeIndex',
-        'new_name': 'newName'
+        'owner_type_index': 'ownerTypeIndex'
     }
 
-    def __init__(self, owner_id=None, project_id=None, parent_id=None, is_public=None, beta_capability_ids=None, owner_type_index=None, new_name=None):  # noqa: E501
+    def __init__(self, owner_id=None, project_id=None, parent_id=None, is_public=None, new_name=None, beta_capability_ids=None, owner_type_index=None):  # noqa: E501
         """BTCopyDocumentParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner_id = None
         self._project_id = None
         self._parent_id = None
         self._is_public = None
+        self._new_name = None
         self._beta_capability_ids = None
         self._owner_type_index = None
-        self._new_name = None
         self.discriminator = None
 
         if owner_id is not None:
@@ -71,12 +71,12 @@ class BTCopyDocumentParams(object):
             self.parent_id = parent_id
         if is_public is not None:
             self.is_public = is_public
+        if new_name is not None:
+            self.new_name = new_name
         if beta_capability_ids is not None:
             self.beta_capability_ids = beta_capability_ids
         if owner_type_index is not None:
             self.owner_type_index = owner_type_index
-        if new_name is not None:
-            self.new_name = new_name
 
     @property
     def owner_id(self):
@@ -163,6 +163,27 @@ class BTCopyDocumentParams(object):
         self._is_public = is_public
 
     @property
+    def new_name(self):
+        """Gets the new_name of this BTCopyDocumentParams.  # noqa: E501
+
+
+        :return: The new_name of this BTCopyDocumentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_name
+
+    @new_name.setter
+    def new_name(self, new_name):
+        """Sets the new_name of this BTCopyDocumentParams.
+
+
+        :param new_name: The new_name of this BTCopyDocumentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._new_name = new_name
+
+    @property
     def beta_capability_ids(self):
         """Gets the beta_capability_ids of this BTCopyDocumentParams.  # noqa: E501
 
@@ -203,27 +224,6 @@ class BTCopyDocumentParams(object):
         """
 
         self._owner_type_index = owner_type_index
-
-    @property
-    def new_name(self):
-        """Gets the new_name of this BTCopyDocumentParams.  # noqa: E501
-
-
-        :return: The new_name of this BTCopyDocumentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._new_name
-
-    @new_name.setter
-    def new_name(self, new_name):
-        """Sets the new_name of this BTCopyDocumentParams.
-
-
-        :param new_name: The new_name of this BTCopyDocumentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._new_name = new_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

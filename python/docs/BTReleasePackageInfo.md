@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**detailed** | **bool** |  | [optional] 
 **column_names** | **dict(str, str)** |  | [optional] 
+**detailed** | **bool** |  | [optional] 
 **comments** | [**list[BTCommentInfo]**](BTCommentInfo.md) |  | [optional] 
 **items** | [**list[BTReleasePackageItemInfo]**](BTReleasePackageItemInfo.md) |  | [optional] 
 **package_thumbnail** | **str** |  | [optional] 
@@ -21,8 +21,8 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
-**is_obsoletion** | **bool** |  | [optional] 
 **workflow** | [**BTWorkflowSnapshotInfo**](BTWorkflowSnapshotInfo.md) |  | [optional] 
+**is_obsoletion** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

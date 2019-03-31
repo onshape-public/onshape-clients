@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **providers** | [**object**](.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
-**form_data_content_disposition** | [**FormDataContentDisposition**](FormDataContentDisposition.md) |  | [optional] 
 **simple** | **bool** |  | [optional] 
+**form_data_content_disposition** | [**FormDataContentDisposition**](FormDataContentDisposition.md) |  | [optional] 
 **parameterized_headers** | [**BodyPartHeaders**](BodyPartHeaders.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

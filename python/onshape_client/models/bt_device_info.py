@@ -34,8 +34,8 @@ class BTDeviceInfo(object):
     openapi_types = {
         'mobile': 'bool',
         'description': 'str',
-        'client_type': 'str',
         'version': 'BTUserAgentVersion',
+        'client_type': 'str',
         'device_name': 'str',
         'operating_system': 'str',
         'device_type': 'str',
@@ -46,8 +46,8 @@ class BTDeviceInfo(object):
     attribute_map = {
         'mobile': 'mobile',
         'description': 'description',
-        'client_type': 'clientType',
         'version': 'version',
+        'client_type': 'clientType',
         'device_name': 'deviceName',
         'operating_system': 'operatingSystem',
         'device_type': 'deviceType',
@@ -55,13 +55,13 @@ class BTDeviceInfo(object):
         'manufacturer': 'manufacturer'
     }
 
-    def __init__(self, mobile=None, description=None, client_type=None, version=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None):  # noqa: E501
+    def __init__(self, mobile=None, description=None, version=None, client_type=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None):  # noqa: E501
         """BTDeviceInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._mobile = None
         self._description = None
-        self._client_type = None
         self._version = None
+        self._client_type = None
         self._device_name = None
         self._operating_system = None
         self._device_type = None
@@ -73,10 +73,10 @@ class BTDeviceInfo(object):
             self.mobile = mobile
         if description is not None:
             self.description = description
-        if client_type is not None:
-            self.client_type = client_type
         if version is not None:
             self.version = version
+        if client_type is not None:
+            self.client_type = client_type
         if device_name is not None:
             self.device_name = device_name
         if operating_system is not None:
@@ -131,6 +131,27 @@ class BTDeviceInfo(object):
         self._description = description
 
     @property
+    def version(self):
+        """Gets the version of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The version of this BTDeviceInfo.  # noqa: E501
+        :rtype: BTUserAgentVersion
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTDeviceInfo.
+
+
+        :param version: The version of this BTDeviceInfo.  # noqa: E501
+        :type: BTUserAgentVersion
+        """
+
+        self._version = version
+
+    @property
     def client_type(self):
         """Gets the client_type of this BTDeviceInfo.  # noqa: E501
 
@@ -156,27 +177,6 @@ class BTDeviceInfo(object):
             )
 
         self._client_type = client_type
-
-    @property
-    def version(self):
-        """Gets the version of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The version of this BTDeviceInfo.  # noqa: E501
-        :rtype: BTUserAgentVersion
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTDeviceInfo.
-
-
-        :param version: The version of this BTDeviceInfo.  # noqa: E501
-        :type: BTUserAgentVersion
-        """
-
-        self._version = version
 
     @property
     def device_name(self):

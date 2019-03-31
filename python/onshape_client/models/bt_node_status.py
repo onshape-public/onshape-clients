@@ -33,8 +33,8 @@ class BTNodeStatus(object):
     """
     openapi_types = {
         'error': 'bool',
-        'status_type': 'str',
         'status_enum': 'str',
+        'status_type': 'str',
         'status_msg': 'str',
         'faulty_parameters': 'list[str]',
         'type_id': 'int',
@@ -45,8 +45,8 @@ class BTNodeStatus(object):
 
     attribute_map = {
         'error': 'error',
-        'status_type': 'statusType',
         'status_enum': 'statusEnum',
+        'status_type': 'statusType',
         'status_msg': 'statusMsg',
         'faulty_parameters': 'faultyParameters',
         'type_id': 'typeId',
@@ -55,12 +55,12 @@ class BTNodeStatus(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, error=None, status_type=None, status_enum=None, status_msg=None, faulty_parameters=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, error=None, status_enum=None, status_type=None, status_msg=None, faulty_parameters=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTNodeStatus - a model defined in OpenAPI"""  # noqa: E501
 
         self._error = None
-        self._status_type = None
         self._status_enum = None
+        self._status_type = None
         self._status_msg = None
         self._faulty_parameters = None
         self._type_id = None
@@ -71,10 +71,10 @@ class BTNodeStatus(object):
 
         if error is not None:
             self.error = error
-        if status_type is not None:
-            self.status_type = status_type
         if status_enum is not None:
             self.status_enum = status_enum
+        if status_type is not None:
+            self.status_type = status_type
         if status_msg is not None:
             self.status_msg = status_msg
         if faulty_parameters is not None:
@@ -110,33 +110,6 @@ class BTNodeStatus(object):
         self._error = error
 
     @property
-    def status_type(self):
-        """Gets the status_type of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The status_type of this BTNodeStatus.  # noqa: E501
-        :rtype: str
-        """
-        return self._status_type
-
-    @status_type.setter
-    def status_type(self, status_type):
-        """Sets the status_type of this BTNodeStatus.
-
-
-        :param status_type: The status_type of this BTNodeStatus.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
-        if status_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(status_type, allowed_values)
-            )
-
-        self._status_type = status_type
-
-    @property
     def status_enum(self):
         """Gets the status_enum of this BTNodeStatus.  # noqa: E501
 
@@ -162,6 +135,33 @@ class BTNodeStatus(object):
             )
 
         self._status_enum = status_enum
+
+    @property
+    def status_type(self):
+        """Gets the status_type of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The status_type of this BTNodeStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._status_type
+
+    @status_type.setter
+    def status_type(self, status_type):
+        """Sets the status_type of this BTNodeStatus.
+
+
+        :param status_type: The status_type of this BTNodeStatus.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
+        if status_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(status_type, allowed_values)
+            )
+
+        self._status_type = status_type
 
     @property
     def status_msg(self):

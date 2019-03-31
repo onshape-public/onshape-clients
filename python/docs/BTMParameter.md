@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
 **value_object** | [**object**](.md) |  | [optional] 
+**revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **direct_imports** | [**list[BTMImport]**](BTMImport.md) |  | [optional] 
 **string_value_for_property** | **str** |  | [optional] 

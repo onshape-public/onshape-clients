@@ -32,52 +32,31 @@ class BTSeatsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_id': 'str',
         'seats': 'int',
-        'light_seats': 'int'
+        'light_seats': 'int',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'user_id': 'userId',
         'seats': 'seats',
-        'light_seats': 'lightSeats'
+        'light_seats': 'lightSeats',
+        'user_id': 'userId'
     }
 
-    def __init__(self, user_id=None, seats=None, light_seats=None):  # noqa: E501
+    def __init__(self, seats=None, light_seats=None, user_id=None):  # noqa: E501
         """BTSeatsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_id = None
         self._seats = None
         self._light_seats = None
+        self._user_id = None
         self.discriminator = None
 
-        if user_id is not None:
-            self.user_id = user_id
         if seats is not None:
             self.seats = seats
         if light_seats is not None:
             self.light_seats = light_seats
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTSeatsParams.  # noqa: E501
-
-
-        :return: The user_id of this BTSeatsParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTSeatsParams.
-
-
-        :param user_id: The user_id of this BTSeatsParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def seats(self):
@@ -120,6 +99,27 @@ class BTSeatsParams(object):
         """
 
         self._light_seats = light_seats
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTSeatsParams.  # noqa: E501
+
+
+        :return: The user_id of this BTSeatsParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTSeatsParams.
+
+
+        :param user_id: The user_id of this BTSeatsParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

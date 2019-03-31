@@ -34,8 +34,8 @@ class BTVector3d(object):
     openapi_types = {
         'values': 'list[float]',
         'y': 'float',
-        'x': 'float',
         'z': 'float',
+        'x': 'float',
         'type_id': 'int',
         'export_type_name': 'str',
         'connection_source': 'BTConnection',
@@ -45,21 +45,21 @@ class BTVector3d(object):
     attribute_map = {
         'values': 'values',
         'y': 'y',
-        'x': 'x',
         'z': 'z',
+        'x': 'x',
         'type_id': 'typeId',
         'export_type_name': 'exportTypeName',
         'connection_source': 'connectionSource',
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, values=None, y=None, x=None, z=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, values=None, y=None, z=None, x=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTVector3d - a model defined in OpenAPI"""  # noqa: E501
 
         self._values = None
         self._y = None
-        self._x = None
         self._z = None
+        self._x = None
         self._type_id = None
         self._export_type_name = None
         self._connection_source = None
@@ -70,10 +70,10 @@ class BTVector3d(object):
             self.values = values
         if y is not None:
             self.y = y
-        if x is not None:
-            self.x = x
         if z is not None:
             self.z = z
+        if x is not None:
+            self.x = x
         if type_id is not None:
             self.type_id = type_id
         if export_type_name is not None:
@@ -126,27 +126,6 @@ class BTVector3d(object):
         self._y = y
 
     @property
-    def x(self):
-        """Gets the x of this BTVector3d.  # noqa: E501
-
-
-        :return: The x of this BTVector3d.  # noqa: E501
-        :rtype: float
-        """
-        return self._x
-
-    @x.setter
-    def x(self, x):
-        """Sets the x of this BTVector3d.
-
-
-        :param x: The x of this BTVector3d.  # noqa: E501
-        :type: float
-        """
-
-        self._x = x
-
-    @property
     def z(self):
         """Gets the z of this BTVector3d.  # noqa: E501
 
@@ -166,6 +145,27 @@ class BTVector3d(object):
         """
 
         self._z = z
+
+    @property
+    def x(self):
+        """Gets the x of this BTVector3d.  # noqa: E501
+
+
+        :return: The x of this BTVector3d.  # noqa: E501
+        :rtype: float
+        """
+        return self._x
+
+    @x.setter
+    def x(self, x):
+        """Sets the x of this BTVector3d.
+
+
+        :param x: The x of this BTVector3d.  # noqa: E501
+        :type: float
+        """
+
+        self._x = x
 
     @property
     def type_id(self):

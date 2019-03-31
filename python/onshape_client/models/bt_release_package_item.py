@@ -35,24 +35,24 @@ class BTReleasePackageItem(object):
         'name': 'str',
         'id': 'str',
         'state': 'int',
+        'revision': 'str',
+        'part_id': 'str',
+        'mime_type': 'str',
+        'created_at': 'datetime',
+        'document_id': 'str',
+        'version_id': 'str',
+        'element_id': 'str',
+        'part_number': 'str',
+        'company_id': 'str',
+        'element_type': 'int',
+        'workspace_id': 'str',
+        'modified_at': 'datetime',
+        'microversion_id': 'str',
         'children': 'list[BTReleasePackageItem]',
         'configuration': 'str',
-        'revision': 'str',
-        'mime_type': 'str',
-        'configuration_key': 'str',
-        'version_id': 'str',
-        'modified_at': 'datetime',
-        'document_id': 'str',
-        'created_at': 'datetime',
-        'company_id': 'str',
         'created_by': 'str',
         'modified_by': 'str',
-        'workspace_id': 'str',
-        'element_id': 'str',
-        'microversion_id': 'str',
-        'part_number': 'str',
-        'part_id': 'str',
-        'element_type': 'int',
+        'configuration_key': 'str',
         'revision_rule_id': 'str',
         'is_included': 'bool',
         'remote_state': 'int',
@@ -69,24 +69,24 @@ class BTReleasePackageItem(object):
         'name': 'name',
         'id': 'id',
         'state': 'state',
+        'revision': 'revision',
+        'part_id': 'partId',
+        'mime_type': 'mimeType',
+        'created_at': 'createdAt',
+        'document_id': 'documentId',
+        'version_id': 'versionId',
+        'element_id': 'elementId',
+        'part_number': 'partNumber',
+        'company_id': 'companyId',
+        'element_type': 'elementType',
+        'workspace_id': 'workspaceId',
+        'modified_at': 'modifiedAt',
+        'microversion_id': 'microversionId',
         'children': 'children',
         'configuration': 'configuration',
-        'revision': 'revision',
-        'mime_type': 'mimeType',
-        'configuration_key': 'configurationKey',
-        'version_id': 'versionId',
-        'modified_at': 'modifiedAt',
-        'document_id': 'documentId',
-        'created_at': 'createdAt',
-        'company_id': 'companyId',
         'created_by': 'createdBy',
         'modified_by': 'modifiedBy',
-        'workspace_id': 'workspaceId',
-        'element_id': 'elementId',
-        'microversion_id': 'microversionId',
-        'part_number': 'partNumber',
-        'part_id': 'partId',
-        'element_type': 'elementType',
+        'configuration_key': 'configurationKey',
         'revision_rule_id': 'revisionRuleId',
         'is_included': 'isIncluded',
         'remote_state': 'remoteState',
@@ -99,30 +99,30 @@ class BTReleasePackageItem(object):
         'obsoletion_revision_id': 'obsoletionRevisionId'
     }
 
-    def __init__(self, name=None, id=None, state=None, children=None, configuration=None, revision=None, mime_type=None, configuration_key=None, version_id=None, modified_at=None, document_id=None, created_at=None, company_id=None, created_by=None, modified_by=None, workspace_id=None, element_id=None, microversion_id=None, part_number=None, part_id=None, element_type=None, revision_rule_id=None, is_included=None, remote_state=None, diff_thumbnail_configuration_key=None, small_thumbnail_href=None, initial_revision=None, is_revision_managed=None, errors=None, rpid=None, obsoletion_revision_id=None):  # noqa: E501
+    def __init__(self, name=None, id=None, state=None, revision=None, part_id=None, mime_type=None, created_at=None, document_id=None, version_id=None, element_id=None, part_number=None, company_id=None, element_type=None, workspace_id=None, modified_at=None, microversion_id=None, children=None, configuration=None, created_by=None, modified_by=None, configuration_key=None, revision_rule_id=None, is_included=None, remote_state=None, diff_thumbnail_configuration_key=None, small_thumbnail_href=None, initial_revision=None, is_revision_managed=None, errors=None, rpid=None, obsoletion_revision_id=None):  # noqa: E501
         """BTReleasePackageItem - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
         self._state = None
+        self._revision = None
+        self._part_id = None
+        self._mime_type = None
+        self._created_at = None
+        self._document_id = None
+        self._version_id = None
+        self._element_id = None
+        self._part_number = None
+        self._company_id = None
+        self._element_type = None
+        self._workspace_id = None
+        self._modified_at = None
+        self._microversion_id = None
         self._children = None
         self._configuration = None
-        self._revision = None
-        self._mime_type = None
-        self._configuration_key = None
-        self._version_id = None
-        self._modified_at = None
-        self._document_id = None
-        self._created_at = None
-        self._company_id = None
         self._created_by = None
         self._modified_by = None
-        self._workspace_id = None
-        self._element_id = None
-        self._microversion_id = None
-        self._part_number = None
-        self._part_id = None
-        self._element_type = None
+        self._configuration_key = None
         self._revision_rule_id = None
         self._is_included = None
         self._remote_state = None
@@ -141,42 +141,42 @@ class BTReleasePackageItem(object):
             self.id = id
         if state is not None:
             self.state = state
+        if revision is not None:
+            self.revision = revision
+        if part_id is not None:
+            self.part_id = part_id
+        if mime_type is not None:
+            self.mime_type = mime_type
+        if created_at is not None:
+            self.created_at = created_at
+        if document_id is not None:
+            self.document_id = document_id
+        if version_id is not None:
+            self.version_id = version_id
+        if element_id is not None:
+            self.element_id = element_id
+        if part_number is not None:
+            self.part_number = part_number
+        if company_id is not None:
+            self.company_id = company_id
+        if element_type is not None:
+            self.element_type = element_type
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if modified_at is not None:
+            self.modified_at = modified_at
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
         if children is not None:
             self.children = children
         if configuration is not None:
             self.configuration = configuration
-        if revision is not None:
-            self.revision = revision
-        if mime_type is not None:
-            self.mime_type = mime_type
-        if configuration_key is not None:
-            self.configuration_key = configuration_key
-        if version_id is not None:
-            self.version_id = version_id
-        if modified_at is not None:
-            self.modified_at = modified_at
-        if document_id is not None:
-            self.document_id = document_id
-        if created_at is not None:
-            self.created_at = created_at
-        if company_id is not None:
-            self.company_id = company_id
         if created_by is not None:
             self.created_by = created_by
         if modified_by is not None:
             self.modified_by = modified_by
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
-        if element_id is not None:
-            self.element_id = element_id
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
-        if part_number is not None:
-            self.part_number = part_number
-        if part_id is not None:
-            self.part_id = part_id
-        if element_type is not None:
-            self.element_type = element_type
+        if configuration_key is not None:
+            self.configuration_key = configuration_key
         if revision_rule_id is not None:
             self.revision_rule_id = revision_rule_id
         if is_included is not None:
@@ -262,6 +262,279 @@ class BTReleasePackageItem(object):
         self._state = state
 
     @property
+    def revision(self):
+        """Gets the revision of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The revision of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._revision
+
+    @revision.setter
+    def revision(self, revision):
+        """Sets the revision of this BTReleasePackageItem.
+
+
+        :param revision: The revision of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._revision = revision
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The part_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTReleasePackageItem.
+
+
+        :param part_id: The part_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The mime_type of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this BTReleasePackageItem.
+
+
+        :param mime_type: The mime_type of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The created_at of this BTReleasePackageItem.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTReleasePackageItem.
+
+
+        :param created_at: The created_at of this BTReleasePackageItem.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The document_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTReleasePackageItem.
+
+
+        :param document_id: The document_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The version_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTReleasePackageItem.
+
+
+        :param version_id: The version_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The element_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTReleasePackageItem.
+
+
+        :param element_id: The element_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
+
+    @property
+    def part_number(self):
+        """Gets the part_number of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The part_number of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_number
+
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTReleasePackageItem.
+
+
+        :param part_number: The part_number of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._part_number = part_number
+
+    @property
+    def company_id(self):
+        """Gets the company_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The company_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_id
+
+    @company_id.setter
+    def company_id(self, company_id):
+        """Sets the company_id of this BTReleasePackageItem.
+
+
+        :param company_id: The company_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._company_id = company_id
+
+    @property
+    def element_type(self):
+        """Gets the element_type of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The element_type of this BTReleasePackageItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTReleasePackageItem.
+
+
+        :param element_type: The element_type of this BTReleasePackageItem.  # noqa: E501
+        :type: int
+        """
+
+        self._element_type = element_type
+
+    @property
+    def workspace_id(self):
+        """Gets the workspace_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The workspace_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._workspace_id
+
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTReleasePackageItem.
+
+
+        :param workspace_id: The workspace_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._workspace_id = workspace_id
+
+    @property
+    def modified_at(self):
+        """Gets the modified_at of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The modified_at of this BTReleasePackageItem.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._modified_at
+
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTReleasePackageItem.
+
+
+        :param modified_at: The modified_at of this BTReleasePackageItem.  # noqa: E501
+        :type: datetime
+        """
+
+        self._modified_at = modified_at
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTReleasePackageItem.  # noqa: E501
+
+
+        :return: The microversion_id of this BTReleasePackageItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTReleasePackageItem.
+
+
+        :param microversion_id: The microversion_id of this BTReleasePackageItem.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
+
+    @property
     def children(self):
         """Gets the children of this BTReleasePackageItem.  # noqa: E501
 
@@ -302,174 +575,6 @@ class BTReleasePackageItem(object):
         """
 
         self._configuration = configuration
-
-    @property
-    def revision(self):
-        """Gets the revision of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The revision of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._revision
-
-    @revision.setter
-    def revision(self, revision):
-        """Sets the revision of this BTReleasePackageItem.
-
-
-        :param revision: The revision of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._revision = revision
-
-    @property
-    def mime_type(self):
-        """Gets the mime_type of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The mime_type of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._mime_type
-
-    @mime_type.setter
-    def mime_type(self, mime_type):
-        """Sets the mime_type of this BTReleasePackageItem.
-
-
-        :param mime_type: The mime_type of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._mime_type = mime_type
-
-    @property
-    def configuration_key(self):
-        """Gets the configuration_key of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The configuration_key of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration_key
-
-    @configuration_key.setter
-    def configuration_key(self, configuration_key):
-        """Sets the configuration_key of this BTReleasePackageItem.
-
-
-        :param configuration_key: The configuration_key of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration_key = configuration_key
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The version_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTReleasePackageItem.
-
-
-        :param version_id: The version_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
-
-    @property
-    def modified_at(self):
-        """Gets the modified_at of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The modified_at of this BTReleasePackageItem.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._modified_at
-
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTReleasePackageItem.
-
-
-        :param modified_at: The modified_at of this BTReleasePackageItem.  # noqa: E501
-        :type: datetime
-        """
-
-        self._modified_at = modified_at
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The document_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTReleasePackageItem.
-
-
-        :param document_id: The document_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The created_at of this BTReleasePackageItem.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTReleasePackageItem.
-
-
-        :param created_at: The created_at of this BTReleasePackageItem.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def company_id(self):
-        """Gets the company_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The company_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._company_id
-
-    @company_id.setter
-    def company_id(self, company_id):
-        """Sets the company_id of this BTReleasePackageItem.
-
-
-        :param company_id: The company_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._company_id = company_id
 
     @property
     def created_by(self):
@@ -514,130 +619,25 @@ class BTReleasePackageItem(object):
         self._modified_by = modified_by
 
     @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTReleasePackageItem.  # noqa: E501
+    def configuration_key(self):
+        """Gets the configuration_key of this BTReleasePackageItem.  # noqa: E501
 
 
-        :return: The workspace_id of this BTReleasePackageItem.  # noqa: E501
+        :return: The configuration_key of this BTReleasePackageItem.  # noqa: E501
         :rtype: str
         """
-        return self._workspace_id
+        return self._configuration_key
 
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTReleasePackageItem.
+    @configuration_key.setter
+    def configuration_key(self, configuration_key):
+        """Sets the configuration_key of this BTReleasePackageItem.
 
 
-        :param workspace_id: The workspace_id of this BTReleasePackageItem.  # noqa: E501
+        :param configuration_key: The configuration_key of this BTReleasePackageItem.  # noqa: E501
         :type: str
         """
 
-        self._workspace_id = workspace_id
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The element_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTReleasePackageItem.
-
-
-        :param element_id: The element_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The microversion_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTReleasePackageItem.
-
-
-        :param microversion_id: The microversion_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
-    def part_number(self):
-        """Gets the part_number of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The part_number of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTReleasePackageItem.
-
-
-        :param part_number: The part_number of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The part_id of this BTReleasePackageItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTReleasePackageItem.
-
-
-        :param part_id: The part_id of this BTReleasePackageItem.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
-    def element_type(self):
-        """Gets the element_type of this BTReleasePackageItem.  # noqa: E501
-
-
-        :return: The element_type of this BTReleasePackageItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._element_type
-
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTReleasePackageItem.
-
-
-        :param element_type: The element_type of this BTReleasePackageItem.  # noqa: E501
-        :type: int
-        """
-
-        self._element_type = element_type
+        self._configuration_key = configuration_key
 
     @property
     def revision_rule_id(self):

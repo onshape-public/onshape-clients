@@ -33,8 +33,6 @@ class ContentItem(object):
     """
     openapi_types = {
         'link': 'str',
-        'width': 'int',
-        'height': 'int',
         'title': 'str',
         'content_id': 'str',
         'item_title': 'str',
@@ -45,13 +43,13 @@ class ContentItem(object):
         'anchor': 'str',
         'vertical_offset': 'int',
         'horizontal_offset': 'int',
-        'position': 'str'
+        'position': 'str',
+        'width': 'int',
+        'height': 'int'
     }
 
     attribute_map = {
         'link': 'link',
-        'width': 'width',
-        'height': 'height',
         'title': 'title',
         'content_id': 'contentId',
         'item_title': 'itemTitle',
@@ -62,15 +60,15 @@ class ContentItem(object):
         'anchor': 'anchor',
         'vertical_offset': 'verticalOffset',
         'horizontal_offset': 'horizontalOffset',
-        'position': 'position'
+        'position': 'position',
+        'width': 'width',
+        'height': 'height'
     }
 
-    def __init__(self, link=None, width=None, height=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, position=None):  # noqa: E501
+    def __init__(self, link=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, position=None, width=None, height=None):  # noqa: E501
         """ContentItem - a model defined in OpenAPI"""  # noqa: E501
 
         self._link = None
-        self._width = None
-        self._height = None
         self._title = None
         self._content_id = None
         self._item_title = None
@@ -82,14 +80,12 @@ class ContentItem(object):
         self._vertical_offset = None
         self._horizontal_offset = None
         self._position = None
+        self._width = None
+        self._height = None
         self.discriminator = None
 
         if link is not None:
             self.link = link
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
         if title is not None:
             self.title = title
         if content_id is not None:
@@ -112,6 +108,10 @@ class ContentItem(object):
             self.horizontal_offset = horizontal_offset
         if position is not None:
             self.position = position
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
 
     @property
     def link(self):
@@ -133,48 +133,6 @@ class ContentItem(object):
         """
 
         self._link = link
-
-    @property
-    def width(self):
-        """Gets the width of this ContentItem.  # noqa: E501
-
-
-        :return: The width of this ContentItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._width
-
-    @width.setter
-    def width(self, width):
-        """Sets the width of this ContentItem.
-
-
-        :param width: The width of this ContentItem.  # noqa: E501
-        :type: int
-        """
-
-        self._width = width
-
-    @property
-    def height(self):
-        """Gets the height of this ContentItem.  # noqa: E501
-
-
-        :return: The height of this ContentItem.  # noqa: E501
-        :rtype: int
-        """
-        return self._height
-
-    @height.setter
-    def height(self, height):
-        """Sets the height of this ContentItem.
-
-
-        :param height: The height of this ContentItem.  # noqa: E501
-        :type: int
-        """
-
-        self._height = height
 
     @property
     def title(self):
@@ -406,6 +364,48 @@ class ContentItem(object):
         """
 
         self._position = position
+
+    @property
+    def width(self):
+        """Gets the width of this ContentItem.  # noqa: E501
+
+
+        :return: The width of this ContentItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        """Sets the width of this ContentItem.
+
+
+        :param width: The width of this ContentItem.  # noqa: E501
+        :type: int
+        """
+
+        self._width = width
+
+    @property
+    def height(self):
+        """Gets the height of this ContentItem.  # noqa: E501
+
+
+        :return: The height of this ContentItem.  # noqa: E501
+        :rtype: int
+        """
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        """Sets the height of this ContentItem.
+
+
+        :param height: The height of this ContentItem.  # noqa: E501
+        :type: int
+        """
+
+        self._height = height
 
     def to_dict(self):
         """Returns the model properties as a dict"""

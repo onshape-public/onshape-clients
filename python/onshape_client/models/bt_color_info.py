@@ -32,52 +32,31 @@ class BTColorInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'blue': 'int',
         'red': 'int',
+        'blue': 'int',
         'green': 'int'
     }
 
     attribute_map = {
-        'blue': 'blue',
         'red': 'red',
+        'blue': 'blue',
         'green': 'green'
     }
 
-    def __init__(self, blue=None, red=None, green=None):  # noqa: E501
+    def __init__(self, red=None, blue=None, green=None):  # noqa: E501
         """BTColorInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._blue = None
         self._red = None
+        self._blue = None
         self._green = None
         self.discriminator = None
 
-        if blue is not None:
-            self.blue = blue
         if red is not None:
             self.red = red
+        if blue is not None:
+            self.blue = blue
         if green is not None:
             self.green = green
-
-    @property
-    def blue(self):
-        """Gets the blue of this BTColorInfo.  # noqa: E501
-
-
-        :return: The blue of this BTColorInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._blue
-
-    @blue.setter
-    def blue(self, blue):
-        """Sets the blue of this BTColorInfo.
-
-
-        :param blue: The blue of this BTColorInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._blue = blue
 
     @property
     def red(self):
@@ -99,6 +78,27 @@ class BTColorInfo(object):
         """
 
         self._red = red
+
+    @property
+    def blue(self):
+        """Gets the blue of this BTColorInfo.  # noqa: E501
+
+
+        :return: The blue of this BTColorInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._blue
+
+    @blue.setter
+    def blue(self, blue):
+        """Sets the blue of this BTColorInfo.
+
+
+        :param blue: The blue of this BTColorInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._blue = blue
 
     @property
     def green(self):

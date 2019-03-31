@@ -32,83 +32,41 @@ class BTCompanyUserParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'guest': 'bool',
-        'light': 'bool',
         'email': 'str',
         'company_id': 'str',
-        'admin': 'bool'
+        'admin': 'bool',
+        'guest': 'bool',
+        'light': 'bool'
     }
 
     attribute_map = {
-        'guest': 'guest',
-        'light': 'light',
         'email': 'email',
         'company_id': 'companyId',
-        'admin': 'admin'
+        'admin': 'admin',
+        'guest': 'guest',
+        'light': 'light'
     }
 
-    def __init__(self, guest=None, light=None, email=None, company_id=None, admin=None):  # noqa: E501
+    def __init__(self, email=None, company_id=None, admin=None, guest=None, light=None):  # noqa: E501
         """BTCompanyUserParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._guest = None
-        self._light = None
         self._email = None
         self._company_id = None
         self._admin = None
+        self._guest = None
+        self._light = None
         self.discriminator = None
 
-        if guest is not None:
-            self.guest = guest
-        if light is not None:
-            self.light = light
         if email is not None:
             self.email = email
         if company_id is not None:
             self.company_id = company_id
         if admin is not None:
             self.admin = admin
-
-    @property
-    def guest(self):
-        """Gets the guest of this BTCompanyUserParams.  # noqa: E501
-
-
-        :return: The guest of this BTCompanyUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._guest
-
-    @guest.setter
-    def guest(self, guest):
-        """Sets the guest of this BTCompanyUserParams.
-
-
-        :param guest: The guest of this BTCompanyUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._guest = guest
-
-    @property
-    def light(self):
-        """Gets the light of this BTCompanyUserParams.  # noqa: E501
-
-
-        :return: The light of this BTCompanyUserParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._light
-
-    @light.setter
-    def light(self, light):
-        """Sets the light of this BTCompanyUserParams.
-
-
-        :param light: The light of this BTCompanyUserParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._light = light
+        if guest is not None:
+            self.guest = guest
+        if light is not None:
+            self.light = light
 
     @property
     def email(self):
@@ -172,6 +130,48 @@ class BTCompanyUserParams(object):
         """
 
         self._admin = admin
+
+    @property
+    def guest(self):
+        """Gets the guest of this BTCompanyUserParams.  # noqa: E501
+
+
+        :return: The guest of this BTCompanyUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._guest
+
+    @guest.setter
+    def guest(self, guest):
+        """Sets the guest of this BTCompanyUserParams.
+
+
+        :param guest: The guest of this BTCompanyUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._guest = guest
+
+    @property
+    def light(self):
+        """Gets the light of this BTCompanyUserParams.  # noqa: E501
+
+
+        :return: The light of this BTCompanyUserParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._light
+
+    @light.setter
+    def light(self, light):
+        """Sets the light of this BTCompanyUserParams.
+
+
+        :param light: The light of this BTCompanyUserParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._light = light
 
     def to_dict(self):
         """Returns the model properties as a dict"""

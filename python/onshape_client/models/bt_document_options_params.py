@@ -32,52 +32,56 @@ class BTDocumentOptionsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'extended_display_check': 'bool',
         'cpp_server_memory': 'int',
         'enable_cpp_server_memory_diagnostics': 'bool',
+        'skip_retrieval_test': 'bool',
+        'document_memory': 'int',
+        'extended_display_check': 'bool',
         'cpp_server_limit': 'int',
         'thumbnail_cpp_server_limit': 'int',
         'linked_cpp_server_limit': 'int',
         'drawing_server_memory': 'int',
-        'cpp_server_default_element_limit': 'int',
-        'skip_retrieval_test': 'bool',
-        'document_memory': 'int'
+        'cpp_server_default_element_limit': 'int'
     }
 
     attribute_map = {
-        'extended_display_check': 'extendedDisplayCheck',
         'cpp_server_memory': 'cppServerMemory',
         'enable_cpp_server_memory_diagnostics': 'enableCppServerMemoryDiagnostics',
+        'skip_retrieval_test': 'skipRetrievalTest',
+        'document_memory': 'documentMemory',
+        'extended_display_check': 'extendedDisplayCheck',
         'cpp_server_limit': 'cppServerLimit',
         'thumbnail_cpp_server_limit': 'thumbnailCppServerLimit',
         'linked_cpp_server_limit': 'linkedCppServerLimit',
         'drawing_server_memory': 'drawingServerMemory',
-        'cpp_server_default_element_limit': 'cppServerDefaultElementLimit',
-        'skip_retrieval_test': 'skipRetrievalTest',
-        'document_memory': 'documentMemory'
+        'cpp_server_default_element_limit': 'cppServerDefaultElementLimit'
     }
 
-    def __init__(self, extended_display_check=None, cpp_server_memory=None, enable_cpp_server_memory_diagnostics=None, cpp_server_limit=None, thumbnail_cpp_server_limit=None, linked_cpp_server_limit=None, drawing_server_memory=None, cpp_server_default_element_limit=None, skip_retrieval_test=None, document_memory=None):  # noqa: E501
+    def __init__(self, cpp_server_memory=None, enable_cpp_server_memory_diagnostics=None, skip_retrieval_test=None, document_memory=None, extended_display_check=None, cpp_server_limit=None, thumbnail_cpp_server_limit=None, linked_cpp_server_limit=None, drawing_server_memory=None, cpp_server_default_element_limit=None):  # noqa: E501
         """BTDocumentOptionsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._extended_display_check = None
         self._cpp_server_memory = None
         self._enable_cpp_server_memory_diagnostics = None
+        self._skip_retrieval_test = None
+        self._document_memory = None
+        self._extended_display_check = None
         self._cpp_server_limit = None
         self._thumbnail_cpp_server_limit = None
         self._linked_cpp_server_limit = None
         self._drawing_server_memory = None
         self._cpp_server_default_element_limit = None
-        self._skip_retrieval_test = None
-        self._document_memory = None
         self.discriminator = None
 
-        if extended_display_check is not None:
-            self.extended_display_check = extended_display_check
         if cpp_server_memory is not None:
             self.cpp_server_memory = cpp_server_memory
         if enable_cpp_server_memory_diagnostics is not None:
             self.enable_cpp_server_memory_diagnostics = enable_cpp_server_memory_diagnostics
+        if skip_retrieval_test is not None:
+            self.skip_retrieval_test = skip_retrieval_test
+        if document_memory is not None:
+            self.document_memory = document_memory
+        if extended_display_check is not None:
+            self.extended_display_check = extended_display_check
         if cpp_server_limit is not None:
             self.cpp_server_limit = cpp_server_limit
         if thumbnail_cpp_server_limit is not None:
@@ -88,31 +92,6 @@ class BTDocumentOptionsParams(object):
             self.drawing_server_memory = drawing_server_memory
         if cpp_server_default_element_limit is not None:
             self.cpp_server_default_element_limit = cpp_server_default_element_limit
-        if skip_retrieval_test is not None:
-            self.skip_retrieval_test = skip_retrieval_test
-        if document_memory is not None:
-            self.document_memory = document_memory
-
-    @property
-    def extended_display_check(self):
-        """Gets the extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._extended_display_check
-
-    @extended_display_check.setter
-    def extended_display_check(self, extended_display_check):
-        """Sets the extended_display_check of this BTDocumentOptionsParams.
-
-
-        :param extended_display_check: The extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._extended_display_check = extended_display_check
 
     @property
     def cpp_server_memory(self):
@@ -155,6 +134,69 @@ class BTDocumentOptionsParams(object):
         """
 
         self._enable_cpp_server_memory_diagnostics = enable_cpp_server_memory_diagnostics
+
+    @property
+    def skip_retrieval_test(self):
+        """Gets the skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._skip_retrieval_test
+
+    @skip_retrieval_test.setter
+    def skip_retrieval_test(self, skip_retrieval_test):
+        """Sets the skip_retrieval_test of this BTDocumentOptionsParams.
+
+
+        :param skip_retrieval_test: The skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._skip_retrieval_test = skip_retrieval_test
+
+    @property
+    def document_memory(self):
+        """Gets the document_memory of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The document_memory of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._document_memory
+
+    @document_memory.setter
+    def document_memory(self, document_memory):
+        """Sets the document_memory of this BTDocumentOptionsParams.
+
+
+        :param document_memory: The document_memory of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._document_memory = document_memory
+
+    @property
+    def extended_display_check(self):
+        """Gets the extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._extended_display_check
+
+    @extended_display_check.setter
+    def extended_display_check(self, extended_display_check):
+        """Sets the extended_display_check of this BTDocumentOptionsParams.
+
+
+        :param extended_display_check: The extended_display_check of this BTDocumentOptionsParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._extended_display_check = extended_display_check
 
     @property
     def cpp_server_limit(self):
@@ -260,48 +302,6 @@ class BTDocumentOptionsParams(object):
         """
 
         self._cpp_server_default_element_limit = cpp_server_default_element_limit
-
-    @property
-    def skip_retrieval_test(self):
-        """Gets the skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._skip_retrieval_test
-
-    @skip_retrieval_test.setter
-    def skip_retrieval_test(self, skip_retrieval_test):
-        """Sets the skip_retrieval_test of this BTDocumentOptionsParams.
-
-
-        :param skip_retrieval_test: The skip_retrieval_test of this BTDocumentOptionsParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._skip_retrieval_test = skip_retrieval_test
-
-    @property
-    def document_memory(self):
-        """Gets the document_memory of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The document_memory of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._document_memory
-
-    @document_memory.setter
-    def document_memory(self, document_memory):
-        """Sets the document_memory of this BTDocumentOptionsParams.
-
-
-        :param document_memory: The document_memory of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._document_memory = document_memory
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,41 +33,45 @@ class BTStandardContentHierarchyParams(object):
     """
     openapi_types = {
         'type': 'str',
+        'standard': 'str',
+        'category': 'str',
         'types': 'str',
         'component_document_id': 'str',
         'disable_production': 'bool',
         'production_version_id': 'str',
-        'test_version_id': 'str',
-        'category': 'str',
-        'standard': 'str'
+        'test_version_id': 'str'
     }
 
     attribute_map = {
         'type': 'type',
+        'standard': 'standard',
+        'category': 'category',
         'types': 'types',
         'component_document_id': 'componentDocumentId',
         'disable_production': 'disableProduction',
         'production_version_id': 'productionVersionId',
-        'test_version_id': 'testVersionId',
-        'category': 'category',
-        'standard': 'standard'
+        'test_version_id': 'testVersionId'
     }
 
-    def __init__(self, type=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None, category=None, standard=None):  # noqa: E501
+    def __init__(self, type=None, standard=None, category=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None):  # noqa: E501
         """BTStandardContentHierarchyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
+        self._standard = None
+        self._category = None
         self._types = None
         self._component_document_id = None
         self._disable_production = None
         self._production_version_id = None
         self._test_version_id = None
-        self._category = None
-        self._standard = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
+        if standard is not None:
+            self.standard = standard
+        if category is not None:
+            self.category = category
         if types is not None:
             self.types = types
         if component_document_id is not None:
@@ -78,10 +82,6 @@ class BTStandardContentHierarchyParams(object):
             self.production_version_id = production_version_id
         if test_version_id is not None:
             self.test_version_id = test_version_id
-        if category is not None:
-            self.category = category
-        if standard is not None:
-            self.standard = standard
 
     @property
     def type(self):
@@ -103,6 +103,48 @@ class BTStandardContentHierarchyParams(object):
         """
 
         self._type = type
+
+    @property
+    def standard(self):
+        """Gets the standard of this BTStandardContentHierarchyParams.  # noqa: E501
+
+
+        :return: The standard of this BTStandardContentHierarchyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._standard
+
+    @standard.setter
+    def standard(self, standard):
+        """Sets the standard of this BTStandardContentHierarchyParams.
+
+
+        :param standard: The standard of this BTStandardContentHierarchyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._standard = standard
+
+    @property
+    def category(self):
+        """Gets the category of this BTStandardContentHierarchyParams.  # noqa: E501
+
+
+        :return: The category of this BTStandardContentHierarchyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTStandardContentHierarchyParams.
+
+
+        :param category: The category of this BTStandardContentHierarchyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
 
     @property
     def types(self):
@@ -208,48 +250,6 @@ class BTStandardContentHierarchyParams(object):
         """
 
         self._test_version_id = test_version_id
-
-    @property
-    def category(self):
-        """Gets the category of this BTStandardContentHierarchyParams.  # noqa: E501
-
-
-        :return: The category of this BTStandardContentHierarchyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTStandardContentHierarchyParams.
-
-
-        :param category: The category of this BTStandardContentHierarchyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._category = category
-
-    @property
-    def standard(self):
-        """Gets the standard of this BTStandardContentHierarchyParams.  # noqa: E501
-
-
-        :return: The standard of this BTStandardContentHierarchyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._standard
-
-    @standard.setter
-    def standard(self, standard):
-        """Sets the standard of this BTStandardContentHierarchyParams.
-
-
-        :param standard: The standard of this BTStandardContentHierarchyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._standard = standard
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,17 +35,17 @@ class BTBetaCapabilityUserInfo(object):
         'capability_state': 'int',
         'created_at': 'datetime',
         'plan_id': 'str',
-        'removed_at': 'datetime',
         'approved_at': 'datetime',
+        'removed_at': 'datetime',
         'source': 'int',
-        'is_guest': 'bool',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
+        'company': 'BTCompanySummaryInfo',
+        'is_guest': 'bool',
         'is_light': 'bool',
         'global_permissions': 'GlobalPermissionInfo',
         'last_login_time': 'datetime',
-        'company': 'BTCompanySummaryInfo',
         'state': 'int',
         'image': 'str',
         'name': 'str',
@@ -58,17 +58,17 @@ class BTBetaCapabilityUserInfo(object):
         'capability_state': 'capabilityState',
         'created_at': 'createdAt',
         'plan_id': 'planId',
-        'removed_at': 'removedAt',
         'approved_at': 'approvedAt',
+        'removed_at': 'removedAt',
         'source': 'source',
-        'is_guest': 'isGuest',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
+        'company': 'company',
+        'is_guest': 'isGuest',
         'is_light': 'isLight',
         'global_permissions': 'globalPermissions',
         'last_login_time': 'lastLoginTime',
-        'company': 'company',
         'state': 'state',
         'image': 'image',
         'name': 'name',
@@ -77,23 +77,23 @@ class BTBetaCapabilityUserInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, capability_state=None, created_at=None, plan_id=None, removed_at=None, approved_at=None, source=None, is_guest=None, first_name=None, last_name=None, email=None, is_light=None, global_permissions=None, last_login_time=None, company=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, capability_state=None, created_at=None, plan_id=None, approved_at=None, removed_at=None, source=None, first_name=None, last_name=None, email=None, company=None, is_guest=None, is_light=None, global_permissions=None, last_login_time=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._capability_state = None
         self._created_at = None
         self._plan_id = None
-        self._removed_at = None
         self._approved_at = None
+        self._removed_at = None
         self._source = None
-        self._is_guest = None
         self._first_name = None
         self._last_name = None
         self._email = None
+        self._company = None
+        self._is_guest = None
         self._is_light = None
         self._global_permissions = None
         self._last_login_time = None
-        self._company = None
         self._state = None
         self._image = None
         self._name = None
@@ -108,28 +108,28 @@ class BTBetaCapabilityUserInfo(object):
             self.created_at = created_at
         if plan_id is not None:
             self.plan_id = plan_id
-        if removed_at is not None:
-            self.removed_at = removed_at
         if approved_at is not None:
             self.approved_at = approved_at
+        if removed_at is not None:
+            self.removed_at = removed_at
         if source is not None:
             self.source = source
-        if is_guest is not None:
-            self.is_guest = is_guest
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if email is not None:
             self.email = email
+        if company is not None:
+            self.company = company
+        if is_guest is not None:
+            self.is_guest = is_guest
         if is_light is not None:
             self.is_light = is_light
         if global_permissions is not None:
             self.global_permissions = global_permissions
         if last_login_time is not None:
             self.last_login_time = last_login_time
-        if company is not None:
-            self.company = company
         if state is not None:
             self.state = state
         if image is not None:
@@ -207,27 +207,6 @@ class BTBetaCapabilityUserInfo(object):
         self._plan_id = plan_id
 
     @property
-    def removed_at(self):
-        """Gets the removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._removed_at
-
-    @removed_at.setter
-    def removed_at(self, removed_at):
-        """Sets the removed_at of this BTBetaCapabilityUserInfo.
-
-
-        :param removed_at: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._removed_at = removed_at
-
-    @property
     def approved_at(self):
         """Gets the approved_at of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -249,6 +228,27 @@ class BTBetaCapabilityUserInfo(object):
         self._approved_at = approved_at
 
     @property
+    def removed_at(self):
+        """Gets the removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._removed_at
+
+    @removed_at.setter
+    def removed_at(self, removed_at):
+        """Sets the removed_at of this BTBetaCapabilityUserInfo.
+
+
+        :param removed_at: The removed_at of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._removed_at = removed_at
+
+    @property
     def source(self):
         """Gets the source of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -268,27 +268,6 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._source = source
-
-    @property
-    def is_guest(self):
-        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_guest
-
-    @is_guest.setter
-    def is_guest(self, is_guest):
-        """Sets the is_guest of this BTBetaCapabilityUserInfo.
-
-
-        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_guest = is_guest
 
     @property
     def first_name(self):
@@ -354,6 +333,48 @@ class BTBetaCapabilityUserInfo(object):
         self._email = email
 
     @property
+    def company(self):
+        """Gets the company of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The company of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: BTCompanySummaryInfo
+        """
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        """Sets the company of this BTBetaCapabilityUserInfo.
+
+
+        :param company: The company of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: BTCompanySummaryInfo
+        """
+
+        self._company = company
+
+    @property
+    def is_guest(self):
+        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_guest
+
+    @is_guest.setter
+    def is_guest(self, is_guest):
+        """Sets the is_guest of this BTBetaCapabilityUserInfo.
+
+
+        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_guest = is_guest
+
+    @property
     def is_light(self):
         """Gets the is_light of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -415,27 +436,6 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._last_login_time = last_login_time
-
-    @property
-    def company(self):
-        """Gets the company of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The company of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: BTCompanySummaryInfo
-        """
-        return self._company
-
-    @company.setter
-    def company(self, company):
-        """Sets the company of this BTBetaCapabilityUserInfo.
-
-
-        :param company: The company of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: BTCompanySummaryInfo
-        """
-
-        self._company = company
 
     @property
     def state(self):

@@ -38,10 +38,10 @@ class BTWorkflowSnapshotInfo(object):
         'approver_ids': 'list[str]',
         'notifier_ids': 'list[str]',
         'rejected_by': 'list[str]',
-        'approved_by': 'list[str]',
         'is_frozen': 'bool',
-        'is_discarded': 'bool',
-        'metadata_state': 'str'
+        'approved_by': 'list[str]',
+        'metadata_state': 'str',
+        'is_discarded': 'bool'
     }
 
     attribute_map = {
@@ -51,13 +51,13 @@ class BTWorkflowSnapshotInfo(object):
         'approver_ids': 'approverIds',
         'notifier_ids': 'notifierIds',
         'rejected_by': 'rejectedBy',
-        'approved_by': 'approvedBy',
         'is_frozen': 'isFrozen',
-        'is_discarded': 'isDiscarded',
-        'metadata_state': 'metadataState'
+        'approved_by': 'approvedBy',
+        'metadata_state': 'metadataState',
+        'is_discarded': 'isDiscarded'
     }
 
-    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, rejected_by=None, approved_by=None, is_frozen=None, is_discarded=None, metadata_state=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, rejected_by=None, is_frozen=None, approved_by=None, metadata_state=None, is_discarded=None):  # noqa: E501
         """BTWorkflowSnapshotInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
@@ -66,10 +66,10 @@ class BTWorkflowSnapshotInfo(object):
         self._approver_ids = None
         self._notifier_ids = None
         self._rejected_by = None
-        self._approved_by = None
         self._is_frozen = None
-        self._is_discarded = None
+        self._approved_by = None
         self._metadata_state = None
+        self._is_discarded = None
         self.discriminator = None
 
         if actions is not None:
@@ -84,14 +84,14 @@ class BTWorkflowSnapshotInfo(object):
             self.notifier_ids = notifier_ids
         if rejected_by is not None:
             self.rejected_by = rejected_by
-        if approved_by is not None:
-            self.approved_by = approved_by
         if is_frozen is not None:
             self.is_frozen = is_frozen
-        if is_discarded is not None:
-            self.is_discarded = is_discarded
+        if approved_by is not None:
+            self.approved_by = approved_by
         if metadata_state is not None:
             self.metadata_state = metadata_state
+        if is_discarded is not None:
+            self.is_discarded = is_discarded
 
     @property
     def actions(self):
@@ -220,27 +220,6 @@ class BTWorkflowSnapshotInfo(object):
         self._rejected_by = rejected_by
 
     @property
-    def approved_by(self):
-        """Gets the approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._approved_by
-
-    @approved_by.setter
-    def approved_by(self, approved_by):
-        """Sets the approved_by of this BTWorkflowSnapshotInfo.
-
-
-        :param approved_by: The approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._approved_by = approved_by
-
-    @property
     def is_frozen(self):
         """Gets the is_frozen of this BTWorkflowSnapshotInfo.  # noqa: E501
 
@@ -262,25 +241,25 @@ class BTWorkflowSnapshotInfo(object):
         self._is_frozen = is_frozen
 
     @property
-    def is_discarded(self):
-        """Gets the is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+    def approved_by(self):
+        """Gets the approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
 
 
-        :return: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: bool
+        :return: The approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._is_discarded
+        return self._approved_by
 
-    @is_discarded.setter
-    def is_discarded(self, is_discarded):
-        """Sets the is_discarded of this BTWorkflowSnapshotInfo.
+    @approved_by.setter
+    def approved_by(self, approved_by):
+        """Sets the approved_by of this BTWorkflowSnapshotInfo.
 
 
-        :param is_discarded: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: bool
+        :param approved_by: The approved_by of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: list[str]
         """
 
-        self._is_discarded = is_discarded
+        self._approved_by = approved_by
 
     @property
     def metadata_state(self):
@@ -302,6 +281,27 @@ class BTWorkflowSnapshotInfo(object):
         """
 
         self._metadata_state = metadata_state
+
+    @property
+    def is_discarded(self):
+        """Gets the is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_discarded
+
+    @is_discarded.setter
+    def is_discarded(self, is_discarded):
+        """Sets the is_discarded of this BTWorkflowSnapshotInfo.
+
+
+        :param is_discarded: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_discarded = is_discarded
 
     def to_dict(self):
         """Returns the model properties as a dict"""

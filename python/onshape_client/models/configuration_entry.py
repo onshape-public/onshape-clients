@@ -32,47 +32,26 @@ class ConfigurationEntry(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'parameter_id': 'str',
-        'parameter_value': 'str'
+        'parameter_value': 'str',
+        'parameter_id': 'str'
     }
 
     attribute_map = {
-        'parameter_id': 'parameterId',
-        'parameter_value': 'parameterValue'
+        'parameter_value': 'parameterValue',
+        'parameter_id': 'parameterId'
     }
 
-    def __init__(self, parameter_id=None, parameter_value=None):  # noqa: E501
+    def __init__(self, parameter_value=None, parameter_id=None):  # noqa: E501
         """ConfigurationEntry - a model defined in OpenAPI"""  # noqa: E501
 
-        self._parameter_id = None
         self._parameter_value = None
+        self._parameter_id = None
         self.discriminator = None
 
-        if parameter_id is not None:
-            self.parameter_id = parameter_id
         if parameter_value is not None:
             self.parameter_value = parameter_value
-
-    @property
-    def parameter_id(self):
-        """Gets the parameter_id of this ConfigurationEntry.  # noqa: E501
-
-
-        :return: The parameter_id of this ConfigurationEntry.  # noqa: E501
-        :rtype: str
-        """
-        return self._parameter_id
-
-    @parameter_id.setter
-    def parameter_id(self, parameter_id):
-        """Sets the parameter_id of this ConfigurationEntry.
-
-
-        :param parameter_id: The parameter_id of this ConfigurationEntry.  # noqa: E501
-        :type: str
-        """
-
-        self._parameter_id = parameter_id
+        if parameter_id is not None:
+            self.parameter_id = parameter_id
 
     @property
     def parameter_value(self):
@@ -94,6 +73,27 @@ class ConfigurationEntry(object):
         """
 
         self._parameter_value = parameter_value
+
+    @property
+    def parameter_id(self):
+        """Gets the parameter_id of this ConfigurationEntry.  # noqa: E501
+
+
+        :return: The parameter_id of this ConfigurationEntry.  # noqa: E501
+        :rtype: str
+        """
+        return self._parameter_id
+
+    @parameter_id.setter
+    def parameter_id(self, parameter_id):
+        """Sets the parameter_id of this ConfigurationEntry.
+
+
+        :param parameter_id: The parameter_id of this ConfigurationEntry.  # noqa: E501
+        :type: str
+        """
+
+        self._parameter_id = parameter_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

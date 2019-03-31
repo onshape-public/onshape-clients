@@ -40,8 +40,8 @@ class BTWorkflowActionInfo(object):
         'label': 'str',
         'action': 'str',
         'required_properties': 'list[str]',
-        'is_admin_override': 'bool',
-        'ui_hint': 'str'
+        'ui_hint': 'str',
+        'is_admin_override': 'bool'
     }
 
     attribute_map = {
@@ -53,11 +53,11 @@ class BTWorkflowActionInfo(object):
         'label': 'label',
         'action': 'action',
         'required_properties': 'requiredProperties',
-        'is_admin_override': 'isAdminOverride',
-        'ui_hint': 'uiHint'
+        'ui_hint': 'uiHint',
+        'is_admin_override': 'isAdminOverride'
     }
 
-    def __init__(self, tooltip=None, allow_if_no_approvers=None, allow_if_approvers=None, always_allow=None, is_approver_action=None, label=None, action=None, required_properties=None, is_admin_override=None, ui_hint=None):  # noqa: E501
+    def __init__(self, tooltip=None, allow_if_no_approvers=None, allow_if_approvers=None, always_allow=None, is_approver_action=None, label=None, action=None, required_properties=None, ui_hint=None, is_admin_override=None):  # noqa: E501
         """BTWorkflowActionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._tooltip = None
@@ -68,8 +68,8 @@ class BTWorkflowActionInfo(object):
         self._label = None
         self._action = None
         self._required_properties = None
-        self._is_admin_override = None
         self._ui_hint = None
+        self._is_admin_override = None
         self.discriminator = None
 
         if tooltip is not None:
@@ -88,10 +88,10 @@ class BTWorkflowActionInfo(object):
             self.action = action
         if required_properties is not None:
             self.required_properties = required_properties
-        if is_admin_override is not None:
-            self.is_admin_override = is_admin_override
         if ui_hint is not None:
             self.ui_hint = ui_hint
+        if is_admin_override is not None:
+            self.is_admin_override = is_admin_override
 
     @property
     def tooltip(self):
@@ -262,27 +262,6 @@ class BTWorkflowActionInfo(object):
         self._required_properties = required_properties
 
     @property
-    def is_admin_override(self):
-        """Gets the is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-
-
-        :return: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_admin_override
-
-    @is_admin_override.setter
-    def is_admin_override(self, is_admin_override):
-        """Sets the is_admin_override of this BTWorkflowActionInfo.
-
-
-        :param is_admin_override: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_admin_override = is_admin_override
-
-    @property
     def ui_hint(self):
         """Gets the ui_hint of this BTWorkflowActionInfo.  # noqa: E501
 
@@ -302,6 +281,27 @@ class BTWorkflowActionInfo(object):
         """
 
         self._ui_hint = ui_hint
+
+    @property
+    def is_admin_override(self):
+        """Gets the is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+
+
+        :return: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_admin_override
+
+    @is_admin_override.setter
+    def is_admin_override(self, is_admin_override):
+        """Sets the is_admin_override of this BTWorkflowActionInfo.
+
+
+        :param is_admin_override: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_admin_override = is_admin_override
 
     def to_dict(self):
         """Returns the model properties as a dict"""

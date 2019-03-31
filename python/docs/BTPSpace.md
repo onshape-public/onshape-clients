@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **str** |  | [optional] 
 **lines** | **list[str]** |  | [optional] 
+**text** | **str** |  | [optional] 
 **changeable_child_field_indices** | **list[int]** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **child_map_indices** | **list[int]** |  | [optional] 

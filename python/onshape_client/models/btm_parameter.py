@@ -32,8 +32,8 @@ class BTMParameter(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'revision_data': 'BTRevisionCustomData',
         'value_object': 'object',
+        'revision_data': 'BTRevisionCustomData',
         'configuration_value_string': 'str',
         'direct_imports': 'list[BTMImport]',
         'string_value_for_property': 'str',
@@ -58,8 +58,8 @@ class BTMParameter(object):
     }
 
     attribute_map = {
-        'revision_data': 'revisionData',
         'value_object': 'valueObject',
+        'revision_data': 'revisionData',
         'configuration_value_string': 'configurationValueString',
         'direct_imports': 'directImports',
         'string_value_for_property': 'stringValueForProperty',
@@ -83,11 +83,11 @@ class BTMParameter(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, revision_data=None, value_object=None, configuration_value_string=None, direct_imports=None, string_value_for_property=None, parameter_id=None, changeable_child_field_indices=None, for_export=None, import_microversion=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, value_object=None, revision_data=None, configuration_value_string=None, direct_imports=None, string_value_for_property=None, parameter_id=None, changeable_child_field_indices=None, for_export=None, import_microversion=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTMParameter - a model defined in OpenAPI"""  # noqa: E501
 
-        self._revision_data = None
         self._value_object = None
+        self._revision_data = None
         self._configuration_value_string = None
         self._direct_imports = None
         self._string_value_for_property = None
@@ -111,10 +111,10 @@ class BTMParameter(object):
         self._unknown_class = None
         self.discriminator = None
 
-        if revision_data is not None:
-            self.revision_data = revision_data
         if value_object is not None:
             self.value_object = value_object
+        if revision_data is not None:
+            self.revision_data = revision_data
         if configuration_value_string is not None:
             self.configuration_value_string = configuration_value_string
         if direct_imports is not None:
@@ -159,27 +159,6 @@ class BTMParameter(object):
             self.unknown_class = unknown_class
 
     @property
-    def revision_data(self):
-        """Gets the revision_data of this BTMParameter.  # noqa: E501
-
-
-        :return: The revision_data of this BTMParameter.  # noqa: E501
-        :rtype: BTRevisionCustomData
-        """
-        return self._revision_data
-
-    @revision_data.setter
-    def revision_data(self, revision_data):
-        """Sets the revision_data of this BTMParameter.
-
-
-        :param revision_data: The revision_data of this BTMParameter.  # noqa: E501
-        :type: BTRevisionCustomData
-        """
-
-        self._revision_data = revision_data
-
-    @property
     def value_object(self):
         """Gets the value_object of this BTMParameter.  # noqa: E501
 
@@ -199,6 +178,27 @@ class BTMParameter(object):
         """
 
         self._value_object = value_object
+
+    @property
+    def revision_data(self):
+        """Gets the revision_data of this BTMParameter.  # noqa: E501
+
+
+        :return: The revision_data of this BTMParameter.  # noqa: E501
+        :rtype: BTRevisionCustomData
+        """
+        return self._revision_data
+
+    @revision_data.setter
+    def revision_data(self, revision_data):
+        """Sets the revision_data of this BTMParameter.
+
+
+        :param revision_data: The revision_data of this BTMParameter.  # noqa: E501
+        :type: BTRevisionCustomData
+        """
+
+        self._revision_data = revision_data
 
     @property
     def configuration_value_string(self):

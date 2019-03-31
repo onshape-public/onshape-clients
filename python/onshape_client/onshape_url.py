@@ -1,50 +1,129 @@
 from urllib.parse import urlparse
 from onshape_client.client import Client
 import json
+from enum import Enum
+import copy
+from onshape_client.units import u
+from onshape_client.models.bt_configuration_params import BTConfigurationParams
+from onshape_client.models.configuration_entry import ConfigurationEntry
+import webbrowser
+
+
 
 class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
     create the useful fields."""
+
     def __init__(self, url, client=None):
+
+        self.client = client if client else Client()
+
         self.original_url = url
         parsed_vals = urlparse(url)
+
         self.base_url = parsed_vals.scheme + "://" + parsed_vals.netloc
         path_list = parsed_vals.path.split('/')
         self.did = path_list[2]
         self.wvmid = path_list[4]
         self.wvm = path_list[3]
-        if len(path_list) > 7 :
-            self.eid = path_list[8]
-            self.optional_microversion = path_list[6]
+        if len(path_list) > 7:
+            eid = path_list[8]
+            optional_microversion = path_list[6]
         else:
-            self.eid = path_list[6]
+            eid = path_list[6]
             # This is the microversion retrieved from get_microversion_path() and represents a part that is pointing towards
             # both a version/workspace and a microversion.
-            self.optional_microversion = None
-        self.client = client
+            optional_microversion = None
+        self.eid = eid
+        self.optional_microversion = optional_microversion
 
+        # Initialize the cached values
+        # Raw configuration params
+        self._raw_configuration_params = self._get_raw_configuration_params()
+        # Map from visible name to parameterId
+        self._parameter_map = self._get_parameter_map()
+        # Map from parameterId to default value
+        self._default_configuration_map = self.get_default_configuration_map()
 
-
-    def get_microversion_url(self, client=None):
+    def get_microversion_url(self):
         """Determine the microversion from the current version/workspace and return the path to that microversion. This
         will call the API to get the current microversion if the microversion is not already specified."""
-        if not client and not self.client:
-            client = Client()
-        elif self.client:
-            client = self.client
         if self.optional_microversion:
             return self.get_url()
         else:
-            res = client.documents_api.get_current_microversion(self.did,
-                                                          self.wvm,
-                                                          self.wvmid,
-                                                          _preload_content=False)
+            res = self.client.documents_api.get_current_microversion(self.did,
+                                                                     self.wvm,
+                                                                     self.wvmid,
+                                                                     _preload_content=False)
             microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
             self.optional_microversion = microversion
             return self.get_url()
+
+    def get_url_with_configuration(self, config, open_browser=False):
+        """A configuration is applied on top of the current element, and doesn't effect the internals of the element.
+
+        To be used like:
+        >>> url = "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90"
+        >>> my_element = OnshapeElement(url)
+        >>> my_element.get_url_with_configuration({"size": 20*u.m})
+        https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3DDefault%3Bsize%3D20.0%2Bmeter
+        >>> my_element.get_url_with_configuration({"Configuration": "chamfered"})
+        https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3Dchamfered%3Bsize%3D20.0%2Bmeter
+        """
+        client = self.client
+        defaults_map = self.get_default_configuration_map()
+        final = []
+        defaults_map.update(config)
+        for k, v in defaults_map.items():
+            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v))
+            final.append(p)
+        params = BTConfigurationParams(parameters=final)
+
+        encoded_config_map = client.elements_api.encode_configuration_map(self.did, self.eid, params, _preload_content=False)
+        url = self.get_url() + "?" + json.loads(encoded_config_map.data.decode("utf-8"))["queryParam"]
+        if open_browser:
+            webbrowser.open(url)
+        return url
+
+    def _make_configuration_map(self, update):
+        return self.get_default_configuration_map().update(update)
+
+    def get_default_configuration_map(self):
+        defaults_map = {}
+        for k,v in self._get_parameter_map().items():
+            param_type = v["typeName"]
+            if param_type == 'BTMConfigurationParameterEnum' or param_type == 'BTMConfigurationParameterBoolean':
+                default_value = v["message"]["defaultValue"]
+            elif param_type == 'BTMConfigurationParameterQuantity':
+                range = v['message']['rangeAndDefault']['message']
+                default_value = u(str(range['defaultValue']) + range['units'])
+            else:
+                raise NotImplementedError("This configuration type: {} is not supported.".format(param_type))
+            defaults_map[k] = default_value
+        # Return a copy so the original doesn't get changed and we can keep using it
+        self._default_configuration_map = defaults_map
+        return copy.deepcopy(defaults_map)
+
+    def _get_param_id_from_name(self, name):
+        return self._get_parameter_map()[name]["message"]["parameterId"]
+
+    def _get_parameter_map(self):
+        config_params = self._get_raw_configuration_params()
+        parameter_map = {}
+        for i, p in enumerate(config_params["configurationParameters"]):
+            name = config_params["configurationParameters"][i]["message"]["parameterName"]
+            parameter_map[name] = config_params["configurationParameters"][i]
+        return parameter_map
+
+    def _get_raw_configuration_params(self):
+        response =self.client.part_studios_api.get_configuration4(self.did, self.wvm, self.wvmid, self.eid,
+                                                        _preload_content=False)
+        return json.loads(response.data.decode("utf-8"))
 
     def get_url(self):
         optional_microversion_add_in = ""
         if self.optional_microversion:
             optional_microversion_add_in = "/m/" + self.optional_microversion
         return self.base_url + "/documents/" + self.did + "/" + self.wvm + "/" + self.wvmid + optional_microversion_add_in + "/e/" + self.eid
+
+

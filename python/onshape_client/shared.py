@@ -22,7 +22,7 @@ class Client:
         self.configuration.api_key['ACCESS_KEY'] = conf['api_keys']['access_key'].encode('utf-8')
         self.configuration.host = conf['baseUrl']
 
-        apiClient = onshape_client.ApiClient(configuration=self.configuration)
+        apiClient = api_client
         # Create the API instance with the configuration
         self.ElementsApi = onshape_client.api.ElementsApi(apiClient)
         self.MetadataApi = onshape_client.api.MetadataApi(apiClient)

@@ -32,25 +32,19 @@ class BTTranslateFormatParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration': 'str',
         'element_id': 'str',
-        'link_document_workspace_id': 'str',
+        'configuration': 'str',
         'link_document_id': 'str',
-        'store_in_document': 'bool',
+        'link_document_workspace_id': 'str',
         'cloud_storage_account_id': 'str',
-        'connection_id': 'str',
-        'cloud_object_id': 'str',
+        'version_string': 'str',
+        'format_name': 'str',
+        'trigger_auto_download': 'bool',
         'notify_user': 'bool',
         'part_ids': 'str',
-        'version_string': 'str',
-        'trigger_auto_download': 'bool',
-        'format_name': 'str',
-        'source_name': 'str',
-        'destination_name': 'str',
-        'grouping': 'bool',
-        'import_in_background': 'bool',
-        'flatten': 'bool',
-        'include_export_ids': 'bool',
+        'store_in_document': 'bool',
+        'cloud_object_id': 'str',
+        'connection_id': 'str',
         'text_as_geometry': 'bool',
         'show_overridden_dimensions': 'bool',
         'current_sheet_only': 'bool',
@@ -59,15 +53,21 @@ class BTTranslateFormatParams(object):
         'color_method': 'str',
         'splines_as_polylines': 'bool',
         'selectable_pdf_text': 'bool',
+        'source_name': 'str',
+        'destination_name': 'str',
+        'flatten': 'bool',
+        'include_export_ids': 'bool',
+        'import_in_background': 'bool',
+        'grouping': 'bool',
         'project_id': 'str',
         'parent_id': 'str',
+        'foreign_id': 'str',
+        'upload_id': 'str',
         'split_assemblies_into_multiple_documents': 'bool',
         'flatten_assemblies': 'bool',
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
         'unit': 'str',
-        'foreign_id': 'str',
-        'upload_id': 'str',
         'original_foreign_id': 'str',
         'blob_microversion_id': 'str',
         'blob_element_id': 'str',
@@ -75,25 +75,19 @@ class BTTranslateFormatParams(object):
     }
 
     attribute_map = {
-        'configuration': 'configuration',
         'element_id': 'elementId',
-        'link_document_workspace_id': 'linkDocumentWorkspaceId',
+        'configuration': 'configuration',
         'link_document_id': 'linkDocumentId',
-        'store_in_document': 'storeInDocument',
+        'link_document_workspace_id': 'linkDocumentWorkspaceId',
         'cloud_storage_account_id': 'cloudStorageAccountId',
-        'connection_id': 'connectionId',
-        'cloud_object_id': 'cloudObjectId',
+        'version_string': 'versionString',
+        'format_name': 'formatName',
+        'trigger_auto_download': 'triggerAutoDownload',
         'notify_user': 'notifyUser',
         'part_ids': 'partIds',
-        'version_string': 'versionString',
-        'trigger_auto_download': 'triggerAutoDownload',
-        'format_name': 'formatName',
-        'source_name': 'sourceName',
-        'destination_name': 'destinationName',
-        'grouping': 'grouping',
-        'import_in_background': 'importInBackground',
-        'flatten': 'flatten',
-        'include_export_ids': 'includeExportIds',
+        'store_in_document': 'storeInDocument',
+        'cloud_object_id': 'cloudObjectId',
+        'connection_id': 'connectionId',
         'text_as_geometry': 'textAsGeometry',
         'show_overridden_dimensions': 'showOverriddenDimensions',
         'current_sheet_only': 'currentSheetOnly',
@@ -102,43 +96,43 @@ class BTTranslateFormatParams(object):
         'color_method': 'colorMethod',
         'splines_as_polylines': 'splinesAsPolylines',
         'selectable_pdf_text': 'selectablePdfText',
+        'source_name': 'sourceName',
+        'destination_name': 'destinationName',
+        'flatten': 'flatten',
+        'include_export_ids': 'includeExportIds',
+        'import_in_background': 'importInBackground',
+        'grouping': 'grouping',
         'project_id': 'projectId',
         'parent_id': 'parentId',
+        'foreign_id': 'foreignId',
+        'upload_id': 'uploadId',
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',
         'flatten_assemblies': 'flattenAssemblies',
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
         'unit': 'unit',
-        'foreign_id': 'foreignId',
-        'upload_id': 'uploadId',
         'original_foreign_id': 'originalForeignId',
         'blob_microversion_id': 'blobMicroversionId',
         'blob_element_id': 'blobElementId',
         'specify_units': 'specifyUnits'
     }
 
-    def __init__(self, configuration=None, element_id=None, link_document_workspace_id=None, link_document_id=None, store_in_document=None, cloud_storage_account_id=None, connection_id=None, cloud_object_id=None, notify_user=None, part_ids=None, version_string=None, trigger_auto_download=None, format_name=None, source_name=None, destination_name=None, grouping=None, import_in_background=None, flatten=None, include_export_ids=None, text_as_geometry=None, show_overridden_dimensions=None, current_sheet_only=None, image_width=None, image_height=None, color_method=None, splines_as_polylines=None, selectable_pdf_text=None, project_id=None, parent_id=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, unit=None, foreign_id=None, upload_id=None, original_foreign_id=None, blob_microversion_id=None, blob_element_id=None, specify_units=None):  # noqa: E501
+    def __init__(self, element_id=None, configuration=None, link_document_id=None, link_document_workspace_id=None, cloud_storage_account_id=None, version_string=None, format_name=None, trigger_auto_download=None, notify_user=None, part_ids=None, store_in_document=None, cloud_object_id=None, connection_id=None, text_as_geometry=None, show_overridden_dimensions=None, current_sheet_only=None, image_width=None, image_height=None, color_method=None, splines_as_polylines=None, selectable_pdf_text=None, source_name=None, destination_name=None, flatten=None, include_export_ids=None, import_in_background=None, grouping=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, unit=None, original_foreign_id=None, blob_microversion_id=None, blob_element_id=None, specify_units=None):  # noqa: E501
         """BTTranslateFormatParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration = None
         self._element_id = None
-        self._link_document_workspace_id = None
+        self._configuration = None
         self._link_document_id = None
-        self._store_in_document = None
+        self._link_document_workspace_id = None
         self._cloud_storage_account_id = None
-        self._connection_id = None
-        self._cloud_object_id = None
+        self._version_string = None
+        self._format_name = None
+        self._trigger_auto_download = None
         self._notify_user = None
         self._part_ids = None
-        self._version_string = None
-        self._trigger_auto_download = None
-        self._format_name = None
-        self._source_name = None
-        self._destination_name = None
-        self._grouping = None
-        self._import_in_background = None
-        self._flatten = None
-        self._include_export_ids = None
+        self._store_in_document = None
+        self._cloud_object_id = None
+        self._connection_id = None
         self._text_as_geometry = None
         self._show_overridden_dimensions = None
         self._current_sheet_only = None
@@ -147,59 +141,53 @@ class BTTranslateFormatParams(object):
         self._color_method = None
         self._splines_as_polylines = None
         self._selectable_pdf_text = None
+        self._source_name = None
+        self._destination_name = None
+        self._flatten = None
+        self._include_export_ids = None
+        self._import_in_background = None
+        self._grouping = None
         self._project_id = None
         self._parent_id = None
+        self._foreign_id = None
+        self._upload_id = None
         self._split_assemblies_into_multiple_documents = None
         self._flatten_assemblies = None
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
         self._unit = None
-        self._foreign_id = None
-        self._upload_id = None
         self._original_foreign_id = None
         self._blob_microversion_id = None
         self._blob_element_id = None
         self._specify_units = None
         self.discriminator = None
 
-        if configuration is not None:
-            self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
-        if link_document_workspace_id is not None:
-            self.link_document_workspace_id = link_document_workspace_id
+        if configuration is not None:
+            self.configuration = configuration
         if link_document_id is not None:
             self.link_document_id = link_document_id
-        if store_in_document is not None:
-            self.store_in_document = store_in_document
+        if link_document_workspace_id is not None:
+            self.link_document_workspace_id = link_document_workspace_id
         if cloud_storage_account_id is not None:
             self.cloud_storage_account_id = cloud_storage_account_id
-        if connection_id is not None:
-            self.connection_id = connection_id
-        if cloud_object_id is not None:
-            self.cloud_object_id = cloud_object_id
+        if version_string is not None:
+            self.version_string = version_string
+        if format_name is not None:
+            self.format_name = format_name
+        if trigger_auto_download is not None:
+            self.trigger_auto_download = trigger_auto_download
         if notify_user is not None:
             self.notify_user = notify_user
         if part_ids is not None:
             self.part_ids = part_ids
-        if version_string is not None:
-            self.version_string = version_string
-        if trigger_auto_download is not None:
-            self.trigger_auto_download = trigger_auto_download
-        if format_name is not None:
-            self.format_name = format_name
-        if source_name is not None:
-            self.source_name = source_name
-        if destination_name is not None:
-            self.destination_name = destination_name
-        if grouping is not None:
-            self.grouping = grouping
-        if import_in_background is not None:
-            self.import_in_background = import_in_background
-        if flatten is not None:
-            self.flatten = flatten
-        if include_export_ids is not None:
-            self.include_export_ids = include_export_ids
+        if store_in_document is not None:
+            self.store_in_document = store_in_document
+        if cloud_object_id is not None:
+            self.cloud_object_id = cloud_object_id
+        if connection_id is not None:
+            self.connection_id = connection_id
         if text_as_geometry is not None:
             self.text_as_geometry = text_as_geometry
         if show_overridden_dimensions is not None:
@@ -216,10 +204,26 @@ class BTTranslateFormatParams(object):
             self.splines_as_polylines = splines_as_polylines
         if selectable_pdf_text is not None:
             self.selectable_pdf_text = selectable_pdf_text
+        if source_name is not None:
+            self.source_name = source_name
+        if destination_name is not None:
+            self.destination_name = destination_name
+        if flatten is not None:
+            self.flatten = flatten
+        if include_export_ids is not None:
+            self.include_export_ids = include_export_ids
+        if import_in_background is not None:
+            self.import_in_background = import_in_background
+        if grouping is not None:
+            self.grouping = grouping
         if project_id is not None:
             self.project_id = project_id
         if parent_id is not None:
             self.parent_id = parent_id
+        if foreign_id is not None:
+            self.foreign_id = foreign_id
+        if upload_id is not None:
+            self.upload_id = upload_id
         if split_assemblies_into_multiple_documents is not None:
             self.split_assemblies_into_multiple_documents = split_assemblies_into_multiple_documents
         if flatten_assemblies is not None:
@@ -230,10 +234,6 @@ class BTTranslateFormatParams(object):
             self.allow_faulty_parts = allow_faulty_parts
         if unit is not None:
             self.unit = unit
-        if foreign_id is not None:
-            self.foreign_id = foreign_id
-        if upload_id is not None:
-            self.upload_id = upload_id
         if original_foreign_id is not None:
             self.original_foreign_id = original_foreign_id
         if blob_microversion_id is not None:
@@ -242,27 +242,6 @@ class BTTranslateFormatParams(object):
             self.blob_element_id = blob_element_id
         if specify_units is not None:
             self.specify_units = specify_units
-
-    @property
-    def configuration(self):
-        """Gets the configuration of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The configuration of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTTranslateFormatParams.
-
-
-        :param configuration: The configuration of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -286,25 +265,25 @@ class BTTranslateFormatParams(object):
         self._element_id = element_id
 
     @property
-    def link_document_workspace_id(self):
-        """Gets the link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :return: The configuration of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._link_document_workspace_id
+        return self._configuration
 
-    @link_document_workspace_id.setter
-    def link_document_workspace_id(self, link_document_workspace_id):
-        """Sets the link_document_workspace_id of this BTTranslateFormatParams.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTTranslateFormatParams.
 
 
-        :param link_document_workspace_id: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :param configuration: The configuration of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._link_document_workspace_id = link_document_workspace_id
+        self._configuration = configuration
 
     @property
     def link_document_id(self):
@@ -328,25 +307,25 @@ class BTTranslateFormatParams(object):
         self._link_document_id = link_document_id
 
     @property
-    def store_in_document(self):
-        """Gets the store_in_document of this BTTranslateFormatParams.  # noqa: E501
+    def link_document_workspace_id(self):
+        """Gets the link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The store_in_document of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
+        :return: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
         """
-        return self._store_in_document
+        return self._link_document_workspace_id
 
-    @store_in_document.setter
-    def store_in_document(self, store_in_document):
-        """Sets the store_in_document of this BTTranslateFormatParams.
+    @link_document_workspace_id.setter
+    def link_document_workspace_id(self, link_document_workspace_id):
+        """Sets the link_document_workspace_id of this BTTranslateFormatParams.
 
 
-        :param store_in_document: The store_in_document of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
+        :param link_document_workspace_id: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
         """
 
-        self._store_in_document = store_in_document
+        self._link_document_workspace_id = link_document_workspace_id
 
     @property
     def cloud_storage_account_id(self):
@@ -370,46 +349,67 @@ class BTTranslateFormatParams(object):
         self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
-    def connection_id(self):
-        """Gets the connection_id of this BTTranslateFormatParams.  # noqa: E501
+    def version_string(self):
+        """Gets the version_string of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The connection_id of this BTTranslateFormatParams.  # noqa: E501
+        :return: The version_string of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._connection_id
+        return self._version_string
 
-    @connection_id.setter
-    def connection_id(self, connection_id):
-        """Sets the connection_id of this BTTranslateFormatParams.
+    @version_string.setter
+    def version_string(self, version_string):
+        """Sets the version_string of this BTTranslateFormatParams.
 
 
-        :param connection_id: The connection_id of this BTTranslateFormatParams.  # noqa: E501
+        :param version_string: The version_string of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._connection_id = connection_id
+        self._version_string = version_string
 
     @property
-    def cloud_object_id(self):
-        """Gets the cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
+    def format_name(self):
+        """Gets the format_name of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
+        :return: The format_name of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._cloud_object_id
+        return self._format_name
 
-    @cloud_object_id.setter
-    def cloud_object_id(self, cloud_object_id):
-        """Sets the cloud_object_id of this BTTranslateFormatParams.
+    @format_name.setter
+    def format_name(self, format_name):
+        """Sets the format_name of this BTTranslateFormatParams.
 
 
-        :param cloud_object_id: The cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
+        :param format_name: The format_name of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._cloud_object_id = cloud_object_id
+        self._format_name = format_name
+
+    @property
+    def trigger_auto_download(self):
+        """Gets the trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._trigger_auto_download
+
+    @trigger_auto_download.setter
+    def trigger_auto_download(self, trigger_auto_download):
+        """Sets the trigger_auto_download of this BTTranslateFormatParams.
+
+
+        :param trigger_auto_download: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._trigger_auto_download = trigger_auto_download
 
     @property
     def notify_user(self):
@@ -454,193 +454,67 @@ class BTTranslateFormatParams(object):
         self._part_ids = part_ids
 
     @property
-    def version_string(self):
-        """Gets the version_string of this BTTranslateFormatParams.  # noqa: E501
+    def store_in_document(self):
+        """Gets the store_in_document of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The version_string of this BTTranslateFormatParams.  # noqa: E501
+        :return: The store_in_document of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._store_in_document
+
+    @store_in_document.setter
+    def store_in_document(self, store_in_document):
+        """Sets the store_in_document of this BTTranslateFormatParams.
+
+
+        :param store_in_document: The store_in_document of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._store_in_document = store_in_document
+
+    @property
+    def cloud_object_id(self):
+        """Gets the cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._version_string
+        return self._cloud_object_id
 
-    @version_string.setter
-    def version_string(self, version_string):
-        """Sets the version_string of this BTTranslateFormatParams.
+    @cloud_object_id.setter
+    def cloud_object_id(self, cloud_object_id):
+        """Sets the cloud_object_id of this BTTranslateFormatParams.
 
 
-        :param version_string: The version_string of this BTTranslateFormatParams.  # noqa: E501
+        :param cloud_object_id: The cloud_object_id of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._version_string = version_string
+        self._cloud_object_id = cloud_object_id
 
     @property
-    def trigger_auto_download(self):
-        """Gets the trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+    def connection_id(self):
+        """Gets the connection_id of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._trigger_auto_download
-
-    @trigger_auto_download.setter
-    def trigger_auto_download(self, trigger_auto_download):
-        """Sets the trigger_auto_download of this BTTranslateFormatParams.
-
-
-        :param trigger_auto_download: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._trigger_auto_download = trigger_auto_download
-
-    @property
-    def format_name(self):
-        """Gets the format_name of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The format_name of this BTTranslateFormatParams.  # noqa: E501
+        :return: The connection_id of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._format_name
+        return self._connection_id
 
-    @format_name.setter
-    def format_name(self, format_name):
-        """Sets the format_name of this BTTranslateFormatParams.
+    @connection_id.setter
+    def connection_id(self, connection_id):
+        """Sets the connection_id of this BTTranslateFormatParams.
 
 
-        :param format_name: The format_name of this BTTranslateFormatParams.  # noqa: E501
+        :param connection_id: The connection_id of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._format_name = format_name
-
-    @property
-    def source_name(self):
-        """Gets the source_name of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The source_name of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_name
-
-    @source_name.setter
-    def source_name(self, source_name):
-        """Sets the source_name of this BTTranslateFormatParams.
-
-
-        :param source_name: The source_name of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._source_name = source_name
-
-    @property
-    def destination_name(self):
-        """Gets the destination_name of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The destination_name of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._destination_name
-
-    @destination_name.setter
-    def destination_name(self, destination_name):
-        """Sets the destination_name of this BTTranslateFormatParams.
-
-
-        :param destination_name: The destination_name of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._destination_name = destination_name
-
-    @property
-    def grouping(self):
-        """Gets the grouping of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The grouping of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._grouping
-
-    @grouping.setter
-    def grouping(self, grouping):
-        """Sets the grouping of this BTTranslateFormatParams.
-
-
-        :param grouping: The grouping of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._grouping = grouping
-
-    @property
-    def import_in_background(self):
-        """Gets the import_in_background of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The import_in_background of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._import_in_background
-
-    @import_in_background.setter
-    def import_in_background(self, import_in_background):
-        """Sets the import_in_background of this BTTranslateFormatParams.
-
-
-        :param import_in_background: The import_in_background of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._import_in_background = import_in_background
-
-    @property
-    def flatten(self):
-        """Gets the flatten of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The flatten of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._flatten
-
-    @flatten.setter
-    def flatten(self, flatten):
-        """Sets the flatten of this BTTranslateFormatParams.
-
-
-        :param flatten: The flatten of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._flatten = flatten
-
-    @property
-    def include_export_ids(self):
-        """Gets the include_export_ids of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The include_export_ids of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_export_ids
-
-    @include_export_ids.setter
-    def include_export_ids(self, include_export_ids):
-        """Sets the include_export_ids of this BTTranslateFormatParams.
-
-
-        :param include_export_ids: The include_export_ids of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_export_ids = include_export_ids
+        self._connection_id = connection_id
 
     @property
     def text_as_geometry(self):
@@ -811,6 +685,132 @@ class BTTranslateFormatParams(object):
         self._selectable_pdf_text = selectable_pdf_text
 
     @property
+    def source_name(self):
+        """Gets the source_name of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The source_name of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_name
+
+    @source_name.setter
+    def source_name(self, source_name):
+        """Sets the source_name of this BTTranslateFormatParams.
+
+
+        :param source_name: The source_name of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._source_name = source_name
+
+    @property
+    def destination_name(self):
+        """Gets the destination_name of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The destination_name of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._destination_name
+
+    @destination_name.setter
+    def destination_name(self, destination_name):
+        """Sets the destination_name of this BTTranslateFormatParams.
+
+
+        :param destination_name: The destination_name of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._destination_name = destination_name
+
+    @property
+    def flatten(self):
+        """Gets the flatten of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The flatten of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._flatten
+
+    @flatten.setter
+    def flatten(self, flatten):
+        """Sets the flatten of this BTTranslateFormatParams.
+
+
+        :param flatten: The flatten of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._flatten = flatten
+
+    @property
+    def include_export_ids(self):
+        """Gets the include_export_ids of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The include_export_ids of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_export_ids
+
+    @include_export_ids.setter
+    def include_export_ids(self, include_export_ids):
+        """Sets the include_export_ids of this BTTranslateFormatParams.
+
+
+        :param include_export_ids: The include_export_ids of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_export_ids = include_export_ids
+
+    @property
+    def import_in_background(self):
+        """Gets the import_in_background of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The import_in_background of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._import_in_background
+
+    @import_in_background.setter
+    def import_in_background(self, import_in_background):
+        """Sets the import_in_background of this BTTranslateFormatParams.
+
+
+        :param import_in_background: The import_in_background of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._import_in_background = import_in_background
+
+    @property
+    def grouping(self):
+        """Gets the grouping of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The grouping of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._grouping
+
+    @grouping.setter
+    def grouping(self, grouping):
+        """Sets the grouping of this BTTranslateFormatParams.
+
+
+        :param grouping: The grouping of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._grouping = grouping
+
+    @property
     def project_id(self):
         """Gets the project_id of this BTTranslateFormatParams.  # noqa: E501
 
@@ -851,6 +851,48 @@ class BTTranslateFormatParams(object):
         """
 
         self._parent_id = parent_id
+
+    @property
+    def foreign_id(self):
+        """Gets the foreign_id of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The foreign_id of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._foreign_id
+
+    @foreign_id.setter
+    def foreign_id(self, foreign_id):
+        """Sets the foreign_id of this BTTranslateFormatParams.
+
+
+        :param foreign_id: The foreign_id of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._foreign_id = foreign_id
+
+    @property
+    def upload_id(self):
+        """Gets the upload_id of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The upload_id of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._upload_id
+
+    @upload_id.setter
+    def upload_id(self, upload_id):
+        """Sets the upload_id of this BTTranslateFormatParams.
+
+
+        :param upload_id: The upload_id of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._upload_id = upload_id
 
     @property
     def split_assemblies_into_multiple_documents(self):
@@ -956,48 +998,6 @@ class BTTranslateFormatParams(object):
         """
 
         self._unit = unit
-
-    @property
-    def foreign_id(self):
-        """Gets the foreign_id of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The foreign_id of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._foreign_id
-
-    @foreign_id.setter
-    def foreign_id(self, foreign_id):
-        """Sets the foreign_id of this BTTranslateFormatParams.
-
-
-        :param foreign_id: The foreign_id of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._foreign_id = foreign_id
-
-    @property
-    def upload_id(self):
-        """Gets the upload_id of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The upload_id of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._upload_id
-
-    @upload_id.setter
-    def upload_id(self, upload_id):
-        """Sets the upload_id of this BTTranslateFormatParams.
-
-
-        :param upload_id: The upload_id of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._upload_id = upload_id
 
     @property
     def original_foreign_id(self):

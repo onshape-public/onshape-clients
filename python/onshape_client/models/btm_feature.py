@@ -33,17 +33,17 @@ class BTMFeature(object):
     """
     openapi_types = {
         'sketch': 'bool',
+        'all_parameters': 'list[BTMParameter]',
+        'full_feature_type': 'str',
         'imported_microversion_id': 'BTMicroversionId',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
         'imported_workspace_element_id': 'str',
         'revision_data': 'BTRevisionCustomData',
-        'full_feature_type': 'str',
-        'all_parameters': 'list[BTMParameter]',
-        'suppression_state_field_index': 'int',
-        'suppressed_field_index': 'int',
         'namespace_field_index': 'int',
         'regenerate_as_version': 'str',
         'plane': 'bool',
+        'suppression_state_field_index': 'int',
+        'suppressed_field_index': 'int',
         'namespace': 'str',
         'node_id': 'str',
         '_import': 'BTPModuleId',
@@ -54,11 +54,10 @@ class BTMFeature(object):
         'suppressed': 'bool',
         'parameters': 'list[BTMParameter]',
         'suppression_state': 'BTMSuppressionState',
-        'feature_type': 'str',
         'feature_id': 'str',
-        'sub_features': 'list[BTMFeature]',
-        'changeable_child_field_indices': 'list[int]',
+        'feature_type': 'str',
         'return_after_subfeatures': 'bool',
+        'changeable_child_field_indices': 'list[int]',
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
         'suppressed_parse_node': 'BTNodeReference',
@@ -78,17 +77,17 @@ class BTMFeature(object):
 
     attribute_map = {
         'sketch': 'sketch',
+        'all_parameters': 'allParameters',
+        'full_feature_type': 'fullFeatureType',
         'imported_microversion_id': 'importedMicroversionId',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
         'imported_workspace_element_id': 'importedWorkspaceElementId',
         'revision_data': 'revisionData',
-        'full_feature_type': 'fullFeatureType',
-        'all_parameters': 'allParameters',
-        'suppression_state_field_index': 'suppressionStateFieldIndex',
-        'suppressed_field_index': 'suppressedFieldIndex',
         'namespace_field_index': 'namespaceFieldIndex',
         'regenerate_as_version': 'regenerateAsVersion',
         'plane': 'plane',
+        'suppression_state_field_index': 'suppressionStateFieldIndex',
+        'suppressed_field_index': 'suppressedFieldIndex',
         'namespace': 'namespace',
         'node_id': 'nodeId',
         '_import': 'import',
@@ -99,11 +98,10 @@ class BTMFeature(object):
         'suppressed': 'suppressed',
         'parameters': 'parameters',
         'suppression_state': 'suppressionState',
-        'feature_type': 'featureType',
         'feature_id': 'featureId',
-        'sub_features': 'subFeatures',
-        'changeable_child_field_indices': 'changeableChildFieldIndices',
+        'feature_type': 'featureType',
         'return_after_subfeatures': 'returnAfterSubfeatures',
+        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
         'suppressed_parse_node': 'suppressedParseNode',
@@ -121,21 +119,21 @@ class BTMFeature(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, sketch=None, imported_microversion_id=None, external_document_with_version_and_element_id=None, imported_workspace_element_id=None, revision_data=None, full_feature_type=None, all_parameters=None, suppression_state_field_index=None, suppressed_field_index=None, namespace_field_index=None, regenerate_as_version=None, plane=None, namespace=None, node_id=None, _import=None, combined_namespace=None, for_export=None, import_microversion=None, name=None, suppressed=None, parameters=None, suppression_state=None, feature_type=None, feature_id=None, sub_features=None, changeable_child_field_indices=None, return_after_subfeatures=None, first_child_field=None, child_list_indices=None, suppressed_parse_node=None, name_parse_node=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, sketch=None, all_parameters=None, full_feature_type=None, imported_microversion_id=None, external_document_with_version_and_element_id=None, imported_workspace_element_id=None, revision_data=None, namespace_field_index=None, regenerate_as_version=None, plane=None, suppression_state_field_index=None, suppressed_field_index=None, namespace=None, node_id=None, _import=None, combined_namespace=None, for_export=None, import_microversion=None, name=None, suppressed=None, parameters=None, suppression_state=None, feature_id=None, feature_type=None, return_after_subfeatures=None, changeable_child_field_indices=None, first_child_field=None, child_list_indices=None, suppressed_parse_node=None, name_parse_node=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTMFeature - a model defined in OpenAPI"""  # noqa: E501
 
         self._sketch = None
+        self._all_parameters = None
+        self._full_feature_type = None
         self._imported_microversion_id = None
         self._external_document_with_version_and_element_id = None
         self._imported_workspace_element_id = None
         self._revision_data = None
-        self._full_feature_type = None
-        self._all_parameters = None
-        self._suppression_state_field_index = None
-        self._suppressed_field_index = None
         self._namespace_field_index = None
         self._regenerate_as_version = None
         self._plane = None
+        self._suppression_state_field_index = None
+        self._suppressed_field_index = None
         self._namespace = None
         self._node_id = None
         self.__import = None
@@ -146,11 +144,10 @@ class BTMFeature(object):
         self._suppressed = None
         self._parameters = None
         self._suppression_state = None
-        self._feature_type = None
         self._feature_id = None
-        self._sub_features = None
-        self._changeable_child_field_indices = None
+        self._feature_type = None
         self._return_after_subfeatures = None
+        self._changeable_child_field_indices = None
         self._first_child_field = None
         self._child_list_indices = None
         self._suppressed_parse_node = None
@@ -170,6 +167,10 @@ class BTMFeature(object):
 
         if sketch is not None:
             self.sketch = sketch
+        if all_parameters is not None:
+            self.all_parameters = all_parameters
+        if full_feature_type is not None:
+            self.full_feature_type = full_feature_type
         if imported_microversion_id is not None:
             self.imported_microversion_id = imported_microversion_id
         if external_document_with_version_and_element_id is not None:
@@ -178,20 +179,16 @@ class BTMFeature(object):
             self.imported_workspace_element_id = imported_workspace_element_id
         if revision_data is not None:
             self.revision_data = revision_data
-        if full_feature_type is not None:
-            self.full_feature_type = full_feature_type
-        if all_parameters is not None:
-            self.all_parameters = all_parameters
-        if suppression_state_field_index is not None:
-            self.suppression_state_field_index = suppression_state_field_index
-        if suppressed_field_index is not None:
-            self.suppressed_field_index = suppressed_field_index
         if namespace_field_index is not None:
             self.namespace_field_index = namespace_field_index
         if regenerate_as_version is not None:
             self.regenerate_as_version = regenerate_as_version
         if plane is not None:
             self.plane = plane
+        if suppression_state_field_index is not None:
+            self.suppression_state_field_index = suppression_state_field_index
+        if suppressed_field_index is not None:
+            self.suppressed_field_index = suppressed_field_index
         if namespace is not None:
             self.namespace = namespace
         if node_id is not None:
@@ -212,16 +209,14 @@ class BTMFeature(object):
             self.parameters = parameters
         if suppression_state is not None:
             self.suppression_state = suppression_state
-        if feature_type is not None:
-            self.feature_type = feature_type
         if feature_id is not None:
             self.feature_id = feature_id
-        if sub_features is not None:
-            self.sub_features = sub_features
-        if changeable_child_field_indices is not None:
-            self.changeable_child_field_indices = changeable_child_field_indices
+        if feature_type is not None:
+            self.feature_type = feature_type
         if return_after_subfeatures is not None:
             self.return_after_subfeatures = return_after_subfeatures
+        if changeable_child_field_indices is not None:
+            self.changeable_child_field_indices = changeable_child_field_indices
         if first_child_field is not None:
             self.first_child_field = first_child_field
         if child_list_indices is not None:
@@ -273,6 +268,48 @@ class BTMFeature(object):
         """
 
         self._sketch = sketch
+
+    @property
+    def all_parameters(self):
+        """Gets the all_parameters of this BTMFeature.  # noqa: E501
+
+
+        :return: The all_parameters of this BTMFeature.  # noqa: E501
+        :rtype: list[BTMParameter]
+        """
+        return self._all_parameters
+
+    @all_parameters.setter
+    def all_parameters(self, all_parameters):
+        """Sets the all_parameters of this BTMFeature.
+
+
+        :param all_parameters: The all_parameters of this BTMFeature.  # noqa: E501
+        :type: list[BTMParameter]
+        """
+
+        self._all_parameters = all_parameters
+
+    @property
+    def full_feature_type(self):
+        """Gets the full_feature_type of this BTMFeature.  # noqa: E501
+
+
+        :return: The full_feature_type of this BTMFeature.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_feature_type
+
+    @full_feature_type.setter
+    def full_feature_type(self, full_feature_type):
+        """Sets the full_feature_type of this BTMFeature.
+
+
+        :param full_feature_type: The full_feature_type of this BTMFeature.  # noqa: E501
+        :type: str
+        """
+
+        self._full_feature_type = full_feature_type
 
     @property
     def imported_microversion_id(self):
@@ -359,90 +396,6 @@ class BTMFeature(object):
         self._revision_data = revision_data
 
     @property
-    def full_feature_type(self):
-        """Gets the full_feature_type of this BTMFeature.  # noqa: E501
-
-
-        :return: The full_feature_type of this BTMFeature.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_feature_type
-
-    @full_feature_type.setter
-    def full_feature_type(self, full_feature_type):
-        """Sets the full_feature_type of this BTMFeature.
-
-
-        :param full_feature_type: The full_feature_type of this BTMFeature.  # noqa: E501
-        :type: str
-        """
-
-        self._full_feature_type = full_feature_type
-
-    @property
-    def all_parameters(self):
-        """Gets the all_parameters of this BTMFeature.  # noqa: E501
-
-
-        :return: The all_parameters of this BTMFeature.  # noqa: E501
-        :rtype: list[BTMParameter]
-        """
-        return self._all_parameters
-
-    @all_parameters.setter
-    def all_parameters(self, all_parameters):
-        """Sets the all_parameters of this BTMFeature.
-
-
-        :param all_parameters: The all_parameters of this BTMFeature.  # noqa: E501
-        :type: list[BTMParameter]
-        """
-
-        self._all_parameters = all_parameters
-
-    @property
-    def suppression_state_field_index(self):
-        """Gets the suppression_state_field_index of this BTMFeature.  # noqa: E501
-
-
-        :return: The suppression_state_field_index of this BTMFeature.  # noqa: E501
-        :rtype: int
-        """
-        return self._suppression_state_field_index
-
-    @suppression_state_field_index.setter
-    def suppression_state_field_index(self, suppression_state_field_index):
-        """Sets the suppression_state_field_index of this BTMFeature.
-
-
-        :param suppression_state_field_index: The suppression_state_field_index of this BTMFeature.  # noqa: E501
-        :type: int
-        """
-
-        self._suppression_state_field_index = suppression_state_field_index
-
-    @property
-    def suppressed_field_index(self):
-        """Gets the suppressed_field_index of this BTMFeature.  # noqa: E501
-
-
-        :return: The suppressed_field_index of this BTMFeature.  # noqa: E501
-        :rtype: int
-        """
-        return self._suppressed_field_index
-
-    @suppressed_field_index.setter
-    def suppressed_field_index(self, suppressed_field_index):
-        """Sets the suppressed_field_index of this BTMFeature.
-
-
-        :param suppressed_field_index: The suppressed_field_index of this BTMFeature.  # noqa: E501
-        :type: int
-        """
-
-        self._suppressed_field_index = suppressed_field_index
-
-    @property
     def namespace_field_index(self):
         """Gets the namespace_field_index of this BTMFeature.  # noqa: E501
 
@@ -510,6 +463,48 @@ class BTMFeature(object):
         """
 
         self._plane = plane
+
+    @property
+    def suppression_state_field_index(self):
+        """Gets the suppression_state_field_index of this BTMFeature.  # noqa: E501
+
+
+        :return: The suppression_state_field_index of this BTMFeature.  # noqa: E501
+        :rtype: int
+        """
+        return self._suppression_state_field_index
+
+    @suppression_state_field_index.setter
+    def suppression_state_field_index(self, suppression_state_field_index):
+        """Sets the suppression_state_field_index of this BTMFeature.
+
+
+        :param suppression_state_field_index: The suppression_state_field_index of this BTMFeature.  # noqa: E501
+        :type: int
+        """
+
+        self._suppression_state_field_index = suppression_state_field_index
+
+    @property
+    def suppressed_field_index(self):
+        """Gets the suppressed_field_index of this BTMFeature.  # noqa: E501
+
+
+        :return: The suppressed_field_index of this BTMFeature.  # noqa: E501
+        :rtype: int
+        """
+        return self._suppressed_field_index
+
+    @suppressed_field_index.setter
+    def suppressed_field_index(self, suppressed_field_index):
+        """Sets the suppressed_field_index of this BTMFeature.
+
+
+        :param suppressed_field_index: The suppressed_field_index of this BTMFeature.  # noqa: E501
+        :type: int
+        """
+
+        self._suppressed_field_index = suppressed_field_index
 
     @property
     def namespace(self):
@@ -722,27 +717,6 @@ class BTMFeature(object):
         self._suppression_state = suppression_state
 
     @property
-    def feature_type(self):
-        """Gets the feature_type of this BTMFeature.  # noqa: E501
-
-
-        :return: The feature_type of this BTMFeature.  # noqa: E501
-        :rtype: str
-        """
-        return self._feature_type
-
-    @feature_type.setter
-    def feature_type(self, feature_type):
-        """Sets the feature_type of this BTMFeature.
-
-
-        :param feature_type: The feature_type of this BTMFeature.  # noqa: E501
-        :type: str
-        """
-
-        self._feature_type = feature_type
-
-    @property
     def feature_id(self):
         """Gets the feature_id of this BTMFeature.  # noqa: E501
 
@@ -764,46 +738,25 @@ class BTMFeature(object):
         self._feature_id = feature_id
 
     @property
-    def sub_features(self):
-        """Gets the sub_features of this BTMFeature.  # noqa: E501
+    def feature_type(self):
+        """Gets the feature_type of this BTMFeature.  # noqa: E501
 
 
-        :return: The sub_features of this BTMFeature.  # noqa: E501
-        :rtype: list[BTMFeature]
+        :return: The feature_type of this BTMFeature.  # noqa: E501
+        :rtype: str
         """
-        return self._sub_features
+        return self._feature_type
 
-    @sub_features.setter
-    def sub_features(self, sub_features):
-        """Sets the sub_features of this BTMFeature.
-
-
-        :param sub_features: The sub_features of this BTMFeature.  # noqa: E501
-        :type: list[BTMFeature]
-        """
-
-        self._sub_features = sub_features
-
-    @property
-    def changeable_child_field_indices(self):
-        """Gets the changeable_child_field_indices of this BTMFeature.  # noqa: E501
+    @feature_type.setter
+    def feature_type(self, feature_type):
+        """Sets the feature_type of this BTMFeature.
 
 
-        :return: The changeable_child_field_indices of this BTMFeature.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._changeable_child_field_indices
-
-    @changeable_child_field_indices.setter
-    def changeable_child_field_indices(self, changeable_child_field_indices):
-        """Sets the changeable_child_field_indices of this BTMFeature.
-
-
-        :param changeable_child_field_indices: The changeable_child_field_indices of this BTMFeature.  # noqa: E501
-        :type: list[int]
+        :param feature_type: The feature_type of this BTMFeature.  # noqa: E501
+        :type: str
         """
 
-        self._changeable_child_field_indices = changeable_child_field_indices
+        self._feature_type = feature_type
 
     @property
     def return_after_subfeatures(self):
@@ -825,6 +778,27 @@ class BTMFeature(object):
         """
 
         self._return_after_subfeatures = return_after_subfeatures
+
+    @property
+    def changeable_child_field_indices(self):
+        """Gets the changeable_child_field_indices of this BTMFeature.  # noqa: E501
+
+
+        :return: The changeable_child_field_indices of this BTMFeature.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._changeable_child_field_indices
+
+    @changeable_child_field_indices.setter
+    def changeable_child_field_indices(self, changeable_child_field_indices):
+        """Sets the changeable_child_field_indices of this BTMFeature.
+
+
+        :param changeable_child_field_indices: The changeable_child_field_indices of this BTMFeature.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
     def first_child_field(self):

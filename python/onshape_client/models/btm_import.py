@@ -32,13 +32,13 @@ class BTMImport(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'imported_external_document_id': 'str',
+        'element_import': 'bool',
+        '_import': 'BTPModuleId',
         'imported_microversion_id': 'BTMicroversionId',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
-        '_import': 'BTPModuleId',
         'imported_workspace_element_id': 'str',
         'revision_data': 'BTRevisionCustomData',
-        'element_import': 'bool',
-        'imported_external_document_id': 'str',
         'namespace_field_index': 'int',
         'namespace': 'str',
         'node_id': 'str',
@@ -64,13 +64,13 @@ class BTMImport(object):
     }
 
     attribute_map = {
+        'imported_external_document_id': 'importedExternalDocumentId',
+        'element_import': 'elementImport',
+        '_import': 'import',
         'imported_microversion_id': 'importedMicroversionId',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
-        '_import': 'import',
         'imported_workspace_element_id': 'importedWorkspaceElementId',
         'revision_data': 'revisionData',
-        'element_import': 'elementImport',
-        'imported_external_document_id': 'importedExternalDocumentId',
         'namespace_field_index': 'namespaceFieldIndex',
         'namespace': 'namespace',
         'node_id': 'nodeId',
@@ -95,16 +95,16 @@ class BTMImport(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, imported_microversion_id=None, external_document_with_version_and_element_id=None, _import=None, imported_workspace_element_id=None, revision_data=None, element_import=None, imported_external_document_id=None, namespace_field_index=None, namespace=None, node_id=None, combined_namespace=None, for_export=None, import_microversion=None, path=None, version=None, changeable_child_field_indices=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, imported_external_document_id=None, element_import=None, _import=None, imported_microversion_id=None, external_document_with_version_and_element_id=None, imported_workspace_element_id=None, revision_data=None, namespace_field_index=None, namespace=None, node_id=None, combined_namespace=None, for_export=None, import_microversion=None, path=None, version=None, changeable_child_field_indices=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTMImport - a model defined in OpenAPI"""  # noqa: E501
 
+        self._imported_external_document_id = None
+        self._element_import = None
+        self.__import = None
         self._imported_microversion_id = None
         self._external_document_with_version_and_element_id = None
-        self.__import = None
         self._imported_workspace_element_id = None
         self._revision_data = None
-        self._element_import = None
-        self._imported_external_document_id = None
         self._namespace_field_index = None
         self._namespace = None
         self._node_id = None
@@ -129,20 +129,20 @@ class BTMImport(object):
         self._unknown_class = None
         self.discriminator = None
 
+        if imported_external_document_id is not None:
+            self.imported_external_document_id = imported_external_document_id
+        if element_import is not None:
+            self.element_import = element_import
+        if _import is not None:
+            self._import = _import
         if imported_microversion_id is not None:
             self.imported_microversion_id = imported_microversion_id
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
-        if _import is not None:
-            self._import = _import
         if imported_workspace_element_id is not None:
             self.imported_workspace_element_id = imported_workspace_element_id
         if revision_data is not None:
             self.revision_data = revision_data
-        if element_import is not None:
-            self.element_import = element_import
-        if imported_external_document_id is not None:
-            self.imported_external_document_id = imported_external_document_id
         if namespace_field_index is not None:
             self.namespace_field_index = namespace_field_index
         if namespace is not None:
@@ -189,6 +189,69 @@ class BTMImport(object):
             self.unknown_class = unknown_class
 
     @property
+    def imported_external_document_id(self):
+        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
+
+
+        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
+        :rtype: str
+        """
+        return self._imported_external_document_id
+
+    @imported_external_document_id.setter
+    def imported_external_document_id(self, imported_external_document_id):
+        """Sets the imported_external_document_id of this BTMImport.
+
+
+        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
+        :type: str
+        """
+
+        self._imported_external_document_id = imported_external_document_id
+
+    @property
+    def element_import(self):
+        """Gets the element_import of this BTMImport.  # noqa: E501
+
+
+        :return: The element_import of this BTMImport.  # noqa: E501
+        :rtype: bool
+        """
+        return self._element_import
+
+    @element_import.setter
+    def element_import(self, element_import):
+        """Sets the element_import of this BTMImport.
+
+
+        :param element_import: The element_import of this BTMImport.  # noqa: E501
+        :type: bool
+        """
+
+        self._element_import = element_import
+
+    @property
+    def _import(self):
+        """Gets the _import of this BTMImport.  # noqa: E501
+
+
+        :return: The _import of this BTMImport.  # noqa: E501
+        :rtype: BTPModuleId
+        """
+        return self.__import
+
+    @_import.setter
+    def _import(self, _import):
+        """Sets the _import of this BTMImport.
+
+
+        :param _import: The _import of this BTMImport.  # noqa: E501
+        :type: BTPModuleId
+        """
+
+        self.__import = _import
+
+    @property
     def imported_microversion_id(self):
         """Gets the imported_microversion_id of this BTMImport.  # noqa: E501
 
@@ -231,27 +294,6 @@ class BTMImport(object):
         self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
 
     @property
-    def _import(self):
-        """Gets the _import of this BTMImport.  # noqa: E501
-
-
-        :return: The _import of this BTMImport.  # noqa: E501
-        :rtype: BTPModuleId
-        """
-        return self.__import
-
-    @_import.setter
-    def _import(self, _import):
-        """Sets the _import of this BTMImport.
-
-
-        :param _import: The _import of this BTMImport.  # noqa: E501
-        :type: BTPModuleId
-        """
-
-        self.__import = _import
-
-    @property
     def imported_workspace_element_id(self):
         """Gets the imported_workspace_element_id of this BTMImport.  # noqa: E501
 
@@ -292,48 +334,6 @@ class BTMImport(object):
         """
 
         self._revision_data = revision_data
-
-    @property
-    def element_import(self):
-        """Gets the element_import of this BTMImport.  # noqa: E501
-
-
-        :return: The element_import of this BTMImport.  # noqa: E501
-        :rtype: bool
-        """
-        return self._element_import
-
-    @element_import.setter
-    def element_import(self, element_import):
-        """Sets the element_import of this BTMImport.
-
-
-        :param element_import: The element_import of this BTMImport.  # noqa: E501
-        :type: bool
-        """
-
-        self._element_import = element_import
-
-    @property
-    def imported_external_document_id(self):
-        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
-
-
-        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_external_document_id
-
-    @imported_external_document_id.setter
-    def imported_external_document_id(self, imported_external_document_id):
-        """Sets the imported_external_document_id of this BTMImport.
-
-
-        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_external_document_id = imported_external_document_id
 
     @property
     def namespace_field_index(self):

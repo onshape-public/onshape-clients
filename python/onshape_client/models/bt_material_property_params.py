@@ -35,32 +35,32 @@ class BTMaterialPropertyParams(object):
         'name': 'str',
         'value': 'str',
         'type': 'str',
-        'display_name': 'str',
         'description': 'str',
+        'units': 'str',
         'category': 'str',
-        'units': 'str'
+        'display_name': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'value': 'value',
         'type': 'type',
-        'display_name': 'displayName',
         'description': 'description',
+        'units': 'units',
         'category': 'category',
-        'units': 'units'
+        'display_name': 'displayName'
     }
 
-    def __init__(self, name=None, value=None, type=None, display_name=None, description=None, category=None, units=None):  # noqa: E501
+    def __init__(self, name=None, value=None, type=None, description=None, units=None, category=None, display_name=None):  # noqa: E501
         """BTMaterialPropertyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._value = None
         self._type = None
-        self._display_name = None
         self._description = None
-        self._category = None
         self._units = None
+        self._category = None
+        self._display_name = None
         self.discriminator = None
 
         if name is not None:
@@ -69,14 +69,14 @@ class BTMaterialPropertyParams(object):
             self.value = value
         if type is not None:
             self.type = type
-        if display_name is not None:
-            self.display_name = display_name
         if description is not None:
             self.description = description
-        if category is not None:
-            self.category = category
         if units is not None:
             self.units = units
+        if category is not None:
+            self.category = category
+        if display_name is not None:
+            self.display_name = display_name
 
     @property
     def name(self):
@@ -142,27 +142,6 @@ class BTMaterialPropertyParams(object):
         self._type = type
 
     @property
-    def display_name(self):
-        """Gets the display_name of this BTMaterialPropertyParams.  # noqa: E501
-
-
-        :return: The display_name of this BTMaterialPropertyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTMaterialPropertyParams.
-
-
-        :param display_name: The display_name of this BTMaterialPropertyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
     def description(self):
         """Gets the description of this BTMaterialPropertyParams.  # noqa: E501
 
@@ -182,6 +161,27 @@ class BTMaterialPropertyParams(object):
         """
 
         self._description = description
+
+    @property
+    def units(self):
+        """Gets the units of this BTMaterialPropertyParams.  # noqa: E501
+
+
+        :return: The units of this BTMaterialPropertyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._units
+
+    @units.setter
+    def units(self, units):
+        """Sets the units of this BTMaterialPropertyParams.
+
+
+        :param units: The units of this BTMaterialPropertyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._units = units
 
     @property
     def category(self):
@@ -205,25 +205,25 @@ class BTMaterialPropertyParams(object):
         self._category = category
 
     @property
-    def units(self):
-        """Gets the units of this BTMaterialPropertyParams.  # noqa: E501
+    def display_name(self):
+        """Gets the display_name of this BTMaterialPropertyParams.  # noqa: E501
 
 
-        :return: The units of this BTMaterialPropertyParams.  # noqa: E501
+        :return: The display_name of this BTMaterialPropertyParams.  # noqa: E501
         :rtype: str
         """
-        return self._units
+        return self._display_name
 
-    @units.setter
-    def units(self, units):
-        """Sets the units of this BTMaterialPropertyParams.
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTMaterialPropertyParams.
 
 
-        :param units: The units of this BTMaterialPropertyParams.  # noqa: E501
+        :param display_name: The display_name of this BTMaterialPropertyParams.  # noqa: E501
         :type: str
         """
 
-        self._units = units
+        self._display_name = display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

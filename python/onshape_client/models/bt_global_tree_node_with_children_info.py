@@ -34,29 +34,29 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
     openapi_types = {
         'permission_set': 'BTPermissionSet',
         'path_to_root': 'list[PathSegment]',
+        'href': 'str',
         'next': 'str',
         'items': 'list[BTGlobalTreeNodeInfo]',
-        'href': 'str',
         'previous': 'str'
     }
 
     attribute_map = {
         'permission_set': 'permissionSet',
         'path_to_root': 'pathToRoot',
+        'href': 'href',
         'next': 'next',
         'items': 'items',
-        'href': 'href',
         'previous': 'previous'
     }
 
-    def __init__(self, permission_set=None, path_to_root=None, next=None, items=None, href=None, previous=None):  # noqa: E501
+    def __init__(self, permission_set=None, path_to_root=None, href=None, next=None, items=None, previous=None):  # noqa: E501
         """BTGlobalTreeNodeWithChildrenInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._permission_set = None
         self._path_to_root = None
+        self._href = None
         self._next = None
         self._items = None
-        self._href = None
         self._previous = None
         self.discriminator = None
 
@@ -64,12 +64,12 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
             self.permission_set = permission_set
         if path_to_root is not None:
             self.path_to_root = path_to_root
+        if href is not None:
+            self.href = href
         if next is not None:
             self.next = next
         if items is not None:
             self.items = items
-        if href is not None:
-            self.href = href
         if previous is not None:
             self.previous = previous
 
@@ -116,6 +116,27 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
         self._path_to_root = path_to_root
 
     @property
+    def href(self):
+        """Gets the href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+
+
+        :return: The href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BTGlobalTreeNodeWithChildrenInfo.
+
+
+        :param href: The href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._href = href
+
+    @property
     def next(self):
         """Gets the next of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
 
@@ -156,27 +177,6 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
         """
 
         self._items = items
-
-    @property
-    def href(self):
-        """Gets the href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-
-
-        :return: The href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BTGlobalTreeNodeWithChildrenInfo.
-
-
-        :param href: The href of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._href = href
 
     @property
     def previous(self):

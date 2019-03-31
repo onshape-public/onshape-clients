@@ -33,40 +33,40 @@ class BTDocumentMicroversionInfo(object):
     """
     openapi_types = {
         'document_id': 'str',
-        'workspace_id': 'str',
-        'microversion_id': 'str',
         'element_type': 'str',
-        'current_configuration': 'str'
+        'current_configuration': 'str',
+        'workspace_id': 'str',
+        'microversion_id': 'str'
     }
 
     attribute_map = {
         'document_id': 'documentId',
-        'workspace_id': 'workspaceId',
-        'microversion_id': 'microversionId',
         'element_type': 'elementType',
-        'current_configuration': 'currentConfiguration'
+        'current_configuration': 'currentConfiguration',
+        'workspace_id': 'workspaceId',
+        'microversion_id': 'microversionId'
     }
 
-    def __init__(self, document_id=None, workspace_id=None, microversion_id=None, element_type=None, current_configuration=None):  # noqa: E501
+    def __init__(self, document_id=None, element_type=None, current_configuration=None, workspace_id=None, microversion_id=None):  # noqa: E501
         """BTDocumentMicroversionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._document_id = None
-        self._workspace_id = None
-        self._microversion_id = None
         self._element_type = None
         self._current_configuration = None
+        self._workspace_id = None
+        self._microversion_id = None
         self.discriminator = None
 
         if document_id is not None:
             self.document_id = document_id
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
         if element_type is not None:
             self.element_type = element_type
         if current_configuration is not None:
             self.current_configuration = current_configuration
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
 
     @property
     def document_id(self):
@@ -88,48 +88,6 @@ class BTDocumentMicroversionInfo(object):
         """
 
         self._document_id = document_id
-
-    @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
-
-
-        :return: The workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._workspace_id
-
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTDocumentMicroversionInfo.
-
-
-        :param workspace_id: The workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._workspace_id = workspace_id
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
-
-
-        :return: The microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTDocumentMicroversionInfo.
-
-
-        :param microversion_id: The microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
 
     @property
     def element_type(self):
@@ -172,6 +130,48 @@ class BTDocumentMicroversionInfo(object):
         """
 
         self._current_configuration = current_configuration
+
+    @property
+    def workspace_id(self):
+        """Gets the workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
+
+
+        :return: The workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._workspace_id
+
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTDocumentMicroversionInfo.
+
+
+        :param workspace_id: The workspace_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._workspace_id = workspace_id
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
+
+
+        :return: The microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTDocumentMicroversionInfo.
+
+
+        :param microversion_id: The microversion_id of this BTDocumentMicroversionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

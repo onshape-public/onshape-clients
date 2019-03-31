@@ -6,10 +6,8 @@ Name | Type | Description | Notes
 **array** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
-**namespace** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**owner_id** | **str** |  | [optional] 
-**owner_type_ordinal** | **int** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 **property_config_param_list** | [**list[BTMetadataPropertyConfigParams]**](BTMetadataPropertyConfigParams.md) |  | [optional] 
 **value_type** | **int** |  | [optional] 
 **object_def_name** | **str** |  | [optional] 
@@ -17,6 +15,8 @@ Name | Type | Description | Notes
 **editable_in_version** | **bool** |  | [optional] 
 **editable_in_microversion** | **bool** |  | [optional] 
 **search_boost** | **float** |  | [optional] 
+**owner_id** | **str** |  | [optional] 
+**owner_type_ordinal** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

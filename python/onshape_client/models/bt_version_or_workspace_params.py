@@ -34,10 +34,10 @@ class BTVersionOrWorkspaceParams(object):
     openapi_types = {
         'name': 'str',
         'description': 'str',
-        'version_id': 'str',
-        'document_id': 'str',
         'workspace_id': 'str',
         'microversion_id': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'read_only': 'bool',
         'is_release': 'bool',
         'from_history': 'bool',
@@ -47,25 +47,25 @@ class BTVersionOrWorkspaceParams(object):
     attribute_map = {
         'name': 'name',
         'description': 'description',
-        'version_id': 'versionId',
-        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'microversion_id': 'microversionId',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'read_only': 'readOnly',
         'is_release': 'isRelease',
         'from_history': 'fromHistory',
         'client_interaction_mode': 'clientInteractionMode'
     }
 
-    def __init__(self, name=None, description=None, version_id=None, document_id=None, workspace_id=None, microversion_id=None, read_only=None, is_release=None, from_history=None, client_interaction_mode=None):  # noqa: E501
+    def __init__(self, name=None, description=None, workspace_id=None, microversion_id=None, version_id=None, document_id=None, read_only=None, is_release=None, from_history=None, client_interaction_mode=None):  # noqa: E501
         """BTVersionOrWorkspaceParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
-        self._version_id = None
-        self._document_id = None
         self._workspace_id = None
         self._microversion_id = None
+        self._version_id = None
+        self._document_id = None
         self._read_only = None
         self._is_release = None
         self._from_history = None
@@ -76,14 +76,14 @@ class BTVersionOrWorkspaceParams(object):
             self.name = name
         if description is not None:
             self.description = description
-        if version_id is not None:
-            self.version_id = version_id
-        if document_id is not None:
-            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if microversion_id is not None:
             self.microversion_id = microversion_id
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if read_only is not None:
             self.read_only = read_only
         if is_release is not None:
@@ -136,48 +136,6 @@ class BTVersionOrWorkspaceParams(object):
         self._description = description
 
     @property
-    def version_id(self):
-        """Gets the version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTVersionOrWorkspaceParams.
-
-
-        :param version_id: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTVersionOrWorkspaceParams.
-
-
-        :param document_id: The document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
     def workspace_id(self):
         """Gets the workspace_id of this BTVersionOrWorkspaceParams.  # noqa: E501
 
@@ -218,6 +176,48 @@ class BTVersionOrWorkspaceParams(object):
         """
 
         self._microversion_id = microversion_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTVersionOrWorkspaceParams.
+
+
+        :param version_id: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTVersionOrWorkspaceParams.
+
+
+        :param document_id: The document_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def read_only(self):

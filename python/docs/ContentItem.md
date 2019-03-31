@@ -4,8 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **link** | **str** |  | [optional] 
-**width** | **int** |  | [optional] 
-**height** | **int** |  | [optional] 
 **title** | **str** |  | [optional] 
 **content_id** | **str** |  | [optional] 
 **item_title** | **str** |  | [optional] 
@@ -17,6 +15,8 @@ Name | Type | Description | Notes
 **vertical_offset** | **int** |  | [optional] 
 **horizontal_offset** | **int** |  | [optional] 
 **position** | **str** |  | [optional] 
+**width** | **int** |  | [optional] 
+**height** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

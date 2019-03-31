@@ -6,11 +6,10 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
-**configuration** | **str** |  | [optional] 
+**part_number** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **project** | **str** |  | [optional] 
-**connection_id** | **str** |  | [optional] 
-**material** | [**BTMaterialParams**](BTMaterialParams.md) |  | [optional] 
+**configuration** | **str** |  | [optional] 
 **custom_properties** | [**list[BTNameValuePair]**](BTNameValuePair.md) |  | [optional] 
 **vendor** | **str** |  | [optional] 
 **product_line** | **str** |  | [optional] 
@@ -18,10 +17,11 @@ Name | Type | Description | Notes
 **title2** | **str** |  | [optional] 
 **title3** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
-**part_number** | **str** |  | [optional] 
+**connection_id** | **str** |  | [optional] 
+**material** | [**BTMaterialParams**](BTMaterialParams.md) |  | [optional] 
+**appearance** | [**BTPartAppearanceParams**](BTPartAppearanceParams.md) |  | [optional] 
 **custom_property_definitions** | [**list[BTCustomPropertyDefinitionParams]**](BTCustomPropertyDefinitionParams.md) |  | [optional] 
 **apply_update_to_all_configurations** | **bool** |  | [optional] 
-**appearance** | [**BTPartAppearanceParams**](BTPartAppearanceParams.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

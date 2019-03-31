@@ -35,26 +35,26 @@ class BTAPIDeveloperParams(object):
         'name': 'str',
         'website': 'str',
         'description': 'str',
-        'user_id': 'str',
-        'company_id': 'str'
+        'company_id': 'str',
+        'user_id': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'website': 'website',
         'description': 'description',
-        'user_id': 'userId',
-        'company_id': 'companyId'
+        'company_id': 'companyId',
+        'user_id': 'userId'
     }
 
-    def __init__(self, name=None, website=None, description=None, user_id=None, company_id=None):  # noqa: E501
+    def __init__(self, name=None, website=None, description=None, company_id=None, user_id=None):  # noqa: E501
         """BTAPIDeveloperParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._website = None
         self._description = None
-        self._user_id = None
         self._company_id = None
+        self._user_id = None
         self.discriminator = None
 
         if name is not None:
@@ -63,10 +63,10 @@ class BTAPIDeveloperParams(object):
             self.website = website
         if description is not None:
             self.description = description
-        if user_id is not None:
-            self.user_id = user_id
         if company_id is not None:
             self.company_id = company_id
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def name(self):
@@ -132,27 +132,6 @@ class BTAPIDeveloperParams(object):
         self._description = description
 
     @property
-    def user_id(self):
-        """Gets the user_id of this BTAPIDeveloperParams.  # noqa: E501
-
-
-        :return: The user_id of this BTAPIDeveloperParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTAPIDeveloperParams.
-
-
-        :param user_id: The user_id of this BTAPIDeveloperParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
-
-    @property
     def company_id(self):
         """Gets the company_id of this BTAPIDeveloperParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTAPIDeveloperParams(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTAPIDeveloperParams.  # noqa: E501
+
+
+        :return: The user_id of this BTAPIDeveloperParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTAPIDeveloperParams.
+
+
+        :param user_id: The user_id of this BTAPIDeveloperParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,39 +34,39 @@ class ConfigurationInfoEntry(object):
     openapi_types = {
         'parameter_display_value': 'str',
         'explicit': 'bool',
-        'parameter_name': 'str',
+        'parameter_value': 'str',
         'parameter_id': 'str',
-        'parameter_value': 'str'
+        'parameter_name': 'str'
     }
 
     attribute_map = {
         'parameter_display_value': 'parameterDisplayValue',
         'explicit': 'explicit',
-        'parameter_name': 'parameterName',
+        'parameter_value': 'parameterValue',
         'parameter_id': 'parameterId',
-        'parameter_value': 'parameterValue'
+        'parameter_name': 'parameterName'
     }
 
-    def __init__(self, parameter_display_value=None, explicit=None, parameter_name=None, parameter_id=None, parameter_value=None):  # noqa: E501
+    def __init__(self, parameter_display_value=None, explicit=None, parameter_value=None, parameter_id=None, parameter_name=None):  # noqa: E501
         """ConfigurationInfoEntry - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameter_display_value = None
         self._explicit = None
-        self._parameter_name = None
-        self._parameter_id = None
         self._parameter_value = None
+        self._parameter_id = None
+        self._parameter_name = None
         self.discriminator = None
 
         if parameter_display_value is not None:
             self.parameter_display_value = parameter_display_value
         if explicit is not None:
             self.explicit = explicit
-        if parameter_name is not None:
-            self.parameter_name = parameter_name
-        if parameter_id is not None:
-            self.parameter_id = parameter_id
         if parameter_value is not None:
             self.parameter_value = parameter_value
+        if parameter_id is not None:
+            self.parameter_id = parameter_id
+        if parameter_name is not None:
+            self.parameter_name = parameter_name
 
     @property
     def parameter_display_value(self):
@@ -111,25 +111,25 @@ class ConfigurationInfoEntry(object):
         self._explicit = explicit
 
     @property
-    def parameter_name(self):
-        """Gets the parameter_name of this ConfigurationInfoEntry.  # noqa: E501
+    def parameter_value(self):
+        """Gets the parameter_value of this ConfigurationInfoEntry.  # noqa: E501
 
 
-        :return: The parameter_name of this ConfigurationInfoEntry.  # noqa: E501
+        :return: The parameter_value of this ConfigurationInfoEntry.  # noqa: E501
         :rtype: str
         """
-        return self._parameter_name
+        return self._parameter_value
 
-    @parameter_name.setter
-    def parameter_name(self, parameter_name):
-        """Sets the parameter_name of this ConfigurationInfoEntry.
+    @parameter_value.setter
+    def parameter_value(self, parameter_value):
+        """Sets the parameter_value of this ConfigurationInfoEntry.
 
 
-        :param parameter_name: The parameter_name of this ConfigurationInfoEntry.  # noqa: E501
+        :param parameter_value: The parameter_value of this ConfigurationInfoEntry.  # noqa: E501
         :type: str
         """
 
-        self._parameter_name = parameter_name
+        self._parameter_value = parameter_value
 
     @property
     def parameter_id(self):
@@ -153,25 +153,25 @@ class ConfigurationInfoEntry(object):
         self._parameter_id = parameter_id
 
     @property
-    def parameter_value(self):
-        """Gets the parameter_value of this ConfigurationInfoEntry.  # noqa: E501
+    def parameter_name(self):
+        """Gets the parameter_name of this ConfigurationInfoEntry.  # noqa: E501
 
 
-        :return: The parameter_value of this ConfigurationInfoEntry.  # noqa: E501
+        :return: The parameter_name of this ConfigurationInfoEntry.  # noqa: E501
         :rtype: str
         """
-        return self._parameter_value
+        return self._parameter_name
 
-    @parameter_value.setter
-    def parameter_value(self, parameter_value):
-        """Sets the parameter_value of this ConfigurationInfoEntry.
+    @parameter_name.setter
+    def parameter_name(self, parameter_name):
+        """Sets the parameter_name of this ConfigurationInfoEntry.
 
 
-        :param parameter_value: The parameter_value of this ConfigurationInfoEntry.  # noqa: E501
+        :param parameter_name: The parameter_name of this ConfigurationInfoEntry.  # noqa: E501
         :type: str
         """
 
-        self._parameter_value = parameter_value
+        self._parameter_name = parameter_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

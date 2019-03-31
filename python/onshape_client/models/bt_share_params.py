@@ -35,12 +35,12 @@ class BTShareParams(object):
         'message': 'str',
         'entries': 'list[BTShareEntryParams]',
         'permission': 'int',
-        'document_id': 'str',
+        'update': 'bool',
         'workspace_id': 'str',
         'element_id': 'str',
         'folder_id': 'str',
         'permission_set': 'BTPermissionSet',
-        'update': 'bool',
+        'document_id': 'str',
         'encoded_configuration': 'str'
     }
 
@@ -48,27 +48,27 @@ class BTShareParams(object):
         'message': 'message',
         'entries': 'entries',
         'permission': 'permission',
-        'document_id': 'documentId',
+        'update': 'update',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'folder_id': 'folderId',
         'permission_set': 'permissionSet',
-        'update': 'update',
+        'document_id': 'documentId',
         'encoded_configuration': 'encodedConfiguration'
     }
 
-    def __init__(self, message=None, entries=None, permission=None, document_id=None, workspace_id=None, element_id=None, folder_id=None, permission_set=None, update=None, encoded_configuration=None):  # noqa: E501
+    def __init__(self, message=None, entries=None, permission=None, update=None, workspace_id=None, element_id=None, folder_id=None, permission_set=None, document_id=None, encoded_configuration=None):  # noqa: E501
         """BTShareParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._message = None
         self._entries = None
         self._permission = None
-        self._document_id = None
+        self._update = None
         self._workspace_id = None
         self._element_id = None
         self._folder_id = None
         self._permission_set = None
-        self._update = None
+        self._document_id = None
         self._encoded_configuration = None
         self.discriminator = None
 
@@ -78,8 +78,8 @@ class BTShareParams(object):
             self.entries = entries
         if permission is not None:
             self.permission = permission
-        if document_id is not None:
-            self.document_id = document_id
+        if update is not None:
+            self.update = update
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
@@ -88,8 +88,8 @@ class BTShareParams(object):
             self.folder_id = folder_id
         if permission_set is not None:
             self.permission_set = permission_set
-        if update is not None:
-            self.update = update
+        if document_id is not None:
+            self.document_id = document_id
         if encoded_configuration is not None:
             self.encoded_configuration = encoded_configuration
 
@@ -157,25 +157,25 @@ class BTShareParams(object):
         self._permission = permission
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTShareParams.  # noqa: E501
+    def update(self):
+        """Gets the update of this BTShareParams.  # noqa: E501
 
 
-        :return: The document_id of this BTShareParams.  # noqa: E501
-        :rtype: str
+        :return: The update of this BTShareParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._document_id
+        return self._update
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTShareParams.
+    @update.setter
+    def update(self, update):
+        """Sets the update of this BTShareParams.
 
 
-        :param document_id: The document_id of this BTShareParams.  # noqa: E501
-        :type: str
+        :param update: The update of this BTShareParams.  # noqa: E501
+        :type: bool
         """
 
-        self._document_id = document_id
+        self._update = update
 
     @property
     def workspace_id(self):
@@ -262,25 +262,25 @@ class BTShareParams(object):
         self._permission_set = permission_set
 
     @property
-    def update(self):
-        """Gets the update of this BTShareParams.  # noqa: E501
+    def document_id(self):
+        """Gets the document_id of this BTShareParams.  # noqa: E501
 
 
-        :return: The update of this BTShareParams.  # noqa: E501
-        :rtype: bool
+        :return: The document_id of this BTShareParams.  # noqa: E501
+        :rtype: str
         """
-        return self._update
+        return self._document_id
 
-    @update.setter
-    def update(self, update):
-        """Sets the update of this BTShareParams.
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTShareParams.
 
 
-        :param update: The update of this BTShareParams.  # noqa: E501
-        :type: bool
+        :param document_id: The document_id of this BTShareParams.  # noqa: E501
+        :type: str
         """
 
-        self._update = update
+        self._document_id = document_id
 
     @property
     def encoded_configuration(self):

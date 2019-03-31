@@ -32,47 +32,26 @@ class BTExtendTrialParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_id': 'str',
-        'extension_days': 'int'
+        'extension_days': 'int',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'user_id': 'userId',
-        'extension_days': 'extensionDays'
+        'extension_days': 'extensionDays',
+        'user_id': 'userId'
     }
 
-    def __init__(self, user_id=None, extension_days=None):  # noqa: E501
+    def __init__(self, extension_days=None, user_id=None):  # noqa: E501
         """BTExtendTrialParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_id = None
         self._extension_days = None
+        self._user_id = None
         self.discriminator = None
 
-        if user_id is not None:
-            self.user_id = user_id
         if extension_days is not None:
             self.extension_days = extension_days
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTExtendTrialParams.  # noqa: E501
-
-
-        :return: The user_id of this BTExtendTrialParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTExtendTrialParams.
-
-
-        :param user_id: The user_id of this BTExtendTrialParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def extension_days(self):
@@ -94,6 +73,27 @@ class BTExtendTrialParams(object):
         """
 
         self._extension_days = extension_days
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTExtendTrialParams.  # noqa: E501
+
+
+        :return: The user_id of this BTExtendTrialParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTExtendTrialParams.
+
+
+        :param user_id: The user_id of this BTExtendTrialParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

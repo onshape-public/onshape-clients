@@ -34,34 +34,34 @@ class BTDocumentLabelParams(object):
     openapi_types = {
         'name': 'str',
         'owner_id': 'str',
-        'parent_label_id': 'str',
-        'document_ids': 'list[str]'
+        'document_ids': 'list[str]',
+        'parent_label_id': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'owner_id': 'ownerId',
-        'parent_label_id': 'parentLabelId',
-        'document_ids': 'documentIds'
+        'document_ids': 'documentIds',
+        'parent_label_id': 'parentLabelId'
     }
 
-    def __init__(self, name=None, owner_id=None, parent_label_id=None, document_ids=None):  # noqa: E501
+    def __init__(self, name=None, owner_id=None, document_ids=None, parent_label_id=None):  # noqa: E501
         """BTDocumentLabelParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._owner_id = None
-        self._parent_label_id = None
         self._document_ids = None
+        self._parent_label_id = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
         if owner_id is not None:
             self.owner_id = owner_id
-        if parent_label_id is not None:
-            self.parent_label_id = parent_label_id
         if document_ids is not None:
             self.document_ids = document_ids
+        if parent_label_id is not None:
+            self.parent_label_id = parent_label_id
 
     @property
     def name(self):
@@ -106,27 +106,6 @@ class BTDocumentLabelParams(object):
         self._owner_id = owner_id
 
     @property
-    def parent_label_id(self):
-        """Gets the parent_label_id of this BTDocumentLabelParams.  # noqa: E501
-
-
-        :return: The parent_label_id of this BTDocumentLabelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_label_id
-
-    @parent_label_id.setter
-    def parent_label_id(self, parent_label_id):
-        """Sets the parent_label_id of this BTDocumentLabelParams.
-
-
-        :param parent_label_id: The parent_label_id of this BTDocumentLabelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_label_id = parent_label_id
-
-    @property
     def document_ids(self):
         """Gets the document_ids of this BTDocumentLabelParams.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTDocumentLabelParams(object):
         """
 
         self._document_ids = document_ids
+
+    @property
+    def parent_label_id(self):
+        """Gets the parent_label_id of this BTDocumentLabelParams.  # noqa: E501
+
+
+        :return: The parent_label_id of this BTDocumentLabelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_label_id
+
+    @parent_label_id.setter
+    def parent_label_id(self, parent_label_id):
+        """Sets the parent_label_id of this BTDocumentLabelParams.
+
+
+        :param parent_label_id: The parent_label_id of this BTDocumentLabelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_label_id = parent_label_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

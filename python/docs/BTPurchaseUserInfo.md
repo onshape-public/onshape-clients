@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchase** | [**BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
 **user** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **consumed_quantity** | **int** |  | [optional] 
 **purchase_state** | **int** |  | [optional] 
+**purchase** | [**BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

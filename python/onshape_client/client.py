@@ -54,13 +54,16 @@ class Client:
         self.configuration = configuration
 
     def _create_apis(self):
-        self.accounts_api = onshape_client.api.AccountsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.app_elements_api = onshape_client.api.AppElementsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.assemblies_api = onshape_client.api.AssembliesApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.documents_api = onshape_client.api.DocumentsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.elements_api = onshape_client.api.ElementsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.endpoints_api = onshape_client.api.EndpointsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.metadata_api = onshape_client.api.MetadataApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.parts_api = onshape_client.api.PartsApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.part_studios_api = onshape_client.api.PartStudiosApi(onshape_client.ApiClient(configuration=self.configuration))
-        self.translation_api = onshape_client.api.TranslationsApi(onshape_client.ApiClient(configuration=self.configuration))
+        api_client = onshape_client.ApiClient(configuration=self.configuration)
+
+        self.accounts_api = onshape_client.api.AccountsApi(api_client)
+        self.app_elements_api = onshape_client.api.AppElementsApi(api_client)
+        self.assemblies_api = onshape_client.api.AssembliesApi(api_client)
+        self.blob_elements_api = onshape_client.api.BlobElementsApi(api_client)
+        self.documents_api = onshape_client.api.DocumentsApi(api_client)
+        self.elements_api = onshape_client.api.ElementsApi(api_client)
+        self.endpoints_api = onshape_client.api.EndpointsApi(api_client)
+        self.metadata_api = onshape_client.api.MetadataApi(api_client)
+        self.parts_api = onshape_client.api.PartsApi(api_client)
+        self.part_studios_api = onshape_client.api.PartStudiosApi(api_client)
+        self.translation_api = onshape_client.api.TranslationsApi(api_client)

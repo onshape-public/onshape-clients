@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**imported_external_document_id** | **str** |  | [optional] 
+**element_import** | **bool** |  | [optional] 
+**_import** | [**BTPModuleId**](BTPModuleId.md) |  | [optional] 
 **imported_microversion_id** | [**BTMicroversionId**](BTMicroversionId.md) |  | [optional] 
 **external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
-**_import** | [**BTPModuleId**](BTPModuleId.md) |  | [optional] 
 **imported_workspace_element_id** | **str** |  | [optional] 
 **revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
-**element_import** | **bool** |  | [optional] 
-**imported_external_document_id** | **str** |  | [optional] 
 **namespace_field_index** | **int** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

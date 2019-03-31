@@ -32,36 +32,57 @@ class BTCloudStorageObjectListInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'href': 'str',
         'next': 'str',
         'items': 'list[BTCloudStorageObjectInfo]',
-        'href': 'str',
         'path_to_root': 'list[CloudObjectPathSegment]'
     }
 
     attribute_map = {
+        'href': 'href',
         'next': 'next',
         'items': 'items',
-        'href': 'href',
         'path_to_root': 'pathToRoot'
     }
 
-    def __init__(self, next=None, items=None, href=None, path_to_root=None):  # noqa: E501
+    def __init__(self, href=None, next=None, items=None, path_to_root=None):  # noqa: E501
         """BTCloudStorageObjectListInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._href = None
         self._next = None
         self._items = None
-        self._href = None
         self._path_to_root = None
         self.discriminator = None
 
+        if href is not None:
+            self.href = href
         if next is not None:
             self.next = next
         if items is not None:
             self.items = items
-        if href is not None:
-            self.href = href
         if path_to_root is not None:
             self.path_to_root = path_to_root
+
+    @property
+    def href(self):
+        """Gets the href of this BTCloudStorageObjectListInfo.  # noqa: E501
+
+
+        :return: The href of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BTCloudStorageObjectListInfo.
+
+
+        :param href: The href of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._href = href
 
     @property
     def next(self):
@@ -104,27 +125,6 @@ class BTCloudStorageObjectListInfo(object):
         """
 
         self._items = items
-
-    @property
-    def href(self):
-        """Gets the href of this BTCloudStorageObjectListInfo.  # noqa: E501
-
-
-        :return: The href of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BTCloudStorageObjectListInfo.
-
-
-        :param href: The href of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._href = href
 
     @property
     def path_to_root(self):

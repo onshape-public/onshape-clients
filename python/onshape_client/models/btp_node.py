@@ -37,8 +37,8 @@ class BTPNode(object):
         'end_source_location': 'int',
         'documentation_type': 'str',
         'short_descriptor': 'str',
-        'changeable_child_field_indices': 'list[int]',
         'space_before': 'BTPSpace',
+        'changeable_child_field_indices': 'list[int]',
         'first_child_field': 'int',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
@@ -59,8 +59,8 @@ class BTPNode(object):
         'end_source_location': 'endSourceLocation',
         'documentation_type': 'documentationType',
         'short_descriptor': 'shortDescriptor',
-        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'space_before': 'spaceBefore',
+        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'first_child_field': 'firstChildField',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
@@ -75,7 +75,7 @@ class BTPNode(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, atomic=None, start_source_location=None, end_source_location=None, documentation_type=None, short_descriptor=None, changeable_child_field_indices=None, space_before=None, first_child_field=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
+    def __init__(self, atomic=None, start_source_location=None, end_source_location=None, documentation_type=None, short_descriptor=None, space_before=None, changeable_child_field_indices=None, first_child_field=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, export_type_name=None, connection_source=None, unknown_class=None):  # noqa: E501
         """BTPNode - a model defined in OpenAPI"""  # noqa: E501
 
         self._atomic = None
@@ -83,8 +83,8 @@ class BTPNode(object):
         self._end_source_location = None
         self._documentation_type = None
         self._short_descriptor = None
-        self._changeable_child_field_indices = None
         self._space_before = None
+        self._changeable_child_field_indices = None
         self._first_child_field = None
         self._space_default = None
         self._space_after = None
@@ -109,10 +109,10 @@ class BTPNode(object):
             self.documentation_type = documentation_type
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
-        if changeable_child_field_indices is not None:
-            self.changeable_child_field_indices = changeable_child_field_indices
         if space_before is not None:
             self.space_before = space_before
+        if changeable_child_field_indices is not None:
+            self.changeable_child_field_indices = changeable_child_field_indices
         if first_child_field is not None:
             self.first_child_field = first_child_field
         if space_default is not None:
@@ -250,27 +250,6 @@ class BTPNode(object):
         self._short_descriptor = short_descriptor
 
     @property
-    def changeable_child_field_indices(self):
-        """Gets the changeable_child_field_indices of this BTPNode.  # noqa: E501
-
-
-        :return: The changeable_child_field_indices of this BTPNode.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._changeable_child_field_indices
-
-    @changeable_child_field_indices.setter
-    def changeable_child_field_indices(self, changeable_child_field_indices):
-        """Sets the changeable_child_field_indices of this BTPNode.
-
-
-        :param changeable_child_field_indices: The changeable_child_field_indices of this BTPNode.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._changeable_child_field_indices = changeable_child_field_indices
-
-    @property
     def space_before(self):
         """Gets the space_before of this BTPNode.  # noqa: E501
 
@@ -290,6 +269,27 @@ class BTPNode(object):
         """
 
         self._space_before = space_before
+
+    @property
+    def changeable_child_field_indices(self):
+        """Gets the changeable_child_field_indices of this BTPNode.  # noqa: E501
+
+
+        :return: The changeable_child_field_indices of this BTPNode.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._changeable_child_field_indices
+
+    @changeable_child_field_indices.setter
+    def changeable_child_field_indices(self, changeable_child_field_indices):
+        """Sets the changeable_child_field_indices of this BTPNode.
+
+
+        :param changeable_child_field_indices: The changeable_child_field_indices of this BTPNode.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
     def first_child_field(self):

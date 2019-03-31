@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identity_type** | **int** |  | [optional] 
 **user** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
+**identity_type** | **int** |  | [optional] 
 **team** | [**BTTeamSummaryInfo**](BTTeamSummaryInfo.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

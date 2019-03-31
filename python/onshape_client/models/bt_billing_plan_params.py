@@ -35,9 +35,9 @@ class BTBillingPlanParams(object):
         'name': 'str',
         'description': 'str',
         'group': 'str',
+        'application_id': 'str',
         'plan_id': 'str',
         'client_id': 'str',
-        'application_id': 'str',
         'plan_type': 'int',
         'trial_period_days': 'int',
         'consumable_quantity': 'int',
@@ -50,9 +50,9 @@ class BTBillingPlanParams(object):
         'name': 'name',
         'description': 'description',
         'group': 'group',
+        'application_id': 'applicationId',
         'plan_id': 'planId',
         'client_id': 'clientId',
-        'application_id': 'applicationId',
         'plan_type': 'planType',
         'trial_period_days': 'trialPeriodDays',
         'consumable_quantity': 'consumableQuantity',
@@ -61,15 +61,15 @@ class BTBillingPlanParams(object):
         'interval': 'interval'
     }
 
-    def __init__(self, name=None, description=None, group=None, plan_id=None, client_id=None, application_id=None, plan_type=None, trial_period_days=None, consumable_quantity=None, amount_cents=None, hidden=None, interval=None):  # noqa: E501
+    def __init__(self, name=None, description=None, group=None, application_id=None, plan_id=None, client_id=None, plan_type=None, trial_period_days=None, consumable_quantity=None, amount_cents=None, hidden=None, interval=None):  # noqa: E501
         """BTBillingPlanParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
         self._group = None
+        self._application_id = None
         self._plan_id = None
         self._client_id = None
-        self._application_id = None
         self._plan_type = None
         self._trial_period_days = None
         self._consumable_quantity = None
@@ -84,12 +84,12 @@ class BTBillingPlanParams(object):
             self.description = description
         if group is not None:
             self.group = group
+        if application_id is not None:
+            self.application_id = application_id
         if plan_id is not None:
             self.plan_id = plan_id
         if client_id is not None:
             self.client_id = client_id
-        if application_id is not None:
-            self.application_id = application_id
         if plan_type is not None:
             self.plan_type = plan_type
         if trial_period_days is not None:
@@ -167,6 +167,27 @@ class BTBillingPlanParams(object):
         self._group = group
 
     @property
+    def application_id(self):
+        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._application_id
+
+    @application_id.setter
+    def application_id(self, application_id):
+        """Sets the application_id of this BTBillingPlanParams.
+
+
+        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._application_id = application_id
+
+    @property
     def plan_id(self):
         """Gets the plan_id of this BTBillingPlanParams.  # noqa: E501
 
@@ -207,27 +228,6 @@ class BTBillingPlanParams(object):
         """
 
         self._client_id = client_id
-
-    @property
-    def application_id(self):
-        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._application_id
-
-    @application_id.setter
-    def application_id(self, application_id):
-        """Sets the application_id of this BTBillingPlanParams.
-
-
-        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._application_id = application_id
 
     @property
     def plan_type(self):

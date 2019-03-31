@@ -32,47 +32,26 @@ class BTAPIKeyParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'company_id': 'str',
-        'scope_names': 'list[str]'
+        'scope_names': 'list[str]',
+        'company_id': 'str'
     }
 
     attribute_map = {
-        'company_id': 'companyId',
-        'scope_names': 'scopeNames'
+        'scope_names': 'scopeNames',
+        'company_id': 'companyId'
     }
 
-    def __init__(self, company_id=None, scope_names=None):  # noqa: E501
+    def __init__(self, scope_names=None, company_id=None):  # noqa: E501
         """BTAPIKeyParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._company_id = None
         self._scope_names = None
+        self._company_id = None
         self.discriminator = None
 
-        if company_id is not None:
-            self.company_id = company_id
         if scope_names is not None:
             self.scope_names = scope_names
-
-    @property
-    def company_id(self):
-        """Gets the company_id of this BTAPIKeyParams.  # noqa: E501
-
-
-        :return: The company_id of this BTAPIKeyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._company_id
-
-    @company_id.setter
-    def company_id(self, company_id):
-        """Sets the company_id of this BTAPIKeyParams.
-
-
-        :param company_id: The company_id of this BTAPIKeyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._company_id = company_id
+        if company_id is not None:
+            self.company_id = company_id
 
     @property
     def scope_names(self):
@@ -94,6 +73,27 @@ class BTAPIKeyParams(object):
         """
 
         self._scope_names = scope_names
+
+    @property
+    def company_id(self):
+        """Gets the company_id of this BTAPIKeyParams.  # noqa: E501
+
+
+        :return: The company_id of this BTAPIKeyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_id
+
+    @company_id.setter
+    def company_id(self, company_id):
+        """Sets the company_id of this BTAPIKeyParams.
+
+
+        :param company_id: The company_id of this BTAPIKeyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._company_id = company_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

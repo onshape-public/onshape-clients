@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **label** | **str** |  | [optional] 
 **action** | **str** |  | [optional] 
 **required_properties** | **list[str]** |  | [optional] 
-**is_admin_override** | **bool** |  | [optional] 
 **ui_hint** | **str** |  | [optional] 
+**is_admin_override** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **type** | **str** |  | [optional] 
 **raw_query** | **str** |  | [optional] 
 **offset** | **int** |  | [optional] 
+**limit** | **int** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **document_filter** | **int** |  | [optional] 
@@ -13,7 +14,6 @@ Name | Type | Description | Notes
 **sort_order** | **str** |  | [optional] 
 **found_in** | **str** |  | [optional] 
 **when** | **str** |  | [optional] 
-**limit** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

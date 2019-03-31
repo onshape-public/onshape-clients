@@ -33,30 +33,30 @@ class BTMetadataSchemaParams(object):
     """
     openapi_types = {
         'owner_id': 'str',
-        'object_type': 'int',
-        'owner_type': 'int'
+        'owner_type': 'int',
+        'object_type': 'int'
     }
 
     attribute_map = {
         'owner_id': 'ownerId',
-        'object_type': 'objectType',
-        'owner_type': 'ownerType'
+        'owner_type': 'ownerType',
+        'object_type': 'objectType'
     }
 
-    def __init__(self, owner_id=None, object_type=None, owner_type=None):  # noqa: E501
+    def __init__(self, owner_id=None, owner_type=None, object_type=None):  # noqa: E501
         """BTMetadataSchemaParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner_id = None
-        self._object_type = None
         self._owner_type = None
+        self._object_type = None
         self.discriminator = None
 
         if owner_id is not None:
             self.owner_id = owner_id
-        if object_type is not None:
-            self.object_type = object_type
         if owner_type is not None:
             self.owner_type = owner_type
+        if object_type is not None:
+            self.object_type = object_type
 
     @property
     def owner_id(self):
@@ -80,27 +80,6 @@ class BTMetadataSchemaParams(object):
         self._owner_id = owner_id
 
     @property
-    def object_type(self):
-        """Gets the object_type of this BTMetadataSchemaParams.  # noqa: E501
-
-
-        :return: The object_type of this BTMetadataSchemaParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._object_type
-
-    @object_type.setter
-    def object_type(self, object_type):
-        """Sets the object_type of this BTMetadataSchemaParams.
-
-
-        :param object_type: The object_type of this BTMetadataSchemaParams.  # noqa: E501
-        :type: int
-        """
-
-        self._object_type = object_type
-
-    @property
     def owner_type(self):
         """Gets the owner_type of this BTMetadataSchemaParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTMetadataSchemaParams(object):
         """
 
         self._owner_type = owner_type
+
+    @property
+    def object_type(self):
+        """Gets the object_type of this BTMetadataSchemaParams.  # noqa: E501
+
+
+        :return: The object_type of this BTMetadataSchemaParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._object_type
+
+    @object_type.setter
+    def object_type(self, object_type):
+        """Sets the object_type of this BTMetadataSchemaParams.
+
+
+        :param object_type: The object_type of this BTMetadataSchemaParams.  # noqa: E501
+        :type: int
+        """
+
+        self._object_type = object_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

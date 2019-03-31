@@ -32,8 +32,8 @@ class BTIdentityInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identity_type': 'int',
         'user': 'BTUserSummaryInfo',
+        'identity_type': 'int',
         'team': 'BTTeamSummaryInfo',
         'name': 'str',
         'id': 'str',
@@ -42,8 +42,8 @@ class BTIdentityInfo(object):
     }
 
     attribute_map = {
-        'identity_type': 'identityType',
         'user': 'user',
+        'identity_type': 'identityType',
         'team': 'team',
         'name': 'name',
         'id': 'id',
@@ -51,11 +51,11 @@ class BTIdentityInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, identity_type=None, user=None, team=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, user=None, identity_type=None, team=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTIdentityInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._identity_type = None
         self._user = None
+        self._identity_type = None
         self._team = None
         self._name = None
         self._id = None
@@ -63,10 +63,10 @@ class BTIdentityInfo(object):
         self._view_ref = None
         self.discriminator = None
 
-        if identity_type is not None:
-            self.identity_type = identity_type
         if user is not None:
             self.user = user
+        if identity_type is not None:
+            self.identity_type = identity_type
         if team is not None:
             self.team = team
         if name is not None:
@@ -77,27 +77,6 @@ class BTIdentityInfo(object):
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
-
-    @property
-    def identity_type(self):
-        """Gets the identity_type of this BTIdentityInfo.  # noqa: E501
-
-
-        :return: The identity_type of this BTIdentityInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._identity_type
-
-    @identity_type.setter
-    def identity_type(self, identity_type):
-        """Sets the identity_type of this BTIdentityInfo.
-
-
-        :param identity_type: The identity_type of this BTIdentityInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._identity_type = identity_type
 
     @property
     def user(self):
@@ -119,6 +98,27 @@ class BTIdentityInfo(object):
         """
 
         self._user = user
+
+    @property
+    def identity_type(self):
+        """Gets the identity_type of this BTIdentityInfo.  # noqa: E501
+
+
+        :return: The identity_type of this BTIdentityInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._identity_type
+
+    @identity_type.setter
+    def identity_type(self, identity_type):
+        """Sets the identity_type of this BTIdentityInfo.
+
+
+        :param identity_type: The identity_type of this BTIdentityInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._identity_type = identity_type
 
     @property
     def team(self):

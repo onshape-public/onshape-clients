@@ -32,47 +32,26 @@ class Entry(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'role': 'BTRbacRoleInfo',
-        'permission_set': 'BTPermissionSet'
+        'permission_set': 'BTPermissionSet',
+        'role': 'BTRbacRoleInfo'
     }
 
     attribute_map = {
-        'role': 'role',
-        'permission_set': 'permissionSet'
+        'permission_set': 'permissionSet',
+        'role': 'role'
     }
 
-    def __init__(self, role=None, permission_set=None):  # noqa: E501
+    def __init__(self, permission_set=None, role=None):  # noqa: E501
         """Entry - a model defined in OpenAPI"""  # noqa: E501
 
-        self._role = None
         self._permission_set = None
+        self._role = None
         self.discriminator = None
 
-        if role is not None:
-            self.role = role
         if permission_set is not None:
             self.permission_set = permission_set
-
-    @property
-    def role(self):
-        """Gets the role of this Entry.  # noqa: E501
-
-
-        :return: The role of this Entry.  # noqa: E501
-        :rtype: BTRbacRoleInfo
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this Entry.
-
-
-        :param role: The role of this Entry.  # noqa: E501
-        :type: BTRbacRoleInfo
-        """
-
-        self._role = role
+        if role is not None:
+            self.role = role
 
     @property
     def permission_set(self):
@@ -94,6 +73,27 @@ class Entry(object):
         """
 
         self._permission_set = permission_set
+
+    @property
+    def role(self):
+        """Gets the role of this Entry.  # noqa: E501
+
+
+        :return: The role of this Entry.  # noqa: E501
+        :rtype: BTRbacRoleInfo
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this Entry.
+
+
+        :param role: The role of this Entry.  # noqa: E501
+        :type: BTRbacRoleInfo
+        """
+
+        self._role = role
 
     def to_dict(self):
         """Returns the model properties as a dict"""

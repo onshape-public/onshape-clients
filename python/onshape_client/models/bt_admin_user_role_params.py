@@ -32,47 +32,26 @@ class BTAdminUserRoleParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_id': 'str',
-        'role_ids': 'list[str]'
+        'role_ids': 'list[str]',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'user_id': 'userId',
-        'role_ids': 'roleIds'
+        'role_ids': 'roleIds',
+        'user_id': 'userId'
     }
 
-    def __init__(self, user_id=None, role_ids=None):  # noqa: E501
+    def __init__(self, role_ids=None, user_id=None):  # noqa: E501
         """BTAdminUserRoleParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_id = None
         self._role_ids = None
+        self._user_id = None
         self.discriminator = None
 
-        if user_id is not None:
-            self.user_id = user_id
         if role_ids is not None:
             self.role_ids = role_ids
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTAdminUserRoleParams.  # noqa: E501
-
-
-        :return: The user_id of this BTAdminUserRoleParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTAdminUserRoleParams.
-
-
-        :param user_id: The user_id of this BTAdminUserRoleParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def role_ids(self):
@@ -94,6 +73,27 @@ class BTAdminUserRoleParams(object):
         """
 
         self._role_ids = role_ids
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTAdminUserRoleParams.  # noqa: E501
+
+
+        :return: The user_id of this BTAdminUserRoleParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTAdminUserRoleParams.
+
+
+        :param user_id: The user_id of this BTAdminUserRoleParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
