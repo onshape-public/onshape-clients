@@ -29,6 +29,7 @@ onshape_client/apikey_headers.py
 onshape_client/onshape_url.py
 onshape_client/client.py
 onshape_client/utility.py
+.travis.yml
 README.md
 test/*
 example_programs/*

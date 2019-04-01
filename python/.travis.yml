@@ -1,14 +1,49 @@
-# ref: https://docs.travis-ci.com/user/languages/python
+# Heavily aided by: https://gist.github.com/brenns10/f48e1021e8befd2221a2
 language: python
 python:
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  #- "3.5-dev" # 3.5 development branch
-  #- "nightly" # points to the latest development branch e.g. 3.6-dev
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
-script: nosetests
+  - 3.5
+before_install:
+ - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev # required to avoid SSL errors
+install:
+  - pip install pipenv
+  - pipenv install --dev
+  - gem install html-proofer
+script:
+  - pipenv run make html
+  - pipenv run make doctest
+  # Require a link check to work to pass a PR.
+  - if $TRAVIS_PULL_REQUEST; then htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html; fi;
+after_script:
+  - htmlproofer docs/ --allow_hash_href --file_ignore "_build/html/search.html"
+before_deploy:
+  - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
+  - if [ -n "$PDF" ]; then ./build_pdf.sh; fi; # If the PDF environment variable is passed in, build PDF to be pushed to test branch.
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    local-dir: _build/html
+    on:
+      tags: true
+      branch: master
+  - provider: pages # Deploy to the test branch
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    local-dir: _build
+    target-branch: test
+    on:
+      all_branches: true
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file:
+      - _build/AguaClaraTextbook.pdf
+      - _build/zipped_latex.zip
+    skip_cleanup: true
+    on:
+      tags: true
