@@ -11,7 +11,7 @@ here, where did, wvm, wvmid and eid are specified:
 
 Link version: `<https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/aaa25d18038e06f0b2964e2d/e/69c9eedda86512966b20bc90/>`_
 
-To display the configured link, we pass in the values we want to configure:
+To display the configured link, we pass in the values we want to configure, using pint to represent quantities:
 
 >>> new_config_map = {'size': 10 * u.inch, 'edge_configuration': 'chamfered', 'show_cube': False}
 
