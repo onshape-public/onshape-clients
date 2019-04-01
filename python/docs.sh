@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-
+main () {
+	make_and_test_documentation;
+	deploy_to_gh_pages;
+}
 make_and_test_documentation (){
 	pipenv run make doctest;
 	pipenv run make html;
