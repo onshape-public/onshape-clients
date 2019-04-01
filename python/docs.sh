@@ -12,7 +12,7 @@ make_and_test_documentation (){
 # To be run after tests pass and build generated
 deploy_to_gh_pages(){
 	git checkout gh-pages;
-	mv $ONSHAPE_CLIENTS_PATH/python/docs_rst/html/* /python/;
+	mv $ONSHAPE_CLIENTS_PATH/python/docs_rst/html/* $ONSHAPE_CLIENTS_PATH/python_html;
 	git add python;
 	git commit -m "Bringing up to date with $ONSHAPE_CLIENTS_VERSION";
 	git push;
