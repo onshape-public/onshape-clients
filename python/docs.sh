@@ -16,6 +16,7 @@ deploy_to_gh_pages(){
 	git add python;
 	git commit -m "Bringing up to date with $ONSHAPE_CLIENTS_VERSION";
 	git push;
+	git checkout master;
 }
 
 main;
