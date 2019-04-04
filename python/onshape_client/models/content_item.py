@@ -34,70 +34,64 @@ class ContentItem(object):
     openapi_types = {
         'link': 'str',
         'position': 'str',
-        'title': 'str',
-        'content_id': 'str',
-        'item_title': 'str',
-        'template': 'str',
-        'thumbnail': 'str',
+        'width': 'int',
+        'height': 'int',
         'player': 'str',
         'pause_points': 'list[float]',
         'anchor': 'str',
         'vertical_offset': 'int',
         'horizontal_offset': 'int',
-        'width': 'int',
-        'height': 'int'
+        'title': 'str',
+        'content_id': 'str',
+        'item_title': 'str',
+        'template': 'str',
+        'thumbnail': 'str'
     }
 
     attribute_map = {
         'link': 'link',
         'position': 'position',
-        'title': 'title',
-        'content_id': 'contentId',
-        'item_title': 'itemTitle',
-        'template': 'template',
-        'thumbnail': 'thumbnail',
+        'width': 'width',
+        'height': 'height',
         'player': 'player',
         'pause_points': 'pausePoints',
         'anchor': 'anchor',
         'vertical_offset': 'verticalOffset',
         'horizontal_offset': 'horizontalOffset',
-        'width': 'width',
-        'height': 'height'
+        'title': 'title',
+        'content_id': 'contentId',
+        'item_title': 'itemTitle',
+        'template': 'template',
+        'thumbnail': 'thumbnail'
     }
 
-    def __init__(self, link=None, position=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, width=None, height=None):  # noqa: E501
+    def __init__(self, link=None, position=None, width=None, height=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None):  # noqa: E501
         """ContentItem - a model defined in OpenAPI"""  # noqa: E501
 
         self._link = None
         self._position = None
-        self._title = None
-        self._content_id = None
-        self._item_title = None
-        self._template = None
-        self._thumbnail = None
+        self._width = None
+        self._height = None
         self._player = None
         self._pause_points = None
         self._anchor = None
         self._vertical_offset = None
         self._horizontal_offset = None
-        self._width = None
-        self._height = None
+        self._title = None
+        self._content_id = None
+        self._item_title = None
+        self._template = None
+        self._thumbnail = None
         self.discriminator = None
 
         if link is not None:
             self.link = link
         if position is not None:
             self.position = position
-        if title is not None:
-            self.title = title
-        if content_id is not None:
-            self.content_id = content_id
-        if item_title is not None:
-            self.item_title = item_title
-        if template is not None:
-            self.template = template
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
         if player is not None:
             self.player = player
         if pause_points is not None:
@@ -108,10 +102,16 @@ class ContentItem(object):
             self.vertical_offset = vertical_offset
         if horizontal_offset is not None:
             self.horizontal_offset = horizontal_offset
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
+        if title is not None:
+            self.title = title
+        if content_id is not None:
+            self.content_id = content_id
+        if item_title is not None:
+            self.item_title = item_title
+        if template is not None:
+            self.template = template
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
 
     @property
     def link(self):
@@ -156,109 +156,46 @@ class ContentItem(object):
         self._position = position
 
     @property
-    def title(self):
-        """Gets the title of this ContentItem.  # noqa: E501
+    def width(self):
+        """Gets the width of this ContentItem.  # noqa: E501
 
 
-        :return: The title of this ContentItem.  # noqa: E501
-        :rtype: str
+        :return: The width of this ContentItem.  # noqa: E501
+        :rtype: int
         """
-        return self._title
+        return self._width
 
-    @title.setter
-    def title(self, title):
-        """Sets the title of this ContentItem.
+    @width.setter
+    def width(self, width):
+        """Sets the width of this ContentItem.
 
 
-        :param title: The title of this ContentItem.  # noqa: E501
-        :type: str
+        :param width: The width of this ContentItem.  # noqa: E501
+        :type: int
         """
 
-        self._title = title
+        self._width = width
 
     @property
-    def content_id(self):
-        """Gets the content_id of this ContentItem.  # noqa: E501
+    def height(self):
+        """Gets the height of this ContentItem.  # noqa: E501
 
 
-        :return: The content_id of this ContentItem.  # noqa: E501
-        :rtype: str
+        :return: The height of this ContentItem.  # noqa: E501
+        :rtype: int
         """
-        return self._content_id
+        return self._height
 
-    @content_id.setter
-    def content_id(self, content_id):
-        """Sets the content_id of this ContentItem.
-
-
-        :param content_id: The content_id of this ContentItem.  # noqa: E501
-        :type: str
-        """
-
-        self._content_id = content_id
-
-    @property
-    def item_title(self):
-        """Gets the item_title of this ContentItem.  # noqa: E501
+    @height.setter
+    def height(self, height):
+        """Sets the height of this ContentItem.
 
 
-        :return: The item_title of this ContentItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._item_title
-
-    @item_title.setter
-    def item_title(self, item_title):
-        """Sets the item_title of this ContentItem.
-
-
-        :param item_title: The item_title of this ContentItem.  # noqa: E501
-        :type: str
+        :param height: The height of this ContentItem.  # noqa: E501
+        :type: int
         """
 
-        self._item_title = item_title
-
-    @property
-    def template(self):
-        """Gets the template of this ContentItem.  # noqa: E501
-
-
-        :return: The template of this ContentItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._template
-
-    @template.setter
-    def template(self, template):
-        """Sets the template of this ContentItem.
-
-
-        :param template: The template of this ContentItem.  # noqa: E501
-        :type: str
-        """
-
-        self._template = template
-
-    @property
-    def thumbnail(self):
-        """Gets the thumbnail of this ContentItem.  # noqa: E501
-
-
-        :return: The thumbnail of this ContentItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._thumbnail
-
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this ContentItem.
-
-
-        :param thumbnail: The thumbnail of this ContentItem.  # noqa: E501
-        :type: str
-        """
-
-        self._thumbnail = thumbnail
+        self._height = height
 
     @property
     def player(self):
@@ -366,46 +303,109 @@ class ContentItem(object):
         self._horizontal_offset = horizontal_offset
 
     @property
-    def width(self):
-        """Gets the width of this ContentItem.  # noqa: E501
+    def title(self):
+        """Gets the title of this ContentItem.  # noqa: E501
 
 
-        :return: The width of this ContentItem.  # noqa: E501
-        :rtype: int
+        :return: The title of this ContentItem.  # noqa: E501
+        :rtype: str
         """
-        return self._width
+        return self._title
 
-    @width.setter
-    def width(self, width):
-        """Sets the width of this ContentItem.
+    @title.setter
+    def title(self, title):
+        """Sets the title of this ContentItem.
 
 
-        :param width: The width of this ContentItem.  # noqa: E501
-        :type: int
+        :param title: The title of this ContentItem.  # noqa: E501
+        :type: str
         """
 
-        self._width = width
+        self._title = title
 
     @property
-    def height(self):
-        """Gets the height of this ContentItem.  # noqa: E501
+    def content_id(self):
+        """Gets the content_id of this ContentItem.  # noqa: E501
 
 
-        :return: The height of this ContentItem.  # noqa: E501
-        :rtype: int
+        :return: The content_id of this ContentItem.  # noqa: E501
+        :rtype: str
         """
-        return self._height
+        return self._content_id
 
-    @height.setter
-    def height(self, height):
-        """Sets the height of this ContentItem.
+    @content_id.setter
+    def content_id(self, content_id):
+        """Sets the content_id of this ContentItem.
 
 
-        :param height: The height of this ContentItem.  # noqa: E501
-        :type: int
+        :param content_id: The content_id of this ContentItem.  # noqa: E501
+        :type: str
         """
 
-        self._height = height
+        self._content_id = content_id
+
+    @property
+    def item_title(self):
+        """Gets the item_title of this ContentItem.  # noqa: E501
+
+
+        :return: The item_title of this ContentItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._item_title
+
+    @item_title.setter
+    def item_title(self, item_title):
+        """Sets the item_title of this ContentItem.
+
+
+        :param item_title: The item_title of this ContentItem.  # noqa: E501
+        :type: str
+        """
+
+        self._item_title = item_title
+
+    @property
+    def template(self):
+        """Gets the template of this ContentItem.  # noqa: E501
+
+
+        :return: The template of this ContentItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """Sets the template of this ContentItem.
+
+
+        :param template: The template of this ContentItem.  # noqa: E501
+        :type: str
+        """
+
+        self._template = template
+
+    @property
+    def thumbnail(self):
+        """Gets the thumbnail of this ContentItem.  # noqa: E501
+
+
+        :return: The thumbnail of this ContentItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this ContentItem.
+
+
+        :param thumbnail: The thumbnail of this ContentItem.  # noqa: E501
+        :type: str
+        """
+
+        self._thumbnail = thumbnail
 
     def to_dict(self):
         """Returns the model properties as a dict"""

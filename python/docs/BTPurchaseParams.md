@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **str** |  | [optional] 
-**user_id** | **str** |  | [optional] 
-**light_seats** | **int** |  | [optional] 
-**allow_deprecated_plan** | **bool** |  | [optional] 
 **email** | **str** |  | [optional] 
+**password** | **str** |  | [optional] 
+**trial_period_days** | **int** |  | [optional] 
+**user_id** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
 **seats** | **int** |  | [optional] 
 **domain_prefix** | **str** |  | [optional] 
-**trial_period_days** | **int** |  | [optional] 
+**light_seats** | **int** |  | [optional] 
+**allow_deprecated_plan** | **bool** |  | [optional] 
 **payment_type** | **int** |  | [optional] 
 **reseller_name** | **str** |  | [optional] 
 

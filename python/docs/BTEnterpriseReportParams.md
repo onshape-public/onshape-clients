@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
-**owner_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**owner_id** | **str** |  | [optional] 
 **report_id** | **str** |  | [optional] 
 **report_name** | **str** |  | [optional] 
 **group_name** | **str** |  | [optional] 

@@ -34,18 +34,18 @@ class BTBillingPlanInfo(object):
     openapi_types = {
         'discount_info': 'BTDiscountInfo',
         'group': 'str',
-        'client_id': 'str',
         'trial_period_days': 'int',
+        'client_id': 'str',
         'hidden': 'bool',
         'onshape_plan': 'bool',
         'description': 'str',
-        'application_id': 'str',
-        'interval': 'str',
-        'company_plan': 'bool',
         'deprecated': 'bool',
         'plan_type': 'int',
         'consumable_quantity': 'int',
         'amount_cents': 'int',
+        'interval': 'str',
+        'application_id': 'str',
+        'company_plan': 'bool',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -55,41 +55,41 @@ class BTBillingPlanInfo(object):
     attribute_map = {
         'discount_info': 'discountInfo',
         'group': 'group',
-        'client_id': 'clientId',
         'trial_period_days': 'trialPeriodDays',
+        'client_id': 'clientId',
         'hidden': 'hidden',
         'onshape_plan': 'onshapePlan',
         'description': 'description',
-        'application_id': 'applicationId',
-        'interval': 'interval',
-        'company_plan': 'companyPlan',
         'deprecated': 'deprecated',
         'plan_type': 'planType',
         'consumable_quantity': 'consumableQuantity',
         'amount_cents': 'amountCents',
+        'interval': 'interval',
+        'application_id': 'applicationId',
+        'company_plan': 'companyPlan',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, discount_info=None, group=None, client_id=None, trial_period_days=None, hidden=None, onshape_plan=None, description=None, application_id=None, interval=None, company_plan=None, deprecated=None, plan_type=None, consumable_quantity=None, amount_cents=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, discount_info=None, group=None, trial_period_days=None, client_id=None, hidden=None, onshape_plan=None, description=None, deprecated=None, plan_type=None, consumable_quantity=None, amount_cents=None, interval=None, application_id=None, company_plan=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBillingPlanInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._discount_info = None
         self._group = None
-        self._client_id = None
         self._trial_period_days = None
+        self._client_id = None
         self._hidden = None
         self._onshape_plan = None
         self._description = None
-        self._application_id = None
-        self._interval = None
-        self._company_plan = None
         self._deprecated = None
         self._plan_type = None
         self._consumable_quantity = None
         self._amount_cents = None
+        self._interval = None
+        self._application_id = None
+        self._company_plan = None
         self._name = None
         self._id = None
         self._href = None
@@ -100,22 +100,16 @@ class BTBillingPlanInfo(object):
             self.discount_info = discount_info
         if group is not None:
             self.group = group
-        if client_id is not None:
-            self.client_id = client_id
         if trial_period_days is not None:
             self.trial_period_days = trial_period_days
+        if client_id is not None:
+            self.client_id = client_id
         if hidden is not None:
             self.hidden = hidden
         if onshape_plan is not None:
             self.onshape_plan = onshape_plan
         if description is not None:
             self.description = description
-        if application_id is not None:
-            self.application_id = application_id
-        if interval is not None:
-            self.interval = interval
-        if company_plan is not None:
-            self.company_plan = company_plan
         if deprecated is not None:
             self.deprecated = deprecated
         if plan_type is not None:
@@ -124,6 +118,12 @@ class BTBillingPlanInfo(object):
             self.consumable_quantity = consumable_quantity
         if amount_cents is not None:
             self.amount_cents = amount_cents
+        if interval is not None:
+            self.interval = interval
+        if application_id is not None:
+            self.application_id = application_id
+        if company_plan is not None:
+            self.company_plan = company_plan
         if name is not None:
             self.name = name
         if id is not None:
@@ -176,27 +176,6 @@ class BTBillingPlanInfo(object):
         self._group = group
 
     @property
-    def client_id(self):
-        """Gets the client_id of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The client_id of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._client_id
-
-    @client_id.setter
-    def client_id(self, client_id):
-        """Sets the client_id of this BTBillingPlanInfo.
-
-
-        :param client_id: The client_id of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._client_id = client_id
-
-    @property
     def trial_period_days(self):
         """Gets the trial_period_days of this BTBillingPlanInfo.  # noqa: E501
 
@@ -216,6 +195,27 @@ class BTBillingPlanInfo(object):
         """
 
         self._trial_period_days = trial_period_days
+
+    @property
+    def client_id(self):
+        """Gets the client_id of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The client_id of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_id
+
+    @client_id.setter
+    def client_id(self, client_id):
+        """Sets the client_id of this BTBillingPlanInfo.
+
+
+        :param client_id: The client_id of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._client_id = client_id
 
     @property
     def hidden(self):
@@ -279,69 +279,6 @@ class BTBillingPlanInfo(object):
         """
 
         self._description = description
-
-    @property
-    def application_id(self):
-        """Gets the application_id of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The application_id of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._application_id
-
-    @application_id.setter
-    def application_id(self, application_id):
-        """Sets the application_id of this BTBillingPlanInfo.
-
-
-        :param application_id: The application_id of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._application_id = application_id
-
-    @property
-    def interval(self):
-        """Gets the interval of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The interval of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._interval
-
-    @interval.setter
-    def interval(self, interval):
-        """Sets the interval of this BTBillingPlanInfo.
-
-
-        :param interval: The interval of this BTBillingPlanInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._interval = interval
-
-    @property
-    def company_plan(self):
-        """Gets the company_plan of this BTBillingPlanInfo.  # noqa: E501
-
-
-        :return: The company_plan of this BTBillingPlanInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._company_plan
-
-    @company_plan.setter
-    def company_plan(self, company_plan):
-        """Sets the company_plan of this BTBillingPlanInfo.
-
-
-        :param company_plan: The company_plan of this BTBillingPlanInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._company_plan = company_plan
 
     @property
     def deprecated(self):
@@ -426,6 +363,69 @@ class BTBillingPlanInfo(object):
         """
 
         self._amount_cents = amount_cents
+
+    @property
+    def interval(self):
+        """Gets the interval of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The interval of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._interval
+
+    @interval.setter
+    def interval(self, interval):
+        """Sets the interval of this BTBillingPlanInfo.
+
+
+        :param interval: The interval of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._interval = interval
+
+    @property
+    def application_id(self):
+        """Gets the application_id of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The application_id of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._application_id
+
+    @application_id.setter
+    def application_id(self, application_id):
+        """Sets the application_id of this BTBillingPlanInfo.
+
+
+        :param application_id: The application_id of this BTBillingPlanInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._application_id = application_id
+
+    @property
+    def company_plan(self):
+        """Gets the company_plan of this BTBillingPlanInfo.  # noqa: E501
+
+
+        :return: The company_plan of this BTBillingPlanInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._company_plan
+
+    @company_plan.setter
+    def company_plan(self, company_plan):
+        """Sets the company_plan of this BTBillingPlanInfo.
+
+
+        :param company_plan: The company_plan of this BTBillingPlanInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._company_plan = company_plan
 
     @property
     def name(self):

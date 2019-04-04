@@ -32,62 +32,41 @@ class BTReleasePackageWorkflowChangeParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'version_id': 'str',
         'workspace_id': 'str',
+        'version_id': 'str',
         'release_package_id': 'str',
         'workflow_state': 'str',
         'is_obsoletion': 'bool'
     }
 
     attribute_map = {
-        'version_id': 'versionId',
         'workspace_id': 'workspaceId',
+        'version_id': 'versionId',
         'release_package_id': 'releasePackageId',
         'workflow_state': 'workflowState',
         'is_obsoletion': 'isObsoletion'
     }
 
-    def __init__(self, version_id=None, workspace_id=None, release_package_id=None, workflow_state=None, is_obsoletion=None):  # noqa: E501
+    def __init__(self, workspace_id=None, version_id=None, release_package_id=None, workflow_state=None, is_obsoletion=None):  # noqa: E501
         """BTReleasePackageWorkflowChangeParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._version_id = None
         self._workspace_id = None
+        self._version_id = None
         self._release_package_id = None
         self._workflow_state = None
         self._is_obsoletion = None
         self.discriminator = None
 
-        if version_id is not None:
-            self.version_id = version_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
+        if version_id is not None:
+            self.version_id = version_id
         if release_package_id is not None:
             self.release_package_id = release_package_id
         if workflow_state is not None:
             self.workflow_state = workflow_state
         if is_obsoletion is not None:
             self.is_obsoletion = is_obsoletion
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
-
-
-        :return: The version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTReleasePackageWorkflowChangeParams.
-
-
-        :param version_id: The version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
 
     @property
     def workspace_id(self):
@@ -109,6 +88,27 @@ class BTReleasePackageWorkflowChangeParams(object):
         """
 
         self._workspace_id = workspace_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
+
+
+        :return: The version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTReleasePackageWorkflowChangeParams.
+
+
+        :param version_id: The version_id of this BTReleasePackageWorkflowChangeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
 
     @property
     def release_package_id(self):

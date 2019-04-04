@@ -34,24 +34,24 @@ class BTElementParams(object):
     openapi_types = {
         'location': 'BTElementLocationParams',
         'format': 'str',
-        'source_document_id': 'str',
-        'source_workspace_id': 'str',
-        'notify_user': 'bool',
-        'document_id': 'str',
+        'filename': 'str',
         'media_type': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
+        'document_id': 'str',
+        'is_initial_upload': 'bool',
+        'source_document_id': 'str',
+        'source_workspace_id': 'str',
+        'notify_user': 'bool',
         'translate_stored_file': 'bool',
         'create_drawing_if_possible': 'bool',
-        'filename': 'str',
-        'is_initial_upload': 'bool',
         'unit': 'str',
         'split_assemblies_into_multiple_documents': 'bool',
         'flatten_assemblies': 'bool',
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
-        'parent_id': 'str',
         'project_id': 'str',
+        'parent_id': 'str',
         'foreign_id': 'str',
         'upload_id': 'str',
         'original_foreign_id': 'str',
@@ -64,24 +64,24 @@ class BTElementParams(object):
     attribute_map = {
         'location': 'location',
         'format': 'format',
-        'source_document_id': 'sourceDocumentId',
-        'source_workspace_id': 'sourceWorkspaceId',
-        'notify_user': 'notifyUser',
-        'document_id': 'documentId',
+        'filename': 'filename',
         'media_type': 'mediaType',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
+        'document_id': 'documentId',
+        'is_initial_upload': 'isInitialUpload',
+        'source_document_id': 'sourceDocumentId',
+        'source_workspace_id': 'sourceWorkspaceId',
+        'notify_user': 'notifyUser',
         'translate_stored_file': 'translateStoredFile',
         'create_drawing_if_possible': 'createDrawingIfPossible',
-        'filename': 'filename',
-        'is_initial_upload': 'isInitialUpload',
         'unit': 'unit',
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',
         'flatten_assemblies': 'flattenAssemblies',
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
-        'parent_id': 'parentId',
         'project_id': 'projectId',
+        'parent_id': 'parentId',
         'foreign_id': 'foreignId',
         'upload_id': 'uploadId',
         'original_foreign_id': 'originalForeignId',
@@ -91,29 +91,29 @@ class BTElementParams(object):
         'specify_units': 'specifyUnits'
     }
 
-    def __init__(self, location=None, format=None, source_document_id=None, source_workspace_id=None, notify_user=None, document_id=None, media_type=None, workspace_id=None, element_id=None, translate_stored_file=None, create_drawing_if_possible=None, filename=None, is_initial_upload=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, parent_id=None, project_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
+    def __init__(self, location=None, format=None, filename=None, media_type=None, workspace_id=None, element_id=None, document_id=None, is_initial_upload=None, source_document_id=None, source_workspace_id=None, notify_user=None, translate_stored_file=None, create_drawing_if_possible=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
         """BTElementParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._location = None
         self._format = None
-        self._source_document_id = None
-        self._source_workspace_id = None
-        self._notify_user = None
-        self._document_id = None
+        self._filename = None
         self._media_type = None
         self._workspace_id = None
         self._element_id = None
+        self._document_id = None
+        self._is_initial_upload = None
+        self._source_document_id = None
+        self._source_workspace_id = None
+        self._notify_user = None
         self._translate_stored_file = None
         self._create_drawing_if_possible = None
-        self._filename = None
-        self._is_initial_upload = None
         self._unit = None
         self._split_assemblies_into_multiple_documents = None
         self._flatten_assemblies = None
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
-        self._parent_id = None
         self._project_id = None
+        self._parent_id = None
         self._foreign_id = None
         self._upload_id = None
         self._original_foreign_id = None
@@ -127,28 +127,28 @@ class BTElementParams(object):
             self.location = location
         if format is not None:
             self.format = format
-        if source_document_id is not None:
-            self.source_document_id = source_document_id
-        if source_workspace_id is not None:
-            self.source_workspace_id = source_workspace_id
-        if notify_user is not None:
-            self.notify_user = notify_user
-        if document_id is not None:
-            self.document_id = document_id
+        if filename is not None:
+            self.filename = filename
         if media_type is not None:
             self.media_type = media_type
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if is_initial_upload is not None:
+            self.is_initial_upload = is_initial_upload
+        if source_document_id is not None:
+            self.source_document_id = source_document_id
+        if source_workspace_id is not None:
+            self.source_workspace_id = source_workspace_id
+        if notify_user is not None:
+            self.notify_user = notify_user
         if translate_stored_file is not None:
             self.translate_stored_file = translate_stored_file
         if create_drawing_if_possible is not None:
             self.create_drawing_if_possible = create_drawing_if_possible
-        if filename is not None:
-            self.filename = filename
-        if is_initial_upload is not None:
-            self.is_initial_upload = is_initial_upload
         if unit is not None:
             self.unit = unit
         if split_assemblies_into_multiple_documents is not None:
@@ -159,10 +159,10 @@ class BTElementParams(object):
             self.gety_axis_is_up = gety_axis_is_up
         if allow_faulty_parts is not None:
             self.allow_faulty_parts = allow_faulty_parts
-        if parent_id is not None:
-            self.parent_id = parent_id
         if project_id is not None:
             self.project_id = project_id
+        if parent_id is not None:
+            self.parent_id = parent_id
         if foreign_id is not None:
             self.foreign_id = foreign_id
         if upload_id is not None:
@@ -227,88 +227,25 @@ class BTElementParams(object):
         self._format = format
 
     @property
-    def source_document_id(self):
-        """Gets the source_document_id of this BTElementParams.  # noqa: E501
+    def filename(self):
+        """Gets the filename of this BTElementParams.  # noqa: E501
 
 
-        :return: The source_document_id of this BTElementParams.  # noqa: E501
+        :return: The filename of this BTElementParams.  # noqa: E501
         :rtype: str
         """
-        return self._source_document_id
+        return self._filename
 
-    @source_document_id.setter
-    def source_document_id(self, source_document_id):
-        """Sets the source_document_id of this BTElementParams.
+    @filename.setter
+    def filename(self, filename):
+        """Sets the filename of this BTElementParams.
 
 
-        :param source_document_id: The source_document_id of this BTElementParams.  # noqa: E501
+        :param filename: The filename of this BTElementParams.  # noqa: E501
         :type: str
         """
 
-        self._source_document_id = source_document_id
-
-    @property
-    def source_workspace_id(self):
-        """Gets the source_workspace_id of this BTElementParams.  # noqa: E501
-
-
-        :return: The source_workspace_id of this BTElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_workspace_id
-
-    @source_workspace_id.setter
-    def source_workspace_id(self, source_workspace_id):
-        """Sets the source_workspace_id of this BTElementParams.
-
-
-        :param source_workspace_id: The source_workspace_id of this BTElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._source_workspace_id = source_workspace_id
-
-    @property
-    def notify_user(self):
-        """Gets the notify_user of this BTElementParams.  # noqa: E501
-
-
-        :return: The notify_user of this BTElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._notify_user
-
-    @notify_user.setter
-    def notify_user(self, notify_user):
-        """Sets the notify_user of this BTElementParams.
-
-
-        :param notify_user: The notify_user of this BTElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._notify_user = notify_user
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTElementParams.  # noqa: E501
-
-
-        :return: The document_id of this BTElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTElementParams.
-
-
-        :param document_id: The document_id of this BTElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._filename = filename
 
     @property
     def media_type(self):
@@ -374,6 +311,111 @@ class BTElementParams(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTElementParams.  # noqa: E501
+
+
+        :return: The document_id of this BTElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTElementParams.
+
+
+        :param document_id: The document_id of this BTElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def is_initial_upload(self):
+        """Gets the is_initial_upload of this BTElementParams.  # noqa: E501
+
+
+        :return: The is_initial_upload of this BTElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_initial_upload
+
+    @is_initial_upload.setter
+    def is_initial_upload(self, is_initial_upload):
+        """Sets the is_initial_upload of this BTElementParams.
+
+
+        :param is_initial_upload: The is_initial_upload of this BTElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_initial_upload = is_initial_upload
+
+    @property
+    def source_document_id(self):
+        """Gets the source_document_id of this BTElementParams.  # noqa: E501
+
+
+        :return: The source_document_id of this BTElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_document_id
+
+    @source_document_id.setter
+    def source_document_id(self, source_document_id):
+        """Sets the source_document_id of this BTElementParams.
+
+
+        :param source_document_id: The source_document_id of this BTElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._source_document_id = source_document_id
+
+    @property
+    def source_workspace_id(self):
+        """Gets the source_workspace_id of this BTElementParams.  # noqa: E501
+
+
+        :return: The source_workspace_id of this BTElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_workspace_id
+
+    @source_workspace_id.setter
+    def source_workspace_id(self, source_workspace_id):
+        """Sets the source_workspace_id of this BTElementParams.
+
+
+        :param source_workspace_id: The source_workspace_id of this BTElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._source_workspace_id = source_workspace_id
+
+    @property
+    def notify_user(self):
+        """Gets the notify_user of this BTElementParams.  # noqa: E501
+
+
+        :return: The notify_user of this BTElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._notify_user
+
+    @notify_user.setter
+    def notify_user(self, notify_user):
+        """Sets the notify_user of this BTElementParams.
+
+
+        :param notify_user: The notify_user of this BTElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._notify_user = notify_user
+
+    @property
     def translate_stored_file(self):
         """Gets the translate_stored_file of this BTElementParams.  # noqa: E501
 
@@ -414,48 +456,6 @@ class BTElementParams(object):
         """
 
         self._create_drawing_if_possible = create_drawing_if_possible
-
-    @property
-    def filename(self):
-        """Gets the filename of this BTElementParams.  # noqa: E501
-
-
-        :return: The filename of this BTElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._filename
-
-    @filename.setter
-    def filename(self, filename):
-        """Sets the filename of this BTElementParams.
-
-
-        :param filename: The filename of this BTElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._filename = filename
-
-    @property
-    def is_initial_upload(self):
-        """Gets the is_initial_upload of this BTElementParams.  # noqa: E501
-
-
-        :return: The is_initial_upload of this BTElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_initial_upload
-
-    @is_initial_upload.setter
-    def is_initial_upload(self, is_initial_upload):
-        """Sets the is_initial_upload of this BTElementParams.
-
-
-        :param is_initial_upload: The is_initial_upload of this BTElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_initial_upload = is_initial_upload
 
     @property
     def unit(self):
@@ -563,27 +563,6 @@ class BTElementParams(object):
         self._allow_faulty_parts = allow_faulty_parts
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this BTElementParams.  # noqa: E501
-
-
-        :return: The parent_id of this BTElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTElementParams.
-
-
-        :param parent_id: The parent_id of this BTElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_id = parent_id
-
-    @property
     def project_id(self):
         """Gets the project_id of this BTElementParams.  # noqa: E501
 
@@ -603,6 +582,27 @@ class BTElementParams(object):
         """
 
         self._project_id = project_id
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTElementParams.  # noqa: E501
+
+
+        :return: The parent_id of this BTElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTElementParams.
+
+
+        :param parent_id: The parent_id of this BTElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def foreign_id(self):

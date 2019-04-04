@@ -35,26 +35,26 @@ class BodyPartMediaType(object):
         'type': 'str',
         'subtype': 'str',
         'parameters': 'dict(str, str)',
-        'wildcard_subtype': 'bool',
-        'wildcard_type': 'bool'
+        'wildcard_type': 'bool',
+        'wildcard_subtype': 'bool'
     }
 
     attribute_map = {
         'type': 'type',
         'subtype': 'subtype',
         'parameters': 'parameters',
-        'wildcard_subtype': 'wildcardSubtype',
-        'wildcard_type': 'wildcardType'
+        'wildcard_type': 'wildcardType',
+        'wildcard_subtype': 'wildcardSubtype'
     }
 
-    def __init__(self, type=None, subtype=None, parameters=None, wildcard_subtype=None, wildcard_type=None):  # noqa: E501
+    def __init__(self, type=None, subtype=None, parameters=None, wildcard_type=None, wildcard_subtype=None):  # noqa: E501
         """BodyPartMediaType - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
         self._subtype = None
         self._parameters = None
-        self._wildcard_subtype = None
         self._wildcard_type = None
+        self._wildcard_subtype = None
         self.discriminator = None
 
         if type is not None:
@@ -63,10 +63,10 @@ class BodyPartMediaType(object):
             self.subtype = subtype
         if parameters is not None:
             self.parameters = parameters
-        if wildcard_subtype is not None:
-            self.wildcard_subtype = wildcard_subtype
         if wildcard_type is not None:
             self.wildcard_type = wildcard_type
+        if wildcard_subtype is not None:
+            self.wildcard_subtype = wildcard_subtype
 
     @property
     def type(self):
@@ -132,27 +132,6 @@ class BodyPartMediaType(object):
         self._parameters = parameters
 
     @property
-    def wildcard_subtype(self):
-        """Gets the wildcard_subtype of this BodyPartMediaType.  # noqa: E501
-
-
-        :return: The wildcard_subtype of this BodyPartMediaType.  # noqa: E501
-        :rtype: bool
-        """
-        return self._wildcard_subtype
-
-    @wildcard_subtype.setter
-    def wildcard_subtype(self, wildcard_subtype):
-        """Sets the wildcard_subtype of this BodyPartMediaType.
-
-
-        :param wildcard_subtype: The wildcard_subtype of this BodyPartMediaType.  # noqa: E501
-        :type: bool
-        """
-
-        self._wildcard_subtype = wildcard_subtype
-
-    @property
     def wildcard_type(self):
         """Gets the wildcard_type of this BodyPartMediaType.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BodyPartMediaType(object):
         """
 
         self._wildcard_type = wildcard_type
+
+    @property
+    def wildcard_subtype(self):
+        """Gets the wildcard_subtype of this BodyPartMediaType.  # noqa: E501
+
+
+        :return: The wildcard_subtype of this BodyPartMediaType.  # noqa: E501
+        :rtype: bool
+        """
+        return self._wildcard_subtype
+
+    @wildcard_subtype.setter
+    def wildcard_subtype(self, wildcard_subtype):
+        """Sets the wildcard_subtype of this BodyPartMediaType.
+
+
+        :param wildcard_subtype: The wildcard_subtype of this BodyPartMediaType.  # noqa: E501
+        :type: bool
+        """
+
+        self._wildcard_subtype = wildcard_subtype
 
     def to_dict(self):
         """Returns the model properties as a dict"""

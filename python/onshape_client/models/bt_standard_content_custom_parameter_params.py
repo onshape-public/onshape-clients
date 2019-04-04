@@ -33,68 +33,68 @@ class BTStandardContentCustomParameterParams(object):
     """
     openapi_types = {
         'owner_id': 'str',
-        'owner_type': 'int',
         'property_id': 'str',
         'is_driving_configuration': 'bool',
+        'owner_type': 'int',
         'parameter_value': 'str',
         'parameter_name': 'str',
         'parameter_type': 'int',
         'type': 'str',
-        'category': 'str',
+        'standard': 'str',
         'types': 'str',
         'component_document_id': 'str',
         'disable_production': 'bool',
         'production_version_id': 'str',
         'test_version_id': 'str',
-        'standard': 'str'
+        'category': 'str'
     }
 
     attribute_map = {
         'owner_id': 'ownerId',
-        'owner_type': 'ownerType',
         'property_id': 'propertyId',
         'is_driving_configuration': 'isDrivingConfiguration',
+        'owner_type': 'ownerType',
         'parameter_value': 'parameterValue',
         'parameter_name': 'parameterName',
         'parameter_type': 'parameterType',
         'type': 'type',
-        'category': 'category',
+        'standard': 'standard',
         'types': 'types',
         'component_document_id': 'componentDocumentId',
         'disable_production': 'disableProduction',
         'production_version_id': 'productionVersionId',
         'test_version_id': 'testVersionId',
-        'standard': 'standard'
+        'category': 'category'
     }
 
-    def __init__(self, owner_id=None, owner_type=None, property_id=None, is_driving_configuration=None, parameter_value=None, parameter_name=None, parameter_type=None, type=None, category=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None, standard=None):  # noqa: E501
+    def __init__(self, owner_id=None, property_id=None, is_driving_configuration=None, owner_type=None, parameter_value=None, parameter_name=None, parameter_type=None, type=None, standard=None, types=None, component_document_id=None, disable_production=None, production_version_id=None, test_version_id=None, category=None):  # noqa: E501
         """BTStandardContentCustomParameterParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner_id = None
-        self._owner_type = None
         self._property_id = None
         self._is_driving_configuration = None
+        self._owner_type = None
         self._parameter_value = None
         self._parameter_name = None
         self._parameter_type = None
         self._type = None
-        self._category = None
+        self._standard = None
         self._types = None
         self._component_document_id = None
         self._disable_production = None
         self._production_version_id = None
         self._test_version_id = None
-        self._standard = None
+        self._category = None
         self.discriminator = None
 
         if owner_id is not None:
             self.owner_id = owner_id
-        if owner_type is not None:
-            self.owner_type = owner_type
         if property_id is not None:
             self.property_id = property_id
         if is_driving_configuration is not None:
             self.is_driving_configuration = is_driving_configuration
+        if owner_type is not None:
+            self.owner_type = owner_type
         if parameter_value is not None:
             self.parameter_value = parameter_value
         if parameter_name is not None:
@@ -103,8 +103,8 @@ class BTStandardContentCustomParameterParams(object):
             self.parameter_type = parameter_type
         if type is not None:
             self.type = type
-        if category is not None:
-            self.category = category
+        if standard is not None:
+            self.standard = standard
         if types is not None:
             self.types = types
         if component_document_id is not None:
@@ -115,8 +115,8 @@ class BTStandardContentCustomParameterParams(object):
             self.production_version_id = production_version_id
         if test_version_id is not None:
             self.test_version_id = test_version_id
-        if standard is not None:
-            self.standard = standard
+        if category is not None:
+            self.category = category
 
     @property
     def owner_id(self):
@@ -138,27 +138,6 @@ class BTStandardContentCustomParameterParams(object):
         """
 
         self._owner_id = owner_id
-
-    @property
-    def owner_type(self):
-        """Gets the owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTStandardContentCustomParameterParams.
-
-
-        :param owner_type: The owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
 
     @property
     def property_id(self):
@@ -201,6 +180,27 @@ class BTStandardContentCustomParameterParams(object):
         """
 
         self._is_driving_configuration = is_driving_configuration
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTStandardContentCustomParameterParams.
+
+
+        :param owner_type: The owner_type of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
 
     @property
     def parameter_value(self):
@@ -287,25 +287,25 @@ class BTStandardContentCustomParameterParams(object):
         self._type = type
 
     @property
-    def category(self):
-        """Gets the category of this BTStandardContentCustomParameterParams.  # noqa: E501
+    def standard(self):
+        """Gets the standard of this BTStandardContentCustomParameterParams.  # noqa: E501
 
 
-        :return: The category of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :return: The standard of this BTStandardContentCustomParameterParams.  # noqa: E501
         :rtype: str
         """
-        return self._category
+        return self._standard
 
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTStandardContentCustomParameterParams.
+    @standard.setter
+    def standard(self, standard):
+        """Sets the standard of this BTStandardContentCustomParameterParams.
 
 
-        :param category: The category of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :param standard: The standard of this BTStandardContentCustomParameterParams.  # noqa: E501
         :type: str
         """
 
-        self._category = category
+        self._standard = standard
 
     @property
     def types(self):
@@ -413,25 +413,25 @@ class BTStandardContentCustomParameterParams(object):
         self._test_version_id = test_version_id
 
     @property
-    def standard(self):
-        """Gets the standard of this BTStandardContentCustomParameterParams.  # noqa: E501
+    def category(self):
+        """Gets the category of this BTStandardContentCustomParameterParams.  # noqa: E501
 
 
-        :return: The standard of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :return: The category of this BTStandardContentCustomParameterParams.  # noqa: E501
         :rtype: str
         """
-        return self._standard
+        return self._category
 
-    @standard.setter
-    def standard(self, standard):
-        """Sets the standard of this BTStandardContentCustomParameterParams.
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTStandardContentCustomParameterParams.
 
 
-        :param standard: The standard of this BTStandardContentCustomParameterParams.  # noqa: E501
+        :param category: The category of this BTStandardContentCustomParameterParams.  # noqa: E501
         :type: str
         """
 
-        self._standard = standard
+        self._category = category
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,47 +32,26 @@ class BTToolTreeUpdateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'save': 'list[BTToolTreeParams]',
-        'remove': 'list[str]'
+        'remove': 'list[str]',
+        'save': 'list[BTToolTreeParams]'
     }
 
     attribute_map = {
-        'save': 'save',
-        'remove': 'remove'
+        'remove': 'remove',
+        'save': 'save'
     }
 
-    def __init__(self, save=None, remove=None):  # noqa: E501
+    def __init__(self, remove=None, save=None):  # noqa: E501
         """BTToolTreeUpdateParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._save = None
         self._remove = None
+        self._save = None
         self.discriminator = None
 
-        if save is not None:
-            self.save = save
         if remove is not None:
             self.remove = remove
-
-    @property
-    def save(self):
-        """Gets the save of this BTToolTreeUpdateParams.  # noqa: E501
-
-
-        :return: The save of this BTToolTreeUpdateParams.  # noqa: E501
-        :rtype: list[BTToolTreeParams]
-        """
-        return self._save
-
-    @save.setter
-    def save(self, save):
-        """Sets the save of this BTToolTreeUpdateParams.
-
-
-        :param save: The save of this BTToolTreeUpdateParams.  # noqa: E501
-        :type: list[BTToolTreeParams]
-        """
-
-        self._save = save
+        if save is not None:
+            self.save = save
 
     @property
     def remove(self):
@@ -94,6 +73,27 @@ class BTToolTreeUpdateParams(object):
         """
 
         self._remove = remove
+
+    @property
+    def save(self):
+        """Gets the save of this BTToolTreeUpdateParams.  # noqa: E501
+
+
+        :return: The save of this BTToolTreeUpdateParams.  # noqa: E501
+        :rtype: list[BTToolTreeParams]
+        """
+        return self._save
+
+    @save.setter
+    def save(self, save):
+        """Sets the save of this BTToolTreeUpdateParams.
+
+
+        :param save: The save of this BTToolTreeUpdateParams.  # noqa: E501
+        :type: list[BTToolTreeParams]
+        """
+
+        self._save = save
 
     def to_dict(self):
         """Returns the model properties as a dict"""

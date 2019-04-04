@@ -33,55 +33,55 @@ class BTUserActivationParams(object):
     """
     openapi_types = {
         'id': 'str',
+        'email': 'str',
         'password': 'str',
-        'role': 'int',
         'first_name': 'str',
         'last_name': 'str',
-        'email': 'str',
         'default_company_name': 'str',
-        'phone_number': 'str'
+        'phone_number': 'str',
+        'role': 'int'
     }
 
     attribute_map = {
         'id': 'id',
+        'email': 'email',
         'password': 'password',
-        'role': 'role',
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'email': 'email',
         'default_company_name': 'defaultCompanyName',
-        'phone_number': 'phoneNumber'
+        'phone_number': 'phoneNumber',
+        'role': 'role'
     }
 
-    def __init__(self, id=None, password=None, role=None, first_name=None, last_name=None, email=None, default_company_name=None, phone_number=None):  # noqa: E501
+    def __init__(self, id=None, email=None, password=None, first_name=None, last_name=None, default_company_name=None, phone_number=None, role=None):  # noqa: E501
         """BTUserActivationParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
+        self._email = None
         self._password = None
-        self._role = None
         self._first_name = None
         self._last_name = None
-        self._email = None
         self._default_company_name = None
         self._phone_number = None
+        self._role = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if email is not None:
+            self.email = email
         if password is not None:
             self.password = password
-        if role is not None:
-            self.role = role
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
-        if email is not None:
-            self.email = email
         if default_company_name is not None:
             self.default_company_name = default_company_name
         if phone_number is not None:
             self.phone_number = phone_number
+        if role is not None:
+            self.role = role
 
     @property
     def id(self):
@@ -105,6 +105,27 @@ class BTUserActivationParams(object):
         self._id = id
 
     @property
+    def email(self):
+        """Gets the email of this BTUserActivationParams.  # noqa: E501
+
+
+        :return: The email of this BTUserActivationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTUserActivationParams.
+
+
+        :param email: The email of this BTUserActivationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
     def password(self):
         """Gets the password of this BTUserActivationParams.  # noqa: E501
 
@@ -124,27 +145,6 @@ class BTUserActivationParams(object):
         """
 
         self._password = password
-
-    @property
-    def role(self):
-        """Gets the role of this BTUserActivationParams.  # noqa: E501
-
-
-        :return: The role of this BTUserActivationParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this BTUserActivationParams.
-
-
-        :param role: The role of this BTUserActivationParams.  # noqa: E501
-        :type: int
-        """
-
-        self._role = role
 
     @property
     def first_name(self):
@@ -189,27 +189,6 @@ class BTUserActivationParams(object):
         self._last_name = last_name
 
     @property
-    def email(self):
-        """Gets the email of this BTUserActivationParams.  # noqa: E501
-
-
-        :return: The email of this BTUserActivationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTUserActivationParams.
-
-
-        :param email: The email of this BTUserActivationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
     def default_company_name(self):
         """Gets the default_company_name of this BTUserActivationParams.  # noqa: E501
 
@@ -250,6 +229,27 @@ class BTUserActivationParams(object):
         """
 
         self._phone_number = phone_number
+
+    @property
+    def role(self):
+        """Gets the role of this BTUserActivationParams.  # noqa: E501
+
+
+        :return: The role of this BTUserActivationParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this BTUserActivationParams.
+
+
+        :param role: The role of this BTUserActivationParams.  # noqa: E501
+        :type: int
+        """
+
+        self._role = role
 
     def to_dict(self):
         """Returns the model properties as a dict"""

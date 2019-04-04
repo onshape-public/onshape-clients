@@ -32,46 +32,67 @@ class BTShareEntryParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'email': 'str',
         'user_id': 'str',
+        'company_id': 'str',
         'entry_type': 'int',
         'team_id': 'str',
-        'application_id': 'str',
-        'email': 'str',
-        'company_id': 'str'
+        'application_id': 'str'
     }
 
     attribute_map = {
+        'email': 'email',
         'user_id': 'userId',
+        'company_id': 'companyId',
         'entry_type': 'entryType',
         'team_id': 'teamId',
-        'application_id': 'applicationId',
-        'email': 'email',
-        'company_id': 'companyId'
+        'application_id': 'applicationId'
     }
 
-    def __init__(self, user_id=None, entry_type=None, team_id=None, application_id=None, email=None, company_id=None):  # noqa: E501
+    def __init__(self, email=None, user_id=None, company_id=None, entry_type=None, team_id=None, application_id=None):  # noqa: E501
         """BTShareEntryParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._email = None
         self._user_id = None
+        self._company_id = None
         self._entry_type = None
         self._team_id = None
         self._application_id = None
-        self._email = None
-        self._company_id = None
         self.discriminator = None
 
+        if email is not None:
+            self.email = email
         if user_id is not None:
             self.user_id = user_id
+        if company_id is not None:
+            self.company_id = company_id
         if entry_type is not None:
             self.entry_type = entry_type
         if team_id is not None:
             self.team_id = team_id
         if application_id is not None:
             self.application_id = application_id
-        if email is not None:
-            self.email = email
-        if company_id is not None:
-            self.company_id = company_id
+
+    @property
+    def email(self):
+        """Gets the email of this BTShareEntryParams.  # noqa: E501
+
+
+        :return: The email of this BTShareEntryParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTShareEntryParams.
+
+
+        :param email: The email of this BTShareEntryParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def user_id(self):
@@ -93,6 +114,27 @@ class BTShareEntryParams(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def company_id(self):
+        """Gets the company_id of this BTShareEntryParams.  # noqa: E501
+
+
+        :return: The company_id of this BTShareEntryParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_id
+
+    @company_id.setter
+    def company_id(self, company_id):
+        """Sets the company_id of this BTShareEntryParams.
+
+
+        :param company_id: The company_id of this BTShareEntryParams.  # noqa: E501
+        :type: str
+        """
+
+        self._company_id = company_id
 
     @property
     def entry_type(self):
@@ -156,48 +198,6 @@ class BTShareEntryParams(object):
         """
 
         self._application_id = application_id
-
-    @property
-    def email(self):
-        """Gets the email of this BTShareEntryParams.  # noqa: E501
-
-
-        :return: The email of this BTShareEntryParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTShareEntryParams.
-
-
-        :param email: The email of this BTShareEntryParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
-    def company_id(self):
-        """Gets the company_id of this BTShareEntryParams.  # noqa: E501
-
-
-        :return: The company_id of this BTShareEntryParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._company_id
-
-    @company_id.setter
-    def company_id(self, company_id):
-        """Sets the company_id of this BTShareEntryParams.
-
-
-        :param company_id: The company_id of this BTShareEntryParams.  # noqa: E501
-        :type: str
-        """
-
-        self._company_id = company_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

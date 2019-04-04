@@ -38,8 +38,8 @@ class BTPNode(object):
         'atomic': 'bool',
         'documentation_type': 'str',
         'space_before': 'BTPSpace',
-        'changeable_child_field_indices': 'list[int]',
         'first_child_field': 'int',
+        'changeable_child_field_indices': 'list[int]',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
         'node_id': 'str',
@@ -48,9 +48,9 @@ class BTPNode(object):
         'node_id_raw': 'BTObjectId',
         'child_list_indices': 'list[int]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
@@ -60,8 +60,8 @@ class BTPNode(object):
         'atomic': 'atomic',
         'documentation_type': 'documentationType',
         'space_before': 'spaceBefore',
-        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'first_child_field': 'firstChildField',
+        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
         'node_id': 'nodeId',
@@ -70,12 +70,12 @@ class BTPNode(object):
         'node_id_raw': 'nodeIdRaw',
         'child_list_indices': 'childListIndices',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, start_source_location=None, end_source_location=None, short_descriptor=None, atomic=None, documentation_type=None, space_before=None, changeable_child_field_indices=None, first_child_field=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, start_source_location=None, end_source_location=None, short_descriptor=None, atomic=None, documentation_type=None, space_before=None, first_child_field=None, changeable_child_field_indices=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTPNode - a model defined in OpenAPI"""  # noqa: E501
 
         self._start_source_location = None
@@ -84,8 +84,8 @@ class BTPNode(object):
         self._atomic = None
         self._documentation_type = None
         self._space_before = None
-        self._changeable_child_field_indices = None
         self._first_child_field = None
+        self._changeable_child_field_indices = None
         self._space_default = None
         self._space_after = None
         self._node_id = None
@@ -94,9 +94,9 @@ class BTPNode(object):
         self._node_id_raw = None
         self._child_list_indices = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if start_source_location is not None:
@@ -111,10 +111,10 @@ class BTPNode(object):
             self.documentation_type = documentation_type
         if space_before is not None:
             self.space_before = space_before
-        if changeable_child_field_indices is not None:
-            self.changeable_child_field_indices = changeable_child_field_indices
         if first_child_field is not None:
             self.first_child_field = first_child_field
+        if changeable_child_field_indices is not None:
+            self.changeable_child_field_indices = changeable_child_field_indices
         if space_default is not None:
             self.space_default = space_default
         if space_after is not None:
@@ -131,12 +131,12 @@ class BTPNode(object):
             self.child_list_indices = child_list_indices
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def start_source_location(self):
@@ -271,27 +271,6 @@ class BTPNode(object):
         self._space_before = space_before
 
     @property
-    def changeable_child_field_indices(self):
-        """Gets the changeable_child_field_indices of this BTPNode.  # noqa: E501
-
-
-        :return: The changeable_child_field_indices of this BTPNode.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._changeable_child_field_indices
-
-    @changeable_child_field_indices.setter
-    def changeable_child_field_indices(self, changeable_child_field_indices):
-        """Sets the changeable_child_field_indices of this BTPNode.
-
-
-        :param changeable_child_field_indices: The changeable_child_field_indices of this BTPNode.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._changeable_child_field_indices = changeable_child_field_indices
-
-    @property
     def first_child_field(self):
         """Gets the first_child_field of this BTPNode.  # noqa: E501
 
@@ -311,6 +290,27 @@ class BTPNode(object):
         """
 
         self._first_child_field = first_child_field
+
+    @property
+    def changeable_child_field_indices(self):
+        """Gets the changeable_child_field_indices of this BTPNode.  # noqa: E501
+
+
+        :return: The changeable_child_field_indices of this BTPNode.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._changeable_child_field_indices
+
+    @changeable_child_field_indices.setter
+    def changeable_child_field_indices(self, changeable_child_field_indices):
+        """Sets the changeable_child_field_indices of this BTPNode.
+
+
+        :param changeable_child_field_indices: The changeable_child_field_indices of this BTPNode.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
     def space_default(self):
@@ -481,6 +481,27 @@ class BTPNode(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTPNode.  # noqa: E501
+
+
+        :return: The connection_source of this BTPNode.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTPNode.
+
+
+        :param connection_source: The connection_source of this BTPNode.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTPNode.  # noqa: E501
 
@@ -521,27 +542,6 @@ class BTPNode(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTPNode.  # noqa: E501
-
-
-        :return: The connection_source of this BTPNode.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTPNode.
-
-
-        :param connection_source: The connection_source of this BTPNode.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

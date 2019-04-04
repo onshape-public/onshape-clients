@@ -34,34 +34,34 @@ class Definition(object):
     openapi_types = {
         'name': 'str',
         'sort_order': 'int',
-        'description': 'str',
-        'code': 'int'
+        'code': 'int',
+        'description': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'sort_order': 'sortOrder',
-        'description': 'description',
-        'code': 'code'
+        'code': 'code',
+        'description': 'description'
     }
 
-    def __init__(self, name=None, sort_order=None, description=None, code=None):  # noqa: E501
+    def __init__(self, name=None, sort_order=None, code=None, description=None):  # noqa: E501
         """Definition - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._sort_order = None
-        self._description = None
         self._code = None
+        self._description = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
         if sort_order is not None:
             self.sort_order = sort_order
-        if description is not None:
-            self.description = description
         if code is not None:
             self.code = code
+        if description is not None:
+            self.description = description
 
     @property
     def name(self):
@@ -106,27 +106,6 @@ class Definition(object):
         self._sort_order = sort_order
 
     @property
-    def description(self):
-        """Gets the description of this Definition.  # noqa: E501
-
-
-        :return: The description of this Definition.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Definition.
-
-
-        :param description: The description of this Definition.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def code(self):
         """Gets the code of this Definition.  # noqa: E501
 
@@ -146,6 +125,27 @@ class Definition(object):
         """
 
         self._code = code
+
+    @property
+    def description(self):
+        """Gets the description of this Definition.  # noqa: E501
+
+
+        :return: The description of this Definition.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Definition.
+
+
+        :param description: The description of this Definition.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

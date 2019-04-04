@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
-**external_document_with_version** | [**BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 
 **version_and_microversion** | **str** |  | [optional] 
 **external_import** | **bool** |  | [optional] 
 **imported_document_id** | **str** |  | [optional] 
@@ -16,12 +14,14 @@ Name | Type | Description | Notes
 **valid_legacy_version** | **bool** |  | [optional] 
 **path_version** | **str** |  | [optional] 
 **imported_version_id** | **str** |  | [optional] 
+**external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
+**external_document_with_version** | [**BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
 **path** | [**BTPLiteralString**](BTPLiteralString.md) |  | [optional] 
 **version** | [**BTPLiteralString**](BTPLiteralString.md) |  | [optional] 
 **microversion** | **str** |  | [optional] 
-**changeable_child_field_indices** | **list[int]** |  | [optional] 
 **first_child_field** | **int** |  | [optional] 
+**changeable_child_field_indices** | **list[int]** |  | [optional] 
 **space_before_path** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_after_path** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_before_version** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
@@ -39,9 +39,9 @@ Name | Type | Description | Notes
 **node_id_raw** | [**BTObjectId**](BTObjectId.md) |  | [optional] 
 **child_list_indices** | **list[int]** |  | [optional] 
 **type_id** | **int** |  | [optional] 
+**connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 
 **unknown_class** | **bool** |  | [optional] 
-**connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

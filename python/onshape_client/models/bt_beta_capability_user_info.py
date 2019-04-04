@@ -37,14 +37,14 @@ class BTBetaCapabilityUserInfo(object):
         'plan_id': 'str',
         'approved_at': 'datetime',
         'removed_at': 'datetime',
+        'email': 'str',
         'source': 'int',
         'first_name': 'str',
         'last_name': 'str',
-        'email': 'str',
+        'is_guest': 'bool',
         'company': 'BTCompanySummaryInfo',
         'last_login_time': 'datetime',
         'global_permissions': 'GlobalPermissionInfo',
-        'is_guest': 'bool',
         'is_light': 'bool',
         'state': 'int',
         'image': 'str',
@@ -60,14 +60,14 @@ class BTBetaCapabilityUserInfo(object):
         'plan_id': 'planId',
         'approved_at': 'approvedAt',
         'removed_at': 'removedAt',
+        'email': 'email',
         'source': 'source',
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'email': 'email',
+        'is_guest': 'isGuest',
         'company': 'company',
         'last_login_time': 'lastLoginTime',
         'global_permissions': 'globalPermissions',
-        'is_guest': 'isGuest',
         'is_light': 'isLight',
         'state': 'state',
         'image': 'image',
@@ -77,7 +77,7 @@ class BTBetaCapabilityUserInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, capability_state=None, created_at=None, plan_id=None, approved_at=None, removed_at=None, source=None, first_name=None, last_name=None, email=None, company=None, last_login_time=None, global_permissions=None, is_guest=None, is_light=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, capability_state=None, created_at=None, plan_id=None, approved_at=None, removed_at=None, email=None, source=None, first_name=None, last_name=None, is_guest=None, company=None, last_login_time=None, global_permissions=None, is_light=None, state=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._capability_state = None
@@ -85,14 +85,14 @@ class BTBetaCapabilityUserInfo(object):
         self._plan_id = None
         self._approved_at = None
         self._removed_at = None
+        self._email = None
         self._source = None
         self._first_name = None
         self._last_name = None
-        self._email = None
+        self._is_guest = None
         self._company = None
         self._last_login_time = None
         self._global_permissions = None
-        self._is_guest = None
         self._is_light = None
         self._state = None
         self._image = None
@@ -112,22 +112,22 @@ class BTBetaCapabilityUserInfo(object):
             self.approved_at = approved_at
         if removed_at is not None:
             self.removed_at = removed_at
+        if email is not None:
+            self.email = email
         if source is not None:
             self.source = source
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
-        if email is not None:
-            self.email = email
+        if is_guest is not None:
+            self.is_guest = is_guest
         if company is not None:
             self.company = company
         if last_login_time is not None:
             self.last_login_time = last_login_time
         if global_permissions is not None:
             self.global_permissions = global_permissions
-        if is_guest is not None:
-            self.is_guest = is_guest
         if is_light is not None:
             self.is_light = is_light
         if state is not None:
@@ -249,6 +249,27 @@ class BTBetaCapabilityUserInfo(object):
         self._removed_at = removed_at
 
     @property
+    def email(self):
+        """Gets the email of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTBetaCapabilityUserInfo.
+
+
+        :param email: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
     def source(self):
         """Gets the source of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -312,25 +333,25 @@ class BTBetaCapabilityUserInfo(object):
         self._last_name = last_name
 
     @property
-    def email(self):
-        """Gets the email of this BTBetaCapabilityUserInfo.  # noqa: E501
+    def is_guest(self):
+        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
 
 
-        :return: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
+        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._email
+        return self._is_guest
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTBetaCapabilityUserInfo.
+    @is_guest.setter
+    def is_guest(self, is_guest):
+        """Sets the is_guest of this BTBetaCapabilityUserInfo.
 
 
-        :param email: The email of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
+        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._email = email
+        self._is_guest = is_guest
 
     @property
     def company(self):
@@ -394,27 +415,6 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._global_permissions = global_permissions
-
-    @property
-    def is_guest(self):
-        """Gets the is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_guest
-
-    @is_guest.setter
-    def is_guest(self, is_guest):
-        """Sets the is_guest of this BTBetaCapabilityUserInfo.
-
-
-        :param is_guest: The is_guest of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_guest = is_guest
 
     @property
     def is_light(self):

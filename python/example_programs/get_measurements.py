@@ -41,4 +41,8 @@ for m in measurements:
     key = m["message"]["key"]["message"]["value"]
     value = parse_quantity(m["message"]["value"]["message"])
     parsed_measurements[key] = value
-print(parsed_measurements)
+print("Measurements: \n" + str(parsed_measurements))
+"""
+Measurements: 
+{'distance_from_polygon_to_square': '0.1308455707096832*meter', 'diameter': '0.0868175271040671*meter', 'polygon_side_length': '0.05706864859958895*meter'}
+"""

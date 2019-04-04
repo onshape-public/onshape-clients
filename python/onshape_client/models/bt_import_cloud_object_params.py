@@ -36,21 +36,21 @@ class BTImportCloudObjectParams(object):
         'public': 'bool',
         'owner_id': 'str',
         'mime_type': 'str',
-        'url': 'str',
+        'owner_type': 'str',
         'cloud_object_id': 'str',
         'size_bytes': 'int',
         'access_token': 'str',
         'cloud_storage_provider': 'int',
-        'owner_type': 'str',
-        'notify_user': 'bool',
         'cloud_storage_account_id': 'str',
+        'url': 'str',
+        'notify_user': 'bool',
         'unit': 'str',
         'split_assemblies_into_multiple_documents': 'bool',
         'flatten_assemblies': 'bool',
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
-        'parent_id': 'str',
         'project_id': 'str',
+        'parent_id': 'str',
         'foreign_id': 'str',
         'upload_id': 'str',
         'original_foreign_id': 'str',
@@ -65,21 +65,21 @@ class BTImportCloudObjectParams(object):
         'public': 'public',
         'owner_id': 'ownerId',
         'mime_type': 'mimeType',
-        'url': 'url',
+        'owner_type': 'ownerType',
         'cloud_object_id': 'cloudObjectId',
         'size_bytes': 'sizeBytes',
         'access_token': 'accessToken',
         'cloud_storage_provider': 'cloudStorageProvider',
-        'owner_type': 'ownerType',
-        'notify_user': 'notifyUser',
         'cloud_storage_account_id': 'cloudStorageAccountId',
+        'url': 'url',
+        'notify_user': 'notifyUser',
         'unit': 'unit',
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',
         'flatten_assemblies': 'flattenAssemblies',
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
-        'parent_id': 'parentId',
         'project_id': 'projectId',
+        'parent_id': 'parentId',
         'foreign_id': 'foreignId',
         'upload_id': 'uploadId',
         'original_foreign_id': 'originalForeignId',
@@ -89,28 +89,28 @@ class BTImportCloudObjectParams(object):
         'specify_units': 'specifyUnits'
     }
 
-    def __init__(self, name=None, public=None, owner_id=None, mime_type=None, url=None, cloud_object_id=None, size_bytes=None, access_token=None, cloud_storage_provider=None, owner_type=None, notify_user=None, cloud_storage_account_id=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, parent_id=None, project_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
+    def __init__(self, name=None, public=None, owner_id=None, mime_type=None, owner_type=None, cloud_object_id=None, size_bytes=None, access_token=None, cloud_storage_provider=None, cloud_storage_account_id=None, url=None, notify_user=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
         """BTImportCloudObjectParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._public = None
         self._owner_id = None
         self._mime_type = None
-        self._url = None
+        self._owner_type = None
         self._cloud_object_id = None
         self._size_bytes = None
         self._access_token = None
         self._cloud_storage_provider = None
-        self._owner_type = None
-        self._notify_user = None
         self._cloud_storage_account_id = None
+        self._url = None
+        self._notify_user = None
         self._unit = None
         self._split_assemblies_into_multiple_documents = None
         self._flatten_assemblies = None
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
-        self._parent_id = None
         self._project_id = None
+        self._parent_id = None
         self._foreign_id = None
         self._upload_id = None
         self._original_foreign_id = None
@@ -128,8 +128,8 @@ class BTImportCloudObjectParams(object):
             self.owner_id = owner_id
         if mime_type is not None:
             self.mime_type = mime_type
-        if url is not None:
-            self.url = url
+        if owner_type is not None:
+            self.owner_type = owner_type
         if cloud_object_id is not None:
             self.cloud_object_id = cloud_object_id
         if size_bytes is not None:
@@ -138,12 +138,12 @@ class BTImportCloudObjectParams(object):
             self.access_token = access_token
         if cloud_storage_provider is not None:
             self.cloud_storage_provider = cloud_storage_provider
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if notify_user is not None:
-            self.notify_user = notify_user
         if cloud_storage_account_id is not None:
             self.cloud_storage_account_id = cloud_storage_account_id
+        if url is not None:
+            self.url = url
+        if notify_user is not None:
+            self.notify_user = notify_user
         if unit is not None:
             self.unit = unit
         if split_assemblies_into_multiple_documents is not None:
@@ -154,10 +154,10 @@ class BTImportCloudObjectParams(object):
             self.gety_axis_is_up = gety_axis_is_up
         if allow_faulty_parts is not None:
             self.allow_faulty_parts = allow_faulty_parts
-        if parent_id is not None:
-            self.parent_id = parent_id
         if project_id is not None:
             self.project_id = project_id
+        if parent_id is not None:
+            self.parent_id = parent_id
         if foreign_id is not None:
             self.foreign_id = foreign_id
         if upload_id is not None:
@@ -258,25 +258,31 @@ class BTImportCloudObjectParams(object):
         self._mime_type = mime_type
 
     @property
-    def url(self):
-        """Gets the url of this BTImportCloudObjectParams.  # noqa: E501
+    def owner_type(self):
+        """Gets the owner_type of this BTImportCloudObjectParams.  # noqa: E501
 
 
-        :return: The url of this BTImportCloudObjectParams.  # noqa: E501
+        :return: The owner_type of this BTImportCloudObjectParams.  # noqa: E501
         :rtype: str
         """
-        return self._url
+        return self._owner_type
 
-    @url.setter
-    def url(self, url):
-        """Sets the url of this BTImportCloudObjectParams.
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTImportCloudObjectParams.
 
 
-        :param url: The url of this BTImportCloudObjectParams.  # noqa: E501
+        :param owner_type: The owner_type of this BTImportCloudObjectParams.  # noqa: E501
         :type: str
         """
+        allowed_values = ["USER", "COMPANY", "ONSHAPE"]  # noqa: E501
+        if owner_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `owner_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(owner_type, allowed_values)
+            )
 
-        self._url = url
+        self._owner_type = owner_type
 
     @property
     def cloud_object_id(self):
@@ -363,31 +369,46 @@ class BTImportCloudObjectParams(object):
         self._cloud_storage_provider = cloud_storage_provider
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTImportCloudObjectParams.  # noqa: E501
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
 
 
-        :return: The owner_type of this BTImportCloudObjectParams.  # noqa: E501
+        :return: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
         :rtype: str
         """
-        return self._owner_type
+        return self._cloud_storage_account_id
 
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTImportCloudObjectParams.
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTImportCloudObjectParams.
 
 
-        :param owner_type: The owner_type of this BTImportCloudObjectParams.  # noqa: E501
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
         :type: str
         """
-        allowed_values = ["USER", "COMPANY", "ONSHAPE"]  # noqa: E501
-        if owner_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `owner_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(owner_type, allowed_values)
-            )
 
-        self._owner_type = owner_type
+        self._cloud_storage_account_id = cloud_storage_account_id
+
+    @property
+    def url(self):
+        """Gets the url of this BTImportCloudObjectParams.  # noqa: E501
+
+
+        :return: The url of this BTImportCloudObjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this BTImportCloudObjectParams.
+
+
+        :param url: The url of this BTImportCloudObjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     @property
     def notify_user(self):
@@ -409,27 +430,6 @@ class BTImportCloudObjectParams(object):
         """
 
         self._notify_user = notify_user
-
-    @property
-    def cloud_storage_account_id(self):
-        """Gets the cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-
-
-        :return: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._cloud_storage_account_id
-
-    @cloud_storage_account_id.setter
-    def cloud_storage_account_id(self, cloud_storage_account_id):
-        """Sets the cloud_storage_account_id of this BTImportCloudObjectParams.
-
-
-        :param cloud_storage_account_id: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
     def unit(self):
@@ -537,27 +537,6 @@ class BTImportCloudObjectParams(object):
         self._allow_faulty_parts = allow_faulty_parts
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this BTImportCloudObjectParams.  # noqa: E501
-
-
-        :return: The parent_id of this BTImportCloudObjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTImportCloudObjectParams.
-
-
-        :param parent_id: The parent_id of this BTImportCloudObjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_id = parent_id
-
-    @property
     def project_id(self):
         """Gets the project_id of this BTImportCloudObjectParams.  # noqa: E501
 
@@ -577,6 +556,27 @@ class BTImportCloudObjectParams(object):
         """
 
         self._project_id = project_id
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTImportCloudObjectParams.  # noqa: E501
+
+
+        :return: The parent_id of this BTImportCloudObjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTImportCloudObjectParams.
+
+
+        :param parent_id: The parent_id of this BTImportCloudObjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def foreign_id(self):

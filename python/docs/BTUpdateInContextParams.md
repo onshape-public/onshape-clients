@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**microversion_id** | [**BTMicroversionId**](BTMicroversionId.md) |  | [optional] 
 **encoded_context_configuration** | **str** |  | [optional] 
 **use_latest_microversion** | **bool** |  | [optional] 
-**microversion_id** | [**BTMicroversionId**](BTMicroversionId.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **context_id** | **str** |  | [optional] 
 

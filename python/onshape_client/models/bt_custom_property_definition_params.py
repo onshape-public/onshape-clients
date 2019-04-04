@@ -35,26 +35,26 @@ class BTCustomPropertyDefinitionParams(object):
         'name': 'str',
         'type': 'str',
         'description': 'str',
-        'template': 'str',
-        'enum_definition': 'list[str]'
+        'enum_definition': 'list[str]',
+        'template': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'type': 'type',
         'description': 'description',
-        'template': 'template',
-        'enum_definition': 'enumDefinition'
+        'enum_definition': 'enumDefinition',
+        'template': 'template'
     }
 
-    def __init__(self, name=None, type=None, description=None, template=None, enum_definition=None):  # noqa: E501
+    def __init__(self, name=None, type=None, description=None, enum_definition=None, template=None):  # noqa: E501
         """BTCustomPropertyDefinitionParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._type = None
         self._description = None
-        self._template = None
         self._enum_definition = None
+        self._template = None
         self.discriminator = None
 
         if name is not None:
@@ -63,10 +63,10 @@ class BTCustomPropertyDefinitionParams(object):
             self.type = type
         if description is not None:
             self.description = description
-        if template is not None:
-            self.template = template
         if enum_definition is not None:
             self.enum_definition = enum_definition
+        if template is not None:
+            self.template = template
 
     @property
     def name(self):
@@ -138,27 +138,6 @@ class BTCustomPropertyDefinitionParams(object):
         self._description = description
 
     @property
-    def template(self):
-        """Gets the template of this BTCustomPropertyDefinitionParams.  # noqa: E501
-
-
-        :return: The template of this BTCustomPropertyDefinitionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._template
-
-    @template.setter
-    def template(self, template):
-        """Sets the template of this BTCustomPropertyDefinitionParams.
-
-
-        :param template: The template of this BTCustomPropertyDefinitionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._template = template
-
-    @property
     def enum_definition(self):
         """Gets the enum_definition of this BTCustomPropertyDefinitionParams.  # noqa: E501
 
@@ -178,6 +157,27 @@ class BTCustomPropertyDefinitionParams(object):
         """
 
         self._enum_definition = enum_definition
+
+    @property
+    def template(self):
+        """Gets the template of this BTCustomPropertyDefinitionParams.  # noqa: E501
+
+
+        :return: The template of this BTCustomPropertyDefinitionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """Sets the template of this BTCustomPropertyDefinitionParams.
+
+
+        :param template: The template of this BTCustomPropertyDefinitionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._template = template
 
     def to_dict(self):
         """Returns the model properties as a dict"""

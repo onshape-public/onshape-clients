@@ -32,57 +32,36 @@ class BTListResponseBTBetaCapabilitySummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'next': 'str',
         'href': 'str',
+        'next': 'str',
         'items': 'list[BTBetaCapabilitySummaryInfo]',
         'previous': 'str'
     }
 
     attribute_map = {
-        'next': 'next',
         'href': 'href',
+        'next': 'next',
         'items': 'items',
         'previous': 'previous'
     }
 
-    def __init__(self, next=None, href=None, items=None, previous=None):  # noqa: E501
+    def __init__(self, href=None, next=None, items=None, previous=None):  # noqa: E501
         """BTListResponseBTBetaCapabilitySummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._next = None
         self._href = None
+        self._next = None
         self._items = None
         self._previous = None
         self.discriminator = None
 
-        if next is not None:
-            self.next = next
         if href is not None:
             self.href = href
+        if next is not None:
+            self.next = next
         if items is not None:
             self.items = items
         if previous is not None:
             self.previous = previous
-
-    @property
-    def next(self):
-        """Gets the next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
-
-
-        :return: The next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._next
-
-    @next.setter
-    def next(self, next):
-        """Sets the next of this BTListResponseBTBetaCapabilitySummaryInfo.
-
-
-        :param next: The next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._next = next
 
     @property
     def href(self):
@@ -104,6 +83,27 @@ class BTListResponseBTBetaCapabilitySummaryInfo(object):
         """
 
         self._href = href
+
+    @property
+    def next(self):
+        """Gets the next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
+
+
+        :return: The next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._next
+
+    @next.setter
+    def next(self, next):
+        """Sets the next of this BTListResponseBTBetaCapabilitySummaryInfo.
+
+
+        :param next: The next of this BTListResponseBTBetaCapabilitySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._next = next
 
     @property
     def items(self):

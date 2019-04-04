@@ -34,23 +34,23 @@ class BTAppElementReferenceResolveInfo(object):
     openapi_types = {
         'target_element_microversion_id': 'str',
         'resolved_element_microversion_id': 'str',
+        'id_tag': 'str',
         'revision': 'str',
         'part_number': 'str',
         'change_id': 'str',
-        'target_document_id': 'str',
-        'target_element_id': 'str',
-        'target_configuration': 'str',
         'target_version_id': 'str',
         'is_sketch_only': 'bool',
-        'sketch_ids': 'list[str]',
-        'id_tag': 'str',
-        'id_tag_is_valid': 'bool',
+        'target_configuration': 'str',
         'reference_id': 'str',
+        'target_document_id': 'str',
+        'target_element_id': 'str',
         'target_document_microversion_id': 'str',
         'is_configurable': 'bool',
         'resolved_document_microversion_id': 'str',
+        'id_tag_is_valid': 'bool',
         'is_flattened_part': 'bool',
         'track_new_versions': 'bool',
+        'sketch_ids': 'list[str]',
         'error_code': 'int',
         'error_value': 'str',
         'error_description': 'str'
@@ -59,50 +59,50 @@ class BTAppElementReferenceResolveInfo(object):
     attribute_map = {
         'target_element_microversion_id': 'targetElementMicroversionId',
         'resolved_element_microversion_id': 'resolvedElementMicroversionId',
+        'id_tag': 'idTag',
         'revision': 'revision',
         'part_number': 'partNumber',
         'change_id': 'changeId',
-        'target_document_id': 'targetDocumentId',
-        'target_element_id': 'targetElementId',
-        'target_configuration': 'targetConfiguration',
         'target_version_id': 'targetVersionId',
         'is_sketch_only': 'isSketchOnly',
-        'sketch_ids': 'sketchIds',
-        'id_tag': 'idTag',
-        'id_tag_is_valid': 'idTagIsValid',
+        'target_configuration': 'targetConfiguration',
         'reference_id': 'referenceId',
+        'target_document_id': 'targetDocumentId',
+        'target_element_id': 'targetElementId',
         'target_document_microversion_id': 'targetDocumentMicroversionId',
         'is_configurable': 'isConfigurable',
         'resolved_document_microversion_id': 'resolvedDocumentMicroversionId',
+        'id_tag_is_valid': 'idTagIsValid',
         'is_flattened_part': 'isFlattenedPart',
         'track_new_versions': 'trackNewVersions',
+        'sketch_ids': 'sketchIds',
         'error_code': 'errorCode',
         'error_value': 'errorValue',
         'error_description': 'errorDescription'
     }
 
-    def __init__(self, target_element_microversion_id=None, resolved_element_microversion_id=None, revision=None, part_number=None, change_id=None, target_document_id=None, target_element_id=None, target_configuration=None, target_version_id=None, is_sketch_only=None, sketch_ids=None, id_tag=None, id_tag_is_valid=None, reference_id=None, target_document_microversion_id=None, is_configurable=None, resolved_document_microversion_id=None, is_flattened_part=None, track_new_versions=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
+    def __init__(self, target_element_microversion_id=None, resolved_element_microversion_id=None, id_tag=None, revision=None, part_number=None, change_id=None, target_version_id=None, is_sketch_only=None, target_configuration=None, reference_id=None, target_document_id=None, target_element_id=None, target_document_microversion_id=None, is_configurable=None, resolved_document_microversion_id=None, id_tag_is_valid=None, is_flattened_part=None, track_new_versions=None, sketch_ids=None, error_code=None, error_value=None, error_description=None):  # noqa: E501
         """BTAppElementReferenceResolveInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._target_element_microversion_id = None
         self._resolved_element_microversion_id = None
+        self._id_tag = None
         self._revision = None
         self._part_number = None
         self._change_id = None
-        self._target_document_id = None
-        self._target_element_id = None
-        self._target_configuration = None
         self._target_version_id = None
         self._is_sketch_only = None
-        self._sketch_ids = None
-        self._id_tag = None
-        self._id_tag_is_valid = None
+        self._target_configuration = None
         self._reference_id = None
+        self._target_document_id = None
+        self._target_element_id = None
         self._target_document_microversion_id = None
         self._is_configurable = None
         self._resolved_document_microversion_id = None
+        self._id_tag_is_valid = None
         self._is_flattened_part = None
         self._track_new_versions = None
+        self._sketch_ids = None
         self._error_code = None
         self._error_value = None
         self._error_description = None
@@ -112,40 +112,40 @@ class BTAppElementReferenceResolveInfo(object):
             self.target_element_microversion_id = target_element_microversion_id
         if resolved_element_microversion_id is not None:
             self.resolved_element_microversion_id = resolved_element_microversion_id
+        if id_tag is not None:
+            self.id_tag = id_tag
         if revision is not None:
             self.revision = revision
         if part_number is not None:
             self.part_number = part_number
         if change_id is not None:
             self.change_id = change_id
-        if target_document_id is not None:
-            self.target_document_id = target_document_id
-        if target_element_id is not None:
-            self.target_element_id = target_element_id
-        if target_configuration is not None:
-            self.target_configuration = target_configuration
         if target_version_id is not None:
             self.target_version_id = target_version_id
         if is_sketch_only is not None:
             self.is_sketch_only = is_sketch_only
-        if sketch_ids is not None:
-            self.sketch_ids = sketch_ids
-        if id_tag is not None:
-            self.id_tag = id_tag
-        if id_tag_is_valid is not None:
-            self.id_tag_is_valid = id_tag_is_valid
+        if target_configuration is not None:
+            self.target_configuration = target_configuration
         if reference_id is not None:
             self.reference_id = reference_id
+        if target_document_id is not None:
+            self.target_document_id = target_document_id
+        if target_element_id is not None:
+            self.target_element_id = target_element_id
         if target_document_microversion_id is not None:
             self.target_document_microversion_id = target_document_microversion_id
         if is_configurable is not None:
             self.is_configurable = is_configurable
         if resolved_document_microversion_id is not None:
             self.resolved_document_microversion_id = resolved_document_microversion_id
+        if id_tag_is_valid is not None:
+            self.id_tag_is_valid = id_tag_is_valid
         if is_flattened_part is not None:
             self.is_flattened_part = is_flattened_part
         if track_new_versions is not None:
             self.track_new_versions = track_new_versions
+        if sketch_ids is not None:
+            self.sketch_ids = sketch_ids
         if error_code is not None:
             self.error_code = error_code
         if error_value is not None:
@@ -194,6 +194,27 @@ class BTAppElementReferenceResolveInfo(object):
         """
 
         self._resolved_element_microversion_id = resolved_element_microversion_id
+
+    @property
+    def id_tag(self):
+        """Gets the id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
+
+
+        :return: The id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_tag
+
+    @id_tag.setter
+    def id_tag(self, id_tag):
+        """Sets the id_tag of this BTAppElementReferenceResolveInfo.
+
+
+        :param id_tag: The id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id_tag = id_tag
 
     @property
     def revision(self):
@@ -259,69 +280,6 @@ class BTAppElementReferenceResolveInfo(object):
         self._change_id = change_id
 
     @property
-    def target_document_id(self):
-        """Gets the target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-
-
-        :return: The target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_document_id
-
-    @target_document_id.setter
-    def target_document_id(self, target_document_id):
-        """Sets the target_document_id of this BTAppElementReferenceResolveInfo.
-
-
-        :param target_document_id: The target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._target_document_id = target_document_id
-
-    @property
-    def target_element_id(self):
-        """Gets the target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-
-
-        :return: The target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_element_id
-
-    @target_element_id.setter
-    def target_element_id(self, target_element_id):
-        """Sets the target_element_id of this BTAppElementReferenceResolveInfo.
-
-
-        :param target_element_id: The target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._target_element_id = target_element_id
-
-    @property
-    def target_configuration(self):
-        """Gets the target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
-
-
-        :return: The target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_configuration
-
-    @target_configuration.setter
-    def target_configuration(self, target_configuration):
-        """Sets the target_configuration of this BTAppElementReferenceResolveInfo.
-
-
-        :param target_configuration: The target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._target_configuration = target_configuration
-
-    @property
     def target_version_id(self):
         """Gets the target_version_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
 
@@ -364,67 +322,25 @@ class BTAppElementReferenceResolveInfo(object):
         self._is_sketch_only = is_sketch_only
 
     @property
-    def sketch_ids(self):
-        """Gets the sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
+    def target_configuration(self):
+        """Gets the target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
 
 
-        :return: The sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._sketch_ids
-
-    @sketch_ids.setter
-    def sketch_ids(self, sketch_ids):
-        """Sets the sketch_ids of this BTAppElementReferenceResolveInfo.
-
-
-        :param sketch_ids: The sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._sketch_ids = sketch_ids
-
-    @property
-    def id_tag(self):
-        """Gets the id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
-
-
-        :return: The id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :return: The target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
         :rtype: str
         """
-        return self._id_tag
+        return self._target_configuration
 
-    @id_tag.setter
-    def id_tag(self, id_tag):
-        """Sets the id_tag of this BTAppElementReferenceResolveInfo.
+    @target_configuration.setter
+    def target_configuration(self, target_configuration):
+        """Sets the target_configuration of this BTAppElementReferenceResolveInfo.
 
 
-        :param id_tag: The id_tag of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :param target_configuration: The target_configuration of this BTAppElementReferenceResolveInfo.  # noqa: E501
         :type: str
         """
 
-        self._id_tag = id_tag
-
-    @property
-    def id_tag_is_valid(self):
-        """Gets the id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
-
-
-        :return: The id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._id_tag_is_valid
-
-    @id_tag_is_valid.setter
-    def id_tag_is_valid(self, id_tag_is_valid):
-        """Sets the id_tag_is_valid of this BTAppElementReferenceResolveInfo.
-
-
-        :param id_tag_is_valid: The id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._id_tag_is_valid = id_tag_is_valid
+        self._target_configuration = target_configuration
 
     @property
     def reference_id(self):
@@ -446,6 +362,48 @@ class BTAppElementReferenceResolveInfo(object):
         """
 
         self._reference_id = reference_id
+
+    @property
+    def target_document_id(self):
+        """Gets the target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+
+
+        :return: The target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_document_id
+
+    @target_document_id.setter
+    def target_document_id(self, target_document_id):
+        """Sets the target_document_id of this BTAppElementReferenceResolveInfo.
+
+
+        :param target_document_id: The target_document_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._target_document_id = target_document_id
+
+    @property
+    def target_element_id(self):
+        """Gets the target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+
+
+        :return: The target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_element_id
+
+    @target_element_id.setter
+    def target_element_id(self, target_element_id):
+        """Sets the target_element_id of this BTAppElementReferenceResolveInfo.
+
+
+        :param target_element_id: The target_element_id of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._target_element_id = target_element_id
 
     @property
     def target_document_microversion_id(self):
@@ -511,6 +469,27 @@ class BTAppElementReferenceResolveInfo(object):
         self._resolved_document_microversion_id = resolved_document_microversion_id
 
     @property
+    def id_tag_is_valid(self):
+        """Gets the id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
+
+
+        :return: The id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._id_tag_is_valid
+
+    @id_tag_is_valid.setter
+    def id_tag_is_valid(self, id_tag_is_valid):
+        """Sets the id_tag_is_valid of this BTAppElementReferenceResolveInfo.
+
+
+        :param id_tag_is_valid: The id_tag_is_valid of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._id_tag_is_valid = id_tag_is_valid
+
+    @property
     def is_flattened_part(self):
         """Gets the is_flattened_part of this BTAppElementReferenceResolveInfo.  # noqa: E501
 
@@ -551,6 +530,27 @@ class BTAppElementReferenceResolveInfo(object):
         """
 
         self._track_new_versions = track_new_versions
+
+    @property
+    def sketch_ids(self):
+        """Gets the sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
+
+
+        :return: The sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._sketch_ids
+
+    @sketch_ids.setter
+    def sketch_ids(self, sketch_ids):
+        """Sets the sketch_ids of this BTAppElementReferenceResolveInfo.
+
+
+        :param sketch_ids: The sketch_ids of this BTAppElementReferenceResolveInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._sketch_ids = sketch_ids
 
     @property
     def error_code(self):

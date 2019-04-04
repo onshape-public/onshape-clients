@@ -32,57 +32,36 @@ class BTUserUsagesSummary(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'owner_id': 'str',
         'count': 'int',
+        'owner_id': 'str',
         'owner_type': 'str',
         'owner_name': 'str'
     }
 
     attribute_map = {
-        'owner_id': 'ownerId',
         'count': 'count',
+        'owner_id': 'ownerId',
         'owner_type': 'ownerType',
         'owner_name': 'ownerName'
     }
 
-    def __init__(self, owner_id=None, count=None, owner_type=None, owner_name=None):  # noqa: E501
+    def __init__(self, count=None, owner_id=None, owner_type=None, owner_name=None):  # noqa: E501
         """BTUserUsagesSummary - a model defined in OpenAPI"""  # noqa: E501
 
-        self._owner_id = None
         self._count = None
+        self._owner_id = None
         self._owner_type = None
         self._owner_name = None
         self.discriminator = None
 
-        if owner_id is not None:
-            self.owner_id = owner_id
         if count is not None:
             self.count = count
+        if owner_id is not None:
+            self.owner_id = owner_id
         if owner_type is not None:
             self.owner_type = owner_type
         if owner_name is not None:
             self.owner_name = owner_name
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTUserUsagesSummary.  # noqa: E501
-
-
-        :return: The owner_id of this BTUserUsagesSummary.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTUserUsagesSummary.
-
-
-        :param owner_id: The owner_id of this BTUserUsagesSummary.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
 
     @property
     def count(self):
@@ -104,6 +83,27 @@ class BTUserUsagesSummary(object):
         """
 
         self._count = count
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTUserUsagesSummary.  # noqa: E501
+
+
+        :return: The owner_id of this BTUserUsagesSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTUserUsagesSummary.
+
+
+        :param owner_id: The owner_id of this BTUserUsagesSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def owner_type(self):

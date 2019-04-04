@@ -39,15 +39,15 @@ class BTFeatureListResponse(object):
         'imports': 'list[BTMImport]',
         'rollback_index': 'int',
         'bel_script_library_version': 'BTBelScriptLibraryVersion',
-        'serialization_version': 'str',
-        'library_version': 'int',
         'source_microversion': 'str',
         'reject_microversion_skew': 'bool',
+        'serialization_version': 'str',
+        'library_version': 'int',
         'microversion_skew': 'bool',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
@@ -58,18 +58,18 @@ class BTFeatureListResponse(object):
         'imports': 'imports',
         'rollback_index': 'rollbackIndex',
         'bel_script_library_version': 'belScriptLibraryVersion',
-        'serialization_version': 'serializationVersion',
-        'library_version': 'libraryVersion',
         'source_microversion': 'sourceMicroversion',
         'reject_microversion_skew': 'rejectMicroversionSkew',
+        'serialization_version': 'serializationVersion',
+        'library_version': 'libraryVersion',
         'microversion_skew': 'microversionSkew',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, features=None, is_complete=None, feature_states=None, default_features=None, imports=None, rollback_index=None, bel_script_library_version=None, serialization_version=None, library_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, features=None, is_complete=None, feature_states=None, default_features=None, imports=None, rollback_index=None, bel_script_library_version=None, source_microversion=None, reject_microversion_skew=None, serialization_version=None, library_version=None, microversion_skew=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTFeatureListResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._features = None
@@ -79,15 +79,15 @@ class BTFeatureListResponse(object):
         self._imports = None
         self._rollback_index = None
         self._bel_script_library_version = None
-        self._serialization_version = None
-        self._library_version = None
         self._source_microversion = None
         self._reject_microversion_skew = None
+        self._serialization_version = None
+        self._library_version = None
         self._microversion_skew = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if features is not None:
@@ -104,24 +104,24 @@ class BTFeatureListResponse(object):
             self.rollback_index = rollback_index
         if bel_script_library_version is not None:
             self.bel_script_library_version = bel_script_library_version
-        if serialization_version is not None:
-            self.serialization_version = serialization_version
-        if library_version is not None:
-            self.library_version = library_version
         if source_microversion is not None:
             self.source_microversion = source_microversion
         if reject_microversion_skew is not None:
             self.reject_microversion_skew = reject_microversion_skew
+        if serialization_version is not None:
+            self.serialization_version = serialization_version
+        if library_version is not None:
+            self.library_version = library_version
         if microversion_skew is not None:
             self.microversion_skew = microversion_skew
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def features(self):
@@ -271,48 +271,6 @@ class BTFeatureListResponse(object):
         self._bel_script_library_version = bel_script_library_version
 
     @property
-    def serialization_version(self):
-        """Gets the serialization_version of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The serialization_version of this BTFeatureListResponse.  # noqa: E501
-        :rtype: str
-        """
-        return self._serialization_version
-
-    @serialization_version.setter
-    def serialization_version(self, serialization_version):
-        """Sets the serialization_version of this BTFeatureListResponse.
-
-
-        :param serialization_version: The serialization_version of this BTFeatureListResponse.  # noqa: E501
-        :type: str
-        """
-
-        self._serialization_version = serialization_version
-
-    @property
-    def library_version(self):
-        """Gets the library_version of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The library_version of this BTFeatureListResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._library_version
-
-    @library_version.setter
-    def library_version(self, library_version):
-        """Sets the library_version of this BTFeatureListResponse.
-
-
-        :param library_version: The library_version of this BTFeatureListResponse.  # noqa: E501
-        :type: int
-        """
-
-        self._library_version = library_version
-
-    @property
     def source_microversion(self):
         """Gets the source_microversion of this BTFeatureListResponse.  # noqa: E501
 
@@ -353,6 +311,48 @@ class BTFeatureListResponse(object):
         """
 
         self._reject_microversion_skew = reject_microversion_skew
+
+    @property
+    def serialization_version(self):
+        """Gets the serialization_version of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._serialization_version
+
+    @serialization_version.setter
+    def serialization_version(self, serialization_version):
+        """Sets the serialization_version of this BTFeatureListResponse.
+
+
+        :param serialization_version: The serialization_version of this BTFeatureListResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._serialization_version = serialization_version
+
+    @property
+    def library_version(self):
+        """Gets the library_version of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The library_version of this BTFeatureListResponse.  # noqa: E501
+        :rtype: int
+        """
+        return self._library_version
+
+    @library_version.setter
+    def library_version(self, library_version):
+        """Sets the library_version of this BTFeatureListResponse.
+
+
+        :param library_version: The library_version of this BTFeatureListResponse.  # noqa: E501
+        :type: int
+        """
+
+        self._library_version = library_version
 
     @property
     def microversion_skew(self):
@@ -397,6 +397,27 @@ class BTFeatureListResponse(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The connection_source of this BTFeatureListResponse.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTFeatureListResponse.
+
+
+        :param connection_source: The connection_source of this BTFeatureListResponse.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTFeatureListResponse.  # noqa: E501
 
@@ -437,27 +458,6 @@ class BTFeatureListResponse(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The connection_source of this BTFeatureListResponse.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTFeatureListResponse.
-
-
-        :param connection_source: The connection_source of this BTFeatureListResponse.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

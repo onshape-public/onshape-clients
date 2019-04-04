@@ -32,67 +32,46 @@ class BTVector2d(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'y': 'float',
         'x': 'float',
+        'y': 'float',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'y': 'y',
         'x': 'x',
+        'y': 'y',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, y=None, x=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, x=None, y=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTVector2d - a model defined in OpenAPI"""  # noqa: E501
 
-        self._y = None
         self._x = None
+        self._y = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
-        if y is not None:
-            self.y = y
         if x is not None:
             self.x = x
+        if y is not None:
+            self.y = y
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
-
-    @property
-    def y(self):
-        """Gets the y of this BTVector2d.  # noqa: E501
-
-
-        :return: The y of this BTVector2d.  # noqa: E501
-        :rtype: float
-        """
-        return self._y
-
-    @y.setter
-    def y(self, y):
-        """Sets the y of this BTVector2d.
-
-
-        :param y: The y of this BTVector2d.  # noqa: E501
-        :type: float
-        """
-
-        self._y = y
 
     @property
     def x(self):
@@ -116,6 +95,27 @@ class BTVector2d(object):
         self._x = x
 
     @property
+    def y(self):
+        """Gets the y of this BTVector2d.  # noqa: E501
+
+
+        :return: The y of this BTVector2d.  # noqa: E501
+        :rtype: float
+        """
+        return self._y
+
+    @y.setter
+    def y(self, y):
+        """Sets the y of this BTVector2d.
+
+
+        :param y: The y of this BTVector2d.  # noqa: E501
+        :type: float
+        """
+
+        self._y = y
+
+    @property
     def type_id(self):
         """Gets the type_id of this BTVector2d.  # noqa: E501
 
@@ -135,6 +135,27 @@ class BTVector2d(object):
         """
 
         self._type_id = type_id
+
+    @property
+    def connection_source(self):
+        """Gets the connection_source of this BTVector2d.  # noqa: E501
+
+
+        :return: The connection_source of this BTVector2d.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTVector2d.
+
+
+        :param connection_source: The connection_source of this BTVector2d.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
 
     @property
     def export_type_name(self):
@@ -177,27 +198,6 @@ class BTVector2d(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTVector2d.  # noqa: E501
-
-
-        :return: The connection_source of this BTVector2d.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTVector2d.
-
-
-        :param connection_source: The connection_source of this BTVector2d.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

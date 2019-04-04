@@ -46,9 +46,9 @@ class BTMSuppressionState(object):
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
@@ -66,12 +66,12 @@ class BTMSuppressionState(object):
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, for_export=None, import_microversion=None, child_nodes=None, changeable_child_field_indices=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, for_export=None, import_microversion=None, child_nodes=None, changeable_child_field_indices=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTMSuppressionState - a model defined in OpenAPI"""  # noqa: E501
 
         self._for_export = None
@@ -88,9 +88,9 @@ class BTMSuppressionState(object):
         self._first_child_field = None
         self._child_list_indices = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if for_export is not None:
@@ -121,12 +121,12 @@ class BTMSuppressionState(object):
             self.child_list_indices = child_list_indices
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def for_export(self):
@@ -423,6 +423,27 @@ class BTMSuppressionState(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTMSuppressionState.  # noqa: E501
+
+
+        :return: The connection_source of this BTMSuppressionState.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTMSuppressionState.
+
+
+        :param connection_source: The connection_source of this BTMSuppressionState.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTMSuppressionState.  # noqa: E501
 
@@ -463,27 +484,6 @@ class BTMSuppressionState(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTMSuppressionState.  # noqa: E501
-
-
-        :return: The connection_source of this BTMSuppressionState.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTMSuppressionState.
-
-
-        :param connection_source: The connection_source of this BTMSuppressionState.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

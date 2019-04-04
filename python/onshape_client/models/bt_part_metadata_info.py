@@ -35,27 +35,27 @@ class BTPartMetadataInfo(object):
         'name': 'str',
         'id': 'str',
         'state': 'str',
-        'description': 'str',
-        'revision': 'str',
-        'thumbnail_info': 'BTThumbnailInfo',
-        'configuration_id': 'str',
-        'project': 'str',
         'href': 'str',
-        'element_id': 'str',
-        'part_number': 'str',
-        'custom_properties': 'dict(str, str)',
-        'microversion_id': 'str',
+        'description': 'str',
+        'project': 'str',
         'vendor': 'str',
-        'product_line': 'str',
         'title1': 'str',
+        'revision': 'str',
         'title2': 'str',
         'title3': 'str',
+        'microversion_id': 'str',
+        'part_number': 'str',
+        'product_line': 'str',
+        'thumbnail_info': 'BTThumbnailInfo',
+        'element_id': 'str',
         'part_query': 'str',
         'part_id': 'str',
         'unflattened_part_id': 'str',
+        'configuration_id': 'str',
+        'appearance': 'BTPartAppearanceInfo',
         'material': 'BTPartMaterialInfo',
         'thumbnail_configuration_id': 'str',
-        'appearance': 'BTPartAppearanceInfo',
+        'custom_properties': 'dict(str, str)',
         'custom_property_definitions': 'dict(str, BTCustomPropertyDefinitionInfo)',
         'body_type': 'str',
         'is_mesh': 'bool',
@@ -70,27 +70,27 @@ class BTPartMetadataInfo(object):
         'name': 'name',
         'id': 'id',
         'state': 'state',
-        'description': 'description',
-        'revision': 'revision',
-        'thumbnail_info': 'thumbnailInfo',
-        'configuration_id': 'configurationId',
-        'project': 'project',
         'href': 'href',
-        'element_id': 'elementId',
-        'part_number': 'partNumber',
-        'custom_properties': 'customProperties',
-        'microversion_id': 'microversionId',
+        'description': 'description',
+        'project': 'project',
         'vendor': 'vendor',
-        'product_line': 'productLine',
         'title1': 'title1',
+        'revision': 'revision',
         'title2': 'title2',
         'title3': 'title3',
+        'microversion_id': 'microversionId',
+        'part_number': 'partNumber',
+        'product_line': 'productLine',
+        'thumbnail_info': 'thumbnailInfo',
+        'element_id': 'elementId',
         'part_query': 'partQuery',
         'part_id': 'partId',
         'unflattened_part_id': 'unflattenedPartId',
+        'configuration_id': 'configurationId',
+        'appearance': 'appearance',
         'material': 'material',
         'thumbnail_configuration_id': 'thumbnailConfigurationId',
-        'appearance': 'appearance',
+        'custom_properties': 'customProperties',
         'custom_property_definitions': 'customPropertyDefinitions',
         'body_type': 'bodyType',
         'is_mesh': 'isMesh',
@@ -101,33 +101,33 @@ class BTPartMetadataInfo(object):
         'property_source_types': 'propertySourceTypes'
     }
 
-    def __init__(self, name=None, id=None, state=None, description=None, revision=None, thumbnail_info=None, configuration_id=None, project=None, href=None, element_id=None, part_number=None, custom_properties=None, microversion_id=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_query=None, part_id=None, unflattened_part_id=None, material=None, thumbnail_configuration_id=None, appearance=None, custom_property_definitions=None, body_type=None, is_mesh=None, referencing_configured_part_node_ids=None, is_flattened_body=None, is_hidden=None, ordinal=None, property_source_types=None):  # noqa: E501
+    def __init__(self, name=None, id=None, state=None, href=None, description=None, project=None, vendor=None, title1=None, revision=None, title2=None, title3=None, microversion_id=None, part_number=None, product_line=None, thumbnail_info=None, element_id=None, part_query=None, part_id=None, unflattened_part_id=None, configuration_id=None, appearance=None, material=None, thumbnail_configuration_id=None, custom_properties=None, custom_property_definitions=None, body_type=None, is_mesh=None, referencing_configured_part_node_ids=None, is_flattened_body=None, is_hidden=None, ordinal=None, property_source_types=None):  # noqa: E501
         """BTPartMetadataInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
         self._state = None
-        self._description = None
-        self._revision = None
-        self._thumbnail_info = None
-        self._configuration_id = None
-        self._project = None
         self._href = None
-        self._element_id = None
-        self._part_number = None
-        self._custom_properties = None
-        self._microversion_id = None
+        self._description = None
+        self._project = None
         self._vendor = None
-        self._product_line = None
         self._title1 = None
+        self._revision = None
         self._title2 = None
         self._title3 = None
+        self._microversion_id = None
+        self._part_number = None
+        self._product_line = None
+        self._thumbnail_info = None
+        self._element_id = None
         self._part_query = None
         self._part_id = None
         self._unflattened_part_id = None
+        self._configuration_id = None
+        self._appearance = None
         self._material = None
         self._thumbnail_configuration_id = None
-        self._appearance = None
+        self._custom_properties = None
         self._custom_property_definitions = None
         self._body_type = None
         self._is_mesh = None
@@ -144,48 +144,48 @@ class BTPartMetadataInfo(object):
             self.id = id
         if state is not None:
             self.state = state
-        if description is not None:
-            self.description = description
-        if revision is not None:
-            self.revision = revision
-        if thumbnail_info is not None:
-            self.thumbnail_info = thumbnail_info
-        if configuration_id is not None:
-            self.configuration_id = configuration_id
-        if project is not None:
-            self.project = project
         if href is not None:
             self.href = href
-        if element_id is not None:
-            self.element_id = element_id
-        if part_number is not None:
-            self.part_number = part_number
-        if custom_properties is not None:
-            self.custom_properties = custom_properties
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
+        if description is not None:
+            self.description = description
+        if project is not None:
+            self.project = project
         if vendor is not None:
             self.vendor = vendor
-        if product_line is not None:
-            self.product_line = product_line
         if title1 is not None:
             self.title1 = title1
+        if revision is not None:
+            self.revision = revision
         if title2 is not None:
             self.title2 = title2
         if title3 is not None:
             self.title3 = title3
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
+        if part_number is not None:
+            self.part_number = part_number
+        if product_line is not None:
+            self.product_line = product_line
+        if thumbnail_info is not None:
+            self.thumbnail_info = thumbnail_info
+        if element_id is not None:
+            self.element_id = element_id
         if part_query is not None:
             self.part_query = part_query
         if part_id is not None:
             self.part_id = part_id
         if unflattened_part_id is not None:
             self.unflattened_part_id = unflattened_part_id
+        if configuration_id is not None:
+            self.configuration_id = configuration_id
+        if appearance is not None:
+            self.appearance = appearance
         if material is not None:
             self.material = material
         if thumbnail_configuration_id is not None:
             self.thumbnail_configuration_id = thumbnail_configuration_id
-        if appearance is not None:
-            self.appearance = appearance
+        if custom_properties is not None:
+            self.custom_properties = custom_properties
         if custom_property_definitions is not None:
             self.custom_property_definitions = custom_property_definitions
         if body_type is not None:
@@ -273,6 +273,27 @@ class BTPartMetadataInfo(object):
         self._state = state
 
     @property
+    def href(self):
+        """Gets the href of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The href of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BTPartMetadataInfo.
+
+
+        :param href: The href of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._href = href
+
+    @property
     def description(self):
         """Gets the description of this BTPartMetadataInfo.  # noqa: E501
 
@@ -292,69 +313,6 @@ class BTPartMetadataInfo(object):
         """
 
         self._description = description
-
-    @property
-    def revision(self):
-        """Gets the revision of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The revision of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._revision
-
-    @revision.setter
-    def revision(self, revision):
-        """Sets the revision of this BTPartMetadataInfo.
-
-
-        :param revision: The revision of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._revision = revision
-
-    @property
-    def thumbnail_info(self):
-        """Gets the thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
-        """
-        return self._thumbnail_info
-
-    @thumbnail_info.setter
-    def thumbnail_info(self, thumbnail_info):
-        """Sets the thumbnail_info of this BTPartMetadataInfo.
-
-
-        :param thumbnail_info: The thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
-        :type: BTThumbnailInfo
-        """
-
-        self._thumbnail_info = thumbnail_info
-
-    @property
-    def configuration_id(self):
-        """Gets the configuration_id of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The configuration_id of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration_id
-
-    @configuration_id.setter
-    def configuration_id(self, configuration_id):
-        """Sets the configuration_id of this BTPartMetadataInfo.
-
-
-        :param configuration_id: The configuration_id of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration_id = configuration_id
 
     @property
     def project(self):
@@ -378,111 +336,6 @@ class BTPartMetadataInfo(object):
         self._project = project
 
     @property
-    def href(self):
-        """Gets the href of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The href of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BTPartMetadataInfo.
-
-
-        :param href: The href of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._href = href
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The element_id of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTPartMetadataInfo.
-
-
-        :param element_id: The element_id of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def part_number(self):
-        """Gets the part_number of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The part_number of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTPartMetadataInfo.
-
-
-        :param part_number: The part_number of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def custom_properties(self):
-        """Gets the custom_properties of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The custom_properties of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._custom_properties
-
-    @custom_properties.setter
-    def custom_properties(self, custom_properties):
-        """Sets the custom_properties of this BTPartMetadataInfo.
-
-
-        :param custom_properties: The custom_properties of this BTPartMetadataInfo.  # noqa: E501
-        :type: dict(str, str)
-        """
-
-        self._custom_properties = custom_properties
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The microversion_id of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTPartMetadataInfo.
-
-
-        :param microversion_id: The microversion_id of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
     def vendor(self):
         """Gets the vendor of this BTPartMetadataInfo.  # noqa: E501
 
@@ -504,27 +357,6 @@ class BTPartMetadataInfo(object):
         self._vendor = vendor
 
     @property
-    def product_line(self):
-        """Gets the product_line of this BTPartMetadataInfo.  # noqa: E501
-
-
-        :return: The product_line of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._product_line
-
-    @product_line.setter
-    def product_line(self, product_line):
-        """Sets the product_line of this BTPartMetadataInfo.
-
-
-        :param product_line: The product_line of this BTPartMetadataInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._product_line = product_line
-
-    @property
     def title1(self):
         """Gets the title1 of this BTPartMetadataInfo.  # noqa: E501
 
@@ -544,6 +376,27 @@ class BTPartMetadataInfo(object):
         """
 
         self._title1 = title1
+
+    @property
+    def revision(self):
+        """Gets the revision of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The revision of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._revision
+
+    @revision.setter
+    def revision(self, revision):
+        """Sets the revision of this BTPartMetadataInfo.
+
+
+        :param revision: The revision of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._revision = revision
 
     @property
     def title2(self):
@@ -586,6 +439,111 @@ class BTPartMetadataInfo(object):
         """
 
         self._title3 = title3
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The microversion_id of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTPartMetadataInfo.
+
+
+        :param microversion_id: The microversion_id of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
+
+    @property
+    def part_number(self):
+        """Gets the part_number of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The part_number of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_number
+
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTPartMetadataInfo.
+
+
+        :param part_number: The part_number of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._part_number = part_number
+
+    @property
+    def product_line(self):
+        """Gets the product_line of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The product_line of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._product_line
+
+    @product_line.setter
+    def product_line(self, product_line):
+        """Sets the product_line of this BTPartMetadataInfo.
+
+
+        :param product_line: The product_line of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._product_line = product_line
+
+    @property
+    def thumbnail_info(self):
+        """Gets the thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail_info
+
+    @thumbnail_info.setter
+    def thumbnail_info(self, thumbnail_info):
+        """Sets the thumbnail_info of this BTPartMetadataInfo.
+
+
+        :param thumbnail_info: The thumbnail_info of this BTPartMetadataInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail_info = thumbnail_info
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The element_id of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTPartMetadataInfo.
+
+
+        :param element_id: The element_id of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
 
     @property
     def part_query(self):
@@ -651,6 +609,48 @@ class BTPartMetadataInfo(object):
         self._unflattened_part_id = unflattened_part_id
 
     @property
+    def configuration_id(self):
+        """Gets the configuration_id of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The configuration_id of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration_id
+
+    @configuration_id.setter
+    def configuration_id(self, configuration_id):
+        """Sets the configuration_id of this BTPartMetadataInfo.
+
+
+        :param configuration_id: The configuration_id of this BTPartMetadataInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration_id = configuration_id
+
+    @property
+    def appearance(self):
+        """Gets the appearance of this BTPartMetadataInfo.  # noqa: E501
+
+
+        :return: The appearance of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: BTPartAppearanceInfo
+        """
+        return self._appearance
+
+    @appearance.setter
+    def appearance(self, appearance):
+        """Sets the appearance of this BTPartMetadataInfo.
+
+
+        :param appearance: The appearance of this BTPartMetadataInfo.  # noqa: E501
+        :type: BTPartAppearanceInfo
+        """
+
+        self._appearance = appearance
+
+    @property
     def material(self):
         """Gets the material of this BTPartMetadataInfo.  # noqa: E501
 
@@ -693,25 +693,25 @@ class BTPartMetadataInfo(object):
         self._thumbnail_configuration_id = thumbnail_configuration_id
 
     @property
-    def appearance(self):
-        """Gets the appearance of this BTPartMetadataInfo.  # noqa: E501
+    def custom_properties(self):
+        """Gets the custom_properties of this BTPartMetadataInfo.  # noqa: E501
 
 
-        :return: The appearance of this BTPartMetadataInfo.  # noqa: E501
-        :rtype: BTPartAppearanceInfo
+        :return: The custom_properties of this BTPartMetadataInfo.  # noqa: E501
+        :rtype: dict(str, str)
         """
-        return self._appearance
+        return self._custom_properties
 
-    @appearance.setter
-    def appearance(self, appearance):
-        """Sets the appearance of this BTPartMetadataInfo.
+    @custom_properties.setter
+    def custom_properties(self, custom_properties):
+        """Sets the custom_properties of this BTPartMetadataInfo.
 
 
-        :param appearance: The appearance of this BTPartMetadataInfo.  # noqa: E501
-        :type: BTPartAppearanceInfo
+        :param custom_properties: The custom_properties of this BTPartMetadataInfo.  # noqa: E501
+        :type: dict(str, str)
         """
 
-        self._appearance = appearance
+        self._custom_properties = custom_properties
 
     @property
     def custom_property_definitions(self):

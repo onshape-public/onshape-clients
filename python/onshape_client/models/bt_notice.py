@@ -38,18 +38,18 @@ class BTNotice(object):
         'type': 'str',
         'level': 'str',
         'parameter_id': 'str',
-        'changeable_child_field_indices': 'list[int]',
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
+        'changeable_child_field_indices': 'list[int]',
         'try_node': 'BTNodeReference',
         'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
         'node_id_raw': 'BTObjectId',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
@@ -59,21 +59,21 @@ class BTNotice(object):
         'type': 'type',
         'level': 'level',
         'parameter_id': 'parameterId',
-        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
+        'changeable_child_field_indices': 'changeableChildFieldIndices',
         'try_node': 'tryNode',
         'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
         'node_id_raw': 'nodeIdRaw',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, location_infos=None, message=None, stack_trace=None, type=None, level=None, parameter_id=None, changeable_child_field_indices=None, first_child_field=None, child_list_indices=None, try_node=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, location_infos=None, message=None, stack_trace=None, type=None, level=None, parameter_id=None, first_child_field=None, child_list_indices=None, changeable_child_field_indices=None, try_node=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTNotice - a model defined in OpenAPI"""  # noqa: E501
 
         self._location_infos = None
@@ -82,18 +82,18 @@ class BTNotice(object):
         self._type = None
         self._level = None
         self._parameter_id = None
-        self._changeable_child_field_indices = None
         self._first_child_field = None
         self._child_list_indices = None
+        self._changeable_child_field_indices = None
         self._try_node = None
         self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
         self._node_id_raw = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if location_infos is not None:
@@ -108,12 +108,12 @@ class BTNotice(object):
             self.level = level
         if parameter_id is not None:
             self.parameter_id = parameter_id
-        if changeable_child_field_indices is not None:
-            self.changeable_child_field_indices = changeable_child_field_indices
         if first_child_field is not None:
             self.first_child_field = first_child_field
         if child_list_indices is not None:
             self.child_list_indices = child_list_indices
+        if changeable_child_field_indices is not None:
+            self.changeable_child_field_indices = changeable_child_field_indices
         if try_node is not None:
             self.try_node = try_node
         if node_id is not None:
@@ -126,12 +126,12 @@ class BTNotice(object):
             self.node_id_raw = node_id_raw
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def location_infos(self):
@@ -272,27 +272,6 @@ class BTNotice(object):
         self._parameter_id = parameter_id
 
     @property
-    def changeable_child_field_indices(self):
-        """Gets the changeable_child_field_indices of this BTNotice.  # noqa: E501
-
-
-        :return: The changeable_child_field_indices of this BTNotice.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._changeable_child_field_indices
-
-    @changeable_child_field_indices.setter
-    def changeable_child_field_indices(self, changeable_child_field_indices):
-        """Sets the changeable_child_field_indices of this BTNotice.
-
-
-        :param changeable_child_field_indices: The changeable_child_field_indices of this BTNotice.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._changeable_child_field_indices = changeable_child_field_indices
-
-    @property
     def first_child_field(self):
         """Gets the first_child_field of this BTNotice.  # noqa: E501
 
@@ -333,6 +312,27 @@ class BTNotice(object):
         """
 
         self._child_list_indices = child_list_indices
+
+    @property
+    def changeable_child_field_indices(self):
+        """Gets the changeable_child_field_indices of this BTNotice.  # noqa: E501
+
+
+        :return: The changeable_child_field_indices of this BTNotice.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._changeable_child_field_indices
+
+    @changeable_child_field_indices.setter
+    def changeable_child_field_indices(self, changeable_child_field_indices):
+        """Sets the changeable_child_field_indices of this BTNotice.
+
+
+        :param changeable_child_field_indices: The changeable_child_field_indices of this BTNotice.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._changeable_child_field_indices = changeable_child_field_indices
 
     @property
     def try_node(self):
@@ -461,6 +461,27 @@ class BTNotice(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTNotice.  # noqa: E501
+
+
+        :return: The connection_source of this BTNotice.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTNotice.
+
+
+        :param connection_source: The connection_source of this BTNotice.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTNotice.  # noqa: E501
 
@@ -501,27 +522,6 @@ class BTNotice(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTNotice.  # noqa: E501
-
-
-        :return: The connection_source of this BTNotice.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTNotice.
-
-
-        :param connection_source: The connection_source of this BTNotice.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

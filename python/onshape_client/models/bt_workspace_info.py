@@ -37,13 +37,13 @@ class BTWorkspaceInfo(object):
         'parent': 'str',
         'type': 'str',
         'description': 'str',
-        'parents': 'list[BTVersionInfo]',
-        'thumbnail': 'BTThumbnailInfo',
+        'microversion': 'str',
         'created_at': 'datetime',
-        'document_id': 'str',
         'modified_at': 'datetime',
         'last_modifier': 'BTUserBasicSummaryInfo',
-        'microversion': 'str',
+        'document_id': 'str',
+        'thumbnail': 'BTThumbnailInfo',
+        'parents': 'list[BTVersionInfo]',
         'creator': 'BTUserBasicSummaryInfo',
         'override_date': 'datetime',
         'name': 'str',
@@ -58,13 +58,13 @@ class BTWorkspaceInfo(object):
         'parent': 'parent',
         'type': 'type',
         'description': 'description',
-        'parents': 'parents',
-        'thumbnail': 'thumbnail',
+        'microversion': 'microversion',
         'created_at': 'createdAt',
-        'document_id': 'documentId',
         'modified_at': 'modifiedAt',
         'last_modifier': 'lastModifier',
-        'microversion': 'microversion',
+        'document_id': 'documentId',
+        'thumbnail': 'thumbnail',
+        'parents': 'parents',
         'creator': 'creator',
         'override_date': 'overrideDate',
         'name': 'name',
@@ -73,7 +73,7 @@ class BTWorkspaceInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, is_read_only=None, can_delete=None, parent=None, type=None, description=None, parents=None, thumbnail=None, created_at=None, document_id=None, modified_at=None, last_modifier=None, microversion=None, creator=None, override_date=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, is_read_only=None, can_delete=None, parent=None, type=None, description=None, microversion=None, created_at=None, modified_at=None, last_modifier=None, document_id=None, thumbnail=None, parents=None, creator=None, override_date=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTWorkspaceInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._is_read_only = None
@@ -81,13 +81,13 @@ class BTWorkspaceInfo(object):
         self._parent = None
         self._type = None
         self._description = None
-        self._parents = None
-        self._thumbnail = None
+        self._microversion = None
         self._created_at = None
-        self._document_id = None
         self._modified_at = None
         self._last_modifier = None
-        self._microversion = None
+        self._document_id = None
+        self._thumbnail = None
+        self._parents = None
         self._creator = None
         self._override_date = None
         self._name = None
@@ -106,20 +106,20 @@ class BTWorkspaceInfo(object):
             self.type = type
         if description is not None:
             self.description = description
-        if parents is not None:
-            self.parents = parents
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
+        if microversion is not None:
+            self.microversion = microversion
         if created_at is not None:
             self.created_at = created_at
-        if document_id is not None:
-            self.document_id = document_id
         if modified_at is not None:
             self.modified_at = modified_at
         if last_modifier is not None:
             self.last_modifier = last_modifier
-        if microversion is not None:
-            self.microversion = microversion
+        if document_id is not None:
+            self.document_id = document_id
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
+        if parents is not None:
+            self.parents = parents
         if creator is not None:
             self.creator = creator
         if override_date is not None:
@@ -239,46 +239,25 @@ class BTWorkspaceInfo(object):
         self._description = description
 
     @property
-    def parents(self):
-        """Gets the parents of this BTWorkspaceInfo.  # noqa: E501
+    def microversion(self):
+        """Gets the microversion of this BTWorkspaceInfo.  # noqa: E501
 
 
-        :return: The parents of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: list[BTVersionInfo]
+        :return: The microversion of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._parents
+        return self._microversion
 
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this BTWorkspaceInfo.
-
-
-        :param parents: The parents of this BTWorkspaceInfo.  # noqa: E501
-        :type: list[BTVersionInfo]
-        """
-
-        self._parents = parents
-
-    @property
-    def thumbnail(self):
-        """Gets the thumbnail of this BTWorkspaceInfo.  # noqa: E501
+    @microversion.setter
+    def microversion(self, microversion):
+        """Sets the microversion of this BTWorkspaceInfo.
 
 
-        :return: The thumbnail of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
-        """
-        return self._thumbnail
-
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this BTWorkspaceInfo.
-
-
-        :param thumbnail: The thumbnail of this BTWorkspaceInfo.  # noqa: E501
-        :type: BTThumbnailInfo
+        :param microversion: The microversion of this BTWorkspaceInfo.  # noqa: E501
+        :type: str
         """
 
-        self._thumbnail = thumbnail
+        self._microversion = microversion
 
     @property
     def created_at(self):
@@ -300,27 +279,6 @@ class BTWorkspaceInfo(object):
         """
 
         self._created_at = created_at
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTWorkspaceInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTWorkspaceInfo.
-
-
-        :param document_id: The document_id of this BTWorkspaceInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     @property
     def modified_at(self):
@@ -365,25 +323,67 @@ class BTWorkspaceInfo(object):
         self._last_modifier = last_modifier
 
     @property
-    def microversion(self):
-        """Gets the microversion of this BTWorkspaceInfo.  # noqa: E501
+    def document_id(self):
+        """Gets the document_id of this BTWorkspaceInfo.  # noqa: E501
 
 
-        :return: The microversion of this BTWorkspaceInfo.  # noqa: E501
+        :return: The document_id of this BTWorkspaceInfo.  # noqa: E501
         :rtype: str
         """
-        return self._microversion
+        return self._document_id
 
-    @microversion.setter
-    def microversion(self, microversion):
-        """Sets the microversion of this BTWorkspaceInfo.
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTWorkspaceInfo.
 
 
-        :param microversion: The microversion of this BTWorkspaceInfo.  # noqa: E501
+        :param document_id: The document_id of this BTWorkspaceInfo.  # noqa: E501
         :type: str
         """
 
-        self._microversion = microversion
+        self._document_id = document_id
+
+    @property
+    def thumbnail(self):
+        """Gets the thumbnail of this BTWorkspaceInfo.  # noqa: E501
+
+
+        :return: The thumbnail of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this BTWorkspaceInfo.
+
+
+        :param thumbnail: The thumbnail of this BTWorkspaceInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail = thumbnail
+
+    @property
+    def parents(self):
+        """Gets the parents of this BTWorkspaceInfo.  # noqa: E501
+
+
+        :return: The parents of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: list[BTVersionInfo]
+        """
+        return self._parents
+
+    @parents.setter
+    def parents(self, parents):
+        """Sets the parents of this BTWorkspaceInfo.
+
+
+        :param parents: The parents of this BTWorkspaceInfo.  # noqa: E501
+        :type: list[BTVersionInfo]
+        """
+
+        self._parents = parents
 
     @property
     def creator(self):

@@ -35,19 +35,19 @@ class BTImportForeignDataParams(object):
         'size': 'int',
         'owner_id': 'str',
         'owner_type': 'str',
+        'filename': 'str',
+        'media_type': 'str',
+        'document_id': 'str',
         'file_format': 'str',
         'public_document': 'bool',
         'notify_user': 'bool',
-        'document_id': 'str',
-        'media_type': 'str',
-        'filename': 'str',
         'unit': 'str',
         'split_assemblies_into_multiple_documents': 'bool',
         'flatten_assemblies': 'bool',
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
-        'parent_id': 'str',
         'project_id': 'str',
+        'parent_id': 'str',
         'foreign_id': 'str',
         'upload_id': 'str',
         'original_foreign_id': 'str',
@@ -61,19 +61,19 @@ class BTImportForeignDataParams(object):
         'size': 'size',
         'owner_id': 'ownerId',
         'owner_type': 'ownerType',
+        'filename': 'filename',
+        'media_type': 'mediaType',
+        'document_id': 'documentId',
         'file_format': 'fileFormat',
         'public_document': 'publicDocument',
         'notify_user': 'notifyUser',
-        'document_id': 'documentId',
-        'media_type': 'mediaType',
-        'filename': 'filename',
         'unit': 'unit',
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',
         'flatten_assemblies': 'flattenAssemblies',
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
-        'parent_id': 'parentId',
         'project_id': 'projectId',
+        'parent_id': 'parentId',
         'foreign_id': 'foreignId',
         'upload_id': 'uploadId',
         'original_foreign_id': 'originalForeignId',
@@ -83,25 +83,25 @@ class BTImportForeignDataParams(object):
         'specify_units': 'specifyUnits'
     }
 
-    def __init__(self, size=None, owner_id=None, owner_type=None, file_format=None, public_document=None, notify_user=None, document_id=None, media_type=None, filename=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, parent_id=None, project_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
+    def __init__(self, size=None, owner_id=None, owner_type=None, filename=None, media_type=None, document_id=None, file_format=None, public_document=None, notify_user=None, unit=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, specify_units=None):  # noqa: E501
         """BTImportForeignDataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._size = None
         self._owner_id = None
         self._owner_type = None
+        self._filename = None
+        self._media_type = None
+        self._document_id = None
         self._file_format = None
         self._public_document = None
         self._notify_user = None
-        self._document_id = None
-        self._media_type = None
-        self._filename = None
         self._unit = None
         self._split_assemblies_into_multiple_documents = None
         self._flatten_assemblies = None
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
-        self._parent_id = None
         self._project_id = None
+        self._parent_id = None
         self._foreign_id = None
         self._upload_id = None
         self._original_foreign_id = None
@@ -117,18 +117,18 @@ class BTImportForeignDataParams(object):
             self.owner_id = owner_id
         if owner_type is not None:
             self.owner_type = owner_type
+        if filename is not None:
+            self.filename = filename
+        if media_type is not None:
+            self.media_type = media_type
+        if document_id is not None:
+            self.document_id = document_id
         if file_format is not None:
             self.file_format = file_format
         if public_document is not None:
             self.public_document = public_document
         if notify_user is not None:
             self.notify_user = notify_user
-        if document_id is not None:
-            self.document_id = document_id
-        if media_type is not None:
-            self.media_type = media_type
-        if filename is not None:
-            self.filename = filename
         if unit is not None:
             self.unit = unit
         if split_assemblies_into_multiple_documents is not None:
@@ -139,10 +139,10 @@ class BTImportForeignDataParams(object):
             self.gety_axis_is_up = gety_axis_is_up
         if allow_faulty_parts is not None:
             self.allow_faulty_parts = allow_faulty_parts
-        if parent_id is not None:
-            self.parent_id = parent_id
         if project_id is not None:
             self.project_id = project_id
+        if parent_id is not None:
+            self.parent_id = parent_id
         if foreign_id is not None:
             self.foreign_id = foreign_id
         if upload_id is not None:
@@ -228,6 +228,69 @@ class BTImportForeignDataParams(object):
         self._owner_type = owner_type
 
     @property
+    def filename(self):
+        """Gets the filename of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The filename of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._filename
+
+    @filename.setter
+    def filename(self, filename):
+        """Sets the filename of this BTImportForeignDataParams.
+
+
+        :param filename: The filename of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._filename = filename
+
+    @property
+    def media_type(self):
+        """Gets the media_type of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The media_type of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._media_type
+
+    @media_type.setter
+    def media_type(self, media_type):
+        """Sets the media_type of this BTImportForeignDataParams.
+
+
+        :param media_type: The media_type of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._media_type = media_type
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The document_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTImportForeignDataParams.
+
+
+        :param document_id: The document_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def file_format(self):
         """Gets the file_format of this BTImportForeignDataParams.  # noqa: E501
 
@@ -295,69 +358,6 @@ class BTImportForeignDataParams(object):
         """
 
         self._notify_user = notify_user
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The document_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTImportForeignDataParams.
-
-
-        :param document_id: The document_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def media_type(self):
-        """Gets the media_type of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The media_type of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._media_type
-
-    @media_type.setter
-    def media_type(self, media_type):
-        """Sets the media_type of this BTImportForeignDataParams.
-
-
-        :param media_type: The media_type of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._media_type = media_type
-
-    @property
-    def filename(self):
-        """Gets the filename of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The filename of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._filename
-
-    @filename.setter
-    def filename(self, filename):
-        """Sets the filename of this BTImportForeignDataParams.
-
-
-        :param filename: The filename of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._filename = filename
 
     @property
     def unit(self):
@@ -465,27 +465,6 @@ class BTImportForeignDataParams(object):
         self._allow_faulty_parts = allow_faulty_parts
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The parent_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTImportForeignDataParams.
-
-
-        :param parent_id: The parent_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_id = parent_id
-
-    @property
     def project_id(self):
         """Gets the project_id of this BTImportForeignDataParams.  # noqa: E501
 
@@ -505,6 +484,27 @@ class BTImportForeignDataParams(object):
         """
 
         self._project_id = project_id
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The parent_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTImportForeignDataParams.
+
+
+        :param parent_id: The parent_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def foreign_id(self):

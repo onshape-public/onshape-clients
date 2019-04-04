@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 **require_totp** | **bool** |  | [optional] 
 **use_light_ui** | **bool** |  | [optional] 
+**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 **require_approved_drawing_templates** | **bool** |  | [optional] 
 **approved_drawing_templates_document_id** | **str** |  | [optional] 
 **add_company_owned_libraries_in_user_account** | **bool** |  | [optional] 

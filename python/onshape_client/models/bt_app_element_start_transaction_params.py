@@ -32,47 +32,26 @@ class BTAppElementStartTransactionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'parent_change_id': 'str',
-        'return_error': 'bool'
+        'return_error': 'bool',
+        'parent_change_id': 'str'
     }
 
     attribute_map = {
-        'parent_change_id': 'parentChangeId',
-        'return_error': 'returnError'
+        'return_error': 'returnError',
+        'parent_change_id': 'parentChangeId'
     }
 
-    def __init__(self, parent_change_id=None, return_error=None):  # noqa: E501
+    def __init__(self, return_error=None, parent_change_id=None):  # noqa: E501
         """BTAppElementStartTransactionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._parent_change_id = None
         self._return_error = None
+        self._parent_change_id = None
         self.discriminator = None
 
-        if parent_change_id is not None:
-            self.parent_change_id = parent_change_id
         if return_error is not None:
             self.return_error = return_error
-
-    @property
-    def parent_change_id(self):
-        """Gets the parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
-
-
-        :return: The parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_change_id
-
-    @parent_change_id.setter
-    def parent_change_id(self, parent_change_id):
-        """Sets the parent_change_id of this BTAppElementStartTransactionParams.
-
-
-        :param parent_change_id: The parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_change_id = parent_change_id
+        if parent_change_id is not None:
+            self.parent_change_id = parent_change_id
 
     @property
     def return_error(self):
@@ -94,6 +73,27 @@ class BTAppElementStartTransactionParams(object):
         """
 
         self._return_error = return_error
+
+    @property
+    def parent_change_id(self):
+        """Gets the parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
+
+
+        :return: The parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_change_id
+
+    @parent_change_id.setter
+    def parent_change_id(self, parent_change_id):
+        """Sets the parent_change_id of this BTAppElementStartTransactionParams.
+
+
+        :param parent_change_id: The parent_change_id of this BTAppElementStartTransactionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_change_id = parent_change_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

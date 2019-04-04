@@ -33,56 +33,56 @@ class BTMassProperties(object):
     """
     openapi_types = {
         'has_mass': 'bool',
+        'volume': 'list[float]',
         'mass_missing_count': 'int',
         'mass': 'list[float]',
-        'volume': 'list[float]',
         'periphery': 'list[float]',
         'centroid': 'list[float]',
         'inertia': 'list[float]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'has_mass': 'hasMass',
+        'volume': 'volume',
         'mass_missing_count': 'massMissingCount',
         'mass': 'mass',
-        'volume': 'volume',
         'periphery': 'periphery',
         'centroid': 'centroid',
         'inertia': 'inertia',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, has_mass=None, mass_missing_count=None, mass=None, volume=None, periphery=None, centroid=None, inertia=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, has_mass=None, volume=None, mass_missing_count=None, mass=None, periphery=None, centroid=None, inertia=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTMassProperties - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_mass = None
+        self._volume = None
         self._mass_missing_count = None
         self._mass = None
-        self._volume = None
         self._periphery = None
         self._centroid = None
         self._inertia = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if has_mass is not None:
             self.has_mass = has_mass
+        if volume is not None:
+            self.volume = volume
         if mass_missing_count is not None:
             self.mass_missing_count = mass_missing_count
         if mass is not None:
             self.mass = mass
-        if volume is not None:
-            self.volume = volume
         if periphery is not None:
             self.periphery = periphery
         if centroid is not None:
@@ -91,12 +91,12 @@ class BTMassProperties(object):
             self.inertia = inertia
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def has_mass(self):
@@ -118,6 +118,27 @@ class BTMassProperties(object):
         """
 
         self._has_mass = has_mass
+
+    @property
+    def volume(self):
+        """Gets the volume of this BTMassProperties.  # noqa: E501
+
+
+        :return: The volume of this BTMassProperties.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._volume
+
+    @volume.setter
+    def volume(self, volume):
+        """Sets the volume of this BTMassProperties.
+
+
+        :param volume: The volume of this BTMassProperties.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._volume = volume
 
     @property
     def mass_missing_count(self):
@@ -160,27 +181,6 @@ class BTMassProperties(object):
         """
 
         self._mass = mass
-
-    @property
-    def volume(self):
-        """Gets the volume of this BTMassProperties.  # noqa: E501
-
-
-        :return: The volume of this BTMassProperties.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._volume
-
-    @volume.setter
-    def volume(self, volume):
-        """Sets the volume of this BTMassProperties.
-
-
-        :param volume: The volume of this BTMassProperties.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._volume = volume
 
     @property
     def periphery(self):
@@ -267,6 +267,27 @@ class BTMassProperties(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTMassProperties.  # noqa: E501
+
+
+        :return: The connection_source of this BTMassProperties.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTMassProperties.
+
+
+        :param connection_source: The connection_source of this BTMassProperties.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTMassProperties.  # noqa: E501
 
@@ -307,27 +328,6 @@ class BTMassProperties(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTMassProperties.  # noqa: E501
-
-
-        :return: The connection_source of this BTMassProperties.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTMassProperties.
-
-
-        :param connection_source: The connection_source of this BTMassProperties.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

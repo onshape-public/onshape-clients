@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**email** | **str** |  | [optional] 
 **source** | **int** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
+**is_guest** | **bool** |  | [optional] 
 **company** | [**BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
 **last_login_time** | **datetime** |  | [optional] 
 **global_permissions** | [**GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
-**is_guest** | **bool** |  | [optional] 
 **is_light** | **bool** |  | [optional] 
 **state** | **int** |  | [optional] 
 **image** | **str** |  | [optional] 

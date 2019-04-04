@@ -26,6 +26,7 @@ from six.moves.urllib.parse import quote
 from onshape_client.configuration import Configuration
 import onshape_client.models
 from onshape_client import rest
+from onshape_client.onshape_rest_extras import decode_file_name_from_header
 
 
 class ApiClient(object):
@@ -76,7 +77,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/0.0.12/python'
+        self.user_agent = 'OpenAPI-Generator/0.0.13/python'
 
     def __del__(self):
         if self._pool:
@@ -535,15 +536,14 @@ class ApiClient(object):
 
         content_disposition = response.getheader("Content-Disposition")
         if content_disposition:
-            # filename = re.search(r'filename=[\'"]?([^\'"\s]+)[\'"]?',
-            #                      content_disposition).group(1)
-
-            # path = os.path.join(os.path.dirname(path), filename)
-
-            path = "/Users/ethankeller/onshape/onshape-clients/python/a_step_file.step"
+            filename = decode_file_name_from_header(content_disposition)
+            path = os.path.join(os.path.dirname(path), filename)
 
         with open(path, "wb") as f:
-            f.write(response.data.encode("UTF-8"))
+            data = response.data
+            if isinstance(data, str):
+                data = data.encode("UTF=8")
+            f.write(data)
 
         return path
 

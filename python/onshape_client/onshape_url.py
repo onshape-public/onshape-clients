@@ -14,7 +14,7 @@ class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
     create the useful fields."""
 
-    def __init__(self, url, client=None):
+    def __init__(self, url, *args, client=None, **kwargs):
 
         self.client = client if client else Client()
 
@@ -37,14 +37,6 @@ class OnshapeElement(object):
         self.eid = eid
         self.optional_microversion = optional_microversion
 
-        # Initialize the cached values
-        # Raw configuration params
-        self._raw_configuration_params = self._get_raw_configuration_params()
-        # Map from visible name to parameterId
-        self._parameter_map = self._get_parameter_map()
-        # Map from parameterId to default value
-        self._default_configuration_map = self.get_default_configuration_map()
-
     def get_microversion_url(self):
         """Determine the microversion from the current version/workspace and return the path to that microversion. This
         will call the API to get the current microversion if the microversion is not already specified."""
@@ -58,6 +50,25 @@ class OnshapeElement(object):
             microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
             self.optional_microversion = microversion
             return self.get_url()
+
+    def get_url(self):
+        optional_microversion_add_in = ""
+        if self.optional_microversion:
+            optional_microversion_add_in = "/m/" + self.optional_microversion
+        return self.base_url + "/documents/" + self.did + "/" + self.wvm + "/" + self.wvmid + optional_microversion_add_in + "/e/" + self.eid
+
+
+class ConfiguredOnshapeElement(OnshapeElement):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Initialize the cached values
+        # Raw configuration params
+        self._raw_configuration_params = self._get_raw_configuration_params()
+        # Map from visible name to parameterId
+        self._parameter_map = self._get_parameter_map()
+        # Map from parameterId to default value
+        self._default_configuration_map = self.get_default_configuration_map()
 
     def get_url_with_configuration(self, config, open_browser=False):
         """A configuration is applied on top of the current element, and doesn't effect the internals of the element.
@@ -120,10 +131,6 @@ class OnshapeElement(object):
                                                         _preload_content=False)
         return json.loads(response.data.decode("utf-8"))
 
-    def get_url(self):
-        optional_microversion_add_in = ""
-        if self.optional_microversion:
-            optional_microversion_add_in = "/m/" + self.optional_microversion
-        return self.base_url + "/documents/" + self.did + "/" + self.wvm + "/" + self.wvmid + optional_microversion_add_in + "/e/" + self.eid
+
 
 

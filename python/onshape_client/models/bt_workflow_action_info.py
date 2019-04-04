@@ -38,10 +38,10 @@ class BTWorkflowActionInfo(object):
         'always_allow': 'bool',
         'is_approver_action': 'bool',
         'label': 'str',
+        'is_admin_override': 'bool',
         'action': 'str',
         'required_properties': 'list[str]',
-        'ui_hint': 'str',
-        'is_admin_override': 'bool'
+        'ui_hint': 'str'
     }
 
     attribute_map = {
@@ -51,13 +51,13 @@ class BTWorkflowActionInfo(object):
         'always_allow': 'alwaysAllow',
         'is_approver_action': 'isApproverAction',
         'label': 'label',
+        'is_admin_override': 'isAdminOverride',
         'action': 'action',
         'required_properties': 'requiredProperties',
-        'ui_hint': 'uiHint',
-        'is_admin_override': 'isAdminOverride'
+        'ui_hint': 'uiHint'
     }
 
-    def __init__(self, tooltip=None, allow_if_no_approvers=None, allow_if_approvers=None, always_allow=None, is_approver_action=None, label=None, action=None, required_properties=None, ui_hint=None, is_admin_override=None):  # noqa: E501
+    def __init__(self, tooltip=None, allow_if_no_approvers=None, allow_if_approvers=None, always_allow=None, is_approver_action=None, label=None, is_admin_override=None, action=None, required_properties=None, ui_hint=None):  # noqa: E501
         """BTWorkflowActionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._tooltip = None
@@ -66,10 +66,10 @@ class BTWorkflowActionInfo(object):
         self._always_allow = None
         self._is_approver_action = None
         self._label = None
+        self._is_admin_override = None
         self._action = None
         self._required_properties = None
         self._ui_hint = None
-        self._is_admin_override = None
         self.discriminator = None
 
         if tooltip is not None:
@@ -84,14 +84,14 @@ class BTWorkflowActionInfo(object):
             self.is_approver_action = is_approver_action
         if label is not None:
             self.label = label
+        if is_admin_override is not None:
+            self.is_admin_override = is_admin_override
         if action is not None:
             self.action = action
         if required_properties is not None:
             self.required_properties = required_properties
         if ui_hint is not None:
             self.ui_hint = ui_hint
-        if is_admin_override is not None:
-            self.is_admin_override = is_admin_override
 
     @property
     def tooltip(self):
@@ -220,6 +220,27 @@ class BTWorkflowActionInfo(object):
         self._label = label
 
     @property
+    def is_admin_override(self):
+        """Gets the is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+
+
+        :return: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_admin_override
+
+    @is_admin_override.setter
+    def is_admin_override(self, is_admin_override):
+        """Sets the is_admin_override of this BTWorkflowActionInfo.
+
+
+        :param is_admin_override: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_admin_override = is_admin_override
+
+    @property
     def action(self):
         """Gets the action of this BTWorkflowActionInfo.  # noqa: E501
 
@@ -281,27 +302,6 @@ class BTWorkflowActionInfo(object):
         """
 
         self._ui_hint = ui_hint
-
-    @property
-    def is_admin_override(self):
-        """Gets the is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-
-
-        :return: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_admin_override
-
-    @is_admin_override.setter
-    def is_admin_override(self, is_admin_override):
-        """Sets the is_admin_override of this BTWorkflowActionInfo.
-
-
-        :param is_admin_override: The is_admin_override of this BTWorkflowActionInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_admin_override = is_admin_override
 
     def to_dict(self):
         """Returns the model properties as a dict"""

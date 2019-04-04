@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_index** | **int** |  | [optional] 
-**next** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
+**next** | **str** |  | [optional] 
 **items** | [**list[BTRbacPermissionSchemeInfo]**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 

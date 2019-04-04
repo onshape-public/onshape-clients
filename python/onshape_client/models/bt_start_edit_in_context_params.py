@@ -32,57 +32,36 @@ class BTStartEditInContextParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'encoded_configuration': 'str',
         'microversion_id': 'str',
+        'encoded_configuration': 'str',
         'description': 'str',
         'context_id': 'str'
     }
 
     attribute_map = {
-        'encoded_configuration': 'encodedConfiguration',
         'microversion_id': 'microversionId',
+        'encoded_configuration': 'encodedConfiguration',
         'description': 'description',
         'context_id': 'contextId'
     }
 
-    def __init__(self, encoded_configuration=None, microversion_id=None, description=None, context_id=None):  # noqa: E501
+    def __init__(self, microversion_id=None, encoded_configuration=None, description=None, context_id=None):  # noqa: E501
         """BTStartEditInContextParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._encoded_configuration = None
         self._microversion_id = None
+        self._encoded_configuration = None
         self._description = None
         self._context_id = None
         self.discriminator = None
 
-        if encoded_configuration is not None:
-            self.encoded_configuration = encoded_configuration
         if microversion_id is not None:
             self.microversion_id = microversion_id
+        if encoded_configuration is not None:
+            self.encoded_configuration = encoded_configuration
         if description is not None:
             self.description = description
         if context_id is not None:
             self.context_id = context_id
-
-    @property
-    def encoded_configuration(self):
-        """Gets the encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
-
-
-        :return: The encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._encoded_configuration
-
-    @encoded_configuration.setter
-    def encoded_configuration(self, encoded_configuration):
-        """Sets the encoded_configuration of this BTStartEditInContextParams.
-
-
-        :param encoded_configuration: The encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
-        :type: str
-        """
-
-        self._encoded_configuration = encoded_configuration
 
     @property
     def microversion_id(self):
@@ -104,6 +83,27 @@ class BTStartEditInContextParams(object):
         """
 
         self._microversion_id = microversion_id
+
+    @property
+    def encoded_configuration(self):
+        """Gets the encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
+
+
+        :return: The encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._encoded_configuration
+
+    @encoded_configuration.setter
+    def encoded_configuration(self, encoded_configuration):
+        """Sets the encoded_configuration of this BTStartEditInContextParams.
+
+
+        :param encoded_configuration: The encoded_configuration of this BTStartEditInContextParams.  # noqa: E501
+        :type: str
+        """
+
+        self._encoded_configuration = encoded_configuration
 
     @property
     def description(self):

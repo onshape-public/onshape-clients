@@ -33,60 +33,60 @@ class BTExportTessellatedFacesBody(object):
     """
     openapi_types = {
         'id': 'str',
-        'faces': 'list[BTExportTessellatedFacesFace]',
         'appearance': 'BTGraphicsAppearance',
         'body_type': 'str',
+        'faces': 'list[BTExportTessellatedFacesFace]',
         'facet_points': 'list[BTVector3d]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
-        'faces': 'faces',
         'appearance': 'appearance',
         'body_type': 'bodyType',
+        'faces': 'faces',
         'facet_points': 'facetPoints',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, id=None, faces=None, appearance=None, body_type=None, facet_points=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, id=None, appearance=None, body_type=None, faces=None, facet_points=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTExportTessellatedFacesBody - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._faces = None
         self._appearance = None
         self._body_type = None
+        self._faces = None
         self._facet_points = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if faces is not None:
-            self.faces = faces
         if appearance is not None:
             self.appearance = appearance
         if body_type is not None:
             self.body_type = body_type
+        if faces is not None:
+            self.faces = faces
         if facet_points is not None:
             self.facet_points = facet_points
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def id(self):
@@ -108,27 +108,6 @@ class BTExportTessellatedFacesBody(object):
         """
 
         self._id = id
-
-    @property
-    def faces(self):
-        """Gets the faces of this BTExportTessellatedFacesBody.  # noqa: E501
-
-
-        :return: The faces of this BTExportTessellatedFacesBody.  # noqa: E501
-        :rtype: list[BTExportTessellatedFacesFace]
-        """
-        return self._faces
-
-    @faces.setter
-    def faces(self, faces):
-        """Sets the faces of this BTExportTessellatedFacesBody.
-
-
-        :param faces: The faces of this BTExportTessellatedFacesBody.  # noqa: E501
-        :type: list[BTExportTessellatedFacesFace]
-        """
-
-        self._faces = faces
 
     @property
     def appearance(self):
@@ -179,6 +158,27 @@ class BTExportTessellatedFacesBody(object):
         self._body_type = body_type
 
     @property
+    def faces(self):
+        """Gets the faces of this BTExportTessellatedFacesBody.  # noqa: E501
+
+
+        :return: The faces of this BTExportTessellatedFacesBody.  # noqa: E501
+        :rtype: list[BTExportTessellatedFacesFace]
+        """
+        return self._faces
+
+    @faces.setter
+    def faces(self, faces):
+        """Sets the faces of this BTExportTessellatedFacesBody.
+
+
+        :param faces: The faces of this BTExportTessellatedFacesBody.  # noqa: E501
+        :type: list[BTExportTessellatedFacesFace]
+        """
+
+        self._faces = faces
+
+    @property
     def facet_points(self):
         """Gets the facet_points of this BTExportTessellatedFacesBody.  # noqa: E501
 
@@ -221,6 +221,27 @@ class BTExportTessellatedFacesBody(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
+
+
+        :return: The connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTExportTessellatedFacesBody.
+
+
+        :param connection_source: The connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTExportTessellatedFacesBody.  # noqa: E501
 
@@ -261,27 +282,6 @@ class BTExportTessellatedFacesBody(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
-
-
-        :return: The connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTExportTessellatedFacesBody.
-
-
-        :param connection_source: The connection_source of this BTExportTessellatedFacesBody.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

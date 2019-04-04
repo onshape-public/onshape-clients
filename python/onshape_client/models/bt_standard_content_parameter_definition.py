@@ -34,44 +34,44 @@ class BTStandardContentParameterDefinition(object):
     openapi_types = {
         'default_value': 'str',
         'display_name': 'str',
+        'is_driving_configuration': 'bool',
         'parameter_id': 'str',
         'visible': 'bool',
-        'is_custom_parameter': 'bool',
-        'is_driving_configuration': 'bool'
+        'is_custom_parameter': 'bool'
     }
 
     attribute_map = {
         'default_value': 'defaultValue',
         'display_name': 'displayName',
+        'is_driving_configuration': 'isDrivingConfiguration',
         'parameter_id': 'parameterId',
         'visible': 'visible',
-        'is_custom_parameter': 'isCustomParameter',
-        'is_driving_configuration': 'isDrivingConfiguration'
+        'is_custom_parameter': 'isCustomParameter'
     }
 
-    def __init__(self, default_value=None, display_name=None, parameter_id=None, visible=None, is_custom_parameter=None, is_driving_configuration=None):  # noqa: E501
+    def __init__(self, default_value=None, display_name=None, is_driving_configuration=None, parameter_id=None, visible=None, is_custom_parameter=None):  # noqa: E501
         """BTStandardContentParameterDefinition - a model defined in OpenAPI"""  # noqa: E501
 
         self._default_value = None
         self._display_name = None
+        self._is_driving_configuration = None
         self._parameter_id = None
         self._visible = None
         self._is_custom_parameter = None
-        self._is_driving_configuration = None
         self.discriminator = None
 
         if default_value is not None:
             self.default_value = default_value
         if display_name is not None:
             self.display_name = display_name
+        if is_driving_configuration is not None:
+            self.is_driving_configuration = is_driving_configuration
         if parameter_id is not None:
             self.parameter_id = parameter_id
         if visible is not None:
             self.visible = visible
         if is_custom_parameter is not None:
             self.is_custom_parameter = is_custom_parameter
-        if is_driving_configuration is not None:
-            self.is_driving_configuration = is_driving_configuration
 
     @property
     def default_value(self):
@@ -114,6 +114,27 @@ class BTStandardContentParameterDefinition(object):
         """
 
         self._display_name = display_name
+
+    @property
+    def is_driving_configuration(self):
+        """Gets the is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
+
+
+        :return: The is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_driving_configuration
+
+    @is_driving_configuration.setter
+    def is_driving_configuration(self, is_driving_configuration):
+        """Sets the is_driving_configuration of this BTStandardContentParameterDefinition.
+
+
+        :param is_driving_configuration: The is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_driving_configuration = is_driving_configuration
 
     @property
     def parameter_id(self):
@@ -177,27 +198,6 @@ class BTStandardContentParameterDefinition(object):
         """
 
         self._is_custom_parameter = is_custom_parameter
-
-    @property
-    def is_driving_configuration(self):
-        """Gets the is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
-
-
-        :return: The is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_driving_configuration
-
-    @is_driving_configuration.setter
-    def is_driving_configuration(self, is_driving_configuration):
-        """Sets the is_driving_configuration of this BTStandardContentParameterDefinition.
-
-
-        :param is_driving_configuration: The is_driving_configuration of this BTStandardContentParameterDefinition.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_driving_configuration = is_driving_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

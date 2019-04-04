@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **approver_ids** | **list[str]** |  | [optional] 
 **notifier_ids** | **list[str]** |  | [optional] 
 **is_frozen** | **bool** |  | [optional] 
-**is_discarded** | **bool** |  | [optional] 
 **metadata_state** | **str** |  | [optional] 
+**is_discarded** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

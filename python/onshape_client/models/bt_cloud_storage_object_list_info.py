@@ -32,57 +32,36 @@ class BTCloudStorageObjectListInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'next': 'str',
         'href': 'str',
-        'items': 'list[BTCloudStorageObjectInfo]',
-        'path_to_root': 'list[CloudObjectPathSegment]'
+        'next': 'str',
+        'path_to_root': 'list[CloudObjectPathSegment]',
+        'items': 'list[BTCloudStorageObjectInfo]'
     }
 
     attribute_map = {
-        'next': 'next',
         'href': 'href',
-        'items': 'items',
-        'path_to_root': 'pathToRoot'
+        'next': 'next',
+        'path_to_root': 'pathToRoot',
+        'items': 'items'
     }
 
-    def __init__(self, next=None, href=None, items=None, path_to_root=None):  # noqa: E501
+    def __init__(self, href=None, next=None, path_to_root=None, items=None):  # noqa: E501
         """BTCloudStorageObjectListInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._next = None
         self._href = None
-        self._items = None
+        self._next = None
         self._path_to_root = None
+        self._items = None
         self.discriminator = None
 
-        if next is not None:
-            self.next = next
         if href is not None:
             self.href = href
-        if items is not None:
-            self.items = items
+        if next is not None:
+            self.next = next
         if path_to_root is not None:
             self.path_to_root = path_to_root
-
-    @property
-    def next(self):
-        """Gets the next of this BTCloudStorageObjectListInfo.  # noqa: E501
-
-
-        :return: The next of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._next
-
-    @next.setter
-    def next(self, next):
-        """Sets the next of this BTCloudStorageObjectListInfo.
-
-
-        :param next: The next of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._next = next
+        if items is not None:
+            self.items = items
 
     @property
     def href(self):
@@ -106,25 +85,25 @@ class BTCloudStorageObjectListInfo(object):
         self._href = href
 
     @property
-    def items(self):
-        """Gets the items of this BTCloudStorageObjectListInfo.  # noqa: E501
+    def next(self):
+        """Gets the next of this BTCloudStorageObjectListInfo.  # noqa: E501
 
 
-        :return: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :rtype: list[BTCloudStorageObjectInfo]
+        :return: The next of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._items
+        return self._next
 
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTCloudStorageObjectListInfo.
+    @next.setter
+    def next(self, next):
+        """Sets the next of this BTCloudStorageObjectListInfo.
 
 
-        :param items: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :type: list[BTCloudStorageObjectInfo]
+        :param next: The next of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :type: str
         """
 
-        self._items = items
+        self._next = next
 
     @property
     def path_to_root(self):
@@ -146,6 +125,27 @@ class BTCloudStorageObjectListInfo(object):
         """
 
         self._path_to_root = path_to_root
+
+    @property
+    def items(self):
+        """Gets the items of this BTCloudStorageObjectListInfo.  # noqa: E501
+
+
+        :return: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :rtype: list[BTCloudStorageObjectInfo]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTCloudStorageObjectListInfo.
+
+
+        :param items: The items of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :type: list[BTCloudStorageObjectInfo]
+        """
+
+        self._items = items
 
     def to_dict(self):
         """Returns the model properties as a dict"""

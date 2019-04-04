@@ -33,60 +33,60 @@ class BTNodeStatus(object):
     """
     openapi_types = {
         'error': 'bool',
-        'status_type': 'str',
         'status_enum': 'str',
+        'status_type': 'str',
         'status_msg': 'str',
         'faulty_parameters': 'list[str]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'error': 'error',
-        'status_type': 'statusType',
         'status_enum': 'statusEnum',
+        'status_type': 'statusType',
         'status_msg': 'statusMsg',
         'faulty_parameters': 'faultyParameters',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, error=None, status_type=None, status_enum=None, status_msg=None, faulty_parameters=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, error=None, status_enum=None, status_type=None, status_msg=None, faulty_parameters=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTNodeStatus - a model defined in OpenAPI"""  # noqa: E501
 
         self._error = None
-        self._status_type = None
         self._status_enum = None
+        self._status_type = None
         self._status_msg = None
         self._faulty_parameters = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if error is not None:
             self.error = error
-        if status_type is not None:
-            self.status_type = status_type
         if status_enum is not None:
             self.status_enum = status_enum
+        if status_type is not None:
+            self.status_type = status_type
         if status_msg is not None:
             self.status_msg = status_msg
         if faulty_parameters is not None:
             self.faulty_parameters = faulty_parameters
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def error(self):
@@ -108,33 +108,6 @@ class BTNodeStatus(object):
         """
 
         self._error = error
-
-    @property
-    def status_type(self):
-        """Gets the status_type of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The status_type of this BTNodeStatus.  # noqa: E501
-        :rtype: str
-        """
-        return self._status_type
-
-    @status_type.setter
-    def status_type(self, status_type):
-        """Sets the status_type of this BTNodeStatus.
-
-
-        :param status_type: The status_type of this BTNodeStatus.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
-        if status_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(status_type, allowed_values)
-            )
-
-        self._status_type = status_type
 
     @property
     def status_enum(self):
@@ -162,6 +135,33 @@ class BTNodeStatus(object):
             )
 
         self._status_enum = status_enum
+
+    @property
+    def status_type(self):
+        """Gets the status_type of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The status_type of this BTNodeStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._status_type
+
+    @status_type.setter
+    def status_type(self, status_type):
+        """Sets the status_type of this BTNodeStatus.
+
+
+        :param status_type: The status_type of this BTNodeStatus.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
+        if status_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(status_type, allowed_values)
+            )
+
+        self._status_type = status_type
 
     @property
     def status_msg(self):
@@ -227,6 +227,27 @@ class BTNodeStatus(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The connection_source of this BTNodeStatus.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTNodeStatus.
+
+
+        :param connection_source: The connection_source of this BTNodeStatus.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTNodeStatus.  # noqa: E501
 
@@ -267,27 +288,6 @@ class BTNodeStatus(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTNodeStatus.  # noqa: E501
-
-
-        :return: The connection_source of this BTNodeStatus.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTNodeStatus.
-
-
-        :param connection_source: The connection_source of this BTNodeStatus.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,21 +33,21 @@ class BTLocationInfo(object):
     """
     openapi_types = {
         'from_node': 'BTPNode',
-        'end_line': 'int',
-        'line': 'int',
         'version': 'str',
-        'element_microversion': 'str',
-        'top_level': 'str',
+        'line': 'int',
         'document': 'str',
-        'module_ids': 'BTDocumentVersionElementIds',
+        'top_level': 'str',
+        'element_microversion': 'str',
         'language_version': 'int',
+        'module_ids': 'BTDocumentVersionElementIds',
+        'column': 'int',
+        'end_line': 'int',
         'changeable_child_field_indices': 'list[int]',
         'end_column': 'int',
-        'column': 'int',
+        'character': 'int',
         'parse_node_id': 'str',
         'end_character': 'int',
         'parse_node_id_raw': 'BTObjectId',
-        'character': 'int',
         'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
@@ -55,28 +55,28 @@ class BTLocationInfo(object):
         'first_child_field': 'int',
         'child_list_indices': 'list[int]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
         'from_node': 'fromNode',
-        'end_line': 'endLine',
-        'line': 'line',
         'version': 'version',
-        'element_microversion': 'elementMicroversion',
-        'top_level': 'topLevel',
+        'line': 'line',
         'document': 'document',
-        'module_ids': 'moduleIds',
+        'top_level': 'topLevel',
+        'element_microversion': 'elementMicroversion',
         'language_version': 'languageVersion',
+        'module_ids': 'moduleIds',
+        'column': 'column',
+        'end_line': 'endLine',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
         'end_column': 'endColumn',
-        'column': 'column',
+        'character': 'character',
         'parse_node_id': 'parseNodeId',
         'end_character': 'endCharacter',
         'parse_node_id_raw': 'parseNodeIdRaw',
-        'character': 'character',
         'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
@@ -84,30 +84,30 @@ class BTLocationInfo(object):
         'first_child_field': 'firstChildField',
         'child_list_indices': 'childListIndices',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, from_node=None, end_line=None, line=None, version=None, element_microversion=None, top_level=None, document=None, module_ids=None, language_version=None, changeable_child_field_indices=None, end_column=None, column=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, character=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, from_node=None, version=None, line=None, document=None, top_level=None, element_microversion=None, language_version=None, module_ids=None, column=None, end_line=None, changeable_child_field_indices=None, end_column=None, character=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTLocationInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._from_node = None
-        self._end_line = None
-        self._line = None
         self._version = None
-        self._element_microversion = None
-        self._top_level = None
+        self._line = None
         self._document = None
-        self._module_ids = None
+        self._top_level = None
+        self._element_microversion = None
         self._language_version = None
+        self._module_ids = None
+        self._column = None
+        self._end_line = None
         self._changeable_child_field_indices = None
         self._end_column = None
-        self._column = None
+        self._character = None
         self._parse_node_id = None
         self._end_character = None
         self._parse_node_id_raw = None
-        self._character = None
         self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
@@ -115,43 +115,43 @@ class BTLocationInfo(object):
         self._first_child_field = None
         self._child_list_indices = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
         if from_node is not None:
             self.from_node = from_node
-        if end_line is not None:
-            self.end_line = end_line
-        if line is not None:
-            self.line = line
         if version is not None:
             self.version = version
-        if element_microversion is not None:
-            self.element_microversion = element_microversion
-        if top_level is not None:
-            self.top_level = top_level
+        if line is not None:
+            self.line = line
         if document is not None:
             self.document = document
-        if module_ids is not None:
-            self.module_ids = module_ids
+        if top_level is not None:
+            self.top_level = top_level
+        if element_microversion is not None:
+            self.element_microversion = element_microversion
         if language_version is not None:
             self.language_version = language_version
+        if module_ids is not None:
+            self.module_ids = module_ids
+        if column is not None:
+            self.column = column
+        if end_line is not None:
+            self.end_line = end_line
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
         if end_column is not None:
             self.end_column = end_column
-        if column is not None:
-            self.column = column
+        if character is not None:
+            self.character = character
         if parse_node_id is not None:
             self.parse_node_id = parse_node_id
         if end_character is not None:
             self.end_character = end_character
         if parse_node_id_raw is not None:
             self.parse_node_id_raw = parse_node_id_raw
-        if character is not None:
-            self.character = character
         if node_id is not None:
             self.node_id = node_id
         if child_map_indices is not None:
@@ -166,12 +166,12 @@ class BTLocationInfo(object):
             self.child_list_indices = child_list_indices
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
 
     @property
     def from_node(self):
@@ -195,25 +195,25 @@ class BTLocationInfo(object):
         self._from_node = from_node
 
     @property
-    def end_line(self):
-        """Gets the end_line of this BTLocationInfo.  # noqa: E501
+    def version(self):
+        """Gets the version of this BTLocationInfo.  # noqa: E501
 
 
-        :return: The end_line of this BTLocationInfo.  # noqa: E501
-        :rtype: int
+        :return: The version of this BTLocationInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._end_line
+        return self._version
 
-    @end_line.setter
-    def end_line(self, end_line):
-        """Sets the end_line of this BTLocationInfo.
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTLocationInfo.
 
 
-        :param end_line: The end_line of this BTLocationInfo.  # noqa: E501
-        :type: int
+        :param version: The version of this BTLocationInfo.  # noqa: E501
+        :type: str
         """
 
-        self._end_line = end_line
+        self._version = version
 
     @property
     def line(self):
@@ -237,46 +237,25 @@ class BTLocationInfo(object):
         self._line = line
 
     @property
-    def version(self):
-        """Gets the version of this BTLocationInfo.  # noqa: E501
+    def document(self):
+        """Gets the document of this BTLocationInfo.  # noqa: E501
 
 
-        :return: The version of this BTLocationInfo.  # noqa: E501
+        :return: The document of this BTLocationInfo.  # noqa: E501
         :rtype: str
         """
-        return self._version
+        return self._document
 
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTLocationInfo.
+    @document.setter
+    def document(self, document):
+        """Sets the document of this BTLocationInfo.
 
 
-        :param version: The version of this BTLocationInfo.  # noqa: E501
+        :param document: The document of this BTLocationInfo.  # noqa: E501
         :type: str
         """
 
-        self._version = version
-
-    @property
-    def element_microversion(self):
-        """Gets the element_microversion of this BTLocationInfo.  # noqa: E501
-
-
-        :return: The element_microversion of this BTLocationInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_microversion
-
-    @element_microversion.setter
-    def element_microversion(self, element_microversion):
-        """Sets the element_microversion of this BTLocationInfo.
-
-
-        :param element_microversion: The element_microversion of this BTLocationInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._element_microversion = element_microversion
+        self._document = document
 
     @property
     def top_level(self):
@@ -300,25 +279,46 @@ class BTLocationInfo(object):
         self._top_level = top_level
 
     @property
-    def document(self):
-        """Gets the document of this BTLocationInfo.  # noqa: E501
+    def element_microversion(self):
+        """Gets the element_microversion of this BTLocationInfo.  # noqa: E501
 
 
-        :return: The document of this BTLocationInfo.  # noqa: E501
+        :return: The element_microversion of this BTLocationInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document
+        return self._element_microversion
 
-    @document.setter
-    def document(self, document):
-        """Sets the document of this BTLocationInfo.
+    @element_microversion.setter
+    def element_microversion(self, element_microversion):
+        """Sets the element_microversion of this BTLocationInfo.
 
 
-        :param document: The document of this BTLocationInfo.  # noqa: E501
+        :param element_microversion: The element_microversion of this BTLocationInfo.  # noqa: E501
         :type: str
         """
 
-        self._document = document
+        self._element_microversion = element_microversion
+
+    @property
+    def language_version(self):
+        """Gets the language_version of this BTLocationInfo.  # noqa: E501
+
+
+        :return: The language_version of this BTLocationInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._language_version
+
+    @language_version.setter
+    def language_version(self, language_version):
+        """Sets the language_version of this BTLocationInfo.
+
+
+        :param language_version: The language_version of this BTLocationInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._language_version = language_version
 
     @property
     def module_ids(self):
@@ -342,25 +342,46 @@ class BTLocationInfo(object):
         self._module_ids = module_ids
 
     @property
-    def language_version(self):
-        """Gets the language_version of this BTLocationInfo.  # noqa: E501
+    def column(self):
+        """Gets the column of this BTLocationInfo.  # noqa: E501
 
 
-        :return: The language_version of this BTLocationInfo.  # noqa: E501
+        :return: The column of this BTLocationInfo.  # noqa: E501
         :rtype: int
         """
-        return self._language_version
+        return self._column
 
-    @language_version.setter
-    def language_version(self, language_version):
-        """Sets the language_version of this BTLocationInfo.
+    @column.setter
+    def column(self, column):
+        """Sets the column of this BTLocationInfo.
 
 
-        :param language_version: The language_version of this BTLocationInfo.  # noqa: E501
+        :param column: The column of this BTLocationInfo.  # noqa: E501
         :type: int
         """
 
-        self._language_version = language_version
+        self._column = column
+
+    @property
+    def end_line(self):
+        """Gets the end_line of this BTLocationInfo.  # noqa: E501
+
+
+        :return: The end_line of this BTLocationInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_line
+
+    @end_line.setter
+    def end_line(self, end_line):
+        """Sets the end_line of this BTLocationInfo.
+
+
+        :param end_line: The end_line of this BTLocationInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._end_line = end_line
 
     @property
     def changeable_child_field_indices(self):
@@ -405,25 +426,25 @@ class BTLocationInfo(object):
         self._end_column = end_column
 
     @property
-    def column(self):
-        """Gets the column of this BTLocationInfo.  # noqa: E501
+    def character(self):
+        """Gets the character of this BTLocationInfo.  # noqa: E501
 
 
-        :return: The column of this BTLocationInfo.  # noqa: E501
+        :return: The character of this BTLocationInfo.  # noqa: E501
         :rtype: int
         """
-        return self._column
+        return self._character
 
-    @column.setter
-    def column(self, column):
-        """Sets the column of this BTLocationInfo.
+    @character.setter
+    def character(self, character):
+        """Sets the character of this BTLocationInfo.
 
 
-        :param column: The column of this BTLocationInfo.  # noqa: E501
+        :param character: The character of this BTLocationInfo.  # noqa: E501
         :type: int
         """
 
-        self._column = column
+        self._character = character
 
     @property
     def parse_node_id(self):
@@ -487,27 +508,6 @@ class BTLocationInfo(object):
         """
 
         self._parse_node_id_raw = parse_node_id_raw
-
-    @property
-    def character(self):
-        """Gets the character of this BTLocationInfo.  # noqa: E501
-
-
-        :return: The character of this BTLocationInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._character
-
-    @character.setter
-    def character(self, character):
-        """Sets the character of this BTLocationInfo.
-
-
-        :param character: The character of this BTLocationInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._character = character
 
     @property
     def node_id(self):
@@ -657,6 +657,27 @@ class BTLocationInfo(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTLocationInfo.  # noqa: E501
+
+
+        :return: The connection_source of this BTLocationInfo.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTLocationInfo.
+
+
+        :param connection_source: The connection_source of this BTLocationInfo.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTLocationInfo.  # noqa: E501
 
@@ -697,27 +718,6 @@ class BTLocationInfo(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTLocationInfo.  # noqa: E501
-
-
-        :return: The connection_source of this BTLocationInfo.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTLocationInfo.
-
-
-        :param connection_source: The connection_source of this BTLocationInfo.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

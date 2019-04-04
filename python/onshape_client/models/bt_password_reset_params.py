@@ -33,33 +33,33 @@ class BTPasswordResetParams(object):
     """
     openapi_types = {
         'id': 'str',
-        'password': 'str',
         'email': 'str',
+        'password': 'str',
         'secret': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'password': 'password',
         'email': 'email',
+        'password': 'password',
         'secret': 'secret'
     }
 
-    def __init__(self, id=None, password=None, email=None, secret=None):  # noqa: E501
+    def __init__(self, id=None, email=None, password=None, secret=None):  # noqa: E501
         """BTPasswordResetParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._password = None
         self._email = None
+        self._password = None
         self._secret = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if password is not None:
-            self.password = password
         if email is not None:
             self.email = email
+        if password is not None:
+            self.password = password
         if secret is not None:
             self.secret = secret
 
@@ -85,27 +85,6 @@ class BTPasswordResetParams(object):
         self._id = id
 
     @property
-    def password(self):
-        """Gets the password of this BTPasswordResetParams.  # noqa: E501
-
-
-        :return: The password of this BTPasswordResetParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this BTPasswordResetParams.
-
-
-        :param password: The password of this BTPasswordResetParams.  # noqa: E501
-        :type: str
-        """
-
-        self._password = password
-
-    @property
     def email(self):
         """Gets the email of this BTPasswordResetParams.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTPasswordResetParams(object):
         """
 
         self._email = email
+
+    @property
+    def password(self):
+        """Gets the password of this BTPasswordResetParams.  # noqa: E501
+
+
+        :return: The password of this BTPasswordResetParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this BTPasswordResetParams.
+
+
+        :param password: The password of this BTPasswordResetParams.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     @property
     def secret(self):

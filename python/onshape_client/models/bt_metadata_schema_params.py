@@ -32,52 +32,31 @@ class BTMetadataSchemaParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'owner_id': 'str',
         'object_type': 'int',
+        'owner_id': 'str',
         'owner_type': 'int'
     }
 
     attribute_map = {
-        'owner_id': 'ownerId',
         'object_type': 'objectType',
+        'owner_id': 'ownerId',
         'owner_type': 'ownerType'
     }
 
-    def __init__(self, owner_id=None, object_type=None, owner_type=None):  # noqa: E501
+    def __init__(self, object_type=None, owner_id=None, owner_type=None):  # noqa: E501
         """BTMetadataSchemaParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._owner_id = None
         self._object_type = None
+        self._owner_id = None
         self._owner_type = None
         self.discriminator = None
 
-        if owner_id is not None:
-            self.owner_id = owner_id
         if object_type is not None:
             self.object_type = object_type
+        if owner_id is not None:
+            self.owner_id = owner_id
         if owner_type is not None:
             self.owner_type = owner_type
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTMetadataSchemaParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTMetadataSchemaParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTMetadataSchemaParams.
-
-
-        :param owner_id: The owner_id of this BTMetadataSchemaParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
 
     @property
     def object_type(self):
@@ -99,6 +78,27 @@ class BTMetadataSchemaParams(object):
         """
 
         self._object_type = object_type
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTMetadataSchemaParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTMetadataSchemaParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTMetadataSchemaParams.
+
+
+        :param owner_id: The owner_id of this BTMetadataSchemaParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def owner_type(self):

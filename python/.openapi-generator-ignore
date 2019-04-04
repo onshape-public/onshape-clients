@@ -22,6 +22,7 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
+onshape_client/api_client.py
 onshape_client/rest.py
 onshape_client/shared.py
 onshape_client/configuration.py

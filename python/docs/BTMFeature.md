@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sketch** | **bool** |  | [optional] 
+**all_parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
 **full_feature_type** | **str** |  | [optional] 
 **imported_microversion_id** | [**BTMicroversionId**](BTMicroversionId.md) |  | [optional] 
 **external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
 **imported_workspace_element_id** | **str** |  | [optional] 
 **revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
-**all_parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
 **suppression_state_field_index** | **int** |  | [optional] 
 **suppressed_field_index** | **int** |  | [optional] 
 **namespace_field_index** | **int** |  | [optional] 
@@ -27,11 +27,11 @@ Name | Type | Description | Notes
 **suppression_state** | [**BTMSuppressionState**](BTMSuppressionState.md) |  | [optional] 
 **feature_id** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 
-**changeable_child_field_indices** | **list[int]** |  | [optional] 
-**first_child_field** | **int** |  | [optional] 
-**child_list_indices** | **list[int]** |  | [optional] 
 **sub_features** | [**list[BTMFeature]**](BTMFeature.md) |  | [optional] 
 **return_after_subfeatures** | **bool** |  | [optional] 
+**first_child_field** | **int** |  | [optional] 
+**child_list_indices** | **list[int]** |  | [optional] 
+**changeable_child_field_indices** | **list[int]** |  | [optional] 
 **suppressed_parse_node** | [**BTNodeReference**](BTNodeReference.md) |  | [optional] 
 **name_parse_node** | [**BTNodeReference**](BTNodeReference.md) |  | [optional] 
 **child_nodes** | [**dict(str, BTNodeReference)**](BTNodeReference.md) |  | [optional] 
@@ -42,9 +42,9 @@ Name | Type | Description | Notes
 **atomic_child_indices** | **list[int]** |  | [optional] 
 **node_id_raw** | [**BTObjectId**](BTObjectId.md) |  | [optional] 
 **type_id** | **int** |  | [optional] 
+**connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 
 **unknown_class** | **bool** |  | [optional] 
-**connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

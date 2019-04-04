@@ -32,14 +32,14 @@ class BTExportModelParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_version_id': 'str',
-        'link_document_workspace_id': 'str',
-        'document_id': 'str',
-        'element_id': 'str',
-        'workspace_id': 'str',
+        'microversion': 'str',
         'link_document_id': 'str',
         'configuration': 'str',
-        'microversion': 'str',
+        'workspace_id': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
+        'document_version_id': 'str',
+        'link_document_workspace_id': 'str',
         'sheet_metal_flat': 'bool',
         'include_bend_lines': 'bool',
         'include_sketches': 'bool',
@@ -48,35 +48,35 @@ class BTExportModelParams(object):
         'is_parting_out': 'bool',
         'include_bend_centerlines': 'bool',
         'batch_flat_patterns': 'bool',
-        'user_id': 'str',
         'scale': 'float',
+        'version': 'str',
         'mode': 'str',
         'format': 'str',
-        'version': 'str',
+        'user_id': 'str',
+        'units': 'str',
+        'view': 'str',
         'cloud_object_id': 'str',
+        'angle_tolerance': 'float',
+        'chord_tolerance': 'float',
+        'part_ids': 'str',
+        'part_query': 'str',
+        'max_facet_width': 'float',
+        'trigger_auto_download': 'bool',
+        'from_user_id': 'str',
+        'cloud_storage_account_id': 'str',
         'email_attachment': 'bool',
         'email_link': 'bool',
         'email_subject': 'str',
         'email_message': 'str',
         'email_to': 'list[str]',
         'send_copy_to_me': 'bool',
-        'units': 'str',
-        'element_ids': 'str',
-        'part_ids': 'str',
-        'part_query': 'str',
-        'angle_tolerance': 'float',
-        'chord_tolerance': 'float',
-        'max_facet_width': 'float',
-        'store_in_document': 'bool',
-        'from_user_id': 'str',
-        'cloud_storage_account_id': 'str',
-        'view': 'str',
-        'trigger_auto_download': 'bool',
         'destination_name': 'str',
-        'resolution': 'str',
-        'feature_ids': 'str',
+        'store_in_document': 'bool',
+        'element_ids': 'str',
         'include_export_ids': 'bool',
+        'feature_ids': 'str',
         'min_facet_width': 'float',
+        'resolution': 'str',
         'grouping': 'str',
         'zip_single_file_output': 'bool',
         'include_foreign_data': 'bool',
@@ -88,14 +88,14 @@ class BTExportModelParams(object):
     }
 
     attribute_map = {
-        'document_version_id': 'documentVersionId',
-        'link_document_workspace_id': 'linkDocumentWorkspaceId',
-        'document_id': 'documentId',
-        'element_id': 'elementId',
-        'workspace_id': 'workspaceId',
+        'microversion': 'microversion',
         'link_document_id': 'linkDocumentId',
         'configuration': 'configuration',
-        'microversion': 'microversion',
+        'workspace_id': 'workspaceId',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
+        'document_version_id': 'documentVersionId',
+        'link_document_workspace_id': 'linkDocumentWorkspaceId',
         'sheet_metal_flat': 'sheetMetalFlat',
         'include_bend_lines': 'includeBendLines',
         'include_sketches': 'includeSketches',
@@ -104,35 +104,35 @@ class BTExportModelParams(object):
         'is_parting_out': 'isPartingOut',
         'include_bend_centerlines': 'includeBendCenterlines',
         'batch_flat_patterns': 'batchFlatPatterns',
-        'user_id': 'userId',
         'scale': 'scale',
+        'version': 'version',
         'mode': 'mode',
         'format': 'format',
-        'version': 'version',
+        'user_id': 'userId',
+        'units': 'units',
+        'view': 'view',
         'cloud_object_id': 'cloudObjectId',
+        'angle_tolerance': 'angleTolerance',
+        'chord_tolerance': 'chordTolerance',
+        'part_ids': 'partIds',
+        'part_query': 'partQuery',
+        'max_facet_width': 'maxFacetWidth',
+        'trigger_auto_download': 'triggerAutoDownload',
+        'from_user_id': 'fromUserId',
+        'cloud_storage_account_id': 'cloudStorageAccountId',
         'email_attachment': 'emailAttachment',
         'email_link': 'emailLink',
         'email_subject': 'emailSubject',
         'email_message': 'emailMessage',
         'email_to': 'emailTo',
         'send_copy_to_me': 'sendCopyToMe',
-        'units': 'units',
-        'element_ids': 'elementIds',
-        'part_ids': 'partIds',
-        'part_query': 'partQuery',
-        'angle_tolerance': 'angleTolerance',
-        'chord_tolerance': 'chordTolerance',
-        'max_facet_width': 'maxFacetWidth',
-        'store_in_document': 'storeInDocument',
-        'from_user_id': 'fromUserId',
-        'cloud_storage_account_id': 'cloudStorageAccountId',
-        'view': 'view',
-        'trigger_auto_download': 'triggerAutoDownload',
         'destination_name': 'destinationName',
-        'resolution': 'resolution',
-        'feature_ids': 'featureIds',
+        'store_in_document': 'storeInDocument',
+        'element_ids': 'elementIds',
         'include_export_ids': 'includeExportIds',
+        'feature_ids': 'featureIds',
         'min_facet_width': 'minFacetWidth',
+        'resolution': 'resolution',
         'grouping': 'grouping',
         'zip_single_file_output': 'zipSingleFileOutput',
         'include_foreign_data': 'includeForeignData',
@@ -143,17 +143,17 @@ class BTExportModelParams(object):
         'extract_to_s3': 'extractToS3'
     }
 
-    def __init__(self, document_version_id=None, link_document_workspace_id=None, document_id=None, element_id=None, workspace_id=None, link_document_id=None, configuration=None, microversion=None, sheet_metal_flat=None, include_bend_lines=None, include_sketches=None, flatten=None, splines_as_polylines=None, is_parting_out=None, include_bend_centerlines=None, batch_flat_patterns=None, user_id=None, scale=None, mode=None, format=None, version=None, cloud_object_id=None, email_attachment=None, email_link=None, email_subject=None, email_message=None, email_to=None, send_copy_to_me=None, units=None, element_ids=None, part_ids=None, part_query=None, angle_tolerance=None, chord_tolerance=None, max_facet_width=None, store_in_document=None, from_user_id=None, cloud_storage_account_id=None, view=None, trigger_auto_download=None, destination_name=None, resolution=None, feature_ids=None, include_export_ids=None, min_facet_width=None, grouping=None, zip_single_file_output=None, include_foreign_data=None, deep_search_for_foreign_data=None, include_std=None, include_release_management_data=None, include_linked_documents=None, extract_to_s3=None):  # noqa: E501
+    def __init__(self, microversion=None, link_document_id=None, configuration=None, workspace_id=None, element_id=None, document_id=None, document_version_id=None, link_document_workspace_id=None, sheet_metal_flat=None, include_bend_lines=None, include_sketches=None, flatten=None, splines_as_polylines=None, is_parting_out=None, include_bend_centerlines=None, batch_flat_patterns=None, scale=None, version=None, mode=None, format=None, user_id=None, units=None, view=None, cloud_object_id=None, angle_tolerance=None, chord_tolerance=None, part_ids=None, part_query=None, max_facet_width=None, trigger_auto_download=None, from_user_id=None, cloud_storage_account_id=None, email_attachment=None, email_link=None, email_subject=None, email_message=None, email_to=None, send_copy_to_me=None, destination_name=None, store_in_document=None, element_ids=None, include_export_ids=None, feature_ids=None, min_facet_width=None, resolution=None, grouping=None, zip_single_file_output=None, include_foreign_data=None, deep_search_for_foreign_data=None, include_std=None, include_release_management_data=None, include_linked_documents=None, extract_to_s3=None):  # noqa: E501
         """BTExportModelParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._document_version_id = None
-        self._link_document_workspace_id = None
-        self._document_id = None
-        self._element_id = None
-        self._workspace_id = None
+        self._microversion = None
         self._link_document_id = None
         self._configuration = None
-        self._microversion = None
+        self._workspace_id = None
+        self._element_id = None
+        self._document_id = None
+        self._document_version_id = None
+        self._link_document_workspace_id = None
         self._sheet_metal_flat = None
         self._include_bend_lines = None
         self._include_sketches = None
@@ -162,35 +162,35 @@ class BTExportModelParams(object):
         self._is_parting_out = None
         self._include_bend_centerlines = None
         self._batch_flat_patterns = None
-        self._user_id = None
         self._scale = None
+        self._version = None
         self._mode = None
         self._format = None
-        self._version = None
+        self._user_id = None
+        self._units = None
+        self._view = None
         self._cloud_object_id = None
+        self._angle_tolerance = None
+        self._chord_tolerance = None
+        self._part_ids = None
+        self._part_query = None
+        self._max_facet_width = None
+        self._trigger_auto_download = None
+        self._from_user_id = None
+        self._cloud_storage_account_id = None
         self._email_attachment = None
         self._email_link = None
         self._email_subject = None
         self._email_message = None
         self._email_to = None
         self._send_copy_to_me = None
-        self._units = None
-        self._element_ids = None
-        self._part_ids = None
-        self._part_query = None
-        self._angle_tolerance = None
-        self._chord_tolerance = None
-        self._max_facet_width = None
-        self._store_in_document = None
-        self._from_user_id = None
-        self._cloud_storage_account_id = None
-        self._view = None
-        self._trigger_auto_download = None
         self._destination_name = None
-        self._resolution = None
-        self._feature_ids = None
+        self._store_in_document = None
+        self._element_ids = None
         self._include_export_ids = None
+        self._feature_ids = None
         self._min_facet_width = None
+        self._resolution = None
         self._grouping = None
         self._zip_single_file_output = None
         self._include_foreign_data = None
@@ -201,22 +201,22 @@ class BTExportModelParams(object):
         self._extract_to_s3 = None
         self.discriminator = None
 
-        if document_version_id is not None:
-            self.document_version_id = document_version_id
-        if link_document_workspace_id is not None:
-            self.link_document_workspace_id = link_document_workspace_id
-        if document_id is not None:
-            self.document_id = document_id
-        if element_id is not None:
-            self.element_id = element_id
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
+        if microversion is not None:
+            self.microversion = microversion
         if link_document_id is not None:
             self.link_document_id = link_document_id
         if configuration is not None:
             self.configuration = configuration
-        if microversion is not None:
-            self.microversion = microversion
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if document_version_id is not None:
+            self.document_version_id = document_version_id
+        if link_document_workspace_id is not None:
+            self.link_document_workspace_id = link_document_workspace_id
         if sheet_metal_flat is not None:
             self.sheet_metal_flat = sheet_metal_flat
         if include_bend_lines is not None:
@@ -233,18 +233,38 @@ class BTExportModelParams(object):
             self.include_bend_centerlines = include_bend_centerlines
         if batch_flat_patterns is not None:
             self.batch_flat_patterns = batch_flat_patterns
-        if user_id is not None:
-            self.user_id = user_id
         if scale is not None:
             self.scale = scale
+        if version is not None:
+            self.version = version
         if mode is not None:
             self.mode = mode
         if format is not None:
             self.format = format
-        if version is not None:
-            self.version = version
+        if user_id is not None:
+            self.user_id = user_id
+        if units is not None:
+            self.units = units
+        if view is not None:
+            self.view = view
         if cloud_object_id is not None:
             self.cloud_object_id = cloud_object_id
+        if angle_tolerance is not None:
+            self.angle_tolerance = angle_tolerance
+        if chord_tolerance is not None:
+            self.chord_tolerance = chord_tolerance
+        if part_ids is not None:
+            self.part_ids = part_ids
+        if part_query is not None:
+            self.part_query = part_query
+        if max_facet_width is not None:
+            self.max_facet_width = max_facet_width
+        if trigger_auto_download is not None:
+            self.trigger_auto_download = trigger_auto_download
+        if from_user_id is not None:
+            self.from_user_id = from_user_id
+        if cloud_storage_account_id is not None:
+            self.cloud_storage_account_id = cloud_storage_account_id
         if email_attachment is not None:
             self.email_attachment = email_attachment
         if email_link is not None:
@@ -257,40 +277,20 @@ class BTExportModelParams(object):
             self.email_to = email_to
         if send_copy_to_me is not None:
             self.send_copy_to_me = send_copy_to_me
-        if units is not None:
-            self.units = units
-        if element_ids is not None:
-            self.element_ids = element_ids
-        if part_ids is not None:
-            self.part_ids = part_ids
-        if part_query is not None:
-            self.part_query = part_query
-        if angle_tolerance is not None:
-            self.angle_tolerance = angle_tolerance
-        if chord_tolerance is not None:
-            self.chord_tolerance = chord_tolerance
-        if max_facet_width is not None:
-            self.max_facet_width = max_facet_width
-        if store_in_document is not None:
-            self.store_in_document = store_in_document
-        if from_user_id is not None:
-            self.from_user_id = from_user_id
-        if cloud_storage_account_id is not None:
-            self.cloud_storage_account_id = cloud_storage_account_id
-        if view is not None:
-            self.view = view
-        if trigger_auto_download is not None:
-            self.trigger_auto_download = trigger_auto_download
         if destination_name is not None:
             self.destination_name = destination_name
-        if resolution is not None:
-            self.resolution = resolution
-        if feature_ids is not None:
-            self.feature_ids = feature_ids
+        if store_in_document is not None:
+            self.store_in_document = store_in_document
+        if element_ids is not None:
+            self.element_ids = element_ids
         if include_export_ids is not None:
             self.include_export_ids = include_export_ids
+        if feature_ids is not None:
+            self.feature_ids = feature_ids
         if min_facet_width is not None:
             self.min_facet_width = min_facet_width
+        if resolution is not None:
+            self.resolution = resolution
         if grouping is not None:
             self.grouping = grouping
         if zip_single_file_output is not None:
@@ -309,109 +309,25 @@ class BTExportModelParams(object):
             self.extract_to_s3 = extract_to_s3
 
     @property
-    def document_version_id(self):
-        """Gets the document_version_id of this BTExportModelParams.  # noqa: E501
+    def microversion(self):
+        """Gets the microversion of this BTExportModelParams.  # noqa: E501
 
 
-        :return: The document_version_id of this BTExportModelParams.  # noqa: E501
+        :return: The microversion of this BTExportModelParams.  # noqa: E501
         :rtype: str
         """
-        return self._document_version_id
+        return self._microversion
 
-    @document_version_id.setter
-    def document_version_id(self, document_version_id):
-        """Sets the document_version_id of this BTExportModelParams.
+    @microversion.setter
+    def microversion(self, microversion):
+        """Sets the microversion of this BTExportModelParams.
 
 
-        :param document_version_id: The document_version_id of this BTExportModelParams.  # noqa: E501
+        :param microversion: The microversion of this BTExportModelParams.  # noqa: E501
         :type: str
         """
 
-        self._document_version_id = document_version_id
-
-    @property
-    def link_document_workspace_id(self):
-        """Gets the link_document_workspace_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The link_document_workspace_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._link_document_workspace_id
-
-    @link_document_workspace_id.setter
-    def link_document_workspace_id(self, link_document_workspace_id):
-        """Sets the link_document_workspace_id of this BTExportModelParams.
-
-
-        :param link_document_workspace_id: The link_document_workspace_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._link_document_workspace_id = link_document_workspace_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The document_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTExportModelParams.
-
-
-        :param document_id: The document_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The element_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTExportModelParams.
-
-
-        :param element_id: The element_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The workspace_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._workspace_id
-
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTExportModelParams.
-
-
-        :param workspace_id: The workspace_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._workspace_id = workspace_id
+        self._microversion = microversion
 
     @property
     def link_document_id(self):
@@ -456,25 +372,109 @@ class BTExportModelParams(object):
         self._configuration = configuration
 
     @property
-    def microversion(self):
-        """Gets the microversion of this BTExportModelParams.  # noqa: E501
+    def workspace_id(self):
+        """Gets the workspace_id of this BTExportModelParams.  # noqa: E501
 
 
-        :return: The microversion of this BTExportModelParams.  # noqa: E501
+        :return: The workspace_id of this BTExportModelParams.  # noqa: E501
         :rtype: str
         """
-        return self._microversion
+        return self._workspace_id
 
-    @microversion.setter
-    def microversion(self, microversion):
-        """Sets the microversion of this BTExportModelParams.
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTExportModelParams.
 
 
-        :param microversion: The microversion of this BTExportModelParams.  # noqa: E501
+        :param workspace_id: The workspace_id of this BTExportModelParams.  # noqa: E501
         :type: str
         """
 
-        self._microversion = microversion
+        self._workspace_id = workspace_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The element_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTExportModelParams.
+
+
+        :param element_id: The element_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The document_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTExportModelParams.
+
+
+        :param document_id: The document_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def document_version_id(self):
+        """Gets the document_version_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The document_version_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_version_id
+
+    @document_version_id.setter
+    def document_version_id(self, document_version_id):
+        """Sets the document_version_id of this BTExportModelParams.
+
+
+        :param document_version_id: The document_version_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_version_id = document_version_id
+
+    @property
+    def link_document_workspace_id(self):
+        """Gets the link_document_workspace_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The link_document_workspace_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._link_document_workspace_id
+
+    @link_document_workspace_id.setter
+    def link_document_workspace_id(self, link_document_workspace_id):
+        """Sets the link_document_workspace_id of this BTExportModelParams.
+
+
+        :param link_document_workspace_id: The link_document_workspace_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._link_document_workspace_id = link_document_workspace_id
 
     @property
     def sheet_metal_flat(self):
@@ -645,27 +645,6 @@ class BTExportModelParams(object):
         self._batch_flat_patterns = batch_flat_patterns
 
     @property
-    def user_id(self):
-        """Gets the user_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The user_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTExportModelParams.
-
-
-        :param user_id: The user_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
-
-    @property
     def scale(self):
         """Gets the scale of this BTExportModelParams.  # noqa: E501
 
@@ -685,6 +664,27 @@ class BTExportModelParams(object):
         """
 
         self._scale = scale
+
+    @property
+    def version(self):
+        """Gets the version of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The version of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTExportModelParams.
+
+
+        :param version: The version of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version = version
 
     @property
     def mode(self):
@@ -729,25 +729,67 @@ class BTExportModelParams(object):
         self._format = format
 
     @property
-    def version(self):
-        """Gets the version of this BTExportModelParams.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this BTExportModelParams.  # noqa: E501
 
 
-        :return: The version of this BTExportModelParams.  # noqa: E501
+        :return: The user_id of this BTExportModelParams.  # noqa: E501
         :rtype: str
         """
-        return self._version
+        return self._user_id
 
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTExportModelParams.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTExportModelParams.
 
 
-        :param version: The version of this BTExportModelParams.  # noqa: E501
+        :param user_id: The user_id of this BTExportModelParams.  # noqa: E501
         :type: str
         """
 
-        self._version = version
+        self._user_id = user_id
+
+    @property
+    def units(self):
+        """Gets the units of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The units of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._units
+
+    @units.setter
+    def units(self, units):
+        """Sets the units of this BTExportModelParams.
+
+
+        :param units: The units of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._units = units
+
+    @property
+    def view(self):
+        """Gets the view of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The view of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._view
+
+    @view.setter
+    def view(self, view):
+        """Sets the view of this BTExportModelParams.
+
+
+        :param view: The view of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._view = view
 
     @property
     def cloud_object_id(self):
@@ -769,6 +811,174 @@ class BTExportModelParams(object):
         """
 
         self._cloud_object_id = cloud_object_id
+
+    @property
+    def angle_tolerance(self):
+        """Gets the angle_tolerance of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The angle_tolerance of this BTExportModelParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._angle_tolerance
+
+    @angle_tolerance.setter
+    def angle_tolerance(self, angle_tolerance):
+        """Sets the angle_tolerance of this BTExportModelParams.
+
+
+        :param angle_tolerance: The angle_tolerance of this BTExportModelParams.  # noqa: E501
+        :type: float
+        """
+
+        self._angle_tolerance = angle_tolerance
+
+    @property
+    def chord_tolerance(self):
+        """Gets the chord_tolerance of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The chord_tolerance of this BTExportModelParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._chord_tolerance
+
+    @chord_tolerance.setter
+    def chord_tolerance(self, chord_tolerance):
+        """Sets the chord_tolerance of this BTExportModelParams.
+
+
+        :param chord_tolerance: The chord_tolerance of this BTExportModelParams.  # noqa: E501
+        :type: float
+        """
+
+        self._chord_tolerance = chord_tolerance
+
+    @property
+    def part_ids(self):
+        """Gets the part_ids of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The part_ids of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_ids
+
+    @part_ids.setter
+    def part_ids(self, part_ids):
+        """Sets the part_ids of this BTExportModelParams.
+
+
+        :param part_ids: The part_ids of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_ids = part_ids
+
+    @property
+    def part_query(self):
+        """Gets the part_query of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The part_query of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_query
+
+    @part_query.setter
+    def part_query(self, part_query):
+        """Sets the part_query of this BTExportModelParams.
+
+
+        :param part_query: The part_query of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_query = part_query
+
+    @property
+    def max_facet_width(self):
+        """Gets the max_facet_width of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The max_facet_width of this BTExportModelParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_facet_width
+
+    @max_facet_width.setter
+    def max_facet_width(self, max_facet_width):
+        """Sets the max_facet_width of this BTExportModelParams.
+
+
+        :param max_facet_width: The max_facet_width of this BTExportModelParams.  # noqa: E501
+        :type: float
+        """
+
+        self._max_facet_width = max_facet_width
+
+    @property
+    def trigger_auto_download(self):
+        """Gets the trigger_auto_download of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The trigger_auto_download of this BTExportModelParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._trigger_auto_download
+
+    @trigger_auto_download.setter
+    def trigger_auto_download(self, trigger_auto_download):
+        """Sets the trigger_auto_download of this BTExportModelParams.
+
+
+        :param trigger_auto_download: The trigger_auto_download of this BTExportModelParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._trigger_auto_download = trigger_auto_download
+
+    @property
+    def from_user_id(self):
+        """Gets the from_user_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The from_user_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._from_user_id
+
+    @from_user_id.setter
+    def from_user_id(self, from_user_id):
+        """Sets the from_user_id of this BTExportModelParams.
+
+
+        :param from_user_id: The from_user_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._from_user_id = from_user_id
+
+    @property
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id
+
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTExportModelParams.
+
+
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
     def email_attachment(self):
@@ -897,151 +1107,25 @@ class BTExportModelParams(object):
         self._send_copy_to_me = send_copy_to_me
 
     @property
-    def units(self):
-        """Gets the units of this BTExportModelParams.  # noqa: E501
+    def destination_name(self):
+        """Gets the destination_name of this BTExportModelParams.  # noqa: E501
 
 
-        :return: The units of this BTExportModelParams.  # noqa: E501
+        :return: The destination_name of this BTExportModelParams.  # noqa: E501
         :rtype: str
         """
-        return self._units
+        return self._destination_name
 
-    @units.setter
-    def units(self, units):
-        """Sets the units of this BTExportModelParams.
+    @destination_name.setter
+    def destination_name(self, destination_name):
+        """Sets the destination_name of this BTExportModelParams.
 
 
-        :param units: The units of this BTExportModelParams.  # noqa: E501
+        :param destination_name: The destination_name of this BTExportModelParams.  # noqa: E501
         :type: str
         """
 
-        self._units = units
-
-    @property
-    def element_ids(self):
-        """Gets the element_ids of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The element_ids of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_ids
-
-    @element_ids.setter
-    def element_ids(self, element_ids):
-        """Sets the element_ids of this BTExportModelParams.
-
-
-        :param element_ids: The element_ids of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_ids = element_ids
-
-    @property
-    def part_ids(self):
-        """Gets the part_ids of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The part_ids of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_ids
-
-    @part_ids.setter
-    def part_ids(self, part_ids):
-        """Sets the part_ids of this BTExportModelParams.
-
-
-        :param part_ids: The part_ids of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_ids = part_ids
-
-    @property
-    def part_query(self):
-        """Gets the part_query of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The part_query of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_query
-
-    @part_query.setter
-    def part_query(self, part_query):
-        """Sets the part_query of this BTExportModelParams.
-
-
-        :param part_query: The part_query of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_query = part_query
-
-    @property
-    def angle_tolerance(self):
-        """Gets the angle_tolerance of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The angle_tolerance of this BTExportModelParams.  # noqa: E501
-        :rtype: float
-        """
-        return self._angle_tolerance
-
-    @angle_tolerance.setter
-    def angle_tolerance(self, angle_tolerance):
-        """Sets the angle_tolerance of this BTExportModelParams.
-
-
-        :param angle_tolerance: The angle_tolerance of this BTExportModelParams.  # noqa: E501
-        :type: float
-        """
-
-        self._angle_tolerance = angle_tolerance
-
-    @property
-    def chord_tolerance(self):
-        """Gets the chord_tolerance of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The chord_tolerance of this BTExportModelParams.  # noqa: E501
-        :rtype: float
-        """
-        return self._chord_tolerance
-
-    @chord_tolerance.setter
-    def chord_tolerance(self, chord_tolerance):
-        """Sets the chord_tolerance of this BTExportModelParams.
-
-
-        :param chord_tolerance: The chord_tolerance of this BTExportModelParams.  # noqa: E501
-        :type: float
-        """
-
-        self._chord_tolerance = chord_tolerance
-
-    @property
-    def max_facet_width(self):
-        """Gets the max_facet_width of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The max_facet_width of this BTExportModelParams.  # noqa: E501
-        :rtype: float
-        """
-        return self._max_facet_width
-
-    @max_facet_width.setter
-    def max_facet_width(self, max_facet_width):
-        """Sets the max_facet_width of this BTExportModelParams.
-
-
-        :param max_facet_width: The max_facet_width of this BTExportModelParams.  # noqa: E501
-        :type: float
-        """
-
-        self._max_facet_width = max_facet_width
+        self._destination_name = destination_name
 
     @property
     def store_in_document(self):
@@ -1065,151 +1149,25 @@ class BTExportModelParams(object):
         self._store_in_document = store_in_document
 
     @property
-    def from_user_id(self):
-        """Gets the from_user_id of this BTExportModelParams.  # noqa: E501
+    def element_ids(self):
+        """Gets the element_ids of this BTExportModelParams.  # noqa: E501
 
 
-        :return: The from_user_id of this BTExportModelParams.  # noqa: E501
+        :return: The element_ids of this BTExportModelParams.  # noqa: E501
         :rtype: str
         """
-        return self._from_user_id
+        return self._element_ids
 
-    @from_user_id.setter
-    def from_user_id(self, from_user_id):
-        """Sets the from_user_id of this BTExportModelParams.
+    @element_ids.setter
+    def element_ids(self, element_ids):
+        """Sets the element_ids of this BTExportModelParams.
 
 
-        :param from_user_id: The from_user_id of this BTExportModelParams.  # noqa: E501
+        :param element_ids: The element_ids of this BTExportModelParams.  # noqa: E501
         :type: str
         """
 
-        self._from_user_id = from_user_id
-
-    @property
-    def cloud_storage_account_id(self):
-        """Gets the cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._cloud_storage_account_id
-
-    @cloud_storage_account_id.setter
-    def cloud_storage_account_id(self, cloud_storage_account_id):
-        """Sets the cloud_storage_account_id of this BTExportModelParams.
-
-
-        :param cloud_storage_account_id: The cloud_storage_account_id of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._cloud_storage_account_id = cloud_storage_account_id
-
-    @property
-    def view(self):
-        """Gets the view of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The view of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._view
-
-    @view.setter
-    def view(self, view):
-        """Sets the view of this BTExportModelParams.
-
-
-        :param view: The view of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._view = view
-
-    @property
-    def trigger_auto_download(self):
-        """Gets the trigger_auto_download of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The trigger_auto_download of this BTExportModelParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._trigger_auto_download
-
-    @trigger_auto_download.setter
-    def trigger_auto_download(self, trigger_auto_download):
-        """Sets the trigger_auto_download of this BTExportModelParams.
-
-
-        :param trigger_auto_download: The trigger_auto_download of this BTExportModelParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._trigger_auto_download = trigger_auto_download
-
-    @property
-    def destination_name(self):
-        """Gets the destination_name of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The destination_name of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._destination_name
-
-    @destination_name.setter
-    def destination_name(self, destination_name):
-        """Sets the destination_name of this BTExportModelParams.
-
-
-        :param destination_name: The destination_name of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._destination_name = destination_name
-
-    @property
-    def resolution(self):
-        """Gets the resolution of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The resolution of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._resolution
-
-    @resolution.setter
-    def resolution(self, resolution):
-        """Sets the resolution of this BTExportModelParams.
-
-
-        :param resolution: The resolution of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._resolution = resolution
-
-    @property
-    def feature_ids(self):
-        """Gets the feature_ids of this BTExportModelParams.  # noqa: E501
-
-
-        :return: The feature_ids of this BTExportModelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._feature_ids
-
-    @feature_ids.setter
-    def feature_ids(self, feature_ids):
-        """Sets the feature_ids of this BTExportModelParams.
-
-
-        :param feature_ids: The feature_ids of this BTExportModelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._feature_ids = feature_ids
+        self._element_ids = element_ids
 
     @property
     def include_export_ids(self):
@@ -1233,6 +1191,27 @@ class BTExportModelParams(object):
         self._include_export_ids = include_export_ids
 
     @property
+    def feature_ids(self):
+        """Gets the feature_ids of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The feature_ids of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_ids
+
+    @feature_ids.setter
+    def feature_ids(self, feature_ids):
+        """Sets the feature_ids of this BTExportModelParams.
+
+
+        :param feature_ids: The feature_ids of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_ids = feature_ids
+
+    @property
     def min_facet_width(self):
         """Gets the min_facet_width of this BTExportModelParams.  # noqa: E501
 
@@ -1252,6 +1231,27 @@ class BTExportModelParams(object):
         """
 
         self._min_facet_width = min_facet_width
+
+    @property
+    def resolution(self):
+        """Gets the resolution of this BTExportModelParams.  # noqa: E501
+
+
+        :return: The resolution of this BTExportModelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._resolution
+
+    @resolution.setter
+    def resolution(self, resolution):
+        """Sets the resolution of this BTExportModelParams.
+
+
+        :param resolution: The resolution of this BTExportModelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._resolution = resolution
 
     @property
     def grouping(self):

@@ -33,36 +33,36 @@ class BTRbacPermissionSchemeListInfo(object):
     """
     openapi_types = {
         'default_index': 'int',
-        'next': 'str',
         'href': 'str',
+        'next': 'str',
         'items': 'list[BTRbacPermissionSchemeInfo]',
         'previous': 'str'
     }
 
     attribute_map = {
         'default_index': 'defaultIndex',
-        'next': 'next',
         'href': 'href',
+        'next': 'next',
         'items': 'items',
         'previous': 'previous'
     }
 
-    def __init__(self, default_index=None, next=None, href=None, items=None, previous=None):  # noqa: E501
+    def __init__(self, default_index=None, href=None, next=None, items=None, previous=None):  # noqa: E501
         """BTRbacPermissionSchemeListInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._default_index = None
-        self._next = None
         self._href = None
+        self._next = None
         self._items = None
         self._previous = None
         self.discriminator = None
 
         if default_index is not None:
             self.default_index = default_index
-        if next is not None:
-            self.next = next
         if href is not None:
             self.href = href
+        if next is not None:
+            self.next = next
         if items is not None:
             self.items = items
         if previous is not None:
@@ -90,27 +90,6 @@ class BTRbacPermissionSchemeListInfo(object):
         self._default_index = default_index
 
     @property
-    def next(self):
-        """Gets the next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-
-
-        :return: The next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._next
-
-    @next.setter
-    def next(self, next):
-        """Sets the next of this BTRbacPermissionSchemeListInfo.
-
-
-        :param next: The next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._next = next
-
-    @property
     def href(self):
         """Gets the href of this BTRbacPermissionSchemeListInfo.  # noqa: E501
 
@@ -130,6 +109,27 @@ class BTRbacPermissionSchemeListInfo(object):
         """
 
         self._href = href
+
+    @property
+    def next(self):
+        """Gets the next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+
+
+        :return: The next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._next
+
+    @next.setter
+    def next(self, next):
+        """Sets the next of this BTRbacPermissionSchemeListInfo.
+
+
+        :param next: The next of this BTRbacPermissionSchemeListInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._next = next
 
     @property
     def items(self):

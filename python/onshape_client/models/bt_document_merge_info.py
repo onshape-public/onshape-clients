@@ -32,47 +32,26 @@ class BTDocumentMergeInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'library_version_mismatch': 'bool',
-        'overwritten_elements': 'list[BTDocumentElementInfo]'
+        'overwritten_elements': 'list[BTDocumentElementInfo]',
+        'library_version_mismatch': 'bool'
     }
 
     attribute_map = {
-        'library_version_mismatch': 'libraryVersionMismatch',
-        'overwritten_elements': 'overwrittenElements'
+        'overwritten_elements': 'overwrittenElements',
+        'library_version_mismatch': 'libraryVersionMismatch'
     }
 
-    def __init__(self, library_version_mismatch=None, overwritten_elements=None):  # noqa: E501
+    def __init__(self, overwritten_elements=None, library_version_mismatch=None):  # noqa: E501
         """BTDocumentMergeInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._library_version_mismatch = None
         self._overwritten_elements = None
+        self._library_version_mismatch = None
         self.discriminator = None
 
-        if library_version_mismatch is not None:
-            self.library_version_mismatch = library_version_mismatch
         if overwritten_elements is not None:
             self.overwritten_elements = overwritten_elements
-
-    @property
-    def library_version_mismatch(self):
-        """Gets the library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
-
-
-        :return: The library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._library_version_mismatch
-
-    @library_version_mismatch.setter
-    def library_version_mismatch(self, library_version_mismatch):
-        """Sets the library_version_mismatch of this BTDocumentMergeInfo.
-
-
-        :param library_version_mismatch: The library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._library_version_mismatch = library_version_mismatch
+        if library_version_mismatch is not None:
+            self.library_version_mismatch = library_version_mismatch
 
     @property
     def overwritten_elements(self):
@@ -94,6 +73,27 @@ class BTDocumentMergeInfo(object):
         """
 
         self._overwritten_elements = overwritten_elements
+
+    @property
+    def library_version_mismatch(self):
+        """Gets the library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
+
+
+        :return: The library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._library_version_mismatch
+
+    @library_version_mismatch.setter
+    def library_version_mismatch(self, library_version_mismatch):
+        """Sets the library_version_mismatch of this BTDocumentMergeInfo.
+
+
+        :param library_version_mismatch: The library_version_mismatch of this BTDocumentMergeInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._library_version_mismatch = library_version_mismatch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,30 +33,30 @@ class BTAppElementCommitTransactionParams(object):
     """
     openapi_types = {
         'description': 'str',
-        'transaction_id': 'str',
-        'return_error': 'bool'
+        'return_error': 'bool',
+        'transaction_id': 'str'
     }
 
     attribute_map = {
         'description': 'description',
-        'transaction_id': 'transactionId',
-        'return_error': 'returnError'
+        'return_error': 'returnError',
+        'transaction_id': 'transactionId'
     }
 
-    def __init__(self, description=None, transaction_id=None, return_error=None):  # noqa: E501
+    def __init__(self, description=None, return_error=None, transaction_id=None):  # noqa: E501
         """BTAppElementCommitTransactionParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
-        self._transaction_id = None
         self._return_error = None
+        self._transaction_id = None
         self.discriminator = None
 
         if description is not None:
             self.description = description
-        if transaction_id is not None:
-            self.transaction_id = transaction_id
         if return_error is not None:
             self.return_error = return_error
+        if transaction_id is not None:
+            self.transaction_id = transaction_id
 
     @property
     def description(self):
@@ -80,27 +80,6 @@ class BTAppElementCommitTransactionParams(object):
         self._description = description
 
     @property
-    def transaction_id(self):
-        """Gets the transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
-
-
-        :return: The transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._transaction_id
-
-    @transaction_id.setter
-    def transaction_id(self, transaction_id):
-        """Sets the transaction_id of this BTAppElementCommitTransactionParams.
-
-
-        :param transaction_id: The transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._transaction_id = transaction_id
-
-    @property
     def return_error(self):
         """Gets the return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTAppElementCommitTransactionParams(object):
         """
 
         self._return_error = return_error
+
+    @property
+    def transaction_id(self):
+        """Gets the transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
+
+
+        :return: The transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._transaction_id
+
+    @transaction_id.setter
+    def transaction_id(self, transaction_id):
+        """Sets the transaction_id of this BTAppElementCommitTransactionParams.
+
+
+        :param transaction_id: The transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._transaction_id = transaction_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

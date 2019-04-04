@@ -35,8 +35,8 @@ class BTCompanyParams(object):
         'name': 'str',
         'id': 'str',
         'address': 'BTAddressInfo',
-        'owner_id': 'str',
         'description': 'str',
+        'owner_id': 'str',
         'domain_prefix': 'str'
     }
 
@@ -44,19 +44,19 @@ class BTCompanyParams(object):
         'name': 'name',
         'id': 'id',
         'address': 'address',
-        'owner_id': 'ownerId',
         'description': 'description',
+        'owner_id': 'ownerId',
         'domain_prefix': 'domainPrefix'
     }
 
-    def __init__(self, name=None, id=None, address=None, owner_id=None, description=None, domain_prefix=None):  # noqa: E501
+    def __init__(self, name=None, id=None, address=None, description=None, owner_id=None, domain_prefix=None):  # noqa: E501
         """BTCompanyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._id = None
         self._address = None
-        self._owner_id = None
         self._description = None
+        self._owner_id = None
         self._domain_prefix = None
         self.discriminator = None
 
@@ -66,10 +66,10 @@ class BTCompanyParams(object):
             self.id = id
         if address is not None:
             self.address = address
-        if owner_id is not None:
-            self.owner_id = owner_id
         if description is not None:
             self.description = description
+        if owner_id is not None:
+            self.owner_id = owner_id
         if domain_prefix is not None:
             self.domain_prefix = domain_prefix
 
@@ -137,27 +137,6 @@ class BTCompanyParams(object):
         self._address = address
 
     @property
-    def owner_id(self):
-        """Gets the owner_id of this BTCompanyParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTCompanyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTCompanyParams.
-
-
-        :param owner_id: The owner_id of this BTCompanyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
-
-    @property
     def description(self):
         """Gets the description of this BTCompanyParams.  # noqa: E501
 
@@ -177,6 +156,27 @@ class BTCompanyParams(object):
         """
 
         self._description = description
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTCompanyParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTCompanyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTCompanyParams.
+
+
+        :param owner_id: The owner_id of this BTCompanyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def domain_prefix(self):

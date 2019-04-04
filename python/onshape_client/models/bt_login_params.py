@@ -32,82 +32,61 @@ class BTLoginParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'password': 'str',
         'email': 'str',
+        'password': 'str',
         'device_id': 'str',
         'random_token': 'str',
         'totp': 'str',
-        'enable_totp': 'bool',
         'remember_totp': 'bool',
         'web_client_capabilities': 'BTWebClientCapabilitiesParams',
+        'enable_totp': 'bool',
         'renderer_performance_measurement': 'BTWebRendererPerformanceMeasurementParams'
     }
 
     attribute_map = {
-        'password': 'password',
         'email': 'email',
+        'password': 'password',
         'device_id': 'deviceId',
         'random_token': 'randomToken',
         'totp': 'totp',
-        'enable_totp': 'enableTotp',
         'remember_totp': 'rememberTotp',
         'web_client_capabilities': 'webClientCapabilities',
+        'enable_totp': 'enableTotp',
         'renderer_performance_measurement': 'rendererPerformanceMeasurement'
     }
 
-    def __init__(self, password=None, email=None, device_id=None, random_token=None, totp=None, enable_totp=None, remember_totp=None, web_client_capabilities=None, renderer_performance_measurement=None):  # noqa: E501
+    def __init__(self, email=None, password=None, device_id=None, random_token=None, totp=None, remember_totp=None, web_client_capabilities=None, enable_totp=None, renderer_performance_measurement=None):  # noqa: E501
         """BTLoginParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._password = None
         self._email = None
+        self._password = None
         self._device_id = None
         self._random_token = None
         self._totp = None
-        self._enable_totp = None
         self._remember_totp = None
         self._web_client_capabilities = None
+        self._enable_totp = None
         self._renderer_performance_measurement = None
         self.discriminator = None
 
-        if password is not None:
-            self.password = password
         if email is not None:
             self.email = email
+        if password is not None:
+            self.password = password
         if device_id is not None:
             self.device_id = device_id
         if random_token is not None:
             self.random_token = random_token
         if totp is not None:
             self.totp = totp
-        if enable_totp is not None:
-            self.enable_totp = enable_totp
         if remember_totp is not None:
             self.remember_totp = remember_totp
         if web_client_capabilities is not None:
             self.web_client_capabilities = web_client_capabilities
+        if enable_totp is not None:
+            self.enable_totp = enable_totp
         if renderer_performance_measurement is not None:
             self.renderer_performance_measurement = renderer_performance_measurement
-
-    @property
-    def password(self):
-        """Gets the password of this BTLoginParams.  # noqa: E501
-
-
-        :return: The password of this BTLoginParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this BTLoginParams.
-
-
-        :param password: The password of this BTLoginParams.  # noqa: E501
-        :type: str
-        """
-
-        self._password = password
 
     @property
     def email(self):
@@ -129,6 +108,27 @@ class BTLoginParams(object):
         """
 
         self._email = email
+
+    @property
+    def password(self):
+        """Gets the password of this BTLoginParams.  # noqa: E501
+
+
+        :return: The password of this BTLoginParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this BTLoginParams.
+
+
+        :param password: The password of this BTLoginParams.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     @property
     def device_id(self):
@@ -194,27 +194,6 @@ class BTLoginParams(object):
         self._totp = totp
 
     @property
-    def enable_totp(self):
-        """Gets the enable_totp of this BTLoginParams.  # noqa: E501
-
-
-        :return: The enable_totp of this BTLoginParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_totp
-
-    @enable_totp.setter
-    def enable_totp(self, enable_totp):
-        """Sets the enable_totp of this BTLoginParams.
-
-
-        :param enable_totp: The enable_totp of this BTLoginParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._enable_totp = enable_totp
-
-    @property
     def remember_totp(self):
         """Gets the remember_totp of this BTLoginParams.  # noqa: E501
 
@@ -255,6 +234,27 @@ class BTLoginParams(object):
         """
 
         self._web_client_capabilities = web_client_capabilities
+
+    @property
+    def enable_totp(self):
+        """Gets the enable_totp of this BTLoginParams.  # noqa: E501
+
+
+        :return: The enable_totp of this BTLoginParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_totp
+
+    @enable_totp.setter
+    def enable_totp(self, enable_totp):
+        """Sets the enable_totp of this BTLoginParams.
+
+
+        :param enable_totp: The enable_totp of this BTLoginParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_totp = enable_totp
 
     @property
     def renderer_performance_measurement(self):

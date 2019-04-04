@@ -35,17 +35,17 @@ class BTBillingAccountParams(object):
         'address': 'BTAddressInfo',
         'force_create': 'bool',
         'password': 'str',
+        'trial_period_days': 'int',
         'user_id': 'str',
         'token': 'str',
-        'promonthly_enabled': 'bool',
         'plan_id': 'str',
         'company_id': 'str',
         'seats': 'int',
         'domain_prefix': 'str',
         'company_plan': 'bool',
-        'trial_period_days': 'int',
-        'payment_type': 'int',
+        'promonthly_enabled': 'bool',
         'company_name': 'str',
+        'payment_type': 'int',
         'reseller_name': 'str'
     }
 
@@ -53,37 +53,37 @@ class BTBillingAccountParams(object):
         'address': 'address',
         'force_create': 'forceCreate',
         'password': 'password',
+        'trial_period_days': 'trialPeriodDays',
         'user_id': 'userId',
         'token': 'token',
-        'promonthly_enabled': 'promonthlyEnabled',
         'plan_id': 'planId',
         'company_id': 'companyId',
         'seats': 'seats',
         'domain_prefix': 'domainPrefix',
         'company_plan': 'companyPlan',
-        'trial_period_days': 'trialPeriodDays',
-        'payment_type': 'paymentType',
+        'promonthly_enabled': 'promonthlyEnabled',
         'company_name': 'companyName',
+        'payment_type': 'paymentType',
         'reseller_name': 'resellerName'
     }
 
-    def __init__(self, address=None, force_create=None, password=None, user_id=None, token=None, promonthly_enabled=None, plan_id=None, company_id=None, seats=None, domain_prefix=None, company_plan=None, trial_period_days=None, payment_type=None, company_name=None, reseller_name=None):  # noqa: E501
+    def __init__(self, address=None, force_create=None, password=None, trial_period_days=None, user_id=None, token=None, plan_id=None, company_id=None, seats=None, domain_prefix=None, company_plan=None, promonthly_enabled=None, company_name=None, payment_type=None, reseller_name=None):  # noqa: E501
         """BTBillingAccountParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._address = None
         self._force_create = None
         self._password = None
+        self._trial_period_days = None
         self._user_id = None
         self._token = None
-        self._promonthly_enabled = None
         self._plan_id = None
         self._company_id = None
         self._seats = None
         self._domain_prefix = None
         self._company_plan = None
-        self._trial_period_days = None
-        self._payment_type = None
+        self._promonthly_enabled = None
         self._company_name = None
+        self._payment_type = None
         self._reseller_name = None
         self.discriminator = None
 
@@ -93,12 +93,12 @@ class BTBillingAccountParams(object):
             self.force_create = force_create
         if password is not None:
             self.password = password
+        if trial_period_days is not None:
+            self.trial_period_days = trial_period_days
         if user_id is not None:
             self.user_id = user_id
         if token is not None:
             self.token = token
-        if promonthly_enabled is not None:
-            self.promonthly_enabled = promonthly_enabled
         if plan_id is not None:
             self.plan_id = plan_id
         if company_id is not None:
@@ -109,12 +109,12 @@ class BTBillingAccountParams(object):
             self.domain_prefix = domain_prefix
         if company_plan is not None:
             self.company_plan = company_plan
-        if trial_period_days is not None:
-            self.trial_period_days = trial_period_days
-        if payment_type is not None:
-            self.payment_type = payment_type
+        if promonthly_enabled is not None:
+            self.promonthly_enabled = promonthly_enabled
         if company_name is not None:
             self.company_name = company_name
+        if payment_type is not None:
+            self.payment_type = payment_type
         if reseller_name is not None:
             self.reseller_name = reseller_name
 
@@ -182,6 +182,27 @@ class BTBillingAccountParams(object):
         self._password = password
 
     @property
+    def trial_period_days(self):
+        """Gets the trial_period_days of this BTBillingAccountParams.  # noqa: E501
+
+
+        :return: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._trial_period_days
+
+    @trial_period_days.setter
+    def trial_period_days(self, trial_period_days):
+        """Sets the trial_period_days of this BTBillingAccountParams.
+
+
+        :param trial_period_days: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
+        :type: int
+        """
+
+        self._trial_period_days = trial_period_days
+
+    @property
     def user_id(self):
         """Gets the user_id of this BTBillingAccountParams.  # noqa: E501
 
@@ -222,27 +243,6 @@ class BTBillingAccountParams(object):
         """
 
         self._token = token
-
-    @property
-    def promonthly_enabled(self):
-        """Gets the promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
-
-
-        :return: The promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._promonthly_enabled
-
-    @promonthly_enabled.setter
-    def promonthly_enabled(self, promonthly_enabled):
-        """Sets the promonthly_enabled of this BTBillingAccountParams.
-
-
-        :param promonthly_enabled: The promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._promonthly_enabled = promonthly_enabled
 
     @property
     def plan_id(self):
@@ -350,46 +350,25 @@ class BTBillingAccountParams(object):
         self._company_plan = company_plan
 
     @property
-    def trial_period_days(self):
-        """Gets the trial_period_days of this BTBillingAccountParams.  # noqa: E501
+    def promonthly_enabled(self):
+        """Gets the promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
 
 
-        :return: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
-        :rtype: int
+        :return: The promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._trial_period_days
+        return self._promonthly_enabled
 
-    @trial_period_days.setter
-    def trial_period_days(self, trial_period_days):
-        """Sets the trial_period_days of this BTBillingAccountParams.
-
-
-        :param trial_period_days: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
-        :type: int
-        """
-
-        self._trial_period_days = trial_period_days
-
-    @property
-    def payment_type(self):
-        """Gets the payment_type of this BTBillingAccountParams.  # noqa: E501
+    @promonthly_enabled.setter
+    def promonthly_enabled(self, promonthly_enabled):
+        """Sets the promonthly_enabled of this BTBillingAccountParams.
 
 
-        :return: The payment_type of this BTBillingAccountParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """Sets the payment_type of this BTBillingAccountParams.
-
-
-        :param payment_type: The payment_type of this BTBillingAccountParams.  # noqa: E501
-        :type: int
+        :param promonthly_enabled: The promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
+        :type: bool
         """
 
-        self._payment_type = payment_type
+        self._promonthly_enabled = promonthly_enabled
 
     @property
     def company_name(self):
@@ -411,6 +390,27 @@ class BTBillingAccountParams(object):
         """
 
         self._company_name = company_name
+
+    @property
+    def payment_type(self):
+        """Gets the payment_type of this BTBillingAccountParams.  # noqa: E501
+
+
+        :return: The payment_type of this BTBillingAccountParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """Sets the payment_type of this BTBillingAccountParams.
+
+
+        :param payment_type: The payment_type of this BTBillingAccountParams.  # noqa: E501
+        :type: int
+        """
+
+        self._payment_type = payment_type
 
     @property
     def reseller_name(self):

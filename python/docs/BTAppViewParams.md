@@ -4,15 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **parameters** | **list[float]** |  | [optional] 
-**display_state_id** | **str** |  | [optional] 
-**model_reference_id** | **str** |  | [optional] 
-**view_matrix** | **list[float]** |  | [optional] 
-**view_direction** | **list[float]** |  | [optional] 
-**cut_point** | **list[float]** |  | [optional] 
-**offset_section_points** | **list[float]** |  | [optional] 
-**broken_out_section** | **bool** |  | [optional] 
 **crop_view** | **bool** |  | [optional] 
-**bom_reference_id** | **str** |  | [optional] 
 **include_hidden_instances** | **bool** |  | [optional] 
 **view_scale** | **float** |  | [optional] 
 **show_tangent_lines** | **bool** |  | [optional] 
@@ -32,9 +24,17 @@ Name | Type | Description | Notes
 **include_surfaces** | **bool** |  | [optional] 
 **is_surface** | **bool** |  | [optional] 
 **depth_section_end_condition** | [**BTBrokenOutEndCondition**](BTBrokenOutEndCondition.md) |  | [optional] 
-**occurrence_or_part_id_to_geometry_properties** | **dict(str, dict(str, str))** |  | [optional] 
+**display_state_id** | **str** |  | [optional] 
 **transaction_id** | **str** |  | [optional] 
 **parent_change_id** | **str** |  | [optional] 
+**model_reference_id** | **str** |  | [optional] 
+**view_matrix** | **list[float]** |  | [optional] 
+**view_direction** | **list[float]** |  | [optional] 
+**cut_point** | **list[float]** |  | [optional] 
+**offset_section_points** | **list[float]** |  | [optional] 
+**broken_out_section** | **bool** |  | [optional] 
+**bom_reference_id** | **str** |  | [optional] 
+**occurrence_or_part_id_to_geometry_properties** | **dict(str, dict(str, str))** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

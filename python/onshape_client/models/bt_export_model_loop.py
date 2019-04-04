@@ -32,72 +32,51 @@ class BTExportModelLoop(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_outer': 'bool',
         'is_inner': 'bool',
+        'is_outer': 'bool',
         'coedges': 'list[BTExportModelCoedge]',
         'type_id': 'int',
+        'connection_source': 'BTConnection',
         'export_type_name': 'str',
-        'unknown_class': 'bool',
-        'connection_source': 'BTConnection'
+        'unknown_class': 'bool'
     }
 
     attribute_map = {
-        'is_outer': 'isOuter',
         'is_inner': 'isInner',
+        'is_outer': 'isOuter',
         'coedges': 'coedges',
         'type_id': 'typeId',
+        'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
-        'unknown_class': 'unknownClass',
-        'connection_source': 'connectionSource'
+        'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, is_outer=None, is_inner=None, coedges=None, type_id=None, export_type_name=None, unknown_class=None, connection_source=None):  # noqa: E501
+    def __init__(self, is_inner=None, is_outer=None, coedges=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTExportModelLoop - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_outer = None
         self._is_inner = None
+        self._is_outer = None
         self._coedges = None
         self._type_id = None
+        self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
-        self._connection_source = None
         self.discriminator = None
 
-        if is_outer is not None:
-            self.is_outer = is_outer
         if is_inner is not None:
             self.is_inner = is_inner
+        if is_outer is not None:
+            self.is_outer = is_outer
         if coedges is not None:
             self.coedges = coedges
         if type_id is not None:
             self.type_id = type_id
+        if connection_source is not None:
+            self.connection_source = connection_source
         if export_type_name is not None:
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-        if connection_source is not None:
-            self.connection_source = connection_source
-
-    @property
-    def is_outer(self):
-        """Gets the is_outer of this BTExportModelLoop.  # noqa: E501
-
-
-        :return: The is_outer of this BTExportModelLoop.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_outer
-
-    @is_outer.setter
-    def is_outer(self, is_outer):
-        """Sets the is_outer of this BTExportModelLoop.
-
-
-        :param is_outer: The is_outer of this BTExportModelLoop.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_outer = is_outer
 
     @property
     def is_inner(self):
@@ -119,6 +98,27 @@ class BTExportModelLoop(object):
         """
 
         self._is_inner = is_inner
+
+    @property
+    def is_outer(self):
+        """Gets the is_outer of this BTExportModelLoop.  # noqa: E501
+
+
+        :return: The is_outer of this BTExportModelLoop.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_outer
+
+    @is_outer.setter
+    def is_outer(self, is_outer):
+        """Sets the is_outer of this BTExportModelLoop.
+
+
+        :param is_outer: The is_outer of this BTExportModelLoop.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_outer = is_outer
 
     @property
     def coedges(self):
@@ -163,6 +163,27 @@ class BTExportModelLoop(object):
         self._type_id = type_id
 
     @property
+    def connection_source(self):
+        """Gets the connection_source of this BTExportModelLoop.  # noqa: E501
+
+
+        :return: The connection_source of this BTExportModelLoop.  # noqa: E501
+        :rtype: BTConnection
+        """
+        return self._connection_source
+
+    @connection_source.setter
+    def connection_source(self, connection_source):
+        """Sets the connection_source of this BTExportModelLoop.
+
+
+        :param connection_source: The connection_source of this BTExportModelLoop.  # noqa: E501
+        :type: BTConnection
+        """
+
+        self._connection_source = connection_source
+
+    @property
     def export_type_name(self):
         """Gets the export_type_name of this BTExportModelLoop.  # noqa: E501
 
@@ -203,27 +224,6 @@ class BTExportModelLoop(object):
         """
 
         self._unknown_class = unknown_class
-
-    @property
-    def connection_source(self):
-        """Gets the connection_source of this BTExportModelLoop.  # noqa: E501
-
-
-        :return: The connection_source of this BTExportModelLoop.  # noqa: E501
-        :rtype: BTConnection
-        """
-        return self._connection_source
-
-    @connection_source.setter
-    def connection_source(self, connection_source):
-        """Sets the connection_source of this BTExportModelLoop.
-
-
-        :param connection_source: The connection_source of this BTExportModelLoop.  # noqa: E501
-        :type: BTConnection
-        """
-
-        self._connection_source = connection_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -38,8 +38,8 @@ class BTWorkflowSnapshotInfo(object):
         'approver_ids': 'list[str]',
         'notifier_ids': 'list[str]',
         'is_frozen': 'bool',
-        'is_discarded': 'bool',
-        'metadata_state': 'str'
+        'metadata_state': 'str',
+        'is_discarded': 'bool'
     }
 
     attribute_map = {
@@ -49,11 +49,11 @@ class BTWorkflowSnapshotInfo(object):
         'approver_ids': 'approverIds',
         'notifier_ids': 'notifierIds',
         'is_frozen': 'isFrozen',
-        'is_discarded': 'isDiscarded',
-        'metadata_state': 'metadataState'
+        'metadata_state': 'metadataState',
+        'is_discarded': 'isDiscarded'
     }
 
-    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, is_frozen=None, is_discarded=None, metadata_state=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, is_frozen=None, metadata_state=None, is_discarded=None):  # noqa: E501
         """BTWorkflowSnapshotInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
@@ -62,8 +62,8 @@ class BTWorkflowSnapshotInfo(object):
         self._approver_ids = None
         self._notifier_ids = None
         self._is_frozen = None
-        self._is_discarded = None
         self._metadata_state = None
+        self._is_discarded = None
         self.discriminator = None
 
         if actions is not None:
@@ -78,10 +78,10 @@ class BTWorkflowSnapshotInfo(object):
             self.notifier_ids = notifier_ids
         if is_frozen is not None:
             self.is_frozen = is_frozen
-        if is_discarded is not None:
-            self.is_discarded = is_discarded
         if metadata_state is not None:
             self.metadata_state = metadata_state
+        if is_discarded is not None:
+            self.is_discarded = is_discarded
 
     @property
     def actions(self):
@@ -210,27 +210,6 @@ class BTWorkflowSnapshotInfo(object):
         self._is_frozen = is_frozen
 
     @property
-    def is_discarded(self):
-        """Gets the is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_discarded
-
-    @is_discarded.setter
-    def is_discarded(self, is_discarded):
-        """Sets the is_discarded of this BTWorkflowSnapshotInfo.
-
-
-        :param is_discarded: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_discarded = is_discarded
-
-    @property
     def metadata_state(self):
         """Gets the metadata_state of this BTWorkflowSnapshotInfo.  # noqa: E501
 
@@ -250,6 +229,27 @@ class BTWorkflowSnapshotInfo(object):
         """
 
         self._metadata_state = metadata_state
+
+    @property
+    def is_discarded(self):
+        """Gets the is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_discarded
+
+    @is_discarded.setter
+    def is_discarded(self, is_discarded):
+        """Sets the is_discarded of this BTWorkflowSnapshotInfo.
+
+
+        :param is_discarded: The is_discarded of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_discarded = is_discarded
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.0.12"
+__version__ = "0.0.13"
 
 # import apis into sdk package
 from onshape_client.api.accounts_api import AccountsApi

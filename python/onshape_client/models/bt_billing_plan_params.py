@@ -35,47 +35,47 @@ class BTBillingPlanParams(object):
         'name': 'str',
         'group': 'str',
         'description': 'str',
-        'application_id': 'str',
-        'plan_id': 'str',
-        'client_id': 'str',
-        'interval': 'str',
         'plan_type': 'int',
         'trial_period_days': 'int',
         'consumable_quantity': 'int',
         'amount_cents': 'int',
-        'hidden': 'bool'
+        'hidden': 'bool',
+        'plan_id': 'str',
+        'client_id': 'str',
+        'interval': 'str',
+        'application_id': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'group': 'group',
         'description': 'description',
-        'application_id': 'applicationId',
-        'plan_id': 'planId',
-        'client_id': 'clientId',
-        'interval': 'interval',
         'plan_type': 'planType',
         'trial_period_days': 'trialPeriodDays',
         'consumable_quantity': 'consumableQuantity',
         'amount_cents': 'amountCents',
-        'hidden': 'hidden'
+        'hidden': 'hidden',
+        'plan_id': 'planId',
+        'client_id': 'clientId',
+        'interval': 'interval',
+        'application_id': 'applicationId'
     }
 
-    def __init__(self, name=None, group=None, description=None, application_id=None, plan_id=None, client_id=None, interval=None, plan_type=None, trial_period_days=None, consumable_quantity=None, amount_cents=None, hidden=None):  # noqa: E501
+    def __init__(self, name=None, group=None, description=None, plan_type=None, trial_period_days=None, consumable_quantity=None, amount_cents=None, hidden=None, plan_id=None, client_id=None, interval=None, application_id=None):  # noqa: E501
         """BTBillingPlanParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._group = None
         self._description = None
-        self._application_id = None
-        self._plan_id = None
-        self._client_id = None
-        self._interval = None
         self._plan_type = None
         self._trial_period_days = None
         self._consumable_quantity = None
         self._amount_cents = None
         self._hidden = None
+        self._plan_id = None
+        self._client_id = None
+        self._interval = None
+        self._application_id = None
         self.discriminator = None
 
         if name is not None:
@@ -84,14 +84,6 @@ class BTBillingPlanParams(object):
             self.group = group
         if description is not None:
             self.description = description
-        if application_id is not None:
-            self.application_id = application_id
-        if plan_id is not None:
-            self.plan_id = plan_id
-        if client_id is not None:
-            self.client_id = client_id
-        if interval is not None:
-            self.interval = interval
         if plan_type is not None:
             self.plan_type = plan_type
         if trial_period_days is not None:
@@ -102,6 +94,14 @@ class BTBillingPlanParams(object):
             self.amount_cents = amount_cents
         if hidden is not None:
             self.hidden = hidden
+        if plan_id is not None:
+            self.plan_id = plan_id
+        if client_id is not None:
+            self.client_id = client_id
+        if interval is not None:
+            self.interval = interval
+        if application_id is not None:
+            self.application_id = application_id
 
     @property
     def name(self):
@@ -165,90 +165,6 @@ class BTBillingPlanParams(object):
         """
 
         self._description = description
-
-    @property
-    def application_id(self):
-        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._application_id
-
-    @application_id.setter
-    def application_id(self, application_id):
-        """Sets the application_id of this BTBillingPlanParams.
-
-
-        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._application_id = application_id
-
-    @property
-    def plan_id(self):
-        """Gets the plan_id of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The plan_id of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._plan_id
-
-    @plan_id.setter
-    def plan_id(self, plan_id):
-        """Sets the plan_id of this BTBillingPlanParams.
-
-
-        :param plan_id: The plan_id of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._plan_id = plan_id
-
-    @property
-    def client_id(self):
-        """Gets the client_id of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The client_id of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._client_id
-
-    @client_id.setter
-    def client_id(self, client_id):
-        """Sets the client_id of this BTBillingPlanParams.
-
-
-        :param client_id: The client_id of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._client_id = client_id
-
-    @property
-    def interval(self):
-        """Gets the interval of this BTBillingPlanParams.  # noqa: E501
-
-
-        :return: The interval of this BTBillingPlanParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._interval
-
-    @interval.setter
-    def interval(self, interval):
-        """Sets the interval of this BTBillingPlanParams.
-
-
-        :param interval: The interval of this BTBillingPlanParams.  # noqa: E501
-        :type: str
-        """
-
-        self._interval = interval
 
     @property
     def plan_type(self):
@@ -354,6 +270,90 @@ class BTBillingPlanParams(object):
         """
 
         self._hidden = hidden
+
+    @property
+    def plan_id(self):
+        """Gets the plan_id of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The plan_id of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        """Sets the plan_id of this BTBillingPlanParams.
+
+
+        :param plan_id: The plan_id of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._plan_id = plan_id
+
+    @property
+    def client_id(self):
+        """Gets the client_id of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The client_id of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_id
+
+    @client_id.setter
+    def client_id(self, client_id):
+        """Sets the client_id of this BTBillingPlanParams.
+
+
+        :param client_id: The client_id of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._client_id = client_id
+
+    @property
+    def interval(self):
+        """Gets the interval of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The interval of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._interval
+
+    @interval.setter
+    def interval(self, interval):
+        """Sets the interval of this BTBillingPlanParams.
+
+
+        :param interval: The interval of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._interval = interval
+
+    @property
+    def application_id(self):
+        """Gets the application_id of this BTBillingPlanParams.  # noqa: E501
+
+
+        :return: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._application_id
+
+    @application_id.setter
+    def application_id(self, application_id):
+        """Sets the application_id of this BTBillingPlanParams.
+
+
+        :param application_id: The application_id of this BTBillingPlanParams.  # noqa: E501
+        :type: str
+        """
+
+        self._application_id = application_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

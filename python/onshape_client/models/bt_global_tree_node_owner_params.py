@@ -34,34 +34,34 @@ class BTGlobalTreeNodeOwnerParams(object):
     openapi_types = {
         'resource_type': 'str',
         'new_owner_type': 'int',
-        'resource_id': 'str',
-        'new_owner_id': 'str'
+        'new_owner_id': 'str',
+        'resource_id': 'str'
     }
 
     attribute_map = {
         'resource_type': 'resourceType',
         'new_owner_type': 'newOwnerType',
-        'resource_id': 'resourceId',
-        'new_owner_id': 'newOwnerId'
+        'new_owner_id': 'newOwnerId',
+        'resource_id': 'resourceId'
     }
 
-    def __init__(self, resource_type=None, new_owner_type=None, resource_id=None, new_owner_id=None):  # noqa: E501
+    def __init__(self, resource_type=None, new_owner_type=None, new_owner_id=None, resource_id=None):  # noqa: E501
         """BTGlobalTreeNodeOwnerParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._resource_type = None
         self._new_owner_type = None
-        self._resource_id = None
         self._new_owner_id = None
+        self._resource_id = None
         self.discriminator = None
 
         if resource_type is not None:
             self.resource_type = resource_type
         if new_owner_type is not None:
             self.new_owner_type = new_owner_type
-        if resource_id is not None:
-            self.resource_id = resource_id
         if new_owner_id is not None:
             self.new_owner_id = new_owner_id
+        if resource_id is not None:
+            self.resource_id = resource_id
 
     @property
     def resource_type(self):
@@ -106,27 +106,6 @@ class BTGlobalTreeNodeOwnerParams(object):
         self._new_owner_type = new_owner_type
 
     @property
-    def resource_id(self):
-        """Gets the resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
-
-
-        :return: The resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._resource_id
-
-    @resource_id.setter
-    def resource_id(self, resource_id):
-        """Sets the resource_id of this BTGlobalTreeNodeOwnerParams.
-
-
-        :param resource_id: The resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
-        :type: str
-        """
-
-        self._resource_id = resource_id
-
-    @property
     def new_owner_id(self):
         """Gets the new_owner_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTGlobalTreeNodeOwnerParams(object):
         """
 
         self._new_owner_id = new_owner_id
+
+    @property
+    def resource_id(self):
+        """Gets the resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
+
+
+        :return: The resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._resource_id
+
+    @resource_id.setter
+    def resource_id(self, resource_id):
+        """Sets the resource_id of this BTGlobalTreeNodeOwnerParams.
+
+
+        :param resource_id: The resource_id of this BTGlobalTreeNodeOwnerParams.  # noqa: E501
+        :type: str
+        """
+
+        self._resource_id = resource_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
