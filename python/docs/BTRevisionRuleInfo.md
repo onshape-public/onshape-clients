@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
+**script** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
 **revision_list** | **list[str]** |  | [optional] 
 **rule_type** | **int** |  | [optional] 
-**script** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

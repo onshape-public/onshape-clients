@@ -71,7 +71,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/json;charset=UTF-8
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -524,7 +524,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_translator_formats1**
-> get_element_translator_formats1(did, wid, eid, check_content=check_content)
+> get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
 
 
 
@@ -542,9 +542,10 @@ did = 'did_example' # str |
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
 check_content = True # bool |  (optional) (default to True)
+configuration = 'configuration_example' # str |  (optional)
 
 try:
-    api_instance.get_element_translator_formats1(did, wid, eid, check_content=check_content)
+    api_instance.get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
 except ApiException as e:
     print("Exception when calling ElementsApi->get_element_translator_formats1: %s\n" % e)
 ```
@@ -557,6 +558,7 @@ Name | Type | Description  | Notes
  **wid** | **str**|  | 
  **eid** | **str**|  | 
  **check_content** | **bool**|  | [optional] [default to True]
+ **configuration** | **str**|  | [optional] 
 
 ### Return type
 

@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
-**value** | **int** |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **required_properties** | **list[str]** |  | [optional] 
 **approver_source_property** | **str** |  | [optional] 

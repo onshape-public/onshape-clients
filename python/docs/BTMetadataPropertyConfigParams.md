@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_value** | **str** |  | [optional] 
+**pattern** | **str** |  | [optional] 
 **publish_state** | **int** |  | [optional] 
 **schema_id** | **str** |  | [optional] 
-**property_id** | **str** |  | [optional] 
 **min_length** | **int** |  | [optional] 
 **max_length** | **int** |  | [optional] 
 **min_value** | **float** |  | [optional] 
@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **multiline** | **bool** |  | [optional] 
 **enum_values** | **list[dict(str, str)]** |  | [optional] 
 **display_name** | **str** |  | [optional] 
-**pattern** | **str** |  | [optional] 
 **required** | **bool** |  | [optional] 
+**property_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

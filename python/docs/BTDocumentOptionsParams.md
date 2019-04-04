@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpp_server_memory** | **int** |  | [optional] 
 **enable_cpp_server_memory_diagnostics** | **bool** |  | [optional] 
-**skip_retrieval_test** | **bool** |  | [optional] 
 **document_memory** | **int** |  | [optional] 
+**skip_retrieval_test** | **bool** |  | [optional] 
 **extended_display_check** | **bool** |  | [optional] 
 **cpp_server_limit** | **int** |  | [optional] 
 **thumbnail_cpp_server_limit** | **int** |  | [optional] 

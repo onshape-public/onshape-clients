@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **require_base_part_release_with_derived_part** | **bool** |  | [optional] 
 **require_image_release_with_drawing** | **bool** |  | [optional] 
 **action_show_drawings_watermark** | **bool** |  | [optional] 
+**prevent_duplicate_document_name_regex** | **str** |  | [optional] 
 **error_on_feature_list_errors_during_release** | **bool** |  | [optional] 
 **error_on_rollback_bar_not_at_end_during_release** | **bool** |  | [optional] 
 **error_on_assembly_tree_errors_during_release** | **bool** |  | [optional] 

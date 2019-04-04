@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
+**href** | **str** |  | [optional] 
 **items** | [**list[BTBetaCapabilitySummaryInfo]**](BTBetaCapabilitySummaryInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 

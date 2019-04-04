@@ -4,11 +4,68 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**download_external_data**](DocumentsApi.md#download_external_data) | **GET** /api/documents/d/{did}/externaldata/{fid} | Download External Data
 [**get_current_microversion**](DocumentsApi.md#get_current_microversion) | **GET** /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion | 
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /api/documents | Get Documents
 [**merge_into_workspace**](DocumentsApi.md#merge_into_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/merge | Merge into workspace
 [**restore_document**](DocumentsApi.md#restore_document) | **POST** /api/documents/{did}/restore | Restore Document
 
+
+# **download_external_data**
+> file download_external_data(did, fid, if_none_match=if_none_match)
+
+Download External Data
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.DocumentsApi(onshape_client.ApiClient(configuration))
+did = 'did_example' # str | 
+fid = 'fid_example' # str | 
+if_none_match = 'if_none_match_example' # str |  (optional)
+
+try:
+    # Download External Data
+    api_response = api_instance.download_external_data(did, fid, if_none_match=if_none_match)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->download_external_data: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **fid** | **str**|  | 
+ **if_none_match** | **str**|  | [optional] 
+
+### Return type
+
+**file**
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9, application/vnd.onshape.v1+octet-stream; qs=0.1, application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_current_microversion**
 > get_current_microversion(did, wv, wvid)

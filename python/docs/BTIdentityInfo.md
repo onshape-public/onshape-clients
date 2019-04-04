@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
-**identity_type** | **int** |  | [optional] 
 **team** | [**BTTeamSummaryInfo**](BTTeamSummaryInfo.md) |  | [optional] 
+**identity_type** | **int** |  | [optional] 
+**user** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

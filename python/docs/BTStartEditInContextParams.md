@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**microversion_id** | **str** |  | [optional] 
 **encoded_configuration** | **str** |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **context_id** | **str** |  | [optional] 
 

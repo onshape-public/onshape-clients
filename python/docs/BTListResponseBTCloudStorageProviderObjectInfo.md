@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
+**href** | **str** |  | [optional] 
 **items** | [**list[BTCloudStorageProviderObjectInfo]**](BTCloudStorageProviderObjectInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 

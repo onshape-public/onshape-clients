@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** |  | [optional] 
 **source_id** | **str** |  | [optional] 
-**collection_changes** | **dict(str, list[BTDiffInfo])** |  | [optional] 
+**changes** | [**dict(str, BTDiffInfo)**](BTDiffInfo.md) |  | [optional] 
 **target_id** | **str** |  | [optional] 
 **source_value** | **str** |  | [optional] 
 **target_value** | **str** |  | [optional] 

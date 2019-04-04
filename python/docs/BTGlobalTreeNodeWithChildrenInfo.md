@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **permission_set** | [**BTPermissionSet**](BTPermissionSet.md) |  | [optional] 
 **path_to_root** | [**list[PathSegment]**](PathSegment.md) |  | [optional] 
-**href** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
+**href** | **str** |  | [optional] 
 **items** | [**list[BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 

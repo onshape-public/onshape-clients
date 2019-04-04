@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**trash** | **bool** |  | [optional] 
+**permission_set** | [**BTPermissionSet**](BTPermissionSet.md) |  | [optional] 
 **permission_scheme** | [**BTRbacPermissionSchemeInfo**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
 **role_map_entries** | [**list[RoleMapEntry]**](RoleMapEntry.md) |  | [optional] 
-**permission_set** | [**BTPermissionSet**](BTPermissionSet.md) |  | [optional] 
-**trash** | **bool** |  | [optional] 
 **owner** | [**BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**is_container** | **bool** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
-**modified_at** | **datetime** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
+**is_container** | **bool** |  | [optional] 
+**created_at** | **datetime** |  | [optional] 
 **is_enterprise_owned** | **bool** |  | [optional] 
+**modified_at** | **datetime** |  | [optional] 
 **created_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **modified_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **tree_href** | **str** |  | [optional] 

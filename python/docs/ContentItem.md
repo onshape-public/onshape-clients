@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **link** | **str** |  | [optional] 
+**position** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
 **content_id** | **str** |  | [optional] 
 **item_title** | **str** |  | [optional] 
@@ -14,7 +15,6 @@ Name | Type | Description | Notes
 **anchor** | **str** |  | [optional] 
 **vertical_offset** | **int** |  | [optional] 
 **horizontal_offset** | **int** |  | [optional] 
-**position** | **str** |  | [optional] 
 **width** | **int** |  | [optional] 
 **height** | **int** |  | [optional] 
 
