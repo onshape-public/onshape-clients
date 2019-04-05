@@ -6,7 +6,8 @@ Demos 307 redirects with the Onshape API
 '''
 
 from onshape_client.client import Client
-from onshape_client.onshape_url import OnshapeElement
+from onshape_client.onshape_url import OnshapeElement, ConfiguredOnshapeElement
+from onshape_client.units import u
 
 client = Client()
 
@@ -17,93 +18,12 @@ cube = OnshapeElement(url, client=client)
 # get the STL export
 stl = client.part_studios_api.export_stl1(cube.did, cube.wvm, cube.wvmid, cube.eid, _preload_content=False)
 
-print("Resulting STL data: \n" + stl.data)
-"""
-Resulting STL data: 
-solid Onshape
-  facet normal 0 0 -1
-    outer loop
-      vertex -0.5 0.503781 0
-      vertex 0.5 0.503781 0
-      vertex -0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal 0 0 -1
-    outer loop
-      vertex 0.5 0.503781 0
-      vertex 0.5 -0.496219 0
-      vertex -0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 0.5 0.503781 1
-      vertex -0.5 0.503781 1
-      vertex 0.5 -0.496219 1
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex -0.5 0.503781 1
-      vertex -0.5 -0.496219 1
-      vertex 0.5 -0.496219 1
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex -0.5 -0.496219 1
-      vertex -0.5 0.503781 1
-      vertex -0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex -0.5 0.503781 1
-      vertex -0.5 0.503781 0
-      vertex -0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex -0.5 0.503781 1
-      vertex 0.5 0.503781 1
-      vertex -0.5 0.503781 0
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 0.5 0.503781 1
-      vertex 0.5 0.503781 0
-      vertex -0.5 0.503781 0
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 0.5 -0.496219 1
-      vertex -0.5 -0.496219 1
-      vertex 0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex -0.5 -0.496219 1
-      vertex -0.5 -0.496219 0
-      vertex 0.5 -0.496219 0
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 0.5 0.503781 1
-      vertex 0.5 -0.496219 1
-      vertex 0.5 0.503781 0
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 0.5 -0.496219 1
-      vertex 0.5 -0.496219 0
-      vertex 0.5 0.503781 0
-    endloop
-  endfacet
-endsolid Onshape
-"""
+print("Resulting STL data (unconfigured): \n" + stl.data)
+
+cube = ConfiguredOnshapeElement(url, client=client)
+cube.update_current_configuration({'size': 40 * u.inch, 'edge_configuration': 'chamfered'})
+
+# get the STL export
+stl = client.part_studios_api.export_stl1(cube.did, cube.wvm, cube.wvmid, cube.eid, configuration=cube.get_configuration_string(), _preload_content=False)
+
+print("Resulting STL data (configured): \n" + stl.data)

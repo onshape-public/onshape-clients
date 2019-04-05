@@ -9,7 +9,6 @@ from onshape_client.models.configuration_entry import ConfigurationEntry
 import webbrowser
 
 
-
 class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
     create the useful fields."""
@@ -68,38 +67,47 @@ class ConfiguredOnshapeElement(OnshapeElement):
         # Map from visible name to parameterId
         self._parameter_map = self._get_parameter_map()
         # Map from parameterId to default value
-        self._default_configuration_map = self.get_default_configuration_map()
+        self.default_configuration_map = self._get_default_configuration_map()
+        # In the beginning, the current configuration is the default config
+        self.current_configuration = self.default_configuration_map
 
-    def get_url_with_configuration(self, config, open_browser=False):
-        """A configuration is applied on top of the current element, and doesn't effect the internals of the element.
+    def get_url_with_configuration(self, open_browser=False):
+        """A configuration is applied on top of the current element.
 
         To be used like:
         >>> url = "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90"
-        >>> my_element = OnshapeElement(url)
-        >>> my_element.get_url_with_configuration({"size": 20*u.m})
+        >>> my_element = ConfiguredOnshapeElement(url)
+        >>> my_element.update_current_configuration({"size": 20*u.m})
+        >>> my_element.get_url_with_configuration()
         https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3DDefault%3Bsize%3D20.0%2Bmeter
-        >>> my_element.get_url_with_configuration({"Configuration": "chamfered"})
+        >>> my_element.update_current_configuration({"Configuration": "chamfered"})
+        >>> my_element.get_url_with_configuration()
         https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3Dchamfered%3Bsize%3D20.0%2Bmeter
         """
-        client = self.client
-        defaults_map = self.get_default_configuration_map()
-        final = []
-        defaults_map.update(config)
-        for k, v in defaults_map.items():
-            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v))
-            final.append(p)
-        params = BTConfigurationParams(parameters=final)
-
-        encoded_config_map = client.elements_api.encode_configuration_map(self.did, self.eid, params, _preload_content=False)
-        url = self.get_url() + "?" + json.loads(encoded_config_map.data.decode("utf-8"))["queryParam"]
+        url = self.get_url() + "?" + self.get_configuration_query_param()
         if open_browser:
             webbrowser.open(url)
         return url
 
-    def _make_configuration_map(self, update):
-        return self.get_default_configuration_map().update(update)
+    def update_current_configuration(self, config):
+        self.current_configuration.update(config)
 
-    def get_default_configuration_map(self):
+    def get_configuration_string(self):
+        encoded_val = self._get_configuration_encoding_response()
+        return encoded_val["encodedId"]
+
+    def get_configuration_query_param(self):
+        encoded_val = self._get_configuration_encoding_response()
+        return encoded_val["queryParam"]
+
+    def _get_configuration_encoding_response(self):
+        res = self.client.elements_api.encode_configuration_map(self.did, self.eid, self._get_bt_configuration_params_for_current_configuration(), _preload_content=False)
+        return json.loads(res.data.decode("utf-8"))
+
+    def _make_configuration_map(self, update):
+        return self._get_default_configuration_map().update(update)
+
+    def _get_default_configuration_map(self):
         defaults_map = {}
         for k,v in self._get_parameter_map().items():
             param_type = v["typeName"]
@@ -112,8 +120,15 @@ class ConfiguredOnshapeElement(OnshapeElement):
                 raise NotImplementedError("This configuration type: {} is not supported.".format(param_type))
             defaults_map[k] = default_value
         # Return a copy so the original doesn't get changed and we can keep using it
-        self._default_configuration_map = defaults_map
+        self.default_configuration_map = defaults_map
         return copy.deepcopy(defaults_map)
+
+    def _get_bt_configuration_params_for_current_configuration(self):
+        final = []
+        for k, v in self.current_configuration.items():
+            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v))
+            final.append(p)
+        return BTConfigurationParams(parameters=final)
 
     def _get_param_id_from_name(self, name):
         return self._get_parameter_map()[name]["message"]["parameterId"]
