@@ -161,6 +161,7 @@ class RESTClientObject(object):
 
         # Ethan added this to build the necessary authentication headers
         from onshape_client.apikey_headers import add_auth_headers
+        import copy
         def make_boundary_key_and_ctype_header():
             boundary = binascii.hexlify(os.urandom(16))
             boundary = boundary.decode('ascii')
@@ -168,8 +169,9 @@ class RESTClientObject(object):
         if headers['Content-Type'] == 'multipart/form-data':
             (boundary_key, ctype) = make_boundary_key_and_ctype_header()
             headers['Content-Type'] = ctype
-        add_auth_headers(method, urlparse(url).path, self._access_key, self._secret_key, headers=headers, query_params=query_params)
-
+        if self._access_key and self._secret_key:
+            add_auth_headers(method, urlparse(url).path, self._access_key, self._secret_key, headers=headers, query_params=query_params)
+        orig_headers = copy.deepcopy(headers)
 
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
@@ -258,7 +260,7 @@ class RESTClientObject(object):
             parsed_qs = parse_qs(location.query)
             for q in parsed_qs:
                 parsed_qs[q] = parsed_qs[q][0]
-            return self.request(method, new_url, headers=headers, query_params=parsed_qs)
+            return self.request(method, new_url, headers=orig_headers, query_params=parsed_qs)
 
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)

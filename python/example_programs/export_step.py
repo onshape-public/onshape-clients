@@ -8,7 +8,7 @@ import time
 import json
 import os.path
 
-client = Client(stack_key="prod")
+client = Client()
 
 # We're saving these files to the home directory ("~")
 client.configuration.temp_folder_path = os.path.expanduser("~")

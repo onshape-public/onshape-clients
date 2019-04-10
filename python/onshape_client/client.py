@@ -48,10 +48,15 @@ class Client:
 
     def _set_configuration(self, configuration_dictionary):
         configuration = Configuration()
-        configuration.api_key['SECRET_KEY'] = configuration_dictionary['secret_key']
-        configuration.api_key['ACCESS_KEY'] = configuration_dictionary['access_key']
-        configuration.host = configuration_dictionary['base_url']
+        configuration.access_token = self._get_if_present(configuration_dictionary, 'access_token')
+        configuration.api_key['SECRET_KEY'] = self._get_if_present(configuration_dictionary, 'secret_key')
+        configuration.api_key['ACCESS_KEY'] = self._get_if_present(configuration_dictionary, 'access_key')
+        configuration.host = self._get_if_present(configuration_dictionary, 'base_url')
         self.configuration = configuration
+
+    @staticmethod
+    def _get_if_present(dictionary, key):
+        return dictionary[key] if key in dictionary else ""
 
     def _create_apis(self):
         api_client = onshape_client.ApiClient(configuration=self.configuration)
