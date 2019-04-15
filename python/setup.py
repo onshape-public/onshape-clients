@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "onshape_client"
-VERSION = "0.0.14"
+VERSION = "0.0.15"
 # To install the library, run the following
 #
 # python setup.py install
@@ -22,7 +22,7 @@ VERSION = "0.0.14"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "requests_oauthlib"]
 
 setup(
     name=NAME,

@@ -40,7 +40,7 @@ class ThreeDSecure(object):
         'created': 'int',
         'currency': 'str',
         'livemode': 'bool',
-        'redirect_url': 'str',
+        'redirect_uri': 'str',
         'status': 'str'
     }
 
@@ -53,7 +53,7 @@ class ThreeDSecure(object):
         'created': 'created',
         'currency': 'currency',
         'livemode': 'livemode',
-        'redirect_url': 'redirectURL',
+        'redirect_uri': 'redirectURL',
         'status': 'status'
     }
 
@@ -263,20 +263,20 @@ class ThreeDSecure(object):
 
     @property
     def redirect_url(self):
-        """Gets the redirect_url of this ThreeDSecure.  # noqa: E501
+        """Gets the redirect_uri of this ThreeDSecure.  # noqa: E501
 
 
-        :return: The redirect_url of this ThreeDSecure.  # noqa: E501
+        :return: The redirect_uri of this ThreeDSecure.  # noqa: E501
         :rtype: str
         """
         return self._redirect_url
 
     @redirect_url.setter
     def redirect_url(self, redirect_url):
-        """Sets the redirect_url of this ThreeDSecure.
+        """Sets the redirect_uri of this ThreeDSecure.
 
 
-        :param redirect_url: The redirect_url of this ThreeDSecure.  # noqa: E501
+        :param redirect_url: The redirect_uri of this ThreeDSecure.  # noqa: E501
         :type: str
         """
 

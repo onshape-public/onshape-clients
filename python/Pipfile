@@ -6,7 +6,7 @@ verify_ssl = true
 
 [dev-packages]
 codecov = "*"
-v = {editable = true,version = "*"}
+v = {version = "*",editable = true}
 coverage = "*"
 pytest = "*"
 pytest-cov = "*"
@@ -17,6 +17,7 @@ sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
 
 [packages]
+requests-oauthlib = "*"
 
 [requires]
 python_version = "3.5"

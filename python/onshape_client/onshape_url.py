@@ -13,9 +13,9 @@ class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
     create the useful fields."""
 
-    def __init__(self, url, *args, client=None, **kwargs):
+    def __init__(self, url, *args, **kwargs):
 
-        self.client = client if client else Client()
+        self.client = Client.get_client()
 
         self.original_url = url
         parsed_vals = urlparse(url)

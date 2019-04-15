@@ -25,6 +25,7 @@ import six
 from six.moves.urllib.parse import urlencode, urlparse, parse_qs
 import os
 import binascii
+from onshape_client.client import Client
 
 try:
     import urllib3
@@ -113,7 +114,7 @@ class RESTClientObject(object):
 
     def request(self, method, url, query_params=None, headers=None,
                 body=None, post_params=None, _preload_content=True,
-                _request_timeout=None):
+                _request_timeout=None, _oauth_persistent=True):
         """Perform requests.
 
         :param method: http request method
@@ -261,6 +262,15 @@ class RESTClientObject(object):
             for q in parsed_qs:
                 parsed_qs[q] = parsed_qs[q][0]
             return self.request(method, new_url, headers=orig_headers, query_params=parsed_qs)
+
+        if r.status == 403 or r.status == 401:
+            client = Client.get_client()
+            if client.get_authentication_method() == "oauth" and _oauth_persistent:
+                client.do_oauth_flow()
+                headers['Authorization'] = "Bearer {}".format(client.configuration.access_token)
+                return self.request(method, url, query_params=query_params, headers=headers,
+                body=body, post_params=post_params, _preload_content=_preload_content,
+                _request_timeout=_request_timeout, _oauth_persistent=False)
 
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)

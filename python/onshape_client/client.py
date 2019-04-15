@@ -3,6 +3,10 @@ import onshape_client
 from pathlib import Path
 from ruamel.yaml import YAML
 import os
+from requests_oauthlib import OAuth2Session
+import webbrowser
+
+
 
 
 class Client:
@@ -29,30 +33,118 @@ class Client:
         The key of the name for the particular stack to be used. Only applicable when reading configuration from the
         conf_file.
     """
+    __instance = None
+
+    @staticmethod
+    def get_client():
+        """ get an instance of the client class singleton. """
+        if Client.__instance == None:
+            raise Exception("Please manually instantiate the client.")
+        return Client.__instance
+
+    @staticmethod
+    def get_configuration_from_keys_file(keys_file, stack_key):
+        try:
+            yaml = YAML()
+            configurations_file = yaml.load(Path(keys_file))
+            final_configuration = configurations_file[stack_key if stack_key else configurations_file['default_stack']]
+        except KeyError as e:
+            raise KeyError(
+                "Your creds file is not constructed as expected. The key: {} was expected and now found.".format(e))
+        return final_configuration
+
     def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None):
+        if Client.__instance != None:
+            raise Exception("This class is a singleton! Please use 'get_client' for all subsequent calls.")
         keys_file = os.path.expanduser(keys_file)
         if configuration:
             final_configuration = configuration
         elif keys_file:
-            try:
-                yaml = YAML()
-                configurations_file = yaml.load(Path(keys_file))
-                final_configuration = configurations_file[stack_key if stack_key else configurations_file['default_stack']]
-            except KeyError as e:
-                raise KeyError("Your creds file is not constructed as expected: {}".format(e))
+            final_configuration = self.get_configuration_from_keys_file(keys_file, stack_key)
         else:
             raise EnvironmentError("API keys were not properly set.")
 
         self._set_configuration(final_configuration)
         self._create_apis()
 
+        if self.get_authentication_method() == "oauth":
+            self._set_oauth_session()
+            self.authorization_url, self.state = self.oauth.authorization_url(
+                self.authorization_uri)
+
+        Client.__instance = self
+
+    def get_authentication_method(self):
+        # Prefer OAUTH if specified, otherwise try for apikeys
+        if self.client_secret and self.client_id:
+            return "oauth"
+        elif self.configuration.api_key['SECRET_KEY'] and self.configuration.api_key['ACCESS_KEY']:
+            return "api_keys"
+        else:
+            return None
+
+    def do_oauth_flow(self):
+        """Do the oauth flow to set the access token"""
+        try:
+            self._refresh_access_token()
+        except BaseException as e:
+            if self.oauth_authorization_method == "localhost_server":
+                from onshape_client.oauth.local_server import start_server
+                start_server(self._fetch_access_token, self.authorization_url)
+
+
     def _set_configuration(self, configuration_dictionary):
         configuration = Configuration()
-        configuration.access_token = self._get_if_present(configuration_dictionary, 'access_token')
+
         configuration.api_key['SECRET_KEY'] = self._get_if_present(configuration_dictionary, 'secret_key')
         configuration.api_key['ACCESS_KEY'] = self._get_if_present(configuration_dictionary, 'access_key')
+
+        self.client_id = self._get_if_present(configuration_dictionary, 'client_id')
+        self.client_secret = self._get_if_present(configuration_dictionary, 'client_secret')
+        configuration.access_token = self._get_if_present(configuration_dictionary, 'access_token')
+        self.refresh_token = self._get_if_present(configuration_dictionary, 'refresh_token')
+        self.scope = self._get_if_present(configuration_dictionary, 'scope')
+        self.redirect_uri = self._get_if_present(configuration_dictionary, 'redirect_uri')
+        self.token_uri = self._get_if_present(configuration_dictionary, 'token_uri')
+        self.authorization_uri = self._get_if_present(configuration_dictionary, 'authorization_url')
+        self.scope = self._get_if_present(configuration_dictionary, 'scope')
+        self.oauth_authorization_method = self._get_if_present(configuration_dictionary, 'oauth_authorization_method')
+
         configuration.host = self._get_if_present(configuration_dictionary, 'base_url')
         self.configuration = configuration
+        return
+
+    def _set_oauth_session(self):
+        self.oauth = OAuth2Session(self.client_id, redirect_uri=self.redirect_uri,
+                                           scope=self.scope)
+        return
+
+    def _refresh_access_token(self):
+        # So that the oauth library doesn't complain about scope changing
+        os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "True"
+
+        token_response = self.oauth.refresh_token(
+            self.token_uri, refresh_token=self.refresh_token, client_id=self.client_id, client_secret=self.client_secret)
+        self._set_oauth_creds_from_token_response(token_response)
+        return
+
+    def _fetch_access_token(self, authorization_response):
+        try:
+            token_response = self.oauth.fetch_token(
+            self.token_uri,
+            authorization_response=authorization_response,
+            client_secret=self.client_secret)
+            self._set_oauth_creds_from_token_response(token_response)
+        except Warning:
+            # This is probably a scope warning.
+            pass
+        return
+
+    def _set_oauth_creds_from_token_response(self, token_response):
+        self.configuration.access_token = token_response["access_token"]
+        self.refresh_token = token_response["refresh_token"]
+        return
+
 
     @staticmethod
     def _get_if_present(dictionary, key):
@@ -72,3 +164,4 @@ class Client:
         self.parts_api = onshape_client.api.PartsApi(api_client)
         self.part_studios_api = onshape_client.api.PartStudiosApi(api_client)
         self.translation_api = onshape_client.api.TranslationsApi(api_client)
+
