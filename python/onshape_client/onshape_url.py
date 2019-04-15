@@ -1,7 +1,7 @@
-from urllib.parse import urlparse
+from onshape_client.compatible_imports import parse
 from onshape_client.client import Client
 import json
-from enum import Enum
+
 import copy
 from onshape_client.units import u
 from onshape_client.models.bt_configuration_params import BTConfigurationParams
@@ -18,7 +18,7 @@ class OnshapeElement(object):
         self.client = Client.get_client()
 
         self.original_url = url
-        parsed_vals = urlparse(url)
+        parsed_vals = parse(url)
 
         self.base_url = parsed_vals.scheme + "://" + parsed_vals.netloc
         path_list = parsed_vals.path.split('/')
@@ -60,7 +60,7 @@ class OnshapeElement(object):
 class ConfiguredOnshapeElement(OnshapeElement):
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(ConfiguredOnshapeElement, self).__init__(*args, **kwargs)
         # Initialize the cached values
         # Raw configuration params
         self._raw_configuration_params = self._get_raw_configuration_params()

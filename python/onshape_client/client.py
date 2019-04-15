@@ -3,8 +3,8 @@ import onshape_client
 from pathlib import Path
 from ruamel.yaml import YAML
 import os
+import six
 from requests_oauthlib import OAuth2Session
-import webbrowser
 
 
 
@@ -89,8 +89,12 @@ class Client:
             self._refresh_access_token()
         except BaseException as e:
             if self.oauth_authorization_method == "localhost_server":
-                from onshape_client.oauth.local_server import start_server
+                if six.PY3:
+                    from onshape_client.oauth.local_server_python_3 import start_server
+                else:
+                    from onshape_client.oauth.local_server_python_2 import start_server
                 start_server(self._fetch_access_token, self.authorization_url)
+
 
 
     def _set_configuration(self, configuration_dictionary):

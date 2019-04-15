@@ -11,13 +11,13 @@ coverage = "*"
 pytest = "*"
 pytest-cov = "*"
 twine = "*"
-onshape-client = {editable = true,path = "."}
 sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
+onshape-client = {editable = true,path = "."}
 
 [packages]
 requests-oauthlib = "*"
 
 [requires]
-python_version = "3.5"
+python_version = "2.7"

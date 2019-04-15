@@ -4,7 +4,11 @@ from onshape_client.onshape_url import ConfiguredOnshapeElement
 
 @pytest.fixture
 def client():
-    return Client()
+    try:
+        client = Client.get_client()
+    except Exception as e:
+        client = Client()
+    return client
 
 @pytest.fixture
 def configurable_cube():
