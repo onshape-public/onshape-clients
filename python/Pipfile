@@ -14,10 +14,17 @@ twine = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
-onshape-client = {editable = true,path = "."}
+#onshape-client = {path = ".",editable = true}
+tox-pipenv = "*"
+tox = "==3.7.0"
 
 [packages]
+urllib3 = "*"
+six = "*"
+certifi = "*"
+python-dateutil = "*"
 requests-oauthlib = "*"
-
-[requires]
-python_version = "2.7"
+ruamel-yaml = "*"
+pathlib = "*"
+enum34 = "*"
+pint = "*"

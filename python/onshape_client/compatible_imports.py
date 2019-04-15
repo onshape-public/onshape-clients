@@ -13,7 +13,7 @@ def get_parse():
     if six.PY2:
         from urlparse import urlparse as parse
     else:
-        from urllib import parse
+        from urllib.parse import urlparse as parse
     return parse
 
 unquote=get_unquote()
