@@ -3,8 +3,10 @@ import onshape_client
 from pathlib import Path
 from ruamel.yaml import YAML
 import os
-import six
 from requests_oauthlib import OAuth2Session
+from onshape_client.compatible_imports import start_server
+from enum import Enum
+import webbrowser
 
 
 
@@ -53,7 +55,17 @@ class Client:
                 "Your creds file is not constructed as expected. The key: {} was expected and now found.".format(e))
         return final_configuration
 
-    def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None):
+    def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None, open_authorize_grant_callback=None):
+        """
+
+        :param keys_file:
+        :param configuration:
+        :param stack_key:
+        :param open_authorize_grant_callback: This will get called when the application needs to show the user the grant
+            authorization page. It gets passed the URL to go to. Once the grant is authorized, the application needs to
+            call client.set_grant_authorization_url_response(redirected_url) with whatever url the user got directed to
+            (that includes the authorization code!)
+        """
         if Client.__instance != None:
             raise Exception("This class is a singleton! Please use 'get_client' for all subsequent calls.")
         keys_file = os.path.expanduser(keys_file)
@@ -66,6 +78,7 @@ class Client:
 
         self._set_configuration(final_configuration)
         self._create_apis()
+        self.open_authorize_grant_callback = open_authorize_grant_callback
 
         if self.get_authentication_method() == "oauth":
             self._set_oauth_session()
@@ -73,6 +86,10 @@ class Client:
                 self.authorization_uri)
 
         Client.__instance = self
+
+    def set_grant_authorization_url_response(self, authorization_url_response):
+        """ This is the redirected-to url, for example: https:localhost/oauth_redirect?code=XraRXPYGSWfZmBvUIiNHvSlZ&state=kgZQJbVp731CgNxAeKJN7TIoOlo5bz"""
+        self._fetch_access_token(authorization_url_response)
 
     def get_authentication_method(self):
         # Prefer OAUTH if specified, otherwise try for apikeys
@@ -89,12 +106,29 @@ class Client:
             self._refresh_access_token()
         except BaseException as e:
             if self.oauth_authorization_method == "localhost_server":
-                if six.PY3:
-                    from onshape_client.oauth.local_server_python_3 import start_server
-                else:
-                    from onshape_client.oauth.local_server_python_2 import start_server
-                start_server(self._fetch_access_token, self.authorization_url)
+                start_server(self._fetch_access_token, self.authorization_url, self.open_authorize_grant)
 
+    def open_authorize_grant(self):
+        callback = self.open_authorize_grant_callback
+        url = self.oauth_authorization_method
+        defaults_supported = ["localhost_server"]
+        if not callback and url not in defaults_supported:
+            raise NotImplementedError("To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
+        elif callback:
+            try:
+                if callback and not callable(callback):
+                    # Attempt to evaluate the function definition
+                    callback = eval(callback)
+                callback(self.authorization_url)
+            except:
+                raise AttributeError("The open_authorize_grant_callback function did not work.")
+        else:
+            self.default_callback(url)
+
+    def default_callback(self, url):
+        authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
+        if authorization_method == OAuthAuthorizationMethods.LOCALHOST_SERVER:
+            webbrowser.open(url)
 
 
     def _set_configuration(self, configuration_dictionary):
@@ -169,3 +203,6 @@ class Client:
         self.part_studios_api = onshape_client.api.PartStudiosApi(api_client)
         self.translation_api = onshape_client.api.TranslationsApi(api_client)
 
+class OAuthAuthorizationMethods(Enum):
+    LOCALHOST_SERVER="localhost_server"
+    PYTHON_CALLBACK="python_callback"

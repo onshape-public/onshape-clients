@@ -2,23 +2,23 @@ from http.server import *
 import webbrowser
 
 
-def start_server(authorization_callback, authorization_url):
+def start_server(authorization_callback, authorization_url, open_grant_authorization_page_callback):
     """
     :param authorization_callback: The function to call once with the authorization URL response
     :param startup_callback: The function to call when the server starts - for example opening a webpage
     :return:
     """
-    ServerClass = MakeServerClass(authorization_url)
+    ServerClass = MakeServerClass(authorization_url, open_grant_authorization_page_callback)
     server = ServerClass(('localhost', 9000), MakeHandlerWithCallbacks(authorization_callback))
     server.serve_forever()
 
 
-def MakeServerClass(authorization_url):
+def MakeServerClass(authorization_url, open_grant_authorization_page_callback):
     class OAuth2RedirectServer(HTTPServer):
 
         def server_activate(self):
             super(HTTPServer, self).server_activate()
-            webbrowser.open(authorization_url)
+            open_grant_authorization_page_callback()
 
     return OAuth2RedirectServer
 
