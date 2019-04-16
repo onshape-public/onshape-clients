@@ -4,7 +4,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 import os
 from requests_oauthlib import OAuth2Session
-from onshape_client.compatible_imports import start_server
+from onshape_client.oauth.local_server import start_server
 from enum import Enum
 import webbrowser
 
@@ -106,20 +106,21 @@ class Client:
             self._refresh_access_token()
         except BaseException as e:
             if self.oauth_authorization_method == "localhost_server":
-                start_server(self._fetch_access_token, self.authorization_url, self.open_authorize_grant)
+                start_server(self._fetch_access_token, self.open_authorize_grant)
 
     def open_authorize_grant(self):
         callback = self.open_authorize_grant_callback
-        url = self.oauth_authorization_method
+        oauth_type = self.oauth_authorization_method
+        url = self.authorization_url
         defaults_supported = ["localhost_server"]
-        if not callback and url not in defaults_supported:
+        if not callback and oauth_type not in defaults_supported:
             raise NotImplementedError("To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
         elif callback:
             try:
                 if callback and not callable(callback):
                     # Attempt to evaluate the function definition
                     callback = eval(callback)
-                callback(self.authorization_url)
+                callback(url)
             except:
                 raise AttributeError("The open_authorize_grant_callback function did not work.")
         else:

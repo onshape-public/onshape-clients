@@ -6,7 +6,6 @@ verify_ssl = true
 
 [dev-packages]
 codecov = "*"
-v = {version = "*",editable = true}
 coverage = "*"
 pytest = "*"
 pytest-cov = "*"
@@ -14,7 +13,6 @@ twine = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
-#onshape-client = {path = ".",editable = true}
 tox-pipenv = "*"
 tox = "==3.7.0"
 

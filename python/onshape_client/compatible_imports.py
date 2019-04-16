@@ -1,5 +1,15 @@
 import six
 
+# Alphabetical!
+def get_http_server():
+    if six.PY2:
+        from BaseHTTPServer import HTTPServer
+        from SimpleHTTPServer import SimpleHTTPRequestHandler as HTTPHandler
+    else:
+        from http.server import HTTPServer
+        from http.server import BaseHTTPRequestHandler as HTTPHandler
+    return HTTPServer, HTTPHandler
+
 def get_parse():
     if six.PY2:
         from urlparse import urlparse as parse
@@ -7,12 +17,14 @@ def get_parse():
         from urllib.parse import urlparse as parse
     return parse
 
-def get_start_server():
-    if six.PY3:
-        from onshape_client.oauth.local_server_python_3 import start_server
+def get_sendable():
+    if six.PY2:
+        def sendable(s):
+            return s
     else:
-        from onshape_client.oauth.local_server_python_2 import start_server
-    return start_server
+        def sendable(s):
+            return bytes(s, 'UTF-8')
+    return sendable
 
 def get_unquote():
     if six.PY2:
@@ -22,6 +34,7 @@ def get_unquote():
     return unquote
 
 # Alphabetical!
+HTTPServer, HTTPHandler = get_http_server()
 parse=get_parse()
-start_server=get_start_server()
+sendable=get_sendable()
 unquote=get_unquote()

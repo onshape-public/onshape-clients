@@ -1,34 +1,30 @@
-import SimpleHTTPServer
-import SocketServer
-from SocketServer import TCPServer
-from BaseHTTPServer import HTTPServer
-
+from onshape_client.compatible_imports import HTTPServer, HTTPHandler, sendable
 import webbrowser
 
 
-def start_server(authorization_callback, authorization_url):
+def start_server(authorization_callback, open_grant_authorization_page_callback):
     """
     :param authorization_callback: The function to call once with the authorization URL response
     :param startup_callback: The function to call when the server starts - for example opening a webpage
     :return:
     """
-    ServerClass = MakeServerClass(authorization_url)
+    ServerClass = MakeServerClass(open_grant_authorization_page_callback)
     server = ServerClass(('localhost', 9000), MakeHandlerWithCallbacks(authorization_callback))
     server.serve_forever()
 
 
-def MakeServerClass(authorization_url):
+def MakeServerClass(open_grant_authorization_page_callback):
     class OAuth2RedirectServer(HTTPServer, object):
 
         def server_activate(self):
             super(OAuth2RedirectServer, self).server_activate()
-            webbrowser.open(authorization_url)
+            open_grant_authorization_page_callback()
 
     return OAuth2RedirectServer
 
 
 def MakeHandlerWithCallbacks(authorization_callback):
-    class OAuth2RedirectHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+    class OAuth2RedirectHandler(HTTPHandler):
         def do_GET(self):
 
             try:
@@ -44,7 +40,7 @@ def MakeHandlerWithCallbacks(authorization_callback):
                             <p>You may close this tab.</p>
                             </body></html>
                             '''.format(self.path)
-                self.wfile.write(content)
+                self.wfile.write(sendable(content))
             except BaseException as e:
                 self.send_response(500)
                 self.send_header('Content-type', 'text/html')
@@ -55,7 +51,7 @@ def MakeHandlerWithCallbacks(authorization_callback):
                             <p>You may close this tab.</p>
                             </body></html>
                             '''.format(e)
-                self.wfile.write(content)
+                self.wfile.write(sendable(content))
 
             import threading
             assassin = threading.Thread(target=self.server.shutdown)
