@@ -36,10 +36,10 @@ class BTCompanySummaryInfo(object):
         'type': 'int',
         'description': 'str',
         'owner_id': 'str',
-        'domain_prefix': 'str',
         'admin': 'bool',
         'no_public_documents': 'bool',
         'enterprise_base_url': 'str',
+        'domain_prefix': 'str',
         'image': 'str',
         'name': 'str',
         'id': 'str',
@@ -52,10 +52,10 @@ class BTCompanySummaryInfo(object):
         'type': 'type',
         'description': 'description',
         'owner_id': 'ownerId',
-        'domain_prefix': 'domainPrefix',
         'admin': 'admin',
         'no_public_documents': 'noPublicDocuments',
         'enterprise_base_url': 'enterpriseBaseUrl',
+        'domain_prefix': 'domainPrefix',
         'image': 'image',
         'name': 'name',
         'id': 'id',
@@ -63,17 +63,17 @@ class BTCompanySummaryInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, state=None, type=None, description=None, owner_id=None, domain_prefix=None, admin=None, no_public_documents=None, enterprise_base_url=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, state=None, type=None, description=None, owner_id=None, admin=None, no_public_documents=None, enterprise_base_url=None, domain_prefix=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTCompanySummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._state = None
         self._type = None
         self._description = None
         self._owner_id = None
-        self._domain_prefix = None
         self._admin = None
         self._no_public_documents = None
         self._enterprise_base_url = None
+        self._domain_prefix = None
         self._image = None
         self._name = None
         self._id = None
@@ -89,14 +89,14 @@ class BTCompanySummaryInfo(object):
             self.description = description
         if owner_id is not None:
             self.owner_id = owner_id
-        if domain_prefix is not None:
-            self.domain_prefix = domain_prefix
         if admin is not None:
             self.admin = admin
         if no_public_documents is not None:
             self.no_public_documents = no_public_documents
         if enterprise_base_url is not None:
             self.enterprise_base_url = enterprise_base_url
+        if domain_prefix is not None:
+            self.domain_prefix = domain_prefix
         if image is not None:
             self.image = image
         if name is not None:
@@ -193,27 +193,6 @@ class BTCompanySummaryInfo(object):
         self._owner_id = owner_id
 
     @property
-    def domain_prefix(self):
-        """Gets the domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_prefix
-
-    @domain_prefix.setter
-    def domain_prefix(self, domain_prefix):
-        """Sets the domain_prefix of this BTCompanySummaryInfo.
-
-
-        :param domain_prefix: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._domain_prefix = domain_prefix
-
-    @property
     def admin(self):
         """Gets the admin of this BTCompanySummaryInfo.  # noqa: E501
 
@@ -275,6 +254,27 @@ class BTCompanySummaryInfo(object):
         """
 
         self._enterprise_base_url = enterprise_base_url
+
+    @property
+    def domain_prefix(self):
+        """Gets the domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_prefix
+
+    @domain_prefix.setter
+    def domain_prefix(self, domain_prefix):
+        """Sets the domain_prefix of this BTCompanySummaryInfo.
+
+
+        :param domain_prefix: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._domain_prefix = domain_prefix
 
     @property
     def image(self):

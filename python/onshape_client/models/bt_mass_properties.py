@@ -33,9 +33,9 @@ class BTMassProperties(object):
     """
     openapi_types = {
         'has_mass': 'bool',
-        'volume': 'list[float]',
         'mass_missing_count': 'int',
         'mass': 'list[float]',
+        'volume': 'list[float]',
         'periphery': 'list[float]',
         'centroid': 'list[float]',
         'inertia': 'list[float]',
@@ -47,9 +47,9 @@ class BTMassProperties(object):
 
     attribute_map = {
         'has_mass': 'hasMass',
-        'volume': 'volume',
         'mass_missing_count': 'massMissingCount',
         'mass': 'mass',
+        'volume': 'volume',
         'periphery': 'periphery',
         'centroid': 'centroid',
         'inertia': 'inertia',
@@ -59,13 +59,13 @@ class BTMassProperties(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, has_mass=None, volume=None, mass_missing_count=None, mass=None, periphery=None, centroid=None, inertia=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, has_mass=None, mass_missing_count=None, mass=None, volume=None, periphery=None, centroid=None, inertia=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTMassProperties - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_mass = None
-        self._volume = None
         self._mass_missing_count = None
         self._mass = None
+        self._volume = None
         self._periphery = None
         self._centroid = None
         self._inertia = None
@@ -77,12 +77,12 @@ class BTMassProperties(object):
 
         if has_mass is not None:
             self.has_mass = has_mass
-        if volume is not None:
-            self.volume = volume
         if mass_missing_count is not None:
             self.mass_missing_count = mass_missing_count
         if mass is not None:
             self.mass = mass
+        if volume is not None:
+            self.volume = volume
         if periphery is not None:
             self.periphery = periphery
         if centroid is not None:
@@ -118,27 +118,6 @@ class BTMassProperties(object):
         """
 
         self._has_mass = has_mass
-
-    @property
-    def volume(self):
-        """Gets the volume of this BTMassProperties.  # noqa: E501
-
-
-        :return: The volume of this BTMassProperties.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._volume
-
-    @volume.setter
-    def volume(self, volume):
-        """Sets the volume of this BTMassProperties.
-
-
-        :param volume: The volume of this BTMassProperties.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._volume = volume
 
     @property
     def mass_missing_count(self):
@@ -181,6 +160,27 @@ class BTMassProperties(object):
         """
 
         self._mass = mass
+
+    @property
+    def volume(self):
+        """Gets the volume of this BTMassProperties.  # noqa: E501
+
+
+        :return: The volume of this BTMassProperties.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._volume
+
+    @volume.setter
+    def volume(self, volume):
+        """Sets the volume of this BTMassProperties.
+
+
+        :param volume: The volume of this BTMassProperties.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._volume = volume
 
     @property
     def periphery(self):

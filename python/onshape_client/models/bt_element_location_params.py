@@ -32,52 +32,31 @@ class BTElementLocationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'position': 'int',
         'element_id': 'str',
+        'position': 'int',
         'group_id': 'str'
     }
 
     attribute_map = {
-        'position': 'position',
         'element_id': 'elementId',
+        'position': 'position',
         'group_id': 'groupId'
     }
 
-    def __init__(self, position=None, element_id=None, group_id=None):  # noqa: E501
+    def __init__(self, element_id=None, position=None, group_id=None):  # noqa: E501
         """BTElementLocationParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._position = None
         self._element_id = None
+        self._position = None
         self._group_id = None
         self.discriminator = None
 
-        if position is not None:
-            self.position = position
         if element_id is not None:
             self.element_id = element_id
+        if position is not None:
+            self.position = position
         if group_id is not None:
             self.group_id = group_id
-
-    @property
-    def position(self):
-        """Gets the position of this BTElementLocationParams.  # noqa: E501
-
-
-        :return: The position of this BTElementLocationParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._position
-
-    @position.setter
-    def position(self, position):
-        """Sets the position of this BTElementLocationParams.
-
-
-        :param position: The position of this BTElementLocationParams.  # noqa: E501
-        :type: int
-        """
-
-        self._position = position
 
     @property
     def element_id(self):
@@ -99,6 +78,27 @@ class BTElementLocationParams(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def position(self):
+        """Gets the position of this BTElementLocationParams.  # noqa: E501
+
+
+        :return: The position of this BTElementLocationParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._position
+
+    @position.setter
+    def position(self, position):
+        """Sets the position of this BTElementLocationParams.
+
+
+        :param position: The position of this BTElementLocationParams.  # noqa: E501
+        :type: int
+        """
+
+        self._position = position
 
     @property
     def group_id(self):

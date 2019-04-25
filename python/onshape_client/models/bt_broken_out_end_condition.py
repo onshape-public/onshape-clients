@@ -33,11 +33,11 @@ class BTBrokenOutEndCondition(object):
     """
     openapi_types = {
         'upto_point3d': 'BTVector3d',
+        'upto_point': 'list[float]',
         'has_upto_point': 'bool',
         'has_offset': 'bool',
         'offset_distance': 'float',
         'offset_opposite_direction': 'bool',
-        'upto_point': 'list[float]',
         'type_id': 'int',
         'connection_source': 'BTConnection',
         'export_type_name': 'str',
@@ -46,26 +46,26 @@ class BTBrokenOutEndCondition(object):
 
     attribute_map = {
         'upto_point3d': 'uptoPoint3d',
+        'upto_point': 'uptoPoint',
         'has_upto_point': 'hasUptoPoint',
         'has_offset': 'hasOffset',
         'offset_distance': 'offsetDistance',
         'offset_opposite_direction': 'offsetOppositeDirection',
-        'upto_point': 'uptoPoint',
         'type_id': 'typeId',
         'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, upto_point3d=None, has_upto_point=None, has_offset=None, offset_distance=None, offset_opposite_direction=None, upto_point=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, upto_point3d=None, upto_point=None, has_upto_point=None, has_offset=None, offset_distance=None, offset_opposite_direction=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTBrokenOutEndCondition - a model defined in OpenAPI"""  # noqa: E501
 
         self._upto_point3d = None
+        self._upto_point = None
         self._has_upto_point = None
         self._has_offset = None
         self._offset_distance = None
         self._offset_opposite_direction = None
-        self._upto_point = None
         self._type_id = None
         self._connection_source = None
         self._export_type_name = None
@@ -74,6 +74,8 @@ class BTBrokenOutEndCondition(object):
 
         if upto_point3d is not None:
             self.upto_point3d = upto_point3d
+        if upto_point is not None:
+            self.upto_point = upto_point
         if has_upto_point is not None:
             self.has_upto_point = has_upto_point
         if has_offset is not None:
@@ -82,8 +84,6 @@ class BTBrokenOutEndCondition(object):
             self.offset_distance = offset_distance
         if offset_opposite_direction is not None:
             self.offset_opposite_direction = offset_opposite_direction
-        if upto_point is not None:
-            self.upto_point = upto_point
         if type_id is not None:
             self.type_id = type_id
         if connection_source is not None:
@@ -113,6 +113,27 @@ class BTBrokenOutEndCondition(object):
         """
 
         self._upto_point3d = upto_point3d
+
+    @property
+    def upto_point(self):
+        """Gets the upto_point of this BTBrokenOutEndCondition.  # noqa: E501
+
+
+        :return: The upto_point of this BTBrokenOutEndCondition.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._upto_point
+
+    @upto_point.setter
+    def upto_point(self, upto_point):
+        """Sets the upto_point of this BTBrokenOutEndCondition.
+
+
+        :param upto_point: The upto_point of this BTBrokenOutEndCondition.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._upto_point = upto_point
 
     @property
     def has_upto_point(self):
@@ -197,27 +218,6 @@ class BTBrokenOutEndCondition(object):
         """
 
         self._offset_opposite_direction = offset_opposite_direction
-
-    @property
-    def upto_point(self):
-        """Gets the upto_point of this BTBrokenOutEndCondition.  # noqa: E501
-
-
-        :return: The upto_point of this BTBrokenOutEndCondition.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._upto_point
-
-    @upto_point.setter
-    def upto_point(self, upto_point):
-        """Sets the upto_point of this BTBrokenOutEndCondition.
-
-
-        :param upto_point: The upto_point of this BTBrokenOutEndCondition.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._upto_point = upto_point
 
     @property
     def type_id(self):

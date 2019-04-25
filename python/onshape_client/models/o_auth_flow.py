@@ -35,7 +35,7 @@ class OAuthFlow(object):
         'authorization_url': 'str',
         'token_url': 'str',
         'refresh_url': 'str',
-        'scope': 'OAuthFlowScopes',
+        'scopes': 'OAuthFlowScopes',
         'extensions': 'dict(str, object)'
     }
 
@@ -43,7 +43,7 @@ class OAuthFlow(object):
         'authorization_url': 'authorizationUrl',
         'token_url': 'tokenUrl',
         'refresh_url': 'refreshUrl',
-        'scope': 'scope',
+        'scopes': 'scopes',
         'extensions': 'extensions'
     }
 
@@ -133,20 +133,20 @@ class OAuthFlow(object):
 
     @property
     def scopes(self):
-        """Gets the scope of this OAuthFlow.  # noqa: E501
+        """Gets the scopes of this OAuthFlow.  # noqa: E501
 
 
-        :return: The scope of this OAuthFlow.  # noqa: E501
+        :return: The scopes of this OAuthFlow.  # noqa: E501
         :rtype: OAuthFlowScopes
         """
         return self._scopes
 
     @scopes.setter
     def scopes(self, scopes):
-        """Sets the scope of this OAuthFlow.
+        """Sets the scopes of this OAuthFlow.
 
 
-        :param scopes: The scope of this OAuthFlow.  # noqa: E501
+        :param scopes: The scopes of this OAuthFlow.  # noqa: E501
         :type: OAuthFlowScopes
         """
 

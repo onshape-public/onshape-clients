@@ -542,7 +542,8 @@ class ApiClient(object):
         with open(path, "wb") as f:
             data = response.data
             if isinstance(data, str):
-                data = data.encode("UTF=8")
+                if six.PY3:
+                    data = data.encode("UTF=8")
             f.write(data)
 
         return path

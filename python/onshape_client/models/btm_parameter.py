@@ -42,9 +42,9 @@ class BTMParameter(object):
         'for_export': 'bool',
         'import_microversion': 'str',
         'child_nodes': 'dict(str, BTNodeReference)',
-        'has_user_code': 'bool',
-        'child_locations': 'dict(str, BTInsertionLocation)',
         'source_parse_tree_nodes': 'dict(str, list[BTNodeReference])',
+        'child_locations': 'dict(str, BTInsertionLocation)',
+        'has_user_code': 'bool',
         'node_id': 'str',
         'child_map_indices': 'list[int]',
         'atomic_child_indices': 'list[int]',
@@ -68,9 +68,9 @@ class BTMParameter(object):
         'for_export': 'forExport',
         'import_microversion': 'importMicroversion',
         'child_nodes': 'childNodes',
-        'has_user_code': 'hasUserCode',
-        'child_locations': 'childLocations',
         'source_parse_tree_nodes': 'sourceParseTreeNodes',
+        'child_locations': 'childLocations',
+        'has_user_code': 'hasUserCode',
         'node_id': 'nodeId',
         'child_map_indices': 'childMapIndices',
         'atomic_child_indices': 'atomicChildIndices',
@@ -83,7 +83,7 @@ class BTMParameter(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, revision_data=None, value_object=None, configuration_value_string=None, direct_imports=None, string_value_for_property=None, parameter_id=None, changeable_child_field_indices=None, for_export=None, import_microversion=None, child_nodes=None, has_user_code=None, child_locations=None, source_parse_tree_nodes=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, revision_data=None, value_object=None, configuration_value_string=None, direct_imports=None, string_value_for_property=None, parameter_id=None, changeable_child_field_indices=None, for_export=None, import_microversion=None, child_nodes=None, source_parse_tree_nodes=None, child_locations=None, has_user_code=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, first_child_field=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTMParameter - a model defined in OpenAPI"""  # noqa: E501
 
         self._revision_data = None
@@ -96,9 +96,9 @@ class BTMParameter(object):
         self._for_export = None
         self._import_microversion = None
         self._child_nodes = None
-        self._has_user_code = None
-        self._child_locations = None
         self._source_parse_tree_nodes = None
+        self._child_locations = None
+        self._has_user_code = None
         self._node_id = None
         self._child_map_indices = None
         self._atomic_child_indices = None
@@ -131,12 +131,12 @@ class BTMParameter(object):
             self.import_microversion = import_microversion
         if child_nodes is not None:
             self.child_nodes = child_nodes
-        if has_user_code is not None:
-            self.has_user_code = has_user_code
-        if child_locations is not None:
-            self.child_locations = child_locations
         if source_parse_tree_nodes is not None:
             self.source_parse_tree_nodes = source_parse_tree_nodes
+        if child_locations is not None:
+            self.child_locations = child_locations
+        if has_user_code is not None:
+            self.has_user_code = has_user_code
         if node_id is not None:
             self.node_id = node_id
         if child_map_indices is not None:
@@ -369,25 +369,25 @@ class BTMParameter(object):
         self._child_nodes = child_nodes
 
     @property
-    def has_user_code(self):
-        """Gets the has_user_code of this BTMParameter.  # noqa: E501
+    def source_parse_tree_nodes(self):
+        """Gets the source_parse_tree_nodes of this BTMParameter.  # noqa: E501
 
 
-        :return: The has_user_code of this BTMParameter.  # noqa: E501
-        :rtype: bool
+        :return: The source_parse_tree_nodes of this BTMParameter.  # noqa: E501
+        :rtype: dict(str, list[BTNodeReference])
         """
-        return self._has_user_code
+        return self._source_parse_tree_nodes
 
-    @has_user_code.setter
-    def has_user_code(self, has_user_code):
-        """Sets the has_user_code of this BTMParameter.
+    @source_parse_tree_nodes.setter
+    def source_parse_tree_nodes(self, source_parse_tree_nodes):
+        """Sets the source_parse_tree_nodes of this BTMParameter.
 
 
-        :param has_user_code: The has_user_code of this BTMParameter.  # noqa: E501
-        :type: bool
+        :param source_parse_tree_nodes: The source_parse_tree_nodes of this BTMParameter.  # noqa: E501
+        :type: dict(str, list[BTNodeReference])
         """
 
-        self._has_user_code = has_user_code
+        self._source_parse_tree_nodes = source_parse_tree_nodes
 
     @property
     def child_locations(self):
@@ -411,25 +411,25 @@ class BTMParameter(object):
         self._child_locations = child_locations
 
     @property
-    def source_parse_tree_nodes(self):
-        """Gets the source_parse_tree_nodes of this BTMParameter.  # noqa: E501
+    def has_user_code(self):
+        """Gets the has_user_code of this BTMParameter.  # noqa: E501
 
 
-        :return: The source_parse_tree_nodes of this BTMParameter.  # noqa: E501
-        :rtype: dict(str, list[BTNodeReference])
+        :return: The has_user_code of this BTMParameter.  # noqa: E501
+        :rtype: bool
         """
-        return self._source_parse_tree_nodes
+        return self._has_user_code
 
-    @source_parse_tree_nodes.setter
-    def source_parse_tree_nodes(self, source_parse_tree_nodes):
-        """Sets the source_parse_tree_nodes of this BTMParameter.
+    @has_user_code.setter
+    def has_user_code(self, has_user_code):
+        """Sets the has_user_code of this BTMParameter.
 
 
-        :param source_parse_tree_nodes: The source_parse_tree_nodes of this BTMParameter.  # noqa: E501
-        :type: dict(str, list[BTNodeReference])
+        :param has_user_code: The has_user_code of this BTMParameter.  # noqa: E501
+        :type: bool
         """
 
-        self._source_parse_tree_nodes = source_parse_tree_nodes
+        self._has_user_code = has_user_code
 
     @property
     def node_id(self):

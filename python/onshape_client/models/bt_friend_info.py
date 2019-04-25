@@ -32,11 +32,11 @@ class BTFriendInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email': 'str',
+        'image_url': 'str',
         'token': 'str',
         'first_name': 'str',
         'last_name': 'str',
-        'image_url': 'str',
+        'email': 'str',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -44,41 +44,41 @@ class BTFriendInfo(object):
     }
 
     attribute_map = {
-        'email': 'email',
+        'image_url': 'imageUrl',
         'token': 'token',
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'image_url': 'imageUrl',
+        'email': 'email',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, email=None, token=None, first_name=None, last_name=None, image_url=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, image_url=None, token=None, first_name=None, last_name=None, email=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTFriendInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._email = None
+        self._image_url = None
         self._token = None
         self._first_name = None
         self._last_name = None
-        self._image_url = None
+        self._email = None
         self._name = None
         self._id = None
         self._href = None
         self._view_ref = None
         self.discriminator = None
 
-        if email is not None:
-            self.email = email
+        if image_url is not None:
+            self.image_url = image_url
         if token is not None:
             self.token = token
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
-        if image_url is not None:
-            self.image_url = image_url
+        if email is not None:
+            self.email = email
         if name is not None:
             self.name = name
         if id is not None:
@@ -89,25 +89,25 @@ class BTFriendInfo(object):
             self.view_ref = view_ref
 
     @property
-    def email(self):
-        """Gets the email of this BTFriendInfo.  # noqa: E501
+    def image_url(self):
+        """Gets the image_url of this BTFriendInfo.  # noqa: E501
 
 
-        :return: The email of this BTFriendInfo.  # noqa: E501
+        :return: The image_url of this BTFriendInfo.  # noqa: E501
         :rtype: str
         """
-        return self._email
+        return self._image_url
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTFriendInfo.
+    @image_url.setter
+    def image_url(self, image_url):
+        """Sets the image_url of this BTFriendInfo.
 
 
-        :param email: The email of this BTFriendInfo.  # noqa: E501
+        :param image_url: The image_url of this BTFriendInfo.  # noqa: E501
         :type: str
         """
 
-        self._email = email
+        self._image_url = image_url
 
     @property
     def token(self):
@@ -173,25 +173,25 @@ class BTFriendInfo(object):
         self._last_name = last_name
 
     @property
-    def image_url(self):
-        """Gets the image_url of this BTFriendInfo.  # noqa: E501
+    def email(self):
+        """Gets the email of this BTFriendInfo.  # noqa: E501
 
 
-        :return: The image_url of this BTFriendInfo.  # noqa: E501
+        :return: The email of this BTFriendInfo.  # noqa: E501
         :rtype: str
         """
-        return self._image_url
+        return self._email
 
-    @image_url.setter
-    def image_url(self, image_url):
-        """Sets the image_url of this BTFriendInfo.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTFriendInfo.
 
 
-        :param image_url: The image_url of this BTFriendInfo.  # noqa: E501
+        :param email: The email of this BTFriendInfo.  # noqa: E501
         :type: str
         """
 
-        self._image_url = image_url
+        self._email = email
 
     @property
     def name(self):

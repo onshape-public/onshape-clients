@@ -1,11 +1,10 @@
 from onshape_client.compatible_imports import HTTPServer, HTTPHandler, sendable
-import webbrowser
 
 
 def start_server(authorization_callback, open_grant_authorization_page_callback):
     """
     :param authorization_callback: The function to call once with the authorization URL response
-    :param startup_callback: The function to call when the server starts - for example opening a webpage
+    :param open_grant_authorization_page_callback: The function to call when the server starts - for example opening a webpage
     :return:
     """
     ServerClass = MakeServerClass(open_grant_authorization_page_callback)

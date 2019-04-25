@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **workflow_type** | **str** |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 
 

@@ -37,10 +37,10 @@ class BTMatchingStandardContentHierarchyInfo(object):
         'category_default': 'str',
         'types_default': 'str',
         'type_default': 'str',
+        'category': 'list[str]',
         'standard': 'list[str]',
         'types': 'list[str]',
         'component_document_id': 'str',
-        'category': 'list[str]',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -53,17 +53,17 @@ class BTMatchingStandardContentHierarchyInfo(object):
         'category_default': 'categoryDefault',
         'types_default': 'typesDefault',
         'type_default': 'typeDefault',
+        'category': 'category',
         'standard': 'standard',
         'types': 'types',
         'component_document_id': 'componentDocumentId',
-        'category': 'category',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, type=None, standard_default=None, category_default=None, types_default=None, type_default=None, standard=None, types=None, component_document_id=None, category=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, type=None, standard_default=None, category_default=None, types_default=None, type_default=None, category=None, standard=None, types=None, component_document_id=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTMatchingStandardContentHierarchyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
@@ -71,10 +71,10 @@ class BTMatchingStandardContentHierarchyInfo(object):
         self._category_default = None
         self._types_default = None
         self._type_default = None
+        self._category = None
         self._standard = None
         self._types = None
         self._component_document_id = None
-        self._category = None
         self._name = None
         self._id = None
         self._href = None
@@ -91,14 +91,14 @@ class BTMatchingStandardContentHierarchyInfo(object):
             self.types_default = types_default
         if type_default is not None:
             self.type_default = type_default
+        if category is not None:
+            self.category = category
         if standard is not None:
             self.standard = standard
         if types is not None:
             self.types = types
         if component_document_id is not None:
             self.component_document_id = component_document_id
-        if category is not None:
-            self.category = category
         if name is not None:
             self.name = name
         if id is not None:
@@ -214,6 +214,27 @@ class BTMatchingStandardContentHierarchyInfo(object):
         self._type_default = type_default
 
     @property
+    def category(self):
+        """Gets the category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTMatchingStandardContentHierarchyInfo.
+
+
+        :param category: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._category = category
+
+    @property
     def standard(self):
         """Gets the standard of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
 
@@ -275,27 +296,6 @@ class BTMatchingStandardContentHierarchyInfo(object):
         """
 
         self._component_document_id = component_document_id
-
-    @property
-    def category(self):
-        """Gets the category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTMatchingStandardContentHierarchyInfo.
-
-
-        :param category: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._category = category
 
     @property
     def name(self):

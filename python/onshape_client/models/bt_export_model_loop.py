@@ -32,9 +32,9 @@ class BTExportModelLoop(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_inner': 'bool',
         'is_outer': 'bool',
         'coedges': 'list[BTExportModelCoedge]',
+        'is_inner': 'bool',
         'type_id': 'int',
         'connection_source': 'BTConnection',
         'export_type_name': 'str',
@@ -42,33 +42,33 @@ class BTExportModelLoop(object):
     }
 
     attribute_map = {
-        'is_inner': 'isInner',
         'is_outer': 'isOuter',
         'coedges': 'coedges',
+        'is_inner': 'isInner',
         'type_id': 'typeId',
         'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, is_inner=None, is_outer=None, coedges=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, is_outer=None, coedges=None, is_inner=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTExportModelLoop - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_inner = None
         self._is_outer = None
         self._coedges = None
+        self._is_inner = None
         self._type_id = None
         self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
         self.discriminator = None
 
-        if is_inner is not None:
-            self.is_inner = is_inner
         if is_outer is not None:
             self.is_outer = is_outer
         if coedges is not None:
             self.coedges = coedges
+        if is_inner is not None:
+            self.is_inner = is_inner
         if type_id is not None:
             self.type_id = type_id
         if connection_source is not None:
@@ -77,27 +77,6 @@ class BTExportModelLoop(object):
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-
-    @property
-    def is_inner(self):
-        """Gets the is_inner of this BTExportModelLoop.  # noqa: E501
-
-
-        :return: The is_inner of this BTExportModelLoop.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_inner
-
-    @is_inner.setter
-    def is_inner(self, is_inner):
-        """Sets the is_inner of this BTExportModelLoop.
-
-
-        :param is_inner: The is_inner of this BTExportModelLoop.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_inner = is_inner
 
     @property
     def is_outer(self):
@@ -140,6 +119,27 @@ class BTExportModelLoop(object):
         """
 
         self._coedges = coedges
+
+    @property
+    def is_inner(self):
+        """Gets the is_inner of this BTExportModelLoop.  # noqa: E501
+
+
+        :return: The is_inner of this BTExportModelLoop.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_inner
+
+    @is_inner.setter
+    def is_inner(self, is_inner):
+        """Sets the is_inner of this BTExportModelLoop.
+
+
+        :param is_inner: The is_inner of this BTExportModelLoop.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_inner = is_inner
 
     @property
     def type_id(self):

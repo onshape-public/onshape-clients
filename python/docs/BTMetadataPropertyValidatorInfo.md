@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max** | **float** |  | [optional] 
 **min** | **float** |  | [optional] 
+**max** | **float** |  | [optional] 
 **pattern** | **str** |  | [optional] 
 **min_length** | **int** |  | [optional] 
 **max_length** | **int** |  | [optional] 

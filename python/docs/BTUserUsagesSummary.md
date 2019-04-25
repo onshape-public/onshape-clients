@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**count** | **int** |  | [optional] 
 **owner_type** | **str** |  | [optional] 
 **owner_name** | **str** |  | [optional] 
 

@@ -32,39 +32,39 @@ class BTModelBodyParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'part_query': 'str',
         'part_id': 'str',
-        'document_id': 'str',
-        'element_microversion_id': 'str'
+        'element_microversion_id': 'str',
+        'configuration': 'str'
     }
 
     attribute_map = {
-        'configuration': 'configuration',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'part_query': 'partQuery',
         'part_id': 'partId',
-        'document_id': 'documentId',
-        'element_microversion_id': 'elementMicroversionId'
+        'element_microversion_id': 'elementMicroversionId',
+        'configuration': 'configuration'
     }
 
-    def __init__(self, configuration=None, workspace_id=None, element_id=None, part_query=None, part_id=None, document_id=None, element_microversion_id=None):  # noqa: E501
+    def __init__(self, document_id=None, workspace_id=None, element_id=None, part_query=None, part_id=None, element_microversion_id=None, configuration=None):  # noqa: E501
         """BTModelBodyParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
         self._part_query = None
         self._part_id = None
-        self._document_id = None
         self._element_microversion_id = None
+        self._configuration = None
         self.discriminator = None
 
-        if configuration is not None:
-            self.configuration = configuration
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
@@ -73,31 +73,31 @@ class BTModelBodyParams(object):
             self.part_query = part_query
         if part_id is not None:
             self.part_id = part_id
-        if document_id is not None:
-            self.document_id = document_id
         if element_microversion_id is not None:
             self.element_microversion_id = element_microversion_id
+        if configuration is not None:
+            self.configuration = configuration
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTModelBodyParams.  # noqa: E501
+    def document_id(self):
+        """Gets the document_id of this BTModelBodyParams.  # noqa: E501
 
 
-        :return: The configuration of this BTModelBodyParams.  # noqa: E501
+        :return: The document_id of this BTModelBodyParams.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._document_id
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTModelBodyParams.
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTModelBodyParams.
 
 
-        :param configuration: The configuration of this BTModelBodyParams.  # noqa: E501
+        :param document_id: The document_id of this BTModelBodyParams.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -184,27 +184,6 @@ class BTModelBodyParams(object):
         self._part_id = part_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTModelBodyParams.  # noqa: E501
-
-
-        :return: The document_id of this BTModelBodyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTModelBodyParams.
-
-
-        :param document_id: The document_id of this BTModelBodyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
     def element_microversion_id(self):
         """Gets the element_microversion_id of this BTModelBodyParams.  # noqa: E501
 
@@ -224,6 +203,27 @@ class BTModelBodyParams(object):
         """
 
         self._element_microversion_id = element_microversion_id
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this BTModelBodyParams.  # noqa: E501
+
+
+        :return: The configuration of this BTModelBodyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTModelBodyParams.
+
+
+        :param configuration: The configuration of this BTModelBodyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

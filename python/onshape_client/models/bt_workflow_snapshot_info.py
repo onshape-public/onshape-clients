@@ -34,54 +34,54 @@ class BTWorkflowSnapshotInfo(object):
     openapi_types = {
         'actions': 'list[BTWorkflowActionInfo]',
         'state': 'BTWorkflowStateInfo',
-        'is_setup': 'bool',
-        'approver_ids': 'list[str]',
-        'notifier_ids': 'list[str]',
         'is_frozen': 'bool',
+        'is_setup': 'bool',
         'metadata_state': 'str',
-        'is_discarded': 'bool'
+        'is_discarded': 'bool',
+        'approver_ids': 'list[str]',
+        'notifier_ids': 'list[str]'
     }
 
     attribute_map = {
         'actions': 'actions',
         'state': 'state',
-        'is_setup': 'isSetup',
-        'approver_ids': 'approverIds',
-        'notifier_ids': 'notifierIds',
         'is_frozen': 'isFrozen',
+        'is_setup': 'isSetup',
         'metadata_state': 'metadataState',
-        'is_discarded': 'isDiscarded'
+        'is_discarded': 'isDiscarded',
+        'approver_ids': 'approverIds',
+        'notifier_ids': 'notifierIds'
     }
 
-    def __init__(self, actions=None, state=None, is_setup=None, approver_ids=None, notifier_ids=None, is_frozen=None, metadata_state=None, is_discarded=None):  # noqa: E501
+    def __init__(self, actions=None, state=None, is_frozen=None, is_setup=None, metadata_state=None, is_discarded=None, approver_ids=None, notifier_ids=None):  # noqa: E501
         """BTWorkflowSnapshotInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._actions = None
         self._state = None
-        self._is_setup = None
-        self._approver_ids = None
-        self._notifier_ids = None
         self._is_frozen = None
+        self._is_setup = None
         self._metadata_state = None
         self._is_discarded = None
+        self._approver_ids = None
+        self._notifier_ids = None
         self.discriminator = None
 
         if actions is not None:
             self.actions = actions
         if state is not None:
             self.state = state
-        if is_setup is not None:
-            self.is_setup = is_setup
-        if approver_ids is not None:
-            self.approver_ids = approver_ids
-        if notifier_ids is not None:
-            self.notifier_ids = notifier_ids
         if is_frozen is not None:
             self.is_frozen = is_frozen
+        if is_setup is not None:
+            self.is_setup = is_setup
         if metadata_state is not None:
             self.metadata_state = metadata_state
         if is_discarded is not None:
             self.is_discarded = is_discarded
+        if approver_ids is not None:
+            self.approver_ids = approver_ids
+        if notifier_ids is not None:
+            self.notifier_ids = notifier_ids
 
     @property
     def actions(self):
@@ -126,69 +126,6 @@ class BTWorkflowSnapshotInfo(object):
         self._state = state
 
     @property
-    def is_setup(self):
-        """Gets the is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_setup
-
-    @is_setup.setter
-    def is_setup(self, is_setup):
-        """Sets the is_setup of this BTWorkflowSnapshotInfo.
-
-
-        :param is_setup: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_setup = is_setup
-
-    @property
-    def approver_ids(self):
-        """Gets the approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._approver_ids
-
-    @approver_ids.setter
-    def approver_ids(self, approver_ids):
-        """Sets the approver_ids of this BTWorkflowSnapshotInfo.
-
-
-        :param approver_ids: The approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._approver_ids = approver_ids
-
-    @property
-    def notifier_ids(self):
-        """Gets the notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-
-
-        :return: The notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._notifier_ids
-
-    @notifier_ids.setter
-    def notifier_ids(self, notifier_ids):
-        """Sets the notifier_ids of this BTWorkflowSnapshotInfo.
-
-
-        :param notifier_ids: The notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._notifier_ids = notifier_ids
-
-    @property
     def is_frozen(self):
         """Gets the is_frozen of this BTWorkflowSnapshotInfo.  # noqa: E501
 
@@ -208,6 +145,27 @@ class BTWorkflowSnapshotInfo(object):
         """
 
         self._is_frozen = is_frozen
+
+    @property
+    def is_setup(self):
+        """Gets the is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_setup
+
+    @is_setup.setter
+    def is_setup(self, is_setup):
+        """Sets the is_setup of this BTWorkflowSnapshotInfo.
+
+
+        :param is_setup: The is_setup of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_setup = is_setup
 
     @property
     def metadata_state(self):
@@ -250,6 +208,48 @@ class BTWorkflowSnapshotInfo(object):
         """
 
         self._is_discarded = is_discarded
+
+    @property
+    def approver_ids(self):
+        """Gets the approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._approver_ids
+
+    @approver_ids.setter
+    def approver_ids(self, approver_ids):
+        """Sets the approver_ids of this BTWorkflowSnapshotInfo.
+
+
+        :param approver_ids: The approver_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._approver_ids = approver_ids
+
+    @property
+    def notifier_ids(self):
+        """Gets the notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+
+
+        :return: The notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._notifier_ids
+
+    @notifier_ids.setter
+    def notifier_ids(self, notifier_ids):
+        """Sets the notifier_ids of this BTWorkflowSnapshotInfo.
+
+
+        :param notifier_ids: The notifier_ids of this BTWorkflowSnapshotInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._notifier_ids = notifier_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

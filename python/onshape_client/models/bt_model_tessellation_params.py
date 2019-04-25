@@ -32,11 +32,11 @@ class BTModelTessellationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
-        'part_ids': 'list[str]',
         'part_query': 'str',
+        'part_ids': 'list[str]',
         'angle_tolerance': 'float',
         'chord_tolerance': 'float',
         'max_facet_width': 'float',
@@ -47,16 +47,16 @@ class BTModelTessellationParams(object):
         'entity_ids': 'list[str]',
         'output_error_faces': 'bool',
         'part_id': 'str',
-        'document_id': 'str',
-        'element_microversion_id': 'str'
+        'element_microversion_id': 'str',
+        'configuration': 'str'
     }
 
     attribute_map = {
-        'configuration': 'configuration',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
-        'part_ids': 'partIds',
         'part_query': 'partQuery',
+        'part_ids': 'partIds',
         'angle_tolerance': 'angleTolerance',
         'chord_tolerance': 'chordTolerance',
         'max_facet_width': 'maxFacetWidth',
@@ -67,18 +67,18 @@ class BTModelTessellationParams(object):
         'entity_ids': 'entityIds',
         'output_error_faces': 'outputErrorFaces',
         'part_id': 'partId',
-        'document_id': 'documentId',
-        'element_microversion_id': 'elementMicroversionId'
+        'element_microversion_id': 'elementMicroversionId',
+        'configuration': 'configuration'
     }
 
-    def __init__(self, configuration=None, workspace_id=None, element_id=None, part_ids=None, part_query=None, angle_tolerance=None, chord_tolerance=None, max_facet_width=None, output_vertex_normals=None, output_facet_normals=None, output_texture_coordinates=None, output_index_table=None, entity_ids=None, output_error_faces=None, part_id=None, document_id=None, element_microversion_id=None):  # noqa: E501
+    def __init__(self, document_id=None, workspace_id=None, element_id=None, part_query=None, part_ids=None, angle_tolerance=None, chord_tolerance=None, max_facet_width=None, output_vertex_normals=None, output_facet_normals=None, output_texture_coordinates=None, output_index_table=None, entity_ids=None, output_error_faces=None, part_id=None, element_microversion_id=None, configuration=None):  # noqa: E501
         """BTModelTessellationParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
-        self._part_ids = None
         self._part_query = None
+        self._part_ids = None
         self._angle_tolerance = None
         self._chord_tolerance = None
         self._max_facet_width = None
@@ -89,20 +89,20 @@ class BTModelTessellationParams(object):
         self._entity_ids = None
         self._output_error_faces = None
         self._part_id = None
-        self._document_id = None
         self._element_microversion_id = None
+        self._configuration = None
         self.discriminator = None
 
-        if configuration is not None:
-            self.configuration = configuration
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
-        if part_ids is not None:
-            self.part_ids = part_ids
         if part_query is not None:
             self.part_query = part_query
+        if part_ids is not None:
+            self.part_ids = part_ids
         if angle_tolerance is not None:
             self.angle_tolerance = angle_tolerance
         if chord_tolerance is not None:
@@ -123,31 +123,31 @@ class BTModelTessellationParams(object):
             self.output_error_faces = output_error_faces
         if part_id is not None:
             self.part_id = part_id
-        if document_id is not None:
-            self.document_id = document_id
         if element_microversion_id is not None:
             self.element_microversion_id = element_microversion_id
+        if configuration is not None:
+            self.configuration = configuration
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTModelTessellationParams.  # noqa: E501
+    def document_id(self):
+        """Gets the document_id of this BTModelTessellationParams.  # noqa: E501
 
 
-        :return: The configuration of this BTModelTessellationParams.  # noqa: E501
+        :return: The document_id of this BTModelTessellationParams.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._document_id
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTModelTessellationParams.
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTModelTessellationParams.
 
 
-        :param configuration: The configuration of this BTModelTessellationParams.  # noqa: E501
+        :param document_id: The document_id of this BTModelTessellationParams.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -192,27 +192,6 @@ class BTModelTessellationParams(object):
         self._element_id = element_id
 
     @property
-    def part_ids(self):
-        """Gets the part_ids of this BTModelTessellationParams.  # noqa: E501
-
-
-        :return: The part_ids of this BTModelTessellationParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._part_ids
-
-    @part_ids.setter
-    def part_ids(self, part_ids):
-        """Sets the part_ids of this BTModelTessellationParams.
-
-
-        :param part_ids: The part_ids of this BTModelTessellationParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._part_ids = part_ids
-
-    @property
     def part_query(self):
         """Gets the part_query of this BTModelTessellationParams.  # noqa: E501
 
@@ -232,6 +211,27 @@ class BTModelTessellationParams(object):
         """
 
         self._part_query = part_query
+
+    @property
+    def part_ids(self):
+        """Gets the part_ids of this BTModelTessellationParams.  # noqa: E501
+
+
+        :return: The part_ids of this BTModelTessellationParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._part_ids
+
+    @part_ids.setter
+    def part_ids(self, part_ids):
+        """Sets the part_ids of this BTModelTessellationParams.
+
+
+        :param part_ids: The part_ids of this BTModelTessellationParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._part_ids = part_ids
 
     @property
     def angle_tolerance(self):
@@ -444,27 +444,6 @@ class BTModelTessellationParams(object):
         self._part_id = part_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTModelTessellationParams.  # noqa: E501
-
-
-        :return: The document_id of this BTModelTessellationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTModelTessellationParams.
-
-
-        :param document_id: The document_id of this BTModelTessellationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
     def element_microversion_id(self):
         """Gets the element_microversion_id of this BTModelTessellationParams.  # noqa: E501
 
@@ -484,6 +463,27 @@ class BTModelTessellationParams(object):
         """
 
         self._element_microversion_id = element_microversion_id
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this BTModelTessellationParams.  # noqa: E501
+
+
+        :return: The configuration of this BTModelTessellationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTModelTessellationParams.
+
+
+        :param configuration: The configuration of this BTModelTessellationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

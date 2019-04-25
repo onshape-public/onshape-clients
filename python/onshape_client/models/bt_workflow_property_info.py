@@ -32,68 +32,68 @@ class BTWorkflowPropertyInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_notifier_property': 'bool',
         'is_approver_property': 'bool',
+        'is_notifier_property': 'bool',
         'name': 'str',
         'default_value': 'object',
         'initial_value': 'object',
         'dirty': 'bool',
-        'editable': 'bool',
-        'property_id': 'str',
+        'schema_id': 'str',
         'value_type': 'str',
         'required': 'bool',
-        'schema_id': 'str',
         'enum_values': 'list[BTMetadataEnumValueInfo]',
-        'editable_in_ui': 'bool',
         'validator': 'BTMetadataPropertyValidatorInfo',
+        'editable': 'bool',
+        'property_id': 'str',
         'property_source': 'int',
+        'editable_in_ui': 'bool',
         'ui_hints': 'BTMetadataPropertyUiHintsInfo'
     }
 
     attribute_map = {
-        'is_notifier_property': 'isNotifierProperty',
         'is_approver_property': 'isApproverProperty',
+        'is_notifier_property': 'isNotifierProperty',
         'name': 'name',
         'default_value': 'defaultValue',
         'initial_value': 'initialValue',
         'dirty': 'dirty',
-        'editable': 'editable',
-        'property_id': 'propertyId',
+        'schema_id': 'schemaId',
         'value_type': 'valueType',
         'required': 'required',
-        'schema_id': 'schemaId',
         'enum_values': 'enumValues',
-        'editable_in_ui': 'editableInUi',
         'validator': 'validator',
+        'editable': 'editable',
+        'property_id': 'propertyId',
         'property_source': 'propertySource',
+        'editable_in_ui': 'editableInUi',
         'ui_hints': 'uiHints'
     }
 
-    def __init__(self, is_notifier_property=None, is_approver_property=None, name=None, default_value=None, initial_value=None, dirty=None, editable=None, property_id=None, value_type=None, required=None, schema_id=None, enum_values=None, editable_in_ui=None, validator=None, property_source=None, ui_hints=None):  # noqa: E501
+    def __init__(self, is_approver_property=None, is_notifier_property=None, name=None, default_value=None, initial_value=None, dirty=None, schema_id=None, value_type=None, required=None, enum_values=None, validator=None, editable=None, property_id=None, property_source=None, editable_in_ui=None, ui_hints=None):  # noqa: E501
         """BTWorkflowPropertyInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_notifier_property = None
         self._is_approver_property = None
+        self._is_notifier_property = None
         self._name = None
         self._default_value = None
         self._initial_value = None
         self._dirty = None
-        self._editable = None
-        self._property_id = None
+        self._schema_id = None
         self._value_type = None
         self._required = None
-        self._schema_id = None
         self._enum_values = None
-        self._editable_in_ui = None
         self._validator = None
+        self._editable = None
+        self._property_id = None
         self._property_source = None
+        self._editable_in_ui = None
         self._ui_hints = None
         self.discriminator = None
 
-        if is_notifier_property is not None:
-            self.is_notifier_property = is_notifier_property
         if is_approver_property is not None:
             self.is_approver_property = is_approver_property
+        if is_notifier_property is not None:
+            self.is_notifier_property = is_notifier_property
         if name is not None:
             self.name = name
         if default_value is not None:
@@ -102,47 +102,26 @@ class BTWorkflowPropertyInfo(object):
             self.initial_value = initial_value
         if dirty is not None:
             self.dirty = dirty
-        if editable is not None:
-            self.editable = editable
-        if property_id is not None:
-            self.property_id = property_id
+        if schema_id is not None:
+            self.schema_id = schema_id
         if value_type is not None:
             self.value_type = value_type
         if required is not None:
             self.required = required
-        if schema_id is not None:
-            self.schema_id = schema_id
         if enum_values is not None:
             self.enum_values = enum_values
-        if editable_in_ui is not None:
-            self.editable_in_ui = editable_in_ui
         if validator is not None:
             self.validator = validator
+        if editable is not None:
+            self.editable = editable
+        if property_id is not None:
+            self.property_id = property_id
         if property_source is not None:
             self.property_source = property_source
+        if editable_in_ui is not None:
+            self.editable_in_ui = editable_in_ui
         if ui_hints is not None:
             self.ui_hints = ui_hints
-
-    @property
-    def is_notifier_property(self):
-        """Gets the is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
-
-
-        :return: The is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_notifier_property
-
-    @is_notifier_property.setter
-    def is_notifier_property(self, is_notifier_property):
-        """Sets the is_notifier_property of this BTWorkflowPropertyInfo.
-
-
-        :param is_notifier_property: The is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_notifier_property = is_notifier_property
 
     @property
     def is_approver_property(self):
@@ -164,6 +143,27 @@ class BTWorkflowPropertyInfo(object):
         """
 
         self._is_approver_property = is_approver_property
+
+    @property
+    def is_notifier_property(self):
+        """Gets the is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
+
+
+        :return: The is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_notifier_property
+
+    @is_notifier_property.setter
+    def is_notifier_property(self, is_notifier_property):
+        """Sets the is_notifier_property of this BTWorkflowPropertyInfo.
+
+
+        :param is_notifier_property: The is_notifier_property of this BTWorkflowPropertyInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_notifier_property = is_notifier_property
 
     @property
     def name(self):
@@ -250,46 +250,25 @@ class BTWorkflowPropertyInfo(object):
         self._dirty = dirty
 
     @property
-    def editable(self):
-        """Gets the editable of this BTWorkflowPropertyInfo.  # noqa: E501
+    def schema_id(self):
+        """Gets the schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
 
 
-        :return: The editable of this BTWorkflowPropertyInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._editable
-
-    @editable.setter
-    def editable(self, editable):
-        """Sets the editable of this BTWorkflowPropertyInfo.
-
-
-        :param editable: The editable of this BTWorkflowPropertyInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._editable = editable
-
-    @property
-    def property_id(self):
-        """Gets the property_id of this BTWorkflowPropertyInfo.  # noqa: E501
-
-
-        :return: The property_id of this BTWorkflowPropertyInfo.  # noqa: E501
+        :return: The schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._property_id
+        return self._schema_id
 
-    @property_id.setter
-    def property_id(self, property_id):
-        """Sets the property_id of this BTWorkflowPropertyInfo.
+    @schema_id.setter
+    def schema_id(self, schema_id):
+        """Sets the schema_id of this BTWorkflowPropertyInfo.
 
 
-        :param property_id: The property_id of this BTWorkflowPropertyInfo.  # noqa: E501
+        :param schema_id: The schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
         :type: str
         """
 
-        self._property_id = property_id
+        self._schema_id = schema_id
 
     @property
     def value_type(self):
@@ -334,27 +313,6 @@ class BTWorkflowPropertyInfo(object):
         self._required = required
 
     @property
-    def schema_id(self):
-        """Gets the schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
-
-
-        :return: The schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._schema_id
-
-    @schema_id.setter
-    def schema_id(self, schema_id):
-        """Sets the schema_id of this BTWorkflowPropertyInfo.
-
-
-        :param schema_id: The schema_id of this BTWorkflowPropertyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._schema_id = schema_id
-
-    @property
     def enum_values(self):
         """Gets the enum_values of this BTWorkflowPropertyInfo.  # noqa: E501
 
@@ -374,27 +332,6 @@ class BTWorkflowPropertyInfo(object):
         """
 
         self._enum_values = enum_values
-
-    @property
-    def editable_in_ui(self):
-        """Gets the editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
-
-
-        :return: The editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._editable_in_ui
-
-    @editable_in_ui.setter
-    def editable_in_ui(self, editable_in_ui):
-        """Sets the editable_in_ui of this BTWorkflowPropertyInfo.
-
-
-        :param editable_in_ui: The editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._editable_in_ui = editable_in_ui
 
     @property
     def validator(self):
@@ -418,6 +355,48 @@ class BTWorkflowPropertyInfo(object):
         self._validator = validator
 
     @property
+    def editable(self):
+        """Gets the editable of this BTWorkflowPropertyInfo.  # noqa: E501
+
+
+        :return: The editable of this BTWorkflowPropertyInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._editable
+
+    @editable.setter
+    def editable(self, editable):
+        """Sets the editable of this BTWorkflowPropertyInfo.
+
+
+        :param editable: The editable of this BTWorkflowPropertyInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._editable = editable
+
+    @property
+    def property_id(self):
+        """Gets the property_id of this BTWorkflowPropertyInfo.  # noqa: E501
+
+
+        :return: The property_id of this BTWorkflowPropertyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._property_id
+
+    @property_id.setter
+    def property_id(self, property_id):
+        """Sets the property_id of this BTWorkflowPropertyInfo.
+
+
+        :param property_id: The property_id of this BTWorkflowPropertyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._property_id = property_id
+
+    @property
     def property_source(self):
         """Gets the property_source of this BTWorkflowPropertyInfo.  # noqa: E501
 
@@ -437,6 +416,27 @@ class BTWorkflowPropertyInfo(object):
         """
 
         self._property_source = property_source
+
+    @property
+    def editable_in_ui(self):
+        """Gets the editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
+
+
+        :return: The editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._editable_in_ui
+
+    @editable_in_ui.setter
+    def editable_in_ui(self, editable_in_ui):
+        """Sets the editable_in_ui of this BTWorkflowPropertyInfo.
+
+
+        :param editable_in_ui: The editable_in_ui of this BTWorkflowPropertyInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._editable_in_ui = editable_in_ui
 
     @property
     def ui_hints(self):

@@ -33,35 +33,35 @@ class BTCompanyActivateParams(object):
     """
     openapi_types = {
         'user_id': 'str',
+        'payment_type': 'int',
         'plan_id': 'str',
-        'seats': 'int',
-        'payment_type': 'int'
+        'seats': 'int'
     }
 
     attribute_map = {
         'user_id': 'userId',
+        'payment_type': 'paymentType',
         'plan_id': 'planId',
-        'seats': 'seats',
-        'payment_type': 'paymentType'
+        'seats': 'seats'
     }
 
-    def __init__(self, user_id=None, plan_id=None, seats=None, payment_type=None):  # noqa: E501
+    def __init__(self, user_id=None, payment_type=None, plan_id=None, seats=None):  # noqa: E501
         """BTCompanyActivateParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._user_id = None
+        self._payment_type = None
         self._plan_id = None
         self._seats = None
-        self._payment_type = None
         self.discriminator = None
 
         if user_id is not None:
             self.user_id = user_id
+        if payment_type is not None:
+            self.payment_type = payment_type
         if plan_id is not None:
             self.plan_id = plan_id
         if seats is not None:
             self.seats = seats
-        if payment_type is not None:
-            self.payment_type = payment_type
 
     @property
     def user_id(self):
@@ -83,6 +83,27 @@ class BTCompanyActivateParams(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def payment_type(self):
+        """Gets the payment_type of this BTCompanyActivateParams.  # noqa: E501
+
+
+        :return: The payment_type of this BTCompanyActivateParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """Sets the payment_type of this BTCompanyActivateParams.
+
+
+        :param payment_type: The payment_type of this BTCompanyActivateParams.  # noqa: E501
+        :type: int
+        """
+
+        self._payment_type = payment_type
 
     @property
     def plan_id(self):
@@ -125,27 +146,6 @@ class BTCompanyActivateParams(object):
         """
 
         self._seats = seats
-
-    @property
-    def payment_type(self):
-        """Gets the payment_type of this BTCompanyActivateParams.  # noqa: E501
-
-
-        :return: The payment_type of this BTCompanyActivateParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """Sets the payment_type of this BTCompanyActivateParams.
-
-
-        :param payment_type: The payment_type of this BTCompanyActivateParams.  # noqa: E501
-        :type: int
-        """
-
-        self._payment_type = payment_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

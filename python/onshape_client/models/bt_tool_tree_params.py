@@ -36,11 +36,8 @@ class BTToolTreeParams(object):
         'priority': 'int',
         'id': 'str',
         'active': 'bool',
-        'namespace': 'str',
         'owner_id': 'str',
-        'use_history': 'bool',
-        'mini': 'bool',
-        'collection_name': 'str',
+        'namespace': 'str',
         'icon': 'str',
         'owner_type': 'int',
         'capability': 'str',
@@ -53,6 +50,9 @@ class BTToolTreeParams(object):
         'feature_spec_name': 'str',
         'fs_version': 'int',
         'use_dynamic_snippet': 'bool',
+        'use_history': 'bool',
+        'mini': 'bool',
+        'collection_name': 'str',
         'icon_initials': 'str',
         'context_menu': 'str',
         'is_newer_version_available': 'bool'
@@ -63,11 +63,8 @@ class BTToolTreeParams(object):
         'priority': 'priority',
         'id': 'id',
         'active': 'active',
-        'namespace': 'namespace',
         'owner_id': 'ownerId',
-        'use_history': 'useHistory',
-        'mini': 'mini',
-        'collection_name': 'collectionName',
+        'namespace': 'namespace',
         'icon': 'icon',
         'owner_type': 'ownerType',
         'capability': 'capability',
@@ -80,23 +77,23 @@ class BTToolTreeParams(object):
         'feature_spec_name': 'featureSpecName',
         'fs_version': 'fsVersion',
         'use_dynamic_snippet': 'useDynamicSnippet',
+        'use_history': 'useHistory',
+        'mini': 'mini',
+        'collection_name': 'collectionName',
         'icon_initials': 'iconInitials',
         'context_menu': 'contextMenu',
         'is_newer_version_available': 'isNewerVersionAvailable'
     }
 
-    def __init__(self, context=None, priority=None, id=None, active=None, namespace=None, owner_id=None, use_history=None, mini=None, collection_name=None, icon=None, owner_type=None, capability=None, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, icon_initials=None, context_menu=None, is_newer_version_available=None):  # noqa: E501
+    def __init__(self, context=None, priority=None, id=None, active=None, owner_id=None, namespace=None, icon=None, owner_type=None, capability=None, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, use_history=None, mini=None, collection_name=None, icon_initials=None, context_menu=None, is_newer_version_available=None):  # noqa: E501
         """BTToolTreeParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._context = None
         self._priority = None
         self._id = None
         self._active = None
-        self._namespace = None
         self._owner_id = None
-        self._use_history = None
-        self._mini = None
-        self._collection_name = None
+        self._namespace = None
         self._icon = None
         self._owner_type = None
         self._capability = None
@@ -109,6 +106,9 @@ class BTToolTreeParams(object):
         self._feature_spec_name = None
         self._fs_version = None
         self._use_dynamic_snippet = None
+        self._use_history = None
+        self._mini = None
+        self._collection_name = None
         self._icon_initials = None
         self._context_menu = None
         self._is_newer_version_available = None
@@ -122,16 +122,10 @@ class BTToolTreeParams(object):
             self.id = id
         if active is not None:
             self.active = active
-        if namespace is not None:
-            self.namespace = namespace
         if owner_id is not None:
             self.owner_id = owner_id
-        if use_history is not None:
-            self.use_history = use_history
-        if mini is not None:
-            self.mini = mini
-        if collection_name is not None:
-            self.collection_name = collection_name
+        if namespace is not None:
+            self.namespace = namespace
         if icon is not None:
             self.icon = icon
         if owner_type is not None:
@@ -156,6 +150,12 @@ class BTToolTreeParams(object):
             self.fs_version = fs_version
         if use_dynamic_snippet is not None:
             self.use_dynamic_snippet = use_dynamic_snippet
+        if use_history is not None:
+            self.use_history = use_history
+        if mini is not None:
+            self.mini = mini
+        if collection_name is not None:
+            self.collection_name = collection_name
         if icon_initials is not None:
             self.icon_initials = icon_initials
         if context_menu is not None:
@@ -248,27 +248,6 @@ class BTToolTreeParams(object):
         self._active = active
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The namespace of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTToolTreeParams.
-
-
-        :param namespace: The namespace of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this BTToolTreeParams.  # noqa: E501
 
@@ -290,67 +269,25 @@ class BTToolTreeParams(object):
         self._owner_id = owner_id
 
     @property
-    def use_history(self):
-        """Gets the use_history of this BTToolTreeParams.  # noqa: E501
+    def namespace(self):
+        """Gets the namespace of this BTToolTreeParams.  # noqa: E501
 
 
-        :return: The use_history of this BTToolTreeParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._use_history
-
-    @use_history.setter
-    def use_history(self, use_history):
-        """Sets the use_history of this BTToolTreeParams.
-
-
-        :param use_history: The use_history of this BTToolTreeParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._use_history = use_history
-
-    @property
-    def mini(self):
-        """Gets the mini of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The mini of this BTToolTreeParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._mini
-
-    @mini.setter
-    def mini(self, mini):
-        """Sets the mini of this BTToolTreeParams.
-
-
-        :param mini: The mini of this BTToolTreeParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._mini = mini
-
-    @property
-    def collection_name(self):
-        """Gets the collection_name of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The collection_name of this BTToolTreeParams.  # noqa: E501
+        :return: The namespace of this BTToolTreeParams.  # noqa: E501
         :rtype: str
         """
-        return self._collection_name
+        return self._namespace
 
-    @collection_name.setter
-    def collection_name(self, collection_name):
-        """Sets the collection_name of this BTToolTreeParams.
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTToolTreeParams.
 
 
-        :param collection_name: The collection_name of this BTToolTreeParams.  # noqa: E501
+        :param namespace: The namespace of this BTToolTreeParams.  # noqa: E501
         :type: str
         """
 
-        self._collection_name = collection_name
+        self._namespace = namespace
 
     @property
     def icon(self):
@@ -603,6 +540,69 @@ class BTToolTreeParams(object):
         """
 
         self._use_dynamic_snippet = use_dynamic_snippet
+
+    @property
+    def use_history(self):
+        """Gets the use_history of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The use_history of this BTToolTreeParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_history
+
+    @use_history.setter
+    def use_history(self, use_history):
+        """Sets the use_history of this BTToolTreeParams.
+
+
+        :param use_history: The use_history of this BTToolTreeParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_history = use_history
+
+    @property
+    def mini(self):
+        """Gets the mini of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The mini of this BTToolTreeParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._mini
+
+    @mini.setter
+    def mini(self, mini):
+        """Sets the mini of this BTToolTreeParams.
+
+
+        :param mini: The mini of this BTToolTreeParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._mini = mini
+
+    @property
+    def collection_name(self):
+        """Gets the collection_name of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The collection_name of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._collection_name
+
+    @collection_name.setter
+    def collection_name(self, collection_name):
+        """Sets the collection_name of this BTToolTreeParams.
+
+
+        :param collection_name: The collection_name of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._collection_name = collection_name
 
     @property
     def icon_initials(self):

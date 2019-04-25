@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **int** |  | [optional] 
-**accept_ownership_transfer** | **bool** |  | [optional] 
 **is_enterprise_owned_resource** | **bool** |  | [optional] 
+**accept_ownership_transfer** | **bool** |  | [optional] 
 **image** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

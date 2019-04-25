@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner_id** | **str** |  | [optional] 
+**created_by** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **percent_off** | **int** |  | [optional] 
 **amount_off** | **int** |  | [optional] 
 **coupon_type** | **int** |  | [optional] 
@@ -11,7 +12,6 @@ Name | Type | Description | Notes
 **expires_at** | **datetime** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
-**created_by** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **used_at** | **datetime** |  | [optional] 
 **trial_end_date** | **str** |  | [optional] 
 **account_balance** | **int** |  | [optional] 

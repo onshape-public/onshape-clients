@@ -36,9 +36,9 @@ class BTStandardContentHierarchyInfo(object):
         'existing_versions': 'list[VersionSpecs]',
         'document_type': 'int',
         'default_workspace': 'str',
+        'category': 'str',
         'standard': 'str',
         'types': 'str',
-        'category': 'str',
         'production_version_id': 'str',
         'test_version_id': 'str',
         'name': 'str',
@@ -52,9 +52,9 @@ class BTStandardContentHierarchyInfo(object):
         'existing_versions': 'existingVersions',
         'document_type': 'documentType',
         'default_workspace': 'defaultWorkspace',
+        'category': 'category',
         'standard': 'standard',
         'types': 'types',
-        'category': 'category',
         'production_version_id': 'productionVersionId',
         'test_version_id': 'testVersionId',
         'name': 'name',
@@ -63,16 +63,16 @@ class BTStandardContentHierarchyInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, type=None, existing_versions=None, document_type=None, default_workspace=None, standard=None, types=None, category=None, production_version_id=None, test_version_id=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, type=None, existing_versions=None, document_type=None, default_workspace=None, category=None, standard=None, types=None, production_version_id=None, test_version_id=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTStandardContentHierarchyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
         self._existing_versions = None
         self._document_type = None
         self._default_workspace = None
+        self._category = None
         self._standard = None
         self._types = None
-        self._category = None
         self._production_version_id = None
         self._test_version_id = None
         self._name = None
@@ -89,12 +89,12 @@ class BTStandardContentHierarchyInfo(object):
             self.document_type = document_type
         if default_workspace is not None:
             self.default_workspace = default_workspace
+        if category is not None:
+            self.category = category
         if standard is not None:
             self.standard = standard
         if types is not None:
             self.types = types
-        if category is not None:
-            self.category = category
         if production_version_id is not None:
             self.production_version_id = production_version_id
         if test_version_id is not None:
@@ -193,6 +193,27 @@ class BTStandardContentHierarchyInfo(object):
         self._default_workspace = default_workspace
 
     @property
+    def category(self):
+        """Gets the category of this BTStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTStandardContentHierarchyInfo.
+
+
+        :param category: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
+
+    @property
     def standard(self):
         """Gets the standard of this BTStandardContentHierarchyInfo.  # noqa: E501
 
@@ -233,27 +254,6 @@ class BTStandardContentHierarchyInfo(object):
         """
 
         self._types = types
-
-    @property
-    def category(self):
-        """Gets the category of this BTStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTStandardContentHierarchyInfo.
-
-
-        :param category: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._category = category
 
     @property
     def production_version_id(self):

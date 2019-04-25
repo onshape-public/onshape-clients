@@ -35,12 +35,12 @@ class BTVersionInfo(object):
         'parent': 'str',
         'type': 'str',
         'description': 'str',
-        'microversion': 'str',
-        'created_at': 'datetime',
         'modified_at': 'datetime',
-        'last_modifier': 'BTUserBasicSummaryInfo',
         'document_id': 'str',
+        'last_modifier': 'BTUserBasicSummaryInfo',
+        'microversion': 'str',
         'thumbnail': 'BTThumbnailInfo',
+        'created_at': 'datetime',
         'creator': 'BTUserBasicSummaryInfo',
         'override_date': 'datetime',
         'name': 'str',
@@ -53,12 +53,12 @@ class BTVersionInfo(object):
         'parent': 'parent',
         'type': 'type',
         'description': 'description',
-        'microversion': 'microversion',
-        'created_at': 'createdAt',
         'modified_at': 'modifiedAt',
-        'last_modifier': 'lastModifier',
         'document_id': 'documentId',
+        'last_modifier': 'lastModifier',
+        'microversion': 'microversion',
         'thumbnail': 'thumbnail',
+        'created_at': 'createdAt',
         'creator': 'creator',
         'override_date': 'overrideDate',
         'name': 'name',
@@ -67,18 +67,18 @@ class BTVersionInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, parent=None, type=None, description=None, microversion=None, created_at=None, modified_at=None, last_modifier=None, document_id=None, thumbnail=None, creator=None, override_date=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, parent=None, type=None, description=None, modified_at=None, document_id=None, last_modifier=None, microversion=None, thumbnail=None, created_at=None, creator=None, override_date=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTVersionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._parent = None
         self._type = None
         self._description = None
-        self._microversion = None
-        self._created_at = None
         self._modified_at = None
-        self._last_modifier = None
         self._document_id = None
+        self._last_modifier = None
+        self._microversion = None
         self._thumbnail = None
+        self._created_at = None
         self._creator = None
         self._override_date = None
         self._name = None
@@ -93,18 +93,18 @@ class BTVersionInfo(object):
             self.type = type
         if description is not None:
             self.description = description
-        if microversion is not None:
-            self.microversion = microversion
-        if created_at is not None:
-            self.created_at = created_at
         if modified_at is not None:
             self.modified_at = modified_at
-        if last_modifier is not None:
-            self.last_modifier = last_modifier
         if document_id is not None:
             self.document_id = document_id
+        if last_modifier is not None:
+            self.last_modifier = last_modifier
+        if microversion is not None:
+            self.microversion = microversion
         if thumbnail is not None:
             self.thumbnail = thumbnail
+        if created_at is not None:
+            self.created_at = created_at
         if creator is not None:
             self.creator = creator
         if override_date is not None:
@@ -182,48 +182,6 @@ class BTVersionInfo(object):
         self._description = description
 
     @property
-    def microversion(self):
-        """Gets the microversion of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The microversion of this BTVersionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion
-
-    @microversion.setter
-    def microversion(self, microversion):
-        """Sets the microversion of this BTVersionInfo.
-
-
-        :param microversion: The microversion of this BTVersionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion = microversion
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTVersionInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTVersionInfo.
-
-
-        :param created_at: The created_at of this BTVersionInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
     def modified_at(self):
         """Gets the modified_at of this BTVersionInfo.  # noqa: E501
 
@@ -243,27 +201,6 @@ class BTVersionInfo(object):
         """
 
         self._modified_at = modified_at
-
-    @property
-    def last_modifier(self):
-        """Gets the last_modifier of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The last_modifier of this BTVersionInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._last_modifier
-
-    @last_modifier.setter
-    def last_modifier(self, last_modifier):
-        """Sets the last_modifier of this BTVersionInfo.
-
-
-        :param last_modifier: The last_modifier of this BTVersionInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._last_modifier = last_modifier
 
     @property
     def document_id(self):
@@ -287,6 +224,48 @@ class BTVersionInfo(object):
         self._document_id = document_id
 
     @property
+    def last_modifier(self):
+        """Gets the last_modifier of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The last_modifier of this BTVersionInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._last_modifier
+
+    @last_modifier.setter
+    def last_modifier(self, last_modifier):
+        """Sets the last_modifier of this BTVersionInfo.
+
+
+        :param last_modifier: The last_modifier of this BTVersionInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._last_modifier = last_modifier
+
+    @property
+    def microversion(self):
+        """Gets the microversion of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The microversion of this BTVersionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion
+
+    @microversion.setter
+    def microversion(self, microversion):
+        """Sets the microversion of this BTVersionInfo.
+
+
+        :param microversion: The microversion of this BTVersionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion = microversion
+
+    @property
     def thumbnail(self):
         """Gets the thumbnail of this BTVersionInfo.  # noqa: E501
 
@@ -306,6 +285,27 @@ class BTVersionInfo(object):
         """
 
         self._thumbnail = thumbnail
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTVersionInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTVersionInfo.
+
+
+        :param created_at: The created_at of this BTVersionInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
 
     @property
     def creator(self):

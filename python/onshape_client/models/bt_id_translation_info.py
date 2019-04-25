@@ -32,62 +32,41 @@ class BTIdTranslationInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'source_document_microversion': 'str',
         'target_document_microversion': 'str',
+        'source_document_microversion': 'str',
         'ids': 'list[BTIdTranslationResultInfo]',
-        'element_id': 'str',
-        'document_id': 'str'
+        'document_id': 'str',
+        'element_id': 'str'
     }
 
     attribute_map = {
-        'source_document_microversion': 'sourceDocumentMicroversion',
         'target_document_microversion': 'targetDocumentMicroversion',
+        'source_document_microversion': 'sourceDocumentMicroversion',
         'ids': 'ids',
-        'element_id': 'elementId',
-        'document_id': 'documentId'
+        'document_id': 'documentId',
+        'element_id': 'elementId'
     }
 
-    def __init__(self, source_document_microversion=None, target_document_microversion=None, ids=None, element_id=None, document_id=None):  # noqa: E501
+    def __init__(self, target_document_microversion=None, source_document_microversion=None, ids=None, document_id=None, element_id=None):  # noqa: E501
         """BTIdTranslationInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._source_document_microversion = None
         self._target_document_microversion = None
+        self._source_document_microversion = None
         self._ids = None
-        self._element_id = None
         self._document_id = None
+        self._element_id = None
         self.discriminator = None
 
-        if source_document_microversion is not None:
-            self.source_document_microversion = source_document_microversion
         if target_document_microversion is not None:
             self.target_document_microversion = target_document_microversion
+        if source_document_microversion is not None:
+            self.source_document_microversion = source_document_microversion
         if ids is not None:
             self.ids = ids
-        if element_id is not None:
-            self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-
-    @property
-    def source_document_microversion(self):
-        """Gets the source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
-
-
-        :return: The source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_document_microversion
-
-    @source_document_microversion.setter
-    def source_document_microversion(self, source_document_microversion):
-        """Sets the source_document_microversion of this BTIdTranslationInfo.
-
-
-        :param source_document_microversion: The source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._source_document_microversion = source_document_microversion
+        if element_id is not None:
+            self.element_id = element_id
 
     @property
     def target_document_microversion(self):
@@ -111,6 +90,27 @@ class BTIdTranslationInfo(object):
         self._target_document_microversion = target_document_microversion
 
     @property
+    def source_document_microversion(self):
+        """Gets the source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
+
+
+        :return: The source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_document_microversion
+
+    @source_document_microversion.setter
+    def source_document_microversion(self, source_document_microversion):
+        """Sets the source_document_microversion of this BTIdTranslationInfo.
+
+
+        :param source_document_microversion: The source_document_microversion of this BTIdTranslationInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._source_document_microversion = source_document_microversion
+
+    @property
     def ids(self):
         """Gets the ids of this BTIdTranslationInfo.  # noqa: E501
 
@@ -132,27 +132,6 @@ class BTIdTranslationInfo(object):
         self._ids = ids
 
     @property
-    def element_id(self):
-        """Gets the element_id of this BTIdTranslationInfo.  # noqa: E501
-
-
-        :return: The element_id of this BTIdTranslationInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTIdTranslationInfo.
-
-
-        :param element_id: The element_id of this BTIdTranslationInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
     def document_id(self):
         """Gets the document_id of this BTIdTranslationInfo.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTIdTranslationInfo(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTIdTranslationInfo.  # noqa: E501
+
+
+        :return: The element_id of this BTIdTranslationInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTIdTranslationInfo.
+
+
+        :param element_id: The element_id of this BTIdTranslationInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

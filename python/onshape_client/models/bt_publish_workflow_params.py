@@ -34,9 +34,9 @@ class BTPublishWorkflowParams(object):
     openapi_types = {
         'name': 'str',
         'description': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
-        'document_id': 'str',
         'workflow_type': 'str',
         'is_obsoletion': 'bool'
     }
@@ -44,21 +44,21 @@ class BTPublishWorkflowParams(object):
     attribute_map = {
         'name': 'name',
         'description': 'description',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
-        'document_id': 'documentId',
         'workflow_type': 'workflowType',
         'is_obsoletion': 'isObsoletion'
     }
 
-    def __init__(self, name=None, description=None, workspace_id=None, element_id=None, document_id=None, workflow_type=None, is_obsoletion=None):  # noqa: E501
+    def __init__(self, name=None, description=None, document_id=None, workspace_id=None, element_id=None, workflow_type=None, is_obsoletion=None):  # noqa: E501
         """BTPublishWorkflowParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
-        self._document_id = None
         self._workflow_type = None
         self._is_obsoletion = None
         self.discriminator = None
@@ -67,12 +67,12 @@ class BTPublishWorkflowParams(object):
             self.name = name
         if description is not None:
             self.description = description
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
-        if document_id is not None:
-            self.document_id = document_id
         if workflow_type is not None:
             self.workflow_type = workflow_type
         if is_obsoletion is not None:
@@ -121,6 +121,27 @@ class BTPublishWorkflowParams(object):
         self._description = description
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTPublishWorkflowParams.  # noqa: E501
+
+
+        :return: The document_id of this BTPublishWorkflowParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTPublishWorkflowParams.
+
+
+        :param document_id: The document_id of this BTPublishWorkflowParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def workspace_id(self):
         """Gets the workspace_id of this BTPublishWorkflowParams.  # noqa: E501
 
@@ -161,27 +182,6 @@ class BTPublishWorkflowParams(object):
         """
 
         self._element_id = element_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTPublishWorkflowParams.  # noqa: E501
-
-
-        :return: The document_id of this BTPublishWorkflowParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTPublishWorkflowParams.
-
-
-        :param document_id: The document_id of this BTPublishWorkflowParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     @property
     def workflow_type(self):

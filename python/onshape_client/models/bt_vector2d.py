@@ -32,8 +32,8 @@ class BTVector2d(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'x': 'float',
         'y': 'float',
+        'x': 'float',
         'type_id': 'int',
         'connection_source': 'BTConnection',
         'export_type_name': 'str',
@@ -41,29 +41,29 @@ class BTVector2d(object):
     }
 
     attribute_map = {
-        'x': 'x',
         'y': 'y',
+        'x': 'x',
         'type_id': 'typeId',
         'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, x=None, y=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, y=None, x=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTVector2d - a model defined in OpenAPI"""  # noqa: E501
 
-        self._x = None
         self._y = None
+        self._x = None
         self._type_id = None
         self._connection_source = None
         self._export_type_name = None
         self._unknown_class = None
         self.discriminator = None
 
-        if x is not None:
-            self.x = x
         if y is not None:
             self.y = y
+        if x is not None:
+            self.x = x
         if type_id is not None:
             self.type_id = type_id
         if connection_source is not None:
@@ -72,27 +72,6 @@ class BTVector2d(object):
             self.export_type_name = export_type_name
         if unknown_class is not None:
             self.unknown_class = unknown_class
-
-    @property
-    def x(self):
-        """Gets the x of this BTVector2d.  # noqa: E501
-
-
-        :return: The x of this BTVector2d.  # noqa: E501
-        :rtype: float
-        """
-        return self._x
-
-    @x.setter
-    def x(self, x):
-        """Sets the x of this BTVector2d.
-
-
-        :param x: The x of this BTVector2d.  # noqa: E501
-        :type: float
-        """
-
-        self._x = x
 
     @property
     def y(self):
@@ -114,6 +93,27 @@ class BTVector2d(object):
         """
 
         self._y = y
+
+    @property
+    def x(self):
+        """Gets the x of this BTVector2d.  # noqa: E501
+
+
+        :return: The x of this BTVector2d.  # noqa: E501
+        :rtype: float
+        """
+        return self._x
+
+    @x.setter
+    def x(self, x):
+        """Sets the x of this BTVector2d.
+
+
+        :param x: The x of this BTVector2d.  # noqa: E501
+        :type: float
+        """
+
+        self._x = x
 
     @property
     def type_id(self):

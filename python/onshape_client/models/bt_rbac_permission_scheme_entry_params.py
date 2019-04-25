@@ -32,47 +32,26 @@ class BTRbacPermissionSchemeEntryParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'permission_set': 'BTPermissionSet',
-        'role_id': 'str'
+        'role_id': 'str',
+        'permission_set': 'BTPermissionSet'
     }
 
     attribute_map = {
-        'permission_set': 'permissionSet',
-        'role_id': 'roleId'
+        'role_id': 'roleId',
+        'permission_set': 'permissionSet'
     }
 
-    def __init__(self, permission_set=None, role_id=None):  # noqa: E501
+    def __init__(self, role_id=None, permission_set=None):  # noqa: E501
         """BTRbacPermissionSchemeEntryParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._permission_set = None
         self._role_id = None
+        self._permission_set = None
         self.discriminator = None
 
-        if permission_set is not None:
-            self.permission_set = permission_set
         if role_id is not None:
             self.role_id = role_id
-
-    @property
-    def permission_set(self):
-        """Gets the permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
-
-
-        :return: The permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
-        :rtype: BTPermissionSet
-        """
-        return self._permission_set
-
-    @permission_set.setter
-    def permission_set(self, permission_set):
-        """Sets the permission_set of this BTRbacPermissionSchemeEntryParams.
-
-
-        :param permission_set: The permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
-        :type: BTPermissionSet
-        """
-
-        self._permission_set = permission_set
+        if permission_set is not None:
+            self.permission_set = permission_set
 
     @property
     def role_id(self):
@@ -94,6 +73,27 @@ class BTRbacPermissionSchemeEntryParams(object):
         """
 
         self._role_id = role_id
+
+    @property
+    def permission_set(self):
+        """Gets the permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
+
+
+        :return: The permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
+        :rtype: BTPermissionSet
+        """
+        return self._permission_set
+
+    @permission_set.setter
+    def permission_set(self, permission_set):
+        """Sets the permission_set of this BTRbacPermissionSchemeEntryParams.
+
+
+        :param permission_set: The permission_set of this BTRbacPermissionSchemeEntryParams.  # noqa: E501
+        :type: BTPermissionSet
+        """
+
+        self._permission_set = permission_set
 
     def to_dict(self):
         """Returns the model properties as a dict"""

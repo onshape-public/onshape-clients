@@ -33,30 +33,30 @@ class BTAppElementCommitTransactionParams(object):
     """
     openapi_types = {
         'description': 'str',
-        'return_error': 'bool',
-        'transaction_id': 'str'
+        'transaction_id': 'str',
+        'return_error': 'bool'
     }
 
     attribute_map = {
         'description': 'description',
-        'return_error': 'returnError',
-        'transaction_id': 'transactionId'
+        'transaction_id': 'transactionId',
+        'return_error': 'returnError'
     }
 
-    def __init__(self, description=None, return_error=None, transaction_id=None):  # noqa: E501
+    def __init__(self, description=None, transaction_id=None, return_error=None):  # noqa: E501
         """BTAppElementCommitTransactionParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
-        self._return_error = None
         self._transaction_id = None
+        self._return_error = None
         self.discriminator = None
 
         if description is not None:
             self.description = description
-        if return_error is not None:
-            self.return_error = return_error
         if transaction_id is not None:
             self.transaction_id = transaction_id
+        if return_error is not None:
+            self.return_error = return_error
 
     @property
     def description(self):
@@ -80,27 +80,6 @@ class BTAppElementCommitTransactionParams(object):
         self._description = description
 
     @property
-    def return_error(self):
-        """Gets the return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
-
-
-        :return: The return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._return_error
-
-    @return_error.setter
-    def return_error(self, return_error):
-        """Sets the return_error of this BTAppElementCommitTransactionParams.
-
-
-        :param return_error: The return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._return_error = return_error
-
-    @property
     def transaction_id(self):
         """Gets the transaction_id of this BTAppElementCommitTransactionParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTAppElementCommitTransactionParams(object):
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def return_error(self):
+        """Gets the return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
+
+
+        :return: The return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._return_error
+
+    @return_error.setter
+    def return_error(self, return_error):
+        """Sets the return_error of this BTAppElementCommitTransactionParams.
+
+
+        :param return_error: The return_error of this BTAppElementCommitTransactionParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._return_error = return_error
 
     def to_dict(self):
         """Returns the model properties as a dict"""

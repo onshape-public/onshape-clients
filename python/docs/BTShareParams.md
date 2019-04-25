@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **message** | **str** |  | [optional] 
 **entries** | [**list[BTShareEntryParams]**](BTShareEntryParams.md) |  | [optional] 
 **permission** | **int** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
 **permission_set** | [**BTPermissionSet**](BTPermissionSet.md) |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **update** | **bool** |  | [optional] 
 **encoded_configuration** | **str** |  | [optional] 
 

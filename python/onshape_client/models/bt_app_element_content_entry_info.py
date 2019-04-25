@@ -32,52 +32,31 @@ class BTAppElementContentEntryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'deltas': 'list[BTAppElementContentDeltaInfo]',
         'subelement_id': 'str',
-        'base_content': 'str'
+        'base_content': 'str',
+        'deltas': 'list[BTAppElementContentDeltaInfo]'
     }
 
     attribute_map = {
-        'deltas': 'deltas',
         'subelement_id': 'subelementId',
-        'base_content': 'baseContent'
+        'base_content': 'baseContent',
+        'deltas': 'deltas'
     }
 
-    def __init__(self, deltas=None, subelement_id=None, base_content=None):  # noqa: E501
+    def __init__(self, subelement_id=None, base_content=None, deltas=None):  # noqa: E501
         """BTAppElementContentEntryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._deltas = None
         self._subelement_id = None
         self._base_content = None
+        self._deltas = None
         self.discriminator = None
 
-        if deltas is not None:
-            self.deltas = deltas
         if subelement_id is not None:
             self.subelement_id = subelement_id
         if base_content is not None:
             self.base_content = base_content
-
-    @property
-    def deltas(self):
-        """Gets the deltas of this BTAppElementContentEntryInfo.  # noqa: E501
-
-
-        :return: The deltas of this BTAppElementContentEntryInfo.  # noqa: E501
-        :rtype: list[BTAppElementContentDeltaInfo]
-        """
-        return self._deltas
-
-    @deltas.setter
-    def deltas(self, deltas):
-        """Sets the deltas of this BTAppElementContentEntryInfo.
-
-
-        :param deltas: The deltas of this BTAppElementContentEntryInfo.  # noqa: E501
-        :type: list[BTAppElementContentDeltaInfo]
-        """
-
-        self._deltas = deltas
+        if deltas is not None:
+            self.deltas = deltas
 
     @property
     def subelement_id(self):
@@ -120,6 +99,27 @@ class BTAppElementContentEntryInfo(object):
         """
 
         self._base_content = base_content
+
+    @property
+    def deltas(self):
+        """Gets the deltas of this BTAppElementContentEntryInfo.  # noqa: E501
+
+
+        :return: The deltas of this BTAppElementContentEntryInfo.  # noqa: E501
+        :rtype: list[BTAppElementContentDeltaInfo]
+        """
+        return self._deltas
+
+    @deltas.setter
+    def deltas(self, deltas):
+        """Sets the deltas of this BTAppElementContentEntryInfo.
+
+
+        :param deltas: The deltas of this BTAppElementContentEntryInfo.  # noqa: E501
+        :type: list[BTAppElementContentDeltaInfo]
+        """
+
+        self._deltas = deltas
 
     def to_dict(self):
         """Returns the model properties as a dict"""

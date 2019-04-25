@@ -32,31 +32,52 @@ class BTColorInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'green': 'int',
         'blue': 'int',
-        'red': 'int',
-        'green': 'int'
+        'red': 'int'
     }
 
     attribute_map = {
+        'green': 'green',
         'blue': 'blue',
-        'red': 'red',
-        'green': 'green'
+        'red': 'red'
     }
 
-    def __init__(self, blue=None, red=None, green=None):  # noqa: E501
+    def __init__(self, green=None, blue=None, red=None):  # noqa: E501
         """BTColorInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._green = None
         self._blue = None
         self._red = None
-        self._green = None
         self.discriminator = None
 
+        if green is not None:
+            self.green = green
         if blue is not None:
             self.blue = blue
         if red is not None:
             self.red = red
-        if green is not None:
-            self.green = green
+
+    @property
+    def green(self):
+        """Gets the green of this BTColorInfo.  # noqa: E501
+
+
+        :return: The green of this BTColorInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._green
+
+    @green.setter
+    def green(self, green):
+        """Sets the green of this BTColorInfo.
+
+
+        :param green: The green of this BTColorInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._green = green
 
     @property
     def blue(self):
@@ -99,27 +120,6 @@ class BTColorInfo(object):
         """
 
         self._red = red
-
-    @property
-    def green(self):
-        """Gets the green of this BTColorInfo.  # noqa: E501
-
-
-        :return: The green of this BTColorInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._green
-
-    @green.setter
-    def green(self, green):
-        """Sets the green of this BTColorInfo.
-
-
-        :param green: The green of this BTColorInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._green = green
 
     def to_dict(self):
         """Returns the model properties as a dict"""

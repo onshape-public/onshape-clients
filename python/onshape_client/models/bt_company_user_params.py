@@ -32,83 +32,41 @@ class BTCompanyUserParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email': 'str',
-        'company_id': 'str',
         'admin': 'bool',
         'guest': 'bool',
-        'light': 'bool'
+        'light': 'bool',
+        'email': 'str',
+        'company_id': 'str'
     }
 
     attribute_map = {
-        'email': 'email',
-        'company_id': 'companyId',
         'admin': 'admin',
         'guest': 'guest',
-        'light': 'light'
+        'light': 'light',
+        'email': 'email',
+        'company_id': 'companyId'
     }
 
-    def __init__(self, email=None, company_id=None, admin=None, guest=None, light=None):  # noqa: E501
+    def __init__(self, admin=None, guest=None, light=None, email=None, company_id=None):  # noqa: E501
         """BTCompanyUserParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._email = None
-        self._company_id = None
         self._admin = None
         self._guest = None
         self._light = None
+        self._email = None
+        self._company_id = None
         self.discriminator = None
 
-        if email is not None:
-            self.email = email
-        if company_id is not None:
-            self.company_id = company_id
         if admin is not None:
             self.admin = admin
         if guest is not None:
             self.guest = guest
         if light is not None:
             self.light = light
-
-    @property
-    def email(self):
-        """Gets the email of this BTCompanyUserParams.  # noqa: E501
-
-
-        :return: The email of this BTCompanyUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTCompanyUserParams.
-
-
-        :param email: The email of this BTCompanyUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
-    def company_id(self):
-        """Gets the company_id of this BTCompanyUserParams.  # noqa: E501
-
-
-        :return: The company_id of this BTCompanyUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._company_id
-
-    @company_id.setter
-    def company_id(self, company_id):
-        """Sets the company_id of this BTCompanyUserParams.
-
-
-        :param company_id: The company_id of this BTCompanyUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._company_id = company_id
+        if email is not None:
+            self.email = email
+        if company_id is not None:
+            self.company_id = company_id
 
     @property
     def admin(self):
@@ -172,6 +130,48 @@ class BTCompanyUserParams(object):
         """
 
         self._light = light
+
+    @property
+    def email(self):
+        """Gets the email of this BTCompanyUserParams.  # noqa: E501
+
+
+        :return: The email of this BTCompanyUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTCompanyUserParams.
+
+
+        :param email: The email of this BTCompanyUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def company_id(self):
+        """Gets the company_id of this BTCompanyUserParams.  # noqa: E501
+
+
+        :return: The company_id of this BTCompanyUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_id
+
+    @company_id.setter
+    def company_id(self, company_id):
+        """Sets the company_id of this BTCompanyUserParams.
+
+
+        :param company_id: The company_id of this BTCompanyUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._company_id = company_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

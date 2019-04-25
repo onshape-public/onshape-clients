@@ -15,6 +15,7 @@ sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
 tox-pipenv = "*"
 tox = "==3.7.0"
+onshape-client = {path = ".",editable = true}
 
 [packages]
 urllib3 = "*"

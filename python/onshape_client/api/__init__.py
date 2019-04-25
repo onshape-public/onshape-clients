@@ -8,6 +8,7 @@ from onshape_client.api.app_elements_api import AppElementsApi
 from onshape_client.api.assemblies_api import AssembliesApi
 from onshape_client.api.blob_elements_api import BlobElementsApi
 from onshape_client.api.documents_api import DocumentsApi
+from onshape_client.api.drawings_api import DrawingsApi
 from onshape_client.api.elements_api import ElementsApi
 from onshape_client.api.endpoints_api import EndpointsApi
 from onshape_client.api.metadata_api import MetadataApi

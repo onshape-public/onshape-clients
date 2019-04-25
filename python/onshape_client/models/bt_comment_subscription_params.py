@@ -32,47 +32,26 @@ class BTCommentSubscriptionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'subscribed': 'bool',
-        'document_id': 'str'
+        'document_id': 'str',
+        'subscribed': 'bool'
     }
 
     attribute_map = {
-        'subscribed': 'subscribed',
-        'document_id': 'documentId'
+        'document_id': 'documentId',
+        'subscribed': 'subscribed'
     }
 
-    def __init__(self, subscribed=None, document_id=None):  # noqa: E501
+    def __init__(self, document_id=None, subscribed=None):  # noqa: E501
         """BTCommentSubscriptionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._subscribed = None
         self._document_id = None
+        self._subscribed = None
         self.discriminator = None
 
-        if subscribed is not None:
-            self.subscribed = subscribed
         if document_id is not None:
             self.document_id = document_id
-
-    @property
-    def subscribed(self):
-        """Gets the subscribed of this BTCommentSubscriptionParams.  # noqa: E501
-
-
-        :return: The subscribed of this BTCommentSubscriptionParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._subscribed
-
-    @subscribed.setter
-    def subscribed(self, subscribed):
-        """Sets the subscribed of this BTCommentSubscriptionParams.
-
-
-        :param subscribed: The subscribed of this BTCommentSubscriptionParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._subscribed = subscribed
+        if subscribed is not None:
+            self.subscribed = subscribed
 
     @property
     def document_id(self):
@@ -94,6 +73,27 @@ class BTCommentSubscriptionParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def subscribed(self):
+        """Gets the subscribed of this BTCommentSubscriptionParams.  # noqa: E501
+
+
+        :return: The subscribed of this BTCommentSubscriptionParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._subscribed
+
+    @subscribed.setter
+    def subscribed(self, subscribed):
+        """Sets the subscribed of this BTCommentSubscriptionParams.
+
+
+        :param subscribed: The subscribed of this BTCommentSubscriptionParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._subscribed = subscribed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

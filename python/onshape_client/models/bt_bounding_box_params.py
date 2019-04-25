@@ -32,46 +32,50 @@ class BTBoundingBoxParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'sketch_id': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'part_query': 'str',
         'part_id': 'str',
         'include_wire_bodies': 'bool',
         'display_state_id': 'str',
-        'document_id': 'str',
-        'sketch_id': 'str',
-        'element_microversion_id': 'str',
-        'include_hidden': 'bool'
+        'include_hidden': 'bool',
+        'element_microversion_id': 'str'
     }
 
     attribute_map = {
+        'sketch_id': 'sketchId',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'part_query': 'partQuery',
         'part_id': 'partId',
         'include_wire_bodies': 'includeWireBodies',
         'display_state_id': 'displayStateId',
-        'document_id': 'documentId',
-        'sketch_id': 'sketchId',
-        'element_microversion_id': 'elementMicroversionId',
-        'include_hidden': 'includeHidden'
+        'include_hidden': 'includeHidden',
+        'element_microversion_id': 'elementMicroversionId'
     }
 
-    def __init__(self, workspace_id=None, element_id=None, part_query=None, part_id=None, include_wire_bodies=None, display_state_id=None, document_id=None, sketch_id=None, element_microversion_id=None, include_hidden=None):  # noqa: E501
+    def __init__(self, sketch_id=None, document_id=None, workspace_id=None, element_id=None, part_query=None, part_id=None, include_wire_bodies=None, display_state_id=None, include_hidden=None, element_microversion_id=None):  # noqa: E501
         """BTBoundingBoxParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._sketch_id = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
         self._part_query = None
         self._part_id = None
         self._include_wire_bodies = None
         self._display_state_id = None
-        self._document_id = None
-        self._sketch_id = None
-        self._element_microversion_id = None
         self._include_hidden = None
+        self._element_microversion_id = None
         self.discriminator = None
 
+        if sketch_id is not None:
+            self.sketch_id = sketch_id
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
@@ -84,14 +88,52 @@ class BTBoundingBoxParams(object):
             self.include_wire_bodies = include_wire_bodies
         if display_state_id is not None:
             self.display_state_id = display_state_id
-        if document_id is not None:
-            self.document_id = document_id
-        if sketch_id is not None:
-            self.sketch_id = sketch_id
-        if element_microversion_id is not None:
-            self.element_microversion_id = element_microversion_id
         if include_hidden is not None:
             self.include_hidden = include_hidden
+        if element_microversion_id is not None:
+            self.element_microversion_id = element_microversion_id
+
+    @property
+    def sketch_id(self):
+        """Gets the sketch_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._sketch_id
+
+    @sketch_id.setter
+    def sketch_id(self, sketch_id):
+        """Sets the sketch_id of this BTBoundingBoxParams.
+
+
+        :param sketch_id: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._sketch_id = sketch_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The document_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTBoundingBoxParams.
+
+
+        :param document_id: The document_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -220,46 +262,25 @@ class BTBoundingBoxParams(object):
         self._display_state_id = display_state_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTBoundingBoxParams.  # noqa: E501
+    def include_hidden(self):
+        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
 
 
-        :return: The document_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
+        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._document_id
+        return self._include_hidden
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTBoundingBoxParams.
-
-
-        :param document_id: The document_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def sketch_id(self):
-        """Gets the sketch_id of this BTBoundingBoxParams.  # noqa: E501
+    @include_hidden.setter
+    def include_hidden(self, include_hidden):
+        """Sets the include_hidden of this BTBoundingBoxParams.
 
 
-        :return: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._sketch_id
-
-    @sketch_id.setter
-    def sketch_id(self, sketch_id):
-        """Sets the sketch_id of this BTBoundingBoxParams.
-
-
-        :param sketch_id: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
+        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :type: bool
         """
 
-        self._sketch_id = sketch_id
+        self._include_hidden = include_hidden
 
     @property
     def element_microversion_id(self):
@@ -281,27 +302,6 @@ class BTBoundingBoxParams(object):
         """
 
         self._element_microversion_id = element_microversion_id
-
-    @property
-    def include_hidden(self):
-        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_hidden
-
-    @include_hidden.setter
-    def include_hidden(self, include_hidden):
-        """Sets the include_hidden of this BTBoundingBoxParams.
-
-
-        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_hidden = include_hidden
 
     def to_dict(self):
         """Returns the model properties as a dict"""

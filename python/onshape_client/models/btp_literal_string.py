@@ -35,8 +35,8 @@ class BTPLiteralString(object):
         'value': 'str',
         'text': 'str',
         'short_descriptor': 'str',
-        'first_child_field': 'int',
         'changeable_child_field_indices': 'list[int]',
+        'first_child_field': 'int',
         'start_source_location': 'int',
         'end_source_location': 'int',
         'atomic': 'bool',
@@ -59,8 +59,8 @@ class BTPLiteralString(object):
         'value': 'value',
         'text': 'text',
         'short_descriptor': 'shortDescriptor',
-        'first_child_field': 'firstChildField',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
+        'first_child_field': 'firstChildField',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
         'atomic': 'atomic',
@@ -79,14 +79,14 @@ class BTPLiteralString(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, value=None, text=None, short_descriptor=None, first_child_field=None, changeable_child_field_indices=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, value=None, text=None, short_descriptor=None, changeable_child_field_indices=None, first_child_field=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTPLiteralString - a model defined in OpenAPI"""  # noqa: E501
 
         self._value = None
         self._text = None
         self._short_descriptor = None
-        self._first_child_field = None
         self._changeable_child_field_indices = None
+        self._first_child_field = None
         self._start_source_location = None
         self._end_source_location = None
         self._atomic = None
@@ -111,10 +111,10 @@ class BTPLiteralString(object):
             self.text = text
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
-        if first_child_field is not None:
-            self.first_child_field = first_child_field
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
+        if first_child_field is not None:
+            self.first_child_field = first_child_field
         if start_source_location is not None:
             self.start_source_location = start_source_location
         if end_source_location is not None:
@@ -212,27 +212,6 @@ class BTPLiteralString(object):
         self._short_descriptor = short_descriptor
 
     @property
-    def first_child_field(self):
-        """Gets the first_child_field of this BTPLiteralString.  # noqa: E501
-
-
-        :return: The first_child_field of this BTPLiteralString.  # noqa: E501
-        :rtype: int
-        """
-        return self._first_child_field
-
-    @first_child_field.setter
-    def first_child_field(self, first_child_field):
-        """Sets the first_child_field of this BTPLiteralString.
-
-
-        :param first_child_field: The first_child_field of this BTPLiteralString.  # noqa: E501
-        :type: int
-        """
-
-        self._first_child_field = first_child_field
-
-    @property
     def changeable_child_field_indices(self):
         """Gets the changeable_child_field_indices of this BTPLiteralString.  # noqa: E501
 
@@ -252,6 +231,27 @@ class BTPLiteralString(object):
         """
 
         self._changeable_child_field_indices = changeable_child_field_indices
+
+    @property
+    def first_child_field(self):
+        """Gets the first_child_field of this BTPLiteralString.  # noqa: E501
+
+
+        :return: The first_child_field of this BTPLiteralString.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_child_field
+
+    @first_child_field.setter
+    def first_child_field(self, first_child_field):
+        """Sets the first_child_field of this BTPLiteralString.
+
+
+        :param first_child_field: The first_child_field of this BTPLiteralString.  # noqa: E501
+        :type: int
+        """
+
+        self._first_child_field = first_child_field
 
     @property
     def start_source_location(self):

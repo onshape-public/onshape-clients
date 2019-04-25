@@ -38,10 +38,10 @@ class BTDocumentParams(object):
         'description': 'str',
         'tags': 'list[str]',
         'owner_id': 'str',
-        'owner_type': 'int',
         'not_revision_managed': 'bool',
         'project_id': 'str',
         'parent_id': 'str',
+        'owner_type': 'int',
         'is_public': 'bool',
         'beta_capability_ids': 'list[str]',
         'owner_email': 'str'
@@ -54,16 +54,16 @@ class BTDocumentParams(object):
         'description': 'description',
         'tags': 'tags',
         'owner_id': 'ownerId',
-        'owner_type': 'ownerType',
         'not_revision_managed': 'notRevisionManaged',
         'project_id': 'projectId',
         'parent_id': 'parentId',
+        'owner_type': 'ownerType',
         'is_public': 'isPublic',
         'beta_capability_ids': 'betaCapabilityIds',
         'owner_email': 'ownerEmail'
     }
 
-    def __init__(self, name=None, generate_unknown_messages=None, is_empty_content=None, description=None, tags=None, owner_id=None, owner_type=None, not_revision_managed=None, project_id=None, parent_id=None, is_public=None, beta_capability_ids=None, owner_email=None):  # noqa: E501
+    def __init__(self, name=None, generate_unknown_messages=None, is_empty_content=None, description=None, tags=None, owner_id=None, not_revision_managed=None, project_id=None, parent_id=None, owner_type=None, is_public=None, beta_capability_ids=None, owner_email=None):  # noqa: E501
         """BTDocumentParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
@@ -72,10 +72,10 @@ class BTDocumentParams(object):
         self._description = None
         self._tags = None
         self._owner_id = None
-        self._owner_type = None
         self._not_revision_managed = None
         self._project_id = None
         self._parent_id = None
+        self._owner_type = None
         self._is_public = None
         self._beta_capability_ids = None
         self._owner_email = None
@@ -93,14 +93,14 @@ class BTDocumentParams(object):
             self.tags = tags
         if owner_id is not None:
             self.owner_id = owner_id
-        if owner_type is not None:
-            self.owner_type = owner_type
         if not_revision_managed is not None:
             self.not_revision_managed = not_revision_managed
         if project_id is not None:
             self.project_id = project_id
         if parent_id is not None:
             self.parent_id = parent_id
+        if owner_type is not None:
+            self.owner_type = owner_type
         if is_public is not None:
             self.is_public = is_public
         if beta_capability_ids is not None:
@@ -235,27 +235,6 @@ class BTDocumentParams(object):
         self._owner_id = owner_id
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTDocumentParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTDocumentParams.
-
-
-        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
     def not_revision_managed(self):
         """Gets the not_revision_managed of this BTDocumentParams.  # noqa: E501
 
@@ -317,6 +296,27 @@ class BTDocumentParams(object):
         """
 
         self._parent_id = parent_id
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTDocumentParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTDocumentParams.
+
+
+        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
 
     @property
     def is_public(self):

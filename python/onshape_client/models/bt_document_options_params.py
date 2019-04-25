@@ -32,56 +32,46 @@ class BTDocumentOptionsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'cpp_server_limit': 'int',
-        'thumbnail_cpp_server_limit': 'int',
-        'linked_cpp_server_limit': 'int',
-        'drawing_server_memory': 'int',
-        'cpp_server_default_element_limit': 'int',
         'cpp_server_memory': 'int',
         'enable_cpp_server_memory_diagnostics': 'bool',
         'extended_display_check': 'bool',
         'skip_retrieval_test': 'bool',
-        'document_memory': 'int'
+        'document_memory': 'int',
+        'cpp_server_limit': 'int',
+        'thumbnail_cpp_server_limit': 'int',
+        'linked_cpp_server_limit': 'int',
+        'drawing_server_memory': 'int',
+        'cpp_server_default_element_limit': 'int'
     }
 
     attribute_map = {
-        'cpp_server_limit': 'cppServerLimit',
-        'thumbnail_cpp_server_limit': 'thumbnailCppServerLimit',
-        'linked_cpp_server_limit': 'linkedCppServerLimit',
-        'drawing_server_memory': 'drawingServerMemory',
-        'cpp_server_default_element_limit': 'cppServerDefaultElementLimit',
         'cpp_server_memory': 'cppServerMemory',
         'enable_cpp_server_memory_diagnostics': 'enableCppServerMemoryDiagnostics',
         'extended_display_check': 'extendedDisplayCheck',
         'skip_retrieval_test': 'skipRetrievalTest',
-        'document_memory': 'documentMemory'
+        'document_memory': 'documentMemory',
+        'cpp_server_limit': 'cppServerLimit',
+        'thumbnail_cpp_server_limit': 'thumbnailCppServerLimit',
+        'linked_cpp_server_limit': 'linkedCppServerLimit',
+        'drawing_server_memory': 'drawingServerMemory',
+        'cpp_server_default_element_limit': 'cppServerDefaultElementLimit'
     }
 
-    def __init__(self, cpp_server_limit=None, thumbnail_cpp_server_limit=None, linked_cpp_server_limit=None, drawing_server_memory=None, cpp_server_default_element_limit=None, cpp_server_memory=None, enable_cpp_server_memory_diagnostics=None, extended_display_check=None, skip_retrieval_test=None, document_memory=None):  # noqa: E501
+    def __init__(self, cpp_server_memory=None, enable_cpp_server_memory_diagnostics=None, extended_display_check=None, skip_retrieval_test=None, document_memory=None, cpp_server_limit=None, thumbnail_cpp_server_limit=None, linked_cpp_server_limit=None, drawing_server_memory=None, cpp_server_default_element_limit=None):  # noqa: E501
         """BTDocumentOptionsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._cpp_server_limit = None
-        self._thumbnail_cpp_server_limit = None
-        self._linked_cpp_server_limit = None
-        self._drawing_server_memory = None
-        self._cpp_server_default_element_limit = None
         self._cpp_server_memory = None
         self._enable_cpp_server_memory_diagnostics = None
         self._extended_display_check = None
         self._skip_retrieval_test = None
         self._document_memory = None
+        self._cpp_server_limit = None
+        self._thumbnail_cpp_server_limit = None
+        self._linked_cpp_server_limit = None
+        self._drawing_server_memory = None
+        self._cpp_server_default_element_limit = None
         self.discriminator = None
 
-        if cpp_server_limit is not None:
-            self.cpp_server_limit = cpp_server_limit
-        if thumbnail_cpp_server_limit is not None:
-            self.thumbnail_cpp_server_limit = thumbnail_cpp_server_limit
-        if linked_cpp_server_limit is not None:
-            self.linked_cpp_server_limit = linked_cpp_server_limit
-        if drawing_server_memory is not None:
-            self.drawing_server_memory = drawing_server_memory
-        if cpp_server_default_element_limit is not None:
-            self.cpp_server_default_element_limit = cpp_server_default_element_limit
         if cpp_server_memory is not None:
             self.cpp_server_memory = cpp_server_memory
         if enable_cpp_server_memory_diagnostics is not None:
@@ -92,111 +82,16 @@ class BTDocumentOptionsParams(object):
             self.skip_retrieval_test = skip_retrieval_test
         if document_memory is not None:
             self.document_memory = document_memory
-
-    @property
-    def cpp_server_limit(self):
-        """Gets the cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._cpp_server_limit
-
-    @cpp_server_limit.setter
-    def cpp_server_limit(self, cpp_server_limit):
-        """Sets the cpp_server_limit of this BTDocumentOptionsParams.
-
-
-        :param cpp_server_limit: The cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._cpp_server_limit = cpp_server_limit
-
-    @property
-    def thumbnail_cpp_server_limit(self):
-        """Gets the thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._thumbnail_cpp_server_limit
-
-    @thumbnail_cpp_server_limit.setter
-    def thumbnail_cpp_server_limit(self, thumbnail_cpp_server_limit):
-        """Sets the thumbnail_cpp_server_limit of this BTDocumentOptionsParams.
-
-
-        :param thumbnail_cpp_server_limit: The thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._thumbnail_cpp_server_limit = thumbnail_cpp_server_limit
-
-    @property
-    def linked_cpp_server_limit(self):
-        """Gets the linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._linked_cpp_server_limit
-
-    @linked_cpp_server_limit.setter
-    def linked_cpp_server_limit(self, linked_cpp_server_limit):
-        """Sets the linked_cpp_server_limit of this BTDocumentOptionsParams.
-
-
-        :param linked_cpp_server_limit: The linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._linked_cpp_server_limit = linked_cpp_server_limit
-
-    @property
-    def drawing_server_memory(self):
-        """Gets the drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._drawing_server_memory
-
-    @drawing_server_memory.setter
-    def drawing_server_memory(self, drawing_server_memory):
-        """Sets the drawing_server_memory of this BTDocumentOptionsParams.
-
-
-        :param drawing_server_memory: The drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._drawing_server_memory = drawing_server_memory
-
-    @property
-    def cpp_server_default_element_limit(self):
-        """Gets the cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
-
-
-        :return: The cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._cpp_server_default_element_limit
-
-    @cpp_server_default_element_limit.setter
-    def cpp_server_default_element_limit(self, cpp_server_default_element_limit):
-        """Sets the cpp_server_default_element_limit of this BTDocumentOptionsParams.
-
-
-        :param cpp_server_default_element_limit: The cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
-        :type: int
-        """
-
-        self._cpp_server_default_element_limit = cpp_server_default_element_limit
+        if cpp_server_limit is not None:
+            self.cpp_server_limit = cpp_server_limit
+        if thumbnail_cpp_server_limit is not None:
+            self.thumbnail_cpp_server_limit = thumbnail_cpp_server_limit
+        if linked_cpp_server_limit is not None:
+            self.linked_cpp_server_limit = linked_cpp_server_limit
+        if drawing_server_memory is not None:
+            self.drawing_server_memory = drawing_server_memory
+        if cpp_server_default_element_limit is not None:
+            self.cpp_server_default_element_limit = cpp_server_default_element_limit
 
     @property
     def cpp_server_memory(self):
@@ -302,6 +197,111 @@ class BTDocumentOptionsParams(object):
         """
 
         self._document_memory = document_memory
+
+    @property
+    def cpp_server_limit(self):
+        """Gets the cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._cpp_server_limit
+
+    @cpp_server_limit.setter
+    def cpp_server_limit(self, cpp_server_limit):
+        """Sets the cpp_server_limit of this BTDocumentOptionsParams.
+
+
+        :param cpp_server_limit: The cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._cpp_server_limit = cpp_server_limit
+
+    @property
+    def thumbnail_cpp_server_limit(self):
+        """Gets the thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._thumbnail_cpp_server_limit
+
+    @thumbnail_cpp_server_limit.setter
+    def thumbnail_cpp_server_limit(self, thumbnail_cpp_server_limit):
+        """Sets the thumbnail_cpp_server_limit of this BTDocumentOptionsParams.
+
+
+        :param thumbnail_cpp_server_limit: The thumbnail_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._thumbnail_cpp_server_limit = thumbnail_cpp_server_limit
+
+    @property
+    def linked_cpp_server_limit(self):
+        """Gets the linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._linked_cpp_server_limit
+
+    @linked_cpp_server_limit.setter
+    def linked_cpp_server_limit(self, linked_cpp_server_limit):
+        """Sets the linked_cpp_server_limit of this BTDocumentOptionsParams.
+
+
+        :param linked_cpp_server_limit: The linked_cpp_server_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._linked_cpp_server_limit = linked_cpp_server_limit
+
+    @property
+    def drawing_server_memory(self):
+        """Gets the drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._drawing_server_memory
+
+    @drawing_server_memory.setter
+    def drawing_server_memory(self, drawing_server_memory):
+        """Sets the drawing_server_memory of this BTDocumentOptionsParams.
+
+
+        :param drawing_server_memory: The drawing_server_memory of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._drawing_server_memory = drawing_server_memory
+
+    @property
+    def cpp_server_default_element_limit(self):
+        """Gets the cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
+
+
+        :return: The cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._cpp_server_default_element_limit
+
+    @cpp_server_default_element_limit.setter
+    def cpp_server_default_element_limit(self, cpp_server_default_element_limit):
+        """Sets the cpp_server_default_element_limit of this BTDocumentOptionsParams.
+
+
+        :param cpp_server_default_element_limit: The cpp_server_default_element_limit of this BTDocumentOptionsParams.  # noqa: E501
+        :type: int
+        """
+
+        self._cpp_server_default_element_limit = cpp_server_default_element_limit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

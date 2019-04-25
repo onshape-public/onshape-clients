@@ -32,47 +32,26 @@ class BTTagParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'display_name': 'str',
-        'tag': 'str'
+        'tag': 'str',
+        'display_name': 'str'
     }
 
     attribute_map = {
-        'display_name': 'displayName',
-        'tag': 'tag'
+        'tag': 'tag',
+        'display_name': 'displayName'
     }
 
-    def __init__(self, display_name=None, tag=None):  # noqa: E501
+    def __init__(self, tag=None, display_name=None):  # noqa: E501
         """BTTagParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._display_name = None
         self._tag = None
+        self._display_name = None
         self.discriminator = None
 
-        if display_name is not None:
-            self.display_name = display_name
         if tag is not None:
             self.tag = tag
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTTagParams.  # noqa: E501
-
-
-        :return: The display_name of this BTTagParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTTagParams.
-
-
-        :param display_name: The display_name of this BTTagParams.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
+        if display_name is not None:
+            self.display_name = display_name
 
     @property
     def tag(self):
@@ -94,6 +73,27 @@ class BTTagParams(object):
         """
 
         self._tag = tag
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTTagParams.  # noqa: E501
+
+
+        :return: The display_name of this BTTagParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTTagParams.
+
+
+        :param display_name: The display_name of this BTTagParams.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

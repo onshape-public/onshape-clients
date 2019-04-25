@@ -35,44 +35,44 @@ class BTDocumentSearchParams(object):
         'type': 'str',
         'raw_query': 'str',
         'offset': 'int',
-        'limit': 'int',
         'owner_id': 'str',
+        'found_in': 'str',
+        'when': 'str',
         'parent_id': 'str',
+        'limit': 'int',
         'document_filter': 'int',
         'sort_column': 'str',
-        'sort_order': 'str',
-        'found_in': 'str',
-        'when': 'str'
+        'sort_order': 'str'
     }
 
     attribute_map = {
         'type': 'type',
         'raw_query': 'rawQuery',
         'offset': 'offset',
-        'limit': 'limit',
         'owner_id': 'ownerId',
+        'found_in': 'foundIn',
+        'when': 'when',
         'parent_id': 'parentId',
+        'limit': 'limit',
         'document_filter': 'documentFilter',
         'sort_column': 'sortColumn',
-        'sort_order': 'sortOrder',
-        'found_in': 'foundIn',
-        'when': 'when'
+        'sort_order': 'sortOrder'
     }
 
-    def __init__(self, type=None, raw_query=None, offset=None, limit=None, owner_id=None, parent_id=None, document_filter=None, sort_column=None, sort_order=None, found_in=None, when=None):  # noqa: E501
+    def __init__(self, type=None, raw_query=None, offset=None, owner_id=None, found_in=None, when=None, parent_id=None, limit=None, document_filter=None, sort_column=None, sort_order=None):  # noqa: E501
         """BTDocumentSearchParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
         self._raw_query = None
         self._offset = None
-        self._limit = None
         self._owner_id = None
+        self._found_in = None
+        self._when = None
         self._parent_id = None
+        self._limit = None
         self._document_filter = None
         self._sort_column = None
         self._sort_order = None
-        self._found_in = None
-        self._when = None
         self.discriminator = None
 
         if type is not None:
@@ -81,22 +81,22 @@ class BTDocumentSearchParams(object):
             self.raw_query = raw_query
         if offset is not None:
             self.offset = offset
-        if limit is not None:
-            self.limit = limit
         if owner_id is not None:
             self.owner_id = owner_id
+        if found_in is not None:
+            self.found_in = found_in
+        if when is not None:
+            self.when = when
         if parent_id is not None:
             self.parent_id = parent_id
+        if limit is not None:
+            self.limit = limit
         if document_filter is not None:
             self.document_filter = document_filter
         if sort_column is not None:
             self.sort_column = sort_column
         if sort_order is not None:
             self.sort_order = sort_order
-        if found_in is not None:
-            self.found_in = found_in
-        if when is not None:
-            self.when = when
 
     @property
     def type(self):
@@ -162,27 +162,6 @@ class BTDocumentSearchParams(object):
         self._offset = offset
 
     @property
-    def limit(self):
-        """Gets the limit of this BTDocumentSearchParams.  # noqa: E501
-
-
-        :return: The limit of this BTDocumentSearchParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """Sets the limit of this BTDocumentSearchParams.
-
-
-        :param limit: The limit of this BTDocumentSearchParams.  # noqa: E501
-        :type: int
-        """
-
-        self._limit = limit
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this BTDocumentSearchParams.  # noqa: E501
 
@@ -204,6 +183,60 @@ class BTDocumentSearchParams(object):
         self._owner_id = owner_id
 
     @property
+    def found_in(self):
+        """Gets the found_in of this BTDocumentSearchParams.  # noqa: E501
+
+
+        :return: The found_in of this BTDocumentSearchParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._found_in
+
+    @found_in.setter
+    def found_in(self, found_in):
+        """Sets the found_in of this BTDocumentSearchParams.
+
+
+        :param found_in: The found_in of this BTDocumentSearchParams.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["ALL", "WORKSPACES", "VERSIONS"]  # noqa: E501
+        if found_in not in allowed_values:
+            raise ValueError(
+                "Invalid value for `found_in` ({0}), must be one of {1}"  # noqa: E501
+                .format(found_in, allowed_values)
+            )
+
+        self._found_in = found_in
+
+    @property
+    def when(self):
+        """Gets the when of this BTDocumentSearchParams.  # noqa: E501
+
+
+        :return: The when of this BTDocumentSearchParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._when
+
+    @when.setter
+    def when(self, when):
+        """Sets the when of this BTDocumentSearchParams.
+
+
+        :param when: The when of this BTDocumentSearchParams.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["ALL", "LATEST", "LATEST_PER_HIT"]  # noqa: E501
+        if when not in allowed_values:
+            raise ValueError(
+                "Invalid value for `when` ({0}), must be one of {1}"  # noqa: E501
+                .format(when, allowed_values)
+            )
+
+        self._when = when
+
+    @property
     def parent_id(self):
         """Gets the parent_id of this BTDocumentSearchParams.  # noqa: E501
 
@@ -223,6 +256,27 @@ class BTDocumentSearchParams(object):
         """
 
         self._parent_id = parent_id
+
+    @property
+    def limit(self):
+        """Gets the limit of this BTDocumentSearchParams.  # noqa: E501
+
+
+        :return: The limit of this BTDocumentSearchParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """Sets the limit of this BTDocumentSearchParams.
+
+
+        :param limit: The limit of this BTDocumentSearchParams.  # noqa: E501
+        :type: int
+        """
+
+        self._limit = limit
 
     @property
     def document_filter(self):
@@ -286,60 +340,6 @@ class BTDocumentSearchParams(object):
         """
 
         self._sort_order = sort_order
-
-    @property
-    def found_in(self):
-        """Gets the found_in of this BTDocumentSearchParams.  # noqa: E501
-
-
-        :return: The found_in of this BTDocumentSearchParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._found_in
-
-    @found_in.setter
-    def found_in(self, found_in):
-        """Sets the found_in of this BTDocumentSearchParams.
-
-
-        :param found_in: The found_in of this BTDocumentSearchParams.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["ALL", "WORKSPACES", "VERSIONS"]  # noqa: E501
-        if found_in not in allowed_values:
-            raise ValueError(
-                "Invalid value for `found_in` ({0}), must be one of {1}"  # noqa: E501
-                .format(found_in, allowed_values)
-            )
-
-        self._found_in = found_in
-
-    @property
-    def when(self):
-        """Gets the when of this BTDocumentSearchParams.  # noqa: E501
-
-
-        :return: The when of this BTDocumentSearchParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._when
-
-    @when.setter
-    def when(self, when):
-        """Sets the when of this BTDocumentSearchParams.
-
-
-        :param when: The when of this BTDocumentSearchParams.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["ALL", "LATEST", "LATEST_PER_HIT"]  # noqa: E501
-        if when not in allowed_values:
-            raise ValueError(
-                "Invalid value for `when` ({0}), must be one of {1}"  # noqa: E501
-                .format(when, allowed_values)
-            )
-
-        self._when = when
 
     def to_dict(self):
         """Returns the model properties as a dict"""

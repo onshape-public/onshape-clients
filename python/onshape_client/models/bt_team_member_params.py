@@ -32,52 +32,31 @@ class BTTeamMemberParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email': 'str',
         'admin': 'bool',
-        'team_id': 'str'
+        'team_id': 'str',
+        'email': 'str'
     }
 
     attribute_map = {
-        'email': 'email',
         'admin': 'admin',
-        'team_id': 'teamId'
+        'team_id': 'teamId',
+        'email': 'email'
     }
 
-    def __init__(self, email=None, admin=None, team_id=None):  # noqa: E501
+    def __init__(self, admin=None, team_id=None, email=None):  # noqa: E501
         """BTTeamMemberParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._email = None
         self._admin = None
         self._team_id = None
+        self._email = None
         self.discriminator = None
 
-        if email is not None:
-            self.email = email
         if admin is not None:
             self.admin = admin
         if team_id is not None:
             self.team_id = team_id
-
-    @property
-    def email(self):
-        """Gets the email of this BTTeamMemberParams.  # noqa: E501
-
-
-        :return: The email of this BTTeamMemberParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTTeamMemberParams.
-
-
-        :param email: The email of this BTTeamMemberParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
+        if email is not None:
+            self.email = email
 
     @property
     def admin(self):
@@ -120,6 +99,27 @@ class BTTeamMemberParams(object):
         """
 
         self._team_id = team_id
+
+    @property
+    def email(self):
+        """Gets the email of this BTTeamMemberParams.  # noqa: E501
+
+
+        :return: The email of this BTTeamMemberParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTTeamMemberParams.
+
+
+        :param email: The email of this BTTeamMemberParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """Returns the model properties as a dict"""

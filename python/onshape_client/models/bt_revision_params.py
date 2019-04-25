@@ -32,82 +32,61 @@ class BTRevisionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'element_type': 'int',
         'revision': 'str',
-        'company_id': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'element_id': 'str',
+        'element_type': 'int',
+        'company_id': 'str',
         'part_number': 'str',
         'insertable_id': 'str',
-        'release_id': 'str',
-        'version_id': 'str',
-        'document_id': 'str'
+        'release_id': 'str'
     }
 
     attribute_map = {
-        'element_type': 'elementType',
         'revision': 'revision',
-        'company_id': 'companyId',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'element_id': 'elementId',
+        'element_type': 'elementType',
+        'company_id': 'companyId',
         'part_number': 'partNumber',
         'insertable_id': 'insertableId',
-        'release_id': 'releaseId',
-        'version_id': 'versionId',
-        'document_id': 'documentId'
+        'release_id': 'releaseId'
     }
 
-    def __init__(self, element_type=None, revision=None, company_id=None, element_id=None, part_number=None, insertable_id=None, release_id=None, version_id=None, document_id=None):  # noqa: E501
+    def __init__(self, revision=None, version_id=None, document_id=None, element_id=None, element_type=None, company_id=None, part_number=None, insertable_id=None, release_id=None):  # noqa: E501
         """BTRevisionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._element_type = None
         self._revision = None
-        self._company_id = None
+        self._version_id = None
+        self._document_id = None
         self._element_id = None
+        self._element_type = None
+        self._company_id = None
         self._part_number = None
         self._insertable_id = None
         self._release_id = None
-        self._version_id = None
-        self._document_id = None
         self.discriminator = None
 
-        if element_type is not None:
-            self.element_type = element_type
         if revision is not None:
             self.revision = revision
-        if company_id is not None:
-            self.company_id = company_id
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if element_id is not None:
             self.element_id = element_id
+        if element_type is not None:
+            self.element_type = element_type
+        if company_id is not None:
+            self.company_id = company_id
         if part_number is not None:
             self.part_number = part_number
         if insertable_id is not None:
             self.insertable_id = insertable_id
         if release_id is not None:
             self.release_id = release_id
-        if version_id is not None:
-            self.version_id = version_id
-        if document_id is not None:
-            self.document_id = document_id
-
-    @property
-    def element_type(self):
-        """Gets the element_type of this BTRevisionParams.  # noqa: E501
-
-
-        :return: The element_type of this BTRevisionParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._element_type
-
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTRevisionParams.
-
-
-        :param element_type: The element_type of this BTRevisionParams.  # noqa: E501
-        :type: int
-        """
-
-        self._element_type = element_type
 
     @property
     def revision(self):
@@ -131,25 +110,46 @@ class BTRevisionParams(object):
         self._revision = revision
 
     @property
-    def company_id(self):
-        """Gets the company_id of this BTRevisionParams.  # noqa: E501
+    def version_id(self):
+        """Gets the version_id of this BTRevisionParams.  # noqa: E501
 
 
-        :return: The company_id of this BTRevisionParams.  # noqa: E501
+        :return: The version_id of this BTRevisionParams.  # noqa: E501
         :rtype: str
         """
-        return self._company_id
+        return self._version_id
 
-    @company_id.setter
-    def company_id(self, company_id):
-        """Sets the company_id of this BTRevisionParams.
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTRevisionParams.
 
 
-        :param company_id: The company_id of this BTRevisionParams.  # noqa: E501
+        :param version_id: The version_id of this BTRevisionParams.  # noqa: E501
         :type: str
         """
 
-        self._company_id = company_id
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTRevisionParams.  # noqa: E501
+
+
+        :return: The document_id of this BTRevisionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTRevisionParams.
+
+
+        :param document_id: The document_id of this BTRevisionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def element_id(self):
@@ -171,6 +171,48 @@ class BTRevisionParams(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def element_type(self):
+        """Gets the element_type of this BTRevisionParams.  # noqa: E501
+
+
+        :return: The element_type of this BTRevisionParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTRevisionParams.
+
+
+        :param element_type: The element_type of this BTRevisionParams.  # noqa: E501
+        :type: int
+        """
+
+        self._element_type = element_type
+
+    @property
+    def company_id(self):
+        """Gets the company_id of this BTRevisionParams.  # noqa: E501
+
+
+        :return: The company_id of this BTRevisionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_id
+
+    @company_id.setter
+    def company_id(self, company_id):
+        """Sets the company_id of this BTRevisionParams.
+
+
+        :param company_id: The company_id of this BTRevisionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._company_id = company_id
 
     @property
     def part_number(self):
@@ -234,48 +276,6 @@ class BTRevisionParams(object):
         """
 
         self._release_id = release_id
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTRevisionParams.  # noqa: E501
-
-
-        :return: The version_id of this BTRevisionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTRevisionParams.
-
-
-        :param version_id: The version_id of this BTRevisionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTRevisionParams.  # noqa: E501
-
-
-        :return: The document_id of this BTRevisionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTRevisionParams.
-
-
-        :param document_id: The document_id of this BTRevisionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,29 +35,29 @@ class BTFolderParams(object):
         'name': 'str',
         'description': 'str',
         'owner_id': 'str',
-        'owner_type': 'int',
         'project_id': 'str',
-        'parent_id': 'str'
+        'parent_id': 'str',
+        'owner_type': 'int'
     }
 
     attribute_map = {
         'name': 'name',
         'description': 'description',
         'owner_id': 'ownerId',
-        'owner_type': 'ownerType',
         'project_id': 'projectId',
-        'parent_id': 'parentId'
+        'parent_id': 'parentId',
+        'owner_type': 'ownerType'
     }
 
-    def __init__(self, name=None, description=None, owner_id=None, owner_type=None, project_id=None, parent_id=None):  # noqa: E501
+    def __init__(self, name=None, description=None, owner_id=None, project_id=None, parent_id=None, owner_type=None):  # noqa: E501
         """BTFolderParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._description = None
         self._owner_id = None
-        self._owner_type = None
         self._project_id = None
         self._parent_id = None
+        self._owner_type = None
         self.discriminator = None
 
         if name is not None:
@@ -66,12 +66,12 @@ class BTFolderParams(object):
             self.description = description
         if owner_id is not None:
             self.owner_id = owner_id
-        if owner_type is not None:
-            self.owner_type = owner_type
         if project_id is not None:
             self.project_id = project_id
         if parent_id is not None:
             self.parent_id = parent_id
+        if owner_type is not None:
+            self.owner_type = owner_type
 
     @property
     def name(self):
@@ -137,27 +137,6 @@ class BTFolderParams(object):
         self._owner_id = owner_id
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTFolderParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTFolderParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTFolderParams.
-
-
-        :param owner_type: The owner_type of this BTFolderParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
     def project_id(self):
         """Gets the project_id of this BTFolderParams.  # noqa: E501
 
@@ -198,6 +177,27 @@ class BTFolderParams(object):
         """
 
         self._parent_id = parent_id
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTFolderParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTFolderParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTFolderParams.
+
+
+        :param owner_type: The owner_type of this BTFolderParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

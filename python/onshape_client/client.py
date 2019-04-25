@@ -82,14 +82,12 @@ class Client:
 
         if self.get_authentication_method() == "oauth":
             self._set_oauth_session()
-            self.authorization_url, self.state = self.oauth.authorization_url(
-                self.authorization_uri)
 
         Client.__instance = self
 
     def set_grant_authorization_url_response(self, authorization_url_response):
         """ This is the redirected-to url, for example: https:localhost/oauth_redirect?code=XraRXPYGSWfZmBvUIiNHvSlZ&state=kgZQJbVp731CgNxAeKJN7TIoOlo5bz"""
-        self._fetch_access_token(authorization_url_response)
+        self.fetch_access_token(authorization_url_response)
 
     def get_authentication_method(self):
         # Prefer OAUTH if specified, otherwise try for apikeys
@@ -100,27 +98,37 @@ class Client:
         else:
             return None
 
+    def get_authorization_url(self):
+        url, state = self.oauth.authorization_url(self.authorization_uri)
+        return url
+
     def do_oauth_flow(self):
         """Do the oauth flow to set the access token"""
         try:
             self._refresh_access_token()
         except BaseException as e:
-            if self.oauth_authorization_method == "localhost_server":
-                start_server(self._fetch_access_token, self.open_authorize_grant)
+            authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
+            if authorization_method == OAuthAuthorizationMethods.LOCALHOST_SERVER:
+                start_server(self.fetch_access_token, self.open_authorize_grant)
+            elif authorization_method == OAuthAuthorizationMethods.PYTHON_CALLBACK:
+                self.open_authorize_grant()
 
     def open_authorize_grant(self):
+        done = self.fetch_access_token
         callback = self.open_authorize_grant_callback
-        oauth_type = self.oauth_authorization_method
-        url = self.authorization_url
-        defaults_supported = ["localhost_server"]
-        if not callback and oauth_type not in defaults_supported:
+        oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
+        url = self.get_authorization_url()
+        defaults_supported = [OAuthAuthorizationMethods.LOCALHOST_SERVER]
+        if oauth_type == OAuthAuthorizationMethods.MANUAL_FLOW:
+            raise OAuthNotAuthorizedException("You need to have the user authorize the grant.")
+        elif not callback and oauth_type not in defaults_supported:
             raise NotImplementedError("To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
         elif callback:
             try:
                 if callback and not callable(callback):
                     # Attempt to evaluate the function definition
                     callback = eval(callback)
-                callback(url)
+                callback(url, done)
             except:
                 raise AttributeError("The open_authorize_grant_callback function did not work.")
         else:
@@ -130,7 +138,6 @@ class Client:
         authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
         if authorization_method == OAuthAuthorizationMethods.LOCALHOST_SERVER:
             webbrowser.open(url)
-
 
     def _set_configuration(self, configuration_dictionary):
         configuration = Configuration()
@@ -145,8 +152,7 @@ class Client:
         self.scope = self._get_if_present(configuration_dictionary, 'scope')
         self.redirect_uri = self._get_if_present(configuration_dictionary, 'redirect_uri')
         self.token_uri = self._get_if_present(configuration_dictionary, 'token_uri')
-        self.authorization_uri = self._get_if_present(configuration_dictionary, 'authorization_url')
-        self.scope = self._get_if_present(configuration_dictionary, 'scope')
+        self.authorization_uri = self._get_if_present(configuration_dictionary, 'authorization_uri')
         self.oauth_authorization_method = self._get_if_present(configuration_dictionary, 'oauth_authorization_method')
 
         configuration.host = self._get_if_present(configuration_dictionary, 'base_url')
@@ -167,17 +173,23 @@ class Client:
         self._set_oauth_creds_from_token_response(token_response)
         return
 
-    def _fetch_access_token(self, authorization_response):
+    def fetch_access_token(self, authorization_response):
+        """
+        :param authorization_response: The response containing the authorization code.
+        :return: The access token and the refresh token. These should be stored by the caller to facilitate future
+        client initialization.
+        """
         try:
             token_response = self.oauth.fetch_token(
             self.token_uri,
             authorization_response=authorization_response,
             client_secret=self.client_secret)
             self._set_oauth_creds_from_token_response(token_response)
+            return token_response
         except Warning:
             # This is probably a scope warning.
             pass
-        return
+
 
     def _set_oauth_creds_from_token_response(self, token_response):
         self.configuration.access_token = token_response["access_token"]
@@ -196,6 +208,7 @@ class Client:
         self.app_elements_api = onshape_client.api.AppElementsApi(api_client)
         self.assemblies_api = onshape_client.api.AssembliesApi(api_client)
         self.blob_elements_api = onshape_client.api.BlobElementsApi(api_client)
+        self.drawings_api = onshape_client.api.DrawingsApi(api_client)
         self.documents_api = onshape_client.api.DocumentsApi(api_client)
         self.elements_api = onshape_client.api.ElementsApi(api_client)
         self.endpoints_api = onshape_client.api.EndpointsApi(api_client)
@@ -205,5 +218,26 @@ class Client:
         self.translation_api = onshape_client.api.TranslationsApi(api_client)
 
 class OAuthAuthorizationMethods(Enum):
+
+    # This is fully implemented, and meant for locally hosted applications (desktop apps)
     LOCALHOST_SERVER="localhost_server"
+
+    # This is for when the open_authorize_grant_callback is set. It yields control to this client
+    # by specifying a function that should be called to authorize the grant, and passes in a
+    # function to that callback that needs to be called when the grant has been authorized with
+    # the result.
     PYTHON_CALLBACK="python_callback"
+
+    # This flow will communicate that the client needs the authorization flow with an OAuthNotAuthorizedException
+    # after failing to refresh the token. Once the client throws the error, the application should
+    # call client.get_authorization_url() and present the resulting url to the user, and subsequently
+    # call client.fetch_access_token(resulting_url_with_authorization_code) to complete the flow.
+    # Note that for the best user experience, the client should store the refresh_token in persistent
+    # storage so the user only has to go through the grant authorization step once.
+    MANUAL_FLOW = "manual_flow"
+
+# Exception that should be caught signaling that the user should go through the grant authorization flow.
+class OAuthNotAuthorizedException(Exception):
+    def __init__(self, *args, **kwargs):
+        super(OAuthNotAuthorizedException, self).__init__(args, kwargs)
+

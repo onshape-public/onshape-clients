@@ -36,20 +36,20 @@ class BTAPIApplicationParams(object):
         'name': 'str',
         'state': 'int',
         'description': 'str',
-        'primary_format': 'str',
-        'internal_grant_on_demand': 'bool',
-        'client_id': 'str',
-        'scope_names': 'list[str]',
+        'store_entry_is_public': 'bool',
         'developer_email': 'str',
-        'base_href': 'str',
-        'supports_collaboration': 'bool',
         'developer_id': 'str',
         'redirect_ur_ls': 'list[str]',
         'ui_spec': 'str',
         'supports_merge': 'bool',
         'admin_team_id': 'str',
         'hidden_from_plus_menu': 'bool',
-        'store_entry_is_public': 'bool'
+        'scope_names': 'list[str]',
+        'primary_format': 'str',
+        'base_href': 'str',
+        'supports_collaboration': 'bool',
+        'internal_grant_on_demand': 'bool',
+        'client_id': 'str'
     }
 
     attribute_map = {
@@ -57,43 +57,43 @@ class BTAPIApplicationParams(object):
         'name': 'name',
         'state': 'state',
         'description': 'description',
-        'primary_format': 'primaryFormat',
-        'internal_grant_on_demand': 'internalGrantOnDemand',
-        'client_id': 'clientId',
-        'scope_names': 'scopeNames',
+        'store_entry_is_public': 'storeEntryIsPublic',
         'developer_email': 'developerEmail',
-        'base_href': 'baseHref',
-        'supports_collaboration': 'supportsCollaboration',
         'developer_id': 'developerId',
         'redirect_ur_ls': 'redirectURLs',
         'ui_spec': 'uiSpec',
         'supports_merge': 'supportsMerge',
         'admin_team_id': 'adminTeamId',
         'hidden_from_plus_menu': 'hiddenFromPlusMenu',
-        'store_entry_is_public': 'storeEntryIsPublic'
+        'scope_names': 'scopeNames',
+        'primary_format': 'primaryFormat',
+        'base_href': 'baseHref',
+        'supports_collaboration': 'supportsCollaboration',
+        'internal_grant_on_demand': 'internalGrantOnDemand',
+        'client_id': 'clientId'
     }
 
-    def __init__(self, hidden_from_plus_menu_=None, name=None, state=None, description=None, primary_format=None, internal_grant_on_demand=None, client_id=None, scope_names=None, developer_email=None, base_href=None, supports_collaboration=None, developer_id=None, redirect_ur_ls=None, ui_spec=None, supports_merge=None, admin_team_id=None, hidden_from_plus_menu=None, store_entry_is_public=None):  # noqa: E501
+    def __init__(self, hidden_from_plus_menu_=None, name=None, state=None, description=None, store_entry_is_public=None, developer_email=None, developer_id=None, redirect_ur_ls=None, ui_spec=None, supports_merge=None, admin_team_id=None, hidden_from_plus_menu=None, scope_names=None, primary_format=None, base_href=None, supports_collaboration=None, internal_grant_on_demand=None, client_id=None):  # noqa: E501
         """BTAPIApplicationParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._hidden_from_plus_menu_ = None
         self._name = None
         self._state = None
         self._description = None
-        self._primary_format = None
-        self._internal_grant_on_demand = None
-        self._client_id = None
-        self._scope_names = None
+        self._store_entry_is_public = None
         self._developer_email = None
-        self._base_href = None
-        self._supports_collaboration = None
         self._developer_id = None
         self._redirect_ur_ls = None
         self._ui_spec = None
         self._supports_merge = None
         self._admin_team_id = None
         self._hidden_from_plus_menu = None
-        self._store_entry_is_public = None
+        self._scope_names = None
+        self._primary_format = None
+        self._base_href = None
+        self._supports_collaboration = None
+        self._internal_grant_on_demand = None
+        self._client_id = None
         self.discriminator = None
 
         if hidden_from_plus_menu_ is not None:
@@ -104,20 +104,10 @@ class BTAPIApplicationParams(object):
             self.state = state
         if description is not None:
             self.description = description
-        if primary_format is not None:
-            self.primary_format = primary_format
-        if internal_grant_on_demand is not None:
-            self.internal_grant_on_demand = internal_grant_on_demand
-        if client_id is not None:
-            self.client_id = client_id
-        if scope_names is not None:
-            self.scope_names = scope_names
+        if store_entry_is_public is not None:
+            self.store_entry_is_public = store_entry_is_public
         if developer_email is not None:
             self.developer_email = developer_email
-        if base_href is not None:
-            self.base_href = base_href
-        if supports_collaboration is not None:
-            self.supports_collaboration = supports_collaboration
         if developer_id is not None:
             self.developer_id = developer_id
         if redirect_ur_ls is not None:
@@ -130,8 +120,18 @@ class BTAPIApplicationParams(object):
             self.admin_team_id = admin_team_id
         if hidden_from_plus_menu is not None:
             self.hidden_from_plus_menu = hidden_from_plus_menu
-        if store_entry_is_public is not None:
-            self.store_entry_is_public = store_entry_is_public
+        if scope_names is not None:
+            self.scope_names = scope_names
+        if primary_format is not None:
+            self.primary_format = primary_format
+        if base_href is not None:
+            self.base_href = base_href
+        if supports_collaboration is not None:
+            self.supports_collaboration = supports_collaboration
+        if internal_grant_on_demand is not None:
+            self.internal_grant_on_demand = internal_grant_on_demand
+        if client_id is not None:
+            self.client_id = client_id
 
     @property
     def hidden_from_plus_menu_(self):
@@ -218,88 +218,25 @@ class BTAPIApplicationParams(object):
         self._description = description
 
     @property
-    def primary_format(self):
-        """Gets the primary_format of this BTAPIApplicationParams.  # noqa: E501
+    def store_entry_is_public(self):
+        """Gets the store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
 
 
-        :return: The primary_format of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._primary_format
-
-    @primary_format.setter
-    def primary_format(self, primary_format):
-        """Sets the primary_format of this BTAPIApplicationParams.
-
-
-        :param primary_format: The primary_format of this BTAPIApplicationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._primary_format = primary_format
-
-    @property
-    def internal_grant_on_demand(self):
-        """Gets the internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
+        :return: The store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
         :rtype: bool
         """
-        return self._internal_grant_on_demand
+        return self._store_entry_is_public
 
-    @internal_grant_on_demand.setter
-    def internal_grant_on_demand(self, internal_grant_on_demand):
-        """Sets the internal_grant_on_demand of this BTAPIApplicationParams.
+    @store_entry_is_public.setter
+    def store_entry_is_public(self, store_entry_is_public):
+        """Sets the store_entry_is_public of this BTAPIApplicationParams.
 
 
-        :param internal_grant_on_demand: The internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
+        :param store_entry_is_public: The store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
         :type: bool
         """
 
-        self._internal_grant_on_demand = internal_grant_on_demand
-
-    @property
-    def client_id(self):
-        """Gets the client_id of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The client_id of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._client_id
-
-    @client_id.setter
-    def client_id(self, client_id):
-        """Sets the client_id of this BTAPIApplicationParams.
-
-
-        :param client_id: The client_id of this BTAPIApplicationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._client_id = client_id
-
-    @property
-    def scope_names(self):
-        """Gets the scope_names of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The scope_names of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._scope_names
-
-    @scope_names.setter
-    def scope_names(self, scope_names):
-        """Sets the scope_names of this BTAPIApplicationParams.
-
-
-        :param scope_names: The scope_names of this BTAPIApplicationParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._scope_names = scope_names
+        self._store_entry_is_public = store_entry_is_public
 
     @property
     def developer_email(self):
@@ -321,48 +258,6 @@ class BTAPIApplicationParams(object):
         """
 
         self._developer_email = developer_email
-
-    @property
-    def base_href(self):
-        """Gets the base_href of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The base_href of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._base_href
-
-    @base_href.setter
-    def base_href(self, base_href):
-        """Sets the base_href of this BTAPIApplicationParams.
-
-
-        :param base_href: The base_href of this BTAPIApplicationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._base_href = base_href
-
-    @property
-    def supports_collaboration(self):
-        """Gets the supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._supports_collaboration
-
-    @supports_collaboration.setter
-    def supports_collaboration(self, supports_collaboration):
-        """Sets the supports_collaboration of this BTAPIApplicationParams.
-
-
-        :param supports_collaboration: The supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._supports_collaboration = supports_collaboration
 
     @property
     def developer_id(self):
@@ -491,25 +386,130 @@ class BTAPIApplicationParams(object):
         self._hidden_from_plus_menu = hidden_from_plus_menu
 
     @property
-    def store_entry_is_public(self):
-        """Gets the store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
+    def scope_names(self):
+        """Gets the scope_names of this BTAPIApplicationParams.  # noqa: E501
 
 
-        :return: The store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
+        :return: The scope_names of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._scope_names
+
+    @scope_names.setter
+    def scope_names(self, scope_names):
+        """Sets the scope_names of this BTAPIApplicationParams.
+
+
+        :param scope_names: The scope_names of this BTAPIApplicationParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._scope_names = scope_names
+
+    @property
+    def primary_format(self):
+        """Gets the primary_format of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The primary_format of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_format
+
+    @primary_format.setter
+    def primary_format(self, primary_format):
+        """Sets the primary_format of this BTAPIApplicationParams.
+
+
+        :param primary_format: The primary_format of this BTAPIApplicationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_format = primary_format
+
+    @property
+    def base_href(self):
+        """Gets the base_href of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The base_href of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._base_href
+
+    @base_href.setter
+    def base_href(self, base_href):
+        """Sets the base_href of this BTAPIApplicationParams.
+
+
+        :param base_href: The base_href of this BTAPIApplicationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._base_href = base_href
+
+    @property
+    def supports_collaboration(self):
+        """Gets the supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
         :rtype: bool
         """
-        return self._store_entry_is_public
+        return self._supports_collaboration
 
-    @store_entry_is_public.setter
-    def store_entry_is_public(self, store_entry_is_public):
-        """Sets the store_entry_is_public of this BTAPIApplicationParams.
+    @supports_collaboration.setter
+    def supports_collaboration(self, supports_collaboration):
+        """Sets the supports_collaboration of this BTAPIApplicationParams.
 
 
-        :param store_entry_is_public: The store_entry_is_public of this BTAPIApplicationParams.  # noqa: E501
+        :param supports_collaboration: The supports_collaboration of this BTAPIApplicationParams.  # noqa: E501
         :type: bool
         """
 
-        self._store_entry_is_public = store_entry_is_public
+        self._supports_collaboration = supports_collaboration
+
+    @property
+    def internal_grant_on_demand(self):
+        """Gets the internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._internal_grant_on_demand
+
+    @internal_grant_on_demand.setter
+    def internal_grant_on_demand(self, internal_grant_on_demand):
+        """Sets the internal_grant_on_demand of this BTAPIApplicationParams.
+
+
+        :param internal_grant_on_demand: The internal_grant_on_demand of this BTAPIApplicationParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._internal_grant_on_demand = internal_grant_on_demand
+
+    @property
+    def client_id(self):
+        """Gets the client_id of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The client_id of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_id
+
+    @client_id.setter
+    def client_id(self, client_id):
+        """Sets the client_id of this BTAPIApplicationParams.
+
+
+        :param client_id: The client_id of this BTAPIApplicationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._client_id = client_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

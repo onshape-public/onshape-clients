@@ -34,54 +34,54 @@ class BTMetricParams(object):
     openapi_types = {
         'system_id': 'str',
         'property_map': 'dict(str, object)',
-        'event_name': 'str',
-        'event_namespace': 'str',
-        'event_time': 'datetime',
+        'document_id': 'str',
         'element_id': 'str',
         'event_type': 'int',
-        'document_id': 'str'
+        'event_name': 'str',
+        'event_namespace': 'str',
+        'event_time': 'datetime'
     }
 
     attribute_map = {
         'system_id': 'systemId',
         'property_map': 'propertyMap',
-        'event_name': 'eventName',
-        'event_namespace': 'eventNamespace',
-        'event_time': 'eventTime',
+        'document_id': 'documentId',
         'element_id': 'elementId',
         'event_type': 'eventType',
-        'document_id': 'documentId'
+        'event_name': 'eventName',
+        'event_namespace': 'eventNamespace',
+        'event_time': 'eventTime'
     }
 
-    def __init__(self, system_id=None, property_map=None, event_name=None, event_namespace=None, event_time=None, element_id=None, event_type=None, document_id=None):  # noqa: E501
+    def __init__(self, system_id=None, property_map=None, document_id=None, element_id=None, event_type=None, event_name=None, event_namespace=None, event_time=None):  # noqa: E501
         """BTMetricParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._system_id = None
         self._property_map = None
+        self._document_id = None
+        self._element_id = None
+        self._event_type = None
         self._event_name = None
         self._event_namespace = None
         self._event_time = None
-        self._element_id = None
-        self._event_type = None
-        self._document_id = None
         self.discriminator = None
 
         if system_id is not None:
             self.system_id = system_id
         if property_map is not None:
             self.property_map = property_map
+        if document_id is not None:
+            self.document_id = document_id
+        if element_id is not None:
+            self.element_id = element_id
+        if event_type is not None:
+            self.event_type = event_type
         if event_name is not None:
             self.event_name = event_name
         if event_namespace is not None:
             self.event_namespace = event_namespace
         if event_time is not None:
             self.event_time = event_time
-        if element_id is not None:
-            self.element_id = element_id
-        if event_type is not None:
-            self.event_type = event_type
-        if document_id is not None:
-            self.document_id = document_id
 
     @property
     def system_id(self):
@@ -124,6 +124,69 @@ class BTMetricParams(object):
         """
 
         self._property_map = property_map
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTMetricParams.  # noqa: E501
+
+
+        :return: The document_id of this BTMetricParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTMetricParams.
+
+
+        :param document_id: The document_id of this BTMetricParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTMetricParams.  # noqa: E501
+
+
+        :return: The element_id of this BTMetricParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTMetricParams.
+
+
+        :param element_id: The element_id of this BTMetricParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
+
+    @property
+    def event_type(self):
+        """Gets the event_type of this BTMetricParams.  # noqa: E501
+
+
+        :return: The event_type of this BTMetricParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._event_type
+
+    @event_type.setter
+    def event_type(self, event_type):
+        """Sets the event_type of this BTMetricParams.
+
+
+        :param event_type: The event_type of this BTMetricParams.  # noqa: E501
+        :type: int
+        """
+
+        self._event_type = event_type
 
     @property
     def event_name(self):
@@ -187,69 +250,6 @@ class BTMetricParams(object):
         """
 
         self._event_time = event_time
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTMetricParams.  # noqa: E501
-
-
-        :return: The element_id of this BTMetricParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTMetricParams.
-
-
-        :param element_id: The element_id of this BTMetricParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def event_type(self):
-        """Gets the event_type of this BTMetricParams.  # noqa: E501
-
-
-        :return: The event_type of this BTMetricParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._event_type
-
-    @event_type.setter
-    def event_type(self, event_type):
-        """Sets the event_type of this BTMetricParams.
-
-
-        :param event_type: The event_type of this BTMetricParams.  # noqa: E501
-        :type: int
-        """
-
-        self._event_type = event_type
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTMetricParams.  # noqa: E501
-
-
-        :return: The document_id of this BTMetricParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTMetricParams.
-
-
-        :param document_id: The document_id of this BTMetricParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

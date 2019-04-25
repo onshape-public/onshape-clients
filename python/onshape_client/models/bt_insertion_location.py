@@ -36,8 +36,8 @@ class BTInsertionLocation(object):
         'adjacent_to_node': 'bool',
         'node_id': 'str',
         'node_id_raw': 'BTObjectId',
-        'child_field_index': 'int',
         'before': 'bool',
+        'child_field_index': 'int',
         'type_id': 'int',
         'connection_source': 'BTConnection',
         'export_type_name': 'str',
@@ -49,23 +49,23 @@ class BTInsertionLocation(object):
         'adjacent_to_node': 'adjacentToNode',
         'node_id': 'nodeId',
         'node_id_raw': 'nodeIdRaw',
-        'child_field_index': 'childFieldIndex',
         'before': 'before',
+        'child_field_index': 'childFieldIndex',
         'type_id': 'typeId',
         'connection_source': 'connectionSource',
         'export_type_name': 'exportTypeName',
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, order_preserving=None, adjacent_to_node=None, node_id=None, node_id_raw=None, child_field_index=None, before=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, order_preserving=None, adjacent_to_node=None, node_id=None, node_id_raw=None, before=None, child_field_index=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTInsertionLocation - a model defined in OpenAPI"""  # noqa: E501
 
         self._order_preserving = None
         self._adjacent_to_node = None
         self._node_id = None
         self._node_id_raw = None
-        self._child_field_index = None
         self._before = None
+        self._child_field_index = None
         self._type_id = None
         self._connection_source = None
         self._export_type_name = None
@@ -80,10 +80,10 @@ class BTInsertionLocation(object):
             self.node_id = node_id
         if node_id_raw is not None:
             self.node_id_raw = node_id_raw
-        if child_field_index is not None:
-            self.child_field_index = child_field_index
         if before is not None:
             self.before = before
+        if child_field_index is not None:
+            self.child_field_index = child_field_index
         if type_id is not None:
             self.type_id = type_id
         if connection_source is not None:
@@ -178,27 +178,6 @@ class BTInsertionLocation(object):
         self._node_id_raw = node_id_raw
 
     @property
-    def child_field_index(self):
-        """Gets the child_field_index of this BTInsertionLocation.  # noqa: E501
-
-
-        :return: The child_field_index of this BTInsertionLocation.  # noqa: E501
-        :rtype: int
-        """
-        return self._child_field_index
-
-    @child_field_index.setter
-    def child_field_index(self, child_field_index):
-        """Sets the child_field_index of this BTInsertionLocation.
-
-
-        :param child_field_index: The child_field_index of this BTInsertionLocation.  # noqa: E501
-        :type: int
-        """
-
-        self._child_field_index = child_field_index
-
-    @property
     def before(self):
         """Gets the before of this BTInsertionLocation.  # noqa: E501
 
@@ -218,6 +197,27 @@ class BTInsertionLocation(object):
         """
 
         self._before = before
+
+    @property
+    def child_field_index(self):
+        """Gets the child_field_index of this BTInsertionLocation.  # noqa: E501
+
+
+        :return: The child_field_index of this BTInsertionLocation.  # noqa: E501
+        :rtype: int
+        """
+        return self._child_field_index
+
+    @child_field_index.setter
+    def child_field_index(self, child_field_index):
+        """Sets the child_field_index of this BTInsertionLocation.
+
+
+        :param child_field_index: The child_field_index of this BTInsertionLocation.  # noqa: E501
+        :type: int
+        """
+
+        self._child_field_index = child_field_index
 
     @property
     def type_id(self):

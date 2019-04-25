@@ -38,8 +38,8 @@ class BTPNode(object):
         'atomic': 'bool',
         'documentation_type': 'str',
         'space_before': 'BTPSpace',
-        'first_child_field': 'int',
         'changeable_child_field_indices': 'list[int]',
+        'first_child_field': 'int',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
         'node_id': 'str',
@@ -60,8 +60,8 @@ class BTPNode(object):
         'atomic': 'atomic',
         'documentation_type': 'documentationType',
         'space_before': 'spaceBefore',
-        'first_child_field': 'firstChildField',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
+        'first_child_field': 'firstChildField',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
         'node_id': 'nodeId',
@@ -75,7 +75,7 @@ class BTPNode(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, start_source_location=None, end_source_location=None, short_descriptor=None, atomic=None, documentation_type=None, space_before=None, first_child_field=None, changeable_child_field_indices=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, start_source_location=None, end_source_location=None, short_descriptor=None, atomic=None, documentation_type=None, space_before=None, changeable_child_field_indices=None, first_child_field=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTPNode - a model defined in OpenAPI"""  # noqa: E501
 
         self._start_source_location = None
@@ -84,8 +84,8 @@ class BTPNode(object):
         self._atomic = None
         self._documentation_type = None
         self._space_before = None
-        self._first_child_field = None
         self._changeable_child_field_indices = None
+        self._first_child_field = None
         self._space_default = None
         self._space_after = None
         self._node_id = None
@@ -111,10 +111,10 @@ class BTPNode(object):
             self.documentation_type = documentation_type
         if space_before is not None:
             self.space_before = space_before
-        if first_child_field is not None:
-            self.first_child_field = first_child_field
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
+        if first_child_field is not None:
+            self.first_child_field = first_child_field
         if space_default is not None:
             self.space_default = space_default
         if space_after is not None:
@@ -271,27 +271,6 @@ class BTPNode(object):
         self._space_before = space_before
 
     @property
-    def first_child_field(self):
-        """Gets the first_child_field of this BTPNode.  # noqa: E501
-
-
-        :return: The first_child_field of this BTPNode.  # noqa: E501
-        :rtype: int
-        """
-        return self._first_child_field
-
-    @first_child_field.setter
-    def first_child_field(self, first_child_field):
-        """Sets the first_child_field of this BTPNode.
-
-
-        :param first_child_field: The first_child_field of this BTPNode.  # noqa: E501
-        :type: int
-        """
-
-        self._first_child_field = first_child_field
-
-    @property
     def changeable_child_field_indices(self):
         """Gets the changeable_child_field_indices of this BTPNode.  # noqa: E501
 
@@ -311,6 +290,27 @@ class BTPNode(object):
         """
 
         self._changeable_child_field_indices = changeable_child_field_indices
+
+    @property
+    def first_child_field(self):
+        """Gets the first_child_field of this BTPNode.  # noqa: E501
+
+
+        :return: The first_child_field of this BTPNode.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_child_field
+
+    @first_child_field.setter
+    def first_child_field(self, first_child_field):
+        """Sets the first_child_field of this BTPNode.
+
+
+        :param first_child_field: The first_child_field of this BTPNode.  # noqa: E501
+        :type: int
+        """
+
+        self._first_child_field = first_child_field
 
     @property
     def space_default(self):

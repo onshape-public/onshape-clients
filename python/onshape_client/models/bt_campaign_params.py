@@ -32,52 +32,31 @@ class BTCampaignParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'terminated': 'bool',
         'campaign_name': 'str',
-        'messages': 'list[Message]'
+        'messages': 'list[Message]',
+        'terminated': 'bool'
     }
 
     attribute_map = {
-        'terminated': 'terminated',
         'campaign_name': 'campaignName',
-        'messages': 'messages'
+        'messages': 'messages',
+        'terminated': 'terminated'
     }
 
-    def __init__(self, terminated=None, campaign_name=None, messages=None):  # noqa: E501
+    def __init__(self, campaign_name=None, messages=None, terminated=None):  # noqa: E501
         """BTCampaignParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._terminated = None
         self._campaign_name = None
         self._messages = None
+        self._terminated = None
         self.discriminator = None
 
-        if terminated is not None:
-            self.terminated = terminated
         if campaign_name is not None:
             self.campaign_name = campaign_name
         if messages is not None:
             self.messages = messages
-
-    @property
-    def terminated(self):
-        """Gets the terminated of this BTCampaignParams.  # noqa: E501
-
-
-        :return: The terminated of this BTCampaignParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._terminated
-
-    @terminated.setter
-    def terminated(self, terminated):
-        """Sets the terminated of this BTCampaignParams.
-
-
-        :param terminated: The terminated of this BTCampaignParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._terminated = terminated
+        if terminated is not None:
+            self.terminated = terminated
 
     @property
     def campaign_name(self):
@@ -120,6 +99,27 @@ class BTCampaignParams(object):
         """
 
         self._messages = messages
+
+    @property
+    def terminated(self):
+        """Gets the terminated of this BTCampaignParams.  # noqa: E501
+
+
+        :return: The terminated of this BTCampaignParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._terminated
+
+    @terminated.setter
+    def terminated(self, terminated):
+        """Sets the terminated of this BTCampaignParams.
+
+
+        :param terminated: The terminated of this BTCampaignParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._terminated = terminated
 
     def to_dict(self):
         """Returns the model properties as a dict"""

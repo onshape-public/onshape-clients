@@ -32,8 +32,11 @@ class BTPModuleId(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'version_and_microversion': 'str',
+        'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
+        'external_document_with_version': 'BTDocumentWithVersionId',
         'external_import': 'bool',
+        'version_and_microversion': 'str',
+        'imported_version_id': 'str',
         'imported_document_id': 'str',
         'legacy': 'bool',
         'dbimport_string': 'str',
@@ -42,15 +45,12 @@ class BTPModuleId(object):
         'potentially_valid': 'bool',
         'valid_legacy_version': 'bool',
         'path_version': 'str',
-        'imported_version_id': 'str',
-        'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
-        'external_document_with_version': 'BTDocumentWithVersionId',
         'short_descriptor': 'str',
         'path': 'BTPLiteralString',
         'version': 'BTPLiteralString',
         'microversion': 'str',
-        'first_child_field': 'int',
         'changeable_child_field_indices': 'list[int]',
+        'first_child_field': 'int',
         'space_before_path': 'BTPSpace',
         'space_after_path': 'BTPSpace',
         'space_before_version': 'BTPSpace',
@@ -74,8 +74,11 @@ class BTPModuleId(object):
     }
 
     attribute_map = {
-        'version_and_microversion': 'versionAndMicroversion',
+        'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
+        'external_document_with_version': 'externalDocumentWithVersion',
         'external_import': 'externalImport',
+        'version_and_microversion': 'versionAndMicroversion',
+        'imported_version_id': 'importedVersionId',
         'imported_document_id': 'importedDocumentId',
         'legacy': 'legacy',
         'dbimport_string': 'dbimportString',
@@ -84,15 +87,12 @@ class BTPModuleId(object):
         'potentially_valid': 'potentiallyValid',
         'valid_legacy_version': 'validLegacyVersion',
         'path_version': 'pathVersion',
-        'imported_version_id': 'importedVersionId',
-        'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
-        'external_document_with_version': 'externalDocumentWithVersion',
         'short_descriptor': 'shortDescriptor',
         'path': 'path',
         'version': 'version',
         'microversion': 'microversion',
-        'first_child_field': 'firstChildField',
         'changeable_child_field_indices': 'changeableChildFieldIndices',
+        'first_child_field': 'firstChildField',
         'space_before_path': 'spaceBeforePath',
         'space_after_path': 'spaceAfterPath',
         'space_before_version': 'spaceBeforeVersion',
@@ -115,11 +115,14 @@ class BTPModuleId(object):
         'unknown_class': 'unknownClass'
     }
 
-    def __init__(self, version_and_microversion=None, external_import=None, imported_document_id=None, legacy=None, dbimport_string=None, imported_element_id=None, element_import=None, potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, external_document_with_version_and_element_id=None, external_document_with_version=None, short_descriptor=None, path=None, version=None, microversion=None, first_child_field=None, changeable_child_field_indices=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
+    def __init__(self, external_document_with_version_and_element_id=None, external_document_with_version=None, external_import=None, version_and_microversion=None, imported_version_id=None, imported_document_id=None, legacy=None, dbimport_string=None, imported_element_id=None, element_import=None, potentially_valid=None, valid_legacy_version=None, path_version=None, short_descriptor=None, path=None, version=None, microversion=None, changeable_child_field_indices=None, first_child_field=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, child_map_indices=None, atomic_child_indices=None, node_id_raw=None, child_list_indices=None, type_id=None, connection_source=None, export_type_name=None, unknown_class=None):  # noqa: E501
         """BTPModuleId - a model defined in OpenAPI"""  # noqa: E501
 
-        self._version_and_microversion = None
+        self._external_document_with_version_and_element_id = None
+        self._external_document_with_version = None
         self._external_import = None
+        self._version_and_microversion = None
+        self._imported_version_id = None
         self._imported_document_id = None
         self._legacy = None
         self._dbimport_string = None
@@ -128,15 +131,12 @@ class BTPModuleId(object):
         self._potentially_valid = None
         self._valid_legacy_version = None
         self._path_version = None
-        self._imported_version_id = None
-        self._external_document_with_version_and_element_id = None
-        self._external_document_with_version = None
         self._short_descriptor = None
         self._path = None
         self._version = None
         self._microversion = None
-        self._first_child_field = None
         self._changeable_child_field_indices = None
+        self._first_child_field = None
         self._space_before_path = None
         self._space_after_path = None
         self._space_before_version = None
@@ -159,10 +159,16 @@ class BTPModuleId(object):
         self._unknown_class = None
         self.discriminator = None
 
-        if version_and_microversion is not None:
-            self.version_and_microversion = version_and_microversion
+        if external_document_with_version_and_element_id is not None:
+            self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
+        if external_document_with_version is not None:
+            self.external_document_with_version = external_document_with_version
         if external_import is not None:
             self.external_import = external_import
+        if version_and_microversion is not None:
+            self.version_and_microversion = version_and_microversion
+        if imported_version_id is not None:
+            self.imported_version_id = imported_version_id
         if imported_document_id is not None:
             self.imported_document_id = imported_document_id
         if legacy is not None:
@@ -179,12 +185,6 @@ class BTPModuleId(object):
             self.valid_legacy_version = valid_legacy_version
         if path_version is not None:
             self.path_version = path_version
-        if imported_version_id is not None:
-            self.imported_version_id = imported_version_id
-        if external_document_with_version_and_element_id is not None:
-            self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
-        if external_document_with_version is not None:
-            self.external_document_with_version = external_document_with_version
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
         if path is not None:
@@ -193,10 +193,10 @@ class BTPModuleId(object):
             self.version = version
         if microversion is not None:
             self.microversion = microversion
-        if first_child_field is not None:
-            self.first_child_field = first_child_field
         if changeable_child_field_indices is not None:
             self.changeable_child_field_indices = changeable_child_field_indices
+        if first_child_field is not None:
+            self.first_child_field = first_child_field
         if space_before_path is not None:
             self.space_before_path = space_before_path
         if space_after_path is not None:
@@ -239,25 +239,46 @@ class BTPModuleId(object):
             self.unknown_class = unknown_class
 
     @property
-    def version_and_microversion(self):
-        """Gets the version_and_microversion of this BTPModuleId.  # noqa: E501
+    def external_document_with_version_and_element_id(self):
+        """Gets the external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
 
 
-        :return: The version_and_microversion of this BTPModuleId.  # noqa: E501
-        :rtype: str
+        :return: The external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
+        :rtype: BTDocumentWithVersionAndElementId
         """
-        return self._version_and_microversion
+        return self._external_document_with_version_and_element_id
 
-    @version_and_microversion.setter
-    def version_and_microversion(self, version_and_microversion):
-        """Sets the version_and_microversion of this BTPModuleId.
+    @external_document_with_version_and_element_id.setter
+    def external_document_with_version_and_element_id(self, external_document_with_version_and_element_id):
+        """Sets the external_document_with_version_and_element_id of this BTPModuleId.
 
 
-        :param version_and_microversion: The version_and_microversion of this BTPModuleId.  # noqa: E501
-        :type: str
+        :param external_document_with_version_and_element_id: The external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
+        :type: BTDocumentWithVersionAndElementId
         """
 
-        self._version_and_microversion = version_and_microversion
+        self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
+
+    @property
+    def external_document_with_version(self):
+        """Gets the external_document_with_version of this BTPModuleId.  # noqa: E501
+
+
+        :return: The external_document_with_version of this BTPModuleId.  # noqa: E501
+        :rtype: BTDocumentWithVersionId
+        """
+        return self._external_document_with_version
+
+    @external_document_with_version.setter
+    def external_document_with_version(self, external_document_with_version):
+        """Sets the external_document_with_version of this BTPModuleId.
+
+
+        :param external_document_with_version: The external_document_with_version of this BTPModuleId.  # noqa: E501
+        :type: BTDocumentWithVersionId
+        """
+
+        self._external_document_with_version = external_document_with_version
 
     @property
     def external_import(self):
@@ -279,6 +300,48 @@ class BTPModuleId(object):
         """
 
         self._external_import = external_import
+
+    @property
+    def version_and_microversion(self):
+        """Gets the version_and_microversion of this BTPModuleId.  # noqa: E501
+
+
+        :return: The version_and_microversion of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_and_microversion
+
+    @version_and_microversion.setter
+    def version_and_microversion(self, version_and_microversion):
+        """Sets the version_and_microversion of this BTPModuleId.
+
+
+        :param version_and_microversion: The version_and_microversion of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._version_and_microversion = version_and_microversion
+
+    @property
+    def imported_version_id(self):
+        """Gets the imported_version_id of this BTPModuleId.  # noqa: E501
+
+
+        :return: The imported_version_id of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._imported_version_id
+
+    @imported_version_id.setter
+    def imported_version_id(self, imported_version_id):
+        """Sets the imported_version_id of this BTPModuleId.
+
+
+        :param imported_version_id: The imported_version_id of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._imported_version_id = imported_version_id
 
     @property
     def imported_document_id(self):
@@ -449,69 +512,6 @@ class BTPModuleId(object):
         self._path_version = path_version
 
     @property
-    def imported_version_id(self):
-        """Gets the imported_version_id of this BTPModuleId.  # noqa: E501
-
-
-        :return: The imported_version_id of this BTPModuleId.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_version_id
-
-    @imported_version_id.setter
-    def imported_version_id(self, imported_version_id):
-        """Sets the imported_version_id of this BTPModuleId.
-
-
-        :param imported_version_id: The imported_version_id of this BTPModuleId.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_version_id = imported_version_id
-
-    @property
-    def external_document_with_version_and_element_id(self):
-        """Gets the external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
-
-
-        :return: The external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
-        :rtype: BTDocumentWithVersionAndElementId
-        """
-        return self._external_document_with_version_and_element_id
-
-    @external_document_with_version_and_element_id.setter
-    def external_document_with_version_and_element_id(self, external_document_with_version_and_element_id):
-        """Sets the external_document_with_version_and_element_id of this BTPModuleId.
-
-
-        :param external_document_with_version_and_element_id: The external_document_with_version_and_element_id of this BTPModuleId.  # noqa: E501
-        :type: BTDocumentWithVersionAndElementId
-        """
-
-        self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
-
-    @property
-    def external_document_with_version(self):
-        """Gets the external_document_with_version of this BTPModuleId.  # noqa: E501
-
-
-        :return: The external_document_with_version of this BTPModuleId.  # noqa: E501
-        :rtype: BTDocumentWithVersionId
-        """
-        return self._external_document_with_version
-
-    @external_document_with_version.setter
-    def external_document_with_version(self, external_document_with_version):
-        """Sets the external_document_with_version of this BTPModuleId.
-
-
-        :param external_document_with_version: The external_document_with_version of this BTPModuleId.  # noqa: E501
-        :type: BTDocumentWithVersionId
-        """
-
-        self._external_document_with_version = external_document_with_version
-
-    @property
     def short_descriptor(self):
         """Gets the short_descriptor of this BTPModuleId.  # noqa: E501
 
@@ -596,27 +596,6 @@ class BTPModuleId(object):
         self._microversion = microversion
 
     @property
-    def first_child_field(self):
-        """Gets the first_child_field of this BTPModuleId.  # noqa: E501
-
-
-        :return: The first_child_field of this BTPModuleId.  # noqa: E501
-        :rtype: int
-        """
-        return self._first_child_field
-
-    @first_child_field.setter
-    def first_child_field(self, first_child_field):
-        """Sets the first_child_field of this BTPModuleId.
-
-
-        :param first_child_field: The first_child_field of this BTPModuleId.  # noqa: E501
-        :type: int
-        """
-
-        self._first_child_field = first_child_field
-
-    @property
     def changeable_child_field_indices(self):
         """Gets the changeable_child_field_indices of this BTPModuleId.  # noqa: E501
 
@@ -636,6 +615,27 @@ class BTPModuleId(object):
         """
 
         self._changeable_child_field_indices = changeable_child_field_indices
+
+    @property
+    def first_child_field(self):
+        """Gets the first_child_field of this BTPModuleId.  # noqa: E501
+
+
+        :return: The first_child_field of this BTPModuleId.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_child_field
+
+    @first_child_field.setter
+    def first_child_field(self, first_child_field):
+        """Sets the first_child_field of this BTPModuleId.
+
+
+        :param first_child_field: The first_child_field of this BTPModuleId.  # noqa: E501
+        :type: int
+        """
+
+        self._first_child_field = first_child_field
 
     @property
     def space_before_path(self):

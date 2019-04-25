@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
+**purchase** | [**BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
 **consumed_quantity** | **int** |  | [optional] 
 **purchase_state** | **int** |  | [optional] 
-**purchase** | [**BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

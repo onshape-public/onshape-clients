@@ -35,9 +35,9 @@ class JsonNode(object):
         'array': 'bool',
         'null': 'bool',
         'float': 'bool',
-        'object': 'bool',
-        'node_type': 'str',
         'textual': 'bool',
+        'node_type': 'str',
+        'object': 'bool',
         'value_node': 'bool',
         'container_node': 'bool',
         'missing_node': 'bool',
@@ -59,9 +59,9 @@ class JsonNode(object):
         'array': 'array',
         'null': 'null',
         'float': 'float',
-        'object': 'object',
-        'node_type': 'nodeType',
         'textual': 'textual',
+        'node_type': 'nodeType',
+        'object': 'object',
         'value_node': 'valueNode',
         'container_node': 'containerNode',
         'missing_node': 'missingNode',
@@ -79,15 +79,15 @@ class JsonNode(object):
         'binary': 'binary'
     }
 
-    def __init__(self, array=None, null=None, float=None, object=None, node_type=None, textual=None, value_node=None, container_node=None, missing_node=None, pojo=None, number=None, integral_number=None, floating_point_number=None, short=None, int=None, long=None, double=None, big_decimal=None, big_integer=None, boolean=None, binary=None):  # noqa: E501
+    def __init__(self, array=None, null=None, float=None, textual=None, node_type=None, object=None, value_node=None, container_node=None, missing_node=None, pojo=None, number=None, integral_number=None, floating_point_number=None, short=None, int=None, long=None, double=None, big_decimal=None, big_integer=None, boolean=None, binary=None):  # noqa: E501
         """JsonNode - a model defined in OpenAPI"""  # noqa: E501
 
         self._array = None
         self._null = None
         self._float = None
-        self._object = None
-        self._node_type = None
         self._textual = None
+        self._node_type = None
+        self._object = None
         self._value_node = None
         self._container_node = None
         self._missing_node = None
@@ -111,12 +111,12 @@ class JsonNode(object):
             self.null = null
         if float is not None:
             self.float = float
-        if object is not None:
-            self.object = object
-        if node_type is not None:
-            self.node_type = node_type
         if textual is not None:
             self.textual = textual
+        if node_type is not None:
+            self.node_type = node_type
+        if object is not None:
+            self.object = object
         if value_node is not None:
             self.value_node = value_node
         if container_node is not None:
@@ -212,25 +212,25 @@ class JsonNode(object):
         self._float = float
 
     @property
-    def object(self):
-        """Gets the object of this JsonNode.  # noqa: E501
+    def textual(self):
+        """Gets the textual of this JsonNode.  # noqa: E501
 
 
-        :return: The object of this JsonNode.  # noqa: E501
+        :return: The textual of this JsonNode.  # noqa: E501
         :rtype: bool
         """
-        return self._object
+        return self._textual
 
-    @object.setter
-    def object(self, object):
-        """Sets the object of this JsonNode.
+    @textual.setter
+    def textual(self, textual):
+        """Sets the textual of this JsonNode.
 
 
-        :param object: The object of this JsonNode.  # noqa: E501
+        :param textual: The textual of this JsonNode.  # noqa: E501
         :type: bool
         """
 
-        self._object = object
+        self._textual = textual
 
     @property
     def node_type(self):
@@ -260,25 +260,25 @@ class JsonNode(object):
         self._node_type = node_type
 
     @property
-    def textual(self):
-        """Gets the textual of this JsonNode.  # noqa: E501
+    def object(self):
+        """Gets the object of this JsonNode.  # noqa: E501
 
 
-        :return: The textual of this JsonNode.  # noqa: E501
+        :return: The object of this JsonNode.  # noqa: E501
         :rtype: bool
         """
-        return self._textual
+        return self._object
 
-    @textual.setter
-    def textual(self, textual):
-        """Sets the textual of this JsonNode.
+    @object.setter
+    def object(self, object):
+        """Sets the object of this JsonNode.
 
 
-        :param textual: The textual of this JsonNode.  # noqa: E501
+        :param object: The object of this JsonNode.  # noqa: E501
         :type: bool
         """
 
-        self._textual = textual
+        self._object = object
 
     @property
     def value_node(self):

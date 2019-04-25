@@ -33,8 +33,8 @@ class BTOwnerInfo(object):
     """
     openapi_types = {
         'type': 'int',
-        'accept_ownership_transfer': 'bool',
         'is_enterprise_owned_resource': 'bool',
+        'accept_ownership_transfer': 'bool',
         'image': 'str',
         'name': 'str',
         'id': 'str',
@@ -44,8 +44,8 @@ class BTOwnerInfo(object):
 
     attribute_map = {
         'type': 'type',
-        'accept_ownership_transfer': 'acceptOwnershipTransfer',
         'is_enterprise_owned_resource': 'isEnterpriseOwnedResource',
+        'accept_ownership_transfer': 'acceptOwnershipTransfer',
         'image': 'image',
         'name': 'name',
         'id': 'id',
@@ -53,12 +53,12 @@ class BTOwnerInfo(object):
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, type=None, accept_ownership_transfer=None, is_enterprise_owned_resource=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, type=None, is_enterprise_owned_resource=None, accept_ownership_transfer=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTOwnerInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
-        self._accept_ownership_transfer = None
         self._is_enterprise_owned_resource = None
+        self._accept_ownership_transfer = None
         self._image = None
         self._name = None
         self._id = None
@@ -68,10 +68,10 @@ class BTOwnerInfo(object):
 
         if type is not None:
             self.type = type
-        if accept_ownership_transfer is not None:
-            self.accept_ownership_transfer = accept_ownership_transfer
         if is_enterprise_owned_resource is not None:
             self.is_enterprise_owned_resource = is_enterprise_owned_resource
+        if accept_ownership_transfer is not None:
+            self.accept_ownership_transfer = accept_ownership_transfer
         if image is not None:
             self.image = image
         if name is not None:
@@ -105,27 +105,6 @@ class BTOwnerInfo(object):
         self._type = type
 
     @property
-    def accept_ownership_transfer(self):
-        """Gets the accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
-
-
-        :return: The accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._accept_ownership_transfer
-
-    @accept_ownership_transfer.setter
-    def accept_ownership_transfer(self, accept_ownership_transfer):
-        """Sets the accept_ownership_transfer of this BTOwnerInfo.
-
-
-        :param accept_ownership_transfer: The accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._accept_ownership_transfer = accept_ownership_transfer
-
-    @property
     def is_enterprise_owned_resource(self):
         """Gets the is_enterprise_owned_resource of this BTOwnerInfo.  # noqa: E501
 
@@ -145,6 +124,27 @@ class BTOwnerInfo(object):
         """
 
         self._is_enterprise_owned_resource = is_enterprise_owned_resource
+
+    @property
+    def accept_ownership_transfer(self):
+        """Gets the accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
+
+
+        :return: The accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._accept_ownership_transfer
+
+    @accept_ownership_transfer.setter
+    def accept_ownership_transfer(self, accept_ownership_transfer):
+        """Sets the accept_ownership_transfer of this BTOwnerInfo.
+
+
+        :param accept_ownership_transfer: The accept_ownership_transfer of this BTOwnerInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._accept_ownership_transfer = accept_ownership_transfer
 
     @property
     def image(self):

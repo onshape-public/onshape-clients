@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **normal** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
 **indices** | **list[int]** |  | [optional] 
-**vertices** | [**list[BTVector3d]**](BTVector3d.md) |  | [optional] 
 **normals** | [**list[BTVector3d]**](BTVector3d.md) |  | [optional] 
+**vertices** | [**list[BTVector3d]**](BTVector3d.md) |  | [optional] 
 **texture_coordinates** | [**list[BTVector2d]**](BTVector2d.md) |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 

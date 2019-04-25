@@ -33,10 +33,10 @@ class BTPlanSubscriberInfo(object):
     """
     openapi_types = {
         'state': 'int',
-        'email': 'str',
+        'image': 'str',
         'first_name': 'str',
         'last_name': 'str',
-        'image': 'str',
+        'email': 'str',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -45,24 +45,24 @@ class BTPlanSubscriberInfo(object):
 
     attribute_map = {
         'state': 'state',
-        'email': 'email',
+        'image': 'image',
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'image': 'image',
+        'email': 'email',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, state=None, email=None, first_name=None, last_name=None, image=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, state=None, image=None, first_name=None, last_name=None, email=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTPlanSubscriberInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._state = None
-        self._email = None
+        self._image = None
         self._first_name = None
         self._last_name = None
-        self._image = None
+        self._email = None
         self._name = None
         self._id = None
         self._href = None
@@ -71,14 +71,14 @@ class BTPlanSubscriberInfo(object):
 
         if state is not None:
             self.state = state
-        if email is not None:
-            self.email = email
+        if image is not None:
+            self.image = image
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
-        if image is not None:
-            self.image = image
+        if email is not None:
+            self.email = email
         if name is not None:
             self.name = name
         if id is not None:
@@ -110,25 +110,25 @@ class BTPlanSubscriberInfo(object):
         self._state = state
 
     @property
-    def email(self):
-        """Gets the email of this BTPlanSubscriberInfo.  # noqa: E501
+    def image(self):
+        """Gets the image of this BTPlanSubscriberInfo.  # noqa: E501
 
 
-        :return: The email of this BTPlanSubscriberInfo.  # noqa: E501
+        :return: The image of this BTPlanSubscriberInfo.  # noqa: E501
         :rtype: str
         """
-        return self._email
+        return self._image
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTPlanSubscriberInfo.
+    @image.setter
+    def image(self, image):
+        """Sets the image of this BTPlanSubscriberInfo.
 
 
-        :param email: The email of this BTPlanSubscriberInfo.  # noqa: E501
+        :param image: The image of this BTPlanSubscriberInfo.  # noqa: E501
         :type: str
         """
 
-        self._email = email
+        self._image = image
 
     @property
     def first_name(self):
@@ -173,25 +173,25 @@ class BTPlanSubscriberInfo(object):
         self._last_name = last_name
 
     @property
-    def image(self):
-        """Gets the image of this BTPlanSubscriberInfo.  # noqa: E501
+    def email(self):
+        """Gets the email of this BTPlanSubscriberInfo.  # noqa: E501
 
 
-        :return: The image of this BTPlanSubscriberInfo.  # noqa: E501
+        :return: The email of this BTPlanSubscriberInfo.  # noqa: E501
         :rtype: str
         """
-        return self._image
+        return self._email
 
-    @image.setter
-    def image(self, image):
-        """Sets the image of this BTPlanSubscriberInfo.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTPlanSubscriberInfo.
 
 
-        :param image: The image of this BTPlanSubscriberInfo.  # noqa: E501
+        :param email: The email of this BTPlanSubscriberInfo.  # noqa: E501
         :type: str
         """
 
-        self._image = image
+        self._email = email
 
     @property
     def name(self):

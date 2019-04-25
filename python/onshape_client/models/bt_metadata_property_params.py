@@ -36,10 +36,7 @@ class BTMetadataPropertyParams(object):
         'name': 'str',
         'id': 'str',
         'description': 'str',
-        'namespace': 'str',
         'owner_id': 'str',
-        'value_type': 'int',
-        'owner_type_ordinal': 'int',
         'property_config_param_list': 'list[BTMetadataPropertyConfigParams]',
         'object_def_name': 'str',
         'blob_mime_type': 'str',
@@ -47,7 +44,10 @@ class BTMetadataPropertyParams(object):
         'editable_in_microversion': 'bool',
         'ui_readonly_in_version': 'bool',
         'ui_readonly_in_microversion': 'bool',
-        'search_boost': 'float'
+        'search_boost': 'float',
+        'namespace': 'str',
+        'value_type': 'int',
+        'owner_type_ordinal': 'int'
     }
 
     attribute_map = {
@@ -55,10 +55,7 @@ class BTMetadataPropertyParams(object):
         'name': 'name',
         'id': 'id',
         'description': 'description',
-        'namespace': 'namespace',
         'owner_id': 'ownerId',
-        'value_type': 'valueType',
-        'owner_type_ordinal': 'ownerTypeOrdinal',
         'property_config_param_list': 'propertyConfigParamList',
         'object_def_name': 'objectDefName',
         'blob_mime_type': 'blobMimeType',
@@ -66,20 +63,20 @@ class BTMetadataPropertyParams(object):
         'editable_in_microversion': 'editableInMicroversion',
         'ui_readonly_in_version': 'uiReadonlyInVersion',
         'ui_readonly_in_microversion': 'uiReadonlyInMicroversion',
-        'search_boost': 'searchBoost'
+        'search_boost': 'searchBoost',
+        'namespace': 'namespace',
+        'value_type': 'valueType',
+        'owner_type_ordinal': 'ownerTypeOrdinal'
     }
 
-    def __init__(self, array=None, name=None, id=None, description=None, namespace=None, owner_id=None, value_type=None, owner_type_ordinal=None, property_config_param_list=None, object_def_name=None, blob_mime_type=None, editable_in_version=None, editable_in_microversion=None, ui_readonly_in_version=None, ui_readonly_in_microversion=None, search_boost=None):  # noqa: E501
+    def __init__(self, array=None, name=None, id=None, description=None, owner_id=None, property_config_param_list=None, object_def_name=None, blob_mime_type=None, editable_in_version=None, editable_in_microversion=None, ui_readonly_in_version=None, ui_readonly_in_microversion=None, search_boost=None, namespace=None, value_type=None, owner_type_ordinal=None):  # noqa: E501
         """BTMetadataPropertyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._array = None
         self._name = None
         self._id = None
         self._description = None
-        self._namespace = None
         self._owner_id = None
-        self._value_type = None
-        self._owner_type_ordinal = None
         self._property_config_param_list = None
         self._object_def_name = None
         self._blob_mime_type = None
@@ -88,6 +85,9 @@ class BTMetadataPropertyParams(object):
         self._ui_readonly_in_version = None
         self._ui_readonly_in_microversion = None
         self._search_boost = None
+        self._namespace = None
+        self._value_type = None
+        self._owner_type_ordinal = None
         self.discriminator = None
 
         if array is not None:
@@ -98,14 +98,8 @@ class BTMetadataPropertyParams(object):
             self.id = id
         if description is not None:
             self.description = description
-        if namespace is not None:
-            self.namespace = namespace
         if owner_id is not None:
             self.owner_id = owner_id
-        if value_type is not None:
-            self.value_type = value_type
-        if owner_type_ordinal is not None:
-            self.owner_type_ordinal = owner_type_ordinal
         if property_config_param_list is not None:
             self.property_config_param_list = property_config_param_list
         if object_def_name is not None:
@@ -122,6 +116,12 @@ class BTMetadataPropertyParams(object):
             self.ui_readonly_in_microversion = ui_readonly_in_microversion
         if search_boost is not None:
             self.search_boost = search_boost
+        if namespace is not None:
+            self.namespace = namespace
+        if value_type is not None:
+            self.value_type = value_type
+        if owner_type_ordinal is not None:
+            self.owner_type_ordinal = owner_type_ordinal
 
     @property
     def array(self):
@@ -208,27 +208,6 @@ class BTMetadataPropertyParams(object):
         self._description = description
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTMetadataPropertyParams.  # noqa: E501
-
-
-        :return: The namespace of this BTMetadataPropertyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMetadataPropertyParams.
-
-
-        :param namespace: The namespace of this BTMetadataPropertyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this BTMetadataPropertyParams.  # noqa: E501
 
@@ -248,48 +227,6 @@ class BTMetadataPropertyParams(object):
         """
 
         self._owner_id = owner_id
-
-    @property
-    def value_type(self):
-        """Gets the value_type of this BTMetadataPropertyParams.  # noqa: E501
-
-
-        :return: The value_type of this BTMetadataPropertyParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._value_type
-
-    @value_type.setter
-    def value_type(self, value_type):
-        """Sets the value_type of this BTMetadataPropertyParams.
-
-
-        :param value_type: The value_type of this BTMetadataPropertyParams.  # noqa: E501
-        :type: int
-        """
-
-        self._value_type = value_type
-
-    @property
-    def owner_type_ordinal(self):
-        """Gets the owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
-
-
-        :return: The owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type_ordinal
-
-    @owner_type_ordinal.setter
-    def owner_type_ordinal(self, owner_type_ordinal):
-        """Sets the owner_type_ordinal of this BTMetadataPropertyParams.
-
-
-        :param owner_type_ordinal: The owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type_ordinal = owner_type_ordinal
 
     @property
     def property_config_param_list(self):
@@ -458,6 +395,69 @@ class BTMetadataPropertyParams(object):
         """
 
         self._search_boost = search_boost
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTMetadataPropertyParams.  # noqa: E501
+
+
+        :return: The namespace of this BTMetadataPropertyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMetadataPropertyParams.
+
+
+        :param namespace: The namespace of this BTMetadataPropertyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
+
+    @property
+    def value_type(self):
+        """Gets the value_type of this BTMetadataPropertyParams.  # noqa: E501
+
+
+        :return: The value_type of this BTMetadataPropertyParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._value_type
+
+    @value_type.setter
+    def value_type(self, value_type):
+        """Sets the value_type of this BTMetadataPropertyParams.
+
+
+        :param value_type: The value_type of this BTMetadataPropertyParams.  # noqa: E501
+        :type: int
+        """
+
+        self._value_type = value_type
+
+    @property
+    def owner_type_ordinal(self):
+        """Gets the owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
+
+
+        :return: The owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type_ordinal
+
+    @owner_type_ordinal.setter
+    def owner_type_ordinal(self, owner_type_ordinal):
+        """Sets the owner_type_ordinal of this BTMetadataPropertyParams.
+
+
+        :param owner_type_ordinal: The owner_type_ordinal of this BTMetadataPropertyParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type_ordinal = owner_type_ordinal
 
     def to_dict(self):
         """Returns the model properties as a dict"""

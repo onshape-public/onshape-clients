@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_mass** | **bool** |  | [optional] 
-**volume** | **list[float]** |  | [optional] 
 **mass_missing_count** | **int** |  | [optional] 
 **mass** | **list[float]** |  | [optional] 
+**volume** | **list[float]** |  | [optional] 
 **periphery** | **list[float]** |  | [optional] 
 **centroid** | **list[float]** |  | [optional] 
 **inertia** | **list[float]** |  | [optional] 

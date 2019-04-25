@@ -33,9 +33,9 @@ class BTPurchaseUserInfo(object):
     """
     openapi_types = {
         'user': 'BTUserBasicSummaryInfo',
+        'purchase': 'BTPurchaseInfo',
         'consumed_quantity': 'int',
         'purchase_state': 'int',
-        'purchase': 'BTPurchaseInfo',
         'name': 'str',
         'id': 'str',
         'href': 'str',
@@ -44,22 +44,22 @@ class BTPurchaseUserInfo(object):
 
     attribute_map = {
         'user': 'user',
+        'purchase': 'purchase',
         'consumed_quantity': 'consumedQuantity',
         'purchase_state': 'purchaseState',
-        'purchase': 'purchase',
         'name': 'name',
         'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef'
     }
 
-    def __init__(self, user=None, consumed_quantity=None, purchase_state=None, purchase=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, user=None, purchase=None, consumed_quantity=None, purchase_state=None, name=None, id=None, href=None, view_ref=None):  # noqa: E501
         """BTPurchaseUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._user = None
+        self._purchase = None
         self._consumed_quantity = None
         self._purchase_state = None
-        self._purchase = None
         self._name = None
         self._id = None
         self._href = None
@@ -68,12 +68,12 @@ class BTPurchaseUserInfo(object):
 
         if user is not None:
             self.user = user
+        if purchase is not None:
+            self.purchase = purchase
         if consumed_quantity is not None:
             self.consumed_quantity = consumed_quantity
         if purchase_state is not None:
             self.purchase_state = purchase_state
-        if purchase is not None:
-            self.purchase = purchase
         if name is not None:
             self.name = name
         if id is not None:
@@ -103,6 +103,27 @@ class BTPurchaseUserInfo(object):
         """
 
         self._user = user
+
+    @property
+    def purchase(self):
+        """Gets the purchase of this BTPurchaseUserInfo.  # noqa: E501
+
+
+        :return: The purchase of this BTPurchaseUserInfo.  # noqa: E501
+        :rtype: BTPurchaseInfo
+        """
+        return self._purchase
+
+    @purchase.setter
+    def purchase(self, purchase):
+        """Sets the purchase of this BTPurchaseUserInfo.
+
+
+        :param purchase: The purchase of this BTPurchaseUserInfo.  # noqa: E501
+        :type: BTPurchaseInfo
+        """
+
+        self._purchase = purchase
 
     @property
     def consumed_quantity(self):
@@ -145,27 +166,6 @@ class BTPurchaseUserInfo(object):
         """
 
         self._purchase_state = purchase_state
-
-    @property
-    def purchase(self):
-        """Gets the purchase of this BTPurchaseUserInfo.  # noqa: E501
-
-
-        :return: The purchase of this BTPurchaseUserInfo.  # noqa: E501
-        :rtype: BTPurchaseInfo
-        """
-        return self._purchase
-
-    @purchase.setter
-    def purchase(self, purchase):
-        """Sets the purchase of this BTPurchaseUserInfo.
-
-
-        :param purchase: The purchase of this BTPurchaseUserInfo.  # noqa: E501
-        :type: BTPurchaseInfo
-        """
-
-        self._purchase = purchase
 
     @property
     def name(self):

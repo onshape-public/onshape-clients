@@ -33,10 +33,10 @@ class BTAssociativeDataParams(object):
     """
     openapi_types = {
         'type': 'str',
-        'id_tag': 'str',
-        'microversion_id': 'str',
         'data': 'list[BTNameValuePair]',
-        'configuration': 'str',
+        'id_tag': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_microversion': 'str',
@@ -45,16 +45,16 @@ class BTAssociativeDataParams(object):
         'view_id': 'str',
         'occurrence_id': 'str',
         'is_hidden_base_view': 'bool',
-        'version_id': 'str',
-        'document_id': 'str'
+        'microversion_id': 'str',
+        'configuration': 'str'
     }
 
     attribute_map = {
         'type': 'type',
-        'id_tag': 'idTag',
-        'microversion_id': 'microversionId',
         'data': 'data',
-        'configuration': 'configuration',
+        'id_tag': 'idTag',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_microversion': 'documentMicroversion',
@@ -63,18 +63,18 @@ class BTAssociativeDataParams(object):
         'view_id': 'viewId',
         'occurrence_id': 'occurrenceId',
         'is_hidden_base_view': 'isHiddenBaseView',
-        'version_id': 'versionId',
-        'document_id': 'documentId'
+        'microversion_id': 'microversionId',
+        'configuration': 'configuration'
     }
 
-    def __init__(self, type=None, id_tag=None, microversion_id=None, data=None, configuration=None, workspace_id=None, element_id=None, document_microversion=None, associative_data_id=None, operation=None, view_id=None, occurrence_id=None, is_hidden_base_view=None, version_id=None, document_id=None):  # noqa: E501
+    def __init__(self, type=None, data=None, id_tag=None, version_id=None, document_id=None, workspace_id=None, element_id=None, document_microversion=None, associative_data_id=None, operation=None, view_id=None, occurrence_id=None, is_hidden_base_view=None, microversion_id=None, configuration=None):  # noqa: E501
         """BTAssociativeDataParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
-        self._id_tag = None
-        self._microversion_id = None
         self._data = None
-        self._configuration = None
+        self._id_tag = None
+        self._version_id = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
         self._document_microversion = None
@@ -83,20 +83,20 @@ class BTAssociativeDataParams(object):
         self._view_id = None
         self._occurrence_id = None
         self._is_hidden_base_view = None
-        self._version_id = None
-        self._document_id = None
+        self._microversion_id = None
+        self._configuration = None
         self.discriminator = None
 
         if type is not None:
             self.type = type
-        if id_tag is not None:
-            self.id_tag = id_tag
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
         if data is not None:
             self.data = data
-        if configuration is not None:
-            self.configuration = configuration
+        if id_tag is not None:
+            self.id_tag = id_tag
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
@@ -113,10 +113,10 @@ class BTAssociativeDataParams(object):
             self.occurrence_id = occurrence_id
         if is_hidden_base_view is not None:
             self.is_hidden_base_view = is_hidden_base_view
-        if version_id is not None:
-            self.version_id = version_id
-        if document_id is not None:
-            self.document_id = document_id
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
+        if configuration is not None:
+            self.configuration = configuration
 
     @property
     def type(self):
@@ -146,48 +146,6 @@ class BTAssociativeDataParams(object):
         self._type = type
 
     @property
-    def id_tag(self):
-        """Gets the id_tag of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The id_tag of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_tag
-
-    @id_tag.setter
-    def id_tag(self, id_tag):
-        """Sets the id_tag of this BTAssociativeDataParams.
-
-
-        :param id_tag: The id_tag of this BTAssociativeDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._id_tag = id_tag
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTAssociativeDataParams.  # noqa: E501
-
-
-        :return: The microversion_id of this BTAssociativeDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTAssociativeDataParams.
-
-
-        :param microversion_id: The microversion_id of this BTAssociativeDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
     def data(self):
         """Gets the data of this BTAssociativeDataParams.  # noqa: E501
 
@@ -209,25 +167,67 @@ class BTAssociativeDataParams(object):
         self._data = data
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTAssociativeDataParams.  # noqa: E501
+    def id_tag(self):
+        """Gets the id_tag of this BTAssociativeDataParams.  # noqa: E501
 
 
-        :return: The configuration of this BTAssociativeDataParams.  # noqa: E501
+        :return: The id_tag of this BTAssociativeDataParams.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._id_tag
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTAssociativeDataParams.
+    @id_tag.setter
+    def id_tag(self, id_tag):
+        """Sets the id_tag of this BTAssociativeDataParams.
 
 
-        :param configuration: The configuration of this BTAssociativeDataParams.  # noqa: E501
+        :param id_tag: The id_tag of this BTAssociativeDataParams.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._id_tag = id_tag
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTAssociativeDataParams.
+
+
+        :param version_id: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTAssociativeDataParams.  # noqa: E501
+
+
+        :return: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAssociativeDataParams.
+
+
+        :param document_id: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -404,46 +404,46 @@ class BTAssociativeDataParams(object):
         self._is_hidden_base_view = is_hidden_base_view
 
     @property
-    def version_id(self):
-        """Gets the version_id of this BTAssociativeDataParams.  # noqa: E501
+    def microversion_id(self):
+        """Gets the microversion_id of this BTAssociativeDataParams.  # noqa: E501
 
 
-        :return: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :return: The microversion_id of this BTAssociativeDataParams.  # noqa: E501
         :rtype: str
         """
-        return self._version_id
+        return self._microversion_id
 
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTAssociativeDataParams.
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTAssociativeDataParams.
 
 
-        :param version_id: The version_id of this BTAssociativeDataParams.  # noqa: E501
+        :param microversion_id: The microversion_id of this BTAssociativeDataParams.  # noqa: E501
         :type: str
         """
 
-        self._version_id = version_id
+        self._microversion_id = microversion_id
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTAssociativeDataParams.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTAssociativeDataParams.  # noqa: E501
 
 
-        :return: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :return: The configuration of this BTAssociativeDataParams.  # noqa: E501
         :rtype: str
         """
-        return self._document_id
+        return self._configuration
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAssociativeDataParams.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTAssociativeDataParams.
 
 
-        :param document_id: The document_id of this BTAssociativeDataParams.  # noqa: E501
+        :param configuration: The configuration of this BTAssociativeDataParams.  # noqa: E501
         :type: str
         """
 
-        self._document_id = document_id
+        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

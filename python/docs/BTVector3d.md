@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **values** | **list[float]** |  | [optional] 
-**x** | **float** |  | [optional] 
 **y** | **float** |  | [optional] 
+**x** | **float** |  | [optional] 
 **z** | **float** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 

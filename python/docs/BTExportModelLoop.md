@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_inner** | **bool** |  | [optional] 
 **is_outer** | **bool** |  | [optional] 
 **coedges** | [**list[BTExportModelCoedge]**](BTExportModelCoedge.md) |  | [optional] 
+**is_inner** | **bool** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

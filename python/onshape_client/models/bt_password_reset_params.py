@@ -33,35 +33,35 @@ class BTPasswordResetParams(object):
     """
     openapi_types = {
         'id': 'str',
-        'email': 'str',
         'password': 'str',
-        'secret': 'str'
+        'secret': 'str',
+        'email': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'email': 'email',
         'password': 'password',
-        'secret': 'secret'
+        'secret': 'secret',
+        'email': 'email'
     }
 
-    def __init__(self, id=None, email=None, password=None, secret=None):  # noqa: E501
+    def __init__(self, id=None, password=None, secret=None, email=None):  # noqa: E501
         """BTPasswordResetParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
-        self._email = None
         self._password = None
         self._secret = None
+        self._email = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if email is not None:
-            self.email = email
         if password is not None:
             self.password = password
         if secret is not None:
             self.secret = secret
+        if email is not None:
+            self.email = email
 
     @property
     def id(self):
@@ -83,27 +83,6 @@ class BTPasswordResetParams(object):
         """
 
         self._id = id
-
-    @property
-    def email(self):
-        """Gets the email of this BTPasswordResetParams.  # noqa: E501
-
-
-        :return: The email of this BTPasswordResetParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTPasswordResetParams.
-
-
-        :param email: The email of this BTPasswordResetParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
 
     @property
     def password(self):
@@ -146,6 +125,27 @@ class BTPasswordResetParams(object):
         """
 
         self._secret = secret
+
+    @property
+    def email(self):
+        """Gets the email of this BTPasswordResetParams.  # noqa: E501
+
+
+        :return: The email of this BTPasswordResetParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTPasswordResetParams.
+
+
+        :param email: The email of this BTPasswordResetParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **upto_point3d** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
+**upto_point** | **list[float]** |  | [optional] 
 **has_upto_point** | **bool** |  | [optional] 
 **has_offset** | **bool** |  | [optional] 
 **offset_distance** | **float** |  | [optional] 
 **offset_opposite_direction** | **bool** |  | [optional] 
-**upto_point** | **list[float]** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

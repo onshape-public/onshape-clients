@@ -32,57 +32,36 @@ class BTUserEmailVerifyParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email': 'str',
         'user_id': 'str',
         'request_id': 'str',
-        'secret': 'str'
+        'secret': 'str',
+        'email': 'str'
     }
 
     attribute_map = {
-        'email': 'email',
         'user_id': 'userId',
         'request_id': 'requestId',
-        'secret': 'secret'
+        'secret': 'secret',
+        'email': 'email'
     }
 
-    def __init__(self, email=None, user_id=None, request_id=None, secret=None):  # noqa: E501
+    def __init__(self, user_id=None, request_id=None, secret=None, email=None):  # noqa: E501
         """BTUserEmailVerifyParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._email = None
         self._user_id = None
         self._request_id = None
         self._secret = None
+        self._email = None
         self.discriminator = None
 
-        if email is not None:
-            self.email = email
         if user_id is not None:
             self.user_id = user_id
         if request_id is not None:
             self.request_id = request_id
         if secret is not None:
             self.secret = secret
-
-    @property
-    def email(self):
-        """Gets the email of this BTUserEmailVerifyParams.  # noqa: E501
-
-
-        :return: The email of this BTUserEmailVerifyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTUserEmailVerifyParams.
-
-
-        :param email: The email of this BTUserEmailVerifyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
+        if email is not None:
+            self.email = email
 
     @property
     def user_id(self):
@@ -146,6 +125,27 @@ class BTUserEmailVerifyParams(object):
         """
 
         self._secret = secret
+
+    @property
+    def email(self):
+        """Gets the email of this BTUserEmailVerifyParams.  # noqa: E501
+
+
+        :return: The email of this BTUserEmailVerifyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTUserEmailVerifyParams.
+
+
+        :param email: The email of this BTUserEmailVerifyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """Returns the model properties as a dict"""

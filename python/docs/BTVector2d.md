@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**x** | **float** |  | [optional] 
 **y** | **float** |  | [optional] 
+**x** | **float** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**full_path_as_string** | **str** |  | [optional] 
 **root_occurrence** | **bool** |  | [optional] 
+**full_path_as_string** | **str** |  | [optional] 
 **tail_instance_id** | **str** |  | [optional] 
 **head_instance_id** | **str** |  | [optional] 
 **occurrence_without_head** | [**BTOccurrence**](BTOccurrence.md) |  | [optional] 

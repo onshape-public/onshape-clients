@@ -35,9 +35,9 @@ class BTAddressInfo(object):
         'id': 'str',
         'state': 'str',
         'address': 'str',
-        'country': 'str',
         'city': 'str',
         'state_code': 'str',
+        'country': 'str',
         'country_code': 'str',
         'zip': 'str'
     }
@@ -46,22 +46,22 @@ class BTAddressInfo(object):
         'id': 'id',
         'state': 'state',
         'address': 'address',
-        'country': 'country',
         'city': 'city',
         'state_code': 'stateCode',
+        'country': 'country',
         'country_code': 'countryCode',
         'zip': 'zip'
     }
 
-    def __init__(self, id=None, state=None, address=None, country=None, city=None, state_code=None, country_code=None, zip=None):  # noqa: E501
+    def __init__(self, id=None, state=None, address=None, city=None, state_code=None, country=None, country_code=None, zip=None):  # noqa: E501
         """BTAddressInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._state = None
         self._address = None
-        self._country = None
         self._city = None
         self._state_code = None
+        self._country = None
         self._country_code = None
         self._zip = None
         self.discriminator = None
@@ -72,12 +72,12 @@ class BTAddressInfo(object):
             self.state = state
         if address is not None:
             self.address = address
-        if country is not None:
-            self.country = country
         if city is not None:
             self.city = city
         if state_code is not None:
             self.state_code = state_code
+        if country is not None:
+            self.country = country
         if country_code is not None:
             self.country_code = country_code
         if zip is not None:
@@ -147,27 +147,6 @@ class BTAddressInfo(object):
         self._address = address
 
     @property
-    def country(self):
-        """Gets the country of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The country of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._country
-
-    @country.setter
-    def country(self, country):
-        """Sets the country of this BTAddressInfo.
-
-
-        :param country: The country of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._country = country
-
-    @property
     def city(self):
         """Gets the city of this BTAddressInfo.  # noqa: E501
 
@@ -208,6 +187,27 @@ class BTAddressInfo(object):
         """
 
         self._state_code = state_code
+
+    @property
+    def country(self):
+        """Gets the country of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The country of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """Sets the country of this BTAddressInfo.
+
+
+        :param country: The country of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._country = country
 
     @property
     def country_code(self):

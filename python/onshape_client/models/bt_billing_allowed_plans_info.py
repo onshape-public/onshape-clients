@@ -32,31 +32,52 @@ class BTBillingAllowedPlansInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'current_plan': 'BTBillingPlanSummaryInfo',
         'upgrades': 'list[BTBillingPlanSummaryInfo]',
-        'downgrades': 'list[BTBillingPlanSummaryInfo]',
-        'current_plan': 'BTBillingPlanSummaryInfo'
+        'downgrades': 'list[BTBillingPlanSummaryInfo]'
     }
 
     attribute_map = {
+        'current_plan': 'currentPlan',
         'upgrades': 'upgrades',
-        'downgrades': 'downgrades',
-        'current_plan': 'currentPlan'
+        'downgrades': 'downgrades'
     }
 
-    def __init__(self, upgrades=None, downgrades=None, current_plan=None):  # noqa: E501
+    def __init__(self, current_plan=None, upgrades=None, downgrades=None):  # noqa: E501
         """BTBillingAllowedPlansInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._current_plan = None
         self._upgrades = None
         self._downgrades = None
-        self._current_plan = None
         self.discriminator = None
 
+        if current_plan is not None:
+            self.current_plan = current_plan
         if upgrades is not None:
             self.upgrades = upgrades
         if downgrades is not None:
             self.downgrades = downgrades
-        if current_plan is not None:
-            self.current_plan = current_plan
+
+    @property
+    def current_plan(self):
+        """Gets the current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
+
+
+        :return: The current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
+        :rtype: BTBillingPlanSummaryInfo
+        """
+        return self._current_plan
+
+    @current_plan.setter
+    def current_plan(self, current_plan):
+        """Sets the current_plan of this BTBillingAllowedPlansInfo.
+
+
+        :param current_plan: The current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
+        :type: BTBillingPlanSummaryInfo
+        """
+
+        self._current_plan = current_plan
 
     @property
     def upgrades(self):
@@ -99,27 +120,6 @@ class BTBillingAllowedPlansInfo(object):
         """
 
         self._downgrades = downgrades
-
-    @property
-    def current_plan(self):
-        """Gets the current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
-
-
-        :return: The current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
-        :rtype: BTBillingPlanSummaryInfo
-        """
-        return self._current_plan
-
-    @current_plan.setter
-    def current_plan(self, current_plan):
-        """Sets the current_plan of this BTBillingAllowedPlansInfo.
-
-
-        :param current_plan: The current_plan of this BTBillingAllowedPlansInfo.  # noqa: E501
-        :type: BTBillingPlanSummaryInfo
-        """
-
-        self._current_plan = current_plan
 
     def to_dict(self):
         """Returns the model properties as a dict"""

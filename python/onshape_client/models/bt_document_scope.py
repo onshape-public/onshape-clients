@@ -32,72 +32,51 @@ class BTDocumentScope(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration': 'str',
         'document_microversion_id': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'asserted_element_type': 'str',
-        'version_id': 'str',
-        'document_id': 'str'
+        'configuration': 'str'
     }
 
     attribute_map = {
-        'configuration': 'configuration',
         'document_microversion_id': 'documentMicroversionId',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'asserted_element_type': 'assertedElementType',
-        'version_id': 'versionId',
-        'document_id': 'documentId'
+        'configuration': 'configuration'
     }
 
-    def __init__(self, configuration=None, document_microversion_id=None, workspace_id=None, element_id=None, asserted_element_type=None, version_id=None, document_id=None):  # noqa: E501
+    def __init__(self, document_microversion_id=None, version_id=None, document_id=None, workspace_id=None, element_id=None, asserted_element_type=None, configuration=None):  # noqa: E501
         """BTDocumentScope - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration = None
         self._document_microversion_id = None
+        self._version_id = None
+        self._document_id = None
         self._workspace_id = None
         self._element_id = None
         self._asserted_element_type = None
-        self._version_id = None
-        self._document_id = None
+        self._configuration = None
         self.discriminator = None
 
-        if configuration is not None:
-            self.configuration = configuration
         if document_microversion_id is not None:
             self.document_microversion_id = document_microversion_id
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
         if asserted_element_type is not None:
             self.asserted_element_type = asserted_element_type
-        if version_id is not None:
-            self.version_id = version_id
-        if document_id is not None:
-            self.document_id = document_id
-
-    @property
-    def configuration(self):
-        """Gets the configuration of this BTDocumentScope.  # noqa: E501
-
-
-        :return: The configuration of this BTDocumentScope.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTDocumentScope.
-
-
-        :param configuration: The configuration of this BTDocumentScope.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration = configuration
+        if configuration is not None:
+            self.configuration = configuration
 
     @property
     def document_microversion_id(self):
@@ -119,6 +98,48 @@ class BTDocumentScope(object):
         """
 
         self._document_microversion_id = document_microversion_id
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTDocumentScope.  # noqa: E501
+
+
+        :return: The version_id of this BTDocumentScope.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTDocumentScope.
+
+
+        :param version_id: The version_id of this BTDocumentScope.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTDocumentScope.  # noqa: E501
+
+
+        :return: The document_id of this BTDocumentScope.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTDocumentScope.
+
+
+        :param document_id: The document_id of this BTDocumentScope.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def workspace_id(self):
@@ -184,46 +205,25 @@ class BTDocumentScope(object):
         self._asserted_element_type = asserted_element_type
 
     @property
-    def version_id(self):
-        """Gets the version_id of this BTDocumentScope.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTDocumentScope.  # noqa: E501
 
 
-        :return: The version_id of this BTDocumentScope.  # noqa: E501
+        :return: The configuration of this BTDocumentScope.  # noqa: E501
         :rtype: str
         """
-        return self._version_id
+        return self._configuration
 
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTDocumentScope.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTDocumentScope.
 
 
-        :param version_id: The version_id of this BTDocumentScope.  # noqa: E501
+        :param configuration: The configuration of this BTDocumentScope.  # noqa: E501
         :type: str
         """
 
-        self._version_id = version_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTDocumentScope.  # noqa: E501
-
-
-        :return: The document_id of this BTDocumentScope.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTDocumentScope.
-
-
-        :param document_id: The document_id of this BTDocumentScope.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

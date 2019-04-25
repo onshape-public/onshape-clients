@@ -34,44 +34,44 @@ class BTWorkflowStateInfo(object):
     openapi_types = {
         'name': 'str',
         'display_name': 'str',
-        'required_properties': 'list[str]',
+        'approver_source_property': 'str',
         'notifier_source_property': 'str',
         'editable_properties': 'list[str]',
-        'approver_source_property': 'str'
+        'required_properties': 'list[str]'
     }
 
     attribute_map = {
         'name': 'name',
         'display_name': 'displayName',
-        'required_properties': 'requiredProperties',
+        'approver_source_property': 'approverSourceProperty',
         'notifier_source_property': 'notifierSourceProperty',
         'editable_properties': 'editableProperties',
-        'approver_source_property': 'approverSourceProperty'
+        'required_properties': 'requiredProperties'
     }
 
-    def __init__(self, name=None, display_name=None, required_properties=None, notifier_source_property=None, editable_properties=None, approver_source_property=None):  # noqa: E501
+    def __init__(self, name=None, display_name=None, approver_source_property=None, notifier_source_property=None, editable_properties=None, required_properties=None):  # noqa: E501
         """BTWorkflowStateInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
         self._display_name = None
-        self._required_properties = None
+        self._approver_source_property = None
         self._notifier_source_property = None
         self._editable_properties = None
-        self._approver_source_property = None
+        self._required_properties = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
         if display_name is not None:
             self.display_name = display_name
-        if required_properties is not None:
-            self.required_properties = required_properties
+        if approver_source_property is not None:
+            self.approver_source_property = approver_source_property
         if notifier_source_property is not None:
             self.notifier_source_property = notifier_source_property
         if editable_properties is not None:
             self.editable_properties = editable_properties
-        if approver_source_property is not None:
-            self.approver_source_property = approver_source_property
+        if required_properties is not None:
+            self.required_properties = required_properties
 
     @property
     def name(self):
@@ -116,25 +116,25 @@ class BTWorkflowStateInfo(object):
         self._display_name = display_name
 
     @property
-    def required_properties(self):
-        """Gets the required_properties of this BTWorkflowStateInfo.  # noqa: E501
+    def approver_source_property(self):
+        """Gets the approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
 
 
-        :return: The required_properties of this BTWorkflowStateInfo.  # noqa: E501
-        :rtype: list[str]
+        :return: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._required_properties
+        return self._approver_source_property
 
-    @required_properties.setter
-    def required_properties(self, required_properties):
-        """Sets the required_properties of this BTWorkflowStateInfo.
+    @approver_source_property.setter
+    def approver_source_property(self, approver_source_property):
+        """Sets the approver_source_property of this BTWorkflowStateInfo.
 
 
-        :param required_properties: The required_properties of this BTWorkflowStateInfo.  # noqa: E501
-        :type: list[str]
+        :param approver_source_property: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
+        :type: str
         """
 
-        self._required_properties = required_properties
+        self._approver_source_property = approver_source_property
 
     @property
     def notifier_source_property(self):
@@ -179,25 +179,25 @@ class BTWorkflowStateInfo(object):
         self._editable_properties = editable_properties
 
     @property
-    def approver_source_property(self):
-        """Gets the approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
+    def required_properties(self):
+        """Gets the required_properties of this BTWorkflowStateInfo.  # noqa: E501
 
 
-        :return: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
-        :rtype: str
+        :return: The required_properties of this BTWorkflowStateInfo.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._approver_source_property
+        return self._required_properties
 
-    @approver_source_property.setter
-    def approver_source_property(self, approver_source_property):
-        """Sets the approver_source_property of this BTWorkflowStateInfo.
+    @required_properties.setter
+    def required_properties(self, required_properties):
+        """Sets the required_properties of this BTWorkflowStateInfo.
 
 
-        :param approver_source_property: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
-        :type: str
+        :param required_properties: The required_properties of this BTWorkflowStateInfo.  # noqa: E501
+        :type: list[str]
         """
 
-        self._approver_source_property = approver_source_property
+        self._required_properties = required_properties
 
     def to_dict(self):
         """Returns the model properties as a dict"""

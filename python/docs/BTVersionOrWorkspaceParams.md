@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**microversion_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
 **read_only** | **bool** |  | [optional] 
 **is_release** | **bool** |  | [optional] 
 **from_history** | **bool** |  | [optional] 
