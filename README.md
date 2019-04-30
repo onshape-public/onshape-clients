@@ -13,7 +13,7 @@ It is generated using Swagger Codegen from our OpenAPI API definition. For docum
 ## Installation
 
 This package can be installed from pip:
-`pip install onshape`
+`pip install onshape-client`
 
 ## Quick example
 
