@@ -7,6 +7,7 @@ from requests_oauthlib import OAuth2Session
 from onshape_client.oauth.local_server import start_server
 from enum import Enum
 import webbrowser
+from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError
 
 
 
@@ -106,9 +107,12 @@ class Client:
         """Do the oauth flow to set the access token"""
         try:
             self._refresh_access_token()
-        except BaseException as e:
+        except (UnauthorizedClientError, UnsupportedGrantTypeError) as e:
             authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
-            if authorization_method == OAuthAuthorizationMethods.LOCALHOST_SERVER:
+            oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
+            if oauth_type == OAuthAuthorizationMethods.MANUAL_FLOW:
+                raise OAuthNotAuthorizedException("You need to have the user authorize the grant.")
+            elif authorization_method == OAuthAuthorizationMethods.LOCALHOST_SERVER:
                 start_server(self.fetch_access_token, self.open_authorize_grant)
             elif authorization_method == OAuthAuthorizationMethods.PYTHON_CALLBACK:
                 self.open_authorize_grant()
@@ -119,9 +123,7 @@ class Client:
         oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
         url = self.get_authorization_url()
         defaults_supported = [OAuthAuthorizationMethods.LOCALHOST_SERVER]
-        if oauth_type == OAuthAuthorizationMethods.MANUAL_FLOW:
-            raise OAuthNotAuthorizedException("You need to have the user authorize the grant.")
-        elif not callback and oauth_type not in defaults_supported:
+        if not callback and oauth_type not in defaults_supported:
             raise NotImplementedError("To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
         elif callback:
             try:

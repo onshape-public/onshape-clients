@@ -134,6 +134,9 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return self._get_parameter_map()[name]["message"]["parameterId"]
 
     def _get_parameter_map(self):
+        """Returns a map from the user-defined parameter names to the parameterIds ex: {"myEnumParam": "Listisds32d"}
+        :return:
+        """
         config_params = self._get_raw_configuration_params()
         parameter_map = {}
         for i, p in enumerate(config_params["configurationParameters"]):

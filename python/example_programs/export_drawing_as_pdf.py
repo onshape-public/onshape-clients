@@ -14,7 +14,7 @@ client = Client()
 client.configuration.temp_folder_path = os.path.expanduser("~")
 
 # Turn the URL into an "OnshapeElement"
-url = "https://staging.dev.onshape.com/documents/cc8154a298d6e4f0d3785559/w/02965009bd322d4c4a7410d9/e/d84accbbe9992c7ce7ea59a9"
+url = "https://staging.dev.onshape.com/documents/85820308b21bc556da71354e/w/6e6f91f91d8bba3d8453de91/e/6155878d774398248dea31b9"
 cube = OnshapeElement(url, client=client)
 
 # Create the params. Note there are far more params that can be specified.
