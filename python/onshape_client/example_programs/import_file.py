@@ -25,15 +25,16 @@ def import_file(file_path, did, wid):
         r = client.translation_api.get_translation(translation_id, _preload_content=False)
         state = get_field(r, "requestState")
 
+    element_id = get_field(r, 'resultElementIds')[0]
     # Make the actual download when the translation is done, otherwise report the error
     if state == "DONE":
         print("Translated document available at {host}/documents/{did}/w/{wid}/e/{eid}".format(host=client.configuration.host,
                                                                                 did=get_field(r, 'documentId'),
                                                                                 wid=get_field(r, 'workspaceId'),
-                                                                                eid=get_field(r, 'resultElementIds')[0]))
+                                                                                eid=element_id))
     else:
         print("An error ocurred on the server! Here is the response: \n")
-
+    return element_id
 
 if __name__ == "__main__":
     element = OnshapeElement(

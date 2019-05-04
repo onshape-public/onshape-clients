@@ -134,7 +134,7 @@ class PartStudiosApi(object):
             body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/vnd.onshape.v2+json;charset=UTF-8; qs=0.2'])  # noqa: E501
+            ['application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1', 'application/json;charset=UTF-8; qs=0.9'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501

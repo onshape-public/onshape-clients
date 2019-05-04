@@ -13,6 +13,11 @@ class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
     create the useful fields."""
 
+    @staticmethod
+    def create_from_ids(did, wvm, wvmid, eid):
+        client = Client.get_client()
+        return OnshapeElement(client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid + "/e/" + eid)
+
     def __init__(self, url, *args, **kwargs):
 
         self.client = Client.get_client()
