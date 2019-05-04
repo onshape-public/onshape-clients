@@ -166,7 +166,7 @@ class RESTClientObject(object):
         def make_boundary_key_and_ctype_header():
             boundary = binascii.hexlify(os.urandom(16))
             boundary = boundary.decode('ascii')
-            return boundary, str('multipart/form-data; boundary=%s' % boundary)
+            return str(boundary), str('multipart/form-data; boundary=%s' % boundary)
         if headers['Content-Type'] == 'multipart/form-data':
             (boundary_key, ctype) = make_boundary_key_and_ctype_header()
             headers['Content-Type'] = ctype
@@ -209,7 +209,7 @@ class RESTClientObject(object):
                         preload_content=_preload_content,
                         timeout=timeout,
                         headers=headers,
-                        boundary=boundary_key)
+                        multipart_boundary=boundary_key)
                 # Pass a `string` parameter directly in the body to support
                 # other content types than Json when `body` argument is
                 # provided in serialized form

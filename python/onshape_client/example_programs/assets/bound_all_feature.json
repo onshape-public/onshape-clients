@@ -1,0 +1,125 @@
+{
+    "type" : 134,
+    "typeName" : "BTMFeature",
+    "message" : {
+      "featureType" : "calculateBounds",
+      "featureId" : "FlZAafY0nZe70je_112",
+      "name" : "Calculate bounds 1",
+      "parameters" : [ {
+        "type" : 145,
+        "typeName" : "BTMParameterEnum",
+        "message" : {
+          "enumName" : "BoundsFeatureResult",
+          "value" : "PART",
+          "namespace" : "e9e6e33ee18d0684e6ccf638b::m2234f47dd27193645ae48db9",
+          "parameterId" : "featureResult",
+          "hasUserCode" : false,
+          "nodeId" : "AIWF/EaQIMePGU8p"
+        }
+      }, {
+        "type" : 145,
+        "typeName" : "BTMParameterEnum",
+        "message" : {
+          "enumName" : "UnitOutput",
+          "value" : "millimeter",
+          "namespace" : "e9e6e33ee18d0684e6ccf638b::m2234f47dd27193645ae48db9",
+          "parameterId" : "unitOutput",
+          "hasUserCode" : false,
+          "nodeId" : "Ivb+7hM00wWh/bEF"
+        }
+      }, {
+        "type" : 144,
+        "typeName" : "BTMParameterBoolean",
+        "message" : {
+          "value" : true,
+          "parameterId" : "defaultScope",
+          "hasUserCode" : false,
+          "nodeId" : "a0JIjTJaS0Az2yCi"
+        }
+      }, {
+        "type" : 148,
+        "typeName" : "BTMParameterQueryList",
+        "message" : {
+          "queries" : [ ],
+          "parameterId" : "bodies",
+          "hasUserCode" : false,
+          "nodeId" : "GaSRnICJ35FwA6PE"
+        }
+      }, {
+        "type" : 144,
+        "typeName" : "BTMParameterBoolean",
+        "message" : {
+          "value" : false,
+          "parameterId" : "sheetMetal",
+          "hasUserCode" : false,
+          "nodeId" : "g+fC/9mgjMN0ku5O"
+        }
+      }, {
+        "type" : 144,
+        "typeName" : "BTMParameterBoolean",
+        "message" : {
+          "value" : false,
+          "parameterId" : "useFlat",
+          "hasUserCode" : false,
+          "nodeId" : "PXTDQF9PVZscoMB6"
+        }
+      }, {
+        "type" : 144,
+        "typeName" : "BTMParameterBoolean",
+        "message" : {
+          "value" : true,
+          "parameterId" : "calculateSmallest",
+          "hasUserCode" : false,
+          "nodeId" : "6k+fYj1G9nOFLN3H"
+        }
+      }, {
+        "type" : 147,
+        "typeName" : "BTMParameterQuantity",
+        "message" : {
+          "units" : "",
+          "value" : 0.0,
+          "expression" : "10",
+          "isInteger" : true,
+          "parameterId" : "edgeSamples",
+          "hasUserCode" : false,
+          "nodeId" : "KAlJTIMv1bPSENEp"
+        }
+      }, {
+        "type" : 144,
+        "typeName" : "BTMParameterBoolean",
+        "message" : {
+          "value" : true,
+          "parameterId" : "defaultCSys",
+          "hasUserCode" : false,
+          "nodeId" : "jo/pSbNUqh/ahOj8"
+        }
+      }, {
+        "type" : 148,
+        "typeName" : "BTMParameterQueryList",
+        "message" : {
+          "queries" : [ ],
+          "parameterId" : "alignEdge",
+          "hasUserCode" : false,
+          "nodeId" : "R23t0dYzsm276QsB"
+        }
+      }, {
+        "type" : 148,
+        "typeName" : "BTMParameterQueryList",
+        "message" : {
+          "queries" : [ ],
+          "parameterId" : "mateConnector",
+          "hasUserCode" : false,
+          "nodeId" : "RjT8tA2c7hs7E4Qs"
+        }
+      } ],
+      "suppressed" : false,
+      "namespace" : "e9e6e33ee18d0684e6ccf638b::m2234f47dd27193645ae48db9",
+      "subFeatures" : [ ],
+      "returnAfterSubfeatures" : false,
+      "suppressionState" : {
+        "type" : 0
+      },
+      "hasUserCode" : false,
+      "nodeId" : "M7gdX70em/styS8T9"
+    }
+  }

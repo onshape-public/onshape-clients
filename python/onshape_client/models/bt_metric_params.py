@@ -33,7 +33,7 @@ class BTMetricParams(object):
     """
     openapi_types = {
         'system_id': 'str',
-        'property_map': 'dict(str, object)',
+        'element_property_map': 'dict(str, object)',
         'document_id': 'str',
         'element_id': 'str',
         'event_type': 'int',
@@ -44,7 +44,7 @@ class BTMetricParams(object):
 
     attribute_map = {
         'system_id': 'systemId',
-        'property_map': 'propertyMap',
+        'element_property_map': 'propertyMap',
         'document_id': 'documentId',
         'element_id': 'elementId',
         'event_type': 'eventType',
@@ -106,20 +106,20 @@ class BTMetricParams(object):
 
     @property
     def property_map(self):
-        """Gets the property_map of this BTMetricParams.  # noqa: E501
+        """Gets the element_property_map of this BTMetricParams.  # noqa: E501
 
 
-        :return: The property_map of this BTMetricParams.  # noqa: E501
+        :return: The element_property_map of this BTMetricParams.  # noqa: E501
         :rtype: dict(str, object)
         """
         return self._property_map
 
     @property_map.setter
     def property_map(self, property_map):
-        """Sets the property_map of this BTMetricParams.
+        """Sets the element_property_map of this BTMetricParams.
 
 
-        :param property_map: The property_map of this BTMetricParams.  # noqa: E501
+        :param property_map: The element_property_map of this BTMetricParams.  # noqa: E501
         :type: dict(str, object)
         """
 

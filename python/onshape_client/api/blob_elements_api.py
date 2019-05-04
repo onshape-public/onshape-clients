@@ -91,7 +91,7 @@ class BlobElementsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['did', 'wid', 'content_disposition', 'entity', 'headers', 'media_type', 'message_body_workers', 'parent', 'providers', 'body_parts', 'parameterized_headers']  # noqa: E501
+        all_params = ['did', 'wid', 'content_disposition', 'entity', 'headers', 'media_type', 'message_body_workers', 'parent', 'providers', 'body_parts', 'parameterized_headers', 'file', 'translate', 'encodedFilename']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -146,8 +146,13 @@ class BlobElementsApi(object):
             form_params.append(('bodyParts', local_var_params['body_parts']))  # noqa: E501
             collection_formats['bodyParts'] = 'csv'  # noqa: E501
         if 'parameterized_headers' in local_var_params:
-            form_params.append(('parameterizedHeaders', local_var_params['parameterized_headers']))  # noqa: E501
-
+            form_params.append(('parameterizedHeaders', local_var_params['parameterized_headers']))
+        if 'file' in local_var_params:# noqa: E501
+            form_params.append(('file', local_var_params['file']))
+        if 'translate' in local_var_params:
+            form_params.append(('translate', local_var_params['translate']))
+        if 'encodedFilename' in local_var_params:
+            form_params.append(('encodedFilename', local_var_params['encodedFilename']))
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(

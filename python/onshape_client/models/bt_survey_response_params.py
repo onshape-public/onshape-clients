@@ -32,13 +32,13 @@ class BTSurveyResponseParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'property_map': 'dict(str, object)',
+        'element_property_map': 'dict(str, object)',
         'msg_id': 'str',
         'survey_type': 'int'
     }
 
     attribute_map = {
-        'property_map': 'propertyMap',
+        'element_property_map': 'propertyMap',
         'msg_id': 'msgId',
         'survey_type': 'surveyType'
     }
@@ -60,20 +60,20 @@ class BTSurveyResponseParams(object):
 
     @property
     def property_map(self):
-        """Gets the property_map of this BTSurveyResponseParams.  # noqa: E501
+        """Gets the element_property_map of this BTSurveyResponseParams.  # noqa: E501
 
 
-        :return: The property_map of this BTSurveyResponseParams.  # noqa: E501
+        :return: The element_property_map of this BTSurveyResponseParams.  # noqa: E501
         :rtype: dict(str, object)
         """
         return self._property_map
 
     @property_map.setter
     def property_map(self, property_map):
-        """Sets the property_map of this BTSurveyResponseParams.
+        """Sets the element_property_map of this BTSurveyResponseParams.
 
 
-        :param property_map: The property_map of this BTSurveyResponseParams.  # noqa: E501
+        :param property_map: The element_property_map of this BTSurveyResponseParams.  # noqa: E501
         :type: dict(str, object)
         """
 

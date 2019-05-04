@@ -22,16 +22,21 @@
       "title": "Add Metadata and bounding box to:",
       "type": "object",
       "required": [
-        "title"
+        "element_href"
       ],
       "properties": {
-        "title": {
+        "element_href": {
           "type": "string",
           "title": "Element Url",
           "default": "https://cad.onshape.com/documents/..."
         },
-        "part_file_path": {
-        "type": "string"
+        "files": {
+            "title": "Files To Translate",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "data-url"
+              }
         },
         "metadata": {
           "type": "array",

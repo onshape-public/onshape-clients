@@ -39,11 +39,15 @@ class Client:
     __instance = None
 
     @staticmethod
-    def get_client():
+    def get_client(create_if_needed=True):
         """ get an instance of the client class singleton. """
-        if Client.__instance == None:
-            raise Exception("Please manually instantiate the client.")
-        return Client.__instance
+        client = Client.__instance
+        if not client:
+            if create_if_needed:
+                client = Client()
+            else:
+                raise Exception("Please manually instantiate the client.")
+        return client
 
     @staticmethod
     def get_configuration_from_keys_file(keys_file, stack_key):

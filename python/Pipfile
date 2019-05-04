@@ -26,3 +26,4 @@ ruamel-yaml = "*"
 pathlib = "*"
 enum34 = "*"
 pint = "*"
+onshape-client = {path = ".",editable = true}
