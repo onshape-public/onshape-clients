@@ -75,8 +75,7 @@ class myHandler(HTTPHandler):
                 for k, v in part_metadata.items():
                     # For the fixed field items, set for the first part
                     if k != "additionalItems":
-                        meta_data_to_be_set.add_to_part_metadata("JFD",
-                                                                 k,
+                        meta_data_to_be_set.add_to_part_metadata(k,
                                                                  v)
                     else:
                         for custom_metadata_item in v["additionalItems"]:
