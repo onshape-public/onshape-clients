@@ -55,10 +55,12 @@ class OnshapeElement(object):
             self.optional_microversion = microversion
             return self.get_url()
 
-    def get_url(self):
+    def get_url(self, url_type="element"):
         optional_microversion_add_in = ""
         if self.optional_microversion:
             optional_microversion_add_in = "/m/" + self.optional_microversion
+        if url_type == "document":
+            return self.base_url + "/documents/" + self.did
         return self.base_url + "/documents/" + self.did + "/" + self.wvm + "/" + self.wvmid + optional_microversion_add_in + "/e/" + self.eid
 
 

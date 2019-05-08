@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cache_stats** | **dict(str, dict(str, str))** |  | [optional] 
 **cache_names** | **list[str]** |  | [optional] 
+**cache_stats** | **dict(str, dict(str, str))** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

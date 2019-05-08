@@ -3,11 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**part_query** | **str** |  | [optional] 
 **part_ids** | **list[str]** |  | [optional] 
+**part_query** | **str** |  | [optional] 
 **angle_tolerance** | **float** |  | [optional] 
 **chord_tolerance** | **float** |  | [optional] 
 **max_facet_width** | **float** |  | [optional] 
@@ -18,8 +15,11 @@ Name | Type | Description | Notes
 **entity_ids** | **list[str]** |  | [optional] 
 **output_error_faces** | **bool** |  | [optional] 
 **part_id** | **str** |  | [optional] 
-**element_microversion_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**element_microversion_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

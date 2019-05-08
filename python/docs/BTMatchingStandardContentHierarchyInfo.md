@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **list[str]** |  | [optional] 
+**standard** | **list[str]** |  | [optional] 
+**category** | **list[str]** |  | [optional] 
+**types** | **list[str]** |  | [optional] 
+**component_document_id** | **str** |  | [optional] 
 **standard_default** | **str** |  | [optional] 
 **category_default** | **str** |  | [optional] 
 **types_default** | **str** |  | [optional] 
 **type_default** | **str** |  | [optional] 
-**category** | **list[str]** |  | [optional] 
-**standard** | **list[str]** |  | [optional] 
-**types** | **list[str]** |  | [optional] 
-**component_document_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

@@ -8,9 +8,10 @@ import urllib
 import webbrowser
 from onshape_client.example_programs.set_metadata import MetaDataBody
 from onshape_client.example_programs.import_file import import_file
-from onshape_client.utility import write_to_file
+from onshape_client.utility import write_to_file, get_field
 
 client = Client()
+
 
 class myHandler(HTTPHandler):
     def do_GET(self):
@@ -41,11 +42,25 @@ class myHandler(HTTPHandler):
         unquoted_s = urllib.unquote(body)
         data = json.loads(unquoted_s)
 
-        self.onshape_element = OnshapeElement(data["element_href"])
+        from onshape_client.models import BTDocumentParams
+        bt_document_params = BTDocumentParams(name=data["doc_name"])
+        new_doc_response = client.documents_api.create11(bt_document_params, _preload_content=False)
+        did = get_field(new_doc_response, "id")
+        wid = get_field(new_doc_response, "defaultWorkspace")["id"]
+        # Use a fake eid because it isn't used later.
+        eid = "00000000000000"
+        self.onshape_element = OnshapeElement.create_from_ids(did, "w", wid, eid)
 
         if "import_items" in data:
             for import_item in data["import_items"]:
                 self.import_item(import_item)
+
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        content = {"document_href": self.onshape_element.get_url(url_type="document")}
+        self.wfile.write(sendable(json.dumps(content)))
 
     def import_item(self, import_item):
         did = self.onshape_element.did
@@ -56,20 +71,37 @@ class myHandler(HTTPHandler):
         if "part_metadata" in import_item or "element_metadata" in import_item:
             meta_data_to_be_set = MetaDataBody(OnshapeElement.create_from_ids(did, "w", wid, eid))
             if "part_metadata" in import_item:
-                for metadata_item in import_item["part_metadata"]:
-                    meta_data_to_be_set.add_to_part_metadata(metadata_item["part_id"], metadata_item["property_name"], metadata_item["new_value"])
+                part_metadata = import_item["part_metadata"]
+                for k, v in part_metadata.items():
+                    # For the fixed field items, set for the first part
+                    if k != "additionalItems":
+                        meta_data_to_be_set.add_to_part_metadata("JFD",
+                                                                 k,
+                                                                 v)
+                    else:
+                        for custom_metadata_item in v["additionalItems"]:
+                            meta_data_to_be_set.add_to_part_metadata(custom_metadata_item["part_id"],
+                                                                     custom_metadata_item["property_name"],
+                                                                     custom_metadata_item["new_value"])
             if "element_metadata" in import_item:
-                for metadata_item in import_item["element_metadata"]:
-                    meta_data_to_be_set.add_to_element_metadata(metadata_item["property_name"],
-                                                             metadata_item["new_value"], eid=eid)
+                element_metadata = import_item["element_metadata"]
+                for k, v in element_metadata.items():
+                    if k != "additionalItems":
+                        meta_data_to_be_set.add_to_element_metadata(k,v)
+                    else:
+                        for custom_metadata_item in v["additionalItems"]:
+                            meta_data_to_be_set.add_to_element_metadata(custom_metadata_item["property_name"],
+                                                                        custom_metadata_item["new_value"], eid=eid)
             meta_data_to_be_set.send()
 
         if "bounding_box" in import_item and import_item["bounding_box"]:
-            feature_path = "bound_all_feature.json"
+            feature_path = "bound_all_set_metadata.json"
+            # feature_path = "bound_all_feature.json"
             # feature_path = "make_cube_feature.json"
             with open(os.path.dirname(__file__) + "/assets/" + feature_path, "r") as f:
                 body = {"feature": json.loads(f.read())}
             client.part_studios_api.add_feature1(did, "w", wid, eid, body=body)
+
 
 class MyServer(HTTPServer, object):
 
@@ -77,9 +109,6 @@ class MyServer(HTTPServer, object):
         super(MyServer, self).server_activate()
         webbrowser.open("{}:{}".format(self.server_address[0], self.server_port))
 
+
 server = MyServer(('localhost', 9000), myHandler)
 server.serve_forever()
-
-
-
-

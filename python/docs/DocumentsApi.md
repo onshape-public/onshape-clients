@@ -4,12 +4,63 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create11**](DocumentsApi.md#create11) | **POST** /api/documents | 
 [**download_external_data**](DocumentsApi.md#download_external_data) | **GET** /api/documents/d/{did}/externaldata/{fid} | Download External Data
 [**get_current_microversion**](DocumentsApi.md#get_current_microversion) | **GET** /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion | 
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /api/documents | Get Documents
 [**merge_into_workspace**](DocumentsApi.md#merge_into_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/merge | Merge into workspace
 [**restore_document**](DocumentsApi.md#restore_document) | **POST** /api/documents/{did}/restore | Restore Document
 
+
+# **create11**
+> create11(bt_document_params)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2): 
+```python
+from __future__ import print_function
+import time
+import onshape_client
+from onshape_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2
+configuration = onshape_client.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = onshape_client.DocumentsApi(onshape_client.ApiClient(configuration))
+bt_document_params = onshape_client.BTDocumentParams() # BTDocumentParams | 
+
+try:
+    api_instance.create11(bt_document_params)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->create11: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bt_document_params** | [**BTDocumentParams**](BTDocumentParams.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **download_external_data**
 > file download_external_data(did, fid, if_none_match=if_none_match)

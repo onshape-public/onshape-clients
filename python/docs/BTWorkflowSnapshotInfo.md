@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **state** | [**BTWorkflowStateInfo**](BTWorkflowStateInfo.md) |  | [optional] 
 **is_frozen** | **bool** |  | [optional] 
 **is_setup** | **bool** |  | [optional] 
-**metadata_state** | **str** |  | [optional] 
 **is_discarded** | **bool** |  | [optional] 
+**metadata_state** | **str** |  | [optional] 
 **approver_ids** | **list[str]** |  | [optional] 
 **notifier_ids** | **list[str]** |  | [optional] 
 

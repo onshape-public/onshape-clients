@@ -23,6 +23,8 @@ class MetaDataBody(object):
 
     def add_to_element_metadata(self, property_name, new_val, eid=None):
         """If needed, can specify other element metadata"""
+        if not eid:
+            eid = self.onshape_element.eid
         to_be_appended = {
                 "properties": [
                     {

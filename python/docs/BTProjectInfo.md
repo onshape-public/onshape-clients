@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**permission_scheme** | [**BTRbacPermissionSchemeInfo**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
 **permission_set** | [**BTPermissionSet**](BTPermissionSet.md) |  | [optional] 
-**role_map_entries** | [**list[RoleMapEntry]**](RoleMapEntry.md) |  | [optional] 
 **trash** | **bool** |  | [optional] 
+**permission_scheme** | [**BTRbacPermissionSchemeInfo**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
+**role_map_entries** | [**list[RoleMapEntry]**](RoleMapEntry.md) |  | [optional] 
 **owner** | [**BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
+**project_id** | **str** |  | [optional] 
 **created_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **modified_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **modified_at** | **datetime** |  | [optional] 
-**project_id** | **str** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **is_container** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

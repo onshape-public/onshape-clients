@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
 **value_object** | [**object**](.md) |  | [optional] 
+**revision_data** | [**BTRevisionCustomData**](BTRevisionCustomData.md) |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **direct_imports** | [**list[BTMImport]**](BTMImport.md) |  | [optional] 
 **string_value_for_property** | **str** |  | [optional] 
@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **for_export** | **bool** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **child_nodes** | [**dict(str, BTNodeReference)**](BTNodeReference.md) |  | [optional] 
-**source_parse_tree_nodes** | **dict(str, list[BTNodeReference])** |  | [optional] 
-**child_locations** | [**dict(str, BTInsertionLocation)**](BTInsertionLocation.md) |  | [optional] 
 **has_user_code** | **bool** |  | [optional] 
+**child_locations** | [**dict(str, BTInsertionLocation)**](BTInsertionLocation.md) |  | [optional] 
+**source_parse_tree_nodes** | **dict(str, list[BTNodeReference])** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **child_map_indices** | **list[int]** |  | [optional] 
 **atomic_child_indices** | **list[int]** |  | [optional] 

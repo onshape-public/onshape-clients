@@ -3,19 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 **require_totp** | **bool** |  | [optional] 
 **use_light_ui** | **bool** |  | [optional] 
+**integrations** | [**IntegrationsParams**](IntegrationsParams.md) |  | [optional] 
 **require_approved_drawing_templates** | **bool** |  | [optional] 
 **approved_drawing_templates_document_id** | **str** |  | [optional] 
 **add_company_owned_libraries_in_user_account** | **bool** |  | [optional] 
 **release_workflow_id** | **str** |  | [optional] 
 **obsoletion_workflow_id** | **str** |  | [optional] 
 **revision_scheme_id** | **str** |  | [optional] 
-**require_revision_for_released_objects** | **bool** |  | [optional] 
-**require_part_number_for_released_objects** | **bool** |  | [optional] 
 **only_admins_can_edit_properties_of_released_objects** | **bool** |  | [optional] 
 **only_admins_can_delete_documents_containing_released_objects** | **bool** |  | [optional] 
+**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
+**require_part_number_for_released_objects** | **bool** |  | [optional] 
+**require_revision_for_released_objects** | **bool** |  | [optional] 
 **only_admins_can_approve_releases** | **bool** |  | [optional] 
 **require_parts_and_subassemblies_release_with_assembly** | **bool** |  | [optional] 
 **require_parts_and_subassemblies_release_with_drawing** | **bool** |  | [optional] 

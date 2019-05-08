@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**curve** | [**BTCurveDescription**](BTCurveDescription.md) |  | [optional] 
 **geometry** | [**BTExportModelEdgeGeometry**](BTExportModelEdgeGeometry.md) |  | [optional] 
 **vertices** | **list[str]** |  | [optional] 
+**curve** | [**BTCurveDescription**](BTCurveDescription.md) |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

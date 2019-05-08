@@ -26,16 +26,16 @@
 
     const Form = JSONSchemaForm.default;
     const schema = {
-        "title": "Add Metadata and bounding box to:",
+        "title": "Import Items:",
         "type": "object",
         "required": [
-            "element_href"
+            "doc_name"
         ],
         "properties": {
-            "element_href": {
+            "doc_name": {
                 "type": "string",
-                "title": "Sibling Element Url",
-                "default": "https://cad.onshape.com/documents/..."
+                "title": "New document name:",
+                "default": "Imported items"
             },
             "import_items": {
                 "type": "array",
@@ -52,38 +52,72 @@
                             "default": true
                         },
                         "part_metadata": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "property_name": {
-                                        "type": "string",
-                                        "default": "Part number"
-                                    },
-                                    "new_value": {
-                                        "type": "string",
-                                        "default": "A new part number!"
-                                    },
-                                    "part_id": {
-                                        "type": "string",
-                                        "default": "JFD"
+                            "type": "object",
+                            "title": "Part properties to be set on imported part",
+                            "properties": {
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "Part number": {
+                                    "type": "string"
+                                },
+                                "Project id": {
+                                    "type": "string"
+                                },
+                                "Tool id": {
+                                    "type": "string"
+                                },
+                                "Customer name": {
+                                    "type": "string"
+                                },
+                                "additionalItems": {
+                                    "title": "Additional properties to be set:",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "property_name": {
+                                                "type": "string",
+                                                "default": "Title 1"
+                                            },
+                                            "new_value": {
+                                                "type": "string",
+                                                "default": "A new title!"
+                                            },
+                                            "part_id": {
+                                                "type": "string",
+                                                "default": "JFD"
+                                            }
+                                        }
                                     }
                                 }
                             }
+
                         },
                         "element_metadata": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "property_name": {
-                                        "type": "string"
-                                    },
-                                    "new_value": {
-                                        "type": "string"
+                            "type": "object",
+                            "title": "Element properties to be set on the imported part:",
+                            "properties": {
+                                "Name" : {
+                                    "type": "string"
+                                },
+                                "additionalItems": {
+                                    "type": "array",
+                                    "title": "Additional Element properties to be set:",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "property_name": {
+                                                "type": "string"
+                                            },
+                                            "new_value": {
+                                                "type": "string"
+                                            }
+                                        }
                                     }
                                 }
                             }
+
                         }
                     }
                 }
@@ -95,12 +129,13 @@
     const log = (type) => console.log.bind(console, type);
 
     const onSubmit = ({formData}, e) => {
-        jQuery.post("http://localhost:9000/", JSON.stringify(formData)).done((response) => log(response));
+        jQuery(":submit").attr("disabled", true);
+        jQuery.post("http://localhost:9000/", JSON.stringify(formData)).then((response) => replaceWithUrl(response));
     };
 
-    function show_response(data) {
-        log(data)
-    }
+    const replaceWithUrl = (response) => {
+        jQuery("#my_body").replaceWith('<a href='+response.document_href+' class="btn btn-primary btn-lg" style="margin: 20px" role="button" aria-disabled="true">Link to new document</a>')
+    };
 
     ReactDOM.render((
         <Form schema={schema}

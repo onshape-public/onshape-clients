@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**version_id** | **str** |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 
 **export_type_name** | **str** |  | [optional] 

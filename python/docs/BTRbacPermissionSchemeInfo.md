@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entries** | [**list[Entry]**](Entry.md) |  | [optional] 
 **active** | **bool** |  | [optional] 
-**predefined_permission_scheme** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**predefined_permission_scheme** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 

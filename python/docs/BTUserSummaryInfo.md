@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **source** | **int** |  | [optional] 
-**last_login_time** | **datetime** |  | [optional] 
-**company** | [**BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
-**global_permissions** | [**GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
+**email** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
 **is_guest** | **bool** |  | [optional] 
 **is_light** | **bool** |  | [optional] 
+**company** | [**BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
+**global_permissions** | [**GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
+**last_login_time** | **datetime** |  | [optional] 
 **state** | **int** |  | [optional] 
 **image** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

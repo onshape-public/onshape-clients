@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_state** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**user_state** | **int** |  | [optional] 
 **upgradable** | **bool** |  | [optional] 
 **user_based** | **bool** |  | [optional] 
 **self_service_disabled** | **bool** |  | [optional] 

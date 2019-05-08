@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**appearance** | [**BTGraphicsAppearance**](BTGraphicsAppearance.md) |  | [optional] 
 **faces** | [**list[BTExportTessellatedFacesFace]**](BTExportTessellatedFacesFace.md) |  | [optional] 
 **body_type** | **str** |  | [optional] 
-**appearance** | [**BTGraphicsAppearance**](BTGraphicsAppearance.md) |  | [optional] 
 **facet_points** | [**list[BTVector3d]**](BTVector3d.md) |  | [optional] 
 **type_id** | **int** |  | [optional] 
 **connection_source** | [**BTConnection**](BTConnection.md) |  | [optional] 

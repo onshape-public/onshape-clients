@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner** | [**BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
+**project_id** | **str** |  | [optional] 
 **created_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **modified_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **modified_at** | **datetime** |  | [optional] 
-**project_id** | **str** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **is_container** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

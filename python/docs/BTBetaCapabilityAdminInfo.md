@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**capability_name** | **str** |  | [optional] 
 **user_count** | **int** |  | [optional] 
 **approvals_per_hour** | **float** |  | [optional] 
 **auto_approve** | **bool** |  | [optional] 
@@ -11,10 +10,11 @@ Name | Type | Description | Notes
 **auto_approve_onshape** | **bool** |  | [optional] 
 **self_service_disabled** | **bool** |  | [optional] 
 **user_limit** | **int** |  | [optional] 
+**capability_name** | **str** |  | [optional] 
 **eula** | **str** |  | [optional] 
 **welcome_html** | **str** |  | [optional] 
-**user_state** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**user_state** | **int** |  | [optional] 
 **upgradable** | **bool** |  | [optional] 
 **user_based** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 

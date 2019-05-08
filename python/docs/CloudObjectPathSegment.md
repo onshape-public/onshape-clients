@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cloud_storage_provider_type** | **int** |  | [optional] 
 **cloud_storage_account_id** | **str** |  | [optional] 
+**cloud_storage_provider_type** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **tree_href** | **str** |  | [optional] 

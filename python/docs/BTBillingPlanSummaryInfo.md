@@ -4,15 +4,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hidden** | **bool** |  | [optional] 
-**onshape_plan** | **bool** |  | [optional] 
 **description** | **str** |  | [optional] 
+**application_id** | **str** |  | [optional] 
+**onshape_plan** | **bool** |  | [optional] 
 **interval** | **str** |  | [optional] 
 **company_plan** | **bool** |  | [optional] 
+**deprecated** | **bool** |  | [optional] 
 **plan_type** | **int** |  | [optional] 
 **consumable_quantity** | **int** |  | [optional] 
 **amount_cents** | **int** |  | [optional] 
-**application_id** | **str** |  | [optional] 
-**deprecated** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
