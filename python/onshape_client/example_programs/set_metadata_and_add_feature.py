@@ -78,8 +78,8 @@ class myHandler(HTTPHandler):
                         meta_data_to_be_set.add_to_part_metadata(k,
                                                                  v)
                     else:
-                        for custom_metadata_item in v["additionalItems"]:
-                            meta_data_to_be_set.add_to_part_metadata(custom_metadata_item["part_id"],
+                        for custom_metadata_item in v:
+                                meta_data_to_be_set.add_to_part_metadata(custom_metadata_item["part_id"],
                                                                      custom_metadata_item["property_name"],
                                                                      custom_metadata_item["new_value"])
             if "element_metadata" in import_item:
@@ -88,7 +88,7 @@ class myHandler(HTTPHandler):
                     if k != "additionalItems":
                         meta_data_to_be_set.add_to_element_metadata(k,v)
                     else:
-                        for custom_metadata_item in v["additionalItems"]:
+                        for custom_metadata_item in v:
                             meta_data_to_be_set.add_to_element_metadata(custom_metadata_item["property_name"],
                                                                         custom_metadata_item["new_value"], eid=eid)
             meta_data_to_be_set.send()
