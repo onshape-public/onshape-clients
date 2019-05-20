@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "onshape_client"
-VERSION = "0.0.22"
+VERSION = "0.0.23"
 # To install the library, run the following
 #
 # python setup.py install

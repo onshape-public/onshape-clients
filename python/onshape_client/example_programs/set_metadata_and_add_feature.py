@@ -9,6 +9,7 @@ import webbrowser
 from onshape_client.example_programs.set_metadata import MetaDataBody
 from onshape_client.example_programs.import_file import import_file
 from onshape_client.utility import write_to_file, get_field
+from onshape_client.models.bt_mass_prop_response import BTMassPropResponse
 
 client = Client()
 
@@ -67,11 +68,15 @@ class myHandler(HTTPHandler):
         wid = self.onshape_element.wvmid
         path = write_to_file(import_item["file"])
         eid = import_file(path, did, wid)
+        mass_properties = client.part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
+        volume = mass_properties.bodies["-all-"].volume[0]*1000000000
 
         if "part_metadata" in import_item or "element_metadata" in import_item:
             meta_data_to_be_set = MetaDataBody(OnshapeElement.create_from_ids(did, "w", wid, eid))
             if "part_metadata" in import_item:
                 part_metadata = import_item["part_metadata"]
+                # Add the volume part volume property from the API:
+                meta_data_to_be_set.add_to_part_metadata("Part Volume", volume)
                 for k, v in part_metadata.items():
                     # For the fixed field items, set for the first part
                     if k != "additionalItems":

@@ -7,7 +7,7 @@ from requests_oauthlib import OAuth2Session
 from onshape_client.oauth.local_server import start_server
 from enum import Enum
 import webbrowser
-from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError
+from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
 
 
 
@@ -111,7 +111,7 @@ class Client:
         """Do the oauth flow to set the access token"""
         try:
             self._refresh_access_token()
-        except (UnauthorizedClientError, UnsupportedGrantTypeError) as e:
+        except (UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError) as e:
             authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
             oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
             if oauth_type == OAuthAuthorizationMethods.MANUAL_FLOW:
