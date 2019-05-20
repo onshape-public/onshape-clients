@@ -10,6 +10,7 @@ from onshape_client.example_programs.set_metadata import MetaDataBody
 from onshape_client.example_programs.import_file import import_file
 from onshape_client.utility import write_to_file, get_field
 from onshape_client.models.bt_mass_prop_response import BTMassPropResponse
+from onshape_client.models.bt_bounding_box import BTBoundingBox
 
 client = Client()
 
@@ -70,6 +71,12 @@ class myHandler(HTTPHandler):
         eid = import_file(path, did, wid)
         mass_properties = client.part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
         volume = mass_properties.bodies["-all-"].volume[0]*1000000000
+        bounding_box = client.part_studios_api.get_bounding_boxes2(did, 'w', wid, eid, _preload_content=False)
+        bounding_box = json.loads(bounding_box.data)
+        x_span = (bounding_box["highX"]-bounding_box["lowX"])*1000
+        y_span = (bounding_box["highY"]-bounding_box["lowY"])*1000
+        z_span = (bounding_box["highZ"]-bounding_box["lowZ"])*1000
+        bounding_box = "L = {x_span}, W = {y_span}, H = {z_span}".format(x_span=x_span, y_span=y_span, z_span=z_span)
 
         if "part_metadata" in import_item or "element_metadata" in import_item:
             meta_data_to_be_set = MetaDataBody(OnshapeElement.create_from_ids(did, "w", wid, eid))
@@ -77,6 +84,7 @@ class myHandler(HTTPHandler):
                 part_metadata = import_item["part_metadata"]
                 # Add the volume part volume property from the API:
                 meta_data_to_be_set.add_to_part_metadata("Part Volume", volume)
+                meta_data_to_be_set.add_to_part_metadata("Bounding Box", bounding_box)
                 for k, v in part_metadata.items():
                     # For the fixed field items, set for the first part
                     if k != "additionalItems":
