@@ -69,6 +69,9 @@ class myHandler(HTTPHandler):
         wid = self.onshape_element.wvmid
         path = write_to_file(import_item["file"])
         eid = import_file(path, did, wid)
+        onshape_element = self.onshape_element
+        onshape_element.eid = eid
+        url = onshape_element.get_url()
         mass_properties = client.part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
         volume = mass_properties.bodies["-all-"].volume[0]*1000000000
         bounding_box = client.part_studios_api.get_bounding_boxes2(did, 'w', wid, eid, _preload_content=False)

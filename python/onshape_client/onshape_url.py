@@ -152,7 +152,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return parameter_map
 
     def _get_raw_configuration_params(self):
-        response =self.client.part_studios_api.get_configuration4(self.did, self.wvm, self.wvmid, self.eid,
+        response =self.client.elements_api.get_configuration3(self.did, self.wvm, self.wvmid, self.eid,
                                                         _preload_content=False)
         return json.loads(response.data.decode("utf-8"))
 
