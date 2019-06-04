@@ -261,7 +261,13 @@ class RESTClientObject(object):
             parsed_qs = parse_qs(location.query)
             for q in parsed_qs:
                 parsed_qs[q] = parsed_qs[q][0]
-            return self.request(method, new_url, headers=orig_headers, query_params=parsed_qs)
+            return self.request(method, new_url, headers=orig_headers,
+                                query_params=parsed_qs,
+                                body=body,
+                                post_params=post_params,
+                                _preload_content=_preload_content,
+                                _request_timeout=_request_timeout,
+                                _oauth_persistent=_oauth_persistent)
 
         if r.status == 403 or r.status == 401:
             client = Client.get_client()
