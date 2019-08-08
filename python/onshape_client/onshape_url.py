@@ -133,7 +133,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
     def _get_bt_configuration_params_for_current_configuration(self):
         final = []
         for k, v in self.current_configuration.items():
-            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v))
+            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v).replace(' ', '+'))
             final.append(p)
         return BTConfigurationParams(parameters=final)
 

@@ -2,6 +2,7 @@
 """
 
 from onshape_client.client import Client
+from onshape_client.configuration import Configuration
 from onshape_client.onshape_url import OnshapeElement
 from onshape_client.models.bt_translate_format_params import BTTranslateFormatParams
 import time
@@ -13,8 +14,9 @@ client = Client()
 # We're saving these files to the home directory ("~")
 client.configuration.temp_folder_path = os.path.expanduser("~")
 
+
 # Turn the URL into an "OnshapeElement"
-url = "https://staging.dev.onshape.com/documents/85820308b21bc556da71354e/w/6e6f91f91d8bba3d8453de91/e/6155878d774398248dea31b9"
+url = "https://cad.onshape.com/documents/6294e51a225d251659adda53/w/7e81c11d14f7c7dbe1cc6f1f/e/f1c0095cc29ddff084e28cfb"
 cube = OnshapeElement(url, client=client)
 
 # Create the params. Note there are far more params that can be specified.
@@ -38,6 +40,7 @@ while state == 'ACTIVE':
 if state == "DONE":
     client.documents_api.download_external_data(cube.did, parsed_response["resultExternalDataIds"][0])
     print("File saved to " + client.configuration.temp_folder_path)
+    print("Your access tokebn: " + client.oauth.access_token)
 else:
     print("An error ocurred on the server! Here is the response: \n" + parsed_response)
 """

@@ -148,6 +148,7 @@ class Client:
     def _set_configuration(self, configuration_dictionary):
         configuration = Configuration()
 
+        configuration.verify_ssl = False
         configuration.api_key['SECRET_KEY'] = self._get_if_present(configuration_dictionary, 'secret_key')
         configuration.api_key['ACCESS_KEY'] = self._get_if_present(configuration_dictionary, 'access_key')
 
