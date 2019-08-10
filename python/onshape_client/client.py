@@ -73,10 +73,10 @@ class Client:
         """
         if Client.__instance != None:
             raise Exception("This class is a singleton! Please use 'get_client' for all subsequent calls.")
-        keys_file = os.path.expanduser(keys_file)
         if configuration:
             final_configuration = configuration
         elif keys_file:
+            keys_file = os.path.expanduser(keys_file)
             final_configuration = self.get_configuration_from_keys_file(keys_file, stack_key)
         else:
             raise EnvironmentError("API keys were not properly set.")
