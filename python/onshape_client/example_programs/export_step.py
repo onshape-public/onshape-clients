@@ -14,11 +14,11 @@ client = Client()
 client.configuration.temp_folder_path = os.path.expanduser("~")
 
 # Turn the URL into an "OnshapeElement"
-url = "https://cad.onshape.com/documents/d52538842d07c098d986361f/w/2d3de2dce7022ea4bdd19149/e/5da80a9e428fc1110d0baaf2"
+url = "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/aaa25d18038e06f0b2964e2d/e/69c9eedda86512966b20bc90"
 cube = OnshapeElement(url, client=client)
 
 # Create the params. Note there are far more params that can be specified.
-params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='')
+params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='List_UKkGODiz574chc=chamfered;show_cube=true;size=0.254+meter')
 
 # Call the client
 response = client.part_studios_api.translate_format5(cube.did, cube.wvm, cube.wvmid, cube.eid, bt_translate_format_params=params)
