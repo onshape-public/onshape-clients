@@ -14,7 +14,7 @@ import time
 def import_file(file_path, did, wid):
     """Import a file from the local file system. Returns the URL of the resulting element if translated."""
     client = Client.get_client()
-    file = open(file_path, 'r').read()
+    file = open(file_path, 'rb').read()
     r = client.blob_elements_api.upload_file_create_element(did, wid, media_type="application/stl", file=file, translate=True, encodedFilename=file_path.split('/')[-1], _preload_content=False)
     translation_id = get_field(r, 'translationId')
     print("The translationId is: {}.".format(translation_id))
