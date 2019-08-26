@@ -4,13 +4,13 @@ from onshape_client.onshape_url import OnshapeElement
 import json
 from onshape_client.compatible_imports import HTTPServer, HTTPHandler, sendable
 import os
-import urllib
 import webbrowser
 from onshape_client.example_programs.set_metadata import MetaDataBody
 from onshape_client.example_programs.import_file import import_file
 from onshape_client.utility import write_to_file, get_field
 from onshape_client.models.bt_mass_prop_response import BTMassPropResponse
 from onshape_client.models.bt_bounding_box import BTBoundingBox
+import six
 
 client = Client()
 
@@ -41,7 +41,12 @@ class myHandler(HTTPHandler):
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
         body = self.rfile.read(content_length)
-        unquoted_s = urllib.unquote(body)
+        unquoted_s = ""
+        if six.PY2:
+            import urllib
+            unquoted_s = urllib.unquote(body)
+        elif six.PY3:
+            unquoted_s = body.decode('utf-8')
         data = json.loads(unquoted_s)
 
         from onshape_client.models import BTDocumentParams
@@ -75,7 +80,10 @@ class myHandler(HTTPHandler):
         mass_properties = client.part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
         volume = mass_properties.bodies["-all-"].volume[0]*1000000000
         bounding_box = client.part_studios_api.get_bounding_boxes2(did, 'w', wid, eid, _preload_content=False)
-        bounding_box = json.loads(bounding_box.data)
+        data = bounding_box.data
+        if six.PY3:
+            data = data.decode('utf-8')
+        bounding_box = json.loads(data)
         x_span = (bounding_box["highX"]-bounding_box["lowX"])*1000
         y_span = (bounding_box["highY"]-bounding_box["lowY"])*1000
         z_span = (bounding_box["highZ"]-bounding_box["lowZ"])*1000

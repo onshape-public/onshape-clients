@@ -46,7 +46,7 @@ if state == "DONE":
     client.documents_api.download_external_data(cube.did, parsed_response["resultExternalDataIds"][0])
     print("File saved to {}. Took {} seconds to complete the translation.".format(client.configuration.temp_folder_path, time_to_translate))
 else:
-    print("An error ocurred on the server! Here is the response: \n" + parsed_response)
+    print("An error ocurred on the server! Here is the response: \n" + parsed_response['failureReason'])
 """
 File saved to <temp_folder_path>
 """

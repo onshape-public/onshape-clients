@@ -50,6 +50,11 @@ class Client:
         return client
 
     @staticmethod
+    def clear_client():
+        """ delete the singleton instance of the client. """
+        Client.__instance = None
+
+    @staticmethod
     def get_configuration_from_keys_file(keys_file, stack_key):
         try:
             yaml = YAML()

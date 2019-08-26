@@ -41,8 +41,12 @@ def parse_quantity(q):
 
 
 def get_field(response, field):
+    return load_json(response)[field]
+
+
+def load_json(response):
     data = json.loads(response.data.decode("UTF-8"))
-    return data[field]
+    return data
 
 
 def write_to_file(data_uri):
