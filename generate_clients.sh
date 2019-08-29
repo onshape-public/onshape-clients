@@ -22,7 +22,7 @@ downloadFile
 #$GENERATE -g html -o html
 #$GENERATE -g html2 -o html2
 #$GENERATE -g cwiki -o cwiki
-$GENERATE -g python -c ./python/onshape_client/openapi_config.json -o python/onshape_client
+$GENERATE -g python -c ./python/onshape_client/open_api/openapi_config.json -o python/onshape_client/open_api
 
 
 

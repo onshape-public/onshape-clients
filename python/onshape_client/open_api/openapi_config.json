@@ -1,6 +1,6 @@
 {
-  "packageName": "onshape_client",
-  "projectName": "onshape_client",
+  "packageName": "open_api_client",
+  "projectName": "open_api_client",
   "packageVersion": "0.0.20",
   "packageUrl": "",
   "sortParamsByRequiredFlag": true,
