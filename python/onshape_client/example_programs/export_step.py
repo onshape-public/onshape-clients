@@ -21,7 +21,10 @@ cube = OnshapeElement(url, client=client)
 params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='List_UKkGODiz574chc=chamfered;show_cube=true;size=0.254+meter')
 
 # Call the client
+start_time = time.time()
 response = client.part_studios_api.translate_format5(cube.did, cube.wvm, cube.wvmid, cube.eid, bt_translate_format_params=params)
+elapsed_time = time.time() - start_time
+print('Took {} seconds to complete the translation start request.'.format(elapsed_time))
 
 translation_id = response.id
 state = response.request_state
