@@ -1,4 +1,4 @@
-# onshape_client.MetadataApi
+# onshape_client.oas.MetadataApi
 
 All URIs are relative to *https://cad.onshape.com*
 
@@ -23,20 +23,21 @@ Method | HTTP request | Description
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 vid = 'vid_example' # str | 
 eid = 'eid_example' # str | 
@@ -76,7 +77,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -87,20 +93,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -138,7 +145,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -149,20 +161,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -202,7 +215,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -213,20 +231,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
@@ -260,7 +279,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -271,20 +295,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
@@ -318,7 +343,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -329,20 +359,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
@@ -380,7 +411,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -391,20 +427,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 vid = 'vid_example' # str | 
 eid = 'eid_example' # str | 
@@ -443,8 +480,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -455,20 +497,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
@@ -499,8 +542,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -511,20 +559,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
@@ -557,40 +606,48 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_wvep_metadata**
-> update_wvep_metadata(did, wvm, wvmid, sub_resource, body)
+> update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
 
 
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.MetadataApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
+eid = 'eid_example' # str | 
+pid = 'pid_example' # str | 
 sub_resource = 'sub_resource_example' # str | 
 body = 'body_example' # str | 
 
 try:
-    api_instance.update_wvep_metadata(did, wvm, wvmid, sub_resource, body)
+    api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
 except ApiException as e:
     print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
 ```
@@ -602,6 +659,8 @@ Name | Type | Description  | Notes
  **did** | **str**|  | 
  **wvm** | **str**|  | 
  **wvmid** | **str**|  | 
+ **eid** | **str**|  | 
+ **pid** | **str**|  | 
  **sub_resource** | **str**|  | 
  **body** | **str**|  | 
 
@@ -615,8 +674,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

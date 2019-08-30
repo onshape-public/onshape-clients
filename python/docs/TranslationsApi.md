@@ -1,4 +1,4 @@
-# onshape_client.TranslationsApi
+# onshape_client.oas.TranslationsApi
 
 All URIs are relative to *https://cad.onshape.com*
 
@@ -12,40 +12,39 @@ Method | HTTP request | Description
 
 
 # **create_translation**
-> create_translation(did, wid, content_disposition=content_disposition, entity=entity, headers=headers, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts, parameterized_headers=parameterized_headers)
+> create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
 
 
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.TranslationsApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
-content_disposition = onshape_client.ContentDisposition() # ContentDisposition |  (optional)
-entity = NULL # object |  (optional)
-headers = onshape_client.BodyPartHeaders() # BodyPartHeaders |  (optional)
-media_type = onshape_client.BodyPartMediaType() # BodyPartMediaType |  (optional)
-message_body_workers = onshape_client.MessageBodyWorkers() # MessageBodyWorkers |  (optional)
-parent = onshape_client.MultiPart() # MultiPart |  (optional)
-providers = NULL # object |  (optional)
-body_parts = onshape_client.BodyPart() # list[BodyPart] |  (optional)
-parameterized_headers = onshape_client.BodyPartHeaders() # BodyPartHeaders |  (optional)
+content_disposition = onshape_client.oas.ContentDisposition() # ContentDisposition |  (optional)
+entity = None # object |  (optional)
+media_type = onshape_client.oas.BodyPartMediaType() # BodyPartMediaType |  (optional)
+message_body_workers = None # object |  (optional)
+parent = onshape_client.oas.MultiPart() # MultiPart |  (optional)
+providers = None # object |  (optional)
+body_parts = onshape_client.oas.BodyPart() # list[BodyPart] |  (optional)
 
 try:
-    api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, headers=headers, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts, parameterized_headers=parameterized_headers)
+    api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
 except ApiException as e:
     print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
 ```
@@ -58,13 +57,11 @@ Name | Type | Description  | Notes
  **wid** | **str**|  | 
  **content_disposition** | [**ContentDisposition**](ContentDisposition.md)|  | [optional] 
  **entity** | [**object**](object.md)|  | [optional] 
- **headers** | [**BodyPartHeaders**](BodyPartHeaders.md)|  | [optional] 
  **media_type** | [**BodyPartMediaType**](BodyPartMediaType.md)|  | [optional] 
- **message_body_workers** | [**MessageBodyWorkers**](MessageBodyWorkers.md)|  | [optional] 
+ **message_body_workers** | [**object**](object.md)|  | [optional] 
  **parent** | [**MultiPart**](MultiPart.md)|  | [optional] 
  **providers** | [**object**](object.md)|  | [optional] 
  **body_parts** | [**list[BodyPart]**](BodyPart.md)|  | [optional] 
- **parameterized_headers** | [**BodyPartHeaders**](BodyPartHeaders.md)|  | [optional] 
 
 ### Return type
 
@@ -77,7 +74,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -88,20 +90,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.TranslationsApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
 tid = 'tid_example' # str | 
 
 try:
@@ -127,7 +130,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -138,20 +146,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.TranslationsApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 offset = 0 # int |  (optional) (default to 0)
 limit = 20 # int |  (optional) (default to 20)
@@ -181,7 +190,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -192,20 +206,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.TranslationsApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
 tid = 'tid_example' # str | 
 
 try:
@@ -231,7 +246,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -241,15 +261,16 @@ void (empty response body)
 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = onshape_client.TranslationsApi()
+# Create an instance of the API class
+api_instance = onshape_client.oas.TranslationsApi()
 
 try:
     api_instance.get_translator_formats5()
@@ -271,7 +292,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

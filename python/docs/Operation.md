@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **operation_id** | **str** |  | [optional] 
 **parameters** | [**list[Parameter]**](Parameter.md) |  | [optional] 
 **request_body** | [**RequestBody**](RequestBody.md) |  | [optional] 
-**responses** | [**OperationResponses**](OperationResponses.md) |  | [optional] 
+**responses** | [**dict(str, ApiResponse)**](ApiResponse.md) |  | [optional] 
 **callbacks** | [**dict(str, Callback)**](Callback.md) |  | [optional] 
 **deprecated** | **bool** |  | [optional] 
 **security** | [**list[SecurityRequirement]**](SecurityRequirement.md) |  | [optional] 

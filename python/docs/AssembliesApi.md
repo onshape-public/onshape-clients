@@ -1,4 +1,4 @@
-# onshape_client.AssembliesApi
+# onshape_client.oas.AssembliesApi
 
 All URIs are relative to *https://cad.onshape.com*
 
@@ -31,20 +31,21 @@ Method | HTTP request | Description
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -77,8 +78,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -89,23 +95,24 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
-bt_model_element_params = onshape_client.BTModelElementParams() # BTModelElementParams | 
+bt_model_element_params = onshape_client.oas.BTModelElementParams() # BTModelElementParams | 
 
 try:
     api_instance.create_assembly(did, wid, bt_model_element_params)
@@ -131,8 +138,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -143,24 +155,25 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
-bt_assembly_instance_definition_params = onshape_client.BTAssemblyInstanceDefinitionParams() # BTAssemblyInstanceDefinitionParams | 
+bt_assembly_instance_definition_params = onshape_client.oas.BTAssemblyInstanceDefinitionParams() # BTAssemblyInstanceDefinitionParams | 
 
 try:
     api_instance.create_instance1(did, wid, eid, bt_assembly_instance_definition_params)
@@ -187,8 +200,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -199,20 +217,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
@@ -244,7 +263,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -255,20 +279,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 eid = 'eid_example' # str | 
 wid = 'wid_example' # str | 
@@ -300,7 +325,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -311,20 +341,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -366,7 +397,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -377,25 +413,26 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
 eid = 'eid_example' # str | 
-metadata_workspace_id = 'metadata_workspace_id_example' # str |  (optional)
+metadata_workspace_id = '' # str |  (optional) (default to '')
 bom_column_ids = ['bom_column_ids_example'] # list[str] |  (optional)
 indented = True # bool |  (optional) (default to True)
 multi_level = False # bool |  (optional) (default to False)
@@ -417,7 +454,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**|  | 
  **wvmid** | **str**|  | 
  **eid** | **str**|  | 
- **metadata_workspace_id** | **str**|  | [optional] 
+ **metadata_workspace_id** | **str**|  | [optional] [default to &#39;&#39;]
  **bom_column_ids** | [**list[str]**](str.md)|  | [optional] 
  **indented** | **bool**|  | [optional] [default to True]
  **multi_level** | **bool**|  | [optional] [default to False]
@@ -436,31 +473,37 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bounding_boxes**
-> get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration)
+> get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 
 
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -469,9 +512,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 include_hidden = True # bool |  (optional)
 display_state_id = 'display_state_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
+exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
 try:
-    api_instance.get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration)
+    api_instance.get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_bounding_boxes: %s\n" % e)
 ```
@@ -488,6 +532,7 @@ Name | Type | Description  | Notes
  **include_hidden** | **bool**|  | [optional] 
  **display_state_id** | **str**|  | [optional] 
  **configuration** | **str**|  | [optional] 
+ **exploded_view_id** | **str**|  | [optional] 
 
 ### Return type
 
@@ -500,7 +545,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -511,20 +561,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -556,7 +607,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -567,20 +623,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -616,7 +673,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -627,20 +689,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 eid = 'eid_example' # str | 
 skip_perspective = True # bool |  (optional) (default to True)
@@ -670,7 +733,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -681,20 +749,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
@@ -724,31 +793,37 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_shaded_views3**
-> get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration)
+> get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 
 
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wvm = 'wvm_example' # str | 
 wvmid = 'wvmid_example' # str | 
@@ -764,9 +839,10 @@ include_surfaces = True # bool |  (optional) (default to True)
 use_anti_aliasing = False # bool |  (optional) (default to False)
 display_state_id = 'display_state_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
+exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
 try:
-    api_instance.get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration)
+    api_instance.get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_shaded_views3: %s\n" % e)
 ```
@@ -790,6 +866,7 @@ Name | Type | Description  | Notes
  **use_anti_aliasing** | **bool**|  | [optional] [default to False]
  **display_state_id** | **str**|  | [optional] 
  **configuration** | **str**|  | [optional] 
+ **exploded_view_id** | **str**|  | [optional] 
 
 ### Return type
 
@@ -802,7 +879,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -812,15 +894,16 @@ void (empty response body)
 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi()
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi()
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
@@ -852,7 +935,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -863,24 +951,25 @@ No authorization required
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 eid = 'eid_example' # str | 
 wid = 'wid_example' # str | 
-bt_assembly_transformed_instances_definition_params = onshape_client.BTAssemblyTransformedInstancesDefinitionParams() # BTAssemblyTransformedInstancesDefinitionParams | 
+bt_assembly_transformed_instances_definition_params = onshape_client.oas.BTAssemblyTransformedInstancesDefinitionParams() # BTAssemblyTransformedInstancesDefinitionParams | 
 
 try:
     api_instance.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
@@ -907,8 +996,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -919,24 +1013,25 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 eid = 'eid_example' # str | 
 wid = 'wid_example' # str | 
-bt_assembly_transform_definition_params = onshape_client.BTAssemblyTransformDefinitionParams() # BTAssemblyTransformDefinitionParams | 
+bt_assembly_transform_definition_params = onshape_client.oas.BTAssemblyTransformDefinitionParams() # BTAssemblyTransformDefinitionParams | 
 
 try:
     api_instance.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params)
@@ -963,8 +1058,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -975,25 +1075,26 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 eid = 'eid_example' # str | 
-bt_translate_format_params = onshape_client.BTTranslateFormatParams() # BTTranslateFormatParams | 
+bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # BTTranslateFormatParams | 
 
 try:
     api_instance.translate_format(did, wv, wvid, eid, bt_translate_format_params)
@@ -1021,8 +1122,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1033,20 +1139,21 @@ void (empty response body)
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.AssembliesApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
@@ -1079,8 +1186,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
-**content** | [**BodyPartHeaders**](BodyPartHeaders.md) |  | [optional] 
+**content** | [**dict(str, MediaType)**](MediaType.md) |  | [optional] 
 **required** | **bool** |  | [optional] 
 **extensions** | **dict(str, object)** |  | [optional] 
 **getref** | **str** |  | [optional] 

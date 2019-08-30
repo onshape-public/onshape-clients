@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **str** |  | [optional] 
-**admin** | **bool** |  | [optional] 
 **company_id** | **str** |  | [optional] 
+**admin** | **bool** |  | [optional] 
 **guest** | **bool** |  | [optional] 
 **light** | **bool** |  | [optional] 
 

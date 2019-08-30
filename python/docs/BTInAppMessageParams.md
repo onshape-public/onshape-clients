@@ -3,11 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**context** | **int** |  | [optional] 
-**content** | [**list[Content]**](Content.md) |  | [optional] 
-**description** | **str** |  | [optional] 
-**content_type** | **int** |  | [optional] 
 **start_date** | **datetime** |  | [optional] 
 **end_date** | **datetime** |  | [optional] 
 **rule_id** | **str** |  | [optional] 
@@ -17,6 +12,11 @@ Name | Type | Description | Notes
 **domain_type** | **int** |  | [optional] 
 **show_once** | **bool** |  | [optional] 
 **display_order** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
+**content_type** | **int** |  | [optional] 
+**name** | **str** |  | [optional] 
+**context** | **int** |  | [optional] 
+**content** | [**list[Content]**](Content.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

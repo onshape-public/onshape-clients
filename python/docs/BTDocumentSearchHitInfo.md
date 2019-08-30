@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**type** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **highlighted_fields** | **dict(str, list[str])** |  | [optional] 
 **source_map** | **dict(str, object)** |  | [optional] 
-**document_id** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
 **element_name** | **str** |  | [optional] 
 **hit** | [**BTESDocumentHit**](BTESDocumentHit.md) |  | [optional] 
 **version_or_workspace_name** | **str** |  | [optional] 

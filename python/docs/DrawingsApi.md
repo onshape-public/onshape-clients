@@ -1,4 +1,4 @@
-# onshape_client.DrawingsApi
+# onshape_client.oas.DrawingsApi
 
 All URIs are relative to *https://cad.onshape.com*
 
@@ -14,15 +14,16 @@ Method | HTTP request | Description
 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
-api_instance = onshape_client.DrawingsApi()
+# Create an instance of the API class
+api_instance = onshape_client.oas.DrawingsApi()
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
@@ -52,7 +53,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -63,25 +69,26 @@ Create Drawing translation
 
 ### Example
 
-* OAuth Authentication (OAuth2): 
+* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
-import onshape_client
-from onshape_client.rest import ApiException
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
 from pprint import pprint
-
+configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
-configuration = onshape_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# create an instance of the API class
-api_instance = onshape_client.DrawingsApi(onshape_client.ApiClient(configuration))
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.DrawingsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 eid = 'eid_example' # str | 
-bt_translate_format_params = onshape_client.BTTranslateFormatParams() # BTTranslateFormatParams | 
+bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # BTTranslateFormatParams | 
 
 try:
     # Create Drawing translation
@@ -111,8 +118,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8; qs=0.1, application/json;charset=UTF-8; qs=0.9
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

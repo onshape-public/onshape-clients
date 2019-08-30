@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8bcc74dcd1453f5a7cab5cb550760099f7faacc66b1ff6e6dc5aab49924308c2"
+            "sha256": "b52d5b2e5ae81288c1fa4a31d65cad8d9d6f44fba848560b56020631e71565ab"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -97,16 +97,17 @@
         },
         "ruamel-yaml": {
             "hashes": [
-                "sha256:eb4b1ffd095785c50f110118cb6f7bb9cd011ecc013b014436d38b7f8fb7afa9"
+                "sha256:0db639b1b2742dae666c6fc009b8d1931ef15c9276ef31c0673cc6dcf766cf40"
             ],
             "index": "pypi",
-            "version": "==0.16.0"
+            "version": "==0.16.5"
         },
         "ruamel.yaml": {
             "hashes": [
-                "sha256:547aeab5c51c93bc750ed2a320c1559b605bde3aa569216aa75fd91d8a1c4623"
+                "sha256:0db639b1b2742dae666c6fc009b8d1931ef15c9276ef31c0673cc6dcf766cf40",
+                "sha256:412a6f5cfdc0525dee6a27c08f5415c7fd832a7afcb7a0ed7319628aed23d408"
             ],
-            "version": "==0.16.1"
+            "version": "==0.16.5"
         },
         "ruamel.yaml.clib": {
             "hashes": [
@@ -280,6 +281,7 @@
                 "sha256:23d3d873e008a513952355379d93cbcab874c58f4f034ff657c7a87422fa64e8",
                 "sha256:80d2de76188eabfbfcf27e6a37342c2827801e59c4cc14b0371c56fed43820e3"
             ],
+            "markers": "python_version < '3.8'",
             "version": "==0.19"
         },
         "jinja2": {
@@ -335,6 +337,10 @@
                 "sha256:92b8c4b06dac4f0611c0729b2f2ede52b2e1bac1ab48f089c7ddc12e26bb60c4"
             ],
             "version": "==7.2.0"
+        },
+        "onshape-client": {
+            "editable": true,
+            "path": "."
         },
         "packaging": {
             "hashes": [
@@ -396,11 +402,11 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:6ef6d06de77ce2961156013e9dff62f1b2688aa04d0dc244299fe7d67e09370d",
-                "sha256:a736fed91c12681a7b34617c8fcefe39ea04599ca72c608751c31d89579a3f77"
+                "sha256:95b1f6db806e5b1b5b443efeb58984c24945508f93a866c1719e1a507a957d7c",
+                "sha256:c3d5020755f70c82eceda3feaf556af9a341334414a8eca521a18f463bcead88"
             ],
             "index": "pypi",
-            "version": "==5.0.1"
+            "version": "==5.1.1"
         },
         "pytest-console-scripts": {
             "hashes": [
@@ -468,11 +474,11 @@
         },
         "sphinx": {
             "hashes": [
-                "sha256:22538e1bbe62b407cf5a8aabe1bb15848aa66bb79559f42f5202bbce6b757a69",
-                "sha256:f9a79e746b87921cabc3baa375199c6076d1270cee53915dbd24fdbeaaacc427"
+                "sha256:0d586b0f8c2fc3cc6559c5e8fd6124628110514fda0e5d7c82e682d749d2e845",
+                "sha256:839a3ed6f6b092bb60f492024489cc9e6991360fb9f52ed6361acd510d261069"
             ],
             "index": "pypi",
-            "version": "==2.1.2"
+            "version": "==2.2.0"
         },
         "sphinx-rtd-theme": {
             "hashes": [
@@ -549,10 +555,10 @@
         },
         "tqdm": {
             "hashes": [
-                "sha256:14a285392c32b6f8222ecfbcd217838f88e11630affe9006cd0e94c7eff3cb61",
-                "sha256:25d4c0ea02a305a688e7e9c2cdc8f862f989ef2a4701ab28ee963295f5b109ab"
+                "sha256:1be3e4e3198f2d0e47b928e9d9a8ec1b63525db29095cec1467f4c5a4ea8ebf9",
+                "sha256:7e39a30e3d34a7a6539378e39d7490326253b7ee354878a92255656dc4284457"
             ],
-            "version": "==4.32.2"
+            "version": "==4.35.0"
         },
         "twine": {
             "hashes": [
@@ -572,10 +578,10 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:6cb2e4c18d22dbbe283d0a0c31bb7d90771a606b2cb3415323eea008eaee6a9d",
-                "sha256:909fe0d3f7c9151b2df0a2cb53e55bdb7b0d61469353ff7a49fd47b0f0ab9285"
+                "sha256:94a6898293d07f84a98add34c4df900f8ec64a570292279f6d91c781d37fd305",
+                "sha256:f6fc312c031f2d2344f885de114f1cb029dfcffd26aa6e57d2ee2296935c4e7d"
             ],
-            "version": "==16.7.2"
+            "version": "==16.7.4"
         },
         "virtualenv-clone": {
             "hashes": [
@@ -600,10 +606,10 @@
         },
         "zipp": {
             "hashes": [
-                "sha256:4970c3758f4e89a7857a973b1e2a5d75bcdc47794442f2e2dd4fe8e0466e809a",
-                "sha256:8a5712cfd3bb4248015eb3b0b3c54a5f6ee3f2425963ef2a0125b8bc40aafaec"
+                "sha256:3718b1cbcd963c7d4c5511a8240812904164b7f381b647143a89d3b98f9bcd8e",
+                "sha256:f06903e9f1f43b12d371004b4ac7b06ab39a44adc747266928ae6debfa7b3335"
             ],
-            "version": "==0.5.2"
+            "version": "==0.6.0"
         }
     }
 }

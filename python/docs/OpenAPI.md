@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **servers** | [**list[Server]**](Server.md) |  | [optional] 
 **security** | [**list[SecurityRequirement]**](SecurityRequirement.md) |  | [optional] 
 **tags** | [**list[Tag]**](Tag.md) |  | [optional] 
-**paths** | [**OAuthFlowScopes**](OAuthFlowScopes.md) |  | [optional] 
+**paths** | [**dict(str, PathItem)**](PathItem.md) |  | [optional] 
 **components** | [**Components**](Components.md) |  | [optional] 
 **extensions** | **dict(str, object)** |  | [optional] 
 

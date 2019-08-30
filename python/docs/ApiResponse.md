@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
 **headers** | [**dict(str, Header)**](Header.md) |  | [optional] 
-**content** | [**BodyPartHeaders**](BodyPartHeaders.md) |  | [optional] 
+**content** | [**dict(str, MediaType)**](MediaType.md) |  | [optional] 
 **links** | [**dict(str, Link)**](Link.md) |  | [optional] 
 **extensions** | **dict(str, object)** |  | [optional] 
 **getref** | **str** |  | [optional] 

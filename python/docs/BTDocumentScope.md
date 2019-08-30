@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
 **document_microversion_id** | **str** |  | [optional] 
 **asserted_element_type** | **str** |  | [optional] 
