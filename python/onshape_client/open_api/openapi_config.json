@@ -1,9 +1,0 @@
-{
-  "packageName": "open_api_client",
-  "projectName": "open_api_client",
-  "packageVersion": "0.0.20",
-  "packageUrl": "",
-  "sortParamsByRequiredFlag": true,
-  "hideGenerationTimestamp": true,
-  "library": "urllib3"
-}

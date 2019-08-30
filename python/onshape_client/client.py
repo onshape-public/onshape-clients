@@ -1,14 +1,13 @@
-from onshape_client.configuration import Configuration
-import onshape_client
+from .configuration import Configuration
 from pathlib import Path
 from ruamel.yaml import YAML
 import os
 from requests_oauthlib import OAuth2Session
-from onshape_client.oauth.local_server import start_server
+from .oauth.local_server import start_server
 from enum import Enum
 import webbrowser
 from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
-
+from .oas import oas
 
 
 
@@ -214,20 +213,19 @@ class Client:
         return dictionary[key] if key in dictionary else ""
 
     def _create_apis(self):
-        api_client = onshape_client.ApiClient(configuration=self.configuration)
-
-        self.accounts_api = onshape_client.api.AccountsApi(api_client)
-        self.app_elements_api = onshape_client.api.AppElementsApi(api_client)
-        self.assemblies_api = onshape_client.api.AssembliesApi(api_client)
-        self.blob_elements_api = onshape_client.api.BlobElementsApi(api_client)
-        self.drawings_api = onshape_client.api.DrawingsApi(api_client)
-        self.documents_api = onshape_client.api.DocumentsApi(api_client)
-        self.elements_api = onshape_client.api.ElementsApi(api_client)
-        self.endpoints_api = onshape_client.api.EndpointsApi(api_client)
-        self.metadata_api = onshape_client.api.MetadataApi(api_client)
-        self.parts_api = onshape_client.api.PartsApi(api_client)
-        self.part_studios_api = onshape_client.api.PartStudiosApi(api_client)
-        self.translation_api = onshape_client.api.TranslationsApi(api_client)
+        api_client = oas.ApiClient(configuration=self.configuration)
+        self.accounts_api = oas.AccountsApi(api_client)
+        self.app_elements_api = oas.AppElementsApi(api_client)
+        self.assemblies_api = onshape_client.oas.api.AssembliesApi(api_client)
+        self.blob_elements_api = onshape_client.oas.api.BlobElementsApi(api_client)
+        self.drawings_api = onshape_client.oas.api.DrawingsApi(api_client)
+        self.documents_api = onshape_client.oas.api.DocumentsApi(api_client)
+        self.elements_api = onshape_client.oas.api.ElementsApi(api_client)
+        self.endpoints_api = onshape_client.oas.api.EndpointsApi(api_client)
+        self.metadata_api = onshape_client.oas.api.MetadataApi(api_client)
+        self.parts_api = onshape_client.oas.api.PartsApi(api_client)
+        self.part_studios_api = onshape_client.oas.api.PartStudiosApi(api_client)
+        self.translation_api = onshape_client.oas.api.TranslationsApi(api_client)
 
 class OAuthAuthorizationMethods(Enum):
 
