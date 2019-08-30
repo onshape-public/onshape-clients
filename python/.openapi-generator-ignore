@@ -22,14 +22,8 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
-onshape_client/api_client.py
-onshape_client/rest.py
-onshape_client/shared.py
-onshape_client/configuration.py
-onshape_client/apikey_headers.py
-onshape_client/onshape_url.py
-onshape_client/client.py
-onshape_client/utility.py
+onshape_client/oas/api_client.py
+onshape_client/oas/rest.py
 setup.py
 .travis.yml
 README.md
