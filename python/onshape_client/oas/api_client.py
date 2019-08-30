@@ -28,6 +28,9 @@ import onshape_client.oas.models
 from onshape_client.oas import rest
 from onshape_client.oas.exceptions import ApiValueError
 
+# Ethan added this:
+from onshape_client.onshape_rest_extras import decode_file_name_from_header, normalize_response_data
+
 
 class ApiClient(object):
     """Generic API client for OpenAPI client library builds.
@@ -541,12 +544,14 @@ class ApiClient(object):
 
         content_disposition = response.getheader("Content-Disposition")
         if content_disposition:
-            filename = re.search(r'filename=[\'"]?([^\'"\s]+)[\'"]?',
-                                 content_disposition).group(1)
+
+            # Ethan changed this
+            filename = decode_file_name_from_header(content_disposition)
+
             path = os.path.join(os.path.dirname(path), filename)
 
         with open(path, "wb") as f:
-            f.write(response.data)
+            f.write(normalize_response_data(response.data))
 
         return path
 

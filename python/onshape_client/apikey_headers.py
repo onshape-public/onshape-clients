@@ -11,10 +11,12 @@ import base64
 import urllib
 import datetime
 import six
-from six.moves.urllib.parse import urlencode, quote_plus
+import binascii
+from six.moves.urllib.parse import urlencode, urlparse, parse_qs, quote_plus
+import copy
 
 
-def add_auth_headers(method, path, access_key, secret_key, query_params={}, headers={}):
+def add_onshape_specific_headers(method, resource_path, configuration, query_params={}, headers={}):
     '''
     Creates a headers object to sign the request
 
@@ -27,20 +29,26 @@ def add_auth_headers(method, path, access_key, secret_key, query_params={}, head
     Returns:
         - dict: Dictionary containing all headers
     '''
-    method = method.lower()
-    date = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
-    nonce = _make_nonce()
-    ctype = headers['Content-Type']
+    access_key = configuration.get_api_key_with_prefix('ACCESS_KEY')
+    secret_key = configuration.get_api_key_with_prefix('SECRET_KEY')
+    if access_key and secret_key:
+        method = method.lower()
+        date = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
+        nonce = _make_nonce()
+        ctype = headers['Content-Type']
 
-    auth = _make_auth(method, date, nonce, path, access_key, secret_key, query_string=urlencode(query_params), ctype=ctype)
+        auth = _make_auth(method, date, nonce, resource_path, access_key, secret_key, query_string=urlencode(query_params), ctype=ctype)
 
-    req_headers = {
-        'Date': date,
-        'On-Nonce': nonce,
-        'Authorization': auth
-    }
+        req_headers = {
+            'Date': date,
+            'On-Nonce': nonce,
+            'Authorization': auth
+        }
+        headers.update(req_headers)
 
-    headers.update(req_headers)
+    if headers['Content-Type'] == 'multipart/form-data':
+        (boundary_key, ctype) = make_boundary_key_and_ctype_header()
+        headers['Content-Type'] = ctype\
 
     return headers
 
@@ -89,3 +97,9 @@ def _make_auth(method, date, nonce, path, access_key, secret_key, query_string="
     auth = 'On ' + access_key.decode('UTF_8') + ':HmacSHA256:' + signature.decode('UTF_8')
 
     return auth
+
+
+def make_boundary_key_and_ctype_header():
+    boundary = binascii.hexlify(os.urandom(16))
+    boundary = boundary.decode('ascii')
+    return str(boundary), str('multipart/form-data; boundary=%s' % boundary)

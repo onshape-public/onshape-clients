@@ -4,8 +4,8 @@ import json
 
 import copy
 from onshape_client.units import u
-from onshape_client.models.bt_configuration_params import BTConfigurationParams
-from onshape_client.models.configuration_entry import ConfigurationEntry
+from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
+from onshape_client.oas.models.configuration_entry import ConfigurationEntry
 import webbrowser
 
 

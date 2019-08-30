@@ -12,3 +12,9 @@ def decode_file_name_from_header(content_disposition_header):
     else:
         filename = filename_potential.group(1).replace('"', '').replace("'", "")
     return filename
+
+def normalize_response_data(response_data):
+    if isinstance(response_data, bytes):
+        return response_data
+    else:
+        return response_data.encode()

@@ -1,4 +1,3 @@
-from .configuration import Configuration
 from pathlib import Path
 from ruamel.yaml import YAML
 import os
@@ -7,7 +6,9 @@ from .oauth.local_server import start_server
 from enum import Enum
 import webbrowser
 from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
-from .oas import oas
+from .oas import api
+from .oas import ApiClient
+from .oas.configuration import Configuration
 
 
 
@@ -213,19 +214,18 @@ class Client:
         return dictionary[key] if key in dictionary else ""
 
     def _create_apis(self):
-        api_client = oas.ApiClient(configuration=self.configuration)
-        self.accounts_api = oas.AccountsApi(api_client)
-        self.app_elements_api = oas.AppElementsApi(api_client)
-        self.assemblies_api = onshape_client.oas.api.AssembliesApi(api_client)
-        self.blob_elements_api = onshape_client.oas.api.BlobElementsApi(api_client)
-        self.drawings_api = onshape_client.oas.api.DrawingsApi(api_client)
-        self.documents_api = onshape_client.oas.api.DocumentsApi(api_client)
-        self.elements_api = onshape_client.oas.api.ElementsApi(api_client)
-        self.endpoints_api = onshape_client.oas.api.EndpointsApi(api_client)
-        self.metadata_api = onshape_client.oas.api.MetadataApi(api_client)
-        self.parts_api = onshape_client.oas.api.PartsApi(api_client)
-        self.part_studios_api = onshape_client.oas.api.PartStudiosApi(api_client)
-        self.translation_api = onshape_client.oas.api.TranslationsApi(api_client)
+        api_client = ApiClient(configuration=self.configuration)
+        self.accounts_api = api.AccountsApi(api_client)
+        self.app_elements_api = api.AppElementsApi(api_client)
+        self.assemblies_api = api.AssembliesApi(api_client)
+        self.blob_elements_api = api.BlobElementsApi(api_client)
+        self.drawings_api = api.DrawingsApi(api_client)
+        self.documents_api = api.DocumentsApi(api_client)
+        self.elements_api = api.ElementsApi(api_client)
+        self.metadata_api = api.MetadataApi(api_client)
+        self.parts_api = api.PartsApi(api_client)
+        self.part_studios_api = api.PartStudiosApi(api_client)
+        self.translation_api = api.TranslationsApi(api_client)
 
 class OAuthAuthorizationMethods(Enum):
 

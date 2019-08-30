@@ -3,7 +3,7 @@
 
 from onshape_client.client import Client
 from onshape_client.onshape_url import OnshapeElement
-from onshape_client.models.bt_translate_format_params import BTTranslateFormatParams
+from onshape_client.oas.models.bt_translate_format_params import BTTranslateFormatParams
 import time
 import json
 import os.path
