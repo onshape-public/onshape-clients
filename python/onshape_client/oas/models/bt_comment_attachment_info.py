@@ -35,9 +35,9 @@ class BTCommentAttachmentInfo(object):
         'mime_type': 'str',
         'thumbnail_for': 'str',
         'file_name': 'str',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
@@ -45,21 +45,21 @@ class BTCommentAttachmentInfo(object):
         'mime_type': 'mimeType',
         'thumbnail_for': 'thumbnailFor',
         'file_name': 'fileName',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, mime_type=None, thumbnail_for=None, file_name=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, mime_type=None, thumbnail_for=None, file_name=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTCommentAttachmentInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._mime_type = None
         self._thumbnail_for = None
         self._file_name = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
@@ -69,12 +69,12 @@ class BTCommentAttachmentInfo(object):
             self.thumbnail_for = thumbnail_for
         if file_name is not None:
             self.file_name = file_name
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -142,27 +142,6 @@ class BTCommentAttachmentInfo(object):
         self._file_name = file_name
 
     @property
-    def id(self):
-        """Gets the id of this BTCommentAttachmentInfo.  # noqa: E501
-
-
-        :return: The id of this BTCommentAttachmentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTCommentAttachmentInfo.
-
-
-        :param id: The id of this BTCommentAttachmentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTCommentAttachmentInfo.  # noqa: E501
 
@@ -203,6 +182,27 @@ class BTCommentAttachmentInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTCommentAttachmentInfo.  # noqa: E501
+
+
+        :return: The id of this BTCommentAttachmentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTCommentAttachmentInfo.
+
+
+        :param id: The id of this BTCommentAttachmentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

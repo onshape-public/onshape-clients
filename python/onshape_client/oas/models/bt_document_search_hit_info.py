@@ -38,8 +38,8 @@ class BTDocumentSearchHitInfo(object):
         'type': 'str',
         'name': 'str',
         'element_name': 'str',
-        'hit': 'BTESDocumentHit',
-        'version_or_workspace_name': 'str'
+        'version_or_workspace_name': 'str',
+        'hit': 'BTESDocumentHit'
     }
 
     attribute_map = {
@@ -49,11 +49,11 @@ class BTDocumentSearchHitInfo(object):
         'type': 'type',
         'name': 'name',
         'element_name': 'elementName',
-        'hit': 'hit',
-        'version_or_workspace_name': 'versionOrWorkspaceName'
+        'version_or_workspace_name': 'versionOrWorkspaceName',
+        'hit': 'hit'
     }
 
-    def __init__(self, document_id=None, highlighted_fields=None, source_map=None, type=None, name=None, element_name=None, hit=None, version_or_workspace_name=None):  # noqa: E501
+    def __init__(self, document_id=None, highlighted_fields=None, source_map=None, type=None, name=None, element_name=None, version_or_workspace_name=None, hit=None):  # noqa: E501
         """BTDocumentSearchHitInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._document_id = None
@@ -62,8 +62,8 @@ class BTDocumentSearchHitInfo(object):
         self._type = None
         self._name = None
         self._element_name = None
-        self._hit = None
         self._version_or_workspace_name = None
+        self._hit = None
         self.discriminator = None
 
         if document_id is not None:
@@ -78,10 +78,10 @@ class BTDocumentSearchHitInfo(object):
             self.name = name
         if element_name is not None:
             self.element_name = element_name
-        if hit is not None:
-            self.hit = hit
         if version_or_workspace_name is not None:
             self.version_or_workspace_name = version_or_workspace_name
+        if hit is not None:
+            self.hit = hit
 
     @property
     def document_id(self):
@@ -210,27 +210,6 @@ class BTDocumentSearchHitInfo(object):
         self._element_name = element_name
 
     @property
-    def hit(self):
-        """Gets the hit of this BTDocumentSearchHitInfo.  # noqa: E501
-
-
-        :return: The hit of this BTDocumentSearchHitInfo.  # noqa: E501
-        :rtype: BTESDocumentHit
-        """
-        return self._hit
-
-    @hit.setter
-    def hit(self, hit):
-        """Sets the hit of this BTDocumentSearchHitInfo.
-
-
-        :param hit: The hit of this BTDocumentSearchHitInfo.  # noqa: E501
-        :type: BTESDocumentHit
-        """
-
-        self._hit = hit
-
-    @property
     def version_or_workspace_name(self):
         """Gets the version_or_workspace_name of this BTDocumentSearchHitInfo.  # noqa: E501
 
@@ -250,6 +229,27 @@ class BTDocumentSearchHitInfo(object):
         """
 
         self._version_or_workspace_name = version_or_workspace_name
+
+    @property
+    def hit(self):
+        """Gets the hit of this BTDocumentSearchHitInfo.  # noqa: E501
+
+
+        :return: The hit of this BTDocumentSearchHitInfo.  # noqa: E501
+        :rtype: BTESDocumentHit
+        """
+        return self._hit
+
+    @hit.setter
+    def hit(self, hit):
+        """Sets the hit of this BTDocumentSearchHitInfo.
+
+
+        :param hit: The hit of this BTDocumentSearchHitInfo.  # noqa: E501
+        :type: BTESDocumentHit
+        """
+
+        self._hit = hit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

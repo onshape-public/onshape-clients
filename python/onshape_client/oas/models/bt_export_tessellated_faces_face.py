@@ -32,52 +32,31 @@ class BTExportTessellatedFacesFace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'error_message': 'str',
-        'facets': 'list[BTExportTessellatedFacesFacet]'
+        'facets': 'list[BTExportTessellatedFacesFacet]',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'error_message': 'errorMessage',
-        'facets': 'facets'
+        'facets': 'facets',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, error_message=None, facets=None):  # noqa: E501
+    def __init__(self, error_message=None, facets=None, id=None):  # noqa: E501
         """BTExportTessellatedFacesFace - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._error_message = None
         self._facets = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if error_message is not None:
             self.error_message = error_message
         if facets is not None:
             self.facets = facets
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportTessellatedFacesFace.  # noqa: E501
-
-
-        :return: The id of this BTExportTessellatedFacesFace.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportTessellatedFacesFace.
-
-
-        :param id: The id of this BTExportTessellatedFacesFace.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def error_message(self):
@@ -120,6 +99,27 @@ class BTExportTessellatedFacesFace(object):
         """
 
         self._facets = facets
+
+    @property
+    def id(self):
+        """Gets the id of this BTExportTessellatedFacesFace.  # noqa: E501
+
+
+        :return: The id of this BTExportTessellatedFacesFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportTessellatedFacesFace.
+
+
+        :param id: The id of this BTExportTessellatedFacesFace.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

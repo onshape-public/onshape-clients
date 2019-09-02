@@ -32,8 +32,12 @@ class BTInvitationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'company_plan': 'bool',
-        'phone_number': 'str',
+        'first_name': 'str',
+        'last_name': 'str',
+        'email': 'str',
+        'default_company_name': 'str',
+        'plan_id': 'str',
+        'seats': 'int',
         'recaptcha': 'str',
         'invite_friend_request': 'bool',
         'company_user_emails': 'list[str]',
@@ -41,17 +45,13 @@ class BTInvitationParams(object):
         'privacy_consent_accepted': 'bool',
         'cad_system_at_signup': 'str',
         'eula_accepted': 'bool',
-        'first_name': 'str',
-        'last_name': 'str',
-        'email': 'str',
-        'default_company_name': 'str',
-        'plan_id': 'str',
-        'seats': 'int',
-        'role': 'int',
         'country_code': 'str',
-        'description': 'str',
+        'company_plan': 'bool',
+        'phone_number': 'str',
+        'role': 'int',
         'source': 'int',
         'password': 'str',
+        'description': 'str',
         'name': 'str',
         'message': 'str',
         'id': 'str',
@@ -59,8 +59,12 @@ class BTInvitationParams(object):
     }
 
     attribute_map = {
-        'company_plan': 'companyPlan',
-        'phone_number': 'phoneNumber',
+        'first_name': 'firstName',
+        'last_name': 'lastName',
+        'email': 'email',
+        'default_company_name': 'defaultCompanyName',
+        'plan_id': 'planId',
+        'seats': 'seats',
         'recaptcha': 'recaptcha',
         'invite_friend_request': 'inviteFriendRequest',
         'company_user_emails': 'companyUserEmails',
@@ -68,28 +72,28 @@ class BTInvitationParams(object):
         'privacy_consent_accepted': 'privacyConsentAccepted',
         'cad_system_at_signup': 'cadSystemAtSignup',
         'eula_accepted': 'eulaAccepted',
-        'first_name': 'firstName',
-        'last_name': 'lastName',
-        'email': 'email',
-        'default_company_name': 'defaultCompanyName',
-        'plan_id': 'planId',
-        'seats': 'seats',
-        'role': 'role',
         'country_code': 'countryCode',
-        'description': 'description',
+        'company_plan': 'companyPlan',
+        'phone_number': 'phoneNumber',
+        'role': 'role',
         'source': 'source',
         'password': 'password',
+        'description': 'description',
         'name': 'name',
         'message': 'message',
         'id': 'id',
         'state': 'state'
     }
 
-    def __init__(self, company_plan=None, phone_number=None, recaptcha=None, invite_friend_request=None, company_user_emails=None, approve_user=None, privacy_consent_accepted=None, cad_system_at_signup=None, eula_accepted=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, role=None, country_code=None, description=None, source=None, password=None, name=None, message=None, id=None, state=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, recaptcha=None, invite_friend_request=None, company_user_emails=None, approve_user=None, privacy_consent_accepted=None, cad_system_at_signup=None, eula_accepted=None, country_code=None, company_plan=None, phone_number=None, role=None, source=None, password=None, description=None, name=None, message=None, id=None, state=None):  # noqa: E501
         """BTInvitationParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._company_plan = None
-        self._phone_number = None
+        self._first_name = None
+        self._last_name = None
+        self._email = None
+        self._default_company_name = None
+        self._plan_id = None
+        self._seats = None
         self._recaptcha = None
         self._invite_friend_request = None
         self._company_user_emails = None
@@ -97,27 +101,31 @@ class BTInvitationParams(object):
         self._privacy_consent_accepted = None
         self._cad_system_at_signup = None
         self._eula_accepted = None
-        self._first_name = None
-        self._last_name = None
-        self._email = None
-        self._default_company_name = None
-        self._plan_id = None
-        self._seats = None
-        self._role = None
         self._country_code = None
-        self._description = None
+        self._company_plan = None
+        self._phone_number = None
+        self._role = None
         self._source = None
         self._password = None
+        self._description = None
         self._name = None
         self._message = None
         self._id = None
         self._state = None
         self.discriminator = None
 
-        if company_plan is not None:
-            self.company_plan = company_plan
-        if phone_number is not None:
-            self.phone_number = phone_number
+        if first_name is not None:
+            self.first_name = first_name
+        if last_name is not None:
+            self.last_name = last_name
+        if email is not None:
+            self.email = email
+        if default_company_name is not None:
+            self.default_company_name = default_company_name
+        if plan_id is not None:
+            self.plan_id = plan_id
+        if seats is not None:
+            self.seats = seats
         if recaptcha is not None:
             self.recaptcha = recaptcha
         if invite_friend_request is not None:
@@ -132,28 +140,20 @@ class BTInvitationParams(object):
             self.cad_system_at_signup = cad_system_at_signup
         if eula_accepted is not None:
             self.eula_accepted = eula_accepted
-        if first_name is not None:
-            self.first_name = first_name
-        if last_name is not None:
-            self.last_name = last_name
-        if email is not None:
-            self.email = email
-        if default_company_name is not None:
-            self.default_company_name = default_company_name
-        if plan_id is not None:
-            self.plan_id = plan_id
-        if seats is not None:
-            self.seats = seats
-        if role is not None:
-            self.role = role
         if country_code is not None:
             self.country_code = country_code
-        if description is not None:
-            self.description = description
+        if company_plan is not None:
+            self.company_plan = company_plan
+        if phone_number is not None:
+            self.phone_number = phone_number
+        if role is not None:
+            self.role = role
         if source is not None:
             self.source = source
         if password is not None:
             self.password = password
+        if description is not None:
+            self.description = description
         if name is not None:
             self.name = name
         if message is not None:
@@ -164,46 +164,130 @@ class BTInvitationParams(object):
             self.state = state
 
     @property
-    def company_plan(self):
-        """Gets the company_plan of this BTInvitationParams.  # noqa: E501
+    def first_name(self):
+        """Gets the first_name of this BTInvitationParams.  # noqa: E501
 
 
-        :return: The company_plan of this BTInvitationParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._company_plan
-
-    @company_plan.setter
-    def company_plan(self, company_plan):
-        """Sets the company_plan of this BTInvitationParams.
-
-
-        :param company_plan: The company_plan of this BTInvitationParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._company_plan = company_plan
-
-    @property
-    def phone_number(self):
-        """Gets the phone_number of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The phone_number of this BTInvitationParams.  # noqa: E501
+        :return: The first_name of this BTInvitationParams.  # noqa: E501
         :rtype: str
         """
-        return self._phone_number
+        return self._first_name
 
-    @phone_number.setter
-    def phone_number(self, phone_number):
-        """Sets the phone_number of this BTInvitationParams.
+    @first_name.setter
+    def first_name(self, first_name):
+        """Sets the first_name of this BTInvitationParams.
 
 
-        :param phone_number: The phone_number of this BTInvitationParams.  # noqa: E501
+        :param first_name: The first_name of this BTInvitationParams.  # noqa: E501
         :type: str
         """
 
-        self._phone_number = phone_number
+        self._first_name = first_name
+
+    @property
+    def last_name(self):
+        """Gets the last_name of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The last_name of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        """Sets the last_name of this BTInvitationParams.
+
+
+        :param last_name: The last_name of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._last_name = last_name
+
+    @property
+    def email(self):
+        """Gets the email of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The email of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTInvitationParams.
+
+
+        :param email: The email of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def default_company_name(self):
+        """Gets the default_company_name of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The default_company_name of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_company_name
+
+    @default_company_name.setter
+    def default_company_name(self, default_company_name):
+        """Sets the default_company_name of this BTInvitationParams.
+
+
+        :param default_company_name: The default_company_name of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._default_company_name = default_company_name
+
+    @property
+    def plan_id(self):
+        """Gets the plan_id of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The plan_id of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        """Sets the plan_id of this BTInvitationParams.
+
+
+        :param plan_id: The plan_id of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._plan_id = plan_id
+
+    @property
+    def seats(self):
+        """Gets the seats of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The seats of this BTInvitationParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._seats
+
+    @seats.setter
+    def seats(self, seats):
+        """Sets the seats of this BTInvitationParams.
+
+
+        :param seats: The seats of this BTInvitationParams.  # noqa: E501
+        :type: int
+        """
+
+        self._seats = seats
 
     @property
     def recaptcha(self):
@@ -353,153 +437,6 @@ class BTInvitationParams(object):
         self._eula_accepted = eula_accepted
 
     @property
-    def first_name(self):
-        """Gets the first_name of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The first_name of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._first_name
-
-    @first_name.setter
-    def first_name(self, first_name):
-        """Sets the first_name of this BTInvitationParams.
-
-
-        :param first_name: The first_name of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._first_name = first_name
-
-    @property
-    def last_name(self):
-        """Gets the last_name of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The last_name of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        """Sets the last_name of this BTInvitationParams.
-
-
-        :param last_name: The last_name of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._last_name = last_name
-
-    @property
-    def email(self):
-        """Gets the email of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The email of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTInvitationParams.
-
-
-        :param email: The email of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
-    def default_company_name(self):
-        """Gets the default_company_name of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The default_company_name of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_company_name
-
-    @default_company_name.setter
-    def default_company_name(self, default_company_name):
-        """Sets the default_company_name of this BTInvitationParams.
-
-
-        :param default_company_name: The default_company_name of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._default_company_name = default_company_name
-
-    @property
-    def plan_id(self):
-        """Gets the plan_id of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The plan_id of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._plan_id
-
-    @plan_id.setter
-    def plan_id(self, plan_id):
-        """Sets the plan_id of this BTInvitationParams.
-
-
-        :param plan_id: The plan_id of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._plan_id = plan_id
-
-    @property
-    def seats(self):
-        """Gets the seats of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The seats of this BTInvitationParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._seats
-
-    @seats.setter
-    def seats(self, seats):
-        """Sets the seats of this BTInvitationParams.
-
-
-        :param seats: The seats of this BTInvitationParams.  # noqa: E501
-        :type: int
-        """
-
-        self._seats = seats
-
-    @property
-    def role(self):
-        """Gets the role of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The role of this BTInvitationParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this BTInvitationParams.
-
-
-        :param role: The role of this BTInvitationParams.  # noqa: E501
-        :type: int
-        """
-
-        self._role = role
-
-    @property
     def country_code(self):
         """Gets the country_code of this BTInvitationParams.  # noqa: E501
 
@@ -521,25 +458,67 @@ class BTInvitationParams(object):
         self._country_code = country_code
 
     @property
-    def description(self):
-        """Gets the description of this BTInvitationParams.  # noqa: E501
+    def company_plan(self):
+        """Gets the company_plan of this BTInvitationParams.  # noqa: E501
 
 
-        :return: The description of this BTInvitationParams.  # noqa: E501
+        :return: The company_plan of this BTInvitationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._company_plan
+
+    @company_plan.setter
+    def company_plan(self, company_plan):
+        """Sets the company_plan of this BTInvitationParams.
+
+
+        :param company_plan: The company_plan of this BTInvitationParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._company_plan = company_plan
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The phone_number of this BTInvitationParams.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._phone_number
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTInvitationParams.
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this BTInvitationParams.
 
 
-        :param description: The description of this BTInvitationParams.  # noqa: E501
+        :param phone_number: The phone_number of this BTInvitationParams.  # noqa: E501
         :type: str
         """
 
-        self._description = description
+        self._phone_number = phone_number
+
+    @property
+    def role(self):
+        """Gets the role of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The role of this BTInvitationParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this BTInvitationParams.
+
+
+        :param role: The role of this BTInvitationParams.  # noqa: E501
+        :type: int
+        """
+
+        self._role = role
 
     @property
     def source(self):
@@ -582,6 +561,27 @@ class BTInvitationParams(object):
         """
 
         self._password = password
+
+    @property
+    def description(self):
+        """Gets the description of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The description of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTInvitationParams.
+
+
+        :param description: The description of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def name(self):

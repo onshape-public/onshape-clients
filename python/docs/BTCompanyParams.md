@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain_prefix** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**domain_prefix** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

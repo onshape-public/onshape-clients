@@ -32,134 +32,71 @@ class BTUserUpdateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'old_password': 'str',
-        'new_password': 'str',
-        'phone_number': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'default_company_name': 'str',
-        'forum_id': 'str',
         'country_code': 'str',
+        'old_password': 'str',
+        'new_password': 'str',
+        'phone_number': 'str',
+        'forum_id': 'str',
         'description': 'str',
         'name': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'old_password': 'oldPassword',
-        'new_password': 'newPassword',
-        'phone_number': 'phoneNumber',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'default_company_name': 'defaultCompanyName',
-        'forum_id': 'forumId',
         'country_code': 'countryCode',
+        'old_password': 'oldPassword',
+        'new_password': 'newPassword',
+        'phone_number': 'phoneNumber',
+        'forum_id': 'forumId',
         'description': 'description',
         'name': 'name',
         'id': 'id'
     }
 
-    def __init__(self, old_password=None, new_password=None, phone_number=None, first_name=None, last_name=None, default_company_name=None, forum_id=None, country_code=None, description=None, name=None, id=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, default_company_name=None, country_code=None, old_password=None, new_password=None, phone_number=None, forum_id=None, description=None, name=None, id=None):  # noqa: E501
         """BTUserUpdateParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._old_password = None
-        self._new_password = None
-        self._phone_number = None
         self._first_name = None
         self._last_name = None
         self._default_company_name = None
-        self._forum_id = None
         self._country_code = None
+        self._old_password = None
+        self._new_password = None
+        self._phone_number = None
+        self._forum_id = None
         self._description = None
         self._name = None
         self._id = None
         self.discriminator = None
 
-        if old_password is not None:
-            self.old_password = old_password
-        if new_password is not None:
-            self.new_password = new_password
-        if phone_number is not None:
-            self.phone_number = phone_number
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if default_company_name is not None:
             self.default_company_name = default_company_name
-        if forum_id is not None:
-            self.forum_id = forum_id
         if country_code is not None:
             self.country_code = country_code
+        if old_password is not None:
+            self.old_password = old_password
+        if new_password is not None:
+            self.new_password = new_password
+        if phone_number is not None:
+            self.phone_number = phone_number
+        if forum_id is not None:
+            self.forum_id = forum_id
         if description is not None:
             self.description = description
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-
-    @property
-    def old_password(self):
-        """Gets the old_password of this BTUserUpdateParams.  # noqa: E501
-
-
-        :return: The old_password of this BTUserUpdateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._old_password
-
-    @old_password.setter
-    def old_password(self, old_password):
-        """Sets the old_password of this BTUserUpdateParams.
-
-
-        :param old_password: The old_password of this BTUserUpdateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._old_password = old_password
-
-    @property
-    def new_password(self):
-        """Gets the new_password of this BTUserUpdateParams.  # noqa: E501
-
-
-        :return: The new_password of this BTUserUpdateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._new_password
-
-    @new_password.setter
-    def new_password(self, new_password):
-        """Sets the new_password of this BTUserUpdateParams.
-
-
-        :param new_password: The new_password of this BTUserUpdateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._new_password = new_password
-
-    @property
-    def phone_number(self):
-        """Gets the phone_number of this BTUserUpdateParams.  # noqa: E501
-
-
-        :return: The phone_number of this BTUserUpdateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._phone_number
-
-    @phone_number.setter
-    def phone_number(self, phone_number):
-        """Sets the phone_number of this BTUserUpdateParams.
-
-
-        :param phone_number: The phone_number of this BTUserUpdateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._phone_number = phone_number
 
     @property
     def first_name(self):
@@ -225,27 +162,6 @@ class BTUserUpdateParams(object):
         self._default_company_name = default_company_name
 
     @property
-    def forum_id(self):
-        """Gets the forum_id of this BTUserUpdateParams.  # noqa: E501
-
-
-        :return: The forum_id of this BTUserUpdateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._forum_id
-
-    @forum_id.setter
-    def forum_id(self, forum_id):
-        """Sets the forum_id of this BTUserUpdateParams.
-
-
-        :param forum_id: The forum_id of this BTUserUpdateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._forum_id = forum_id
-
-    @property
     def country_code(self):
         """Gets the country_code of this BTUserUpdateParams.  # noqa: E501
 
@@ -265,6 +181,90 @@ class BTUserUpdateParams(object):
         """
 
         self._country_code = country_code
+
+    @property
+    def old_password(self):
+        """Gets the old_password of this BTUserUpdateParams.  # noqa: E501
+
+
+        :return: The old_password of this BTUserUpdateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._old_password
+
+    @old_password.setter
+    def old_password(self, old_password):
+        """Sets the old_password of this BTUserUpdateParams.
+
+
+        :param old_password: The old_password of this BTUserUpdateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._old_password = old_password
+
+    @property
+    def new_password(self):
+        """Gets the new_password of this BTUserUpdateParams.  # noqa: E501
+
+
+        :return: The new_password of this BTUserUpdateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_password
+
+    @new_password.setter
+    def new_password(self, new_password):
+        """Sets the new_password of this BTUserUpdateParams.
+
+
+        :param new_password: The new_password of this BTUserUpdateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._new_password = new_password
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this BTUserUpdateParams.  # noqa: E501
+
+
+        :return: The phone_number of this BTUserUpdateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this BTUserUpdateParams.
+
+
+        :param phone_number: The phone_number of this BTUserUpdateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def forum_id(self):
+        """Gets the forum_id of this BTUserUpdateParams.  # noqa: E501
+
+
+        :return: The forum_id of this BTUserUpdateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._forum_id
+
+    @forum_id.setter
+    def forum_id(self, forum_id):
+        """Sets the forum_id of this BTUserUpdateParams.
+
+
+        :param forum_id: The forum_id of this BTUserUpdateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._forum_id = forum_id
 
     @property
     def description(self):

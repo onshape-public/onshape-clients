@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **element_name** | **str** |  | [optional] 
-**hit** | [**BTESDocumentHit**](BTESDocumentHit.md) |  | [optional] 
 **version_or_workspace_name** | **str** |  | [optional] 
+**hit** | [**BTESDocumentHit**](BTESDocumentHit.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

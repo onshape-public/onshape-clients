@@ -32,57 +32,36 @@ class BTAPIPartnerParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'description': 'str',
         'user_id': 'str',
+        'description': 'str',
         'website': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
         'user_id': 'userId',
+        'description': 'description',
         'website': 'website',
         'name': 'name'
     }
 
-    def __init__(self, description=None, user_id=None, website=None, name=None):  # noqa: E501
+    def __init__(self, user_id=None, description=None, website=None, name=None):  # noqa: E501
         """BTAPIPartnerParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._description = None
         self._user_id = None
+        self._description = None
         self._website = None
         self._name = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
         if user_id is not None:
             self.user_id = user_id
+        if description is not None:
+            self.description = description
         if website is not None:
             self.website = website
         if name is not None:
             self.name = name
-
-    @property
-    def description(self):
-        """Gets the description of this BTAPIPartnerParams.  # noqa: E501
-
-
-        :return: The description of this BTAPIPartnerParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTAPIPartnerParams.
-
-
-        :param description: The description of this BTAPIPartnerParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def user_id(self):
@@ -104,6 +83,27 @@ class BTAPIPartnerParams(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def description(self):
+        """Gets the description of this BTAPIPartnerParams.  # noqa: E501
+
+
+        :return: The description of this BTAPIPartnerParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTAPIPartnerParams.
+
+
+        :param description: The description of this BTAPIPartnerParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def website(self):

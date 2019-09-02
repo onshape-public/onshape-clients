@@ -185,7 +185,7 @@ class Client:
         self._set_oauth_creds_from_token_response(token_response)
         return
 
-    def fetch_access_token(self, authorization_response):
+    def fetch_access_token(self, **kwargs):
         """
         :param authorization_response: The response containing the authorization code.
         :return: The access token and the refresh token. These should be stored by the caller to facilitate future
@@ -194,8 +194,8 @@ class Client:
         try:
             token_response = self.oauth.fetch_token(
             self.token_uri,
-            authorization_response=authorization_response,
-            client_secret=self.client_secret)
+            client_secret=self.client_secret,
+            **kwargs)
             self._set_oauth_creds_from_token_response(token_response)
             return token_response
         except Warning:
@@ -222,6 +222,7 @@ class Client:
         self.drawings_api = api.DrawingsApi(api_client)
         self.documents_api = api.DocumentsApi(api_client)
         self.elements_api = api.ElementsApi(api_client)
+        self.feature_studios_api = api.FeatureStudiosApi(api_client)
         self.metadata_api = api.MetadataApi(api_client)
         self.parts_api = api.PartsApi(api_client)
         self.part_studios_api = api.PartStudiosApi(api_client)

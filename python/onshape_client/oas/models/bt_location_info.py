@@ -33,15 +33,15 @@ class BTLocationInfo(object):
     """
     openapi_types = {
         'from_node': 'BTPNode',
-        'top_level': 'str',
         'document': 'str',
+        'top_level': 'str',
         'element_microversion': 'str',
         'language_version': 'int',
         'module_ids': 'BTDocumentVersionElementIds',
         'column': 'int',
         'end_line': 'int',
-        'end_column': 'int',
         'line': 'int',
+        'end_column': 'int',
         'parse_node_id': 'str',
         'end_character': 'int',
         'parse_node_id_raw': 'BTObjectId',
@@ -52,15 +52,15 @@ class BTLocationInfo(object):
 
     attribute_map = {
         'from_node': 'fromNode',
-        'top_level': 'topLevel',
         'document': 'document',
+        'top_level': 'topLevel',
         'element_microversion': 'elementMicroversion',
         'language_version': 'languageVersion',
         'module_ids': 'moduleIds',
         'column': 'column',
         'end_line': 'endLine',
-        'end_column': 'endColumn',
         'line': 'line',
+        'end_column': 'endColumn',
         'parse_node_id': 'parseNodeId',
         'end_character': 'endCharacter',
         'parse_node_id_raw': 'parseNodeIdRaw',
@@ -69,19 +69,19 @@ class BTLocationInfo(object):
         'node_id': 'nodeId'
     }
 
-    def __init__(self, from_node=None, top_level=None, document=None, element_microversion=None, language_version=None, module_ids=None, column=None, end_line=None, end_column=None, line=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, character=None, version=None, node_id=None):  # noqa: E501
+    def __init__(self, from_node=None, document=None, top_level=None, element_microversion=None, language_version=None, module_ids=None, column=None, end_line=None, line=None, end_column=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, character=None, version=None, node_id=None):  # noqa: E501
         """BTLocationInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._from_node = None
-        self._top_level = None
         self._document = None
+        self._top_level = None
         self._element_microversion = None
         self._language_version = None
         self._module_ids = None
         self._column = None
         self._end_line = None
-        self._end_column = None
         self._line = None
+        self._end_column = None
         self._parse_node_id = None
         self._end_character = None
         self._parse_node_id_raw = None
@@ -92,10 +92,10 @@ class BTLocationInfo(object):
 
         if from_node is not None:
             self.from_node = from_node
-        if top_level is not None:
-            self.top_level = top_level
         if document is not None:
             self.document = document
+        if top_level is not None:
+            self.top_level = top_level
         if element_microversion is not None:
             self.element_microversion = element_microversion
         if language_version is not None:
@@ -106,10 +106,10 @@ class BTLocationInfo(object):
             self.column = column
         if end_line is not None:
             self.end_line = end_line
-        if end_column is not None:
-            self.end_column = end_column
         if line is not None:
             self.line = line
+        if end_column is not None:
+            self.end_column = end_column
         if parse_node_id is not None:
             self.parse_node_id = parse_node_id
         if end_character is not None:
@@ -145,27 +145,6 @@ class BTLocationInfo(object):
         self._from_node = from_node
 
     @property
-    def top_level(self):
-        """Gets the top_level of this BTLocationInfo.  # noqa: E501
-
-
-        :return: The top_level of this BTLocationInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._top_level
-
-    @top_level.setter
-    def top_level(self, top_level):
-        """Sets the top_level of this BTLocationInfo.
-
-
-        :param top_level: The top_level of this BTLocationInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._top_level = top_level
-
-    @property
     def document(self):
         """Gets the document of this BTLocationInfo.  # noqa: E501
 
@@ -185,6 +164,27 @@ class BTLocationInfo(object):
         """
 
         self._document = document
+
+    @property
+    def top_level(self):
+        """Gets the top_level of this BTLocationInfo.  # noqa: E501
+
+
+        :return: The top_level of this BTLocationInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._top_level
+
+    @top_level.setter
+    def top_level(self, top_level):
+        """Sets the top_level of this BTLocationInfo.
+
+
+        :param top_level: The top_level of this BTLocationInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._top_level = top_level
 
     @property
     def element_microversion(self):
@@ -292,27 +292,6 @@ class BTLocationInfo(object):
         self._end_line = end_line
 
     @property
-    def end_column(self):
-        """Gets the end_column of this BTLocationInfo.  # noqa: E501
-
-
-        :return: The end_column of this BTLocationInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._end_column
-
-    @end_column.setter
-    def end_column(self, end_column):
-        """Sets the end_column of this BTLocationInfo.
-
-
-        :param end_column: The end_column of this BTLocationInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._end_column = end_column
-
-    @property
     def line(self):
         """Gets the line of this BTLocationInfo.  # noqa: E501
 
@@ -332,6 +311,27 @@ class BTLocationInfo(object):
         """
 
         self._line = line
+
+    @property
+    def end_column(self):
+        """Gets the end_column of this BTLocationInfo.  # noqa: E501
+
+
+        :return: The end_column of this BTLocationInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_column
+
+    @end_column.setter
+    def end_column(self, end_column):
+        """Sets the end_column of this BTLocationInfo.
+
+
+        :param end_column: The end_column of this BTLocationInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._end_column = end_column
 
     @property
     def parse_node_id(self):

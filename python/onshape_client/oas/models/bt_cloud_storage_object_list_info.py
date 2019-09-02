@@ -32,57 +32,36 @@ class BTCloudStorageObjectListInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'path_to_root': 'list[CloudObjectPathSegment]',
         'href': 'str',
+        'path_to_root': 'list[CloudObjectPathSegment]',
         'items': 'list[BTCloudStorageObjectInfo]',
         'next': 'str'
     }
 
     attribute_map = {
-        'path_to_root': 'pathToRoot',
         'href': 'href',
+        'path_to_root': 'pathToRoot',
         'items': 'items',
         'next': 'next'
     }
 
-    def __init__(self, path_to_root=None, href=None, items=None, next=None):  # noqa: E501
+    def __init__(self, href=None, path_to_root=None, items=None, next=None):  # noqa: E501
         """BTCloudStorageObjectListInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._path_to_root = None
         self._href = None
+        self._path_to_root = None
         self._items = None
         self._next = None
         self.discriminator = None
 
-        if path_to_root is not None:
-            self.path_to_root = path_to_root
         if href is not None:
             self.href = href
+        if path_to_root is not None:
+            self.path_to_root = path_to_root
         if items is not None:
             self.items = items
         if next is not None:
             self.next = next
-
-    @property
-    def path_to_root(self):
-        """Gets the path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
-
-
-        :return: The path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :rtype: list[CloudObjectPathSegment]
-        """
-        return self._path_to_root
-
-    @path_to_root.setter
-    def path_to_root(self, path_to_root):
-        """Sets the path_to_root of this BTCloudStorageObjectListInfo.
-
-
-        :param path_to_root: The path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
-        :type: list[CloudObjectPathSegment]
-        """
-
-        self._path_to_root = path_to_root
 
     @property
     def href(self):
@@ -104,6 +83,27 @@ class BTCloudStorageObjectListInfo(object):
         """
 
         self._href = href
+
+    @property
+    def path_to_root(self):
+        """Gets the path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
+
+
+        :return: The path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :rtype: list[CloudObjectPathSegment]
+        """
+        return self._path_to_root
+
+    @path_to_root.setter
+    def path_to_root(self, path_to_root):
+        """Sets the path_to_root of this BTCloudStorageObjectListInfo.
+
+
+        :param path_to_root: The path_to_root of this BTCloudStorageObjectListInfo.  # noqa: E501
+        :type: list[CloudObjectPathSegment]
+        """
+
+        self._path_to_root = path_to_root
 
     @property
     def items(self):

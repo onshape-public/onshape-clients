@@ -35,29 +35,29 @@ class BTIdentityInfo(object):
         'identity_type': 'int',
         'user': 'BTUserSummaryInfo',
         'team': 'BTTeamSummaryInfo',
-        'id': 'str',
         'href': 'str',
-        'view_ref': 'str'
+        'view_ref': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'identity_type': 'identityType',
         'user': 'user',
         'team': 'team',
-        'id': 'id',
         'href': 'href',
-        'view_ref': 'viewRef'
+        'view_ref': 'viewRef',
+        'id': 'id'
     }
 
-    def __init__(self, identity_type=None, user=None, team=None, id=None, href=None, view_ref=None):  # noqa: E501
+    def __init__(self, identity_type=None, user=None, team=None, href=None, view_ref=None, id=None):  # noqa: E501
         """BTIdentityInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._identity_type = None
         self._user = None
         self._team = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self.discriminator = None
 
         if identity_type is not None:
@@ -66,12 +66,12 @@ class BTIdentityInfo(object):
             self.user = user
         if team is not None:
             self.team = team
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
 
     @property
     def identity_type(self):
@@ -137,27 +137,6 @@ class BTIdentityInfo(object):
         self._team = team
 
     @property
-    def id(self):
-        """Gets the id of this BTIdentityInfo.  # noqa: E501
-
-
-        :return: The id of this BTIdentityInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTIdentityInfo.
-
-
-        :param id: The id of this BTIdentityInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTIdentityInfo.  # noqa: E501
 
@@ -198,6 +177,27 @@ class BTIdentityInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTIdentityInfo.  # noqa: E501
+
+
+        :return: The id of this BTIdentityInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTIdentityInfo.
+
+
+        :param id: The id of this BTIdentityInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

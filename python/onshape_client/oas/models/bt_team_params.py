@@ -33,36 +33,36 @@ class BTTeamParams(object):
     """
     openapi_types = {
         'owner_id': 'str',
-        'description': 'str',
         'owner_type': 'int',
+        'description': 'str',
         'name': 'str',
         'id': 'str'
     }
 
     attribute_map = {
         'owner_id': 'ownerId',
-        'description': 'description',
         'owner_type': 'ownerType',
+        'description': 'description',
         'name': 'name',
         'id': 'id'
     }
 
-    def __init__(self, owner_id=None, description=None, owner_type=None, name=None, id=None):  # noqa: E501
+    def __init__(self, owner_id=None, owner_type=None, description=None, name=None, id=None):  # noqa: E501
         """BTTeamParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._owner_id = None
-        self._description = None
         self._owner_type = None
+        self._description = None
         self._name = None
         self._id = None
         self.discriminator = None
 
         if owner_id is not None:
             self.owner_id = owner_id
-        if description is not None:
-            self.description = description
         if owner_type is not None:
             self.owner_type = owner_type
+        if description is not None:
+            self.description = description
         if name is not None:
             self.name = name
         if id is not None:
@@ -90,27 +90,6 @@ class BTTeamParams(object):
         self._owner_id = owner_id
 
     @property
-    def description(self):
-        """Gets the description of this BTTeamParams.  # noqa: E501
-
-
-        :return: The description of this BTTeamParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTTeamParams.
-
-
-        :param description: The description of this BTTeamParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def owner_type(self):
         """Gets the owner_type of this BTTeamParams.  # noqa: E501
 
@@ -130,6 +109,27 @@ class BTTeamParams(object):
         """
 
         self._owner_type = owner_type
+
+    @property
+    def description(self):
+        """Gets the description of this BTTeamParams.  # noqa: E501
+
+
+        :return: The description of this BTTeamParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTTeamParams.
+
+
+        :param description: The description of this BTTeamParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def name(self):

@@ -32,52 +32,31 @@ class BTIdTranslationResultInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'source': 'str',
         'status': 'str',
+        'source': 'str',
         'target': 'list[str]'
     }
 
     attribute_map = {
-        'source': 'source',
         'status': 'status',
+        'source': 'source',
         'target': 'target'
     }
 
-    def __init__(self, source=None, status=None, target=None):  # noqa: E501
+    def __init__(self, status=None, source=None, target=None):  # noqa: E501
         """BTIdTranslationResultInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._source = None
         self._status = None
+        self._source = None
         self._target = None
         self.discriminator = None
 
-        if source is not None:
-            self.source = source
         if status is not None:
             self.status = status
+        if source is not None:
+            self.source = source
         if target is not None:
             self.target = target
-
-    @property
-    def source(self):
-        """Gets the source of this BTIdTranslationResultInfo.  # noqa: E501
-
-
-        :return: The source of this BTIdTranslationResultInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._source
-
-    @source.setter
-    def source(self, source):
-        """Sets the source of this BTIdTranslationResultInfo.
-
-
-        :param source: The source of this BTIdTranslationResultInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._source = source
 
     @property
     def status(self):
@@ -99,6 +78,27 @@ class BTIdTranslationResultInfo(object):
         """
 
         self._status = status
+
+    @property
+    def source(self):
+        """Gets the source of this BTIdTranslationResultInfo.  # noqa: E501
+
+
+        :return: The source of this BTIdTranslationResultInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this BTIdTranslationResultInfo.
+
+
+        :param source: The source of this BTIdTranslationResultInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._source = source
 
     @property
     def target(self):

@@ -32,62 +32,41 @@ class BTExportModelBody(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'faces': 'list[BTExportModelFace]',
         'vertices': 'list[BTExportModelVertex]',
+        'edges': 'list[BTExportModelEdge]',
         'type': 'str',
-        'edges': 'list[BTExportModelEdge]'
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'faces': 'faces',
         'vertices': 'vertices',
+        'edges': 'edges',
         'type': 'type',
-        'edges': 'edges'
+        'id': 'id'
     }
 
-    def __init__(self, id=None, faces=None, vertices=None, type=None, edges=None):  # noqa: E501
+    def __init__(self, faces=None, vertices=None, edges=None, type=None, id=None):  # noqa: E501
         """BTExportModelBody - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._faces = None
         self._vertices = None
-        self._type = None
         self._edges = None
+        self._type = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if faces is not None:
             self.faces = faces
         if vertices is not None:
             self.vertices = vertices
-        if type is not None:
-            self.type = type
         if edges is not None:
             self.edges = edges
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportModelBody.  # noqa: E501
-
-
-        :return: The id of this BTExportModelBody.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportModelBody.
-
-
-        :param id: The id of this BTExportModelBody.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if type is not None:
+            self.type = type
+        if id is not None:
+            self.id = id
 
     @property
     def faces(self):
@@ -132,6 +111,27 @@ class BTExportModelBody(object):
         self._vertices = vertices
 
     @property
+    def edges(self):
+        """Gets the edges of this BTExportModelBody.  # noqa: E501
+
+
+        :return: The edges of this BTExportModelBody.  # noqa: E501
+        :rtype: list[BTExportModelEdge]
+        """
+        return self._edges
+
+    @edges.setter
+    def edges(self, edges):
+        """Sets the edges of this BTExportModelBody.
+
+
+        :param edges: The edges of this BTExportModelBody.  # noqa: E501
+        :type: list[BTExportModelEdge]
+        """
+
+        self._edges = edges
+
+    @property
     def type(self):
         """Gets the type of this BTExportModelBody.  # noqa: E501
 
@@ -159,25 +159,25 @@ class BTExportModelBody(object):
         self._type = type
 
     @property
-    def edges(self):
-        """Gets the edges of this BTExportModelBody.  # noqa: E501
+    def id(self):
+        """Gets the id of this BTExportModelBody.  # noqa: E501
 
 
-        :return: The edges of this BTExportModelBody.  # noqa: E501
-        :rtype: list[BTExportModelEdge]
+        :return: The id of this BTExportModelBody.  # noqa: E501
+        :rtype: str
         """
-        return self._edges
+        return self._id
 
-    @edges.setter
-    def edges(self, edges):
-        """Sets the edges of this BTExportModelBody.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportModelBody.
 
 
-        :param edges: The edges of this BTExportModelBody.  # noqa: E501
-        :type: list[BTExportModelEdge]
+        :param id: The id of this BTExportModelBody.  # noqa: E501
+        :type: str
         """
 
-        self._edges = edges
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

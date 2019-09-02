@@ -32,90 +32,88 @@ class BTReleasePackageInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[BTReleasePackageItemInfo]',
         'detailed': 'bool',
         'column_names': 'dict(str, str)',
         'comments': 'list[BTCommentInfo]',
         'parent_comments': 'list[BTReleaseCommentListInfo]',
         'package_thumbnail': 'str',
+        'items': 'list[BTReleasePackageItemInfo]',
         'version_id': 'str',
         'workspace_id': 'str',
         'revision_rule_id': 'str',
         'parent_packages': 'list[str]',
         'linked_version_ids': 'list[str]',
+        'workflow': 'BTWorkflowSnapshotInfo',
         'description': 'str',
         'company_id': 'str',
         'document_id': 'str',
-        'workflow': 'BTWorkflowSnapshotInfo',
-        'is_obsoletion': 'bool',
         'workflow_id': 'BTPublishedWorkflowId',
+        'is_obsoletion': 'bool',
         'name_as_property': 'str',
         'description_as_property': 'str',
         'properties': 'list[BTWorkflowPropertyInfo]',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'items': 'items',
         'detailed': 'detailed',
         'column_names': 'columnNames',
         'comments': 'comments',
         'parent_comments': 'parentComments',
         'package_thumbnail': 'packageThumbnail',
+        'items': 'items',
         'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'revision_rule_id': 'revisionRuleId',
         'parent_packages': 'parentPackages',
         'linked_version_ids': 'linkedVersionIds',
+        'workflow': 'workflow',
         'description': 'description',
         'company_id': 'companyId',
         'document_id': 'documentId',
-        'workflow': 'workflow',
-        'is_obsoletion': 'isObsoletion',
         'workflow_id': 'workflowId',
+        'is_obsoletion': 'isObsoletion',
         'name_as_property': 'nameAsProperty',
         'description_as_property': 'descriptionAsProperty',
         'properties': 'properties',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, items=None, detailed=None, column_names=None, comments=None, parent_comments=None, package_thumbnail=None, version_id=None, workspace_id=None, revision_rule_id=None, parent_packages=None, linked_version_ids=None, description=None, company_id=None, document_id=None, workflow=None, is_obsoletion=None, workflow_id=None, name_as_property=None, description_as_property=None, properties=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, detailed=None, column_names=None, comments=None, parent_comments=None, package_thumbnail=None, items=None, version_id=None, workspace_id=None, revision_rule_id=None, parent_packages=None, linked_version_ids=None, workflow=None, description=None, company_id=None, document_id=None, workflow_id=None, is_obsoletion=None, name_as_property=None, description_as_property=None, properties=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTReleasePackageInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._items = None
         self._detailed = None
         self._column_names = None
         self._comments = None
         self._parent_comments = None
         self._package_thumbnail = None
+        self._items = None
         self._version_id = None
         self._workspace_id = None
         self._revision_rule_id = None
         self._parent_packages = None
         self._linked_version_ids = None
+        self._workflow = None
         self._description = None
         self._company_id = None
         self._document_id = None
-        self._workflow = None
-        self._is_obsoletion = None
         self._workflow_id = None
+        self._is_obsoletion = None
         self._name_as_property = None
         self._description_as_property = None
         self._properties = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
-        if items is not None:
-            self.items = items
         if detailed is not None:
             self.detailed = detailed
         if column_names is not None:
@@ -126,6 +124,8 @@ class BTReleasePackageInfo(object):
             self.parent_comments = parent_comments
         if package_thumbnail is not None:
             self.package_thumbnail = package_thumbnail
+        if items is not None:
+            self.items = items
         if version_id is not None:
             self.version_id = version_id
         if workspace_id is not None:
@@ -136,53 +136,32 @@ class BTReleasePackageInfo(object):
             self.parent_packages = parent_packages
         if linked_version_ids is not None:
             self.linked_version_ids = linked_version_ids
+        if workflow is not None:
+            self.workflow = workflow
         if description is not None:
             self.description = description
         if company_id is not None:
             self.company_id = company_id
         if document_id is not None:
             self.document_id = document_id
-        if workflow is not None:
-            self.workflow = workflow
-        if is_obsoletion is not None:
-            self.is_obsoletion = is_obsoletion
         if workflow_id is not None:
             self.workflow_id = workflow_id
+        if is_obsoletion is not None:
+            self.is_obsoletion = is_obsoletion
         if name_as_property is not None:
             self.name_as_property = name_as_property
         if description_as_property is not None:
             self.description_as_property = description_as_property
         if properties is not None:
             self.properties = properties
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
-
-    @property
-    def items(self):
-        """Gets the items of this BTReleasePackageInfo.  # noqa: E501
-
-
-        :return: The items of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: list[BTReleasePackageItemInfo]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTReleasePackageInfo.
-
-
-        :param items: The items of this BTReleasePackageInfo.  # noqa: E501
-        :type: list[BTReleasePackageItemInfo]
-        """
-
-        self._items = items
 
     @property
     def detailed(self):
@@ -290,6 +269,27 @@ class BTReleasePackageInfo(object):
         self._package_thumbnail = package_thumbnail
 
     @property
+    def items(self):
+        """Gets the items of this BTReleasePackageInfo.  # noqa: E501
+
+
+        :return: The items of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: list[BTReleasePackageItemInfo]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTReleasePackageInfo.
+
+
+        :param items: The items of this BTReleasePackageInfo.  # noqa: E501
+        :type: list[BTReleasePackageItemInfo]
+        """
+
+        self._items = items
+
+    @property
     def version_id(self):
         """Gets the version_id of this BTReleasePackageInfo.  # noqa: E501
 
@@ -395,6 +395,27 @@ class BTReleasePackageInfo(object):
         self._linked_version_ids = linked_version_ids
 
     @property
+    def workflow(self):
+        """Gets the workflow of this BTReleasePackageInfo.  # noqa: E501
+
+
+        :return: The workflow of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: BTWorkflowSnapshotInfo
+        """
+        return self._workflow
+
+    @workflow.setter
+    def workflow(self, workflow):
+        """Sets the workflow of this BTReleasePackageInfo.
+
+
+        :param workflow: The workflow of this BTReleasePackageInfo.  # noqa: E501
+        :type: BTWorkflowSnapshotInfo
+        """
+
+        self._workflow = workflow
+
+    @property
     def description(self):
         """Gets the description of this BTReleasePackageInfo.  # noqa: E501
 
@@ -458,25 +479,25 @@ class BTReleasePackageInfo(object):
         self._document_id = document_id
 
     @property
-    def workflow(self):
-        """Gets the workflow of this BTReleasePackageInfo.  # noqa: E501
+    def workflow_id(self):
+        """Gets the workflow_id of this BTReleasePackageInfo.  # noqa: E501
 
 
-        :return: The workflow of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: BTWorkflowSnapshotInfo
+        :return: The workflow_id of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: BTPublishedWorkflowId
         """
-        return self._workflow
+        return self._workflow_id
 
-    @workflow.setter
-    def workflow(self, workflow):
-        """Sets the workflow of this BTReleasePackageInfo.
+    @workflow_id.setter
+    def workflow_id(self, workflow_id):
+        """Sets the workflow_id of this BTReleasePackageInfo.
 
 
-        :param workflow: The workflow of this BTReleasePackageInfo.  # noqa: E501
-        :type: BTWorkflowSnapshotInfo
+        :param workflow_id: The workflow_id of this BTReleasePackageInfo.  # noqa: E501
+        :type: BTPublishedWorkflowId
         """
 
-        self._workflow = workflow
+        self._workflow_id = workflow_id
 
     @property
     def is_obsoletion(self):
@@ -498,27 +519,6 @@ class BTReleasePackageInfo(object):
         """
 
         self._is_obsoletion = is_obsoletion
-
-    @property
-    def workflow_id(self):
-        """Gets the workflow_id of this BTReleasePackageInfo.  # noqa: E501
-
-
-        :return: The workflow_id of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: BTPublishedWorkflowId
-        """
-        return self._workflow_id
-
-    @workflow_id.setter
-    def workflow_id(self, workflow_id):
-        """Sets the workflow_id of this BTReleasePackageInfo.
-
-
-        :param workflow_id: The workflow_id of this BTReleasePackageInfo.  # noqa: E501
-        :type: BTPublishedWorkflowId
-        """
-
-        self._workflow_id = workflow_id
 
     @property
     def name_as_property(self):
@@ -584,27 +584,6 @@ class BTReleasePackageInfo(object):
         self._properties = properties
 
     @property
-    def id(self):
-        """Gets the id of this BTReleasePackageInfo.  # noqa: E501
-
-
-        :return: The id of this BTReleasePackageInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTReleasePackageInfo.
-
-
-        :param id: The id of this BTReleasePackageInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTReleasePackageInfo.  # noqa: E501
 
@@ -645,6 +624,27 @@ class BTReleasePackageInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTReleasePackageInfo.  # noqa: E501
+
+
+        :return: The id of this BTReleasePackageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTReleasePackageInfo.
+
+
+        :param id: The id of this BTReleasePackageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

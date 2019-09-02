@@ -32,7 +32,7 @@ class BTEnterpriseReportParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
+        'owner_id': 'str',
         'drill_down_dashboard': 'bool',
         'group_name': 'str',
         'report_id': 'str',
@@ -40,14 +40,14 @@ class BTEnterpriseReportParams(object):
         'public_report': 'bool',
         'model': 'str',
         'category': 'int',
-        'owner_id': 'str',
         'owner_type': 'int',
         'description': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
+        'owner_id': 'ownerId',
         'drill_down_dashboard': 'drillDownDashboard',
         'group_name': 'groupName',
         'report_id': 'reportId',
@@ -55,16 +55,16 @@ class BTEnterpriseReportParams(object):
         'public_report': 'publicReport',
         'model': 'model',
         'category': 'category',
-        'owner_id': 'ownerId',
         'owner_type': 'ownerType',
         'description': 'description',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, id=None, drill_down_dashboard=None, group_name=None, report_id=None, report_name=None, public_report=None, model=None, category=None, owner_id=None, owner_type=None, description=None, name=None):  # noqa: E501
+    def __init__(self, owner_id=None, drill_down_dashboard=None, group_name=None, report_id=None, report_name=None, public_report=None, model=None, category=None, owner_type=None, description=None, id=None, name=None):  # noqa: E501
         """BTEnterpriseReportParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
+        self._owner_id = None
         self._drill_down_dashboard = None
         self._group_name = None
         self._report_id = None
@@ -72,14 +72,14 @@ class BTEnterpriseReportParams(object):
         self._public_report = None
         self._model = None
         self._category = None
-        self._owner_id = None
         self._owner_type = None
         self._description = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
+        if owner_id is not None:
+            self.owner_id = owner_id
         if drill_down_dashboard is not None:
             self.drill_down_dashboard = drill_down_dashboard
         if group_name is not None:
@@ -94,35 +94,35 @@ class BTEnterpriseReportParams(object):
             self.model = model
         if category is not None:
             self.category = category
-        if owner_id is not None:
-            self.owner_id = owner_id
         if owner_type is not None:
             self.owner_type = owner_type
         if description is not None:
             self.description = description
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
     @property
-    def id(self):
-        """Gets the id of this BTEnterpriseReportParams.  # noqa: E501
+    def owner_id(self):
+        """Gets the owner_id of this BTEnterpriseReportParams.  # noqa: E501
 
 
-        :return: The id of this BTEnterpriseReportParams.  # noqa: E501
+        :return: The owner_id of this BTEnterpriseReportParams.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._owner_id
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTEnterpriseReportParams.
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTEnterpriseReportParams.
 
 
-        :param id: The id of this BTEnterpriseReportParams.  # noqa: E501
+        :param owner_id: The owner_id of this BTEnterpriseReportParams.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._owner_id = owner_id
 
     @property
     def drill_down_dashboard(self):
@@ -272,27 +272,6 @@ class BTEnterpriseReportParams(object):
         self._category = category
 
     @property
-    def owner_id(self):
-        """Gets the owner_id of this BTEnterpriseReportParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTEnterpriseReportParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTEnterpriseReportParams.
-
-
-        :param owner_id: The owner_id of this BTEnterpriseReportParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
-
-    @property
     def owner_type(self):
         """Gets the owner_type of this BTEnterpriseReportParams.  # noqa: E501
 
@@ -333,6 +312,27 @@ class BTEnterpriseReportParams(object):
         """
 
         self._description = description
+
+    @property
+    def id(self):
+        """Gets the id of this BTEnterpriseReportParams.  # noqa: E501
+
+
+        :return: The id of this BTEnterpriseReportParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTEnterpriseReportParams.
+
+
+        :param id: The id of this BTEnterpriseReportParams.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

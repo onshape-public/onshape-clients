@@ -36,9 +36,9 @@ class BTCacheItemInfo(object):
         'cache_key': 'str',
         'cached': 'bool',
         'last_modified_at': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
@@ -47,22 +47,22 @@ class BTCacheItemInfo(object):
         'cache_key': 'cacheKey',
         'cached': 'cached',
         'last_modified_at': 'lastModifiedAt',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, cache_name=None, cache_key=None, cached=None, last_modified_at=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, cache_name=None, cache_key=None, cached=None, last_modified_at=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTCacheItemInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._cache_name = None
         self._cache_key = None
         self._cached = None
         self._last_modified_at = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
@@ -74,12 +74,12 @@ class BTCacheItemInfo(object):
             self.cached = cached
         if last_modified_at is not None:
             self.last_modified_at = last_modified_at
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -168,27 +168,6 @@ class BTCacheItemInfo(object):
         self._last_modified_at = last_modified_at
 
     @property
-    def id(self):
-        """Gets the id of this BTCacheItemInfo.  # noqa: E501
-
-
-        :return: The id of this BTCacheItemInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTCacheItemInfo.
-
-
-        :param id: The id of this BTCacheItemInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTCacheItemInfo.  # noqa: E501
 
@@ -229,6 +208,27 @@ class BTCacheItemInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTCacheItemInfo.  # noqa: E501
+
+
+        :return: The id of this BTCacheItemInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTCacheItemInfo.
+
+
+        :param id: The id of this BTCacheItemInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

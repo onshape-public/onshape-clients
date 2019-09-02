@@ -32,6 +32,16 @@ class BTCommentInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'resolved_by': 'BTUserSummaryInfo',
+        'parent_id': 'str',
+        'thumbnail': 'BTCommentAttachmentInfo',
+        'version_id': 'str',
+        'created_at': 'datetime',
+        'workspace_id': 'str',
+        'element_id': 'str',
+        'user': 'BTUserSummaryInfo',
+        'document_id': 'str',
+        'can_delete': 'bool',
         'element_query': 'str',
         'element_feature': 'str',
         'assignee': 'BTUserSummaryInfo',
@@ -42,29 +52,29 @@ class BTCommentInfo(object):
         'reopened_at': 'datetime',
         'attachment': 'BTCommentAttachmentInfo',
         'resolved_at': 'datetime',
-        'version_id': 'str',
-        'created_at': 'datetime',
-        'workspace_id': 'str',
-        'element_id': 'str',
-        'user': 'BTUserSummaryInfo',
-        'document_id': 'str',
-        'can_delete': 'bool',
-        'resolved_by': 'BTUserSummaryInfo',
-        'parent_id': 'str',
-        'thumbnail': 'BTCommentAttachmentInfo',
         'release_package_id': 'str',
         'element_occurrences': 'list[str]',
         'assembly_features': 'list[str]',
         'can_resolve_or_reopen': 'bool',
         'state': 'int',
         'message': 'str',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'resolved_by': 'resolvedBy',
+        'parent_id': 'parentId',
+        'thumbnail': 'thumbnail',
+        'version_id': 'versionId',
+        'created_at': 'createdAt',
+        'workspace_id': 'workspaceId',
+        'element_id': 'elementId',
+        'user': 'user',
+        'document_id': 'documentId',
+        'can_delete': 'canDelete',
         'element_query': 'elementQuery',
         'element_feature': 'elementFeature',
         'assignee': 'assignee',
@@ -75,31 +85,31 @@ class BTCommentInfo(object):
         'reopened_at': 'reopenedAt',
         'attachment': 'attachment',
         'resolved_at': 'resolvedAt',
-        'version_id': 'versionId',
-        'created_at': 'createdAt',
-        'workspace_id': 'workspaceId',
-        'element_id': 'elementId',
-        'user': 'user',
-        'document_id': 'documentId',
-        'can_delete': 'canDelete',
-        'resolved_by': 'resolvedBy',
-        'parent_id': 'parentId',
-        'thumbnail': 'thumbnail',
         'release_package_id': 'releasePackageId',
         'element_occurrences': 'elementOccurrences',
         'assembly_features': 'assemblyFeatures',
         'can_resolve_or_reopen': 'canResolveOrReopen',
         'state': 'state',
         'message': 'message',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, element_query=None, element_feature=None, assignee=None, assigned_at=None, view_data=None, top_level=None, reopened_by=None, reopened_at=None, attachment=None, resolved_at=None, version_id=None, created_at=None, workspace_id=None, element_id=None, user=None, document_id=None, can_delete=None, resolved_by=None, parent_id=None, thumbnail=None, release_package_id=None, element_occurrences=None, assembly_features=None, can_resolve_or_reopen=None, state=None, message=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, resolved_by=None, parent_id=None, thumbnail=None, version_id=None, created_at=None, workspace_id=None, element_id=None, user=None, document_id=None, can_delete=None, element_query=None, element_feature=None, assignee=None, assigned_at=None, view_data=None, top_level=None, reopened_by=None, reopened_at=None, attachment=None, resolved_at=None, release_package_id=None, element_occurrences=None, assembly_features=None, can_resolve_or_reopen=None, state=None, message=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTCommentInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._resolved_by = None
+        self._parent_id = None
+        self._thumbnail = None
+        self._version_id = None
+        self._created_at = None
+        self._workspace_id = None
+        self._element_id = None
+        self._user = None
+        self._document_id = None
+        self._can_delete = None
         self._element_query = None
         self._element_feature = None
         self._assignee = None
@@ -110,28 +120,38 @@ class BTCommentInfo(object):
         self._reopened_at = None
         self._attachment = None
         self._resolved_at = None
-        self._version_id = None
-        self._created_at = None
-        self._workspace_id = None
-        self._element_id = None
-        self._user = None
-        self._document_id = None
-        self._can_delete = None
-        self._resolved_by = None
-        self._parent_id = None
-        self._thumbnail = None
         self._release_package_id = None
         self._element_occurrences = None
         self._assembly_features = None
         self._can_resolve_or_reopen = None
         self._state = None
         self._message = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
+        if resolved_by is not None:
+            self.resolved_by = resolved_by
+        if parent_id is not None:
+            self.parent_id = parent_id
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
+        if version_id is not None:
+            self.version_id = version_id
+        if created_at is not None:
+            self.created_at = created_at
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if element_id is not None:
+            self.element_id = element_id
+        if user is not None:
+            self.user = user
+        if document_id is not None:
+            self.document_id = document_id
+        if can_delete is not None:
+            self.can_delete = can_delete
         if element_query is not None:
             self.element_query = element_query
         if element_feature is not None:
@@ -152,26 +172,6 @@ class BTCommentInfo(object):
             self.attachment = attachment
         if resolved_at is not None:
             self.resolved_at = resolved_at
-        if version_id is not None:
-            self.version_id = version_id
-        if created_at is not None:
-            self.created_at = created_at
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
-        if element_id is not None:
-            self.element_id = element_id
-        if user is not None:
-            self.user = user
-        if document_id is not None:
-            self.document_id = document_id
-        if can_delete is not None:
-            self.can_delete = can_delete
-        if resolved_by is not None:
-            self.resolved_by = resolved_by
-        if parent_id is not None:
-            self.parent_id = parent_id
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
         if release_package_id is not None:
             self.release_package_id = release_package_id
         if element_occurrences is not None:
@@ -184,14 +184,224 @@ class BTCommentInfo(object):
             self.state = state
         if message is not None:
             self.message = message
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
+
+    @property
+    def resolved_by(self):
+        """Gets the resolved_by of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The resolved_by of this BTCommentInfo.  # noqa: E501
+        :rtype: BTUserSummaryInfo
+        """
+        return self._resolved_by
+
+    @resolved_by.setter
+    def resolved_by(self, resolved_by):
+        """Sets the resolved_by of this BTCommentInfo.
+
+
+        :param resolved_by: The resolved_by of this BTCommentInfo.  # noqa: E501
+        :type: BTUserSummaryInfo
+        """
+
+        self._resolved_by = resolved_by
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The parent_id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTCommentInfo.
+
+
+        :param parent_id: The parent_id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
+
+    @property
+    def thumbnail(self):
+        """Gets the thumbnail of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The thumbnail of this BTCommentInfo.  # noqa: E501
+        :rtype: BTCommentAttachmentInfo
+        """
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this BTCommentInfo.
+
+
+        :param thumbnail: The thumbnail of this BTCommentInfo.  # noqa: E501
+        :type: BTCommentAttachmentInfo
+        """
+
+        self._thumbnail = thumbnail
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The version_id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTCommentInfo.
+
+
+        :param version_id: The version_id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTCommentInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTCommentInfo.
+
+
+        :param created_at: The created_at of this BTCommentInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def workspace_id(self):
+        """Gets the workspace_id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The workspace_id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._workspace_id
+
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTCommentInfo.
+
+
+        :param workspace_id: The workspace_id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._workspace_id = workspace_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The element_id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTCommentInfo.
+
+
+        :param element_id: The element_id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
+
+    @property
+    def user(self):
+        """Gets the user of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The user of this BTCommentInfo.  # noqa: E501
+        :rtype: BTUserSummaryInfo
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this BTCommentInfo.
+
+
+        :param user: The user of this BTCommentInfo.  # noqa: E501
+        :type: BTUserSummaryInfo
+        """
+
+        self._user = user
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTCommentInfo.
+
+
+        :param document_id: The document_id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def can_delete(self):
+        """Gets the can_delete of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The can_delete of this BTCommentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_delete
+
+    @can_delete.setter
+    def can_delete(self, can_delete):
+        """Sets the can_delete of this BTCommentInfo.
+
+
+        :param can_delete: The can_delete of this BTCommentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_delete = can_delete
 
     @property
     def element_query(self):
@@ -404,216 +614,6 @@ class BTCommentInfo(object):
         self._resolved_at = resolved_at
 
     @property
-    def version_id(self):
-        """Gets the version_id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The version_id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTCommentInfo.
-
-
-        :param version_id: The version_id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTCommentInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTCommentInfo.
-
-
-        :param created_at: The created_at of this BTCommentInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The workspace_id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._workspace_id
-
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTCommentInfo.
-
-
-        :param workspace_id: The workspace_id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._workspace_id = workspace_id
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The element_id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTCommentInfo.
-
-
-        :param element_id: The element_id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def user(self):
-        """Gets the user of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The user of this BTCommentInfo.  # noqa: E501
-        :rtype: BTUserSummaryInfo
-        """
-        return self._user
-
-    @user.setter
-    def user(self, user):
-        """Sets the user of this BTCommentInfo.
-
-
-        :param user: The user of this BTCommentInfo.  # noqa: E501
-        :type: BTUserSummaryInfo
-        """
-
-        self._user = user
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTCommentInfo.
-
-
-        :param document_id: The document_id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def can_delete(self):
-        """Gets the can_delete of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The can_delete of this BTCommentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._can_delete
-
-    @can_delete.setter
-    def can_delete(self, can_delete):
-        """Sets the can_delete of this BTCommentInfo.
-
-
-        :param can_delete: The can_delete of this BTCommentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._can_delete = can_delete
-
-    @property
-    def resolved_by(self):
-        """Gets the resolved_by of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The resolved_by of this BTCommentInfo.  # noqa: E501
-        :rtype: BTUserSummaryInfo
-        """
-        return self._resolved_by
-
-    @resolved_by.setter
-    def resolved_by(self, resolved_by):
-        """Sets the resolved_by of this BTCommentInfo.
-
-
-        :param resolved_by: The resolved_by of this BTCommentInfo.  # noqa: E501
-        :type: BTUserSummaryInfo
-        """
-
-        self._resolved_by = resolved_by
-
-    @property
-    def parent_id(self):
-        """Gets the parent_id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The parent_id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTCommentInfo.
-
-
-        :param parent_id: The parent_id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_id = parent_id
-
-    @property
-    def thumbnail(self):
-        """Gets the thumbnail of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The thumbnail of this BTCommentInfo.  # noqa: E501
-        :rtype: BTCommentAttachmentInfo
-        """
-        return self._thumbnail
-
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this BTCommentInfo.
-
-
-        :param thumbnail: The thumbnail of this BTCommentInfo.  # noqa: E501
-        :type: BTCommentAttachmentInfo
-        """
-
-        self._thumbnail = thumbnail
-
-    @property
     def release_package_id(self):
         """Gets the release_package_id of this BTCommentInfo.  # noqa: E501
 
@@ -740,27 +740,6 @@ class BTCommentInfo(object):
         self._message = message
 
     @property
-    def id(self):
-        """Gets the id of this BTCommentInfo.  # noqa: E501
-
-
-        :return: The id of this BTCommentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTCommentInfo.
-
-
-        :param id: The id of this BTCommentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTCommentInfo.  # noqa: E501
 
@@ -801,6 +780,27 @@ class BTCommentInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTCommentInfo.  # noqa: E501
+
+
+        :return: The id of this BTCommentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTCommentInfo.
+
+
+        :param id: The id of this BTCommentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

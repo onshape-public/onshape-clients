@@ -37,6 +37,128 @@ class DocumentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def copy_workspace(self, did, wid, **kwargs):  # noqa: E501
+        """copy_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.copy_workspace(did, wid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTCopyDocumentParams bt_copy_document_params:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.copy_workspace_with_http_info(did, wid, **kwargs)  # noqa: E501
+
+    def copy_workspace_with_http_info(self, did, wid, **kwargs):  # noqa: E501
+        """copy_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.copy_workspace_with_http_info(did, wid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param BTCopyDocumentParams bt_copy_document_params:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'bt_copy_document_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method copy_workspace" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `copy_workspace`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `copy_workspace`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_copy_document_params' in local_var_params:
+            body_params = local_var_params['bt_copy_document_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/workspaces/{wid}/copy', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def create11(self, bt_document_params, **kwargs):  # noqa: E501
         """create11  # noqa: E501
 
@@ -133,6 +255,462 @@ class DocumentsApi(object):
 
         return self.api_client.call_api(
             '/api/documents', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_version1(self, did, bt_version_or_workspace_params, **kwargs):  # noqa: E501
+        """create_version1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_version1(did, bt_version_or_workspace_params, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param BTVersionOrWorkspaceParams bt_version_or_workspace_params: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_version1_with_http_info(did, bt_version_or_workspace_params, **kwargs)  # noqa: E501
+
+    def create_version1_with_http_info(self, did, bt_version_or_workspace_params, **kwargs):  # noqa: E501
+        """create_version1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_version1_with_http_info(did, bt_version_or_workspace_params, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param BTVersionOrWorkspaceParams bt_version_or_workspace_params: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'bt_version_or_workspace_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_version1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `create_version1`")  # noqa: E501
+        # verify the required parameter 'bt_version_or_workspace_params' is set
+        if ('bt_version_or_workspace_params' not in local_var_params or
+                local_var_params['bt_version_or_workspace_params'] is None):
+            raise ApiValueError("Missing the required parameter `bt_version_or_workspace_params` when calling `create_version1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_version_or_workspace_params' in local_var_params:
+            body_params = local_var_params['bt_version_or_workspace_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/versions', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_workspace1(self, did, **kwargs):  # noqa: E501
+        """create_workspace1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_workspace1(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param BTVersionOrWorkspaceParams bt_version_or_workspace_params:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_workspace1_with_http_info(did, **kwargs)  # noqa: E501
+
+    def create_workspace1_with_http_info(self, did, **kwargs):  # noqa: E501
+        """create_workspace1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_workspace1_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param BTVersionOrWorkspaceParams bt_version_or_workspace_params:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'bt_version_or_workspace_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_workspace1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `create_workspace1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_version_or_workspace_params' in local_var_params:
+            body_params = local_var_params['bt_version_or_workspace_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/workspaces', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete7(self, did, **kwargs):  # noqa: E501
+        """delete7  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete7(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param bool forever:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete7_with_http_info(did, **kwargs)  # noqa: E501
+
+    def delete7_with_http_info(self, did, **kwargs):  # noqa: E501
+        """delete7  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete7_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param bool forever:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'forever']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete7" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `delete7`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+        if 'forever' in local_var_params:
+            query_params.append(('forever', local_var_params['forever']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_workspace(self, did, wid, **kwargs):  # noqa: E501
+        """delete_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_workspace(did, wid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_workspace_with_http_info(did, wid, **kwargs)  # noqa: E501
+
+    def delete_workspace_with_http_info(self, did, wid, **kwargs):  # noqa: E501
+        """delete_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_workspace_with_http_info(did, wid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_workspace" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `delete_workspace`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `delete_workspace`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/workspaces/{wid}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -265,8 +843,252 @@ class DocumentsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def export2_json(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+        """export2_json  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export2_json(did, wv, wvid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wv: (required)
+        :param str wvid: (required)
+        :param str eid: (required)
+        :param BTExportModelParams bt_export_model_params:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.export2_json_with_http_info(did, wv, wvid, eid, **kwargs)  # noqa: E501
+
+    def export2_json_with_http_info(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+        """export2_json  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export2_json_with_http_info(did, wv, wvid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wv: (required)
+        :param str wvid: (required)
+        :param str eid: (required)
+        :param BTExportModelParams bt_export_model_params:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wv', 'wvid', 'eid', 'bt_export_model_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method export2_json" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `export2_json`")  # noqa: E501
+        # verify the required parameter 'wv' is set
+        if ('wv' not in local_var_params or
+                local_var_params['wv'] is None):
+            raise ApiValueError("Missing the required parameter `wv` when calling `export2_json`")  # noqa: E501
+        # verify the required parameter 'wvid' is set
+        if ('wvid' not in local_var_params or
+                local_var_params['wvid'] is None):
+            raise ApiValueError("Missing the required parameter `wvid` when calling `export2_json`")  # noqa: E501
+        # verify the required parameter 'eid' is set
+        if ('eid' not in local_var_params or
+                local_var_params['eid'] is None):
+            raise ApiValueError("Missing the required parameter `eid` when calling `export2_json`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wv' in local_var_params:
+            path_params['wv'] = local_var_params['wv']  # noqa: E501
+        if 'wvid' in local_var_params:
+            path_params['wvid'] = local_var_params['wvid']  # noqa: E501
+        if 'eid' in local_var_params:
+            path_params['eid'] = local_var_params['eid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_export_model_params' in local_var_params:
+            body_params = local_var_params['bt_export_model_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+octet-stream;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/{wv}/{wvid}/e/{eid}/export', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_acl(self, did, **kwargs):  # noqa: E501
+        """get_acl  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_acl(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_acl_with_http_info(did, **kwargs)  # noqa: E501
+
+    def get_acl_with_http_info(self, did, **kwargs):  # noqa: E501
+        """get_acl  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_acl_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_acl" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_acl`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/acl', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_current_microversion(self, did, wv, wvid, **kwargs):  # noqa: E501
-        """get_current_microversion  # noqa: E501
+        """Get Current Document Microversion  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -284,7 +1106,7 @@ class DocumentsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: BTMicroversionInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -292,7 +1114,7 @@ class DocumentsApi(object):
         return self.get_current_microversion_with_http_info(did, wv, wvid, **kwargs)  # noqa: E501
 
     def get_current_microversion_with_http_info(self, did, wv, wvid, **kwargs):  # noqa: E501
-        """get_current_microversion  # noqa: E501
+        """Get Current Document Microversion  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -312,7 +1134,7 @@ class DocumentsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(BTMicroversionInfo, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -373,6 +1195,218 @@ class DocumentsApi(object):
 
         return self.api_client.call_api(
             '/api/documents/d/{did}/{wv}/{wvid}/currentmicroversion', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='BTMicroversionInfo',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_document(self, did, **kwargs):  # noqa: E501
+        """get_document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_document_with_http_info(did, **kwargs)  # noqa: E501
+
+    def get_document_with_http_info(self, did, **kwargs):  # noqa: E501
+        """get_document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_document" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_document`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_document_permission_set(self, did, **kwargs):  # noqa: E501
+        """get_document_permission_set  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document_permission_set(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_document_permission_set_with_http_info(did, **kwargs)  # noqa: E501
+
+    def get_document_permission_set_with_http_info(self, did, **kwargs):  # noqa: E501
+        """get_document_permission_set  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document_permission_set_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_document_permission_set" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_document_permission_set`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/permissionset', 'GET',
             path_params,
             query_params,
             header_params,
@@ -529,6 +1563,677 @@ class DocumentsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_elements4(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        """Get a list of elements in the workspace, version, or microversion of the document.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements4(did, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param str element_type:
+        :param str element_id:
+        :param bool with_thumbnails:
+        :param str link_document_id:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[BTDocumentElementInfo]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_elements4_with_http_info(did, wvm, wvmid, **kwargs)  # noqa: E501
+
+    def get_elements4_with_http_info(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        """Get a list of elements in the workspace, version, or microversion of the document.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements4_with_http_info(did, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param str element_type:
+        :param str element_id:
+        :param bool with_thumbnails:
+        :param str link_document_id:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[BTDocumentElementInfo], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wvm', 'wvmid', 'element_type', 'element_id', 'with_thumbnails', 'link_document_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_elements4" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_elements4`")  # noqa: E501
+        # verify the required parameter 'wvm' is set
+        if ('wvm' not in local_var_params or
+                local_var_params['wvm'] is None):
+            raise ApiValueError("Missing the required parameter `wvm` when calling `get_elements4`")  # noqa: E501
+        # verify the required parameter 'wvmid' is set
+        if ('wvmid' not in local_var_params or
+                local_var_params['wvmid'] is None):
+            raise ApiValueError("Missing the required parameter `wvmid` when calling `get_elements4`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wvm' in local_var_params:
+            path_params['wvm'] = local_var_params['wvm']  # noqa: E501
+        if 'wvmid' in local_var_params:
+            path_params['wvmid'] = local_var_params['wvmid']  # noqa: E501
+
+        query_params = []
+        if 'element_type' in local_var_params:
+            query_params.append(('elementType', local_var_params['element_type']))  # noqa: E501
+        if 'element_id' in local_var_params:
+            query_params.append(('elementId', local_var_params['element_id']))  # noqa: E501
+        if 'with_thumbnails' in local_var_params:
+            query_params.append(('withThumbnails', local_var_params['with_thumbnails']))  # noqa: E501
+        if 'link_document_id' in local_var_params:
+            query_params.append(('linkDocumentId', local_var_params['link_document_id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/{wvm}/{wvmid}/elements', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[BTDocumentElementInfo]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_insertables(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        """get_insertables  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_insertables(did, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param list[str] beta_capability_ids:
+        :param bool include_parts:
+        :param bool include_surfaces:
+        :param bool include_wires:
+        :param bool include_sketches:
+        :param bool include_reference_features:
+        :param bool include_assemblies:
+        :param bool include_features:
+        :param bool include_feature_studios:
+        :param bool include_part_studios:
+        :param bool include_blobs:
+        :param bool include_meshes:
+        :param bool include_flattened_bodies:
+        :param str allowed_blob_mime_types:
+        :param int max_feature_script_version:
+        :param bool include_applications:
+        :param str allowed_application_mime_types:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_insertables_with_http_info(did, wvm, wvmid, **kwargs)  # noqa: E501
+
+    def get_insertables_with_http_info(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        """get_insertables  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_insertables_with_http_info(did, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param list[str] beta_capability_ids:
+        :param bool include_parts:
+        :param bool include_surfaces:
+        :param bool include_wires:
+        :param bool include_sketches:
+        :param bool include_reference_features:
+        :param bool include_assemblies:
+        :param bool include_features:
+        :param bool include_feature_studios:
+        :param bool include_part_studios:
+        :param bool include_blobs:
+        :param bool include_meshes:
+        :param bool include_flattened_bodies:
+        :param str allowed_blob_mime_types:
+        :param int max_feature_script_version:
+        :param bool include_applications:
+        :param str allowed_application_mime_types:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wvm', 'wvmid', 'beta_capability_ids', 'include_parts', 'include_surfaces', 'include_wires', 'include_sketches', 'include_reference_features', 'include_assemblies', 'include_features', 'include_feature_studios', 'include_part_studios', 'include_blobs', 'include_meshes', 'include_flattened_bodies', 'allowed_blob_mime_types', 'max_feature_script_version', 'include_applications', 'allowed_application_mime_types']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_insertables" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_insertables`")  # noqa: E501
+        # verify the required parameter 'wvm' is set
+        if ('wvm' not in local_var_params or
+                local_var_params['wvm'] is None):
+            raise ApiValueError("Missing the required parameter `wvm` when calling `get_insertables`")  # noqa: E501
+        # verify the required parameter 'wvmid' is set
+        if ('wvmid' not in local_var_params or
+                local_var_params['wvmid'] is None):
+            raise ApiValueError("Missing the required parameter `wvmid` when calling `get_insertables`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wvm' in local_var_params:
+            path_params['wvm'] = local_var_params['wvm']  # noqa: E501
+        if 'wvmid' in local_var_params:
+            path_params['wvmid'] = local_var_params['wvmid']  # noqa: E501
+
+        query_params = []
+        if 'beta_capability_ids' in local_var_params:
+            query_params.append(('betaCapabilityIds', local_var_params['beta_capability_ids']))  # noqa: E501
+            collection_formats['betaCapabilityIds'] = 'multi'  # noqa: E501
+        if 'include_parts' in local_var_params:
+            query_params.append(('includeParts', local_var_params['include_parts']))  # noqa: E501
+        if 'include_surfaces' in local_var_params:
+            query_params.append(('includeSurfaces', local_var_params['include_surfaces']))  # noqa: E501
+        if 'include_wires' in local_var_params:
+            query_params.append(('includeWires', local_var_params['include_wires']))  # noqa: E501
+        if 'include_sketches' in local_var_params:
+            query_params.append(('includeSketches', local_var_params['include_sketches']))  # noqa: E501
+        if 'include_reference_features' in local_var_params:
+            query_params.append(('includeReferenceFeatures', local_var_params['include_reference_features']))  # noqa: E501
+        if 'include_assemblies' in local_var_params:
+            query_params.append(('includeAssemblies', local_var_params['include_assemblies']))  # noqa: E501
+        if 'include_features' in local_var_params:
+            query_params.append(('includeFeatures', local_var_params['include_features']))  # noqa: E501
+        if 'include_feature_studios' in local_var_params:
+            query_params.append(('includeFeatureStudios', local_var_params['include_feature_studios']))  # noqa: E501
+        if 'include_part_studios' in local_var_params:
+            query_params.append(('includePartStudios', local_var_params['include_part_studios']))  # noqa: E501
+        if 'include_blobs' in local_var_params:
+            query_params.append(('includeBlobs', local_var_params['include_blobs']))  # noqa: E501
+        if 'include_meshes' in local_var_params:
+            query_params.append(('includeMeshes', local_var_params['include_meshes']))  # noqa: E501
+        if 'include_flattened_bodies' in local_var_params:
+            query_params.append(('includeFlattenedBodies', local_var_params['include_flattened_bodies']))  # noqa: E501
+        if 'allowed_blob_mime_types' in local_var_params:
+            query_params.append(('allowedBlobMimeTypes', local_var_params['allowed_blob_mime_types']))  # noqa: E501
+        if 'max_feature_script_version' in local_var_params:
+            query_params.append(('maxFeatureScriptVersion', local_var_params['max_feature_script_version']))  # noqa: E501
+        if 'include_applications' in local_var_params:
+            query_params.append(('includeApplications', local_var_params['include_applications']))  # noqa: E501
+        if 'allowed_application_mime_types' in local_var_params:
+            query_params.append(('allowedApplicationMimeTypes', local_var_params['allowed_application_mime_types']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/{wvm}/{wvmid}/insertables', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_version(self, did, vid, **kwargs):  # noqa: E501
+        """Get Version  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_version(did, vid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str vid: (required)
+        :param bool parents:
+        :param str link_document_id:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: BTVersionInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_version_with_http_info(did, vid, **kwargs)  # noqa: E501
+
+    def get_version_with_http_info(self, did, vid, **kwargs):  # noqa: E501
+        """Get Version  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_version_with_http_info(did, vid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str vid: (required)
+        :param bool parents:
+        :param str link_document_id:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(BTVersionInfo, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'vid', 'parents', 'link_document_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_version" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_version`")  # noqa: E501
+        # verify the required parameter 'vid' is set
+        if ('vid' not in local_var_params or
+                local_var_params['vid'] is None):
+            raise ApiValueError("Missing the required parameter `vid` when calling `get_version`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'vid' in local_var_params:
+            path_params['vid'] = local_var_params['vid']  # noqa: E501
+
+        query_params = []
+        if 'parents' in local_var_params:
+            query_params.append(('parents', local_var_params['parents']))  # noqa: E501
+        if 'link_document_id' in local_var_params:
+            query_params.append(('linkDocumentId', local_var_params['link_document_id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/versions/{vid}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='BTVersionInfo',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_versions1(self, did, **kwargs):  # noqa: E501
+        """Get Versions  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_versions1(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param int offset:
+        :param int limit:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[BTVersionInfo]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_versions1_with_http_info(did, **kwargs)  # noqa: E501
+
+    def get_versions1_with_http_info(self, did, **kwargs):  # noqa: E501
+        """Get Versions  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_versions1_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param int offset:
+        :param int limit:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[BTVersionInfo], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'offset', 'limit']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_versions1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_versions1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+        if 'offset' in local_var_params:
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params:
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/versions', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[BTVersionInfo]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_workspaces1(self, did, **kwargs):  # noqa: E501
+        """Get Workspaces  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_workspaces1(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[BTWorkspaceInfo]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_workspaces1_with_http_info(did, **kwargs)  # noqa: E501
+
+    def get_workspaces1_with_http_info(self, did, **kwargs):  # noqa: E501
+        """Get Workspaces  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_workspaces1_with_http_info(did, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[BTWorkspaceInfo], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_workspaces1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `get_workspaces1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/workspaces', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[BTWorkspaceInfo]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def merge_into_workspace(self, did, wid, bt_version_or_workspace_info, **kwargs):  # noqa: E501
         """Merge into workspace  # noqa: E501
 
@@ -648,6 +2353,385 @@ class DocumentsApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='BTDocumentMergeInfo',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def restore_rendition(self, did, wid, mvid, **kwargs):  # noqa: E501
+        """restore_rendition  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.restore_rendition(did, wid, mvid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str mvid: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.restore_rendition_with_http_info(did, wid, mvid, **kwargs)  # noqa: E501
+
+    def restore_rendition_with_http_info(self, did, wid, mvid, **kwargs):  # noqa: E501
+        """restore_rendition  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.restore_rendition_with_http_info(did, wid, mvid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str mvid: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'mvid']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method restore_rendition" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `restore_rendition`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `restore_rendition`")  # noqa: E501
+        # verify the required parameter 'mvid' is set
+        if ('mvid' not in local_var_params or
+                local_var_params['mvid'] is None):
+            raise ApiValueError("Missing the required parameter `mvid` when calling `restore_rendition`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+        if 'mvid' in local_var_params:
+            path_params['mvid'] = local_var_params['mvid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/{did}/workspaces/{wid}/restore/{mvid}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sync_application_elements1(self, did, wid, application_element_ids, **kwargs):  # noqa: E501
+        """sync_application_elements1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sync_application_elements1(did, wid, application_element_ids, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param list[str] application_element_ids: (required)
+        :param str description:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.sync_application_elements1_with_http_info(did, wid, application_element_ids, **kwargs)  # noqa: E501
+
+    def sync_application_elements1_with_http_info(self, did, wid, application_element_ids, **kwargs):  # noqa: E501
+        """sync_application_elements1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sync_application_elements1_with_http_info(did, wid, application_element_ids, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param list[str] application_element_ids: (required)
+        :param str description:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'application_element_ids', 'description']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sync_application_elements1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `sync_application_elements1`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `sync_application_elements1`")  # noqa: E501
+        # verify the required parameter 'application_element_ids' is set
+        if ('application_element_ids' not in local_var_params or
+                local_var_params['application_element_ids'] is None):
+            raise ApiValueError("Missing the required parameter `application_element_ids` when calling `sync_application_elements1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+
+        query_params = []
+        if 'application_element_ids' in local_var_params:
+            query_params.append(('applicationElementIds', local_var_params['application_element_ids']))  # noqa: E501
+            collection_formats['applicationElementIds'] = 'multi'  # noqa: E501
+        if 'description' in local_var_params:
+            query_params.append(('description', local_var_params['description']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/w/{wid}/syncApplicationElements', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_external_references_to_latest_documents1(self, did, wid, eid, **kwargs):  # noqa: E501
+        """update_external_references_to_latest_documents1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_external_references_to_latest_documents1(did, wid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str eid: (required)
+        :param BTLinkToLatestDocumentParams bt_link_to_latest_document_params:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_external_references_to_latest_documents1_with_http_info(did, wid, eid, **kwargs)  # noqa: E501
+
+    def update_external_references_to_latest_documents1_with_http_info(self, did, wid, eid, **kwargs):  # noqa: E501
+        """update_external_references_to_latest_documents1  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_external_references_to_latest_documents1_with_http_info(did, wid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str eid: (required)
+        :param BTLinkToLatestDocumentParams bt_link_to_latest_document_params:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'eid', 'bt_link_to_latest_document_params']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_external_references_to_latest_documents1" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `update_external_references_to_latest_documents1`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `update_external_references_to_latest_documents1`")  # noqa: E501
+        # verify the required parameter 'eid' is set
+        if ('eid' not in local_var_params or
+                local_var_params['eid'] is None):
+            raise ApiValueError("Missing the required parameter `eid` when calling `update_external_references_to_latest_documents1`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+        if 'eid' in local_var_params:
+            path_params['eid'] = local_var_params['eid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bt_link_to_latest_document_params' in local_var_params:
+            body_params = local_var_params['bt_link_to_latest_document_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

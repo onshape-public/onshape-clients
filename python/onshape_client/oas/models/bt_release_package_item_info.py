@@ -38,21 +38,21 @@ class BTReleasePackageItemInfo(object):
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'element_type': 'int',
-        'part_id': 'str',
         'configuration_key': 'str',
         'diff_thumbnail_configuration_key': 'str',
         'small_thumbnail_href': 'str',
         'is_revision_managed': 'bool',
         'errors': 'list[BTReleasePackageItemError]',
         'is_included_editable': 'bool',
-        'rpid': 'str',
+        'element_type': 'int',
+        'part_id': 'str',
         'mime_type': 'str',
+        'rpid': 'str',
         'obsoletion_revision_id': 'str',
         'properties': 'list[BTMetadataPropertyInfo]',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
@@ -63,25 +63,25 @@ class BTReleasePackageItemInfo(object):
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'element_type': 'elementType',
-        'part_id': 'partId',
         'configuration_key': 'configurationKey',
         'diff_thumbnail_configuration_key': 'diffThumbnailConfigurationKey',
         'small_thumbnail_href': 'smallThumbnailHref',
         'is_revision_managed': 'isRevisionManaged',
         'errors': 'errors',
         'is_included_editable': 'isIncludedEditable',
-        'rpid': 'rpid',
+        'element_type': 'elementType',
+        'part_id': 'partId',
         'mime_type': 'mimeType',
+        'rpid': 'rpid',
         'obsoletion_revision_id': 'obsoletionRevisionId',
         'properties': 'properties',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, configuration=None, version_id=None, company_id=None, workspace_id=None, element_id=None, document_id=None, element_type=None, part_id=None, configuration_key=None, diff_thumbnail_configuration_key=None, small_thumbnail_href=None, is_revision_managed=None, errors=None, is_included_editable=None, rpid=None, mime_type=None, obsoletion_revision_id=None, properties=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, configuration=None, version_id=None, company_id=None, workspace_id=None, element_id=None, document_id=None, configuration_key=None, diff_thumbnail_configuration_key=None, small_thumbnail_href=None, is_revision_managed=None, errors=None, is_included_editable=None, element_type=None, part_id=None, mime_type=None, rpid=None, obsoletion_revision_id=None, properties=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTReleasePackageItemInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._configuration = None
@@ -90,21 +90,21 @@ class BTReleasePackageItemInfo(object):
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
-        self._element_type = None
-        self._part_id = None
         self._configuration_key = None
         self._diff_thumbnail_configuration_key = None
         self._small_thumbnail_href = None
         self._is_revision_managed = None
         self._errors = None
         self._is_included_editable = None
-        self._rpid = None
+        self._element_type = None
+        self._part_id = None
         self._mime_type = None
+        self._rpid = None
         self._obsoletion_revision_id = None
         self._properties = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
@@ -120,10 +120,6 @@ class BTReleasePackageItemInfo(object):
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-        if element_type is not None:
-            self.element_type = element_type
-        if part_id is not None:
-            self.part_id = part_id
         if configuration_key is not None:
             self.configuration_key = configuration_key
         if diff_thumbnail_configuration_key is not None:
@@ -136,20 +132,24 @@ class BTReleasePackageItemInfo(object):
             self.errors = errors
         if is_included_editable is not None:
             self.is_included_editable = is_included_editable
-        if rpid is not None:
-            self.rpid = rpid
+        if element_type is not None:
+            self.element_type = element_type
+        if part_id is not None:
+            self.part_id = part_id
         if mime_type is not None:
             self.mime_type = mime_type
+        if rpid is not None:
+            self.rpid = rpid
         if obsoletion_revision_id is not None:
             self.obsoletion_revision_id = obsoletion_revision_id
         if properties is not None:
             self.properties = properties
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -280,48 +280,6 @@ class BTReleasePackageItemInfo(object):
         self._document_id = document_id
 
     @property
-    def element_type(self):
-        """Gets the element_type of this BTReleasePackageItemInfo.  # noqa: E501
-
-
-        :return: The element_type of this BTReleasePackageItemInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._element_type
-
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTReleasePackageItemInfo.
-
-
-        :param element_type: The element_type of this BTReleasePackageItemInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._element_type = element_type
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTReleasePackageItemInfo.  # noqa: E501
-
-
-        :return: The part_id of this BTReleasePackageItemInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTReleasePackageItemInfo.
-
-
-        :param part_id: The part_id of this BTReleasePackageItemInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
     def configuration_key(self):
         """Gets the configuration_key of this BTReleasePackageItemInfo.  # noqa: E501
 
@@ -448,25 +406,46 @@ class BTReleasePackageItemInfo(object):
         self._is_included_editable = is_included_editable
 
     @property
-    def rpid(self):
-        """Gets the rpid of this BTReleasePackageItemInfo.  # noqa: E501
+    def element_type(self):
+        """Gets the element_type of this BTReleasePackageItemInfo.  # noqa: E501
 
 
-        :return: The rpid of this BTReleasePackageItemInfo.  # noqa: E501
+        :return: The element_type of this BTReleasePackageItemInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTReleasePackageItemInfo.
+
+
+        :param element_type: The element_type of this BTReleasePackageItemInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._element_type = element_type
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTReleasePackageItemInfo.  # noqa: E501
+
+
+        :return: The part_id of this BTReleasePackageItemInfo.  # noqa: E501
         :rtype: str
         """
-        return self._rpid
+        return self._part_id
 
-    @rpid.setter
-    def rpid(self, rpid):
-        """Sets the rpid of this BTReleasePackageItemInfo.
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTReleasePackageItemInfo.
 
 
-        :param rpid: The rpid of this BTReleasePackageItemInfo.  # noqa: E501
+        :param part_id: The part_id of this BTReleasePackageItemInfo.  # noqa: E501
         :type: str
         """
 
-        self._rpid = rpid
+        self._part_id = part_id
 
     @property
     def mime_type(self):
@@ -488,6 +467,27 @@ class BTReleasePackageItemInfo(object):
         """
 
         self._mime_type = mime_type
+
+    @property
+    def rpid(self):
+        """Gets the rpid of this BTReleasePackageItemInfo.  # noqa: E501
+
+
+        :return: The rpid of this BTReleasePackageItemInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._rpid
+
+    @rpid.setter
+    def rpid(self, rpid):
+        """Sets the rpid of this BTReleasePackageItemInfo.
+
+
+        :param rpid: The rpid of this BTReleasePackageItemInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._rpid = rpid
 
     @property
     def obsoletion_revision_id(self):
@@ -532,27 +532,6 @@ class BTReleasePackageItemInfo(object):
         self._properties = properties
 
     @property
-    def id(self):
-        """Gets the id of this BTReleasePackageItemInfo.  # noqa: E501
-
-
-        :return: The id of this BTReleasePackageItemInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTReleasePackageItemInfo.
-
-
-        :param id: The id of this BTReleasePackageItemInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTReleasePackageItemInfo.  # noqa: E501
 
@@ -593,6 +572,27 @@ class BTReleasePackageItemInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTReleasePackageItemInfo.  # noqa: E501
+
+
+        :return: The id of this BTReleasePackageItemInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTReleasePackageItemInfo.
+
+
+        :param id: The id of this BTReleasePackageItemInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

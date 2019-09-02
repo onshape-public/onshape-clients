@@ -44,8 +44,8 @@ class ContentItem(object):
         'anchor': 'str',
         'vertical_offset': 'int',
         'horizontal_offset': 'int',
-        'position': 'str',
-        'link': 'str'
+        'link': 'str',
+        'position': 'str'
     }
 
     attribute_map = {
@@ -61,11 +61,11 @@ class ContentItem(object):
         'anchor': 'anchor',
         'vertical_offset': 'verticalOffset',
         'horizontal_offset': 'horizontalOffset',
-        'position': 'position',
-        'link': 'link'
+        'link': 'link',
+        'position': 'position'
     }
 
-    def __init__(self, width=None, height=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, position=None, link=None):  # noqa: E501
+    def __init__(self, width=None, height=None, title=None, content_id=None, item_title=None, template=None, thumbnail=None, player=None, pause_points=None, anchor=None, vertical_offset=None, horizontal_offset=None, link=None, position=None):  # noqa: E501
         """ContentItem - a model defined in OpenAPI"""  # noqa: E501
 
         self._width = None
@@ -80,8 +80,8 @@ class ContentItem(object):
         self._anchor = None
         self._vertical_offset = None
         self._horizontal_offset = None
-        self._position = None
         self._link = None
+        self._position = None
         self.discriminator = None
 
         if width is not None:
@@ -108,10 +108,10 @@ class ContentItem(object):
             self.vertical_offset = vertical_offset
         if horizontal_offset is not None:
             self.horizontal_offset = horizontal_offset
-        if position is not None:
-            self.position = position
         if link is not None:
             self.link = link
+        if position is not None:
+            self.position = position
 
     @property
     def width(self):
@@ -366,27 +366,6 @@ class ContentItem(object):
         self._horizontal_offset = horizontal_offset
 
     @property
-    def position(self):
-        """Gets the position of this ContentItem.  # noqa: E501
-
-
-        :return: The position of this ContentItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._position
-
-    @position.setter
-    def position(self, position):
-        """Sets the position of this ContentItem.
-
-
-        :param position: The position of this ContentItem.  # noqa: E501
-        :type: str
-        """
-
-        self._position = position
-
-    @property
     def link(self):
         """Gets the link of this ContentItem.  # noqa: E501
 
@@ -406,6 +385,27 @@ class ContentItem(object):
         """
 
         self._link = link
+
+    @property
+    def position(self):
+        """Gets the position of this ContentItem.  # noqa: E501
+
+
+        :return: The position of this ContentItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._position
+
+    @position.setter
+    def position(self, position):
+        """Sets the position of this ContentItem.
+
+
+        :param position: The position of this ContentItem.  # noqa: E501
+        :type: str
+        """
+
+        self._position = position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

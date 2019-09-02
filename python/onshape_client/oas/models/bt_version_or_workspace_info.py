@@ -32,47 +32,26 @@ class BTVersionOrWorkspaceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'type': 'str'
+        'type': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'type': 'type'
+        'type': 'type',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, type=None):  # noqa: E501
+    def __init__(self, type=None, id=None):  # noqa: E501
         """BTVersionOrWorkspaceInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._type = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if type is not None:
             self.type = type
-
-    @property
-    def id(self):
-        """Gets the id of this BTVersionOrWorkspaceInfo.  # noqa: E501
-
-
-        :return: The id of this BTVersionOrWorkspaceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTVersionOrWorkspaceInfo.
-
-
-        :param id: The id of this BTVersionOrWorkspaceInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def type(self):
@@ -94,6 +73,27 @@ class BTVersionOrWorkspaceInfo(object):
         """
 
         self._type = type
+
+    @property
+    def id(self):
+        """Gets the id of this BTVersionOrWorkspaceInfo.  # noqa: E501
+
+
+        :return: The id of this BTVersionOrWorkspaceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTVersionOrWorkspaceInfo.
+
+
+        :param id: The id of this BTVersionOrWorkspaceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

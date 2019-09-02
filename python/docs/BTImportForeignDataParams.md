@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**owner_id** | **str** |  | [optional] 
 **filename** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**owner_id** | **str** |  | [optional] 
 **file_format** | **str** |  | [optional] 
 **media_type** | **str** |  | [optional] 
 **public_document** | **bool** |  | [optional] 
@@ -23,11 +23,11 @@ Name | Type | Description | Notes
 **gety_axis_is_up** | **bool** |  | [optional] 
 **allow_faulty_parts** | **bool** |  | [optional] 
 **create_composite** | **bool** |  | [optional] 
+**processed_foreign_id** | **str** |  | [optional] 
 **original_foreign_id** | **str** |  | [optional] 
 **import_within_document** | **bool** |  | [optional] 
 **blob_element_id** | **str** |  | [optional] 
 **blob_microversion_id** | **str** |  | [optional] 
-**processed_foreign_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

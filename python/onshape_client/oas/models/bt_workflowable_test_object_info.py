@@ -33,83 +33,83 @@ class BTWorkflowableTestObjectInfo(object):
     """
     openapi_types = {
         'info': 'dict(str, str)',
+        'workflow': 'BTWorkflowSnapshotInfo',
         'description': 'str',
         'company_id': 'str',
         'document_id': 'str',
-        'workflow': 'BTWorkflowSnapshotInfo',
-        'is_obsoletion': 'bool',
         'workflow_id': 'BTPublishedWorkflowId',
+        'is_obsoletion': 'bool',
         'name_as_property': 'str',
         'description_as_property': 'str',
         'properties': 'list[BTWorkflowPropertyInfo]',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'info': 'info',
+        'workflow': 'workflow',
         'description': 'description',
         'company_id': 'companyId',
         'document_id': 'documentId',
-        'workflow': 'workflow',
-        'is_obsoletion': 'isObsoletion',
         'workflow_id': 'workflowId',
+        'is_obsoletion': 'isObsoletion',
         'name_as_property': 'nameAsProperty',
         'description_as_property': 'descriptionAsProperty',
         'properties': 'properties',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, info=None, description=None, company_id=None, document_id=None, workflow=None, is_obsoletion=None, workflow_id=None, name_as_property=None, description_as_property=None, properties=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, info=None, workflow=None, description=None, company_id=None, document_id=None, workflow_id=None, is_obsoletion=None, name_as_property=None, description_as_property=None, properties=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTWorkflowableTestObjectInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._info = None
+        self._workflow = None
         self._description = None
         self._company_id = None
         self._document_id = None
-        self._workflow = None
-        self._is_obsoletion = None
         self._workflow_id = None
+        self._is_obsoletion = None
         self._name_as_property = None
         self._description_as_property = None
         self._properties = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
         if info is not None:
             self.info = info
+        if workflow is not None:
+            self.workflow = workflow
         if description is not None:
             self.description = description
         if company_id is not None:
             self.company_id = company_id
         if document_id is not None:
             self.document_id = document_id
-        if workflow is not None:
-            self.workflow = workflow
-        if is_obsoletion is not None:
-            self.is_obsoletion = is_obsoletion
         if workflow_id is not None:
             self.workflow_id = workflow_id
+        if is_obsoletion is not None:
+            self.is_obsoletion = is_obsoletion
         if name_as_property is not None:
             self.name_as_property = name_as_property
         if description_as_property is not None:
             self.description_as_property = description_as_property
         if properties is not None:
             self.properties = properties
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -133,6 +133,27 @@ class BTWorkflowableTestObjectInfo(object):
         """
 
         self._info = info
+
+    @property
+    def workflow(self):
+        """Gets the workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
+
+
+        :return: The workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :rtype: BTWorkflowSnapshotInfo
+        """
+        return self._workflow
+
+    @workflow.setter
+    def workflow(self, workflow):
+        """Sets the workflow of this BTWorkflowableTestObjectInfo.
+
+
+        :param workflow: The workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :type: BTWorkflowSnapshotInfo
+        """
+
+        self._workflow = workflow
 
     @property
     def description(self):
@@ -198,25 +219,25 @@ class BTWorkflowableTestObjectInfo(object):
         self._document_id = document_id
 
     @property
-    def workflow(self):
-        """Gets the workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
+    def workflow_id(self):
+        """Gets the workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
 
 
-        :return: The workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :rtype: BTWorkflowSnapshotInfo
+        :return: The workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :rtype: BTPublishedWorkflowId
         """
-        return self._workflow
+        return self._workflow_id
 
-    @workflow.setter
-    def workflow(self, workflow):
-        """Sets the workflow of this BTWorkflowableTestObjectInfo.
+    @workflow_id.setter
+    def workflow_id(self, workflow_id):
+        """Sets the workflow_id of this BTWorkflowableTestObjectInfo.
 
 
-        :param workflow: The workflow of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :type: BTWorkflowSnapshotInfo
+        :param workflow_id: The workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :type: BTPublishedWorkflowId
         """
 
-        self._workflow = workflow
+        self._workflow_id = workflow_id
 
     @property
     def is_obsoletion(self):
@@ -238,27 +259,6 @@ class BTWorkflowableTestObjectInfo(object):
         """
 
         self._is_obsoletion = is_obsoletion
-
-    @property
-    def workflow_id(self):
-        """Gets the workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-
-
-        :return: The workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :rtype: BTPublishedWorkflowId
-        """
-        return self._workflow_id
-
-    @workflow_id.setter
-    def workflow_id(self, workflow_id):
-        """Sets the workflow_id of this BTWorkflowableTestObjectInfo.
-
-
-        :param workflow_id: The workflow_id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :type: BTPublishedWorkflowId
-        """
-
-        self._workflow_id = workflow_id
 
     @property
     def name_as_property(self):
@@ -324,27 +324,6 @@ class BTWorkflowableTestObjectInfo(object):
         self._properties = properties
 
     @property
-    def id(self):
-        """Gets the id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-
-
-        :return: The id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTWorkflowableTestObjectInfo.
-
-
-        :param id: The id of this BTWorkflowableTestObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTWorkflowableTestObjectInfo.  # noqa: E501
 
@@ -385,6 +364,27 @@ class BTWorkflowableTestObjectInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTWorkflowableTestObjectInfo.  # noqa: E501
+
+
+        :return: The id of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTWorkflowableTestObjectInfo.
+
+
+        :param id: The id of this BTWorkflowableTestObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

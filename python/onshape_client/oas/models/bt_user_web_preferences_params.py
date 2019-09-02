@@ -32,36 +32,57 @@ class BTUserWebPreferencesParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'user_id': 'str',
         'preference_name': 'str',
         'retina_display_setting': 'str',
-        'user_id': 'str',
         'id': 'str'
     }
 
     attribute_map = {
+        'user_id': 'userId',
         'preference_name': 'preferenceName',
         'retina_display_setting': 'retinaDisplaySetting',
-        'user_id': 'userId',
         'id': 'id'
     }
 
-    def __init__(self, preference_name=None, retina_display_setting=None, user_id=None, id=None):  # noqa: E501
+    def __init__(self, user_id=None, preference_name=None, retina_display_setting=None, id=None):  # noqa: E501
         """BTUserWebPreferencesParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._user_id = None
         self._preference_name = None
         self._retina_display_setting = None
-        self._user_id = None
         self._id = None
         self.discriminator = None
 
+        if user_id is not None:
+            self.user_id = user_id
         if preference_name is not None:
             self.preference_name = preference_name
         if retina_display_setting is not None:
             self.retina_display_setting = retina_display_setting
-        if user_id is not None:
-            self.user_id = user_id
         if id is not None:
             self.id = id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTUserWebPreferencesParams.  # noqa: E501
+
+
+        :return: The user_id of this BTUserWebPreferencesParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTUserWebPreferencesParams.
+
+
+        :param user_id: The user_id of this BTUserWebPreferencesParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     @property
     def preference_name(self):
@@ -104,27 +125,6 @@ class BTUserWebPreferencesParams(object):
         """
 
         self._retina_display_setting = retina_display_setting
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTUserWebPreferencesParams.  # noqa: E501
-
-
-        :return: The user_id of this BTUserWebPreferencesParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTUserWebPreferencesParams.
-
-
-        :param user_id: The user_id of this BTUserWebPreferencesParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
 
     @property
     def id(self):

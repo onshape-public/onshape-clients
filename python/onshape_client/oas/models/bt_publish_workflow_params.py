@@ -32,72 +32,51 @@ class BTPublishWorkflowParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'workflow_type': 'int',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
+        'workflow_type': 'int',
         'is_obsoletion': 'bool',
         'description': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'workflow_type': 'workflowType',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
+        'workflow_type': 'workflowType',
         'is_obsoletion': 'isObsoletion',
         'description': 'description',
         'name': 'name'
     }
 
-    def __init__(self, workflow_type=None, workspace_id=None, element_id=None, document_id=None, is_obsoletion=None, description=None, name=None):  # noqa: E501
+    def __init__(self, workspace_id=None, element_id=None, document_id=None, workflow_type=None, is_obsoletion=None, description=None, name=None):  # noqa: E501
         """BTPublishWorkflowParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._workflow_type = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
+        self._workflow_type = None
         self._is_obsoletion = None
         self._description = None
         self._name = None
         self.discriminator = None
 
-        if workflow_type is not None:
-            self.workflow_type = workflow_type
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
+        if workflow_type is not None:
+            self.workflow_type = workflow_type
         if is_obsoletion is not None:
             self.is_obsoletion = is_obsoletion
         if description is not None:
             self.description = description
         if name is not None:
             self.name = name
-
-    @property
-    def workflow_type(self):
-        """Gets the workflow_type of this BTPublishWorkflowParams.  # noqa: E501
-
-
-        :return: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._workflow_type
-
-    @workflow_type.setter
-    def workflow_type(self, workflow_type):
-        """Sets the workflow_type of this BTPublishWorkflowParams.
-
-
-        :param workflow_type: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
-        :type: int
-        """
-
-        self._workflow_type = workflow_type
 
     @property
     def workspace_id(self):
@@ -161,6 +140,27 @@ class BTPublishWorkflowParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def workflow_type(self):
+        """Gets the workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+
+
+        :return: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._workflow_type
+
+    @workflow_type.setter
+    def workflow_type(self, workflow_type):
+        """Sets the workflow_type of this BTPublishWorkflowParams.
+
+
+        :param workflow_type: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+        :type: int
+        """
+
+        self._workflow_type = workflow_type
 
     @property
     def is_obsoletion(self):

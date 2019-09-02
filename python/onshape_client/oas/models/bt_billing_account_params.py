@@ -32,15 +32,15 @@ class BTBillingAccountParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'company_plan': 'bool',
-        'trial_period_days': 'int',
         'user_id': 'str',
         'plan_id': 'str',
         'company_id': 'str',
         'seats': 'int',
         'domain_prefix': 'str',
         'payment_type': 'int',
+        'trial_period_days': 'int',
         'promonthly_enabled': 'bool',
+        'company_plan': 'bool',
         'company_name': 'str',
         'reseller_name': 'str',
         'force_create': 'bool',
@@ -50,15 +50,15 @@ class BTBillingAccountParams(object):
     }
 
     attribute_map = {
-        'company_plan': 'companyPlan',
-        'trial_period_days': 'trialPeriodDays',
         'user_id': 'userId',
         'plan_id': 'planId',
         'company_id': 'companyId',
         'seats': 'seats',
         'domain_prefix': 'domainPrefix',
         'payment_type': 'paymentType',
+        'trial_period_days': 'trialPeriodDays',
         'promonthly_enabled': 'promonthlyEnabled',
+        'company_plan': 'companyPlan',
         'company_name': 'companyName',
         'reseller_name': 'resellerName',
         'force_create': 'forceCreate',
@@ -67,18 +67,18 @@ class BTBillingAccountParams(object):
         'address': 'address'
     }
 
-    def __init__(self, company_plan=None, trial_period_days=None, user_id=None, plan_id=None, company_id=None, seats=None, domain_prefix=None, payment_type=None, promonthly_enabled=None, company_name=None, reseller_name=None, force_create=None, password=None, token=None, address=None):  # noqa: E501
+    def __init__(self, user_id=None, plan_id=None, company_id=None, seats=None, domain_prefix=None, payment_type=None, trial_period_days=None, promonthly_enabled=None, company_plan=None, company_name=None, reseller_name=None, force_create=None, password=None, token=None, address=None):  # noqa: E501
         """BTBillingAccountParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._company_plan = None
-        self._trial_period_days = None
         self._user_id = None
         self._plan_id = None
         self._company_id = None
         self._seats = None
         self._domain_prefix = None
         self._payment_type = None
+        self._trial_period_days = None
         self._promonthly_enabled = None
+        self._company_plan = None
         self._company_name = None
         self._reseller_name = None
         self._force_create = None
@@ -87,10 +87,6 @@ class BTBillingAccountParams(object):
         self._address = None
         self.discriminator = None
 
-        if company_plan is not None:
-            self.company_plan = company_plan
-        if trial_period_days is not None:
-            self.trial_period_days = trial_period_days
         if user_id is not None:
             self.user_id = user_id
         if plan_id is not None:
@@ -103,8 +99,12 @@ class BTBillingAccountParams(object):
             self.domain_prefix = domain_prefix
         if payment_type is not None:
             self.payment_type = payment_type
+        if trial_period_days is not None:
+            self.trial_period_days = trial_period_days
         if promonthly_enabled is not None:
             self.promonthly_enabled = promonthly_enabled
+        if company_plan is not None:
+            self.company_plan = company_plan
         if company_name is not None:
             self.company_name = company_name
         if reseller_name is not None:
@@ -117,48 +117,6 @@ class BTBillingAccountParams(object):
             self.token = token
         if address is not None:
             self.address = address
-
-    @property
-    def company_plan(self):
-        """Gets the company_plan of this BTBillingAccountParams.  # noqa: E501
-
-
-        :return: The company_plan of this BTBillingAccountParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._company_plan
-
-    @company_plan.setter
-    def company_plan(self, company_plan):
-        """Sets the company_plan of this BTBillingAccountParams.
-
-
-        :param company_plan: The company_plan of this BTBillingAccountParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._company_plan = company_plan
-
-    @property
-    def trial_period_days(self):
-        """Gets the trial_period_days of this BTBillingAccountParams.  # noqa: E501
-
-
-        :return: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._trial_period_days
-
-    @trial_period_days.setter
-    def trial_period_days(self, trial_period_days):
-        """Sets the trial_period_days of this BTBillingAccountParams.
-
-
-        :param trial_period_days: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
-        :type: int
-        """
-
-        self._trial_period_days = trial_period_days
 
     @property
     def user_id(self):
@@ -287,6 +245,27 @@ class BTBillingAccountParams(object):
         self._payment_type = payment_type
 
     @property
+    def trial_period_days(self):
+        """Gets the trial_period_days of this BTBillingAccountParams.  # noqa: E501
+
+
+        :return: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._trial_period_days
+
+    @trial_period_days.setter
+    def trial_period_days(self, trial_period_days):
+        """Sets the trial_period_days of this BTBillingAccountParams.
+
+
+        :param trial_period_days: The trial_period_days of this BTBillingAccountParams.  # noqa: E501
+        :type: int
+        """
+
+        self._trial_period_days = trial_period_days
+
+    @property
     def promonthly_enabled(self):
         """Gets the promonthly_enabled of this BTBillingAccountParams.  # noqa: E501
 
@@ -306,6 +285,27 @@ class BTBillingAccountParams(object):
         """
 
         self._promonthly_enabled = promonthly_enabled
+
+    @property
+    def company_plan(self):
+        """Gets the company_plan of this BTBillingAccountParams.  # noqa: E501
+
+
+        :return: The company_plan of this BTBillingAccountParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._company_plan
+
+    @company_plan.setter
+    def company_plan(self, company_plan):
+        """Sets the company_plan of this BTBillingAccountParams.
+
+
+        :param company_plan: The company_plan of this BTBillingAccountParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._company_plan = company_plan
 
     @property
     def company_name(self):

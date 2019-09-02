@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**display_name** | **str** |  | [optional] 
 **units** | **str** |  | [optional] 
+**display_name** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

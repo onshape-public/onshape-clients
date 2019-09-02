@@ -10,6 +10,7 @@ from onshape_client.oas.api.blob_elements_api import BlobElementsApi
 from onshape_client.oas.api.documents_api import DocumentsApi
 from onshape_client.oas.api.drawings_api import DrawingsApi
 from onshape_client.oas.api.elements_api import ElementsApi
+from onshape_client.oas.api.feature_studios_api import FeatureStudiosApi
 from onshape_client.oas.api.metadata_api import MetadataApi
 from onshape_client.oas.api.part_studios_api import PartStudiosApi
 from onshape_client.oas.api.parts_api import PartsApi

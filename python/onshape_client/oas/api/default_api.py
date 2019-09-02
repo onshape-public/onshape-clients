@@ -49,6 +49,7 @@ class DefaultApi(object):
         :param str file_type: The type of file to return. Defaults to JSON.
         :param str excluded_tags: If an operation contains an excluded tag, it is not returned from this endpoint.
         :param str included_tags: Return at most all the operations with tags included in includedTags. If not given, this will default to all tags.
+        :param bool include_deprecated: Include deprecated endpoints.
         :param list[str] documentation_status: Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -76,6 +77,7 @@ class DefaultApi(object):
         :param str file_type: The type of file to return. Defaults to JSON.
         :param str excluded_tags: If an operation contains an excluded tag, it is not returned from this endpoint.
         :param str included_tags: Return at most all the operations with tags included in includedTags. If not given, this will default to all tags.
+        :param bool include_deprecated: Include deprecated endpoints.
         :param list[str] documentation_status: Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to.
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -93,7 +95,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['file_type', 'excluded_tags', 'included_tags', 'documentation_status']  # noqa: E501
+        all_params = ['file_type', 'excluded_tags', 'included_tags', 'include_deprecated', 'documentation_status']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -119,6 +121,8 @@ class DefaultApi(object):
             query_params.append(('excludedTags', local_var_params['excluded_tags']))  # noqa: E501
         if 'included_tags' in local_var_params:
             query_params.append(('includedTags', local_var_params['included_tags']))  # noqa: E501
+        if 'include_deprecated' in local_var_params:
+            query_params.append(('includeDeprecated', local_var_params['include_deprecated']))  # noqa: E501
         if 'documentation_status' in local_var_params:
             query_params.append(('documentationStatus', local_var_params['documentation_status']))  # noqa: E501
             collection_formats['documentationStatus'] = 'multi'  # noqa: E501

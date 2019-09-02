@@ -32,13 +32,13 @@ class BTPurchaseParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'trial_period_days': 'int',
         'user_id': 'str',
         'email': 'str',
         'plan_id': 'str',
         'seats': 'int',
         'domain_prefix': 'str',
         'payment_type': 'int',
+        'trial_period_days': 'int',
         'light_seats': 'int',
         'ref_id': 'str',
         'allow_deprecated_plan': 'bool',
@@ -47,13 +47,13 @@ class BTPurchaseParams(object):
     }
 
     attribute_map = {
-        'trial_period_days': 'trialPeriodDays',
         'user_id': 'userId',
         'email': 'email',
         'plan_id': 'planId',
         'seats': 'seats',
         'domain_prefix': 'domainPrefix',
         'payment_type': 'paymentType',
+        'trial_period_days': 'trialPeriodDays',
         'light_seats': 'lightSeats',
         'ref_id': 'refId',
         'allow_deprecated_plan': 'allowDeprecatedPlan',
@@ -61,16 +61,16 @@ class BTPurchaseParams(object):
         'password': 'password'
     }
 
-    def __init__(self, trial_period_days=None, user_id=None, email=None, plan_id=None, seats=None, domain_prefix=None, payment_type=None, light_seats=None, ref_id=None, allow_deprecated_plan=None, reseller_name=None, password=None):  # noqa: E501
+    def __init__(self, user_id=None, email=None, plan_id=None, seats=None, domain_prefix=None, payment_type=None, trial_period_days=None, light_seats=None, ref_id=None, allow_deprecated_plan=None, reseller_name=None, password=None):  # noqa: E501
         """BTPurchaseParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._trial_period_days = None
         self._user_id = None
         self._email = None
         self._plan_id = None
         self._seats = None
         self._domain_prefix = None
         self._payment_type = None
+        self._trial_period_days = None
         self._light_seats = None
         self._ref_id = None
         self._allow_deprecated_plan = None
@@ -78,8 +78,6 @@ class BTPurchaseParams(object):
         self._password = None
         self.discriminator = None
 
-        if trial_period_days is not None:
-            self.trial_period_days = trial_period_days
         if user_id is not None:
             self.user_id = user_id
         if email is not None:
@@ -92,6 +90,8 @@ class BTPurchaseParams(object):
             self.domain_prefix = domain_prefix
         if payment_type is not None:
             self.payment_type = payment_type
+        if trial_period_days is not None:
+            self.trial_period_days = trial_period_days
         if light_seats is not None:
             self.light_seats = light_seats
         if ref_id is not None:
@@ -102,27 +102,6 @@ class BTPurchaseParams(object):
             self.reseller_name = reseller_name
         if password is not None:
             self.password = password
-
-    @property
-    def trial_period_days(self):
-        """Gets the trial_period_days of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The trial_period_days of this BTPurchaseParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._trial_period_days
-
-    @trial_period_days.setter
-    def trial_period_days(self, trial_period_days):
-        """Sets the trial_period_days of this BTPurchaseParams.
-
-
-        :param trial_period_days: The trial_period_days of this BTPurchaseParams.  # noqa: E501
-        :type: int
-        """
-
-        self._trial_period_days = trial_period_days
 
     @property
     def user_id(self):
@@ -249,6 +228,27 @@ class BTPurchaseParams(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def trial_period_days(self):
+        """Gets the trial_period_days of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The trial_period_days of this BTPurchaseParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._trial_period_days
+
+    @trial_period_days.setter
+    def trial_period_days(self, trial_period_days):
+        """Sets the trial_period_days of this BTPurchaseParams.
+
+
+        :param trial_period_days: The trial_period_days of this BTPurchaseParams.  # noqa: E501
+        :type: int
+        """
+
+        self._trial_period_days = trial_period_days
 
     @property
     def light_seats(self):

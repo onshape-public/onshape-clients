@@ -32,8 +32,8 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'path_to_root': 'list[PathSegment]',
         'permission_set': 'object',
+        'path_to_root': 'list[PathSegment]',
         'href': 'str',
         'items': 'list[BTGlobalTreeNodeInfo]',
         'previous': 'str',
@@ -41,29 +41,29 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
     }
 
     attribute_map = {
-        'path_to_root': 'pathToRoot',
         'permission_set': 'permissionSet',
+        'path_to_root': 'pathToRoot',
         'href': 'href',
         'items': 'items',
         'previous': 'previous',
         'next': 'next'
     }
 
-    def __init__(self, path_to_root=None, permission_set=None, href=None, items=None, previous=None, next=None):  # noqa: E501
+    def __init__(self, permission_set=None, path_to_root=None, href=None, items=None, previous=None, next=None):  # noqa: E501
         """BTGlobalTreeNodeWithChildrenInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._path_to_root = None
         self._permission_set = None
+        self._path_to_root = None
         self._href = None
         self._items = None
         self._previous = None
         self._next = None
         self.discriminator = None
 
-        if path_to_root is not None:
-            self.path_to_root = path_to_root
         if permission_set is not None:
             self.permission_set = permission_set
+        if path_to_root is not None:
+            self.path_to_root = path_to_root
         if href is not None:
             self.href = href
         if items is not None:
@@ -72,27 +72,6 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
             self.previous = previous
         if next is not None:
             self.next = next
-
-    @property
-    def path_to_root(self):
-        """Gets the path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-
-
-        :return: The path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :rtype: list[PathSegment]
-        """
-        return self._path_to_root
-
-    @path_to_root.setter
-    def path_to_root(self, path_to_root):
-        """Sets the path_to_root of this BTGlobalTreeNodeWithChildrenInfo.
-
-
-        :param path_to_root: The path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
-        :type: list[PathSegment]
-        """
-
-        self._path_to_root = path_to_root
 
     @property
     def permission_set(self):
@@ -114,6 +93,27 @@ class BTGlobalTreeNodeWithChildrenInfo(object):
         """
 
         self._permission_set = permission_set
+
+    @property
+    def path_to_root(self):
+        """Gets the path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+
+
+        :return: The path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :rtype: list[PathSegment]
+        """
+        return self._path_to_root
+
+    @path_to_root.setter
+    def path_to_root(self, path_to_root):
+        """Sets the path_to_root of this BTGlobalTreeNodeWithChildrenInfo.
+
+
+        :param path_to_root: The path_to_root of this BTGlobalTreeNodeWithChildrenInfo.  # noqa: E501
+        :type: list[PathSegment]
+        """
+
+        self._path_to_root = path_to_root
 
     @property
     def href(self):

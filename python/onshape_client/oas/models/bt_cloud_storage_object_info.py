@@ -32,145 +32,145 @@ class BTCloudStorageObjectInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'cloud_storage_account_id': 'str',
-        'thumbnail_info': 'BTThumbnailInfo',
         'cloud_storage_provider': 'int',
         'parent_id': 'str',
+        'thumbnail_info': 'BTThumbnailInfo',
+        'cloud_storage_account_id': 'str',
         'cloud_storage_object_id': 'str',
         'size_bytes': 'int',
+        'mime_type': 'str',
         'web_view_link': 'str',
         'icon_link': 'str',
-        'mime_type': 'str',
-        'created_by_id': 'str',
         'modified_by_id': 'str',
-        'description': 'str',
-        'tree_href': 'str',
-        'is_mutable': 'bool',
-        'resource_type': 'str',
+        'created_by_id': 'str',
+        'project_id': 'str',
+        'can_move': 'bool',
         'modified_at': 'datetime',
+        'description': 'str',
         'created_at': 'datetime',
         'created_by': 'BTUserBasicSummaryInfo',
         'modified_by': 'BTUserBasicSummaryInfo',
-        'project_id': 'str',
-        'can_move': 'bool',
+        'tree_href': 'str',
+        'is_mutable': 'bool',
+        'resource_type': 'str',
         'is_container': 'bool',
         'is_enterprise_owned': 'bool',
         'has_pending_owner': 'bool',
         'owner': 'BTOwnerInfo',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'cloud_storage_account_id': 'cloudStorageAccountId',
-        'thumbnail_info': 'thumbnailInfo',
         'cloud_storage_provider': 'cloudStorageProvider',
         'parent_id': 'parentId',
+        'thumbnail_info': 'thumbnailInfo',
+        'cloud_storage_account_id': 'cloudStorageAccountId',
         'cloud_storage_object_id': 'cloudStorageObjectId',
         'size_bytes': 'sizeBytes',
+        'mime_type': 'mimeType',
         'web_view_link': 'webViewLink',
         'icon_link': 'iconLink',
-        'mime_type': 'mimeType',
-        'created_by_id': 'createdById',
         'modified_by_id': 'modifiedById',
-        'description': 'description',
-        'tree_href': 'treeHref',
-        'is_mutable': 'isMutable',
-        'resource_type': 'resourceType',
+        'created_by_id': 'createdById',
+        'project_id': 'projectId',
+        'can_move': 'canMove',
         'modified_at': 'modifiedAt',
+        'description': 'description',
         'created_at': 'createdAt',
         'created_by': 'createdBy',
         'modified_by': 'modifiedBy',
-        'project_id': 'projectId',
-        'can_move': 'canMove',
+        'tree_href': 'treeHref',
+        'is_mutable': 'isMutable',
+        'resource_type': 'resourceType',
         'is_container': 'isContainer',
         'is_enterprise_owned': 'isEnterpriseOwned',
         'has_pending_owner': 'hasPendingOwner',
         'owner': 'owner',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, cloud_storage_account_id=None, thumbnail_info=None, cloud_storage_provider=None, parent_id=None, cloud_storage_object_id=None, size_bytes=None, web_view_link=None, icon_link=None, mime_type=None, created_by_id=None, modified_by_id=None, description=None, tree_href=None, is_mutable=None, resource_type=None, modified_at=None, created_at=None, created_by=None, modified_by=None, project_id=None, can_move=None, is_container=None, is_enterprise_owned=None, has_pending_owner=None, owner=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, cloud_storage_provider=None, parent_id=None, thumbnail_info=None, cloud_storage_account_id=None, cloud_storage_object_id=None, size_bytes=None, mime_type=None, web_view_link=None, icon_link=None, modified_by_id=None, created_by_id=None, project_id=None, can_move=None, modified_at=None, description=None, created_at=None, created_by=None, modified_by=None, tree_href=None, is_mutable=None, resource_type=None, is_container=None, is_enterprise_owned=None, has_pending_owner=None, owner=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTCloudStorageObjectInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._cloud_storage_account_id = None
-        self._thumbnail_info = None
         self._cloud_storage_provider = None
         self._parent_id = None
+        self._thumbnail_info = None
+        self._cloud_storage_account_id = None
         self._cloud_storage_object_id = None
         self._size_bytes = None
+        self._mime_type = None
         self._web_view_link = None
         self._icon_link = None
-        self._mime_type = None
-        self._created_by_id = None
         self._modified_by_id = None
-        self._description = None
-        self._tree_href = None
-        self._is_mutable = None
-        self._resource_type = None
+        self._created_by_id = None
+        self._project_id = None
+        self._can_move = None
         self._modified_at = None
+        self._description = None
         self._created_at = None
         self._created_by = None
         self._modified_by = None
-        self._project_id = None
-        self._can_move = None
+        self._tree_href = None
+        self._is_mutable = None
+        self._resource_type = None
         self._is_container = None
         self._is_enterprise_owned = None
         self._has_pending_owner = None
         self._owner = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
-        if cloud_storage_account_id is not None:
-            self.cloud_storage_account_id = cloud_storage_account_id
-        if thumbnail_info is not None:
-            self.thumbnail_info = thumbnail_info
         if cloud_storage_provider is not None:
             self.cloud_storage_provider = cloud_storage_provider
         if parent_id is not None:
             self.parent_id = parent_id
+        if thumbnail_info is not None:
+            self.thumbnail_info = thumbnail_info
+        if cloud_storage_account_id is not None:
+            self.cloud_storage_account_id = cloud_storage_account_id
         if cloud_storage_object_id is not None:
             self.cloud_storage_object_id = cloud_storage_object_id
         if size_bytes is not None:
             self.size_bytes = size_bytes
+        if mime_type is not None:
+            self.mime_type = mime_type
         if web_view_link is not None:
             self.web_view_link = web_view_link
         if icon_link is not None:
             self.icon_link = icon_link
-        if mime_type is not None:
-            self.mime_type = mime_type
-        if created_by_id is not None:
-            self.created_by_id = created_by_id
         if modified_by_id is not None:
             self.modified_by_id = modified_by_id
-        if description is not None:
-            self.description = description
-        if tree_href is not None:
-            self.tree_href = tree_href
-        if is_mutable is not None:
-            self.is_mutable = is_mutable
-        if resource_type is not None:
-            self.resource_type = resource_type
+        if created_by_id is not None:
+            self.created_by_id = created_by_id
+        if project_id is not None:
+            self.project_id = project_id
+        if can_move is not None:
+            self.can_move = can_move
         if modified_at is not None:
             self.modified_at = modified_at
+        if description is not None:
+            self.description = description
         if created_at is not None:
             self.created_at = created_at
         if created_by is not None:
             self.created_by = created_by
         if modified_by is not None:
             self.modified_by = modified_by
-        if project_id is not None:
-            self.project_id = project_id
-        if can_move is not None:
-            self.can_move = can_move
+        if tree_href is not None:
+            self.tree_href = tree_href
+        if is_mutable is not None:
+            self.is_mutable = is_mutable
+        if resource_type is not None:
+            self.resource_type = resource_type
         if is_container is not None:
             self.is_container = is_container
         if is_enterprise_owned is not None:
@@ -179,56 +179,14 @@ class BTCloudStorageObjectInfo(object):
             self.has_pending_owner = has_pending_owner
         if owner is not None:
             self.owner = owner
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
-
-    @property
-    def cloud_storage_account_id(self):
-        """Gets the cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._cloud_storage_account_id
-
-    @cloud_storage_account_id.setter
-    def cloud_storage_account_id(self, cloud_storage_account_id):
-        """Sets the cloud_storage_account_id of this BTCloudStorageObjectInfo.
-
-
-        :param cloud_storage_account_id: The cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._cloud_storage_account_id = cloud_storage_account_id
-
-    @property
-    def thumbnail_info(self):
-        """Gets the thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
-        """
-        return self._thumbnail_info
-
-    @thumbnail_info.setter
-    def thumbnail_info(self, thumbnail_info):
-        """Sets the thumbnail_info of this BTCloudStorageObjectInfo.
-
-
-        :param thumbnail_info: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: BTThumbnailInfo
-        """
-
-        self._thumbnail_info = thumbnail_info
 
     @property
     def cloud_storage_provider(self):
@@ -273,6 +231,48 @@ class BTCloudStorageObjectInfo(object):
         self._parent_id = parent_id
 
     @property
+    def thumbnail_info(self):
+        """Gets the thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail_info
+
+    @thumbnail_info.setter
+    def thumbnail_info(self, thumbnail_info):
+        """Sets the thumbnail_info of this BTCloudStorageObjectInfo.
+
+
+        :param thumbnail_info: The thumbnail_info of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail_info = thumbnail_info
+
+    @property
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id
+
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTCloudStorageObjectInfo.
+
+
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id = cloud_storage_account_id
+
+    @property
     def cloud_storage_object_id(self):
         """Gets the cloud_storage_object_id of this BTCloudStorageObjectInfo.  # noqa: E501
 
@@ -313,6 +313,27 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._size_bytes = size_bytes
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this BTCloudStorageObjectInfo.
+
+
+        :param mime_type: The mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
 
     @property
     def web_view_link(self):
@@ -357,25 +378,25 @@ class BTCloudStorageObjectInfo(object):
         self._icon_link = icon_link
 
     @property
-    def mime_type(self):
-        """Gets the mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+    def modified_by_id(self):
+        """Gets the modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :return: The modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
         :rtype: str
         """
-        return self._mime_type
+        return self._modified_by_id
 
-    @mime_type.setter
-    def mime_type(self, mime_type):
-        """Sets the mime_type of this BTCloudStorageObjectInfo.
+    @modified_by_id.setter
+    def modified_by_id(self, modified_by_id):
+        """Sets the modified_by_id of this BTCloudStorageObjectInfo.
 
 
-        :param mime_type: The mime_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :param modified_by_id: The modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
         :type: str
         """
 
-        self._mime_type = mime_type
+        self._modified_by_id = modified_by_id
 
     @property
     def created_by_id(self):
@@ -399,109 +420,46 @@ class BTCloudStorageObjectInfo(object):
         self._created_by_id = created_by_id
 
     @property
-    def modified_by_id(self):
-        """Gets the modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
+    def project_id(self):
+        """Gets the project_id of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :return: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
         :rtype: str
         """
-        return self._modified_by_id
+        return self._project_id
 
-    @modified_by_id.setter
-    def modified_by_id(self, modified_by_id):
-        """Sets the modified_by_id of this BTCloudStorageObjectInfo.
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTCloudStorageObjectInfo.
 
 
-        :param modified_by_id: The modified_by_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :param project_id: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
         :type: str
         """
 
-        self._modified_by_id = modified_by_id
+        self._project_id = project_id
 
     @property
-    def description(self):
-        """Gets the description of this BTCloudStorageObjectInfo.  # noqa: E501
+    def can_move(self):
+        """Gets the can_move of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The description of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTCloudStorageObjectInfo.
-
-
-        :param description: The description of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def tree_href(self):
-        """Gets the tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._tree_href
-
-    @tree_href.setter
-    def tree_href(self, tree_href):
-        """Sets the tree_href of this BTCloudStorageObjectInfo.
-
-
-        :param tree_href: The tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._tree_href = tree_href
-
-    @property
-    def is_mutable(self):
-        """Gets the is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
+        :return: The can_move of this BTCloudStorageObjectInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._is_mutable
+        return self._can_move
 
-    @is_mutable.setter
-    def is_mutable(self, is_mutable):
-        """Sets the is_mutable of this BTCloudStorageObjectInfo.
+    @can_move.setter
+    def can_move(self, can_move):
+        """Sets the can_move of this BTCloudStorageObjectInfo.
 
 
-        :param is_mutable: The is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
+        :param can_move: The can_move of this BTCloudStorageObjectInfo.  # noqa: E501
         :type: bool
         """
 
-        self._is_mutable = is_mutable
-
-    @property
-    def resource_type(self):
-        """Gets the resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._resource_type
-
-    @resource_type.setter
-    def resource_type(self, resource_type):
-        """Sets the resource_type of this BTCloudStorageObjectInfo.
-
-
-        :param resource_type: The resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._resource_type = resource_type
+        self._can_move = can_move
 
     @property
     def modified_at(self):
@@ -523,6 +481,27 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._modified_at = modified_at
+
+    @property
+    def description(self):
+        """Gets the description of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The description of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTCloudStorageObjectInfo.
+
+
+        :param description: The description of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def created_at(self):
@@ -588,46 +567,67 @@ class BTCloudStorageObjectInfo(object):
         self._modified_by = modified_by
 
     @property
-    def project_id(self):
-        """Gets the project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+    def tree_href(self):
+        """Gets the tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :return: The tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
         :rtype: str
         """
-        return self._project_id
+        return self._tree_href
 
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTCloudStorageObjectInfo.
+    @tree_href.setter
+    def tree_href(self, tree_href):
+        """Sets the tree_href of this BTCloudStorageObjectInfo.
 
 
-        :param project_id: The project_id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :param tree_href: The tree_href of this BTCloudStorageObjectInfo.  # noqa: E501
         :type: str
         """
 
-        self._project_id = project_id
+        self._tree_href = tree_href
 
     @property
-    def can_move(self):
-        """Gets the can_move of this BTCloudStorageObjectInfo.  # noqa: E501
+    def is_mutable(self):
+        """Gets the is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
 
 
-        :return: The can_move of this BTCloudStorageObjectInfo.  # noqa: E501
+        :return: The is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._can_move
+        return self._is_mutable
 
-    @can_move.setter
-    def can_move(self, can_move):
-        """Sets the can_move of this BTCloudStorageObjectInfo.
+    @is_mutable.setter
+    def is_mutable(self, is_mutable):
+        """Sets the is_mutable of this BTCloudStorageObjectInfo.
 
 
-        :param can_move: The can_move of this BTCloudStorageObjectInfo.  # noqa: E501
+        :param is_mutable: The is_mutable of this BTCloudStorageObjectInfo.  # noqa: E501
         :type: bool
         """
 
-        self._can_move = can_move
+        self._is_mutable = is_mutable
+
+    @property
+    def resource_type(self):
+        """Gets the resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._resource_type
+
+    @resource_type.setter
+    def resource_type(self, resource_type):
+        """Sets the resource_type of this BTCloudStorageObjectInfo.
+
+
+        :param resource_type: The resource_type of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._resource_type = resource_type
 
     @property
     def is_container(self):
@@ -714,27 +714,6 @@ class BTCloudStorageObjectInfo(object):
         self._owner = owner
 
     @property
-    def id(self):
-        """Gets the id of this BTCloudStorageObjectInfo.  # noqa: E501
-
-
-        :return: The id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTCloudStorageObjectInfo.
-
-
-        :param id: The id of this BTCloudStorageObjectInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTCloudStorageObjectInfo.  # noqa: E501
 
@@ -775,6 +754,27 @@ class BTCloudStorageObjectInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTCloudStorageObjectInfo.  # noqa: E501
+
+
+        :return: The id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTCloudStorageObjectInfo.
+
+
+        :param id: The id of this BTCloudStorageObjectInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

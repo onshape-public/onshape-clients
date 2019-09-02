@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parameter_name** | **str** |  | [optional] 
-**parameter_type** | **int** |  | [optional] 
 **property_id** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**parameter_name** | **str** |  | [optional] 
+**parameter_type** | **int** |  | [optional] 
 **is_driving_configuration** | **bool** |  | [optional] 
 **parameter_value** | **str** |  | [optional] 
 **owner_type** | **int** |  | [optional] 

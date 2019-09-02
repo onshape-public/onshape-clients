@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sketch_id** | **str** |  | [optional] 
-**include_hidden** | **bool** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**include_hidden** | **bool** |  | [optional] 
+**sketch_id** | **str** |  | [optional] 
 **part_query** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
 **include_wire_bodies** | **bool** |  | [optional] 

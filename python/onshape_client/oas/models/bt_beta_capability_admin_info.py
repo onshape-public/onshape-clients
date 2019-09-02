@@ -46,9 +46,9 @@ class BTBetaCapabilityAdminInfo(object):
         'user_state': 'int',
         'upgradable': 'bool',
         'user_based': 'bool',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
@@ -67,13 +67,13 @@ class BTBetaCapabilityAdminInfo(object):
         'user_state': 'userState',
         'upgradable': 'upgradable',
         'user_based': 'userBased',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, self_service_disabled=None, user_count=None, user_limit=None, capability_name=None, eula=None, welcome_html=None, description=None, user_state=None, upgradable=None, user_based=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, self_service_disabled=None, user_count=None, user_limit=None, capability_name=None, eula=None, welcome_html=None, description=None, user_state=None, upgradable=None, user_based=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTBetaCapabilityAdminInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._approvals_per_hour = None
@@ -90,9 +90,9 @@ class BTBetaCapabilityAdminInfo(object):
         self._user_state = None
         self._upgradable = None
         self._user_based = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
@@ -124,12 +124,12 @@ class BTBetaCapabilityAdminInfo(object):
             self.upgradable = upgradable
         if user_based is not None:
             self.user_based = user_based
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -428,27 +428,6 @@ class BTBetaCapabilityAdminInfo(object):
         self._user_based = user_based
 
     @property
-    def id(self):
-        """Gets the id of this BTBetaCapabilityAdminInfo.  # noqa: E501
-
-
-        :return: The id of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBetaCapabilityAdminInfo.
-
-
-        :param id: The id of this BTBetaCapabilityAdminInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityAdminInfo.  # noqa: E501
 
@@ -489,6 +468,27 @@ class BTBetaCapabilityAdminInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTBetaCapabilityAdminInfo.  # noqa: E501
+
+
+        :return: The id of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBetaCapabilityAdminInfo.
+
+
+        :param id: The id of this BTBetaCapabilityAdminInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

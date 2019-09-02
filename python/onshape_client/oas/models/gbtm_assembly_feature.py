@@ -41,7 +41,8 @@ class GBTMAssemblyFeature(object):
         'feature_type': 'str',
         'feature_id': 'str',
         'sub_features': 'list[BTMFeature]',
-        'return_after_subfeatures': 'bool'
+        'return_after_subfeatures': 'bool',
+        'version': 'int'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class GBTMAssemblyFeature(object):
         'feature_type': 'featureType',
         'feature_id': 'featureId',
         'sub_features': 'subFeatures',
-        'return_after_subfeatures': 'returnAfterSubfeatures'
+        'return_after_subfeatures': 'returnAfterSubfeatures',
+        'version': 'version'
     }
 
-    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_type=None, feature_id=None, sub_features=None, return_after_subfeatures=None):  # noqa: E501
+    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_type=None, feature_id=None, sub_features=None, return_after_subfeatures=None, version=None):  # noqa: E501
         """GBTMAssemblyFeature - a model defined in OpenAPI"""  # noqa: E501
 
         self._node_id = None
@@ -70,6 +72,7 @@ class GBTMAssemblyFeature(object):
         self._feature_id = None
         self._sub_features = None
         self._return_after_subfeatures = None
+        self._version = None
         self.discriminator = None
 
         if node_id is not None:
@@ -92,6 +95,8 @@ class GBTMAssemblyFeature(object):
             self.sub_features = sub_features
         if return_after_subfeatures is not None:
             self.return_after_subfeatures = return_after_subfeatures
+        if version is not None:
+            self.version = version
 
     @property
     def node_id(self):
@@ -302,6 +307,27 @@ class GBTMAssemblyFeature(object):
         """
 
         self._return_after_subfeatures = return_after_subfeatures
+
+    @property
+    def version(self):
+        """Gets the version of this GBTMAssemblyFeature.  # noqa: E501
+
+
+        :return: The version of this GBTMAssemblyFeature.  # noqa: E501
+        :rtype: int
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this GBTMAssemblyFeature.
+
+
+        :param version: The version of this GBTMAssemblyFeature.  # noqa: E501
+        :type: int
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

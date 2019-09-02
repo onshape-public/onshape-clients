@@ -32,52 +32,31 @@ class BTSubstituteApproverParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identity': 'BTIdentityParams',
         'company_id': 'str',
+        'identity': 'BTIdentityParams',
         'enabled': 'bool'
     }
 
     attribute_map = {
-        'identity': 'identity',
         'company_id': 'companyId',
+        'identity': 'identity',
         'enabled': 'enabled'
     }
 
-    def __init__(self, identity=None, company_id=None, enabled=None):  # noqa: E501
+    def __init__(self, company_id=None, identity=None, enabled=None):  # noqa: E501
         """BTSubstituteApproverParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._identity = None
         self._company_id = None
+        self._identity = None
         self._enabled = None
         self.discriminator = None
 
-        if identity is not None:
-            self.identity = identity
         if company_id is not None:
             self.company_id = company_id
+        if identity is not None:
+            self.identity = identity
         if enabled is not None:
             self.enabled = enabled
-
-    @property
-    def identity(self):
-        """Gets the identity of this BTSubstituteApproverParams.  # noqa: E501
-
-
-        :return: The identity of this BTSubstituteApproverParams.  # noqa: E501
-        :rtype: BTIdentityParams
-        """
-        return self._identity
-
-    @identity.setter
-    def identity(self, identity):
-        """Sets the identity of this BTSubstituteApproverParams.
-
-
-        :param identity: The identity of this BTSubstituteApproverParams.  # noqa: E501
-        :type: BTIdentityParams
-        """
-
-        self._identity = identity
 
     @property
     def company_id(self):
@@ -99,6 +78,27 @@ class BTSubstituteApproverParams(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def identity(self):
+        """Gets the identity of this BTSubstituteApproverParams.  # noqa: E501
+
+
+        :return: The identity of this BTSubstituteApproverParams.  # noqa: E501
+        :rtype: BTIdentityParams
+        """
+        return self._identity
+
+    @identity.setter
+    def identity(self, identity):
+        """Sets the identity of this BTSubstituteApproverParams.
+
+
+        :param identity: The identity of this BTSubstituteApproverParams.  # noqa: E501
+        :type: BTIdentityParams
+        """
+
+        self._identity = identity
 
     @property
     def enabled(self):

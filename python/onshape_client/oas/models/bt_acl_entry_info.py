@@ -32,11 +32,11 @@ class BTAclEntryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'entry_type': 'int',
         'entry_id': 'str',
-        'email': 'str',
+        'entry_type': 'int',
         'permission_set': 'object',
         'image': 'str',
+        'email': 'str',
         'entry_state': 'str',
         'enterprise_member': 'bool',
         'pending_owner_transfer': 'bool',
@@ -49,11 +49,11 @@ class BTAclEntryInfo(object):
     }
 
     attribute_map = {
-        'entry_type': 'entryType',
         'entry_id': 'entryId',
-        'email': 'email',
+        'entry_type': 'entryType',
         'permission_set': 'permissionSet',
         'image': 'image',
+        'email': 'email',
         'entry_state': 'entryState',
         'enterprise_member': 'enterpriseMember',
         'pending_owner_transfer': 'pendingOwnerTransfer',
@@ -65,14 +65,14 @@ class BTAclEntryInfo(object):
         'permission': 'permission'
     }
 
-    def __init__(self, entry_type=None, entry_id=None, email=None, permission_set=None, image=None, entry_state=None, enterprise_member=None, pending_owner_transfer=None, accept_owner_transfer=None, object_id=None, team_name=None, company_name=None, name=None, permission=None):  # noqa: E501
+    def __init__(self, entry_id=None, entry_type=None, permission_set=None, image=None, email=None, entry_state=None, enterprise_member=None, pending_owner_transfer=None, accept_owner_transfer=None, object_id=None, team_name=None, company_name=None, name=None, permission=None):  # noqa: E501
         """BTAclEntryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._entry_type = None
         self._entry_id = None
-        self._email = None
+        self._entry_type = None
         self._permission_set = None
         self._image = None
+        self._email = None
         self._entry_state = None
         self._enterprise_member = None
         self._pending_owner_transfer = None
@@ -84,16 +84,16 @@ class BTAclEntryInfo(object):
         self._permission = None
         self.discriminator = None
 
-        if entry_type is not None:
-            self.entry_type = entry_type
         if entry_id is not None:
             self.entry_id = entry_id
-        if email is not None:
-            self.email = email
+        if entry_type is not None:
+            self.entry_type = entry_type
         if permission_set is not None:
             self.permission_set = permission_set
         if image is not None:
             self.image = image
+        if email is not None:
+            self.email = email
         if entry_state is not None:
             self.entry_state = entry_state
         if enterprise_member is not None:
@@ -112,27 +112,6 @@ class BTAclEntryInfo(object):
             self.name = name
         if permission is not None:
             self.permission = permission
-
-    @property
-    def entry_type(self):
-        """Gets the entry_type of this BTAclEntryInfo.  # noqa: E501
-
-
-        :return: The entry_type of this BTAclEntryInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._entry_type
-
-    @entry_type.setter
-    def entry_type(self, entry_type):
-        """Sets the entry_type of this BTAclEntryInfo.
-
-
-        :param entry_type: The entry_type of this BTAclEntryInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._entry_type = entry_type
 
     @property
     def entry_id(self):
@@ -156,25 +135,25 @@ class BTAclEntryInfo(object):
         self._entry_id = entry_id
 
     @property
-    def email(self):
-        """Gets the email of this BTAclEntryInfo.  # noqa: E501
+    def entry_type(self):
+        """Gets the entry_type of this BTAclEntryInfo.  # noqa: E501
 
 
-        :return: The email of this BTAclEntryInfo.  # noqa: E501
-        :rtype: str
+        :return: The entry_type of this BTAclEntryInfo.  # noqa: E501
+        :rtype: int
         """
-        return self._email
+        return self._entry_type
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTAclEntryInfo.
+    @entry_type.setter
+    def entry_type(self, entry_type):
+        """Sets the entry_type of this BTAclEntryInfo.
 
 
-        :param email: The email of this BTAclEntryInfo.  # noqa: E501
-        :type: str
+        :param entry_type: The entry_type of this BTAclEntryInfo.  # noqa: E501
+        :type: int
         """
 
-        self._email = email
+        self._entry_type = entry_type
 
     @property
     def permission_set(self):
@@ -217,6 +196,27 @@ class BTAclEntryInfo(object):
         """
 
         self._image = image
+
+    @property
+    def email(self):
+        """Gets the email of this BTAclEntryInfo.  # noqa: E501
+
+
+        :return: The email of this BTAclEntryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTAclEntryInfo.
+
+
+        :param email: The email of this BTAclEntryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def entry_state(self):

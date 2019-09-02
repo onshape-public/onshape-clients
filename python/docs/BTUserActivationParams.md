@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phone_number** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **default_company_name** | **str** |  | [optional] 
+**phone_number** | **str** |  | [optional] 
 **role** | **int** |  | [optional] 
 **password** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

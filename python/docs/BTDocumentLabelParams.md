@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parent_label_id** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**parent_label_id** | **str** |  | [optional] 
 **document_ids** | **list[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 

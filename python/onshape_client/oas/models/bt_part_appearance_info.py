@@ -32,52 +32,31 @@ class BTPartAppearanceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'color': 'BTColorInfo',
         'opacity': 'int',
+        'color': 'BTColorInfo',
         'is_generated': 'bool'
     }
 
     attribute_map = {
-        'color': 'color',
         'opacity': 'opacity',
+        'color': 'color',
         'is_generated': 'isGenerated'
     }
 
-    def __init__(self, color=None, opacity=None, is_generated=None):  # noqa: E501
+    def __init__(self, opacity=None, color=None, is_generated=None):  # noqa: E501
         """BTPartAppearanceInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._color = None
         self._opacity = None
+        self._color = None
         self._is_generated = None
         self.discriminator = None
 
-        if color is not None:
-            self.color = color
         if opacity is not None:
             self.opacity = opacity
+        if color is not None:
+            self.color = color
         if is_generated is not None:
             self.is_generated = is_generated
-
-    @property
-    def color(self):
-        """Gets the color of this BTPartAppearanceInfo.  # noqa: E501
-
-
-        :return: The color of this BTPartAppearanceInfo.  # noqa: E501
-        :rtype: BTColorInfo
-        """
-        return self._color
-
-    @color.setter
-    def color(self, color):
-        """Sets the color of this BTPartAppearanceInfo.
-
-
-        :param color: The color of this BTPartAppearanceInfo.  # noqa: E501
-        :type: BTColorInfo
-        """
-
-        self._color = color
 
     @property
     def opacity(self):
@@ -99,6 +78,27 @@ class BTPartAppearanceInfo(object):
         """
 
         self._opacity = opacity
+
+    @property
+    def color(self):
+        """Gets the color of this BTPartAppearanceInfo.  # noqa: E501
+
+
+        :return: The color of this BTPartAppearanceInfo.  # noqa: E501
+        :rtype: BTColorInfo
+        """
+        return self._color
+
+    @color.setter
+    def color(self, color):
+        """Sets the color of this BTPartAppearanceInfo.
+
+
+        :param color: The color of this BTPartAppearanceInfo.  # noqa: E501
+        :type: BTColorInfo
+        """
+
+        self._color = color
 
     @property
     def is_generated(self):

@@ -33,30 +33,30 @@ class BTIdAndConfiguration(object):
     """
     openapi_types = {
         'configuration': 'dict(str, BTFSValue)',
-        'id': 'str',
-        'configuration_is_null': 'bool'
+        'configuration_is_null': 'bool',
+        'id': 'str'
     }
 
     attribute_map = {
         'configuration': 'configuration',
-        'id': 'id',
-        'configuration_is_null': 'configurationIsNull'
+        'configuration_is_null': 'configurationIsNull',
+        'id': 'id'
     }
 
-    def __init__(self, configuration=None, id=None, configuration_is_null=None):  # noqa: E501
+    def __init__(self, configuration=None, configuration_is_null=None, id=None):  # noqa: E501
         """BTIdAndConfiguration - a model defined in OpenAPI"""  # noqa: E501
 
         self._configuration = None
-        self._id = None
         self._configuration_is_null = None
+        self._id = None
         self.discriminator = None
 
         if configuration is not None:
             self.configuration = configuration
-        if id is not None:
-            self.id = id
         if configuration_is_null is not None:
             self.configuration_is_null = configuration_is_null
+        if id is not None:
+            self.id = id
 
     @property
     def configuration(self):
@@ -80,27 +80,6 @@ class BTIdAndConfiguration(object):
         self._configuration = configuration
 
     @property
-    def id(self):
-        """Gets the id of this BTIdAndConfiguration.  # noqa: E501
-
-
-        :return: The id of this BTIdAndConfiguration.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTIdAndConfiguration.
-
-
-        :param id: The id of this BTIdAndConfiguration.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def configuration_is_null(self):
         """Gets the configuration_is_null of this BTIdAndConfiguration.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTIdAndConfiguration(object):
         """
 
         self._configuration_is_null = configuration_is_null
+
+    @property
+    def id(self):
+        """Gets the id of this BTIdAndConfiguration.  # noqa: E501
+
+
+        :return: The id of this BTIdAndConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTIdAndConfiguration.
+
+
+        :param id: The id of this BTIdAndConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

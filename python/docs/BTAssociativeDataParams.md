@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | **str** |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
+**configuration** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**microversion_id** | **str** |  | [optional] 
 **document_microversion** | **str** |  | [optional] 
 **associative_data_id** | **str** |  | [optional] 
 **operation** | **str** |  | [optional] 

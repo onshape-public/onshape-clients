@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hidden_from_plus_menu_** | **bool** |  | [optional] 
+**primary_format** | **str** |  | [optional] 
 **internal_grant_on_demand** | **bool** |  | [optional] 
 **client_id** | **str** |  | [optional] 
 **scope_names** | **list[str]** |  | [optional] 
-**primary_format** | **str** |  | [optional] 
 **base_href** | **str** |  | [optional] 
 **supports_collaboration** | **bool** |  | [optional] 
 **developer_id** | **str** |  | [optional] 

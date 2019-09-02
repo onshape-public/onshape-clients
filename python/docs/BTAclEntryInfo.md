@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entry_type** | **int** |  | [optional] 
 **entry_id** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
+**entry_type** | **int** |  | [optional] 
 **permission_set** | [**object**](.md) |  | [optional] 
 **image** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
 **entry_state** | **str** |  | [optional] 
 **enterprise_member** | **bool** |  | [optional] 
 **pending_owner_transfer** | **bool** |  | [optional] 

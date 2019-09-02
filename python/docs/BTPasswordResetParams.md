@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**secret** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
+**secret** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 

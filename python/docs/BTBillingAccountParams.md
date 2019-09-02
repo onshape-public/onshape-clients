@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**company_plan** | **bool** |  | [optional] 
-**trial_period_days** | **int** |  | [optional] 
 **user_id** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
 **seats** | **int** |  | [optional] 
 **domain_prefix** | **str** |  | [optional] 
 **payment_type** | **int** |  | [optional] 
+**trial_period_days** | **int** |  | [optional] 
 **promonthly_enabled** | **bool** |  | [optional] 
+**company_plan** | **bool** |  | [optional] 
 **company_name** | **str** |  | [optional] 
 **reseller_name** | **str** |  | [optional] 
 **force_create** | **bool** |  | [optional] 

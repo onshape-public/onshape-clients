@@ -32,14 +32,198 @@ class BTFolderInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'parent_id': 'str',
+        'permission_set': 'object',
+        'trash': 'bool',
+        'can_unshare': 'bool',
+        'active': 'bool',
+        'trashed_at': 'datetime',
+        'is_orphaned': 'bool'
     }
 
     attribute_map = {
+        'parent_id': 'parentId',
+        'permission_set': 'permissionSet',
+        'trash': 'trash',
+        'can_unshare': 'canUnshare',
+        'active': 'active',
+        'trashed_at': 'trashedAt',
+        'is_orphaned': 'isOrphaned'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, parent_id=None, permission_set=None, trash=None, can_unshare=None, active=None, trashed_at=None, is_orphaned=None):  # noqa: E501
         """BTFolderInfo - a model defined in OpenAPI"""  # noqa: E501
+
+        self._parent_id = None
+        self._permission_set = None
+        self._trash = None
+        self._can_unshare = None
+        self._active = None
+        self._trashed_at = None
+        self._is_orphaned = None
         self.discriminator = None
+
+        if parent_id is not None:
+            self.parent_id = parent_id
+        if permission_set is not None:
+            self.permission_set = permission_set
+        if trash is not None:
+            self.trash = trash
+        if can_unshare is not None:
+            self.can_unshare = can_unshare
+        if active is not None:
+            self.active = active
+        if trashed_at is not None:
+            self.trashed_at = trashed_at
+        if is_orphaned is not None:
+            self.is_orphaned = is_orphaned
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The parent_id of this BTFolderInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTFolderInfo.
+
+
+        :param parent_id: The parent_id of this BTFolderInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
+
+    @property
+    def permission_set(self):
+        """Gets the permission_set of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The permission_set of this BTFolderInfo.  # noqa: E501
+        :rtype: object
+        """
+        return self._permission_set
+
+    @permission_set.setter
+    def permission_set(self, permission_set):
+        """Sets the permission_set of this BTFolderInfo.
+
+
+        :param permission_set: The permission_set of this BTFolderInfo.  # noqa: E501
+        :type: object
+        """
+
+        self._permission_set = permission_set
+
+    @property
+    def trash(self):
+        """Gets the trash of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The trash of this BTFolderInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._trash
+
+    @trash.setter
+    def trash(self, trash):
+        """Sets the trash of this BTFolderInfo.
+
+
+        :param trash: The trash of this BTFolderInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._trash = trash
+
+    @property
+    def can_unshare(self):
+        """Gets the can_unshare of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The can_unshare of this BTFolderInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_unshare
+
+    @can_unshare.setter
+    def can_unshare(self, can_unshare):
+        """Sets the can_unshare of this BTFolderInfo.
+
+
+        :param can_unshare: The can_unshare of this BTFolderInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_unshare = can_unshare
+
+    @property
+    def active(self):
+        """Gets the active of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The active of this BTFolderInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._active
+
+    @active.setter
+    def active(self, active):
+        """Sets the active of this BTFolderInfo.
+
+
+        :param active: The active of this BTFolderInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._active = active
+
+    @property
+    def trashed_at(self):
+        """Gets the trashed_at of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The trashed_at of this BTFolderInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._trashed_at
+
+    @trashed_at.setter
+    def trashed_at(self, trashed_at):
+        """Sets the trashed_at of this BTFolderInfo.
+
+
+        :param trashed_at: The trashed_at of this BTFolderInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._trashed_at = trashed_at
+
+    @property
+    def is_orphaned(self):
+        """Gets the is_orphaned of this BTFolderInfo.  # noqa: E501
+
+
+        :return: The is_orphaned of this BTFolderInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_orphaned
+
+    @is_orphaned.setter
+    def is_orphaned(self, is_orphaned):
+        """Sets the is_orphaned of this BTFolderInfo.
+
+
+        :param is_orphaned: The is_orphaned of this BTFolderInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_orphaned = is_orphaned
 
     def to_dict(self):
         """Returns the model properties as a dict"""

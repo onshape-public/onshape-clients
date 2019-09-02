@@ -32,57 +32,55 @@ class BTMatchingStandardContentHierarchyInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'category': 'list[str]',
         'types': 'list[str]',
         'component_document_id': 'str',
         'standard_default': 'str',
         'category_default': 'str',
         'types_default': 'str',
         'type_default': 'str',
+        'category': 'list[str]',
         'standard': 'list[str]',
         'type': 'list[str]',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'category': 'category',
         'types': 'types',
         'component_document_id': 'componentDocumentId',
         'standard_default': 'standardDefault',
         'category_default': 'categoryDefault',
         'types_default': 'typesDefault',
         'type_default': 'typeDefault',
+        'category': 'category',
         'standard': 'standard',
         'type': 'type',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, category=None, types=None, component_document_id=None, standard_default=None, category_default=None, types_default=None, type_default=None, standard=None, type=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, types=None, component_document_id=None, standard_default=None, category_default=None, types_default=None, type_default=None, category=None, standard=None, type=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTMatchingStandardContentHierarchyInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._category = None
         self._types = None
         self._component_document_id = None
         self._standard_default = None
         self._category_default = None
         self._types_default = None
         self._type_default = None
+        self._category = None
         self._standard = None
         self._type = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
-        if category is not None:
-            self.category = category
         if types is not None:
             self.types = types
         if component_document_id is not None:
@@ -95,39 +93,20 @@ class BTMatchingStandardContentHierarchyInfo(object):
             self.types_default = types_default
         if type_default is not None:
             self.type_default = type_default
+        if category is not None:
+            self.category = category
         if standard is not None:
             self.standard = standard
         if type is not None:
             self.type = type
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
-
-    @property
-    def category(self):
-        """Gets the category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTMatchingStandardContentHierarchyInfo.
-
-
-        :param category: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._category = category
 
     @property
     def types(self):
@@ -256,6 +235,27 @@ class BTMatchingStandardContentHierarchyInfo(object):
         self._type_default = type_default
 
     @property
+    def category(self):
+        """Gets the category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTMatchingStandardContentHierarchyInfo.
+
+
+        :param category: The category of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._category = category
+
+    @property
     def standard(self):
         """Gets the standard of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
 
@@ -298,27 +298,6 @@ class BTMatchingStandardContentHierarchyInfo(object):
         self._type = type
 
     @property
-    def id(self):
-        """Gets the id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTMatchingStandardContentHierarchyInfo.
-
-
-        :param id: The id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
 
@@ -359,6 +338,27 @@ class BTMatchingStandardContentHierarchyInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTMatchingStandardContentHierarchyInfo.
+
+
+        :param id: The id of this BTMatchingStandardContentHierarchyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

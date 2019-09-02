@@ -33,10 +33,10 @@ class BTAPIApplicationParams(object):
     """
     openapi_types = {
         'hidden_from_plus_menu_': 'bool',
+        'primary_format': 'str',
         'internal_grant_on_demand': 'bool',
         'client_id': 'str',
         'scope_names': 'list[str]',
-        'primary_format': 'str',
         'base_href': 'str',
         'supports_collaboration': 'bool',
         'developer_id': 'str',
@@ -54,10 +54,10 @@ class BTAPIApplicationParams(object):
 
     attribute_map = {
         'hidden_from_plus_menu_': 'hiddenFromPlusMenu_',
+        'primary_format': 'primaryFormat',
         'internal_grant_on_demand': 'internalGrantOnDemand',
         'client_id': 'clientId',
         'scope_names': 'scopeNames',
-        'primary_format': 'primaryFormat',
         'base_href': 'baseHref',
         'supports_collaboration': 'supportsCollaboration',
         'developer_id': 'developerId',
@@ -73,14 +73,14 @@ class BTAPIApplicationParams(object):
         'state': 'state'
     }
 
-    def __init__(self, hidden_from_plus_menu_=None, internal_grant_on_demand=None, client_id=None, scope_names=None, primary_format=None, base_href=None, supports_collaboration=None, developer_id=None, redirect_ur_ls=None, ui_spec=None, supports_merge=None, admin_team_id=None, hidden_from_plus_menu=None, store_entry_is_public=None, developer_email=None, description=None, name=None, state=None):  # noqa: E501
+    def __init__(self, hidden_from_plus_menu_=None, primary_format=None, internal_grant_on_demand=None, client_id=None, scope_names=None, base_href=None, supports_collaboration=None, developer_id=None, redirect_ur_ls=None, ui_spec=None, supports_merge=None, admin_team_id=None, hidden_from_plus_menu=None, store_entry_is_public=None, developer_email=None, description=None, name=None, state=None):  # noqa: E501
         """BTAPIApplicationParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._hidden_from_plus_menu_ = None
+        self._primary_format = None
         self._internal_grant_on_demand = None
         self._client_id = None
         self._scope_names = None
-        self._primary_format = None
         self._base_href = None
         self._supports_collaboration = None
         self._developer_id = None
@@ -98,14 +98,14 @@ class BTAPIApplicationParams(object):
 
         if hidden_from_plus_menu_ is not None:
             self.hidden_from_plus_menu_ = hidden_from_plus_menu_
+        if primary_format is not None:
+            self.primary_format = primary_format
         if internal_grant_on_demand is not None:
             self.internal_grant_on_demand = internal_grant_on_demand
         if client_id is not None:
             self.client_id = client_id
         if scope_names is not None:
             self.scope_names = scope_names
-        if primary_format is not None:
-            self.primary_format = primary_format
         if base_href is not None:
             self.base_href = base_href
         if supports_collaboration is not None:
@@ -153,6 +153,27 @@ class BTAPIApplicationParams(object):
         """
 
         self._hidden_from_plus_menu_ = hidden_from_plus_menu_
+
+    @property
+    def primary_format(self):
+        """Gets the primary_format of this BTAPIApplicationParams.  # noqa: E501
+
+
+        :return: The primary_format of this BTAPIApplicationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_format
+
+    @primary_format.setter
+    def primary_format(self, primary_format):
+        """Sets the primary_format of this BTAPIApplicationParams.
+
+
+        :param primary_format: The primary_format of this BTAPIApplicationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_format = primary_format
 
     @property
     def internal_grant_on_demand(self):
@@ -216,27 +237,6 @@ class BTAPIApplicationParams(object):
         """
 
         self._scope_names = scope_names
-
-    @property
-    def primary_format(self):
-        """Gets the primary_format of this BTAPIApplicationParams.  # noqa: E501
-
-
-        :return: The primary_format of this BTAPIApplicationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._primary_format
-
-    @primary_format.setter
-    def primary_format(self, primary_format):
-        """Sets the primary_format of this BTAPIApplicationParams.
-
-
-        :param primary_format: The primary_format of this BTAPIApplicationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._primary_format = primary_format
 
     @property
     def base_href(self):

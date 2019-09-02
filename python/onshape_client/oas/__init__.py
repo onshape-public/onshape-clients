@@ -25,6 +25,7 @@ from onshape_client.oas.api.blob_elements_api import BlobElementsApi
 from onshape_client.oas.api.documents_api import DocumentsApi
 from onshape_client.oas.api.drawings_api import DrawingsApi
 from onshape_client.oas.api.elements_api import ElementsApi
+from onshape_client.oas.api.feature_studios_api import FeatureStudiosApi
 from onshape_client.oas.api.metadata_api import MetadataApi
 from onshape_client.oas.api.part_studios_api import PartStudiosApi
 from onshape_client.oas.api.parts_api import PartsApi
@@ -115,6 +116,7 @@ from onshape_client.oas.models.bt_card_info import BTCardInfo
 from onshape_client.oas.models.bt_card_params import BTCardParams
 from onshape_client.oas.models.bt_change_context_params import BTChangeContextParams
 from onshape_client.oas.models.bt_cloud_storage_account_info import BTCloudStorageAccountInfo
+from onshape_client.oas.models.bt_cloud_storage_account_info_all_of import BTCloudStorageAccountInfoAllOf
 from onshape_client.oas.models.bt_cloud_storage_account_list_info import BTCloudStorageAccountListInfo
 from onshape_client.oas.models.bt_cloud_storage_account_params import BTCloudStorageAccountParams
 from onshape_client.oas.models.bt_cloud_storage_object_info import BTCloudStorageObjectInfo
@@ -153,7 +155,9 @@ from onshape_client.oas.models.bt_discount_params import BTDiscountParams
 from onshape_client.oas.models.bt_document_check_access_params import BTDocumentCheckAccessParams
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
+from onshape_client.oas.models.bt_document_info_all_of import BTDocumentInfoAllOf
 from onshape_client.oas.models.bt_document_label_info import BTDocumentLabelInfo
+from onshape_client.oas.models.bt_document_label_info_all_of import BTDocumentLabelInfoAllOf
 from onshape_client.oas.models.bt_document_label_params import BTDocumentLabelParams
 from onshape_client.oas.models.bt_document_merge_info import BTDocumentMergeInfo
 from onshape_client.oas.models.bt_document_microversion_info import BTDocumentMicroversionInfo
@@ -161,11 +165,14 @@ from onshape_client.oas.models.bt_document_migrate_params import BTDocumentMigra
 from onshape_client.oas.models.bt_document_options_params import BTDocumentOptionsParams
 from onshape_client.oas.models.bt_document_params import BTDocumentParams
 from onshape_client.oas.models.bt_document_processing_info import BTDocumentProcessingInfo
+from onshape_client.oas.models.bt_document_processing_info_all_of import BTDocumentProcessingInfoAllOf
 from onshape_client.oas.models.bt_document_scope import BTDocumentScope
 from onshape_client.oas.models.bt_document_search_hit_info import BTDocumentSearchHitInfo
 from onshape_client.oas.models.bt_document_search_params import BTDocumentSearchParams
 from onshape_client.oas.models.bt_document_summary_info import BTDocumentSummaryInfo
+from onshape_client.oas.models.bt_document_summary_info_all_of import BTDocumentSummaryInfoAllOf
 from onshape_client.oas.models.bt_document_summary_search_info import BTDocumentSummarySearchInfo
+from onshape_client.oas.models.bt_document_summary_search_info_all_of import BTDocumentSummarySearchInfoAllOf
 from onshape_client.oas.models.bt_document_version_element_ids import BTDocumentVersionElementIds
 from onshape_client.oas.models.bt_drawing_params import BTDrawingParams
 from onshape_client.oas.models.btes_document_hit import BTESDocumentHit
@@ -200,7 +207,9 @@ from onshape_client.oas.models.bt_feature_list_response import BTFeatureListResp
 from onshape_client.oas.models.bt_feature_script_eval_call import BTFeatureScriptEvalCall
 from onshape_client.oas.models.bt_feature_script_eval_response import BTFeatureScriptEvalResponse
 from onshape_client.oas.models.bt_feature_state import BTFeatureState
+from onshape_client.oas.models.bt_feature_studio_contents import BTFeatureStudioContents
 from onshape_client.oas.models.bt_folder_info import BTFolderInfo
+from onshape_client.oas.models.bt_folder_info_all_of import BTFolderInfoAllOf
 from onshape_client.oas.models.bt_folder_params import BTFolderParams
 from onshape_client.oas.models.bt_friend_info import BTFriendInfo
 from onshape_client.oas.models.bt_friends_from_ids_params import BTFriendsFromIdsParams
@@ -208,6 +217,7 @@ from onshape_client.oas.models.bt_global_permission_definitions_info import BTGl
 from onshape_client.oas.models.bt_global_permission_info import BTGlobalPermissionInfo
 from onshape_client.oas.models.bt_global_permission_params import BTGlobalPermissionParams
 from onshape_client.oas.models.bt_global_tree_magic_node_info import BTGlobalTreeMagicNodeInfo
+from onshape_client.oas.models.bt_global_tree_magic_node_info_all_of import BTGlobalTreeMagicNodeInfoAllOf
 from onshape_client.oas.models.bt_global_tree_node_info import BTGlobalTreeNodeInfo
 from onshape_client.oas.models.bt_global_tree_node_info_list_bt_global_tree_node_info import BTGlobalTreeNodeInfoListBTGlobalTreeNodeInfo
 from onshape_client.oas.models.bt_global_tree_node_list_response import BTGlobalTreeNodeListResponse
@@ -263,6 +273,7 @@ from onshape_client.oas.models.bt_metadata_schema_params import BTMetadataSchema
 from onshape_client.oas.models.bt_metric_params import BTMetricParams
 from onshape_client.oas.models.bt_metrics_list_params import BTMetricsListParams
 from onshape_client.oas.models.bt_microversion_id import BTMicroversionId
+from onshape_client.oas.models.bt_microversion_info import BTMicroversionInfo
 from onshape_client.oas.models.bt_mobile_notification_params import BTMobileNotificationParams
 from onshape_client.oas.models.bt_model_body_params import BTModelBodyParams
 from onshape_client.oas.models.bt_model_element_params import BTModelElementParams
@@ -357,6 +368,7 @@ from onshape_client.oas.models.bt_survey_response_params import BTSurveyResponse
 from onshape_client.oas.models.bt_system_config_info import BTSystemConfigInfo
 from onshape_client.oas.models.bt_tag_params import BTTagParams
 from onshape_client.oas.models.bt_team_info import BTTeamInfo
+from onshape_client.oas.models.bt_team_info_all_of import BTTeamInfoAllOf
 from onshape_client.oas.models.bt_team_member_params import BTTeamMemberParams
 from onshape_client.oas.models.bt_team_params import BTTeamParams
 from onshape_client.oas.models.bt_team_summary_info import BTTeamSummaryInfo
@@ -451,8 +463,10 @@ from onshape_client.oas.models.form_data_body_part import FormDataBodyPart
 from onshape_client.oas.models.form_data_content_disposition import FormDataContentDisposition
 from onshape_client.oas.models.form_data_multi_part import FormDataMultiPart
 from onshape_client.oas.models.gbtm_assembly_feature import GBTMAssemblyFeature
+from onshape_client.oas.models.gbtm_assembly_feature_all_of import GBTMAssemblyFeatureAllOf
 from onshape_client.oas.models.gbtm_feature_invalid import GBTMFeatureInvalid
 from onshape_client.oas.models.gbtm_sketch import GBTMSketch
+from onshape_client.oas.models.gbtm_sketch_all_of import GBTMSketchAllOf
 from onshape_client.oas.models.global_permission_info import GlobalPermissionInfo
 from onshape_client.oas.models.header import Header
 from onshape_client.oas.models.info import Info

@@ -32,47 +32,26 @@ class BTShadedRenderDocumentResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'image_data': 'list[str]',
-        'status': 'BTNodeStatus'
+        'status': 'BTNodeStatus',
+        'image_data': 'list[str]'
     }
 
     attribute_map = {
-        'image_data': 'imageData',
-        'status': 'status'
+        'status': 'status',
+        'image_data': 'imageData'
     }
 
-    def __init__(self, image_data=None, status=None):  # noqa: E501
+    def __init__(self, status=None, image_data=None):  # noqa: E501
         """BTShadedRenderDocumentResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._image_data = None
         self._status = None
+        self._image_data = None
         self.discriminator = None
 
-        if image_data is not None:
-            self.image_data = image_data
         if status is not None:
             self.status = status
-
-    @property
-    def image_data(self):
-        """Gets the image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
-
-
-        :return: The image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._image_data
-
-    @image_data.setter
-    def image_data(self, image_data):
-        """Sets the image_data of this BTShadedRenderDocumentResponse.
-
-
-        :param image_data: The image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._image_data = image_data
+        if image_data is not None:
+            self.image_data = image_data
 
     @property
     def status(self):
@@ -94,6 +73,27 @@ class BTShadedRenderDocumentResponse(object):
         """
 
         self._status = status
+
+    @property
+    def image_data(self):
+        """Gets the image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
+
+
+        :return: The image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._image_data
+
+    @image_data.setter
+    def image_data(self, image_data):
+        """Sets the image_data of this BTShadedRenderDocumentResponse.
+
+
+        :param image_data: The image_data of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._image_data = image_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

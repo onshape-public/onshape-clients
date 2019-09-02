@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
-**children** | [**list[BTReleasePackageItem]**](BTReleasePackageItem.md) |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
+**part_number** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
 **modified_at** | **datetime** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
@@ -15,11 +15,7 @@ Name | Type | Description | Notes
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**microversion_id** | **str** |  | [optional] 
-**part_number** | **str** |  | [optional] 
-**revision** | **str** |  | [optional] 
-**element_type** | **int** |  | [optional] 
-**part_id** | **str** |  | [optional] 
+**children** | [**list[BTReleasePackageItem]**](BTReleasePackageItem.md) |  | [optional] 
 **configuration_key** | **str** |  | [optional] 
 **is_included** | **bool** |  | [optional] 
 **revision_rule_id** | **str** |  | [optional] 
@@ -29,10 +25,14 @@ Name | Type | Description | Notes
 **initial_revision** | **str** |  | [optional] 
 **is_revision_managed** | **bool** |  | [optional] 
 **errors** | [**list[BTReleasePackageItemError]**](BTReleasePackageItemError.md) |  | [optional] 
-**rpid** | **str** |  | [optional] 
+**revision** | **str** |  | [optional] 
+**element_type** | **int** |  | [optional] 
+**part_id** | **str** |  | [optional] 
 **mime_type** | **str** |  | [optional] 
+**rpid** | **str** |  | [optional] 
 **obsoletion_revision_id** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
+**id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

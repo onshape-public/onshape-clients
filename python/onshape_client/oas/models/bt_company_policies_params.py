@@ -32,7 +32,6 @@ class BTCompanyPoliciesParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'only_admins_can_mark_objects_as_not_revision_managed': 'bool',
         'require_totp': 'bool',
         'use_light_ui': 'bool',
         'integrations': 'IntegrationsParams',
@@ -68,11 +67,11 @@ class BTCompanyPoliciesParams(object):
         'part_numbering_scheme_id': 'str',
         'require_peer_review': 'bool',
         'drawing_can_duplicate_part_number': 'bool',
-        'enabled_active_multiple_workflows': 'bool'
+        'enabled_active_multiple_workflows': 'bool',
+        'only_admins_can_mark_objects_as_not_revision_managed': 'bool'
     }
 
     attribute_map = {
-        'only_admins_can_mark_objects_as_not_revision_managed': 'onlyAdminsCanMarkObjectsAsNotRevisionManaged',
         'require_totp': 'requireTotp',
         'use_light_ui': 'useLightUi',
         'integrations': 'integrations',
@@ -108,13 +107,13 @@ class BTCompanyPoliciesParams(object):
         'part_numbering_scheme_id': 'partNumberingSchemeId',
         'require_peer_review': 'requirePeerReview',
         'drawing_can_duplicate_part_number': 'drawingCanDuplicatePartNumber',
-        'enabled_active_multiple_workflows': 'enabledActiveMultipleWorkflows'
+        'enabled_active_multiple_workflows': 'enabledActiveMultipleWorkflows',
+        'only_admins_can_mark_objects_as_not_revision_managed': 'onlyAdminsCanMarkObjectsAsNotRevisionManaged'
     }
 
-    def __init__(self, only_admins_can_mark_objects_as_not_revision_managed=None, require_totp=None, use_light_ui=None, integrations=None, require_approved_drawing_templates=None, approved_drawing_templates_document_id=None, add_company_owned_libraries_in_user_account=None, release_workflow_id=None, obsoletion_workflow_id=None, revision_scheme_id=None, require_revision_for_released_objects=None, require_part_number_for_released_objects=None, only_admins_can_edit_properties_of_released_objects=None, only_admins_can_delete_documents_containing_released_objects=None, only_admins_can_approve_releases=None, require_parts_and_subassemblies_release_with_assembly=None, require_parts_and_subassemblies_release_with_drawing=None, require_base_part_release_with_derived_part=None, require_image_release_with_drawing=None, action_show_drawings_watermark=None, hide_watermark_for_not_rev_managed=None, prevent_duplicate_document_name_regex=None, error_on_feature_list_errors_during_release=None, error_on_rollback_bar_not_at_end_during_release=None, error_on_assembly_tree_errors_during_release=None, error_on_pending_context_edits_during_release=None, error_on_pending_drawing_update_during_release=None, error_on_pending_dangling_drawing_objects_during_release=None, approver_required_during_release=None, note_required_during_release=None, require_all_approvers=None, allow_release_items_from_other_documents=None, automatically_obsolete_previous_released_revisions=None, part_numbering_scheme_id=None, require_peer_review=None, drawing_can_duplicate_part_number=None, enabled_active_multiple_workflows=None):  # noqa: E501
+    def __init__(self, require_totp=None, use_light_ui=None, integrations=None, require_approved_drawing_templates=None, approved_drawing_templates_document_id=None, add_company_owned_libraries_in_user_account=None, release_workflow_id=None, obsoletion_workflow_id=None, revision_scheme_id=None, require_revision_for_released_objects=None, require_part_number_for_released_objects=None, only_admins_can_edit_properties_of_released_objects=None, only_admins_can_delete_documents_containing_released_objects=None, only_admins_can_approve_releases=None, require_parts_and_subassemblies_release_with_assembly=None, require_parts_and_subassemblies_release_with_drawing=None, require_base_part_release_with_derived_part=None, require_image_release_with_drawing=None, action_show_drawings_watermark=None, hide_watermark_for_not_rev_managed=None, prevent_duplicate_document_name_regex=None, error_on_feature_list_errors_during_release=None, error_on_rollback_bar_not_at_end_during_release=None, error_on_assembly_tree_errors_during_release=None, error_on_pending_context_edits_during_release=None, error_on_pending_drawing_update_during_release=None, error_on_pending_dangling_drawing_objects_during_release=None, approver_required_during_release=None, note_required_during_release=None, require_all_approvers=None, allow_release_items_from_other_documents=None, automatically_obsolete_previous_released_revisions=None, part_numbering_scheme_id=None, require_peer_review=None, drawing_can_duplicate_part_number=None, enabled_active_multiple_workflows=None, only_admins_can_mark_objects_as_not_revision_managed=None):  # noqa: E501
         """BTCompanyPoliciesParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._only_admins_can_mark_objects_as_not_revision_managed = None
         self._require_totp = None
         self._use_light_ui = None
         self._integrations = None
@@ -151,10 +150,9 @@ class BTCompanyPoliciesParams(object):
         self._require_peer_review = None
         self._drawing_can_duplicate_part_number = None
         self._enabled_active_multiple_workflows = None
+        self._only_admins_can_mark_objects_as_not_revision_managed = None
         self.discriminator = None
 
-        if only_admins_can_mark_objects_as_not_revision_managed is not None:
-            self.only_admins_can_mark_objects_as_not_revision_managed = only_admins_can_mark_objects_as_not_revision_managed
         if require_totp is not None:
             self.require_totp = require_totp
         if use_light_ui is not None:
@@ -227,27 +225,8 @@ class BTCompanyPoliciesParams(object):
             self.drawing_can_duplicate_part_number = drawing_can_duplicate_part_number
         if enabled_active_multiple_workflows is not None:
             self.enabled_active_multiple_workflows = enabled_active_multiple_workflows
-
-    @property
-    def only_admins_can_mark_objects_as_not_revision_managed(self):
-        """Gets the only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
-
-
-        :return: The only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._only_admins_can_mark_objects_as_not_revision_managed
-
-    @only_admins_can_mark_objects_as_not_revision_managed.setter
-    def only_admins_can_mark_objects_as_not_revision_managed(self, only_admins_can_mark_objects_as_not_revision_managed):
-        """Sets the only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.
-
-
-        :param only_admins_can_mark_objects_as_not_revision_managed: The only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._only_admins_can_mark_objects_as_not_revision_managed = only_admins_can_mark_objects_as_not_revision_managed
+        if only_admins_can_mark_objects_as_not_revision_managed is not None:
+            self.only_admins_can_mark_objects_as_not_revision_managed = only_admins_can_mark_objects_as_not_revision_managed
 
     @property
     def require_totp(self):
@@ -1004,6 +983,27 @@ class BTCompanyPoliciesParams(object):
         """
 
         self._enabled_active_multiple_workflows = enabled_active_multiple_workflows
+
+    @property
+    def only_admins_can_mark_objects_as_not_revision_managed(self):
+        """Gets the only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
+
+
+        :return: The only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._only_admins_can_mark_objects_as_not_revision_managed
+
+    @only_admins_can_mark_objects_as_not_revision_managed.setter
+    def only_admins_can_mark_objects_as_not_revision_managed(self, only_admins_can_mark_objects_as_not_revision_managed):
+        """Sets the only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.
+
+
+        :param only_admins_can_mark_objects_as_not_revision_managed: The only_admins_can_mark_objects_as_not_revision_managed of this BTCompanyPoliciesParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._only_admins_can_mark_objects_as_not_revision_managed = only_admins_can_mark_objects_as_not_revision_managed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**start_point** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
 **end_point** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
+**start_point** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
 **mid_point** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
 **quarter_point** | [**BTVector3d**](BTVector3d.md) |  | [optional] 
 **start_vector** | [**BTVector3d**](BTVector3d.md) |  | [optional] 

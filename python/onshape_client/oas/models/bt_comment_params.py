@@ -32,15 +32,15 @@ class BTCommentParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'element_query': 'str',
-        'element_feature': 'str',
-        'element_occurrence': 'str',
-        'assembly_feature': 'str',
+        'parent_id': 'str',
         'version_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'parent_id': 'str',
+        'element_query': 'str',
+        'element_feature': 'str',
+        'element_occurrence': 'str',
+        'assembly_feature': 'str',
         'view_data': 'BTViewDataParams',
         'assignee': 'str',
         'message': 'str',
@@ -48,47 +48,41 @@ class BTCommentParams(object):
     }
 
     attribute_map = {
-        'element_query': 'elementQuery',
-        'element_feature': 'elementFeature',
-        'element_occurrence': 'elementOccurrence',
-        'assembly_feature': 'assemblyFeature',
+        'parent_id': 'parentId',
         'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'parent_id': 'parentId',
+        'element_query': 'elementQuery',
+        'element_feature': 'elementFeature',
+        'element_occurrence': 'elementOccurrence',
+        'assembly_feature': 'assemblyFeature',
         'view_data': 'viewData',
         'assignee': 'assignee',
         'message': 'message',
         'id': 'id'
     }
 
-    def __init__(self, element_query=None, element_feature=None, element_occurrence=None, assembly_feature=None, version_id=None, workspace_id=None, element_id=None, document_id=None, parent_id=None, view_data=None, assignee=None, message=None, id=None):  # noqa: E501
+    def __init__(self, parent_id=None, version_id=None, workspace_id=None, element_id=None, document_id=None, element_query=None, element_feature=None, element_occurrence=None, assembly_feature=None, view_data=None, assignee=None, message=None, id=None):  # noqa: E501
         """BTCommentParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._element_query = None
-        self._element_feature = None
-        self._element_occurrence = None
-        self._assembly_feature = None
+        self._parent_id = None
         self._version_id = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
-        self._parent_id = None
+        self._element_query = None
+        self._element_feature = None
+        self._element_occurrence = None
+        self._assembly_feature = None
         self._view_data = None
         self._assignee = None
         self._message = None
         self._id = None
         self.discriminator = None
 
-        if element_query is not None:
-            self.element_query = element_query
-        if element_feature is not None:
-            self.element_feature = element_feature
-        if element_occurrence is not None:
-            self.element_occurrence = element_occurrence
-        if assembly_feature is not None:
-            self.assembly_feature = assembly_feature
+        if parent_id is not None:
+            self.parent_id = parent_id
         if version_id is not None:
             self.version_id = version_id
         if workspace_id is not None:
@@ -97,8 +91,14 @@ class BTCommentParams(object):
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-        if parent_id is not None:
-            self.parent_id = parent_id
+        if element_query is not None:
+            self.element_query = element_query
+        if element_feature is not None:
+            self.element_feature = element_feature
+        if element_occurrence is not None:
+            self.element_occurrence = element_occurrence
+        if assembly_feature is not None:
+            self.assembly_feature = assembly_feature
         if view_data is not None:
             self.view_data = view_data
         if assignee is not None:
@@ -109,88 +109,25 @@ class BTCommentParams(object):
             self.id = id
 
     @property
-    def element_query(self):
-        """Gets the element_query of this BTCommentParams.  # noqa: E501
+    def parent_id(self):
+        """Gets the parent_id of this BTCommentParams.  # noqa: E501
 
 
-        :return: The element_query of this BTCommentParams.  # noqa: E501
+        :return: The parent_id of this BTCommentParams.  # noqa: E501
         :rtype: str
         """
-        return self._element_query
+        return self._parent_id
 
-    @element_query.setter
-    def element_query(self, element_query):
-        """Sets the element_query of this BTCommentParams.
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTCommentParams.
 
 
-        :param element_query: The element_query of this BTCommentParams.  # noqa: E501
+        :param parent_id: The parent_id of this BTCommentParams.  # noqa: E501
         :type: str
         """
 
-        self._element_query = element_query
-
-    @property
-    def element_feature(self):
-        """Gets the element_feature of this BTCommentParams.  # noqa: E501
-
-
-        :return: The element_feature of this BTCommentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_feature
-
-    @element_feature.setter
-    def element_feature(self, element_feature):
-        """Sets the element_feature of this BTCommentParams.
-
-
-        :param element_feature: The element_feature of this BTCommentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_feature = element_feature
-
-    @property
-    def element_occurrence(self):
-        """Gets the element_occurrence of this BTCommentParams.  # noqa: E501
-
-
-        :return: The element_occurrence of this BTCommentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_occurrence
-
-    @element_occurrence.setter
-    def element_occurrence(self, element_occurrence):
-        """Sets the element_occurrence of this BTCommentParams.
-
-
-        :param element_occurrence: The element_occurrence of this BTCommentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_occurrence = element_occurrence
-
-    @property
-    def assembly_feature(self):
-        """Gets the assembly_feature of this BTCommentParams.  # noqa: E501
-
-
-        :return: The assembly_feature of this BTCommentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._assembly_feature
-
-    @assembly_feature.setter
-    def assembly_feature(self, assembly_feature):
-        """Sets the assembly_feature of this BTCommentParams.
-
-
-        :param assembly_feature: The assembly_feature of this BTCommentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._assembly_feature = assembly_feature
+        self._parent_id = parent_id
 
     @property
     def version_id(self):
@@ -277,25 +214,88 @@ class BTCommentParams(object):
         self._document_id = document_id
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this BTCommentParams.  # noqa: E501
+    def element_query(self):
+        """Gets the element_query of this BTCommentParams.  # noqa: E501
 
 
-        :return: The parent_id of this BTCommentParams.  # noqa: E501
+        :return: The element_query of this BTCommentParams.  # noqa: E501
         :rtype: str
         """
-        return self._parent_id
+        return self._element_query
 
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTCommentParams.
+    @element_query.setter
+    def element_query(self, element_query):
+        """Sets the element_query of this BTCommentParams.
 
 
-        :param parent_id: The parent_id of this BTCommentParams.  # noqa: E501
+        :param element_query: The element_query of this BTCommentParams.  # noqa: E501
         :type: str
         """
 
-        self._parent_id = parent_id
+        self._element_query = element_query
+
+    @property
+    def element_feature(self):
+        """Gets the element_feature of this BTCommentParams.  # noqa: E501
+
+
+        :return: The element_feature of this BTCommentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_feature
+
+    @element_feature.setter
+    def element_feature(self, element_feature):
+        """Sets the element_feature of this BTCommentParams.
+
+
+        :param element_feature: The element_feature of this BTCommentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_feature = element_feature
+
+    @property
+    def element_occurrence(self):
+        """Gets the element_occurrence of this BTCommentParams.  # noqa: E501
+
+
+        :return: The element_occurrence of this BTCommentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_occurrence
+
+    @element_occurrence.setter
+    def element_occurrence(self, element_occurrence):
+        """Sets the element_occurrence of this BTCommentParams.
+
+
+        :param element_occurrence: The element_occurrence of this BTCommentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_occurrence = element_occurrence
+
+    @property
+    def assembly_feature(self):
+        """Gets the assembly_feature of this BTCommentParams.  # noqa: E501
+
+
+        :return: The assembly_feature of this BTCommentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._assembly_feature
+
+    @assembly_feature.setter
+    def assembly_feature(self, assembly_feature):
+        """Sets the assembly_feature of this BTCommentParams.
+
+
+        :param assembly_feature: The assembly_feature of this BTCommentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._assembly_feature = assembly_feature
 
     @property
     def view_data(self):

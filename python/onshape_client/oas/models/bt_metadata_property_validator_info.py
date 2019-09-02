@@ -32,61 +32,145 @@ class BTMetadataPropertyValidatorInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'min_length': 'int',
-        'max_length': 'int',
-        'min_date': 'datetime',
-        'max_date': 'datetime',
-        'min_count': 'int',
-        'max_count': 'int',
         'min': 'float',
         'max': 'float',
+        'max_date': 'datetime',
+        'min_date': 'datetime',
+        'min_length': 'int',
+        'max_length': 'int',
+        'min_count': 'int',
+        'max_count': 'int',
         'pattern': 'str'
     }
 
     attribute_map = {
-        'min_length': 'minLength',
-        'max_length': 'maxLength',
-        'min_date': 'minDate',
-        'max_date': 'maxDate',
-        'min_count': 'minCount',
-        'max_count': 'maxCount',
         'min': 'min',
         'max': 'max',
+        'max_date': 'maxDate',
+        'min_date': 'minDate',
+        'min_length': 'minLength',
+        'max_length': 'maxLength',
+        'min_count': 'minCount',
+        'max_count': 'maxCount',
         'pattern': 'pattern'
     }
 
-    def __init__(self, min_length=None, max_length=None, min_date=None, max_date=None, min_count=None, max_count=None, min=None, max=None, pattern=None):  # noqa: E501
+    def __init__(self, min=None, max=None, max_date=None, min_date=None, min_length=None, max_length=None, min_count=None, max_count=None, pattern=None):  # noqa: E501
         """BTMetadataPropertyValidatorInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._min_length = None
-        self._max_length = None
-        self._min_date = None
-        self._max_date = None
-        self._min_count = None
-        self._max_count = None
         self._min = None
         self._max = None
+        self._max_date = None
+        self._min_date = None
+        self._min_length = None
+        self._max_length = None
+        self._min_count = None
+        self._max_count = None
         self._pattern = None
         self.discriminator = None
 
-        if min_length is not None:
-            self.min_length = min_length
-        if max_length is not None:
-            self.max_length = max_length
-        if min_date is not None:
-            self.min_date = min_date
-        if max_date is not None:
-            self.max_date = max_date
-        if min_count is not None:
-            self.min_count = min_count
-        if max_count is not None:
-            self.max_count = max_count
         if min is not None:
             self.min = min
         if max is not None:
             self.max = max
+        if max_date is not None:
+            self.max_date = max_date
+        if min_date is not None:
+            self.min_date = min_date
+        if min_length is not None:
+            self.min_length = min_length
+        if max_length is not None:
+            self.max_length = max_length
+        if min_count is not None:
+            self.min_count = min_count
+        if max_count is not None:
+            self.max_count = max_count
         if pattern is not None:
             self.pattern = pattern
+
+    @property
+    def min(self):
+        """Gets the min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+
+
+        :return: The min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :rtype: float
+        """
+        return self._min
+
+    @min.setter
+    def min(self, min):
+        """Sets the min of this BTMetadataPropertyValidatorInfo.
+
+
+        :param min: The min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :type: float
+        """
+
+        self._min = min
+
+    @property
+    def max(self):
+        """Gets the max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+
+
+        :return: The max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :rtype: float
+        """
+        return self._max
+
+    @max.setter
+    def max(self, max):
+        """Sets the max of this BTMetadataPropertyValidatorInfo.
+
+
+        :param max: The max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :type: float
+        """
+
+        self._max = max
+
+    @property
+    def max_date(self):
+        """Gets the max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+
+
+        :return: The max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._max_date
+
+    @max_date.setter
+    def max_date(self, max_date):
+        """Sets the max_date of this BTMetadataPropertyValidatorInfo.
+
+
+        :param max_date: The max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._max_date = max_date
+
+    @property
+    def min_date(self):
+        """Gets the min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+
+
+        :return: The min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._min_date
+
+    @min_date.setter
+    def min_date(self, min_date):
+        """Sets the min_date of this BTMetadataPropertyValidatorInfo.
+
+
+        :param min_date: The min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._min_date = min_date
 
     @property
     def min_length(self):
@@ -131,48 +215,6 @@ class BTMetadataPropertyValidatorInfo(object):
         self._max_length = max_length
 
     @property
-    def min_date(self):
-        """Gets the min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-
-
-        :return: The min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._min_date
-
-    @min_date.setter
-    def min_date(self, min_date):
-        """Sets the min_date of this BTMetadataPropertyValidatorInfo.
-
-
-        :param min_date: The min_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._min_date = min_date
-
-    @property
-    def max_date(self):
-        """Gets the max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-
-
-        :return: The max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._max_date
-
-    @max_date.setter
-    def max_date(self, max_date):
-        """Sets the max_date of this BTMetadataPropertyValidatorInfo.
-
-
-        :param max_date: The max_date of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._max_date = max_date
-
-    @property
     def min_count(self):
         """Gets the min_count of this BTMetadataPropertyValidatorInfo.  # noqa: E501
 
@@ -213,48 +255,6 @@ class BTMetadataPropertyValidatorInfo(object):
         """
 
         self._max_count = max_count
-
-    @property
-    def min(self):
-        """Gets the min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-
-
-        :return: The min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :rtype: float
-        """
-        return self._min
-
-    @min.setter
-    def min(self, min):
-        """Sets the min of this BTMetadataPropertyValidatorInfo.
-
-
-        :param min: The min of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :type: float
-        """
-
-        self._min = min
-
-    @property
-    def max(self):
-        """Gets the max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-
-
-        :return: The max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :rtype: float
-        """
-        return self._max
-
-    @max.setter
-    def max(self, max):
-        """Sets the max of this BTMetadataPropertyValidatorInfo.
-
-
-        :param max: The max of this BTMetadataPropertyValidatorInfo.  # noqa: E501
-        :type: float
-        """
-
-        self._max = max
 
     @property
     def pattern(self):

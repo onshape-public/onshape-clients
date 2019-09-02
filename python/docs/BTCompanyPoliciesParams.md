@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 **require_totp** | **bool** |  | [optional] 
 **use_light_ui** | **bool** |  | [optional] 
 **integrations** | [**IntegrationsParams**](IntegrationsParams.md) |  | [optional] 
@@ -40,6 +39,7 @@ Name | Type | Description | Notes
 **require_peer_review** | **bool** |  | [optional] 
 **drawing_can_duplicate_part_number** | **bool** |  | [optional] 
 **enabled_active_multiple_workflows** | **bool** |  | [optional] 
+**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

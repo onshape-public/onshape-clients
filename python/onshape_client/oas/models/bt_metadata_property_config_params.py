@@ -32,6 +32,8 @@ class BTMetadataPropertyConfigParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'min_date': 'datetime',
+        'max_date': 'datetime',
         'required': 'bool',
         'property_id': 'str',
         'publish_state': 'int',
@@ -40,8 +42,6 @@ class BTMetadataPropertyConfigParams(object):
         'max_length': 'int',
         'min_value': 'float',
         'max_value': 'float',
-        'min_date': 'datetime',
-        'max_date': 'datetime',
         'min_count': 'int',
         'max_count': 'int',
         'multiline': 'bool',
@@ -52,6 +52,8 @@ class BTMetadataPropertyConfigParams(object):
     }
 
     attribute_map = {
+        'min_date': 'minDate',
+        'max_date': 'maxDate',
         'required': 'required',
         'property_id': 'propertyId',
         'publish_state': 'publishState',
@@ -60,8 +62,6 @@ class BTMetadataPropertyConfigParams(object):
         'max_length': 'maxLength',
         'min_value': 'minValue',
         'max_value': 'maxValue',
-        'min_date': 'minDate',
-        'max_date': 'maxDate',
         'min_count': 'minCount',
         'max_count': 'maxCount',
         'multiline': 'multiline',
@@ -71,9 +71,11 @@ class BTMetadataPropertyConfigParams(object):
         'default_value': 'defaultValue'
     }
 
-    def __init__(self, required=None, property_id=None, publish_state=None, schema_id=None, min_length=None, max_length=None, min_value=None, max_value=None, min_date=None, max_date=None, min_count=None, max_count=None, multiline=None, enum_values=None, display_name=None, pattern=None, default_value=None):  # noqa: E501
+    def __init__(self, min_date=None, max_date=None, required=None, property_id=None, publish_state=None, schema_id=None, min_length=None, max_length=None, min_value=None, max_value=None, min_count=None, max_count=None, multiline=None, enum_values=None, display_name=None, pattern=None, default_value=None):  # noqa: E501
         """BTMetadataPropertyConfigParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._min_date = None
+        self._max_date = None
         self._required = None
         self._property_id = None
         self._publish_state = None
@@ -82,8 +84,6 @@ class BTMetadataPropertyConfigParams(object):
         self._max_length = None
         self._min_value = None
         self._max_value = None
-        self._min_date = None
-        self._max_date = None
         self._min_count = None
         self._max_count = None
         self._multiline = None
@@ -93,6 +93,10 @@ class BTMetadataPropertyConfigParams(object):
         self._default_value = None
         self.discriminator = None
 
+        if min_date is not None:
+            self.min_date = min_date
+        if max_date is not None:
+            self.max_date = max_date
         if required is not None:
             self.required = required
         if property_id is not None:
@@ -109,10 +113,6 @@ class BTMetadataPropertyConfigParams(object):
             self.min_value = min_value
         if max_value is not None:
             self.max_value = max_value
-        if min_date is not None:
-            self.min_date = min_date
-        if max_date is not None:
-            self.max_date = max_date
         if min_count is not None:
             self.min_count = min_count
         if max_count is not None:
@@ -127,6 +127,48 @@ class BTMetadataPropertyConfigParams(object):
             self.pattern = pattern
         if default_value is not None:
             self.default_value = default_value
+
+    @property
+    def min_date(self):
+        """Gets the min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+
+
+        :return: The min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._min_date
+
+    @min_date.setter
+    def min_date(self, min_date):
+        """Sets the min_date of this BTMetadataPropertyConfigParams.
+
+
+        :param min_date: The min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :type: datetime
+        """
+
+        self._min_date = min_date
+
+    @property
+    def max_date(self):
+        """Gets the max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+
+
+        :return: The max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._max_date
+
+    @max_date.setter
+    def max_date(self, max_date):
+        """Sets the max_date of this BTMetadataPropertyConfigParams.
+
+
+        :param max_date: The max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
+        :type: datetime
+        """
+
+        self._max_date = max_date
 
     @property
     def required(self):
@@ -295,48 +337,6 @@ class BTMetadataPropertyConfigParams(object):
         """
 
         self._max_value = max_value
-
-    @property
-    def min_date(self):
-        """Gets the min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-
-
-        :return: The min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._min_date
-
-    @min_date.setter
-    def min_date(self, min_date):
-        """Sets the min_date of this BTMetadataPropertyConfigParams.
-
-
-        :param min_date: The min_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :type: datetime
-        """
-
-        self._min_date = min_date
-
-    @property
-    def max_date(self):
-        """Gets the max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-
-
-        :return: The max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._max_date
-
-    @max_date.setter
-    def max_date(self, max_date):
-        """Sets the max_date of this BTMetadataPropertyConfigParams.
-
-
-        :param max_date: The max_date of this BTMetadataPropertyConfigParams.  # noqa: E501
-        :type: datetime
-        """
-
-        self._max_date = max_date
 
     @property
     def min_count(self):

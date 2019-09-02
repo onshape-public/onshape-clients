@@ -32,11 +32,11 @@ class BTBoundingBoxParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'sketch_id': 'str',
-        'include_hidden': 'bool',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
+        'include_hidden': 'bool',
+        'sketch_id': 'str',
         'part_query': 'str',
         'part_id': 'str',
         'include_wire_bodies': 'bool',
@@ -46,11 +46,11 @@ class BTBoundingBoxParams(object):
     }
 
     attribute_map = {
-        'sketch_id': 'sketchId',
-        'include_hidden': 'includeHidden',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
+        'include_hidden': 'includeHidden',
+        'sketch_id': 'sketchId',
         'part_query': 'partQuery',
         'part_id': 'partId',
         'include_wire_bodies': 'includeWireBodies',
@@ -59,14 +59,14 @@ class BTBoundingBoxParams(object):
         'element_microversion_id': 'elementMicroversionId'
     }
 
-    def __init__(self, sketch_id=None, include_hidden=None, workspace_id=None, element_id=None, document_id=None, part_query=None, part_id=None, include_wire_bodies=None, display_state_id=None, explosion_id=None, element_microversion_id=None):  # noqa: E501
+    def __init__(self, workspace_id=None, element_id=None, document_id=None, include_hidden=None, sketch_id=None, part_query=None, part_id=None, include_wire_bodies=None, display_state_id=None, explosion_id=None, element_microversion_id=None):  # noqa: E501
         """BTBoundingBoxParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._sketch_id = None
-        self._include_hidden = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
+        self._include_hidden = None
+        self._sketch_id = None
         self._part_query = None
         self._part_id = None
         self._include_wire_bodies = None
@@ -75,16 +75,16 @@ class BTBoundingBoxParams(object):
         self._element_microversion_id = None
         self.discriminator = None
 
-        if sketch_id is not None:
-            self.sketch_id = sketch_id
-        if include_hidden is not None:
-            self.include_hidden = include_hidden
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
+        if include_hidden is not None:
+            self.include_hidden = include_hidden
+        if sketch_id is not None:
+            self.sketch_id = sketch_id
         if part_query is not None:
             self.part_query = part_query
         if part_id is not None:
@@ -97,48 +97,6 @@ class BTBoundingBoxParams(object):
             self.explosion_id = explosion_id
         if element_microversion_id is not None:
             self.element_microversion_id = element_microversion_id
-
-    @property
-    def sketch_id(self):
-        """Gets the sketch_id of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._sketch_id
-
-    @sketch_id.setter
-    def sketch_id(self, sketch_id):
-        """Sets the sketch_id of this BTBoundingBoxParams.
-
-
-        :param sketch_id: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
-        :type: str
-        """
-
-        self._sketch_id = sketch_id
-
-    @property
-    def include_hidden(self):
-        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
-
-
-        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_hidden
-
-    @include_hidden.setter
-    def include_hidden(self, include_hidden):
-        """Sets the include_hidden of this BTBoundingBoxParams.
-
-
-        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_hidden = include_hidden
 
     @property
     def workspace_id(self):
@@ -202,6 +160,48 @@ class BTBoundingBoxParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def include_hidden(self):
+        """Gets the include_hidden of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_hidden
+
+    @include_hidden.setter
+    def include_hidden(self, include_hidden):
+        """Sets the include_hidden of this BTBoundingBoxParams.
+
+
+        :param include_hidden: The include_hidden of this BTBoundingBoxParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_hidden = include_hidden
+
+    @property
+    def sketch_id(self):
+        """Gets the sketch_id of this BTBoundingBoxParams.  # noqa: E501
+
+
+        :return: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._sketch_id
+
+    @sketch_id.setter
+    def sketch_id(self, sketch_id):
+        """Sets the sketch_id of this BTBoundingBoxParams.
+
+
+        :param sketch_id: The sketch_id of this BTBoundingBoxParams.  # noqa: E501
+        :type: str
+        """
+
+        self._sketch_id = sketch_id
 
     @property
     def part_query(self):

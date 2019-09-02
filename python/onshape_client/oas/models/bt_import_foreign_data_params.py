@@ -32,9 +32,9 @@ class BTImportForeignDataParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner_id': 'str',
         'filename': 'str',
         'document_id': 'str',
-        'owner_id': 'str',
         'file_format': 'str',
         'media_type': 'str',
         'public_document': 'bool',
@@ -52,17 +52,17 @@ class BTImportForeignDataParams(object):
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
         'create_composite': 'bool',
+        'processed_foreign_id': 'str',
         'original_foreign_id': 'str',
         'import_within_document': 'bool',
         'blob_element_id': 'str',
-        'blob_microversion_id': 'str',
-        'processed_foreign_id': 'str'
+        'blob_microversion_id': 'str'
     }
 
     attribute_map = {
+        'owner_id': 'ownerId',
         'filename': 'filename',
         'document_id': 'documentId',
-        'owner_id': 'ownerId',
         'file_format': 'fileFormat',
         'media_type': 'mediaType',
         'public_document': 'publicDocument',
@@ -80,19 +80,19 @@ class BTImportForeignDataParams(object):
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
         'create_composite': 'createComposite',
+        'processed_foreign_id': 'processedForeignId',
         'original_foreign_id': 'originalForeignId',
         'import_within_document': 'importWithinDocument',
         'blob_element_id': 'blobElementId',
-        'blob_microversion_id': 'blobMicroversionId',
-        'processed_foreign_id': 'processedForeignId'
+        'blob_microversion_id': 'blobMicroversionId'
     }
 
-    def __init__(self, filename=None, document_id=None, owner_id=None, file_format=None, media_type=None, public_document=None, notify_user=None, owner_type=None, size=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, processed_foreign_id=None):  # noqa: E501
+    def __init__(self, owner_id=None, filename=None, document_id=None, file_format=None, media_type=None, public_document=None, notify_user=None, owner_type=None, size=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, processed_foreign_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None):  # noqa: E501
         """BTImportForeignDataParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._owner_id = None
         self._filename = None
         self._document_id = None
-        self._owner_id = None
         self._file_format = None
         self._media_type = None
         self._public_document = None
@@ -110,19 +110,19 @@ class BTImportForeignDataParams(object):
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
         self._create_composite = None
+        self._processed_foreign_id = None
         self._original_foreign_id = None
         self._import_within_document = None
         self._blob_element_id = None
         self._blob_microversion_id = None
-        self._processed_foreign_id = None
         self.discriminator = None
 
+        if owner_id is not None:
+            self.owner_id = owner_id
         if filename is not None:
             self.filename = filename
         if document_id is not None:
             self.document_id = document_id
-        if owner_id is not None:
-            self.owner_id = owner_id
         if file_format is not None:
             self.file_format = file_format
         if media_type is not None:
@@ -157,6 +157,8 @@ class BTImportForeignDataParams(object):
             self.allow_faulty_parts = allow_faulty_parts
         if create_composite is not None:
             self.create_composite = create_composite
+        if processed_foreign_id is not None:
+            self.processed_foreign_id = processed_foreign_id
         if original_foreign_id is not None:
             self.original_foreign_id = original_foreign_id
         if import_within_document is not None:
@@ -165,8 +167,27 @@ class BTImportForeignDataParams(object):
             self.blob_element_id = blob_element_id
         if blob_microversion_id is not None:
             self.blob_microversion_id = blob_microversion_id
-        if processed_foreign_id is not None:
-            self.processed_foreign_id = processed_foreign_id
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTImportForeignDataParams.
+
+
+        :param owner_id: The owner_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def filename(self):
@@ -209,27 +230,6 @@ class BTImportForeignDataParams(object):
         """
 
         self._document_id = document_id
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTImportForeignDataParams.
-
-
-        :param owner_id: The owner_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
 
     @property
     def file_format(self):
@@ -601,6 +601,27 @@ class BTImportForeignDataParams(object):
         self._create_composite = create_composite
 
     @property
+    def processed_foreign_id(self):
+        """Gets the processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+
+
+        :return: The processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._processed_foreign_id
+
+    @processed_foreign_id.setter
+    def processed_foreign_id(self, processed_foreign_id):
+        """Sets the processed_foreign_id of this BTImportForeignDataParams.
+
+
+        :param processed_foreign_id: The processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._processed_foreign_id = processed_foreign_id
+
+    @property
     def original_foreign_id(self):
         """Gets the original_foreign_id of this BTImportForeignDataParams.  # noqa: E501
 
@@ -683,27 +704,6 @@ class BTImportForeignDataParams(object):
         """
 
         self._blob_microversion_id = blob_microversion_id
-
-    @property
-    def processed_foreign_id(self):
-        """Gets the processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
-
-
-        :return: The processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._processed_foreign_id
-
-    @processed_foreign_id.setter
-    def processed_foreign_id(self, processed_foreign_id):
-        """Sets the processed_foreign_id of this BTImportForeignDataParams.
-
-
-        :param processed_foreign_id: The processed_foreign_id of this BTImportForeignDataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._processed_foreign_id = processed_foreign_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

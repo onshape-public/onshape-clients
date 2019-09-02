@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**old_password** | **str** |  | [optional] 
-**new_password** | **str** |  | [optional] 
-**phone_number** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **default_company_name** | **str** |  | [optional] 
-**forum_id** | **str** |  | [optional] 
 **country_code** | **str** |  | [optional] 
+**old_password** | **str** |  | [optional] 
+**new_password** | **str** |  | [optional] 
+**phone_number** | **str** |  | [optional] 
+**forum_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

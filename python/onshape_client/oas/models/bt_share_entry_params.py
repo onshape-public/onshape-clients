@@ -32,46 +32,67 @@ class BTShareEntryParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'entry_type': 'int',
         'user_id': 'str',
         'email': 'str',
         'company_id': 'str',
-        'entry_type': 'int',
         'team_id': 'str',
         'application_id': 'str'
     }
 
     attribute_map = {
+        'entry_type': 'entryType',
         'user_id': 'userId',
         'email': 'email',
         'company_id': 'companyId',
-        'entry_type': 'entryType',
         'team_id': 'teamId',
         'application_id': 'applicationId'
     }
 
-    def __init__(self, user_id=None, email=None, company_id=None, entry_type=None, team_id=None, application_id=None):  # noqa: E501
+    def __init__(self, entry_type=None, user_id=None, email=None, company_id=None, team_id=None, application_id=None):  # noqa: E501
         """BTShareEntryParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._entry_type = None
         self._user_id = None
         self._email = None
         self._company_id = None
-        self._entry_type = None
         self._team_id = None
         self._application_id = None
         self.discriminator = None
 
+        if entry_type is not None:
+            self.entry_type = entry_type
         if user_id is not None:
             self.user_id = user_id
         if email is not None:
             self.email = email
         if company_id is not None:
             self.company_id = company_id
-        if entry_type is not None:
-            self.entry_type = entry_type
         if team_id is not None:
             self.team_id = team_id
         if application_id is not None:
             self.application_id = application_id
+
+    @property
+    def entry_type(self):
+        """Gets the entry_type of this BTShareEntryParams.  # noqa: E501
+
+
+        :return: The entry_type of this BTShareEntryParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._entry_type
+
+    @entry_type.setter
+    def entry_type(self, entry_type):
+        """Sets the entry_type of this BTShareEntryParams.
+
+
+        :param entry_type: The entry_type of this BTShareEntryParams.  # noqa: E501
+        :type: int
+        """
+
+        self._entry_type = entry_type
 
     @property
     def user_id(self):
@@ -135,27 +156,6 @@ class BTShareEntryParams(object):
         """
 
         self._company_id = company_id
-
-    @property
-    def entry_type(self):
-        """Gets the entry_type of this BTShareEntryParams.  # noqa: E501
-
-
-        :return: The entry_type of this BTShareEntryParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._entry_type
-
-    @entry_type.setter
-    def entry_type(self, entry_type):
-        """Sets the entry_type of this BTShareEntryParams.
-
-
-        :param entry_type: The entry_type of this BTShareEntryParams.  # noqa: E501
-        :type: int
-        """
-
-        self._entry_type = entry_type
 
     @property
     def team_id(self):

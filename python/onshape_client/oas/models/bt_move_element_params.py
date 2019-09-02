@@ -32,11 +32,11 @@ class BTMoveElementParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'target_document_id': 'str',
         'owner_id': 'str',
         'project_id': 'str',
         'parent_id': 'str',
         'is_public': 'bool',
+        'target_document_id': 'str',
         'version_name': 'str',
         'is_copy': 'bool',
         'is_deep_copy': 'bool',
@@ -53,17 +53,17 @@ class BTMoveElementParams(object):
         'is_new_document': 'bool',
         'owner_email': 'str',
         'elements': 'list[str]',
-        'tags': 'list[str]',
         'description': 'str',
+        'tags': 'list[str]',
         'name': 'str'
     }
 
     attribute_map = {
-        'target_document_id': 'targetDocumentId',
         'owner_id': 'ownerId',
         'project_id': 'projectId',
         'parent_id': 'parentId',
         'is_public': 'isPublic',
+        'target_document_id': 'targetDocumentId',
         'version_name': 'versionName',
         'is_copy': 'isCopy',
         'is_deep_copy': 'isDeepCopy',
@@ -80,19 +80,19 @@ class BTMoveElementParams(object):
         'is_new_document': 'isNewDocument',
         'owner_email': 'ownerEmail',
         'elements': 'elements',
-        'tags': 'tags',
         'description': 'description',
+        'tags': 'tags',
         'name': 'name'
     }
 
-    def __init__(self, target_document_id=None, owner_id=None, project_id=None, parent_id=None, is_public=None, version_name=None, is_copy=None, is_deep_copy=None, source_document_id=None, source_workspace_id=None, owner_type=None, anchor_element_id=None, is_group_anchor=None, target_workspace_id=None, generate_unknown_messages=None, import_data=None, need_new_version=None, element_original_to_new_map=None, is_new_document=None, owner_email=None, elements=None, tags=None, description=None, name=None):  # noqa: E501
+    def __init__(self, owner_id=None, project_id=None, parent_id=None, is_public=None, target_document_id=None, version_name=None, is_copy=None, is_deep_copy=None, source_document_id=None, source_workspace_id=None, owner_type=None, anchor_element_id=None, is_group_anchor=None, target_workspace_id=None, generate_unknown_messages=None, import_data=None, need_new_version=None, element_original_to_new_map=None, is_new_document=None, owner_email=None, elements=None, description=None, tags=None, name=None):  # noqa: E501
         """BTMoveElementParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._target_document_id = None
         self._owner_id = None
         self._project_id = None
         self._parent_id = None
         self._is_public = None
+        self._target_document_id = None
         self._version_name = None
         self._is_copy = None
         self._is_deep_copy = None
@@ -109,13 +109,11 @@ class BTMoveElementParams(object):
         self._is_new_document = None
         self._owner_email = None
         self._elements = None
-        self._tags = None
         self._description = None
+        self._tags = None
         self._name = None
         self.discriminator = None
 
-        if target_document_id is not None:
-            self.target_document_id = target_document_id
         if owner_id is not None:
             self.owner_id = owner_id
         if project_id is not None:
@@ -124,6 +122,8 @@ class BTMoveElementParams(object):
             self.parent_id = parent_id
         if is_public is not None:
             self.is_public = is_public
+        if target_document_id is not None:
+            self.target_document_id = target_document_id
         if version_name is not None:
             self.version_name = version_name
         if is_copy is not None:
@@ -156,33 +156,12 @@ class BTMoveElementParams(object):
             self.owner_email = owner_email
         if elements is not None:
             self.elements = elements
-        if tags is not None:
-            self.tags = tags
         if description is not None:
             self.description = description
+        if tags is not None:
+            self.tags = tags
         if name is not None:
             self.name = name
-
-    @property
-    def target_document_id(self):
-        """Gets the target_document_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The target_document_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_document_id
-
-    @target_document_id.setter
-    def target_document_id(self, target_document_id):
-        """Sets the target_document_id of this BTMoveElementParams.
-
-
-        :param target_document_id: The target_document_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._target_document_id = target_document_id
 
     @property
     def owner_id(self):
@@ -267,6 +246,27 @@ class BTMoveElementParams(object):
         """
 
         self._is_public = is_public
+
+    @property
+    def target_document_id(self):
+        """Gets the target_document_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The target_document_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_document_id
+
+    @target_document_id.setter
+    def target_document_id(self, target_document_id):
+        """Sets the target_document_id of this BTMoveElementParams.
+
+
+        :param target_document_id: The target_document_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._target_document_id = target_document_id
 
     @property
     def version_name(self):
@@ -605,27 +605,6 @@ class BTMoveElementParams(object):
         self._elements = elements
 
     @property
-    def tags(self):
-        """Gets the tags of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The tags of this BTMoveElementParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._tags
-
-    @tags.setter
-    def tags(self, tags):
-        """Sets the tags of this BTMoveElementParams.
-
-
-        :param tags: The tags of this BTMoveElementParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._tags = tags
-
-    @property
     def description(self):
         """Gets the description of this BTMoveElementParams.  # noqa: E501
 
@@ -645,6 +624,27 @@ class BTMoveElementParams(object):
         """
 
         self._description = description
+
+    @property
+    def tags(self):
+        """Gets the tags of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The tags of this BTMoveElementParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this BTMoveElementParams.
+
+
+        :param tags: The tags of this BTMoveElementParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._tags = tags
 
     @property
     def name(self):

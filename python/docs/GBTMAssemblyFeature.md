@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **feature_id** | **str** |  | [optional] 
 **sub_features** | [**list[BTMFeature]**](BTMFeature.md) |  | [optional] 
 **return_after_subfeatures** | **bool** |  | [optional] 
+**version** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

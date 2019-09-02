@@ -34,7 +34,6 @@ class BTAppViewParams(object):
     openapi_types = {
         'transaction_id': 'str',
         'parent_change_id': 'str',
-        'display_state_id': 'str',
         'model_reference_id': 'str',
         'view_matrix': 'list[float]',
         'view_direction': 'list[float]',
@@ -43,6 +42,7 @@ class BTAppViewParams(object):
         'broken_out_section': 'bool',
         'crop_view': 'bool',
         'bom_reference_id': 'str',
+        'display_state_id': 'str',
         'include_hidden_instances': 'bool',
         'view_scale': 'float',
         'show_tangent_lines': 'bool',
@@ -76,7 +76,6 @@ class BTAppViewParams(object):
     attribute_map = {
         'transaction_id': 'transactionId',
         'parent_change_id': 'parentChangeId',
-        'display_state_id': 'displayStateId',
         'model_reference_id': 'modelReferenceId',
         'view_matrix': 'viewMatrix',
         'view_direction': 'viewDirection',
@@ -85,6 +84,7 @@ class BTAppViewParams(object):
         'broken_out_section': 'brokenOutSection',
         'crop_view': 'cropView',
         'bom_reference_id': 'bomReferenceId',
+        'display_state_id': 'displayStateId',
         'include_hidden_instances': 'includeHiddenInstances',
         'view_scale': 'viewScale',
         'show_tangent_lines': 'showTangentLines',
@@ -115,12 +115,11 @@ class BTAppViewParams(object):
         'parameters': 'parameters'
     }
 
-    def __init__(self, transaction_id=None, parent_change_id=None, display_state_id=None, model_reference_id=None, view_matrix=None, view_direction=None, cut_point=None, offset_section_points=None, broken_out_section=None, crop_view=None, bom_reference_id=None, include_hidden_instances=None, view_scale=None, show_tangent_lines=None, compute_intersection=None, quality_option=None, simplification_option=None, simplification_threshold=None, is_broken_out_section=None, is_crop_view=None, show_cut_geom_only=None, hidden_lines=None, modification_id=None, perspective=None, projection_angle=None, show_threads=None, quality_option_type=None, simplification_option_type=None, is_partial_section=None, broken_out_point_numbers=None, broken_out_end_conditions=None, broken_out_b_boxes=None, broken_out_b_boxes_map=None, include_surfaces=None, is_surface=None, depth_section_end_condition=None, exploded_view_id=None, occurrence_or_part_id_to_geometry_properties=None, parameters=None):  # noqa: E501
+    def __init__(self, transaction_id=None, parent_change_id=None, model_reference_id=None, view_matrix=None, view_direction=None, cut_point=None, offset_section_points=None, broken_out_section=None, crop_view=None, bom_reference_id=None, display_state_id=None, include_hidden_instances=None, view_scale=None, show_tangent_lines=None, compute_intersection=None, quality_option=None, simplification_option=None, simplification_threshold=None, is_broken_out_section=None, is_crop_view=None, show_cut_geom_only=None, hidden_lines=None, modification_id=None, perspective=None, projection_angle=None, show_threads=None, quality_option_type=None, simplification_option_type=None, is_partial_section=None, broken_out_point_numbers=None, broken_out_end_conditions=None, broken_out_b_boxes=None, broken_out_b_boxes_map=None, include_surfaces=None, is_surface=None, depth_section_end_condition=None, exploded_view_id=None, occurrence_or_part_id_to_geometry_properties=None, parameters=None):  # noqa: E501
         """BTAppViewParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._transaction_id = None
         self._parent_change_id = None
-        self._display_state_id = None
         self._model_reference_id = None
         self._view_matrix = None
         self._view_direction = None
@@ -129,6 +128,7 @@ class BTAppViewParams(object):
         self._broken_out_section = None
         self._crop_view = None
         self._bom_reference_id = None
+        self._display_state_id = None
         self._include_hidden_instances = None
         self._view_scale = None
         self._show_tangent_lines = None
@@ -163,8 +163,6 @@ class BTAppViewParams(object):
             self.transaction_id = transaction_id
         if parent_change_id is not None:
             self.parent_change_id = parent_change_id
-        if display_state_id is not None:
-            self.display_state_id = display_state_id
         if model_reference_id is not None:
             self.model_reference_id = model_reference_id
         if view_matrix is not None:
@@ -181,6 +179,8 @@ class BTAppViewParams(object):
             self.crop_view = crop_view
         if bom_reference_id is not None:
             self.bom_reference_id = bom_reference_id
+        if display_state_id is not None:
+            self.display_state_id = display_state_id
         if include_hidden_instances is not None:
             self.include_hidden_instances = include_hidden_instances
         if view_scale is not None:
@@ -279,27 +279,6 @@ class BTAppViewParams(object):
         """
 
         self._parent_change_id = parent_change_id
-
-    @property
-    def display_state_id(self):
-        """Gets the display_state_id of this BTAppViewParams.  # noqa: E501
-
-
-        :return: The display_state_id of this BTAppViewParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_state_id
-
-    @display_state_id.setter
-    def display_state_id(self, display_state_id):
-        """Sets the display_state_id of this BTAppViewParams.
-
-
-        :param display_state_id: The display_state_id of this BTAppViewParams.  # noqa: E501
-        :type: str
-        """
-
-        self._display_state_id = display_state_id
 
     @property
     def model_reference_id(self):
@@ -468,6 +447,27 @@ class BTAppViewParams(object):
         """
 
         self._bom_reference_id = bom_reference_id
+
+    @property
+    def display_state_id(self):
+        """Gets the display_state_id of this BTAppViewParams.  # noqa: E501
+
+
+        :return: The display_state_id of this BTAppViewParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_state_id
+
+    @display_state_id.setter
+    def display_state_id(self, display_state_id):
+        """Sets the display_state_id of this BTAppViewParams.
+
+
+        :param display_state_id: The display_state_id of this BTAppViewParams.  # noqa: E501
+        :type: str
+        """
+
+        self._display_state_id = display_state_id
 
     @property
     def include_hidden_instances(self):

@@ -32,8 +32,8 @@ class BTExportModelEdgeGeometry(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'start_point': 'BTVector3d',
         'end_point': 'BTVector3d',
+        'start_point': 'BTVector3d',
         'mid_point': 'BTVector3d',
         'quarter_point': 'BTVector3d',
         'start_vector': 'BTVector3d',
@@ -42,8 +42,8 @@ class BTExportModelEdgeGeometry(object):
     }
 
     attribute_map = {
-        'start_point': 'startPoint',
         'end_point': 'endPoint',
+        'start_point': 'startPoint',
         'mid_point': 'midPoint',
         'quarter_point': 'quarterPoint',
         'start_vector': 'startVector',
@@ -51,11 +51,11 @@ class BTExportModelEdgeGeometry(object):
         'length': 'length'
     }
 
-    def __init__(self, start_point=None, end_point=None, mid_point=None, quarter_point=None, start_vector=None, end_vector=None, length=None):  # noqa: E501
+    def __init__(self, end_point=None, start_point=None, mid_point=None, quarter_point=None, start_vector=None, end_vector=None, length=None):  # noqa: E501
         """BTExportModelEdgeGeometry - a model defined in OpenAPI"""  # noqa: E501
 
-        self._start_point = None
         self._end_point = None
+        self._start_point = None
         self._mid_point = None
         self._quarter_point = None
         self._start_vector = None
@@ -63,10 +63,10 @@ class BTExportModelEdgeGeometry(object):
         self._length = None
         self.discriminator = None
 
-        if start_point is not None:
-            self.start_point = start_point
         if end_point is not None:
             self.end_point = end_point
+        if start_point is not None:
+            self.start_point = start_point
         if mid_point is not None:
             self.mid_point = mid_point
         if quarter_point is not None:
@@ -77,27 +77,6 @@ class BTExportModelEdgeGeometry(object):
             self.end_vector = end_vector
         if length is not None:
             self.length = length
-
-    @property
-    def start_point(self):
-        """Gets the start_point of this BTExportModelEdgeGeometry.  # noqa: E501
-
-
-        :return: The start_point of this BTExportModelEdgeGeometry.  # noqa: E501
-        :rtype: BTVector3d
-        """
-        return self._start_point
-
-    @start_point.setter
-    def start_point(self, start_point):
-        """Sets the start_point of this BTExportModelEdgeGeometry.
-
-
-        :param start_point: The start_point of this BTExportModelEdgeGeometry.  # noqa: E501
-        :type: BTVector3d
-        """
-
-        self._start_point = start_point
 
     @property
     def end_point(self):
@@ -119,6 +98,27 @@ class BTExportModelEdgeGeometry(object):
         """
 
         self._end_point = end_point
+
+    @property
+    def start_point(self):
+        """Gets the start_point of this BTExportModelEdgeGeometry.  # noqa: E501
+
+
+        :return: The start_point of this BTExportModelEdgeGeometry.  # noqa: E501
+        :rtype: BTVector3d
+        """
+        return self._start_point
+
+    @start_point.setter
+    def start_point(self, start_point):
+        """Sets the start_point of this BTExportModelEdgeGeometry.
+
+
+        :param start_point: The start_point of this BTExportModelEdgeGeometry.  # noqa: E501
+        :type: BTVector3d
+        """
+
+        self._start_point = start_point
 
     @property
     def mid_point(self):

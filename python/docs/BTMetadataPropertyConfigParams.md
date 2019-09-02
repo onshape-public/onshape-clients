@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**min_date** | **datetime** |  | [optional] 
+**max_date** | **datetime** |  | [optional] 
 **required** | **bool** |  | [optional] 
 **property_id** | **str** |  | [optional] 
 **publish_state** | **int** |  | [optional] 
@@ -11,8 +13,6 @@ Name | Type | Description | Notes
 **max_length** | **int** |  | [optional] 
 **min_value** | **float** |  | [optional] 
 **max_value** | **float** |  | [optional] 
-**min_date** | **datetime** |  | [optional] 
-**max_date** | **datetime** |  | [optional] 
 **min_count** | **int** |  | [optional] 
 **max_count** | **int** |  | [optional] 
 **multiline** | **bool** |  | [optional] 

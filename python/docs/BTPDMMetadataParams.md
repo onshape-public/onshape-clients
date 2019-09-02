@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**project** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
-**project** | **str** |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **vendor** | **str** |  | [optional] 
 **product_line** | **str** |  | [optional] 

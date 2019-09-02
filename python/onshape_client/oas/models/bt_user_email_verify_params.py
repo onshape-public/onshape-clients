@@ -32,57 +32,36 @@ class BTUserEmailVerifyParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'secret': 'str',
         'user_id': 'str',
         'email': 'str',
+        'secret': 'str',
         'request_id': 'str'
     }
 
     attribute_map = {
-        'secret': 'secret',
         'user_id': 'userId',
         'email': 'email',
+        'secret': 'secret',
         'request_id': 'requestId'
     }
 
-    def __init__(self, secret=None, user_id=None, email=None, request_id=None):  # noqa: E501
+    def __init__(self, user_id=None, email=None, secret=None, request_id=None):  # noqa: E501
         """BTUserEmailVerifyParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._secret = None
         self._user_id = None
         self._email = None
+        self._secret = None
         self._request_id = None
         self.discriminator = None
 
-        if secret is not None:
-            self.secret = secret
         if user_id is not None:
             self.user_id = user_id
         if email is not None:
             self.email = email
+        if secret is not None:
+            self.secret = secret
         if request_id is not None:
             self.request_id = request_id
-
-    @property
-    def secret(self):
-        """Gets the secret of this BTUserEmailVerifyParams.  # noqa: E501
-
-
-        :return: The secret of this BTUserEmailVerifyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._secret
-
-    @secret.setter
-    def secret(self, secret):
-        """Sets the secret of this BTUserEmailVerifyParams.
-
-
-        :param secret: The secret of this BTUserEmailVerifyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._secret = secret
 
     @property
     def user_id(self):
@@ -125,6 +104,27 @@ class BTUserEmailVerifyParams(object):
         """
 
         self._email = email
+
+    @property
+    def secret(self):
+        """Gets the secret of this BTUserEmailVerifyParams.  # noqa: E501
+
+
+        :return: The secret of this BTUserEmailVerifyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._secret
+
+    @secret.setter
+    def secret(self, secret):
+        """Sets the secret of this BTUserEmailVerifyParams.
+
+
+        :param secret: The secret of this BTUserEmailVerifyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._secret = secret
 
     @property
     def request_id(self):

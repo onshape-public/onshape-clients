@@ -41,7 +41,9 @@ class GBTMSketch(object):
         'feature_type': 'str',
         'feature_id': 'str',
         'sub_features': 'list[BTMFeature]',
-        'return_after_subfeatures': 'bool'
+        'return_after_subfeatures': 'bool',
+        'entities': 'list[BTMSketchGeomEntity]',
+        'constraints': 'list[BTMSketchConstraint]'
     }
 
     attribute_map = {
@@ -54,10 +56,12 @@ class GBTMSketch(object):
         'feature_type': 'featureType',
         'feature_id': 'featureId',
         'sub_features': 'subFeatures',
-        'return_after_subfeatures': 'returnAfterSubfeatures'
+        'return_after_subfeatures': 'returnAfterSubfeatures',
+        'entities': 'entities',
+        'constraints': 'constraints'
     }
 
-    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_type=None, feature_id=None, sub_features=None, return_after_subfeatures=None):  # noqa: E501
+    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_type=None, feature_id=None, sub_features=None, return_after_subfeatures=None, entities=None, constraints=None):  # noqa: E501
         """GBTMSketch - a model defined in OpenAPI"""  # noqa: E501
 
         self._node_id = None
@@ -70,6 +74,8 @@ class GBTMSketch(object):
         self._feature_id = None
         self._sub_features = None
         self._return_after_subfeatures = None
+        self._entities = None
+        self._constraints = None
         self.discriminator = None
 
         if node_id is not None:
@@ -92,6 +98,10 @@ class GBTMSketch(object):
             self.sub_features = sub_features
         if return_after_subfeatures is not None:
             self.return_after_subfeatures = return_after_subfeatures
+        if entities is not None:
+            self.entities = entities
+        if constraints is not None:
+            self.constraints = constraints
 
     @property
     def node_id(self):
@@ -302,6 +312,48 @@ class GBTMSketch(object):
         """
 
         self._return_after_subfeatures = return_after_subfeatures
+
+    @property
+    def entities(self):
+        """Gets the entities of this GBTMSketch.  # noqa: E501
+
+
+        :return: The entities of this GBTMSketch.  # noqa: E501
+        :rtype: list[BTMSketchGeomEntity]
+        """
+        return self._entities
+
+    @entities.setter
+    def entities(self, entities):
+        """Sets the entities of this GBTMSketch.
+
+
+        :param entities: The entities of this GBTMSketch.  # noqa: E501
+        :type: list[BTMSketchGeomEntity]
+        """
+
+        self._entities = entities
+
+    @property
+    def constraints(self):
+        """Gets the constraints of this GBTMSketch.  # noqa: E501
+
+
+        :return: The constraints of this GBTMSketch.  # noqa: E501
+        :rtype: list[BTMSketchConstraint]
+        """
+        return self._constraints
+
+    @constraints.setter
+    def constraints(self, constraints):
+        """Sets the constraints of this GBTMSketch.
+
+
+        :param constraints: The constraints of this GBTMSketch.  # noqa: E501
+        :type: list[BTMSketchConstraint]
+        """
+
+        self._constraints = constraints
 
     def to_dict(self):
         """Returns the model properties as a dict"""

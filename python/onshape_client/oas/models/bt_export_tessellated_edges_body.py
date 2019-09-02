@@ -32,47 +32,26 @@ class BTExportTessellatedEdgesBody(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'edges': 'list[BTExportTessellatedEdgesEdge]'
+        'edges': 'list[BTExportTessellatedEdgesEdge]',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'edges': 'edges'
+        'edges': 'edges',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, edges=None):  # noqa: E501
+    def __init__(self, edges=None, id=None):  # noqa: E501
         """BTExportTessellatedEdgesBody - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._edges = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if edges is not None:
             self.edges = edges
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportTessellatedEdgesBody.  # noqa: E501
-
-
-        :return: The id of this BTExportTessellatedEdgesBody.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportTessellatedEdgesBody.
-
-
-        :param id: The id of this BTExportTessellatedEdgesBody.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def edges(self):
@@ -94,6 +73,27 @@ class BTExportTessellatedEdgesBody(object):
         """
 
         self._edges = edges
+
+    @property
+    def id(self):
+        """Gets the id of this BTExportTessellatedEdgesBody.  # noqa: E501
+
+
+        :return: The id of this BTExportTessellatedEdgesBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportTessellatedEdgesBody.
+
+
+        :param id: The id of this BTExportTessellatedEdgesBody.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

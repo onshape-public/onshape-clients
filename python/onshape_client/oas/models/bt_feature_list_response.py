@@ -32,9 +32,9 @@ class BTFeatureListResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'features': 'list[BTMFeature]',
         'is_complete': 'bool',
         'feature_states': 'dict(str, BTFeatureState)',
-        'features': 'list[BTMFeature]',
         'default_features': 'list[BTMFeature]',
         'imports': 'list[BTMImport]',
         'rollback_index': 'int',
@@ -46,9 +46,9 @@ class BTFeatureListResponse(object):
     }
 
     attribute_map = {
+        'features': 'features',
         'is_complete': 'isComplete',
         'feature_states': 'featureStates',
-        'features': 'features',
         'default_features': 'defaultFeatures',
         'imports': 'imports',
         'rollback_index': 'rollbackIndex',
@@ -59,12 +59,12 @@ class BTFeatureListResponse(object):
         'microversion_skew': 'microversionSkew'
     }
 
-    def __init__(self, is_complete=None, feature_states=None, features=None, default_features=None, imports=None, rollback_index=None, serialization_version=None, library_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None):  # noqa: E501
+    def __init__(self, features=None, is_complete=None, feature_states=None, default_features=None, imports=None, rollback_index=None, serialization_version=None, library_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None):  # noqa: E501
         """BTFeatureListResponse - a model defined in OpenAPI"""  # noqa: E501
 
+        self._features = None
         self._is_complete = None
         self._feature_states = None
-        self._features = None
         self._default_features = None
         self._imports = None
         self._rollback_index = None
@@ -75,12 +75,12 @@ class BTFeatureListResponse(object):
         self._microversion_skew = None
         self.discriminator = None
 
+        if features is not None:
+            self.features = features
         if is_complete is not None:
             self.is_complete = is_complete
         if feature_states is not None:
             self.feature_states = feature_states
-        if features is not None:
-            self.features = features
         if default_features is not None:
             self.default_features = default_features
         if imports is not None:
@@ -97,6 +97,27 @@ class BTFeatureListResponse(object):
             self.reject_microversion_skew = reject_microversion_skew
         if microversion_skew is not None:
             self.microversion_skew = microversion_skew
+
+    @property
+    def features(self):
+        """Gets the features of this BTFeatureListResponse.  # noqa: E501
+
+
+        :return: The features of this BTFeatureListResponse.  # noqa: E501
+        :rtype: list[BTMFeature]
+        """
+        return self._features
+
+    @features.setter
+    def features(self, features):
+        """Sets the features of this BTFeatureListResponse.
+
+
+        :param features: The features of this BTFeatureListResponse.  # noqa: E501
+        :type: list[BTMFeature]
+        """
+
+        self._features = features
 
     @property
     def is_complete(self):
@@ -139,27 +160,6 @@ class BTFeatureListResponse(object):
         """
 
         self._feature_states = feature_states
-
-    @property
-    def features(self):
-        """Gets the features of this BTFeatureListResponse.  # noqa: E501
-
-
-        :return: The features of this BTFeatureListResponse.  # noqa: E501
-        :rtype: list[BTMFeature]
-        """
-        return self._features
-
-    @features.setter
-    def features(self, features):
-        """Sets the features of this BTFeatureListResponse.
-
-
-        :param features: The features of this BTFeatureListResponse.  # noqa: E501
-        :type: list[BTMFeature]
-        """
-
-        self._features = features
 
     @property
     def default_features(self):

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path_to_root** | [**list[PathSegment]**](PathSegment.md) |  | [optional] 
 **permission_set** | [**object**](.md) |  | [optional] 
+**path_to_root** | [**list[PathSegment]**](PathSegment.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **items** | [**list[BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 

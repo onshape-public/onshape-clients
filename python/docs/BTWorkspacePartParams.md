@@ -3,9 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**project** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
-**project** | **str** |  | [optional] 
+**connection_id** | **str** |  | [optional] 
+**material** | [**BTMaterialParams**](BTMaterialParams.md) |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **vendor** | **str** |  | [optional] 
 **product_line** | **str** |  | [optional] 
@@ -13,12 +15,10 @@ Name | Type | Description | Notes
 **title2** | **str** |  | [optional] 
 **title3** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
-**connection_id** | **str** |  | [optional] 
-**material** | [**BTMaterialParams**](BTMaterialParams.md) |  | [optional] 
 **custom_properties** | [**list[BTNameValuePair]**](BTNameValuePair.md) |  | [optional] 
-**appearance** | [**BTPartAppearanceParams**](BTPartAppearanceParams.md) |  | [optional] 
 **custom_property_definitions** | [**list[BTCustomPropertyDefinitionParams]**](BTCustomPropertyDefinitionParams.md) |  | [optional] 
 **apply_update_to_all_configurations** | **bool** |  | [optional] 
+**appearance** | [**BTPartAppearanceParams**](BTPartAppearanceParams.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

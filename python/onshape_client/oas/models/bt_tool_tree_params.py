@@ -32,6 +32,8 @@ class BTToolTreeParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner_id': 'str',
+        'capability': 'str',
         'node_type': 'int',
         'tool_name': 'str',
         'tooltip_key': 'str',
@@ -47,8 +49,6 @@ class BTToolTreeParams(object):
         'icon_initials': 'str',
         'context_menu': 'str',
         'is_newer_version_available': 'bool',
-        'capability': 'str',
-        'owner_id': 'str',
         'namespace': 'str',
         'icon': 'str',
         'owner_type': 'int',
@@ -59,6 +59,8 @@ class BTToolTreeParams(object):
     }
 
     attribute_map = {
+        'owner_id': 'ownerId',
+        'capability': 'capability',
         'node_type': 'nodeType',
         'tool_name': 'toolName',
         'tooltip_key': 'tooltipKey',
@@ -74,8 +76,6 @@ class BTToolTreeParams(object):
         'icon_initials': 'iconInitials',
         'context_menu': 'contextMenu',
         'is_newer_version_available': 'isNewerVersionAvailable',
-        'capability': 'capability',
-        'owner_id': 'ownerId',
         'namespace': 'namespace',
         'icon': 'icon',
         'owner_type': 'ownerType',
@@ -85,9 +85,11 @@ class BTToolTreeParams(object):
         'active': 'active'
     }
 
-    def __init__(self, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, use_history=None, mini=None, collection_name=None, icon_initials=None, context_menu=None, is_newer_version_available=None, capability=None, owner_id=None, namespace=None, icon=None, owner_type=None, context=None, priority=None, id=None, active=None):  # noqa: E501
+    def __init__(self, owner_id=None, capability=None, node_type=None, tool_name=None, tooltip_key=None, expanded_tooltip_key=None, command=None, command_details=None, feature_spec_name=None, fs_version=None, use_dynamic_snippet=None, use_history=None, mini=None, collection_name=None, icon_initials=None, context_menu=None, is_newer_version_available=None, namespace=None, icon=None, owner_type=None, context=None, priority=None, id=None, active=None):  # noqa: E501
         """BTToolTreeParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._owner_id = None
+        self._capability = None
         self._node_type = None
         self._tool_name = None
         self._tooltip_key = None
@@ -103,8 +105,6 @@ class BTToolTreeParams(object):
         self._icon_initials = None
         self._context_menu = None
         self._is_newer_version_available = None
-        self._capability = None
-        self._owner_id = None
         self._namespace = None
         self._icon = None
         self._owner_type = None
@@ -114,6 +114,10 @@ class BTToolTreeParams(object):
         self._active = None
         self.discriminator = None
 
+        if owner_id is not None:
+            self.owner_id = owner_id
+        if capability is not None:
+            self.capability = capability
         if node_type is not None:
             self.node_type = node_type
         if tool_name is not None:
@@ -144,10 +148,6 @@ class BTToolTreeParams(object):
             self.context_menu = context_menu
         if is_newer_version_available is not None:
             self.is_newer_version_available = is_newer_version_available
-        if capability is not None:
-            self.capability = capability
-        if owner_id is not None:
-            self.owner_id = owner_id
         if namespace is not None:
             self.namespace = namespace
         if icon is not None:
@@ -162,6 +162,48 @@ class BTToolTreeParams(object):
             self.id = id
         if active is not None:
             self.active = active
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTToolTreeParams.
+
+
+        :param owner_id: The owner_id of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
+
+    @property
+    def capability(self):
+        """Gets the capability of this BTToolTreeParams.  # noqa: E501
+
+
+        :return: The capability of this BTToolTreeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._capability
+
+    @capability.setter
+    def capability(self, capability):
+        """Sets the capability of this BTToolTreeParams.
+
+
+        :param capability: The capability of this BTToolTreeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._capability = capability
 
     @property
     def node_type(self):
@@ -477,48 +519,6 @@ class BTToolTreeParams(object):
         """
 
         self._is_newer_version_available = is_newer_version_available
-
-    @property
-    def capability(self):
-        """Gets the capability of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The capability of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._capability
-
-    @capability.setter
-    def capability(self, capability):
-        """Sets the capability of this BTToolTreeParams.
-
-
-        :param capability: The capability of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._capability = capability
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTToolTreeParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTToolTreeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTToolTreeParams.
-
-
-        :param owner_id: The owner_id of this BTToolTreeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
 
     @property
     def namespace(self):

@@ -32,47 +32,26 @@ class BTExportModelVertex(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'point': 'BTVector3d'
+        'point': 'BTVector3d',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'point': 'point'
+        'point': 'point',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, point=None):  # noqa: E501
+    def __init__(self, point=None, id=None):  # noqa: E501
         """BTExportModelVertex - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._point = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if point is not None:
             self.point = point
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportModelVertex.  # noqa: E501
-
-
-        :return: The id of this BTExportModelVertex.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportModelVertex.
-
-
-        :param id: The id of this BTExportModelVertex.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def point(self):
@@ -94,6 +73,27 @@ class BTExportModelVertex(object):
         """
 
         self._point = point
+
+    @property
+    def id(self):
+        """Gets the id of this BTExportModelVertex.  # noqa: E501
+
+
+        :return: The id of this BTExportModelVertex.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportModelVertex.
+
+
+        :param id: The id of this BTExportModelVertex.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

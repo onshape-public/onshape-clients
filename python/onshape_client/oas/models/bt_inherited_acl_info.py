@@ -33,73 +33,73 @@ class BTInheritedAclInfo(object):
     """
     openapi_types = {
         'object_name': 'str',
-        'visibility': 'str',
         'shared_with_support': 'bool',
+        'object_type': 'int',
         'entries': 'list[BTAclEntryInfo]',
         'object_id': 'str',
-        'object_type': 'int',
+        'visibility': 'str',
         'public': 'bool',
         'owner': 'BTOwnerInfo',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'object_name': 'objectName',
-        'visibility': 'visibility',
         'shared_with_support': 'sharedWithSupport',
+        'object_type': 'objectType',
         'entries': 'entries',
         'object_id': 'objectId',
-        'object_type': 'objectType',
+        'visibility': 'visibility',
         'public': 'public',
         'owner': 'owner',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, object_name=None, visibility=None, shared_with_support=None, entries=None, object_id=None, object_type=None, public=None, owner=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, object_name=None, shared_with_support=None, object_type=None, entries=None, object_id=None, visibility=None, public=None, owner=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTInheritedAclInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._object_name = None
-        self._visibility = None
         self._shared_with_support = None
+        self._object_type = None
         self._entries = None
         self._object_id = None
-        self._object_type = None
+        self._visibility = None
         self._public = None
         self._owner = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
         if object_name is not None:
             self.object_name = object_name
-        if visibility is not None:
-            self.visibility = visibility
         if shared_with_support is not None:
             self.shared_with_support = shared_with_support
+        if object_type is not None:
+            self.object_type = object_type
         if entries is not None:
             self.entries = entries
         if object_id is not None:
             self.object_id = object_id
-        if object_type is not None:
-            self.object_type = object_type
+        if visibility is not None:
+            self.visibility = visibility
         if public is not None:
             self.public = public
         if owner is not None:
             self.owner = owner
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -125,27 +125,6 @@ class BTInheritedAclInfo(object):
         self._object_name = object_name
 
     @property
-    def visibility(self):
-        """Gets the visibility of this BTInheritedAclInfo.  # noqa: E501
-
-
-        :return: The visibility of this BTInheritedAclInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._visibility
-
-    @visibility.setter
-    def visibility(self, visibility):
-        """Sets the visibility of this BTInheritedAclInfo.
-
-
-        :param visibility: The visibility of this BTInheritedAclInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._visibility = visibility
-
-    @property
     def shared_with_support(self):
         """Gets the shared_with_support of this BTInheritedAclInfo.  # noqa: E501
 
@@ -165,6 +144,27 @@ class BTInheritedAclInfo(object):
         """
 
         self._shared_with_support = shared_with_support
+
+    @property
+    def object_type(self):
+        """Gets the object_type of this BTInheritedAclInfo.  # noqa: E501
+
+
+        :return: The object_type of this BTInheritedAclInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._object_type
+
+    @object_type.setter
+    def object_type(self, object_type):
+        """Sets the object_type of this BTInheritedAclInfo.
+
+
+        :param object_type: The object_type of this BTInheritedAclInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._object_type = object_type
 
     @property
     def entries(self):
@@ -209,25 +209,25 @@ class BTInheritedAclInfo(object):
         self._object_id = object_id
 
     @property
-    def object_type(self):
-        """Gets the object_type of this BTInheritedAclInfo.  # noqa: E501
+    def visibility(self):
+        """Gets the visibility of this BTInheritedAclInfo.  # noqa: E501
 
 
-        :return: The object_type of this BTInheritedAclInfo.  # noqa: E501
-        :rtype: int
+        :return: The visibility of this BTInheritedAclInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._object_type
+        return self._visibility
 
-    @object_type.setter
-    def object_type(self, object_type):
-        """Sets the object_type of this BTInheritedAclInfo.
+    @visibility.setter
+    def visibility(self, visibility):
+        """Sets the visibility of this BTInheritedAclInfo.
 
 
-        :param object_type: The object_type of this BTInheritedAclInfo.  # noqa: E501
-        :type: int
+        :param visibility: The visibility of this BTInheritedAclInfo.  # noqa: E501
+        :type: str
         """
 
-        self._object_type = object_type
+        self._visibility = visibility
 
     @property
     def public(self):
@@ -272,27 +272,6 @@ class BTInheritedAclInfo(object):
         self._owner = owner
 
     @property
-    def id(self):
-        """Gets the id of this BTInheritedAclInfo.  # noqa: E501
-
-
-        :return: The id of this BTInheritedAclInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTInheritedAclInfo.
-
-
-        :param id: The id of this BTInheritedAclInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTInheritedAclInfo.  # noqa: E501
 
@@ -333,6 +312,27 @@ class BTInheritedAclInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTInheritedAclInfo.  # noqa: E501
+
+
+        :return: The id of this BTInheritedAclInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTInheritedAclInfo.
+
+
+        :param id: The id of this BTInheritedAclInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

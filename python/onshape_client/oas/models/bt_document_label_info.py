@@ -32,14 +32,68 @@ class BTDocumentLabelInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'path': 'str',
+        'parent_label_id': 'str'
     }
 
     attribute_map = {
+        'path': 'path',
+        'parent_label_id': 'parentLabelId'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, path=None, parent_label_id=None):  # noqa: E501
         """BTDocumentLabelInfo - a model defined in OpenAPI"""  # noqa: E501
+
+        self._path = None
+        self._parent_label_id = None
         self.discriminator = None
+
+        if path is not None:
+            self.path = path
+        if parent_label_id is not None:
+            self.parent_label_id = parent_label_id
+
+    @property
+    def path(self):
+        """Gets the path of this BTDocumentLabelInfo.  # noqa: E501
+
+
+        :return: The path of this BTDocumentLabelInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this BTDocumentLabelInfo.
+
+
+        :param path: The path of this BTDocumentLabelInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
+
+    @property
+    def parent_label_id(self):
+        """Gets the parent_label_id of this BTDocumentLabelInfo.  # noqa: E501
+
+
+        :return: The parent_label_id of this BTDocumentLabelInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_label_id
+
+    @parent_label_id.setter
+    def parent_label_id(self, parent_label_id):
+        """Sets the parent_label_id of this BTDocumentLabelInfo.
+
+
+        :param parent_label_id: The parent_label_id of this BTDocumentLabelInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_label_id = parent_label_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

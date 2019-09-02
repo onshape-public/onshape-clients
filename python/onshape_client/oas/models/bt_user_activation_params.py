@@ -32,42 +32,40 @@ class BTUserActivationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'phone_number': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
         'default_company_name': 'str',
+        'phone_number': 'str',
         'role': 'int',
         'password': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'phone_number': 'phoneNumber',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
         'default_company_name': 'defaultCompanyName',
+        'phone_number': 'phoneNumber',
         'role': 'role',
         'password': 'password',
         'id': 'id'
     }
 
-    def __init__(self, phone_number=None, first_name=None, last_name=None, email=None, default_company_name=None, role=None, password=None, id=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email=None, default_company_name=None, phone_number=None, role=None, password=None, id=None):  # noqa: E501
         """BTUserActivationParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._phone_number = None
         self._first_name = None
         self._last_name = None
         self._email = None
         self._default_company_name = None
+        self._phone_number = None
         self._role = None
         self._password = None
         self._id = None
         self.discriminator = None
 
-        if phone_number is not None:
-            self.phone_number = phone_number
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -76,33 +74,14 @@ class BTUserActivationParams(object):
             self.email = email
         if default_company_name is not None:
             self.default_company_name = default_company_name
+        if phone_number is not None:
+            self.phone_number = phone_number
         if role is not None:
             self.role = role
         if password is not None:
             self.password = password
         if id is not None:
             self.id = id
-
-    @property
-    def phone_number(self):
-        """Gets the phone_number of this BTUserActivationParams.  # noqa: E501
-
-
-        :return: The phone_number of this BTUserActivationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._phone_number
-
-    @phone_number.setter
-    def phone_number(self, phone_number):
-        """Sets the phone_number of this BTUserActivationParams.
-
-
-        :param phone_number: The phone_number of this BTUserActivationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._phone_number = phone_number
 
     @property
     def first_name(self):
@@ -187,6 +166,27 @@ class BTUserActivationParams(object):
         """
 
         self._default_company_name = default_company_name
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this BTUserActivationParams.  # noqa: E501
+
+
+        :return: The phone_number of this BTUserActivationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this BTUserActivationParams.
+
+
+        :param phone_number: The phone_number of this BTUserActivationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._phone_number = phone_number
 
     @property
     def role(self):

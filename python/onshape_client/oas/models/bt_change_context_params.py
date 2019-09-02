@@ -33,30 +33,30 @@ class BTChangeContextParams(object):
     """
     openapi_types = {
         'context_path': 'list[str]',
-        'description': 'str',
-        'context_id': 'str'
+        'context_id': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
         'context_path': 'contextPath',
-        'description': 'description',
-        'context_id': 'contextId'
+        'context_id': 'contextId',
+        'description': 'description'
     }
 
-    def __init__(self, context_path=None, description=None, context_id=None):  # noqa: E501
+    def __init__(self, context_path=None, context_id=None, description=None):  # noqa: E501
         """BTChangeContextParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._context_path = None
-        self._description = None
         self._context_id = None
+        self._description = None
         self.discriminator = None
 
         if context_path is not None:
             self.context_path = context_path
-        if description is not None:
-            self.description = description
         if context_id is not None:
             self.context_id = context_id
+        if description is not None:
+            self.description = description
 
     @property
     def context_path(self):
@@ -80,27 +80,6 @@ class BTChangeContextParams(object):
         self._context_path = context_path
 
     @property
-    def description(self):
-        """Gets the description of this BTChangeContextParams.  # noqa: E501
-
-
-        :return: The description of this BTChangeContextParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTChangeContextParams.
-
-
-        :param description: The description of this BTChangeContextParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def context_id(self):
         """Gets the context_id of this BTChangeContextParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTChangeContextParams(object):
         """
 
         self._context_id = context_id
+
+    @property
+    def description(self):
+        """Gets the description of this BTChangeContextParams.  # noqa: E501
+
+
+        :return: The description of this BTChangeContextParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTChangeContextParams.
+
+
+        :param description: The description of this BTChangeContextParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

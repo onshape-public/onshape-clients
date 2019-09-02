@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workflow_type** | **int** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**workflow_type** | **int** |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 
 **description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

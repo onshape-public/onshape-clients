@@ -32,34 +32,36 @@ class BTDiscountParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'plan_id': 'str',
         'percent_off': 'int',
         'amount_off': 'int',
         'coupon_type': 'int',
         'coupon_valid_months': 'int',
-        'expires_in_days': 'int',
-        'plan_id': 'str'
+        'expires_in_days': 'int'
     }
 
     attribute_map = {
+        'plan_id': 'planId',
         'percent_off': 'percentOff',
         'amount_off': 'amountOff',
         'coupon_type': 'couponType',
         'coupon_valid_months': 'couponValidMonths',
-        'expires_in_days': 'expiresInDays',
-        'plan_id': 'planId'
+        'expires_in_days': 'expiresInDays'
     }
 
-    def __init__(self, percent_off=None, amount_off=None, coupon_type=None, coupon_valid_months=None, expires_in_days=None, plan_id=None):  # noqa: E501
+    def __init__(self, plan_id=None, percent_off=None, amount_off=None, coupon_type=None, coupon_valid_months=None, expires_in_days=None):  # noqa: E501
         """BTDiscountParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._plan_id = None
         self._percent_off = None
         self._amount_off = None
         self._coupon_type = None
         self._coupon_valid_months = None
         self._expires_in_days = None
-        self._plan_id = None
         self.discriminator = None
 
+        if plan_id is not None:
+            self.plan_id = plan_id
         if percent_off is not None:
             self.percent_off = percent_off
         if amount_off is not None:
@@ -70,8 +72,27 @@ class BTDiscountParams(object):
             self.coupon_valid_months = coupon_valid_months
         if expires_in_days is not None:
             self.expires_in_days = expires_in_days
-        if plan_id is not None:
-            self.plan_id = plan_id
+
+    @property
+    def plan_id(self):
+        """Gets the plan_id of this BTDiscountParams.  # noqa: E501
+
+
+        :return: The plan_id of this BTDiscountParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        """Sets the plan_id of this BTDiscountParams.
+
+
+        :param plan_id: The plan_id of this BTDiscountParams.  # noqa: E501
+        :type: str
+        """
+
+        self._plan_id = plan_id
 
     @property
     def percent_off(self):
@@ -177,27 +198,6 @@ class BTDiscountParams(object):
         """
 
         self._expires_in_days = expires_in_days
-
-    @property
-    def plan_id(self):
-        """Gets the plan_id of this BTDiscountParams.  # noqa: E501
-
-
-        :return: The plan_id of this BTDiscountParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._plan_id
-
-    @plan_id.setter
-    def plan_id(self, plan_id):
-        """Sets the plan_id of this BTDiscountParams.
-
-
-        :param plan_id: The plan_id of this BTDiscountParams.  # noqa: E501
-        :type: str
-        """
-
-        self._plan_id = plan_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,44 +32,40 @@ class BTAddressInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'zip': 'str',
         'address': 'str',
         'city': 'str',
         'state_code': 'str',
         'country': 'str',
         'country_code': 'str',
-        'state': 'str'
+        'zip': 'str',
+        'state': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'zip': 'zip',
         'address': 'address',
         'city': 'city',
         'state_code': 'stateCode',
         'country': 'country',
         'country_code': 'countryCode',
-        'state': 'state'
+        'zip': 'zip',
+        'state': 'state',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, zip=None, address=None, city=None, state_code=None, country=None, country_code=None, state=None):  # noqa: E501
+    def __init__(self, address=None, city=None, state_code=None, country=None, country_code=None, zip=None, state=None, id=None):  # noqa: E501
         """BTAddressInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
-        self._zip = None
         self._address = None
         self._city = None
         self._state_code = None
         self._country = None
         self._country_code = None
+        self._zip = None
         self._state = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if zip is not None:
-            self.zip = zip
         if address is not None:
             self.address = address
         if city is not None:
@@ -80,50 +76,12 @@ class BTAddressInfo(object):
             self.country = country
         if country_code is not None:
             self.country_code = country_code
+        if zip is not None:
+            self.zip = zip
         if state is not None:
             self.state = state
-
-    @property
-    def id(self):
-        """Gets the id of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The id of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTAddressInfo.
-
-
-        :param id: The id of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def zip(self):
-        """Gets the zip of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The zip of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._zip
-
-    @zip.setter
-    def zip(self, zip):
-        """Sets the zip of this BTAddressInfo.
-
-
-        :param zip: The zip of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._zip = zip
+        if id is not None:
+            self.id = id
 
     @property
     def address(self):
@@ -231,6 +189,27 @@ class BTAddressInfo(object):
         self._country_code = country_code
 
     @property
+    def zip(self):
+        """Gets the zip of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The zip of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._zip
+
+    @zip.setter
+    def zip(self, zip):
+        """Sets the zip of this BTAddressInfo.
+
+
+        :param zip: The zip of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._zip = zip
+
+    @property
     def state(self):
         """Gets the state of this BTAddressInfo.  # noqa: E501
 
@@ -250,6 +229,27 @@ class BTAddressInfo(object):
         """
 
         self._state = state
+
+    @property
+    def id(self):
+        """Gets the id of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The id of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTAddressInfo.
+
+
+        :param id: The id of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

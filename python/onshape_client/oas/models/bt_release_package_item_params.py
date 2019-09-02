@@ -32,92 +32,92 @@ class BTReleasePackageItemParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration': 'str',
+        'href': 'str',
         'version_id': 'str',
+        'configuration': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'href': 'str',
+        'is_included': 'bool',
         'part_number': 'str',
         'part_id': 'str',
-        'is_included': 'bool',
         'properties': 'list[BTPropertyValueParam]',
         'id': 'str'
     }
 
     attribute_map = {
-        'configuration': 'configuration',
+        'href': 'href',
         'version_id': 'versionId',
+        'configuration': 'configuration',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'href': 'href',
+        'is_included': 'isIncluded',
         'part_number': 'partNumber',
         'part_id': 'partId',
-        'is_included': 'isIncluded',
         'properties': 'properties',
         'id': 'id'
     }
 
-    def __init__(self, configuration=None, version_id=None, workspace_id=None, element_id=None, document_id=None, href=None, part_number=None, part_id=None, is_included=None, properties=None, id=None):  # noqa: E501
+    def __init__(self, href=None, version_id=None, configuration=None, workspace_id=None, element_id=None, document_id=None, is_included=None, part_number=None, part_id=None, properties=None, id=None):  # noqa: E501
         """BTReleasePackageItemParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration = None
+        self._href = None
         self._version_id = None
+        self._configuration = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
-        self._href = None
+        self._is_included = None
         self._part_number = None
         self._part_id = None
-        self._is_included = None
         self._properties = None
         self._id = None
         self.discriminator = None
 
-        if configuration is not None:
-            self.configuration = configuration
+        if href is not None:
+            self.href = href
         if version_id is not None:
             self.version_id = version_id
+        if configuration is not None:
+            self.configuration = configuration
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-        if href is not None:
-            self.href = href
+        if is_included is not None:
+            self.is_included = is_included
         if part_number is not None:
             self.part_number = part_number
         if part_id is not None:
             self.part_id = part_id
-        if is_included is not None:
-            self.is_included = is_included
         if properties is not None:
             self.properties = properties
         if id is not None:
             self.id = id
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTReleasePackageItemParams.  # noqa: E501
+    def href(self):
+        """Gets the href of this BTReleasePackageItemParams.  # noqa: E501
 
 
-        :return: The configuration of this BTReleasePackageItemParams.  # noqa: E501
+        :return: The href of this BTReleasePackageItemParams.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._href
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTReleasePackageItemParams.
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BTReleasePackageItemParams.
 
 
-        :param configuration: The configuration of this BTReleasePackageItemParams.  # noqa: E501
+        :param href: The href of this BTReleasePackageItemParams.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._href = href
 
     @property
     def version_id(self):
@@ -139,6 +139,27 @@ class BTReleasePackageItemParams(object):
         """
 
         self._version_id = version_id
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this BTReleasePackageItemParams.  # noqa: E501
+
+
+        :return: The configuration of this BTReleasePackageItemParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTReleasePackageItemParams.
+
+
+        :param configuration: The configuration of this BTReleasePackageItemParams.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration = configuration
 
     @property
     def workspace_id(self):
@@ -204,25 +225,25 @@ class BTReleasePackageItemParams(object):
         self._document_id = document_id
 
     @property
-    def href(self):
-        """Gets the href of this BTReleasePackageItemParams.  # noqa: E501
+    def is_included(self):
+        """Gets the is_included of this BTReleasePackageItemParams.  # noqa: E501
 
 
-        :return: The href of this BTReleasePackageItemParams.  # noqa: E501
-        :rtype: str
+        :return: The is_included of this BTReleasePackageItemParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._href
+        return self._is_included
 
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BTReleasePackageItemParams.
+    @is_included.setter
+    def is_included(self, is_included):
+        """Sets the is_included of this BTReleasePackageItemParams.
 
 
-        :param href: The href of this BTReleasePackageItemParams.  # noqa: E501
-        :type: str
+        :param is_included: The is_included of this BTReleasePackageItemParams.  # noqa: E501
+        :type: bool
         """
 
-        self._href = href
+        self._is_included = is_included
 
     @property
     def part_number(self):
@@ -265,27 +286,6 @@ class BTReleasePackageItemParams(object):
         """
 
         self._part_id = part_id
-
-    @property
-    def is_included(self):
-        """Gets the is_included of this BTReleasePackageItemParams.  # noqa: E501
-
-
-        :return: The is_included of this BTReleasePackageItemParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_included
-
-    @is_included.setter
-    def is_included(self, is_included):
-        """Sets the is_included of this BTReleasePackageItemParams.
-
-
-        :param is_included: The is_included of this BTReleasePackageItemParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_included = is_included
 
     @property
     def properties(self):

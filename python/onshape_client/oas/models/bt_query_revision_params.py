@@ -32,47 +32,26 @@ class BTQueryRevisionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'node_ids': 'list[str]',
-        'company_id': 'str'
+        'company_id': 'str',
+        'node_ids': 'list[str]'
     }
 
     attribute_map = {
-        'node_ids': 'nodeIds',
-        'company_id': 'companyId'
+        'company_id': 'companyId',
+        'node_ids': 'nodeIds'
     }
 
-    def __init__(self, node_ids=None, company_id=None):  # noqa: E501
+    def __init__(self, company_id=None, node_ids=None):  # noqa: E501
         """BTQueryRevisionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._node_ids = None
         self._company_id = None
+        self._node_ids = None
         self.discriminator = None
 
-        if node_ids is not None:
-            self.node_ids = node_ids
         if company_id is not None:
             self.company_id = company_id
-
-    @property
-    def node_ids(self):
-        """Gets the node_ids of this BTQueryRevisionParams.  # noqa: E501
-
-
-        :return: The node_ids of this BTQueryRevisionParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._node_ids
-
-    @node_ids.setter
-    def node_ids(self, node_ids):
-        """Sets the node_ids of this BTQueryRevisionParams.
-
-
-        :param node_ids: The node_ids of this BTQueryRevisionParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._node_ids = node_ids
+        if node_ids is not None:
+            self.node_ids = node_ids
 
     @property
     def company_id(self):
@@ -94,6 +73,27 @@ class BTQueryRevisionParams(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def node_ids(self):
+        """Gets the node_ids of this BTQueryRevisionParams.  # noqa: E501
+
+
+        :return: The node_ids of this BTQueryRevisionParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._node_ids
+
+    @node_ids.setter
+    def node_ids(self, node_ids):
+        """Sets the node_ids of this BTQueryRevisionParams.
+
+
+        :param node_ids: The node_ids of this BTQueryRevisionParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._node_ids = node_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

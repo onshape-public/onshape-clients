@@ -32,36 +32,57 @@ class BTAdminRolePermissionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'allowed': 'bool',
         '_resource_path': 'str',
         'resource_label': 'str',
-        'allowed': 'bool',
         'method': 'str'
     }
 
     attribute_map = {
+        'allowed': 'allowed',
         '_resource_path': 'resourcePath',
         'resource_label': 'resourceLabel',
-        'allowed': 'allowed',
         'method': 'method'
     }
 
-    def __init__(self, _resource_path=None, resource_label=None, allowed=None, method=None):  # noqa: E501
+    def __init__(self, allowed=None, _resource_path=None, resource_label=None, method=None):  # noqa: E501
         """BTAdminRolePermissionParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._allowed = None
         self.__resource_path = None
         self._resource_label = None
-        self._allowed = None
         self._method = None
         self.discriminator = None
 
+        if allowed is not None:
+            self.allowed = allowed
         if _resource_path is not None:
             self._resource_path = _resource_path
         if resource_label is not None:
             self.resource_label = resource_label
-        if allowed is not None:
-            self.allowed = allowed
         if method is not None:
             self.method = method
+
+    @property
+    def allowed(self):
+        """Gets the allowed of this BTAdminRolePermissionParams.  # noqa: E501
+
+
+        :return: The allowed of this BTAdminRolePermissionParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allowed
+
+    @allowed.setter
+    def allowed(self, allowed):
+        """Sets the allowed of this BTAdminRolePermissionParams.
+
+
+        :param allowed: The allowed of this BTAdminRolePermissionParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._allowed = allowed
 
     @property
     def _resource_path(self):
@@ -104,27 +125,6 @@ class BTAdminRolePermissionParams(object):
         """
 
         self._resource_label = resource_label
-
-    @property
-    def allowed(self):
-        """Gets the allowed of this BTAdminRolePermissionParams.  # noqa: E501
-
-
-        :return: The allowed of this BTAdminRolePermissionParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._allowed
-
-    @allowed.setter
-    def allowed(self, allowed):
-        """Sets the allowed of this BTAdminRolePermissionParams.
-
-
-        :param allowed: The allowed of this BTAdminRolePermissionParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._allowed = allowed
 
     @property
     def method(self):

@@ -35,26 +35,26 @@ class BTUpdateInContextParams(object):
         'microversion_id': 'BTMicroversionId',
         'encoded_context_configuration': 'str',
         'use_latest_microversion': 'bool',
-        'description': 'str',
-        'context_id': 'str'
+        'context_id': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
         'microversion_id': 'microversionId',
         'encoded_context_configuration': 'encodedContextConfiguration',
         'use_latest_microversion': 'useLatestMicroversion',
-        'description': 'description',
-        'context_id': 'contextId'
+        'context_id': 'contextId',
+        'description': 'description'
     }
 
-    def __init__(self, microversion_id=None, encoded_context_configuration=None, use_latest_microversion=None, description=None, context_id=None):  # noqa: E501
+    def __init__(self, microversion_id=None, encoded_context_configuration=None, use_latest_microversion=None, context_id=None, description=None):  # noqa: E501
         """BTUpdateInContextParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._microversion_id = None
         self._encoded_context_configuration = None
         self._use_latest_microversion = None
-        self._description = None
         self._context_id = None
+        self._description = None
         self.discriminator = None
 
         if microversion_id is not None:
@@ -63,10 +63,10 @@ class BTUpdateInContextParams(object):
             self.encoded_context_configuration = encoded_context_configuration
         if use_latest_microversion is not None:
             self.use_latest_microversion = use_latest_microversion
-        if description is not None:
-            self.description = description
         if context_id is not None:
             self.context_id = context_id
+        if description is not None:
+            self.description = description
 
     @property
     def microversion_id(self):
@@ -132,27 +132,6 @@ class BTUpdateInContextParams(object):
         self._use_latest_microversion = use_latest_microversion
 
     @property
-    def description(self):
-        """Gets the description of this BTUpdateInContextParams.  # noqa: E501
-
-
-        :return: The description of this BTUpdateInContextParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTUpdateInContextParams.
-
-
-        :param description: The description of this BTUpdateInContextParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def context_id(self):
         """Gets the context_id of this BTUpdateInContextParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTUpdateInContextParams(object):
         """
 
         self._context_id = context_id
+
+    @property
+    def description(self):
+        """Gets the description of this BTUpdateInContextParams.  # noqa: E501
+
+
+        :return: The description of this BTUpdateInContextParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTUpdateInContextParams.
+
+
+        :param description: The description of this BTUpdateInContextParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

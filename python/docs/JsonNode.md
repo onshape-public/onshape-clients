@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**textual** | **bool** |  | [optional] 
 **node_type** | **str** |  | [optional] 
 **object** | **bool** |  | [optional] 
+**textual** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 
 **missing_node** | **bool** |  | [optional] 

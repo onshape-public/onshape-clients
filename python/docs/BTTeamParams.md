@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner_id** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
 **owner_type** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 

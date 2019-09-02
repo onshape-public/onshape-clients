@@ -32,61 +32,88 @@ class BTDeviceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'client_type': 'str',
         'device_name': 'str',
         'operating_system': 'str',
-        'client_type': 'str',
         'device_type': 'str',
         'browser': 'str',
         'manufacturer': 'str',
+        'mobile': 'bool',
         'version': 'BTUserAgentVersion',
-        'description': 'str',
-        'mobile': 'bool'
+        'description': 'str'
     }
 
     attribute_map = {
+        'client_type': 'clientType',
         'device_name': 'deviceName',
         'operating_system': 'operatingSystem',
-        'client_type': 'clientType',
         'device_type': 'deviceType',
         'browser': 'browser',
         'manufacturer': 'manufacturer',
+        'mobile': 'mobile',
         'version': 'version',
-        'description': 'description',
-        'mobile': 'mobile'
+        'description': 'description'
     }
 
-    def __init__(self, device_name=None, operating_system=None, client_type=None, device_type=None, browser=None, manufacturer=None, version=None, description=None, mobile=None):  # noqa: E501
+    def __init__(self, client_type=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None, mobile=None, version=None, description=None):  # noqa: E501
         """BTDeviceInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._client_type = None
         self._device_name = None
         self._operating_system = None
-        self._client_type = None
         self._device_type = None
         self._browser = None
         self._manufacturer = None
+        self._mobile = None
         self._version = None
         self._description = None
-        self._mobile = None
         self.discriminator = None
 
+        if client_type is not None:
+            self.client_type = client_type
         if device_name is not None:
             self.device_name = device_name
         if operating_system is not None:
             self.operating_system = operating_system
-        if client_type is not None:
-            self.client_type = client_type
         if device_type is not None:
             self.device_type = device_type
         if browser is not None:
             self.browser = browser
         if manufacturer is not None:
             self.manufacturer = manufacturer
+        if mobile is not None:
+            self.mobile = mobile
         if version is not None:
             self.version = version
         if description is not None:
             self.description = description
-        if mobile is not None:
-            self.mobile = mobile
+
+    @property
+    def client_type(self):
+        """Gets the client_type of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The client_type of this BTDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_type
+
+    @client_type.setter
+    def client_type(self, client_type):
+        """Sets the client_type of this BTDeviceInfo.
+
+
+        :param client_type: The client_type of this BTDeviceInfo.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["UNKNOWN", "BROWSER", "IOS", "ANDROID", "MAGIC_LEAP"]  # noqa: E501
+        if client_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `client_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(client_type, allowed_values)
+            )
+
+        self._client_type = client_type
 
     @property
     def device_name(self):
@@ -135,33 +162,6 @@ class BTDeviceInfo(object):
             )
 
         self._operating_system = operating_system
-
-    @property
-    def client_type(self):
-        """Gets the client_type of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The client_type of this BTDeviceInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._client_type
-
-    @client_type.setter
-    def client_type(self, client_type):
-        """Sets the client_type of this BTDeviceInfo.
-
-
-        :param client_type: The client_type of this BTDeviceInfo.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["UNKNOWN", "BROWSER", "IOS", "ANDROID", "MAGIC_LEAP"]  # noqa: E501
-        if client_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `client_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(client_type, allowed_values)
-            )
-
-        self._client_type = client_type
 
     @property
     def device_type(self):
@@ -233,6 +233,27 @@ class BTDeviceInfo(object):
         self._manufacturer = manufacturer
 
     @property
+    def mobile(self):
+        """Gets the mobile of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The mobile of this BTDeviceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._mobile
+
+    @mobile.setter
+    def mobile(self, mobile):
+        """Sets the mobile of this BTDeviceInfo.
+
+
+        :param mobile: The mobile of this BTDeviceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._mobile = mobile
+
+    @property
     def version(self):
         """Gets the version of this BTDeviceInfo.  # noqa: E501
 
@@ -273,27 +294,6 @@ class BTDeviceInfo(object):
         """
 
         self._description = description
-
-    @property
-    def mobile(self):
-        """Gets the mobile of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The mobile of this BTDeviceInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._mobile
-
-    @mobile.setter
-    def mobile(self, mobile):
-        """Sets the mobile of this BTDeviceInfo.
-
-
-        :param mobile: The mobile of this BTDeviceInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._mobile = mobile
 
     def to_dict(self):
         """Returns the model properties as a dict"""

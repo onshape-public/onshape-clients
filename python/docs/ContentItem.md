@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **anchor** | **str** |  | [optional] 
 **vertical_offset** | **int** |  | [optional] 
 **horizontal_offset** | **int** |  | [optional] 
-**position** | **str** |  | [optional] 
 **link** | **str** |  | [optional] 
+**position** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

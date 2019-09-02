@@ -32,14 +32,42 @@ class BTGlobalTreeMagicNodeInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'sub_type': 'int'
     }
 
     attribute_map = {
+        'sub_type': 'subType'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, sub_type=None):  # noqa: E501
         """BTGlobalTreeMagicNodeInfo - a model defined in OpenAPI"""  # noqa: E501
+
+        self._sub_type = None
         self.discriminator = None
+
+        if sub_type is not None:
+            self.sub_type = sub_type
+
+    @property
+    def sub_type(self):
+        """Gets the sub_type of this BTGlobalTreeMagicNodeInfo.  # noqa: E501
+
+
+        :return: The sub_type of this BTGlobalTreeMagicNodeInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._sub_type
+
+    @sub_type.setter
+    def sub_type(self, sub_type):
+        """Sets the sub_type of this BTGlobalTreeMagicNodeInfo.
+
+
+        :param sub_type: The sub_type of this BTGlobalTreeMagicNodeInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._sub_type = sub_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

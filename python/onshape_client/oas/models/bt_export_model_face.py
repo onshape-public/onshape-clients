@@ -32,67 +32,46 @@ class BTExportModelFace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'orientation': 'bool',
         'area': 'float',
-        'box': 'BTBoundingBox',
         'surface': 'BTSurfaceDescription',
-        'loops': 'list[BTExportModelLoop]'
+        'loops': 'list[BTExportModelLoop]',
+        'box': 'BTBoundingBox',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'orientation': 'orientation',
         'area': 'area',
-        'box': 'box',
         'surface': 'surface',
-        'loops': 'loops'
+        'loops': 'loops',
+        'box': 'box',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, orientation=None, area=None, box=None, surface=None, loops=None):  # noqa: E501
+    def __init__(self, orientation=None, area=None, surface=None, loops=None, box=None, id=None):  # noqa: E501
         """BTExportModelFace - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._orientation = None
         self._area = None
-        self._box = None
         self._surface = None
         self._loops = None
+        self._box = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if orientation is not None:
             self.orientation = orientation
         if area is not None:
             self.area = area
-        if box is not None:
-            self.box = box
         if surface is not None:
             self.surface = surface
         if loops is not None:
             self.loops = loops
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportModelFace.  # noqa: E501
-
-
-        :return: The id of this BTExportModelFace.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportModelFace.
-
-
-        :param id: The id of this BTExportModelFace.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if box is not None:
+            self.box = box
+        if id is not None:
+            self.id = id
 
     @property
     def orientation(self):
@@ -137,27 +116,6 @@ class BTExportModelFace(object):
         self._area = area
 
     @property
-    def box(self):
-        """Gets the box of this BTExportModelFace.  # noqa: E501
-
-
-        :return: The box of this BTExportModelFace.  # noqa: E501
-        :rtype: BTBoundingBox
-        """
-        return self._box
-
-    @box.setter
-    def box(self, box):
-        """Sets the box of this BTExportModelFace.
-
-
-        :param box: The box of this BTExportModelFace.  # noqa: E501
-        :type: BTBoundingBox
-        """
-
-        self._box = box
-
-    @property
     def surface(self):
         """Gets the surface of this BTExportModelFace.  # noqa: E501
 
@@ -198,6 +156,48 @@ class BTExportModelFace(object):
         """
 
         self._loops = loops
+
+    @property
+    def box(self):
+        """Gets the box of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The box of this BTExportModelFace.  # noqa: E501
+        :rtype: BTBoundingBox
+        """
+        return self._box
+
+    @box.setter
+    def box(self, box):
+        """Sets the box of this BTExportModelFace.
+
+
+        :param box: The box of this BTExportModelFace.  # noqa: E501
+        :type: BTBoundingBox
+        """
+
+        self._box = box
+
+    @property
+    def id(self):
+        """Gets the id of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The id of this BTExportModelFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportModelFace.
+
+
+        :param id: The id of this BTExportModelFace.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

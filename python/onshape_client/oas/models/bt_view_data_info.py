@@ -33,33 +33,33 @@ class BTViewDataInfo(object):
     """
     openapi_types = {
         'is_perspective': 'bool',
-        'camera_viewport': 'list[float]',
         'angle': 'float',
+        'camera_viewport': 'list[float]',
         'view_matrix': 'list[float]'
     }
 
     attribute_map = {
         'is_perspective': 'isPerspective',
-        'camera_viewport': 'cameraViewport',
         'angle': 'angle',
+        'camera_viewport': 'cameraViewport',
         'view_matrix': 'viewMatrix'
     }
 
-    def __init__(self, is_perspective=None, camera_viewport=None, angle=None, view_matrix=None):  # noqa: E501
+    def __init__(self, is_perspective=None, angle=None, camera_viewport=None, view_matrix=None):  # noqa: E501
         """BTViewDataInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._is_perspective = None
-        self._camera_viewport = None
         self._angle = None
+        self._camera_viewport = None
         self._view_matrix = None
         self.discriminator = None
 
         if is_perspective is not None:
             self.is_perspective = is_perspective
-        if camera_viewport is not None:
-            self.camera_viewport = camera_viewport
         if angle is not None:
             self.angle = angle
+        if camera_viewport is not None:
+            self.camera_viewport = camera_viewport
         if view_matrix is not None:
             self.view_matrix = view_matrix
 
@@ -85,27 +85,6 @@ class BTViewDataInfo(object):
         self._is_perspective = is_perspective
 
     @property
-    def camera_viewport(self):
-        """Gets the camera_viewport of this BTViewDataInfo.  # noqa: E501
-
-
-        :return: The camera_viewport of this BTViewDataInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._camera_viewport
-
-    @camera_viewport.setter
-    def camera_viewport(self, camera_viewport):
-        """Sets the camera_viewport of this BTViewDataInfo.
-
-
-        :param camera_viewport: The camera_viewport of this BTViewDataInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._camera_viewport = camera_viewport
-
-    @property
     def angle(self):
         """Gets the angle of this BTViewDataInfo.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTViewDataInfo(object):
         """
 
         self._angle = angle
+
+    @property
+    def camera_viewport(self):
+        """Gets the camera_viewport of this BTViewDataInfo.  # noqa: E501
+
+
+        :return: The camera_viewport of this BTViewDataInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._camera_viewport
+
+    @camera_viewport.setter
+    def camera_viewport(self, camera_viewport):
+        """Sets the camera_viewport of this BTViewDataInfo.
+
+
+        :param camera_viewport: The camera_viewport of this BTViewDataInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._camera_viewport = camera_viewport
 
     @property
     def view_matrix(self):

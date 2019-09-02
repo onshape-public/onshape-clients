@@ -36,9 +36,9 @@ class BTOwnerInfo(object):
         'is_enterprise_owned_resource': 'bool',
         'accept_ownership_transfer': 'bool',
         'type': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
+        'id': 'str',
         'name': 'str'
     }
 
@@ -47,22 +47,22 @@ class BTOwnerInfo(object):
         'is_enterprise_owned_resource': 'isEnterpriseOwnedResource',
         'accept_ownership_transfer': 'acceptOwnershipTransfer',
         'type': 'type',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
+        'id': 'id',
         'name': 'name'
     }
 
-    def __init__(self, image=None, is_enterprise_owned_resource=None, accept_ownership_transfer=None, type=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, image=None, is_enterprise_owned_resource=None, accept_ownership_transfer=None, type=None, href=None, view_ref=None, id=None, name=None):  # noqa: E501
         """BTOwnerInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._image = None
         self._is_enterprise_owned_resource = None
         self._accept_ownership_transfer = None
         self._type = None
-        self._id = None
         self._href = None
         self._view_ref = None
+        self._id = None
         self._name = None
         self.discriminator = None
 
@@ -74,12 +74,12 @@ class BTOwnerInfo(object):
             self.accept_ownership_transfer = accept_ownership_transfer
         if type is not None:
             self.type = type
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
 
@@ -168,27 +168,6 @@ class BTOwnerInfo(object):
         self._type = type
 
     @property
-    def id(self):
-        """Gets the id of this BTOwnerInfo.  # noqa: E501
-
-
-        :return: The id of this BTOwnerInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTOwnerInfo.
-
-
-        :param id: The id of this BTOwnerInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTOwnerInfo.  # noqa: E501
 
@@ -229,6 +208,27 @@ class BTOwnerInfo(object):
         """
 
         self._view_ref = view_ref
+
+    @property
+    def id(self):
+        """Gets the id of this BTOwnerInfo.  # noqa: E501
+
+
+        :return: The id of this BTOwnerInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTOwnerInfo.
+
+
+        :param id: The id of this BTOwnerInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):

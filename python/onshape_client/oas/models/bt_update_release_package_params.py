@@ -32,57 +32,36 @@ class BTUpdateReleasePackageParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[BTReleasePackageItemParams]',
         'item_ids': 'list[str]',
+        'items': 'list[BTReleasePackageItemParams]',
         'empty': 'bool',
         'properties': 'list[BTPropertyValueParam]'
     }
 
     attribute_map = {
-        'items': 'items',
         'item_ids': 'itemIds',
+        'items': 'items',
         'empty': 'empty',
         'properties': 'properties'
     }
 
-    def __init__(self, items=None, item_ids=None, empty=None, properties=None):  # noqa: E501
+    def __init__(self, item_ids=None, items=None, empty=None, properties=None):  # noqa: E501
         """BTUpdateReleasePackageParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._items = None
         self._item_ids = None
+        self._items = None
         self._empty = None
         self._properties = None
         self.discriminator = None
 
-        if items is not None:
-            self.items = items
         if item_ids is not None:
             self.item_ids = item_ids
+        if items is not None:
+            self.items = items
         if empty is not None:
             self.empty = empty
         if properties is not None:
             self.properties = properties
-
-    @property
-    def items(self):
-        """Gets the items of this BTUpdateReleasePackageParams.  # noqa: E501
-
-
-        :return: The items of this BTUpdateReleasePackageParams.  # noqa: E501
-        :rtype: list[BTReleasePackageItemParams]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTUpdateReleasePackageParams.
-
-
-        :param items: The items of this BTUpdateReleasePackageParams.  # noqa: E501
-        :type: list[BTReleasePackageItemParams]
-        """
-
-        self._items = items
 
     @property
     def item_ids(self):
@@ -104,6 +83,27 @@ class BTUpdateReleasePackageParams(object):
         """
 
         self._item_ids = item_ids
+
+    @property
+    def items(self):
+        """Gets the items of this BTUpdateReleasePackageParams.  # noqa: E501
+
+
+        :return: The items of this BTUpdateReleasePackageParams.  # noqa: E501
+        :rtype: list[BTReleasePackageItemParams]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTUpdateReleasePackageParams.
+
+
+        :param items: The items of this BTUpdateReleasePackageParams.  # noqa: E501
+        :type: list[BTReleasePackageItemParams]
+        """
+
+        self._items = items
 
     @property
     def empty(self):

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**email** | **str** |  | [optional] 
 **device_id** | **str** |  | [optional] 
 **random_token** | **str** |  | [optional] 
 **totp** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
 **enable_totp** | **bool** |  | [optional] 
 **remember_totp** | **bool** |  | [optional] 
 **web_client_capabilities** | [**BTWebClientCapabilitiesParams**](BTWebClientCapabilitiesParams.md) |  | [optional] 

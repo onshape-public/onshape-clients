@@ -32,14 +32,172 @@ class BTCloudStorageAccountInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'cloud_storage_account_id_': 'str',
+        'cloud_storage_provider': 'int',
+        'import_folder': 'BTCloudStorageObjectInfo',
+        'export_folder': 'BTCloudStorageObjectInfo',
+        'cloud_storage_account_id': 'str',
+        'enabled': 'bool'
     }
 
     attribute_map = {
+        'cloud_storage_account_id_': 'cloudStorageAccountId_',
+        'cloud_storage_provider': 'cloudStorageProvider',
+        'import_folder': 'importFolder',
+        'export_folder': 'exportFolder',
+        'cloud_storage_account_id': 'cloudStorageAccountId',
+        'enabled': 'enabled'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, cloud_storage_account_id_=None, cloud_storage_provider=None, import_folder=None, export_folder=None, cloud_storage_account_id=None, enabled=None):  # noqa: E501
         """BTCloudStorageAccountInfo - a model defined in OpenAPI"""  # noqa: E501
+
+        self._cloud_storage_account_id_ = None
+        self._cloud_storage_provider = None
+        self._import_folder = None
+        self._export_folder = None
+        self._cloud_storage_account_id = None
+        self._enabled = None
         self.discriminator = None
+
+        if cloud_storage_account_id_ is not None:
+            self.cloud_storage_account_id_ = cloud_storage_account_id_
+        if cloud_storage_provider is not None:
+            self.cloud_storage_provider = cloud_storage_provider
+        if import_folder is not None:
+            self.import_folder = import_folder
+        if export_folder is not None:
+            self.export_folder = export_folder
+        if cloud_storage_account_id is not None:
+            self.cloud_storage_account_id = cloud_storage_account_id
+        if enabled is not None:
+            self.enabled = enabled
+
+    @property
+    def cloud_storage_account_id_(self):
+        """Gets the cloud_storage_account_id_ of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id_ of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id_
+
+    @cloud_storage_account_id_.setter
+    def cloud_storage_account_id_(self, cloud_storage_account_id_):
+        """Sets the cloud_storage_account_id_ of this BTCloudStorageAccountInfo.
+
+
+        :param cloud_storage_account_id_: The cloud_storage_account_id_ of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id_ = cloud_storage_account_id_
+
+    @property
+    def cloud_storage_provider(self):
+        """Gets the cloud_storage_provider of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The cloud_storage_provider of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._cloud_storage_provider
+
+    @cloud_storage_provider.setter
+    def cloud_storage_provider(self, cloud_storage_provider):
+        """Sets the cloud_storage_provider of this BTCloudStorageAccountInfo.
+
+
+        :param cloud_storage_provider: The cloud_storage_provider of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._cloud_storage_provider = cloud_storage_provider
+
+    @property
+    def import_folder(self):
+        """Gets the import_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The import_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: BTCloudStorageObjectInfo
+        """
+        return self._import_folder
+
+    @import_folder.setter
+    def import_folder(self, import_folder):
+        """Sets the import_folder of this BTCloudStorageAccountInfo.
+
+
+        :param import_folder: The import_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: BTCloudStorageObjectInfo
+        """
+
+        self._import_folder = import_folder
+
+    @property
+    def export_folder(self):
+        """Gets the export_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The export_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: BTCloudStorageObjectInfo
+        """
+        return self._export_folder
+
+    @export_folder.setter
+    def export_folder(self, export_folder):
+        """Sets the export_folder of this BTCloudStorageAccountInfo.
+
+
+        :param export_folder: The export_folder of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: BTCloudStorageObjectInfo
+        """
+
+        self._export_folder = export_folder
+
+    @property
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id
+
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTCloudStorageAccountInfo.
+
+
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id = cloud_storage_account_id
+
+    @property
+    def enabled(self):
+        """Gets the enabled of this BTCloudStorageAccountInfo.  # noqa: E501
+
+
+        :return: The enabled of this BTCloudStorageAccountInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enabled
+
+    @enabled.setter
+    def enabled(self, enabled):
+        """Sets the enabled of this BTCloudStorageAccountInfo.
+
+
+        :param enabled: The enabled of this BTCloudStorageAccountInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._enabled = enabled
 
     def to_dict(self):
         """Returns the model properties as a dict"""

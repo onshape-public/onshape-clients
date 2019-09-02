@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**target_document_id** | **str** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **is_public** | **bool** |  | [optional] 
+**target_document_id** | **str** |  | [optional] 
 **version_name** | **str** |  | [optional] 
 **is_copy** | **bool** |  | [optional] 
 **is_deep_copy** | **bool** |  | [optional] 
@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **is_new_document** | **bool** |  | [optional] 
 **owner_email** | **str** |  | [optional] 
 **elements** | **list[str]** |  | [optional] 
-**tags** | **list[str]** |  | [optional] 
 **description** | **str** |  | [optional] 
+**tags** | **list[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -32,33 +32,31 @@ class IntegrationsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_ids': 'list[str]',
         'team_ids': 'list[str]',
         'providers_type': 'int',
         'access_level': 'int',
-        'provider_ids': 'list[str]'
+        'provider_ids': 'list[str]',
+        'user_ids': 'list[str]'
     }
 
     attribute_map = {
-        'user_ids': 'userIds',
         'team_ids': 'teamIds',
         'providers_type': 'providersType',
         'access_level': 'accessLevel',
-        'provider_ids': 'providerIds'
+        'provider_ids': 'providerIds',
+        'user_ids': 'userIds'
     }
 
-    def __init__(self, user_ids=None, team_ids=None, providers_type=None, access_level=None, provider_ids=None):  # noqa: E501
+    def __init__(self, team_ids=None, providers_type=None, access_level=None, provider_ids=None, user_ids=None):  # noqa: E501
         """IntegrationsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_ids = None
         self._team_ids = None
         self._providers_type = None
         self._access_level = None
         self._provider_ids = None
+        self._user_ids = None
         self.discriminator = None
 
-        if user_ids is not None:
-            self.user_ids = user_ids
         if team_ids is not None:
             self.team_ids = team_ids
         if providers_type is not None:
@@ -67,27 +65,8 @@ class IntegrationsParams(object):
             self.access_level = access_level
         if provider_ids is not None:
             self.provider_ids = provider_ids
-
-    @property
-    def user_ids(self):
-        """Gets the user_ids of this IntegrationsParams.  # noqa: E501
-
-
-        :return: The user_ids of this IntegrationsParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._user_ids
-
-    @user_ids.setter
-    def user_ids(self, user_ids):
-        """Sets the user_ids of this IntegrationsParams.
-
-
-        :param user_ids: The user_ids of this IntegrationsParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._user_ids = user_ids
+        if user_ids is not None:
+            self.user_ids = user_ids
 
     @property
     def team_ids(self):
@@ -172,6 +151,27 @@ class IntegrationsParams(object):
         """
 
         self._provider_ids = provider_ids
+
+    @property
+    def user_ids(self):
+        """Gets the user_ids of this IntegrationsParams.  # noqa: E501
+
+
+        :return: The user_ids of this IntegrationsParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._user_ids
+
+    @user_ids.setter
+    def user_ids(self, user_ids):
+        """Sets the user_ids of this IntegrationsParams.
+
+
+        :param user_ids: The user_ids of this IntegrationsParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._user_ids = user_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

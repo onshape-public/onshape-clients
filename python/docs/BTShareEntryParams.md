@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**entry_type** | **int** |  | [optional] 
 **user_id** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
-**entry_type** | **int** |  | [optional] 
 **team_id** | **str** |  | [optional] 
 **application_id** | **str** |  | [optional] 
 

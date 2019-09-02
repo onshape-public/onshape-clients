@@ -32,9 +32,9 @@ class BTPDMMetadataParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'project': 'str',
         'configuration': 'str',
         'element_id': 'str',
-        'project': 'str',
         'part_number': 'str',
         'vendor': 'str',
         'product_line': 'str',
@@ -51,9 +51,9 @@ class BTPDMMetadataParams(object):
     }
 
     attribute_map = {
+        'project': 'project',
         'configuration': 'configuration',
         'element_id': 'elementId',
-        'project': 'project',
         'part_number': 'partNumber',
         'vendor': 'vendor',
         'product_line': 'productLine',
@@ -69,12 +69,12 @@ class BTPDMMetadataParams(object):
         'state': 'state'
     }
 
-    def __init__(self, configuration=None, element_id=None, project=None, part_number=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_id=None, custom_properties=None, description=None, revision=None, name=None, id=None, state=None):  # noqa: E501
+    def __init__(self, project=None, configuration=None, element_id=None, part_number=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_id=None, custom_properties=None, description=None, revision=None, name=None, id=None, state=None):  # noqa: E501
         """BTPDMMetadataParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._project = None
         self._configuration = None
         self._element_id = None
-        self._project = None
         self._part_number = None
         self._vendor = None
         self._product_line = None
@@ -90,12 +90,12 @@ class BTPDMMetadataParams(object):
         self._state = None
         self.discriminator = None
 
+        if project is not None:
+            self.project = project
         if configuration is not None:
             self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
-        if project is not None:
-            self.project = project
         if part_number is not None:
             self.part_number = part_number
         if vendor is not None:
@@ -122,6 +122,27 @@ class BTPDMMetadataParams(object):
             self.id = id
         if state is not None:
             self.state = state
+
+    @property
+    def project(self):
+        """Gets the project of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The project of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this BTPDMMetadataParams.
+
+
+        :param project: The project of this BTPDMMetadataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._project = project
 
     @property
     def configuration(self):
@@ -164,27 +185,6 @@ class BTPDMMetadataParams(object):
         """
 
         self._element_id = element_id
-
-    @property
-    def project(self):
-        """Gets the project of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The project of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this BTPDMMetadataParams.
-
-
-        :param project: The project of this BTPDMMetadataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._project = project
 
     @property
     def part_number(self):

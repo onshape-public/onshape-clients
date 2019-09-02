@@ -32,16 +32,16 @@ class BTImportCloudObjectParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'cloud_storage_account_id': 'str',
         'cloud_storage_provider': 'int',
         'owner_id': 'str',
+        'cloud_storage_account_id': 'str',
         'notify_user': 'bool',
         'url': 'str',
         'cloud_object_id': 'str',
         'size_bytes': 'int',
         'access_token': 'str',
-        'mime_type': 'str',
         'owner_type': 'str',
+        'mime_type': 'str',
         'name': 'str',
         'public': 'bool',
         'project_id': 'str',
@@ -55,24 +55,24 @@ class BTImportCloudObjectParams(object):
         'gety_axis_is_up': 'bool',
         'allow_faulty_parts': 'bool',
         'create_composite': 'bool',
+        'processed_foreign_id': 'str',
         'original_foreign_id': 'str',
         'import_within_document': 'bool',
         'blob_element_id': 'str',
-        'blob_microversion_id': 'str',
-        'processed_foreign_id': 'str'
+        'blob_microversion_id': 'str'
     }
 
     attribute_map = {
-        'cloud_storage_account_id': 'cloudStorageAccountId',
         'cloud_storage_provider': 'cloudStorageProvider',
         'owner_id': 'ownerId',
+        'cloud_storage_account_id': 'cloudStorageAccountId',
         'notify_user': 'notifyUser',
         'url': 'url',
         'cloud_object_id': 'cloudObjectId',
         'size_bytes': 'sizeBytes',
         'access_token': 'accessToken',
-        'mime_type': 'mimeType',
         'owner_type': 'ownerType',
+        'mime_type': 'mimeType',
         'name': 'name',
         'public': 'public',
         'project_id': 'projectId',
@@ -86,26 +86,26 @@ class BTImportCloudObjectParams(object):
         'gety_axis_is_up': 'getyAxisIsUp',
         'allow_faulty_parts': 'allowFaultyParts',
         'create_composite': 'createComposite',
+        'processed_foreign_id': 'processedForeignId',
         'original_foreign_id': 'originalForeignId',
         'import_within_document': 'importWithinDocument',
         'blob_element_id': 'blobElementId',
-        'blob_microversion_id': 'blobMicroversionId',
-        'processed_foreign_id': 'processedForeignId'
+        'blob_microversion_id': 'blobMicroversionId'
     }
 
-    def __init__(self, cloud_storage_account_id=None, cloud_storage_provider=None, owner_id=None, notify_user=None, url=None, cloud_object_id=None, size_bytes=None, access_token=None, mime_type=None, owner_type=None, name=None, public=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, processed_foreign_id=None):  # noqa: E501
+    def __init__(self, cloud_storage_provider=None, owner_id=None, cloud_storage_account_id=None, notify_user=None, url=None, cloud_object_id=None, size_bytes=None, access_token=None, owner_type=None, mime_type=None, name=None, public=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, processed_foreign_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None):  # noqa: E501
         """BTImportCloudObjectParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._cloud_storage_account_id = None
         self._cloud_storage_provider = None
         self._owner_id = None
+        self._cloud_storage_account_id = None
         self._notify_user = None
         self._url = None
         self._cloud_object_id = None
         self._size_bytes = None
         self._access_token = None
-        self._mime_type = None
         self._owner_type = None
+        self._mime_type = None
         self._name = None
         self._public = None
         self._project_id = None
@@ -119,19 +119,19 @@ class BTImportCloudObjectParams(object):
         self._gety_axis_is_up = None
         self._allow_faulty_parts = None
         self._create_composite = None
+        self._processed_foreign_id = None
         self._original_foreign_id = None
         self._import_within_document = None
         self._blob_element_id = None
         self._blob_microversion_id = None
-        self._processed_foreign_id = None
         self.discriminator = None
 
-        if cloud_storage_account_id is not None:
-            self.cloud_storage_account_id = cloud_storage_account_id
         if cloud_storage_provider is not None:
             self.cloud_storage_provider = cloud_storage_provider
         if owner_id is not None:
             self.owner_id = owner_id
+        if cloud_storage_account_id is not None:
+            self.cloud_storage_account_id = cloud_storage_account_id
         if notify_user is not None:
             self.notify_user = notify_user
         if url is not None:
@@ -142,10 +142,10 @@ class BTImportCloudObjectParams(object):
             self.size_bytes = size_bytes
         if access_token is not None:
             self.access_token = access_token
-        if mime_type is not None:
-            self.mime_type = mime_type
         if owner_type is not None:
             self.owner_type = owner_type
+        if mime_type is not None:
+            self.mime_type = mime_type
         if name is not None:
             self.name = name
         if public is not None:
@@ -172,6 +172,8 @@ class BTImportCloudObjectParams(object):
             self.allow_faulty_parts = allow_faulty_parts
         if create_composite is not None:
             self.create_composite = create_composite
+        if processed_foreign_id is not None:
+            self.processed_foreign_id = processed_foreign_id
         if original_foreign_id is not None:
             self.original_foreign_id = original_foreign_id
         if import_within_document is not None:
@@ -180,29 +182,6 @@ class BTImportCloudObjectParams(object):
             self.blob_element_id = blob_element_id
         if blob_microversion_id is not None:
             self.blob_microversion_id = blob_microversion_id
-        if processed_foreign_id is not None:
-            self.processed_foreign_id = processed_foreign_id
-
-    @property
-    def cloud_storage_account_id(self):
-        """Gets the cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-
-
-        :return: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._cloud_storage_account_id
-
-    @cloud_storage_account_id.setter
-    def cloud_storage_account_id(self, cloud_storage_account_id):
-        """Sets the cloud_storage_account_id of this BTImportCloudObjectParams.
-
-
-        :param cloud_storage_account_id: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
     def cloud_storage_provider(self):
@@ -245,6 +224,27 @@ class BTImportCloudObjectParams(object):
         """
 
         self._owner_id = owner_id
+
+    @property
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id
+
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTImportCloudObjectParams.
+
+
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTImportCloudObjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
     def notify_user(self):
@@ -352,27 +352,6 @@ class BTImportCloudObjectParams(object):
         self._access_token = access_token
 
     @property
-    def mime_type(self):
-        """Gets the mime_type of this BTImportCloudObjectParams.  # noqa: E501
-
-
-        :return: The mime_type of this BTImportCloudObjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._mime_type
-
-    @mime_type.setter
-    def mime_type(self, mime_type):
-        """Sets the mime_type of this BTImportCloudObjectParams.
-
-
-        :param mime_type: The mime_type of this BTImportCloudObjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._mime_type = mime_type
-
-    @property
     def owner_type(self):
         """Gets the owner_type of this BTImportCloudObjectParams.  # noqa: E501
 
@@ -398,6 +377,27 @@ class BTImportCloudObjectParams(object):
             )
 
         self._owner_type = owner_type
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this BTImportCloudObjectParams.  # noqa: E501
+
+
+        :return: The mime_type of this BTImportCloudObjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this BTImportCloudObjectParams.
+
+
+        :param mime_type: The mime_type of this BTImportCloudObjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
 
     @property
     def name(self):
@@ -673,6 +673,27 @@ class BTImportCloudObjectParams(object):
         self._create_composite = create_composite
 
     @property
+    def processed_foreign_id(self):
+        """Gets the processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
+
+
+        :return: The processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._processed_foreign_id
+
+    @processed_foreign_id.setter
+    def processed_foreign_id(self, processed_foreign_id):
+        """Sets the processed_foreign_id of this BTImportCloudObjectParams.
+
+
+        :param processed_foreign_id: The processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._processed_foreign_id = processed_foreign_id
+
+    @property
     def original_foreign_id(self):
         """Gets the original_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
 
@@ -755,27 +776,6 @@ class BTImportCloudObjectParams(object):
         """
 
         self._blob_microversion_id = blob_microversion_id
-
-    @property
-    def processed_foreign_id(self):
-        """Gets the processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
-
-
-        :return: The processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._processed_foreign_id
-
-    @processed_foreign_id.setter
-    def processed_foreign_id(self, processed_foreign_id):
-        """Sets the processed_foreign_id of this BTImportCloudObjectParams.
-
-
-        :param processed_foreign_id: The processed_foreign_id of this BTImportCloudObjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._processed_foreign_id = processed_foreign_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
