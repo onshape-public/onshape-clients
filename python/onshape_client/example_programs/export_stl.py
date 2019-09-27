@@ -15,11 +15,11 @@ client = Client.get_client()
 # get the STL export
 stl = client.part_studios_api.export_stl1(cube.did, cube.wvm, cube.wvmid, cube.eid, _preload_content=False)
 
-print("Resulting STL data (unconfigured): \n" + stl.data)
+print("Resulting STL data (unconfigured): \n" + stl.data.decode("UTF-8"))
 
 cube.update_current_configuration({'size': 40 * u.inch, 'edge_configuration': 'chamfered'})
 
 # get the STL export
 stl = client.part_studios_api.export_stl1(cube.did, cube.wvm, cube.wvmid, cube.eid, configuration=cube.get_configuration_string(), _preload_content=False)
 
-print("Resulting STL data (configured): \n" + stl.data)
+print("Resulting STL data (configured): \n" + stl.data.decode("UTF-8"))

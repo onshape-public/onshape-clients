@@ -4,25 +4,25 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**copy_element_from_source_document1**](ElementsApi.md#copy_element_from_source_document1) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | 
+[**copy_element_from_source_document**](ElementsApi.md#copy_element_from_source_document) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | 
 [**decode_configuration**](ElementsApi.md#decode_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid} | 
 [**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | 
 [**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | 
-[**get_configuration3**](ElementsApi.md#get_configuration3) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
+[**get_configuration**](ElementsApi.md#get_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
 [**get_element_by_version_deprecated**](ElementsApi.md#get_element_by_version_deprecated) | **GET** /api/elements/{did}/version/{vid} | 
 [**get_element_by_workspace_deprecated**](ElementsApi.md#get_element_by_workspace_deprecated) | **GET** /api/elements/{did}/workspace/{wid} | 
 [**get_element_metadata**](ElementsApi.md#get_element_metadata) | **GET** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
 [**get_element_metadata_deprecated**](ElementsApi.md#get_element_metadata_deprecated) | **GET** /api/elements/{emid} | 
-[**get_element_translator_formats1**](ElementsApi.md#get_element_translator_formats1) | **GET** /api/elements/translatorFormats/{did}/{wid}/{eid} | 
+[**get_element_translator_formats**](ElementsApi.md#get_element_translator_formats) | **GET** /api/elements/translatorFormats/{did}/{wid}/{eid} | 
 [**get_translator_formats3**](ElementsApi.md#get_translator_formats3) | **GET** /api/elements/translatorFormats | 
-[**update_configuration2**](ElementsApi.md#update_configuration2) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
+[**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
 [**update_element_metadata**](ElementsApi.md#update_element_metadata) | **POST** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
-[**update_references1**](ElementsApi.md#update_references1) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | 
-[**upload_file2**](ElementsApi.md#upload_file2) | **POST** /api/elements/upload/{did} | 
+[**update_references**](ElementsApi.md#update_references) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | 
+[**upload_file1**](ElementsApi.md#upload_file1) | **POST** /api/elements/upload/{did} | 
 
 
-# **copy_element_from_source_document1**
-> copy_element_from_source_document1(did, wid, bt_copy_element_params)
+# **copy_element_from_source_document**
+> copy_element_from_source_document(did, wid, bt_copy_element_params)
 
 
 
@@ -48,9 +48,9 @@ wid = 'wid_example' # str |
 bt_copy_element_params = onshape_client.oas.BTCopyElementParams() # BTCopyElementParams | 
 
 try:
-    api_instance.copy_element_from_source_document1(did, wid, bt_copy_element_params)
+    api_instance.copy_element_from_source_document(did, wid, bt_copy_element_params)
 except ApiException as e:
-    print("Exception when calling ElementsApi->copy_element_from_source_document1: %s\n" % e)
+    print("Exception when calling ElementsApi->copy_element_from_source_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -275,8 +275,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_configuration3**
-> get_configuration3(did, wvm, wvmid, eid)
+# **get_configuration**
+> get_configuration(did, wvm, wvmid, eid)
 
 
 
@@ -303,9 +303,9 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_configuration3(did, wvm, wvmid, eid)
+    api_instance.get_configuration(did, wvm, wvmid, eid)
 except ApiException as e:
-    print("Exception when calling ElementsApi->get_configuration3: %s\n" % e)
+    print("Exception when calling ElementsApi->get_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -577,8 +577,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_translator_formats1**
-> get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
+# **get_element_translator_formats**
+> get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
 
 
 
@@ -600,9 +600,9 @@ check_content = True # bool |  (optional) (default to True)
 configuration = '' # str |  (optional) (default to '')
 
 try:
-    api_instance.get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
+    api_instance.get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
 except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_translator_formats1: %s\n" % e)
+    print("Exception when calling ElementsApi->get_element_translator_formats: %s\n" % e)
 ```
 
 ### Parameters
@@ -681,8 +681,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_configuration2**
-> update_configuration2(did, wvm, wvmid, eid, body=body)
+# **update_configuration**
+> update_configuration(did, wvm, wvmid, eid, body=body)
 
 
 
@@ -710,9 +710,9 @@ eid = 'eid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.update_configuration2(did, wvm, wvmid, eid, body=body)
+    api_instance.update_configuration(did, wvm, wvmid, eid, body=body)
 except ApiException as e:
-    print("Exception when calling ElementsApi->update_configuration2: %s\n" % e)
+    print("Exception when calling ElementsApi->update_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -809,8 +809,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_references1**
-> update_references1(did, wid, eid, bt_update_reference_params)
+# **update_references**
+> update_references(did, wid, eid, bt_update_reference_params)
 
 
 
@@ -837,9 +837,9 @@ eid = 'eid_example' # str |
 bt_update_reference_params = onshape_client.oas.BTUpdateReferenceParams() # BTUpdateReferenceParams | 
 
 try:
-    api_instance.update_references1(did, wid, eid, bt_update_reference_params)
+    api_instance.update_references(did, wid, eid, bt_update_reference_params)
 except ApiException as e:
-    print("Exception when calling ElementsApi->update_references1: %s\n" % e)
+    print("Exception when calling ElementsApi->update_references: %s\n" % e)
 ```
 
 ### Parameters
@@ -871,8 +871,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **upload_file2**
-> upload_file2(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+# **upload_file1**
+> upload_file1(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
 
 
 
@@ -905,9 +905,9 @@ providers = None # object |  (optional)
 body_parts = onshape_client.oas.BodyPart() # list[BodyPart] |  (optional)
 
 try:
-    api_instance.upload_file2(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+    api_instance.upload_file1(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
 except ApiException as e:
-    print("Exception when calling ElementsApi->upload_file2: %s\n" % e)
+    print("Exception when calling ElementsApi->upload_file1: %s\n" % e)
 ```
 
 ### Parameters

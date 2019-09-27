@@ -3,12 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**country_code** | **str** |  | [optional] 
+**role** | **int** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **default_company_name** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
 **seats** | **int** |  | [optional] 
+**company_plan** | **bool** |  | [optional] 
+**phone_number** | **str** |  | [optional] 
 **recaptcha** | **str** |  | [optional] 
 **invite_friend_request** | **bool** |  | [optional] 
 **company_user_emails** | **list[str]** |  | [optional] 
@@ -16,17 +20,13 @@ Name | Type | Description | Notes
 **privacy_consent_accepted** | **bool** |  | [optional] 
 **cad_system_at_signup** | **str** |  | [optional] 
 **eula_accepted** | **bool** |  | [optional] 
-**country_code** | **str** |  | [optional] 
-**company_plan** | **bool** |  | [optional] 
-**phone_number** | **str** |  | [optional] 
-**role** | **int** |  | [optional] 
-**source** | **int** |  | [optional] 
-**password** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
+**password** | **str** |  | [optional] 
+**source** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

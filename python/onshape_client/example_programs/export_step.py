@@ -8,13 +8,13 @@ import json
 import os.path
 from onshape_client.example_programs.onshape_models import cube
 
-client = Client.get_client();
+client = Client.get_client()
 
 # We're saving these files to the home directory ("~")
 client.configuration.temp_folder_path = os.path.expanduser("~")
 
 # Create the params. Note there are far more params that can be specified.
-params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='List_UKkGODiz574chc=chamfered;show_cube=true;size=0.254+meter')
+params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='edge_configuratioin=chamfered;size=0.254+meter')
 
 # Call the client
 start_time = time.time()

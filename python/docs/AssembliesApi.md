@@ -6,22 +6,22 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_feature**](AssembliesApi.md#add_feature) | **POST** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | 
 [**create_assembly**](AssembliesApi.md#create_assembly) | **POST** /api/assemblies/d/{did}/w/{wid} | 
-[**create_instance1**](AssembliesApi.md#create_instance1) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances | 
-[**delete_feature2**](AssembliesApi.md#delete_feature2) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
-[**delete_instance1**](AssembliesApi.md#delete_instance1) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid} | 
-[**get_assembly_definition1**](AssembliesApi.md#get_assembly_definition1) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid} | 
-[**get_bill_of_materials1**](AssembliesApi.md#get_bill_of_materials1) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom | 
+[**create_instance**](AssembliesApi.md#create_instance) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances | 
+[**delete_feature**](AssembliesApi.md#delete_feature) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
+[**delete_instance**](AssembliesApi.md#delete_instance) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid} | 
+[**get_assembly_definition**](AssembliesApi.md#get_assembly_definition) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid} | 
+[**get_bill_of_materials**](AssembliesApi.md#get_bill_of_materials) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom | 
 [**get_bounding_boxes**](AssembliesApi.md#get_bounding_boxes) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | 
-[**get_feature_specs3**](AssembliesApi.md#get_feature_specs3) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | 
-[**get_features2**](AssembliesApi.md#get_features2) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | 
-[**get_named_views1**](AssembliesApi.md#get_named_views1) | **GET** /api/assemblies/d/{did}/e/{eid}/namedViews | 
+[**get_feature_specs**](AssembliesApi.md#get_feature_specs) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | 
+[**get_features**](AssembliesApi.md#get_features) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | 
+[**get_named_views**](AssembliesApi.md#get_named_views) | **GET** /api/assemblies/d/{did}/e/{eid}/namedViews | 
 [**get_or_create_bill_of_materials_element**](AssembliesApi.md#get_or_create_bill_of_materials_element) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement | 
-[**get_shaded_views3**](AssembliesApi.md#get_shaded_views3) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | 
+[**get_shaded_views**](AssembliesApi.md#get_shaded_views) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | 
 [**get_translator_formats**](AssembliesApi.md#get_translator_formats) | **GET** /api/assemblies/d/{did}/w/{wid}/e/{eid}/translationformats | 
 [**insert_transformed_instances**](AssembliesApi.md#insert_transformed_instances) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances | 
 [**transform_occurrences**](AssembliesApi.md#transform_occurrences) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms | 
 [**translate_format**](AssembliesApi.md#translate_format) | **POST** /api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations | 
-[**update_feature2**](AssembliesApi.md#update_feature2) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
+[**update_feature**](AssembliesApi.md#update_feature) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
 
 
 # **add_feature**
@@ -148,8 +148,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_instance1**
-> create_instance1(did, wid, eid, bt_assembly_instance_definition_params)
+# **create_instance**
+> create_instance(did, wid, eid, bt_assembly_instance_definition_params)
 
 
 
@@ -176,9 +176,9 @@ eid = 'eid_example' # str |
 bt_assembly_instance_definition_params = onshape_client.oas.BTAssemblyInstanceDefinitionParams() # BTAssemblyInstanceDefinitionParams | 
 
 try:
-    api_instance.create_instance1(did, wid, eid, bt_assembly_instance_definition_params)
+    api_instance.create_instance(did, wid, eid, bt_assembly_instance_definition_params)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->create_instance1: %s\n" % e)
+    print("Exception when calling AssembliesApi->create_instance: %s\n" % e)
 ```
 
 ### Parameters
@@ -210,8 +210,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_feature2**
-> delete_feature2(did, wid, eid, fid)
+# **delete_feature**
+> delete_feature(did, wid, eid, fid)
 
 
 
@@ -238,9 +238,9 @@ eid = 'eid_example' # str |
 fid = 'fid_example' # str | 
 
 try:
-    api_instance.delete_feature2(did, wid, eid, fid)
+    api_instance.delete_feature(did, wid, eid, fid)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->delete_feature2: %s\n" % e)
+    print("Exception when calling AssembliesApi->delete_feature: %s\n" % e)
 ```
 
 ### Parameters
@@ -272,8 +272,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_instance1**
-> delete_instance1(did, eid, wid, nid)
+# **delete_instance**
+> delete_instance(did, eid, wid, nid)
 
 
 
@@ -300,9 +300,9 @@ wid = 'wid_example' # str |
 nid = 'nid_example' # str | 
 
 try:
-    api_instance.delete_instance1(did, eid, wid, nid)
+    api_instance.delete_instance(did, eid, wid, nid)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->delete_instance1: %s\n" % e)
+    print("Exception when calling AssembliesApi->delete_instance: %s\n" % e)
 ```
 
 ### Parameters
@@ -334,8 +334,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_assembly_definition1**
-> get_assembly_definition1(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+# **get_assembly_definition**
+> get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
 
 
 
@@ -367,9 +367,9 @@ include_mate_connectors = True # bool |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
 try:
-    api_instance.get_assembly_definition1(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+    api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_definition1: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
 ```
 
 ### Parameters
@@ -406,8 +406,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_bill_of_materials1**
-> get_bill_of_materials1(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
+# **get_bill_of_materials**
+> get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
 
 
 
@@ -441,9 +441,9 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
 try:
-    api_instance.get_bill_of_materials1(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
+    api_instance.get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_bill_of_materials1: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
 ```
 
 ### Parameters
@@ -554,8 +554,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_feature_specs3**
-> get_feature_specs3(did, wvm, wvmid, eid)
+# **get_feature_specs**
+> get_feature_specs(did, wvm, wvmid, eid)
 
 
 
@@ -582,9 +582,9 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_feature_specs3(did, wvm, wvmid, eid)
+    api_instance.get_feature_specs(did, wvm, wvmid, eid)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_feature_specs3: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_feature_specs: %s\n" % e)
 ```
 
 ### Parameters
@@ -616,8 +616,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_features2**
-> get_features2(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+# **get_features**
+> get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
 
 
 
@@ -646,9 +646,9 @@ feature_id = ['feature_id_example'] # list[str] |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
-    api_instance.get_features2(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+    api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_features2: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_features: %s\n" % e)
 ```
 
 ### Parameters
@@ -682,8 +682,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_named_views1**
-> get_named_views1(did, eid, skip_perspective=skip_perspective)
+# **get_named_views**
+> get_named_views(did, eid, skip_perspective=skip_perspective)
 
 
 
@@ -709,9 +709,9 @@ eid = 'eid_example' # str |
 skip_perspective = True # bool |  (optional) (default to True)
 
 try:
-    api_instance.get_named_views1(did, eid, skip_perspective=skip_perspective)
+    api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_named_views1: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
 ```
 
 ### Parameters
@@ -802,8 +802,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_shaded_views3**
-> get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+# **get_shaded_views**
+> get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 
 
 
@@ -842,9 +842,9 @@ configuration = 'configuration_example' # str |  (optional)
 exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
 try:
-    api_instance.get_shaded_views3(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+    api_instance.get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->get_shaded_views3: %s\n" % e)
+    print("Exception when calling AssembliesApi->get_shaded_views: %s\n" % e)
 ```
 
 ### Parameters
@@ -1132,8 +1132,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_feature2**
-> update_feature2(did, wid, eid, fid, body=body)
+# **update_feature**
+> update_feature(did, wid, eid, fid, body=body)
 
 
 
@@ -1161,9 +1161,9 @@ fid = 'fid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.update_feature2(did, wid, eid, fid, body=body)
+    api_instance.update_feature(did, wid, eid, fid, body=body)
 except ApiException as e:
-    print("Exception when calling AssembliesApi->update_feature2: %s\n" % e)
+    print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
 ```
 
 ### Parameters

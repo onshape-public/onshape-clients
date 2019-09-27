@@ -5,27 +5,27 @@ All URIs are relative to *https://cad.onshape.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**copy_workspace**](DocumentsApi.md#copy_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/copy | 
-[**create11**](DocumentsApi.md#create11) | **POST** /api/documents | 
-[**create_version1**](DocumentsApi.md#create_version1) | **POST** /api/documents/d/{did}/versions | 
-[**create_workspace1**](DocumentsApi.md#create_workspace1) | **POST** /api/documents/d/{did}/workspaces | 
+[**create9**](DocumentsApi.md#create9) | **POST** /api/documents | 
+[**create_version**](DocumentsApi.md#create_version) | **POST** /api/documents/d/{did}/versions | 
+[**create_workspace**](DocumentsApi.md#create_workspace) | **POST** /api/documents/d/{did}/workspaces | 
 [**delete7**](DocumentsApi.md#delete7) | **DELETE** /api/documents/{did} | 
 [**delete_workspace**](DocumentsApi.md#delete_workspace) | **DELETE** /api/documents/d/{did}/workspaces/{wid} | 
 [**download_external_data**](DocumentsApi.md#download_external_data) | **GET** /api/documents/d/{did}/externaldata/{fid} | Download External Data
 [**export2_json**](DocumentsApi.md#export2_json) | **POST** /api/documents/d/{did}/{wv}/{wvid}/e/{eid}/export | 
 [**get_acl**](DocumentsApi.md#get_acl) | **GET** /api/documents/{did}/acl | 
 [**get_current_microversion**](DocumentsApi.md#get_current_microversion) | **GET** /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion | Get Current Document Microversion
-[**get_document**](DocumentsApi.md#get_document) | **GET** /api/documents/{did} | 
+[**get_document**](DocumentsApi.md#get_document) | **GET** /api/documents/{did} | Get Document
 [**get_document_permission_set**](DocumentsApi.md#get_document_permission_set) | **GET** /api/documents/{did}/permissionset | 
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /api/documents | Get Documents
-[**get_elements4**](DocumentsApi.md#get_elements4) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
+[**get_elements1**](DocumentsApi.md#get_elements1) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
 [**get_insertables**](DocumentsApi.md#get_insertables) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/insertables | 
 [**get_version**](DocumentsApi.md#get_version) | **GET** /api/documents/d/{did}/versions/{vid} | Get Version
 [**get_versions1**](DocumentsApi.md#get_versions1) | **GET** /api/documents/d/{did}/versions | Get Versions
 [**get_workspaces1**](DocumentsApi.md#get_workspaces1) | **GET** /api/documents/d/{did}/workspaces | Get Workspaces
 [**merge_into_workspace**](DocumentsApi.md#merge_into_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/merge | Merge into workspace
 [**restore_rendition**](DocumentsApi.md#restore_rendition) | **POST** /api/documents/{did}/workspaces/{wid}/restore/{mvid} | 
-[**sync_application_elements1**](DocumentsApi.md#sync_application_elements1) | **POST** /api/documents/d/{did}/w/{wid}/syncApplicationElements | 
-[**update_external_references_to_latest_documents1**](DocumentsApi.md#update_external_references_to_latest_documents1) | **POST** /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences | 
+[**sync_application_elements**](DocumentsApi.md#sync_application_elements) | **POST** /api/documents/d/{did}/w/{wid}/syncApplicationElements | 
+[**update_external_references_to_latest_documents**](DocumentsApi.md#update_external_references_to_latest_documents) | **POST** /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences | 
 
 
 # **copy_workspace**
@@ -88,8 +88,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create11**
-> create11(bt_document_params)
+# **create9**
+> create9(bt_document_params)
 
 
 
@@ -113,9 +113,9 @@ api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(conf
 bt_document_params = onshape_client.oas.BTDocumentParams() # BTDocumentParams | 
 
 try:
-    api_instance.create11(bt_document_params)
+    api_instance.create9(bt_document_params)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->create11: %s\n" % e)
+    print("Exception when calling DocumentsApi->create9: %s\n" % e)
 ```
 
 ### Parameters
@@ -144,8 +144,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_version1**
-> create_version1(did, bt_version_or_workspace_params)
+# **create_version**
+> create_version(did, bt_version_or_workspace_params)
 
 
 
@@ -170,9 +170,9 @@ did = 'did_example' # str |
 bt_version_or_workspace_params = onshape_client.oas.BTVersionOrWorkspaceParams() # BTVersionOrWorkspaceParams | 
 
 try:
-    api_instance.create_version1(did, bt_version_or_workspace_params)
+    api_instance.create_version(did, bt_version_or_workspace_params)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->create_version1: %s\n" % e)
+    print("Exception when calling DocumentsApi->create_version: %s\n" % e)
 ```
 
 ### Parameters
@@ -202,8 +202,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_workspace1**
-> create_workspace1(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
+# **create_workspace**
+> create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
 
 
 
@@ -228,9 +228,9 @@ did = 'did_example' # str |
 bt_version_or_workspace_params = onshape_client.oas.BTVersionOrWorkspaceParams() # BTVersionOrWorkspaceParams |  (optional)
 
 try:
-    api_instance.create_workspace1(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
+    api_instance.create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->create_workspace1: %s\n" % e)
+    print("Exception when calling DocumentsApi->create_workspace: %s\n" % e)
 ```
 
 ### Parameters
@@ -621,9 +621,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document**
-> get_document(did)
+> BTDocumentInfo get_document(did)
 
-
+Get Document
 
 ### Example
 
@@ -645,7 +645,9 @@ api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(conf
 did = 'did_example' # str | 
 
 try:
-    api_instance.get_document(did)
+    # Get Document
+    api_response = api_instance.get_document(did)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->get_document: %s\n" % e)
 ```
@@ -658,7 +660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentInfo**](BTDocumentInfo.md)
 
 ### Authorization
 
@@ -672,7 +674,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -810,8 +812,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_elements4**
-> list[BTDocumentElementInfo] get_elements4(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+# **get_elements1**
+> list[BTDocumentElementInfo] get_elements1(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
 
 Get a list of elements in the workspace, version, or microversion of the document.
 
@@ -842,10 +844,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
     # Get a list of elements in the workspace, version, or microversion of the document.
-    api_response = api_instance.get_elements4(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+    api_response = api_instance.get_elements1(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->get_elements4: %s\n" % e)
+    print("Exception when calling DocumentsApi->get_elements1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1280,8 +1282,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sync_application_elements1**
-> sync_application_elements1(did, wid, application_element_ids, description=description)
+# **sync_application_elements**
+> sync_application_elements(did, wid, application_element_ids, description=description)
 
 
 
@@ -1308,9 +1310,9 @@ application_element_ids = ['application_element_ids_example'] # list[str] |
 description = 'description_example' # str |  (optional)
 
 try:
-    api_instance.sync_application_elements1(did, wid, application_element_ids, description=description)
+    api_instance.sync_application_elements(did, wid, application_element_ids, description=description)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->sync_application_elements1: %s\n" % e)
+    print("Exception when calling DocumentsApi->sync_application_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -1342,8 +1344,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_external_references_to_latest_documents1**
-> update_external_references_to_latest_documents1(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
+# **update_external_references_to_latest_documents**
+> update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
 
 
 
@@ -1370,9 +1372,9 @@ eid = 'eid_example' # str |
 bt_link_to_latest_document_params = onshape_client.oas.BTLinkToLatestDocumentParams() # BTLinkToLatestDocumentParams |  (optional)
 
 try:
-    api_instance.update_external_references_to_latest_documents1(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
+    api_instance.update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->update_external_references_to_latest_documents1: %s\n" % e)
+    print("Exception when calling DocumentsApi->update_external_references_to_latest_documents: %s\n" % e)
 ```
 
 ### Parameters

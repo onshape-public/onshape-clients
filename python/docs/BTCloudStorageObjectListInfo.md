@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | **str** |  | [optional] 
 **path_to_root** | [**list[CloudObjectPathSegment]**](CloudObjectPathSegment.md) |  | [optional] 
+**href** | **str** |  | [optional] 
 **items** | [**list[BTCloudStorageObjectInfo]**](BTCloudStorageObjectInfo.md) |  | [optional] 
 **next** | **str** |  | [optional] 
 

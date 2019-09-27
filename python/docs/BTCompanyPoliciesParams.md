@@ -40,6 +40,7 @@ Name | Type | Description | Notes
 **drawing_can_duplicate_part_number** | **bool** |  | [optional] 
 **enabled_active_multiple_workflows** | **bool** |  | [optional] 
 **only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
+**use_company_features_toolbar** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -138,7 +138,10 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return BTConfigurationParams(parameters=final)
 
     def _get_param_id_from_name(self, name):
-        return self._get_parameter_map()[name]["message"]["parameterId"]
+        try:
+            return self._get_parameter_map()[name]["message"]["parameterId"]
+        except KeyError as e:
+            raise KeyError("{} is not a valid parameter Id within the requested model configuration.".format(e))
 
     def _get_parameter_map(self):
         """Returns a map from the user-defined parameter names to the parameterIds ex: {"myEnumParam": "Listisds32d"}
@@ -152,7 +155,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return parameter_map
 
     def _get_raw_configuration_params(self):
-        response =self.client.elements_api.get_configuration3(self.did, self.wvm, self.wvmid, self.eid,
+        response =self.client.elements_api.get_configuration(self.did, self.wvm, self.wvmid, self.eid,
                                                         _preload_content=False)
         return json.loads(response.data.decode("utf-8"))
 

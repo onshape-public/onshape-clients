@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_ids** | **list[str]** |  | [optional] 
 **items** | [**list[BTReleasePackageItemParams]**](BTReleasePackageItemParams.md) |  | [optional] 
+**item_ids** | **list[str]** |  | [optional] 
 **empty** | **bool** |  | [optional] 
 **properties** | [**list[BTPropertyValueParam]**](BTPropertyValueParam.md) |  | [optional] 
 

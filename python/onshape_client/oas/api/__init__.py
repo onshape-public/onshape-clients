@@ -12,7 +12,7 @@ from onshape_client.oas.api.drawings_api import DrawingsApi
 from onshape_client.oas.api.elements_api import ElementsApi
 from onshape_client.oas.api.feature_studios_api import FeatureStudiosApi
 from onshape_client.oas.api.metadata_api import MetadataApi
+from onshape_client.oas.api.open_api_api import OpenAPIApi
 from onshape_client.oas.api.part_studios_api import PartStudiosApi
 from onshape_client.oas.api.parts_api import PartsApi
 from onshape_client.oas.api.translations_api import TranslationsApi
-from onshape_client.oas.api.default_api import DefaultApi

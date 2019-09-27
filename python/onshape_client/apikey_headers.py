@@ -14,9 +14,10 @@ import six
 import binascii
 from six.moves.urllib.parse import urlencode, urlparse, parse_qs, quote_plus
 import copy
+import warnings
 
 
-def add_onshape_specific_headers(method, resource_path, configuration, query_params={}, headers={}):
+def add_onshape_specific_headers(method, url, configuration, query_params={}, headers={}):
     '''
     Creates a headers object to sign the request
 
@@ -29,6 +30,8 @@ def add_onshape_specific_headers(method, resource_path, configuration, query_par
     Returns:
         - dict: Dictionary containing all headers
     '''
+    if not urlparse(configuration.host).netloc == urlparse(url).netloc:
+        warnings.warn("Requesting a url from a different domain ({}) than in the client configuration: ({})".format(urlparse(url).netloc, urlparse(configuration.host).netloc))
     access_key = configuration.get_api_key_with_prefix('ACCESS_KEY')
     secret_key = configuration.get_api_key_with_prefix('SECRET_KEY')
     if access_key and secret_key:
@@ -37,7 +40,7 @@ def add_onshape_specific_headers(method, resource_path, configuration, query_par
         nonce = _make_nonce()
         ctype = headers['Content-Type']
 
-        auth = _make_auth(method, date, nonce, resource_path, access_key, secret_key, query_string=urlencode(query_params), ctype=ctype)
+        auth = _make_auth(method, date, nonce, urlparse(url).path, access_key, secret_key, query_string=urlencode(query_params), ctype=ctype)
 
         req_headers = {
             'Date': date,

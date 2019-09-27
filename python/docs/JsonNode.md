@@ -4,11 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **node_type** | **str** |  | [optional] 
-**object** | **bool** |  | [optional] 
 **textual** | **bool** |  | [optional] 
+**binary** | **bool** |  | [optional] 
+**boolean** | **bool** |  | [optional] 
+**missing_node** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 
-**missing_node** | **bool** |  | [optional] 
 **pojo** | **bool** |  | [optional] 
 **number** | **bool** |  | [optional] 
 **integral_number** | **bool** |  | [optional] 
@@ -19,11 +20,10 @@ Name | Type | Description | Notes
 **double** | **bool** |  | [optional] 
 **big_decimal** | **bool** |  | [optional] 
 **big_integer** | **bool** |  | [optional] 
-**boolean** | **bool** |  | [optional] 
-**binary** | **bool** |  | [optional] 
 **float** | **bool** |  | [optional] 
 **array** | **bool** |  | [optional] 
 **null** | **bool** |  | [optional] 
+**object** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

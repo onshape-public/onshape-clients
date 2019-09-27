@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **location_infos** | [**list[BTLocationInfo]**](BTLocationInfo.md) |  | [optional] 
 **parameter_id** | **str** |  | [optional] 
-**try_node** | [**BTNodeReference**](BTNodeReference.md) |  | [optional] 
 **type** | **str** |  | [optional] 
+**try_node** | [**BTNodeReference**](BTNodeReference.md) |  | [optional] 
 **level** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **stack_trace** | [**list[BTLocationInfo]**](BTLocationInfo.md) |  | [optional] 

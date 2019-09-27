@@ -3,6 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**light_seats** | **int** |  | [optional] 
+**ref_id** | **str** |  | [optional] 
+**allow_deprecated_plan** | **bool** |  | [optional] 
 **user_id** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
@@ -10,9 +13,6 @@ Name | Type | Description | Notes
 **domain_prefix** | **str** |  | [optional] 
 **payment_type** | **int** |  | [optional] 
 **trial_period_days** | **int** |  | [optional] 
-**light_seats** | **int** |  | [optional] 
-**ref_id** | **str** |  | [optional] 
-**allow_deprecated_plan** | **bool** |  | [optional] 
 **reseller_name** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 
 

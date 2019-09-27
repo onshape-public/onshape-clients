@@ -5,28 +5,28 @@ All URIs are relative to *https://cad.onshape.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_feature1**](PartStudiosApi.md#add_feature1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
-[**compare_part_studios1**](PartStudiosApi.md#compare_part_studios1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare | Compare Part Studios
+[**compare_part_studios**](PartStudiosApi.md#compare_part_studios) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare | Compare Part Studios
 [**create_part_studio**](PartStudiosApi.md#create_part_studio) | **POST** /api/partstudios/d/{did}/w/{wid} | Create Part Studio
-[**delete_feature**](PartStudiosApi.md#delete_feature) | **DELETE** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Delete Feature
+[**delete_feature1**](PartStudiosApi.md#delete_feature1) | **DELETE** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Delete Feature
 [**eval_feature_script**](PartStudiosApi.md#eval_feature_script) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript | Evaluate FeatureScript
 [**export_ps1**](PartStudiosApi.md#export_ps1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/parasolid | Export Part Studio to Parasolid
 [**export_stl1**](PartStudiosApi.md#export_stl1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/stl | Export Part Studio to STL
 [**get_body_details2**](PartStudiosApi.md#get_body_details2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails | Array of body information
 [**get_bounding_boxes2**](PartStudiosApi.md#get_bounding_boxes2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | Mass properties of parts or a PartStudio.
-[**get_configuration4**](PartStudiosApi.md#get_configuration4) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
+[**get_configuration1**](PartStudiosApi.md#get_configuration1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
 [**get_edges2**](PartStudiosApi.md#get_edges2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatededges | Tesselated edges from a PartStudio.
 [**get_faces2**](PartStudiosApi.md#get_faces2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/tessellatedfaces | Tesselated faces of the parts in the Part Studio.
-[**get_feature_specs**](PartStudiosApi.md#get_feature_specs) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Specs
-[**get_features**](PartStudiosApi.md#get_features) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Get Feature List
-[**get_mass_properties**](PartStudiosApi.md#get_mass_properties) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties | Mass properties of parts or a PartStudio.
-[**get_named_views2**](PartStudiosApi.md#get_named_views2) | **GET** /api/partstudios/d/{did}/e/{eid}/namedViews | Get Named Views
-[**get_shaded_views1**](PartStudiosApi.md#get_shaded_views1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | Get Shaded Views
+[**get_feature_specs1**](PartStudiosApi.md#get_feature_specs1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Specs
+[**get_features1**](PartStudiosApi.md#get_features1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Get Feature List
+[**get_mass_properties1**](PartStudiosApi.md#get_mass_properties1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties | Mass properties of parts or a PartStudio.
+[**get_named_views1**](PartStudiosApi.md#get_named_views1) | **GET** /api/partstudios/d/{did}/e/{eid}/namedViews | Get Named Views
+[**get_shaded_views2**](PartStudiosApi.md#get_shaded_views2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | Get Shaded Views
 [**get_translator_formats4**](PartStudiosApi.md#get_translator_formats4) | **GET** /api/partstudios/d/{did}/w/{wid}/e/{eid}/translationformats | Get Translation Formats
 [**translate_format5**](PartStudiosApi.md#translate_format5) | **POST** /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Part Studio translation
-[**translate_ids1**](PartStudiosApi.md#translate_ids1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations | Id Translations
-[**update_configuration3**](PartStudiosApi.md#update_configuration3) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
-[**update_feature**](PartStudiosApi.md#update_feature) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Update Feature
-[**update_features1**](PartStudiosApi.md#update_features1) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/updates | Update Features
+[**translate_ids**](PartStudiosApi.md#translate_ids) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations | Id Translations
+[**update_configuration1**](PartStudiosApi.md#update_configuration1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
+[**update_feature1**](PartStudiosApi.md#update_feature1) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Update Feature
+[**update_features**](PartStudiosApi.md#update_features) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/updates | Update Features
 [**update_rollback**](PartStudiosApi.md#update_rollback) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/rollback | Update Feature Rollback
 
 
@@ -96,8 +96,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **compare_part_studios1**
-> BTRootDiffInfo compare_part_studios1(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
+# **compare_part_studios**
+> BTRootDiffInfo compare_part_studios(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
 
 Compare Part Studios
 
@@ -131,10 +131,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
     # Compare Part Studios
-    api_response = api_instance.compare_part_studios1(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
+    api_response = api_instance.compare_part_studios(did, wvm, wvmid, eid, workspace_id=workspace_id, version_id=version_id, microversion_id=microversion_id, source_configuration=source_configuration, target_configuration=target_configuration, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->compare_part_studios1: %s\n" % e)
+    print("Exception when calling PartStudiosApi->compare_part_studios: %s\n" % e)
 ```
 
 ### Parameters
@@ -234,8 +234,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_feature**
-> delete_feature(did, wid, eid, fid)
+# **delete_feature1**
+> delete_feature1(did, wid, eid, fid)
 
 Delete Feature
 
@@ -259,13 +259,13 @@ api_instance = onshape_client.oas.PartStudiosApi(onshape_client.oas.ApiClient(co
 did = 'did_example' # str | Document ID.
 wid = 'wid_example' # str | Workspace ID.
 eid = 'eid_example' # str | Element ID.
-fid = 'fid_example' # str | The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure
+fid = 'fid_example' # str | The id of the feature being updated. This id should be URL encoded and must match the featureId found in the serialized structure
 
 try:
     # Delete Feature
-    api_instance.delete_feature(did, wid, eid, fid)
+    api_instance.delete_feature1(did, wid, eid, fid)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->delete_feature: %s\n" % e)
+    print("Exception when calling PartStudiosApi->delete_feature1: %s\n" % e)
 ```
 
 ### Parameters
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
  **did** | **str**| Document ID. | 
  **wid** | **str**| Workspace ID. | 
  **eid** | **str**| Element ID. | 
- **fid** | **str**| The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure | 
+ **fid** | **str**| The id of the feature being updated. This id should be URL encoded and must match the featureId found in the serialized structure | 
 
 ### Return type
 
@@ -391,7 +391,7 @@ did = 'did_example' # str | Document ID.
 wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
 wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
 eid = 'eid_example' # str | Element ID.
-part_ids = 'part_ids_example' # str | IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
+part_ids = 'part_ids_example' # str | IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
 version = '0' # str | Parasolid version (optional) (default to '0')
 include_export_ids = False # bool | Whether topolgy ids should be exported as parasolid attributes (optional) (default to False)
 configuration = 'configuration_example' # str | Configuration string. (optional)
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
  **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
  **eid** | **str**| Element ID. | 
- **part_ids** | **str**| IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
+ **part_ids** | **str**| IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
  **version** | **str**| Parasolid version | [optional] [default to &#39;0&#39;]
  **include_export_ids** | **bool**| Whether topolgy ids should be exported as parasolid attributes | [optional] [default to False]
  **configuration** | **str**| Configuration string. | [optional] 
@@ -464,7 +464,7 @@ did = 'did_example' # str | Document ID.
 wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
 wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
 eid = 'eid_example' # str | Element ID.
-part_ids = 'part_ids_example' # str | IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
+part_ids = 'part_ids_example' # str | IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
 mode = 'text' # str | Type of file: text, binary (optional) (default to 'text')
 grouping = True # bool | Whether parts should be exported as a group or individually in a .zip file (optional) (default to True)
 scale = 1.0 # float | Scale for measurements. (optional) (default to 1.0)
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
  **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
  **eid** | **str**| Element ID. | 
- **part_ids** | **str**| IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
+ **part_ids** | **str**| IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
  **mode** | **str**| Type of file: text, binary | [optional] [default to &#39;text&#39;]
  **grouping** | **bool**| Whether parts should be exported as a group or individually in a .zip file | [optional] [default to True]
  **scale** | **float**| Scale for measurements. | [optional] [default to 1.0]
@@ -524,7 +524,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_body_details2**
-> list[BTExportModelBodiesResponse] get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id)
+> BTExportModelBodiesResponse get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id)
 
 Array of body information
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[BTExportModelBodiesResponse]**](BTExportModelBodiesResponse.md)
+[**BTExportModelBodiesResponse**](BTExportModelBodiesResponse.md)
 
 ### Authorization
 
@@ -663,8 +663,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_configuration4**
-> get_configuration4(did, wvm, wvmid, eid)
+# **get_configuration1**
+> get_configuration1(did, wvm, wvmid, eid)
 
 Get Configuration
 
@@ -692,9 +692,9 @@ eid = 'eid_example' # str |
 
 try:
     # Get Configuration
-    api_instance.get_configuration4(did, wvm, wvmid, eid)
+    api_instance.get_configuration1(did, wvm, wvmid, eid)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_configuration4: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_configuration1: %s\n" % e)
 ```
 
 ### Parameters
@@ -835,7 +835,7 @@ output_vertex_normals = False # bool | If true, output vertex normals correspond
 output_facet_normals = True # bool | Output facet normals. (optional) (default to True)
 output_texture_coordinates = False # bool | Output texture coordinates. (optional) (default to False)
 output_index_table = False # bool | Output index table. (optional) (default to False)
-part_id = ['part_id_example'] # list[str] | IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
+part_id = ['part_id_example'] # list[str] | IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
 face_id = ['face_id_example'] # list[str] | IDs of the faces to tessellate (repeat query param to add more than one, i.e. faceId=JHK&faceId=JHD) (optional)
 output_error_faces = False # bool | Whether or not to output faces that cause an error (optional) (default to False)
 configuration = 'configuration_example' # str | Configuration string. (optional)
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
  **output_facet_normals** | **bool**| Output facet normals. | [optional] [default to True]
  **output_texture_coordinates** | **bool**| Output texture coordinates. | [optional] [default to False]
  **output_index_table** | **bool**| Output index table. | [optional] [default to False]
- **part_id** | [**list[str]**](str.md)| IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
+ **part_id** | [**list[str]**](str.md)| IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
  **face_id** | [**list[str]**](str.md)| IDs of the faces to tessellate (repeat query param to add more than one, i.e. faceId&#x3D;JHK&amp;faceId&#x3D;JHD) | [optional] 
  **output_error_faces** | **bool**| Whether or not to output faces that cause an error | [optional] [default to False]
  **configuration** | **str**| Configuration string. | [optional] 
@@ -890,8 +890,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_feature_specs**
-> get_feature_specs(did, wvm, wvmid, eid)
+# **get_feature_specs1**
+> get_feature_specs1(did, wvm, wvmid, eid)
 
 Get Feature Specs
 
@@ -919,9 +919,9 @@ eid = 'eid_example' # str | Element ID.
 
 try:
     # Get Feature Specs
-    api_instance.get_feature_specs(did, wvm, wvmid, eid)
+    api_instance.get_feature_specs1(did, wvm, wvmid, eid)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_feature_specs: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_feature_specs1: %s\n" % e)
 ```
 
 ### Parameters
@@ -953,8 +953,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_features**
-> BTFeatureListResponse get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
+# **get_features1**
+> BTFeatureListResponse get_features1(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
 
 Get Feature List
 
@@ -986,10 +986,10 @@ body = 'body_example' # str |  (optional)
 
 try:
     # Get Feature List
-    api_response = api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
+    api_response = api_instance.get_features1(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_features: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_features1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1025,8 +1025,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_mass_properties**
-> BTMassPropertiesBulkInfo get_mass_properties(did, wvm, wvmid, eid, part_id=part_id, mass_as_group=mass_as_group, configuration=configuration, link_document_id=link_document_id)
+# **get_mass_properties1**
+> BTMassPropertiesBulkInfo get_mass_properties1(did, wvm, wvmid, eid, part_id=part_id, mass_as_group=mass_as_group, configuration=configuration, link_document_id=link_document_id)
 
 Mass properties of parts or a PartStudio.
 
@@ -1051,17 +1051,17 @@ did = 'did_example' # str | Document ID.
 wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
 wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
 eid = 'eid_example' # str | Element ID.
-part_id = ['part_id_example'] # list[str] | IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
+part_id = ['part_id_example'] # list[str] | IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
 mass_as_group = True # bool | If true, specified parts will be evaluated as a single object instead of individually (optional) (default to True)
 configuration = 'configuration_example' # str | Configuration string. (optional)
 link_document_id = 'link_document_id_example' # str | Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. (optional)
 
 try:
     # Mass properties of parts or a PartStudio.
-    api_response = api_instance.get_mass_properties(did, wvm, wvmid, eid, part_id=part_id, mass_as_group=mass_as_group, configuration=configuration, link_document_id=link_document_id)
+    api_response = api_instance.get_mass_properties1(did, wvm, wvmid, eid, part_id=part_id, mass_as_group=mass_as_group, configuration=configuration, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_mass_properties: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_mass_properties1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1072,7 +1072,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
  **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
  **eid** | **str**| Element ID. | 
- **part_id** | [**list[str]**](str.md)| IDs of the parts to retrieve. Repeat query param to add more than one, i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
+ **part_id** | [**list[str]**](str.md)| IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional] 
  **mass_as_group** | **bool**| If true, specified parts will be evaluated as a single object instead of individually | [optional] [default to True]
  **configuration** | **str**| Configuration string. | [optional] 
  **link_document_id** | **str**| Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. | [optional] 
@@ -1097,8 +1097,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_named_views2**
-> BTNamedViewsInfo get_named_views2(did, eid, skip_perspective=skip_perspective)
+# **get_named_views1**
+> BTNamedViewsInfo get_named_views1(did, eid, skip_perspective=skip_perspective)
 
 Get Named Views
 
@@ -1125,10 +1125,10 @@ skip_perspective = True # bool | Whether views with a perspective projection sho
 
 try:
     # Get Named Views
-    api_response = api_instance.get_named_views2(did, eid, skip_perspective=skip_perspective)
+    api_response = api_instance.get_named_views1(did, eid, skip_perspective=skip_perspective)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_named_views2: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_named_views1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1159,8 +1159,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_shaded_views1**
-> BTShadedRenderDocumentResponse get_shaded_views1(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
+# **get_shaded_views2**
+> BTShadedRenderDocumentResponse get_shaded_views2(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
 
 Get Shaded Views
 
@@ -1198,10 +1198,10 @@ link_document_id = 'link_document_id_example' # str | Id of document that links 
 
 try:
     # Get Shaded Views
-    api_response = api_instance.get_shaded_views1(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
+    api_response = api_instance.get_shaded_views2(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_shaded_views1: %s\n" % e)
+    print("Exception when calling PartStudiosApi->get_shaded_views2: %s\n" % e)
 ```
 
 ### Parameters
@@ -1262,7 +1262,7 @@ api_instance = onshape_client.oas.PartStudiosApi()
 did = 'did_example' # str | Document ID.
 wid = 'wid_example' # str | Workspace ID.
 eid = 'eid_example' # str | Element ID.
-check_content = True # bool |     Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. (optional) (default to True)
+check_content = True # bool | Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. (optional) (default to True)
 
 try:
     # Get Translation Formats
@@ -1279,7 +1279,7 @@ Name | Type | Description  | Notes
  **did** | **str**| Document ID. | 
  **wid** | **str**| Workspace ID. | 
  **eid** | **str**| Element ID. | 
- **check_content** | **bool**|     Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. | [optional] [default to True]
+ **check_content** | **bool**| Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. | [optional] [default to True]
 
 ### Return type
 
@@ -1324,8 +1324,8 @@ configuration.host = "https://cad.onshape.com"
 # Create an instance of the API class
 api_instance = onshape_client.oas.PartStudiosApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | Document ID.
-wv = 'wv_example' # str | One of w or v corresponding to whether a workspace or version was entered.
-wvid = 'wvid_example' # str | Workspace (w) or Version (v).
+wv = 'wv_example' # str | One of w or v corresponding to whether a workspace or version was specified.
+wvid = 'wvid_example' # str | Workspace (w) or Version (v) ID.
 eid = 'eid_example' # str | Element ID.
 bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # BTTranslateFormatParams | 
 
@@ -1342,8 +1342,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**| Document ID. | 
- **wv** | **str**| One of w or v corresponding to whether a workspace or version was entered. | 
- **wvid** | **str**| Workspace (w) or Version (v). | 
+ **wv** | **str**| One of w or v corresponding to whether a workspace or version was specified. | 
+ **wvid** | **str**| Workspace (w) or Version (v) ID. | 
  **eid** | **str**| Element ID. | 
  **bt_translate_format_params** | [**BTTranslateFormatParams**](BTTranslateFormatParams.md)|  | 
 
@@ -1367,8 +1367,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translate_ids1**
-> BTIdTranslationInfo translate_ids1(did, wvm, wvmid, eid, bt_id_translation_params)
+# **translate_ids**
+> BTIdTranslationInfo translate_ids(did, wvm, wvmid, eid, bt_id_translation_params)
 
 Id Translations
 
@@ -1397,10 +1397,10 @@ bt_id_translation_params = onshape_client.oas.BTIdTranslationParams() # BTIdTran
 
 try:
     # Id Translations
-    api_response = api_instance.translate_ids1(did, wvm, wvmid, eid, bt_id_translation_params)
+    api_response = api_instance.translate_ids(did, wvm, wvmid, eid, bt_id_translation_params)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->translate_ids1: %s\n" % e)
+    print("Exception when calling PartStudiosApi->translate_ids: %s\n" % e)
 ```
 
 ### Parameters
@@ -1433,8 +1433,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_configuration3**
-> update_configuration3(did, wvm, wvmid, eid, body=body)
+# **update_configuration1**
+> update_configuration1(did, wvm, wvmid, eid, body=body)
 
 Update Configuration
 
@@ -1463,9 +1463,9 @@ body = 'body_example' # str |  (optional)
 
 try:
     # Update Configuration
-    api_instance.update_configuration3(did, wvm, wvmid, eid, body=body)
+    api_instance.update_configuration1(did, wvm, wvmid, eid, body=body)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->update_configuration3: %s\n" % e)
+    print("Exception when calling PartStudiosApi->update_configuration1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1498,8 +1498,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_feature**
-> update_feature(did, wid, eid, fid, body=body)
+# **update_feature1**
+> update_feature1(did, wid, eid, fid, body=body)
 
 Update Feature
 
@@ -1523,14 +1523,14 @@ api_instance = onshape_client.oas.PartStudiosApi(onshape_client.oas.ApiClient(co
 did = 'did_example' # str | Document ID.
 wid = 'wid_example' # str | Workspace ID.
 eid = 'eid_example' # str | Element ID.
-fid = 'fid_example' # str | The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure
+fid = 'fid_example' # str | The id of the feature being updated. This id should be URL encoded and must match the featureId found in the serialized structure
 body = 'body_example' # str | feature The serialized feature definition (optional)
 
 try:
     # Update Feature
-    api_instance.update_feature(did, wid, eid, fid, body=body)
+    api_instance.update_feature1(did, wid, eid, fid, body=body)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->update_feature: %s\n" % e)
+    print("Exception when calling PartStudiosApi->update_feature1: %s\n" % e)
 ```
 
 ### Parameters
@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
  **did** | **str**| Document ID. | 
  **wid** | **str**| Workspace ID. | 
  **eid** | **str**| Element ID. | 
- **fid** | **str**| The id of the feature being updated.  This id should be URL encoded and must match the featureId found in the serialized structure | 
+ **fid** | **str**| The id of the feature being updated. This id should be URL encoded and must match the featureId found in the serialized structure | 
  **body** | **str**| feature The serialized feature definition | [optional] 
 
 ### Return type
@@ -1563,8 +1563,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_features1**
-> update_features1(did, wid, eid, body=body)
+# **update_features**
+> update_features(did, wid, eid, body=body)
 
 Update Features
 
@@ -1592,9 +1592,9 @@ body = 'body_example' # str | feature The serialized feature definition (optiona
 
 try:
     # Update Features
-    api_instance.update_features1(did, wid, eid, body=body)
+    api_instance.update_features(did, wid, eid, body=body)
 except ApiException as e:
-    print("Exception when calling PartStudiosApi->update_features1: %s\n" % e)
+    print("Exception when calling PartStudiosApi->update_features: %s\n" % e)
 ```
 
 ### Parameters
@@ -1651,7 +1651,7 @@ api_instance = onshape_client.oas.PartStudiosApi(onshape_client.oas.ApiClient(co
 did = 'did_example' # str | Document ID.
 wid = 'wid_example' # str | Workspace ID.
 eid = 'eid_example' # str | Element ID.
-body = 'body_example' # str | The index at which the rollback index should be placed. Features      *   with entry index (0-based) higher than or equal to this value are rolled back.  The value -1 is treated      *   as an alias for \"end of feature list\".  Otherwise the value must be in the range 0 to the number of      *   entries in the feature list (optional)
+body = 'body_example' # str | The index at which the rollback index should be placed. Features  with entry index (0-based) higher than or equal to the value are rolled back. Value of -1 is treated  as an alias for \"end of feature list\". Otherwise the value must be in the range 0 to the number of  entries in the feature list (optional)
 
 try:
     # Update Feature Rollback
@@ -1667,7 +1667,7 @@ Name | Type | Description  | Notes
  **did** | **str**| Document ID. | 
  **wid** | **str**| Workspace ID. | 
  **eid** | **str**| Element ID. | 
- **body** | **str**| The index at which the rollback index should be placed. Features      *   with entry index (0-based) higher than or equal to this value are rolled back.  The value -1 is treated      *   as an alias for \&quot;end of feature list\&quot;.  Otherwise the value must be in the range 0 to the number of      *   entries in the feature list | [optional] 
+ **body** | **str**| The index at which the rollback index should be placed. Features  with entry index (0-based) higher than or equal to the value are rolled back. Value of -1 is treated  as an alias for \&quot;end of feature list\&quot;. Otherwise the value must be in the range 0 to the number of  entries in the feature list | [optional] 
 
 ### Return type
 

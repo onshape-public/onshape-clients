@@ -5,17 +5,17 @@ All URIs are relative to *https://cad.onshape.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**commit_transaction**](AppElementsApi.md#commit_transaction) | **POST** /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid} | Commit Transaction
-[**create7**](AppElementsApi.md#create7) | **POST** /api/appelements/d/{did}/w/{wid} | Create Element.
-[**create_reference1**](AppElementsApi.md#create_reference1) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references | Create Reference
-[**delete_content1**](AppElementsApi.md#delete_content1) | **DELETE** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid} | Delete a Sub-element
-[**delete_reference1**](AppElementsApi.md#delete_reference1) | **DELETE** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Delete Reference
+[**create4**](AppElementsApi.md#create4) | **POST** /api/appelements/d/{did}/w/{wid} | Create Element.
+[**create_reference**](AppElementsApi.md#create_reference) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references | Create Reference
+[**delete_content**](AppElementsApi.md#delete_content) | **DELETE** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid} | Delete a Sub-element
+[**delete_reference**](AppElementsApi.md#delete_reference) | **DELETE** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Delete Reference
 [**get_history**](AppElementsApi.md#get_history) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history | Get History
 [**get_sub_element_content**](AppElementsApi.md#get_sub_element_content) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Get Content
 [**get_subelement_ids**](AppElementsApi.md#get_subelement_ids) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids | Get Sub-element IDs
-[**resolve_reference1**](AppElementsApi.md#resolve_reference1) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Resolve Reference
+[**resolve_reference**](AppElementsApi.md#resolve_reference) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Resolve Reference
 [**start_transaction**](AppElementsApi.md#start_transaction) | **POST** /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions | Start Transaction
-[**update5**](AppElementsApi.md#update5) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Update Element
-[**update_reference1**](AppElementsApi.md#update_reference1) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Update Reference
+[**update4**](AppElementsApi.md#update4) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Update Element
+[**update_reference**](AppElementsApi.md#update_reference) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Update Reference
 
 
 # **commit_transaction**
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create7**
-> BTAppElementModifyInfo create7(did, wid, bt_app_element_params)
+# **create4**
+> BTAppElementModifyInfo create4(did, wid, bt_app_element_params)
 
 Create Element.
 
@@ -112,10 +112,10 @@ bt_app_element_params = onshape_client.oas.BTAppElementParams() # BTAppElementPa
 
 try:
     # Create Element.
-    api_response = api_instance.create7(did, wid, bt_app_element_params)
+    api_response = api_instance.create4(did, wid, bt_app_element_params)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->create7: %s\n" % e)
+    print("Exception when calling AppElementsApi->create4: %s\n" % e)
 ```
 
 ### Parameters
@@ -146,8 +146,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_reference1**
-> BTAppElementReferenceInfo create_reference1(did, eid, wvm, wvmid, bt_app_element_reference_params)
+# **create_reference**
+> BTAppElementReferenceInfo create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params)
 
 Create Reference
 
@@ -176,10 +176,10 @@ bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams
 
 try:
     # Create Reference
-    api_response = api_instance.create_reference1(did, eid, wvm, wvmid, bt_app_element_reference_params)
+    api_response = api_instance.create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->create_reference1: %s\n" % e)
+    print("Exception when calling AppElementsApi->create_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -212,8 +212,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_content1**
-> BTAppElementModifyInfo delete_content1(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+# **delete_content**
+> BTAppElementModifyInfo delete_content(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
 
 Delete a Sub-element
 
@@ -245,10 +245,10 @@ description = 'description_example' # str |  (optional)
 
 try:
     # Delete a Sub-element
-    api_response = api_instance.delete_content1(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+    api_response = api_instance.delete_content(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->delete_content1: %s\n" % e)
+    print("Exception when calling AppElementsApi->delete_content: %s\n" % e)
 ```
 
 ### Parameters
@@ -284,8 +284,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_reference1**
-> BTAppElementReferenceInfo delete_reference1(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+# **delete_reference**
+> BTAppElementReferenceInfo delete_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
 
 Delete Reference
 
@@ -317,10 +317,10 @@ description = 'description_example' # str |  (optional)
 
 try:
     # Delete Reference
-    api_response = api_instance.delete_reference1(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+    api_response = api_instance.delete_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->delete_reference1: %s\n" % e)
+    print("Exception when calling AppElementsApi->delete_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -562,8 +562,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **resolve_reference1**
-> BTAppElementReferenceResolveInfo resolve_reference1(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
+# **resolve_reference**
+> BTAppElementReferenceResolveInfo resolve_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
 
 Resolve Reference
 
@@ -596,10 +596,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
     # Resolve Reference
-    api_response = api_instance.resolve_reference1(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
+    api_response = api_instance.resolve_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->resolve_reference1: %s\n" % e)
+    print("Exception when calling AppElementsApi->resolve_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -700,8 +700,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update5**
-> BTAppElementModifyInfo update5(did, eid, wvm, wvmid, bt_app_element_update_params)
+# **update4**
+> BTAppElementModifyInfo update4(did, eid, wvm, wvmid, bt_app_element_update_params)
 
 Update Element
 
@@ -730,10 +730,10 @@ bt_app_element_update_params = onshape_client.oas.BTAppElementUpdateParams() # B
 
 try:
     # Update Element
-    api_response = api_instance.update5(did, eid, wvm, wvmid, bt_app_element_update_params)
+    api_response = api_instance.update4(did, eid, wvm, wvmid, bt_app_element_update_params)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->update5: %s\n" % e)
+    print("Exception when calling AppElementsApi->update4: %s\n" % e)
 ```
 
 ### Parameters
@@ -766,8 +766,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_reference1**
-> BTAppElementReferenceInfo update_reference1(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
+# **update_reference**
+> BTAppElementReferenceInfo update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
 
 Update Reference
 
@@ -797,10 +797,10 @@ bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams
 
 try:
     # Update Reference
-    api_response = api_instance.update_reference1(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
+    api_response = api_instance.update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppElementsApi->update_reference1: %s\n" % e)
+    print("Exception when calling AppElementsApi->update_reference: %s\n" % e)
 ```
 
 ### Parameters

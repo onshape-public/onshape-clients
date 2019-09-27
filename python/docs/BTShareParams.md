@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **folder_id** | **str** |  | [optional] 
 **permission_set** | [**object**](.md) |  | [optional] 
+**update** | **bool** |  | [optional] 
+**encoded_configuration** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**update** | **bool** |  | [optional] 
-**encoded_configuration** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **entries** | [**list[BTShareEntryParams]**](BTShareEntryParams.md) |  | [optional] 
 **permission** | **int** |  | [optional] 

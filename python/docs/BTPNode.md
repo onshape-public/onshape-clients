@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**atomic** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **space_before** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 

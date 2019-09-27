@@ -159,7 +159,7 @@ class RESTClientObject(object):
             headers['Content-Type'] = 'application/json'
 
         # Ethan added:
-        add_onshape_specific_headers(method, urlparse(url).path, self.configuration, query_params=query_params, headers=headers)
+        add_onshape_specific_headers(method, url, self.configuration, query_params=query_params, headers=headers)
 
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
@@ -219,7 +219,8 @@ class RESTClientObject(object):
                                               fields=query_params,
                                               preload_content=_preload_content,
                                               timeout=timeout,
-                                              headers=headers)
+                                              headers=headers,
+                                              redirect=False)
         except urllib3.exceptions.SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)
@@ -236,31 +237,32 @@ class RESTClientObject(object):
             logger.debug("response body: %s", r.data)
 
         # TODO: Handle redirections
-        # # Ethan added the below clause to handle redirects correctly:
-        # if 300 <= r.status <= 399:
-        #     # parse location
-        #     location_string = r.getheaders()["Location"]
-        #     location = urlparse(location_string)
-        #     new_url = location.scheme + '://' + location.netloc + location.path
-        #     logger.debug('request redirected to: ' + location_string)
-        #     parsed_qs = parse_qs(location.query)
-        #     for q in parsed_qs:
-        #         parsed_qs[q] = parsed_qs[q][0]
-        #     return self.request(method, new_url, headers=headers,
-        #                         query_params=parsed_qs,
-        #                         body=body,
-        #                         post_params=post_params,
-        #                         _preload_content=_preload_content,
-        #                         _request_timeout=_request_timeout)
-        #
-        # if r.status == 403 or r.status == 401:
-        #     client = Client.get_client()
-        #     if client.get_authentication_method() == "oauth":
-        #         client.do_oauth_flow()
-        #         headers['Authorization'] = "Bearer {}".format(client.configuration.access_token)
-        #         return self.request(method, url, query_params=query_params, headers=headers,
-        #         body=body, post_params=post_params, _preload_content=_preload_content,
-        #         _request_timeout=_request_timeout)
+        # Ethan added the below clause to handle redirects correctly:
+        if 300 <= r.status <= 399:
+            # parse location
+            location_string = r.getheaders()["Location"]
+            location = urlparse(location_string)
+            new_url = location.scheme + '://' + location.netloc + location.path
+            logger.debug('request redirected to: ' + location_string)
+            parsed_qs = parse_qs(location.query)
+            for q in parsed_qs:
+                parsed_qs[q] = parsed_qs[q][0]
+            return self.request(method, new_url, headers=headers,
+                                query_params=parsed_qs,
+                                body=body,
+                                post_params=post_params,
+                                _preload_content=_preload_content,
+                                _request_timeout=_request_timeout)
+
+        if r.status == 403 or r.status == 401:
+            from onshape_client.client import Client
+            client = Client.get_client()
+            if client.get_authentication_method() == "oauth":
+                client.do_oauth_flow()
+                headers['Authorization'] = "Bearer {}".format(client.configuration.access_token)
+                return self.request(method, url, query_params=query_params, headers=headers,
+                body=body, post_params=post_params, _preload_content=_preload_content,
+                _request_timeout=_request_timeout)
 
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)

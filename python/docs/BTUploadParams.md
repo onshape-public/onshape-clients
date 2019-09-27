@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_name** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
+**document_name** | **str** |  | [optional] 
 **cloud_storage_account_id** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

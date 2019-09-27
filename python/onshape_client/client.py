@@ -6,9 +6,9 @@ from .oauth.local_server import start_server
 from enum import Enum
 import webbrowser
 from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
-from .oas import api
-from .oas import ApiClient
-from .oas.configuration import Configuration
+from onshape_client.oas import api
+from onshape_client.oas import ApiClient
+from onshape_client.oas.configuration import Configuration
 
 
 
@@ -231,7 +231,6 @@ class Client:
         self.drawings_api = api.DrawingsApi(api_client)
         self.documents_api = api.DocumentsApi(api_client)
         self.elements_api = api.ElementsApi(api_client)
-        self.feature_studios_api = api.FeatureStudiosApi(api_client)
         self.metadata_api = api.MetadataApi(api_client)
         self.parts_api = api.PartsApi(api_client)
         self.part_studios_api = api.PartStudiosApi(api_client)

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
-**units** | **str** |  | [optional] 
-**type** | **str** |  | [optional] 
 **display_name** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
+**units** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 

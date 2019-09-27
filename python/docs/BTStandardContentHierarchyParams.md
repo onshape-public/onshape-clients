@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**category** | **str** |  | [optional] 
 **types** | **str** |  | [optional] 
 **component_document_id** | **str** |  | [optional] 
 **disable_production** | **bool** |  | [optional] 
 **production_version_id** | **str** |  | [optional] 
 **test_version_id** | **str** |  | [optional] 
-**category** | **str** |  | [optional] 
 **standard** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 

@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**part_number** | **str** |  | [optional] 
+**part_id** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**part_number** | **str** |  | [optional] 
-**part_id** | **str** |  | [optional] 
 **api_configuration** | **str** |  | [optional] 
 **element_type** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
