@@ -2,20 +2,16 @@
 """
 
 from onshape_client.client import Client
-from onshape_client.onshape_url import OnshapeElement
 from onshape_client.oas.models.bt_translate_format_params import BTTranslateFormatParams
 import time
 import json
 import os.path
+from onshape_client.example_programs.onshape_models import cube
 
-client = Client()
+client = Client.get_client();
 
 # We're saving these files to the home directory ("~")
 client.configuration.temp_folder_path = os.path.expanduser("~")
-
-# Turn the URL into an "OnshapeElement"
-url = "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/aaa25d18038e06f0b2964e2d/e/69c9eedda86512966b20bc90"
-cube = OnshapeElement(url, client=client)
 
 # Create the params. Note there are far more params that can be specified.
 params = BTTranslateFormatParams(element_id=cube.eid, format_name="STEP", store_in_document=False, configuration='List_UKkGODiz574chc=chamfered;show_cube=true;size=0.254+meter')

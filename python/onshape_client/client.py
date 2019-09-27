@@ -37,10 +37,17 @@ class Client:
         conf_file.
     """
     __instance = None
+    __singleton = True
+
+    @classmethod
+    def set_singleton(cls, is_singleton):
+        cls.__singleton = is_singleton
 
     @staticmethod
     def get_client(create_if_needed=True):
         """ get an instance of the client class singleton. """
+        if not Client.__singleton:
+            raise ValueError('The Singleton option is turned off')
         client = Client.__instance
         if not client:
             if create_if_needed:
@@ -52,6 +59,8 @@ class Client:
     @staticmethod
     def clear_client():
         """ delete the singleton instance of the client. """
+        if not Client.__singleton:
+            raise ValueError('The Singleton option is turned off')
         Client.__instance = None
 
     @staticmethod
@@ -76,7 +85,7 @@ class Client:
             call client.set_grant_authorization_url_response(redirected_url) with whatever url the user got directed to
             (that includes the authorization code!)
         """
-        if Client.__instance != None:
+        if Client.__singleton and Client.__instance != None:
             raise Exception("This class is a singleton! Please use 'get_client' for all subsequent calls.")
         if configuration:
             final_configuration = configuration
