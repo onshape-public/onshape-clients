@@ -14,9 +14,8 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
 tox-pipenv = "*"
-tox = "==3.7.0"
+tox = "*"
 onshape-client = {path = ".",editable = true}
-python-semantic-release = "*"
 
 [packages]
 urllib3 = "*"

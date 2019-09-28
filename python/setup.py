@@ -12,7 +12,7 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
-import sys
+import sys, os
 
 NAME = "onshape_client"
 # To install the library, run the following
@@ -22,16 +22,11 @@ NAME = "onshape_client"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-try:
-    from semantic_release import setup_hook
-    setup_hook(sys.argv)
-except ImportError:
-    pass
-
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "requests_oauthlib", "ruamel.yaml", "pathlib", "enum34", "pint"]
 
 setup(
     name=NAME,
+    version=os.environ["nextRelease.version"],
     description="Onshape REST API",
     author_email="api-support@onshape.zendesk.com",
     url="",
