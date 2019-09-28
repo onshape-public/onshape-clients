@@ -19,12 +19,8 @@ class OnshapeElement(object):
         return OnshapeElement(client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid + "/e/" + eid)
 
     def __init__(self, url, *args, **kwargs):
-
-        self.client = Client.get_client()
-
         self.original_url = url
         parsed_vals = parse(url)
-
         self.base_url = parsed_vals.scheme + "://" + parsed_vals.netloc
         path_list = parsed_vals.path.split('/')
         self.did = path_list[2]
@@ -47,7 +43,7 @@ class OnshapeElement(object):
         if self.optional_microversion:
             return self.get_url()
         else:
-            res = self.client.documents_api.get_current_microversion(self.did,
+            res = Client.get_client().documents_api.get_current_microversion(self.did,
                                                                      self.wvm,
                                                                      self.wvmid,
                                                                      _preload_content=False)
@@ -108,7 +104,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return encoded_val["queryParam"]
 
     def _get_configuration_encoding_response(self):
-        res = self.client.elements_api.encode_configuration_map(self.did, self.eid, self._get_bt_configuration_params_for_current_configuration(), _preload_content=False)
+        res = Client.get_client().elements_api.encode_configuration_map(self.did, self.eid, self._get_bt_configuration_params_for_current_configuration(), _preload_content=False)
         return json.loads(res.data.decode("utf-8"))
 
     def _make_configuration_map(self, update):
@@ -155,7 +151,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return parameter_map
 
     def _get_raw_configuration_params(self):
-        response =self.client.elements_api.get_configuration(self.did, self.wvm, self.wvmid, self.eid,
+        response =Client.get_client().elements_api.get_configuration(self.did, self.wvm, self.wvmid, self.eid,
                                                         _preload_content=False)
         return json.loads(response.data.decode("utf-8"))
 

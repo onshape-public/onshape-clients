@@ -1,11 +1,11 @@
 from onshape_client.client import Client, OAuthAuthorizationMethods
+import pytest
 
-client = Client(stack_key="prod-oauth-full")
-
-def test_client(configurable_cube):
+def test_client(client, configurable_cube):
     call_api(configurable_cube, client)
 
-def test_manual_oauth_flow(configurable_cube):
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_manual_oauth_flow(configurable_cube, client):
     client.oauth_authorization_method = OAuthAuthorizationMethods.MANUAL_FLOW
     # save refresh token then put in later.
     refresh_token = client.refresh_token
@@ -19,4 +19,4 @@ def test_manual_oauth_flow(configurable_cube):
 
 
 def call_api(cube, client):
-    client.elements_api.get_configuration3(cube.did, cube.wvm, cube.wvmid, cube.eid)
+    client.elements_api.get_configuration(cube.did, cube.wvm, cube.wvmid, cube.eid)

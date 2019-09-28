@@ -36,7 +36,6 @@ def import_file(file_path, did, wid):
         print("An error ocurred on the server! Here is the response: \n")
     return element_id
 
-if __name__ == "__main__":
-    element = OnshapeElement(
-        "http://localhost.dev.onshape.com:8080/documents/ee93985ceb928f7a7c79fed3/w/593971edd8336a08489ec7c0/e/c066cfbaf68e866b53cdb73f")
-    import_file(os.path.dirname(__file__) + "/assets/Cube.x_t", element.did, element.wvmid)
+
+def test_import_file(new_document):
+    import_file(os.getcwd()+"/assets/Cube.x_t", new_document.did, new_document.wvmid)

@@ -15,7 +15,7 @@ This will return all the variables defined under "m", ie, m.radius, m.my_custom_
 
 from onshape_client.client import Client
 from onshape_client.onshape_url import OnshapeElement
-from onshape_client.models.bt_feature_script_eval_call import BTFeatureScriptEvalCall
+from onshape_client.oas.models.bt_feature_script_eval_call import BTFeatureScriptEvalCall
 from onshape_client.utility import parse_quantity
 import json
 
@@ -27,11 +27,10 @@ script = \
     """
 
 
-def main():
+def test_get_variables(client):
     element = OnshapeElement(
         "https://cad.onshape.com/documents/78aa66ffe6f1daceb9cfad3d/v/e36c0bd857c2a2a8b2107a40/e/92549789b92e9aa35f676f4e")
     script_call = BTFeatureScriptEvalCall(script=script)
-    client = Client.get_client()
     response = client.part_studios_api.eval_feature_script(element.did,
                                                            element.wvm,
                                                            element.wvmid,
@@ -69,10 +68,6 @@ def is_fs_type(candidate, type_name):
     except Exception:
         result = False
     return result
-
-
-if __name__ == '__main__':
-    main()
 
 """
 Measurements: 

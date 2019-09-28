@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 function publish() {
-    export NEXT_RELEASE=$1;
+    export ONSHAPE_CLIENT_VERSION=$1;
     $REPO_ONSHAPE_CLIENTS/python/deploy.sh
 }
 

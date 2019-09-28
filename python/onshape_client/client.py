@@ -9,6 +9,7 @@ from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, 
 from onshape_client.oas import api
 from onshape_client.oas import ApiClient
 from onshape_client.oas.configuration import Configuration
+import warnings
 
 
 
@@ -36,32 +37,20 @@ class Client:
         The key of the name for the particular stack to be used. Only applicable when reading configuration from the
         conf_file.
     """
-    __instance = None
-    __singleton = True
-
-    @classmethod
-    def set_singleton(cls, is_singleton):
-        cls.__singleton = is_singleton
+    singleton_instance = None
 
     @staticmethod
-    def get_client(create_if_needed=True):
-        """ get an instance of the client class singleton. """
-        if not Client.__singleton:
-            raise ValueError('The Singleton option is turned off')
-        client = Client.__instance
+    def get_client():
+        """ get an singleton_instance of the client class singleton. """
+        client = Client.singleton_instance
         if not client:
-            if create_if_needed:
-                client = Client()
-            else:
-                raise Exception("Please manually instantiate the client.")
+            raise Exception("Please manually instantiate the client.")
         return client
 
     @staticmethod
     def clear_client():
-        """ delete the singleton instance of the client. """
-        if not Client.__singleton:
-            raise ValueError('The Singleton option is turned off')
-        Client.__instance = None
+        """ delete the singleton singleton_instance of the client. """
+        Client.singleton_instance = None
 
     @staticmethod
     def get_configuration_from_keys_file(keys_file, stack_key):
@@ -71,10 +60,11 @@ class Client:
             final_configuration = configurations_file[stack_key if stack_key else configurations_file['default_stack']]
         except KeyError as e:
             raise KeyError(
-                "Your creds file is not constructed as expected. The key: {} was expected and now found.".format(e))
+                "Your creds file is not constructed as expected. The key: {} was expected and not found.".format(e))
         return final_configuration
 
-    def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None, open_authorize_grant_callback=None):
+    def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None,
+                 open_authorize_grant_callback=None, save=True):
         """
 
         :param keys_file:
@@ -85,8 +75,9 @@ class Client:
             call client.set_grant_authorization_url_response(redirected_url) with whatever url the user got directed to
             (that includes the authorization code!)
         """
-        if Client.__singleton and Client.__instance != None:
-            raise Exception("This class is a singleton! Please use 'get_client' for all subsequent calls.")
+        if not Client.singleton_instance:
+            warnings.warn("A Client was already created so this will create another and override it. Please use "
+                          "Client.get_client() to get the previously created client.")
         if configuration:
             final_configuration = configuration
         elif keys_file:
@@ -102,7 +93,7 @@ class Client:
         if self.get_authentication_method() == "oauth":
             self._set_oauth_session()
 
-        Client.__instance = self
+        Client.singleton_instance = self
 
     def set_grant_authorization_url_response(self, authorization_url_response):
         """ This is the redirected-to url, for example: https:localhost/oauth_redirect?code=XraRXPYGSWfZmBvUIiNHvSlZ&state=kgZQJbVp731CgNxAeKJN7TIoOlo5bz"""
@@ -163,20 +154,20 @@ class Client:
         configuration = Configuration()
 
         configuration.verify_ssl = False
-        configuration.api_key['SECRET_KEY'] = self._get_if_present(configuration_dictionary, 'secret_key')
-        configuration.api_key['ACCESS_KEY'] = self._get_if_present(configuration_dictionary, 'access_key')
+        configuration.api_key['SECRET_KEY'] = configuration_dictionary.get('secret_key', "")
+        configuration.api_key['ACCESS_KEY'] = configuration_dictionary.get('access_key', "")
 
-        self.client_id = self._get_if_present(configuration_dictionary, 'client_id')
-        self.client_secret = self._get_if_present(configuration_dictionary, 'client_secret')
-        configuration.access_token = self._get_if_present(configuration_dictionary, 'access_token')
-        self.refresh_token = self._get_if_present(configuration_dictionary, 'refresh_token')
-        self.scope = self._get_if_present(configuration_dictionary, 'scope')
-        self.redirect_uri = self._get_if_present(configuration_dictionary, 'redirect_uri')
-        self.token_uri = self._get_if_present(configuration_dictionary, 'token_uri')
-        self.authorization_uri = self._get_if_present(configuration_dictionary, 'authorization_uri')
-        self.oauth_authorization_method = self._get_if_present(configuration_dictionary, 'oauth_authorization_method')
-
-        configuration.host = self._get_if_present(configuration_dictionary, 'base_url')
+        self.client_id = configuration_dictionary.get('client_id', "")
+        self.client_secret = configuration_dictionary.get('client_secret', "")
+        configuration.access_token = configuration_dictionary.get('access_token', "")
+        self.refresh_token = configuration_dictionary.get('refresh_token', "")
+        self.scope = configuration_dictionary.get('scope', "")
+        self.redirect_uri = configuration_dictionary.get('redirect_uri', "")
+        self.token_uri = configuration_dictionary.get('token_uri', "")
+        self.authorization_uri = configuration_dictionary.get('authorization_uri', "")
+        self.oauth_authorization_method = configuration_dictionary.get('oauth_authorization_method', "")
+        # Default to prod
+        configuration.host = configuration_dictionary.get('base_url', "https://cad.onshape.com")
         self.configuration = configuration
         return
 
@@ -216,11 +207,6 @@ class Client:
         self.configuration.access_token = token_response["access_token"]
         self.refresh_token = token_response["refresh_token"]
         return
-
-
-    @staticmethod
-    def _get_if_present(dictionary, key):
-        return dictionary[key] if key in dictionary else ""
 
     def _create_apis(self):
         api_client = ApiClient(configuration=self.configuration)

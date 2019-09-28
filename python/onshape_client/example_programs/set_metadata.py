@@ -174,8 +174,6 @@ def update_many_element_metadata_example():
 
     bulk_metadata.send()
 
-if __name__ == "__main__":
+def test_set_metadata():
     update_one_element_metadata_example()
     update_many_element_metadata_example()
-
-

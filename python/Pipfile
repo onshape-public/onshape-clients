@@ -15,7 +15,7 @@ sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
 tox-pipenv = "*"
 tox = "*"
-onshape-client = {path = ".",editable = true}
+onshape-client = {editable = true,path = "."}
 
 [packages]
 urllib3 = "*"
@@ -25,5 +25,4 @@ python-dateutil = "*"
 requests-oauthlib = "*"
 ruamel-yaml = "*"
 pathlib = "*"
-enum34 = "*"
 pint = "*"

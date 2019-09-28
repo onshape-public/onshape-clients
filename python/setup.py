@@ -22,11 +22,11 @@ NAME = "onshape_client"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "requests_oauthlib", "ruamel.yaml", "pathlib", "enum34", "pint"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "requests_oauthlib", "ruamel.yaml", "pathlib", "pint"]
 
 setup(
     name=NAME,
-    version=os.environ["NEXT_RELEASE"],
+    version=33, #os.environ["ONSHAPE_CLIENT_VERSION"],
     description="Onshape REST API",
     author_email="api-support@onshape.zendesk.com",
     url="",

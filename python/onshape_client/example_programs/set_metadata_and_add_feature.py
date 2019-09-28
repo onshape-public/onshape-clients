@@ -8,12 +8,8 @@ import webbrowser
 from onshape_client.example_programs.set_metadata import MetaDataBody
 from onshape_client.example_programs.import_file import import_file
 from onshape_client.utility import write_to_file, get_field
-from onshape_client.models.bt_mass_prop_response import BTMassPropResponse
-from onshape_client.models.bt_bounding_box import BTBoundingBox
 import six
-
-client = Client()
-
+import pytest
 
 class myHandler(HTTPHandler):
     def do_GET(self):
@@ -49,9 +45,9 @@ class myHandler(HTTPHandler):
             unquoted_s = body.decode('utf-8')
         data = json.loads(unquoted_s)
 
-        from onshape_client.models import BTDocumentParams
+        from onshape_client.oas.models import BTDocumentParams
         bt_document_params = BTDocumentParams(name=data["doc_name"])
-        new_doc_response = client.documents_api.create11(bt_document_params, _preload_content=False)
+        new_doc_response = Client.get_client().documents_api.create11(bt_document_params, _preload_content=False)
         did = get_field(new_doc_response, "id")
         wid = get_field(new_doc_response, "defaultWorkspace")["id"]
         # Use a fake eid because it isn't used later.
@@ -77,9 +73,9 @@ class myHandler(HTTPHandler):
         onshape_element = self.onshape_element
         onshape_element.eid = eid
         url = onshape_element.get_url()
-        mass_properties = client.part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
+        mass_properties = Client.get_client().part_studios_api.get_mass_properties(did, 'w', wid, eid) # type: BTMassPropResponse
         volume = mass_properties.bodies["-all-"].volume[0]*1000000000
-        bounding_box = client.part_studios_api.get_bounding_boxes2(did, 'w', wid, eid, _preload_content=False)
+        bounding_box = Client.get_client().part_studios_api.get_bounding_boxes2(did, 'w', wid, eid, _preload_content=False)
         data = bounding_box.data
         if six.PY3:
             data = data.decode('utf-8')
@@ -123,7 +119,7 @@ class myHandler(HTTPHandler):
             # feature_path = "make_cube_feature.json"
             with open(os.path.dirname(__file__) + "/assets/" + feature_path, "r") as f:
                 body = {"feature": json.loads(f.read())}
-            client.part_studios_api.add_feature1(did, "w", wid, eid, body=body)
+            Client.get_client().part_studios_api.add_feature1(did, "w", wid, eid, body=body)
 
 
 class MyServer(HTTPServer, object):
@@ -132,6 +128,7 @@ class MyServer(HTTPServer, object):
         super(MyServer, self).server_activate()
         webbrowser.open("{}:{}".format(self.server_address[0], self.server_port))
 
-
-server = MyServer(('localhost', 9000), myHandler)
-server.serve_forever()
+@pytest.mark.skip(reason="no way of currently testing this on the CI")
+def test_run_import_server():
+    server = MyServer(('localhost', 9000), myHandler)
+    server.serve_forever()
