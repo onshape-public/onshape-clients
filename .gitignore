@@ -6,3 +6,4 @@ openapi_co
 
 # For NPM
 node_modules
+.npmrc

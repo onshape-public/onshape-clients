@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./python/deploy.sh
+cd python && ./deploy.sh && cd ..
