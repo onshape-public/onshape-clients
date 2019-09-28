@@ -3,3 +3,6 @@ openapi-generator-cli.jar
 secrets.sh
 openapi_co
 .onshape_client_config.yaml
+
+# For NPM
+node_modules

@@ -1,0 +1,37 @@
+{
+  "name": "onshape-clients",
+  "version": "1.0.0",
+  "description": "The meta package for creating the various Onshape clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onshape-public/onshape-clients.git"
+  },
+  "keywords": [
+    "Onshape",
+    "Clients",
+    "REST"
+  ],
+  "author": "Ethan Keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onshape-public/onshape-clients/issues"
+  },
+  "homepage": "https://github.com/onshape-public/onshape-clients#readme",
+  "dependencies": {
+    "commitizen": "^4.0.3"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^3.3.7",
+    "cz-conventional-changelog": "^3.0.2",
+    "semantic-release": "^15.13.24"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

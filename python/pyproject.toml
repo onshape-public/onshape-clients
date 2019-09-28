@@ -1,0 +1,2 @@
+[tool.semantic_release]
+version_variable="onshape_client/__init__.py:__version__"
