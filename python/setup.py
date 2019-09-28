@@ -26,7 +26,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "req
 
 setup(
     name=NAME,
-    version=os.environ["nextRelease.version"],
+    version=os.environ["NEXT_RELEASE"],
     description="Onshape REST API",
     author_email="api-support@onshape.zendesk.com",
     url="",

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
+
+# Setup secrets and all the scripts necessary to push this repo and the various distributions out.
+export REPO_ONSHAPE_CLIENTS=$(pwd)
 source ./secrets.sh
-export ONSHAPE_CLIENTS_PATH=${ONSHAPE_CLIENTS_PATH:-$TRAVIS_BUILD_DIR};
-export ONSHAPE_CLIENTS_VERSION=0.0.16;
-git config credential.helper "/bin/bash $ONSHAPE_CLIENTS_PATH/credential-helper.sh";
+source ./publish.sh
