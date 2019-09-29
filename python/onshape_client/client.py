@@ -39,6 +39,12 @@ class Client:
     """
     singleton_instance = None
 
+    ONSHAPE_API_ACCESS_KEY="ONSHAPE_API_ACCESS_KEY"
+    ONSHAPE_API_SECRET_KEY="ONSHAPE_API_SECRET_KEY"
+    ONSHAPE_BASE_URL="ONSHAPE_BASE_URL"
+
+    prod_base_url="https://cad.onshape.com"
+
     @staticmethod
     def get_client():
         """ get an singleton_instance of the client class singleton. """
@@ -80,6 +86,14 @@ class Client:
                           "Client.get_client() to get the previously created client.")
         if configuration:
             final_configuration = configuration
+        elif Client.ONSHAPE_API_ACCESS_KEY in os.environ and Client.ONSHAPE_API_SECRET_KEY in os.environ:
+            base_url = os.environ[Client.ONSHAPE_BASE_URL]
+            base_url = base_url if base_url else Client.prod_base_url
+            final_configuration = {
+                'access_key': os.environ[Client.ONSHAPE_API_ACCESS_KEY],
+                'secret_key': os.environ[Client.ONSHAPE_API_SECRET_KEY],
+                'base_url': base_url
+            }
         elif keys_file:
             keys_file = os.path.expanduser(keys_file)
             final_configuration = self.get_configuration_from_keys_file(keys_file, stack_key)
