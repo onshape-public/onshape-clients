@@ -11,3 +11,4 @@ matrix:
 before_install:
 - openssl aes-256-cbc -K $encrypted_a6d606fa6cad_key -iv $encrypted_a6d606fa6cad_iv
   -in secrets.sh.enc -out secrets.sh -d
+- source environment.sh

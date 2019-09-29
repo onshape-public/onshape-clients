@@ -87,8 +87,7 @@ class Client:
         if configuration:
             final_configuration = configuration
         elif Client.ONSHAPE_API_ACCESS_KEY in os.environ and Client.ONSHAPE_API_SECRET_KEY in os.environ:
-            base_url = os.environ[Client.ONSHAPE_BASE_URL]
-            base_url = base_url if base_url else Client.prod_base_url
+            base_url = os.environ[Client.ONSHAPE_BASE_URL] if Client.ONSHAPE_BASE_URL in os.environ else Client.prod_base_url
             final_configuration = {
                 'access_key': os.environ[Client.ONSHAPE_API_ACCESS_KEY],
                 'secret_key': os.environ[Client.ONSHAPE_API_SECRET_KEY],
