@@ -32,17 +32,17 @@ class BTTranslateFormatParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'link_document_id': 'str',
-        'link_document_workspace_id': 'str',
         'configuration': 'str',
         'element_id': 'str',
-        'trigger_auto_download': 'bool',
-        'notify_user': 'bool',
-        'part_ids': 'str',
+        'link_document_id': 'str',
+        'link_document_workspace_id': 'str',
         'store_in_document': 'bool',
         'from_user_id': 'str',
         'cloud_storage_account_id': 'str',
         'connection_id': 'str',
+        'trigger_auto_download': 'bool',
+        'notify_user': 'bool',
+        'part_ids': 'str',
         'cloud_object_id': 'str',
         'email_link': 'bool',
         'password_required': 'bool',
@@ -84,25 +84,25 @@ class BTTranslateFormatParams(object):
         'create_composite': 'bool',
         'extract_assembly_hierarchy': 'bool',
         'join_adjacent_surfaces': 'bool',
+        'processed_foreign_id': 'str',
         'original_foreign_id': 'str',
         'import_within_document': 'bool',
         'blob_element_id': 'str',
-        'blob_microversion_id': 'str',
-        'processed_foreign_id': 'str'
+        'blob_microversion_id': 'str'
     }
 
     attribute_map = {
-        'link_document_id': 'linkDocumentId',
-        'link_document_workspace_id': 'linkDocumentWorkspaceId',
         'configuration': 'configuration',
         'element_id': 'elementId',
-        'trigger_auto_download': 'triggerAutoDownload',
-        'notify_user': 'notifyUser',
-        'part_ids': 'partIds',
+        'link_document_id': 'linkDocumentId',
+        'link_document_workspace_id': 'linkDocumentWorkspaceId',
         'store_in_document': 'storeInDocument',
         'from_user_id': 'fromUserId',
         'cloud_storage_account_id': 'cloudStorageAccountId',
         'connection_id': 'connectionId',
+        'trigger_auto_download': 'triggerAutoDownload',
+        'notify_user': 'notifyUser',
+        'part_ids': 'partIds',
         'cloud_object_id': 'cloudObjectId',
         'email_link': 'emailLink',
         'password_required': 'passwordRequired',
@@ -144,27 +144,27 @@ class BTTranslateFormatParams(object):
         'create_composite': 'createComposite',
         'extract_assembly_hierarchy': 'extractAssemblyHierarchy',
         'join_adjacent_surfaces': 'joinAdjacentSurfaces',
+        'processed_foreign_id': 'processedForeignId',
         'original_foreign_id': 'originalForeignId',
         'import_within_document': 'importWithinDocument',
         'blob_element_id': 'blobElementId',
-        'blob_microversion_id': 'blobMicroversionId',
-        'processed_foreign_id': 'processedForeignId'
+        'blob_microversion_id': 'blobMicroversionId'
     }
 
-    def __init__(self, link_document_id=None, link_document_workspace_id=None, configuration=None, element_id=None, trigger_auto_download=None, notify_user=None, part_ids=None, store_in_document=None, from_user_id=None, cloud_storage_account_id=None, connection_id=None, cloud_object_id=None, email_link=None, password_required=None, email_subject=None, email_message=None, email_to=None, send_copy_to_me=None, version_string=None, destination_name=None, source_name=None, distance_tolerance=None, angular_tolerance=None, maximum_chord_length=None, valid_for_days=None, format_name=None, flatten=None, include_export_ids=None, text_as_geometry=None, show_overridden_dimensions=None, current_sheet_only=None, image_width=None, image_height=None, color_method=None, splines_as_polylines=None, selectable_pdf_text=None, grouping=None, import_in_background=None, password=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, extract_assembly_hierarchy=None, join_adjacent_surfaces=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None, processed_foreign_id=None):  # noqa: E501
+    def __init__(self, configuration=None, element_id=None, link_document_id=None, link_document_workspace_id=None, store_in_document=None, from_user_id=None, cloud_storage_account_id=None, connection_id=None, trigger_auto_download=None, notify_user=None, part_ids=None, cloud_object_id=None, email_link=None, password_required=None, email_subject=None, email_message=None, email_to=None, send_copy_to_me=None, version_string=None, destination_name=None, source_name=None, distance_tolerance=None, angular_tolerance=None, maximum_chord_length=None, valid_for_days=None, format_name=None, flatten=None, include_export_ids=None, text_as_geometry=None, show_overridden_dimensions=None, current_sheet_only=None, image_width=None, image_height=None, color_method=None, splines_as_polylines=None, selectable_pdf_text=None, grouping=None, import_in_background=None, password=None, project_id=None, parent_id=None, foreign_id=None, upload_id=None, unit=None, specify_units=None, split_assemblies_into_multiple_documents=None, flatten_assemblies=None, gety_axis_is_up=None, allow_faulty_parts=None, create_composite=None, extract_assembly_hierarchy=None, join_adjacent_surfaces=None, processed_foreign_id=None, original_foreign_id=None, import_within_document=None, blob_element_id=None, blob_microversion_id=None):  # noqa: E501
         """BTTranslateFormatParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._link_document_id = None
-        self._link_document_workspace_id = None
         self._configuration = None
         self._element_id = None
-        self._trigger_auto_download = None
-        self._notify_user = None
-        self._part_ids = None
+        self._link_document_id = None
+        self._link_document_workspace_id = None
         self._store_in_document = None
         self._from_user_id = None
         self._cloud_storage_account_id = None
         self._connection_id = None
+        self._trigger_auto_download = None
+        self._notify_user = None
+        self._part_ids = None
         self._cloud_object_id = None
         self._email_link = None
         self._password_required = None
@@ -206,27 +206,21 @@ class BTTranslateFormatParams(object):
         self._create_composite = None
         self._extract_assembly_hierarchy = None
         self._join_adjacent_surfaces = None
+        self._processed_foreign_id = None
         self._original_foreign_id = None
         self._import_within_document = None
         self._blob_element_id = None
         self._blob_microversion_id = None
-        self._processed_foreign_id = None
         self.discriminator = None
 
-        if link_document_id is not None:
-            self.link_document_id = link_document_id
-        if link_document_workspace_id is not None:
-            self.link_document_workspace_id = link_document_workspace_id
         if configuration is not None:
             self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
-        if trigger_auto_download is not None:
-            self.trigger_auto_download = trigger_auto_download
-        if notify_user is not None:
-            self.notify_user = notify_user
-        if part_ids is not None:
-            self.part_ids = part_ids
+        if link_document_id is not None:
+            self.link_document_id = link_document_id
+        if link_document_workspace_id is not None:
+            self.link_document_workspace_id = link_document_workspace_id
         if store_in_document is not None:
             self.store_in_document = store_in_document
         if from_user_id is not None:
@@ -235,6 +229,12 @@ class BTTranslateFormatParams(object):
             self.cloud_storage_account_id = cloud_storage_account_id
         if connection_id is not None:
             self.connection_id = connection_id
+        if trigger_auto_download is not None:
+            self.trigger_auto_download = trigger_auto_download
+        if notify_user is not None:
+            self.notify_user = notify_user
+        if part_ids is not None:
+            self.part_ids = part_ids
         if cloud_object_id is not None:
             self.cloud_object_id = cloud_object_id
         if email_link is not None:
@@ -317,6 +317,8 @@ class BTTranslateFormatParams(object):
             self.extract_assembly_hierarchy = extract_assembly_hierarchy
         if join_adjacent_surfaces is not None:
             self.join_adjacent_surfaces = join_adjacent_surfaces
+        if processed_foreign_id is not None:
+            self.processed_foreign_id = processed_foreign_id
         if original_foreign_id is not None:
             self.original_foreign_id = original_foreign_id
         if import_within_document is not None:
@@ -325,50 +327,6 @@ class BTTranslateFormatParams(object):
             self.blob_element_id = blob_element_id
         if blob_microversion_id is not None:
             self.blob_microversion_id = blob_microversion_id
-        if processed_foreign_id is not None:
-            self.processed_foreign_id = processed_foreign_id
-
-    @property
-    def link_document_id(self):
-        """Gets the link_document_id of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The link_document_id of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._link_document_id
-
-    @link_document_id.setter
-    def link_document_id(self, link_document_id):
-        """Sets the link_document_id of this BTTranslateFormatParams.
-
-
-        :param link_document_id: The link_document_id of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._link_document_id = link_document_id
-
-    @property
-    def link_document_workspace_id(self):
-        """Gets the link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._link_document_workspace_id
-
-    @link_document_workspace_id.setter
-    def link_document_workspace_id(self, link_document_workspace_id):
-        """Sets the link_document_workspace_id of this BTTranslateFormatParams.
-
-
-        :param link_document_workspace_id: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._link_document_workspace_id = link_document_workspace_id
 
     @property
     def configuration(self):
@@ -413,67 +371,46 @@ class BTTranslateFormatParams(object):
         self._element_id = element_id
 
     @property
-    def trigger_auto_download(self):
-        """Gets the trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+    def link_document_id(self):
+        """Gets the link_document_id of this BTTranslateFormatParams.  # noqa: E501
 
 
-        :return: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._trigger_auto_download
-
-    @trigger_auto_download.setter
-    def trigger_auto_download(self, trigger_auto_download):
-        """Sets the trigger_auto_download of this BTTranslateFormatParams.
-
-
-        :param trigger_auto_download: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._trigger_auto_download = trigger_auto_download
-
-    @property
-    def notify_user(self):
-        """Gets the notify_user of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The notify_user of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._notify_user
-
-    @notify_user.setter
-    def notify_user(self, notify_user):
-        """Sets the notify_user of this BTTranslateFormatParams.
-
-
-        :param notify_user: The notify_user of this BTTranslateFormatParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._notify_user = notify_user
-
-    @property
-    def part_ids(self):
-        """Gets the part_ids of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The part_ids of this BTTranslateFormatParams.  # noqa: E501
+        :return: The link_document_id of this BTTranslateFormatParams.  # noqa: E501
         :rtype: str
         """
-        return self._part_ids
+        return self._link_document_id
 
-    @part_ids.setter
-    def part_ids(self, part_ids):
-        """Sets the part_ids of this BTTranslateFormatParams.
+    @link_document_id.setter
+    def link_document_id(self, link_document_id):
+        """Sets the link_document_id of this BTTranslateFormatParams.
 
 
-        :param part_ids: The part_ids of this BTTranslateFormatParams.  # noqa: E501
+        :param link_document_id: The link_document_id of this BTTranslateFormatParams.  # noqa: E501
         :type: str
         """
 
-        self._part_ids = part_ids
+        self._link_document_id = link_document_id
+
+    @property
+    def link_document_workspace_id(self):
+        """Gets the link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._link_document_workspace_id
+
+    @link_document_workspace_id.setter
+    def link_document_workspace_id(self, link_document_workspace_id):
+        """Sets the link_document_workspace_id of this BTTranslateFormatParams.
+
+
+        :param link_document_workspace_id: The link_document_workspace_id of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._link_document_workspace_id = link_document_workspace_id
 
     @property
     def store_in_document(self):
@@ -558,6 +495,69 @@ class BTTranslateFormatParams(object):
         """
 
         self._connection_id = connection_id
+
+    @property
+    def trigger_auto_download(self):
+        """Gets the trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._trigger_auto_download
+
+    @trigger_auto_download.setter
+    def trigger_auto_download(self, trigger_auto_download):
+        """Sets the trigger_auto_download of this BTTranslateFormatParams.
+
+
+        :param trigger_auto_download: The trigger_auto_download of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._trigger_auto_download = trigger_auto_download
+
+    @property
+    def notify_user(self):
+        """Gets the notify_user of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The notify_user of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._notify_user
+
+    @notify_user.setter
+    def notify_user(self, notify_user):
+        """Sets the notify_user of this BTTranslateFormatParams.
+
+
+        :param notify_user: The notify_user of this BTTranslateFormatParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._notify_user = notify_user
+
+    @property
+    def part_ids(self):
+        """Gets the part_ids of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The part_ids of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_ids
+
+    @part_ids.setter
+    def part_ids(self, part_ids):
+        """Sets the part_ids of this BTTranslateFormatParams.
+
+
+        :param part_ids: The part_ids of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_ids = part_ids
 
     @property
     def cloud_object_id(self):
@@ -1421,6 +1421,27 @@ class BTTranslateFormatParams(object):
         self._join_adjacent_surfaces = join_adjacent_surfaces
 
     @property
+    def processed_foreign_id(self):
+        """Gets the processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
+
+
+        :return: The processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._processed_foreign_id
+
+    @processed_foreign_id.setter
+    def processed_foreign_id(self, processed_foreign_id):
+        """Sets the processed_foreign_id of this BTTranslateFormatParams.
+
+
+        :param processed_foreign_id: The processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
+        :type: str
+        """
+
+        self._processed_foreign_id = processed_foreign_id
+
+    @property
     def original_foreign_id(self):
         """Gets the original_foreign_id of this BTTranslateFormatParams.  # noqa: E501
 
@@ -1503,27 +1524,6 @@ class BTTranslateFormatParams(object):
         """
 
         self._blob_microversion_id = blob_microversion_id
-
-    @property
-    def processed_foreign_id(self):
-        """Gets the processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
-
-
-        :return: The processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._processed_foreign_id
-
-    @processed_foreign_id.setter
-    def processed_foreign_id(self, processed_foreign_id):
-        """Sets the processed_foreign_id of this BTTranslateFormatParams.
-
-
-        :param processed_foreign_id: The processed_foreign_id of this BTTranslateFormatParams.  # noqa: E501
-        :type: str
-        """
-
-        self._processed_foreign_id = processed_foreign_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

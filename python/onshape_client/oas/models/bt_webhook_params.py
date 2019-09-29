@@ -32,76 +32,64 @@ class BTWebhookParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'project_id': 'str',
-        'folder_id': 'str',
-        'part_id': 'str',
-        'events': 'list[str]',
-        'user_id': 'str',
         'version_id': 'str',
         'company_id': 'str',
         'client_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'data': 'str',
-        'filter': 'str',
+        'project_id': 'str',
+        'folder_id': 'str',
+        'part_id': 'str',
         'url': 'str',
-        'options': 'BTWebhookOptions'
+        'events': 'list[str]',
+        'id': 'str',
+        'options': 'BTWebhookOptions',
+        'user_id': 'str',
+        'data': 'str',
+        'filter': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'project_id': 'projectId',
-        'folder_id': 'folderId',
-        'part_id': 'partId',
-        'events': 'events',
-        'user_id': 'userId',
         'version_id': 'versionId',
         'company_id': 'companyId',
         'client_id': 'clientId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'data': 'data',
-        'filter': 'filter',
+        'project_id': 'projectId',
+        'folder_id': 'folderId',
+        'part_id': 'partId',
         'url': 'url',
-        'options': 'options'
+        'events': 'events',
+        'id': 'id',
+        'options': 'options',
+        'user_id': 'userId',
+        'data': 'data',
+        'filter': 'filter'
     }
 
-    def __init__(self, id=None, project_id=None, folder_id=None, part_id=None, events=None, user_id=None, version_id=None, company_id=None, client_id=None, workspace_id=None, element_id=None, document_id=None, data=None, filter=None, url=None, options=None):  # noqa: E501
+    def __init__(self, version_id=None, company_id=None, client_id=None, workspace_id=None, element_id=None, document_id=None, project_id=None, folder_id=None, part_id=None, url=None, events=None, id=None, options=None, user_id=None, data=None, filter=None):  # noqa: E501
         """BTWebhookParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
-        self._project_id = None
-        self._folder_id = None
-        self._part_id = None
-        self._events = None
-        self._user_id = None
         self._version_id = None
         self._company_id = None
         self._client_id = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
+        self._project_id = None
+        self._folder_id = None
+        self._part_id = None
+        self._url = None
+        self._events = None
+        self._id = None
+        self._options = None
+        self._user_id = None
         self._data = None
         self._filter = None
-        self._url = None
-        self._options = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if project_id is not None:
-            self.project_id = project_id
-        if folder_id is not None:
-            self.folder_id = folder_id
-        if part_id is not None:
-            self.part_id = part_id
-        if events is not None:
-            self.events = events
-        if user_id is not None:
-            self.user_id = user_id
         if version_id is not None:
             self.version_id = version_id
         if company_id is not None:
@@ -114,140 +102,26 @@ class BTWebhookParams(object):
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
+        if project_id is not None:
+            self.project_id = project_id
+        if folder_id is not None:
+            self.folder_id = folder_id
+        if part_id is not None:
+            self.part_id = part_id
+        if url is not None:
+            self.url = url
+        if events is not None:
+            self.events = events
+        if id is not None:
+            self.id = id
+        if options is not None:
+            self.options = options
+        if user_id is not None:
+            self.user_id = user_id
         if data is not None:
             self.data = data
         if filter is not None:
             self.filter = filter
-        if url is not None:
-            self.url = url
-        if options is not None:
-            self.options = options
-
-    @property
-    def id(self):
-        """Gets the id of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The id of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTWebhookParams.
-
-
-        :param id: The id of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The project_id of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTWebhookParams.
-
-
-        :param project_id: The project_id of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._project_id = project_id
-
-    @property
-    def folder_id(self):
-        """Gets the folder_id of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The folder_id of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._folder_id
-
-    @folder_id.setter
-    def folder_id(self, folder_id):
-        """Sets the folder_id of this BTWebhookParams.
-
-
-        :param folder_id: The folder_id of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._folder_id = folder_id
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The part_id of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTWebhookParams.
-
-
-        :param part_id: The part_id of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
-    def events(self):
-        """Gets the events of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The events of this BTWebhookParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._events
-
-    @events.setter
-    def events(self, events):
-        """Sets the events of this BTWebhookParams.
-
-
-        :param events: The events of this BTWebhookParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._events = events
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The user_id of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTWebhookParams.
-
-
-        :param user_id: The user_id of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
 
     @property
     def version_id(self):
@@ -376,6 +250,174 @@ class BTWebhookParams(object):
         self._document_id = document_id
 
     @property
+    def project_id(self):
+        """Gets the project_id of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The project_id of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTWebhookParams.
+
+
+        :param project_id: The project_id of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._project_id = project_id
+
+    @property
+    def folder_id(self):
+        """Gets the folder_id of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The folder_id of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._folder_id
+
+    @folder_id.setter
+    def folder_id(self, folder_id):
+        """Sets the folder_id of this BTWebhookParams.
+
+
+        :param folder_id: The folder_id of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._folder_id = folder_id
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The part_id of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTWebhookParams.
+
+
+        :param part_id: The part_id of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
+
+    @property
+    def url(self):
+        """Gets the url of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The url of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this BTWebhookParams.
+
+
+        :param url: The url of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
+    def events(self):
+        """Gets the events of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The events of this BTWebhookParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._events
+
+    @events.setter
+    def events(self, events):
+        """Sets the events of this BTWebhookParams.
+
+
+        :param events: The events of this BTWebhookParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._events = events
+
+    @property
+    def id(self):
+        """Gets the id of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The id of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTWebhookParams.
+
+
+        :param id: The id of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def options(self):
+        """Gets the options of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The options of this BTWebhookParams.  # noqa: E501
+        :rtype: BTWebhookOptions
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """Sets the options of this BTWebhookParams.
+
+
+        :param options: The options of this BTWebhookParams.  # noqa: E501
+        :type: BTWebhookOptions
+        """
+
+        self._options = options
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTWebhookParams.  # noqa: E501
+
+
+        :return: The user_id of this BTWebhookParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTWebhookParams.
+
+
+        :param user_id: The user_id of this BTWebhookParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
+
+    @property
     def data(self):
         """Gets the data of this BTWebhookParams.  # noqa: E501
 
@@ -416,48 +458,6 @@ class BTWebhookParams(object):
         """
 
         self._filter = filter
-
-    @property
-    def url(self):
-        """Gets the url of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The url of this BTWebhookParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this BTWebhookParams.
-
-
-        :param url: The url of this BTWebhookParams.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
-
-    @property
-    def options(self):
-        """Gets the options of this BTWebhookParams.  # noqa: E501
-
-
-        :return: The options of this BTWebhookParams.  # noqa: E501
-        :rtype: BTWebhookOptions
-        """
-        return self._options
-
-    @options.setter
-    def options(self, options):
-        """Sets the options of this BTWebhookParams.
-
-
-        :param options: The options of this BTWebhookParams.  # noqa: E501
-        :type: BTWebhookOptions
-        """
-
-        self._options = options
 
     def to_dict(self):
         """Returns the model properties as a dict"""

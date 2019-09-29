@@ -32,52 +32,31 @@ class BTItemParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'publish_state': 'int',
         'company_id': 'str',
+        'publish_state': 'int',
         'name': 'str'
     }
 
     attribute_map = {
-        'publish_state': 'publishState',
         'company_id': 'companyId',
+        'publish_state': 'publishState',
         'name': 'name'
     }
 
-    def __init__(self, publish_state=None, company_id=None, name=None):  # noqa: E501
+    def __init__(self, company_id=None, publish_state=None, name=None):  # noqa: E501
         """BTItemParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._publish_state = None
         self._company_id = None
+        self._publish_state = None
         self._name = None
         self.discriminator = None
 
-        if publish_state is not None:
-            self.publish_state = publish_state
         if company_id is not None:
             self.company_id = company_id
+        if publish_state is not None:
+            self.publish_state = publish_state
         if name is not None:
             self.name = name
-
-    @property
-    def publish_state(self):
-        """Gets the publish_state of this BTItemParams.  # noqa: E501
-
-
-        :return: The publish_state of this BTItemParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._publish_state
-
-    @publish_state.setter
-    def publish_state(self, publish_state):
-        """Sets the publish_state of this BTItemParams.
-
-
-        :param publish_state: The publish_state of this BTItemParams.  # noqa: E501
-        :type: int
-        """
-
-        self._publish_state = publish_state
 
     @property
     def company_id(self):
@@ -99,6 +78,27 @@ class BTItemParams(object):
         """
 
         self._company_id = company_id
+
+    @property
+    def publish_state(self):
+        """Gets the publish_state of this BTItemParams.  # noqa: E501
+
+
+        :return: The publish_state of this BTItemParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._publish_state
+
+    @publish_state.setter
+    def publish_state(self, publish_state):
+        """Sets the publish_state of this BTItemParams.
+
+
+        :param publish_state: The publish_state of this BTItemParams.  # noqa: E501
+        :type: int
+        """
+
+        self._publish_state = publish_state
 
     @property
     def name(self):

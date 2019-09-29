@@ -38,15 +38,15 @@ class BTUserSummaryInfo(object):
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
-        'last_login_time': 'datetime',
         'company': 'BTCompanySummaryInfo',
+        'last_login_time': 'datetime',
         'source': 'int',
         'image': 'str',
         'state': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
@@ -56,18 +56,18 @@ class BTUserSummaryInfo(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
-        'last_login_time': 'lastLoginTime',
         'company': 'company',
+        'last_login_time': 'lastLoginTime',
         'source': 'source',
         'image': 'image',
         'state': 'state',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, is_guest=None, is_light=None, global_permissions=None, first_name=None, last_name=None, email=None, last_login_time=None, company=None, source=None, image=None, state=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, is_guest=None, is_light=None, global_permissions=None, first_name=None, last_name=None, email=None, company=None, last_login_time=None, source=None, image=None, state=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTUserSummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._is_guest = None
@@ -76,15 +76,15 @@ class BTUserSummaryInfo(object):
         self._first_name = None
         self._last_name = None
         self._email = None
-        self._last_login_time = None
         self._company = None
+        self._last_login_time = None
         self._source = None
         self._image = None
         self._state = None
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if is_guest is not None:
@@ -99,24 +99,24 @@ class BTUserSummaryInfo(object):
             self.last_name = last_name
         if email is not None:
             self.email = email
-        if last_login_time is not None:
-            self.last_login_time = last_login_time
         if company is not None:
             self.company = company
+        if last_login_time is not None:
+            self.last_login_time = last_login_time
         if source is not None:
             self.source = source
         if image is not None:
             self.image = image
         if state is not None:
             self.state = state
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def is_guest(self):
@@ -245,27 +245,6 @@ class BTUserSummaryInfo(object):
         self._email = email
 
     @property
-    def last_login_time(self):
-        """Gets the last_login_time of this BTUserSummaryInfo.  # noqa: E501
-
-
-        :return: The last_login_time of this BTUserSummaryInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_login_time
-
-    @last_login_time.setter
-    def last_login_time(self, last_login_time):
-        """Sets the last_login_time of this BTUserSummaryInfo.
-
-
-        :param last_login_time: The last_login_time of this BTUserSummaryInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._last_login_time = last_login_time
-
-    @property
     def company(self):
         """Gets the company of this BTUserSummaryInfo.  # noqa: E501
 
@@ -285,6 +264,27 @@ class BTUserSummaryInfo(object):
         """
 
         self._company = company
+
+    @property
+    def last_login_time(self):
+        """Gets the last_login_time of this BTUserSummaryInfo.  # noqa: E501
+
+
+        :return: The last_login_time of this BTUserSummaryInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_login_time
+
+    @last_login_time.setter
+    def last_login_time(self, last_login_time):
+        """Sets the last_login_time of this BTUserSummaryInfo.
+
+
+        :param last_login_time: The last_login_time of this BTUserSummaryInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._last_login_time = last_login_time
 
     @property
     def source(self):
@@ -350,27 +350,6 @@ class BTUserSummaryInfo(object):
         self._state = state
 
     @property
-    def id(self):
-        """Gets the id of this BTUserSummaryInfo.  # noqa: E501
-
-
-        :return: The id of this BTUserSummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTUserSummaryInfo.
-
-
-        :param id: The id of this BTUserSummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTUserSummaryInfo.  # noqa: E501
 
@@ -432,6 +411,27 @@ class BTUserSummaryInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTUserSummaryInfo.  # noqa: E501
+
+
+        :return: The id of this BTUserSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTUserSummaryInfo.
+
+
+        :param id: The id of this BTUserSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

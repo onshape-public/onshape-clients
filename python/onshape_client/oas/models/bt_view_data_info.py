@@ -32,57 +32,36 @@ class BTViewDataInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'view_matrix': 'list[float]',
         'is_perspective': 'bool',
+        'angle': 'float',
         'camera_viewport': 'list[float]',
-        'angle': 'float'
+        'view_matrix': 'list[float]'
     }
 
     attribute_map = {
-        'view_matrix': 'viewMatrix',
         'is_perspective': 'isPerspective',
+        'angle': 'angle',
         'camera_viewport': 'cameraViewport',
-        'angle': 'angle'
+        'view_matrix': 'viewMatrix'
     }
 
-    def __init__(self, view_matrix=None, is_perspective=None, camera_viewport=None, angle=None):  # noqa: E501
+    def __init__(self, is_perspective=None, angle=None, camera_viewport=None, view_matrix=None):  # noqa: E501
         """BTViewDataInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._view_matrix = None
         self._is_perspective = None
-        self._camera_viewport = None
         self._angle = None
+        self._camera_viewport = None
+        self._view_matrix = None
         self.discriminator = None
 
-        if view_matrix is not None:
-            self.view_matrix = view_matrix
         if is_perspective is not None:
             self.is_perspective = is_perspective
-        if camera_viewport is not None:
-            self.camera_viewport = camera_viewport
         if angle is not None:
             self.angle = angle
-
-    @property
-    def view_matrix(self):
-        """Gets the view_matrix of this BTViewDataInfo.  # noqa: E501
-
-
-        :return: The view_matrix of this BTViewDataInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._view_matrix
-
-    @view_matrix.setter
-    def view_matrix(self, view_matrix):
-        """Sets the view_matrix of this BTViewDataInfo.
-
-
-        :param view_matrix: The view_matrix of this BTViewDataInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._view_matrix = view_matrix
+        if camera_viewport is not None:
+            self.camera_viewport = camera_viewport
+        if view_matrix is not None:
+            self.view_matrix = view_matrix
 
     @property
     def is_perspective(self):
@@ -106,6 +85,27 @@ class BTViewDataInfo(object):
         self._is_perspective = is_perspective
 
     @property
+    def angle(self):
+        """Gets the angle of this BTViewDataInfo.  # noqa: E501
+
+
+        :return: The angle of this BTViewDataInfo.  # noqa: E501
+        :rtype: float
+        """
+        return self._angle
+
+    @angle.setter
+    def angle(self, angle):
+        """Sets the angle of this BTViewDataInfo.
+
+
+        :param angle: The angle of this BTViewDataInfo.  # noqa: E501
+        :type: float
+        """
+
+        self._angle = angle
+
+    @property
     def camera_viewport(self):
         """Gets the camera_viewport of this BTViewDataInfo.  # noqa: E501
 
@@ -127,25 +127,25 @@ class BTViewDataInfo(object):
         self._camera_viewport = camera_viewport
 
     @property
-    def angle(self):
-        """Gets the angle of this BTViewDataInfo.  # noqa: E501
+    def view_matrix(self):
+        """Gets the view_matrix of this BTViewDataInfo.  # noqa: E501
 
 
-        :return: The angle of this BTViewDataInfo.  # noqa: E501
-        :rtype: float
+        :return: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :rtype: list[float]
         """
-        return self._angle
+        return self._view_matrix
 
-    @angle.setter
-    def angle(self, angle):
-        """Sets the angle of this BTViewDataInfo.
+    @view_matrix.setter
+    def view_matrix(self, view_matrix):
+        """Sets the view_matrix of this BTViewDataInfo.
 
 
-        :param angle: The angle of this BTViewDataInfo.  # noqa: E501
-        :type: float
+        :param view_matrix: The view_matrix of this BTViewDataInfo.  # noqa: E501
+        :type: list[float]
         """
 
-        self._angle = angle
+        self._view_matrix = view_matrix
 
     def to_dict(self):
         """Returns the model properties as a dict"""

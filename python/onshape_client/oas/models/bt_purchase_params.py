@@ -32,60 +32,54 @@ class BTPurchaseParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'light_seats': 'int',
-        'ref_id': 'str',
-        'allow_deprecated_plan': 'bool',
-        'user_id': 'str',
+        'trial_period_days': 'int',
         'email': 'str',
         'plan_id': 'str',
         'seats': 'int',
         'domain_prefix': 'str',
         'payment_type': 'int',
-        'trial_period_days': 'int',
+        'light_seats': 'int',
+        'ref_id': 'str',
+        'allow_deprecated_plan': 'bool',
         'reseller_name': 'str',
-        'password': 'str'
+        'password': 'str',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'light_seats': 'lightSeats',
-        'ref_id': 'refId',
-        'allow_deprecated_plan': 'allowDeprecatedPlan',
-        'user_id': 'userId',
+        'trial_period_days': 'trialPeriodDays',
         'email': 'email',
         'plan_id': 'planId',
         'seats': 'seats',
         'domain_prefix': 'domainPrefix',
         'payment_type': 'paymentType',
-        'trial_period_days': 'trialPeriodDays',
+        'light_seats': 'lightSeats',
+        'ref_id': 'refId',
+        'allow_deprecated_plan': 'allowDeprecatedPlan',
         'reseller_name': 'resellerName',
-        'password': 'password'
+        'password': 'password',
+        'user_id': 'userId'
     }
 
-    def __init__(self, light_seats=None, ref_id=None, allow_deprecated_plan=None, user_id=None, email=None, plan_id=None, seats=None, domain_prefix=None, payment_type=None, trial_period_days=None, reseller_name=None, password=None):  # noqa: E501
+    def __init__(self, trial_period_days=None, email=None, plan_id=None, seats=None, domain_prefix=None, payment_type=None, light_seats=None, ref_id=None, allow_deprecated_plan=None, reseller_name=None, password=None, user_id=None):  # noqa: E501
         """BTPurchaseParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._light_seats = None
-        self._ref_id = None
-        self._allow_deprecated_plan = None
-        self._user_id = None
+        self._trial_period_days = None
         self._email = None
         self._plan_id = None
         self._seats = None
         self._domain_prefix = None
         self._payment_type = None
-        self._trial_period_days = None
+        self._light_seats = None
+        self._ref_id = None
+        self._allow_deprecated_plan = None
         self._reseller_name = None
         self._password = None
+        self._user_id = None
         self.discriminator = None
 
-        if light_seats is not None:
-            self.light_seats = light_seats
-        if ref_id is not None:
-            self.ref_id = ref_id
-        if allow_deprecated_plan is not None:
-            self.allow_deprecated_plan = allow_deprecated_plan
-        if user_id is not None:
-            self.user_id = user_id
+        if trial_period_days is not None:
+            self.trial_period_days = trial_period_days
         if email is not None:
             self.email = email
         if plan_id is not None:
@@ -96,96 +90,39 @@ class BTPurchaseParams(object):
             self.domain_prefix = domain_prefix
         if payment_type is not None:
             self.payment_type = payment_type
-        if trial_period_days is not None:
-            self.trial_period_days = trial_period_days
+        if light_seats is not None:
+            self.light_seats = light_seats
+        if ref_id is not None:
+            self.ref_id = ref_id
+        if allow_deprecated_plan is not None:
+            self.allow_deprecated_plan = allow_deprecated_plan
         if reseller_name is not None:
             self.reseller_name = reseller_name
         if password is not None:
             self.password = password
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
-    def light_seats(self):
-        """Gets the light_seats of this BTPurchaseParams.  # noqa: E501
+    def trial_period_days(self):
+        """Gets the trial_period_days of this BTPurchaseParams.  # noqa: E501
 
 
-        :return: The light_seats of this BTPurchaseParams.  # noqa: E501
+        :return: The trial_period_days of this BTPurchaseParams.  # noqa: E501
         :rtype: int
         """
-        return self._light_seats
+        return self._trial_period_days
 
-    @light_seats.setter
-    def light_seats(self, light_seats):
-        """Sets the light_seats of this BTPurchaseParams.
+    @trial_period_days.setter
+    def trial_period_days(self, trial_period_days):
+        """Sets the trial_period_days of this BTPurchaseParams.
 
 
-        :param light_seats: The light_seats of this BTPurchaseParams.  # noqa: E501
+        :param trial_period_days: The trial_period_days of this BTPurchaseParams.  # noqa: E501
         :type: int
         """
 
-        self._light_seats = light_seats
-
-    @property
-    def ref_id(self):
-        """Gets the ref_id of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The ref_id of this BTPurchaseParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._ref_id
-
-    @ref_id.setter
-    def ref_id(self, ref_id):
-        """Sets the ref_id of this BTPurchaseParams.
-
-
-        :param ref_id: The ref_id of this BTPurchaseParams.  # noqa: E501
-        :type: str
-        """
-
-        self._ref_id = ref_id
-
-    @property
-    def allow_deprecated_plan(self):
-        """Gets the allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._allow_deprecated_plan
-
-    @allow_deprecated_plan.setter
-    def allow_deprecated_plan(self, allow_deprecated_plan):
-        """Sets the allow_deprecated_plan of this BTPurchaseParams.
-
-
-        :param allow_deprecated_plan: The allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._allow_deprecated_plan = allow_deprecated_plan
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTPurchaseParams.  # noqa: E501
-
-
-        :return: The user_id of this BTPurchaseParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTPurchaseParams.
-
-
-        :param user_id: The user_id of this BTPurchaseParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        self._trial_period_days = trial_period_days
 
     @property
     def email(self):
@@ -293,25 +230,67 @@ class BTPurchaseParams(object):
         self._payment_type = payment_type
 
     @property
-    def trial_period_days(self):
-        """Gets the trial_period_days of this BTPurchaseParams.  # noqa: E501
+    def light_seats(self):
+        """Gets the light_seats of this BTPurchaseParams.  # noqa: E501
 
 
-        :return: The trial_period_days of this BTPurchaseParams.  # noqa: E501
+        :return: The light_seats of this BTPurchaseParams.  # noqa: E501
         :rtype: int
         """
-        return self._trial_period_days
+        return self._light_seats
 
-    @trial_period_days.setter
-    def trial_period_days(self, trial_period_days):
-        """Sets the trial_period_days of this BTPurchaseParams.
+    @light_seats.setter
+    def light_seats(self, light_seats):
+        """Sets the light_seats of this BTPurchaseParams.
 
 
-        :param trial_period_days: The trial_period_days of this BTPurchaseParams.  # noqa: E501
+        :param light_seats: The light_seats of this BTPurchaseParams.  # noqa: E501
         :type: int
         """
 
-        self._trial_period_days = trial_period_days
+        self._light_seats = light_seats
+
+    @property
+    def ref_id(self):
+        """Gets the ref_id of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The ref_id of this BTPurchaseParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._ref_id
+
+    @ref_id.setter
+    def ref_id(self, ref_id):
+        """Sets the ref_id of this BTPurchaseParams.
+
+
+        :param ref_id: The ref_id of this BTPurchaseParams.  # noqa: E501
+        :type: str
+        """
+
+        self._ref_id = ref_id
+
+    @property
+    def allow_deprecated_plan(self):
+        """Gets the allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_deprecated_plan
+
+    @allow_deprecated_plan.setter
+    def allow_deprecated_plan(self, allow_deprecated_plan):
+        """Sets the allow_deprecated_plan of this BTPurchaseParams.
+
+
+        :param allow_deprecated_plan: The allow_deprecated_plan of this BTPurchaseParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_deprecated_plan = allow_deprecated_plan
 
     @property
     def reseller_name(self):
@@ -354,6 +333,27 @@ class BTPurchaseParams(object):
         """
 
         self._password = password
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTPurchaseParams.  # noqa: E501
+
+
+        :return: The user_id of this BTPurchaseParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTPurchaseParams.
+
+
+        :param user_id: The user_id of this BTPurchaseParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

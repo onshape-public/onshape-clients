@@ -33,50 +33,50 @@ class BTBetaCapabilityImportInfo(object):
     """
     openapi_types = {
         'succeeded': 'list[str]',
-        'failed': 'list[str]',
         'existing': 'list[str]',
-        'id': 'str',
+        'failed': 'list[str]',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'succeeded': 'succeeded',
-        'failed': 'failed',
         'existing': 'existing',
-        'id': 'id',
+        'failed': 'failed',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, succeeded=None, failed=None, existing=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, succeeded=None, existing=None, failed=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTBetaCapabilityImportInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._succeeded = None
-        self._failed = None
         self._existing = None
-        self._id = None
+        self._failed = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if succeeded is not None:
             self.succeeded = succeeded
-        if failed is not None:
-            self.failed = failed
         if existing is not None:
             self.existing = existing
-        if id is not None:
-            self.id = id
+        if failed is not None:
+            self.failed = failed
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def succeeded(self):
@@ -100,27 +100,6 @@ class BTBetaCapabilityImportInfo(object):
         self._succeeded = succeeded
 
     @property
-    def failed(self):
-        """Gets the failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-
-
-        :return: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._failed
-
-    @failed.setter
-    def failed(self, failed):
-        """Sets the failed of this BTBetaCapabilityImportInfo.
-
-
-        :param failed: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._failed = failed
-
-    @property
     def existing(self):
         """Gets the existing of this BTBetaCapabilityImportInfo.  # noqa: E501
 
@@ -142,25 +121,25 @@ class BTBetaCapabilityImportInfo(object):
         self._existing = existing
 
     @property
-    def id(self):
-        """Gets the id of this BTBetaCapabilityImportInfo.  # noqa: E501
+    def failed(self):
+        """Gets the failed of this BTBetaCapabilityImportInfo.  # noqa: E501
 
 
-        :return: The id of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :rtype: str
+        :return: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._id
+        return self._failed
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBetaCapabilityImportInfo.
+    @failed.setter
+    def failed(self, failed):
+        """Sets the failed of this BTBetaCapabilityImportInfo.
 
 
-        :param id: The id of this BTBetaCapabilityImportInfo.  # noqa: E501
-        :type: str
+        :param failed: The failed of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :type: list[str]
         """
 
-        self._id = id
+        self._failed = failed
 
     @property
     def href(self):
@@ -224,6 +203,27 @@ class BTBetaCapabilityImportInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTBetaCapabilityImportInfo.  # noqa: E501
+
+
+        :return: The id of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBetaCapabilityImportInfo.
+
+
+        :param id: The id of this BTBetaCapabilityImportInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

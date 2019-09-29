@@ -32,62 +32,41 @@ class BTUserSettingsParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'key_values': 'dict(str, str)',
         'substitute_approvers': 'list[BTSubstituteApproverParams]',
+        'key_values': 'dict(str, str)',
         'value': 'str',
         'key': 'str',
         'id': 'str'
     }
 
     attribute_map = {
-        'key_values': 'keyValues',
         'substitute_approvers': 'substituteApprovers',
+        'key_values': 'keyValues',
         'value': 'value',
         'key': 'key',
         'id': 'id'
     }
 
-    def __init__(self, key_values=None, substitute_approvers=None, value=None, key=None, id=None):  # noqa: E501
+    def __init__(self, substitute_approvers=None, key_values=None, value=None, key=None, id=None):  # noqa: E501
         """BTUserSettingsParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._key_values = None
         self._substitute_approvers = None
+        self._key_values = None
         self._value = None
         self._key = None
         self._id = None
         self.discriminator = None
 
-        if key_values is not None:
-            self.key_values = key_values
         if substitute_approvers is not None:
             self.substitute_approvers = substitute_approvers
+        if key_values is not None:
+            self.key_values = key_values
         if value is not None:
             self.value = value
         if key is not None:
             self.key = key
         if id is not None:
             self.id = id
-
-    @property
-    def key_values(self):
-        """Gets the key_values of this BTUserSettingsParams.  # noqa: E501
-
-
-        :return: The key_values of this BTUserSettingsParams.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._key_values
-
-    @key_values.setter
-    def key_values(self, key_values):
-        """Sets the key_values of this BTUserSettingsParams.
-
-
-        :param key_values: The key_values of this BTUserSettingsParams.  # noqa: E501
-        :type: dict(str, str)
-        """
-
-        self._key_values = key_values
 
     @property
     def substitute_approvers(self):
@@ -109,6 +88,27 @@ class BTUserSettingsParams(object):
         """
 
         self._substitute_approvers = substitute_approvers
+
+    @property
+    def key_values(self):
+        """Gets the key_values of this BTUserSettingsParams.  # noqa: E501
+
+
+        :return: The key_values of this BTUserSettingsParams.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._key_values
+
+    @key_values.setter
+    def key_values(self, key_values):
+        """Sets the key_values of this BTUserSettingsParams.
+
+
+        :param key_values: The key_values of this BTUserSettingsParams.  # noqa: E501
+        :type: dict(str, str)
+        """
+
+        self._key_values = key_values
 
     @property
     def value(self):

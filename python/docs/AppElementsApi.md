@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**get_sub_element_content**](AppElementsApi.md#get_sub_element_content) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Get Content
 [**get_subelement_ids**](AppElementsApi.md#get_subelement_ids) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids | Get Sub-element IDs
 [**resolve_reference**](AppElementsApi.md#resolve_reference) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Resolve Reference
+[**resolve_references**](AppElementsApi.md#resolve_references) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences | 
 [**start_transaction**](AppElementsApi.md#start_transaction) | **POST** /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions | Start Transaction
 [**update4**](AppElementsApi.md#update4) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Update Element
 [**update_reference**](AppElementsApi.md#update_reference) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Update Reference
@@ -633,6 +634,78 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success! |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **resolve_references**
+> resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
+did = 'did_example' # str | 
+eid = 'eid_example' # str | 
+wvm = 'wvm_example' # str | 
+wvmid = 'wvmid_example' # str | 
+transaction_id = 'transaction_id_example' # str |  (optional)
+parent_change_id = 'parent_change_id_example' # str |  (optional)
+include_internal = False # bool |  (optional) (default to False)
+link_document_id = 'link_document_id_example' # str |  (optional)
+reference_ids = '' # str |  (optional) (default to '')
+
+try:
+    api_instance.resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+except ApiException as e:
+    print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **eid** | **str**|  | 
+ **wvm** | **str**|  | 
+ **wvmid** | **str**|  | 
+ **transaction_id** | **str**|  | [optional] 
+ **parent_change_id** | **str**|  | [optional] 
+ **include_internal** | **bool**|  | [optional] [default to False]
+ **link_document_id** | **str**|  | [optional] 
+ **reference_ids** | **str**|  | [optional] [default to &#39;&#39;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

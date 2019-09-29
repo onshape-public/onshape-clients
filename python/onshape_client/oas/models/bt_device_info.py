@@ -38,9 +38,9 @@ class BTDeviceInfo(object):
         'device_type': 'str',
         'browser': 'str',
         'manufacturer': 'str',
-        'version': 'BTUserAgentVersion',
         'description': 'str',
-        'mobile': 'bool'
+        'mobile': 'bool',
+        'version': 'BTUserAgentVersion'
     }
 
     attribute_map = {
@@ -50,12 +50,12 @@ class BTDeviceInfo(object):
         'device_type': 'deviceType',
         'browser': 'browser',
         'manufacturer': 'manufacturer',
-        'version': 'version',
         'description': 'description',
-        'mobile': 'mobile'
+        'mobile': 'mobile',
+        'version': 'version'
     }
 
-    def __init__(self, client_type=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None, version=None, description=None, mobile=None):  # noqa: E501
+    def __init__(self, client_type=None, device_name=None, operating_system=None, device_type=None, browser=None, manufacturer=None, description=None, mobile=None, version=None):  # noqa: E501
         """BTDeviceInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._client_type = None
@@ -64,9 +64,9 @@ class BTDeviceInfo(object):
         self._device_type = None
         self._browser = None
         self._manufacturer = None
-        self._version = None
         self._description = None
         self._mobile = None
+        self._version = None
         self.discriminator = None
 
         if client_type is not None:
@@ -81,12 +81,12 @@ class BTDeviceInfo(object):
             self.browser = browser
         if manufacturer is not None:
             self.manufacturer = manufacturer
-        if version is not None:
-            self.version = version
         if description is not None:
             self.description = description
         if mobile is not None:
             self.mobile = mobile
+        if version is not None:
+            self.version = version
 
     @property
     def client_type(self):
@@ -233,27 +233,6 @@ class BTDeviceInfo(object):
         self._manufacturer = manufacturer
 
     @property
-    def version(self):
-        """Gets the version of this BTDeviceInfo.  # noqa: E501
-
-
-        :return: The version of this BTDeviceInfo.  # noqa: E501
-        :rtype: BTUserAgentVersion
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTDeviceInfo.
-
-
-        :param version: The version of this BTDeviceInfo.  # noqa: E501
-        :type: BTUserAgentVersion
-        """
-
-        self._version = version
-
-    @property
     def description(self):
         """Gets the description of this BTDeviceInfo.  # noqa: E501
 
@@ -294,6 +273,27 @@ class BTDeviceInfo(object):
         """
 
         self._mobile = mobile
+
+    @property
+    def version(self):
+        """Gets the version of this BTDeviceInfo.  # noqa: E501
+
+
+        :return: The version of this BTDeviceInfo.  # noqa: E501
+        :rtype: BTUserAgentVersion
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTDeviceInfo.
+
+
+        :param version: The version of this BTDeviceInfo.  # noqa: E501
+        :type: BTUserAgentVersion
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

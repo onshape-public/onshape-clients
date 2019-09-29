@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**node_type** | **str** |  | [optional] 
 **textual** | **bool** |  | [optional] 
+**object** | **bool** |  | [optional] 
+**node_type** | **str** |  | [optional] 
 **binary** | **bool** |  | [optional] 
-**boolean** | **bool** |  | [optional] 
 **missing_node** | **bool** |  | [optional] 
+**boolean** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 
 **pojo** | **bool** |  | [optional] 
@@ -20,10 +21,9 @@ Name | Type | Description | Notes
 **double** | **bool** |  | [optional] 
 **big_decimal** | **bool** |  | [optional] 
 **big_integer** | **bool** |  | [optional] 
-**float** | **bool** |  | [optional] 
 **array** | **bool** |  | [optional] 
 **null** | **bool** |  | [optional] 
-**object** | **bool** |  | [optional] 
+**float** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

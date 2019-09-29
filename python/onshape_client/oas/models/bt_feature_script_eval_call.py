@@ -34,49 +34,49 @@ class BTFeatureScriptEvalCall(object):
     openapi_types = {
         'queries': 'dict(str, list[str])',
         'script': 'str',
+        'serialization_version': 'str',
+        'library_version': 'int',
         'source_microversion': 'str',
         'reject_microversion_skew': 'bool',
-        'library_version': 'int',
-        'microversion_skew': 'bool',
-        'serialization_version': 'str'
+        'microversion_skew': 'bool'
     }
 
     attribute_map = {
         'queries': 'queries',
         'script': 'script',
+        'serialization_version': 'serializationVersion',
+        'library_version': 'libraryVersion',
         'source_microversion': 'sourceMicroversion',
         'reject_microversion_skew': 'rejectMicroversionSkew',
-        'library_version': 'libraryVersion',
-        'microversion_skew': 'microversionSkew',
-        'serialization_version': 'serializationVersion'
+        'microversion_skew': 'microversionSkew'
     }
 
-    def __init__(self, queries=None, script=None, source_microversion=None, reject_microversion_skew=None, library_version=None, microversion_skew=None, serialization_version=None):  # noqa: E501
+    def __init__(self, queries=None, script=None, serialization_version=None, library_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None):  # noqa: E501
         """BTFeatureScriptEvalCall - a model defined in OpenAPI"""  # noqa: E501
 
         self._queries = None
         self._script = None
+        self._serialization_version = None
+        self._library_version = None
         self._source_microversion = None
         self._reject_microversion_skew = None
-        self._library_version = None
         self._microversion_skew = None
-        self._serialization_version = None
         self.discriminator = None
 
         if queries is not None:
             self.queries = queries
         if script is not None:
             self.script = script
+        if serialization_version is not None:
+            self.serialization_version = serialization_version
+        if library_version is not None:
+            self.library_version = library_version
         if source_microversion is not None:
             self.source_microversion = source_microversion
         if reject_microversion_skew is not None:
             self.reject_microversion_skew = reject_microversion_skew
-        if library_version is not None:
-            self.library_version = library_version
         if microversion_skew is not None:
             self.microversion_skew = microversion_skew
-        if serialization_version is not None:
-            self.serialization_version = serialization_version
 
     @property
     def queries(self):
@@ -121,6 +121,48 @@ class BTFeatureScriptEvalCall(object):
         self._script = script
 
     @property
+    def serialization_version(self):
+        """Gets the serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
+
+
+        :return: The serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
+        :rtype: str
+        """
+        return self._serialization_version
+
+    @serialization_version.setter
+    def serialization_version(self, serialization_version):
+        """Sets the serialization_version of this BTFeatureScriptEvalCall.
+
+
+        :param serialization_version: The serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
+        :type: str
+        """
+
+        self._serialization_version = serialization_version
+
+    @property
+    def library_version(self):
+        """Gets the library_version of this BTFeatureScriptEvalCall.  # noqa: E501
+
+
+        :return: The library_version of this BTFeatureScriptEvalCall.  # noqa: E501
+        :rtype: int
+        """
+        return self._library_version
+
+    @library_version.setter
+    def library_version(self, library_version):
+        """Sets the library_version of this BTFeatureScriptEvalCall.
+
+
+        :param library_version: The library_version of this BTFeatureScriptEvalCall.  # noqa: E501
+        :type: int
+        """
+
+        self._library_version = library_version
+
+    @property
     def source_microversion(self):
         """Gets the source_microversion of this BTFeatureScriptEvalCall.  # noqa: E501
 
@@ -163,27 +205,6 @@ class BTFeatureScriptEvalCall(object):
         self._reject_microversion_skew = reject_microversion_skew
 
     @property
-    def library_version(self):
-        """Gets the library_version of this BTFeatureScriptEvalCall.  # noqa: E501
-
-
-        :return: The library_version of this BTFeatureScriptEvalCall.  # noqa: E501
-        :rtype: int
-        """
-        return self._library_version
-
-    @library_version.setter
-    def library_version(self, library_version):
-        """Sets the library_version of this BTFeatureScriptEvalCall.
-
-
-        :param library_version: The library_version of this BTFeatureScriptEvalCall.  # noqa: E501
-        :type: int
-        """
-
-        self._library_version = library_version
-
-    @property
     def microversion_skew(self):
         """Gets the microversion_skew of this BTFeatureScriptEvalCall.  # noqa: E501
 
@@ -203,27 +224,6 @@ class BTFeatureScriptEvalCall(object):
         """
 
         self._microversion_skew = microversion_skew
-
-    @property
-    def serialization_version(self):
-        """Gets the serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
-
-
-        :return: The serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
-        :rtype: str
-        """
-        return self._serialization_version
-
-    @serialization_version.setter
-    def serialization_version(self, serialization_version):
-        """Sets the serialization_version of this BTFeatureScriptEvalCall.
-
-
-        :param serialization_version: The serialization_version of this BTFeatureScriptEvalCall.  # noqa: E501
-        :type: str
-        """
-
-        self._serialization_version = serialization_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

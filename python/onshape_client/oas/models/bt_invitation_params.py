@@ -33,13 +33,13 @@ class BTInvitationParams(object):
     """
     openapi_types = {
         'country_code': 'str',
-        'role': 'int',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
         'default_company_name': 'str',
         'plan_id': 'str',
         'seats': 'int',
+        'role': 'int',
         'company_plan': 'bool',
         'phone_number': 'str',
         'recaptcha': 'str',
@@ -49,24 +49,24 @@ class BTInvitationParams(object):
         'privacy_consent_accepted': 'bool',
         'cad_system_at_signup': 'str',
         'eula_accepted': 'bool',
-        'description': 'str',
         'name': 'str',
         'message': 'str',
         'id': 'str',
         'state': 'int',
-        'password': 'str',
-        'source': 'int'
+        'source': 'int',
+        'description': 'str',
+        'password': 'str'
     }
 
     attribute_map = {
         'country_code': 'countryCode',
-        'role': 'role',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
         'default_company_name': 'defaultCompanyName',
         'plan_id': 'planId',
         'seats': 'seats',
+        'role': 'role',
         'company_plan': 'companyPlan',
         'phone_number': 'phoneNumber',
         'recaptcha': 'recaptcha',
@@ -76,26 +76,26 @@ class BTInvitationParams(object):
         'privacy_consent_accepted': 'privacyConsentAccepted',
         'cad_system_at_signup': 'cadSystemAtSignup',
         'eula_accepted': 'eulaAccepted',
-        'description': 'description',
         'name': 'name',
         'message': 'message',
         'id': 'id',
         'state': 'state',
-        'password': 'password',
-        'source': 'source'
+        'source': 'source',
+        'description': 'description',
+        'password': 'password'
     }
 
-    def __init__(self, country_code=None, role=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, company_plan=None, phone_number=None, recaptcha=None, invite_friend_request=None, company_user_emails=None, approve_user=None, privacy_consent_accepted=None, cad_system_at_signup=None, eula_accepted=None, description=None, name=None, message=None, id=None, state=None, password=None, source=None):  # noqa: E501
+    def __init__(self, country_code=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, role=None, company_plan=None, phone_number=None, recaptcha=None, invite_friend_request=None, company_user_emails=None, approve_user=None, privacy_consent_accepted=None, cad_system_at_signup=None, eula_accepted=None, name=None, message=None, id=None, state=None, source=None, description=None, password=None):  # noqa: E501
         """BTInvitationParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._country_code = None
-        self._role = None
         self._first_name = None
         self._last_name = None
         self._email = None
         self._default_company_name = None
         self._plan_id = None
         self._seats = None
+        self._role = None
         self._company_plan = None
         self._phone_number = None
         self._recaptcha = None
@@ -105,19 +105,17 @@ class BTInvitationParams(object):
         self._privacy_consent_accepted = None
         self._cad_system_at_signup = None
         self._eula_accepted = None
-        self._description = None
         self._name = None
         self._message = None
         self._id = None
         self._state = None
-        self._password = None
         self._source = None
+        self._description = None
+        self._password = None
         self.discriminator = None
 
         if country_code is not None:
             self.country_code = country_code
-        if role is not None:
-            self.role = role
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -130,6 +128,8 @@ class BTInvitationParams(object):
             self.plan_id = plan_id
         if seats is not None:
             self.seats = seats
+        if role is not None:
+            self.role = role
         if company_plan is not None:
             self.company_plan = company_plan
         if phone_number is not None:
@@ -148,8 +148,6 @@ class BTInvitationParams(object):
             self.cad_system_at_signup = cad_system_at_signup
         if eula_accepted is not None:
             self.eula_accepted = eula_accepted
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
         if message is not None:
@@ -158,10 +156,12 @@ class BTInvitationParams(object):
             self.id = id
         if state is not None:
             self.state = state
-        if password is not None:
-            self.password = password
         if source is not None:
             self.source = source
+        if description is not None:
+            self.description = description
+        if password is not None:
+            self.password = password
 
     @property
     def country_code(self):
@@ -183,27 +183,6 @@ class BTInvitationParams(object):
         """
 
         self._country_code = country_code
-
-    @property
-    def role(self):
-        """Gets the role of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The role of this BTInvitationParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this BTInvitationParams.
-
-
-        :param role: The role of this BTInvitationParams.  # noqa: E501
-        :type: int
-        """
-
-        self._role = role
 
     @property
     def first_name(self):
@@ -330,6 +309,27 @@ class BTInvitationParams(object):
         """
 
         self._seats = seats
+
+    @property
+    def role(self):
+        """Gets the role of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The role of this BTInvitationParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this BTInvitationParams.
+
+
+        :param role: The role of this BTInvitationParams.  # noqa: E501
+        :type: int
+        """
+
+        self._role = role
 
     @property
     def company_plan(self):
@@ -521,27 +521,6 @@ class BTInvitationParams(object):
         self._eula_accepted = eula_accepted
 
     @property
-    def description(self):
-        """Gets the description of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The description of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTInvitationParams.
-
-
-        :param description: The description of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTInvitationParams.  # noqa: E501
 
@@ -626,27 +605,6 @@ class BTInvitationParams(object):
         self._state = state
 
     @property
-    def password(self):
-        """Gets the password of this BTInvitationParams.  # noqa: E501
-
-
-        :return: The password of this BTInvitationParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this BTInvitationParams.
-
-
-        :param password: The password of this BTInvitationParams.  # noqa: E501
-        :type: str
-        """
-
-        self._password = password
-
-    @property
     def source(self):
         """Gets the source of this BTInvitationParams.  # noqa: E501
 
@@ -666,6 +624,48 @@ class BTInvitationParams(object):
         """
 
         self._source = source
+
+    @property
+    def description(self):
+        """Gets the description of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The description of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTInvitationParams.
+
+
+        :param description: The description of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def password(self):
+        """Gets the password of this BTInvitationParams.  # noqa: E501
+
+
+        :return: The password of this BTInvitationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this BTInvitationParams.
+
+
+        :param password: The password of this BTInvitationParams.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

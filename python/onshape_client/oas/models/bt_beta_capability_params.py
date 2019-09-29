@@ -43,9 +43,9 @@ class BTBetaCapabilityParams(object):
         'self_service_disabled': 'bool',
         'user_limit': 'int',
         'welcome_html': 'str',
-        'description': 'str',
         'name': 'str',
-        'id': 'str'
+        'id': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
@@ -60,12 +60,12 @@ class BTBetaCapabilityParams(object):
         'self_service_disabled': 'selfServiceDisabled',
         'user_limit': 'userLimit',
         'welcome_html': 'welcomeHTML',
-        'description': 'description',
         'name': 'name',
-        'id': 'id'
+        'id': 'id',
+        'description': 'description'
     }
 
-    def __init__(self, capability=None, eula=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, upgradable=None, user_based=None, self_service_disabled=None, user_limit=None, welcome_html=None, description=None, name=None, id=None):  # noqa: E501
+    def __init__(self, capability=None, eula=None, approvals_per_hour=None, auto_approve=None, auto_approve_paid=None, auto_approve_onshape=None, upgradable=None, user_based=None, self_service_disabled=None, user_limit=None, welcome_html=None, name=None, id=None, description=None):  # noqa: E501
         """BTBetaCapabilityParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._capability = None
@@ -79,9 +79,9 @@ class BTBetaCapabilityParams(object):
         self._self_service_disabled = None
         self._user_limit = None
         self._welcome_html = None
-        self._description = None
         self._name = None
         self._id = None
+        self._description = None
         self.discriminator = None
 
         if capability is not None:
@@ -106,12 +106,12 @@ class BTBetaCapabilityParams(object):
             self.user_limit = user_limit
         if welcome_html is not None:
             self.welcome_html = welcome_html
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
+        if description is not None:
+            self.description = description
 
     @property
     def capability(self):
@@ -345,27 +345,6 @@ class BTBetaCapabilityParams(object):
         self._welcome_html = welcome_html
 
     @property
-    def description(self):
-        """Gets the description of this BTBetaCapabilityParams.  # noqa: E501
-
-
-        :return: The description of this BTBetaCapabilityParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTBetaCapabilityParams.
-
-
-        :param description: The description of this BTBetaCapabilityParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTBetaCapabilityParams.  # noqa: E501
 
@@ -406,6 +385,27 @@ class BTBetaCapabilityParams(object):
         """
 
         self._id = id
+
+    @property
+    def description(self):
+        """Gets the description of this BTBetaCapabilityParams.  # noqa: E501
+
+
+        :return: The description of this BTBetaCapabilityParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTBetaCapabilityParams.
+
+
+        :param description: The description of this BTBetaCapabilityParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

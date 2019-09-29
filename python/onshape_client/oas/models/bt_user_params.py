@@ -33,14 +33,14 @@ class BTUserParams(object):
     """
     openapi_types = {
         'country_code': 'str',
-        'forum_id': 'str',
-        'role': 'int',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
         'default_company_name': 'str',
         'plan_id': 'str',
         'seats': 'int',
+        'forum_id': 'str',
+        'role': 'int',
         'company_plan': 'bool',
         'phone_number': 'str',
         'recaptcha': 'str',
@@ -49,26 +49,26 @@ class BTUserParams(object):
         'cad_system_at_signup': 'str',
         'eula_accepted': 'bool',
         'upgrade_to_education_plan': 'bool',
-        'token': 'str',
-        'description': 'str',
         'name': 'str',
         'message': 'str',
         'id': 'str',
         'state': 'int',
+        'source': 'int',
+        'description': 'str',
         'password': 'str',
-        'source': 'int'
+        'token': 'str'
     }
 
     attribute_map = {
         'country_code': 'countryCode',
-        'forum_id': 'forumId',
-        'role': 'role',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
         'default_company_name': 'defaultCompanyName',
         'plan_id': 'planId',
         'seats': 'seats',
+        'forum_id': 'forumId',
+        'role': 'role',
         'company_plan': 'companyPlan',
         'phone_number': 'phoneNumber',
         'recaptcha': 'recaptcha',
@@ -77,28 +77,28 @@ class BTUserParams(object):
         'cad_system_at_signup': 'cadSystemAtSignup',
         'eula_accepted': 'eulaAccepted',
         'upgrade_to_education_plan': 'upgradeToEducationPlan',
-        'token': 'token',
-        'description': 'description',
         'name': 'name',
         'message': 'message',
         'id': 'id',
         'state': 'state',
+        'source': 'source',
+        'description': 'description',
         'password': 'password',
-        'source': 'source'
+        'token': 'token'
     }
 
-    def __init__(self, country_code=None, forum_id=None, role=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, company_plan=None, phone_number=None, recaptcha=None, invite_friend_request=None, approve_user=None, cad_system_at_signup=None, eula_accepted=None, upgrade_to_education_plan=None, token=None, description=None, name=None, message=None, id=None, state=None, password=None, source=None):  # noqa: E501
+    def __init__(self, country_code=None, first_name=None, last_name=None, email=None, default_company_name=None, plan_id=None, seats=None, forum_id=None, role=None, company_plan=None, phone_number=None, recaptcha=None, invite_friend_request=None, approve_user=None, cad_system_at_signup=None, eula_accepted=None, upgrade_to_education_plan=None, name=None, message=None, id=None, state=None, source=None, description=None, password=None, token=None):  # noqa: E501
         """BTUserParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._country_code = None
-        self._forum_id = None
-        self._role = None
         self._first_name = None
         self._last_name = None
         self._email = None
         self._default_company_name = None
         self._plan_id = None
         self._seats = None
+        self._forum_id = None
+        self._role = None
         self._company_plan = None
         self._phone_number = None
         self._recaptcha = None
@@ -107,22 +107,18 @@ class BTUserParams(object):
         self._cad_system_at_signup = None
         self._eula_accepted = None
         self._upgrade_to_education_plan = None
-        self._token = None
-        self._description = None
         self._name = None
         self._message = None
         self._id = None
         self._state = None
-        self._password = None
         self._source = None
+        self._description = None
+        self._password = None
+        self._token = None
         self.discriminator = None
 
         if country_code is not None:
             self.country_code = country_code
-        if forum_id is not None:
-            self.forum_id = forum_id
-        if role is not None:
-            self.role = role
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -135,6 +131,10 @@ class BTUserParams(object):
             self.plan_id = plan_id
         if seats is not None:
             self.seats = seats
+        if forum_id is not None:
+            self.forum_id = forum_id
+        if role is not None:
+            self.role = role
         if company_plan is not None:
             self.company_plan = company_plan
         if phone_number is not None:
@@ -151,10 +151,6 @@ class BTUserParams(object):
             self.eula_accepted = eula_accepted
         if upgrade_to_education_plan is not None:
             self.upgrade_to_education_plan = upgrade_to_education_plan
-        if token is not None:
-            self.token = token
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
         if message is not None:
@@ -163,10 +159,14 @@ class BTUserParams(object):
             self.id = id
         if state is not None:
             self.state = state
-        if password is not None:
-            self.password = password
         if source is not None:
             self.source = source
+        if description is not None:
+            self.description = description
+        if password is not None:
+            self.password = password
+        if token is not None:
+            self.token = token
 
     @property
     def country_code(self):
@@ -188,48 +188,6 @@ class BTUserParams(object):
         """
 
         self._country_code = country_code
-
-    @property
-    def forum_id(self):
-        """Gets the forum_id of this BTUserParams.  # noqa: E501
-
-
-        :return: The forum_id of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._forum_id
-
-    @forum_id.setter
-    def forum_id(self, forum_id):
-        """Sets the forum_id of this BTUserParams.
-
-
-        :param forum_id: The forum_id of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._forum_id = forum_id
-
-    @property
-    def role(self):
-        """Gets the role of this BTUserParams.  # noqa: E501
-
-
-        :return: The role of this BTUserParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this BTUserParams.
-
-
-        :param role: The role of this BTUserParams.  # noqa: E501
-        :type: int
-        """
-
-        self._role = role
 
     @property
     def first_name(self):
@@ -356,6 +314,48 @@ class BTUserParams(object):
         """
 
         self._seats = seats
+
+    @property
+    def forum_id(self):
+        """Gets the forum_id of this BTUserParams.  # noqa: E501
+
+
+        :return: The forum_id of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._forum_id
+
+    @forum_id.setter
+    def forum_id(self, forum_id):
+        """Sets the forum_id of this BTUserParams.
+
+
+        :param forum_id: The forum_id of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._forum_id = forum_id
+
+    @property
+    def role(self):
+        """Gets the role of this BTUserParams.  # noqa: E501
+
+
+        :return: The role of this BTUserParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this BTUserParams.
+
+
+        :param role: The role of this BTUserParams.  # noqa: E501
+        :type: int
+        """
+
+        self._role = role
 
     @property
     def company_plan(self):
@@ -526,48 +526,6 @@ class BTUserParams(object):
         self._upgrade_to_education_plan = upgrade_to_education_plan
 
     @property
-    def token(self):
-        """Gets the token of this BTUserParams.  # noqa: E501
-
-
-        :return: The token of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._token
-
-    @token.setter
-    def token(self, token):
-        """Sets the token of this BTUserParams.
-
-
-        :param token: The token of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._token = token
-
-    @property
-    def description(self):
-        """Gets the description of this BTUserParams.  # noqa: E501
-
-
-        :return: The description of this BTUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTUserParams.
-
-
-        :param description: The description of this BTUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTUserParams.  # noqa: E501
 
@@ -652,6 +610,48 @@ class BTUserParams(object):
         self._state = state
 
     @property
+    def source(self):
+        """Gets the source of this BTUserParams.  # noqa: E501
+
+
+        :return: The source of this BTUserParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this BTUserParams.
+
+
+        :param source: The source of this BTUserParams.  # noqa: E501
+        :type: int
+        """
+
+        self._source = source
+
+    @property
+    def description(self):
+        """Gets the description of this BTUserParams.  # noqa: E501
+
+
+        :return: The description of this BTUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTUserParams.
+
+
+        :param description: The description of this BTUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
     def password(self):
         """Gets the password of this BTUserParams.  # noqa: E501
 
@@ -673,25 +673,25 @@ class BTUserParams(object):
         self._password = password
 
     @property
-    def source(self):
-        """Gets the source of this BTUserParams.  # noqa: E501
+    def token(self):
+        """Gets the token of this BTUserParams.  # noqa: E501
 
 
-        :return: The source of this BTUserParams.  # noqa: E501
-        :rtype: int
+        :return: The token of this BTUserParams.  # noqa: E501
+        :rtype: str
         """
-        return self._source
+        return self._token
 
-    @source.setter
-    def source(self, source):
-        """Sets the source of this BTUserParams.
+    @token.setter
+    def token(self, token):
+        """Sets the token of this BTUserParams.
 
 
-        :param source: The source of this BTUserParams.  # noqa: E501
-        :type: int
+        :param token: The token of this BTUserParams.  # noqa: E501
+        :type: str
         """
 
-        self._source = source
+        self._token = token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

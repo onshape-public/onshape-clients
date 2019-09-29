@@ -32,57 +32,55 @@ class BTStandardContentHierarchyInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'category': 'str',
         'types': 'str',
         'document_type': 'int',
         'production_version_id': 'str',
         'test_version_id': 'str',
         'default_workspace': 'str',
-        'type': 'str',
-        'standard': 'str',
+        'category': 'str',
         'existing_versions': 'list[VersionSpecs]',
-        'id': 'str',
+        'standard': 'str',
+        'type': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'category': 'category',
         'types': 'types',
         'document_type': 'documentType',
         'production_version_id': 'productionVersionId',
         'test_version_id': 'testVersionId',
         'default_workspace': 'defaultWorkspace',
-        'type': 'type',
-        'standard': 'standard',
+        'category': 'category',
         'existing_versions': 'existingVersions',
-        'id': 'id',
+        'standard': 'standard',
+        'type': 'type',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, category=None, types=None, document_type=None, production_version_id=None, test_version_id=None, default_workspace=None, type=None, standard=None, existing_versions=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, types=None, document_type=None, production_version_id=None, test_version_id=None, default_workspace=None, category=None, existing_versions=None, standard=None, type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTStandardContentHierarchyInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._category = None
         self._types = None
         self._document_type = None
         self._production_version_id = None
         self._test_version_id = None
         self._default_workspace = None
-        self._type = None
-        self._standard = None
+        self._category = None
         self._existing_versions = None
-        self._id = None
+        self._standard = None
+        self._type = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if category is not None:
-            self.category = category
         if types is not None:
             self.types = types
         if document_type is not None:
@@ -93,41 +91,22 @@ class BTStandardContentHierarchyInfo(object):
             self.test_version_id = test_version_id
         if default_workspace is not None:
             self.default_workspace = default_workspace
-        if type is not None:
-            self.type = type
-        if standard is not None:
-            self.standard = standard
+        if category is not None:
+            self.category = category
         if existing_versions is not None:
             self.existing_versions = existing_versions
-        if id is not None:
-            self.id = id
+        if standard is not None:
+            self.standard = standard
+        if type is not None:
+            self.type = type
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def category(self):
-        """Gets the category of this BTStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTStandardContentHierarchyInfo.
-
-
-        :param category: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._category = category
+        if id is not None:
+            self.id = id
 
     @property
     def types(self):
@@ -235,46 +214,25 @@ class BTStandardContentHierarchyInfo(object):
         self._default_workspace = default_workspace
 
     @property
-    def type(self):
-        """Gets the type of this BTStandardContentHierarchyInfo.  # noqa: E501
+    def category(self):
+        """Gets the category of this BTStandardContentHierarchyInfo.  # noqa: E501
 
 
-        :return: The type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :return: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._category
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this BTStandardContentHierarchyInfo.
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTStandardContentHierarchyInfo.
 
 
-        :param type: The type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :param category: The category of this BTStandardContentHierarchyInfo.  # noqa: E501
         :type: str
         """
 
-        self._type = type
-
-    @property
-    def standard(self):
-        """Gets the standard of this BTStandardContentHierarchyInfo.  # noqa: E501
-
-
-        :return: The standard of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._standard
-
-    @standard.setter
-    def standard(self, standard):
-        """Sets the standard of this BTStandardContentHierarchyInfo.
-
-
-        :param standard: The standard of this BTStandardContentHierarchyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._standard = standard
+        self._category = category
 
     @property
     def existing_versions(self):
@@ -298,25 +256,46 @@ class BTStandardContentHierarchyInfo(object):
         self._existing_versions = existing_versions
 
     @property
-    def id(self):
-        """Gets the id of this BTStandardContentHierarchyInfo.  # noqa: E501
+    def standard(self):
+        """Gets the standard of this BTStandardContentHierarchyInfo.  # noqa: E501
 
 
-        :return: The id of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :return: The standard of this BTStandardContentHierarchyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._standard
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTStandardContentHierarchyInfo.
+    @standard.setter
+    def standard(self, standard):
+        """Sets the standard of this BTStandardContentHierarchyInfo.
 
 
-        :param id: The id of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :param standard: The standard of this BTStandardContentHierarchyInfo.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._standard = standard
+
+    @property
+    def type(self):
+        """Gets the type of this BTStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this BTStandardContentHierarchyInfo.
+
+
+        :param type: The type of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def href(self):
@@ -380,6 +359,27 @@ class BTStandardContentHierarchyInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTStandardContentHierarchyInfo.  # noqa: E501
+
+
+        :return: The id of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTStandardContentHierarchyInfo.
+
+
+        :param id: The id of this BTStandardContentHierarchyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

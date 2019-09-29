@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_id** | **str** |  | [optional] 
 **new_owner_id** | **str** |  | [optional] 
+**resource_id** | **str** |  | [optional] 
 **resource_type** | **str** |  | [optional] 
 **new_owner_type** | **int** |  | [optional] 
 **personal_message** | **str** |  | [optional] 

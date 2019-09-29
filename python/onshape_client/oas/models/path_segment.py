@@ -32,33 +32,31 @@ class PathSegment(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'sub_type': 'int',
         'tree_href': 'str',
         'resource_type': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'sub_type': 'subType',
         'tree_href': 'treeHref',
         'resource_type': 'resourceType',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, sub_type=None, tree_href=None, resource_type=None, name=None):  # noqa: E501
+    def __init__(self, sub_type=None, tree_href=None, resource_type=None, name=None, id=None):  # noqa: E501
         """PathSegment - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._sub_type = None
         self._tree_href = None
         self._resource_type = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if sub_type is not None:
             self.sub_type = sub_type
         if tree_href is not None:
@@ -67,27 +65,8 @@ class PathSegment(object):
             self.resource_type = resource_type
         if name is not None:
             self.name = name
-
-    @property
-    def id(self):
-        """Gets the id of this PathSegment.  # noqa: E501
-
-
-        :return: The id of this PathSegment.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this PathSegment.
-
-
-        :param id: The id of this PathSegment.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def sub_type(self):
@@ -172,6 +151,27 @@ class PathSegment(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this PathSegment.  # noqa: E501
+
+
+        :return: The id of this PathSegment.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this PathSegment.
+
+
+        :param id: The id of this PathSegment.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

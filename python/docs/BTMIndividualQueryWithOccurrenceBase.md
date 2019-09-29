@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **path** | **list[str]** |  | [optional] 
+**query_string** | **str** |  | [optional] 
 **deterministic_ids** | **list[str]** |  | [optional] 
 **deterministic_id_list** | [**BTMIndividualQueryBase**](BTMIndividualQueryBase.md) |  | [optional] 
 **query** | [**BTMIndividualQueryBase**](BTMIndividualQueryBase.md) |  | [optional] 
-**query_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 

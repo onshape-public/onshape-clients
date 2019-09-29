@@ -33,31 +33,29 @@ class BTPurchaseInfo(object):
     """
     openapi_types = {
         'subscribers': 'list[BTPlanSubscriberInfo]',
+        'plan_type': 'int',
+        'group': 'str',
+        'amount_cents': 'int',
         'account_id': 'str',
-        'payment_type': 'int',
-        'card': 'BTCardInfo',
-        'light_seats': 'int',
-        'canceled_at': 'datetime',
         'plan_id': 'str',
-        'currency': 'str',
         'plan': 'BTBillingPlanInfo',
         'seats': 'int',
         'subscription_begin_at': 'datetime',
         'subscription_end_at': 'datetime',
+        'payment_type': 'int',
         'subscription_id': 'str',
         'application': 'BTAPIApplicationSummaryInfo',
         'client_id': 'str',
-        'amount_cents': 'int',
         'next_charge': 'NextCharge',
-        'plan_type': 'int',
-        'group': 'str',
-        'coupon_percent_off': 'int',
-        'reseller_name': 'str',
-        'trial_end': 'datetime',
-        'actual_amount_paid_cents': 'int',
+        'card': 'BTCardInfo',
+        'light_seats': 'int',
+        'canceled_at': 'datetime',
         'plan_name': 'str',
+        'actual_amount_paid_cents': 'int',
+        'coupon_percent_off': 'int',
+        'trial_end': 'datetime',
+        'reseller_name': 'str',
         'duration': 'int',
-        'state': 'int',
         'subscription_fields': 'Subscription',
         'purchase_date': 'datetime',
         'pending_cancelation': 'bool',
@@ -65,40 +63,40 @@ class BTPurchaseInfo(object):
         'prorated_total': 'int',
         'coupon_amount_off': 'int',
         'duration_months': 'int',
+        'state': 'int',
         'last_modified': 'datetime',
-        'id': 'str',
+        'currency': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'subscribers': 'subscribers',
+        'plan_type': 'planType',
+        'group': 'group',
+        'amount_cents': 'amountCents',
         'account_id': 'accountId',
-        'payment_type': 'paymentType',
-        'card': 'card',
-        'light_seats': 'lightSeats',
-        'canceled_at': 'canceledAt',
         'plan_id': 'planId',
-        'currency': 'currency',
         'plan': 'plan',
         'seats': 'seats',
         'subscription_begin_at': 'subscriptionBeginAt',
         'subscription_end_at': 'subscriptionEndAt',
+        'payment_type': 'paymentType',
         'subscription_id': 'subscriptionId',
         'application': 'application',
         'client_id': 'clientId',
-        'amount_cents': 'amountCents',
         'next_charge': 'nextCharge',
-        'plan_type': 'planType',
-        'group': 'group',
-        'coupon_percent_off': 'couponPercentOff',
-        'reseller_name': 'resellerName',
-        'trial_end': 'trialEnd',
-        'actual_amount_paid_cents': 'actualAmountPaidCents',
+        'card': 'card',
+        'light_seats': 'lightSeats',
+        'canceled_at': 'canceledAt',
         'plan_name': 'planName',
+        'actual_amount_paid_cents': 'actualAmountPaidCents',
+        'coupon_percent_off': 'couponPercentOff',
+        'trial_end': 'trialEnd',
+        'reseller_name': 'resellerName',
         'duration': 'duration',
-        'state': 'state',
         'subscription_fields': 'subscriptionFields',
         'purchase_date': 'purchaseDate',
         'pending_cancelation': 'pendingCancelation',
@@ -106,42 +104,42 @@ class BTPurchaseInfo(object):
         'prorated_total': 'proratedTotal',
         'coupon_amount_off': 'couponAmountOff',
         'duration_months': 'durationMonths',
+        'state': 'state',
         'last_modified': 'lastModified',
-        'id': 'id',
+        'currency': 'currency',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, subscribers=None, account_id=None, payment_type=None, card=None, light_seats=None, canceled_at=None, plan_id=None, currency=None, plan=None, seats=None, subscription_begin_at=None, subscription_end_at=None, subscription_id=None, application=None, client_id=None, amount_cents=None, next_charge=None, plan_type=None, group=None, coupon_percent_off=None, reseller_name=None, trial_end=None, actual_amount_paid_cents=None, plan_name=None, duration=None, state=None, subscription_fields=None, purchase_date=None, pending_cancelation=None, prorated_charges=None, prorated_total=None, coupon_amount_off=None, duration_months=None, last_modified=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, subscribers=None, plan_type=None, group=None, amount_cents=None, account_id=None, plan_id=None, plan=None, seats=None, subscription_begin_at=None, subscription_end_at=None, payment_type=None, subscription_id=None, application=None, client_id=None, next_charge=None, card=None, light_seats=None, canceled_at=None, plan_name=None, actual_amount_paid_cents=None, coupon_percent_off=None, trial_end=None, reseller_name=None, duration=None, subscription_fields=None, purchase_date=None, pending_cancelation=None, prorated_charges=None, prorated_total=None, coupon_amount_off=None, duration_months=None, state=None, last_modified=None, currency=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTPurchaseInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._subscribers = None
+        self._plan_type = None
+        self._group = None
+        self._amount_cents = None
         self._account_id = None
-        self._payment_type = None
-        self._card = None
-        self._light_seats = None
-        self._canceled_at = None
         self._plan_id = None
-        self._currency = None
         self._plan = None
         self._seats = None
         self._subscription_begin_at = None
         self._subscription_end_at = None
+        self._payment_type = None
         self._subscription_id = None
         self._application = None
         self._client_id = None
-        self._amount_cents = None
         self._next_charge = None
-        self._plan_type = None
-        self._group = None
-        self._coupon_percent_off = None
-        self._reseller_name = None
-        self._trial_end = None
-        self._actual_amount_paid_cents = None
+        self._card = None
+        self._light_seats = None
+        self._canceled_at = None
         self._plan_name = None
+        self._actual_amount_paid_cents = None
+        self._coupon_percent_off = None
+        self._trial_end = None
+        self._reseller_name = None
         self._duration = None
-        self._state = None
         self._subscription_fields = None
         self._purchase_date = None
         self._pending_cancelation = None
@@ -149,29 +147,27 @@ class BTPurchaseInfo(object):
         self._prorated_total = None
         self._coupon_amount_off = None
         self._duration_months = None
+        self._state = None
         self._last_modified = None
-        self._id = None
+        self._currency = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if subscribers is not None:
             self.subscribers = subscribers
+        if plan_type is not None:
+            self.plan_type = plan_type
+        if group is not None:
+            self.group = group
+        if amount_cents is not None:
+            self.amount_cents = amount_cents
         if account_id is not None:
             self.account_id = account_id
-        if payment_type is not None:
-            self.payment_type = payment_type
-        if card is not None:
-            self.card = card
-        if light_seats is not None:
-            self.light_seats = light_seats
-        if canceled_at is not None:
-            self.canceled_at = canceled_at
         if plan_id is not None:
             self.plan_id = plan_id
-        if currency is not None:
-            self.currency = currency
         if plan is not None:
             self.plan = plan
         if seats is not None:
@@ -180,34 +176,34 @@ class BTPurchaseInfo(object):
             self.subscription_begin_at = subscription_begin_at
         if subscription_end_at is not None:
             self.subscription_end_at = subscription_end_at
+        if payment_type is not None:
+            self.payment_type = payment_type
         if subscription_id is not None:
             self.subscription_id = subscription_id
         if application is not None:
             self.application = application
         if client_id is not None:
             self.client_id = client_id
-        if amount_cents is not None:
-            self.amount_cents = amount_cents
         if next_charge is not None:
             self.next_charge = next_charge
-        if plan_type is not None:
-            self.plan_type = plan_type
-        if group is not None:
-            self.group = group
-        if coupon_percent_off is not None:
-            self.coupon_percent_off = coupon_percent_off
-        if reseller_name is not None:
-            self.reseller_name = reseller_name
-        if trial_end is not None:
-            self.trial_end = trial_end
-        if actual_amount_paid_cents is not None:
-            self.actual_amount_paid_cents = actual_amount_paid_cents
+        if card is not None:
+            self.card = card
+        if light_seats is not None:
+            self.light_seats = light_seats
+        if canceled_at is not None:
+            self.canceled_at = canceled_at
         if plan_name is not None:
             self.plan_name = plan_name
+        if actual_amount_paid_cents is not None:
+            self.actual_amount_paid_cents = actual_amount_paid_cents
+        if coupon_percent_off is not None:
+            self.coupon_percent_off = coupon_percent_off
+        if trial_end is not None:
+            self.trial_end = trial_end
+        if reseller_name is not None:
+            self.reseller_name = reseller_name
         if duration is not None:
             self.duration = duration
-        if state is not None:
-            self.state = state
         if subscription_fields is not None:
             self.subscription_fields = subscription_fields
         if purchase_date is not None:
@@ -222,16 +218,20 @@ class BTPurchaseInfo(object):
             self.coupon_amount_off = coupon_amount_off
         if duration_months is not None:
             self.duration_months = duration_months
+        if state is not None:
+            self.state = state
         if last_modified is not None:
             self.last_modified = last_modified
-        if id is not None:
-            self.id = id
+        if currency is not None:
+            self.currency = currency
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def subscribers(self):
@@ -255,6 +255,69 @@ class BTPurchaseInfo(object):
         self._subscribers = subscribers
 
     @property
+    def plan_type(self):
+        """Gets the plan_type of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The plan_type of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._plan_type
+
+    @plan_type.setter
+    def plan_type(self, plan_type):
+        """Sets the plan_type of this BTPurchaseInfo.
+
+
+        :param plan_type: The plan_type of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._plan_type = plan_type
+
+    @property
+    def group(self):
+        """Gets the group of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The group of this BTPurchaseInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this BTPurchaseInfo.
+
+
+        :param group: The group of this BTPurchaseInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def amount_cents(self):
+        """Gets the amount_cents of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The amount_cents of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._amount_cents
+
+    @amount_cents.setter
+    def amount_cents(self, amount_cents):
+        """Sets the amount_cents of this BTPurchaseInfo.
+
+
+        :param amount_cents: The amount_cents of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._amount_cents = amount_cents
+
+    @property
     def account_id(self):
         """Gets the account_id of this BTPurchaseInfo.  # noqa: E501
 
@@ -276,90 +339,6 @@ class BTPurchaseInfo(object):
         self._account_id = account_id
 
     @property
-    def payment_type(self):
-        """Gets the payment_type of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The payment_type of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """Sets the payment_type of this BTPurchaseInfo.
-
-
-        :param payment_type: The payment_type of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._payment_type = payment_type
-
-    @property
-    def card(self):
-        """Gets the card of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The card of this BTPurchaseInfo.  # noqa: E501
-        :rtype: BTCardInfo
-        """
-        return self._card
-
-    @card.setter
-    def card(self, card):
-        """Sets the card of this BTPurchaseInfo.
-
-
-        :param card: The card of this BTPurchaseInfo.  # noqa: E501
-        :type: BTCardInfo
-        """
-
-        self._card = card
-
-    @property
-    def light_seats(self):
-        """Gets the light_seats of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The light_seats of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._light_seats
-
-    @light_seats.setter
-    def light_seats(self, light_seats):
-        """Sets the light_seats of this BTPurchaseInfo.
-
-
-        :param light_seats: The light_seats of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._light_seats = light_seats
-
-    @property
-    def canceled_at(self):
-        """Gets the canceled_at of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The canceled_at of this BTPurchaseInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._canceled_at
-
-    @canceled_at.setter
-    def canceled_at(self, canceled_at):
-        """Sets the canceled_at of this BTPurchaseInfo.
-
-
-        :param canceled_at: The canceled_at of this BTPurchaseInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._canceled_at = canceled_at
-
-    @property
     def plan_id(self):
         """Gets the plan_id of this BTPurchaseInfo.  # noqa: E501
 
@@ -379,27 +358,6 @@ class BTPurchaseInfo(object):
         """
 
         self._plan_id = plan_id
-
-    @property
-    def currency(self):
-        """Gets the currency of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The currency of this BTPurchaseInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._currency
-
-    @currency.setter
-    def currency(self, currency):
-        """Sets the currency of this BTPurchaseInfo.
-
-
-        :param currency: The currency of this BTPurchaseInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._currency = currency
 
     @property
     def plan(self):
@@ -486,6 +444,27 @@ class BTPurchaseInfo(object):
         self._subscription_end_at = subscription_end_at
 
     @property
+    def payment_type(self):
+        """Gets the payment_type of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The payment_type of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """Sets the payment_type of this BTPurchaseInfo.
+
+
+        :param payment_type: The payment_type of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._payment_type = payment_type
+
+    @property
     def subscription_id(self):
         """Gets the subscription_id of this BTPurchaseInfo.  # noqa: E501
 
@@ -549,27 +528,6 @@ class BTPurchaseInfo(object):
         self._client_id = client_id
 
     @property
-    def amount_cents(self):
-        """Gets the amount_cents of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The amount_cents of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._amount_cents
-
-    @amount_cents.setter
-    def amount_cents(self, amount_cents):
-        """Sets the amount_cents of this BTPurchaseInfo.
-
-
-        :param amount_cents: The amount_cents of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._amount_cents = amount_cents
-
-    @property
     def next_charge(self):
         """Gets the next_charge of this BTPurchaseInfo.  # noqa: E501
 
@@ -591,130 +549,67 @@ class BTPurchaseInfo(object):
         self._next_charge = next_charge
 
     @property
-    def plan_type(self):
-        """Gets the plan_type of this BTPurchaseInfo.  # noqa: E501
+    def card(self):
+        """Gets the card of this BTPurchaseInfo.  # noqa: E501
 
 
-        :return: The plan_type of this BTPurchaseInfo.  # noqa: E501
+        :return: The card of this BTPurchaseInfo.  # noqa: E501
+        :rtype: BTCardInfo
+        """
+        return self._card
+
+    @card.setter
+    def card(self, card):
+        """Sets the card of this BTPurchaseInfo.
+
+
+        :param card: The card of this BTPurchaseInfo.  # noqa: E501
+        :type: BTCardInfo
+        """
+
+        self._card = card
+
+    @property
+    def light_seats(self):
+        """Gets the light_seats of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The light_seats of this BTPurchaseInfo.  # noqa: E501
         :rtype: int
         """
-        return self._plan_type
+        return self._light_seats
 
-    @plan_type.setter
-    def plan_type(self, plan_type):
-        """Sets the plan_type of this BTPurchaseInfo.
+    @light_seats.setter
+    def light_seats(self, light_seats):
+        """Sets the light_seats of this BTPurchaseInfo.
 
 
-        :param plan_type: The plan_type of this BTPurchaseInfo.  # noqa: E501
+        :param light_seats: The light_seats of this BTPurchaseInfo.  # noqa: E501
         :type: int
         """
 
-        self._plan_type = plan_type
+        self._light_seats = light_seats
 
     @property
-    def group(self):
-        """Gets the group of this BTPurchaseInfo.  # noqa: E501
+    def canceled_at(self):
+        """Gets the canceled_at of this BTPurchaseInfo.  # noqa: E501
 
 
-        :return: The group of this BTPurchaseInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._group
-
-    @group.setter
-    def group(self, group):
-        """Sets the group of this BTPurchaseInfo.
-
-
-        :param group: The group of this BTPurchaseInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._group = group
-
-    @property
-    def coupon_percent_off(self):
-        """Gets the coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._coupon_percent_off
-
-    @coupon_percent_off.setter
-    def coupon_percent_off(self, coupon_percent_off):
-        """Sets the coupon_percent_off of this BTPurchaseInfo.
-
-
-        :param coupon_percent_off: The coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._coupon_percent_off = coupon_percent_off
-
-    @property
-    def reseller_name(self):
-        """Gets the reseller_name of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The reseller_name of this BTPurchaseInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._reseller_name
-
-    @reseller_name.setter
-    def reseller_name(self, reseller_name):
-        """Sets the reseller_name of this BTPurchaseInfo.
-
-
-        :param reseller_name: The reseller_name of this BTPurchaseInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._reseller_name = reseller_name
-
-    @property
-    def trial_end(self):
-        """Gets the trial_end of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The trial_end of this BTPurchaseInfo.  # noqa: E501
+        :return: The canceled_at of this BTPurchaseInfo.  # noqa: E501
         :rtype: datetime
         """
-        return self._trial_end
+        return self._canceled_at
 
-    @trial_end.setter
-    def trial_end(self, trial_end):
-        """Sets the trial_end of this BTPurchaseInfo.
+    @canceled_at.setter
+    def canceled_at(self, canceled_at):
+        """Sets the canceled_at of this BTPurchaseInfo.
 
 
-        :param trial_end: The trial_end of this BTPurchaseInfo.  # noqa: E501
+        :param canceled_at: The canceled_at of this BTPurchaseInfo.  # noqa: E501
         :type: datetime
         """
 
-        self._trial_end = trial_end
-
-    @property
-    def actual_amount_paid_cents(self):
-        """Gets the actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._actual_amount_paid_cents
-
-    @actual_amount_paid_cents.setter
-    def actual_amount_paid_cents(self, actual_amount_paid_cents):
-        """Sets the actual_amount_paid_cents of this BTPurchaseInfo.
-
-
-        :param actual_amount_paid_cents: The actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._actual_amount_paid_cents = actual_amount_paid_cents
+        self._canceled_at = canceled_at
 
     @property
     def plan_name(self):
@@ -738,6 +633,90 @@ class BTPurchaseInfo(object):
         self._plan_name = plan_name
 
     @property
+    def actual_amount_paid_cents(self):
+        """Gets the actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._actual_amount_paid_cents
+
+    @actual_amount_paid_cents.setter
+    def actual_amount_paid_cents(self, actual_amount_paid_cents):
+        """Sets the actual_amount_paid_cents of this BTPurchaseInfo.
+
+
+        :param actual_amount_paid_cents: The actual_amount_paid_cents of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._actual_amount_paid_cents = actual_amount_paid_cents
+
+    @property
+    def coupon_percent_off(self):
+        """Gets the coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._coupon_percent_off
+
+    @coupon_percent_off.setter
+    def coupon_percent_off(self, coupon_percent_off):
+        """Sets the coupon_percent_off of this BTPurchaseInfo.
+
+
+        :param coupon_percent_off: The coupon_percent_off of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._coupon_percent_off = coupon_percent_off
+
+    @property
+    def trial_end(self):
+        """Gets the trial_end of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The trial_end of this BTPurchaseInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._trial_end
+
+    @trial_end.setter
+    def trial_end(self, trial_end):
+        """Sets the trial_end of this BTPurchaseInfo.
+
+
+        :param trial_end: The trial_end of this BTPurchaseInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._trial_end = trial_end
+
+    @property
+    def reseller_name(self):
+        """Gets the reseller_name of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The reseller_name of this BTPurchaseInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._reseller_name
+
+    @reseller_name.setter
+    def reseller_name(self, reseller_name):
+        """Sets the reseller_name of this BTPurchaseInfo.
+
+
+        :param reseller_name: The reseller_name of this BTPurchaseInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._reseller_name = reseller_name
+
+    @property
     def duration(self):
         """Gets the duration of this BTPurchaseInfo.  # noqa: E501
 
@@ -757,27 +736,6 @@ class BTPurchaseInfo(object):
         """
 
         self._duration = duration
-
-    @property
-    def state(self):
-        """Gets the state of this BTPurchaseInfo.  # noqa: E501
-
-
-        :return: The state of this BTPurchaseInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._state
-
-    @state.setter
-    def state(self, state):
-        """Sets the state of this BTPurchaseInfo.
-
-
-        :param state: The state of this BTPurchaseInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._state = state
 
     @property
     def subscription_fields(self):
@@ -927,6 +885,27 @@ class BTPurchaseInfo(object):
         self._duration_months = duration_months
 
     @property
+    def state(self):
+        """Gets the state of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The state of this BTPurchaseInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """Sets the state of this BTPurchaseInfo.
+
+
+        :param state: The state of this BTPurchaseInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._state = state
+
+    @property
     def last_modified(self):
         """Gets the last_modified of this BTPurchaseInfo.  # noqa: E501
 
@@ -948,25 +927,25 @@ class BTPurchaseInfo(object):
         self._last_modified = last_modified
 
     @property
-    def id(self):
-        """Gets the id of this BTPurchaseInfo.  # noqa: E501
+    def currency(self):
+        """Gets the currency of this BTPurchaseInfo.  # noqa: E501
 
 
-        :return: The id of this BTPurchaseInfo.  # noqa: E501
+        :return: The currency of this BTPurchaseInfo.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._currency
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTPurchaseInfo.
+    @currency.setter
+    def currency(self, currency):
+        """Sets the currency of this BTPurchaseInfo.
 
 
-        :param id: The id of this BTPurchaseInfo.  # noqa: E501
+        :param currency: The currency of this BTPurchaseInfo.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._currency = currency
 
     @property
     def href(self):
@@ -1030,6 +1009,27 @@ class BTPurchaseInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTPurchaseInfo.  # noqa: E501
+
+
+        :return: The id of this BTPurchaseInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTPurchaseInfo.
+
+
+        :param id: The id of this BTPurchaseInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,36 +32,57 @@ class BTDocumentLabelParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner_id': 'str',
         'document_ids': 'list[str]',
         'parent_label_id': 'str',
-        'name': 'str',
-        'owner_id': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
+        'owner_id': 'ownerId',
         'document_ids': 'documentIds',
         'parent_label_id': 'parentLabelId',
-        'name': 'name',
-        'owner_id': 'ownerId'
+        'name': 'name'
     }
 
-    def __init__(self, document_ids=None, parent_label_id=None, name=None, owner_id=None):  # noqa: E501
+    def __init__(self, owner_id=None, document_ids=None, parent_label_id=None, name=None):  # noqa: E501
         """BTDocumentLabelParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._owner_id = None
         self._document_ids = None
         self._parent_label_id = None
         self._name = None
-        self._owner_id = None
         self.discriminator = None
 
+        if owner_id is not None:
+            self.owner_id = owner_id
         if document_ids is not None:
             self.document_ids = document_ids
         if parent_label_id is not None:
             self.parent_label_id = parent_label_id
         if name is not None:
             self.name = name
-        if owner_id is not None:
-            self.owner_id = owner_id
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTDocumentLabelParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTDocumentLabelParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTDocumentLabelParams.
+
+
+        :param owner_id: The owner_id of this BTDocumentLabelParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def document_ids(self):
@@ -125,27 +146,6 @@ class BTDocumentLabelParams(object):
         """
 
         self._name = name
-
-    @property
-    def owner_id(self):
-        """Gets the owner_id of this BTDocumentLabelParams.  # noqa: E501
-
-
-        :return: The owner_id of this BTDocumentLabelParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_id
-
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTDocumentLabelParams.
-
-
-        :param owner_id: The owner_id of this BTDocumentLabelParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_id = owner_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

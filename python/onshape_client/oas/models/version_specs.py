@@ -32,47 +32,26 @@ class VersionSpecs(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'version_name': 'str',
-        'version_id': 'str'
+        'version_id': 'str',
+        'version_name': 'str'
     }
 
     attribute_map = {
-        'version_name': 'versionName',
-        'version_id': 'versionId'
+        'version_id': 'versionId',
+        'version_name': 'versionName'
     }
 
-    def __init__(self, version_name=None, version_id=None):  # noqa: E501
+    def __init__(self, version_id=None, version_name=None):  # noqa: E501
         """VersionSpecs - a model defined in OpenAPI"""  # noqa: E501
 
-        self._version_name = None
         self._version_id = None
+        self._version_name = None
         self.discriminator = None
 
-        if version_name is not None:
-            self.version_name = version_name
         if version_id is not None:
             self.version_id = version_id
-
-    @property
-    def version_name(self):
-        """Gets the version_name of this VersionSpecs.  # noqa: E501
-
-
-        :return: The version_name of this VersionSpecs.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_name
-
-    @version_name.setter
-    def version_name(self, version_name):
-        """Sets the version_name of this VersionSpecs.
-
-
-        :param version_name: The version_name of this VersionSpecs.  # noqa: E501
-        :type: str
-        """
-
-        self._version_name = version_name
+        if version_name is not None:
+            self.version_name = version_name
 
     @property
     def version_id(self):
@@ -94,6 +73,27 @@ class VersionSpecs(object):
         """
 
         self._version_id = version_id
+
+    @property
+    def version_name(self):
+        """Gets the version_name of this VersionSpecs.  # noqa: E501
+
+
+        :return: The version_name of this VersionSpecs.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_name
+
+    @version_name.setter
+    def version_name(self, version_name):
+        """Sets the version_name of this VersionSpecs.
+
+
+        :param version_name: The version_name of this VersionSpecs.  # noqa: E501
+        :type: str
+        """
+
+        self._version_name = version_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

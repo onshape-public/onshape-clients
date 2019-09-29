@@ -39,8 +39,8 @@ class FormDataBodyPart(object):
         'message_body_workers': 'object',
         'parent': 'MultiPart',
         'providers': 'object',
-        'simple': 'bool',
         'form_data_content_disposition': 'FormDataContentDisposition',
+        'simple': 'bool',
         'name': 'str',
         'value': 'str',
         'parameterized_headers': 'dict(str, list[ParameterizedHeader])'
@@ -54,14 +54,14 @@ class FormDataBodyPart(object):
         'message_body_workers': 'messageBodyWorkers',
         'parent': 'parent',
         'providers': 'providers',
-        'simple': 'simple',
         'form_data_content_disposition': 'formDataContentDisposition',
+        'simple': 'simple',
         'name': 'name',
         'value': 'value',
         'parameterized_headers': 'parameterizedHeaders'
     }
 
-    def __init__(self, content_disposition=None, entity=None, headers=None, media_type=None, message_body_workers=None, parent=None, providers=None, simple=None, form_data_content_disposition=None, name=None, value=None, parameterized_headers=None):  # noqa: E501
+    def __init__(self, content_disposition=None, entity=None, headers=None, media_type=None, message_body_workers=None, parent=None, providers=None, form_data_content_disposition=None, simple=None, name=None, value=None, parameterized_headers=None):  # noqa: E501
         """FormDataBodyPart - a model defined in OpenAPI"""  # noqa: E501
 
         self._content_disposition = None
@@ -71,8 +71,8 @@ class FormDataBodyPart(object):
         self._message_body_workers = None
         self._parent = None
         self._providers = None
-        self._simple = None
         self._form_data_content_disposition = None
+        self._simple = None
         self._name = None
         self._value = None
         self._parameterized_headers = None
@@ -92,10 +92,10 @@ class FormDataBodyPart(object):
             self.parent = parent
         if providers is not None:
             self.providers = providers
-        if simple is not None:
-            self.simple = simple
         if form_data_content_disposition is not None:
             self.form_data_content_disposition = form_data_content_disposition
+        if simple is not None:
+            self.simple = simple
         if name is not None:
             self.name = name
         if value is not None:
@@ -251,27 +251,6 @@ class FormDataBodyPart(object):
         self._providers = providers
 
     @property
-    def simple(self):
-        """Gets the simple of this FormDataBodyPart.  # noqa: E501
-
-
-        :return: The simple of this FormDataBodyPart.  # noqa: E501
-        :rtype: bool
-        """
-        return self._simple
-
-    @simple.setter
-    def simple(self, simple):
-        """Sets the simple of this FormDataBodyPart.
-
-
-        :param simple: The simple of this FormDataBodyPart.  # noqa: E501
-        :type: bool
-        """
-
-        self._simple = simple
-
-    @property
     def form_data_content_disposition(self):
         """Gets the form_data_content_disposition of this FormDataBodyPart.  # noqa: E501
 
@@ -291,6 +270,27 @@ class FormDataBodyPart(object):
         """
 
         self._form_data_content_disposition = form_data_content_disposition
+
+    @property
+    def simple(self):
+        """Gets the simple of this FormDataBodyPart.  # noqa: E501
+
+
+        :return: The simple of this FormDataBodyPart.  # noqa: E501
+        :rtype: bool
+        """
+        return self._simple
+
+    @simple.setter
+    def simple(self, simple):
+        """Sets the simple of this FormDataBodyPart.
+
+
+        :param simple: The simple of this FormDataBodyPart.  # noqa: E501
+        :type: bool
+        """
+
+        self._simple = simple
 
     @property
     def name(self):

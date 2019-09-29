@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**target_document_id** | **str** |  | [optional] 
-**owner_type** | **int** |  | [optional] 
+**owner_id** | **str** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **is_public** | **bool** |  | [optional] 
 **version_name** | **str** |  | [optional] 
+**target_document_id** | **str** |  | [optional] 
 **is_copy** | **bool** |  | [optional] 
 **is_deep_copy** | **bool** |  | [optional] 
 **is_selective_part_out** | **bool** |  | [optional] 
 **source_document_id** | **str** |  | [optional] 
 **source_workspace_id** | **str** |  | [optional] 
-**owner_id** | **str** |  | [optional] 
+**owner_type** | **int** |  | [optional] 
 **anchor_element_id** | **str** |  | [optional] 
 **is_group_anchor** | **bool** |  | [optional] 
 **element_original_to_new_map** | **dict(str, str)** |  | [optional] 
@@ -24,10 +24,10 @@ Name | Type | Description | Notes
 **need_new_version** | **bool** |  | [optional] 
 **is_new_document** | **bool** |  | [optional] 
 **owner_email** | **str** |  | [optional] 
-**elements** | **list[str]** |  | [optional] 
+**name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **tags** | **list[str]** |  | [optional] 
-**name** | **str** |  | [optional] 
+**elements** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

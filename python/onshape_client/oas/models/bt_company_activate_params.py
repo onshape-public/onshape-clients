@@ -32,57 +32,36 @@ class BTCompanyActivateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'payment_type': 'int',
         'plan_id': 'str',
-        'user_id': 'str',
-        'seats': 'int'
+        'seats': 'int',
+        'payment_type': 'int',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'payment_type': 'paymentType',
         'plan_id': 'planId',
-        'user_id': 'userId',
-        'seats': 'seats'
+        'seats': 'seats',
+        'payment_type': 'paymentType',
+        'user_id': 'userId'
     }
 
-    def __init__(self, payment_type=None, plan_id=None, user_id=None, seats=None):  # noqa: E501
+    def __init__(self, plan_id=None, seats=None, payment_type=None, user_id=None):  # noqa: E501
         """BTCompanyActivateParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._payment_type = None
         self._plan_id = None
-        self._user_id = None
         self._seats = None
+        self._payment_type = None
+        self._user_id = None
         self.discriminator = None
 
-        if payment_type is not None:
-            self.payment_type = payment_type
         if plan_id is not None:
             self.plan_id = plan_id
-        if user_id is not None:
-            self.user_id = user_id
         if seats is not None:
             self.seats = seats
-
-    @property
-    def payment_type(self):
-        """Gets the payment_type of this BTCompanyActivateParams.  # noqa: E501
-
-
-        :return: The payment_type of this BTCompanyActivateParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """Sets the payment_type of this BTCompanyActivateParams.
-
-
-        :param payment_type: The payment_type of this BTCompanyActivateParams.  # noqa: E501
-        :type: int
-        """
-
-        self._payment_type = payment_type
+        if payment_type is not None:
+            self.payment_type = payment_type
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def plan_id(self):
@@ -106,27 +85,6 @@ class BTCompanyActivateParams(object):
         self._plan_id = plan_id
 
     @property
-    def user_id(self):
-        """Gets the user_id of this BTCompanyActivateParams.  # noqa: E501
-
-
-        :return: The user_id of this BTCompanyActivateParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTCompanyActivateParams.
-
-
-        :param user_id: The user_id of this BTCompanyActivateParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
-
-    @property
     def seats(self):
         """Gets the seats of this BTCompanyActivateParams.  # noqa: E501
 
@@ -146,6 +104,48 @@ class BTCompanyActivateParams(object):
         """
 
         self._seats = seats
+
+    @property
+    def payment_type(self):
+        """Gets the payment_type of this BTCompanyActivateParams.  # noqa: E501
+
+
+        :return: The payment_type of this BTCompanyActivateParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """Sets the payment_type of this BTCompanyActivateParams.
+
+
+        :param payment_type: The payment_type of this BTCompanyActivateParams.  # noqa: E501
+        :type: int
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTCompanyActivateParams.  # noqa: E501
+
+
+        :return: The user_id of this BTCompanyActivateParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTCompanyActivateParams.
+
+
+        :param user_id: The user_id of this BTCompanyActivateParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

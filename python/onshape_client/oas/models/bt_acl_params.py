@@ -32,36 +32,57 @@ class BTAclParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'document_id': 'str',
         'anonymous_access_allowed': 'bool',
         'anonymous_allows_export': 'bool',
-        'document_id': 'str',
         'public': 'bool'
     }
 
     attribute_map = {
+        'document_id': 'documentId',
         'anonymous_access_allowed': 'anonymousAccessAllowed',
         'anonymous_allows_export': 'anonymousAllowsExport',
-        'document_id': 'documentId',
         'public': 'public'
     }
 
-    def __init__(self, anonymous_access_allowed=None, anonymous_allows_export=None, document_id=None, public=None):  # noqa: E501
+    def __init__(self, document_id=None, anonymous_access_allowed=None, anonymous_allows_export=None, public=None):  # noqa: E501
         """BTAclParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._document_id = None
         self._anonymous_access_allowed = None
         self._anonymous_allows_export = None
-        self._document_id = None
         self._public = None
         self.discriminator = None
 
+        if document_id is not None:
+            self.document_id = document_id
         if anonymous_access_allowed is not None:
             self.anonymous_access_allowed = anonymous_access_allowed
         if anonymous_allows_export is not None:
             self.anonymous_allows_export = anonymous_allows_export
-        if document_id is not None:
-            self.document_id = document_id
         if public is not None:
             self.public = public
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTAclParams.  # noqa: E501
+
+
+        :return: The document_id of this BTAclParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAclParams.
+
+
+        :param document_id: The document_id of this BTAclParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def anonymous_access_allowed(self):
@@ -104,27 +125,6 @@ class BTAclParams(object):
         """
 
         self._anonymous_allows_export = anonymous_allows_export
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTAclParams.  # noqa: E501
-
-
-        :return: The document_id of this BTAclParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAclParams.
-
-
-        :param document_id: The document_id of this BTAclParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     @property
     def public(self):

@@ -32,57 +32,36 @@ class BTBaseInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTBaseInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def id(self):
-        """Gets the id of this BTBaseInfo.  # noqa: E501
-
-
-        :return: The id of this BTBaseInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBaseInfo.
-
-
-        :param id: The id of this BTBaseInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def href(self):
@@ -146,6 +125,27 @@ class BTBaseInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTBaseInfo.  # noqa: E501
+
+
+        :return: The id of this BTBaseInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBaseInfo.
+
+
+        :param id: The id of this BTBaseInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

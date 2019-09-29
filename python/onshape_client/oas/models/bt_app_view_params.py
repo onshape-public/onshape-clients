@@ -32,6 +32,8 @@ class BTAppViewParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'transaction_id': 'str',
+        'parent_change_id': 'str',
         'display_state_id': 'str',
         'model_reference_id': 'str',
         'view_matrix': 'list[float]',
@@ -67,13 +69,13 @@ class BTAppViewParams(object):
         'is_surface': 'bool',
         'depth_section_end_condition': 'BTBrokenOutEndCondition',
         'exploded_view_id': 'str',
-        'transaction_id': 'str',
-        'parent_change_id': 'str',
         'occurrence_or_part_id_to_geometry_properties': 'dict(str, dict(str, str))',
         'parameters': 'list[float]'
     }
 
     attribute_map = {
+        'transaction_id': 'transactionId',
+        'parent_change_id': 'parentChangeId',
         'display_state_id': 'displayStateId',
         'model_reference_id': 'modelReferenceId',
         'view_matrix': 'viewMatrix',
@@ -109,15 +111,15 @@ class BTAppViewParams(object):
         'is_surface': 'isSurface',
         'depth_section_end_condition': 'depthSectionEndCondition',
         'exploded_view_id': 'explodedViewId',
-        'transaction_id': 'transactionId',
-        'parent_change_id': 'parentChangeId',
         'occurrence_or_part_id_to_geometry_properties': 'occurrenceOrPartIdToGeometryProperties',
         'parameters': 'parameters'
     }
 
-    def __init__(self, display_state_id=None, model_reference_id=None, view_matrix=None, view_direction=None, cut_point=None, offset_section_points=None, broken_out_section=None, crop_view=None, bom_reference_id=None, include_hidden_instances=None, view_scale=None, show_tangent_lines=None, compute_intersection=None, quality_option=None, simplification_option=None, simplification_threshold=None, is_broken_out_section=None, is_crop_view=None, show_cut_geom_only=None, hidden_lines=None, modification_id=None, perspective=None, projection_angle=None, show_threads=None, quality_option_type=None, simplification_option_type=None, is_partial_section=None, broken_out_point_numbers=None, broken_out_end_conditions=None, broken_out_b_boxes=None, broken_out_b_boxes_map=None, include_surfaces=None, is_surface=None, depth_section_end_condition=None, exploded_view_id=None, transaction_id=None, parent_change_id=None, occurrence_or_part_id_to_geometry_properties=None, parameters=None):  # noqa: E501
+    def __init__(self, transaction_id=None, parent_change_id=None, display_state_id=None, model_reference_id=None, view_matrix=None, view_direction=None, cut_point=None, offset_section_points=None, broken_out_section=None, crop_view=None, bom_reference_id=None, include_hidden_instances=None, view_scale=None, show_tangent_lines=None, compute_intersection=None, quality_option=None, simplification_option=None, simplification_threshold=None, is_broken_out_section=None, is_crop_view=None, show_cut_geom_only=None, hidden_lines=None, modification_id=None, perspective=None, projection_angle=None, show_threads=None, quality_option_type=None, simplification_option_type=None, is_partial_section=None, broken_out_point_numbers=None, broken_out_end_conditions=None, broken_out_b_boxes=None, broken_out_b_boxes_map=None, include_surfaces=None, is_surface=None, depth_section_end_condition=None, exploded_view_id=None, occurrence_or_part_id_to_geometry_properties=None, parameters=None):  # noqa: E501
         """BTAppViewParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._transaction_id = None
+        self._parent_change_id = None
         self._display_state_id = None
         self._model_reference_id = None
         self._view_matrix = None
@@ -153,12 +155,14 @@ class BTAppViewParams(object):
         self._is_surface = None
         self._depth_section_end_condition = None
         self._exploded_view_id = None
-        self._transaction_id = None
-        self._parent_change_id = None
         self._occurrence_or_part_id_to_geometry_properties = None
         self._parameters = None
         self.discriminator = None
 
+        if transaction_id is not None:
+            self.transaction_id = transaction_id
+        if parent_change_id is not None:
+            self.parent_change_id = parent_change_id
         if display_state_id is not None:
             self.display_state_id = display_state_id
         if model_reference_id is not None:
@@ -229,14 +233,52 @@ class BTAppViewParams(object):
             self.depth_section_end_condition = depth_section_end_condition
         if exploded_view_id is not None:
             self.exploded_view_id = exploded_view_id
-        if transaction_id is not None:
-            self.transaction_id = transaction_id
-        if parent_change_id is not None:
-            self.parent_change_id = parent_change_id
         if occurrence_or_part_id_to_geometry_properties is not None:
             self.occurrence_or_part_id_to_geometry_properties = occurrence_or_part_id_to_geometry_properties
         if parameters is not None:
             self.parameters = parameters
+
+    @property
+    def transaction_id(self):
+        """Gets the transaction_id of this BTAppViewParams.  # noqa: E501
+
+
+        :return: The transaction_id of this BTAppViewParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._transaction_id
+
+    @transaction_id.setter
+    def transaction_id(self, transaction_id):
+        """Sets the transaction_id of this BTAppViewParams.
+
+
+        :param transaction_id: The transaction_id of this BTAppViewParams.  # noqa: E501
+        :type: str
+        """
+
+        self._transaction_id = transaction_id
+
+    @property
+    def parent_change_id(self):
+        """Gets the parent_change_id of this BTAppViewParams.  # noqa: E501
+
+
+        :return: The parent_change_id of this BTAppViewParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_change_id
+
+    @parent_change_id.setter
+    def parent_change_id(self, parent_change_id):
+        """Sets the parent_change_id of this BTAppViewParams.
+
+
+        :param parent_change_id: The parent_change_id of this BTAppViewParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_change_id = parent_change_id
 
     @property
     def display_state_id(self):
@@ -990,48 +1032,6 @@ class BTAppViewParams(object):
         """
 
         self._exploded_view_id = exploded_view_id
-
-    @property
-    def transaction_id(self):
-        """Gets the transaction_id of this BTAppViewParams.  # noqa: E501
-
-
-        :return: The transaction_id of this BTAppViewParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._transaction_id
-
-    @transaction_id.setter
-    def transaction_id(self, transaction_id):
-        """Sets the transaction_id of this BTAppViewParams.
-
-
-        :param transaction_id: The transaction_id of this BTAppViewParams.  # noqa: E501
-        :type: str
-        """
-
-        self._transaction_id = transaction_id
-
-    @property
-    def parent_change_id(self):
-        """Gets the parent_change_id of this BTAppViewParams.  # noqa: E501
-
-
-        :return: The parent_change_id of this BTAppViewParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_change_id
-
-    @parent_change_id.setter
-    def parent_change_id(self, parent_change_id):
-        """Sets the parent_change_id of this BTAppViewParams.
-
-
-        :param parent_change_id: The parent_change_id of this BTAppViewParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_change_id = parent_change_id
 
     @property
     def occurrence_or_part_id_to_geometry_properties(self):

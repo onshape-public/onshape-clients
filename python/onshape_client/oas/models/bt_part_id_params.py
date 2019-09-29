@@ -32,52 +32,52 @@ class BTPartIdParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'ids': 'list[str]',
+        'configuration': 'str',
         'link_document_id': 'str',
-        'configuration': 'str'
+        'ids': 'list[str]'
     }
 
     attribute_map = {
-        'ids': 'ids',
+        'configuration': 'configuration',
         'link_document_id': 'linkDocumentId',
-        'configuration': 'configuration'
+        'ids': 'ids'
     }
 
-    def __init__(self, ids=None, link_document_id=None, configuration=None):  # noqa: E501
+    def __init__(self, configuration=None, link_document_id=None, ids=None):  # noqa: E501
         """BTPartIdParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._ids = None
-        self._link_document_id = None
         self._configuration = None
+        self._link_document_id = None
+        self._ids = None
         self.discriminator = None
 
-        if ids is not None:
-            self.ids = ids
-        if link_document_id is not None:
-            self.link_document_id = link_document_id
         if configuration is not None:
             self.configuration = configuration
+        if link_document_id is not None:
+            self.link_document_id = link_document_id
+        if ids is not None:
+            self.ids = ids
 
     @property
-    def ids(self):
-        """Gets the ids of this BTPartIdParams.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTPartIdParams.  # noqa: E501
 
 
-        :return: The ids of this BTPartIdParams.  # noqa: E501
-        :rtype: list[str]
+        :return: The configuration of this BTPartIdParams.  # noqa: E501
+        :rtype: str
         """
-        return self._ids
+        return self._configuration
 
-    @ids.setter
-    def ids(self, ids):
-        """Sets the ids of this BTPartIdParams.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTPartIdParams.
 
 
-        :param ids: The ids of this BTPartIdParams.  # noqa: E501
-        :type: list[str]
+        :param configuration: The configuration of this BTPartIdParams.  # noqa: E501
+        :type: str
         """
 
-        self._ids = ids
+        self._configuration = configuration
 
     @property
     def link_document_id(self):
@@ -101,25 +101,25 @@ class BTPartIdParams(object):
         self._link_document_id = link_document_id
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTPartIdParams.  # noqa: E501
+    def ids(self):
+        """Gets the ids of this BTPartIdParams.  # noqa: E501
 
 
-        :return: The configuration of this BTPartIdParams.  # noqa: E501
-        :rtype: str
+        :return: The ids of this BTPartIdParams.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._configuration
+        return self._ids
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTPartIdParams.
+    @ids.setter
+    def ids(self, ids):
+        """Sets the ids of this BTPartIdParams.
 
 
-        :param configuration: The configuration of this BTPartIdParams.  # noqa: E501
-        :type: str
+        :param ids: The ids of this BTPartIdParams.  # noqa: E501
+        :type: list[str]
         """
 
-        self._configuration = configuration
+        self._ids = ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

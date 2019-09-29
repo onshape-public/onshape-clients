@@ -32,67 +32,46 @@ class BTStandardContentParameterDefinition(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'parameter_id': 'str',
         'visible': 'bool',
+        'parameter_id': 'str',
         'is_custom_parameter': 'bool',
         'is_driving_configuration': 'bool',
-        'display_name': 'str',
-        'default_value': 'str'
+        'default_value': 'str',
+        'display_name': 'str'
     }
 
     attribute_map = {
-        'parameter_id': 'parameterId',
         'visible': 'visible',
+        'parameter_id': 'parameterId',
         'is_custom_parameter': 'isCustomParameter',
         'is_driving_configuration': 'isDrivingConfiguration',
-        'display_name': 'displayName',
-        'default_value': 'defaultValue'
+        'default_value': 'defaultValue',
+        'display_name': 'displayName'
     }
 
-    def __init__(self, parameter_id=None, visible=None, is_custom_parameter=None, is_driving_configuration=None, display_name=None, default_value=None):  # noqa: E501
+    def __init__(self, visible=None, parameter_id=None, is_custom_parameter=None, is_driving_configuration=None, default_value=None, display_name=None):  # noqa: E501
         """BTStandardContentParameterDefinition - a model defined in OpenAPI"""  # noqa: E501
 
-        self._parameter_id = None
         self._visible = None
+        self._parameter_id = None
         self._is_custom_parameter = None
         self._is_driving_configuration = None
-        self._display_name = None
         self._default_value = None
+        self._display_name = None
         self.discriminator = None
 
-        if parameter_id is not None:
-            self.parameter_id = parameter_id
         if visible is not None:
             self.visible = visible
+        if parameter_id is not None:
+            self.parameter_id = parameter_id
         if is_custom_parameter is not None:
             self.is_custom_parameter = is_custom_parameter
         if is_driving_configuration is not None:
             self.is_driving_configuration = is_driving_configuration
-        if display_name is not None:
-            self.display_name = display_name
         if default_value is not None:
             self.default_value = default_value
-
-    @property
-    def parameter_id(self):
-        """Gets the parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
-
-
-        :return: The parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
-        :rtype: str
-        """
-        return self._parameter_id
-
-    @parameter_id.setter
-    def parameter_id(self, parameter_id):
-        """Sets the parameter_id of this BTStandardContentParameterDefinition.
-
-
-        :param parameter_id: The parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
-        :type: str
-        """
-
-        self._parameter_id = parameter_id
+        if display_name is not None:
+            self.display_name = display_name
 
     @property
     def visible(self):
@@ -114,6 +93,27 @@ class BTStandardContentParameterDefinition(object):
         """
 
         self._visible = visible
+
+    @property
+    def parameter_id(self):
+        """Gets the parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
+
+
+        :return: The parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._parameter_id
+
+    @parameter_id.setter
+    def parameter_id(self, parameter_id):
+        """Sets the parameter_id of this BTStandardContentParameterDefinition.
+
+
+        :param parameter_id: The parameter_id of this BTStandardContentParameterDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._parameter_id = parameter_id
 
     @property
     def is_custom_parameter(self):
@@ -158,27 +158,6 @@ class BTStandardContentParameterDefinition(object):
         self._is_driving_configuration = is_driving_configuration
 
     @property
-    def display_name(self):
-        """Gets the display_name of this BTStandardContentParameterDefinition.  # noqa: E501
-
-
-        :return: The display_name of this BTStandardContentParameterDefinition.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTStandardContentParameterDefinition.
-
-
-        :param display_name: The display_name of this BTStandardContentParameterDefinition.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
     def default_value(self):
         """Gets the default_value of this BTStandardContentParameterDefinition.  # noqa: E501
 
@@ -198,6 +177,27 @@ class BTStandardContentParameterDefinition(object):
         """
 
         self._default_value = default_value
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTStandardContentParameterDefinition.  # noqa: E501
+
+
+        :return: The display_name of this BTStandardContentParameterDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTStandardContentParameterDefinition.
+
+
+        :param display_name: The display_name of this BTStandardContentParameterDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

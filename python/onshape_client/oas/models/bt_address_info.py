@@ -32,77 +32,56 @@ class BTAddressInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'address': 'str',
-        'country': 'str',
         'city': 'str',
-        'zip': 'str',
         'state_code': 'str',
+        'country': 'str',
         'country_code': 'str',
+        'zip': 'str',
+        'id': 'str',
         'state': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'address': 'address',
-        'country': 'country',
         'city': 'city',
-        'zip': 'zip',
         'state_code': 'stateCode',
+        'country': 'country',
         'country_code': 'countryCode',
+        'zip': 'zip',
+        'id': 'id',
         'state': 'state'
     }
 
-    def __init__(self, id=None, address=None, country=None, city=None, zip=None, state_code=None, country_code=None, state=None):  # noqa: E501
+    def __init__(self, address=None, city=None, state_code=None, country=None, country_code=None, zip=None, id=None, state=None):  # noqa: E501
         """BTAddressInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._address = None
-        self._country = None
         self._city = None
-        self._zip = None
         self._state_code = None
+        self._country = None
         self._country_code = None
+        self._zip = None
+        self._id = None
         self._state = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if address is not None:
             self.address = address
-        if country is not None:
-            self.country = country
         if city is not None:
             self.city = city
-        if zip is not None:
-            self.zip = zip
         if state_code is not None:
             self.state_code = state_code
+        if country is not None:
+            self.country = country
         if country_code is not None:
             self.country_code = country_code
+        if zip is not None:
+            self.zip = zip
+        if id is not None:
+            self.id = id
         if state is not None:
             self.state = state
-
-    @property
-    def id(self):
-        """Gets the id of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The id of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTAddressInfo.
-
-
-        :param id: The id of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def address(self):
@@ -126,27 +105,6 @@ class BTAddressInfo(object):
         self._address = address
 
     @property
-    def country(self):
-        """Gets the country of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The country of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._country
-
-    @country.setter
-    def country(self, country):
-        """Sets the country of this BTAddressInfo.
-
-
-        :param country: The country of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._country = country
-
-    @property
     def city(self):
         """Gets the city of this BTAddressInfo.  # noqa: E501
 
@@ -166,27 +124,6 @@ class BTAddressInfo(object):
         """
 
         self._city = city
-
-    @property
-    def zip(self):
-        """Gets the zip of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The zip of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._zip
-
-    @zip.setter
-    def zip(self, zip):
-        """Sets the zip of this BTAddressInfo.
-
-
-        :param zip: The zip of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._zip = zip
 
     @property
     def state_code(self):
@@ -210,6 +147,27 @@ class BTAddressInfo(object):
         self._state_code = state_code
 
     @property
+    def country(self):
+        """Gets the country of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The country of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """Sets the country of this BTAddressInfo.
+
+
+        :param country: The country of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._country = country
+
+    @property
     def country_code(self):
         """Gets the country_code of this BTAddressInfo.  # noqa: E501
 
@@ -229,6 +187,48 @@ class BTAddressInfo(object):
         """
 
         self._country_code = country_code
+
+    @property
+    def zip(self):
+        """Gets the zip of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The zip of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._zip
+
+    @zip.setter
+    def zip(self, zip):
+        """Sets the zip of this BTAddressInfo.
+
+
+        :param zip: The zip of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._zip = zip
+
+    @property
+    def id(self):
+        """Gets the id of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The id of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTAddressInfo.
+
+
+        :param id: The id of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def state(self):

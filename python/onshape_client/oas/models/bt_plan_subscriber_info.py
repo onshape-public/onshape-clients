@@ -32,82 +32,61 @@ class BTPlanSubscriberInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'image': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
+        'image': 'str',
         'state': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'image': 'image',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
+        'image': 'image',
         'state': 'state',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, image=None, first_name=None, last_name=None, email=None, state=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email=None, image=None, state=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTPlanSubscriberInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._image = None
         self._first_name = None
         self._last_name = None
         self._email = None
+        self._image = None
         self._state = None
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if image is not None:
-            self.image = image
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
         if email is not None:
             self.email = email
+        if image is not None:
+            self.image = image
         if state is not None:
             self.state = state
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def image(self):
-        """Gets the image of this BTPlanSubscriberInfo.  # noqa: E501
-
-
-        :return: The image of this BTPlanSubscriberInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._image
-
-    @image.setter
-    def image(self, image):
-        """Sets the image of this BTPlanSubscriberInfo.
-
-
-        :param image: The image of this BTPlanSubscriberInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._image = image
+        if id is not None:
+            self.id = id
 
     @property
     def first_name(self):
@@ -173,6 +152,27 @@ class BTPlanSubscriberInfo(object):
         self._email = email
 
     @property
+    def image(self):
+        """Gets the image of this BTPlanSubscriberInfo.  # noqa: E501
+
+
+        :return: The image of this BTPlanSubscriberInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this BTPlanSubscriberInfo.
+
+
+        :param image: The image of this BTPlanSubscriberInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._image = image
+
+    @property
     def state(self):
         """Gets the state of this BTPlanSubscriberInfo.  # noqa: E501
 
@@ -192,27 +192,6 @@ class BTPlanSubscriberInfo(object):
         """
 
         self._state = state
-
-    @property
-    def id(self):
-        """Gets the id of this BTPlanSubscriberInfo.  # noqa: E501
-
-
-        :return: The id of this BTPlanSubscriberInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTPlanSubscriberInfo.
-
-
-        :param id: The id of this BTPlanSubscriberInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def href(self):
@@ -276,6 +255,27 @@ class BTPlanSubscriberInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTPlanSubscriberInfo.  # noqa: E501
+
+
+        :return: The id of this BTPlanSubscriberInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTPlanSubscriberInfo.
+
+
+        :param id: The id of this BTPlanSubscriberInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

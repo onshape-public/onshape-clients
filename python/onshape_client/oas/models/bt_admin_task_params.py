@@ -32,78 +32,36 @@ class BTAdminTaskParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'message': 'str',
-        'task_name': 'str',
         'force': 'bool',
-        'task_names': 'list[str]'
+        'task_name': 'str',
+        'task_names': 'list[str]',
+        'message': 'str'
     }
 
     attribute_map = {
-        'message': 'message',
-        'task_name': 'taskName',
         'force': 'force',
-        'task_names': 'taskNames'
+        'task_name': 'taskName',
+        'task_names': 'taskNames',
+        'message': 'message'
     }
 
-    def __init__(self, message=None, task_name=None, force=None, task_names=None):  # noqa: E501
+    def __init__(self, force=None, task_name=None, task_names=None, message=None):  # noqa: E501
         """BTAdminTaskParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._message = None
-        self._task_name = None
         self._force = None
+        self._task_name = None
         self._task_names = None
+        self._message = None
         self.discriminator = None
 
-        if message is not None:
-            self.message = message
-        if task_name is not None:
-            self.task_name = task_name
         if force is not None:
             self.force = force
+        if task_name is not None:
+            self.task_name = task_name
         if task_names is not None:
             self.task_names = task_names
-
-    @property
-    def message(self):
-        """Gets the message of this BTAdminTaskParams.  # noqa: E501
-
-
-        :return: The message of this BTAdminTaskParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this BTAdminTaskParams.
-
-
-        :param message: The message of this BTAdminTaskParams.  # noqa: E501
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def task_name(self):
-        """Gets the task_name of this BTAdminTaskParams.  # noqa: E501
-
-
-        :return: The task_name of this BTAdminTaskParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._task_name
-
-    @task_name.setter
-    def task_name(self, task_name):
-        """Sets the task_name of this BTAdminTaskParams.
-
-
-        :param task_name: The task_name of this BTAdminTaskParams.  # noqa: E501
-        :type: str
-        """
-
-        self._task_name = task_name
+        if message is not None:
+            self.message = message
 
     @property
     def force(self):
@@ -127,6 +85,27 @@ class BTAdminTaskParams(object):
         self._force = force
 
     @property
+    def task_name(self):
+        """Gets the task_name of this BTAdminTaskParams.  # noqa: E501
+
+
+        :return: The task_name of this BTAdminTaskParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._task_name
+
+    @task_name.setter
+    def task_name(self, task_name):
+        """Sets the task_name of this BTAdminTaskParams.
+
+
+        :param task_name: The task_name of this BTAdminTaskParams.  # noqa: E501
+        :type: str
+        """
+
+        self._task_name = task_name
+
+    @property
     def task_names(self):
         """Gets the task_names of this BTAdminTaskParams.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTAdminTaskParams(object):
         """
 
         self._task_names = task_names
+
+    @property
+    def message(self):
+        """Gets the message of this BTAdminTaskParams.  # noqa: E501
+
+
+        :return: The message of this BTAdminTaskParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """Sets the message of this BTAdminTaskParams.
+
+
+        :param message: The message of this BTAdminTaskParams.  # noqa: E501
+        :type: str
+        """
+
+        self._message = message
 
     def to_dict(self):
         """Returns the model properties as a dict"""

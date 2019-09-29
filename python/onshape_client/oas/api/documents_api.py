@@ -159,12 +159,12 @@ class DocumentsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create9(self, bt_document_params, **kwargs):  # noqa: E501
-        """create9  # noqa: E501
+    def create_document(self, bt_document_params, **kwargs):  # noqa: E501
+        """Create document.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create9(bt_document_params, async_req=True)
+        >>> thread = api.create_document(bt_document_params, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -176,19 +176,19 @@ class DocumentsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: BTDocumentInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create9_with_http_info(bt_document_params, **kwargs)  # noqa: E501
+        return self.create_document_with_http_info(bt_document_params, **kwargs)  # noqa: E501
 
-    def create9_with_http_info(self, bt_document_params, **kwargs):  # noqa: E501
-        """create9  # noqa: E501
+    def create_document_with_http_info(self, bt_document_params, **kwargs):  # noqa: E501
+        """Create document.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create9_with_http_info(bt_document_params, async_req=True)
+        >>> thread = api.create_document_with_http_info(bt_document_params, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -202,7 +202,7 @@ class DocumentsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(BTDocumentInfo, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -219,14 +219,14 @@ class DocumentsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create9" % key
+                    " to method create_document" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'bt_document_params' is set
         if ('bt_document_params' not in local_var_params or
                 local_var_params['bt_document_params'] is None):
-            raise ApiValueError("Missing the required parameter `bt_document_params` when calling `create9`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `bt_document_params` when calling `create_document`")  # noqa: E501
 
         collection_formats = {}
 
@@ -261,7 +261,7 @@ class DocumentsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='BTDocumentInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

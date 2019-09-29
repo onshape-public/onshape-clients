@@ -34,44 +34,44 @@ class BTCacheInfo(object):
     openapi_types = {
         'cache_names': 'list[str]',
         'cache_stats': 'dict(str, dict(str, str))',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'cache_names': 'cacheNames',
         'cache_stats': 'cacheStats',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, cache_names=None, cache_stats=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, cache_names=None, cache_stats=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTCacheInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._cache_names = None
         self._cache_stats = None
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if cache_names is not None:
             self.cache_names = cache_names
         if cache_stats is not None:
             self.cache_stats = cache_stats
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def cache_names(self):
@@ -114,27 +114,6 @@ class BTCacheInfo(object):
         """
 
         self._cache_stats = cache_stats
-
-    @property
-    def id(self):
-        """Gets the id of this BTCacheInfo.  # noqa: E501
-
-
-        :return: The id of this BTCacheInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTCacheInfo.
-
-
-        :param id: The id of this BTCacheInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def href(self):
@@ -198,6 +177,27 @@ class BTCacheInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTCacheInfo.  # noqa: E501
+
+
+        :return: The id of this BTCacheInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTCacheInfo.
+
+
+        :param id: The id of this BTCacheInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

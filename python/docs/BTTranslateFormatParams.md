@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link_document_id** | **str** |  | [optional] 
-**link_document_workspace_id** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
-**trigger_auto_download** | **bool** |  | [optional] 
-**notify_user** | **bool** |  | [optional] 
-**part_ids** | **str** |  | [optional] 
+**link_document_id** | **str** |  | [optional] 
+**link_document_workspace_id** | **str** |  | [optional] 
 **store_in_document** | **bool** |  | [optional] 
 **from_user_id** | **str** |  | [optional] 
 **cloud_storage_account_id** | **str** |  | [optional] 
 **connection_id** | **str** |  | [optional] 
+**trigger_auto_download** | **bool** |  | [optional] 
+**notify_user** | **bool** |  | [optional] 
+**part_ids** | **str** |  | [optional] 
 **cloud_object_id** | **str** |  | [optional] 
 **email_link** | **bool** |  | [optional] 
 **password_required** | **bool** |  | [optional] 
@@ -55,11 +55,11 @@ Name | Type | Description | Notes
 **create_composite** | **bool** |  | [optional] 
 **extract_assembly_hierarchy** | **bool** |  | [optional] 
 **join_adjacent_surfaces** | **bool** |  | [optional] 
+**processed_foreign_id** | **str** |  | [optional] 
 **original_foreign_id** | **str** |  | [optional] 
 **import_within_document** | **bool** |  | [optional] 
 **blob_element_id** | **str** |  | [optional] 
 **blob_microversion_id** | **str** |  | [optional] 
-**processed_foreign_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

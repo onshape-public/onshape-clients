@@ -34,34 +34,34 @@ class BTThumbnailInfo(object):
     openapi_types = {
         'sizes': 'list[BTThumbnailSizeInfo]',
         'secondary_sizes': 'list[list[BTThumbnailSizeInfo]]',
-        'id': 'str',
-        'href': 'str'
+        'href': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'sizes': 'sizes',
         'secondary_sizes': 'secondarySizes',
-        'id': 'id',
-        'href': 'href'
+        'href': 'href',
+        'id': 'id'
     }
 
-    def __init__(self, sizes=None, secondary_sizes=None, id=None, href=None):  # noqa: E501
+    def __init__(self, sizes=None, secondary_sizes=None, href=None, id=None):  # noqa: E501
         """BTThumbnailInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._sizes = None
         self._secondary_sizes = None
-        self._id = None
         self._href = None
+        self._id = None
         self.discriminator = None
 
         if sizes is not None:
             self.sizes = sizes
         if secondary_sizes is not None:
             self.secondary_sizes = secondary_sizes
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
+        if id is not None:
+            self.id = id
 
     @property
     def sizes(self):
@@ -106,27 +106,6 @@ class BTThumbnailInfo(object):
         self._secondary_sizes = secondary_sizes
 
     @property
-    def id(self):
-        """Gets the id of this BTThumbnailInfo.  # noqa: E501
-
-
-        :return: The id of this BTThumbnailInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTThumbnailInfo.
-
-
-        :param id: The id of this BTThumbnailInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTThumbnailInfo.  # noqa: E501
 
@@ -146,6 +125,27 @@ class BTThumbnailInfo(object):
         """
 
         self._href = href
+
+    @property
+    def id(self):
+        """Gets the id of this BTThumbnailInfo.  # noqa: E501
+
+
+        :return: The id of this BTThumbnailInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTThumbnailInfo.
+
+
+        :param id: The id of this BTThumbnailInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

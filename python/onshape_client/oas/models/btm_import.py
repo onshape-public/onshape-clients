@@ -32,72 +32,51 @@ class BTMImport(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'imported_external_document_id': 'str',
         'element_import': 'bool',
-        'namespace': 'str',
+        'imported_external_document_id': 'str',
         'node_id': 'str',
+        'namespace': 'str',
         'import_microversion': 'str',
-        'version': 'str',
-        'path': 'str'
+        'path': 'str',
+        'version': 'str'
     }
 
     attribute_map = {
-        'imported_external_document_id': 'importedExternalDocumentId',
         'element_import': 'elementImport',
-        'namespace': 'namespace',
+        'imported_external_document_id': 'importedExternalDocumentId',
         'node_id': 'nodeId',
+        'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
-        'version': 'version',
-        'path': 'path'
+        'path': 'path',
+        'version': 'version'
     }
 
-    def __init__(self, imported_external_document_id=None, element_import=None, namespace=None, node_id=None, import_microversion=None, version=None, path=None):  # noqa: E501
+    def __init__(self, element_import=None, imported_external_document_id=None, node_id=None, namespace=None, import_microversion=None, path=None, version=None):  # noqa: E501
         """BTMImport - a model defined in OpenAPI"""  # noqa: E501
 
-        self._imported_external_document_id = None
         self._element_import = None
-        self._namespace = None
+        self._imported_external_document_id = None
         self._node_id = None
+        self._namespace = None
         self._import_microversion = None
-        self._version = None
         self._path = None
+        self._version = None
         self.discriminator = None
 
-        if imported_external_document_id is not None:
-            self.imported_external_document_id = imported_external_document_id
         if element_import is not None:
             self.element_import = element_import
-        if namespace is not None:
-            self.namespace = namespace
+        if imported_external_document_id is not None:
+            self.imported_external_document_id = imported_external_document_id
         if node_id is not None:
             self.node_id = node_id
+        if namespace is not None:
+            self.namespace = namespace
         if import_microversion is not None:
             self.import_microversion = import_microversion
-        if version is not None:
-            self.version = version
         if path is not None:
             self.path = path
-
-    @property
-    def imported_external_document_id(self):
-        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
-
-
-        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_external_document_id
-
-    @imported_external_document_id.setter
-    def imported_external_document_id(self, imported_external_document_id):
-        """Sets the imported_external_document_id of this BTMImport.
-
-
-        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_external_document_id = imported_external_document_id
+        if version is not None:
+            self.version = version
 
     @property
     def element_import(self):
@@ -121,25 +100,25 @@ class BTMImport(object):
         self._element_import = element_import
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTMImport.  # noqa: E501
+    def imported_external_document_id(self):
+        """Gets the imported_external_document_id of this BTMImport.  # noqa: E501
 
 
-        :return: The namespace of this BTMImport.  # noqa: E501
+        :return: The imported_external_document_id of this BTMImport.  # noqa: E501
         :rtype: str
         """
-        return self._namespace
+        return self._imported_external_document_id
 
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMImport.
+    @imported_external_document_id.setter
+    def imported_external_document_id(self, imported_external_document_id):
+        """Sets the imported_external_document_id of this BTMImport.
 
 
-        :param namespace: The namespace of this BTMImport.  # noqa: E501
+        :param imported_external_document_id: The imported_external_document_id of this BTMImport.  # noqa: E501
         :type: str
         """
 
-        self._namespace = namespace
+        self._imported_external_document_id = imported_external_document_id
 
     @property
     def node_id(self):
@@ -163,6 +142,27 @@ class BTMImport(object):
         self._node_id = node_id
 
     @property
+    def namespace(self):
+        """Gets the namespace of this BTMImport.  # noqa: E501
+
+
+        :return: The namespace of this BTMImport.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMImport.
+
+
+        :param namespace: The namespace of this BTMImport.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
+
+    @property
     def import_microversion(self):
         """Gets the import_microversion of this BTMImport.  # noqa: E501
 
@@ -184,27 +184,6 @@ class BTMImport(object):
         self._import_microversion = import_microversion
 
     @property
-    def version(self):
-        """Gets the version of this BTMImport.  # noqa: E501
-
-
-        :return: The version of this BTMImport.  # noqa: E501
-        :rtype: str
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTMImport.
-
-
-        :param version: The version of this BTMImport.  # noqa: E501
-        :type: str
-        """
-
-        self._version = version
-
-    @property
     def path(self):
         """Gets the path of this BTMImport.  # noqa: E501
 
@@ -224,6 +203,27 @@ class BTMImport(object):
         """
 
         self._path = path
+
+    @property
+    def version(self):
+        """Gets the version of this BTMImport.  # noqa: E501
+
+
+        :return: The version of this BTMImport.  # noqa: E501
+        :rtype: str
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTMImport.
+
+
+        :param version: The version of this BTMImport.  # noqa: E501
+        :type: str
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

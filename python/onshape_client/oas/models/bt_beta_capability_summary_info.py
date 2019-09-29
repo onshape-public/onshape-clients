@@ -32,45 +32,43 @@ class BTBetaCapabilitySummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'description': 'str',
         'user_state': 'int',
         'upgradable': 'bool',
         'user_based': 'bool',
         'self_service_disabled': 'bool',
-        'id': 'str',
+        'description': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
         'user_state': 'userState',
         'upgradable': 'upgradable',
         'user_based': 'userBased',
         'self_service_disabled': 'selfServiceDisabled',
-        'id': 'id',
+        'description': 'description',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, description=None, user_state=None, upgradable=None, user_based=None, self_service_disabled=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, user_state=None, upgradable=None, user_based=None, self_service_disabled=None, description=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTBetaCapabilitySummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._description = None
         self._user_state = None
         self._upgradable = None
         self._user_based = None
         self._self_service_disabled = None
-        self._id = None
+        self._description = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
         if user_state is not None:
             self.user_state = user_state
         if upgradable is not None:
@@ -79,35 +77,16 @@ class BTBetaCapabilitySummaryInfo(object):
             self.user_based = user_based
         if self_service_disabled is not None:
             self.self_service_disabled = self_service_disabled
-        if id is not None:
-            self.id = id
+        if description is not None:
+            self.description = description
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def description(self):
-        """Gets the description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
-
-
-        :return: The description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTBetaCapabilitySummaryInfo.
-
-
-        :param description: The description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
+        if id is not None:
+            self.id = id
 
     @property
     def user_state(self):
@@ -194,25 +173,25 @@ class BTBetaCapabilitySummaryInfo(object):
         self._self_service_disabled = self_service_disabled
 
     @property
-    def id(self):
-        """Gets the id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+    def description(self):
+        """Gets the description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
 
 
-        :return: The id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+        :return: The description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._description
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBetaCapabilitySummaryInfo.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTBetaCapabilitySummaryInfo.
 
 
-        :param id: The id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+        :param description: The description of this BTBetaCapabilitySummaryInfo.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._description = description
 
     @property
     def href(self):
@@ -276,6 +255,27 @@ class BTBetaCapabilitySummaryInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+
+
+        :return: The id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBetaCapabilitySummaryInfo.
+
+
+        :param id: The id of this BTBetaCapabilitySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

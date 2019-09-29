@@ -32,50 +32,47 @@ class BTMFeatureInvalid(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'namespace': 'str',
         'node_id': 'str',
+        'namespace': 'str',
         'import_microversion': 'str',
         'name': 'str',
         'suppressed': 'bool',
         'parameters': 'list[BTMParameter]',
         'feature_id': 'str',
         'feature_type': 'str',
-        'sub_features': 'list[BTMFeature]',
         'return_after_subfeatures': 'bool'
     }
 
     attribute_map = {
-        'namespace': 'namespace',
         'node_id': 'nodeId',
+        'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
         'name': 'name',
         'suppressed': 'suppressed',
         'parameters': 'parameters',
         'feature_id': 'featureId',
         'feature_type': 'featureType',
-        'sub_features': 'subFeatures',
         'return_after_subfeatures': 'returnAfterSubfeatures'
     }
 
-    def __init__(self, namespace=None, node_id=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_id=None, feature_type=None, sub_features=None, return_after_subfeatures=None):  # noqa: E501
+    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_id=None, feature_type=None, return_after_subfeatures=None):  # noqa: E501
         """BTMFeatureInvalid - a model defined in OpenAPI"""  # noqa: E501
 
-        self._namespace = None
         self._node_id = None
+        self._namespace = None
         self._import_microversion = None
         self._name = None
         self._suppressed = None
         self._parameters = None
         self._feature_id = None
         self._feature_type = None
-        self._sub_features = None
         self._return_after_subfeatures = None
         self.discriminator = None
 
-        if namespace is not None:
-            self.namespace = namespace
         if node_id is not None:
             self.node_id = node_id
+        if namespace is not None:
+            self.namespace = namespace
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if name is not None:
@@ -88,31 +85,8 @@ class BTMFeatureInvalid(object):
             self.feature_id = feature_id
         if feature_type is not None:
             self.feature_type = feature_type
-        if sub_features is not None:
-            self.sub_features = sub_features
         if return_after_subfeatures is not None:
             self.return_after_subfeatures = return_after_subfeatures
-
-    @property
-    def namespace(self):
-        """Gets the namespace of this BTMFeatureInvalid.  # noqa: E501
-
-
-        :return: The namespace of this BTMFeatureInvalid.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMFeatureInvalid.
-
-
-        :param namespace: The namespace of this BTMFeatureInvalid.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
 
     @property
     def node_id(self):
@@ -134,6 +108,27 @@ class BTMFeatureInvalid(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTMFeatureInvalid.  # noqa: E501
+
+
+        :return: The namespace of this BTMFeatureInvalid.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMFeatureInvalid.
+
+
+        :param namespace: The namespace of this BTMFeatureInvalid.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
 
     @property
     def import_microversion(self):
@@ -260,27 +255,6 @@ class BTMFeatureInvalid(object):
         """
 
         self._feature_type = feature_type
-
-    @property
-    def sub_features(self):
-        """Gets the sub_features of this BTMFeatureInvalid.  # noqa: E501
-
-
-        :return: The sub_features of this BTMFeatureInvalid.  # noqa: E501
-        :rtype: list[BTMFeature]
-        """
-        return self._sub_features
-
-    @sub_features.setter
-    def sub_features(self, sub_features):
-        """Sets the sub_features of this BTMFeatureInvalid.
-
-
-        :param sub_features: The sub_features of this BTMFeatureInvalid.  # noqa: E501
-        :type: list[BTMFeature]
-        """
-
-        self._sub_features = sub_features
 
     @property
     def return_after_subfeatures(self):

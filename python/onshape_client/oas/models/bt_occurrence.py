@@ -32,8 +32,8 @@ class BTOccurrence(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'full_path_as_string': 'str',
         'root_occurrence': 'bool',
+        'full_path_as_string': 'str',
         'tail_instance_id': 'str',
         'head_instance_id': 'str',
         'occurrence_without_head': 'BTOccurrence',
@@ -43,8 +43,8 @@ class BTOccurrence(object):
     }
 
     attribute_map = {
-        'full_path_as_string': 'fullPathAsString',
         'root_occurrence': 'rootOccurrence',
+        'full_path_as_string': 'fullPathAsString',
         'tail_instance_id': 'tailInstanceId',
         'head_instance_id': 'headInstanceId',
         'occurrence_without_head': 'occurrenceWithoutHead',
@@ -53,11 +53,11 @@ class BTOccurrence(object):
         'path': 'path'
     }
 
-    def __init__(self, full_path_as_string=None, root_occurrence=None, tail_instance_id=None, head_instance_id=None, occurrence_without_head=None, occurrence_without_tail=None, pattern_descendant=None, path=None):  # noqa: E501
+    def __init__(self, root_occurrence=None, full_path_as_string=None, tail_instance_id=None, head_instance_id=None, occurrence_without_head=None, occurrence_without_tail=None, pattern_descendant=None, path=None):  # noqa: E501
         """BTOccurrence - a model defined in OpenAPI"""  # noqa: E501
 
-        self._full_path_as_string = None
         self._root_occurrence = None
+        self._full_path_as_string = None
         self._tail_instance_id = None
         self._head_instance_id = None
         self._occurrence_without_head = None
@@ -66,10 +66,10 @@ class BTOccurrence(object):
         self._path = None
         self.discriminator = None
 
-        if full_path_as_string is not None:
-            self.full_path_as_string = full_path_as_string
         if root_occurrence is not None:
             self.root_occurrence = root_occurrence
+        if full_path_as_string is not None:
+            self.full_path_as_string = full_path_as_string
         if tail_instance_id is not None:
             self.tail_instance_id = tail_instance_id
         if head_instance_id is not None:
@@ -82,27 +82,6 @@ class BTOccurrence(object):
             self.pattern_descendant = pattern_descendant
         if path is not None:
             self.path = path
-
-    @property
-    def full_path_as_string(self):
-        """Gets the full_path_as_string of this BTOccurrence.  # noqa: E501
-
-
-        :return: The full_path_as_string of this BTOccurrence.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_path_as_string
-
-    @full_path_as_string.setter
-    def full_path_as_string(self, full_path_as_string):
-        """Sets the full_path_as_string of this BTOccurrence.
-
-
-        :param full_path_as_string: The full_path_as_string of this BTOccurrence.  # noqa: E501
-        :type: str
-        """
-
-        self._full_path_as_string = full_path_as_string
 
     @property
     def root_occurrence(self):
@@ -124,6 +103,27 @@ class BTOccurrence(object):
         """
 
         self._root_occurrence = root_occurrence
+
+    @property
+    def full_path_as_string(self):
+        """Gets the full_path_as_string of this BTOccurrence.  # noqa: E501
+
+
+        :return: The full_path_as_string of this BTOccurrence.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_path_as_string
+
+    @full_path_as_string.setter
+    def full_path_as_string(self, full_path_as_string):
+        """Sets the full_path_as_string of this BTOccurrence.
+
+
+        :param full_path_as_string: The full_path_as_string of this BTOccurrence.  # noqa: E501
+        :type: str
+        """
+
+        self._full_path_as_string = full_path_as_string
 
     @property
     def tail_instance_id(self):

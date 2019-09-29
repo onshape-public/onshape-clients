@@ -34,39 +34,39 @@ class BTStandardContentFindUsageParams(object):
     openapi_types = {
         'component_document_id': 'str',
         'used_from_in_days': 'str',
-        'user_id': 'str',
         'company_id': 'str',
-        'parameters': 'list[BTStandardContentParameterDefinition]'
+        'parameters': 'list[BTStandardContentParameterDefinition]',
+        'user_id': 'str'
     }
 
     attribute_map = {
         'component_document_id': 'componentDocumentId',
         'used_from_in_days': 'usedFromInDays',
-        'user_id': 'userId',
         'company_id': 'companyId',
-        'parameters': 'parameters'
+        'parameters': 'parameters',
+        'user_id': 'userId'
     }
 
-    def __init__(self, component_document_id=None, used_from_in_days=None, user_id=None, company_id=None, parameters=None):  # noqa: E501
+    def __init__(self, component_document_id=None, used_from_in_days=None, company_id=None, parameters=None, user_id=None):  # noqa: E501
         """BTStandardContentFindUsageParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._component_document_id = None
         self._used_from_in_days = None
-        self._user_id = None
         self._company_id = None
         self._parameters = None
+        self._user_id = None
         self.discriminator = None
 
         if component_document_id is not None:
             self.component_document_id = component_document_id
         if used_from_in_days is not None:
             self.used_from_in_days = used_from_in_days
-        if user_id is not None:
-            self.user_id = user_id
         if company_id is not None:
             self.company_id = company_id
         if parameters is not None:
             self.parameters = parameters
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def component_document_id(self):
@@ -111,27 +111,6 @@ class BTStandardContentFindUsageParams(object):
         self._used_from_in_days = used_from_in_days
 
     @property
-    def user_id(self):
-        """Gets the user_id of this BTStandardContentFindUsageParams.  # noqa: E501
-
-
-        :return: The user_id of this BTStandardContentFindUsageParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTStandardContentFindUsageParams.
-
-
-        :param user_id: The user_id of this BTStandardContentFindUsageParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
-
-    @property
     def company_id(self):
         """Gets the company_id of this BTStandardContentFindUsageParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTStandardContentFindUsageParams(object):
         """
 
         self._parameters = parameters
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTStandardContentFindUsageParams.  # noqa: E501
+
+
+        :return: The user_id of this BTStandardContentFindUsageParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTStandardContentFindUsageParams.
+
+
+        :param user_id: The user_id of this BTStandardContentFindUsageParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

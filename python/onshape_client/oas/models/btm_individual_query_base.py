@@ -32,46 +32,67 @@ class BTMIndividualQueryBase(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'query_string': 'str',
         'deterministic_ids': 'list[str]',
         'deterministic_id_list': 'BTMIndividualQueryBase',
         'query': 'BTMIndividualQueryBase',
-        'query_string': 'str',
         'import_microversion': 'str',
         'node_id': 'str'
     }
 
     attribute_map = {
+        'query_string': 'queryString',
         'deterministic_ids': 'deterministicIds',
         'deterministic_id_list': 'deterministicIdList',
         'query': 'query',
-        'query_string': 'queryString',
         'import_microversion': 'importMicroversion',
         'node_id': 'nodeId'
     }
 
-    def __init__(self, deterministic_ids=None, deterministic_id_list=None, query=None, query_string=None, import_microversion=None, node_id=None):  # noqa: E501
+    def __init__(self, query_string=None, deterministic_ids=None, deterministic_id_list=None, query=None, import_microversion=None, node_id=None):  # noqa: E501
         """BTMIndividualQueryBase - a model defined in OpenAPI"""  # noqa: E501
 
+        self._query_string = None
         self._deterministic_ids = None
         self._deterministic_id_list = None
         self._query = None
-        self._query_string = None
         self._import_microversion = None
         self._node_id = None
         self.discriminator = None
 
+        if query_string is not None:
+            self.query_string = query_string
         if deterministic_ids is not None:
             self.deterministic_ids = deterministic_ids
         if deterministic_id_list is not None:
             self.deterministic_id_list = deterministic_id_list
         if query is not None:
             self.query = query
-        if query_string is not None:
-            self.query_string = query_string
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if node_id is not None:
             self.node_id = node_id
+
+    @property
+    def query_string(self):
+        """Gets the query_string of this BTMIndividualQueryBase.  # noqa: E501
+
+
+        :return: The query_string of this BTMIndividualQueryBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._query_string
+
+    @query_string.setter
+    def query_string(self, query_string):
+        """Sets the query_string of this BTMIndividualQueryBase.
+
+
+        :param query_string: The query_string of this BTMIndividualQueryBase.  # noqa: E501
+        :type: str
+        """
+
+        self._query_string = query_string
 
     @property
     def deterministic_ids(self):
@@ -135,27 +156,6 @@ class BTMIndividualQueryBase(object):
         """
 
         self._query = query
-
-    @property
-    def query_string(self):
-        """Gets the query_string of this BTMIndividualQueryBase.  # noqa: E501
-
-
-        :return: The query_string of this BTMIndividualQueryBase.  # noqa: E501
-        :rtype: str
-        """
-        return self._query_string
-
-    @query_string.setter
-    def query_string(self, query_string):
-        """Sets the query_string of this BTMIndividualQueryBase.
-
-
-        :param query_string: The query_string of this BTMIndividualQueryBase.  # noqa: E501
-        :type: str
-        """
-
-        self._query_string = query_string
 
     @property
     def import_microversion(self):

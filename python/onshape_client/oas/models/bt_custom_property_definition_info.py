@@ -35,26 +35,26 @@ class BTCustomPropertyDefinitionInfo(object):
         'description': 'str',
         'template': 'str',
         'enum_definition': 'list[str]',
-        'type': 'str',
-        'name': 'str'
+        'name': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
         'description': 'description',
         'template': 'template',
         'enum_definition': 'enumDefinition',
-        'type': 'type',
-        'name': 'name'
+        'name': 'name',
+        'type': 'type'
     }
 
-    def __init__(self, description=None, template=None, enum_definition=None, type=None, name=None):  # noqa: E501
+    def __init__(self, description=None, template=None, enum_definition=None, name=None, type=None):  # noqa: E501
         """BTCustomPropertyDefinitionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
         self._template = None
         self._enum_definition = None
-        self._type = None
         self._name = None
+        self._type = None
         self.discriminator = None
 
         if description is not None:
@@ -63,10 +63,10 @@ class BTCustomPropertyDefinitionInfo(object):
             self.template = template
         if enum_definition is not None:
             self.enum_definition = enum_definition
-        if type is not None:
-            self.type = type
         if name is not None:
             self.name = name
+        if type is not None:
+            self.type = type
 
     @property
     def description(self):
@@ -132,6 +132,27 @@ class BTCustomPropertyDefinitionInfo(object):
         self._enum_definition = enum_definition
 
     @property
+    def name(self):
+        """Gets the name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+
+
+        :return: The name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BTCustomPropertyDefinitionInfo.
+
+
+        :param name: The name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
     def type(self):
         """Gets the type of this BTCustomPropertyDefinitionInfo.  # noqa: E501
 
@@ -157,27 +178,6 @@ class BTCustomPropertyDefinitionInfo(object):
             )
 
         self._type = type
-
-    @property
-    def name(self):
-        """Gets the name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-
-
-        :return: The name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BTCustomPropertyDefinitionInfo.
-
-
-        :param name: The name of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

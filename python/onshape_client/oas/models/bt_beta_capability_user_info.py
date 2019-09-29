@@ -32,8 +32,8 @@ class BTBetaCapabilityUserInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'plan_id': 'str',
         'created_at': 'datetime',
+        'plan_id': 'str',
         'approved_at': 'datetime',
         'removed_at': 'datetime',
         'capability_state': 'int',
@@ -43,20 +43,20 @@ class BTBetaCapabilityUserInfo(object):
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
-        'last_login_time': 'datetime',
         'company': 'BTCompanySummaryInfo',
+        'last_login_time': 'datetime',
         'source': 'int',
         'image': 'str',
         'state': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'plan_id': 'planId',
         'created_at': 'createdAt',
+        'plan_id': 'planId',
         'approved_at': 'approvedAt',
         'removed_at': 'removedAt',
         'capability_state': 'capabilityState',
@@ -66,22 +66,22 @@ class BTBetaCapabilityUserInfo(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'email': 'email',
-        'last_login_time': 'lastLoginTime',
         'company': 'company',
+        'last_login_time': 'lastLoginTime',
         'source': 'source',
         'image': 'image',
         'state': 'state',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, plan_id=None, created_at=None, approved_at=None, removed_at=None, capability_state=None, is_guest=None, is_light=None, global_permissions=None, first_name=None, last_name=None, email=None, last_login_time=None, company=None, source=None, image=None, state=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, created_at=None, plan_id=None, approved_at=None, removed_at=None, capability_state=None, is_guest=None, is_light=None, global_permissions=None, first_name=None, last_name=None, email=None, company=None, last_login_time=None, source=None, image=None, state=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTBetaCapabilityUserInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._plan_id = None
         self._created_at = None
+        self._plan_id = None
         self._approved_at = None
         self._removed_at = None
         self._capability_state = None
@@ -91,21 +91,21 @@ class BTBetaCapabilityUserInfo(object):
         self._first_name = None
         self._last_name = None
         self._email = None
-        self._last_login_time = None
         self._company = None
+        self._last_login_time = None
         self._source = None
         self._image = None
         self._state = None
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
-        if plan_id is not None:
-            self.plan_id = plan_id
         if created_at is not None:
             self.created_at = created_at
+        if plan_id is not None:
+            self.plan_id = plan_id
         if approved_at is not None:
             self.approved_at = approved_at
         if removed_at is not None:
@@ -124,45 +124,24 @@ class BTBetaCapabilityUserInfo(object):
             self.last_name = last_name
         if email is not None:
             self.email = email
-        if last_login_time is not None:
-            self.last_login_time = last_login_time
         if company is not None:
             self.company = company
+        if last_login_time is not None:
+            self.last_login_time = last_login_time
         if source is not None:
             self.source = source
         if image is not None:
             self.image = image
         if state is not None:
             self.state = state
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def plan_id(self):
-        """Gets the plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._plan_id
-
-    @plan_id.setter
-    def plan_id(self, plan_id):
-        """Sets the plan_id of this BTBetaCapabilityUserInfo.
-
-
-        :param plan_id: The plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._plan_id = plan_id
+        if id is not None:
+            self.id = id
 
     @property
     def created_at(self):
@@ -184,6 +163,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def plan_id(self):
+        """Gets the plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        """Sets the plan_id of this BTBetaCapabilityUserInfo.
+
+
+        :param plan_id: The plan_id of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._plan_id = plan_id
 
     @property
     def approved_at(self):
@@ -375,27 +375,6 @@ class BTBetaCapabilityUserInfo(object):
         self._email = email
 
     @property
-    def last_login_time(self):
-        """Gets the last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_login_time
-
-    @last_login_time.setter
-    def last_login_time(self, last_login_time):
-        """Sets the last_login_time of this BTBetaCapabilityUserInfo.
-
-
-        :param last_login_time: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._last_login_time = last_login_time
-
-    @property
     def company(self):
         """Gets the company of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -415,6 +394,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._company = company
+
+    @property
+    def last_login_time(self):
+        """Gets the last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_login_time
+
+    @last_login_time.setter
+    def last_login_time(self, last_login_time):
+        """Sets the last_login_time of this BTBetaCapabilityUserInfo.
+
+
+        :param last_login_time: The last_login_time of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._last_login_time = last_login_time
 
     @property
     def source(self):
@@ -480,27 +480,6 @@ class BTBetaCapabilityUserInfo(object):
         self._state = state
 
     @property
-    def id(self):
-        """Gets the id of this BTBetaCapabilityUserInfo.  # noqa: E501
-
-
-        :return: The id of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBetaCapabilityUserInfo.
-
-
-        :param id: The id of this BTBetaCapabilityUserInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def href(self):
         """Gets the href of this BTBetaCapabilityUserInfo.  # noqa: E501
 
@@ -562,6 +541,27 @@ class BTBetaCapabilityUserInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTBetaCapabilityUserInfo.  # noqa: E501
+
+
+        :return: The id of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBetaCapabilityUserInfo.
+
+
+        :param id: The id of this BTBetaCapabilityUserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

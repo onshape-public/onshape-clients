@@ -32,52 +32,31 @@ class BTPSpace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'text': 'str',
         'lines': 'list[str]',
+        'text': 'str',
         'node_id': 'str'
     }
 
     attribute_map = {
-        'text': 'text',
         'lines': 'lines',
+        'text': 'text',
         'node_id': 'nodeId'
     }
 
-    def __init__(self, text=None, lines=None, node_id=None):  # noqa: E501
+    def __init__(self, lines=None, text=None, node_id=None):  # noqa: E501
         """BTPSpace - a model defined in OpenAPI"""  # noqa: E501
 
-        self._text = None
         self._lines = None
+        self._text = None
         self._node_id = None
         self.discriminator = None
 
-        if text is not None:
-            self.text = text
         if lines is not None:
             self.lines = lines
+        if text is not None:
+            self.text = text
         if node_id is not None:
             self.node_id = node_id
-
-    @property
-    def text(self):
-        """Gets the text of this BTPSpace.  # noqa: E501
-
-
-        :return: The text of this BTPSpace.  # noqa: E501
-        :rtype: str
-        """
-        return self._text
-
-    @text.setter
-    def text(self, text):
-        """Sets the text of this BTPSpace.
-
-
-        :param text: The text of this BTPSpace.  # noqa: E501
-        :type: str
-        """
-
-        self._text = text
 
     @property
     def lines(self):
@@ -99,6 +78,27 @@ class BTPSpace(object):
         """
 
         self._lines = lines
+
+    @property
+    def text(self):
+        """Gets the text of this BTPSpace.  # noqa: E501
+
+
+        :return: The text of this BTPSpace.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this BTPSpace.
+
+
+        :param text: The text of this BTPSpace.  # noqa: E501
+        :type: str
+        """
+
+        self._text = text
 
     @property
     def node_id(self):

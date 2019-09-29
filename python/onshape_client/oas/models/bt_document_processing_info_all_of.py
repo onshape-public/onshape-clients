@@ -32,47 +32,26 @@ class BTDocumentProcessingInfoAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'translation_event_key': 'str',
-        'translation_id': 'str'
+        'translation_id': 'str',
+        'translation_event_key': 'str'
     }
 
     attribute_map = {
-        'translation_event_key': 'translationEventKey',
-        'translation_id': 'translationId'
+        'translation_id': 'translationId',
+        'translation_event_key': 'translationEventKey'
     }
 
-    def __init__(self, translation_event_key=None, translation_id=None):  # noqa: E501
+    def __init__(self, translation_id=None, translation_event_key=None):  # noqa: E501
         """BTDocumentProcessingInfoAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._translation_event_key = None
         self._translation_id = None
+        self._translation_event_key = None
         self.discriminator = None
 
-        if translation_event_key is not None:
-            self.translation_event_key = translation_event_key
         if translation_id is not None:
             self.translation_id = translation_id
-
-    @property
-    def translation_event_key(self):
-        """Gets the translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
-
-
-        :return: The translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._translation_event_key
-
-    @translation_event_key.setter
-    def translation_event_key(self, translation_event_key):
-        """Sets the translation_event_key of this BTDocumentProcessingInfoAllOf.
-
-
-        :param translation_event_key: The translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._translation_event_key = translation_event_key
+        if translation_event_key is not None:
+            self.translation_event_key = translation_event_key
 
     @property
     def translation_id(self):
@@ -94,6 +73,27 @@ class BTDocumentProcessingInfoAllOf(object):
         """
 
         self._translation_id = translation_id
+
+    @property
+    def translation_event_key(self):
+        """Gets the translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
+
+
+        :return: The translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._translation_event_key
+
+    @translation_event_key.setter
+    def translation_event_key(self, translation_event_key):
+        """Sets the translation_event_key of this BTDocumentProcessingInfoAllOf.
+
+
+        :param translation_event_key: The translation_event_key of this BTDocumentProcessingInfoAllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._translation_event_key = translation_event_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

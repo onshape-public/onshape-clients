@@ -1,4 +1,4 @@
-# Onshape Clients
+# Onshape Clients [![Build Status](https://travis-ci.org/onshape-public/onshape-clients.svg?branch=master)](https://travis-ci.org/onshape-public/onshape-clients)
 
 This repo is responsible for generating and disseminating Onshape clients in multiple languages. These clients are for 
 use by Onshape developer partners. To learn more, visit the [Onshape Developer Portal](https://dev-portal.onshape.com).

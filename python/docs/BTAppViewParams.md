@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**transaction_id** | **str** |  | [optional] 
+**parent_change_id** | **str** |  | [optional] 
 **display_state_id** | **str** |  | [optional] 
 **model_reference_id** | **str** |  | [optional] 
 **view_matrix** | **list[float]** |  | [optional] 
@@ -38,8 +40,6 @@ Name | Type | Description | Notes
 **is_surface** | **bool** |  | [optional] 
 **depth_section_end_condition** | [**BTBrokenOutEndCondition**](BTBrokenOutEndCondition.md) |  | [optional] 
 **exploded_view_id** | **str** |  | [optional] 
-**transaction_id** | **str** |  | [optional] 
-**parent_change_id** | **str** |  | [optional] 
 **occurrence_or_part_id_to_geometry_properties** | **dict(str, dict(str, str))** |  | [optional] 
 **parameters** | **list[float]** |  | [optional] 
 

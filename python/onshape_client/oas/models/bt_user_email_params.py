@@ -32,57 +32,36 @@ class BTUserEmailParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_id': 'str',
         'email': 'str',
+        'primary': 'bool',
         'password': 'str',
-        'primary': 'bool'
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'user_id': 'userId',
         'email': 'email',
+        'primary': 'primary',
         'password': 'password',
-        'primary': 'primary'
+        'user_id': 'userId'
     }
 
-    def __init__(self, user_id=None, email=None, password=None, primary=None):  # noqa: E501
+    def __init__(self, email=None, primary=None, password=None, user_id=None):  # noqa: E501
         """BTUserEmailParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_id = None
         self._email = None
-        self._password = None
         self._primary = None
+        self._password = None
+        self._user_id = None
         self.discriminator = None
 
-        if user_id is not None:
-            self.user_id = user_id
         if email is not None:
             self.email = email
-        if password is not None:
-            self.password = password
         if primary is not None:
             self.primary = primary
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTUserEmailParams.  # noqa: E501
-
-
-        :return: The user_id of this BTUserEmailParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTUserEmailParams.
-
-
-        :param user_id: The user_id of this BTUserEmailParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if password is not None:
+            self.password = password
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def email(self):
@@ -106,6 +85,27 @@ class BTUserEmailParams(object):
         self._email = email
 
     @property
+    def primary(self):
+        """Gets the primary of this BTUserEmailParams.  # noqa: E501
+
+
+        :return: The primary of this BTUserEmailParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._primary
+
+    @primary.setter
+    def primary(self, primary):
+        """Sets the primary of this BTUserEmailParams.
+
+
+        :param primary: The primary of this BTUserEmailParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._primary = primary
+
+    @property
     def password(self):
         """Gets the password of this BTUserEmailParams.  # noqa: E501
 
@@ -127,25 +127,25 @@ class BTUserEmailParams(object):
         self._password = password
 
     @property
-    def primary(self):
-        """Gets the primary of this BTUserEmailParams.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this BTUserEmailParams.  # noqa: E501
 
 
-        :return: The primary of this BTUserEmailParams.  # noqa: E501
-        :rtype: bool
+        :return: The user_id of this BTUserEmailParams.  # noqa: E501
+        :rtype: str
         """
-        return self._primary
+        return self._user_id
 
-    @primary.setter
-    def primary(self, primary):
-        """Sets the primary of this BTUserEmailParams.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTUserEmailParams.
 
 
-        :param primary: The primary of this BTUserEmailParams.  # noqa: E501
-        :type: bool
+        :param user_id: The user_id of this BTUserEmailParams.  # noqa: E501
+        :type: str
         """
 
-        self._primary = primary
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

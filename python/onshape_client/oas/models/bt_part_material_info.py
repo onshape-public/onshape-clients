@@ -32,83 +32,41 @@ class BTPartMaterialInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'display_name': 'str',
         'library_name': 'str',
         'library_reference': 'BTExternalElementReferenceInfo',
-        'properties': 'list[BTPartMaterialPropertyInfo]'
+        'properties': 'list[BTPartMaterialPropertyInfo]',
+        'id': 'str',
+        'display_name': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'display_name': 'displayName',
         'library_name': 'libraryName',
         'library_reference': 'libraryReference',
-        'properties': 'properties'
+        'properties': 'properties',
+        'id': 'id',
+        'display_name': 'displayName'
     }
 
-    def __init__(self, id=None, display_name=None, library_name=None, library_reference=None, properties=None):  # noqa: E501
+    def __init__(self, library_name=None, library_reference=None, properties=None, id=None, display_name=None):  # noqa: E501
         """BTPartMaterialInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
-        self._display_name = None
         self._library_name = None
         self._library_reference = None
         self._properties = None
+        self._id = None
+        self._display_name = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if display_name is not None:
-            self.display_name = display_name
         if library_name is not None:
             self.library_name = library_name
         if library_reference is not None:
             self.library_reference = library_reference
         if properties is not None:
             self.properties = properties
-
-    @property
-    def id(self):
-        """Gets the id of this BTPartMaterialInfo.  # noqa: E501
-
-
-        :return: The id of this BTPartMaterialInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTPartMaterialInfo.
-
-
-        :param id: The id of this BTPartMaterialInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTPartMaterialInfo.  # noqa: E501
-
-
-        :return: The display_name of this BTPartMaterialInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTPartMaterialInfo.
-
-
-        :param display_name: The display_name of this BTPartMaterialInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
+        if id is not None:
+            self.id = id
+        if display_name is not None:
+            self.display_name = display_name
 
     @property
     def library_name(self):
@@ -172,6 +130,48 @@ class BTPartMaterialInfo(object):
         """
 
         self._properties = properties
+
+    @property
+    def id(self):
+        """Gets the id of this BTPartMaterialInfo.  # noqa: E501
+
+
+        :return: The id of this BTPartMaterialInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTPartMaterialInfo.
+
+
+        :param id: The id of this BTPartMaterialInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTPartMaterialInfo.  # noqa: E501
+
+
+        :return: The display_name of this BTPartMaterialInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTPartMaterialInfo.
+
+
+        :param display_name: The display_name of this BTPartMaterialInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,7 +3,7 @@ GLOBAL_VERSION=4.1.1
 
 # Var
 EXECUTABLE="./openapi-generator-cli.jar"
-OAS_CONFIG_API_PATH="http://localhost.dev.onshape.com:8080/api/openapi"
+OAS_CONFIG_API_PATH="http://localhost.dev.onshape.com:8083/api/openapi"
 OAS_CONFIG_LOCAL_PATH="./openapi.json"
 GENERATE="java -jar $EXECUTABLE generate -i $OAS_CONFIG_LOCAL_PATH"
 

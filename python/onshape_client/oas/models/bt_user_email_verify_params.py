@@ -33,35 +33,35 @@ class BTUserEmailVerifyParams(object):
     """
     openapi_types = {
         'request_id': 'str',
-        'user_id': 'str',
         'email': 'str',
-        'secret': 'str'
+        'secret': 'str',
+        'user_id': 'str'
     }
 
     attribute_map = {
         'request_id': 'requestId',
-        'user_id': 'userId',
         'email': 'email',
-        'secret': 'secret'
+        'secret': 'secret',
+        'user_id': 'userId'
     }
 
-    def __init__(self, request_id=None, user_id=None, email=None, secret=None):  # noqa: E501
+    def __init__(self, request_id=None, email=None, secret=None, user_id=None):  # noqa: E501
         """BTUserEmailVerifyParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._request_id = None
-        self._user_id = None
         self._email = None
         self._secret = None
+        self._user_id = None
         self.discriminator = None
 
         if request_id is not None:
             self.request_id = request_id
-        if user_id is not None:
-            self.user_id = user_id
         if email is not None:
             self.email = email
         if secret is not None:
             self.secret = secret
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def request_id(self):
@@ -83,27 +83,6 @@ class BTUserEmailVerifyParams(object):
         """
 
         self._request_id = request_id
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTUserEmailVerifyParams.  # noqa: E501
-
-
-        :return: The user_id of this BTUserEmailVerifyParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTUserEmailVerifyParams.
-
-
-        :param user_id: The user_id of this BTUserEmailVerifyParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
 
     @property
     def email(self):
@@ -146,6 +125,27 @@ class BTUserEmailVerifyParams(object):
         """
 
         self._secret = secret
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTUserEmailVerifyParams.  # noqa: E501
+
+
+        :return: The user_id of this BTUserEmailVerifyParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTUserEmailVerifyParams.
+
+
+        :param user_id: The user_id of this BTUserEmailVerifyParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,41 +32,62 @@ class BTSendGridDeliveryEventParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'email': 'str',
         'smtpid': 'str',
         'event': 'str',
-        'email': 'str',
-        'timestamp': 'int',
-        'ip': 'str'
+        'ip': 'str',
+        'timestamp': 'int'
     }
 
     attribute_map = {
+        'email': 'email',
         'smtpid': 'smtpid',
         'event': 'event',
-        'email': 'email',
-        'timestamp': 'timestamp',
-        'ip': 'ip'
+        'ip': 'ip',
+        'timestamp': 'timestamp'
     }
 
-    def __init__(self, smtpid=None, event=None, email=None, timestamp=None, ip=None):  # noqa: E501
+    def __init__(self, email=None, smtpid=None, event=None, ip=None, timestamp=None):  # noqa: E501
         """BTSendGridDeliveryEventParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._email = None
         self._smtpid = None
         self._event = None
-        self._email = None
-        self._timestamp = None
         self._ip = None
+        self._timestamp = None
         self.discriminator = None
 
+        if email is not None:
+            self.email = email
         if smtpid is not None:
             self.smtpid = smtpid
         if event is not None:
             self.event = event
-        if email is not None:
-            self.email = email
-        if timestamp is not None:
-            self.timestamp = timestamp
         if ip is not None:
             self.ip = ip
+        if timestamp is not None:
+            self.timestamp = timestamp
+
+    @property
+    def email(self):
+        """Gets the email of this BTSendGridDeliveryEventParams.  # noqa: E501
+
+
+        :return: The email of this BTSendGridDeliveryEventParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BTSendGridDeliveryEventParams.
+
+
+        :param email: The email of this BTSendGridDeliveryEventParams.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def smtpid(self):
@@ -111,25 +132,25 @@ class BTSendGridDeliveryEventParams(object):
         self._event = event
 
     @property
-    def email(self):
-        """Gets the email of this BTSendGridDeliveryEventParams.  # noqa: E501
+    def ip(self):
+        """Gets the ip of this BTSendGridDeliveryEventParams.  # noqa: E501
 
 
-        :return: The email of this BTSendGridDeliveryEventParams.  # noqa: E501
+        :return: The ip of this BTSendGridDeliveryEventParams.  # noqa: E501
         :rtype: str
         """
-        return self._email
+        return self._ip
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BTSendGridDeliveryEventParams.
+    @ip.setter
+    def ip(self, ip):
+        """Sets the ip of this BTSendGridDeliveryEventParams.
 
 
-        :param email: The email of this BTSendGridDeliveryEventParams.  # noqa: E501
+        :param ip: The ip of this BTSendGridDeliveryEventParams.  # noqa: E501
         :type: str
         """
 
-        self._email = email
+        self._ip = ip
 
     @property
     def timestamp(self):
@@ -151,27 +172,6 @@ class BTSendGridDeliveryEventParams(object):
         """
 
         self._timestamp = timestamp
-
-    @property
-    def ip(self):
-        """Gets the ip of this BTSendGridDeliveryEventParams.  # noqa: E501
-
-
-        :return: The ip of this BTSendGridDeliveryEventParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._ip
-
-    @ip.setter
-    def ip(self, ip):
-        """Sets the ip of this BTSendGridDeliveryEventParams.
-
-
-        :param ip: The ip of this BTSendGridDeliveryEventParams.  # noqa: E501
-        :type: str
-        """
-
-        self._ip = ip
 
     def to_dict(self):
         """Returns the model properties as a dict"""

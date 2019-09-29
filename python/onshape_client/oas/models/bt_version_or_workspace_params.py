@@ -32,57 +32,49 @@ class BTVersionOrWorkspaceParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'read_only': 'bool',
-        'is_release': 'bool',
-        'from_history': 'bool',
-        'purpose': 'int',
         'version_id': 'str',
         'workspace_id': 'str',
         'document_id': 'str',
         'microversion_id': 'str',
+        'read_only': 'bool',
+        'is_release': 'bool',
+        'from_history': 'bool',
+        'purpose': 'int',
         'client_interaction_mode': 'str',
-        'description': 'str',
-        'name': 'str'
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'read_only': 'readOnly',
-        'is_release': 'isRelease',
-        'from_history': 'fromHistory',
-        'purpose': 'purpose',
         'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'document_id': 'documentId',
         'microversion_id': 'microversionId',
+        'read_only': 'readOnly',
+        'is_release': 'isRelease',
+        'from_history': 'fromHistory',
+        'purpose': 'purpose',
         'client_interaction_mode': 'clientInteractionMode',
-        'description': 'description',
-        'name': 'name'
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, read_only=None, is_release=None, from_history=None, purpose=None, version_id=None, workspace_id=None, document_id=None, microversion_id=None, client_interaction_mode=None, description=None, name=None):  # noqa: E501
+    def __init__(self, version_id=None, workspace_id=None, document_id=None, microversion_id=None, read_only=None, is_release=None, from_history=None, purpose=None, client_interaction_mode=None, name=None, description=None):  # noqa: E501
         """BTVersionOrWorkspaceParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._read_only = None
-        self._is_release = None
-        self._from_history = None
-        self._purpose = None
         self._version_id = None
         self._workspace_id = None
         self._document_id = None
         self._microversion_id = None
+        self._read_only = None
+        self._is_release = None
+        self._from_history = None
+        self._purpose = None
         self._client_interaction_mode = None
-        self._description = None
         self._name = None
+        self._description = None
         self.discriminator = None
 
-        if read_only is not None:
-            self.read_only = read_only
-        if is_release is not None:
-            self.is_release = is_release
-        if from_history is not None:
-            self.from_history = from_history
-        if purpose is not None:
-            self.purpose = purpose
         if version_id is not None:
             self.version_id = version_id
         if workspace_id is not None:
@@ -91,96 +83,20 @@ class BTVersionOrWorkspaceParams(object):
             self.document_id = document_id
         if microversion_id is not None:
             self.microversion_id = microversion_id
+        if read_only is not None:
+            self.read_only = read_only
+        if is_release is not None:
+            self.is_release = is_release
+        if from_history is not None:
+            self.from_history = from_history
+        if purpose is not None:
+            self.purpose = purpose
         if client_interaction_mode is not None:
             self.client_interaction_mode = client_interaction_mode
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
-
-    @property
-    def read_only(self):
-        """Gets the read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._read_only
-
-    @read_only.setter
-    def read_only(self, read_only):
-        """Sets the read_only of this BTVersionOrWorkspaceParams.
-
-
-        :param read_only: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._read_only = read_only
-
-    @property
-    def is_release(self):
-        """Gets the is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_release
-
-    @is_release.setter
-    def is_release(self, is_release):
-        """Sets the is_release of this BTVersionOrWorkspaceParams.
-
-
-        :param is_release: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_release = is_release
-
-    @property
-    def from_history(self):
-        """Gets the from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._from_history
-
-    @from_history.setter
-    def from_history(self, from_history):
-        """Sets the from_history of this BTVersionOrWorkspaceParams.
-
-
-        :param from_history: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._from_history = from_history
-
-    @property
-    def purpose(self):
-        """Gets the purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._purpose
-
-    @purpose.setter
-    def purpose(self, purpose):
-        """Sets the purpose of this BTVersionOrWorkspaceParams.
-
-
-        :param purpose: The purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: int
-        """
-
-        self._purpose = purpose
+        if description is not None:
+            self.description = description
 
     @property
     def version_id(self):
@@ -267,6 +183,90 @@ class BTVersionOrWorkspaceParams(object):
         self._microversion_id = microversion_id
 
     @property
+    def read_only(self):
+        """Gets the read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._read_only
+
+    @read_only.setter
+    def read_only(self, read_only):
+        """Sets the read_only of this BTVersionOrWorkspaceParams.
+
+
+        :param read_only: The read_only of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._read_only = read_only
+
+    @property
+    def is_release(self):
+        """Gets the is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_release
+
+    @is_release.setter
+    def is_release(self, is_release):
+        """Sets the is_release of this BTVersionOrWorkspaceParams.
+
+
+        :param is_release: The is_release of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_release = is_release
+
+    @property
+    def from_history(self):
+        """Gets the from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._from_history
+
+    @from_history.setter
+    def from_history(self, from_history):
+        """Sets the from_history of this BTVersionOrWorkspaceParams.
+
+
+        :param from_history: The from_history of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._from_history = from_history
+
+    @property
+    def purpose(self):
+        """Gets the purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._purpose
+
+    @purpose.setter
+    def purpose(self, purpose):
+        """Sets the purpose of this BTVersionOrWorkspaceParams.
+
+
+        :param purpose: The purpose of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: int
+        """
+
+        self._purpose = purpose
+
+    @property
     def client_interaction_mode(self):
         """Gets the client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
 
@@ -288,27 +288,6 @@ class BTVersionOrWorkspaceParams(object):
         self._client_interaction_mode = client_interaction_mode
 
     @property
-    def description(self):
-        """Gets the description of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTVersionOrWorkspaceParams.
-
-
-        :param description: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTVersionOrWorkspaceParams.  # noqa: E501
 
@@ -328,6 +307,27 @@ class BTVersionOrWorkspaceParams(object):
         """
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTVersionOrWorkspaceParams.
+
+
+        :param description: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

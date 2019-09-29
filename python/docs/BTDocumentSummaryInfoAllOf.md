@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**default_element_id** | **str** |  | [optional] 
+**default_workspace** | [**BTBaseInfo**](BTBaseInfo.md) |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **permission_set** | [**object**](.md) |  | [optional] 
 **trash** | **bool** |  | [optional] 
@@ -22,16 +24,14 @@ Name | Type | Description | Notes
 **not_revision_managed** | **bool** |  | [optional] 
 **anonymous_access_allowed** | **bool** |  | [optional] 
 **anonymous_allows_export** | **bool** |  | [optional] 
-**default_element_id** | **str** |  | [optional] 
-**default_workspace** | [**BTBaseInfo**](BTBaseInfo.md) |  | [optional] 
-**trashed_at** | **datetime** |  | [optional] 
-**public** | **bool** |  | [optional] 
-**is_orphaned** | **bool** |  | [optional] 
 **tags** | **list[str]** |  | [optional] 
-**has_release_revisionable_objects** | **bool** |  | [optional] 
+**trashed_at** | **datetime** |  | [optional] 
+**is_orphaned** | **bool** |  | [optional] 
+**public** | **bool** |  | [optional] 
 **user_account_limits_breached** | **bool** |  | [optional] 
 **is_using_managed_workflow** | **bool** |  | [optional] 
 **permission** | **str** |  | [optional] 
+**has_release_revisionable_objects** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

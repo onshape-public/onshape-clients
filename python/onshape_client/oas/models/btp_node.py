@@ -33,58 +33,58 @@ class BTPNode(object):
     """
     openapi_types = {
         'atomic': 'bool',
+        'short_descriptor': 'str',
         'start_source_location': 'int',
         'end_source_location': 'int',
-        'short_descriptor': 'str',
         'documentation_type': 'str',
         'space_before': 'BTPSpace',
-        'space_default': 'bool',
         'space_after': 'BTPSpace',
+        'space_default': 'bool',
         'node_id': 'str'
     }
 
     attribute_map = {
         'atomic': 'atomic',
+        'short_descriptor': 'shortDescriptor',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
-        'short_descriptor': 'shortDescriptor',
         'documentation_type': 'documentationType',
         'space_before': 'spaceBefore',
-        'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
+        'space_default': 'spaceDefault',
         'node_id': 'nodeId'
     }
 
-    def __init__(self, atomic=None, start_source_location=None, end_source_location=None, short_descriptor=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, atomic=None, short_descriptor=None, start_source_location=None, end_source_location=None, documentation_type=None, space_before=None, space_after=None, space_default=None, node_id=None):  # noqa: E501
         """BTPNode - a model defined in OpenAPI"""  # noqa: E501
 
         self._atomic = None
+        self._short_descriptor = None
         self._start_source_location = None
         self._end_source_location = None
-        self._short_descriptor = None
         self._documentation_type = None
         self._space_before = None
-        self._space_default = None
         self._space_after = None
+        self._space_default = None
         self._node_id = None
         self.discriminator = None
 
         if atomic is not None:
             self.atomic = atomic
+        if short_descriptor is not None:
+            self.short_descriptor = short_descriptor
         if start_source_location is not None:
             self.start_source_location = start_source_location
         if end_source_location is not None:
             self.end_source_location = end_source_location
-        if short_descriptor is not None:
-            self.short_descriptor = short_descriptor
         if documentation_type is not None:
             self.documentation_type = documentation_type
         if space_before is not None:
             self.space_before = space_before
-        if space_default is not None:
-            self.space_default = space_default
         if space_after is not None:
             self.space_after = space_after
+        if space_default is not None:
+            self.space_default = space_default
         if node_id is not None:
             self.node_id = node_id
 
@@ -108,6 +108,27 @@ class BTPNode(object):
         """
 
         self._atomic = atomic
+
+    @property
+    def short_descriptor(self):
+        """Gets the short_descriptor of this BTPNode.  # noqa: E501
+
+
+        :return: The short_descriptor of this BTPNode.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_descriptor
+
+    @short_descriptor.setter
+    def short_descriptor(self, short_descriptor):
+        """Sets the short_descriptor of this BTPNode.
+
+
+        :param short_descriptor: The short_descriptor of this BTPNode.  # noqa: E501
+        :type: str
+        """
+
+        self._short_descriptor = short_descriptor
 
     @property
     def start_source_location(self):
@@ -150,27 +171,6 @@ class BTPNode(object):
         """
 
         self._end_source_location = end_source_location
-
-    @property
-    def short_descriptor(self):
-        """Gets the short_descriptor of this BTPNode.  # noqa: E501
-
-
-        :return: The short_descriptor of this BTPNode.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_descriptor
-
-    @short_descriptor.setter
-    def short_descriptor(self, short_descriptor):
-        """Sets the short_descriptor of this BTPNode.
-
-
-        :param short_descriptor: The short_descriptor of this BTPNode.  # noqa: E501
-        :type: str
-        """
-
-        self._short_descriptor = short_descriptor
 
     @property
     def documentation_type(self):
@@ -221,27 +221,6 @@ class BTPNode(object):
         self._space_before = space_before
 
     @property
-    def space_default(self):
-        """Gets the space_default of this BTPNode.  # noqa: E501
-
-
-        :return: The space_default of this BTPNode.  # noqa: E501
-        :rtype: bool
-        """
-        return self._space_default
-
-    @space_default.setter
-    def space_default(self, space_default):
-        """Sets the space_default of this BTPNode.
-
-
-        :param space_default: The space_default of this BTPNode.  # noqa: E501
-        :type: bool
-        """
-
-        self._space_default = space_default
-
-    @property
     def space_after(self):
         """Gets the space_after of this BTPNode.  # noqa: E501
 
@@ -261,6 +240,27 @@ class BTPNode(object):
         """
 
         self._space_after = space_after
+
+    @property
+    def space_default(self):
+        """Gets the space_default of this BTPNode.  # noqa: E501
+
+
+        :return: The space_default of this BTPNode.  # noqa: E501
+        :rtype: bool
+        """
+        return self._space_default
+
+    @space_default.setter
+    def space_default(self, space_default):
+        """Sets the space_default of this BTPNode.
+
+
+        :param space_default: The space_default of this BTPNode.  # noqa: E501
+        :type: bool
+        """
+
+        self._space_default = space_default
 
     @property
     def node_id(self):

@@ -34,39 +34,39 @@ class BTAppElementParams(object):
     openapi_types = {
         'subelements': 'list[BTAppElementChangeParams]',
         'format_id': 'str',
-        'description': 'str',
         'name': 'str',
-        'location': 'BTElementLocationParams'
+        'location': 'BTElementLocationParams',
+        'description': 'str'
     }
 
     attribute_map = {
         'subelements': 'subelements',
         'format_id': 'formatId',
-        'description': 'description',
         'name': 'name',
-        'location': 'location'
+        'location': 'location',
+        'description': 'description'
     }
 
-    def __init__(self, subelements=None, format_id=None, description=None, name=None, location=None):  # noqa: E501
+    def __init__(self, subelements=None, format_id=None, name=None, location=None, description=None):  # noqa: E501
         """BTAppElementParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._subelements = None
         self._format_id = None
-        self._description = None
         self._name = None
         self._location = None
+        self._description = None
         self.discriminator = None
 
         if subelements is not None:
             self.subelements = subelements
         if format_id is not None:
             self.format_id = format_id
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
         if location is not None:
             self.location = location
+        if description is not None:
+            self.description = description
 
     @property
     def subelements(self):
@@ -111,27 +111,6 @@ class BTAppElementParams(object):
         self._format_id = format_id
 
     @property
-    def description(self):
-        """Gets the description of this BTAppElementParams.  # noqa: E501
-
-
-        :return: The description of this BTAppElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTAppElementParams.
-
-
-        :param description: The description of this BTAppElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTAppElementParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTAppElementParams(object):
         """
 
         self._location = location
+
+    @property
+    def description(self):
+        """Gets the description of this BTAppElementParams.  # noqa: E501
+
+
+        :return: The description of this BTAppElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTAppElementParams.
+
+
+        :param description: The description of this BTAppElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

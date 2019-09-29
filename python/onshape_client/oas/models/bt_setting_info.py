@@ -32,47 +32,26 @@ class BTSettingInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'key': 'str',
-        'value': 'object'
+        'value': 'object',
+        'key': 'str'
     }
 
     attribute_map = {
-        'key': 'key',
-        'value': 'value'
+        'value': 'value',
+        'key': 'key'
     }
 
-    def __init__(self, key=None, value=None):  # noqa: E501
+    def __init__(self, value=None, key=None):  # noqa: E501
         """BTSettingInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._key = None
         self._value = None
+        self._key = None
         self.discriminator = None
 
-        if key is not None:
-            self.key = key
         if value is not None:
             self.value = value
-
-    @property
-    def key(self):
-        """Gets the key of this BTSettingInfo.  # noqa: E501
-
-
-        :return: The key of this BTSettingInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._key
-
-    @key.setter
-    def key(self, key):
-        """Sets the key of this BTSettingInfo.
-
-
-        :param key: The key of this BTSettingInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._key = key
+        if key is not None:
+            self.key = key
 
     @property
     def value(self):
@@ -94,6 +73,27 @@ class BTSettingInfo(object):
         """
 
         self._value = value
+
+    @property
+    def key(self):
+        """Gets the key of this BTSettingInfo.  # noqa: E501
+
+
+        :return: The key of this BTSettingInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this BTSettingInfo.
+
+
+        :param key: The key of this BTSettingInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._key = key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

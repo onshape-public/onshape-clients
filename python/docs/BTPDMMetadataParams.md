@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
+**project** | **str** |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **vendor** | **str** |  | [optional] 
 **product_line** | **str** |  | [optional] 
@@ -11,13 +13,11 @@ Name | Type | Description | Notes
 **title2** | **str** |  | [optional] 
 **title3** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
-**configuration** | **str** |  | [optional] 
 **custom_properties** | [**list[BTNameValuePair]**](BTNameValuePair.md) |  | [optional] 
-**description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
-**project** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

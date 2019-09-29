@@ -34,44 +34,44 @@ class BTUserBasicSummaryInfo(object):
     openapi_types = {
         'image': 'str',
         'state': 'int',
-        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'image': 'image',
         'state': 'state',
-        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, image=None, state=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, image=None, state=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTUserBasicSummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._image = None
         self._state = None
-        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if image is not None:
             self.image = image
         if state is not None:
             self.state = state
-        if id is not None:
-            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def image(self):
@@ -114,27 +114,6 @@ class BTUserBasicSummaryInfo(object):
         """
 
         self._state = state
-
-    @property
-    def id(self):
-        """Gets the id of this BTUserBasicSummaryInfo.  # noqa: E501
-
-
-        :return: The id of this BTUserBasicSummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTUserBasicSummaryInfo.
-
-
-        :param id: The id of this BTUserBasicSummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def href(self):
@@ -198,6 +177,27 @@ class BTUserBasicSummaryInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTUserBasicSummaryInfo.  # noqa: E501
+
+
+        :return: The id of this BTUserBasicSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTUserBasicSummaryInfo.
+
+
+        :param id: The id of this BTUserBasicSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

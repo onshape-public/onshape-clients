@@ -37,6 +37,140 @@ class BlobElementsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def download_file_workspace(self, did, wid, eid, **kwargs):  # noqa: E501
+        """download_file_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.download_file_workspace(did, wid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str eid: (required)
+        :param str content_disposition:
+        :param str if_none_match:
+        :param str link_document_id:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.download_file_workspace_with_http_info(did, wid, eid, **kwargs)  # noqa: E501
+
+    def download_file_workspace_with_http_info(self, did, wid, eid, **kwargs):  # noqa: E501
+        """download_file_workspace  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.download_file_workspace_with_http_info(did, wid, eid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str wid: (required)
+        :param str eid: (required)
+        :param str content_disposition:
+        :param str if_none_match:
+        :param str link_document_id:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'wid', 'eid', 'content_disposition', 'if_none_match', 'link_document_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method download_file_workspace" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `download_file_workspace`")  # noqa: E501
+        # verify the required parameter 'wid' is set
+        if ('wid' not in local_var_params or
+                local_var_params['wid'] is None):
+            raise ApiValueError("Missing the required parameter `wid` when calling `download_file_workspace`")  # noqa: E501
+        # verify the required parameter 'eid' is set
+        if ('eid' not in local_var_params or
+                local_var_params['eid'] is None):
+            raise ApiValueError("Missing the required parameter `eid` when calling `download_file_workspace`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'wid' in local_var_params:
+            path_params['wid'] = local_var_params['wid']  # noqa: E501
+        if 'eid' in local_var_params:
+            path_params['eid'] = local_var_params['eid']  # noqa: E501
+
+        query_params = []
+        if 'content_disposition' in local_var_params:
+            query_params.append(('contentDisposition', local_var_params['content_disposition']))  # noqa: E501
+        if 'link_document_id' in local_var_params:
+            query_params.append(('linkDocumentId', local_var_params['link_document_id']))  # noqa: E501
+
+        header_params = {}
+        if 'if_none_match' in local_var_params:
+            header_params['If-None-Match'] = local_var_params['if_none_match']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+octet-stream;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09', 'application/octet-stream'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/blobelements/d/{did}/w/{wid}/e/{eid}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def upload_file_create_element(self, did, wid, **kwargs):  # noqa: E501
         """upload_file_create_element  # noqa: E501
 

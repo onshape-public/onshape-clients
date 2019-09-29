@@ -33,30 +33,30 @@ class LevelInfo(object):
     """
     openapi_types = {
         'description': 'str',
-        'index': 'int',
-        'name': 'str'
+        'name': 'str',
+        'index': 'int'
     }
 
     attribute_map = {
         'description': 'description',
-        'index': 'index',
-        'name': 'name'
+        'name': 'name',
+        'index': 'index'
     }
 
-    def __init__(self, description=None, index=None, name=None):  # noqa: E501
+    def __init__(self, description=None, name=None, index=None):  # noqa: E501
         """LevelInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
-        self._index = None
         self._name = None
+        self._index = None
         self.discriminator = None
 
         if description is not None:
             self.description = description
-        if index is not None:
-            self.index = index
         if name is not None:
             self.name = name
+        if index is not None:
+            self.index = index
 
     @property
     def description(self):
@@ -80,27 +80,6 @@ class LevelInfo(object):
         self._description = description
 
     @property
-    def index(self):
-        """Gets the index of this LevelInfo.  # noqa: E501
-
-
-        :return: The index of this LevelInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._index
-
-    @index.setter
-    def index(self, index):
-        """Sets the index of this LevelInfo.
-
-
-        :param index: The index of this LevelInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._index = index
-
-    @property
     def name(self):
         """Gets the name of this LevelInfo.  # noqa: E501
 
@@ -120,6 +99,27 @@ class LevelInfo(object):
         """
 
         self._name = name
+
+    @property
+    def index(self):
+        """Gets the index of this LevelInfo.  # noqa: E501
+
+
+        :return: The index of this LevelInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._index
+
+    @index.setter
+    def index(self, index):
+        """Sets the index of this LevelInfo.
+
+
+        :param index: The index of this LevelInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._index = index
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -44,12 +44,12 @@ class BTInAppMessageInfo(object):
         'show_once': 'bool',
         'display_order': 'int',
         'content_index': 'int',
-        'content_type': 'int',
         'context': 'int',
-        'id': 'str',
+        'content_type': 'int',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
@@ -65,15 +65,15 @@ class BTInAppMessageInfo(object):
         'show_once': 'showOnce',
         'display_order': 'displayOrder',
         'content_index': 'contentIndex',
-        'content_type': 'contentType',
         'context': 'context',
-        'id': 'id',
+        'content_type': 'contentType',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, description=None, content=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None, content_index=None, content_type=None, context=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, description=None, content=None, start_date=None, end_date=None, rule_id=None, looker_query=None, population_task_id=None, billing_plan_ids=None, domain_type=None, show_once=None, display_order=None, content_index=None, context=None, content_type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTInAppMessageInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
@@ -88,12 +88,12 @@ class BTInAppMessageInfo(object):
         self._show_once = None
         self._display_order = None
         self._content_index = None
-        self._content_type = None
         self._context = None
-        self._id = None
+        self._content_type = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if description is not None:
@@ -120,18 +120,18 @@ class BTInAppMessageInfo(object):
             self.display_order = display_order
         if content_index is not None:
             self.content_index = content_index
-        if content_type is not None:
-            self.content_type = content_type
         if context is not None:
             self.context = context
-        if id is not None:
-            self.id = id
+        if content_type is not None:
+            self.content_type = content_type
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def description(self):
@@ -386,27 +386,6 @@ class BTInAppMessageInfo(object):
         self._content_index = content_index
 
     @property
-    def content_type(self):
-        """Gets the content_type of this BTInAppMessageInfo.  # noqa: E501
-
-
-        :return: The content_type of this BTInAppMessageInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._content_type
-
-    @content_type.setter
-    def content_type(self, content_type):
-        """Sets the content_type of this BTInAppMessageInfo.
-
-
-        :param content_type: The content_type of this BTInAppMessageInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._content_type = content_type
-
-    @property
     def context(self):
         """Gets the context of this BTInAppMessageInfo.  # noqa: E501
 
@@ -428,25 +407,25 @@ class BTInAppMessageInfo(object):
         self._context = context
 
     @property
-    def id(self):
-        """Gets the id of this BTInAppMessageInfo.  # noqa: E501
+    def content_type(self):
+        """Gets the content_type of this BTInAppMessageInfo.  # noqa: E501
 
 
-        :return: The id of this BTInAppMessageInfo.  # noqa: E501
-        :rtype: str
+        :return: The content_type of this BTInAppMessageInfo.  # noqa: E501
+        :rtype: int
         """
-        return self._id
+        return self._content_type
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTInAppMessageInfo.
+    @content_type.setter
+    def content_type(self, content_type):
+        """Sets the content_type of this BTInAppMessageInfo.
 
 
-        :param id: The id of this BTInAppMessageInfo.  # noqa: E501
-        :type: str
+        :param content_type: The content_type of this BTInAppMessageInfo.  # noqa: E501
+        :type: int
         """
 
-        self._id = id
+        self._content_type = content_type
 
     @property
     def href(self):
@@ -510,6 +489,27 @@ class BTInAppMessageInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTInAppMessageInfo.  # noqa: E501
+
+
+        :return: The id of this BTInAppMessageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTInAppMessageInfo.
+
+
+        :param id: The id of this BTInAppMessageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,40 +32,44 @@ class BTIdentityManagementParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'provider_type': 'int',
+        'disable_password_sign_in': 'bool',
         'idp_certificate': 'str',
         'idp_entity_id': 'str',
         'idp_redirect_url': 'str',
         'metadata_must_be_signed': 'bool',
         'name': 'str',
-        'provider_type': 'int',
-        'disable_password_sign_in': 'bool',
         'enabled': 'bool'
     }
 
     attribute_map = {
+        'provider_type': 'providerType',
+        'disable_password_sign_in': 'disablePasswordSignIn',
         'idp_certificate': 'idpCertificate',
         'idp_entity_id': 'idpEntityId',
         'idp_redirect_url': 'idpRedirectURL',
         'metadata_must_be_signed': 'metadataMustBeSigned',
         'name': 'name',
-        'provider_type': 'providerType',
-        'disable_password_sign_in': 'disablePasswordSignIn',
         'enabled': 'enabled'
     }
 
-    def __init__(self, idp_certificate=None, idp_entity_id=None, idp_redirect_url=None, metadata_must_be_signed=None, name=None, provider_type=None, disable_password_sign_in=None, enabled=None):  # noqa: E501
+    def __init__(self, provider_type=None, disable_password_sign_in=None, idp_certificate=None, idp_entity_id=None, idp_redirect_url=None, metadata_must_be_signed=None, name=None, enabled=None):  # noqa: E501
         """BTIdentityManagementParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._provider_type = None
+        self._disable_password_sign_in = None
         self._idp_certificate = None
         self._idp_entity_id = None
         self._idp_redirect_url = None
         self._metadata_must_be_signed = None
         self._name = None
-        self._provider_type = None
-        self._disable_password_sign_in = None
         self._enabled = None
         self.discriminator = None
 
+        if provider_type is not None:
+            self.provider_type = provider_type
+        if disable_password_sign_in is not None:
+            self.disable_password_sign_in = disable_password_sign_in
         if idp_certificate is not None:
             self.idp_certificate = idp_certificate
         if idp_entity_id is not None:
@@ -76,12 +80,50 @@ class BTIdentityManagementParams(object):
             self.metadata_must_be_signed = metadata_must_be_signed
         if name is not None:
             self.name = name
-        if provider_type is not None:
-            self.provider_type = provider_type
-        if disable_password_sign_in is not None:
-            self.disable_password_sign_in = disable_password_sign_in
         if enabled is not None:
             self.enabled = enabled
+
+    @property
+    def provider_type(self):
+        """Gets the provider_type of this BTIdentityManagementParams.  # noqa: E501
+
+
+        :return: The provider_type of this BTIdentityManagementParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._provider_type
+
+    @provider_type.setter
+    def provider_type(self, provider_type):
+        """Sets the provider_type of this BTIdentityManagementParams.
+
+
+        :param provider_type: The provider_type of this BTIdentityManagementParams.  # noqa: E501
+        :type: int
+        """
+
+        self._provider_type = provider_type
+
+    @property
+    def disable_password_sign_in(self):
+        """Gets the disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
+
+
+        :return: The disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disable_password_sign_in
+
+    @disable_password_sign_in.setter
+    def disable_password_sign_in(self, disable_password_sign_in):
+        """Sets the disable_password_sign_in of this BTIdentityManagementParams.
+
+
+        :param disable_password_sign_in: The disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._disable_password_sign_in = disable_password_sign_in
 
     @property
     def idp_certificate(self):
@@ -187,48 +229,6 @@ class BTIdentityManagementParams(object):
         """
 
         self._name = name
-
-    @property
-    def provider_type(self):
-        """Gets the provider_type of this BTIdentityManagementParams.  # noqa: E501
-
-
-        :return: The provider_type of this BTIdentityManagementParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._provider_type
-
-    @provider_type.setter
-    def provider_type(self, provider_type):
-        """Sets the provider_type of this BTIdentityManagementParams.
-
-
-        :param provider_type: The provider_type of this BTIdentityManagementParams.  # noqa: E501
-        :type: int
-        """
-
-        self._provider_type = provider_type
-
-    @property
-    def disable_password_sign_in(self):
-        """Gets the disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
-
-
-        :return: The disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disable_password_sign_in
-
-    @disable_password_sign_in.setter
-    def disable_password_sign_in(self, disable_password_sign_in):
-        """Sets the disable_password_sign_in of this BTIdentityManagementParams.
-
-
-        :param disable_password_sign_in: The disable_password_sign_in of this BTIdentityManagementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._disable_password_sign_in = disable_password_sign_in
 
     @property
     def enabled(self):

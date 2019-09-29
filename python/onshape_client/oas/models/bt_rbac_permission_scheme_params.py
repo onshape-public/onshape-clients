@@ -33,30 +33,30 @@ class BTRbacPermissionSchemeParams(object):
     """
     openapi_types = {
         'permission_map': 'dict(str, object)',
-        'description': 'str',
-        'name': 'str'
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
         'permission_map': 'permissionMap',
-        'description': 'description',
-        'name': 'name'
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, permission_map=None, description=None, name=None):  # noqa: E501
+    def __init__(self, permission_map=None, name=None, description=None):  # noqa: E501
         """BTRbacPermissionSchemeParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._permission_map = None
-        self._description = None
         self._name = None
+        self._description = None
         self.discriminator = None
 
         if permission_map is not None:
             self.permission_map = permission_map
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
+        if description is not None:
+            self.description = description
 
     @property
     def permission_map(self):
@@ -80,27 +80,6 @@ class BTRbacPermissionSchemeParams(object):
         self._permission_map = permission_map
 
     @property
-    def description(self):
-        """Gets the description of this BTRbacPermissionSchemeParams.  # noqa: E501
-
-
-        :return: The description of this BTRbacPermissionSchemeParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTRbacPermissionSchemeParams.
-
-
-        :param description: The description of this BTRbacPermissionSchemeParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTRbacPermissionSchemeParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTRbacPermissionSchemeParams(object):
         """
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTRbacPermissionSchemeParams.  # noqa: E501
+
+
+        :return: The description of this BTRbacPermissionSchemeParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTRbacPermissionSchemeParams.
+
+
+        :param description: The description of this BTRbacPermissionSchemeParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

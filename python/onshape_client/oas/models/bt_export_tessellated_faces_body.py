@@ -32,33 +32,31 @@ class BTExportTessellatedFacesBody(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'faces': 'list[BTExportTessellatedFacesFace]',
         'appearance': 'BTGraphicsAppearance',
         'body_type': 'str',
-        'facet_points': 'list[BTVector3d]'
+        'facet_points': 'list[BTVector3d]',
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
         'faces': 'faces',
         'appearance': 'appearance',
         'body_type': 'bodyType',
-        'facet_points': 'facetPoints'
+        'facet_points': 'facetPoints',
+        'id': 'id'
     }
 
-    def __init__(self, id=None, faces=None, appearance=None, body_type=None, facet_points=None):  # noqa: E501
+    def __init__(self, faces=None, appearance=None, body_type=None, facet_points=None, id=None):  # noqa: E501
         """BTExportTessellatedFacesBody - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
         self._faces = None
         self._appearance = None
         self._body_type = None
         self._facet_points = None
+        self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if faces is not None:
             self.faces = faces
         if appearance is not None:
@@ -67,27 +65,8 @@ class BTExportTessellatedFacesBody(object):
             self.body_type = body_type
         if facet_points is not None:
             self.facet_points = facet_points
-
-    @property
-    def id(self):
-        """Gets the id of this BTExportTessellatedFacesBody.  # noqa: E501
-
-
-        :return: The id of this BTExportTessellatedFacesBody.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTExportTessellatedFacesBody.
-
-
-        :param id: The id of this BTExportTessellatedFacesBody.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
+        if id is not None:
+            self.id = id
 
     @property
     def faces(self):
@@ -178,6 +157,27 @@ class BTExportTessellatedFacesBody(object):
         """
 
         self._facet_points = facet_points
+
+    @property
+    def id(self):
+        """Gets the id of this BTExportTessellatedFacesBody.  # noqa: E501
+
+
+        :return: The id of this BTExportTessellatedFacesBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTExportTessellatedFacesBody.
+
+
+        :param id: The id of this BTExportTessellatedFacesBody.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

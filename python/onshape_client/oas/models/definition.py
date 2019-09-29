@@ -32,36 +32,57 @@ class Definition(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'code': 'int',
         'description': 'str',
         'sort_order': 'int',
-        'code': 'int',
         'name': 'str'
     }
 
     attribute_map = {
+        'code': 'code',
         'description': 'description',
         'sort_order': 'sortOrder',
-        'code': 'code',
         'name': 'name'
     }
 
-    def __init__(self, description=None, sort_order=None, code=None, name=None):  # noqa: E501
+    def __init__(self, code=None, description=None, sort_order=None, name=None):  # noqa: E501
         """Definition - a model defined in OpenAPI"""  # noqa: E501
 
+        self._code = None
         self._description = None
         self._sort_order = None
-        self._code = None
         self._name = None
         self.discriminator = None
 
+        if code is not None:
+            self.code = code
         if description is not None:
             self.description = description
         if sort_order is not None:
             self.sort_order = sort_order
-        if code is not None:
-            self.code = code
         if name is not None:
             self.name = name
+
+    @property
+    def code(self):
+        """Gets the code of this Definition.  # noqa: E501
+
+
+        :return: The code of this Definition.  # noqa: E501
+        :rtype: int
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """Sets the code of this Definition.
+
+
+        :param code: The code of this Definition.  # noqa: E501
+        :type: int
+        """
+
+        self._code = code
 
     @property
     def description(self):
@@ -104,27 +125,6 @@ class Definition(object):
         """
 
         self._sort_order = sort_order
-
-    @property
-    def code(self):
-        """Gets the code of this Definition.  # noqa: E501
-
-
-        :return: The code of this Definition.  # noqa: E501
-        :rtype: int
-        """
-        return self._code
-
-    @code.setter
-    def code(self, code):
-        """Sets the code of this Definition.
-
-
-        :param code: The code of this Definition.  # noqa: E501
-        :type: int
-        """
-
-        self._code = code
 
     @property
     def name(self):

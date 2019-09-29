@@ -32,41 +32,62 @@ class BTUploadParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'cloud_storage_account_id': 'str',
         'element_id': 'str',
         'document_name': 'str',
-        'cloud_storage_account_id': 'str',
-        'state': 'str',
-        'name': 'str'
+        'name': 'str',
+        'state': 'str'
     }
 
     attribute_map = {
+        'cloud_storage_account_id': 'cloudStorageAccountId',
         'element_id': 'elementId',
         'document_name': 'documentName',
-        'cloud_storage_account_id': 'cloudStorageAccountId',
-        'state': 'state',
-        'name': 'name'
+        'name': 'name',
+        'state': 'state'
     }
 
-    def __init__(self, element_id=None, document_name=None, cloud_storage_account_id=None, state=None, name=None):  # noqa: E501
+    def __init__(self, cloud_storage_account_id=None, element_id=None, document_name=None, name=None, state=None):  # noqa: E501
         """BTUploadParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._cloud_storage_account_id = None
         self._element_id = None
         self._document_name = None
-        self._cloud_storage_account_id = None
-        self._state = None
         self._name = None
+        self._state = None
         self.discriminator = None
 
+        if cloud_storage_account_id is not None:
+            self.cloud_storage_account_id = cloud_storage_account_id
         if element_id is not None:
             self.element_id = element_id
         if document_name is not None:
             self.document_name = document_name
-        if cloud_storage_account_id is not None:
-            self.cloud_storage_account_id = cloud_storage_account_id
-        if state is not None:
-            self.state = state
         if name is not None:
             self.name = name
+        if state is not None:
+            self.state = state
+
+    @property
+    def cloud_storage_account_id(self):
+        """Gets the cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+
+
+        :return: The cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._cloud_storage_account_id
+
+    @cloud_storage_account_id.setter
+    def cloud_storage_account_id(self, cloud_storage_account_id):
+        """Sets the cloud_storage_account_id of this BTUploadParams.
+
+
+        :param cloud_storage_account_id: The cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+        :type: str
+        """
+
+        self._cloud_storage_account_id = cloud_storage_account_id
 
     @property
     def element_id(self):
@@ -111,25 +132,25 @@ class BTUploadParams(object):
         self._document_name = document_name
 
     @property
-    def cloud_storage_account_id(self):
-        """Gets the cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+    def name(self):
+        """Gets the name of this BTUploadParams.  # noqa: E501
 
 
-        :return: The cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+        :return: The name of this BTUploadParams.  # noqa: E501
         :rtype: str
         """
-        return self._cloud_storage_account_id
+        return self._name
 
-    @cloud_storage_account_id.setter
-    def cloud_storage_account_id(self, cloud_storage_account_id):
-        """Sets the cloud_storage_account_id of this BTUploadParams.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BTUploadParams.
 
 
-        :param cloud_storage_account_id: The cloud_storage_account_id of this BTUploadParams.  # noqa: E501
+        :param name: The name of this BTUploadParams.  # noqa: E501
         :type: str
         """
 
-        self._cloud_storage_account_id = cloud_storage_account_id
+        self._name = name
 
     @property
     def state(self):
@@ -151,27 +172,6 @@ class BTUploadParams(object):
         """
 
         self._state = state
-
-    @property
-    def name(self):
-        """Gets the name of this BTUploadParams.  # noqa: E501
-
-
-        :return: The name of this BTUploadParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BTUploadParams.
-
-
-        :param name: The name of this BTUploadParams.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,41 +34,39 @@ class CloudObjectPathSegment(object):
     openapi_types = {
         'cloud_storage_account_id': 'str',
         'cloud_storage_provider_type': 'int',
-        'id': 'str',
         'sub_type': 'int',
         'tree_href': 'str',
         'resource_type': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'cloud_storage_account_id': 'cloudStorageAccountId',
         'cloud_storage_provider_type': 'cloudStorageProviderType',
-        'id': 'id',
         'sub_type': 'subType',
         'tree_href': 'treeHref',
         'resource_type': 'resourceType',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, cloud_storage_account_id=None, cloud_storage_provider_type=None, id=None, sub_type=None, tree_href=None, resource_type=None, name=None):  # noqa: E501
+    def __init__(self, cloud_storage_account_id=None, cloud_storage_provider_type=None, sub_type=None, tree_href=None, resource_type=None, name=None, id=None):  # noqa: E501
         """CloudObjectPathSegment - a model defined in OpenAPI"""  # noqa: E501
 
         self._cloud_storage_account_id = None
         self._cloud_storage_provider_type = None
-        self._id = None
         self._sub_type = None
         self._tree_href = None
         self._resource_type = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if cloud_storage_account_id is not None:
             self.cloud_storage_account_id = cloud_storage_account_id
         if cloud_storage_provider_type is not None:
             self.cloud_storage_provider_type = cloud_storage_provider_type
-        if id is not None:
-            self.id = id
         if sub_type is not None:
             self.sub_type = sub_type
         if tree_href is not None:
@@ -77,6 +75,8 @@ class CloudObjectPathSegment(object):
             self.resource_type = resource_type
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def cloud_storage_account_id(self):
@@ -119,27 +119,6 @@ class CloudObjectPathSegment(object):
         """
 
         self._cloud_storage_provider_type = cloud_storage_provider_type
-
-    @property
-    def id(self):
-        """Gets the id of this CloudObjectPathSegment.  # noqa: E501
-
-
-        :return: The id of this CloudObjectPathSegment.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this CloudObjectPathSegment.
-
-
-        :param id: The id of this CloudObjectPathSegment.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def sub_type(self):
@@ -224,6 +203,27 @@ class CloudObjectPathSegment(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this CloudObjectPathSegment.  # noqa: E501
+
+
+        :return: The id of this CloudObjectPathSegment.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this CloudObjectPathSegment.
+
+
+        :param id: The id of this CloudObjectPathSegment.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

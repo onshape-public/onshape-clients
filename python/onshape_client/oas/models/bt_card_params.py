@@ -32,47 +32,26 @@ class BTCardParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'token': 'str',
-        'address': 'BTAddressInfo'
+        'address': 'BTAddressInfo',
+        'token': 'str'
     }
 
     attribute_map = {
-        'token': 'token',
-        'address': 'address'
+        'address': 'address',
+        'token': 'token'
     }
 
-    def __init__(self, token=None, address=None):  # noqa: E501
+    def __init__(self, address=None, token=None):  # noqa: E501
         """BTCardParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._token = None
         self._address = None
+        self._token = None
         self.discriminator = None
 
-        if token is not None:
-            self.token = token
         if address is not None:
             self.address = address
-
-    @property
-    def token(self):
-        """Gets the token of this BTCardParams.  # noqa: E501
-
-
-        :return: The token of this BTCardParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._token
-
-    @token.setter
-    def token(self, token):
-        """Sets the token of this BTCardParams.
-
-
-        :param token: The token of this BTCardParams.  # noqa: E501
-        :type: str
-        """
-
-        self._token = token
+        if token is not None:
+            self.token = token
 
     @property
     def address(self):
@@ -94,6 +73,27 @@ class BTCardParams(object):
         """
 
         self._address = address
+
+    @property
+    def token(self):
+        """Gets the token of this BTCardParams.  # noqa: E501
+
+
+        :return: The token of this BTCardParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._token
+
+    @token.setter
+    def token(self, token):
+        """Sets the token of this BTCardParams.
+
+
+        :param token: The token of this BTCardParams.  # noqa: E501
+        :type: str
+        """
+
+        self._token = token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

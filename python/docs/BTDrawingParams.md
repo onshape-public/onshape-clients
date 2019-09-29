@@ -3,6 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
 **part_query** | **str** |  | [optional] 
@@ -21,12 +24,9 @@ Name | Type | Description | Notes
 **is_surface** | **bool** |  | [optional] 
 **pure_sketch** | **bool** |  | [optional] 
 **is_sketch_only** | **bool** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
-**model_type** | **str** |  | [optional] 
 **template_version_id** | **str** |  | [optional] 
-**decimal_separator** | **str** |  | [optional] 
+**model_type** | **str** |  | [optional] 
+**border** | **bool** |  | [optional] 
 **external_document_id** | **str** |  | [optional] 
 **external_document_version_id** | **str** |  | [optional] 
 **element_configuration** | **str** |  | [optional] 
@@ -38,7 +38,6 @@ Name | Type | Description | Notes
 **drawing_name** | **str** |  | [optional] 
 **projection** | **str** |  | [optional] 
 **standard** | **str** |  | [optional] 
-**border** | **bool** |  | [optional] 
 **titleblock** | **bool** |  | [optional] 
 **number_horizontal_zones** | **int** |  | [optional] 
 **number_vertical_zones** | **int** |  | [optional] 
@@ -50,6 +49,7 @@ Name | Type | Description | Notes
 **size** | **str** |  | [optional] 
 **language** | **str** |  | [optional] 
 **units** | **str** |  | [optional] 
+**decimal_separator** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

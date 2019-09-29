@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **pierce_parameter** | **float** |  | [optional] 
 **help_parameters** | **list[float]** |  | [optional] 
 **parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
-**namespace** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 

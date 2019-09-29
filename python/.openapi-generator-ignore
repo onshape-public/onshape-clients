@@ -31,3 +31,4 @@ test/*
 example_programs/*
 tox.ini
 .gitignore
+git_push.sh

@@ -32,49 +32,51 @@ class BTDocumentSearchParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner_id': 'str',
         'parent_id': 'str',
         'document_filter': 'int',
         'sort_column': 'str',
         'sort_order': 'str',
         'found_in': 'str',
         'when': 'str',
-        'limit': 'int',
         'type': 'str',
         'raw_query': 'str',
         'offset': 'int',
-        'owner_id': 'str'
+        'limit': 'int'
     }
 
     attribute_map = {
+        'owner_id': 'ownerId',
         'parent_id': 'parentId',
         'document_filter': 'documentFilter',
         'sort_column': 'sortColumn',
         'sort_order': 'sortOrder',
         'found_in': 'foundIn',
         'when': 'when',
-        'limit': 'limit',
         'type': 'type',
         'raw_query': 'rawQuery',
         'offset': 'offset',
-        'owner_id': 'ownerId'
+        'limit': 'limit'
     }
 
-    def __init__(self, parent_id=None, document_filter=None, sort_column=None, sort_order=None, found_in=None, when=None, limit=None, type=None, raw_query=None, offset=None, owner_id=None):  # noqa: E501
+    def __init__(self, owner_id=None, parent_id=None, document_filter=None, sort_column=None, sort_order=None, found_in=None, when=None, type=None, raw_query=None, offset=None, limit=None):  # noqa: E501
         """BTDocumentSearchParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._owner_id = None
         self._parent_id = None
         self._document_filter = None
         self._sort_column = None
         self._sort_order = None
         self._found_in = None
         self._when = None
-        self._limit = None
         self._type = None
         self._raw_query = None
         self._offset = None
-        self._owner_id = None
+        self._limit = None
         self.discriminator = None
 
+        if owner_id is not None:
+            self.owner_id = owner_id
         if parent_id is not None:
             self.parent_id = parent_id
         if document_filter is not None:
@@ -87,16 +89,35 @@ class BTDocumentSearchParams(object):
             self.found_in = found_in
         if when is not None:
             self.when = when
-        if limit is not None:
-            self.limit = limit
         if type is not None:
             self.type = type
         if raw_query is not None:
             self.raw_query = raw_query
         if offset is not None:
             self.offset = offset
-        if owner_id is not None:
-            self.owner_id = owner_id
+        if limit is not None:
+            self.limit = limit
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this BTDocumentSearchParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTDocumentSearchParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTDocumentSearchParams.
+
+
+        :param owner_id: The owner_id of this BTDocumentSearchParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     @property
     def parent_id(self):
@@ -237,27 +258,6 @@ class BTDocumentSearchParams(object):
         self._when = when
 
     @property
-    def limit(self):
-        """Gets the limit of this BTDocumentSearchParams.  # noqa: E501
-
-
-        :return: The limit of this BTDocumentSearchParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """Sets the limit of this BTDocumentSearchParams.
-
-
-        :param limit: The limit of this BTDocumentSearchParams.  # noqa: E501
-        :type: int
-        """
-
-        self._limit = limit
-
-    @property
     def type(self):
         """Gets the type of this BTDocumentSearchParams.  # noqa: E501
 
@@ -321,25 +321,25 @@ class BTDocumentSearchParams(object):
         self._offset = offset
 
     @property
-    def owner_id(self):
-        """Gets the owner_id of this BTDocumentSearchParams.  # noqa: E501
+    def limit(self):
+        """Gets the limit of this BTDocumentSearchParams.  # noqa: E501
 
 
-        :return: The owner_id of this BTDocumentSearchParams.  # noqa: E501
-        :rtype: str
+        :return: The limit of this BTDocumentSearchParams.  # noqa: E501
+        :rtype: int
         """
-        return self._owner_id
+        return self._limit
 
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTDocumentSearchParams.
+    @limit.setter
+    def limit(self, limit):
+        """Sets the limit of this BTDocumentSearchParams.
 
 
-        :param owner_id: The owner_id of this BTDocumentSearchParams.  # noqa: E501
-        :type: str
+        :param limit: The limit of this BTDocumentSearchParams.  # noqa: E501
+        :type: int
         """
 
-        self._owner_id = owner_id
+        self._limit = limit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,72 +32,51 @@ class BTWorkflowStateInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'required_item_properties': 'list[str]',
         'required_properties': 'list[str]',
-        'display_name': 'str',
+        'required_item_properties': 'list[str]',
+        'approver_source_property': 'str',
         'notifier_source_property': 'str',
         'editable_properties': 'list[str]',
-        'approver_source_property': 'str',
-        'name': 'str'
+        'name': 'str',
+        'display_name': 'str'
     }
 
     attribute_map = {
-        'required_item_properties': 'requiredItemProperties',
         'required_properties': 'requiredProperties',
-        'display_name': 'displayName',
+        'required_item_properties': 'requiredItemProperties',
+        'approver_source_property': 'approverSourceProperty',
         'notifier_source_property': 'notifierSourceProperty',
         'editable_properties': 'editableProperties',
-        'approver_source_property': 'approverSourceProperty',
-        'name': 'name'
+        'name': 'name',
+        'display_name': 'displayName'
     }
 
-    def __init__(self, required_item_properties=None, required_properties=None, display_name=None, notifier_source_property=None, editable_properties=None, approver_source_property=None, name=None):  # noqa: E501
+    def __init__(self, required_properties=None, required_item_properties=None, approver_source_property=None, notifier_source_property=None, editable_properties=None, name=None, display_name=None):  # noqa: E501
         """BTWorkflowStateInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._required_item_properties = None
         self._required_properties = None
-        self._display_name = None
+        self._required_item_properties = None
+        self._approver_source_property = None
         self._notifier_source_property = None
         self._editable_properties = None
-        self._approver_source_property = None
         self._name = None
+        self._display_name = None
         self.discriminator = None
 
-        if required_item_properties is not None:
-            self.required_item_properties = required_item_properties
         if required_properties is not None:
             self.required_properties = required_properties
-        if display_name is not None:
-            self.display_name = display_name
+        if required_item_properties is not None:
+            self.required_item_properties = required_item_properties
+        if approver_source_property is not None:
+            self.approver_source_property = approver_source_property
         if notifier_source_property is not None:
             self.notifier_source_property = notifier_source_property
         if editable_properties is not None:
             self.editable_properties = editable_properties
-        if approver_source_property is not None:
-            self.approver_source_property = approver_source_property
         if name is not None:
             self.name = name
-
-    @property
-    def required_item_properties(self):
-        """Gets the required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
-
-
-        :return: The required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._required_item_properties
-
-    @required_item_properties.setter
-    def required_item_properties(self, required_item_properties):
-        """Sets the required_item_properties of this BTWorkflowStateInfo.
-
-
-        :param required_item_properties: The required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._required_item_properties = required_item_properties
+        if display_name is not None:
+            self.display_name = display_name
 
     @property
     def required_properties(self):
@@ -121,25 +100,46 @@ class BTWorkflowStateInfo(object):
         self._required_properties = required_properties
 
     @property
-    def display_name(self):
-        """Gets the display_name of this BTWorkflowStateInfo.  # noqa: E501
+    def required_item_properties(self):
+        """Gets the required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
 
 
-        :return: The display_name of this BTWorkflowStateInfo.  # noqa: E501
+        :return: The required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._required_item_properties
+
+    @required_item_properties.setter
+    def required_item_properties(self, required_item_properties):
+        """Sets the required_item_properties of this BTWorkflowStateInfo.
+
+
+        :param required_item_properties: The required_item_properties of this BTWorkflowStateInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._required_item_properties = required_item_properties
+
+    @property
+    def approver_source_property(self):
+        """Gets the approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
+
+
+        :return: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
         :rtype: str
         """
-        return self._display_name
+        return self._approver_source_property
 
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTWorkflowStateInfo.
+    @approver_source_property.setter
+    def approver_source_property(self, approver_source_property):
+        """Sets the approver_source_property of this BTWorkflowStateInfo.
 
 
-        :param display_name: The display_name of this BTWorkflowStateInfo.  # noqa: E501
+        :param approver_source_property: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
         :type: str
         """
 
-        self._display_name = display_name
+        self._approver_source_property = approver_source_property
 
     @property
     def notifier_source_property(self):
@@ -184,27 +184,6 @@ class BTWorkflowStateInfo(object):
         self._editable_properties = editable_properties
 
     @property
-    def approver_source_property(self):
-        """Gets the approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
-
-
-        :return: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._approver_source_property
-
-    @approver_source_property.setter
-    def approver_source_property(self, approver_source_property):
-        """Sets the approver_source_property of this BTWorkflowStateInfo.
-
-
-        :param approver_source_property: The approver_source_property of this BTWorkflowStateInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._approver_source_property = approver_source_property
-
-    @property
     def name(self):
         """Gets the name of this BTWorkflowStateInfo.  # noqa: E501
 
@@ -224,6 +203,27 @@ class BTWorkflowStateInfo(object):
         """
 
         self._name = name
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTWorkflowStateInfo.  # noqa: E501
+
+
+        :return: The display_name of this BTWorkflowStateInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTWorkflowStateInfo.
+
+
+        :param display_name: The display_name of this BTWorkflowStateInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

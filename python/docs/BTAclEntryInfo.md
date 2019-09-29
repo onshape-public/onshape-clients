@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entry_id** | **str** |  | [optional] 
 **entry_type** | **int** |  | [optional] 
+**entry_id** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
 **permission_set** | [**object**](.md) |  | [optional] 
 **image** | **str** |  | [optional] 
 **entry_state** | **str** |  | [optional] 
@@ -13,7 +14,6 @@ Name | Type | Description | Notes
 **accept_owner_transfer** | **bool** |  | [optional] 
 **object_id** | **str** |  | [optional] 
 **team_name** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
 **company_name** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **permission** | **int** |  | [optional] 

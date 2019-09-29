@@ -33,85 +33,85 @@ class BTBillingAccountInfo(object):
     """
     openapi_types = {
         'address': 'BTAddressInfo',
-        'card': 'BTCardInfo',
         'created_at': 'datetime',
+        'card': 'BTCardInfo',
         'account_balance': 'int',
         'state': 'int',
-        'stripe_id': 'str',
         'company': 'BTCompanyInfo',
+        'stripe_id': 'str',
         'pro_monthly_enabled': 'bool',
-        'owner': 'BTUserSummaryInfo',
         'zuora_id': 'str',
-        'id': 'str',
+        'owner': 'BTUserSummaryInfo',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'address': 'address',
-        'card': 'card',
         'created_at': 'createdAt',
+        'card': 'card',
         'account_balance': 'accountBalance',
         'state': 'state',
-        'stripe_id': 'stripeId',
         'company': 'company',
+        'stripe_id': 'stripeId',
         'pro_monthly_enabled': 'proMonthlyEnabled',
-        'owner': 'owner',
         'zuora_id': 'zuoraId',
-        'id': 'id',
+        'owner': 'owner',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, address=None, card=None, created_at=None, account_balance=None, state=None, stripe_id=None, company=None, pro_monthly_enabled=None, owner=None, zuora_id=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, address=None, created_at=None, card=None, account_balance=None, state=None, company=None, stripe_id=None, pro_monthly_enabled=None, zuora_id=None, owner=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTBillingAccountInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._address = None
-        self._card = None
         self._created_at = None
+        self._card = None
         self._account_balance = None
         self._state = None
-        self._stripe_id = None
         self._company = None
+        self._stripe_id = None
         self._pro_monthly_enabled = None
-        self._owner = None
         self._zuora_id = None
-        self._id = None
+        self._owner = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if address is not None:
             self.address = address
-        if card is not None:
-            self.card = card
         if created_at is not None:
             self.created_at = created_at
+        if card is not None:
+            self.card = card
         if account_balance is not None:
             self.account_balance = account_balance
         if state is not None:
             self.state = state
-        if stripe_id is not None:
-            self.stripe_id = stripe_id
         if company is not None:
             self.company = company
+        if stripe_id is not None:
+            self.stripe_id = stripe_id
         if pro_monthly_enabled is not None:
             self.pro_monthly_enabled = pro_monthly_enabled
-        if owner is not None:
-            self.owner = owner
         if zuora_id is not None:
             self.zuora_id = zuora_id
-        if id is not None:
-            self.id = id
+        if owner is not None:
+            self.owner = owner
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def address(self):
@@ -135,27 +135,6 @@ class BTBillingAccountInfo(object):
         self._address = address
 
     @property
-    def card(self):
-        """Gets the card of this BTBillingAccountInfo.  # noqa: E501
-
-
-        :return: The card of this BTBillingAccountInfo.  # noqa: E501
-        :rtype: BTCardInfo
-        """
-        return self._card
-
-    @card.setter
-    def card(self, card):
-        """Sets the card of this BTBillingAccountInfo.
-
-
-        :param card: The card of this BTBillingAccountInfo.  # noqa: E501
-        :type: BTCardInfo
-        """
-
-        self._card = card
-
-    @property
     def created_at(self):
         """Gets the created_at of this BTBillingAccountInfo.  # noqa: E501
 
@@ -175,6 +154,27 @@ class BTBillingAccountInfo(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def card(self):
+        """Gets the card of this BTBillingAccountInfo.  # noqa: E501
+
+
+        :return: The card of this BTBillingAccountInfo.  # noqa: E501
+        :rtype: BTCardInfo
+        """
+        return self._card
+
+    @card.setter
+    def card(self, card):
+        """Sets the card of this BTBillingAccountInfo.
+
+
+        :param card: The card of this BTBillingAccountInfo.  # noqa: E501
+        :type: BTCardInfo
+        """
+
+        self._card = card
 
     @property
     def account_balance(self):
@@ -219,27 +219,6 @@ class BTBillingAccountInfo(object):
         self._state = state
 
     @property
-    def stripe_id(self):
-        """Gets the stripe_id of this BTBillingAccountInfo.  # noqa: E501
-
-
-        :return: The stripe_id of this BTBillingAccountInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._stripe_id
-
-    @stripe_id.setter
-    def stripe_id(self, stripe_id):
-        """Sets the stripe_id of this BTBillingAccountInfo.
-
-
-        :param stripe_id: The stripe_id of this BTBillingAccountInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._stripe_id = stripe_id
-
-    @property
     def company(self):
         """Gets the company of this BTBillingAccountInfo.  # noqa: E501
 
@@ -259,6 +238,27 @@ class BTBillingAccountInfo(object):
         """
 
         self._company = company
+
+    @property
+    def stripe_id(self):
+        """Gets the stripe_id of this BTBillingAccountInfo.  # noqa: E501
+
+
+        :return: The stripe_id of this BTBillingAccountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._stripe_id
+
+    @stripe_id.setter
+    def stripe_id(self, stripe_id):
+        """Sets the stripe_id of this BTBillingAccountInfo.
+
+
+        :param stripe_id: The stripe_id of this BTBillingAccountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._stripe_id = stripe_id
 
     @property
     def pro_monthly_enabled(self):
@@ -282,27 +282,6 @@ class BTBillingAccountInfo(object):
         self._pro_monthly_enabled = pro_monthly_enabled
 
     @property
-    def owner(self):
-        """Gets the owner of this BTBillingAccountInfo.  # noqa: E501
-
-
-        :return: The owner of this BTBillingAccountInfo.  # noqa: E501
-        :rtype: BTUserSummaryInfo
-        """
-        return self._owner
-
-    @owner.setter
-    def owner(self, owner):
-        """Sets the owner of this BTBillingAccountInfo.
-
-
-        :param owner: The owner of this BTBillingAccountInfo.  # noqa: E501
-        :type: BTUserSummaryInfo
-        """
-
-        self._owner = owner
-
-    @property
     def zuora_id(self):
         """Gets the zuora_id of this BTBillingAccountInfo.  # noqa: E501
 
@@ -324,25 +303,25 @@ class BTBillingAccountInfo(object):
         self._zuora_id = zuora_id
 
     @property
-    def id(self):
-        """Gets the id of this BTBillingAccountInfo.  # noqa: E501
+    def owner(self):
+        """Gets the owner of this BTBillingAccountInfo.  # noqa: E501
 
 
-        :return: The id of this BTBillingAccountInfo.  # noqa: E501
-        :rtype: str
+        :return: The owner of this BTBillingAccountInfo.  # noqa: E501
+        :rtype: BTUserSummaryInfo
         """
-        return self._id
+        return self._owner
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTBillingAccountInfo.
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this BTBillingAccountInfo.
 
 
-        :param id: The id of this BTBillingAccountInfo.  # noqa: E501
-        :type: str
+        :param owner: The owner of this BTBillingAccountInfo.  # noqa: E501
+        :type: BTUserSummaryInfo
         """
 
-        self._id = id
+        self._owner = owner
 
     @property
     def href(self):
@@ -406,6 +385,27 @@ class BTBillingAccountInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTBillingAccountInfo.  # noqa: E501
+
+
+        :return: The id of this BTBillingAccountInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTBillingAccountInfo.
+
+
+        :param id: The id of this BTBillingAccountInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

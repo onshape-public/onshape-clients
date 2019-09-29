@@ -32,113 +32,92 @@ class BTAssemblyInstanceDefinitionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'feature_id': 'str',
-        'document_id': 'str',
+        'configuration': 'str',
         'version_id': 'str',
         'element_id': 'str',
+        'document_id': 'str',
+        'microversion_id': 'str',
         'part_number': 'str',
         'revision': 'str',
-        'microversion_id': 'str',
         'part_id': 'str',
-        'configuration': 'str',
+        'feature_id': 'str',
         'is_assembly': 'bool',
         'is_whole_part_studio': 'bool'
     }
 
     attribute_map = {
-        'feature_id': 'featureId',
-        'document_id': 'documentId',
+        'configuration': 'configuration',
         'version_id': 'versionId',
         'element_id': 'elementId',
+        'document_id': 'documentId',
+        'microversion_id': 'microversionId',
         'part_number': 'partNumber',
         'revision': 'revision',
-        'microversion_id': 'microversionId',
         'part_id': 'partId',
-        'configuration': 'configuration',
+        'feature_id': 'featureId',
         'is_assembly': 'isAssembly',
         'is_whole_part_studio': 'isWholePartStudio'
     }
 
-    def __init__(self, feature_id=None, document_id=None, version_id=None, element_id=None, part_number=None, revision=None, microversion_id=None, part_id=None, configuration=None, is_assembly=None, is_whole_part_studio=None):  # noqa: E501
+    def __init__(self, configuration=None, version_id=None, element_id=None, document_id=None, microversion_id=None, part_number=None, revision=None, part_id=None, feature_id=None, is_assembly=None, is_whole_part_studio=None):  # noqa: E501
         """BTAssemblyInstanceDefinitionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._feature_id = None
-        self._document_id = None
+        self._configuration = None
         self._version_id = None
         self._element_id = None
+        self._document_id = None
+        self._microversion_id = None
         self._part_number = None
         self._revision = None
-        self._microversion_id = None
         self._part_id = None
-        self._configuration = None
+        self._feature_id = None
         self._is_assembly = None
         self._is_whole_part_studio = None
         self.discriminator = None
 
-        if feature_id is not None:
-            self.feature_id = feature_id
-        if document_id is not None:
-            self.document_id = document_id
+        if configuration is not None:
+            self.configuration = configuration
         if version_id is not None:
             self.version_id = version_id
         if element_id is not None:
             self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
         if part_number is not None:
             self.part_number = part_number
         if revision is not None:
             self.revision = revision
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
         if part_id is not None:
             self.part_id = part_id
-        if configuration is not None:
-            self.configuration = configuration
+        if feature_id is not None:
+            self.feature_id = feature_id
         if is_assembly is not None:
             self.is_assembly = is_assembly
         if is_whole_part_studio is not None:
             self.is_whole_part_studio = is_whole_part_studio
 
     @property
-    def feature_id(self):
-        """Gets the feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
 
 
-        :return: The feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :return: The configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
         :rtype: str
         """
-        return self._feature_id
+        return self._configuration
 
-    @feature_id.setter
-    def feature_id(self, feature_id):
-        """Sets the feature_id of this BTAssemblyInstanceDefinitionParams.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTAssemblyInstanceDefinitionParams.
 
 
-        :param feature_id: The feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :param configuration: The configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
         :type: str
         """
 
-        self._feature_id = feature_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-
-
-        :return: The document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAssemblyInstanceDefinitionParams.
-
-
-        :param document_id: The document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._configuration = configuration
 
     @property
     def version_id(self):
@@ -183,6 +162,48 @@ class BTAssemblyInstanceDefinitionParams(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+
+
+        :return: The document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAssemblyInstanceDefinitionParams.
+
+
+        :param document_id: The document_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+
+
+        :return: The microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTAssemblyInstanceDefinitionParams.
+
+
+        :param microversion_id: The microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
+
+    @property
     def part_number(self):
         """Gets the part_number of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
 
@@ -225,27 +246,6 @@ class BTAssemblyInstanceDefinitionParams(object):
         self._revision = revision
 
     @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-
-
-        :return: The microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTAssemblyInstanceDefinitionParams.
-
-
-        :param microversion_id: The microversion_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
     def part_id(self):
         """Gets the part_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
 
@@ -267,25 +267,25 @@ class BTAssemblyInstanceDefinitionParams(object):
         self._part_id = part_id
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+    def feature_id(self):
+        """Gets the feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
 
 
-        :return: The configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :return: The feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._feature_id
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTAssemblyInstanceDefinitionParams.
+    @feature_id.setter
+    def feature_id(self, feature_id):
+        """Sets the feature_id of this BTAssemblyInstanceDefinitionParams.
 
 
-        :param configuration: The configuration of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
+        :param feature_id: The feature_id of this BTAssemblyInstanceDefinitionParams.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._feature_id = feature_id
 
     @property
     def is_assembly(self):

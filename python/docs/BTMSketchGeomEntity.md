@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **control_box_ids** | **list[str]** |  | [optional] 
 **is_construction** | **bool** |  | [optional] 
 **parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
-**namespace** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 

@@ -32,47 +32,26 @@ class BTUpdateRbacRoleParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'description': 'str',
-        'name': 'str'
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
-        'name': 'name'
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, description=None, name=None):  # noqa: E501
+    def __init__(self, name=None, description=None):  # noqa: E501
         """BTUpdateRbacRoleParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._description = None
         self._name = None
+        self._description = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
-
-    @property
-    def description(self):
-        """Gets the description of this BTUpdateRbacRoleParams.  # noqa: E501
-
-
-        :return: The description of this BTUpdateRbacRoleParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTUpdateRbacRoleParams.
-
-
-        :param description: The description of this BTUpdateRbacRoleParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
+        if description is not None:
+            self.description = description
 
     @property
     def name(self):
@@ -94,6 +73,27 @@ class BTUpdateRbacRoleParams(object):
         """
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTUpdateRbacRoleParams.  # noqa: E501
+
+
+        :return: The description of this BTUpdateRbacRoleParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTUpdateRbacRoleParams.
+
+
+        :param description: The description of this BTUpdateRbacRoleParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

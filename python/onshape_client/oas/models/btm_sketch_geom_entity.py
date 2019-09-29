@@ -35,8 +35,8 @@ class BTMSketchGeomEntity(object):
         'control_box_ids': 'list[str]',
         'is_construction': 'bool',
         'parameters': 'list[BTMParameter]',
-        'namespace': 'str',
         'node_id': 'str',
+        'namespace': 'str',
         'import_microversion': 'str',
         'entity_id': 'str'
     }
@@ -45,20 +45,20 @@ class BTMSketchGeomEntity(object):
         'control_box_ids': 'controlBoxIds',
         'is_construction': 'isConstruction',
         'parameters': 'parameters',
-        'namespace': 'namespace',
         'node_id': 'nodeId',
+        'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
         'entity_id': 'entityId'
     }
 
-    def __init__(self, control_box_ids=None, is_construction=None, parameters=None, namespace=None, node_id=None, import_microversion=None, entity_id=None):  # noqa: E501
+    def __init__(self, control_box_ids=None, is_construction=None, parameters=None, node_id=None, namespace=None, import_microversion=None, entity_id=None):  # noqa: E501
         """BTMSketchGeomEntity - a model defined in OpenAPI"""  # noqa: E501
 
         self._control_box_ids = None
         self._is_construction = None
         self._parameters = None
-        self._namespace = None
         self._node_id = None
+        self._namespace = None
         self._import_microversion = None
         self._entity_id = None
         self.discriminator = None
@@ -69,10 +69,10 @@ class BTMSketchGeomEntity(object):
             self.is_construction = is_construction
         if parameters is not None:
             self.parameters = parameters
-        if namespace is not None:
-            self.namespace = namespace
         if node_id is not None:
             self.node_id = node_id
+        if namespace is not None:
+            self.namespace = namespace
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if entity_id is not None:
@@ -142,27 +142,6 @@ class BTMSketchGeomEntity(object):
         self._parameters = parameters
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTMSketchGeomEntity.  # noqa: E501
-
-
-        :return: The namespace of this BTMSketchGeomEntity.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMSketchGeomEntity.
-
-
-        :param namespace: The namespace of this BTMSketchGeomEntity.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
     def node_id(self):
         """Gets the node_id of this BTMSketchGeomEntity.  # noqa: E501
 
@@ -182,6 +161,27 @@ class BTMSketchGeomEntity(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTMSketchGeomEntity.  # noqa: E501
+
+
+        :return: The namespace of this BTMSketchGeomEntity.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMSketchGeomEntity.
+
+
+        :param namespace: The namespace of this BTMSketchGeomEntity.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
 
     @property
     def import_microversion(self):

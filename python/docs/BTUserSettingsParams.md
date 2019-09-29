@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key_values** | **dict(str, str)** |  | [optional] 
 **substitute_approvers** | [**list[BTSubstituteApproverParams]**](BTSubstituteApproverParams.md) |  | [optional] 
+**key_values** | **dict(str, str)** |  | [optional] 
 **value** | **str** |  | [optional] 
 **key** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

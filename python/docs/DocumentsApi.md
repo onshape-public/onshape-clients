@@ -5,7 +5,7 @@ All URIs are relative to *https://cad.onshape.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**copy_workspace**](DocumentsApi.md#copy_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/copy | 
-[**create9**](DocumentsApi.md#create9) | **POST** /api/documents | 
+[**create_document**](DocumentsApi.md#create_document) | **POST** /api/documents | Create document.
 [**create_version**](DocumentsApi.md#create_version) | **POST** /api/documents/d/{did}/versions | 
 [**create_workspace**](DocumentsApi.md#create_workspace) | **POST** /api/documents/d/{did}/workspaces | 
 [**delete7**](DocumentsApi.md#delete7) | **DELETE** /api/documents/{did} | 
@@ -88,10 +88,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create9**
-> create9(bt_document_params)
+# **create_document**
+> BTDocumentInfo create_document(bt_document_params)
 
-
+Create document.
 
 ### Example
 
@@ -113,9 +113,11 @@ api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(conf
 bt_document_params = onshape_client.oas.BTDocumentParams() # BTDocumentParams | 
 
 try:
-    api_instance.create9(bt_document_params)
+    # Create document.
+    api_response = api_instance.create_document(bt_document_params)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->create9: %s\n" % e)
+    print("Exception when calling DocumentsApi->create_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -126,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentInfo**](BTDocumentInfo.md)
 
 ### Authorization
 

@@ -14,16 +14,16 @@ Name | Type | Description | Notes
 **hidden_from_plus_menu** | **bool** |  | [optional] 
 **store_entry_is_public** | **bool** |  | [optional] 
 **developer_email** | **str** |  | [optional] 
-**base_href** | **str** |  | [optional] 
-**supports_collaboration** | **bool** |  | [optional] 
 **internal_grant_on_demand** | **bool** |  | [optional] 
 **client_id** | **str** |  | [optional] 
 **scope_names** | **list[str]** |  | [optional] 
 **primary_format** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**base_href** | **str** |  | [optional] 
+**supports_collaboration** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **type** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

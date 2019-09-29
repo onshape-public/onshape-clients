@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **max_date** | **datetime** |  | [optional] 
 **min_count** | **int** |  | [optional] 
 **max_count** | **int** |  | [optional] 
-**pattern** | **str** |  | [optional] 
-**min** | **float** |  | [optional] 
 **max** | **float** |  | [optional] 
+**min** | **float** |  | [optional] 
+**pattern** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

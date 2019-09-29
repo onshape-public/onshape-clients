@@ -33,7 +33,7 @@ class BTDiffInfo(object):
     """
     openapi_types = {
         'source_id': 'str',
-        'changes': 'dict(str, BTDiffInfo)',
+        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'geometry_change_messages': 'list[str]',
         'source_value': 'str',
         'target_value': 'str',
@@ -44,7 +44,7 @@ class BTDiffInfo(object):
 
     attribute_map = {
         'source_id': 'sourceId',
-        'changes': 'changes',
+        'collection_changes': 'collectionChanges',
         'geometry_change_messages': 'geometryChangeMessages',
         'source_value': 'sourceValue',
         'target_value': 'targetValue',
@@ -53,11 +53,11 @@ class BTDiffInfo(object):
         'type': 'type'
     }
 
-    def __init__(self, source_id=None, changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None):  # noqa: E501
+    def __init__(self, source_id=None, collection_changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None):  # noqa: E501
         """BTDiffInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._source_id = None
-        self._changes = None
+        self._collection_changes = None
         self._geometry_change_messages = None
         self._source_value = None
         self._target_value = None
@@ -68,8 +68,8 @@ class BTDiffInfo(object):
 
         if source_id is not None:
             self.source_id = source_id
-        if changes is not None:
-            self.changes = changes
+        if collection_changes is not None:
+            self.collection_changes = collection_changes
         if geometry_change_messages is not None:
             self.geometry_change_messages = geometry_change_messages
         if source_value is not None:
@@ -105,25 +105,25 @@ class BTDiffInfo(object):
         self._source_id = source_id
 
     @property
-    def changes(self):
-        """Gets the changes of this BTDiffInfo.  # noqa: E501
+    def collection_changes(self):
+        """Gets the collection_changes of this BTDiffInfo.  # noqa: E501
 
 
-        :return: The changes of this BTDiffInfo.  # noqa: E501
-        :rtype: dict(str, BTDiffInfo)
+        :return: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :rtype: dict(str, list[BTDiffInfo])
         """
-        return self._changes
+        return self._collection_changes
 
-    @changes.setter
-    def changes(self, changes):
-        """Sets the changes of this BTDiffInfo.
+    @collection_changes.setter
+    def collection_changes(self, collection_changes):
+        """Sets the collection_changes of this BTDiffInfo.
 
 
-        :param changes: The changes of this BTDiffInfo.  # noqa: E501
-        :type: dict(str, BTDiffInfo)
+        :param collection_changes: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :type: dict(str, list[BTDiffInfo])
         """
 
-        self._changes = changes
+        self._collection_changes = collection_changes
 
     @property
     def geometry_change_messages(self):

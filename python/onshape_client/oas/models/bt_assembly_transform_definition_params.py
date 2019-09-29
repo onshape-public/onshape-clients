@@ -32,52 +32,31 @@ class BTAssemblyTransformDefinitionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'occurrences': 'list[BTOccurrence]',
         'transform': 'list[float]',
+        'occurrences': 'list[BTOccurrence]',
         'is_relative': 'bool'
     }
 
     attribute_map = {
-        'occurrences': 'occurrences',
         'transform': 'transform',
+        'occurrences': 'occurrences',
         'is_relative': 'isRelative'
     }
 
-    def __init__(self, occurrences=None, transform=None, is_relative=None):  # noqa: E501
+    def __init__(self, transform=None, occurrences=None, is_relative=None):  # noqa: E501
         """BTAssemblyTransformDefinitionParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._occurrences = None
         self._transform = None
+        self._occurrences = None
         self._is_relative = None
         self.discriminator = None
 
-        if occurrences is not None:
-            self.occurrences = occurrences
         if transform is not None:
             self.transform = transform
+        if occurrences is not None:
+            self.occurrences = occurrences
         if is_relative is not None:
             self.is_relative = is_relative
-
-    @property
-    def occurrences(self):
-        """Gets the occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-
-
-        :return: The occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-        :rtype: list[BTOccurrence]
-        """
-        return self._occurrences
-
-    @occurrences.setter
-    def occurrences(self, occurrences):
-        """Sets the occurrences of this BTAssemblyTransformDefinitionParams.
-
-
-        :param occurrences: The occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
-        :type: list[BTOccurrence]
-        """
-
-        self._occurrences = occurrences
 
     @property
     def transform(self):
@@ -99,6 +78,27 @@ class BTAssemblyTransformDefinitionParams(object):
         """
 
         self._transform = transform
+
+    @property
+    def occurrences(self):
+        """Gets the occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+
+
+        :return: The occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+        :rtype: list[BTOccurrence]
+        """
+        return self._occurrences
+
+    @occurrences.setter
+    def occurrences(self, occurrences):
+        """Sets the occurrences of this BTAssemblyTransformDefinitionParams.
+
+
+        :param occurrences: The occurrences of this BTAssemblyTransformDefinitionParams.  # noqa: E501
+        :type: list[BTOccurrence]
+        """
+
+        self._occurrences = occurrences
 
     @property
     def is_relative(self):

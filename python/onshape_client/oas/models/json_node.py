@@ -32,11 +32,12 @@ class JsonNode(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'node_type': 'str',
         'textual': 'bool',
+        'object': 'bool',
+        'node_type': 'str',
         'binary': 'bool',
-        'boolean': 'bool',
         'missing_node': 'bool',
+        'boolean': 'bool',
         'value_node': 'bool',
         'container_node': 'bool',
         'pojo': 'bool',
@@ -49,18 +50,18 @@ class JsonNode(object):
         'double': 'bool',
         'big_decimal': 'bool',
         'big_integer': 'bool',
-        'float': 'bool',
         'array': 'bool',
         'null': 'bool',
-        'object': 'bool'
+        'float': 'bool'
     }
 
     attribute_map = {
-        'node_type': 'nodeType',
         'textual': 'textual',
+        'object': 'object',
+        'node_type': 'nodeType',
         'binary': 'binary',
-        'boolean': 'boolean',
         'missing_node': 'missingNode',
+        'boolean': 'boolean',
         'value_node': 'valueNode',
         'container_node': 'containerNode',
         'pojo': 'pojo',
@@ -73,20 +74,20 @@ class JsonNode(object):
         'double': 'double',
         'big_decimal': 'bigDecimal',
         'big_integer': 'bigInteger',
-        'float': 'float',
         'array': 'array',
         'null': 'null',
-        'object': 'object'
+        'float': 'float'
     }
 
-    def __init__(self, node_type=None, textual=None, binary=None, boolean=None, missing_node=None, value_node=None, container_node=None, pojo=None, number=None, integral_number=None, floating_point_number=None, short=None, int=None, long=None, double=None, big_decimal=None, big_integer=None, float=None, array=None, null=None, object=None):  # noqa: E501
+    def __init__(self, textual=None, object=None, node_type=None, binary=None, missing_node=None, boolean=None, value_node=None, container_node=None, pojo=None, number=None, integral_number=None, floating_point_number=None, short=None, int=None, long=None, double=None, big_decimal=None, big_integer=None, array=None, null=None, float=None):  # noqa: E501
         """JsonNode - a model defined in OpenAPI"""  # noqa: E501
 
-        self._node_type = None
         self._textual = None
+        self._object = None
+        self._node_type = None
         self._binary = None
-        self._boolean = None
         self._missing_node = None
+        self._boolean = None
         self._value_node = None
         self._container_node = None
         self._pojo = None
@@ -99,22 +100,23 @@ class JsonNode(object):
         self._double = None
         self._big_decimal = None
         self._big_integer = None
-        self._float = None
         self._array = None
         self._null = None
-        self._object = None
+        self._float = None
         self.discriminator = None
 
-        if node_type is not None:
-            self.node_type = node_type
         if textual is not None:
             self.textual = textual
+        if object is not None:
+            self.object = object
+        if node_type is not None:
+            self.node_type = node_type
         if binary is not None:
             self.binary = binary
-        if boolean is not None:
-            self.boolean = boolean
         if missing_node is not None:
             self.missing_node = missing_node
+        if boolean is not None:
+            self.boolean = boolean
         if value_node is not None:
             self.value_node = value_node
         if container_node is not None:
@@ -139,14 +141,54 @@ class JsonNode(object):
             self.big_decimal = big_decimal
         if big_integer is not None:
             self.big_integer = big_integer
-        if float is not None:
-            self.float = float
         if array is not None:
             self.array = array
         if null is not None:
             self.null = null
-        if object is not None:
-            self.object = object
+        if float is not None:
+            self.float = float
+
+    @property
+    def textual(self):
+        """Gets the textual of this JsonNode.  # noqa: E501
+
+
+        :return: The textual of this JsonNode.  # noqa: E501
+        :rtype: bool
+        """
+        return self._textual
+
+    @textual.setter
+    def textual(self, textual):
+        """Sets the textual of this JsonNode.
+
+
+        :param textual: The textual of this JsonNode.  # noqa: E501
+        :type: bool
+        """
+
+        self._textual = textual
+
+    @property
+    def object(self):
+        """Gets the object of this JsonNode.  # noqa: E501
+
+
+        :return: The object of this JsonNode.  # noqa: E501
+        :rtype: bool
+        """
+        return self._object
+
+    @object.setter
+    def object(self, object):
+        """Sets the object of this JsonNode.
+
+
+        :param object: The object of this JsonNode.  # noqa: E501
+        :type: bool
+        """
+
+        self._object = object
 
     @property
     def node_type(self):
@@ -176,27 +218,6 @@ class JsonNode(object):
         self._node_type = node_type
 
     @property
-    def textual(self):
-        """Gets the textual of this JsonNode.  # noqa: E501
-
-
-        :return: The textual of this JsonNode.  # noqa: E501
-        :rtype: bool
-        """
-        return self._textual
-
-    @textual.setter
-    def textual(self, textual):
-        """Sets the textual of this JsonNode.
-
-
-        :param textual: The textual of this JsonNode.  # noqa: E501
-        :type: bool
-        """
-
-        self._textual = textual
-
-    @property
     def binary(self):
         """Gets the binary of this JsonNode.  # noqa: E501
 
@@ -218,27 +239,6 @@ class JsonNode(object):
         self._binary = binary
 
     @property
-    def boolean(self):
-        """Gets the boolean of this JsonNode.  # noqa: E501
-
-
-        :return: The boolean of this JsonNode.  # noqa: E501
-        :rtype: bool
-        """
-        return self._boolean
-
-    @boolean.setter
-    def boolean(self, boolean):
-        """Sets the boolean of this JsonNode.
-
-
-        :param boolean: The boolean of this JsonNode.  # noqa: E501
-        :type: bool
-        """
-
-        self._boolean = boolean
-
-    @property
     def missing_node(self):
         """Gets the missing_node of this JsonNode.  # noqa: E501
 
@@ -258,6 +258,27 @@ class JsonNode(object):
         """
 
         self._missing_node = missing_node
+
+    @property
+    def boolean(self):
+        """Gets the boolean of this JsonNode.  # noqa: E501
+
+
+        :return: The boolean of this JsonNode.  # noqa: E501
+        :rtype: bool
+        """
+        return self._boolean
+
+    @boolean.setter
+    def boolean(self, boolean):
+        """Sets the boolean of this JsonNode.
+
+
+        :param boolean: The boolean of this JsonNode.  # noqa: E501
+        :type: bool
+        """
+
+        self._boolean = boolean
 
     @property
     def value_node(self):
@@ -512,27 +533,6 @@ class JsonNode(object):
         self._big_integer = big_integer
 
     @property
-    def float(self):
-        """Gets the float of this JsonNode.  # noqa: E501
-
-
-        :return: The float of this JsonNode.  # noqa: E501
-        :rtype: bool
-        """
-        return self._float
-
-    @float.setter
-    def float(self, float):
-        """Sets the float of this JsonNode.
-
-
-        :param float: The float of this JsonNode.  # noqa: E501
-        :type: bool
-        """
-
-        self._float = float
-
-    @property
     def array(self):
         """Gets the array of this JsonNode.  # noqa: E501
 
@@ -575,25 +575,25 @@ class JsonNode(object):
         self._null = null
 
     @property
-    def object(self):
-        """Gets the object of this JsonNode.  # noqa: E501
+    def float(self):
+        """Gets the float of this JsonNode.  # noqa: E501
 
 
-        :return: The object of this JsonNode.  # noqa: E501
+        :return: The float of this JsonNode.  # noqa: E501
         :rtype: bool
         """
-        return self._object
+        return self._float
 
-    @object.setter
-    def object(self, object):
-        """Sets the object of this JsonNode.
+    @float.setter
+    def float(self, float):
+        """Sets the float of this JsonNode.
 
 
-        :param object: The object of this JsonNode.  # noqa: E501
+        :param float: The float of this JsonNode.  # noqa: E501
         :type: bool
         """
 
-        self._object = object
+        self._float = float
 
     def to_dict(self):
         """Returns the model properties as a dict"""

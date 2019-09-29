@@ -33,40 +33,40 @@ class BTAgreementParams(object):
     """
     openapi_types = {
         'reapply': 'bool',
-        'version': 'int',
         'name': 'str',
         'content': 'str',
-        'options': 'list[str]'
+        'options': 'list[str]',
+        'version': 'int'
     }
 
     attribute_map = {
         'reapply': 'reapply',
-        'version': 'version',
         'name': 'name',
         'content': 'content',
-        'options': 'options'
+        'options': 'options',
+        'version': 'version'
     }
 
-    def __init__(self, reapply=None, version=None, name=None, content=None, options=None):  # noqa: E501
+    def __init__(self, reapply=None, name=None, content=None, options=None, version=None):  # noqa: E501
         """BTAgreementParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._reapply = None
-        self._version = None
         self._name = None
         self._content = None
         self._options = None
+        self._version = None
         self.discriminator = None
 
         if reapply is not None:
             self.reapply = reapply
-        if version is not None:
-            self.version = version
         if name is not None:
             self.name = name
         if content is not None:
             self.content = content
         if options is not None:
             self.options = options
+        if version is not None:
+            self.version = version
 
     @property
     def reapply(self):
@@ -88,27 +88,6 @@ class BTAgreementParams(object):
         """
 
         self._reapply = reapply
-
-    @property
-    def version(self):
-        """Gets the version of this BTAgreementParams.  # noqa: E501
-
-
-        :return: The version of this BTAgreementParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTAgreementParams.
-
-
-        :param version: The version of this BTAgreementParams.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
 
     @property
     def name(self):
@@ -172,6 +151,27 @@ class BTAgreementParams(object):
         """
 
         self._options = options
+
+    @property
+    def version(self):
+        """Gets the version of this BTAgreementParams.  # noqa: E501
+
+
+        :return: The version of this BTAgreementParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTAgreementParams.
+
+
+        :param version: The version of this BTAgreementParams.  # noqa: E501
+        :type: int
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

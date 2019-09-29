@@ -34,114 +34,114 @@ class BTTeamSummaryInfo(object):
     openapi_types = {
         'predefined_team': 'int',
         'active': 'bool',
-        'description': 'str',
         'tree_href': 'str',
         'is_mutable': 'bool',
         'resource_type': 'str',
+        'description': 'str',
+        'modified_at': 'datetime',
+        'created_at': 'datetime',
+        'created_by': 'BTUserBasicSummaryInfo',
+        'modified_by': 'BTUserBasicSummaryInfo',
         'project_id': 'str',
         'can_move': 'bool',
         'is_container': 'bool',
-        'created_at': 'datetime',
         'is_enterprise_owned': 'bool',
-        'modified_at': 'datetime',
-        'created_by': 'BTUserBasicSummaryInfo',
-        'modified_by': 'BTUserBasicSummaryInfo',
-        'owner': 'BTOwnerInfo',
         'has_pending_owner': 'bool',
-        'id': 'str',
+        'owner': 'BTOwnerInfo',
         'href': 'str',
         'view_ref': 'str',
-        'name': 'str'
+        'name': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
         'predefined_team': 'predefinedTeam',
         'active': 'active',
-        'description': 'description',
         'tree_href': 'treeHref',
         'is_mutable': 'isMutable',
         'resource_type': 'resourceType',
+        'description': 'description',
+        'modified_at': 'modifiedAt',
+        'created_at': 'createdAt',
+        'created_by': 'createdBy',
+        'modified_by': 'modifiedBy',
         'project_id': 'projectId',
         'can_move': 'canMove',
         'is_container': 'isContainer',
-        'created_at': 'createdAt',
         'is_enterprise_owned': 'isEnterpriseOwned',
-        'modified_at': 'modifiedAt',
-        'created_by': 'createdBy',
-        'modified_by': 'modifiedBy',
-        'owner': 'owner',
         'has_pending_owner': 'hasPendingOwner',
-        'id': 'id',
+        'owner': 'owner',
         'href': 'href',
         'view_ref': 'viewRef',
-        'name': 'name'
+        'name': 'name',
+        'id': 'id'
     }
 
-    def __init__(self, predefined_team=None, active=None, description=None, tree_href=None, is_mutable=None, resource_type=None, project_id=None, can_move=None, is_container=None, created_at=None, is_enterprise_owned=None, modified_at=None, created_by=None, modified_by=None, owner=None, has_pending_owner=None, id=None, href=None, view_ref=None, name=None):  # noqa: E501
+    def __init__(self, predefined_team=None, active=None, tree_href=None, is_mutable=None, resource_type=None, description=None, modified_at=None, created_at=None, created_by=None, modified_by=None, project_id=None, can_move=None, is_container=None, is_enterprise_owned=None, has_pending_owner=None, owner=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTTeamSummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._predefined_team = None
         self._active = None
-        self._description = None
         self._tree_href = None
         self._is_mutable = None
         self._resource_type = None
+        self._description = None
+        self._modified_at = None
+        self._created_at = None
+        self._created_by = None
+        self._modified_by = None
         self._project_id = None
         self._can_move = None
         self._is_container = None
-        self._created_at = None
         self._is_enterprise_owned = None
-        self._modified_at = None
-        self._created_by = None
-        self._modified_by = None
-        self._owner = None
         self._has_pending_owner = None
-        self._id = None
+        self._owner = None
         self._href = None
         self._view_ref = None
         self._name = None
+        self._id = None
         self.discriminator = None
 
         if predefined_team is not None:
             self.predefined_team = predefined_team
         if active is not None:
             self.active = active
-        if description is not None:
-            self.description = description
         if tree_href is not None:
             self.tree_href = tree_href
         if is_mutable is not None:
             self.is_mutable = is_mutable
         if resource_type is not None:
             self.resource_type = resource_type
+        if description is not None:
+            self.description = description
+        if modified_at is not None:
+            self.modified_at = modified_at
+        if created_at is not None:
+            self.created_at = created_at
+        if created_by is not None:
+            self.created_by = created_by
+        if modified_by is not None:
+            self.modified_by = modified_by
         if project_id is not None:
             self.project_id = project_id
         if can_move is not None:
             self.can_move = can_move
         if is_container is not None:
             self.is_container = is_container
-        if created_at is not None:
-            self.created_at = created_at
         if is_enterprise_owned is not None:
             self.is_enterprise_owned = is_enterprise_owned
-        if modified_at is not None:
-            self.modified_at = modified_at
-        if created_by is not None:
-            self.created_by = created_by
-        if modified_by is not None:
-            self.modified_by = modified_by
-        if owner is not None:
-            self.owner = owner
         if has_pending_owner is not None:
             self.has_pending_owner = has_pending_owner
-        if id is not None:
-            self.id = id
+        if owner is not None:
+            self.owner = owner
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
+        if id is not None:
+            self.id = id
 
     @property
     def predefined_team(self):
@@ -184,27 +184,6 @@ class BTTeamSummaryInfo(object):
         """
 
         self._active = active
-
-    @property
-    def description(self):
-        """Gets the description of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The description of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTTeamSummaryInfo.
-
-
-        :param description: The description of this BTTeamSummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def tree_href(self):
@@ -270,6 +249,111 @@ class BTTeamSummaryInfo(object):
         self._resource_type = resource_type
 
     @property
+    def description(self):
+        """Gets the description of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The description of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTTeamSummaryInfo.
+
+
+        :param description: The description of this BTTeamSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def modified_at(self):
+        """Gets the modified_at of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The modified_at of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._modified_at
+
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTTeamSummaryInfo.
+
+
+        :param modified_at: The modified_at of this BTTeamSummaryInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._modified_at = modified_at
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTTeamSummaryInfo.
+
+
+        :param created_at: The created_at of this BTTeamSummaryInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def created_by(self):
+        """Gets the created_by of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The created_by of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._created_by
+
+    @created_by.setter
+    def created_by(self, created_by):
+        """Sets the created_by of this BTTeamSummaryInfo.
+
+
+        :param created_by: The created_by of this BTTeamSummaryInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._created_by = created_by
+
+    @property
+    def modified_by(self):
+        """Gets the modified_by of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The modified_by of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._modified_by
+
+    @modified_by.setter
+    def modified_by(self, modified_by):
+        """Sets the modified_by of this BTTeamSummaryInfo.
+
+
+        :param modified_by: The modified_by of this BTTeamSummaryInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._modified_by = modified_by
+
+    @property
     def project_id(self):
         """Gets the project_id of this BTTeamSummaryInfo.  # noqa: E501
 
@@ -333,27 +417,6 @@ class BTTeamSummaryInfo(object):
         self._is_container = is_container
 
     @property
-    def created_at(self):
-        """Gets the created_at of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTTeamSummaryInfo.
-
-
-        :param created_at: The created_at of this BTTeamSummaryInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
     def is_enterprise_owned(self):
         """Gets the is_enterprise_owned of this BTTeamSummaryInfo.  # noqa: E501
 
@@ -373,90 +436,6 @@ class BTTeamSummaryInfo(object):
         """
 
         self._is_enterprise_owned = is_enterprise_owned
-
-    @property
-    def modified_at(self):
-        """Gets the modified_at of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The modified_at of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._modified_at
-
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTTeamSummaryInfo.
-
-
-        :param modified_at: The modified_at of this BTTeamSummaryInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._modified_at = modified_at
-
-    @property
-    def created_by(self):
-        """Gets the created_by of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The created_by of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._created_by
-
-    @created_by.setter
-    def created_by(self, created_by):
-        """Sets the created_by of this BTTeamSummaryInfo.
-
-
-        :param created_by: The created_by of this BTTeamSummaryInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._created_by = created_by
-
-    @property
-    def modified_by(self):
-        """Gets the modified_by of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The modified_by of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._modified_by
-
-    @modified_by.setter
-    def modified_by(self, modified_by):
-        """Sets the modified_by of this BTTeamSummaryInfo.
-
-
-        :param modified_by: The modified_by of this BTTeamSummaryInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._modified_by = modified_by
-
-    @property
-    def owner(self):
-        """Gets the owner of this BTTeamSummaryInfo.  # noqa: E501
-
-
-        :return: The owner of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: BTOwnerInfo
-        """
-        return self._owner
-
-    @owner.setter
-    def owner(self, owner):
-        """Sets the owner of this BTTeamSummaryInfo.
-
-
-        :param owner: The owner of this BTTeamSummaryInfo.  # noqa: E501
-        :type: BTOwnerInfo
-        """
-
-        self._owner = owner
 
     @property
     def has_pending_owner(self):
@@ -480,25 +459,25 @@ class BTTeamSummaryInfo(object):
         self._has_pending_owner = has_pending_owner
 
     @property
-    def id(self):
-        """Gets the id of this BTTeamSummaryInfo.  # noqa: E501
+    def owner(self):
+        """Gets the owner of this BTTeamSummaryInfo.  # noqa: E501
 
 
-        :return: The id of this BTTeamSummaryInfo.  # noqa: E501
-        :rtype: str
+        :return: The owner of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: BTOwnerInfo
         """
-        return self._id
+        return self._owner
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTTeamSummaryInfo.
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this BTTeamSummaryInfo.
 
 
-        :param id: The id of this BTTeamSummaryInfo.  # noqa: E501
-        :type: str
+        :param owner: The owner of this BTTeamSummaryInfo.  # noqa: E501
+        :type: BTOwnerInfo
         """
 
-        self._id = id
+        self._owner = owner
 
     @property
     def href(self):
@@ -562,6 +541,27 @@ class BTTeamSummaryInfo(object):
         """
 
         self._name = name
+
+    @property
+    def id(self):
+        """Gets the id of this BTTeamSummaryInfo.  # noqa: E501
+
+
+        :return: The id of this BTTeamSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTTeamSummaryInfo.
+
+
+        :param id: The id of this BTTeamSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,83 +32,62 @@ class BTTeamParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'owner_type': 'int',
-        'description': 'str',
+        'owner_id': 'str',
         'name': 'str',
         'id': 'str',
-        'owner_id': 'str'
+        'description': 'str',
+        'owner_type': 'int'
     }
 
     attribute_map = {
-        'owner_type': 'ownerType',
-        'description': 'description',
+        'owner_id': 'ownerId',
         'name': 'name',
         'id': 'id',
-        'owner_id': 'ownerId'
+        'description': 'description',
+        'owner_type': 'ownerType'
     }
 
-    def __init__(self, owner_type=None, description=None, name=None, id=None, owner_id=None):  # noqa: E501
+    def __init__(self, owner_id=None, name=None, id=None, description=None, owner_type=None):  # noqa: E501
         """BTTeamParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._owner_type = None
-        self._description = None
+        self._owner_id = None
         self._name = None
         self._id = None
-        self._owner_id = None
+        self._description = None
+        self._owner_type = None
         self.discriminator = None
 
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if description is not None:
-            self.description = description
+        if owner_id is not None:
+            self.owner_id = owner_id
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
-        if owner_id is not None:
-            self.owner_id = owner_id
+        if description is not None:
+            self.description = description
+        if owner_type is not None:
+            self.owner_type = owner_type
 
     @property
-    def owner_type(self):
-        """Gets the owner_type of this BTTeamParams.  # noqa: E501
+    def owner_id(self):
+        """Gets the owner_id of this BTTeamParams.  # noqa: E501
 
 
-        :return: The owner_type of this BTTeamParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTTeamParams.
-
-
-        :param owner_type: The owner_type of this BTTeamParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
-    def description(self):
-        """Gets the description of this BTTeamParams.  # noqa: E501
-
-
-        :return: The description of this BTTeamParams.  # noqa: E501
+        :return: The owner_id of this BTTeamParams.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._owner_id
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTTeamParams.
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTTeamParams.
 
 
-        :param description: The description of this BTTeamParams.  # noqa: E501
+        :param owner_id: The owner_id of this BTTeamParams.  # noqa: E501
         :type: str
         """
 
-        self._description = description
+        self._owner_id = owner_id
 
     @property
     def name(self):
@@ -153,25 +132,46 @@ class BTTeamParams(object):
         self._id = id
 
     @property
-    def owner_id(self):
-        """Gets the owner_id of this BTTeamParams.  # noqa: E501
+    def description(self):
+        """Gets the description of this BTTeamParams.  # noqa: E501
 
 
-        :return: The owner_id of this BTTeamParams.  # noqa: E501
+        :return: The description of this BTTeamParams.  # noqa: E501
         :rtype: str
         """
-        return self._owner_id
+        return self._description
 
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTTeamParams.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTTeamParams.
 
 
-        :param owner_id: The owner_id of this BTTeamParams.  # noqa: E501
+        :param description: The description of this BTTeamParams.  # noqa: E501
         :type: str
         """
 
-        self._owner_id = owner_id
+        self._description = description
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTTeamParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTTeamParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTTeamParams.
+
+
+        :param owner_type: The owner_type of this BTTeamParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,9 +36,9 @@ class BTRevisionRuleParams(object):
         'rule_type': 'int',
         'validation_regex': 'str',
         'company_id': 'str',
-        'script': 'str',
+        'name': 'str',
         'description': 'str',
-        'name': 'str'
+        'script': 'str'
     }
 
     attribute_map = {
@@ -46,21 +46,21 @@ class BTRevisionRuleParams(object):
         'rule_type': 'ruleType',
         'validation_regex': 'validationRegex',
         'company_id': 'companyId',
-        'script': 'script',
+        'name': 'name',
         'description': 'description',
-        'name': 'name'
+        'script': 'script'
     }
 
-    def __init__(self, revision_list=None, rule_type=None, validation_regex=None, company_id=None, script=None, description=None, name=None):  # noqa: E501
+    def __init__(self, revision_list=None, rule_type=None, validation_regex=None, company_id=None, name=None, description=None, script=None):  # noqa: E501
         """BTRevisionRuleParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._revision_list = None
         self._rule_type = None
         self._validation_regex = None
         self._company_id = None
-        self._script = None
-        self._description = None
         self._name = None
+        self._description = None
+        self._script = None
         self.discriminator = None
 
         if revision_list is not None:
@@ -71,12 +71,12 @@ class BTRevisionRuleParams(object):
             self.validation_regex = validation_regex
         if company_id is not None:
             self.company_id = company_id
-        if script is not None:
-            self.script = script
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
+        if description is not None:
+            self.description = description
+        if script is not None:
+            self.script = script
 
     @property
     def revision_list(self):
@@ -163,25 +163,25 @@ class BTRevisionRuleParams(object):
         self._company_id = company_id
 
     @property
-    def script(self):
-        """Gets the script of this BTRevisionRuleParams.  # noqa: E501
+    def name(self):
+        """Gets the name of this BTRevisionRuleParams.  # noqa: E501
 
 
-        :return: The script of this BTRevisionRuleParams.  # noqa: E501
+        :return: The name of this BTRevisionRuleParams.  # noqa: E501
         :rtype: str
         """
-        return self._script
+        return self._name
 
-    @script.setter
-    def script(self, script):
-        """Sets the script of this BTRevisionRuleParams.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BTRevisionRuleParams.
 
 
-        :param script: The script of this BTRevisionRuleParams.  # noqa: E501
+        :param name: The name of this BTRevisionRuleParams.  # noqa: E501
         :type: str
         """
 
-        self._script = script
+        self._name = name
 
     @property
     def description(self):
@@ -205,25 +205,25 @@ class BTRevisionRuleParams(object):
         self._description = description
 
     @property
-    def name(self):
-        """Gets the name of this BTRevisionRuleParams.  # noqa: E501
+    def script(self):
+        """Gets the script of this BTRevisionRuleParams.  # noqa: E501
 
 
-        :return: The name of this BTRevisionRuleParams.  # noqa: E501
+        :return: The script of this BTRevisionRuleParams.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._script
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BTRevisionRuleParams.
+    @script.setter
+    def script(self, script):
+        """Sets the script of this BTRevisionRuleParams.
 
 
-        :param name: The name of this BTRevisionRuleParams.  # noqa: E501
+        :param script: The script of this BTRevisionRuleParams.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._script = script
 
     def to_dict(self):
         """Returns the model properties as a dict"""

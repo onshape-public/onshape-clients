@@ -41,8 +41,8 @@ class BTRootDiffInfo(object):
         'target_workspace_id': 'str',
         'target_version_id': 'str',
         'source_id': 'str',
-        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'changes': 'dict(str, BTDiffInfo)',
+        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'geometry_change_messages': 'list[str]',
         'source_value': 'str',
         'target_value': 'str',
@@ -61,8 +61,8 @@ class BTRootDiffInfo(object):
         'target_workspace_id': 'targetWorkspaceId',
         'target_version_id': 'targetVersionId',
         'source_id': 'sourceId',
-        'collection_changes': 'collectionChanges',
         'changes': 'changes',
+        'collection_changes': 'collectionChanges',
         'geometry_change_messages': 'geometryChangeMessages',
         'source_value': 'sourceValue',
         'target_value': 'targetValue',
@@ -71,7 +71,7 @@ class BTRootDiffInfo(object):
         'type': 'type'
     }
 
-    def __init__(self, source_workspace_id=None, source_configuration=None, target_configuration=None, source_microversion_id=None, source_version_id=None, target_microversion_id=None, target_workspace_id=None, target_version_id=None, source_id=None, collection_changes=None, changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None):  # noqa: E501
+    def __init__(self, source_workspace_id=None, source_configuration=None, target_configuration=None, source_microversion_id=None, source_version_id=None, target_microversion_id=None, target_workspace_id=None, target_version_id=None, source_id=None, changes=None, collection_changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None):  # noqa: E501
         """BTRootDiffInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._source_workspace_id = None
@@ -83,8 +83,8 @@ class BTRootDiffInfo(object):
         self._target_workspace_id = None
         self._target_version_id = None
         self._source_id = None
-        self._collection_changes = None
         self._changes = None
+        self._collection_changes = None
         self._geometry_change_messages = None
         self._source_value = None
         self._target_value = None
@@ -111,10 +111,10 @@ class BTRootDiffInfo(object):
             self.target_version_id = target_version_id
         if source_id is not None:
             self.source_id = source_id
-        if collection_changes is not None:
-            self.collection_changes = collection_changes
         if changes is not None:
             self.changes = changes
+        if collection_changes is not None:
+            self.collection_changes = collection_changes
         if geometry_change_messages is not None:
             self.geometry_change_messages = geometry_change_messages
         if source_value is not None:
@@ -318,27 +318,6 @@ class BTRootDiffInfo(object):
         self._source_id = source_id
 
     @property
-    def collection_changes(self):
-        """Gets the collection_changes of this BTRootDiffInfo.  # noqa: E501
-
-
-        :return: The collection_changes of this BTRootDiffInfo.  # noqa: E501
-        :rtype: dict(str, list[BTDiffInfo])
-        """
-        return self._collection_changes
-
-    @collection_changes.setter
-    def collection_changes(self, collection_changes):
-        """Sets the collection_changes of this BTRootDiffInfo.
-
-
-        :param collection_changes: The collection_changes of this BTRootDiffInfo.  # noqa: E501
-        :type: dict(str, list[BTDiffInfo])
-        """
-
-        self._collection_changes = collection_changes
-
-    @property
     def changes(self):
         """Gets the changes of this BTRootDiffInfo.  # noqa: E501
 
@@ -358,6 +337,27 @@ class BTRootDiffInfo(object):
         """
 
         self._changes = changes
+
+    @property
+    def collection_changes(self):
+        """Gets the collection_changes of this BTRootDiffInfo.  # noqa: E501
+
+
+        :return: The collection_changes of this BTRootDiffInfo.  # noqa: E501
+        :rtype: dict(str, list[BTDiffInfo])
+        """
+        return self._collection_changes
+
+    @collection_changes.setter
+    def collection_changes(self, collection_changes):
+        """Sets the collection_changes of this BTRootDiffInfo.
+
+
+        :param collection_changes: The collection_changes of this BTRootDiffInfo.  # noqa: E501
+        :type: dict(str, list[BTDiffInfo])
+        """
+
+        self._collection_changes = collection_changes
 
     @property
     def geometry_change_messages(self):

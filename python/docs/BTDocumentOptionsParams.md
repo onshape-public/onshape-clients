@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**skip_retrieval_test** | **bool** |  | [optional] 
 **cpp_server_memory** | **int** |  | [optional] 
 **enable_cpp_server_memory_diagnostics** | **bool** |  | [optional] 
 **document_memory** | **int** |  | [optional] 
@@ -13,6 +12,7 @@ Name | Type | Description | Notes
 **linked_cpp_server_limit** | **int** |  | [optional] 
 **drawing_server_memory** | **int** |  | [optional] 
 **cpp_server_default_element_limit** | **int** |  | [optional] 
+**skip_retrieval_test** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

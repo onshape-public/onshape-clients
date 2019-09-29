@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**plan_id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**plan_id** | **str** |  | [optional] 
 **approved_at** | **datetime** |  | [optional] 
 **removed_at** | **datetime** |  | [optional] 
 **capability_state** | **int** |  | [optional] 
@@ -14,15 +14,15 @@ Name | Type | Description | Notes
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
-**last_login_time** | **datetime** |  | [optional] 
 **company** | [**BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
+**last_login_time** | **datetime** |  | [optional] 
 **source** | **int** |  | [optional] 
 **image** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
-**id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

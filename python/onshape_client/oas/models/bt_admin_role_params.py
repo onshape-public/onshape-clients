@@ -32,57 +32,36 @@ class BTAdminRoleParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'description': 'str',
         'name': 'str',
         'permissions': 'list[BTAdminRolePermissionParams]',
-        'id': 'str'
+        'id': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
         'name': 'name',
         'permissions': 'permissions',
-        'id': 'id'
+        'id': 'id',
+        'description': 'description'
     }
 
-    def __init__(self, description=None, name=None, permissions=None, id=None):  # noqa: E501
+    def __init__(self, name=None, permissions=None, id=None, description=None):  # noqa: E501
         """BTAdminRoleParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._description = None
         self._name = None
         self._permissions = None
         self._id = None
+        self._description = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
         if permissions is not None:
             self.permissions = permissions
         if id is not None:
             self.id = id
-
-    @property
-    def description(self):
-        """Gets the description of this BTAdminRoleParams.  # noqa: E501
-
-
-        :return: The description of this BTAdminRoleParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTAdminRoleParams.
-
-
-        :param description: The description of this BTAdminRoleParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
+        if description is not None:
+            self.description = description
 
     @property
     def name(self):
@@ -146,6 +125,27 @@ class BTAdminRoleParams(object):
         """
 
         self._id = id
+
+    @property
+    def description(self):
+        """Gets the description of this BTAdminRoleParams.  # noqa: E501
+
+
+        :return: The description of this BTAdminRoleParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTAdminRoleParams.
+
+
+        :param description: The description of this BTAdminRoleParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

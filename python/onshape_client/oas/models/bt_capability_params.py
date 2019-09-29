@@ -33,40 +33,40 @@ class BTCapabilityParams(object):
     """
     openapi_types = {
         'rule_id': 'str',
-        'reason': 'str',
         'name': 'str',
         'id': 'str',
-        'type': 'str'
+        'type': 'str',
+        'reason': 'str'
     }
 
     attribute_map = {
         'rule_id': 'ruleId',
-        'reason': 'reason',
         'name': 'name',
         'id': 'id',
-        'type': 'type'
+        'type': 'type',
+        'reason': 'reason'
     }
 
-    def __init__(self, rule_id=None, reason=None, name=None, id=None, type=None):  # noqa: E501
+    def __init__(self, rule_id=None, name=None, id=None, type=None, reason=None):  # noqa: E501
         """BTCapabilityParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._rule_id = None
-        self._reason = None
         self._name = None
         self._id = None
         self._type = None
+        self._reason = None
         self.discriminator = None
 
         if rule_id is not None:
             self.rule_id = rule_id
-        if reason is not None:
-            self.reason = reason
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
         if type is not None:
             self.type = type
+        if reason is not None:
+            self.reason = reason
 
     @property
     def rule_id(self):
@@ -88,27 +88,6 @@ class BTCapabilityParams(object):
         """
 
         self._rule_id = rule_id
-
-    @property
-    def reason(self):
-        """Gets the reason of this BTCapabilityParams.  # noqa: E501
-
-
-        :return: The reason of this BTCapabilityParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """Sets the reason of this BTCapabilityParams.
-
-
-        :param reason: The reason of this BTCapabilityParams.  # noqa: E501
-        :type: str
-        """
-
-        self._reason = reason
 
     @property
     def name(self):
@@ -172,6 +151,27 @@ class BTCapabilityParams(object):
         """
 
         self._type = type
+
+    @property
+    def reason(self):
+        """Gets the reason of this BTCapabilityParams.  # noqa: E501
+
+
+        :return: The reason of this BTCapabilityParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """Sets the reason of this BTCapabilityParams.
+
+
+        :param reason: The reason of this BTCapabilityParams.  # noqa: E501
+        :type: str
+        """
+
+        self._reason = reason
 
     def to_dict(self):
         """Returns the model properties as a dict"""

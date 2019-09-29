@@ -32,47 +32,43 @@ class BTNextPartNumberParam(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'part_number': 'str',
-        'part_id': 'str',
         'version_id': 'str',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'element_type': 'int',
+        'part_number': 'str',
+        'part_id': 'str',
         'id': 'str',
-        'mime_type': 'str'
+        'mime_type': 'str',
+        'element_type': 'int'
     }
 
     attribute_map = {
-        'part_number': 'partNumber',
-        'part_id': 'partId',
         'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'element_type': 'elementType',
+        'part_number': 'partNumber',
+        'part_id': 'partId',
         'id': 'id',
-        'mime_type': 'mimeType'
+        'mime_type': 'mimeType',
+        'element_type': 'elementType'
     }
 
-    def __init__(self, part_number=None, part_id=None, version_id=None, workspace_id=None, element_id=None, document_id=None, element_type=None, id=None, mime_type=None):  # noqa: E501
+    def __init__(self, version_id=None, workspace_id=None, element_id=None, document_id=None, part_number=None, part_id=None, id=None, mime_type=None, element_type=None):  # noqa: E501
         """BTNextPartNumberParam - a model defined in OpenAPI"""  # noqa: E501
 
-        self._part_number = None
-        self._part_id = None
         self._version_id = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
-        self._element_type = None
+        self._part_number = None
+        self._part_id = None
         self._id = None
         self._mime_type = None
+        self._element_type = None
         self.discriminator = None
 
-        if part_number is not None:
-            self.part_number = part_number
-        if part_id is not None:
-            self.part_id = part_id
         if version_id is not None:
             self.version_id = version_id
         if workspace_id is not None:
@@ -81,54 +77,16 @@ class BTNextPartNumberParam(object):
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-        if element_type is not None:
-            self.element_type = element_type
+        if part_number is not None:
+            self.part_number = part_number
+        if part_id is not None:
+            self.part_id = part_id
         if id is not None:
             self.id = id
         if mime_type is not None:
             self.mime_type = mime_type
-
-    @property
-    def part_number(self):
-        """Gets the part_number of this BTNextPartNumberParam.  # noqa: E501
-
-
-        :return: The part_number of this BTNextPartNumberParam.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_number
-
-    @part_number.setter
-    def part_number(self, part_number):
-        """Sets the part_number of this BTNextPartNumberParam.
-
-
-        :param part_number: The part_number of this BTNextPartNumberParam.  # noqa: E501
-        :type: str
-        """
-
-        self._part_number = part_number
-
-    @property
-    def part_id(self):
-        """Gets the part_id of this BTNextPartNumberParam.  # noqa: E501
-
-
-        :return: The part_id of this BTNextPartNumberParam.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTNextPartNumberParam.
-
-
-        :param part_id: The part_id of this BTNextPartNumberParam.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
+        if element_type is not None:
+            self.element_type = element_type
 
     @property
     def version_id(self):
@@ -215,25 +173,46 @@ class BTNextPartNumberParam(object):
         self._document_id = document_id
 
     @property
-    def element_type(self):
-        """Gets the element_type of this BTNextPartNumberParam.  # noqa: E501
+    def part_number(self):
+        """Gets the part_number of this BTNextPartNumberParam.  # noqa: E501
 
 
-        :return: The element_type of this BTNextPartNumberParam.  # noqa: E501
-        :rtype: int
+        :return: The part_number of this BTNextPartNumberParam.  # noqa: E501
+        :rtype: str
         """
-        return self._element_type
+        return self._part_number
 
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTNextPartNumberParam.
+    @part_number.setter
+    def part_number(self, part_number):
+        """Sets the part_number of this BTNextPartNumberParam.
 
 
-        :param element_type: The element_type of this BTNextPartNumberParam.  # noqa: E501
-        :type: int
+        :param part_number: The part_number of this BTNextPartNumberParam.  # noqa: E501
+        :type: str
         """
 
-        self._element_type = element_type
+        self._part_number = part_number
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTNextPartNumberParam.  # noqa: E501
+
+
+        :return: The part_id of this BTNextPartNumberParam.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTNextPartNumberParam.
+
+
+        :param part_id: The part_id of this BTNextPartNumberParam.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
 
     @property
     def id(self):
@@ -276,6 +255,27 @@ class BTNextPartNumberParam(object):
         """
 
         self._mime_type = mime_type
+
+    @property
+    def element_type(self):
+        """Gets the element_type of this BTNextPartNumberParam.  # noqa: E501
+
+
+        :return: The element_type of this BTNextPartNumberParam.  # noqa: E501
+        :rtype: int
+        """
+        return self._element_type
+
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTNextPartNumberParam.
+
+
+        :param element_type: The element_type of this BTNextPartNumberParam.  # noqa: E501
+        :type: int
+        """
+
+        self._element_type = element_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

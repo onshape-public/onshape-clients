@@ -32,6 +32,8 @@ class BTDocumentSummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'default_element_id': 'str',
+        'default_workspace': 'BTBaseInfo',
         'parent_id': 'str',
         'permission_set': 'object',
         'trash': 'bool',
@@ -51,19 +53,19 @@ class BTDocumentSummaryInfo(object):
         'not_revision_managed': 'bool',
         'anonymous_access_allowed': 'bool',
         'anonymous_allows_export': 'bool',
-        'default_element_id': 'str',
-        'default_workspace': 'BTBaseInfo',
-        'trashed_at': 'datetime',
-        'public': 'bool',
-        'is_orphaned': 'bool',
         'tags': 'list[str]',
-        'has_release_revisionable_objects': 'bool',
+        'trashed_at': 'datetime',
+        'is_orphaned': 'bool',
+        'public': 'bool',
         'user_account_limits_breached': 'bool',
         'is_using_managed_workflow': 'bool',
-        'permission': 'str'
+        'permission': 'str',
+        'has_release_revisionable_objects': 'bool'
     }
 
     attribute_map = {
+        'default_element_id': 'defaultElementId',
+        'default_workspace': 'defaultWorkspace',
         'parent_id': 'parentId',
         'permission_set': 'permissionSet',
         'trash': 'trash',
@@ -83,21 +85,21 @@ class BTDocumentSummaryInfo(object):
         'not_revision_managed': 'notRevisionManaged',
         'anonymous_access_allowed': 'anonymousAccessAllowed',
         'anonymous_allows_export': 'anonymousAllowsExport',
-        'default_element_id': 'defaultElementId',
-        'default_workspace': 'defaultWorkspace',
-        'trashed_at': 'trashedAt',
-        'public': 'public',
-        'is_orphaned': 'isOrphaned',
         'tags': 'tags',
-        'has_release_revisionable_objects': 'hasReleaseRevisionableObjects',
+        'trashed_at': 'trashedAt',
+        'is_orphaned': 'isOrphaned',
+        'public': 'public',
         'user_account_limits_breached': 'userAccountLimitsBreached',
         'is_using_managed_workflow': 'isUsingManagedWorkflow',
-        'permission': 'permission'
+        'permission': 'permission',
+        'has_release_revisionable_objects': 'hasReleaseRevisionableObjects'
     }
 
-    def __init__(self, parent_id=None, permission_set=None, trash=None, total_workspaces_updating=None, total_workspaces_scheduled_for_update=None, can_unshare=None, thumbnail=None, support_team_user_and_shared=None, liked_by_current_user=None, document_labels=None, number_of_times_referenced=None, number_of_times_copied=None, likes=None, recent_version=None, has_relevant_insertables=None, created_with_education_plan=None, not_revision_managed=None, anonymous_access_allowed=None, anonymous_allows_export=None, default_element_id=None, default_workspace=None, trashed_at=None, public=None, is_orphaned=None, tags=None, has_release_revisionable_objects=None, user_account_limits_breached=None, is_using_managed_workflow=None, permission=None):  # noqa: E501
+    def __init__(self, default_element_id=None, default_workspace=None, parent_id=None, permission_set=None, trash=None, total_workspaces_updating=None, total_workspaces_scheduled_for_update=None, can_unshare=None, thumbnail=None, support_team_user_and_shared=None, liked_by_current_user=None, document_labels=None, number_of_times_referenced=None, number_of_times_copied=None, likes=None, recent_version=None, has_relevant_insertables=None, created_with_education_plan=None, not_revision_managed=None, anonymous_access_allowed=None, anonymous_allows_export=None, tags=None, trashed_at=None, is_orphaned=None, public=None, user_account_limits_breached=None, is_using_managed_workflow=None, permission=None, has_release_revisionable_objects=None):  # noqa: E501
         """BTDocumentSummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._default_element_id = None
+        self._default_workspace = None
         self._parent_id = None
         self._permission_set = None
         self._trash = None
@@ -117,18 +119,20 @@ class BTDocumentSummaryInfo(object):
         self._not_revision_managed = None
         self._anonymous_access_allowed = None
         self._anonymous_allows_export = None
-        self._default_element_id = None
-        self._default_workspace = None
-        self._trashed_at = None
-        self._public = None
-        self._is_orphaned = None
         self._tags = None
-        self._has_release_revisionable_objects = None
+        self._trashed_at = None
+        self._is_orphaned = None
+        self._public = None
         self._user_account_limits_breached = None
         self._is_using_managed_workflow = None
         self._permission = None
+        self._has_release_revisionable_objects = None
         self.discriminator = None
 
+        if default_element_id is not None:
+            self.default_element_id = default_element_id
+        if default_workspace is not None:
+            self.default_workspace = default_workspace
         if parent_id is not None:
             self.parent_id = parent_id
         if permission_set is not None:
@@ -167,26 +171,64 @@ class BTDocumentSummaryInfo(object):
             self.anonymous_access_allowed = anonymous_access_allowed
         if anonymous_allows_export is not None:
             self.anonymous_allows_export = anonymous_allows_export
-        if default_element_id is not None:
-            self.default_element_id = default_element_id
-        if default_workspace is not None:
-            self.default_workspace = default_workspace
-        if trashed_at is not None:
-            self.trashed_at = trashed_at
-        if public is not None:
-            self.public = public
-        if is_orphaned is not None:
-            self.is_orphaned = is_orphaned
         if tags is not None:
             self.tags = tags
-        if has_release_revisionable_objects is not None:
-            self.has_release_revisionable_objects = has_release_revisionable_objects
+        if trashed_at is not None:
+            self.trashed_at = trashed_at
+        if is_orphaned is not None:
+            self.is_orphaned = is_orphaned
+        if public is not None:
+            self.public = public
         if user_account_limits_breached is not None:
             self.user_account_limits_breached = user_account_limits_breached
         if is_using_managed_workflow is not None:
             self.is_using_managed_workflow = is_using_managed_workflow
         if permission is not None:
             self.permission = permission
+        if has_release_revisionable_objects is not None:
+            self.has_release_revisionable_objects = has_release_revisionable_objects
+
+    @property
+    def default_element_id(self):
+        """Gets the default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
+
+
+        :return: The default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_element_id
+
+    @default_element_id.setter
+    def default_element_id(self, default_element_id):
+        """Sets the default_element_id of this BTDocumentSummaryInfo.
+
+
+        :param default_element_id: The default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._default_element_id = default_element_id
+
+    @property
+    def default_workspace(self):
+        """Gets the default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
+
+
+        :return: The default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
+        :rtype: BTBaseInfo
+        """
+        return self._default_workspace
+
+    @default_workspace.setter
+    def default_workspace(self, default_workspace):
+        """Sets the default_workspace of this BTDocumentSummaryInfo.
+
+
+        :param default_workspace: The default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
+        :type: BTBaseInfo
+        """
+
+        self._default_workspace = default_workspace
 
     @property
     def parent_id(self):
@@ -588,46 +630,25 @@ class BTDocumentSummaryInfo(object):
         self._anonymous_allows_export = anonymous_allows_export
 
     @property
-    def default_element_id(self):
-        """Gets the default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
+    def tags(self):
+        """Gets the tags of this BTDocumentSummaryInfo.  # noqa: E501
 
 
-        :return: The default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
-        :rtype: str
+        :return: The tags of this BTDocumentSummaryInfo.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._default_element_id
+        return self._tags
 
-    @default_element_id.setter
-    def default_element_id(self, default_element_id):
-        """Sets the default_element_id of this BTDocumentSummaryInfo.
-
-
-        :param default_element_id: The default_element_id of this BTDocumentSummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._default_element_id = default_element_id
-
-    @property
-    def default_workspace(self):
-        """Gets the default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this BTDocumentSummaryInfo.
 
 
-        :return: The default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
-        :rtype: BTBaseInfo
-        """
-        return self._default_workspace
-
-    @default_workspace.setter
-    def default_workspace(self, default_workspace):
-        """Sets the default_workspace of this BTDocumentSummaryInfo.
-
-
-        :param default_workspace: The default_workspace of this BTDocumentSummaryInfo.  # noqa: E501
-        :type: BTBaseInfo
+        :param tags: The tags of this BTDocumentSummaryInfo.  # noqa: E501
+        :type: list[str]
         """
 
-        self._default_workspace = default_workspace
+        self._tags = tags
 
     @property
     def trashed_at(self):
@@ -651,27 +672,6 @@ class BTDocumentSummaryInfo(object):
         self._trashed_at = trashed_at
 
     @property
-    def public(self):
-        """Gets the public of this BTDocumentSummaryInfo.  # noqa: E501
-
-
-        :return: The public of this BTDocumentSummaryInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._public
-
-    @public.setter
-    def public(self, public):
-        """Sets the public of this BTDocumentSummaryInfo.
-
-
-        :param public: The public of this BTDocumentSummaryInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._public = public
-
-    @property
     def is_orphaned(self):
         """Gets the is_orphaned of this BTDocumentSummaryInfo.  # noqa: E501
 
@@ -693,46 +693,25 @@ class BTDocumentSummaryInfo(object):
         self._is_orphaned = is_orphaned
 
     @property
-    def tags(self):
-        """Gets the tags of this BTDocumentSummaryInfo.  # noqa: E501
+    def public(self):
+        """Gets the public of this BTDocumentSummaryInfo.  # noqa: E501
 
 
-        :return: The tags of this BTDocumentSummaryInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._tags
-
-    @tags.setter
-    def tags(self, tags):
-        """Sets the tags of this BTDocumentSummaryInfo.
-
-
-        :param tags: The tags of this BTDocumentSummaryInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._tags = tags
-
-    @property
-    def has_release_revisionable_objects(self):
-        """Gets the has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
-
-
-        :return: The has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
+        :return: The public of this BTDocumentSummaryInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._has_release_revisionable_objects
+        return self._public
 
-    @has_release_revisionable_objects.setter
-    def has_release_revisionable_objects(self, has_release_revisionable_objects):
-        """Sets the has_release_revisionable_objects of this BTDocumentSummaryInfo.
+    @public.setter
+    def public(self, public):
+        """Sets the public of this BTDocumentSummaryInfo.
 
 
-        :param has_release_revisionable_objects: The has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
+        :param public: The public of this BTDocumentSummaryInfo.  # noqa: E501
         :type: bool
         """
 
-        self._has_release_revisionable_objects = has_release_revisionable_objects
+        self._public = public
 
     @property
     def user_account_limits_breached(self):
@@ -802,6 +781,27 @@ class BTDocumentSummaryInfo(object):
             )
 
         self._permission = permission
+
+    @property
+    def has_release_revisionable_objects(self):
+        """Gets the has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
+
+
+        :return: The has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_release_revisionable_objects
+
+    @has_release_revisionable_objects.setter
+    def has_release_revisionable_objects(self, has_release_revisionable_objects):
+        """Sets the has_release_revisionable_objects of this BTDocumentSummaryInfo.
+
+
+        :param has_release_revisionable_objects: The has_release_revisionable_objects of this BTDocumentSummaryInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_release_revisionable_objects = has_release_revisionable_objects
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -44,8 +44,8 @@ class BTMSketchConstraint(object):
         'pierce_parameter': 'float',
         'help_parameters': 'list[float]',
         'parameters': 'list[BTMParameter]',
-        'namespace': 'str',
         'node_id': 'str',
+        'namespace': 'str',
         'import_microversion': 'str',
         'entity_id': 'str'
     }
@@ -63,13 +63,13 @@ class BTMSketchConstraint(object):
         'pierce_parameter': 'pierceParameter',
         'help_parameters': 'helpParameters',
         'parameters': 'parameters',
-        'namespace': 'namespace',
         'node_id': 'nodeId',
+        'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
         'entity_id': 'entityId'
     }
 
-    def __init__(self, driven_dimension=None, constraint_type=None, has_offset_data1=None, offset_orientation1=None, offset_distance1=None, has_offset_data2=None, offset_orientation2=None, offset_distance2=None, has_pierce_parameter=None, pierce_parameter=None, help_parameters=None, parameters=None, namespace=None, node_id=None, import_microversion=None, entity_id=None):  # noqa: E501
+    def __init__(self, driven_dimension=None, constraint_type=None, has_offset_data1=None, offset_orientation1=None, offset_distance1=None, has_offset_data2=None, offset_orientation2=None, offset_distance2=None, has_pierce_parameter=None, pierce_parameter=None, help_parameters=None, parameters=None, node_id=None, namespace=None, import_microversion=None, entity_id=None):  # noqa: E501
         """BTMSketchConstraint - a model defined in OpenAPI"""  # noqa: E501
 
         self._driven_dimension = None
@@ -84,8 +84,8 @@ class BTMSketchConstraint(object):
         self._pierce_parameter = None
         self._help_parameters = None
         self._parameters = None
-        self._namespace = None
         self._node_id = None
+        self._namespace = None
         self._import_microversion = None
         self._entity_id = None
         self.discriminator = None
@@ -114,10 +114,10 @@ class BTMSketchConstraint(object):
             self.help_parameters = help_parameters
         if parameters is not None:
             self.parameters = parameters
-        if namespace is not None:
-            self.namespace = namespace
         if node_id is not None:
             self.node_id = node_id
+        if namespace is not None:
+            self.namespace = namespace
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if entity_id is not None:
@@ -382,27 +382,6 @@ class BTMSketchConstraint(object):
         self._parameters = parameters
 
     @property
-    def namespace(self):
-        """Gets the namespace of this BTMSketchConstraint.  # noqa: E501
-
-
-        :return: The namespace of this BTMSketchConstraint.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this BTMSketchConstraint.
-
-
-        :param namespace: The namespace of this BTMSketchConstraint.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
     def node_id(self):
         """Gets the node_id of this BTMSketchConstraint.  # noqa: E501
 
@@ -422,6 +401,27 @@ class BTMSketchConstraint(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this BTMSketchConstraint.  # noqa: E501
+
+
+        :return: The namespace of this BTMSketchConstraint.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this BTMSketchConstraint.
+
+
+        :param namespace: The namespace of this BTMSketchConstraint.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
 
     @property
     def import_microversion(self):

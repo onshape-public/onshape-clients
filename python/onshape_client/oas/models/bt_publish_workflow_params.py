@@ -32,72 +32,72 @@ class BTPublishWorkflowParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_obsoletion': 'bool',
+        'workflow_type': 'int',
         'workspace_id': 'str',
         'element_id': 'str',
         'document_id': 'str',
-        'description': 'str',
-        'workflow_type': 'int',
-        'name': 'str'
+        'is_obsoletion': 'bool',
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'is_obsoletion': 'isObsoletion',
+        'workflow_type': 'workflowType',
         'workspace_id': 'workspaceId',
         'element_id': 'elementId',
         'document_id': 'documentId',
-        'description': 'description',
-        'workflow_type': 'workflowType',
-        'name': 'name'
+        'is_obsoletion': 'isObsoletion',
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, is_obsoletion=None, workspace_id=None, element_id=None, document_id=None, description=None, workflow_type=None, name=None):  # noqa: E501
+    def __init__(self, workflow_type=None, workspace_id=None, element_id=None, document_id=None, is_obsoletion=None, name=None, description=None):  # noqa: E501
         """BTPublishWorkflowParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._is_obsoletion = None
+        self._workflow_type = None
         self._workspace_id = None
         self._element_id = None
         self._document_id = None
-        self._description = None
-        self._workflow_type = None
+        self._is_obsoletion = None
         self._name = None
+        self._description = None
         self.discriminator = None
 
-        if is_obsoletion is not None:
-            self.is_obsoletion = is_obsoletion
+        if workflow_type is not None:
+            self.workflow_type = workflow_type
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if element_id is not None:
             self.element_id = element_id
         if document_id is not None:
             self.document_id = document_id
-        if description is not None:
-            self.description = description
-        if workflow_type is not None:
-            self.workflow_type = workflow_type
+        if is_obsoletion is not None:
+            self.is_obsoletion = is_obsoletion
         if name is not None:
             self.name = name
+        if description is not None:
+            self.description = description
 
     @property
-    def is_obsoletion(self):
-        """Gets the is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
+    def workflow_type(self):
+        """Gets the workflow_type of this BTPublishWorkflowParams.  # noqa: E501
 
 
-        :return: The is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
-        :rtype: bool
+        :return: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+        :rtype: int
         """
-        return self._is_obsoletion
+        return self._workflow_type
 
-    @is_obsoletion.setter
-    def is_obsoletion(self, is_obsoletion):
-        """Sets the is_obsoletion of this BTPublishWorkflowParams.
+    @workflow_type.setter
+    def workflow_type(self, workflow_type):
+        """Sets the workflow_type of this BTPublishWorkflowParams.
 
 
-        :param is_obsoletion: The is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
-        :type: bool
+        :param workflow_type: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+        :type: int
         """
 
-        self._is_obsoletion = is_obsoletion
+        self._workflow_type = workflow_type
 
     @property
     def workspace_id(self):
@@ -163,46 +163,25 @@ class BTPublishWorkflowParams(object):
         self._document_id = document_id
 
     @property
-    def description(self):
-        """Gets the description of this BTPublishWorkflowParams.  # noqa: E501
+    def is_obsoletion(self):
+        """Gets the is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
 
 
-        :return: The description of this BTPublishWorkflowParams.  # noqa: E501
-        :rtype: str
+        :return: The is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._description
+        return self._is_obsoletion
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTPublishWorkflowParams.
-
-
-        :param description: The description of this BTPublishWorkflowParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def workflow_type(self):
-        """Gets the workflow_type of this BTPublishWorkflowParams.  # noqa: E501
+    @is_obsoletion.setter
+    def is_obsoletion(self, is_obsoletion):
+        """Sets the is_obsoletion of this BTPublishWorkflowParams.
 
 
-        :return: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._workflow_type
-
-    @workflow_type.setter
-    def workflow_type(self, workflow_type):
-        """Sets the workflow_type of this BTPublishWorkflowParams.
-
-
-        :param workflow_type: The workflow_type of this BTPublishWorkflowParams.  # noqa: E501
-        :type: int
+        :param is_obsoletion: The is_obsoletion of this BTPublishWorkflowParams.  # noqa: E501
+        :type: bool
         """
 
-        self._workflow_type = workflow_type
+        self._is_obsoletion = is_obsoletion
 
     @property
     def name(self):
@@ -224,6 +203,27 @@ class BTPublishWorkflowParams(object):
         """
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTPublishWorkflowParams.  # noqa: E501
+
+
+        :return: The description of this BTPublishWorkflowParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTPublishWorkflowParams.
+
+
+        :param description: The description of this BTPublishWorkflowParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

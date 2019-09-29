@@ -1319,6 +1319,156 @@ class AppElementsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def resolve_references(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        """resolve_references  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.resolve_references(did, eid, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str eid: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param str transaction_id:
+        :param str parent_change_id:
+        :param bool include_internal:
+        :param str link_document_id:
+        :param str reference_ids:
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.resolve_references_with_http_info(did, eid, wvm, wvmid, **kwargs)  # noqa: E501
+
+    def resolve_references_with_http_info(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        """resolve_references  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.resolve_references_with_http_info(did, eid, wvm, wvmid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str did: (required)
+        :param str eid: (required)
+        :param str wvm: (required)
+        :param str wvmid: (required)
+        :param str transaction_id:
+        :param str parent_change_id:
+        :param bool include_internal:
+        :param str link_document_id:
+        :param str reference_ids:
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['did', 'eid', 'wvm', 'wvmid', 'transaction_id', 'parent_change_id', 'include_internal', 'link_document_id', 'reference_ids']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method resolve_references" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'did' is set
+        if ('did' not in local_var_params or
+                local_var_params['did'] is None):
+            raise ApiValueError("Missing the required parameter `did` when calling `resolve_references`")  # noqa: E501
+        # verify the required parameter 'eid' is set
+        if ('eid' not in local_var_params or
+                local_var_params['eid'] is None):
+            raise ApiValueError("Missing the required parameter `eid` when calling `resolve_references`")  # noqa: E501
+        # verify the required parameter 'wvm' is set
+        if ('wvm' not in local_var_params or
+                local_var_params['wvm'] is None):
+            raise ApiValueError("Missing the required parameter `wvm` when calling `resolve_references`")  # noqa: E501
+        # verify the required parameter 'wvmid' is set
+        if ('wvmid' not in local_var_params or
+                local_var_params['wvmid'] is None):
+            raise ApiValueError("Missing the required parameter `wvmid` when calling `resolve_references`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'did' in local_var_params:
+            path_params['did'] = local_var_params['did']  # noqa: E501
+        if 'eid' in local_var_params:
+            path_params['eid'] = local_var_params['eid']  # noqa: E501
+        if 'wvm' in local_var_params:
+            path_params['wvm'] = local_var_params['wvm']  # noqa: E501
+        if 'wvmid' in local_var_params:
+            path_params['wvmid'] = local_var_params['wvmid']  # noqa: E501
+
+        query_params = []
+        if 'transaction_id' in local_var_params:
+            query_params.append(('transactionId', local_var_params['transaction_id']))  # noqa: E501
+        if 'parent_change_id' in local_var_params:
+            query_params.append(('parentChangeId', local_var_params['parent_change_id']))  # noqa: E501
+        if 'include_internal' in local_var_params:
+            query_params.append(('includeInternal', local_var_params['include_internal']))  # noqa: E501
+        if 'link_document_id' in local_var_params:
+            query_params.append(('linkDocumentId', local_var_params['link_document_id']))  # noqa: E501
+        if 'reference_ids' in local_var_params:
+            query_params.append(('referenceIds', local_var_params['reference_ids']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1', 'application/json;charset=UTF-8; qs=0.09'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['OAuth2']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def start_transaction(self, did, eid, wid, bt_app_element_start_transaction_params, **kwargs):  # noqa: E501
         """Start Transaction  # noqa: E501
 

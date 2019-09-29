@@ -32,6 +32,9 @@ class BTDrawingParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'workspace_id': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
         'part_number': 'str',
         'revision': 'str',
         'part_query': 'str',
@@ -50,12 +53,9 @@ class BTDrawingParams(object):
         'is_surface': 'bool',
         'pure_sketch': 'bool',
         'is_sketch_only': 'bool',
-        'workspace_id': 'str',
-        'element_id': 'str',
-        'document_id': 'str',
-        'model_type': 'str',
         'template_version_id': 'str',
-        'decimal_separator': 'str',
+        'model_type': 'str',
+        'border': 'bool',
         'external_document_id': 'str',
         'external_document_version_id': 'str',
         'element_configuration': 'str',
@@ -67,7 +67,6 @@ class BTDrawingParams(object):
         'drawing_name': 'str',
         'projection': 'str',
         'standard': 'str',
-        'border': 'bool',
         'titleblock': 'bool',
         'number_horizontal_zones': 'int',
         'number_vertical_zones': 'int',
@@ -78,10 +77,14 @@ class BTDrawingParams(object):
         'location': 'BTElementLocationParams',
         'size': 'str',
         'language': 'str',
-        'units': 'str'
+        'units': 'str',
+        'decimal_separator': 'str'
     }
 
     attribute_map = {
+        'workspace_id': 'workspaceId',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
         'part_number': 'partNumber',
         'revision': 'revision',
         'part_query': 'partQuery',
@@ -100,12 +103,9 @@ class BTDrawingParams(object):
         'is_surface': 'isSurface',
         'pure_sketch': 'pureSketch',
         'is_sketch_only': 'isSketchOnly',
-        'workspace_id': 'workspaceId',
-        'element_id': 'elementId',
-        'document_id': 'documentId',
-        'model_type': 'modelType',
         'template_version_id': 'templateVersionId',
-        'decimal_separator': 'decimalSeparator',
+        'model_type': 'modelType',
+        'border': 'border',
         'external_document_id': 'externalDocumentId',
         'external_document_version_id': 'externalDocumentVersionId',
         'element_configuration': 'elementConfiguration',
@@ -117,7 +117,6 @@ class BTDrawingParams(object):
         'drawing_name': 'drawingName',
         'projection': 'projection',
         'standard': 'standard',
-        'border': 'border',
         'titleblock': 'titleblock',
         'number_horizontal_zones': 'numberHorizontalZones',
         'number_vertical_zones': 'numberVerticalZones',
@@ -128,12 +127,16 @@ class BTDrawingParams(object):
         'location': 'location',
         'size': 'size',
         'language': 'language',
-        'units': 'units'
+        'units': 'units',
+        'decimal_separator': 'decimalSeparator'
     }
 
-    def __init__(self, part_number=None, revision=None, part_query=None, part_id=None, element_microversion_id=None, sketch_ids=None, quality_option=None, views=None, compute_intersection=None, simplification_option=None, simplification_threshold=None, show_cut_geom_only=None, document_microversion_id=None, hidden_lines=None, include_surfaces=None, is_surface=None, pure_sketch=None, is_sketch_only=None, workspace_id=None, element_id=None, document_id=None, model_type=None, template_version_id=None, decimal_separator=None, external_document_id=None, external_document_version_id=None, element_configuration=None, template_document_id=None, template_workspace_id=None, template_name=None, template_args=None, template_element_id=None, drawing_name=None, projection=None, standard=None, border=None, titleblock=None, number_horizontal_zones=None, number_vertical_zones=None, start_zones=None, is_flattened_part=None, reference_type_enum=None, reference_type=None, location=None, size=None, language=None, units=None):  # noqa: E501
+    def __init__(self, workspace_id=None, element_id=None, document_id=None, part_number=None, revision=None, part_query=None, part_id=None, element_microversion_id=None, sketch_ids=None, quality_option=None, views=None, compute_intersection=None, simplification_option=None, simplification_threshold=None, show_cut_geom_only=None, document_microversion_id=None, hidden_lines=None, include_surfaces=None, is_surface=None, pure_sketch=None, is_sketch_only=None, template_version_id=None, model_type=None, border=None, external_document_id=None, external_document_version_id=None, element_configuration=None, template_document_id=None, template_workspace_id=None, template_name=None, template_args=None, template_element_id=None, drawing_name=None, projection=None, standard=None, titleblock=None, number_horizontal_zones=None, number_vertical_zones=None, start_zones=None, is_flattened_part=None, reference_type_enum=None, reference_type=None, location=None, size=None, language=None, units=None, decimal_separator=None):  # noqa: E501
         """BTDrawingParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._workspace_id = None
+        self._element_id = None
+        self._document_id = None
         self._part_number = None
         self._revision = None
         self._part_query = None
@@ -152,12 +155,9 @@ class BTDrawingParams(object):
         self._is_surface = None
         self._pure_sketch = None
         self._is_sketch_only = None
-        self._workspace_id = None
-        self._element_id = None
-        self._document_id = None
-        self._model_type = None
         self._template_version_id = None
-        self._decimal_separator = None
+        self._model_type = None
+        self._border = None
         self._external_document_id = None
         self._external_document_version_id = None
         self._element_configuration = None
@@ -169,7 +169,6 @@ class BTDrawingParams(object):
         self._drawing_name = None
         self._projection = None
         self._standard = None
-        self._border = None
         self._titleblock = None
         self._number_horizontal_zones = None
         self._number_vertical_zones = None
@@ -181,8 +180,15 @@ class BTDrawingParams(object):
         self._size = None
         self._language = None
         self._units = None
+        self._decimal_separator = None
         self.discriminator = None
 
+        if workspace_id is not None:
+            self.workspace_id = workspace_id
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
         if part_number is not None:
             self.part_number = part_number
         if revision is not None:
@@ -219,18 +225,12 @@ class BTDrawingParams(object):
             self.pure_sketch = pure_sketch
         if is_sketch_only is not None:
             self.is_sketch_only = is_sketch_only
-        if workspace_id is not None:
-            self.workspace_id = workspace_id
-        if element_id is not None:
-            self.element_id = element_id
-        if document_id is not None:
-            self.document_id = document_id
-        if model_type is not None:
-            self.model_type = model_type
         if template_version_id is not None:
             self.template_version_id = template_version_id
-        if decimal_separator is not None:
-            self.decimal_separator = decimal_separator
+        if model_type is not None:
+            self.model_type = model_type
+        if border is not None:
+            self.border = border
         if external_document_id is not None:
             self.external_document_id = external_document_id
         if external_document_version_id is not None:
@@ -253,8 +253,6 @@ class BTDrawingParams(object):
             self.projection = projection
         if standard is not None:
             self.standard = standard
-        if border is not None:
-            self.border = border
         if titleblock is not None:
             self.titleblock = titleblock
         if number_horizontal_zones is not None:
@@ -277,6 +275,71 @@ class BTDrawingParams(object):
             self.language = language
         if units is not None:
             self.units = units
+        if decimal_separator is not None:
+            self.decimal_separator = decimal_separator
+
+    @property
+    def workspace_id(self):
+        """Gets the workspace_id of this BTDrawingParams.  # noqa: E501
+
+
+        :return: The workspace_id of this BTDrawingParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._workspace_id
+
+    @workspace_id.setter
+    def workspace_id(self, workspace_id):
+        """Sets the workspace_id of this BTDrawingParams.
+
+
+        :param workspace_id: The workspace_id of this BTDrawingParams.  # noqa: E501
+        :type: str
+        """
+
+        self._workspace_id = workspace_id
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTDrawingParams.  # noqa: E501
+
+
+        :return: The element_id of this BTDrawingParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTDrawingParams.
+
+
+        :param element_id: The element_id of this BTDrawingParams.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTDrawingParams.  # noqa: E501
+
+
+        :return: The document_id of this BTDrawingParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTDrawingParams.
+
+
+        :param document_id: The document_id of this BTDrawingParams.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def part_number(self):
@@ -663,67 +726,25 @@ class BTDrawingParams(object):
         self._is_sketch_only = is_sketch_only
 
     @property
-    def workspace_id(self):
-        """Gets the workspace_id of this BTDrawingParams.  # noqa: E501
+    def template_version_id(self):
+        """Gets the template_version_id of this BTDrawingParams.  # noqa: E501
 
 
-        :return: The workspace_id of this BTDrawingParams.  # noqa: E501
+        :return: The template_version_id of this BTDrawingParams.  # noqa: E501
         :rtype: str
         """
-        return self._workspace_id
+        return self._template_version_id
 
-    @workspace_id.setter
-    def workspace_id(self, workspace_id):
-        """Sets the workspace_id of this BTDrawingParams.
+    @template_version_id.setter
+    def template_version_id(self, template_version_id):
+        """Sets the template_version_id of this BTDrawingParams.
 
 
-        :param workspace_id: The workspace_id of this BTDrawingParams.  # noqa: E501
+        :param template_version_id: The template_version_id of this BTDrawingParams.  # noqa: E501
         :type: str
         """
 
-        self._workspace_id = workspace_id
-
-    @property
-    def element_id(self):
-        """Gets the element_id of this BTDrawingParams.  # noqa: E501
-
-
-        :return: The element_id of this BTDrawingParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTDrawingParams.
-
-
-        :param element_id: The element_id of this BTDrawingParams.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTDrawingParams.  # noqa: E501
-
-
-        :return: The document_id of this BTDrawingParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTDrawingParams.
-
-
-        :param document_id: The document_id of this BTDrawingParams.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._template_version_id = template_version_id
 
     @property
     def model_type(self):
@@ -747,46 +768,25 @@ class BTDrawingParams(object):
         self._model_type = model_type
 
     @property
-    def template_version_id(self):
-        """Gets the template_version_id of this BTDrawingParams.  # noqa: E501
+    def border(self):
+        """Gets the border of this BTDrawingParams.  # noqa: E501
 
 
-        :return: The template_version_id of this BTDrawingParams.  # noqa: E501
-        :rtype: str
+        :return: The border of this BTDrawingParams.  # noqa: E501
+        :rtype: bool
         """
-        return self._template_version_id
+        return self._border
 
-    @template_version_id.setter
-    def template_version_id(self, template_version_id):
-        """Sets the template_version_id of this BTDrawingParams.
-
-
-        :param template_version_id: The template_version_id of this BTDrawingParams.  # noqa: E501
-        :type: str
-        """
-
-        self._template_version_id = template_version_id
-
-    @property
-    def decimal_separator(self):
-        """Gets the decimal_separator of this BTDrawingParams.  # noqa: E501
+    @border.setter
+    def border(self, border):
+        """Sets the border of this BTDrawingParams.
 
 
-        :return: The decimal_separator of this BTDrawingParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._decimal_separator
-
-    @decimal_separator.setter
-    def decimal_separator(self, decimal_separator):
-        """Sets the decimal_separator of this BTDrawingParams.
-
-
-        :param decimal_separator: The decimal_separator of this BTDrawingParams.  # noqa: E501
-        :type: str
+        :param border: The border of this BTDrawingParams.  # noqa: E501
+        :type: bool
         """
 
-        self._decimal_separator = decimal_separator
+        self._border = border
 
     @property
     def external_document_id(self):
@@ -1018,27 +1018,6 @@ class BTDrawingParams(object):
         """
 
         self._standard = standard
-
-    @property
-    def border(self):
-        """Gets the border of this BTDrawingParams.  # noqa: E501
-
-
-        :return: The border of this BTDrawingParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._border
-
-    @border.setter
-    def border(self, border):
-        """Sets the border of this BTDrawingParams.
-
-
-        :param border: The border of this BTDrawingParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._border = border
 
     @property
     def titleblock(self):
@@ -1276,6 +1255,27 @@ class BTDrawingParams(object):
         """
 
         self._units = units
+
+    @property
+    def decimal_separator(self):
+        """Gets the decimal_separator of this BTDrawingParams.  # noqa: E501
+
+
+        :return: The decimal_separator of this BTDrawingParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._decimal_separator
+
+    @decimal_separator.setter
+    def decimal_separator(self, decimal_separator):
+        """Sets the decimal_separator of this BTDrawingParams.
+
+
+        :param decimal_separator: The decimal_separator of this BTDrawingParams.  # noqa: E501
+        :type: str
+        """
+
+        self._decimal_separator = decimal_separator
 
     def to_dict(self):
         """Returns the model properties as a dict"""

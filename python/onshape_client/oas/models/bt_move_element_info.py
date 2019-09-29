@@ -36,8 +36,8 @@ class BTMoveElementInfo(object):
         'element_original_to_new_map': 'dict(str, str)',
         'new_document_id': 'str',
         'new_workspace_id': 'str',
-        'new_document_name': 'str',
         'is_new_document': 'bool',
+        'new_document_name': 'str',
         'new_document_version_id': 'str'
     }
 
@@ -46,20 +46,20 @@ class BTMoveElementInfo(object):
         'element_original_to_new_map': 'elementOriginalToNewMap',
         'new_document_id': 'newDocumentId',
         'new_workspace_id': 'newWorkspaceId',
-        'new_document_name': 'newDocumentName',
         'is_new_document': 'isNewDocument',
+        'new_document_name': 'newDocumentName',
         'new_document_version_id': 'newDocumentVersionId'
     }
 
-    def __init__(self, error_message=None, element_original_to_new_map=None, new_document_id=None, new_workspace_id=None, new_document_name=None, is_new_document=None, new_document_version_id=None):  # noqa: E501
+    def __init__(self, error_message=None, element_original_to_new_map=None, new_document_id=None, new_workspace_id=None, is_new_document=None, new_document_name=None, new_document_version_id=None):  # noqa: E501
         """BTMoveElementInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._error_message = None
         self._element_original_to_new_map = None
         self._new_document_id = None
         self._new_workspace_id = None
-        self._new_document_name = None
         self._is_new_document = None
+        self._new_document_name = None
         self._new_document_version_id = None
         self.discriminator = None
 
@@ -71,10 +71,10 @@ class BTMoveElementInfo(object):
             self.new_document_id = new_document_id
         if new_workspace_id is not None:
             self.new_workspace_id = new_workspace_id
-        if new_document_name is not None:
-            self.new_document_name = new_document_name
         if is_new_document is not None:
             self.is_new_document = is_new_document
+        if new_document_name is not None:
+            self.new_document_name = new_document_name
         if new_document_version_id is not None:
             self.new_document_version_id = new_document_version_id
 
@@ -163,27 +163,6 @@ class BTMoveElementInfo(object):
         self._new_workspace_id = new_workspace_id
 
     @property
-    def new_document_name(self):
-        """Gets the new_document_name of this BTMoveElementInfo.  # noqa: E501
-
-
-        :return: The new_document_name of this BTMoveElementInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._new_document_name
-
-    @new_document_name.setter
-    def new_document_name(self, new_document_name):
-        """Sets the new_document_name of this BTMoveElementInfo.
-
-
-        :param new_document_name: The new_document_name of this BTMoveElementInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._new_document_name = new_document_name
-
-    @property
     def is_new_document(self):
         """Gets the is_new_document of this BTMoveElementInfo.  # noqa: E501
 
@@ -203,6 +182,27 @@ class BTMoveElementInfo(object):
         """
 
         self._is_new_document = is_new_document
+
+    @property
+    def new_document_name(self):
+        """Gets the new_document_name of this BTMoveElementInfo.  # noqa: E501
+
+
+        :return: The new_document_name of this BTMoveElementInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_document_name
+
+    @new_document_name.setter
+    def new_document_name(self, new_document_name):
+        """Sets the new_document_name of this BTMoveElementInfo.
+
+
+        :param new_document_name: The new_document_name of this BTMoveElementInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._new_document_name = new_document_name
 
     @property
     def new_document_version_id(self):

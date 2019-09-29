@@ -35,26 +35,26 @@ class BTProjectParams(object):
         'permission_scheme_id': 'str',
         'role_identity_map': 'dict(str, list[BTIdentity])',
         'role_map': 'dict(str, list[BTIdentityParams])',
-        'description': 'str',
-        'name': 'str'
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
         'permission_scheme_id': 'permissionSchemeId',
         'role_identity_map': 'roleIdentityMap',
         'role_map': 'roleMap',
-        'description': 'description',
-        'name': 'name'
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, permission_scheme_id=None, role_identity_map=None, role_map=None, description=None, name=None):  # noqa: E501
+    def __init__(self, permission_scheme_id=None, role_identity_map=None, role_map=None, name=None, description=None):  # noqa: E501
         """BTProjectParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._permission_scheme_id = None
         self._role_identity_map = None
         self._role_map = None
-        self._description = None
         self._name = None
+        self._description = None
         self.discriminator = None
 
         if permission_scheme_id is not None:
@@ -63,10 +63,10 @@ class BTProjectParams(object):
             self.role_identity_map = role_identity_map
         if role_map is not None:
             self.role_map = role_map
-        if description is not None:
-            self.description = description
         if name is not None:
             self.name = name
+        if description is not None:
+            self.description = description
 
     @property
     def permission_scheme_id(self):
@@ -132,27 +132,6 @@ class BTProjectParams(object):
         self._role_map = role_map
 
     @property
-    def description(self):
-        """Gets the description of this BTProjectParams.  # noqa: E501
-
-
-        :return: The description of this BTProjectParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTProjectParams.
-
-
-        :param description: The description of this BTProjectParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def name(self):
         """Gets the name of this BTProjectParams.  # noqa: E501
 
@@ -172,6 +151,27 @@ class BTProjectParams(object):
         """
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTProjectParams.  # noqa: E501
+
+
+        :return: The description of this BTProjectParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTProjectParams.
+
+
+        :param description: The description of this BTProjectParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""
