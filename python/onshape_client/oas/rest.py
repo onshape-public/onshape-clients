@@ -134,6 +134,7 @@ class RESTClientObject(object):
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
         """
+        logging.info(f"body: {body}")
         method = method.upper()
         assert method in ['GET', 'HEAD', 'DELETE', 'POST', 'PUT',
                           'PATCH', 'OPTIONS']
