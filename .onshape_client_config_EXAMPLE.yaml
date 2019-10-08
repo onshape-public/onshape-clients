@@ -1,8 +1,8 @@
-prod-api_keys:
+prod_api_keys:
   base_url: "https://cad.onshape.com"
   secret_key: YOUR SECRET KEY
   access_key: YOUR ACCESS KEY
-prod-oauth:
+prod_oauth:
   base_url: "https://cad.onshape.com"
   # Make sure to include handling authentication errors by using the refreshToken as discussed here
   # under OAuth => Refreshing the access token: https://dev-portal.onshape.com/help
@@ -17,4 +17,4 @@ prod-oauth:
    - OAuth2Write
   #  refresh_token: <OPTIONAL>
   oauth_authorization_method: localhost_server
-default_stack: prod-oauth
+default_stack: prod_api_keys
