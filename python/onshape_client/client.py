@@ -81,7 +81,7 @@ class Client:
             call client.set_grant_authorization_url_response(redirected_url) with whatever url the user got directed to
             (that includes the authorization code!)
         """
-        if not Client.singleton_instance:
+        if Client.singleton_instance:
             warnings.warn("A Client was already created so this will create another and override it. Please use "
                           "Client.get_client() to get the previously created client.")
         if configuration:
