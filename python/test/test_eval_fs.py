@@ -19,18 +19,42 @@ from onshape_client.oas.models.bt_feature_script_eval_call import BTFeatureScrip
 from onshape_client.utility import parse_quantity
 import json
 
-script = \
+script_get_variables = \
     r"""
-    function(context, queries) {
-            return getAllVariables(context);
-        }
+    function(context, queries) 
+    {
+        return getAllVariables(context);
+    }
     """
 
+script_get_hole_center = \
+    r"""
+    function(context, queries)
+    {
+        var holesQuery = queries['hole_centers'];
+        var evaluatedPoints = [];
+        for (var hole in evaluateQuery(context, holesQuery))
+        {   
+            evaluatedPoints = append(evaluatedPoints, evVertexPoint(context, {
+                    "vertex" : hole
+            }));
+        }
+        return evaluatedPoints;
+    }
+    """
+
+script_get_queries = \
+    r"""
+    function(context, queries)
+    {
+        return queries;
+    }
+    """
 
 def test_get_variables(client):
     element = OnshapeElement(
         "https://cad.onshape.com/documents/78aa66ffe6f1daceb9cfad3d/v/e36c0bd857c2a2a8b2107a40/e/92549789b92e9aa35f676f4e")
-    script_call = BTFeatureScriptEvalCall(script=script)
+    script_call = BTFeatureScriptEvalCall(script=script_get_variables)
     response = client.part_studios_api.eval_feature_script(element.did,
                                                            element.wvm,
                                                            element.wvmid,
@@ -39,9 +63,26 @@ def test_get_variables(client):
                                                            _preload_content=False)
     measurements = json.loads(response.data.decode("utf-8"))["result"]["message"]["value"]
     parsed_measurements = parse_variables_from_map(measurements)
-
     print("Measurements: \n" + str(parsed_measurements))
+    assert parsed_measurements['block_height'] == "5.0*meter"
 
+
+def test_get_centers(client):
+    element = OnshapeElement(
+        "https://cad.onshape.com/documents/3cdcb81d025b7faf96aaed73/v/43e49db3229b09381dc936f7/e/258deef46af76a558fad8f27")
+    queries = [{"key" : "hole_centers", "value":["IJ"]}]
+    script_call = BTFeatureScriptEvalCall(script=script_get_hole_center, queries=queries)
+    response = client.part_studios_api.eval_feature_script(element.did,
+                                                           element.wvm,
+                                                           element.wvmid,
+                                                           element.eid,
+                                                           bt_feature_script_eval_call=script_call,
+                                                           _preload_content=False)
+    result = json.loads(response.data.decode("utf-8"))
+    coords = result['result']['message']['value'][0]['message']['value']
+    assert coords[0]['message']['value'] == 0.14818060398101807
+    assert coords[1]['message']['value'] == 0.22330030798912048
+    assert coords[2]['message']['value'] == 0.508
 
 def parse_variables_from_map(unparsed):
     parsed_variables = {}
