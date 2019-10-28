@@ -6,6 +6,8 @@ import copy
 from onshape_client.units import u
 from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
 from onshape_client.oas.models.configuration_entry import ConfigurationEntry
+from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
+from onshape_client.oas.models.bt_document_info import BTDocumentInfo
 import webbrowser
 
 
@@ -14,7 +16,14 @@ class OnshapeElement(object):
     create the useful fields."""
 
     @staticmethod
-    def create_from_ids(did, wvm, wvmid, eid):
+    def create_from_oas_models(oas_model, **kwargs):
+        if isinstance(oas_model, BTDocumentElementInfo):
+            return OnshapeElement.create_from_ids(eid=oas_model.id, **kwargs)
+        if isinstance(oas_model, BTDocumentInfo):
+            return OnshapeElement.create_from_ids(did=oas_model.id, **kwargs)
+
+    @staticmethod
+    def create_from_ids(did=None, wvm=None, wvmid=None, eid=None):
         client = Client.get_client()
         return OnshapeElement(client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid + "/e/" + eid)
 

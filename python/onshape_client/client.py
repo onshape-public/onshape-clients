@@ -1,17 +1,40 @@
-from pathlib import Path
-from ruamel.yaml import YAML
 import os
-from requests_oauthlib import OAuth2Session
-from .oauth.local_server import start_server
-from enum import Enum
-import webbrowser
-from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
-from onshape_client.oas import api
-from onshape_client.oas import ApiClient
-from onshape_client.oas.configuration import Configuration
 import warnings
+import webbrowser
+from enum import Enum
+from pathlib import Path
+from types import SimpleNamespace
 
+from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
+from onshape_client.oas import ApiClient
+from onshape_client.oas import api
+from onshape_client.oas.configuration import Configuration
+from requests_oauthlib import OAuth2Session
+from ruamel.yaml import YAML
 
+from .oauth.local_server import start_server
+
+def add_defaults(namespace, **kwargs):
+    for config_name, env_var_name in kwargs.items():
+        add_default(namespace, config_name, env_var_name)
+    return namespace
+
+def add_default(namespace, config_name, env_var_name):
+    new_config_var = ConfigVar(config_name, env_var_name)
+    if new_config_var.config_name not in vars(namespace):
+        setattr(namespace, new_config_var.config_name, new_config_var)
+
+# Only update if the config doesn't already have the value AND the default has the value not evaluated as False
+def update_with_default_carefully(config, default_config):
+    for k, v in default_config.items():
+        if v and (k not in config or not config[k]):
+            config[k] = v
+
+class ConfigVar:
+
+    def __init__(self, config_name, env_var_name):
+        self.config_name = config_name
+        self.env_var_name = env_var_name
 
 class Client:
     """
@@ -39,11 +62,14 @@ class Client:
     """
     singleton_instance = None
 
-    ONSHAPE_API_ACCESS_KEY="ONSHAPE_API_ACCESS_KEY"
-    ONSHAPE_API_SECRET_KEY="ONSHAPE_API_SECRET_KEY"
-    ONSHAPE_BASE_URL="ONSHAPE_BASE_URL"
+    config_vars = SimpleNamespace()
 
-    prod_base_url="https://cad.onshape.com"
+    prod_base_url = "https://cad.onshape.com"
+
+    add_defaults(config_vars, access_key='ONSHAPE_API_ACCESS', authorization_uri='ONSHAPE_AUTHORIZATION_URI',
+                 base_url='ONSHAPE_BASE_URL', client_id='ONSHAPE_CLIENT_ID',
+                 client_secret='ONSHAPE_CLIENT_SECRET', oauth_authorization_method='ONSHAPE_AUTHORIZATION_METHOD',
+                 redirect_uri='ONSHAPE_REDIRECT_URI', scope='ONSHAPE_SCOPE', token_uri='ONSHAPE_TOKEN_URI')
 
     @staticmethod
     def get_client():
@@ -59,19 +85,29 @@ class Client:
         Client.singleton_instance = None
 
     @staticmethod
-    def get_configuration_from_keys_file(keys_file, stack_key):
+    def _get_from_environment():
+        defaults = {}
+        for name, config_var in vars(Client.config_vars).items():
+            if config_var.env_var_name in os.environ:
+                defaults.setdefault(config_var.config_name, os.environ[config_var.env_var_name])
+        return defaults
+
+    @staticmethod
+    def _get_configuration_from_keys_file(keys_file, stack_key):
         try:
             yaml = YAML()
             configurations_file = yaml.load(Path(keys_file))
-            final_configuration = configurations_file[stack_key if stack_key else configurations_file['default_stack']]
+            config = configurations_file[stack_key if stack_key else configurations_file['default_stack']]
+
         except KeyError as e:
             raise KeyError(
                 "Your creds file is not constructed as expected. The key: {} was expected and not found.".format(e))
-        return final_configuration
+        return config
 
     def __init__(self, keys_file="~/.onshape_client_config.yaml", configuration=None, stack_key=None,
                  open_authorize_grant_callback=None, save=True):
-        """
+        """Configuration values can come from setting directly, with configuration= or from environment variables, or
+        from the configuration file specified with key_file in that order without overwriting. Generally, those in the key_file are considered defaults.
 
         :param keys_file:
         :param configuration:
@@ -84,20 +120,11 @@ class Client:
         if Client.singleton_instance:
             warnings.warn("A Client was already created so this will create another and override it. Please use "
                           "Client.get_client() to get the previously created client.")
-        if configuration:
-            final_configuration = configuration
-        elif Client.ONSHAPE_API_ACCESS_KEY in os.environ and Client.ONSHAPE_API_SECRET_KEY in os.environ:
-            base_url = os.environ[Client.ONSHAPE_BASE_URL] if Client.ONSHAPE_BASE_URL in os.environ else Client.prod_base_url
-            final_configuration = {
-                'access_key': os.environ[Client.ONSHAPE_API_ACCESS_KEY],
-                'secret_key': os.environ[Client.ONSHAPE_API_SECRET_KEY],
-                'base_url': base_url
-            }
-        elif keys_file:
+        final_configuration = configuration if configuration else {}
+        update_with_default_carefully(final_configuration,Client._get_from_environment())
+        if keys_file:
             keys_file = os.path.expanduser(keys_file)
-            final_configuration = self.get_configuration_from_keys_file(keys_file, stack_key)
-        else:
-            raise EnvironmentError("API keys were not properly set.")
+            update_with_default_carefully(final_configuration,Client._get_configuration_from_keys_file(keys_file, stack_key))
 
         self._set_configuration(final_configuration)
         self._create_apis()
@@ -128,7 +155,7 @@ class Client:
     def do_oauth_flow(self):
         """Do the oauth flow to set the access token"""
         try:
-            self._refresh_access_token()
+            self.refresh_access_token()
         except (UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError) as e:
             authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
             oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
@@ -146,7 +173,8 @@ class Client:
         url = self.get_authorization_url()
         defaults_supported = [OAuthAuthorizationMethods.LOCALHOST_SERVER]
         if not callback and oauth_type not in defaults_supported:
-            raise NotImplementedError("To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
+            raise NotImplementedError(
+                "To use OAuth, you need to pass in a callback to the client constructor with open_authorize_grant_callback=")
         elif callback:
             try:
                 if callback and not callable(callback):
@@ -170,15 +198,15 @@ class Client:
         configuration.api_key['SECRET_KEY'] = configuration_dictionary.get('secret_key', "")
         configuration.api_key['ACCESS_KEY'] = configuration_dictionary.get('access_key', "")
 
-        self.client_id = configuration_dictionary.get('client_id', "")
-        self.client_secret = configuration_dictionary.get('client_secret', "")
+        self.client_id = configuration_dictionary.get('client_id', None)
+        self.client_secret = configuration_dictionary.get('client_secret', None)
         configuration.access_token = configuration_dictionary.get('access_token', "")
-        self.refresh_token = configuration_dictionary.get('refresh_token', "")
-        self.scope = configuration_dictionary.get('scope', "")
-        self.redirect_uri = configuration_dictionary.get('redirect_uri', "")
-        self.token_uri = configuration_dictionary.get('token_uri', "")
-        self.authorization_uri = configuration_dictionary.get('authorization_uri', "")
-        self.oauth_authorization_method = configuration_dictionary.get('oauth_authorization_method', "")
+        self.refresh_token = configuration_dictionary.get('refresh_token', None)
+        self.scope = configuration_dictionary.get('scope', None)
+        self.redirect_uri = configuration_dictionary.get('redirect_uri', None)
+        self.token_uri = configuration_dictionary.get('token_uri', 'https://oauth.onshape.com/oauth/token')
+        self.authorization_uri = configuration_dictionary.get('authorization_uri', 'https://oauth.onshape.com/oauth/authorize')
+        self.oauth_authorization_method = configuration_dictionary.get('oauth_authorization_method', OAuthAuthorizationMethods.MANUAL_FLOW)
         # Default to prod
         configuration.host = configuration_dictionary.get('base_url', "https://cad.onshape.com")
         self.configuration = configuration
@@ -186,17 +214,19 @@ class Client:
 
     def _set_oauth_session(self):
         self.oauth = OAuth2Session(self.client_id, redirect_uri=self.redirect_uri,
-                                           scope=self.scope)
+                                   scope=self.scope)
         return
 
-    def _refresh_access_token(self):
+    """Override this method to get the resulting access code dictionary"""
+    def refresh_access_token(self):
         # So that the oauth library doesn't complain about scope changing
         os.environ["OAUTHLIB_RELAX_TOKEN_SCOPE"] = "True"
 
         token_response = self.oauth.refresh_token(
-            self.token_uri, refresh_token=self.refresh_token, client_id=self.client_id, client_secret=self.client_secret)
+            self.token_uri, refresh_token=self.refresh_token, client_id=self.client_id,
+            client_secret=self.client_secret)
         self._set_oauth_creds_from_token_response(token_response)
-        return
+        return token_response
 
     def fetch_access_token(self, **kwargs):
         """
@@ -206,15 +236,14 @@ class Client:
         """
         try:
             token_response = self.oauth.fetch_token(
-            self.token_uri,
-            client_secret=self.client_secret,
-            **kwargs)
+                self.token_uri,
+                client_secret=self.client_secret,
+                **kwargs)
             self._set_oauth_creds_from_token_response(token_response)
             return token_response
         except Warning:
             # This is probably a scope warning.
             pass
-
 
     def _set_oauth_creds_from_token_response(self, token_response):
         self.configuration.access_token = token_response["access_token"]
@@ -236,16 +265,16 @@ class Client:
         self.part_studios_api = api.PartStudiosApi(api_client)
         self.translation_api = api.TranslationsApi(api_client)
 
-class OAuthAuthorizationMethods(Enum):
 
+class OAuthAuthorizationMethods(Enum):
     # This is fully implemented, and meant for locally hosted applications (desktop apps)
-    LOCALHOST_SERVER="localhost_server"
+    LOCALHOST_SERVER = "localhost_server"
 
     # This is for when the open_authorize_grant_callback is set. It yields control to this client
     # by specifying a function that should be called to authorize the grant, and passes in a
     # function to that callback that needs to be called when the grant has been authorized with
     # the result.
-    PYTHON_CALLBACK="python_callback"
+    PYTHON_CALLBACK = "python_callback"
 
     # This flow will communicate that the client needs the authorization flow with an OAuthNotAuthorizedException
     # after failing to refresh the token. Once the client throws the error, the application should
@@ -259,4 +288,3 @@ class OAuthAuthorizationMethods(Enum):
 class OAuthNotAuthorizedException(Exception):
     def __init__(self, *args, **kwargs):
         super(OAuthNotAuthorizedException, self).__init__(args, kwargs)
-
