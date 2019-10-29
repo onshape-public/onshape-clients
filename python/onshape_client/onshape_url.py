@@ -3,12 +3,15 @@ from onshape_client.client import Client
 import json
 
 import copy
+
+from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams
 from onshape_client.units import u
 from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
 from onshape_client.oas.models.configuration_entry import ConfigurationEntry
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
 import webbrowser
+from enum import Enum
 
 
 class OnshapeElement(object):
@@ -25,7 +28,9 @@ class OnshapeElement(object):
     @staticmethod
     def create_from_ids(did=None, wvm=None, wvmid=None, eid=None):
         client = Client.get_client()
-        return OnshapeElement(client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid + "/e/" + eid)
+        url = client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid
+        url = url + "/e/" + eid if eid else url
+        return OnshapeElement(url)
 
     def __init__(self, url, *args, **kwargs):
         self.original_url = url
@@ -35,13 +40,17 @@ class OnshapeElement(object):
         self.did = path_list[2]
         self.wvmid = path_list[4]
         self.wvm = path_list[3]
-        if len(path_list) > 7:
+        length = len(path_list)
+        if length > 7:
             eid = path_list[8]
             optional_microversion = path_list[6]
-        else:
+        elif length > 5 and path_list[5] == 'e':
             eid = path_list[6]
             # This is the microversion retrieved from get_microversion_path() and represents a part that is pointing towards
             # both a version/workspace and a microversion.
+            optional_microversion = None
+        else:
+            eid = None
             optional_microversion = None
         self.eid = eid
         self.optional_microversion = optional_microversion
@@ -60,14 +69,96 @@ class OnshapeElement(object):
             self.optional_microversion = microversion
             return self.get_url()
 
-    def get_url(self, url_type="element"):
-        optional_microversion_add_in = ""
+    def get_url(self):
+        url = self.base_url + "/documents/"
+        if self.did:
+            url = url + self.did + "/"
+        if self.wvm:
+            url = url + self.wvm + "/"
+        if self.wvmid:
+            url = url + self.wvmid + "/"
         if self.optional_microversion:
-            optional_microversion_add_in = "/m/" + self.optional_microversion
-        if url_type == "document":
-            return self.base_url + "/documents/" + self.did
-        return self.base_url + "/documents/" + self.did + "/" + self.wvm + "/" + self.wvmid + optional_microversion_add_in + "/e/" + self.eid
+            url = url + "m/" + self.optional_microversion + "/"
+        if self.eid:
+            url = url + "e/" + self.eid + "/"
+        return url
 
+    @property
+    def element_type(self):
+        elements = Client.get_client().documents_api.get_elements1(self.did, self.wvm, self.wvmid)
+        for element in elements:
+            if element.id == self.eid:
+                return element.type
+
+    def elements(self, filter_name=None, filter_type=None):
+        result = []
+        for e in self._get_element_infos():
+            ands = []
+            if filter_name and filter_name==self.name:
+                ands.append(True)
+            if filter_type and filter_type==self.element_type:
+                ands.append(True)
+            if all(ands):
+                result.append(OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=e.id))
+        return result
+
+    @property
+    def microversion(self):
+        res = Client.get_client().documents_api.get_current_microversion(self.did,
+                                                                         self.wvm,
+                                                                         self.wvmid,
+                                                                         _preload_content=False)
+        microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
+        return microversion
+
+    @property
+    def name(self):
+        if self.eid:
+            return self._get_element_info().name
+        return self._get_document_info().name
+
+
+    @property
+    def default_workspace(self):
+        return self._get_document_info().default_workspace.id
+
+    @property
+    def assemblies(self):
+        result = []
+        for element in self._get_element_infos():
+            if element.element_type == 'Assembly':
+                result.append(element)
+        return result
+
+    def s_assembly_insert_message(self):
+        e_type = self.element_type
+        message = BTAssemblyInstanceDefinitionParams(document_id=self.did,
+                                                     element_id=self.eid, is_assembly=e_type == 'Assembly',
+                                                     is_whole_part_studio=e_type == 'Part Studio')
+        if self.wvm == 'w':
+            message.microversion_id = self.microversion
+        elif self.wvm == 'v':
+            message.version_id = self.wvmid
+        elif self.wvm == 'm':
+            message.microversion_id = self.wvmid
+        return message
+
+    def new_assembly(self, name="Assembly"):
+        asm = Client.get_client().assemblies_api.create_assembly(self.did, self.wvmid, BTModelElementParams(name=name), _preload_content=False)
+        asm = json.loads(asm.data.decode('utf-8'))
+        return OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=asm["id"])
+
+    def delete(self):
+        Client.get_client().documents_api.delete7(self.did)
+
+    def _get_element_info(self):
+        return next(i for i in self._get_element_infos() if i.id == self.eid)
+
+    def _get_document_info(self):
+        return Client.get_client().documents_api.get_document(self.did)
+
+    def _get_element_infos(self):
+        return Client.get_client().documents_api.get_elements1(self.did, self.wvm, self.wvmid)
 
 class ConfiguredOnshapeElement(OnshapeElement):
 
