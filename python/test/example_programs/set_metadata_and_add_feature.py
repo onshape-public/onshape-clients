@@ -5,8 +5,8 @@ import json
 from onshape_client.compatible_imports import HTTPServer, HTTPHandler, sendable
 import os
 import webbrowser
-from onshape_client.example_programs.set_metadata import MetaDataBody
-from onshape_client.example_programs.import_file import import_file
+from test.example_programs import MetaDataBody
+from test.example_programs.import_file import import_file
 from onshape_client.utility import write_to_file, get_field
 import six
 import pytest
