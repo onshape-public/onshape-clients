@@ -15,7 +15,10 @@ prod_element_bank = OrderedDict(
     three_axes_assembly="https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079"
 )
 local_element_bank = OrderedDict(
-    configurable_cube="http://localhost.dev.onshape.com:8080/documents/4e0722c1fc54dc237ad8573f/m/90558470aa93e7524be11581/e/e8d1a07a6ec267d7faa1b1b3"
+    configurable_cube="http://localhost.dev.onshape.com:8080/documents/ffd7fa16077446a3dee5120b/v/fb4d34c4570a257439b4fd27/e/05c8a3ca269ebf676918ad3f"
+)
+local2_element_bank = OrderedDict(
+    configurable_cube="http://localhost.dev.onshape.com:8082/documents/5887e636419d22a788cb3dd1/w/f9d9ff9ac255733f190657a7/e/bc13e90647cc600404514d76"
 )
 
 @pytest.fixture(scope='module', params=['configurable_cube'])
@@ -26,6 +29,8 @@ def insertable(request, client):
         element_bank = prod_element_bank
     elif host == "http://localhost.dev.onshape.com:8080":
         element_bank = local_element_bank
+    elif host == "http://localhost.dev.onshape.com:8082":
+        element_bank = local2_element_bank
     else:
         raise UserWarning("don't have an element bank for this stack")
     return OnshapeElement(element_bank[element_key])
@@ -45,7 +50,7 @@ def new_document(client, name_factory):
     doc_params = BTDocumentParams(name=name_factory())
     doc = client.documents_api.create_document(doc_params)
     doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
-    webbrowser.open_new(doc.get_url(url_type="workspace"))
+    webbrowser.open_new(doc.get_url())
     yield doc
     doc.delete()
 
@@ -93,18 +98,6 @@ def three_axes_assembly(client):
     elif host == "http://localhost.dev.onshape.com:8080":
         return ConfiguredOnshapeElement(
             "http://localhost.dev.onshape.com:8080/documents/4e0722c1fc54dc237ad8573f/v/4437ecd9877c3dcfae751529/e/f2f8ab0b14be9872d4e895c0")
-
-
-@pytest.fixture
-def s_assembly_insert_message(insertable):
-    e_type = insertable.element_type
-    message = BTAssemblyInstanceDefinitionParams(document_id=insertable.did,
-                                              element_id=insertable.eid, is_assembly=e_type=='Assembly', is_whole_part_studio=e_type=='Part Studio')
-    if insertable.wvm == 'w':
-        message.version_id = insertable.wvmid
-    elif insertable.wvm == 'm':
-        message.microversion_id = insertable.wvmid
-    return message
 
 
 @pytest.fixture
