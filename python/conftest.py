@@ -7,6 +7,7 @@ from onshape_client.client import Client
 from onshape_client.oas import BTAssemblyInstanceDefinitionParams, BTCopyDocumentParams
 from onshape_client.oas.models.bt_document_params import BTDocumentParams
 from onshape_client.onshape_url import ConfiguredOnshapeElement, OnshapeElement
+from pathlib import Path
 
 collect_ignore = ["setup.py"]
 
@@ -44,6 +45,9 @@ def client():
         client = Client(stack_key='local')
     return client
 
+@pytest.fixture
+def assets():
+    return Path(__file__).parent / 'test' / 'assets'
 
 @pytest.fixture
 def new_document(client, name_factory):
@@ -60,6 +64,15 @@ def assembly(client, new_document):
     elements = client.documents_api.get_elements1(new_document.did, new_document.wvm, new_document.wvmid)
     for element in elements:
         if element.type == 'Assembly':
+            element = OnshapeElement.create_from_oas_models(element, did=new_document.did, wvmid=new_document.wvmid,
+                                                            wvm=new_document.wvm)
+            return element
+
+@pytest.fixture
+def part_studio(client, new_document):
+    elements = client.documents_api.get_elements1(new_document.did, new_document.wvm, new_document.wvmid)
+    for element in elements:
+        if element.type == 'Part Studio':
             element = OnshapeElement.create_from_oas_models(element, did=new_document.did, wvmid=new_document.wvmid,
                                                             wvm=new_document.wvm)
             return element
