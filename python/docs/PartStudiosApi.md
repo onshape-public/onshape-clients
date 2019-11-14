@@ -21,7 +21,6 @@ Method | HTTP request | Description
 [**get_mass_properties1**](PartStudiosApi.md#get_mass_properties1) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties | Mass properties of parts or a PartStudio.
 [**get_named_views1**](PartStudiosApi.md#get_named_views1) | **GET** /api/partstudios/d/{did}/e/{eid}/namedViews | Get Named Views
 [**get_shaded_views2**](PartStudiosApi.md#get_shaded_views2) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | Get Shaded Views
-[**get_translator_formats4**](PartStudiosApi.md#get_translator_formats4) | **GET** /api/partstudios/d/{did}/w/{wid}/e/{eid}/translationformats | Get Translation Formats
 [**translate_format5**](PartStudiosApi.md#translate_format5) | **POST** /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Part Studio translation
 [**translate_ids**](PartStudiosApi.md#translate_ids) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations | Id Translations
 [**update_configuration1**](PartStudiosApi.md#update_configuration1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
@@ -87,7 +86,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -524,7 +523,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_body_details2**
-> BTExportModelBodiesResponse get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id)
+> BTExportModelBodiesResponse get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, rollback_bar_index=rollback_bar_index)
 
 Array of body information
 
@@ -545,16 +544,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration.host = "https://cad.onshape.com"
 # Create an instance of the API class
 api_instance = onshape_client.oas.PartStudiosApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | Document ID.
-wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
-wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
-eid = 'eid_example' # str | Element ID.
-configuration = 'configuration_example' # str | Configuration string. (optional)
-link_document_id = 'link_document_id_example' # str | Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. (optional)
+did = 'did_example' # str | 
+wvm = 'wvm_example' # str | 
+wvmid = 'wvmid_example' # str | 
+eid = 'eid_example' # str | 
+configuration = 'configuration_example' # str |  (optional)
+link_document_id = 'link_document_id_example' # str |  (optional)
+rollback_bar_index = -1 # int |  (optional) (default to -1)
 
 try:
     # Array of body information
-    api_response = api_instance.get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id)
+    api_response = api_instance.get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, rollback_bar_index=rollback_bar_index)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PartStudiosApi->get_body_details2: %s\n" % e)
@@ -564,12 +564,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**| Document ID. | 
- **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. | 
- **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
- **eid** | **str**| Element ID. | 
- **configuration** | **str**| Configuration string. | [optional] 
- **link_document_id** | **str**| Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. | [optional] 
+ **did** | **str**|  | 
+ **wvm** | **str**|  | 
+ **wvmid** | **str**|  | 
+ **eid** | **str**|  | 
+ **configuration** | **str**|  | [optional] 
+ **link_document_id** | **str**|  | [optional] 
+ **rollback_bar_index** | **int**|  | [optional] [default to -1]
 
 ### Return type
 
@@ -881,7 +882,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1230,64 +1231,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success! |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_translator_formats4**
-> list[BTModelFormatInfo] get_translator_formats4(did, wid, eid, check_content=check_content)
-
-Get Translation Formats
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartStudiosApi()
-did = 'did_example' # str | Document ID.
-wid = 'wid_example' # str | Workspace ID.
-eid = 'eid_example' # str | Element ID.
-check_content = True # bool | Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. (optional) (default to True)
-
-try:
-    # Get Translation Formats
-    api_response = api_instance.get_translator_formats4(did, wid, eid, check_content=check_content)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PartStudiosApi->get_translator_formats4: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**| Document ID. | 
- **wid** | **str**| Workspace ID. | 
- **eid** | **str**| Element ID. | 
- **check_content** | **bool**| Whether the current content or lack thereof should be considered when determining the available formats. Empty part studios cannot be translated into any format. | [optional] [default to True]
-
-### Return type
-
-[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 

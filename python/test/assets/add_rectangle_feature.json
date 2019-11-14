@@ -8,16 +8,16 @@
           "type": 155,
           "typeName": "BTMSketchCurveSegment",
           "message": {
-            "startPointId": "Fq5XtKyk6Mqj.bottom.start",
-            "endPointId": "Fq5XtKyk6Mqj.bottom.end",
+            "startPointId": "RandomIdIGenerate.bottom.start",
+            "endPointId": "RandomIdIGenerate.bottom.end",
             "startParam": -0.0976787880063057,
             "endParam": 0.0976787880063057,
             "geometry": {
               "type": 117,
               "typeName": "BTCurveGeometryLine",
               "message": {
-                "pntX": 0.0,
-                "pntY": 0.10624505579471588,
+                "pntX": 2,
+                "pntY": 2,
                 "dirX": -1.0,
                 "dirY": 0.0
               }
@@ -26,7 +26,7 @@
             "internalIds": [],
             "isConstruction": false,
             "parameters": [],
-            "entityId": "Fq5XtKyk6Mqj.bottom",
+            "entityId": "RandomIdIGenerate.bottom",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MjEKCN7ndPQsoutWS"
@@ -36,8 +36,8 @@
           "type": 155,
           "typeName": "BTMSketchCurveSegment",
           "message": {
-            "startPointId": "Fq5XtKyk6Mqj.top.start",
-            "endPointId": "Fq5XtKyk6Mqj.top.end",
+            "startPointId": "RandomIdIGenerate.top.start",
+            "endPointId": "RandomIdIGenerate.top.end",
             "startParam": -0.0976787880063057,
             "endParam": 0.0976787880063057,
             "geometry": {
@@ -54,7 +54,7 @@
             "internalIds": [],
             "isConstruction": false,
             "parameters": [],
-            "entityId": "Fq5XtKyk6Mqj.top",
+            "entityId": "RandomIdIGenerate.top",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "Mg/33KK0qO3k8KkdX"
@@ -64,8 +64,8 @@
           "type": 155,
           "typeName": "BTMSketchCurveSegment",
           "message": {
-            "startPointId": "Fq5XtKyk6Mqj.left.start",
-            "endPointId": "Fq5XtKyk6Mqj.left.end",
+            "startPointId": "RandomIdIGenerate.left.start",
+            "endPointId": "RandomIdIGenerate.left.end",
             "startParam": -0.10624505579471588,
             "endParam": 0.10624505579471588,
             "geometry": {
@@ -82,7 +82,7 @@
             "internalIds": [],
             "isConstruction": false,
             "parameters": [],
-            "entityId": "Fq5XtKyk6Mqj.left",
+            "entityId": "RandomIdIGenerate.left",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "M9Wupz2hBAuSjMwWL"
@@ -92,8 +92,8 @@
           "type": 155,
           "typeName": "BTMSketchCurveSegment",
           "message": {
-            "startPointId": "Fq5XtKyk6Mqj.right.start",
-            "endPointId": "Fq5XtKyk6Mqj.right.end",
+            "startPointId": "RandomIdIGenerate.right.start",
+            "endPointId": "RandomIdIGenerate.right.end",
             "startParam": -0.10624505579471588,
             "endParam": 0.10624505579471588,
             "geometry": {
@@ -110,7 +110,7 @@
             "internalIds": [],
             "isConstruction": false,
             "parameters": [],
-            "entityId": "Fq5XtKyk6Mqj.right",
+            "entityId": "RandomIdIGenerate.right",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MY8IbD8J5t+ItZEAi"
@@ -125,7 +125,7 @@
             "isUserPoint": true,
             "isConstruction": true,
             "parameters": [],
-            "entityId": "Fq5XtKyk6Mqj.middle",
+            "entityId": "RandomIdIGenerate.middle",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MdwZrbJImp/wGbTtR"
@@ -143,7 +143,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.middle",
+                  "value": "RandomIdIGenerate.middle",
                   "parameterId": "localMidpoint",
                   "hasUserCode": false,
                   "nodeId": "MNfNXTEFTnFmXdgdB"
@@ -153,7 +153,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top.start",
+                  "value": "RandomIdIGenerate.top.start",
                   "parameterId": "localEntity1",
                   "hasUserCode": false,
                   "nodeId": "Mu92d16NsjsAZknAt"
@@ -163,7 +163,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.bottom.end",
+                  "value": "RandomIdIGenerate.bottom.end",
                   "parameterId": "localEntity2",
                   "hasUserCode": false,
                   "nodeId": "MdZvbSf5wy7s8OLUd"
@@ -179,7 +179,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.mid1",
+            "entityId": "RandomIdIGenerate.mid1",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MktcyMBUv8Ab566GD"
@@ -195,7 +195,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.middle",
+                  "value": "RandomIdIGenerate.middle",
                   "parameterId": "localMidpoint",
                   "hasUserCode": false,
                   "nodeId": "ML/m55P/Ii2CPesvp"
@@ -205,7 +205,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top.end",
+                  "value": "RandomIdIGenerate.top.end",
                   "parameterId": "localEntity1",
                   "hasUserCode": false,
                   "nodeId": "MPhsyJR4mckWxxejg"
@@ -215,7 +215,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.bottom.start",
+                  "value": "RandomIdIGenerate.bottom.start",
                   "parameterId": "localEntity2",
                   "hasUserCode": false,
                   "nodeId": "MewBfZTUdhLwrxRN5"
@@ -231,7 +231,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.mid2",
+            "entityId": "RandomIdIGenerate.mid2",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MRPaN0ibpHkyYKK1r"
@@ -247,7 +247,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top",
+                  "value": "RandomIdIGenerate.top",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "Mwp/rMp12z7QdvPrY"
@@ -257,7 +257,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.left",
+                  "value": "RandomIdIGenerate.left",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MZOvzwfMya9BGvGL2"
@@ -273,7 +273,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.perpendicular",
+            "entityId": "RandomIdIGenerate.perpendicular",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MetNCGxtcR8cC+/+u"
@@ -289,7 +289,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.bottom",
+                  "value": "RandomIdIGenerate.bottom",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "M4JP3Q/l0SnJRjO+Q"
@@ -299,7 +299,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top",
+                  "value": "RandomIdIGenerate.top",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MlsKvfj9v7MZBTo3o"
@@ -315,7 +315,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.parallel.1",
+            "entityId": "RandomIdIGenerate.parallel.1",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "Mvjj8572jCNGerM5D"
@@ -331,7 +331,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.left",
+                  "value": "RandomIdIGenerate.left",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "M9y4qbNJS+fGqyaO7"
@@ -341,7 +341,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.right",
+                  "value": "RandomIdIGenerate.right",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MJt+piyckWjZP2ozV"
@@ -357,7 +357,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.parallel.2",
+            "entityId": "RandomIdIGenerate.parallel.2",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MKG9UjDyb9Cexe/yU"
@@ -373,7 +373,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top",
+                  "value": "RandomIdIGenerate.top",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MaScG/zCUKoyj/sDK"
@@ -389,7 +389,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.horizontal",
+            "entityId": "RandomIdIGenerate.horizontal",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MROyfk8x8HeI5BvTy"
@@ -405,7 +405,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.bottom.start",
+                  "value": "RandomIdIGenerate.bottom.start",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MAQYbCl0zpYbstRDB"
@@ -415,7 +415,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.left.start",
+                  "value": "RandomIdIGenerate.left.start",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MqpGZf4GdUhiP/AxT"
@@ -431,7 +431,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.corner0",
+            "entityId": "RandomIdIGenerate.corner0",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MZCmOglMur7E9HPiI"
@@ -447,7 +447,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.bottom.end",
+                  "value": "RandomIdIGenerate.bottom.end",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MUw1dJ8K/VXNMu4Cl"
@@ -457,7 +457,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.right.start",
+                  "value": "RandomIdIGenerate.right.start",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MyiXh3n1vM0W2vCy4"
@@ -473,7 +473,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.corner1",
+            "entityId": "RandomIdIGenerate.corner1",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MUpTXuMuKlSE+U6A9"
@@ -489,7 +489,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top.start",
+                  "value": "RandomIdIGenerate.top.start",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "Mf6AlrY57UsVfhAta"
@@ -499,7 +499,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.left.end",
+                  "value": "RandomIdIGenerate.left.end",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MEYRdaYRR0fJp2Tub"
@@ -515,7 +515,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.corner2",
+            "entityId": "RandomIdIGenerate.corner2",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MLdluJb0XCwOr6H0V"
@@ -531,7 +531,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top.end",
+                  "value": "RandomIdIGenerate.top.end",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MSojv5e6cawfPhR1W"
@@ -541,7 +541,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.right.end",
+                  "value": "RandomIdIGenerate.right.end",
                   "parameterId": "localSecond",
                   "hasUserCode": false,
                   "nodeId": "MtpQWR+r2KOIDdgPP"
@@ -557,7 +557,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.corner3",
+            "entityId": "RandomIdIGenerate.corner3",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MZV4hSHyFQEeCs5BW"
@@ -573,7 +573,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.middle",
+                  "value": "RandomIdIGenerate.middle",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MDtwjjEkoS3AS7You"
@@ -609,7 +609,7 @@
             "offsetDistance2": 0.0,
             "hasPierceParameter": false,
             "pierceParameter": 0.0,
-            "entityId": "Fq5XtKyk6Mqj.middle.positionSnap0",
+            "entityId": "RandomIdIGenerate.middle.positionSnap0",
             "namespace": "",
             "hasUserCode": false,
             "nodeId": "MCpN6MZcNBvObPyUQ"
@@ -625,7 +625,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.right",
+                  "value": "RandomIdIGenerate.right",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MlRi3UuISrapIjQi5"
@@ -720,7 +720,7 @@
                 "type": 149,
                 "typeName": "BTMParameterString",
                 "message": {
-                  "value": "Fq5XtKyk6Mqj.top",
+                  "value": "RandomIdIGenerate.top",
                   "parameterId": "localFirst",
                   "hasUserCode": false,
                   "nodeId": "MX1vgcHxfOOQTUurE"
@@ -822,14 +822,12 @@
                   "geometryIds": [
                     "JDC"
                   ],
-                  "hasUserCode": false,
-                  "nodeId": "F2dJKUg8Q43vrEn"
+                  "hasUserCode": false
                 }
               }
             ],
             "parameterId": "sketchPlane",
-            "hasUserCode": false,
-            "nodeId": "sH7loHL3zO5GSmOX"
+            "hasUserCode": false
           }
         }
       ],
@@ -840,8 +838,7 @@
       "suppressionState": {
         "type": 0
       },
-      "hasUserCode": false,
-      "nodeId": "MyrwwCiSzeXsEfZjr"
+      "hasUserCode": false
     }
   },
   "serializationVersion": "1.1.18",

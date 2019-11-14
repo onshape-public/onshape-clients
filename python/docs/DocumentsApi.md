@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**get_document**](DocumentsApi.md#get_document) | **GET** /api/documents/{did} | Get Document
 [**get_document_permission_set**](DocumentsApi.md#get_document_permission_set) | **GET** /api/documents/{did}/permissionset | 
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /api/documents | Get Documents
-[**get_elements1**](DocumentsApi.md#get_elements1) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
+[**get_elements2**](DocumentsApi.md#get_elements2) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
 [**get_insertables**](DocumentsApi.md#get_insertables) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/insertables | 
 [**get_version**](DocumentsApi.md#get_version) | **GET** /api/documents/d/{did}/versions/{vid} | Get Version
 [**get_versions1**](DocumentsApi.md#get_versions1) | **GET** /api/documents/d/{did}/versions | Get Versions
@@ -814,8 +814,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_elements1**
-> list[BTDocumentElementInfo] get_elements1(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+# **get_elements2**
+> list[BTDocumentElementInfo] get_elements2(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
 
 Get a list of elements in the workspace, version, or microversion of the document.
 
@@ -846,10 +846,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
     # Get a list of elements in the workspace, version, or microversion of the document.
-    api_response = api_instance.get_elements1(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+    api_response = api_instance.get_elements2(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->get_elements1: %s\n" % e)
+    print("Exception when calling DocumentsApi->get_elements2: %s\n" % e)
 ```
 
 ### Parameters

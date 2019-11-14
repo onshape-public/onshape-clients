@@ -3,11 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filename** | **str** |  | [optional] 
-**length_units** | **str** |  | [optional] 
-**angle_units** | **str** |  | [optional] 
-**mass_units** | **str** |  | [optional] 
-**thumbnail_info** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
 **data_type** | **str** |  | [optional] 
 **thumbnails** | **str** |  | [optional] 
 **microversion_id** | **str** |  | [optional] 
@@ -15,6 +10,11 @@ Name | Type | Description | Notes
 **foreign_data_id** | **str** |  | [optional] 
 **unupdatable** | **bool** |  | [optional] 
 **specified_unit** | **str** |  | [optional] 
+**filename** | **str** |  | [optional] 
+**thumbnail_info** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
+**length_units** | **str** |  | [optional] 
+**angle_units** | **str** |  | [optional] 
+**mass_units** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

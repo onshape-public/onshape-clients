@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **control_box_ids** | **list[str]** |  | [optional] 
 **is_construction** | **bool** |  | [optional] 
 **parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
+**entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

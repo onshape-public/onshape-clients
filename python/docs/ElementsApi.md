@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**get_element_by_workspace_deprecated**](ElementsApi.md#get_element_by_workspace_deprecated) | **GET** /api/elements/{did}/workspace/{wid} | 
 [**get_element_metadata**](ElementsApi.md#get_element_metadata) | **GET** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
 [**get_element_metadata_deprecated**](ElementsApi.md#get_element_metadata_deprecated) | **GET** /api/elements/{emid} | 
-[**get_element_translator_formats**](ElementsApi.md#get_element_translator_formats) | **GET** /api/elements/translatorFormats/{did}/{wid}/{eid} | 
+[**get_element_translator_formats1**](ElementsApi.md#get_element_translator_formats1) | **GET** /api/elements/translatorFormats/{did}/{wid}/{eid} | 
 [**get_translator_formats3**](ElementsApi.md#get_translator_formats3) | **GET** /api/elements/translatorFormats | 
 [**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
 [**update_element_metadata**](ElementsApi.md#update_element_metadata) | **POST** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
@@ -577,8 +577,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_translator_formats**
-> get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
+# **get_element_translator_formats1**
+> get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
 
 
 
@@ -600,9 +600,9 @@ check_content = True # bool |  (optional) (default to True)
 configuration = '' # str |  (optional) (default to '')
 
 try:
-    api_instance.get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
+    api_instance.get_element_translator_formats1(did, wid, eid, check_content=check_content, configuration=configuration)
 except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_translator_formats: %s\n" % e)
+    print("Exception when calling ElementsApi->get_element_translator_formats1: %s\n" % e)
 ```
 
 ### Parameters

@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain_prefix** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
 **admin** | **bool** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
-**enterprise_base_url** | **str** |  | [optional] 
 **no_public_documents** | **bool** |  | [optional] 
+**enterprise_base_url** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
+**domain_prefix** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **type** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 

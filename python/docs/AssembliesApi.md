@@ -4,30 +4,30 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_feature**](AssembliesApi.md#add_feature) | **POST** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | 
-[**create_assembly**](AssembliesApi.md#create_assembly) | **POST** /api/assemblies/d/{did}/w/{wid} | 
-[**create_instance**](AssembliesApi.md#create_instance) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances | 
-[**delete_feature**](AssembliesApi.md#delete_feature) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
-[**delete_instance**](AssembliesApi.md#delete_instance) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid} | 
-[**get_assembly_definition**](AssembliesApi.md#get_assembly_definition) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid} | 
+[**add_feature**](AssembliesApi.md#add_feature) | **POST** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
+[**create_assembly**](AssembliesApi.md#create_assembly) | **POST** /api/assemblies/d/{did}/w/{wid} | Create Assembly
+[**create_instance**](AssembliesApi.md#create_instance) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances | Create assembly instance
+[**delete_feature**](AssembliesApi.md#delete_feature) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Delete Feature
+[**delete_instance**](AssembliesApi.md#delete_instance) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid} | Delete assembly instance.
+[**get_assembly_definition**](AssembliesApi.md#get_assembly_definition) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid} | Assembly Definition.
 [**get_bill_of_materials**](AssembliesApi.md#get_bill_of_materials) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom | 
-[**get_bounding_boxes**](AssembliesApi.md#get_bounding_boxes) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | 
-[**get_feature_specs**](AssembliesApi.md#get_feature_specs) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | 
-[**get_features**](AssembliesApi.md#get_features) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | 
-[**get_named_views**](AssembliesApi.md#get_named_views) | **GET** /api/assemblies/d/{did}/e/{eid}/namedViews | 
-[**get_or_create_bill_of_materials_element**](AssembliesApi.md#get_or_create_bill_of_materials_element) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement | 
-[**get_shaded_views**](AssembliesApi.md#get_shaded_views) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | 
-[**get_translator_formats**](AssembliesApi.md#get_translator_formats) | **GET** /api/assemblies/d/{did}/w/{wid}/e/{eid}/translationformats | 
-[**insert_transformed_instances**](AssembliesApi.md#insert_transformed_instances) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances | 
-[**transform_occurrences**](AssembliesApi.md#transform_occurrences) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms | 
-[**translate_format**](AssembliesApi.md#translate_format) | **POST** /api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations | 
-[**update_feature**](AssembliesApi.md#update_feature) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | 
+[**get_bounding_boxes**](AssembliesApi.md#get_bounding_boxes) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | Bounding Boxes.
+[**get_feature_specs**](AssembliesApi.md#get_feature_specs) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Specs
+[**get_features**](AssembliesApi.md#get_features) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Get Feature List
+[**get_named_views**](AssembliesApi.md#get_named_views) | **GET** /api/assemblies/d/{did}/e/{eid}/namedViews | Get Named Views
+[**get_or_create_bill_of_materials_element**](AssembliesApi.md#get_or_create_bill_of_materials_element) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement | Get or Create Bill of Materials Element
+[**get_shaded_views**](AssembliesApi.md#get_shaded_views) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews | Shaded Views.
+[**get_translator_formats**](AssembliesApi.md#get_translator_formats) | **GET** /api/assemblies/d/{did}/w/{wid}/e/{eid}/translationformats | Get Translation Formats
+[**insert_transformed_instances**](AssembliesApi.md#insert_transformed_instances) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances | Create and transform assembly instances
+[**transform_occurrences**](AssembliesApi.md#transform_occurrences) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms | Transform assembly occurrences.
+[**translate_format**](AssembliesApi.md#translate_format) | **POST** /api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Assembly translation.
+[**update_feature**](AssembliesApi.md#update_feature) | **POST** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Update Feature
 
 
 # **add_feature**
-> add_feature(did, wvm, wvmid, eid, body=body)
+> BTFeatureDefinitionResponse add_feature(did, wvm, wvmid, eid, body=body)
 
-
+Add Feature
 
 ### Example
 
@@ -53,7 +53,9 @@ eid = 'eid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.add_feature(did, wvm, wvmid, eid, body=body)
+    # Add Feature
+    api_response = api_instance.add_feature(did, wvm, wvmid, eid, body=body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
 ```
@@ -70,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureDefinitionResponse**](BTFeatureDefinitionResponse.md)
 
 ### Authorization
 
@@ -79,19 +81,19 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_assembly**
-> create_assembly(did, wid, bt_model_element_params)
+> BTDocumentElementInfo create_assembly(did, wid, bt_model_element_params)
 
-
+Create Assembly
 
 ### Example
 
@@ -115,7 +117,9 @@ wid = 'wid_example' # str |
 bt_model_element_params = onshape_client.oas.BTModelElementParams() # BTModelElementParams | 
 
 try:
-    api_instance.create_assembly(did, wid, bt_model_element_params)
+    # Create Assembly
+    api_response = api_instance.create_assembly(did, wid, bt_model_element_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->create_assembly: %s\n" % e)
 ```
@@ -130,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -144,14 +148,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_instance**
-> create_instance(did, wid, eid, bt_assembly_instance_definition_params)
+> list[BTOccurrence] create_instance(did, wid, eid, bt_assembly_instance_definition_params)
 
-
+Create assembly instance
 
 ### Example
 
@@ -176,7 +180,9 @@ eid = 'eid_example' # str |
 bt_assembly_instance_definition_params = onshape_client.oas.BTAssemblyInstanceDefinitionParams() # BTAssemblyInstanceDefinitionParams | 
 
 try:
-    api_instance.create_instance(did, wid, eid, bt_assembly_instance_definition_params)
+    # Create assembly instance
+    api_response = api_instance.create_instance(did, wid, eid, bt_assembly_instance_definition_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->create_instance: %s\n" % e)
 ```
@@ -192,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[BTOccurrence]**](BTOccurrence.md)
 
 ### Authorization
 
@@ -206,14 +212,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_feature**
-> delete_feature(did, wid, eid, fid)
+> BTFeatureApiBase delete_feature(did, wid, eid, fid)
 
-
+Delete Feature
 
 ### Example
 
@@ -238,7 +244,9 @@ eid = 'eid_example' # str |
 fid = 'fid_example' # str | 
 
 try:
-    api_instance.delete_feature(did, wid, eid, fid)
+    # Delete Feature
+    api_response = api_instance.delete_feature(did, wid, eid, fid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->delete_feature: %s\n" % e)
 ```
@@ -254,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureApiBase**](BTFeatureApiBase.md)
 
 ### Authorization
 
@@ -268,14 +276,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_instance**
 > delete_instance(did, eid, wid, nid)
 
-
+Delete assembly instance.
 
 ### Example
 
@@ -300,6 +308,7 @@ wid = 'wid_example' # str |
 nid = 'nid_example' # str | 
 
 try:
+    # Delete assembly instance.
     api_instance.delete_instance(did, eid, wid, nid)
 except ApiException as e:
     print("Exception when calling AssembliesApi->delete_instance: %s\n" % e)
@@ -335,9 +344,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assembly_definition**
-> get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+> BTAssemblyDefinitionInfo get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
 
-
+Assembly Definition.
 
 ### Example
 
@@ -367,7 +376,9 @@ include_mate_connectors = True # bool |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
 try:
-    api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+    # Assembly Definition.
+    api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
 ```
@@ -388,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTAssemblyDefinitionInfo**](BTAssemblyDefinitionInfo.md)
 
 ### Authorization
 
@@ -402,7 +413,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -483,9 +494,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bounding_boxes**
-> get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+> BTBoundingBoxInfo get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 
-
+Bounding Boxes.
 
 ### Example
 
@@ -515,7 +526,9 @@ configuration = 'configuration_example' # str |  (optional)
 exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
 try:
-    api_instance.get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+    # Bounding Boxes.
+    api_response = api_instance.get_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_bounding_boxes: %s\n" % e)
 ```
@@ -536,7 +549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTBoundingBoxInfo**](BTBoundingBoxInfo.md)
 
 ### Authorization
 
@@ -545,19 +558,19 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_specs**
-> get_feature_specs(did, wvm, wvmid, eid)
+> BTFeatureSpecsResponse get_feature_specs(did, wvm, wvmid, eid)
 
-
+Get Feature Specs
 
 ### Example
 
@@ -582,7 +595,9 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_feature_specs(did, wvm, wvmid, eid)
+    # Get Feature Specs
+    api_response = api_instance.get_feature_specs(did, wvm, wvmid, eid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_feature_specs: %s\n" % e)
 ```
@@ -598,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureSpecsResponse**](BTFeatureSpecsResponse.md)
 
 ### Authorization
 
@@ -612,14 +627,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_features**
-> get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+> BTAssemblyFeatureListResponse get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
 
-
+Get Feature List
 
 ### Example
 
@@ -646,7 +661,9 @@ feature_id = ['feature_id_example'] # list[str] |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
-    api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+    # Get Feature List
+    api_response = api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_features: %s\n" % e)
 ```
@@ -664,7 +681,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTAssemblyFeatureListResponse**](BTAssemblyFeatureListResponse.md)
 
 ### Authorization
 
@@ -673,19 +690,19 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_named_views**
-> get_named_views(did, eid, skip_perspective=skip_perspective)
+> BTNamedViewsInfo get_named_views(did, eid, skip_perspective=skip_perspective)
 
-
+Get Named Views
 
 ### Example
 
@@ -709,7 +726,9 @@ eid = 'eid_example' # str |
 skip_perspective = True # bool |  (optional) (default to True)
 
 try:
-    api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
+    # Get Named Views
+    api_response = api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
 ```
@@ -724,7 +743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTNamedViewsInfo**](BTNamedViewsInfo.md)
 
 ### Authorization
 
@@ -733,19 +752,19 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_or_create_bill_of_materials_element**
-> get_or_create_bill_of_materials_element(did, wid, eid)
+> BTDocumentElementInfo get_or_create_bill_of_materials_element(did, wid, eid)
 
-
+Get or Create Bill of Materials Element
 
 ### Example
 
@@ -769,7 +788,9 @@ wid = 'wid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
+    # Get or Create Bill of Materials Element
+    api_response = api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_or_create_bill_of_materials_element: %s\n" % e)
 ```
@@ -784,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -798,14 +819,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_shaded_views**
-> get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+> BTShadedViewsInfo get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
 
-
+Shaded Views.
 
 ### Example
 
@@ -842,7 +863,9 @@ configuration = 'configuration_example' # str |  (optional)
 exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
 try:
-    api_instance.get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+    # Shaded Views.
+    api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_shaded_views: %s\n" % e)
 ```
@@ -870,7 +893,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTShadedViewsInfo**](BTShadedViewsInfo.md)
 
 ### Authorization
 
@@ -884,14 +907,14 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_translator_formats**
-> get_translator_formats(did, wid, eid, check_content=check_content)
+> list[BTModelFormatInfo] get_translator_formats(did, wid, eid, check_content=check_content)
 
-
+Get Translation Formats
 
 ### Example
 
@@ -910,7 +933,9 @@ eid = 'eid_example' # str |
 check_content = True # bool |  (optional) (default to True)
 
 try:
-    api_instance.get_translator_formats(did, wid, eid, check_content=check_content)
+    # Get Translation Formats
+    api_response = api_instance.get_translator_formats(did, wid, eid, check_content=check_content)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_translator_formats: %s\n" % e)
 ```
@@ -926,7 +951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
 
 ### Authorization
 
@@ -940,14 +965,14 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **insert_transformed_instances**
 > insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
 
-
+Create and transform assembly instances
 
 ### Example
 
@@ -972,6 +997,7 @@ wid = 'wid_example' # str |
 bt_assembly_transformed_instances_definition_params = onshape_client.oas.BTAssemblyTransformedInstancesDefinitionParams() # BTAssemblyTransformedInstancesDefinitionParams | 
 
 try:
+    # Create and transform assembly instances
     api_instance.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
 except ApiException as e:
     print("Exception when calling AssembliesApi->insert_transformed_instances: %s\n" % e)
@@ -1009,7 +1035,7 @@ void (empty response body)
 # **transform_occurrences**
 > transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params)
 
-
+Transform assembly occurrences.
 
 ### Example
 
@@ -1034,6 +1060,7 @@ wid = 'wid_example' # str |
 bt_assembly_transform_definition_params = onshape_client.oas.BTAssemblyTransformDefinitionParams() # BTAssemblyTransformDefinitionParams | 
 
 try:
+    # Transform assembly occurrences.
     api_instance.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params)
 except ApiException as e:
     print("Exception when calling AssembliesApi->transform_occurrences: %s\n" % e)
@@ -1069,9 +1096,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translate_format**
-> translate_format(did, wv, wvid, eid, bt_translate_format_params)
+> BTTranslationRequestInfo translate_format(did, wv, wvid, eid, bt_translate_format_params)
 
-
+Create Assembly translation.
 
 ### Example
 
@@ -1097,7 +1124,9 @@ eid = 'eid_example' # str |
 bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # BTTranslateFormatParams | 
 
 try:
-    api_instance.translate_format(did, wv, wvid, eid, bt_translate_format_params)
+    # Create Assembly translation.
+    api_response = api_instance.translate_format(did, wv, wvid, eid, bt_translate_format_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->translate_format: %s\n" % e)
 ```
@@ -1114,7 +1143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTTranslationRequestInfo**](BTTranslationRequestInfo.md)
 
 ### Authorization
 
@@ -1133,9 +1162,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_feature**
-> update_feature(did, wid, eid, fid, body=body)
+> BTFeatureDefinitionResponse update_feature(did, wid, eid, fid, body=body)
 
-
+Update Feature
 
 ### Example
 
@@ -1161,7 +1190,9 @@ fid = 'fid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.update_feature(did, wid, eid, fid, body=body)
+    # Update Feature
+    api_response = api_instance.update_feature(did, wid, eid, fid, body=body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
 ```
@@ -1178,7 +1209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureDefinitionResponse**](BTFeatureDefinitionResponse.md)
 
 ### Authorization
 
@@ -1187,12 +1218,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

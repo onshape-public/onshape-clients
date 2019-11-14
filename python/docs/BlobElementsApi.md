@@ -4,14 +4,14 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**download_file_workspace**](BlobElementsApi.md#download_file_workspace) | **GET** /api/blobelements/d/{did}/w/{wid}/e/{eid} | 
+[**download_file_workspace**](BlobElementsApi.md#download_file_workspace) | **GET** /api/blobelements/d/{did}/w/{wid}/e/{eid} | Download File From Blob Element.
 [**upload_file_create_element**](BlobElementsApi.md#upload_file_create_element) | **POST** /api/blobelements/d/{did}/w/{wid} | 
 
 
 # **download_file_workspace**
-> download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
+> BTForeignItemInfo download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
 
-
+Download File From Blob Element.
 
 ### Example
 
@@ -38,7 +38,9 @@ if_none_match = 'if_none_match_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
-    api_instance.download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
+    # Download File From Blob Element.
+    api_response = api_instance.download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling BlobElementsApi->download_file_workspace: %s\n" % e)
 ```
@@ -56,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTForeignItemInfo**](BTForeignItemInfo.md)
 
 ### Authorization
 
@@ -70,7 +72,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_translation**
-> create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+> BTTranslationRequestInfo create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
 
 
 
@@ -44,7 +44,8 @@ providers = None # object |  (optional)
 body_parts = onshape_client.oas.BodyPart() # list[BodyPart] |  (optional)
 
 try:
-    api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+    api_response = api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
 ```
@@ -65,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTTranslationRequestInfo**](BTTranslationRequestInfo.md)
 
 ### Authorization
 

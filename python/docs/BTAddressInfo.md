@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**zip** | **str** |  | [optional] 
 **address** | **str** |  | [optional] 
 **city** | **str** |  | [optional] 
 **state_code** | **str** |  | [optional] 
 **country** | **str** |  | [optional] 
 **country_code** | **str** |  | [optional] 
-**zip** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 

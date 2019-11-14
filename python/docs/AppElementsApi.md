@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**get_sub_element_content**](AppElementsApi.md#get_sub_element_content) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Get Content
 [**get_subelement_ids**](AppElementsApi.md#get_subelement_ids) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids | Get Sub-element IDs
 [**resolve_reference**](AppElementsApi.md#resolve_reference) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Resolve Reference
-[**resolve_references**](AppElementsApi.md#resolve_references) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences | 
+[**resolve_references**](AppElementsApi.md#resolve_references) | **GET** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences | Resolve references.
 [**start_transaction**](AppElementsApi.md#start_transaction) | **POST** /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions | Start Transaction
 [**update4**](AppElementsApi.md#update4) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content | Update Element
 [**update_reference**](AppElementsApi.md#update_reference) | **POST** /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid} | Update Reference
@@ -638,9 +638,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **resolve_references**
-> resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+> BTAppElementReferencesResolveInfo resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
 
-
+Resolve references.
 
 ### Example
 
@@ -670,7 +670,9 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 reference_ids = '' # str |  (optional) (default to '')
 
 try:
-    api_instance.resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+    # Resolve references.
+    api_response = api_instance.resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
 ```
@@ -691,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTAppElementReferencesResolveInfo**](BTAppElementReferencesResolveInfo.md)
 
 ### Authorization
 
@@ -700,12 +702,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

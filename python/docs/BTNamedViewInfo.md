@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**angle** | **float** |  | [optional] 
 **camera_viewport** | **list[float]** |  | [optional] 
+**angle** | **float** |  | [optional] 
 **view_matrix** | **list[float]** |  | [optional] 
 **perspective** | **bool** |  | [optional] 
 **section_planes** | [**list[BTSectionPlaneInfo]**](BTSectionPlaneInfo.md) |  | [optional] 

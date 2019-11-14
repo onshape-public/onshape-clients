@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **occurrence_without_head** | [**BTOccurrence**](BTOccurrence.md) |  | [optional] 
 **occurrence_without_tail** | [**BTOccurrence**](BTOccurrence.md) |  | [optional] 
 **pattern_descendant** | **bool** |  | [optional] 
+**parent** | [**BTOccurrence**](BTOccurrence.md) |  | [optional] 
 **path** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

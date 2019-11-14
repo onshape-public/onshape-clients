@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **approve_releases** | **bool** |  | [optional] 
 **create_releases** | **bool** |  | [optional] 
 **share_for_anonymous_access** | **bool** |  | [optional] 
+**allow_app_store_access** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
