@@ -36,7 +36,8 @@ class BTExportModelBody(object):
         'vertices': 'list[BTExportModelVertex]',
         'id': 'str',
         'type': 'str',
-        'edges': 'list[BTExportModelEdge]'
+        'edges': 'list[BTExportModelEdge]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class BTExportModelBody(object):
         'vertices': 'vertices',
         'id': 'id',
         'type': 'type',
-        'edges': 'edges'
+        'edges': 'edges',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, faces=None, vertices=None, id=None, type=None, edges=None):  # noqa: E501
+    def __init__(self, faces=None, vertices=None, id=None, type=None, edges=None, bt_type=None):  # noqa: E501
         """BTExportModelBody - a model defined in OpenAPI"""  # noqa: E501
 
         self._faces = None
@@ -55,6 +57,7 @@ class BTExportModelBody(object):
         self._id = None
         self._type = None
         self._edges = None
+        self._bt_type = None
         self.discriminator = None
 
         if faces is not None:
@@ -67,6 +70,8 @@ class BTExportModelBody(object):
             self.type = type
         if edges is not None:
             self.edges = edges
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def faces(self):
@@ -178,6 +183,27 @@ class BTExportModelBody(object):
         """
 
         self._edges = edges
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelBody.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelBody.
+
+
+        :param bt_type: The bt_type of this BTExportModelBody.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

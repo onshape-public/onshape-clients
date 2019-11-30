@@ -32,57 +32,36 @@ class BTPConversionFunctionAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        '_from': 'BTPLiteralNumber',
         'to': 'BTPLiteralNumber',
+        '_from': 'BTPLiteralNumber',
         'type_name': 'BTPIdentifier',
         'space_after_type': 'BTPSpace'
     }
 
     attribute_map = {
-        '_from': 'from',
         'to': 'to',
+        '_from': 'from',
         'type_name': 'typeName',
         'space_after_type': 'spaceAfterType'
     }
 
-    def __init__(self, _from=None, to=None, type_name=None, space_after_type=None):  # noqa: E501
+    def __init__(self, to=None, _from=None, type_name=None, space_after_type=None):  # noqa: E501
         """BTPConversionFunctionAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self.__from = None
         self._to = None
+        self.__from = None
         self._type_name = None
         self._space_after_type = None
         self.discriminator = None
 
-        if _from is not None:
-            self._from = _from
         if to is not None:
             self.to = to
+        if _from is not None:
+            self._from = _from
         if type_name is not None:
             self.type_name = type_name
         if space_after_type is not None:
             self.space_after_type = space_after_type
-
-    @property
-    def _from(self):
-        """Gets the _from of this BTPConversionFunctionAllOf.  # noqa: E501
-
-
-        :return: The _from of this BTPConversionFunctionAllOf.  # noqa: E501
-        :rtype: BTPLiteralNumber
-        """
-        return self.__from
-
-    @_from.setter
-    def _from(self, _from):
-        """Sets the _from of this BTPConversionFunctionAllOf.
-
-
-        :param _from: The _from of this BTPConversionFunctionAllOf.  # noqa: E501
-        :type: BTPLiteralNumber
-        """
-
-        self.__from = _from
 
     @property
     def to(self):
@@ -104,6 +83,27 @@ class BTPConversionFunctionAllOf(object):
         """
 
         self._to = to
+
+    @property
+    def _from(self):
+        """Gets the _from of this BTPConversionFunctionAllOf.  # noqa: E501
+
+
+        :return: The _from of this BTPConversionFunctionAllOf.  # noqa: E501
+        :rtype: BTPLiteralNumber
+        """
+        return self.__from
+
+    @_from.setter
+    def _from(self, _from):
+        """Sets the _from of this BTPConversionFunctionAllOf.
+
+
+        :param _from: The _from of this BTPConversionFunctionAllOf.  # noqa: E501
+        :type: BTPLiteralNumber
+        """
+
+        self.__from = _from
 
     @property
     def type_name(self):

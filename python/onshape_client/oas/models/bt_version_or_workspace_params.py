@@ -32,8 +32,6 @@ class BTVersionOrWorkspaceParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'microversion_id': 'str',
-        'client_interaction_mode': 'str',
         'read_only': 'bool',
         'is_release': 'bool',
         'from_history': 'bool',
@@ -41,13 +39,13 @@ class BTVersionOrWorkspaceParams(object):
         'version_id': 'str',
         'workspace_id': 'str',
         'document_id': 'str',
+        'microversion_id': 'str',
+        'client_interaction_mode': 'str',
         'name': 'str',
         'description': 'str'
     }
 
     attribute_map = {
-        'microversion_id': 'microversionId',
-        'client_interaction_mode': 'clientInteractionMode',
         'read_only': 'readOnly',
         'is_release': 'isRelease',
         'from_history': 'fromHistory',
@@ -55,15 +53,15 @@ class BTVersionOrWorkspaceParams(object):
         'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'document_id': 'documentId',
+        'microversion_id': 'microversionId',
+        'client_interaction_mode': 'clientInteractionMode',
         'name': 'name',
         'description': 'description'
     }
 
-    def __init__(self, microversion_id=None, client_interaction_mode=None, read_only=None, is_release=None, from_history=None, purpose=None, version_id=None, workspace_id=None, document_id=None, name=None, description=None):  # noqa: E501
+    def __init__(self, read_only=None, is_release=None, from_history=None, purpose=None, version_id=None, workspace_id=None, document_id=None, microversion_id=None, client_interaction_mode=None, name=None, description=None):  # noqa: E501
         """BTVersionOrWorkspaceParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._microversion_id = None
-        self._client_interaction_mode = None
         self._read_only = None
         self._is_release = None
         self._from_history = None
@@ -71,14 +69,12 @@ class BTVersionOrWorkspaceParams(object):
         self._version_id = None
         self._workspace_id = None
         self._document_id = None
+        self._microversion_id = None
+        self._client_interaction_mode = None
         self._name = None
         self._description = None
         self.discriminator = None
 
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
-        if client_interaction_mode is not None:
-            self.client_interaction_mode = client_interaction_mode
         if read_only is not None:
             self.read_only = read_only
         if is_release is not None:
@@ -93,52 +89,14 @@ class BTVersionOrWorkspaceParams(object):
             self.workspace_id = workspace_id
         if document_id is not None:
             self.document_id = document_id
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
+        if client_interaction_mode is not None:
+            self.client_interaction_mode = client_interaction_mode
         if name is not None:
             self.name = name
         if description is not None:
             self.description = description
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTVersionOrWorkspaceParams.
-
-
-        :param microversion_id: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
-    def client_interaction_mode(self):
-        """Gets the client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._client_interaction_mode
-
-    @client_interaction_mode.setter
-    def client_interaction_mode(self, client_interaction_mode):
-        """Sets the client_interaction_mode of this BTVersionOrWorkspaceParams.
-
-
-        :param client_interaction_mode: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._client_interaction_mode = client_interaction_mode
 
     @property
     def read_only(self):
@@ -286,6 +244,48 @@ class BTVersionOrWorkspaceParams(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def microversion_id(self):
+        """Gets the microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._microversion_id
+
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTVersionOrWorkspaceParams.
+
+
+        :param microversion_id: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._microversion_id = microversion_id
+
+    @property
+    def client_interaction_mode(self):
+        """Gets the client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_interaction_mode
+
+    @client_interaction_mode.setter
+    def client_interaction_mode(self, client_interaction_mode):
+        """Sets the client_interaction_mode of this BTVersionOrWorkspaceParams.
+
+
+        :param client_interaction_mode: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._client_interaction_mode = client_interaction_mode
 
     @property
     def name(self):

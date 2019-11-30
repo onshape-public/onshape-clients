@@ -35,8 +35,8 @@ class BTPName(object):
         'import_microversion': 'str',
         'short_descriptor': 'str',
         'for_export': 'bool',
-        'identifier': 'BTPIdentifier',
         'global_namespace': 'bool',
+        'identifier': 'BTPIdentifier',
         'namespace': 'list[BTPIdentifier]',
         'start_source_location': 'int',
         'end_source_location': 'int',
@@ -45,15 +45,16 @@ class BTPName(object):
         'space_before': 'BTPSpace',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'import_microversion': 'importMicroversion',
         'short_descriptor': 'shortDescriptor',
         'for_export': 'forExport',
-        'identifier': 'identifier',
         'global_namespace': 'globalNamespace',
+        'identifier': 'identifier',
         'namespace': 'namespace',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
@@ -62,17 +63,18 @@ class BTPName(object):
         'space_before': 'spaceBefore',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, import_microversion=None, short_descriptor=None, for_export=None, identifier=None, global_namespace=None, namespace=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, import_microversion=None, short_descriptor=None, for_export=None, global_namespace=None, identifier=None, namespace=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPName - a model defined in OpenAPI"""  # noqa: E501
 
         self._import_microversion = None
         self._short_descriptor = None
         self._for_export = None
-        self._identifier = None
         self._global_namespace = None
+        self._identifier = None
         self._namespace = None
         self._start_source_location = None
         self._end_source_location = None
@@ -82,6 +84,7 @@ class BTPName(object):
         self._space_default = None
         self._space_after = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if import_microversion is not None:
@@ -90,10 +93,10 @@ class BTPName(object):
             self.short_descriptor = short_descriptor
         if for_export is not None:
             self.for_export = for_export
-        if identifier is not None:
-            self.identifier = identifier
         if global_namespace is not None:
             self.global_namespace = global_namespace
+        if identifier is not None:
+            self.identifier = identifier
         if namespace is not None:
             self.namespace = namespace
         if start_source_location is not None:
@@ -112,6 +115,8 @@ class BTPName(object):
             self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def import_microversion(self):
@@ -177,27 +182,6 @@ class BTPName(object):
         self._for_export = for_export
 
     @property
-    def identifier(self):
-        """Gets the identifier of this BTPName.  # noqa: E501
-
-
-        :return: The identifier of this BTPName.  # noqa: E501
-        :rtype: BTPIdentifier
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this BTPName.
-
-
-        :param identifier: The identifier of this BTPName.  # noqa: E501
-        :type: BTPIdentifier
-        """
-
-        self._identifier = identifier
-
-    @property
     def global_namespace(self):
         """Gets the global_namespace of this BTPName.  # noqa: E501
 
@@ -217,6 +201,27 @@ class BTPName(object):
         """
 
         self._global_namespace = global_namespace
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this BTPName.  # noqa: E501
+
+
+        :return: The identifier of this BTPName.  # noqa: E501
+        :rtype: BTPIdentifier
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this BTPName.
+
+
+        :param identifier: The identifier of this BTPName.  # noqa: E501
+        :type: BTPIdentifier
+        """
+
+        self._identifier = identifier
 
     @property
     def namespace(self):
@@ -412,6 +417,27 @@ class BTPName(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPName.  # noqa: E501
+
+
+        :return: The bt_type of this BTPName.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPName.
+
+
+        :param bt_type: The bt_type of this BTPName.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

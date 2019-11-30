@@ -34,44 +34,49 @@ class BTPartMaterial(object):
     openapi_types = {
         'library_name': 'str',
         'library_reference': 'BTElementReference',
-        'version': 'int',
         'name': 'str',
         'properties': 'dict(str, BTPartMaterialProperty)',
-        'id': 'str'
+        'id': 'str',
+        'version': 'int',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'library_name': 'libraryName',
         'library_reference': 'libraryReference',
-        'version': 'version',
         'name': 'name',
         'properties': 'properties',
-        'id': 'id'
+        'id': 'id',
+        'version': 'version',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, library_name=None, library_reference=None, version=None, name=None, properties=None, id=None):  # noqa: E501
+    def __init__(self, library_name=None, library_reference=None, name=None, properties=None, id=None, version=None, bt_type=None):  # noqa: E501
         """BTPartMaterial - a model defined in OpenAPI"""  # noqa: E501
 
         self._library_name = None
         self._library_reference = None
-        self._version = None
         self._name = None
         self._properties = None
         self._id = None
+        self._version = None
+        self._bt_type = None
         self.discriminator = None
 
         if library_name is not None:
             self.library_name = library_name
         if library_reference is not None:
             self.library_reference = library_reference
-        if version is not None:
-            self.version = version
         if name is not None:
             self.name = name
         if properties is not None:
             self.properties = properties
         if id is not None:
             self.id = id
+        if version is not None:
+            self.version = version
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def library_name(self):
@@ -114,27 +119,6 @@ class BTPartMaterial(object):
         """
 
         self._library_reference = library_reference
-
-    @property
-    def version(self):
-        """Gets the version of this BTPartMaterial.  # noqa: E501
-
-
-        :return: The version of this BTPartMaterial.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTPartMaterial.
-
-
-        :param version: The version of this BTPartMaterial.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
 
     @property
     def name(self):
@@ -198,6 +182,48 @@ class BTPartMaterial(object):
         """
 
         self._id = id
+
+    @property
+    def version(self):
+        """Gets the version of this BTPartMaterial.  # noqa: E501
+
+
+        :return: The version of this BTPartMaterial.  # noqa: E501
+        :rtype: int
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTPartMaterial.
+
+
+        :param version: The version of this BTPartMaterial.  # noqa: E501
+        :type: int
+        """
+
+        self._version = version
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPartMaterial.  # noqa: E501
+
+
+        :return: The bt_type of this BTPartMaterial.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPartMaterial.
+
+
+        :param bt_type: The bt_type of this BTPartMaterial.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

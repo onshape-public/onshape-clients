@@ -33,38 +33,38 @@ class BTCardInfo(object):
     """
     openapi_types = {
         'last4': 'str',
+        'billing_address': 'BTAddressInfo',
         'exp_month': 'int',
         'exp_year': 'int',
-        'billing_address': 'BTAddressInfo',
         'type': 'str'
     }
 
     attribute_map = {
         'last4': 'last4',
+        'billing_address': 'billingAddress',
         'exp_month': 'expMonth',
         'exp_year': 'expYear',
-        'billing_address': 'billingAddress',
         'type': 'type'
     }
 
-    def __init__(self, last4=None, exp_month=None, exp_year=None, billing_address=None, type=None):  # noqa: E501
+    def __init__(self, last4=None, billing_address=None, exp_month=None, exp_year=None, type=None):  # noqa: E501
         """BTCardInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._last4 = None
+        self._billing_address = None
         self._exp_month = None
         self._exp_year = None
-        self._billing_address = None
         self._type = None
         self.discriminator = None
 
         if last4 is not None:
             self.last4 = last4
+        if billing_address is not None:
+            self.billing_address = billing_address
         if exp_month is not None:
             self.exp_month = exp_month
         if exp_year is not None:
             self.exp_year = exp_year
-        if billing_address is not None:
-            self.billing_address = billing_address
         if type is not None:
             self.type = type
 
@@ -88,6 +88,27 @@ class BTCardInfo(object):
         """
 
         self._last4 = last4
+
+    @property
+    def billing_address(self):
+        """Gets the billing_address of this BTCardInfo.  # noqa: E501
+
+
+        :return: The billing_address of this BTCardInfo.  # noqa: E501
+        :rtype: BTAddressInfo
+        """
+        return self._billing_address
+
+    @billing_address.setter
+    def billing_address(self, billing_address):
+        """Sets the billing_address of this BTCardInfo.
+
+
+        :param billing_address: The billing_address of this BTCardInfo.  # noqa: E501
+        :type: BTAddressInfo
+        """
+
+        self._billing_address = billing_address
 
     @property
     def exp_month(self):
@@ -130,27 +151,6 @@ class BTCardInfo(object):
         """
 
         self._exp_year = exp_year
-
-    @property
-    def billing_address(self):
-        """Gets the billing_address of this BTCardInfo.  # noqa: E501
-
-
-        :return: The billing_address of this BTCardInfo.  # noqa: E501
-        :rtype: BTAddressInfo
-        """
-        return self._billing_address
-
-    @billing_address.setter
-    def billing_address(self, billing_address):
-        """Sets the billing_address of this BTCardInfo.
-
-
-        :param billing_address: The billing_address of this BTCardInfo.  # noqa: E501
-        :type: BTAddressInfo
-        """
-
-        self._billing_address = billing_address
 
     @property
     def type(self):

@@ -34,38 +34,38 @@ class BTMParameterQuantity(object):
     openapi_types = {
         'units': 'str',
         'is_integer': 'bool',
-        'expression': 'str',
-        'value': 'float'
+        'value': 'float',
+        'expression': 'str'
     }
 
     attribute_map = {
         'units': 'units',
         'is_integer': 'isInteger',
-        'expression': 'expression',
-        'value': 'value'
+        'value': 'value',
+        'expression': 'expression'
     }
 
     discriminator_value_class_map = {
         'BTMParameterNullableQuantity': 'BTMParameterNullableQuantity'
     }
 
-    def __init__(self, units=None, is_integer=None, expression=None, value=None):  # noqa: E501
+    def __init__(self, units=None, is_integer=None, value=None, expression=None):  # noqa: E501
         """BTMParameterQuantity - a model defined in OpenAPI"""  # noqa: E501
 
         self._units = None
         self._is_integer = None
-        self._expression = None
         self._value = None
-        self.discriminator = 'type'
+        self._expression = None
+        self.discriminator = 'bt_type'
 
         if units is not None:
             self.units = units
         if is_integer is not None:
             self.is_integer = is_integer
-        if expression is not None:
-            self.expression = expression
         if value is not None:
             self.value = value
+        if expression is not None:
+            self.expression = expression
 
     @property
     def units(self):
@@ -110,27 +110,6 @@ class BTMParameterQuantity(object):
         self._is_integer = is_integer
 
     @property
-    def expression(self):
-        """Gets the expression of this BTMParameterQuantity.  # noqa: E501
-
-
-        :return: The expression of this BTMParameterQuantity.  # noqa: E501
-        :rtype: str
-        """
-        return self._expression
-
-    @expression.setter
-    def expression(self, expression):
-        """Sets the expression of this BTMParameterQuantity.
-
-
-        :param expression: The expression of this BTMParameterQuantity.  # noqa: E501
-        :type: str
-        """
-
-        self._expression = expression
-
-    @property
     def value(self):
         """Gets the value of this BTMParameterQuantity.  # noqa: E501
 
@@ -150,6 +129,27 @@ class BTMParameterQuantity(object):
         """
 
         self._value = value
+
+    @property
+    def expression(self):
+        """Gets the expression of this BTMParameterQuantity.  # noqa: E501
+
+
+        :return: The expression of this BTMParameterQuantity.  # noqa: E501
+        :rtype: str
+        """
+        return self._expression
+
+    @expression.setter
+    def expression(self, expression):
+        """Sets the expression of this BTMParameterQuantity.
+
+
+        :param expression: The expression of this BTMParameterQuantity.  # noqa: E501
+        :type: str
+        """
+
+        self._expression = expression
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

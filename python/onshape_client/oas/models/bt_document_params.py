@@ -32,165 +32,81 @@ class BTDocumentParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'owner_type': 'int',
-        'project_id': 'str',
-        'parent_id': 'str',
-        'is_public': 'bool',
         'is_empty_content': 'bool',
         'generate_unknown_messages': 'bool',
         'not_revision_managed': 'bool',
+        'owner_id': 'str',
+        'project_id': 'str',
+        'parent_id': 'str',
+        'is_public': 'bool',
         'beta_capability_ids': 'list[str]',
         'owner_email': 'str',
+        'owner_type': 'int',
         'name': 'str',
-        'tags': 'list[str]',
         'description': 'str',
-        'owner_id': 'str'
+        'tags': 'list[str]'
     }
 
     attribute_map = {
-        'owner_type': 'ownerType',
-        'project_id': 'projectId',
-        'parent_id': 'parentId',
-        'is_public': 'isPublic',
         'is_empty_content': 'isEmptyContent',
         'generate_unknown_messages': 'generateUnknownMessages',
         'not_revision_managed': 'notRevisionManaged',
+        'owner_id': 'ownerId',
+        'project_id': 'projectId',
+        'parent_id': 'parentId',
+        'is_public': 'isPublic',
         'beta_capability_ids': 'betaCapabilityIds',
         'owner_email': 'ownerEmail',
+        'owner_type': 'ownerType',
         'name': 'name',
-        'tags': 'tags',
         'description': 'description',
-        'owner_id': 'ownerId'
+        'tags': 'tags'
     }
 
-    def __init__(self, owner_type=None, project_id=None, parent_id=None, is_public=None, is_empty_content=None, generate_unknown_messages=None, not_revision_managed=None, beta_capability_ids=None, owner_email=None, name=None, tags=None, description=None, owner_id=None):  # noqa: E501
+    def __init__(self, is_empty_content=None, generate_unknown_messages=None, not_revision_managed=None, owner_id=None, project_id=None, parent_id=None, is_public=None, beta_capability_ids=None, owner_email=None, owner_type=None, name=None, description=None, tags=None):  # noqa: E501
         """BTDocumentParams - a model defined in OpenAPI"""  # noqa: E501
 
-        self._owner_type = None
-        self._project_id = None
-        self._parent_id = None
-        self._is_public = None
         self._is_empty_content = None
         self._generate_unknown_messages = None
         self._not_revision_managed = None
+        self._owner_id = None
+        self._project_id = None
+        self._parent_id = None
+        self._is_public = None
         self._beta_capability_ids = None
         self._owner_email = None
+        self._owner_type = None
         self._name = None
-        self._tags = None
         self._description = None
-        self._owner_id = None
+        self._tags = None
         self.discriminator = None
 
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if project_id is not None:
-            self.project_id = project_id
-        if parent_id is not None:
-            self.parent_id = parent_id
-        if is_public is not None:
-            self.is_public = is_public
         if is_empty_content is not None:
             self.is_empty_content = is_empty_content
         if generate_unknown_messages is not None:
             self.generate_unknown_messages = generate_unknown_messages
         if not_revision_managed is not None:
             self.not_revision_managed = not_revision_managed
+        if owner_id is not None:
+            self.owner_id = owner_id
+        if project_id is not None:
+            self.project_id = project_id
+        if parent_id is not None:
+            self.parent_id = parent_id
+        if is_public is not None:
+            self.is_public = is_public
         if beta_capability_ids is not None:
             self.beta_capability_ids = beta_capability_ids
         if owner_email is not None:
             self.owner_email = owner_email
+        if owner_type is not None:
+            self.owner_type = owner_type
         if name is not None:
             self.name = name
-        if tags is not None:
-            self.tags = tags
         if description is not None:
             self.description = description
-        if owner_id is not None:
-            self.owner_id = owner_id
-
-    @property
-    def owner_type(self):
-        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTDocumentParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTDocumentParams.
-
-
-        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The project_id of this BTDocumentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTDocumentParams.
-
-
-        :param project_id: The project_id of this BTDocumentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._project_id = project_id
-
-    @property
-    def parent_id(self):
-        """Gets the parent_id of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The parent_id of this BTDocumentParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this BTDocumentParams.
-
-
-        :param parent_id: The parent_id of this BTDocumentParams.  # noqa: E501
-        :type: str
-        """
-
-        self._parent_id = parent_id
-
-    @property
-    def is_public(self):
-        """Gets the is_public of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The is_public of this BTDocumentParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_public
-
-    @is_public.setter
-    def is_public(self, is_public):
-        """Sets the is_public of this BTDocumentParams.
-
-
-        :param is_public: The is_public of this BTDocumentParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_public = is_public
+        if tags is not None:
+            self.tags = tags
 
     @property
     def is_empty_content(self):
@@ -256,6 +172,90 @@ class BTDocumentParams(object):
         self._not_revision_managed = not_revision_managed
 
     @property
+    def owner_id(self):
+        """Gets the owner_id of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The owner_id of this BTDocumentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this BTDocumentParams.
+
+
+        :param owner_id: The owner_id of this BTDocumentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
+
+    @property
+    def project_id(self):
+        """Gets the project_id of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The project_id of this BTDocumentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTDocumentParams.
+
+
+        :param project_id: The project_id of this BTDocumentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._project_id = project_id
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The parent_id of this BTDocumentParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this BTDocumentParams.
+
+
+        :param parent_id: The parent_id of this BTDocumentParams.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
+
+    @property
+    def is_public(self):
+        """Gets the is_public of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The is_public of this BTDocumentParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_public
+
+    @is_public.setter
+    def is_public(self, is_public):
+        """Sets the is_public of this BTDocumentParams.
+
+
+        :param is_public: The is_public of this BTDocumentParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_public = is_public
+
+    @property
     def beta_capability_ids(self):
         """Gets the beta_capability_ids of this BTDocumentParams.  # noqa: E501
 
@@ -298,6 +298,27 @@ class BTDocumentParams(object):
         self._owner_email = owner_email
 
     @property
+    def owner_type(self):
+        """Gets the owner_type of this BTDocumentParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTDocumentParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTDocumentParams.
+
+
+        :param owner_type: The owner_type of this BTDocumentParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
+
+    @property
     def name(self):
         """Gets the name of this BTDocumentParams.  # noqa: E501
 
@@ -317,27 +338,6 @@ class BTDocumentParams(object):
         """
 
         self._name = name
-
-    @property
-    def tags(self):
-        """Gets the tags of this BTDocumentParams.  # noqa: E501
-
-
-        :return: The tags of this BTDocumentParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._tags
-
-    @tags.setter
-    def tags(self, tags):
-        """Sets the tags of this BTDocumentParams.
-
-
-        :param tags: The tags of this BTDocumentParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._tags = tags
 
     @property
     def description(self):
@@ -361,25 +361,25 @@ class BTDocumentParams(object):
         self._description = description
 
     @property
-    def owner_id(self):
-        """Gets the owner_id of this BTDocumentParams.  # noqa: E501
+    def tags(self):
+        """Gets the tags of this BTDocumentParams.  # noqa: E501
 
 
-        :return: The owner_id of this BTDocumentParams.  # noqa: E501
-        :rtype: str
+        :return: The tags of this BTDocumentParams.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._owner_id
+        return self._tags
 
-    @owner_id.setter
-    def owner_id(self, owner_id):
-        """Sets the owner_id of this BTDocumentParams.
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this BTDocumentParams.
 
 
-        :param owner_id: The owner_id of this BTDocumentParams.  # noqa: E501
-        :type: str
+        :param tags: The tags of this BTDocumentParams.  # noqa: E501
+        :type: list[str]
         """
 
-        self._owner_id = owner_id
+        self._tags = tags
 
     def to_dict(self):
         """Returns the model properties as a dict"""

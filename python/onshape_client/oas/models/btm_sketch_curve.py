@@ -53,7 +53,7 @@ class BTMSketchCurve(object):
         self._geometry = None
         self._center_id = None
         self._internal_ids = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if geometry is not None:
             self.geometry = geometry

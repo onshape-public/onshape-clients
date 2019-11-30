@@ -34,21 +34,24 @@ class BTExportModelLoop(object):
     openapi_types = {
         'is_outer': 'bool',
         'is_inner': 'bool',
-        'coedges': 'list[BTExportModelCoedge]'
+        'coedges': 'list[BTExportModelCoedge]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'is_outer': 'isOuter',
         'is_inner': 'isInner',
-        'coedges': 'coedges'
+        'coedges': 'coedges',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_outer=None, is_inner=None, coedges=None):  # noqa: E501
+    def __init__(self, is_outer=None, is_inner=None, coedges=None, bt_type=None):  # noqa: E501
         """BTExportModelLoop - a model defined in OpenAPI"""  # noqa: E501
 
         self._is_outer = None
         self._is_inner = None
         self._coedges = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_outer is not None:
@@ -57,6 +60,8 @@ class BTExportModelLoop(object):
             self.is_inner = is_inner
         if coedges is not None:
             self.coedges = coedges
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_outer(self):
@@ -120,6 +125,27 @@ class BTExportModelLoop(object):
         """
 
         self._coedges = coedges
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelLoop.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelLoop.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelLoop.
+
+
+        :param bt_type: The bt_type of this BTExportModelLoop.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

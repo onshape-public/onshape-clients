@@ -34,48 +34,53 @@ class BTParameterLookupTableEntry(object):
     openapi_types = {
         'localized_name': 'str',
         'localizable_name': 'str',
-        'additional_localized_strings': 'int',
         'strings_to_localize': 'list[str]',
+        'additional_localized_strings': 'int',
+        'localized_label': 'str',
         'label': 'str',
-        'localized_label': 'str'
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'localized_name': 'localizedName',
         'localizable_name': 'localizableName',
-        'additional_localized_strings': 'additionalLocalizedStrings',
         'strings_to_localize': 'stringsToLocalize',
+        'additional_localized_strings': 'additionalLocalizedStrings',
+        'localized_label': 'localizedLabel',
         'label': 'label',
-        'localized_label': 'localizedLabel'
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
         
     }
 
-    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, label=None, localized_label=None):  # noqa: E501
+    def __init__(self, localized_name=None, localizable_name=None, strings_to_localize=None, additional_localized_strings=None, localized_label=None, label=None, bt_type=None):  # noqa: E501
         """BTParameterLookupTableEntry - a model defined in OpenAPI"""  # noqa: E501
 
         self._localized_name = None
         self._localizable_name = None
-        self._additional_localized_strings = None
         self._strings_to_localize = None
-        self._label = None
+        self._additional_localized_strings = None
         self._localized_label = None
-        self.discriminator = 'type'
+        self._label = None
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if localized_name is not None:
             self.localized_name = localized_name
         if localizable_name is not None:
             self.localizable_name = localizable_name
-        if additional_localized_strings is not None:
-            self.additional_localized_strings = additional_localized_strings
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
-        if label is not None:
-            self.label = label
+        if additional_localized_strings is not None:
+            self.additional_localized_strings = additional_localized_strings
         if localized_label is not None:
             self.localized_label = localized_label
+        if label is not None:
+            self.label = label
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def localized_name(self):
@@ -120,6 +125,27 @@ class BTParameterLookupTableEntry(object):
         self._localizable_name = localizable_name
 
     @property
+    def strings_to_localize(self):
+        """Gets the strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
+
+
+        :return: The strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._strings_to_localize
+
+    @strings_to_localize.setter
+    def strings_to_localize(self, strings_to_localize):
+        """Sets the strings_to_localize of this BTParameterLookupTableEntry.
+
+
+        :param strings_to_localize: The strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._strings_to_localize = strings_to_localize
+
+    @property
     def additional_localized_strings(self):
         """Gets the additional_localized_strings of this BTParameterLookupTableEntry.  # noqa: E501
 
@@ -141,25 +167,25 @@ class BTParameterLookupTableEntry(object):
         self._additional_localized_strings = additional_localized_strings
 
     @property
-    def strings_to_localize(self):
-        """Gets the strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
+    def localized_label(self):
+        """Gets the localized_label of this BTParameterLookupTableEntry.  # noqa: E501
 
 
-        :return: The strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
-        :rtype: list[str]
+        :return: The localized_label of this BTParameterLookupTableEntry.  # noqa: E501
+        :rtype: str
         """
-        return self._strings_to_localize
+        return self._localized_label
 
-    @strings_to_localize.setter
-    def strings_to_localize(self, strings_to_localize):
-        """Sets the strings_to_localize of this BTParameterLookupTableEntry.
+    @localized_label.setter
+    def localized_label(self, localized_label):
+        """Sets the localized_label of this BTParameterLookupTableEntry.
 
 
-        :param strings_to_localize: The strings_to_localize of this BTParameterLookupTableEntry.  # noqa: E501
-        :type: list[str]
+        :param localized_label: The localized_label of this BTParameterLookupTableEntry.  # noqa: E501
+        :type: str
         """
 
-        self._strings_to_localize = strings_to_localize
+        self._localized_label = localized_label
 
     @property
     def label(self):
@@ -183,25 +209,25 @@ class BTParameterLookupTableEntry(object):
         self._label = label
 
     @property
-    def localized_label(self):
-        """Gets the localized_label of this BTParameterLookupTableEntry.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterLookupTableEntry.  # noqa: E501
 
 
-        :return: The localized_label of this BTParameterLookupTableEntry.  # noqa: E501
+        :return: The bt_type of this BTParameterLookupTableEntry.  # noqa: E501
         :rtype: str
         """
-        return self._localized_label
+        return self._bt_type
 
-    @localized_label.setter
-    def localized_label(self, localized_label):
-        """Sets the localized_label of this BTParameterLookupTableEntry.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterLookupTableEntry.
 
 
-        :param localized_label: The localized_label of this BTParameterLookupTableEntry.  # noqa: E501
+        :param bt_type: The bt_type of this BTParameterLookupTableEntry.  # noqa: E501
         :type: str
         """
 
-        self._localized_label = localized_label
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -32,47 +32,26 @@ class BTPLiteralStringAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'text': 'str',
-        'value': 'str'
+        'value': 'str',
+        'text': 'str'
     }
 
     attribute_map = {
-        'text': 'text',
-        'value': 'value'
+        'value': 'value',
+        'text': 'text'
     }
 
-    def __init__(self, text=None, value=None):  # noqa: E501
+    def __init__(self, value=None, text=None):  # noqa: E501
         """BTPLiteralStringAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._text = None
         self._value = None
+        self._text = None
         self.discriminator = None
 
-        if text is not None:
-            self.text = text
         if value is not None:
             self.value = value
-
-    @property
-    def text(self):
-        """Gets the text of this BTPLiteralStringAllOf.  # noqa: E501
-
-
-        :return: The text of this BTPLiteralStringAllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._text
-
-    @text.setter
-    def text(self, text):
-        """Sets the text of this BTPLiteralStringAllOf.
-
-
-        :param text: The text of this BTPLiteralStringAllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._text = text
+        if text is not None:
+            self.text = text
 
     @property
     def value(self):
@@ -94,6 +73,27 @@ class BTPLiteralStringAllOf(object):
         """
 
         self._value = value
+
+    @property
+    def text(self):
+        """Gets the text of this BTPLiteralStringAllOf.  # noqa: E501
+
+
+        :return: The text of this BTPLiteralStringAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this BTPLiteralStringAllOf.
+
+
+        :param text: The text of this BTPLiteralStringAllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._text = text
 
     def to_dict(self):
         """Returns the model properties as a dict"""

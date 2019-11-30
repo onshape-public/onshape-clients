@@ -33,25 +33,30 @@ class BTVector2d(object):
     """
     openapi_types = {
         'x': 'float',
-        'y': 'float'
+        'y': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'x': 'x',
-        'y': 'y'
+        'y': 'y',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, x=None, y=None):  # noqa: E501
+    def __init__(self, x=None, y=None, bt_type=None):  # noqa: E501
         """BTVector2d - a model defined in OpenAPI"""  # noqa: E501
 
         self._x = None
         self._y = None
+        self._bt_type = None
         self.discriminator = None
 
         if x is not None:
             self.x = x
         if y is not None:
             self.y = y
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def x(self):
@@ -94,6 +99,27 @@ class BTVector2d(object):
         """
 
         self._y = y
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTVector2d.  # noqa: E501
+
+
+        :return: The bt_type of this BTVector2d.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTVector2d.
+
+
+        :param bt_type: The bt_type of this BTVector2d.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

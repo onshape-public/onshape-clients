@@ -35,23 +35,26 @@ class BTEditingLogic(object):
         'function_name': 'str',
         'wants_is_creating': 'bool',
         'wants_specified_parameters': 'bool',
-        'wants_hidden_bodies': 'bool'
+        'wants_hidden_bodies': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'function_name': 'functionName',
         'wants_is_creating': 'wantsIsCreating',
         'wants_specified_parameters': 'wantsSpecifiedParameters',
-        'wants_hidden_bodies': 'wantsHiddenBodies'
+        'wants_hidden_bodies': 'wantsHiddenBodies',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, function_name=None, wants_is_creating=None, wants_specified_parameters=None, wants_hidden_bodies=None):  # noqa: E501
+    def __init__(self, function_name=None, wants_is_creating=None, wants_specified_parameters=None, wants_hidden_bodies=None, bt_type=None):  # noqa: E501
         """BTEditingLogic - a model defined in OpenAPI"""  # noqa: E501
 
         self._function_name = None
         self._wants_is_creating = None
         self._wants_specified_parameters = None
         self._wants_hidden_bodies = None
+        self._bt_type = None
         self.discriminator = None
 
         if function_name is not None:
@@ -62,6 +65,8 @@ class BTEditingLogic(object):
             self.wants_specified_parameters = wants_specified_parameters
         if wants_hidden_bodies is not None:
             self.wants_hidden_bodies = wants_hidden_bodies
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def function_name(self):
@@ -146,6 +151,27 @@ class BTEditingLogic(object):
         """
 
         self._wants_hidden_bodies = wants_hidden_bodies
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTEditingLogic.  # noqa: E501
+
+
+        :return: The bt_type of this BTEditingLogic.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTEditingLogic.
+
+
+        :param bt_type: The bt_type of this BTEditingLogic.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

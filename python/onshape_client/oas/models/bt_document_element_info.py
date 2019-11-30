@@ -32,15 +32,15 @@ class BTDocumentElementInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'data_type': 'str',
-        'thumbnails': 'str',
         'microversion_id': 'str',
-        'element_type': 'str',
+        'data_type': 'str',
         'foreign_data_id': 'str',
         'unupdatable': 'bool',
         'specified_unit': 'str',
-        'filename': 'str',
         'thumbnail_info': 'BTThumbnailInfo',
+        'thumbnails': 'str',
+        'filename': 'str',
+        'element_type': 'str',
         'length_units': 'str',
         'angle_units': 'str',
         'mass_units': 'str',
@@ -50,15 +50,15 @@ class BTDocumentElementInfo(object):
     }
 
     attribute_map = {
-        'data_type': 'dataType',
-        'thumbnails': 'thumbnails',
         'microversion_id': 'microversionId',
-        'element_type': 'elementType',
+        'data_type': 'dataType',
         'foreign_data_id': 'foreignDataId',
         'unupdatable': 'unupdatable',
         'specified_unit': 'specifiedUnit',
-        'filename': 'filename',
         'thumbnail_info': 'thumbnailInfo',
+        'thumbnails': 'thumbnails',
+        'filename': 'filename',
+        'element_type': 'elementType',
         'length_units': 'lengthUnits',
         'angle_units': 'angleUnits',
         'mass_units': 'massUnits',
@@ -67,18 +67,18 @@ class BTDocumentElementInfo(object):
         'type': 'type'
     }
 
-    def __init__(self, data_type=None, thumbnails=None, microversion_id=None, element_type=None, foreign_data_id=None, unupdatable=None, specified_unit=None, filename=None, thumbnail_info=None, length_units=None, angle_units=None, mass_units=None, name=None, id=None, type=None):  # noqa: E501
+    def __init__(self, microversion_id=None, data_type=None, foreign_data_id=None, unupdatable=None, specified_unit=None, thumbnail_info=None, thumbnails=None, filename=None, element_type=None, length_units=None, angle_units=None, mass_units=None, name=None, id=None, type=None):  # noqa: E501
         """BTDocumentElementInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._data_type = None
-        self._thumbnails = None
         self._microversion_id = None
-        self._element_type = None
+        self._data_type = None
         self._foreign_data_id = None
         self._unupdatable = None
         self._specified_unit = None
-        self._filename = None
         self._thumbnail_info = None
+        self._thumbnails = None
+        self._filename = None
+        self._element_type = None
         self._length_units = None
         self._angle_units = None
         self._mass_units = None
@@ -87,24 +87,24 @@ class BTDocumentElementInfo(object):
         self._type = None
         self.discriminator = None
 
-        if data_type is not None:
-            self.data_type = data_type
-        if thumbnails is not None:
-            self.thumbnails = thumbnails
         if microversion_id is not None:
             self.microversion_id = microversion_id
-        if element_type is not None:
-            self.element_type = element_type
+        if data_type is not None:
+            self.data_type = data_type
         if foreign_data_id is not None:
             self.foreign_data_id = foreign_data_id
         if unupdatable is not None:
             self.unupdatable = unupdatable
         if specified_unit is not None:
             self.specified_unit = specified_unit
-        if filename is not None:
-            self.filename = filename
         if thumbnail_info is not None:
             self.thumbnail_info = thumbnail_info
+        if thumbnails is not None:
+            self.thumbnails = thumbnails
+        if filename is not None:
+            self.filename = filename
+        if element_type is not None:
+            self.element_type = element_type
         if length_units is not None:
             self.length_units = length_units
         if angle_units is not None:
@@ -117,48 +117,6 @@ class BTDocumentElementInfo(object):
             self.id = id
         if type is not None:
             self.type = type
-
-    @property
-    def data_type(self):
-        """Gets the data_type of this BTDocumentElementInfo.  # noqa: E501
-
-
-        :return: The data_type of this BTDocumentElementInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_type
-
-    @data_type.setter
-    def data_type(self, data_type):
-        """Sets the data_type of this BTDocumentElementInfo.
-
-
-        :param data_type: The data_type of this BTDocumentElementInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._data_type = data_type
-
-    @property
-    def thumbnails(self):
-        """Gets the thumbnails of this BTDocumentElementInfo.  # noqa: E501
-
-
-        :return: The thumbnails of this BTDocumentElementInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._thumbnails
-
-    @thumbnails.setter
-    def thumbnails(self, thumbnails):
-        """Sets the thumbnails of this BTDocumentElementInfo.
-
-
-        :param thumbnails: The thumbnails of this BTDocumentElementInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._thumbnails = thumbnails
 
     @property
     def microversion_id(self):
@@ -182,31 +140,25 @@ class BTDocumentElementInfo(object):
         self._microversion_id = microversion_id
 
     @property
-    def element_type(self):
-        """Gets the element_type of this BTDocumentElementInfo.  # noqa: E501
+    def data_type(self):
+        """Gets the data_type of this BTDocumentElementInfo.  # noqa: E501
 
 
-        :return: The element_type of this BTDocumentElementInfo.  # noqa: E501
+        :return: The data_type of this BTDocumentElementInfo.  # noqa: E501
         :rtype: str
         """
-        return self._element_type
+        return self._data_type
 
-    @element_type.setter
-    def element_type(self, element_type):
-        """Sets the element_type of this BTDocumentElementInfo.
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this BTDocumentElementInfo.
 
 
-        :param element_type: The element_type of this BTDocumentElementInfo.  # noqa: E501
+        :param data_type: The data_type of this BTDocumentElementInfo.  # noqa: E501
         :type: str
         """
-        allowed_values = ["PARTSTUDIO", "ASSEMBLY", "DRAWING", "FEATURESTUDIO", "BLOB", "APPLICATION", "TABLE", "BILLOFMATERIALS", "UNKNOWN"]  # noqa: E501
-        if element_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `element_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(element_type, allowed_values)
-            )
 
-        self._element_type = element_type
+        self._data_type = data_type
 
     @property
     def foreign_data_id(self):
@@ -272,6 +224,48 @@ class BTDocumentElementInfo(object):
         self._specified_unit = specified_unit
 
     @property
+    def thumbnail_info(self):
+        """Gets the thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
+
+
+        :return: The thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail_info
+
+    @thumbnail_info.setter
+    def thumbnail_info(self, thumbnail_info):
+        """Sets the thumbnail_info of this BTDocumentElementInfo.
+
+
+        :param thumbnail_info: The thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail_info = thumbnail_info
+
+    @property
+    def thumbnails(self):
+        """Gets the thumbnails of this BTDocumentElementInfo.  # noqa: E501
+
+
+        :return: The thumbnails of this BTDocumentElementInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._thumbnails
+
+    @thumbnails.setter
+    def thumbnails(self, thumbnails):
+        """Sets the thumbnails of this BTDocumentElementInfo.
+
+
+        :param thumbnails: The thumbnails of this BTDocumentElementInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._thumbnails = thumbnails
+
+    @property
     def filename(self):
         """Gets the filename of this BTDocumentElementInfo.  # noqa: E501
 
@@ -293,25 +287,31 @@ class BTDocumentElementInfo(object):
         self._filename = filename
 
     @property
-    def thumbnail_info(self):
-        """Gets the thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
+    def element_type(self):
+        """Gets the element_type of this BTDocumentElementInfo.  # noqa: E501
 
 
-        :return: The thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
+        :return: The element_type of this BTDocumentElementInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._thumbnail_info
+        return self._element_type
 
-    @thumbnail_info.setter
-    def thumbnail_info(self, thumbnail_info):
-        """Sets the thumbnail_info of this BTDocumentElementInfo.
+    @element_type.setter
+    def element_type(self, element_type):
+        """Sets the element_type of this BTDocumentElementInfo.
 
 
-        :param thumbnail_info: The thumbnail_info of this BTDocumentElementInfo.  # noqa: E501
-        :type: BTThumbnailInfo
+        :param element_type: The element_type of this BTDocumentElementInfo.  # noqa: E501
+        :type: str
         """
+        allowed_values = ["PARTSTUDIO", "ASSEMBLY", "DRAWING", "FEATURESTUDIO", "BLOB", "APPLICATION", "TABLE", "BILLOFMATERIALS", "UNKNOWN"]  # noqa: E501
+        if element_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `element_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(element_type, allowed_values)
+            )
 
-        self._thumbnail_info = thumbnail_info
+        self._element_type = element_type
 
     @property
     def length_units(self):

@@ -33,14 +33,14 @@ class BTPTopLevelTypeDeclaration(object):
     """
     openapi_types = {
         'space_after_version': 'BTPSpace',
-        'version': 'BTPLiteralNumber',
-        'name': 'BTPIdentifier'
+        'name': 'BTPIdentifier',
+        'version': 'BTPLiteralNumber'
     }
 
     attribute_map = {
         'space_after_version': 'spaceAfterVersion',
-        'version': 'version',
-        'name': 'name'
+        'name': 'name',
+        'version': 'version'
     }
 
     discriminator_value_class_map = {
@@ -48,20 +48,20 @@ class BTPTopLevelTypeDeclaration(object):
         'BTPTopLevelUserTypeDeclaration': 'BTPTopLevelUserTypeDeclaration'
     }
 
-    def __init__(self, space_after_version=None, version=None, name=None):  # noqa: E501
+    def __init__(self, space_after_version=None, name=None, version=None):  # noqa: E501
         """BTPTopLevelTypeDeclaration - a model defined in OpenAPI"""  # noqa: E501
 
         self._space_after_version = None
-        self._version = None
         self._name = None
-        self.discriminator = 'type'
+        self._version = None
+        self.discriminator = 'bt_type'
 
         if space_after_version is not None:
             self.space_after_version = space_after_version
-        if version is not None:
-            self.version = version
         if name is not None:
             self.name = name
+        if version is not None:
+            self.version = version
 
     @property
     def space_after_version(self):
@@ -85,27 +85,6 @@ class BTPTopLevelTypeDeclaration(object):
         self._space_after_version = space_after_version
 
     @property
-    def version(self):
-        """Gets the version of this BTPTopLevelTypeDeclaration.  # noqa: E501
-
-
-        :return: The version of this BTPTopLevelTypeDeclaration.  # noqa: E501
-        :rtype: BTPLiteralNumber
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTPTopLevelTypeDeclaration.
-
-
-        :param version: The version of this BTPTopLevelTypeDeclaration.  # noqa: E501
-        :type: BTPLiteralNumber
-        """
-
-        self._version = version
-
-    @property
     def name(self):
         """Gets the name of this BTPTopLevelTypeDeclaration.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTPTopLevelTypeDeclaration(object):
         """
 
         self._name = name
+
+    @property
+    def version(self):
+        """Gets the version of this BTPTopLevelTypeDeclaration.  # noqa: E501
+
+
+        :return: The version of this BTPTopLevelTypeDeclaration.  # noqa: E501
+        :rtype: BTPLiteralNumber
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTPTopLevelTypeDeclaration.
+
+
+        :param version: The version of this BTPTopLevelTypeDeclaration.  # noqa: E501
+        :type: BTPLiteralNumber
+        """
+
+        self._version = version
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

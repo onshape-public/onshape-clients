@@ -33,53 +33,56 @@ class BTParameterLookupTableListEntry(object):
     """
     openapi_types = {
         'additional_localized_strings': 'int',
-        'display_name': 'str',
         'entries': 'list[BTParameterLookupTableEntry]',
         'default_index': 'int',
+        'display_name': 'str',
         'name': 'str',
         'localized_name': 'str',
         'localizable_name': 'str',
         'strings_to_localize': 'list[str]',
+        'localized_label': 'str',
         'label': 'str',
-        'localized_label': 'str'
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'additional_localized_strings': 'additionalLocalizedStrings',
-        'display_name': 'displayName',
         'entries': 'entries',
         'default_index': 'defaultIndex',
+        'display_name': 'displayName',
         'name': 'name',
         'localized_name': 'localizedName',
         'localizable_name': 'localizableName',
         'strings_to_localize': 'stringsToLocalize',
+        'localized_label': 'localizedLabel',
         'label': 'label',
-        'localized_label': 'localizedLabel'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, additional_localized_strings=None, display_name=None, entries=None, default_index=None, name=None, localized_name=None, localizable_name=None, strings_to_localize=None, label=None, localized_label=None):  # noqa: E501
+    def __init__(self, additional_localized_strings=None, entries=None, default_index=None, display_name=None, name=None, localized_name=None, localizable_name=None, strings_to_localize=None, localized_label=None, label=None, bt_type=None):  # noqa: E501
         """BTParameterLookupTableListEntry - a model defined in OpenAPI"""  # noqa: E501
 
         self._additional_localized_strings = None
-        self._display_name = None
         self._entries = None
         self._default_index = None
+        self._display_name = None
         self._name = None
         self._localized_name = None
         self._localizable_name = None
         self._strings_to_localize = None
-        self._label = None
         self._localized_label = None
+        self._label = None
+        self._bt_type = None
         self.discriminator = None
 
         if additional_localized_strings is not None:
             self.additional_localized_strings = additional_localized_strings
-        if display_name is not None:
-            self.display_name = display_name
         if entries is not None:
             self.entries = entries
         if default_index is not None:
             self.default_index = default_index
+        if display_name is not None:
+            self.display_name = display_name
         if name is not None:
             self.name = name
         if localized_name is not None:
@@ -88,10 +91,12 @@ class BTParameterLookupTableListEntry(object):
             self.localizable_name = localizable_name
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
-        if label is not None:
-            self.label = label
         if localized_label is not None:
             self.localized_label = localized_label
+        if label is not None:
+            self.label = label
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def additional_localized_strings(self):
@@ -113,27 +118,6 @@ class BTParameterLookupTableListEntry(object):
         """
 
         self._additional_localized_strings = additional_localized_strings
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTParameterLookupTableListEntry.  # noqa: E501
-
-
-        :return: The display_name of this BTParameterLookupTableListEntry.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTParameterLookupTableListEntry.
-
-
-        :param display_name: The display_name of this BTParameterLookupTableListEntry.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
 
     @property
     def entries(self):
@@ -176,6 +160,27 @@ class BTParameterLookupTableListEntry(object):
         """
 
         self._default_index = default_index
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTParameterLookupTableListEntry.  # noqa: E501
+
+
+        :return: The display_name of this BTParameterLookupTableListEntry.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTParameterLookupTableListEntry.
+
+
+        :param display_name: The display_name of this BTParameterLookupTableListEntry.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     @property
     def name(self):
@@ -262,6 +267,27 @@ class BTParameterLookupTableListEntry(object):
         self._strings_to_localize = strings_to_localize
 
     @property
+    def localized_label(self):
+        """Gets the localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+
+
+        :return: The localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+        :rtype: str
+        """
+        return self._localized_label
+
+    @localized_label.setter
+    def localized_label(self, localized_label):
+        """Sets the localized_label of this BTParameterLookupTableListEntry.
+
+
+        :param localized_label: The localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+        :type: str
+        """
+
+        self._localized_label = localized_label
+
+    @property
     def label(self):
         """Gets the label of this BTParameterLookupTableListEntry.  # noqa: E501
 
@@ -283,25 +309,25 @@ class BTParameterLookupTableListEntry(object):
         self._label = label
 
     @property
-    def localized_label(self):
-        """Gets the localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterLookupTableListEntry.  # noqa: E501
 
 
-        :return: The localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+        :return: The bt_type of this BTParameterLookupTableListEntry.  # noqa: E501
         :rtype: str
         """
-        return self._localized_label
+        return self._bt_type
 
-    @localized_label.setter
-    def localized_label(self, localized_label):
-        """Sets the localized_label of this BTParameterLookupTableListEntry.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterLookupTableListEntry.
 
 
-        :param localized_label: The localized_label of this BTParameterLookupTableListEntry.  # noqa: E501
+        :param bt_type: The bt_type of this BTParameterLookupTableListEntry.  # noqa: E501
         :type: str
         """
 
-        self._localized_label = localized_label
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

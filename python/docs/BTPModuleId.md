@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**external_import** | **bool** |  | [optional] 
 **external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
 **external_document_with_version** | [**BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 
+**external_import** | **bool** |  | [optional] 
 **version_and_microversion** | **str** |  | [optional] 
 **imported_document_id** | **str** |  | [optional] 
 **legacy** | **bool** |  | [optional] 
@@ -20,11 +20,11 @@ Name | Type | Description | Notes
 **potentially_valid** | **bool** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
 **microversion** | **str** |  | [optional] 
-**path** | [**BTPLiteralString**](BTPLiteralString.md) |  | [optional] 
 **space_before_path** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_after_path** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_before_version** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_after_version** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
+**path** | [**BTPLiteralString**](BTPLiteralString.md) |  | [optional] 
 **version** | [**BTPLiteralString**](BTPLiteralString.md) |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **space_default** | **bool** |  | [optional] 
 **space_after** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

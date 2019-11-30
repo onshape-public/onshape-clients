@@ -32,53 +32,53 @@ class BTDocumentInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'tree_href': 'str',
-        'resource_type': 'str',
-        'can_move': 'bool',
-        'project_id': 'str',
-        'is_container': 'bool',
-        'created_at': 'datetime',
         'description': 'str',
-        'is_enterprise_owned': 'bool',
-        'is_mutable': 'bool',
-        'has_pending_owner': 'bool',
-        'owner': 'BTOwnerInfo',
         'modified_at': 'datetime',
+        'created_at': 'datetime',
         'created_by': 'BTUserBasicSummaryInfo',
         'modified_by': 'BTUserBasicSummaryInfo',
+        'tree_href': 'str',
+        'is_mutable': 'bool',
+        'resource_type': 'str',
+        'project_id': 'str',
+        'can_move': 'bool',
+        'is_container': 'bool',
+        'is_enterprise_owned': 'bool',
+        'has_pending_owner': 'bool',
+        'owner': 'BTOwnerInfo',
         'href': 'str',
         'view_ref': 'str',
         'name': 'str',
         'id': 'str',
         'json_type': 'str',
-        'is_using_managed_workflow': 'bool',
-        'liked_by_current_user': 'bool',
-        'has_relevant_insertables': 'bool',
-        'can_unshare': 'bool',
-        'trash': 'bool',
+        'default_element_id': 'str',
+        'default_workspace': 'BTBaseInfo',
+        'created_with_education_plan': 'bool',
+        'not_revision_managed': 'bool',
+        'anonymous_access_allowed': 'bool',
+        'anonymous_allows_export': 'bool',
+        'thumbnail': 'BTThumbnailInfo',
         'parent_id': 'str',
         'permission_set': 'object',
+        'trash': 'bool',
         'total_workspaces_updating': 'int',
         'total_workspaces_scheduled_for_update': 'int',
-        'thumbnail': 'BTThumbnailInfo',
+        'can_unshare': 'bool',
         'support_team_user_and_shared': 'bool',
+        'liked_by_current_user': 'bool',
         'document_labels': 'list[BTDocumentLabelInfo]',
         'number_of_times_referenced': 'int',
         'number_of_times_copied': 'int',
         'likes': 'int',
         'recent_version': 'BTBaseInfo',
-        'created_with_education_plan': 'bool',
-        'not_revision_managed': 'bool',
-        'anonymous_access_allowed': 'bool',
-        'anonymous_allows_export': 'bool',
-        'trashed_at': 'datetime',
-        'public': 'bool',
+        'has_relevant_insertables': 'bool',
         'tags': 'list[str]',
         'has_release_revisionable_objects': 'bool',
+        'trashed_at': 'datetime',
+        'public': 'bool',
         'is_orphaned': 'bool',
         'user_account_limits_breached': 'bool',
-        'default_element_id': 'str',
-        'default_workspace': 'BTBaseInfo',
+        'is_using_managed_workflow': 'bool',
         'permission': 'str',
         'document_thumbnail_element_id': 'str',
         'duplicate_name_violation_error': 'str',
@@ -87,53 +87,53 @@ class BTDocumentInfo(object):
     }
 
     attribute_map = {
-        'tree_href': 'treeHref',
-        'resource_type': 'resourceType',
-        'can_move': 'canMove',
-        'project_id': 'projectId',
-        'is_container': 'isContainer',
-        'created_at': 'createdAt',
         'description': 'description',
-        'is_enterprise_owned': 'isEnterpriseOwned',
-        'is_mutable': 'isMutable',
-        'has_pending_owner': 'hasPendingOwner',
-        'owner': 'owner',
         'modified_at': 'modifiedAt',
+        'created_at': 'createdAt',
         'created_by': 'createdBy',
         'modified_by': 'modifiedBy',
+        'tree_href': 'treeHref',
+        'is_mutable': 'isMutable',
+        'resource_type': 'resourceType',
+        'project_id': 'projectId',
+        'can_move': 'canMove',
+        'is_container': 'isContainer',
+        'is_enterprise_owned': 'isEnterpriseOwned',
+        'has_pending_owner': 'hasPendingOwner',
+        'owner': 'owner',
         'href': 'href',
         'view_ref': 'viewRef',
         'name': 'name',
         'id': 'id',
         'json_type': 'jsonType',
-        'is_using_managed_workflow': 'isUsingManagedWorkflow',
-        'liked_by_current_user': 'likedByCurrentUser',
-        'has_relevant_insertables': 'hasRelevantInsertables',
-        'can_unshare': 'canUnshare',
-        'trash': 'trash',
+        'default_element_id': 'defaultElementId',
+        'default_workspace': 'defaultWorkspace',
+        'created_with_education_plan': 'createdWithEducationPlan',
+        'not_revision_managed': 'notRevisionManaged',
+        'anonymous_access_allowed': 'anonymousAccessAllowed',
+        'anonymous_allows_export': 'anonymousAllowsExport',
+        'thumbnail': 'thumbnail',
         'parent_id': 'parentId',
         'permission_set': 'permissionSet',
+        'trash': 'trash',
         'total_workspaces_updating': 'totalWorkspacesUpdating',
         'total_workspaces_scheduled_for_update': 'totalWorkspacesScheduledForUpdate',
-        'thumbnail': 'thumbnail',
+        'can_unshare': 'canUnshare',
         'support_team_user_and_shared': 'supportTeamUserAndShared',
+        'liked_by_current_user': 'likedByCurrentUser',
         'document_labels': 'documentLabels',
         'number_of_times_referenced': 'numberOfTimesReferenced',
         'number_of_times_copied': 'numberOfTimesCopied',
         'likes': 'likes',
         'recent_version': 'recentVersion',
-        'created_with_education_plan': 'createdWithEducationPlan',
-        'not_revision_managed': 'notRevisionManaged',
-        'anonymous_access_allowed': 'anonymousAccessAllowed',
-        'anonymous_allows_export': 'anonymousAllowsExport',
-        'trashed_at': 'trashedAt',
-        'public': 'public',
+        'has_relevant_insertables': 'hasRelevantInsertables',
         'tags': 'tags',
         'has_release_revisionable_objects': 'hasReleaseRevisionableObjects',
+        'trashed_at': 'trashedAt',
+        'public': 'public',
         'is_orphaned': 'isOrphaned',
         'user_account_limits_breached': 'userAccountLimitsBreached',
-        'default_element_id': 'defaultElementId',
-        'default_workspace': 'defaultWorkspace',
+        'is_using_managed_workflow': 'isUsingManagedWorkflow',
         'permission': 'permission',
         'document_thumbnail_element_id': 'documentThumbnailElementId',
         'duplicate_name_violation_error': 'duplicateNameViolationError',
@@ -141,56 +141,56 @@ class BTDocumentInfo(object):
         'is_upgraded_to_latest_version': 'isUpgradedToLatestVersion'
     }
 
-    def __init__(self, tree_href=None, resource_type=None, can_move=None, project_id=None, is_container=None, created_at=None, description=None, is_enterprise_owned=None, is_mutable=None, has_pending_owner=None, owner=None, modified_at=None, created_by=None, modified_by=None, href=None, view_ref=None, name=None, id=None, json_type=None, is_using_managed_workflow=None, liked_by_current_user=None, has_relevant_insertables=None, can_unshare=None, trash=None, parent_id=None, permission_set=None, total_workspaces_updating=None, total_workspaces_scheduled_for_update=None, thumbnail=None, support_team_user_and_shared=None, document_labels=None, number_of_times_referenced=None, number_of_times_copied=None, likes=None, recent_version=None, created_with_education_plan=None, not_revision_managed=None, anonymous_access_allowed=None, anonymous_allows_export=None, trashed_at=None, public=None, tags=None, has_release_revisionable_objects=None, is_orphaned=None, user_account_limits_breached=None, default_element_id=None, default_workspace=None, permission=None, document_thumbnail_element_id=None, duplicate_name_violation_error=None, beta_capability_ids=None, is_upgraded_to_latest_version=None):  # noqa: E501
+    def __init__(self, description=None, modified_at=None, created_at=None, created_by=None, modified_by=None, tree_href=None, is_mutable=None, resource_type=None, project_id=None, can_move=None, is_container=None, is_enterprise_owned=None, has_pending_owner=None, owner=None, href=None, view_ref=None, name=None, id=None, json_type=None, default_element_id=None, default_workspace=None, created_with_education_plan=None, not_revision_managed=None, anonymous_access_allowed=None, anonymous_allows_export=None, thumbnail=None, parent_id=None, permission_set=None, trash=None, total_workspaces_updating=None, total_workspaces_scheduled_for_update=None, can_unshare=None, support_team_user_and_shared=None, liked_by_current_user=None, document_labels=None, number_of_times_referenced=None, number_of_times_copied=None, likes=None, recent_version=None, has_relevant_insertables=None, tags=None, has_release_revisionable_objects=None, trashed_at=None, public=None, is_orphaned=None, user_account_limits_breached=None, is_using_managed_workflow=None, permission=None, document_thumbnail_element_id=None, duplicate_name_violation_error=None, beta_capability_ids=None, is_upgraded_to_latest_version=None):  # noqa: E501
         """BTDocumentInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._tree_href = None
-        self._resource_type = None
-        self._can_move = None
-        self._project_id = None
-        self._is_container = None
-        self._created_at = None
         self._description = None
-        self._is_enterprise_owned = None
-        self._is_mutable = None
-        self._has_pending_owner = None
-        self._owner = None
         self._modified_at = None
+        self._created_at = None
         self._created_by = None
         self._modified_by = None
+        self._tree_href = None
+        self._is_mutable = None
+        self._resource_type = None
+        self._project_id = None
+        self._can_move = None
+        self._is_container = None
+        self._is_enterprise_owned = None
+        self._has_pending_owner = None
+        self._owner = None
         self._href = None
         self._view_ref = None
         self._name = None
         self._id = None
         self._json_type = None
-        self._is_using_managed_workflow = None
-        self._liked_by_current_user = None
-        self._has_relevant_insertables = None
-        self._can_unshare = None
-        self._trash = None
+        self._default_element_id = None
+        self._default_workspace = None
+        self._created_with_education_plan = None
+        self._not_revision_managed = None
+        self._anonymous_access_allowed = None
+        self._anonymous_allows_export = None
+        self._thumbnail = None
         self._parent_id = None
         self._permission_set = None
+        self._trash = None
         self._total_workspaces_updating = None
         self._total_workspaces_scheduled_for_update = None
-        self._thumbnail = None
+        self._can_unshare = None
         self._support_team_user_and_shared = None
+        self._liked_by_current_user = None
         self._document_labels = None
         self._number_of_times_referenced = None
         self._number_of_times_copied = None
         self._likes = None
         self._recent_version = None
-        self._created_with_education_plan = None
-        self._not_revision_managed = None
-        self._anonymous_access_allowed = None
-        self._anonymous_allows_export = None
-        self._trashed_at = None
-        self._public = None
+        self._has_relevant_insertables = None
         self._tags = None
         self._has_release_revisionable_objects = None
+        self._trashed_at = None
+        self._public = None
         self._is_orphaned = None
         self._user_account_limits_breached = None
-        self._default_element_id = None
-        self._default_workspace = None
+        self._is_using_managed_workflow = None
         self._permission = None
         self._document_thumbnail_element_id = None
         self._duplicate_name_violation_error = None
@@ -198,34 +198,34 @@ class BTDocumentInfo(object):
         self._is_upgraded_to_latest_version = None
         self.discriminator = None
 
-        if tree_href is not None:
-            self.tree_href = tree_href
-        if resource_type is not None:
-            self.resource_type = resource_type
-        if can_move is not None:
-            self.can_move = can_move
-        if project_id is not None:
-            self.project_id = project_id
-        if is_container is not None:
-            self.is_container = is_container
-        if created_at is not None:
-            self.created_at = created_at
         if description is not None:
             self.description = description
-        if is_enterprise_owned is not None:
-            self.is_enterprise_owned = is_enterprise_owned
-        if is_mutable is not None:
-            self.is_mutable = is_mutable
-        if has_pending_owner is not None:
-            self.has_pending_owner = has_pending_owner
-        if owner is not None:
-            self.owner = owner
         if modified_at is not None:
             self.modified_at = modified_at
+        if created_at is not None:
+            self.created_at = created_at
         if created_by is not None:
             self.created_by = created_by
         if modified_by is not None:
             self.modified_by = modified_by
+        if tree_href is not None:
+            self.tree_href = tree_href
+        if is_mutable is not None:
+            self.is_mutable = is_mutable
+        if resource_type is not None:
+            self.resource_type = resource_type
+        if project_id is not None:
+            self.project_id = project_id
+        if can_move is not None:
+            self.can_move = can_move
+        if is_container is not None:
+            self.is_container = is_container
+        if is_enterprise_owned is not None:
+            self.is_enterprise_owned = is_enterprise_owned
+        if has_pending_owner is not None:
+            self.has_pending_owner = has_pending_owner
+        if owner is not None:
+            self.owner = owner
         if href is not None:
             self.href = href
         if view_ref is not None:
@@ -235,28 +235,36 @@ class BTDocumentInfo(object):
         if id is not None:
             self.id = id
         self.json_type = json_type
-        if is_using_managed_workflow is not None:
-            self.is_using_managed_workflow = is_using_managed_workflow
-        if liked_by_current_user is not None:
-            self.liked_by_current_user = liked_by_current_user
-        if has_relevant_insertables is not None:
-            self.has_relevant_insertables = has_relevant_insertables
-        if can_unshare is not None:
-            self.can_unshare = can_unshare
-        if trash is not None:
-            self.trash = trash
+        if default_element_id is not None:
+            self.default_element_id = default_element_id
+        if default_workspace is not None:
+            self.default_workspace = default_workspace
+        if created_with_education_plan is not None:
+            self.created_with_education_plan = created_with_education_plan
+        if not_revision_managed is not None:
+            self.not_revision_managed = not_revision_managed
+        if anonymous_access_allowed is not None:
+            self.anonymous_access_allowed = anonymous_access_allowed
+        if anonymous_allows_export is not None:
+            self.anonymous_allows_export = anonymous_allows_export
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
         if parent_id is not None:
             self.parent_id = parent_id
         if permission_set is not None:
             self.permission_set = permission_set
+        if trash is not None:
+            self.trash = trash
         if total_workspaces_updating is not None:
             self.total_workspaces_updating = total_workspaces_updating
         if total_workspaces_scheduled_for_update is not None:
             self.total_workspaces_scheduled_for_update = total_workspaces_scheduled_for_update
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
+        if can_unshare is not None:
+            self.can_unshare = can_unshare
         if support_team_user_and_shared is not None:
             self.support_team_user_and_shared = support_team_user_and_shared
+        if liked_by_current_user is not None:
+            self.liked_by_current_user = liked_by_current_user
         if document_labels is not None:
             self.document_labels = document_labels
         if number_of_times_referenced is not None:
@@ -267,30 +275,22 @@ class BTDocumentInfo(object):
             self.likes = likes
         if recent_version is not None:
             self.recent_version = recent_version
-        if created_with_education_plan is not None:
-            self.created_with_education_plan = created_with_education_plan
-        if not_revision_managed is not None:
-            self.not_revision_managed = not_revision_managed
-        if anonymous_access_allowed is not None:
-            self.anonymous_access_allowed = anonymous_access_allowed
-        if anonymous_allows_export is not None:
-            self.anonymous_allows_export = anonymous_allows_export
-        if trashed_at is not None:
-            self.trashed_at = trashed_at
-        if public is not None:
-            self.public = public
+        if has_relevant_insertables is not None:
+            self.has_relevant_insertables = has_relevant_insertables
         if tags is not None:
             self.tags = tags
         if has_release_revisionable_objects is not None:
             self.has_release_revisionable_objects = has_release_revisionable_objects
+        if trashed_at is not None:
+            self.trashed_at = trashed_at
+        if public is not None:
+            self.public = public
         if is_orphaned is not None:
             self.is_orphaned = is_orphaned
         if user_account_limits_breached is not None:
             self.user_account_limits_breached = user_account_limits_breached
-        if default_element_id is not None:
-            self.default_element_id = default_element_id
-        if default_workspace is not None:
-            self.default_workspace = default_workspace
+        if is_using_managed_workflow is not None:
+            self.is_using_managed_workflow = is_using_managed_workflow
         if permission is not None:
             self.permission = permission
         if document_thumbnail_element_id is not None:
@@ -301,132 +301,6 @@ class BTDocumentInfo(object):
             self.beta_capability_ids = beta_capability_ids
         if is_upgraded_to_latest_version is not None:
             self.is_upgraded_to_latest_version = is_upgraded_to_latest_version
-
-    @property
-    def tree_href(self):
-        """Gets the tree_href of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The tree_href of this BTDocumentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._tree_href
-
-    @tree_href.setter
-    def tree_href(self, tree_href):
-        """Sets the tree_href of this BTDocumentInfo.
-
-
-        :param tree_href: The tree_href of this BTDocumentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._tree_href = tree_href
-
-    @property
-    def resource_type(self):
-        """Gets the resource_type of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The resource_type of this BTDocumentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._resource_type
-
-    @resource_type.setter
-    def resource_type(self, resource_type):
-        """Sets the resource_type of this BTDocumentInfo.
-
-
-        :param resource_type: The resource_type of this BTDocumentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._resource_type = resource_type
-
-    @property
-    def can_move(self):
-        """Gets the can_move of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The can_move of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._can_move
-
-    @can_move.setter
-    def can_move(self, can_move):
-        """Sets the can_move of this BTDocumentInfo.
-
-
-        :param can_move: The can_move of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._can_move = can_move
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The project_id of this BTDocumentInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this BTDocumentInfo.
-
-
-        :param project_id: The project_id of this BTDocumentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._project_id = project_id
-
-    @property
-    def is_container(self):
-        """Gets the is_container of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The is_container of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_container
-
-    @is_container.setter
-    def is_container(self, is_container):
-        """Sets the is_container of this BTDocumentInfo.
-
-
-        :param is_container: The is_container of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_container = is_container
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTDocumentInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTDocumentInfo.
-
-
-        :param created_at: The created_at of this BTDocumentInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
 
     @property
     def description(self):
@@ -450,90 +324,6 @@ class BTDocumentInfo(object):
         self._description = description
 
     @property
-    def is_enterprise_owned(self):
-        """Gets the is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_enterprise_owned
-
-    @is_enterprise_owned.setter
-    def is_enterprise_owned(self, is_enterprise_owned):
-        """Sets the is_enterprise_owned of this BTDocumentInfo.
-
-
-        :param is_enterprise_owned: The is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_enterprise_owned = is_enterprise_owned
-
-    @property
-    def is_mutable(self):
-        """Gets the is_mutable of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The is_mutable of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_mutable
-
-    @is_mutable.setter
-    def is_mutable(self, is_mutable):
-        """Sets the is_mutable of this BTDocumentInfo.
-
-
-        :param is_mutable: The is_mutable of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_mutable = is_mutable
-
-    @property
-    def has_pending_owner(self):
-        """Gets the has_pending_owner of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The has_pending_owner of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_pending_owner
-
-    @has_pending_owner.setter
-    def has_pending_owner(self, has_pending_owner):
-        """Sets the has_pending_owner of this BTDocumentInfo.
-
-
-        :param has_pending_owner: The has_pending_owner of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_pending_owner = has_pending_owner
-
-    @property
-    def owner(self):
-        """Gets the owner of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The owner of this BTDocumentInfo.  # noqa: E501
-        :rtype: BTOwnerInfo
-        """
-        return self._owner
-
-    @owner.setter
-    def owner(self, owner):
-        """Sets the owner of this BTDocumentInfo.
-
-
-        :param owner: The owner of this BTDocumentInfo.  # noqa: E501
-        :type: BTOwnerInfo
-        """
-
-        self._owner = owner
-
-    @property
     def modified_at(self):
         """Gets the modified_at of this BTDocumentInfo.  # noqa: E501
 
@@ -553,6 +343,27 @@ class BTDocumentInfo(object):
         """
 
         self._modified_at = modified_at
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTDocumentInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTDocumentInfo.
+
+
+        :param created_at: The created_at of this BTDocumentInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
 
     @property
     def created_by(self):
@@ -595,6 +406,195 @@ class BTDocumentInfo(object):
         """
 
         self._modified_by = modified_by
+
+    @property
+    def tree_href(self):
+        """Gets the tree_href of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The tree_href of this BTDocumentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._tree_href
+
+    @tree_href.setter
+    def tree_href(self, tree_href):
+        """Sets the tree_href of this BTDocumentInfo.
+
+
+        :param tree_href: The tree_href of this BTDocumentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._tree_href = tree_href
+
+    @property
+    def is_mutable(self):
+        """Gets the is_mutable of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The is_mutable of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_mutable
+
+    @is_mutable.setter
+    def is_mutable(self, is_mutable):
+        """Sets the is_mutable of this BTDocumentInfo.
+
+
+        :param is_mutable: The is_mutable of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_mutable = is_mutable
+
+    @property
+    def resource_type(self):
+        """Gets the resource_type of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The resource_type of this BTDocumentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._resource_type
+
+    @resource_type.setter
+    def resource_type(self, resource_type):
+        """Sets the resource_type of this BTDocumentInfo.
+
+
+        :param resource_type: The resource_type of this BTDocumentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._resource_type = resource_type
+
+    @property
+    def project_id(self):
+        """Gets the project_id of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The project_id of this BTDocumentInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BTDocumentInfo.
+
+
+        :param project_id: The project_id of this BTDocumentInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._project_id = project_id
+
+    @property
+    def can_move(self):
+        """Gets the can_move of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The can_move of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_move
+
+    @can_move.setter
+    def can_move(self, can_move):
+        """Sets the can_move of this BTDocumentInfo.
+
+
+        :param can_move: The can_move of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_move = can_move
+
+    @property
+    def is_container(self):
+        """Gets the is_container of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The is_container of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_container
+
+    @is_container.setter
+    def is_container(self, is_container):
+        """Sets the is_container of this BTDocumentInfo.
+
+
+        :param is_container: The is_container of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_container = is_container
+
+    @property
+    def is_enterprise_owned(self):
+        """Gets the is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_enterprise_owned
+
+    @is_enterprise_owned.setter
+    def is_enterprise_owned(self, is_enterprise_owned):
+        """Sets the is_enterprise_owned of this BTDocumentInfo.
+
+
+        :param is_enterprise_owned: The is_enterprise_owned of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_enterprise_owned = is_enterprise_owned
+
+    @property
+    def has_pending_owner(self):
+        """Gets the has_pending_owner of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The has_pending_owner of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_pending_owner
+
+    @has_pending_owner.setter
+    def has_pending_owner(self, has_pending_owner):
+        """Sets the has_pending_owner of this BTDocumentInfo.
+
+
+        :param has_pending_owner: The has_pending_owner of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_pending_owner = has_pending_owner
+
+    @property
+    def owner(self):
+        """Gets the owner of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The owner of this BTDocumentInfo.  # noqa: E501
+        :rtype: BTOwnerInfo
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this BTDocumentInfo.
+
+
+        :param owner: The owner of this BTDocumentInfo.  # noqa: E501
+        :type: BTOwnerInfo
+        """
+
+        self._owner = owner
 
     @property
     def href(self):
@@ -704,109 +704,151 @@ class BTDocumentInfo(object):
         self._json_type = json_type
 
     @property
-    def is_using_managed_workflow(self):
-        """Gets the is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
+    def default_element_id(self):
+        """Gets the default_element_id of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
+        :return: The default_element_id of this BTDocumentInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._is_using_managed_workflow
+        return self._default_element_id
 
-    @is_using_managed_workflow.setter
-    def is_using_managed_workflow(self, is_using_managed_workflow):
-        """Sets the is_using_managed_workflow of this BTDocumentInfo.
+    @default_element_id.setter
+    def default_element_id(self, default_element_id):
+        """Sets the default_element_id of this BTDocumentInfo.
 
 
-        :param is_using_managed_workflow: The is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
-        :type: bool
+        :param default_element_id: The default_element_id of this BTDocumentInfo.  # noqa: E501
+        :type: str
         """
 
-        self._is_using_managed_workflow = is_using_managed_workflow
+        self._default_element_id = default_element_id
 
     @property
-    def liked_by_current_user(self):
-        """Gets the liked_by_current_user of this BTDocumentInfo.  # noqa: E501
+    def default_workspace(self):
+        """Gets the default_workspace of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The liked_by_current_user of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
+        :return: The default_workspace of this BTDocumentInfo.  # noqa: E501
+        :rtype: BTBaseInfo
         """
-        return self._liked_by_current_user
+        return self._default_workspace
 
-    @liked_by_current_user.setter
-    def liked_by_current_user(self, liked_by_current_user):
-        """Sets the liked_by_current_user of this BTDocumentInfo.
+    @default_workspace.setter
+    def default_workspace(self, default_workspace):
+        """Sets the default_workspace of this BTDocumentInfo.
 
 
-        :param liked_by_current_user: The liked_by_current_user of this BTDocumentInfo.  # noqa: E501
-        :type: bool
+        :param default_workspace: The default_workspace of this BTDocumentInfo.  # noqa: E501
+        :type: BTBaseInfo
         """
 
-        self._liked_by_current_user = liked_by_current_user
+        self._default_workspace = default_workspace
 
     @property
-    def has_relevant_insertables(self):
-        """Gets the has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
+    def created_with_education_plan(self):
+        """Gets the created_with_education_plan of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
+        :return: The created_with_education_plan of this BTDocumentInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._has_relevant_insertables
+        return self._created_with_education_plan
 
-    @has_relevant_insertables.setter
-    def has_relevant_insertables(self, has_relevant_insertables):
-        """Sets the has_relevant_insertables of this BTDocumentInfo.
+    @created_with_education_plan.setter
+    def created_with_education_plan(self, created_with_education_plan):
+        """Sets the created_with_education_plan of this BTDocumentInfo.
 
 
-        :param has_relevant_insertables: The has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
+        :param created_with_education_plan: The created_with_education_plan of this BTDocumentInfo.  # noqa: E501
         :type: bool
         """
 
-        self._has_relevant_insertables = has_relevant_insertables
+        self._created_with_education_plan = created_with_education_plan
 
     @property
-    def can_unshare(self):
-        """Gets the can_unshare of this BTDocumentInfo.  # noqa: E501
+    def not_revision_managed(self):
+        """Gets the not_revision_managed of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The can_unshare of this BTDocumentInfo.  # noqa: E501
+        :return: The not_revision_managed of this BTDocumentInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._can_unshare
+        return self._not_revision_managed
 
-    @can_unshare.setter
-    def can_unshare(self, can_unshare):
-        """Sets the can_unshare of this BTDocumentInfo.
+    @not_revision_managed.setter
+    def not_revision_managed(self, not_revision_managed):
+        """Sets the not_revision_managed of this BTDocumentInfo.
 
 
-        :param can_unshare: The can_unshare of this BTDocumentInfo.  # noqa: E501
+        :param not_revision_managed: The not_revision_managed of this BTDocumentInfo.  # noqa: E501
         :type: bool
         """
 
-        self._can_unshare = can_unshare
+        self._not_revision_managed = not_revision_managed
 
     @property
-    def trash(self):
-        """Gets the trash of this BTDocumentInfo.  # noqa: E501
+    def anonymous_access_allowed(self):
+        """Gets the anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The trash of this BTDocumentInfo.  # noqa: E501
+        :return: The anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._trash
+        return self._anonymous_access_allowed
 
-    @trash.setter
-    def trash(self, trash):
-        """Sets the trash of this BTDocumentInfo.
+    @anonymous_access_allowed.setter
+    def anonymous_access_allowed(self, anonymous_access_allowed):
+        """Sets the anonymous_access_allowed of this BTDocumentInfo.
 
 
-        :param trash: The trash of this BTDocumentInfo.  # noqa: E501
+        :param anonymous_access_allowed: The anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
         :type: bool
         """
 
-        self._trash = trash
+        self._anonymous_access_allowed = anonymous_access_allowed
+
+    @property
+    def anonymous_allows_export(self):
+        """Gets the anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._anonymous_allows_export
+
+    @anonymous_allows_export.setter
+    def anonymous_allows_export(self, anonymous_allows_export):
+        """Sets the anonymous_allows_export of this BTDocumentInfo.
+
+
+        :param anonymous_allows_export: The anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._anonymous_allows_export = anonymous_allows_export
+
+    @property
+    def thumbnail(self):
+        """Gets the thumbnail of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The thumbnail of this BTDocumentInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this BTDocumentInfo.
+
+
+        :param thumbnail: The thumbnail of this BTDocumentInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail = thumbnail
 
     @property
     def parent_id(self):
@@ -851,6 +893,27 @@ class BTDocumentInfo(object):
         self._permission_set = permission_set
 
     @property
+    def trash(self):
+        """Gets the trash of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The trash of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._trash
+
+    @trash.setter
+    def trash(self, trash):
+        """Sets the trash of this BTDocumentInfo.
+
+
+        :param trash: The trash of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._trash = trash
+
+    @property
     def total_workspaces_updating(self):
         """Gets the total_workspaces_updating of this BTDocumentInfo.  # noqa: E501
 
@@ -893,25 +956,25 @@ class BTDocumentInfo(object):
         self._total_workspaces_scheduled_for_update = total_workspaces_scheduled_for_update
 
     @property
-    def thumbnail(self):
-        """Gets the thumbnail of this BTDocumentInfo.  # noqa: E501
+    def can_unshare(self):
+        """Gets the can_unshare of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The thumbnail of this BTDocumentInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
+        :return: The can_unshare of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._thumbnail
+        return self._can_unshare
 
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this BTDocumentInfo.
+    @can_unshare.setter
+    def can_unshare(self, can_unshare):
+        """Sets the can_unshare of this BTDocumentInfo.
 
 
-        :param thumbnail: The thumbnail of this BTDocumentInfo.  # noqa: E501
-        :type: BTThumbnailInfo
+        :param can_unshare: The can_unshare of this BTDocumentInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._thumbnail = thumbnail
+        self._can_unshare = can_unshare
 
     @property
     def support_team_user_and_shared(self):
@@ -933,6 +996,27 @@ class BTDocumentInfo(object):
         """
 
         self._support_team_user_and_shared = support_team_user_and_shared
+
+    @property
+    def liked_by_current_user(self):
+        """Gets the liked_by_current_user of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The liked_by_current_user of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._liked_by_current_user
+
+    @liked_by_current_user.setter
+    def liked_by_current_user(self, liked_by_current_user):
+        """Sets the liked_by_current_user of this BTDocumentInfo.
+
+
+        :param liked_by_current_user: The liked_by_current_user of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._liked_by_current_user = liked_by_current_user
 
     @property
     def document_labels(self):
@@ -1040,130 +1124,25 @@ class BTDocumentInfo(object):
         self._recent_version = recent_version
 
     @property
-    def created_with_education_plan(self):
-        """Gets the created_with_education_plan of this BTDocumentInfo.  # noqa: E501
+    def has_relevant_insertables(self):
+        """Gets the has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The created_with_education_plan of this BTDocumentInfo.  # noqa: E501
+        :return: The has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._created_with_education_plan
+        return self._has_relevant_insertables
 
-    @created_with_education_plan.setter
-    def created_with_education_plan(self, created_with_education_plan):
-        """Sets the created_with_education_plan of this BTDocumentInfo.
+    @has_relevant_insertables.setter
+    def has_relevant_insertables(self, has_relevant_insertables):
+        """Sets the has_relevant_insertables of this BTDocumentInfo.
 
 
-        :param created_with_education_plan: The created_with_education_plan of this BTDocumentInfo.  # noqa: E501
+        :param has_relevant_insertables: The has_relevant_insertables of this BTDocumentInfo.  # noqa: E501
         :type: bool
         """
 
-        self._created_with_education_plan = created_with_education_plan
-
-    @property
-    def not_revision_managed(self):
-        """Gets the not_revision_managed of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The not_revision_managed of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._not_revision_managed
-
-    @not_revision_managed.setter
-    def not_revision_managed(self, not_revision_managed):
-        """Sets the not_revision_managed of this BTDocumentInfo.
-
-
-        :param not_revision_managed: The not_revision_managed of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._not_revision_managed = not_revision_managed
-
-    @property
-    def anonymous_access_allowed(self):
-        """Gets the anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._anonymous_access_allowed
-
-    @anonymous_access_allowed.setter
-    def anonymous_access_allowed(self, anonymous_access_allowed):
-        """Sets the anonymous_access_allowed of this BTDocumentInfo.
-
-
-        :param anonymous_access_allowed: The anonymous_access_allowed of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._anonymous_access_allowed = anonymous_access_allowed
-
-    @property
-    def anonymous_allows_export(self):
-        """Gets the anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._anonymous_allows_export
-
-    @anonymous_allows_export.setter
-    def anonymous_allows_export(self, anonymous_allows_export):
-        """Sets the anonymous_allows_export of this BTDocumentInfo.
-
-
-        :param anonymous_allows_export: The anonymous_allows_export of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._anonymous_allows_export = anonymous_allows_export
-
-    @property
-    def trashed_at(self):
-        """Gets the trashed_at of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The trashed_at of this BTDocumentInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._trashed_at
-
-    @trashed_at.setter
-    def trashed_at(self, trashed_at):
-        """Sets the trashed_at of this BTDocumentInfo.
-
-
-        :param trashed_at: The trashed_at of this BTDocumentInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._trashed_at = trashed_at
-
-    @property
-    def public(self):
-        """Gets the public of this BTDocumentInfo.  # noqa: E501
-
-
-        :return: The public of this BTDocumentInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._public
-
-    @public.setter
-    def public(self, public):
-        """Sets the public of this BTDocumentInfo.
-
-
-        :param public: The public of this BTDocumentInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._public = public
+        self._has_relevant_insertables = has_relevant_insertables
 
     @property
     def tags(self):
@@ -1208,6 +1187,48 @@ class BTDocumentInfo(object):
         self._has_release_revisionable_objects = has_release_revisionable_objects
 
     @property
+    def trashed_at(self):
+        """Gets the trashed_at of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The trashed_at of this BTDocumentInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._trashed_at
+
+    @trashed_at.setter
+    def trashed_at(self, trashed_at):
+        """Sets the trashed_at of this BTDocumentInfo.
+
+
+        :param trashed_at: The trashed_at of this BTDocumentInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._trashed_at = trashed_at
+
+    @property
+    def public(self):
+        """Gets the public of this BTDocumentInfo.  # noqa: E501
+
+
+        :return: The public of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this BTDocumentInfo.
+
+
+        :param public: The public of this BTDocumentInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._public = public
+
+    @property
     def is_orphaned(self):
         """Gets the is_orphaned of this BTDocumentInfo.  # noqa: E501
 
@@ -1250,46 +1271,25 @@ class BTDocumentInfo(object):
         self._user_account_limits_breached = user_account_limits_breached
 
     @property
-    def default_element_id(self):
-        """Gets the default_element_id of this BTDocumentInfo.  # noqa: E501
+    def is_using_managed_workflow(self):
+        """Gets the is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
 
 
-        :return: The default_element_id of this BTDocumentInfo.  # noqa: E501
-        :rtype: str
+        :return: The is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
+        :rtype: bool
         """
-        return self._default_element_id
+        return self._is_using_managed_workflow
 
-    @default_element_id.setter
-    def default_element_id(self, default_element_id):
-        """Sets the default_element_id of this BTDocumentInfo.
-
-
-        :param default_element_id: The default_element_id of this BTDocumentInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._default_element_id = default_element_id
-
-    @property
-    def default_workspace(self):
-        """Gets the default_workspace of this BTDocumentInfo.  # noqa: E501
+    @is_using_managed_workflow.setter
+    def is_using_managed_workflow(self, is_using_managed_workflow):
+        """Sets the is_using_managed_workflow of this BTDocumentInfo.
 
 
-        :return: The default_workspace of this BTDocumentInfo.  # noqa: E501
-        :rtype: BTBaseInfo
-        """
-        return self._default_workspace
-
-    @default_workspace.setter
-    def default_workspace(self, default_workspace):
-        """Sets the default_workspace of this BTDocumentInfo.
-
-
-        :param default_workspace: The default_workspace of this BTDocumentInfo.  # noqa: E501
-        :type: BTBaseInfo
+        :param is_using_managed_workflow: The is_using_managed_workflow of this BTDocumentInfo.  # noqa: E501
+        :type: bool
         """
 
-        self._default_workspace = default_workspace
+        self._is_using_managed_workflow = is_using_managed_workflow
 
     @property
     def permission(self):

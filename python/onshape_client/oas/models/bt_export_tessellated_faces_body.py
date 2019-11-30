@@ -36,7 +36,8 @@ class BTExportTessellatedFacesBody(object):
         'body_type': 'str',
         'appearance': 'BTGraphicsAppearance',
         'facet_points': 'list[BTVector3d]',
-        'id': 'str'
+        'id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class BTExportTessellatedFacesBody(object):
         'body_type': 'bodyType',
         'appearance': 'appearance',
         'facet_points': 'facetPoints',
-        'id': 'id'
+        'id': 'id',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, faces=None, body_type=None, appearance=None, facet_points=None, id=None):  # noqa: E501
+    def __init__(self, faces=None, body_type=None, appearance=None, facet_points=None, id=None, bt_type=None):  # noqa: E501
         """BTExportTessellatedFacesBody - a model defined in OpenAPI"""  # noqa: E501
 
         self._faces = None
@@ -55,6 +57,7 @@ class BTExportTessellatedFacesBody(object):
         self._appearance = None
         self._facet_points = None
         self._id = None
+        self._bt_type = None
         self.discriminator = None
 
         if faces is not None:
@@ -67,6 +70,8 @@ class BTExportTessellatedFacesBody(object):
             self.facet_points = facet_points
         if id is not None:
             self.id = id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def faces(self):
@@ -178,6 +183,27 @@ class BTExportTessellatedFacesBody(object):
         """
 
         self._id = id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportTessellatedFacesBody.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportTessellatedFacesBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportTessellatedFacesBody.
+
+
+        :param bt_type: The bt_type of this BTExportTessellatedFacesBody.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

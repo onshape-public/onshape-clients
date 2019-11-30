@@ -32,44 +32,47 @@ class BTCacheDataPath(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_id': 'str',
         'element_id': 'str',
+        'document_id': 'str',
         'url': 'str',
         'is_persisted': 'bool',
         'full_file_path': 'str',
         'use_local_file_cache': 'bool',
         'expire_secs': 'str',
-        'key': 'str'
+        'key': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'document_id': 'documentId',
         'element_id': 'elementId',
+        'document_id': 'documentId',
         'url': 'url',
         'is_persisted': 'isPersisted',
         'full_file_path': 'fullFilePath',
         'use_local_file_cache': 'useLocalFileCache',
         'expire_secs': 'expireSecs',
-        'key': 'key'
+        'key': 'key',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, document_id=None, element_id=None, url=None, is_persisted=None, full_file_path=None, use_local_file_cache=None, expire_secs=None, key=None):  # noqa: E501
+    def __init__(self, element_id=None, document_id=None, url=None, is_persisted=None, full_file_path=None, use_local_file_cache=None, expire_secs=None, key=None, bt_type=None):  # noqa: E501
         """BTCacheDataPath - a model defined in OpenAPI"""  # noqa: E501
 
-        self._document_id = None
         self._element_id = None
+        self._document_id = None
         self._url = None
         self._is_persisted = None
         self._full_file_path = None
         self._use_local_file_cache = None
         self._expire_secs = None
         self._key = None
+        self._bt_type = None
         self.discriminator = None
 
-        if document_id is not None:
-            self.document_id = document_id
         if element_id is not None:
             self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
         if url is not None:
             self.url = url
         if is_persisted is not None:
@@ -82,27 +85,8 @@ class BTCacheDataPath(object):
             self.expire_secs = expire_secs
         if key is not None:
             self.key = key
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTCacheDataPath.  # noqa: E501
-
-
-        :return: The document_id of this BTCacheDataPath.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTCacheDataPath.
-
-
-        :param document_id: The document_id of this BTCacheDataPath.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def element_id(self):
@@ -124,6 +108,27 @@ class BTCacheDataPath(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTCacheDataPath.  # noqa: E501
+
+
+        :return: The document_id of this BTCacheDataPath.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTCacheDataPath.
+
+
+        :param document_id: The document_id of this BTCacheDataPath.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def url(self):
@@ -250,6 +255,27 @@ class BTCacheDataPath(object):
         """
 
         self._key = key
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTCacheDataPath.  # noqa: E501
+
+
+        :return: The bt_type of this BTCacheDataPath.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTCacheDataPath.
+
+
+        :param bt_type: The bt_type of this BTCacheDataPath.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

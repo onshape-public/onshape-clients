@@ -46,7 +46,7 @@ class BTParameterSpecReference(object):
 
     def __init__(self):  # noqa: E501
         """BTParameterSpecReference - a model defined in OpenAPI"""  # noqa: E501
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

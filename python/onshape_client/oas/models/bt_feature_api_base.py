@@ -32,19 +32,21 @@ class BTFeatureApiBase(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'microversion_skew': 'bool',
         'source_microversion': 'str',
         'reject_microversion_skew': 'bool',
+        'microversion_skew': 'bool',
+        'library_version': 'int',
         'serialization_version': 'str',
-        'library_version': 'int'
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'microversion_skew': 'microversionSkew',
         'source_microversion': 'sourceMicroversion',
         'reject_microversion_skew': 'rejectMicroversionSkew',
+        'microversion_skew': 'microversionSkew',
+        'library_version': 'libraryVersion',
         'serialization_version': 'serializationVersion',
-        'library_version': 'libraryVersion'
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -58,47 +60,29 @@ class BTFeatureApiBase(object):
         'BTConfigurationUpdateCall': 'BTConfigurationUpdateCall'
     }
 
-    def __init__(self, microversion_skew=None, source_microversion=None, reject_microversion_skew=None, serialization_version=None, library_version=None):  # noqa: E501
+    def __init__(self, source_microversion=None, reject_microversion_skew=None, microversion_skew=None, library_version=None, serialization_version=None, bt_type=None):  # noqa: E501
         """BTFeatureApiBase - a model defined in OpenAPI"""  # noqa: E501
 
-        self._microversion_skew = None
         self._source_microversion = None
         self._reject_microversion_skew = None
-        self._serialization_version = None
+        self._microversion_skew = None
         self._library_version = None
-        self.discriminator = 'type'
+        self._serialization_version = None
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
-        if microversion_skew is not None:
-            self.microversion_skew = microversion_skew
         if source_microversion is not None:
             self.source_microversion = source_microversion
         if reject_microversion_skew is not None:
             self.reject_microversion_skew = reject_microversion_skew
-        if serialization_version is not None:
-            self.serialization_version = serialization_version
+        if microversion_skew is not None:
+            self.microversion_skew = microversion_skew
         if library_version is not None:
             self.library_version = library_version
-
-    @property
-    def microversion_skew(self):
-        """Gets the microversion_skew of this BTFeatureApiBase.  # noqa: E501
-
-
-        :return: The microversion_skew of this BTFeatureApiBase.  # noqa: E501
-        :rtype: bool
-        """
-        return self._microversion_skew
-
-    @microversion_skew.setter
-    def microversion_skew(self, microversion_skew):
-        """Sets the microversion_skew of this BTFeatureApiBase.
-
-
-        :param microversion_skew: The microversion_skew of this BTFeatureApiBase.  # noqa: E501
-        :type: bool
-        """
-
-        self._microversion_skew = microversion_skew
+        if serialization_version is not None:
+            self.serialization_version = serialization_version
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def source_microversion(self):
@@ -143,25 +127,25 @@ class BTFeatureApiBase(object):
         self._reject_microversion_skew = reject_microversion_skew
 
     @property
-    def serialization_version(self):
-        """Gets the serialization_version of this BTFeatureApiBase.  # noqa: E501
+    def microversion_skew(self):
+        """Gets the microversion_skew of this BTFeatureApiBase.  # noqa: E501
 
 
-        :return: The serialization_version of this BTFeatureApiBase.  # noqa: E501
-        :rtype: str
+        :return: The microversion_skew of this BTFeatureApiBase.  # noqa: E501
+        :rtype: bool
         """
-        return self._serialization_version
+        return self._microversion_skew
 
-    @serialization_version.setter
-    def serialization_version(self, serialization_version):
-        """Sets the serialization_version of this BTFeatureApiBase.
+    @microversion_skew.setter
+    def microversion_skew(self, microversion_skew):
+        """Sets the microversion_skew of this BTFeatureApiBase.
 
 
-        :param serialization_version: The serialization_version of this BTFeatureApiBase.  # noqa: E501
-        :type: str
+        :param microversion_skew: The microversion_skew of this BTFeatureApiBase.  # noqa: E501
+        :type: bool
         """
 
-        self._serialization_version = serialization_version
+        self._microversion_skew = microversion_skew
 
     @property
     def library_version(self):
@@ -183,6 +167,48 @@ class BTFeatureApiBase(object):
         """
 
         self._library_version = library_version
+
+    @property
+    def serialization_version(self):
+        """Gets the serialization_version of this BTFeatureApiBase.  # noqa: E501
+
+
+        :return: The serialization_version of this BTFeatureApiBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._serialization_version
+
+    @serialization_version.setter
+    def serialization_version(self, serialization_version):
+        """Sets the serialization_version of this BTFeatureApiBase.
+
+
+        :param serialization_version: The serialization_version of this BTFeatureApiBase.  # noqa: E501
+        :type: str
+        """
+
+        self._serialization_version = serialization_version
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFeatureApiBase.  # noqa: E501
+
+
+        :return: The bt_type of this BTFeatureApiBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFeatureApiBase.
+
+
+        :param bt_type: The bt_type of this BTFeatureApiBase.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

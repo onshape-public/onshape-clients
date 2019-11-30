@@ -32,15 +32,15 @@ class BTTranslationRequestInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_id': 'str',
-        'version_id': 'str',
         'workspace_id': 'str',
         'result_element_ids': 'list[str]',
         'result_document_id': 'str',
         'failure_reason': 'str',
+        'version_id': 'str',
+        'document_id': 'str',
         'result_workspace_id': 'str',
-        'request_element_id': 'str',
         'request_state': 'str',
+        'request_element_id': 'str',
         'result_external_data_ids': 'list[str]',
         'href': 'str',
         'view_ref': 'str',
@@ -49,15 +49,15 @@ class BTTranslationRequestInfo(object):
     }
 
     attribute_map = {
-        'document_id': 'documentId',
-        'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'result_element_ids': 'resultElementIds',
         'result_document_id': 'resultDocumentId',
         'failure_reason': 'failureReason',
+        'version_id': 'versionId',
+        'document_id': 'documentId',
         'result_workspace_id': 'resultWorkspaceId',
-        'request_element_id': 'requestElementId',
         'request_state': 'requestState',
+        'request_element_id': 'requestElementId',
         'result_external_data_ids': 'resultExternalDataIds',
         'href': 'href',
         'view_ref': 'viewRef',
@@ -65,18 +65,18 @@ class BTTranslationRequestInfo(object):
         'id': 'id'
     }
 
-    def __init__(self, document_id=None, version_id=None, workspace_id=None, result_element_ids=None, result_document_id=None, failure_reason=None, result_workspace_id=None, request_element_id=None, request_state=None, result_external_data_ids=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
+    def __init__(self, workspace_id=None, result_element_ids=None, result_document_id=None, failure_reason=None, version_id=None, document_id=None, result_workspace_id=None, request_state=None, request_element_id=None, result_external_data_ids=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTTranslationRequestInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._document_id = None
-        self._version_id = None
         self._workspace_id = None
         self._result_element_ids = None
         self._result_document_id = None
         self._failure_reason = None
+        self._version_id = None
+        self._document_id = None
         self._result_workspace_id = None
-        self._request_element_id = None
         self._request_state = None
+        self._request_element_id = None
         self._result_external_data_ids = None
         self._href = None
         self._view_ref = None
@@ -84,10 +84,6 @@ class BTTranslationRequestInfo(object):
         self._id = None
         self.discriminator = None
 
-        if document_id is not None:
-            self.document_id = document_id
-        if version_id is not None:
-            self.version_id = version_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if result_element_ids is not None:
@@ -96,12 +92,16 @@ class BTTranslationRequestInfo(object):
             self.result_document_id = result_document_id
         if failure_reason is not None:
             self.failure_reason = failure_reason
+        if version_id is not None:
+            self.version_id = version_id
+        if document_id is not None:
+            self.document_id = document_id
         if result_workspace_id is not None:
             self.result_workspace_id = result_workspace_id
-        if request_element_id is not None:
-            self.request_element_id = request_element_id
         if request_state is not None:
             self.request_state = request_state
+        if request_element_id is not None:
+            self.request_element_id = request_element_id
         if result_external_data_ids is not None:
             self.result_external_data_ids = result_external_data_ids
         if href is not None:
@@ -112,48 +112,6 @@ class BTTranslationRequestInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTTranslationRequestInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTTranslationRequestInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTTranslationRequestInfo.
-
-
-        :param document_id: The document_id of this BTTranslationRequestInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTTranslationRequestInfo.  # noqa: E501
-
-
-        :return: The version_id of this BTTranslationRequestInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTTranslationRequestInfo.
-
-
-        :param version_id: The version_id of this BTTranslationRequestInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
 
     @property
     def workspace_id(self):
@@ -240,6 +198,48 @@ class BTTranslationRequestInfo(object):
         self._failure_reason = failure_reason
 
     @property
+    def version_id(self):
+        """Gets the version_id of this BTTranslationRequestInfo.  # noqa: E501
+
+
+        :return: The version_id of this BTTranslationRequestInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTTranslationRequestInfo.
+
+
+        :param version_id: The version_id of this BTTranslationRequestInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTTranslationRequestInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTTranslationRequestInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTTranslationRequestInfo.
+
+
+        :param document_id: The document_id of this BTTranslationRequestInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def result_workspace_id(self):
         """Gets the result_workspace_id of this BTTranslationRequestInfo.  # noqa: E501
 
@@ -259,27 +259,6 @@ class BTTranslationRequestInfo(object):
         """
 
         self._result_workspace_id = result_workspace_id
-
-    @property
-    def request_element_id(self):
-        """Gets the request_element_id of this BTTranslationRequestInfo.  # noqa: E501
-
-
-        :return: The request_element_id of this BTTranslationRequestInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._request_element_id
-
-    @request_element_id.setter
-    def request_element_id(self, request_element_id):
-        """Sets the request_element_id of this BTTranslationRequestInfo.
-
-
-        :param request_element_id: The request_element_id of this BTTranslationRequestInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._request_element_id = request_element_id
 
     @property
     def request_state(self):
@@ -307,6 +286,27 @@ class BTTranslationRequestInfo(object):
             )
 
         self._request_state = request_state
+
+    @property
+    def request_element_id(self):
+        """Gets the request_element_id of this BTTranslationRequestInfo.  # noqa: E501
+
+
+        :return: The request_element_id of this BTTranslationRequestInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._request_element_id
+
+    @request_element_id.setter
+    def request_element_id(self, request_element_id):
+        """Sets the request_element_id of this BTTranslationRequestInfo.
+
+
+        :param request_element_id: The request_element_id of this BTTranslationRequestInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._request_element_id = request_element_id
 
     @property
     def result_external_data_ids(self):

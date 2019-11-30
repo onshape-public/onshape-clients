@@ -33,25 +33,30 @@ class BTExportTessellatedEdgesBody(object):
     """
     openapi_types = {
         'id': 'str',
-        'edges': 'list[BTExportTessellatedEdgesEdge]'
+        'edges': 'list[BTExportTessellatedEdgesEdge]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'edges': 'edges'
+        'edges': 'edges',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, id=None, edges=None):  # noqa: E501
+    def __init__(self, id=None, edges=None, bt_type=None):  # noqa: E501
         """BTExportTessellatedEdgesBody - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._edges = None
+        self._bt_type = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         if edges is not None:
             self.edges = edges
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def id(self):
@@ -94,6 +99,27 @@ class BTExportTessellatedEdgesBody(object):
         """
 
         self._edges = edges
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportTessellatedEdgesBody.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportTessellatedEdgesBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportTessellatedEdgesBody.
+
+
+        :param bt_type: The bt_type of this BTExportTessellatedEdgesBody.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

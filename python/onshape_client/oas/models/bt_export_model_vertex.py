@@ -33,25 +33,30 @@ class BTExportModelVertex(object):
     """
     openapi_types = {
         'point': 'BTVector3d',
-        'id': 'str'
+        'id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'point': 'point',
-        'id': 'id'
+        'id': 'id',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, point=None, id=None):  # noqa: E501
+    def __init__(self, point=None, id=None, bt_type=None):  # noqa: E501
         """BTExportModelVertex - a model defined in OpenAPI"""  # noqa: E501
 
         self._point = None
         self._id = None
+        self._bt_type = None
         self.discriminator = None
 
         if point is not None:
             self.point = point
         if id is not None:
             self.id = id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def point(self):
@@ -94,6 +99,27 @@ class BTExportModelVertex(object):
         """
 
         self._id = id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelVertex.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelVertex.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelVertex.
+
+
+        :param bt_type: The bt_type of this BTExportModelVertex.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

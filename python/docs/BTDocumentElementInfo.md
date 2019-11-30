@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_type** | **str** |  | [optional] 
-**thumbnails** | **str** |  | [optional] 
 **microversion_id** | **str** |  | [optional] 
-**element_type** | **str** |  | [optional] 
+**data_type** | **str** |  | [optional] 
 **foreign_data_id** | **str** |  | [optional] 
 **unupdatable** | **bool** |  | [optional] 
 **specified_unit** | **str** |  | [optional] 
-**filename** | **str** |  | [optional] 
 **thumbnail_info** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
+**thumbnails** | **str** |  | [optional] 
+**filename** | **str** |  | [optional] 
+**element_type** | **str** |  | [optional] 
 **length_units** | **str** |  | [optional] 
 **angle_units** | **str** |  | [optional] 
 **mass_units** | **str** |  | [optional] 

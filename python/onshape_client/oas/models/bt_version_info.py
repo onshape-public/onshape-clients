@@ -33,16 +33,16 @@ class BTVersionInfo(object):
     """
     openapi_types = {
         'purpose': 'int',
-        'creator': 'BTUserBasicSummaryInfo',
-        'thumbnail': 'BTThumbnailInfo',
-        'created_at': 'datetime',
-        'document_id': 'str',
         'microversion': 'str',
-        'parents': 'list[BTVersionInfo]',
         'description': 'str',
-        'override_date': 'datetime',
         'modified_at': 'datetime',
+        'created_at': 'datetime',
         'last_modifier': 'BTUserBasicSummaryInfo',
+        'document_id': 'str',
+        'creator': 'BTUserBasicSummaryInfo',
+        'parents': 'list[BTVersionInfo]',
+        'thumbnail': 'BTThumbnailInfo',
+        'override_date': 'datetime',
         'parent': 'str',
         'type': 'str',
         'href': 'str',
@@ -53,16 +53,16 @@ class BTVersionInfo(object):
 
     attribute_map = {
         'purpose': 'purpose',
-        'creator': 'creator',
-        'thumbnail': 'thumbnail',
-        'created_at': 'createdAt',
-        'document_id': 'documentId',
         'microversion': 'microversion',
-        'parents': 'parents',
         'description': 'description',
-        'override_date': 'overrideDate',
         'modified_at': 'modifiedAt',
+        'created_at': 'createdAt',
         'last_modifier': 'lastModifier',
+        'document_id': 'documentId',
+        'creator': 'creator',
+        'parents': 'parents',
+        'thumbnail': 'thumbnail',
+        'override_date': 'overrideDate',
         'parent': 'parent',
         'type': 'type',
         'href': 'href',
@@ -71,20 +71,20 @@ class BTVersionInfo(object):
         'id': 'id'
     }
 
-    def __init__(self, purpose=None, creator=None, thumbnail=None, created_at=None, document_id=None, microversion=None, parents=None, description=None, override_date=None, modified_at=None, last_modifier=None, parent=None, type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
+    def __init__(self, purpose=None, microversion=None, description=None, modified_at=None, created_at=None, last_modifier=None, document_id=None, creator=None, parents=None, thumbnail=None, override_date=None, parent=None, type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTVersionInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._purpose = None
-        self._creator = None
-        self._thumbnail = None
-        self._created_at = None
-        self._document_id = None
         self._microversion = None
-        self._parents = None
         self._description = None
-        self._override_date = None
         self._modified_at = None
+        self._created_at = None
         self._last_modifier = None
+        self._document_id = None
+        self._creator = None
+        self._parents = None
+        self._thumbnail = None
+        self._override_date = None
         self._parent = None
         self._type = None
         self._href = None
@@ -95,26 +95,26 @@ class BTVersionInfo(object):
 
         if purpose is not None:
             self.purpose = purpose
-        if creator is not None:
-            self.creator = creator
-        if thumbnail is not None:
-            self.thumbnail = thumbnail
-        if created_at is not None:
-            self.created_at = created_at
-        if document_id is not None:
-            self.document_id = document_id
         if microversion is not None:
             self.microversion = microversion
-        if parents is not None:
-            self.parents = parents
         if description is not None:
             self.description = description
-        if override_date is not None:
-            self.override_date = override_date
         if modified_at is not None:
             self.modified_at = modified_at
+        if created_at is not None:
+            self.created_at = created_at
         if last_modifier is not None:
             self.last_modifier = last_modifier
+        if document_id is not None:
+            self.document_id = document_id
+        if creator is not None:
+            self.creator = creator
+        if parents is not None:
+            self.parents = parents
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
+        if override_date is not None:
+            self.override_date = override_date
         if parent is not None:
             self.parent = parent
         if type is not None:
@@ -150,90 +150,6 @@ class BTVersionInfo(object):
         self._purpose = purpose
 
     @property
-    def creator(self):
-        """Gets the creator of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The creator of this BTVersionInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._creator
-
-    @creator.setter
-    def creator(self, creator):
-        """Sets the creator of this BTVersionInfo.
-
-
-        :param creator: The creator of this BTVersionInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._creator = creator
-
-    @property
-    def thumbnail(self):
-        """Gets the thumbnail of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The thumbnail of this BTVersionInfo.  # noqa: E501
-        :rtype: BTThumbnailInfo
-        """
-        return self._thumbnail
-
-    @thumbnail.setter
-    def thumbnail(self, thumbnail):
-        """Sets the thumbnail of this BTVersionInfo.
-
-
-        :param thumbnail: The thumbnail of this BTVersionInfo.  # noqa: E501
-        :type: BTThumbnailInfo
-        """
-
-        self._thumbnail = thumbnail
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTVersionInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTVersionInfo.
-
-
-        :param created_at: The created_at of this BTVersionInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTVersionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTVersionInfo.
-
-
-        :param document_id: The document_id of this BTVersionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
-
-    @property
     def microversion(self):
         """Gets the microversion of this BTVersionInfo.  # noqa: E501
 
@@ -253,27 +169,6 @@ class BTVersionInfo(object):
         """
 
         self._microversion = microversion
-
-    @property
-    def parents(self):
-        """Gets the parents of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The parents of this BTVersionInfo.  # noqa: E501
-        :rtype: list[BTVersionInfo]
-        """
-        return self._parents
-
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this BTVersionInfo.
-
-
-        :param parents: The parents of this BTVersionInfo.  # noqa: E501
-        :type: list[BTVersionInfo]
-        """
-
-        self._parents = parents
 
     @property
     def description(self):
@@ -297,27 +192,6 @@ class BTVersionInfo(object):
         self._description = description
 
     @property
-    def override_date(self):
-        """Gets the override_date of this BTVersionInfo.  # noqa: E501
-
-
-        :return: The override_date of this BTVersionInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._override_date
-
-    @override_date.setter
-    def override_date(self, override_date):
-        """Sets the override_date of this BTVersionInfo.
-
-
-        :param override_date: The override_date of this BTVersionInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._override_date = override_date
-
-    @property
     def modified_at(self):
         """Gets the modified_at of this BTVersionInfo.  # noqa: E501
 
@@ -339,6 +213,27 @@ class BTVersionInfo(object):
         self._modified_at = modified_at
 
     @property
+    def created_at(self):
+        """Gets the created_at of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTVersionInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTVersionInfo.
+
+
+        :param created_at: The created_at of this BTVersionInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
     def last_modifier(self):
         """Gets the last_modifier of this BTVersionInfo.  # noqa: E501
 
@@ -358,6 +253,111 @@ class BTVersionInfo(object):
         """
 
         self._last_modifier = last_modifier
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTVersionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTVersionInfo.
+
+
+        :param document_id: The document_id of this BTVersionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
+    def creator(self):
+        """Gets the creator of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The creator of this BTVersionInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this BTVersionInfo.
+
+
+        :param creator: The creator of this BTVersionInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._creator = creator
+
+    @property
+    def parents(self):
+        """Gets the parents of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The parents of this BTVersionInfo.  # noqa: E501
+        :rtype: list[BTVersionInfo]
+        """
+        return self._parents
+
+    @parents.setter
+    def parents(self, parents):
+        """Sets the parents of this BTVersionInfo.
+
+
+        :param parents: The parents of this BTVersionInfo.  # noqa: E501
+        :type: list[BTVersionInfo]
+        """
+
+        self._parents = parents
+
+    @property
+    def thumbnail(self):
+        """Gets the thumbnail of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The thumbnail of this BTVersionInfo.  # noqa: E501
+        :rtype: BTThumbnailInfo
+        """
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        """Sets the thumbnail of this BTVersionInfo.
+
+
+        :param thumbnail: The thumbnail of this BTVersionInfo.  # noqa: E501
+        :type: BTThumbnailInfo
+        """
+
+        self._thumbnail = thumbnail
+
+    @property
+    def override_date(self):
+        """Gets the override_date of this BTVersionInfo.  # noqa: E501
+
+
+        :return: The override_date of this BTVersionInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._override_date
+
+    @override_date.setter
+    def override_date(self, override_date):
+        """Sets the override_date of this BTVersionInfo.
+
+
+        :param override_date: The override_date of this BTVersionInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._override_date = override_date
 
     @property
     def parent(self):

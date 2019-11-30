@@ -34,26 +34,26 @@ class BTMConfigurationParameterEnumAllOf(object):
     openapi_types = {
         'option_ids': 'list[str]',
         'enum_name': 'str',
-        'default_value': 'str',
         'options': 'list[BTMEnumOption]',
+        'default_value': 'str',
         'namespace': 'str'
     }
 
     attribute_map = {
         'option_ids': 'optionIds',
         'enum_name': 'enumName',
-        'default_value': 'defaultValue',
         'options': 'options',
+        'default_value': 'defaultValue',
         'namespace': 'namespace'
     }
 
-    def __init__(self, option_ids=None, enum_name=None, default_value=None, options=None, namespace=None):  # noqa: E501
+    def __init__(self, option_ids=None, enum_name=None, options=None, default_value=None, namespace=None):  # noqa: E501
         """BTMConfigurationParameterEnumAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._option_ids = None
         self._enum_name = None
-        self._default_value = None
         self._options = None
+        self._default_value = None
         self._namespace = None
         self.discriminator = None
 
@@ -61,10 +61,10 @@ class BTMConfigurationParameterEnumAllOf(object):
             self.option_ids = option_ids
         if enum_name is not None:
             self.enum_name = enum_name
-        if default_value is not None:
-            self.default_value = default_value
         if options is not None:
             self.options = options
+        if default_value is not None:
+            self.default_value = default_value
         if namespace is not None:
             self.namespace = namespace
 
@@ -111,27 +111,6 @@ class BTMConfigurationParameterEnumAllOf(object):
         self._enum_name = enum_name
 
     @property
-    def default_value(self):
-        """Gets the default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
-
-
-        :return: The default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_value
-
-    @default_value.setter
-    def default_value(self, default_value):
-        """Sets the default_value of this BTMConfigurationParameterEnumAllOf.
-
-
-        :param default_value: The default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._default_value = default_value
-
-    @property
     def options(self):
         """Gets the options of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
 
@@ -151,6 +130,27 @@ class BTMConfigurationParameterEnumAllOf(object):
         """
 
         self._options = options
+
+    @property
+    def default_value(self):
+        """Gets the default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
+
+
+        :return: The default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_value
+
+    @default_value.setter
+    def default_value(self, default_value):
+        """Sets the default_value of this BTMConfigurationParameterEnumAllOf.
+
+
+        :param default_value: The default_value of this BTMConfigurationParameterEnumAllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._default_value = default_value
 
     @property
     def namespace(self):

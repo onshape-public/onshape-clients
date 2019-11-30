@@ -32,36 +32,57 @@ class BTFSValueWithUnits(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'quantity_type': 'str',
         'value_object': 'float',
+        'quantity_type': 'str',
         'unit_to_power': 'dict(str, int)',
         'value': 'float'
     }
 
     attribute_map = {
-        'quantity_type': 'quantityType',
         'value_object': 'valueObject',
+        'quantity_type': 'quantityType',
         'unit_to_power': 'unitToPower',
         'value': 'value'
     }
 
-    def __init__(self, quantity_type=None, value_object=None, unit_to_power=None, value=None):  # noqa: E501
+    def __init__(self, value_object=None, quantity_type=None, unit_to_power=None, value=None):  # noqa: E501
         """BTFSValueWithUnits - a model defined in OpenAPI"""  # noqa: E501
 
-        self._quantity_type = None
         self._value_object = None
+        self._quantity_type = None
         self._unit_to_power = None
         self._value = None
         self.discriminator = None
 
-        if quantity_type is not None:
-            self.quantity_type = quantity_type
         if value_object is not None:
             self.value_object = value_object
+        if quantity_type is not None:
+            self.quantity_type = quantity_type
         if unit_to_power is not None:
             self.unit_to_power = unit_to_power
         if value is not None:
             self.value = value
+
+    @property
+    def value_object(self):
+        """Gets the value_object of this BTFSValueWithUnits.  # noqa: E501
+
+
+        :return: The value_object of this BTFSValueWithUnits.  # noqa: E501
+        :rtype: float
+        """
+        return self._value_object
+
+    @value_object.setter
+    def value_object(self, value_object):
+        """Sets the value_object of this BTFSValueWithUnits.
+
+
+        :param value_object: The value_object of this BTFSValueWithUnits.  # noqa: E501
+        :type: float
+        """
+
+        self._value_object = value_object
 
     @property
     def quantity_type(self):
@@ -89,27 +110,6 @@ class BTFSValueWithUnits(object):
             )
 
         self._quantity_type = quantity_type
-
-    @property
-    def value_object(self):
-        """Gets the value_object of this BTFSValueWithUnits.  # noqa: E501
-
-
-        :return: The value_object of this BTFSValueWithUnits.  # noqa: E501
-        :rtype: float
-        """
-        return self._value_object
-
-    @value_object.setter
-    def value_object(self, value_object):
-        """Sets the value_object of this BTFSValueWithUnits.
-
-
-        :param value_object: The value_object of this BTFSValueWithUnits.  # noqa: E501
-        :type: float
-        """
-
-        self._value_object = value_object
 
     @property
     def unit_to_power(self):

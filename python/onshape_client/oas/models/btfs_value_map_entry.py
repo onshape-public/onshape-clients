@@ -32,26 +32,52 @@ class BTFSValueMapEntry(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'value': 'BTFSValue',
         'key': 'BTFSValue',
-        'value': 'BTFSValue'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'value': 'value',
         'key': 'key',
-        'value': 'value'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, key=None, value=None):  # noqa: E501
+    def __init__(self, value=None, key=None, bt_type=None):  # noqa: E501
         """BTFSValueMapEntry - a model defined in OpenAPI"""  # noqa: E501
 
-        self._key = None
         self._value = None
+        self._key = None
+        self._bt_type = None
         self.discriminator = None
 
-        if key is not None:
-            self.key = key
         if value is not None:
             self.value = value
+        if key is not None:
+            self.key = key
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def value(self):
+        """Gets the value of this BTFSValueMapEntry.  # noqa: E501
+
+
+        :return: The value of this BTFSValueMapEntry.  # noqa: E501
+        :rtype: BTFSValue
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this BTFSValueMapEntry.
+
+
+        :param value: The value of this BTFSValueMapEntry.  # noqa: E501
+        :type: BTFSValue
+        """
+
+        self._value = value
 
     @property
     def key(self):
@@ -75,25 +101,25 @@ class BTFSValueMapEntry(object):
         self._key = key
 
     @property
-    def value(self):
-        """Gets the value of this BTFSValueMapEntry.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTFSValueMapEntry.  # noqa: E501
 
 
-        :return: The value of this BTFSValueMapEntry.  # noqa: E501
-        :rtype: BTFSValue
+        :return: The bt_type of this BTFSValueMapEntry.  # noqa: E501
+        :rtype: str
         """
-        return self._value
+        return self._bt_type
 
-    @value.setter
-    def value(self, value):
-        """Sets the value of this BTFSValueMapEntry.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFSValueMapEntry.
 
 
-        :param value: The value of this BTFSValueMapEntry.  # noqa: E501
-        :type: BTFSValue
+        :param bt_type: The bt_type of this BTFSValueMapEntry.  # noqa: E501
+        :type: str
         """
 
-        self._value = value
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

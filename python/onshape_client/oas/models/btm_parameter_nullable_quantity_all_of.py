@@ -32,47 +32,26 @@ class BTMParameterNullableQuantityAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'null_value': 'str',
-        'is_null': 'bool'
+        'is_null': 'bool',
+        'null_value': 'str'
     }
 
     attribute_map = {
-        'null_value': 'nullValue',
-        'is_null': 'isNull'
+        'is_null': 'isNull',
+        'null_value': 'nullValue'
     }
 
-    def __init__(self, null_value=None, is_null=None):  # noqa: E501
+    def __init__(self, is_null=None, null_value=None):  # noqa: E501
         """BTMParameterNullableQuantityAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._null_value = None
         self._is_null = None
+        self._null_value = None
         self.discriminator = None
 
-        if null_value is not None:
-            self.null_value = null_value
         if is_null is not None:
             self.is_null = is_null
-
-    @property
-    def null_value(self):
-        """Gets the null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
-
-
-        :return: The null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._null_value
-
-    @null_value.setter
-    def null_value(self, null_value):
-        """Sets the null_value of this BTMParameterNullableQuantityAllOf.
-
-
-        :param null_value: The null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._null_value = null_value
+        if null_value is not None:
+            self.null_value = null_value
 
     @property
     def is_null(self):
@@ -94,6 +73,27 @@ class BTMParameterNullableQuantityAllOf(object):
         """
 
         self._is_null = is_null
+
+    @property
+    def null_value(self):
+        """Gets the null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
+
+
+        :return: The null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._null_value
+
+    @null_value.setter
+    def null_value(self, null_value):
+        """Sets the null_value of this BTMParameterNullableQuantityAllOf.
+
+
+        :param null_value: The null_value of this BTMParameterNullableQuantityAllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._null_value = null_value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

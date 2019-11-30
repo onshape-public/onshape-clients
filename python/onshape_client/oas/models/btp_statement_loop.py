@@ -52,7 +52,7 @@ class BTPStatementLoop(object):
 
         self._body = None
         self._space_after_loop_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if body is not None:
             self.body = body

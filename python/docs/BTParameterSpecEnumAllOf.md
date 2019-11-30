@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enum_name** | **str** |  | [optional] 
 **option_names** | **list[str]** |  | [optional] 
+**enum_name** | **str** |  | [optional] 
 **options** | **list[str]** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 

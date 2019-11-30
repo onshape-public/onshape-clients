@@ -33,30 +33,30 @@ class BTParameterSpecQuery(object):
     """
     openapi_types = {
         'max_number_of_picks': 'int',
-        'filter': 'object',
-        'additional_box_select_filter': 'object'
+        'additional_box_select_filter': 'BTQueryFilter',
+        'filter': 'BTQueryFilter'
     }
 
     attribute_map = {
         'max_number_of_picks': 'maxNumberOfPicks',
-        'filter': 'filter',
-        'additional_box_select_filter': 'additionalBoxSelectFilter'
+        'additional_box_select_filter': 'additionalBoxSelectFilter',
+        'filter': 'filter'
     }
 
-    def __init__(self, max_number_of_picks=None, filter=None, additional_box_select_filter=None):  # noqa: E501
+    def __init__(self, max_number_of_picks=None, additional_box_select_filter=None, filter=None):  # noqa: E501
         """BTParameterSpecQuery - a model defined in OpenAPI"""  # noqa: E501
 
         self._max_number_of_picks = None
-        self._filter = None
         self._additional_box_select_filter = None
+        self._filter = None
         self.discriminator = None
 
         if max_number_of_picks is not None:
             self.max_number_of_picks = max_number_of_picks
-        if filter is not None:
-            self.filter = filter
         if additional_box_select_filter is not None:
             self.additional_box_select_filter = additional_box_select_filter
+        if filter is not None:
+            self.filter = filter
 
     @property
     def max_number_of_picks(self):
@@ -80,33 +80,12 @@ class BTParameterSpecQuery(object):
         self._max_number_of_picks = max_number_of_picks
 
     @property
-    def filter(self):
-        """Gets the filter of this BTParameterSpecQuery.  # noqa: E501
-
-
-        :return: The filter of this BTParameterSpecQuery.  # noqa: E501
-        :rtype: object
-        """
-        return self._filter
-
-    @filter.setter
-    def filter(self, filter):
-        """Sets the filter of this BTParameterSpecQuery.
-
-
-        :param filter: The filter of this BTParameterSpecQuery.  # noqa: E501
-        :type: object
-        """
-
-        self._filter = filter
-
-    @property
     def additional_box_select_filter(self):
         """Gets the additional_box_select_filter of this BTParameterSpecQuery.  # noqa: E501
 
 
         :return: The additional_box_select_filter of this BTParameterSpecQuery.  # noqa: E501
-        :rtype: object
+        :rtype: BTQueryFilter
         """
         return self._additional_box_select_filter
 
@@ -116,10 +95,31 @@ class BTParameterSpecQuery(object):
 
 
         :param additional_box_select_filter: The additional_box_select_filter of this BTParameterSpecQuery.  # noqa: E501
-        :type: object
+        :type: BTQueryFilter
         """
 
         self._additional_box_select_filter = additional_box_select_filter
+
+    @property
+    def filter(self):
+        """Gets the filter of this BTParameterSpecQuery.  # noqa: E501
+
+
+        :return: The filter of this BTParameterSpecQuery.  # noqa: E501
+        :rtype: BTQueryFilter
+        """
+        return self._filter
+
+    @filter.setter
+    def filter(self, filter):
+        """Sets the filter of this BTParameterSpecQuery.
+
+
+        :param filter: The filter of this BTParameterSpecQuery.  # noqa: E501
+        :type: BTQueryFilter
+        """
+
+        self._filter = filter
 
     def to_dict(self):
         """Returns the model properties as a dict"""

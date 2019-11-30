@@ -33,30 +33,30 @@ class BTPStatementAssignmentAllOf(object):
     """
     openapi_types = {
         'operator': 'str',
-        'rvalue': 'BTPExpression',
-        'lvalue': 'BTPLValue'
+        'lvalue': 'BTPLValue',
+        'rvalue': 'BTPExpression'
     }
 
     attribute_map = {
         'operator': 'operator',
-        'rvalue': 'rvalue',
-        'lvalue': 'lvalue'
+        'lvalue': 'lvalue',
+        'rvalue': 'rvalue'
     }
 
-    def __init__(self, operator=None, rvalue=None, lvalue=None):  # noqa: E501
+    def __init__(self, operator=None, lvalue=None, rvalue=None):  # noqa: E501
         """BTPStatementAssignmentAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._operator = None
-        self._rvalue = None
         self._lvalue = None
+        self._rvalue = None
         self.discriminator = None
 
         if operator is not None:
             self.operator = operator
-        if rvalue is not None:
-            self.rvalue = rvalue
         if lvalue is not None:
             self.lvalue = lvalue
+        if rvalue is not None:
+            self.rvalue = rvalue
 
     @property
     def operator(self):
@@ -86,27 +86,6 @@ class BTPStatementAssignmentAllOf(object):
         self._operator = operator
 
     @property
-    def rvalue(self):
-        """Gets the rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
-
-
-        :return: The rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
-        :rtype: BTPExpression
-        """
-        return self._rvalue
-
-    @rvalue.setter
-    def rvalue(self, rvalue):
-        """Sets the rvalue of this BTPStatementAssignmentAllOf.
-
-
-        :param rvalue: The rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
-        :type: BTPExpression
-        """
-
-        self._rvalue = rvalue
-
-    @property
     def lvalue(self):
         """Gets the lvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
 
@@ -126,6 +105,27 @@ class BTPStatementAssignmentAllOf(object):
         """
 
         self._lvalue = lvalue
+
+    @property
+    def rvalue(self):
+        """Gets the rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
+
+
+        :return: The rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
+        :rtype: BTPExpression
+        """
+        return self._rvalue
+
+    @rvalue.setter
+    def rvalue(self, rvalue):
+        """Sets the rvalue of this BTPStatementAssignmentAllOf.
+
+
+        :param rvalue: The rvalue of this BTPStatementAssignmentAllOf.  # noqa: E501
+        :type: BTPExpression
+        """
+
+        self._rvalue = rvalue
 
     def to_dict(self):
         """Returns the model properties as a dict"""

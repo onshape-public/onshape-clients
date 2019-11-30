@@ -48,7 +48,7 @@ class BTPFunctionOrPredicateDeclaration(object):
         """BTPFunctionOrPredicateDeclaration - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if name is not None:
             self.name = name

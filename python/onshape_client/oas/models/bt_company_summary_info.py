@@ -32,13 +32,13 @@ class BTCompanySummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'image': 'str',
-        'admin': 'bool',
         'owner_id': 'str',
-        'no_public_documents': 'bool',
-        'enterprise_base_url': 'str',
         'description': 'str',
         'domain_prefix': 'str',
+        'admin': 'bool',
+        'image': 'str',
+        'no_public_documents': 'bool',
+        'enterprise_base_url': 'str',
         'state': 'int',
         'type': 'int',
         'href': 'str',
@@ -48,13 +48,13 @@ class BTCompanySummaryInfo(object):
     }
 
     attribute_map = {
-        'image': 'image',
-        'admin': 'admin',
         'owner_id': 'ownerId',
-        'no_public_documents': 'noPublicDocuments',
-        'enterprise_base_url': 'enterpriseBaseUrl',
         'description': 'description',
         'domain_prefix': 'domainPrefix',
+        'admin': 'admin',
+        'image': 'image',
+        'no_public_documents': 'noPublicDocuments',
+        'enterprise_base_url': 'enterpriseBaseUrl',
         'state': 'state',
         'type': 'type',
         'href': 'href',
@@ -63,16 +63,16 @@ class BTCompanySummaryInfo(object):
         'id': 'id'
     }
 
-    def __init__(self, image=None, admin=None, owner_id=None, no_public_documents=None, enterprise_base_url=None, description=None, domain_prefix=None, state=None, type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
+    def __init__(self, owner_id=None, description=None, domain_prefix=None, admin=None, image=None, no_public_documents=None, enterprise_base_url=None, state=None, type=None, href=None, view_ref=None, name=None, id=None):  # noqa: E501
         """BTCompanySummaryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._image = None
-        self._admin = None
         self._owner_id = None
-        self._no_public_documents = None
-        self._enterprise_base_url = None
         self._description = None
         self._domain_prefix = None
+        self._admin = None
+        self._image = None
+        self._no_public_documents = None
+        self._enterprise_base_url = None
         self._state = None
         self._type = None
         self._href = None
@@ -81,20 +81,20 @@ class BTCompanySummaryInfo(object):
         self._id = None
         self.discriminator = None
 
-        if image is not None:
-            self.image = image
-        if admin is not None:
-            self.admin = admin
         if owner_id is not None:
             self.owner_id = owner_id
-        if no_public_documents is not None:
-            self.no_public_documents = no_public_documents
-        if enterprise_base_url is not None:
-            self.enterprise_base_url = enterprise_base_url
         if description is not None:
             self.description = description
         if domain_prefix is not None:
             self.domain_prefix = domain_prefix
+        if admin is not None:
+            self.admin = admin
+        if image is not None:
+            self.image = image
+        if no_public_documents is not None:
+            self.no_public_documents = no_public_documents
+        if enterprise_base_url is not None:
+            self.enterprise_base_url = enterprise_base_url
         if state is not None:
             self.state = state
         if type is not None:
@@ -107,48 +107,6 @@ class BTCompanySummaryInfo(object):
             self.name = name
         if id is not None:
             self.id = id
-
-    @property
-    def image(self):
-        """Gets the image of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The image of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._image
-
-    @image.setter
-    def image(self, image):
-        """Sets the image of this BTCompanySummaryInfo.
-
-
-        :param image: The image of this BTCompanySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._image = image
-
-    @property
-    def admin(self):
-        """Gets the admin of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The admin of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._admin
-
-    @admin.setter
-    def admin(self, admin):
-        """Sets the admin of this BTCompanySummaryInfo.
-
-
-        :param admin: The admin of this BTCompanySummaryInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._admin = admin
 
     @property
     def owner_id(self):
@@ -170,48 +128,6 @@ class BTCompanySummaryInfo(object):
         """
 
         self._owner_id = owner_id
-
-    @property
-    def no_public_documents(self):
-        """Gets the no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._no_public_documents
-
-    @no_public_documents.setter
-    def no_public_documents(self, no_public_documents):
-        """Sets the no_public_documents of this BTCompanySummaryInfo.
-
-
-        :param no_public_documents: The no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._no_public_documents = no_public_documents
-
-    @property
-    def enterprise_base_url(self):
-        """Gets the enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._enterprise_base_url
-
-    @enterprise_base_url.setter
-    def enterprise_base_url(self, enterprise_base_url):
-        """Sets the enterprise_base_url of this BTCompanySummaryInfo.
-
-
-        :param enterprise_base_url: The enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._enterprise_base_url = enterprise_base_url
 
     @property
     def description(self):
@@ -254,6 +170,90 @@ class BTCompanySummaryInfo(object):
         """
 
         self._domain_prefix = domain_prefix
+
+    @property
+    def admin(self):
+        """Gets the admin of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The admin of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._admin
+
+    @admin.setter
+    def admin(self, admin):
+        """Sets the admin of this BTCompanySummaryInfo.
+
+
+        :param admin: The admin of this BTCompanySummaryInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._admin = admin
+
+    @property
+    def image(self):
+        """Gets the image of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The image of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this BTCompanySummaryInfo.
+
+
+        :param image: The image of this BTCompanySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._image = image
+
+    @property
+    def no_public_documents(self):
+        """Gets the no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._no_public_documents
+
+    @no_public_documents.setter
+    def no_public_documents(self, no_public_documents):
+        """Sets the no_public_documents of this BTCompanySummaryInfo.
+
+
+        :param no_public_documents: The no_public_documents of this BTCompanySummaryInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._no_public_documents = no_public_documents
+
+    @property
+    def enterprise_base_url(self):
+        """Gets the enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._enterprise_base_url
+
+    @enterprise_base_url.setter
+    def enterprise_base_url(self, enterprise_base_url):
+        """Sets the enterprise_base_url of this BTCompanySummaryInfo.
+
+
+        :param enterprise_base_url: The enterprise_base_url of this BTCompanySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._enterprise_base_url = enterprise_base_url
 
     @property
     def state(self):

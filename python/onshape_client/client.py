@@ -5,7 +5,7 @@ from enum import Enum
 from pathlib import Path
 from types import SimpleNamespace
 
-from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError
+from oauthlib.oauth2 import UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError, InvalidClientIdError
 from onshape_client.oas import ApiClient
 from onshape_client.oas import api
 from onshape_client.oas.configuration import Configuration
@@ -156,7 +156,8 @@ class Client:
         """Do the oauth flow to set the access token"""
         try:
             self.refresh_access_token()
-        except (UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError) as e:
+            # InvalidClientIdError : when the refresh token isn't valid
+        except (UnauthorizedClientError, UnsupportedGrantTypeError, MissingTokenError, InvalidClientIdError) as e:
             authorization_method = OAuthAuthorizationMethods(self.oauth_authorization_method)
             oauth_type = OAuthAuthorizationMethods(self.oauth_authorization_method)
             if oauth_type == OAuthAuthorizationMethods.MANUAL_FLOW:

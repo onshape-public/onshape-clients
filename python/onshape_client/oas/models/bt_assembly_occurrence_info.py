@@ -32,36 +32,57 @@ class BTAssemblyOccurrenceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'transform': 'list[float]',
         'fixed': 'bool',
         'hidden': 'bool',
-        'transform': 'list[float]',
         'path': 'list[str]'
     }
 
     attribute_map = {
+        'transform': 'transform',
         'fixed': 'fixed',
         'hidden': 'hidden',
-        'transform': 'transform',
         'path': 'path'
     }
 
-    def __init__(self, fixed=None, hidden=None, transform=None, path=None):  # noqa: E501
+    def __init__(self, transform=None, fixed=None, hidden=None, path=None):  # noqa: E501
         """BTAssemblyOccurrenceInfo - a model defined in OpenAPI"""  # noqa: E501
 
+        self._transform = None
         self._fixed = None
         self._hidden = None
-        self._transform = None
         self._path = None
         self.discriminator = None
 
+        if transform is not None:
+            self.transform = transform
         if fixed is not None:
             self.fixed = fixed
         if hidden is not None:
             self.hidden = hidden
-        if transform is not None:
-            self.transform = transform
         if path is not None:
             self.path = path
+
+    @property
+    def transform(self):
+        """Gets the transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
+
+
+        :return: The transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._transform
+
+    @transform.setter
+    def transform(self, transform):
+        """Sets the transform of this BTAssemblyOccurrenceInfo.
+
+
+        :param transform: The transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._transform = transform
 
     @property
     def fixed(self):
@@ -104,27 +125,6 @@ class BTAssemblyOccurrenceInfo(object):
         """
 
         self._hidden = hidden
-
-    @property
-    def transform(self):
-        """Gets the transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
-
-
-        :return: The transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._transform
-
-    @transform.setter
-    def transform(self, transform):
-        """Sets the transform of this BTAssemblyOccurrenceInfo.
-
-
-        :param transform: The transform of this BTAssemblyOccurrenceInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._transform = transform
 
     @property
     def path(self):

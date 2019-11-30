@@ -35,26 +35,28 @@ class BTPStatement(object):
         'annotation': 'BTPAnnotation',
         'start_source_location': 'int',
         'end_source_location': 'int',
-        'short_descriptor': 'str',
         'atomic': 'bool',
+        'short_descriptor': 'str',
         'documentation_type': 'str',
         'space_before': 'BTPSpace',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'annotation': 'annotation',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
-        'short_descriptor': 'shortDescriptor',
         'atomic': 'atomic',
+        'short_descriptor': 'shortDescriptor',
         'documentation_type': 'documentationType',
         'space_before': 'spaceBefore',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -73,20 +75,21 @@ class BTPStatement(object):
         'BTPStatementLoop': 'BTPStatementLoop'
     }
 
-    def __init__(self, annotation=None, start_source_location=None, end_source_location=None, short_descriptor=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, annotation=None, start_source_location=None, end_source_location=None, atomic=None, short_descriptor=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPStatement - a model defined in OpenAPI"""  # noqa: E501
 
         self._annotation = None
         self._start_source_location = None
         self._end_source_location = None
-        self._short_descriptor = None
         self._atomic = None
+        self._short_descriptor = None
         self._documentation_type = None
         self._space_before = None
         self._space_default = None
         self._space_after = None
         self._node_id = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if annotation is not None:
             self.annotation = annotation
@@ -94,10 +97,10 @@ class BTPStatement(object):
             self.start_source_location = start_source_location
         if end_source_location is not None:
             self.end_source_location = end_source_location
-        if short_descriptor is not None:
-            self.short_descriptor = short_descriptor
         if atomic is not None:
             self.atomic = atomic
+        if short_descriptor is not None:
+            self.short_descriptor = short_descriptor
         if documentation_type is not None:
             self.documentation_type = documentation_type
         if space_before is not None:
@@ -108,6 +111,8 @@ class BTPStatement(object):
             self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def annotation(self):
@@ -173,27 +178,6 @@ class BTPStatement(object):
         self._end_source_location = end_source_location
 
     @property
-    def short_descriptor(self):
-        """Gets the short_descriptor of this BTPStatement.  # noqa: E501
-
-
-        :return: The short_descriptor of this BTPStatement.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_descriptor
-
-    @short_descriptor.setter
-    def short_descriptor(self, short_descriptor):
-        """Sets the short_descriptor of this BTPStatement.
-
-
-        :param short_descriptor: The short_descriptor of this BTPStatement.  # noqa: E501
-        :type: str
-        """
-
-        self._short_descriptor = short_descriptor
-
-    @property
     def atomic(self):
         """Gets the atomic of this BTPStatement.  # noqa: E501
 
@@ -213,6 +197,27 @@ class BTPStatement(object):
         """
 
         self._atomic = atomic
+
+    @property
+    def short_descriptor(self):
+        """Gets the short_descriptor of this BTPStatement.  # noqa: E501
+
+
+        :return: The short_descriptor of this BTPStatement.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_descriptor
+
+    @short_descriptor.setter
+    def short_descriptor(self, short_descriptor):
+        """Sets the short_descriptor of this BTPStatement.
+
+
+        :param short_descriptor: The short_descriptor of this BTPStatement.  # noqa: E501
+        :type: str
+        """
+
+        self._short_descriptor = short_descriptor
 
     @property
     def documentation_type(self):
@@ -324,6 +329,27 @@ class BTPStatement(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatement.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatement.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatement.
+
+
+        :param bt_type: The bt_type of this BTPStatement.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

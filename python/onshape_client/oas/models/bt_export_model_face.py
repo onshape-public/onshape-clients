@@ -34,44 +34,49 @@ class BTExportModelFace(object):
     openapi_types = {
         'orientation': 'bool',
         'area': 'float',
-        'box': 'BTBoundingBox',
         'surface': 'BTSurfaceDescription',
         'loops': 'list[BTExportModelLoop]',
-        'id': 'str'
+        'box': 'BTBoundingBox',
+        'id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'orientation': 'orientation',
         'area': 'area',
-        'box': 'box',
         'surface': 'surface',
         'loops': 'loops',
-        'id': 'id'
+        'box': 'box',
+        'id': 'id',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, orientation=None, area=None, box=None, surface=None, loops=None, id=None):  # noqa: E501
+    def __init__(self, orientation=None, area=None, surface=None, loops=None, box=None, id=None, bt_type=None):  # noqa: E501
         """BTExportModelFace - a model defined in OpenAPI"""  # noqa: E501
 
         self._orientation = None
         self._area = None
-        self._box = None
         self._surface = None
         self._loops = None
+        self._box = None
         self._id = None
+        self._bt_type = None
         self.discriminator = None
 
         if orientation is not None:
             self.orientation = orientation
         if area is not None:
             self.area = area
-        if box is not None:
-            self.box = box
         if surface is not None:
             self.surface = surface
         if loops is not None:
             self.loops = loops
+        if box is not None:
+            self.box = box
         if id is not None:
             self.id = id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def orientation(self):
@@ -116,27 +121,6 @@ class BTExportModelFace(object):
         self._area = area
 
     @property
-    def box(self):
-        """Gets the box of this BTExportModelFace.  # noqa: E501
-
-
-        :return: The box of this BTExportModelFace.  # noqa: E501
-        :rtype: BTBoundingBox
-        """
-        return self._box
-
-    @box.setter
-    def box(self, box):
-        """Sets the box of this BTExportModelFace.
-
-
-        :param box: The box of this BTExportModelFace.  # noqa: E501
-        :type: BTBoundingBox
-        """
-
-        self._box = box
-
-    @property
     def surface(self):
         """Gets the surface of this BTExportModelFace.  # noqa: E501
 
@@ -179,6 +163,27 @@ class BTExportModelFace(object):
         self._loops = loops
 
     @property
+    def box(self):
+        """Gets the box of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The box of this BTExportModelFace.  # noqa: E501
+        :rtype: BTBoundingBox
+        """
+        return self._box
+
+    @box.setter
+    def box(self, box):
+        """Sets the box of this BTExportModelFace.
+
+
+        :param box: The box of this BTExportModelFace.  # noqa: E501
+        :type: BTBoundingBox
+        """
+
+        self._box = box
+
+    @property
     def id(self):
         """Gets the id of this BTExportModelFace.  # noqa: E501
 
@@ -198,6 +203,27 @@ class BTExportModelFace(object):
         """
 
         self._id = id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelFace.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelFace.
+
+
+        :param bt_type: The bt_type of this BTExportModelFace.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

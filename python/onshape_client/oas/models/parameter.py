@@ -283,7 +283,7 @@ class Parameter(object):
         :param style: The style of this Parameter.  # noqa: E501
         :type: str
         """
-        allowed_values = ["matrix", "label", "form", "simple", "spaceDelimited", "pipeDelimited", "deepObject"]  # noqa: E501
+        allowed_values = ["MATRIX", "LABEL", "FORM", "SIMPLE", "SPACEDELIMITED", "PIPEDELIMITED", "DEEPOBJECT"]  # noqa: E501
         if style not in allowed_values:
             raise ValueError(
                 "Invalid value for `style` ({0}), must be one of {1}"  # noqa: E501

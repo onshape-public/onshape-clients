@@ -33,25 +33,30 @@ class BTExportModelBodiesResponse(object):
     """
     openapi_types = {
         'error_enum': 'str',
-        'bodies': 'list[BTExportModelBody]'
+        'bodies': 'list[BTExportModelBody]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'error_enum': 'errorEnum',
-        'bodies': 'bodies'
+        'bodies': 'bodies',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, error_enum=None, bodies=None):  # noqa: E501
+    def __init__(self, error_enum=None, bodies=None, bt_type=None):  # noqa: E501
         """BTExportModelBodiesResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._error_enum = None
         self._bodies = None
+        self._bt_type = None
         self.discriminator = None
 
         if error_enum is not None:
             self.error_enum = error_enum
         if bodies is not None:
             self.bodies = bodies
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def error_enum(self):
@@ -100,6 +105,27 @@ class BTExportModelBodiesResponse(object):
         """
 
         self._bodies = bodies
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelBodiesResponse.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelBodiesResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelBodiesResponse.
+
+
+        :param bt_type: The bt_type of this BTExportModelBodiesResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

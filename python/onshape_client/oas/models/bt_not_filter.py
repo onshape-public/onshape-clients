@@ -32,7 +32,7 @@ class BTNotFilter(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'operand': 'object'
+        'operand': 'BTQueryFilter'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class BTNotFilter(object):
 
 
         :return: The operand of this BTNotFilter.  # noqa: E501
-        :rtype: object
+        :rtype: BTQueryFilter
         """
         return self._operand
 
@@ -64,7 +64,7 @@ class BTNotFilter(object):
 
 
         :param operand: The operand of this BTNotFilter.  # noqa: E501
-        :type: object
+        :type: BTQueryFilter
         """
 
         self._operand = operand

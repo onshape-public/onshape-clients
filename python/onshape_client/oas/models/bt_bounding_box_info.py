@@ -33,45 +33,45 @@ class BTBoundingBoxInfo(object):
     """
     openapi_types = {
         'low_x': 'float',
+        'low_z': 'float',
         'low_y': 'float',
-        'high_y': 'float',
         'high_z': 'float',
         'high_x': 'float',
-        'low_z': 'float'
+        'high_y': 'float'
     }
 
     attribute_map = {
         'low_x': 'lowX',
+        'low_z': 'lowZ',
         'low_y': 'lowY',
-        'high_y': 'highY',
         'high_z': 'highZ',
         'high_x': 'highX',
-        'low_z': 'lowZ'
+        'high_y': 'highY'
     }
 
-    def __init__(self, low_x=None, low_y=None, high_y=None, high_z=None, high_x=None, low_z=None):  # noqa: E501
+    def __init__(self, low_x=None, low_z=None, low_y=None, high_z=None, high_x=None, high_y=None):  # noqa: E501
         """BTBoundingBoxInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._low_x = None
+        self._low_z = None
         self._low_y = None
-        self._high_y = None
         self._high_z = None
         self._high_x = None
-        self._low_z = None
+        self._high_y = None
         self.discriminator = None
 
         if low_x is not None:
             self.low_x = low_x
+        if low_z is not None:
+            self.low_z = low_z
         if low_y is not None:
             self.low_y = low_y
-        if high_y is not None:
-            self.high_y = high_y
         if high_z is not None:
             self.high_z = high_z
         if high_x is not None:
             self.high_x = high_x
-        if low_z is not None:
-            self.low_z = low_z
+        if high_y is not None:
+            self.high_y = high_y
 
     @property
     def low_x(self):
@@ -95,6 +95,27 @@ class BTBoundingBoxInfo(object):
         self._low_x = low_x
 
     @property
+    def low_z(self):
+        """Gets the low_z of this BTBoundingBoxInfo.  # noqa: E501
+
+
+        :return: The low_z of this BTBoundingBoxInfo.  # noqa: E501
+        :rtype: float
+        """
+        return self._low_z
+
+    @low_z.setter
+    def low_z(self, low_z):
+        """Sets the low_z of this BTBoundingBoxInfo.
+
+
+        :param low_z: The low_z of this BTBoundingBoxInfo.  # noqa: E501
+        :type: float
+        """
+
+        self._low_z = low_z
+
+    @property
     def low_y(self):
         """Gets the low_y of this BTBoundingBoxInfo.  # noqa: E501
 
@@ -114,27 +135,6 @@ class BTBoundingBoxInfo(object):
         """
 
         self._low_y = low_y
-
-    @property
-    def high_y(self):
-        """Gets the high_y of this BTBoundingBoxInfo.  # noqa: E501
-
-
-        :return: The high_y of this BTBoundingBoxInfo.  # noqa: E501
-        :rtype: float
-        """
-        return self._high_y
-
-    @high_y.setter
-    def high_y(self, high_y):
-        """Sets the high_y of this BTBoundingBoxInfo.
-
-
-        :param high_y: The high_y of this BTBoundingBoxInfo.  # noqa: E501
-        :type: float
-        """
-
-        self._high_y = high_y
 
     @property
     def high_z(self):
@@ -179,25 +179,25 @@ class BTBoundingBoxInfo(object):
         self._high_x = high_x
 
     @property
-    def low_z(self):
-        """Gets the low_z of this BTBoundingBoxInfo.  # noqa: E501
+    def high_y(self):
+        """Gets the high_y of this BTBoundingBoxInfo.  # noqa: E501
 
 
-        :return: The low_z of this BTBoundingBoxInfo.  # noqa: E501
+        :return: The high_y of this BTBoundingBoxInfo.  # noqa: E501
         :rtype: float
         """
-        return self._low_z
+        return self._high_y
 
-    @low_z.setter
-    def low_z(self, low_z):
-        """Sets the low_z of this BTBoundingBoxInfo.
+    @high_y.setter
+    def high_y(self, high_y):
+        """Sets the high_y of this BTBoundingBoxInfo.
 
 
-        :param low_z: The low_z of this BTBoundingBoxInfo.  # noqa: E501
+        :param high_y: The high_y of this BTBoundingBoxInfo.  # noqa: E501
         :type: float
         """
 
-        self._low_z = low_z
+        self._high_y = high_y
 
     def to_dict(self):
         """Returns the model properties as a dict"""

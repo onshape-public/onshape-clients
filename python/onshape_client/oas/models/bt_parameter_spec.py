@@ -38,12 +38,13 @@ class BTParameterSpec(object):
         'strings_to_localize': 'list[str]',
         'parameter_id': 'str',
         'parameter_name': 'str',
+        'icon_uri': 'str',
         'visibility_condition': 'BTParameterVisibilityCondition',
         'ui_hint': 'str',
         'ui_hints': 'list[str]',
         'column_name': 'str',
-        'icon_uri': 'str',
-        'default_value': 'BTMParameter'
+        'default_value': 'BTMParameter',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -53,12 +54,13 @@ class BTParameterSpec(object):
         'strings_to_localize': 'stringsToLocalize',
         'parameter_id': 'parameterId',
         'parameter_name': 'parameterName',
+        'icon_uri': 'iconUri',
         'visibility_condition': 'visibilityCondition',
         'ui_hint': 'uiHint',
         'ui_hints': 'uiHints',
         'column_name': 'columnName',
-        'icon_uri': 'iconUri',
-        'default_value': 'defaultValue'
+        'default_value': 'defaultValue',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -79,7 +81,7 @@ class BTParameterSpec(object):
         'BTParameterSpecForeignId': 'BTParameterSpecForeignId'
     }
 
-    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, parameter_id=None, parameter_name=None, visibility_condition=None, ui_hint=None, ui_hints=None, column_name=None, icon_uri=None, default_value=None):  # noqa: E501
+    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, parameter_id=None, parameter_name=None, icon_uri=None, visibility_condition=None, ui_hint=None, ui_hints=None, column_name=None, default_value=None, bt_type=None):  # noqa: E501
         """BTParameterSpec - a model defined in OpenAPI"""  # noqa: E501
 
         self._localized_name = None
@@ -88,13 +90,14 @@ class BTParameterSpec(object):
         self._strings_to_localize = None
         self._parameter_id = None
         self._parameter_name = None
+        self._icon_uri = None
         self._visibility_condition = None
         self._ui_hint = None
         self._ui_hints = None
         self._column_name = None
-        self._icon_uri = None
         self._default_value = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if localized_name is not None:
             self.localized_name = localized_name
@@ -108,6 +111,8 @@ class BTParameterSpec(object):
             self.parameter_id = parameter_id
         if parameter_name is not None:
             self.parameter_name = parameter_name
+        if icon_uri is not None:
+            self.icon_uri = icon_uri
         if visibility_condition is not None:
             self.visibility_condition = visibility_condition
         if ui_hint is not None:
@@ -116,10 +121,10 @@ class BTParameterSpec(object):
             self.ui_hints = ui_hints
         if column_name is not None:
             self.column_name = column_name
-        if icon_uri is not None:
-            self.icon_uri = icon_uri
         if default_value is not None:
             self.default_value = default_value
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def localized_name(self):
@@ -248,6 +253,27 @@ class BTParameterSpec(object):
         self._parameter_name = parameter_name
 
     @property
+    def icon_uri(self):
+        """Gets the icon_uri of this BTParameterSpec.  # noqa: E501
+
+
+        :return: The icon_uri of this BTParameterSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._icon_uri
+
+    @icon_uri.setter
+    def icon_uri(self, icon_uri):
+        """Sets the icon_uri of this BTParameterSpec.
+
+
+        :param icon_uri: The icon_uri of this BTParameterSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._icon_uri = icon_uri
+
+    @property
     def visibility_condition(self):
         """Gets the visibility_condition of this BTParameterSpec.  # noqa: E501
 
@@ -339,27 +365,6 @@ class BTParameterSpec(object):
         self._column_name = column_name
 
     @property
-    def icon_uri(self):
-        """Gets the icon_uri of this BTParameterSpec.  # noqa: E501
-
-
-        :return: The icon_uri of this BTParameterSpec.  # noqa: E501
-        :rtype: str
-        """
-        return self._icon_uri
-
-    @icon_uri.setter
-    def icon_uri(self, icon_uri):
-        """Sets the icon_uri of this BTParameterSpec.
-
-
-        :param icon_uri: The icon_uri of this BTParameterSpec.  # noqa: E501
-        :type: str
-        """
-
-        self._icon_uri = icon_uri
-
-    @property
     def default_value(self):
         """Gets the default_value of this BTParameterSpec.  # noqa: E501
 
@@ -379,6 +384,27 @@ class BTParameterSpec(object):
         """
 
         self._default_value = default_value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpec.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpec.
+
+
+        :param bt_type: The bt_type of this BTParameterSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

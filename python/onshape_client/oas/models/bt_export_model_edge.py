@@ -33,35 +33,40 @@ class BTExportModelEdge(object):
     """
     openapi_types = {
         'curve': 'BTCurveDescription',
-        'geometry': 'BTExportModelEdgeGeometry',
         'vertices': 'list[str]',
-        'id': 'str'
+        'geometry': 'BTExportModelEdgeGeometry',
+        'id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'curve': 'curve',
-        'geometry': 'geometry',
         'vertices': 'vertices',
-        'id': 'id'
+        'geometry': 'geometry',
+        'id': 'id',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, curve=None, geometry=None, vertices=None, id=None):  # noqa: E501
+    def __init__(self, curve=None, vertices=None, geometry=None, id=None, bt_type=None):  # noqa: E501
         """BTExportModelEdge - a model defined in OpenAPI"""  # noqa: E501
 
         self._curve = None
-        self._geometry = None
         self._vertices = None
+        self._geometry = None
         self._id = None
+        self._bt_type = None
         self.discriminator = None
 
         if curve is not None:
             self.curve = curve
-        if geometry is not None:
-            self.geometry = geometry
         if vertices is not None:
             self.vertices = vertices
+        if geometry is not None:
+            self.geometry = geometry
         if id is not None:
             self.id = id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def curve(self):
@@ -85,27 +90,6 @@ class BTExportModelEdge(object):
         self._curve = curve
 
     @property
-    def geometry(self):
-        """Gets the geometry of this BTExportModelEdge.  # noqa: E501
-
-
-        :return: The geometry of this BTExportModelEdge.  # noqa: E501
-        :rtype: BTExportModelEdgeGeometry
-        """
-        return self._geometry
-
-    @geometry.setter
-    def geometry(self, geometry):
-        """Sets the geometry of this BTExportModelEdge.
-
-
-        :param geometry: The geometry of this BTExportModelEdge.  # noqa: E501
-        :type: BTExportModelEdgeGeometry
-        """
-
-        self._geometry = geometry
-
-    @property
     def vertices(self):
         """Gets the vertices of this BTExportModelEdge.  # noqa: E501
 
@@ -127,6 +111,27 @@ class BTExportModelEdge(object):
         self._vertices = vertices
 
     @property
+    def geometry(self):
+        """Gets the geometry of this BTExportModelEdge.  # noqa: E501
+
+
+        :return: The geometry of this BTExportModelEdge.  # noqa: E501
+        :rtype: BTExportModelEdgeGeometry
+        """
+        return self._geometry
+
+    @geometry.setter
+    def geometry(self, geometry):
+        """Sets the geometry of this BTExportModelEdge.
+
+
+        :param geometry: The geometry of this BTExportModelEdge.  # noqa: E501
+        :type: BTExportModelEdgeGeometry
+        """
+
+        self._geometry = geometry
+
+    @property
     def id(self):
         """Gets the id of this BTExportModelEdge.  # noqa: E501
 
@@ -146,6 +151,27 @@ class BTExportModelEdge(object):
         """
 
         self._id = id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelEdge.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelEdge.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelEdge.
+
+
+        :param bt_type: The bt_type of this BTExportModelEdge.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

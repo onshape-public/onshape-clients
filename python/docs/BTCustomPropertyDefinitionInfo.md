@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**template** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**template** | **str** |  | [optional] 
 **enum_definition** | **list[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

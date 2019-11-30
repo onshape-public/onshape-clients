@@ -32,66 +32,50 @@ class BTQuantityRange(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'units': 'str',
         'min_value': 'float',
         'max_value': 'float',
+        'units': 'str',
         'location': 'BTLocationInfo',
-        'default_value': 'float'
+        'default_value': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'units': 'units',
         'min_value': 'minValue',
         'max_value': 'maxValue',
+        'units': 'units',
         'location': 'location',
-        'default_value': 'defaultValue'
+        'default_value': 'defaultValue',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
         'BTNullableQuantityRange': 'BTNullableQuantityRange'
     }
 
-    def __init__(self, units=None, min_value=None, max_value=None, location=None, default_value=None):  # noqa: E501
+    def __init__(self, min_value=None, max_value=None, units=None, location=None, default_value=None, bt_type=None):  # noqa: E501
         """BTQuantityRange - a model defined in OpenAPI"""  # noqa: E501
 
-        self._units = None
         self._min_value = None
         self._max_value = None
+        self._units = None
         self._location = None
         self._default_value = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
-        if units is not None:
-            self.units = units
         if min_value is not None:
             self.min_value = min_value
         if max_value is not None:
             self.max_value = max_value
+        if units is not None:
+            self.units = units
         if location is not None:
             self.location = location
         if default_value is not None:
             self.default_value = default_value
-
-    @property
-    def units(self):
-        """Gets the units of this BTQuantityRange.  # noqa: E501
-
-
-        :return: The units of this BTQuantityRange.  # noqa: E501
-        :rtype: str
-        """
-        return self._units
-
-    @units.setter
-    def units(self, units):
-        """Sets the units of this BTQuantityRange.
-
-
-        :param units: The units of this BTQuantityRange.  # noqa: E501
-        :type: str
-        """
-
-        self._units = units
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def min_value(self):
@@ -136,6 +120,27 @@ class BTQuantityRange(object):
         self._max_value = max_value
 
     @property
+    def units(self):
+        """Gets the units of this BTQuantityRange.  # noqa: E501
+
+
+        :return: The units of this BTQuantityRange.  # noqa: E501
+        :rtype: str
+        """
+        return self._units
+
+    @units.setter
+    def units(self, units):
+        """Sets the units of this BTQuantityRange.
+
+
+        :param units: The units of this BTQuantityRange.  # noqa: E501
+        :type: str
+        """
+
+        self._units = units
+
+    @property
     def location(self):
         """Gets the location of this BTQuantityRange.  # noqa: E501
 
@@ -176,6 +181,27 @@ class BTQuantityRange(object):
         """
 
         self._default_value = default_value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTQuantityRange.  # noqa: E501
+
+
+        :return: The bt_type of this BTQuantityRange.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTQuantityRange.
+
+
+        :param bt_type: The bt_type of this BTQuantityRange.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

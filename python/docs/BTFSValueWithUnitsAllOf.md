@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**quantity_type** | **str** |  | [optional] 
 **value_object** | **float** |  | [optional] 
+**quantity_type** | **str** |  | [optional] 
 **unit_to_power** | **dict(str, int)** |  | [optional] 
 **value** | **float** |  | [optional] 
 

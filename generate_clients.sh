@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-GLOBAL_VERSION=4.1.1
+GLOBAL_VERSION=4.2.0
 
 # Var
 EXECUTABLE="./openapi-generator-cli.jar"

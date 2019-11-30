@@ -38,7 +38,8 @@ class BTMImport(object):
         'namespace': 'str',
         'import_microversion': 'str',
         'path': 'str',
-        'version': 'str'
+        'version': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class BTMImport(object):
         'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
         'path': 'path',
-        'version': 'version'
+        'version': 'version',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, imported_external_document_id=None, element_import=None, node_id=None, namespace=None, import_microversion=None, path=None, version=None):  # noqa: E501
+    def __init__(self, imported_external_document_id=None, element_import=None, node_id=None, namespace=None, import_microversion=None, path=None, version=None, bt_type=None):  # noqa: E501
         """BTMImport - a model defined in OpenAPI"""  # noqa: E501
 
         self._imported_external_document_id = None
@@ -61,6 +63,7 @@ class BTMImport(object):
         self._import_microversion = None
         self._path = None
         self._version = None
+        self._bt_type = None
         self.discriminator = None
 
         if imported_external_document_id is not None:
@@ -77,6 +80,8 @@ class BTMImport(object):
             self.path = path
         if version is not None:
             self.version = version
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def imported_external_document_id(self):
@@ -224,6 +229,27 @@ class BTMImport(object):
         """
 
         self._version = version
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMImport.  # noqa: E501
+
+
+        :return: The bt_type of this BTMImport.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMImport.
+
+
+        :param bt_type: The bt_type of this BTMImport.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

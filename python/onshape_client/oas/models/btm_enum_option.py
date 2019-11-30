@@ -32,57 +32,41 @@ class BTMEnumOption(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'option': 'str',
         'option_name': 'str',
+        'option': 'str',
         'import_microversion': 'str',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'option': 'option',
         'option_name': 'optionName',
+        'option': 'option',
         'import_microversion': 'importMicroversion',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, option=None, option_name=None, import_microversion=None, node_id=None):  # noqa: E501
+    def __init__(self, option_name=None, option=None, import_microversion=None, node_id=None, bt_type=None):  # noqa: E501
         """BTMEnumOption - a model defined in OpenAPI"""  # noqa: E501
 
-        self._option = None
         self._option_name = None
+        self._option = None
         self._import_microversion = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
-        if option is not None:
-            self.option = option
         if option_name is not None:
             self.option_name = option_name
+        if option is not None:
+            self.option = option
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if node_id is not None:
             self.node_id = node_id
-
-    @property
-    def option(self):
-        """Gets the option of this BTMEnumOption.  # noqa: E501
-
-
-        :return: The option of this BTMEnumOption.  # noqa: E501
-        :rtype: str
-        """
-        return self._option
-
-    @option.setter
-    def option(self, option):
-        """Sets the option of this BTMEnumOption.
-
-
-        :param option: The option of this BTMEnumOption.  # noqa: E501
-        :type: str
-        """
-
-        self._option = option
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def option_name(self):
@@ -104,6 +88,27 @@ class BTMEnumOption(object):
         """
 
         self._option_name = option_name
+
+    @property
+    def option(self):
+        """Gets the option of this BTMEnumOption.  # noqa: E501
+
+
+        :return: The option of this BTMEnumOption.  # noqa: E501
+        :rtype: str
+        """
+        return self._option
+
+    @option.setter
+    def option(self, option):
+        """Sets the option of this BTMEnumOption.
+
+
+        :param option: The option of this BTMEnumOption.  # noqa: E501
+        :type: str
+        """
+
+        self._option = option
 
     @property
     def import_microversion(self):
@@ -146,6 +151,27 @@ class BTMEnumOption(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMEnumOption.  # noqa: E501
+
+
+        :return: The bt_type of this BTMEnumOption.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMEnumOption.
+
+
+        :param bt_type: The bt_type of this BTMEnumOption.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

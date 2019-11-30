@@ -68,7 +68,7 @@ class BTPTopLevelNode(object):
         self._for_export = None
         self._space_after_export = None
         self._annotation = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if deprecated is not None:
             self.deprecated = deprecated

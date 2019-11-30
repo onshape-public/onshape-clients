@@ -32,47 +32,26 @@ class BTPIdentifierAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identifier': 'str',
-        'invalid_identifier_for_test': 'str'
+        'invalid_identifier_for_test': 'str',
+        'identifier': 'str'
     }
 
     attribute_map = {
-        'identifier': 'identifier',
-        'invalid_identifier_for_test': 'invalidIdentifierForTest'
+        'invalid_identifier_for_test': 'invalidIdentifierForTest',
+        'identifier': 'identifier'
     }
 
-    def __init__(self, identifier=None, invalid_identifier_for_test=None):  # noqa: E501
+    def __init__(self, invalid_identifier_for_test=None, identifier=None):  # noqa: E501
         """BTPIdentifierAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._identifier = None
         self._invalid_identifier_for_test = None
+        self._identifier = None
         self.discriminator = None
 
-        if identifier is not None:
-            self.identifier = identifier
         if invalid_identifier_for_test is not None:
             self.invalid_identifier_for_test = invalid_identifier_for_test
-
-    @property
-    def identifier(self):
-        """Gets the identifier of this BTPIdentifierAllOf.  # noqa: E501
-
-
-        :return: The identifier of this BTPIdentifierAllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this BTPIdentifierAllOf.
-
-
-        :param identifier: The identifier of this BTPIdentifierAllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._identifier = identifier
+        if identifier is not None:
+            self.identifier = identifier
 
     @property
     def invalid_identifier_for_test(self):
@@ -94,6 +73,27 @@ class BTPIdentifierAllOf(object):
         """
 
         self._invalid_identifier_for_test = invalid_identifier_for_test
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this BTPIdentifierAllOf.  # noqa: E501
+
+
+        :return: The identifier of this BTPIdentifierAllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this BTPIdentifierAllOf.
+
+
+        :param identifier: The identifier of this BTPIdentifierAllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
 
     def to_dict(self):
         """Returns the model properties as a dict"""

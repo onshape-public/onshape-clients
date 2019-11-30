@@ -32,99 +32,102 @@ class BTFeatureSpec(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'full_feature_type': 'str',
         'all_parameters': 'list[BTParameterSpec]',
         'localized_name': 'str',
         'localizable_name': 'str',
+        'full_feature_type': 'str',
         'additional_localized_strings': 'int',
         'location_infos': 'list[BTLocationInfo]',
         'namespace_the_source': 'bool',
         'namespace_including_enums': 'str',
         'signature': 'str',
         'strings_to_localize': 'list[str]',
-        'source_microversion_id': 'str',
         'feature_type_name': 'str',
         'feature_type': 'str',
+        'source_microversion_id': 'str',
         'groups': 'list[BTParameterGroupSpec]',
-        'ui_hints': 'list[str]',
-        'source_location': 'BTLocationInfo',
         'icon_uri': 'str',
-        'language_version': 'int',
+        'source_location': 'BTLocationInfo',
         'linked_location_name': 'str',
+        'ui_hints': 'list[str]',
+        'language_version': 'int',
         'feature_name_template': 'str',
         'manipulator_change_function': 'str',
         'filter_selectors': 'list[str]',
         'editing_logic': 'BTEditingLogic',
         'parameters': 'list[BTParameterSpec]',
-        'namespace': 'str'
+        'namespace': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'full_feature_type': 'fullFeatureType',
         'all_parameters': 'allParameters',
         'localized_name': 'localizedName',
         'localizable_name': 'localizableName',
+        'full_feature_type': 'fullFeatureType',
         'additional_localized_strings': 'additionalLocalizedStrings',
         'location_infos': 'locationInfos',
         'namespace_the_source': 'namespaceTheSource',
         'namespace_including_enums': 'namespaceIncludingEnums',
         'signature': 'signature',
         'strings_to_localize': 'stringsToLocalize',
-        'source_microversion_id': 'sourceMicroversionId',
         'feature_type_name': 'featureTypeName',
         'feature_type': 'featureType',
+        'source_microversion_id': 'sourceMicroversionId',
         'groups': 'groups',
-        'ui_hints': 'uiHints',
-        'source_location': 'sourceLocation',
         'icon_uri': 'iconUri',
-        'language_version': 'languageVersion',
+        'source_location': 'sourceLocation',
         'linked_location_name': 'linkedLocationName',
+        'ui_hints': 'uiHints',
+        'language_version': 'languageVersion',
         'feature_name_template': 'featureNameTemplate',
         'manipulator_change_function': 'manipulatorChangeFunction',
         'filter_selectors': 'filterSelectors',
         'editing_logic': 'editingLogic',
         'parameters': 'parameters',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, full_feature_type=None, all_parameters=None, localized_name=None, localizable_name=None, additional_localized_strings=None, location_infos=None, namespace_the_source=None, namespace_including_enums=None, signature=None, strings_to_localize=None, source_microversion_id=None, feature_type_name=None, feature_type=None, groups=None, ui_hints=None, source_location=None, icon_uri=None, language_version=None, linked_location_name=None, feature_name_template=None, manipulator_change_function=None, filter_selectors=None, editing_logic=None, parameters=None, namespace=None):  # noqa: E501
+    def __init__(self, all_parameters=None, localized_name=None, localizable_name=None, full_feature_type=None, additional_localized_strings=None, location_infos=None, namespace_the_source=None, namespace_including_enums=None, signature=None, strings_to_localize=None, feature_type_name=None, feature_type=None, source_microversion_id=None, groups=None, icon_uri=None, source_location=None, linked_location_name=None, ui_hints=None, language_version=None, feature_name_template=None, manipulator_change_function=None, filter_selectors=None, editing_logic=None, parameters=None, namespace=None, bt_type=None):  # noqa: E501
         """BTFeatureSpec - a model defined in OpenAPI"""  # noqa: E501
 
-        self._full_feature_type = None
         self._all_parameters = None
         self._localized_name = None
         self._localizable_name = None
+        self._full_feature_type = None
         self._additional_localized_strings = None
         self._location_infos = None
         self._namespace_the_source = None
         self._namespace_including_enums = None
         self._signature = None
         self._strings_to_localize = None
-        self._source_microversion_id = None
         self._feature_type_name = None
         self._feature_type = None
+        self._source_microversion_id = None
         self._groups = None
-        self._ui_hints = None
-        self._source_location = None
         self._icon_uri = None
-        self._language_version = None
+        self._source_location = None
         self._linked_location_name = None
+        self._ui_hints = None
+        self._language_version = None
         self._feature_name_template = None
         self._manipulator_change_function = None
         self._filter_selectors = None
         self._editing_logic = None
         self._parameters = None
         self._namespace = None
+        self._bt_type = None
         self.discriminator = None
 
-        if full_feature_type is not None:
-            self.full_feature_type = full_feature_type
         if all_parameters is not None:
             self.all_parameters = all_parameters
         if localized_name is not None:
             self.localized_name = localized_name
         if localizable_name is not None:
             self.localizable_name = localizable_name
+        if full_feature_type is not None:
+            self.full_feature_type = full_feature_type
         if additional_localized_strings is not None:
             self.additional_localized_strings = additional_localized_strings
         if location_infos is not None:
@@ -137,24 +140,24 @@ class BTFeatureSpec(object):
             self.signature = signature
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
-        if source_microversion_id is not None:
-            self.source_microversion_id = source_microversion_id
         if feature_type_name is not None:
             self.feature_type_name = feature_type_name
         if feature_type is not None:
             self.feature_type = feature_type
+        if source_microversion_id is not None:
+            self.source_microversion_id = source_microversion_id
         if groups is not None:
             self.groups = groups
-        if ui_hints is not None:
-            self.ui_hints = ui_hints
-        if source_location is not None:
-            self.source_location = source_location
         if icon_uri is not None:
             self.icon_uri = icon_uri
-        if language_version is not None:
-            self.language_version = language_version
+        if source_location is not None:
+            self.source_location = source_location
         if linked_location_name is not None:
             self.linked_location_name = linked_location_name
+        if ui_hints is not None:
+            self.ui_hints = ui_hints
+        if language_version is not None:
+            self.language_version = language_version
         if feature_name_template is not None:
             self.feature_name_template = feature_name_template
         if manipulator_change_function is not None:
@@ -167,27 +170,8 @@ class BTFeatureSpec(object):
             self.parameters = parameters
         if namespace is not None:
             self.namespace = namespace
-
-    @property
-    def full_feature_type(self):
-        """Gets the full_feature_type of this BTFeatureSpec.  # noqa: E501
-
-
-        :return: The full_feature_type of this BTFeatureSpec.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_feature_type
-
-    @full_feature_type.setter
-    def full_feature_type(self, full_feature_type):
-        """Sets the full_feature_type of this BTFeatureSpec.
-
-
-        :param full_feature_type: The full_feature_type of this BTFeatureSpec.  # noqa: E501
-        :type: str
-        """
-
-        self._full_feature_type = full_feature_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def all_parameters(self):
@@ -251,6 +235,27 @@ class BTFeatureSpec(object):
         """
 
         self._localizable_name = localizable_name
+
+    @property
+    def full_feature_type(self):
+        """Gets the full_feature_type of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The full_feature_type of this BTFeatureSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_feature_type
+
+    @full_feature_type.setter
+    def full_feature_type(self, full_feature_type):
+        """Sets the full_feature_type of this BTFeatureSpec.
+
+
+        :param full_feature_type: The full_feature_type of this BTFeatureSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._full_feature_type = full_feature_type
 
     @property
     def additional_localized_strings(self):
@@ -379,27 +384,6 @@ class BTFeatureSpec(object):
         self._strings_to_localize = strings_to_localize
 
     @property
-    def source_microversion_id(self):
-        """Gets the source_microversion_id of this BTFeatureSpec.  # noqa: E501
-
-
-        :return: The source_microversion_id of this BTFeatureSpec.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_microversion_id
-
-    @source_microversion_id.setter
-    def source_microversion_id(self, source_microversion_id):
-        """Sets the source_microversion_id of this BTFeatureSpec.
-
-
-        :param source_microversion_id: The source_microversion_id of this BTFeatureSpec.  # noqa: E501
-        :type: str
-        """
-
-        self._source_microversion_id = source_microversion_id
-
-    @property
     def feature_type_name(self):
         """Gets the feature_type_name of this BTFeatureSpec.  # noqa: E501
 
@@ -442,6 +426,27 @@ class BTFeatureSpec(object):
         self._feature_type = feature_type
 
     @property
+    def source_microversion_id(self):
+        """Gets the source_microversion_id of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The source_microversion_id of this BTFeatureSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_microversion_id
+
+    @source_microversion_id.setter
+    def source_microversion_id(self, source_microversion_id):
+        """Sets the source_microversion_id of this BTFeatureSpec.
+
+
+        :param source_microversion_id: The source_microversion_id of this BTFeatureSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._source_microversion_id = source_microversion_id
+
+    @property
     def groups(self):
         """Gets the groups of this BTFeatureSpec.  # noqa: E501
 
@@ -461,6 +466,69 @@ class BTFeatureSpec(object):
         """
 
         self._groups = groups
+
+    @property
+    def icon_uri(self):
+        """Gets the icon_uri of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The icon_uri of this BTFeatureSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._icon_uri
+
+    @icon_uri.setter
+    def icon_uri(self, icon_uri):
+        """Sets the icon_uri of this BTFeatureSpec.
+
+
+        :param icon_uri: The icon_uri of this BTFeatureSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._icon_uri = icon_uri
+
+    @property
+    def source_location(self):
+        """Gets the source_location of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The source_location of this BTFeatureSpec.  # noqa: E501
+        :rtype: BTLocationInfo
+        """
+        return self._source_location
+
+    @source_location.setter
+    def source_location(self, source_location):
+        """Sets the source_location of this BTFeatureSpec.
+
+
+        :param source_location: The source_location of this BTFeatureSpec.  # noqa: E501
+        :type: BTLocationInfo
+        """
+
+        self._source_location = source_location
+
+    @property
+    def linked_location_name(self):
+        """Gets the linked_location_name of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The linked_location_name of this BTFeatureSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._linked_location_name
+
+    @linked_location_name.setter
+    def linked_location_name(self, linked_location_name):
+        """Sets the linked_location_name of this BTFeatureSpec.
+
+
+        :param linked_location_name: The linked_location_name of this BTFeatureSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._linked_location_name = linked_location_name
 
     @property
     def ui_hints(self):
@@ -491,48 +559,6 @@ class BTFeatureSpec(object):
         self._ui_hints = ui_hints
 
     @property
-    def source_location(self):
-        """Gets the source_location of this BTFeatureSpec.  # noqa: E501
-
-
-        :return: The source_location of this BTFeatureSpec.  # noqa: E501
-        :rtype: BTLocationInfo
-        """
-        return self._source_location
-
-    @source_location.setter
-    def source_location(self, source_location):
-        """Sets the source_location of this BTFeatureSpec.
-
-
-        :param source_location: The source_location of this BTFeatureSpec.  # noqa: E501
-        :type: BTLocationInfo
-        """
-
-        self._source_location = source_location
-
-    @property
-    def icon_uri(self):
-        """Gets the icon_uri of this BTFeatureSpec.  # noqa: E501
-
-
-        :return: The icon_uri of this BTFeatureSpec.  # noqa: E501
-        :rtype: str
-        """
-        return self._icon_uri
-
-    @icon_uri.setter
-    def icon_uri(self, icon_uri):
-        """Sets the icon_uri of this BTFeatureSpec.
-
-
-        :param icon_uri: The icon_uri of this BTFeatureSpec.  # noqa: E501
-        :type: str
-        """
-
-        self._icon_uri = icon_uri
-
-    @property
     def language_version(self):
         """Gets the language_version of this BTFeatureSpec.  # noqa: E501
 
@@ -552,27 +578,6 @@ class BTFeatureSpec(object):
         """
 
         self._language_version = language_version
-
-    @property
-    def linked_location_name(self):
-        """Gets the linked_location_name of this BTFeatureSpec.  # noqa: E501
-
-
-        :return: The linked_location_name of this BTFeatureSpec.  # noqa: E501
-        :rtype: str
-        """
-        return self._linked_location_name
-
-    @linked_location_name.setter
-    def linked_location_name(self, linked_location_name):
-        """Sets the linked_location_name of this BTFeatureSpec.
-
-
-        :param linked_location_name: The linked_location_name of this BTFeatureSpec.  # noqa: E501
-        :type: str
-        """
-
-        self._linked_location_name = linked_location_name
 
     @property
     def feature_name_template(self):
@@ -699,6 +704,27 @@ class BTFeatureSpec(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFeatureSpec.  # noqa: E501
+
+
+        :return: The bt_type of this BTFeatureSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFeatureSpec.
+
+
+        :param bt_type: The bt_type of this BTFeatureSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

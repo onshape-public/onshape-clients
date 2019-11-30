@@ -33,30 +33,30 @@ class UpdateParams(object):
     """
     openapi_types = {
         'from_reference': 'BTUniqueDocumentItemParams',
-        'to_reference': 'BTUniqueDocumentItemParams',
-        'ids_to_update': 'list[str]'
+        'ids_to_update': 'list[str]',
+        'to_reference': 'BTUniqueDocumentItemParams'
     }
 
     attribute_map = {
         'from_reference': 'fromReference',
-        'to_reference': 'toReference',
-        'ids_to_update': 'idsToUpdate'
+        'ids_to_update': 'idsToUpdate',
+        'to_reference': 'toReference'
     }
 
-    def __init__(self, from_reference=None, to_reference=None, ids_to_update=None):  # noqa: E501
+    def __init__(self, from_reference=None, ids_to_update=None, to_reference=None):  # noqa: E501
         """UpdateParams - a model defined in OpenAPI"""  # noqa: E501
 
         self._from_reference = None
-        self._to_reference = None
         self._ids_to_update = None
+        self._to_reference = None
         self.discriminator = None
 
         if from_reference is not None:
             self.from_reference = from_reference
-        if to_reference is not None:
-            self.to_reference = to_reference
         if ids_to_update is not None:
             self.ids_to_update = ids_to_update
+        if to_reference is not None:
+            self.to_reference = to_reference
 
     @property
     def from_reference(self):
@@ -80,27 +80,6 @@ class UpdateParams(object):
         self._from_reference = from_reference
 
     @property
-    def to_reference(self):
-        """Gets the to_reference of this UpdateParams.  # noqa: E501
-
-
-        :return: The to_reference of this UpdateParams.  # noqa: E501
-        :rtype: BTUniqueDocumentItemParams
-        """
-        return self._to_reference
-
-    @to_reference.setter
-    def to_reference(self, to_reference):
-        """Sets the to_reference of this UpdateParams.
-
-
-        :param to_reference: The to_reference of this UpdateParams.  # noqa: E501
-        :type: BTUniqueDocumentItemParams
-        """
-
-        self._to_reference = to_reference
-
-    @property
     def ids_to_update(self):
         """Gets the ids_to_update of this UpdateParams.  # noqa: E501
 
@@ -120,6 +99,27 @@ class UpdateParams(object):
         """
 
         self._ids_to_update = ids_to_update
+
+    @property
+    def to_reference(self):
+        """Gets the to_reference of this UpdateParams.  # noqa: E501
+
+
+        :return: The to_reference of this UpdateParams.  # noqa: E501
+        :rtype: BTUniqueDocumentItemParams
+        """
+        return self._to_reference
+
+    @to_reference.setter
+    def to_reference(self, to_reference):
+        """Sets the to_reference of this UpdateParams.
+
+
+        :param to_reference: The to_reference of this UpdateParams.  # noqa: E501
+        :type: BTUniqueDocumentItemParams
+        """
+
+        self._to_reference = to_reference
 
     def to_dict(self):
         """Returns the model properties as a dict"""

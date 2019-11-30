@@ -32,57 +32,36 @@ class BTTorusDescriptionAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'axis': 'BTVector3d',
         'major_radius': 'float',
         'minor_radius': 'float',
+        'axis': 'BTVector3d',
         'origin': 'BTVector3d'
     }
 
     attribute_map = {
-        'axis': 'axis',
         'major_radius': 'majorRadius',
         'minor_radius': 'minorRadius',
+        'axis': 'axis',
         'origin': 'origin'
     }
 
-    def __init__(self, axis=None, major_radius=None, minor_radius=None, origin=None):  # noqa: E501
+    def __init__(self, major_radius=None, minor_radius=None, axis=None, origin=None):  # noqa: E501
         """BTTorusDescriptionAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._axis = None
         self._major_radius = None
         self._minor_radius = None
+        self._axis = None
         self._origin = None
         self.discriminator = None
 
-        if axis is not None:
-            self.axis = axis
         if major_radius is not None:
             self.major_radius = major_radius
         if minor_radius is not None:
             self.minor_radius = minor_radius
+        if axis is not None:
+            self.axis = axis
         if origin is not None:
             self.origin = origin
-
-    @property
-    def axis(self):
-        """Gets the axis of this BTTorusDescriptionAllOf.  # noqa: E501
-
-
-        :return: The axis of this BTTorusDescriptionAllOf.  # noqa: E501
-        :rtype: BTVector3d
-        """
-        return self._axis
-
-    @axis.setter
-    def axis(self, axis):
-        """Sets the axis of this BTTorusDescriptionAllOf.
-
-
-        :param axis: The axis of this BTTorusDescriptionAllOf.  # noqa: E501
-        :type: BTVector3d
-        """
-
-        self._axis = axis
 
     @property
     def major_radius(self):
@@ -125,6 +104,27 @@ class BTTorusDescriptionAllOf(object):
         """
 
         self._minor_radius = minor_radius
+
+    @property
+    def axis(self):
+        """Gets the axis of this BTTorusDescriptionAllOf.  # noqa: E501
+
+
+        :return: The axis of this BTTorusDescriptionAllOf.  # noqa: E501
+        :rtype: BTVector3d
+        """
+        return self._axis
+
+    @axis.setter
+    def axis(self, axis):
+        """Sets the axis of this BTTorusDescriptionAllOf.
+
+
+        :param axis: The axis of this BTTorusDescriptionAllOf.  # noqa: E501
+        :type: BTVector3d
+        """
+
+        self._axis = axis
 
     @property
     def origin(self):

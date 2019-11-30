@@ -34,21 +34,24 @@ class BTVector3d(object):
     openapi_types = {
         'z': 'float',
         'x': 'float',
-        'y': 'float'
+        'y': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'z': 'z',
         'x': 'x',
-        'y': 'y'
+        'y': 'y',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, z=None, x=None, y=None):  # noqa: E501
+    def __init__(self, z=None, x=None, y=None, bt_type=None):  # noqa: E501
         """BTVector3d - a model defined in OpenAPI"""  # noqa: E501
 
         self._z = None
         self._x = None
         self._y = None
+        self._bt_type = None
         self.discriminator = None
 
         if z is not None:
@@ -57,6 +60,8 @@ class BTVector3d(object):
             self.x = x
         if y is not None:
             self.y = y
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def z(self):
@@ -120,6 +125,27 @@ class BTVector3d(object):
         """
 
         self._y = y
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTVector3d.  # noqa: E501
+
+
+        :return: The bt_type of this BTVector3d.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTVector3d.
+
+
+        :param bt_type: The bt_type of this BTVector3d.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,21 +34,24 @@ class BTExportTessellatedFacesResponse(object):
     openapi_types = {
         'bodies': 'list[BTExportTessellatedFacesBody]',
         'error_enum': 'str',
-        'facet_points': 'list[BTVector3d]'
+        'facet_points': 'list[BTVector3d]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'bodies': 'bodies',
         'error_enum': 'errorEnum',
-        'facet_points': 'facetPoints'
+        'facet_points': 'facetPoints',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, bodies=None, error_enum=None, facet_points=None):  # noqa: E501
+    def __init__(self, bodies=None, error_enum=None, facet_points=None, bt_type=None):  # noqa: E501
         """BTExportTessellatedFacesResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._bodies = None
         self._error_enum = None
         self._facet_points = None
+        self._bt_type = None
         self.discriminator = None
 
         if bodies is not None:
@@ -57,6 +60,8 @@ class BTExportTessellatedFacesResponse(object):
             self.error_enum = error_enum
         if facet_points is not None:
             self.facet_points = facet_points
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def bodies(self):
@@ -128,6 +133,27 @@ class BTExportTessellatedFacesResponse(object):
         """
 
         self._facet_points = facet_points
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportTessellatedFacesResponse.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportTessellatedFacesResponse.
+
+
+        :param bt_type: The bt_type of this BTExportTessellatedFacesResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,14 +32,14 @@ class BTMParameterReference(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'feature_script_type': 'str',
         'element_id': 'str',
+        'feature_script_type': 'str',
         'namespace': 'str'
     }
 
     attribute_map = {
-        'feature_script_type': 'featureScriptType',
         'element_id': 'elementId',
+        'feature_script_type': 'featureScriptType',
         'namespace': 'namespace'
     }
 
@@ -48,41 +48,20 @@ class BTMParameterReference(object):
         'BTMParameterReferenceBlob': 'BTMParameterReferenceBlob'
     }
 
-    def __init__(self, feature_script_type=None, element_id=None, namespace=None):  # noqa: E501
+    def __init__(self, element_id=None, feature_script_type=None, namespace=None):  # noqa: E501
         """BTMParameterReference - a model defined in OpenAPI"""  # noqa: E501
 
-        self._feature_script_type = None
         self._element_id = None
+        self._feature_script_type = None
         self._namespace = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
-        if feature_script_type is not None:
-            self.feature_script_type = feature_script_type
         if element_id is not None:
             self.element_id = element_id
+        if feature_script_type is not None:
+            self.feature_script_type = feature_script_type
         if namespace is not None:
             self.namespace = namespace
-
-    @property
-    def feature_script_type(self):
-        """Gets the feature_script_type of this BTMParameterReference.  # noqa: E501
-
-
-        :return: The feature_script_type of this BTMParameterReference.  # noqa: E501
-        :rtype: str
-        """
-        return self._feature_script_type
-
-    @feature_script_type.setter
-    def feature_script_type(self, feature_script_type):
-        """Sets the feature_script_type of this BTMParameterReference.
-
-
-        :param feature_script_type: The feature_script_type of this BTMParameterReference.  # noqa: E501
-        :type: str
-        """
-
-        self._feature_script_type = feature_script_type
 
     @property
     def element_id(self):
@@ -104,6 +83,27 @@ class BTMParameterReference(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def feature_script_type(self):
+        """Gets the feature_script_type of this BTMParameterReference.  # noqa: E501
+
+
+        :return: The feature_script_type of this BTMParameterReference.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_script_type
+
+    @feature_script_type.setter
+    def feature_script_type(self, feature_script_type):
+        """Sets the feature_script_type of this BTMParameterReference.
+
+
+        :param feature_script_type: The feature_script_type of this BTMParameterReference.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_script_type = feature_script_type
 
     @property
     def namespace(self):

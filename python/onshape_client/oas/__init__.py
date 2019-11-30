@@ -520,6 +520,7 @@ from onshape_client.oas.models.bt_plane_orientation_filter_all_of import BTPlane
 from onshape_client.oas.models.bt_purchase_info import BTPurchaseInfo
 from onshape_client.oas.models.bt_purchase_user_params import BTPurchaseUserParams
 from onshape_client.oas.models.bt_quantity_range import BTQuantityRange
+from onshape_client.oas.models.bt_query_filter import BTQueryFilter
 from onshape_client.oas.models.bt_root_assembly_info import BTRootAssemblyInfo
 from onshape_client.oas.models.bt_root_diff_info import BTRootDiffInfo
 from onshape_client.oas.models.btsm_definition_entity_type_filter import BTSMDefinitionEntityTypeFilter

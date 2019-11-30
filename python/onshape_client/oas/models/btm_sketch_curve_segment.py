@@ -56,7 +56,7 @@ class BTMSketchCurveSegment(object):
         self._end_point_id = None
         self._start_param = None
         self._end_param = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if start_point_id is not None:
             self.start_point_id = start_point_id

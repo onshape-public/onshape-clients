@@ -38,7 +38,8 @@ class BTMConfigurationParameter(object):
         'parameter_id': 'str',
         'parameter_name': 'str',
         'import_microversion': 'str',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -48,7 +49,8 @@ class BTMConfigurationParameter(object):
         'parameter_id': 'parameterId',
         'parameter_name': 'parameterName',
         'import_microversion': 'importMicroversion',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -58,7 +60,7 @@ class BTMConfigurationParameter(object):
         'BTMConfigurationParameterQuantity': 'BTMConfigurationParameterQuantity'
     }
 
-    def __init__(self, parameter_type=None, generated_parameter_id=None, valid=None, parameter_id=None, parameter_name=None, import_microversion=None, node_id=None):  # noqa: E501
+    def __init__(self, parameter_type=None, generated_parameter_id=None, valid=None, parameter_id=None, parameter_name=None, import_microversion=None, node_id=None, bt_type=None):  # noqa: E501
         """BTMConfigurationParameter - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameter_type = None
@@ -68,7 +70,8 @@ class BTMConfigurationParameter(object):
         self._parameter_name = None
         self._import_microversion = None
         self._node_id = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if parameter_type is not None:
             self.parameter_type = parameter_type
@@ -84,6 +87,8 @@ class BTMConfigurationParameter(object):
             self.import_microversion = import_microversion
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def parameter_type(self):
@@ -237,6 +242,27 @@ class BTMConfigurationParameter(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMConfigurationParameter.  # noqa: E501
+
+
+        :return: The bt_type of this BTMConfigurationParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMConfigurationParameter.
+
+
+        :param bt_type: The bt_type of this BTMConfigurationParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -34,21 +34,24 @@ class BTPSpace(object):
     openapi_types = {
         'lines': 'list[str]',
         'text': 'str',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'lines': 'lines',
         'text': 'text',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, lines=None, text=None, node_id=None):  # noqa: E501
+    def __init__(self, lines=None, text=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPSpace - a model defined in OpenAPI"""  # noqa: E501
 
         self._lines = None
         self._text = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if lines is not None:
@@ -57,6 +60,8 @@ class BTPSpace(object):
             self.text = text
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def lines(self):
@@ -120,6 +125,27 @@ class BTPSpace(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPSpace.  # noqa: E501
+
+
+        :return: The bt_type of this BTPSpace.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPSpace.
+
+
+        :param bt_type: The bt_type of this BTPSpace.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

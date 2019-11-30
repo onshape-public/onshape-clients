@@ -32,15 +32,17 @@ class BTFSValue(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'configuration_value_string': 'str',
         'value_object': 'object',
-        'type_tag': 'str'
+        'configuration_value_string': 'str',
+        'type_tag': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'configuration_value_string': 'configurationValueString',
         'value_object': 'valueObject',
-        'type_tag': 'typeTag'
+        'configuration_value_string': 'configurationValueString',
+        'type_tag': 'typeTag',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -55,41 +57,23 @@ class BTFSValue(object):
         'BTFSValueBoolean': 'BTFSValueBoolean'
     }
 
-    def __init__(self, configuration_value_string=None, value_object=None, type_tag=None):  # noqa: E501
+    def __init__(self, value_object=None, configuration_value_string=None, type_tag=None, bt_type=None):  # noqa: E501
         """BTFSValue - a model defined in OpenAPI"""  # noqa: E501
 
-        self._configuration_value_string = None
         self._value_object = None
+        self._configuration_value_string = None
         self._type_tag = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
-        if configuration_value_string is not None:
-            self.configuration_value_string = configuration_value_string
         if value_object is not None:
             self.value_object = value_object
+        if configuration_value_string is not None:
+            self.configuration_value_string = configuration_value_string
         if type_tag is not None:
             self.type_tag = type_tag
-
-    @property
-    def configuration_value_string(self):
-        """Gets the configuration_value_string of this BTFSValue.  # noqa: E501
-
-
-        :return: The configuration_value_string of this BTFSValue.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration_value_string
-
-    @configuration_value_string.setter
-    def configuration_value_string(self, configuration_value_string):
-        """Sets the configuration_value_string of this BTFSValue.
-
-
-        :param configuration_value_string: The configuration_value_string of this BTFSValue.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration_value_string = configuration_value_string
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def value_object(self):
@@ -113,6 +97,27 @@ class BTFSValue(object):
         self._value_object = value_object
 
     @property
+    def configuration_value_string(self):
+        """Gets the configuration_value_string of this BTFSValue.  # noqa: E501
+
+
+        :return: The configuration_value_string of this BTFSValue.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration_value_string
+
+    @configuration_value_string.setter
+    def configuration_value_string(self, configuration_value_string):
+        """Sets the configuration_value_string of this BTFSValue.
+
+
+        :param configuration_value_string: The configuration_value_string of this BTFSValue.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration_value_string = configuration_value_string
+
+    @property
     def type_tag(self):
         """Gets the type_tag of this BTFSValue.  # noqa: E501
 
@@ -132,6 +137,27 @@ class BTFSValue(object):
         """
 
         self._type_tag = type_tag
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFSValue.  # noqa: E501
+
+
+        :return: The bt_type of this BTFSValue.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFSValue.
+
+
+        :param bt_type: The bt_type of this BTFSValue.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

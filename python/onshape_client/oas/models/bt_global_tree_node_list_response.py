@@ -32,57 +32,36 @@ class BTGlobalTreeNodeListResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'href': 'str',
         'items': 'list[BTGlobalTreeNodeInfo]',
+        'href': 'str',
         'previous': 'str',
         'next': 'str'
     }
 
     attribute_map = {
-        'href': 'href',
         'items': 'items',
+        'href': 'href',
         'previous': 'previous',
         'next': 'next'
     }
 
-    def __init__(self, href=None, items=None, previous=None, next=None):  # noqa: E501
+    def __init__(self, items=None, href=None, previous=None, next=None):  # noqa: E501
         """BTGlobalTreeNodeListResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._href = None
         self._items = None
+        self._href = None
         self._previous = None
         self._next = None
         self.discriminator = None
 
-        if href is not None:
-            self.href = href
         if items is not None:
             self.items = items
+        if href is not None:
+            self.href = href
         if previous is not None:
             self.previous = previous
         if next is not None:
             self.next = next
-
-    @property
-    def href(self):
-        """Gets the href of this BTGlobalTreeNodeListResponse.  # noqa: E501
-
-
-        :return: The href of this BTGlobalTreeNodeListResponse.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BTGlobalTreeNodeListResponse.
-
-
-        :param href: The href of this BTGlobalTreeNodeListResponse.  # noqa: E501
-        :type: str
-        """
-
-        self._href = href
 
     @property
     def items(self):
@@ -104,6 +83,27 @@ class BTGlobalTreeNodeListResponse(object):
         """
 
         self._items = items
+
+    @property
+    def href(self):
+        """Gets the href of this BTGlobalTreeNodeListResponse.  # noqa: E501
+
+
+        :return: The href of this BTGlobalTreeNodeListResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BTGlobalTreeNodeListResponse.
+
+
+        :param href: The href of this BTGlobalTreeNodeListResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._href = href
 
     @property
     def previous(self):

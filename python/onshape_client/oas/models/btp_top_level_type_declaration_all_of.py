@@ -33,30 +33,30 @@ class BTPTopLevelTypeDeclarationAllOf(object):
     """
     openapi_types = {
         'space_after_version': 'BTPSpace',
-        'version': 'BTPLiteralNumber',
-        'name': 'BTPIdentifier'
+        'name': 'BTPIdentifier',
+        'version': 'BTPLiteralNumber'
     }
 
     attribute_map = {
         'space_after_version': 'spaceAfterVersion',
-        'version': 'version',
-        'name': 'name'
+        'name': 'name',
+        'version': 'version'
     }
 
-    def __init__(self, space_after_version=None, version=None, name=None):  # noqa: E501
+    def __init__(self, space_after_version=None, name=None, version=None):  # noqa: E501
         """BTPTopLevelTypeDeclarationAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._space_after_version = None
-        self._version = None
         self._name = None
+        self._version = None
         self.discriminator = None
 
         if space_after_version is not None:
             self.space_after_version = space_after_version
-        if version is not None:
-            self.version = version
         if name is not None:
             self.name = name
+        if version is not None:
+            self.version = version
 
     @property
     def space_after_version(self):
@@ -80,27 +80,6 @@ class BTPTopLevelTypeDeclarationAllOf(object):
         self._space_after_version = space_after_version
 
     @property
-    def version(self):
-        """Gets the version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
-
-
-        :return: The version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
-        :rtype: BTPLiteralNumber
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this BTPTopLevelTypeDeclarationAllOf.
-
-
-        :param version: The version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
-        :type: BTPLiteralNumber
-        """
-
-        self._version = version
-
-    @property
     def name(self):
         """Gets the name of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTPTopLevelTypeDeclarationAllOf(object):
         """
 
         self._name = name
+
+    @property
+    def version(self):
+        """Gets the version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
+
+
+        :return: The version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
+        :rtype: BTPLiteralNumber
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this BTPTopLevelTypeDeclarationAllOf.
+
+
+        :param version: The version of this BTPTopLevelTypeDeclarationAllOf.  # noqa: E501
+        :type: BTPLiteralNumber
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

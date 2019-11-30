@@ -32,47 +32,26 @@ class BTConfigurationResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'current_configuration': 'list[BTMParameter]',
-        'configuration_parameters': 'list[BTMConfigurationParameter]'
+        'configuration_parameters': 'list[BTMConfigurationParameter]',
+        'current_configuration': 'list[BTMParameter]'
     }
 
     attribute_map = {
-        'current_configuration': 'currentConfiguration',
-        'configuration_parameters': 'configurationParameters'
+        'configuration_parameters': 'configurationParameters',
+        'current_configuration': 'currentConfiguration'
     }
 
-    def __init__(self, current_configuration=None, configuration_parameters=None):  # noqa: E501
+    def __init__(self, configuration_parameters=None, current_configuration=None):  # noqa: E501
         """BTConfigurationResponse - a model defined in OpenAPI"""  # noqa: E501
 
-        self._current_configuration = None
         self._configuration_parameters = None
+        self._current_configuration = None
         self.discriminator = None
 
-        if current_configuration is not None:
-            self.current_configuration = current_configuration
         if configuration_parameters is not None:
             self.configuration_parameters = configuration_parameters
-
-    @property
-    def current_configuration(self):
-        """Gets the current_configuration of this BTConfigurationResponse.  # noqa: E501
-
-
-        :return: The current_configuration of this BTConfigurationResponse.  # noqa: E501
-        :rtype: list[BTMParameter]
-        """
-        return self._current_configuration
-
-    @current_configuration.setter
-    def current_configuration(self, current_configuration):
-        """Sets the current_configuration of this BTConfigurationResponse.
-
-
-        :param current_configuration: The current_configuration of this BTConfigurationResponse.  # noqa: E501
-        :type: list[BTMParameter]
-        """
-
-        self._current_configuration = current_configuration
+        if current_configuration is not None:
+            self.current_configuration = current_configuration
 
     @property
     def configuration_parameters(self):
@@ -94,6 +73,27 @@ class BTConfigurationResponse(object):
         """
 
         self._configuration_parameters = configuration_parameters
+
+    @property
+    def current_configuration(self):
+        """Gets the current_configuration of this BTConfigurationResponse.  # noqa: E501
+
+
+        :return: The current_configuration of this BTConfigurationResponse.  # noqa: E501
+        :rtype: list[BTMParameter]
+        """
+        return self._current_configuration
+
+    @current_configuration.setter
+    def current_configuration(self, current_configuration):
+        """Sets the current_configuration of this BTConfigurationResponse.
+
+
+        :param current_configuration: The current_configuration of this BTConfigurationResponse.  # noqa: E501
+        :type: list[BTMParameter]
+        """
+
+        self._current_configuration = current_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

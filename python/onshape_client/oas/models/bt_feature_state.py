@@ -32,21 +32,26 @@ class BTFeatureState(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'feature_status': 'str'
+        'feature_status': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'feature_status': 'featureStatus'
+        'feature_status': 'featureStatus',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, feature_status=None):  # noqa: E501
+    def __init__(self, feature_status=None, bt_type=None):  # noqa: E501
         """BTFeatureState - a model defined in OpenAPI"""  # noqa: E501
 
         self._feature_status = None
+        self._bt_type = None
         self.discriminator = None
 
         if feature_status is not None:
             self.feature_status = feature_status
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def feature_status(self):
@@ -74,6 +79,27 @@ class BTFeatureState(object):
             )
 
         self._feature_status = feature_status
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFeatureState.  # noqa: E501
+
+
+        :return: The bt_type of this BTFeatureState.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFeatureState.
+
+
+        :param bt_type: The bt_type of this BTFeatureState.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

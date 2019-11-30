@@ -34,21 +34,24 @@ class BTBoundingBox(object):
     openapi_types = {
         'valid': 'bool',
         'min_corner': 'BTVector3d',
-        'max_corner': 'BTVector3d'
+        'max_corner': 'BTVector3d',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'valid': 'valid',
         'min_corner': 'minCorner',
-        'max_corner': 'maxCorner'
+        'max_corner': 'maxCorner',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, valid=None, min_corner=None, max_corner=None):  # noqa: E501
+    def __init__(self, valid=None, min_corner=None, max_corner=None, bt_type=None):  # noqa: E501
         """BTBoundingBox - a model defined in OpenAPI"""  # noqa: E501
 
         self._valid = None
         self._min_corner = None
         self._max_corner = None
+        self._bt_type = None
         self.discriminator = None
 
         if valid is not None:
@@ -57,6 +60,8 @@ class BTBoundingBox(object):
             self.min_corner = min_corner
         if max_corner is not None:
             self.max_corner = max_corner
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def valid(self):
@@ -120,6 +125,27 @@ class BTBoundingBox(object):
         """
 
         self._max_corner = max_corner
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTBoundingBox.  # noqa: E501
+
+
+        :return: The bt_type of this BTBoundingBox.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTBoundingBox.
+
+
+        :param bt_type: The bt_type of this BTBoundingBox.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

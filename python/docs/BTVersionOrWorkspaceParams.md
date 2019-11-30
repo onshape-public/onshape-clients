@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**microversion_id** | **str** |  | [optional] 
-**client_interaction_mode** | **str** |  | [optional] 
 **read_only** | **bool** |  | [optional] 
 **is_release** | **bool** |  | [optional] 
 **from_history** | **bool** |  | [optional] 
@@ -12,6 +10,8 @@ Name | Type | Description | Notes
 **version_id** | **str** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**microversion_id** | **str** |  | [optional] 
+**client_interaction_mode** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 

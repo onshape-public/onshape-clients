@@ -32,44 +32,49 @@ class BTElementReference(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'element_id': 'str',
         'external_reference': 'bool',
         'microversion_id_and_configuration': 'BTMicroversionIdAndConfiguration',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
         'external_document_with_version': 'BTDocumentWithVersionId',
         'configured': 'bool',
-        'element_id': 'str',
         'full_element_id': 'BTFullElementId',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'element_id': 'elementId',
         'external_reference': 'externalReference',
         'microversion_id_and_configuration': 'microversionIdAndConfiguration',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
         'external_document_with_version': 'externalDocumentWithVersion',
         'configured': 'configured',
-        'element_id': 'elementId',
         'full_element_id': 'fullElementId',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
         'BTExternalReference': 'BTExternalReference'
     }
 
-    def __init__(self, external_reference=None, microversion_id_and_configuration=None, external_document_with_version_and_element_id=None, external_document_with_version=None, configured=None, element_id=None, full_element_id=None, node_id=None):  # noqa: E501
+    def __init__(self, element_id=None, external_reference=None, microversion_id_and_configuration=None, external_document_with_version_and_element_id=None, external_document_with_version=None, configured=None, full_element_id=None, node_id=None, bt_type=None):  # noqa: E501
         """BTElementReference - a model defined in OpenAPI"""  # noqa: E501
 
+        self._element_id = None
         self._external_reference = None
         self._microversion_id_and_configuration = None
         self._external_document_with_version_and_element_id = None
         self._external_document_with_version = None
         self._configured = None
-        self._element_id = None
         self._full_element_id = None
         self._node_id = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
+        if element_id is not None:
+            self.element_id = element_id
         if external_reference is not None:
             self.external_reference = external_reference
         if microversion_id_and_configuration is not None:
@@ -80,12 +85,33 @@ class BTElementReference(object):
             self.external_document_with_version = external_document_with_version
         if configured is not None:
             self.configured = configured
-        if element_id is not None:
-            self.element_id = element_id
         if full_element_id is not None:
             self.full_element_id = full_element_id
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def element_id(self):
+        """Gets the element_id of this BTElementReference.  # noqa: E501
+
+
+        :return: The element_id of this BTElementReference.  # noqa: E501
+        :rtype: str
+        """
+        return self._element_id
+
+    @element_id.setter
+    def element_id(self, element_id):
+        """Sets the element_id of this BTElementReference.
+
+
+        :param element_id: The element_id of this BTElementReference.  # noqa: E501
+        :type: str
+        """
+
+        self._element_id = element_id
 
     @property
     def external_reference(self):
@@ -193,27 +219,6 @@ class BTElementReference(object):
         self._configured = configured
 
     @property
-    def element_id(self):
-        """Gets the element_id of this BTElementReference.  # noqa: E501
-
-
-        :return: The element_id of this BTElementReference.  # noqa: E501
-        :rtype: str
-        """
-        return self._element_id
-
-    @element_id.setter
-    def element_id(self, element_id):
-        """Sets the element_id of this BTElementReference.
-
-
-        :param element_id: The element_id of this BTElementReference.  # noqa: E501
-        :type: str
-        """
-
-        self._element_id = element_id
-
-    @property
     def full_element_id(self):
         """Gets the full_element_id of this BTElementReference.  # noqa: E501
 
@@ -254,6 +259,27 @@ class BTElementReference(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTElementReference.  # noqa: E501
+
+
+        :return: The bt_type of this BTElementReference.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTElementReference.
+
+
+        :param bt_type: The bt_type of this BTElementReference.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

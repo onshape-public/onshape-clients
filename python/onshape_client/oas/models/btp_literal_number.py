@@ -33,30 +33,30 @@ class BTPLiteralNumber(object):
     """
     openapi_types = {
         'integer': 'bool',
-        'text': 'str',
-        'value': 'float'
+        'value': 'float',
+        'text': 'str'
     }
 
     attribute_map = {
         'integer': 'integer',
-        'text': 'text',
-        'value': 'value'
+        'value': 'value',
+        'text': 'text'
     }
 
-    def __init__(self, integer=None, text=None, value=None):  # noqa: E501
+    def __init__(self, integer=None, value=None, text=None):  # noqa: E501
         """BTPLiteralNumber - a model defined in OpenAPI"""  # noqa: E501
 
         self._integer = None
-        self._text = None
         self._value = None
+        self._text = None
         self.discriminator = None
 
         if integer is not None:
             self.integer = integer
-        if text is not None:
-            self.text = text
         if value is not None:
             self.value = value
+        if text is not None:
+            self.text = text
 
     @property
     def integer(self):
@@ -80,27 +80,6 @@ class BTPLiteralNumber(object):
         self._integer = integer
 
     @property
-    def text(self):
-        """Gets the text of this BTPLiteralNumber.  # noqa: E501
-
-
-        :return: The text of this BTPLiteralNumber.  # noqa: E501
-        :rtype: str
-        """
-        return self._text
-
-    @text.setter
-    def text(self, text):
-        """Sets the text of this BTPLiteralNumber.
-
-
-        :param text: The text of this BTPLiteralNumber.  # noqa: E501
-        :type: str
-        """
-
-        self._text = text
-
-    @property
     def value(self):
         """Gets the value of this BTPLiteralNumber.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTPLiteralNumber(object):
         """
 
         self._value = value
+
+    @property
+    def text(self):
+        """Gets the text of this BTPLiteralNumber.  # noqa: E501
+
+
+        :return: The text of this BTPLiteralNumber.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this BTPLiteralNumber.
+
+
+        :param text: The text of this BTPLiteralNumber.  # noqa: E501
+        :type: str
+        """
+
+        self._text = text
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,8 +32,8 @@ class BTPProcedureDeclarationBaseAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'arguments': 'list[BTPArgumentDeclaration]',
         'body': 'BTPStatementBlock',
+        'arguments': 'list[BTPArgumentDeclaration]',
         'precondition': 'BTPStatement',
         'space_after_arglist': 'BTPSpace',
         'space_in_empty_list': 'BTPSpace',
@@ -41,29 +41,29 @@ class BTPProcedureDeclarationBaseAllOf(object):
     }
 
     attribute_map = {
-        'arguments': 'arguments',
         'body': 'body',
+        'arguments': 'arguments',
         'precondition': 'precondition',
         'space_after_arglist': 'spaceAfterArglist',
         'space_in_empty_list': 'spaceInEmptyList',
         'return_type': 'returnType'
     }
 
-    def __init__(self, arguments=None, body=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, return_type=None):  # noqa: E501
+    def __init__(self, body=None, arguments=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, return_type=None):  # noqa: E501
         """BTPProcedureDeclarationBaseAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._arguments = None
         self._body = None
+        self._arguments = None
         self._precondition = None
         self._space_after_arglist = None
         self._space_in_empty_list = None
         self._return_type = None
         self.discriminator = None
 
-        if arguments is not None:
-            self.arguments = arguments
         if body is not None:
             self.body = body
+        if arguments is not None:
+            self.arguments = arguments
         if precondition is not None:
             self.precondition = precondition
         if space_after_arglist is not None:
@@ -72,27 +72,6 @@ class BTPProcedureDeclarationBaseAllOf(object):
             self.space_in_empty_list = space_in_empty_list
         if return_type is not None:
             self.return_type = return_type
-
-    @property
-    def arguments(self):
-        """Gets the arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
-
-
-        :return: The arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
-        :rtype: list[BTPArgumentDeclaration]
-        """
-        return self._arguments
-
-    @arguments.setter
-    def arguments(self, arguments):
-        """Sets the arguments of this BTPProcedureDeclarationBaseAllOf.
-
-
-        :param arguments: The arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
-        :type: list[BTPArgumentDeclaration]
-        """
-
-        self._arguments = arguments
 
     @property
     def body(self):
@@ -114,6 +93,27 @@ class BTPProcedureDeclarationBaseAllOf(object):
         """
 
         self._body = body
+
+    @property
+    def arguments(self):
+        """Gets the arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
+
+
+        :return: The arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
+        :rtype: list[BTPArgumentDeclaration]
+        """
+        return self._arguments
+
+    @arguments.setter
+    def arguments(self, arguments):
+        """Sets the arguments of this BTPProcedureDeclarationBaseAllOf.
+
+
+        :param arguments: The arguments of this BTPProcedureDeclarationBaseAllOf.  # noqa: E501
+        :type: list[BTPArgumentDeclaration]
+        """
+
+        self._arguments = arguments
 
     @property
     def precondition(self):

@@ -33,8 +33,8 @@ class BTPLiteralMapEntry(object):
     """
     openapi_types = {
         'short_descriptor': 'str',
-        'key': 'BTPPropertyAccessor',
         'value': 'BTPExpression',
+        'key': 'BTPPropertyAccessor',
         'start_source_location': 'int',
         'end_source_location': 'int',
         'atomic': 'bool',
@@ -42,13 +42,14 @@ class BTPLiteralMapEntry(object):
         'space_before': 'BTPSpace',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'short_descriptor': 'shortDescriptor',
-        'key': 'key',
         'value': 'value',
+        'key': 'key',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
         'atomic': 'atomic',
@@ -56,15 +57,16 @@ class BTPLiteralMapEntry(object):
         'space_before': 'spaceBefore',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, short_descriptor=None, key=None, value=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, short_descriptor=None, value=None, key=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPLiteralMapEntry - a model defined in OpenAPI"""  # noqa: E501
 
         self._short_descriptor = None
-        self._key = None
         self._value = None
+        self._key = None
         self._start_source_location = None
         self._end_source_location = None
         self._atomic = None
@@ -73,14 +75,15 @@ class BTPLiteralMapEntry(object):
         self._space_default = None
         self._space_after = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
-        if key is not None:
-            self.key = key
         if value is not None:
             self.value = value
+        if key is not None:
+            self.key = key
         if start_source_location is not None:
             self.start_source_location = start_source_location
         if end_source_location is not None:
@@ -97,6 +100,8 @@ class BTPLiteralMapEntry(object):
             self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def short_descriptor(self):
@@ -120,27 +125,6 @@ class BTPLiteralMapEntry(object):
         self._short_descriptor = short_descriptor
 
     @property
-    def key(self):
-        """Gets the key of this BTPLiteralMapEntry.  # noqa: E501
-
-
-        :return: The key of this BTPLiteralMapEntry.  # noqa: E501
-        :rtype: BTPPropertyAccessor
-        """
-        return self._key
-
-    @key.setter
-    def key(self, key):
-        """Sets the key of this BTPLiteralMapEntry.
-
-
-        :param key: The key of this BTPLiteralMapEntry.  # noqa: E501
-        :type: BTPPropertyAccessor
-        """
-
-        self._key = key
-
-    @property
     def value(self):
         """Gets the value of this BTPLiteralMapEntry.  # noqa: E501
 
@@ -160,6 +144,27 @@ class BTPLiteralMapEntry(object):
         """
 
         self._value = value
+
+    @property
+    def key(self):
+        """Gets the key of this BTPLiteralMapEntry.  # noqa: E501
+
+
+        :return: The key of this BTPLiteralMapEntry.  # noqa: E501
+        :rtype: BTPPropertyAccessor
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this BTPLiteralMapEntry.
+
+
+        :param key: The key of this BTPLiteralMapEntry.  # noqa: E501
+        :type: BTPPropertyAccessor
+        """
+
+        self._key = key
 
     @property
     def start_source_location(self):
@@ -334,6 +339,27 @@ class BTPLiteralMapEntry(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPLiteralMapEntry.  # noqa: E501
+
+
+        :return: The bt_type of this BTPLiteralMapEntry.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPLiteralMapEntry.
+
+
+        :param bt_type: The bt_type of this BTPLiteralMapEntry.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,39 +34,44 @@ class BTExportTessellatedFacesFacet(object):
     openapi_types = {
         'normal': 'BTVector3d',
         'indices': 'list[int]',
+        'vertices': 'list[BTVector3d]',
         'normals': 'list[BTVector3d]',
         'texture_coordinates': 'list[BTVector2d]',
-        'vertices': 'list[BTVector3d]'
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'normal': 'normal',
         'indices': 'indices',
+        'vertices': 'vertices',
         'normals': 'normals',
         'texture_coordinates': 'textureCoordinates',
-        'vertices': 'vertices'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, normal=None, indices=None, normals=None, texture_coordinates=None, vertices=None):  # noqa: E501
+    def __init__(self, normal=None, indices=None, vertices=None, normals=None, texture_coordinates=None, bt_type=None):  # noqa: E501
         """BTExportTessellatedFacesFacet - a model defined in OpenAPI"""  # noqa: E501
 
         self._normal = None
         self._indices = None
+        self._vertices = None
         self._normals = None
         self._texture_coordinates = None
-        self._vertices = None
+        self._bt_type = None
         self.discriminator = None
 
         if normal is not None:
             self.normal = normal
         if indices is not None:
             self.indices = indices
+        if vertices is not None:
+            self.vertices = vertices
         if normals is not None:
             self.normals = normals
         if texture_coordinates is not None:
             self.texture_coordinates = texture_coordinates
-        if vertices is not None:
-            self.vertices = vertices
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def normal(self):
@@ -111,6 +116,27 @@ class BTExportTessellatedFacesFacet(object):
         self._indices = indices
 
     @property
+    def vertices(self):
+        """Gets the vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
+
+
+        :return: The vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
+        :rtype: list[BTVector3d]
+        """
+        return self._vertices
+
+    @vertices.setter
+    def vertices(self, vertices):
+        """Sets the vertices of this BTExportTessellatedFacesFacet.
+
+
+        :param vertices: The vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
+        :type: list[BTVector3d]
+        """
+
+        self._vertices = vertices
+
+    @property
     def normals(self):
         """Gets the normals of this BTExportTessellatedFacesFacet.  # noqa: E501
 
@@ -153,25 +179,25 @@ class BTExportTessellatedFacesFacet(object):
         self._texture_coordinates = texture_coordinates
 
     @property
-    def vertices(self):
-        """Gets the vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTExportTessellatedFacesFacet.  # noqa: E501
 
 
-        :return: The vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
-        :rtype: list[BTVector3d]
+        :return: The bt_type of this BTExportTessellatedFacesFacet.  # noqa: E501
+        :rtype: str
         """
-        return self._vertices
+        return self._bt_type
 
-    @vertices.setter
-    def vertices(self, vertices):
-        """Sets the vertices of this BTExportTessellatedFacesFacet.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportTessellatedFacesFacet.
 
 
-        :param vertices: The vertices of this BTExportTessellatedFacesFacet.  # noqa: E501
-        :type: list[BTVector3d]
+        :param bt_type: The bt_type of this BTExportTessellatedFacesFacet.  # noqa: E501
+        :type: str
         """
 
-        self._vertices = vertices
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

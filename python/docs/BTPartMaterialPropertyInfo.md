@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**units** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
-**display_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**units** | **str** |  | [optional] 
+**display_name** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

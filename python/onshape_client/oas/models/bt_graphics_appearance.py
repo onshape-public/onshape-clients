@@ -35,23 +35,26 @@ class BTGraphicsAppearance(object):
         'non_trivial': 'bool',
         'reset': 'bool',
         'opacity': 'int',
-        'color': 'list[str]'
+        'color': 'list[str]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'non_trivial': 'nonTrivial',
         'reset': 'reset',
         'opacity': 'opacity',
-        'color': 'color'
+        'color': 'color',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, non_trivial=None, reset=None, opacity=None, color=None):  # noqa: E501
+    def __init__(self, non_trivial=None, reset=None, opacity=None, color=None, bt_type=None):  # noqa: E501
         """BTGraphicsAppearance - a model defined in OpenAPI"""  # noqa: E501
 
         self._non_trivial = None
         self._reset = None
         self._opacity = None
         self._color = None
+        self._bt_type = None
         self.discriminator = None
 
         if non_trivial is not None:
@@ -62,6 +65,8 @@ class BTGraphicsAppearance(object):
             self.opacity = opacity
         if color is not None:
             self.color = color
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def non_trivial(self):
@@ -146,6 +151,27 @@ class BTGraphicsAppearance(object):
         """
 
         self._color = color
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTGraphicsAppearance.  # noqa: E501
+
+
+        :return: The bt_type of this BTGraphicsAppearance.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTGraphicsAppearance.
+
+
+        :param bt_type: The bt_type of this BTGraphicsAppearance.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

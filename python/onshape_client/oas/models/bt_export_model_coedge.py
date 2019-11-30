@@ -33,25 +33,30 @@ class BTExportModelCoedge(object):
     """
     openapi_types = {
         'orientation': 'bool',
-        'edge_id': 'str'
+        'edge_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'orientation': 'orientation',
-        'edge_id': 'edgeId'
+        'edge_id': 'edgeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, orientation=None, edge_id=None):  # noqa: E501
+    def __init__(self, orientation=None, edge_id=None, bt_type=None):  # noqa: E501
         """BTExportModelCoedge - a model defined in OpenAPI"""  # noqa: E501
 
         self._orientation = None
         self._edge_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if orientation is not None:
             self.orientation = orientation
         if edge_id is not None:
             self.edge_id = edge_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def orientation(self):
@@ -94,6 +99,27 @@ class BTExportModelCoedge(object):
         """
 
         self._edge_id = edge_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelCoedge.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelCoedge.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelCoedge.
+
+
+        :param bt_type: The bt_type of this BTExportModelCoedge.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

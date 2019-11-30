@@ -33,36 +33,36 @@ class BTPartMaterialInfo(object):
     """
     openapi_types = {
         'library_name': 'str',
-        'display_name': 'str',
         'library_reference': 'BTExternalElementReferenceInfo',
+        'display_name': 'str',
         'properties': 'list[BTPartMaterialPropertyInfo]',
         'id': 'str'
     }
 
     attribute_map = {
         'library_name': 'libraryName',
-        'display_name': 'displayName',
         'library_reference': 'libraryReference',
+        'display_name': 'displayName',
         'properties': 'properties',
         'id': 'id'
     }
 
-    def __init__(self, library_name=None, display_name=None, library_reference=None, properties=None, id=None):  # noqa: E501
+    def __init__(self, library_name=None, library_reference=None, display_name=None, properties=None, id=None):  # noqa: E501
         """BTPartMaterialInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._library_name = None
-        self._display_name = None
         self._library_reference = None
+        self._display_name = None
         self._properties = None
         self._id = None
         self.discriminator = None
 
         if library_name is not None:
             self.library_name = library_name
-        if display_name is not None:
-            self.display_name = display_name
         if library_reference is not None:
             self.library_reference = library_reference
+        if display_name is not None:
+            self.display_name = display_name
         if properties is not None:
             self.properties = properties
         if id is not None:
@@ -90,27 +90,6 @@ class BTPartMaterialInfo(object):
         self._library_name = library_name
 
     @property
-    def display_name(self):
-        """Gets the display_name of this BTPartMaterialInfo.  # noqa: E501
-
-
-        :return: The display_name of this BTPartMaterialInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTPartMaterialInfo.
-
-
-        :param display_name: The display_name of this BTPartMaterialInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
     def library_reference(self):
         """Gets the library_reference of this BTPartMaterialInfo.  # noqa: E501
 
@@ -130,6 +109,27 @@ class BTPartMaterialInfo(object):
         """
 
         self._library_reference = library_reference
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTPartMaterialInfo.  # noqa: E501
+
+
+        :return: The display_name of this BTPartMaterialInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTPartMaterialInfo.
+
+
+        :param display_name: The display_name of this BTPartMaterialInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     @property
     def properties(self):

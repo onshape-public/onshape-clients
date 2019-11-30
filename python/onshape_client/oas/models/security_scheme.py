@@ -111,7 +111,7 @@ class SecurityScheme(object):
         :param type: The type of this SecurityScheme.  # noqa: E501
         :type: str
         """
-        allowed_values = ["apiKey", "http", "oauth2", "openIdConnect"]  # noqa: E501
+        allowed_values = ["APIKEY", "HTTP", "OAUTH2", "OPENIDCONNECT"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
@@ -201,7 +201,7 @@ class SecurityScheme(object):
         :param _in: The _in of this SecurityScheme.  # noqa: E501
         :type: str
         """
-        allowed_values = ["cookie", "header", "query"]  # noqa: E501
+        allowed_values = ["COOKIE", "HEADER", "QUERY"]  # noqa: E501
         if _in not in allowed_values:
             raise ValueError(
                 "Invalid value for `_in` ({0}), must be one of {1}"  # noqa: E501

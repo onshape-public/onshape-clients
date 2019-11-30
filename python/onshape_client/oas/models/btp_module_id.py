@@ -32,9 +32,9 @@ class BTPModuleId(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'external_import': 'bool',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
         'external_document_with_version': 'BTDocumentWithVersionId',
+        'external_import': 'bool',
         'version_and_microversion': 'str',
         'imported_document_id': 'str',
         'legacy': 'bool',
@@ -49,11 +49,11 @@ class BTPModuleId(object):
         'potentially_valid': 'bool',
         'short_descriptor': 'str',
         'microversion': 'str',
-        'path': 'BTPLiteralString',
         'space_before_path': 'BTPSpace',
         'space_after_path': 'BTPSpace',
         'space_before_version': 'BTPSpace',
         'space_after_version': 'BTPSpace',
+        'path': 'BTPLiteralString',
         'version': 'BTPLiteralString',
         'start_source_location': 'int',
         'end_source_location': 'int',
@@ -62,13 +62,14 @@ class BTPModuleId(object):
         'space_before': 'BTPSpace',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'external_import': 'externalImport',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
         'external_document_with_version': 'externalDocumentWithVersion',
+        'external_import': 'externalImport',
         'version_and_microversion': 'versionAndMicroversion',
         'imported_document_id': 'importedDocumentId',
         'legacy': 'legacy',
@@ -83,11 +84,11 @@ class BTPModuleId(object):
         'potentially_valid': 'potentiallyValid',
         'short_descriptor': 'shortDescriptor',
         'microversion': 'microversion',
-        'path': 'path',
         'space_before_path': 'spaceBeforePath',
         'space_after_path': 'spaceAfterPath',
         'space_before_version': 'spaceBeforeVersion',
         'space_after_version': 'spaceAfterVersion',
+        'path': 'path',
         'version': 'version',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
@@ -96,15 +97,16 @@ class BTPModuleId(object):
         'space_before': 'spaceBefore',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, external_import=None, external_document_with_version_and_element_id=None, external_document_with_version=None, version_and_microversion=None, imported_document_id=None, legacy=None, dbimport_string=None, imported_element_id=None, element_import=None, path_potentially_valid=None, version_potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, potentially_valid=None, short_descriptor=None, microversion=None, path=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, version=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, external_document_with_version_and_element_id=None, external_document_with_version=None, external_import=None, version_and_microversion=None, imported_document_id=None, legacy=None, dbimport_string=None, imported_element_id=None, element_import=None, path_potentially_valid=None, version_potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, potentially_valid=None, short_descriptor=None, microversion=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, path=None, version=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPModuleId - a model defined in OpenAPI"""  # noqa: E501
 
-        self._external_import = None
         self._external_document_with_version_and_element_id = None
         self._external_document_with_version = None
+        self._external_import = None
         self._version_and_microversion = None
         self._imported_document_id = None
         self._legacy = None
@@ -119,11 +121,11 @@ class BTPModuleId(object):
         self._potentially_valid = None
         self._short_descriptor = None
         self._microversion = None
-        self._path = None
         self._space_before_path = None
         self._space_after_path = None
         self._space_before_version = None
         self._space_after_version = None
+        self._path = None
         self._version = None
         self._start_source_location = None
         self._end_source_location = None
@@ -133,14 +135,15 @@ class BTPModuleId(object):
         self._space_default = None
         self._space_after = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
-        if external_import is not None:
-            self.external_import = external_import
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
         if external_document_with_version is not None:
             self.external_document_with_version = external_document_with_version
+        if external_import is not None:
+            self.external_import = external_import
         if version_and_microversion is not None:
             self.version_and_microversion = version_and_microversion
         if imported_document_id is not None:
@@ -169,8 +172,6 @@ class BTPModuleId(object):
             self.short_descriptor = short_descriptor
         if microversion is not None:
             self.microversion = microversion
-        if path is not None:
-            self.path = path
         if space_before_path is not None:
             self.space_before_path = space_before_path
         if space_after_path is not None:
@@ -179,6 +180,8 @@ class BTPModuleId(object):
             self.space_before_version = space_before_version
         if space_after_version is not None:
             self.space_after_version = space_after_version
+        if path is not None:
+            self.path = path
         if version is not None:
             self.version = version
         if start_source_location is not None:
@@ -197,27 +200,8 @@ class BTPModuleId(object):
             self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
-
-    @property
-    def external_import(self):
-        """Gets the external_import of this BTPModuleId.  # noqa: E501
-
-
-        :return: The external_import of this BTPModuleId.  # noqa: E501
-        :rtype: bool
-        """
-        return self._external_import
-
-    @external_import.setter
-    def external_import(self, external_import):
-        """Sets the external_import of this BTPModuleId.
-
-
-        :param external_import: The external_import of this BTPModuleId.  # noqa: E501
-        :type: bool
-        """
-
-        self._external_import = external_import
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def external_document_with_version_and_element_id(self):
@@ -260,6 +244,27 @@ class BTPModuleId(object):
         """
 
         self._external_document_with_version = external_document_with_version
+
+    @property
+    def external_import(self):
+        """Gets the external_import of this BTPModuleId.  # noqa: E501
+
+
+        :return: The external_import of this BTPModuleId.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_import
+
+    @external_import.setter
+    def external_import(self, external_import):
+        """Sets the external_import of this BTPModuleId.
+
+
+        :param external_import: The external_import of this BTPModuleId.  # noqa: E501
+        :type: bool
+        """
+
+        self._external_import = external_import
 
     @property
     def version_and_microversion(self):
@@ -556,27 +561,6 @@ class BTPModuleId(object):
         self._microversion = microversion
 
     @property
-    def path(self):
-        """Gets the path of this BTPModuleId.  # noqa: E501
-
-
-        :return: The path of this BTPModuleId.  # noqa: E501
-        :rtype: BTPLiteralString
-        """
-        return self._path
-
-    @path.setter
-    def path(self, path):
-        """Sets the path of this BTPModuleId.
-
-
-        :param path: The path of this BTPModuleId.  # noqa: E501
-        :type: BTPLiteralString
-        """
-
-        self._path = path
-
-    @property
     def space_before_path(self):
         """Gets the space_before_path of this BTPModuleId.  # noqa: E501
 
@@ -659,6 +643,27 @@ class BTPModuleId(object):
         """
 
         self._space_after_version = space_after_version
+
+    @property
+    def path(self):
+        """Gets the path of this BTPModuleId.  # noqa: E501
+
+
+        :return: The path of this BTPModuleId.  # noqa: E501
+        :rtype: BTPLiteralString
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this BTPModuleId.
+
+
+        :param path: The path of this BTPModuleId.  # noqa: E501
+        :type: BTPLiteralString
+        """
+
+        self._path = path
 
     @property
     def version(self):
@@ -854,6 +859,27 @@ class BTPModuleId(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPModuleId.  # noqa: E501
+
+
+        :return: The bt_type of this BTPModuleId.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPModuleId.
+
+
+        :param bt_type: The bt_type of this BTPModuleId.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,55 +33,60 @@ class BTNotice(object):
     """
     openapi_types = {
         'location_infos': 'list[BTLocationInfo]',
-        'level': 'str',
-        'message': 'str',
         'parameter_id': 'str',
         'try_node': 'BTNodeReference',
+        'message': 'str',
         'stack_trace': 'list[BTLocationInfo]',
         'type': 'str',
-        'node_id': 'str'
+        'level': 'str',
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'location_infos': 'locationInfos',
-        'level': 'level',
-        'message': 'message',
         'parameter_id': 'parameterId',
         'try_node': 'tryNode',
+        'message': 'message',
         'stack_trace': 'stackTrace',
         'type': 'type',
-        'node_id': 'nodeId'
+        'level': 'level',
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, location_infos=None, level=None, message=None, parameter_id=None, try_node=None, stack_trace=None, type=None, node_id=None):  # noqa: E501
+    def __init__(self, location_infos=None, parameter_id=None, try_node=None, message=None, stack_trace=None, type=None, level=None, node_id=None, bt_type=None):  # noqa: E501
         """BTNotice - a model defined in OpenAPI"""  # noqa: E501
 
         self._location_infos = None
-        self._level = None
-        self._message = None
         self._parameter_id = None
         self._try_node = None
+        self._message = None
         self._stack_trace = None
         self._type = None
+        self._level = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if location_infos is not None:
             self.location_infos = location_infos
-        if level is not None:
-            self.level = level
-        if message is not None:
-            self.message = message
         if parameter_id is not None:
             self.parameter_id = parameter_id
         if try_node is not None:
             self.try_node = try_node
+        if message is not None:
+            self.message = message
         if stack_trace is not None:
             self.stack_trace = stack_trace
         if type is not None:
             self.type = type
+        if level is not None:
+            self.level = level
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def location_infos(self):
@@ -103,54 +108,6 @@ class BTNotice(object):
         """
 
         self._location_infos = location_infos
-
-    @property
-    def level(self):
-        """Gets the level of this BTNotice.  # noqa: E501
-
-
-        :return: The level of this BTNotice.  # noqa: E501
-        :rtype: str
-        """
-        return self._level
-
-    @level.setter
-    def level(self, level):
-        """Sets the level of this BTNotice.
-
-
-        :param level: The level of this BTNotice.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["INTERNAL", "ERROR", "WARNING", "INFO", "UNKNOWN"]  # noqa: E501
-        if level not in allowed_values:
-            raise ValueError(
-                "Invalid value for `level` ({0}), must be one of {1}"  # noqa: E501
-                .format(level, allowed_values)
-            )
-
-        self._level = level
-
-    @property
-    def message(self):
-        """Gets the message of this BTNotice.  # noqa: E501
-
-
-        :return: The message of this BTNotice.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this BTNotice.
-
-
-        :param message: The message of this BTNotice.  # noqa: E501
-        :type: str
-        """
-
-        self._message = message
 
     @property
     def parameter_id(self):
@@ -193,6 +150,27 @@ class BTNotice(object):
         """
 
         self._try_node = try_node
+
+    @property
+    def message(self):
+        """Gets the message of this BTNotice.  # noqa: E501
+
+
+        :return: The message of this BTNotice.  # noqa: E501
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """Sets the message of this BTNotice.
+
+
+        :param message: The message of this BTNotice.  # noqa: E501
+        :type: str
+        """
+
+        self._message = message
 
     @property
     def stack_trace(self):
@@ -243,6 +221,33 @@ class BTNotice(object):
         self._type = type
 
     @property
+    def level(self):
+        """Gets the level of this BTNotice.  # noqa: E501
+
+
+        :return: The level of this BTNotice.  # noqa: E501
+        :rtype: str
+        """
+        return self._level
+
+    @level.setter
+    def level(self, level):
+        """Sets the level of this BTNotice.
+
+
+        :param level: The level of this BTNotice.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["INTERNAL", "ERROR", "WARNING", "INFO", "UNKNOWN"]  # noqa: E501
+        if level not in allowed_values:
+            raise ValueError(
+                "Invalid value for `level` ({0}), must be one of {1}"  # noqa: E501
+                .format(level, allowed_values)
+            )
+
+        self._level = level
+
+    @property
     def node_id(self):
         """Gets the node_id of this BTNotice.  # noqa: E501
 
@@ -262,6 +267,27 @@ class BTNotice(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTNotice.  # noqa: E501
+
+
+        :return: The bt_type of this BTNotice.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTNotice.
+
+
+        :param bt_type: The bt_type of this BTNotice.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

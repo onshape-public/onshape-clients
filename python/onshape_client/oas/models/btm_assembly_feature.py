@@ -32,16 +32,16 @@ class BTMAssemblyFeature(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'occurrence_queries_from_all_configurations': 'list[BTMIndividualQueryWithOccurrenceBase]',
         'feature_list_field_index': 'int',
         'auxiliary_assembly_feature': 'bool',
-        'occurrence_queries_from_all_configurations': 'list[BTMIndividualQueryWithOccurrenceBase]',
         'version': 'int'
     }
 
     attribute_map = {
+        'occurrence_queries_from_all_configurations': 'occurrenceQueriesFromAllConfigurations',
         'feature_list_field_index': 'featureListFieldIndex',
         'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',
-        'occurrence_queries_from_all_configurations': 'occurrenceQueriesFromAllConfigurations',
         'version': 'version'
     }
 
@@ -59,23 +59,44 @@ class BTMAssemblyFeature(object):
         'BTMGeometryMate': 'BTMGeometryMate'
     }
 
-    def __init__(self, feature_list_field_index=None, auxiliary_assembly_feature=None, occurrence_queries_from_all_configurations=None, version=None):  # noqa: E501
+    def __init__(self, occurrence_queries_from_all_configurations=None, feature_list_field_index=None, auxiliary_assembly_feature=None, version=None):  # noqa: E501
         """BTMAssemblyFeature - a model defined in OpenAPI"""  # noqa: E501
 
+        self._occurrence_queries_from_all_configurations = None
         self._feature_list_field_index = None
         self._auxiliary_assembly_feature = None
-        self._occurrence_queries_from_all_configurations = None
         self._version = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
+        if occurrence_queries_from_all_configurations is not None:
+            self.occurrence_queries_from_all_configurations = occurrence_queries_from_all_configurations
         if feature_list_field_index is not None:
             self.feature_list_field_index = feature_list_field_index
         if auxiliary_assembly_feature is not None:
             self.auxiliary_assembly_feature = auxiliary_assembly_feature
-        if occurrence_queries_from_all_configurations is not None:
-            self.occurrence_queries_from_all_configurations = occurrence_queries_from_all_configurations
         if version is not None:
             self.version = version
+
+    @property
+    def occurrence_queries_from_all_configurations(self):
+        """Gets the occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
+
+
+        :return: The occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
+        :rtype: list[BTMIndividualQueryWithOccurrenceBase]
+        """
+        return self._occurrence_queries_from_all_configurations
+
+    @occurrence_queries_from_all_configurations.setter
+    def occurrence_queries_from_all_configurations(self, occurrence_queries_from_all_configurations):
+        """Sets the occurrence_queries_from_all_configurations of this BTMAssemblyFeature.
+
+
+        :param occurrence_queries_from_all_configurations: The occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
+        :type: list[BTMIndividualQueryWithOccurrenceBase]
+        """
+
+        self._occurrence_queries_from_all_configurations = occurrence_queries_from_all_configurations
 
     @property
     def feature_list_field_index(self):
@@ -118,27 +139,6 @@ class BTMAssemblyFeature(object):
         """
 
         self._auxiliary_assembly_feature = auxiliary_assembly_feature
-
-    @property
-    def occurrence_queries_from_all_configurations(self):
-        """Gets the occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
-
-
-        :return: The occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
-        :rtype: list[BTMIndividualQueryWithOccurrenceBase]
-        """
-        return self._occurrence_queries_from_all_configurations
-
-    @occurrence_queries_from_all_configurations.setter
-    def occurrence_queries_from_all_configurations(self, occurrence_queries_from_all_configurations):
-        """Sets the occurrence_queries_from_all_configurations of this BTMAssemblyFeature.
-
-
-        :param occurrence_queries_from_all_configurations: The occurrence_queries_from_all_configurations of this BTMAssemblyFeature.  # noqa: E501
-        :type: list[BTMIndividualQueryWithOccurrenceBase]
-        """
-
-        self._occurrence_queries_from_all_configurations = occurrence_queries_from_all_configurations
 
     @property
     def version(self):

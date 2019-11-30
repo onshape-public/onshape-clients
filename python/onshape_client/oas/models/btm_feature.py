@@ -38,10 +38,11 @@ class BTMFeature(object):
         'name': 'str',
         'suppressed': 'bool',
         'parameters': 'list[BTMParameter]',
-        'feature_id': 'str',
         'feature_type': 'str',
+        'feature_id': 'str',
         'sub_features': 'list[BTMFeature]',
-        'return_after_subfeatures': 'bool'
+        'return_after_subfeatures': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class BTMFeature(object):
         'name': 'name',
         'suppressed': 'suppressed',
         'parameters': 'parameters',
-        'feature_id': 'featureId',
         'feature_type': 'featureType',
+        'feature_id': 'featureId',
         'sub_features': 'subFeatures',
-        'return_after_subfeatures': 'returnAfterSubfeatures'
+        'return_after_subfeatures': 'returnAfterSubfeatures',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -63,7 +65,7 @@ class BTMFeature(object):
         'BTMAssemblyFeature': 'BTMAssemblyFeature'
     }
 
-    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_id=None, feature_type=None, sub_features=None, return_after_subfeatures=None):  # noqa: E501
+    def __init__(self, node_id=None, namespace=None, import_microversion=None, name=None, suppressed=None, parameters=None, feature_type=None, feature_id=None, sub_features=None, return_after_subfeatures=None, bt_type=None):  # noqa: E501
         """BTMFeature - a model defined in OpenAPI"""  # noqa: E501
 
         self._node_id = None
@@ -72,11 +74,12 @@ class BTMFeature(object):
         self._name = None
         self._suppressed = None
         self._parameters = None
-        self._feature_id = None
         self._feature_type = None
+        self._feature_id = None
         self._sub_features = None
         self._return_after_subfeatures = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if node_id is not None:
             self.node_id = node_id
@@ -90,14 +93,16 @@ class BTMFeature(object):
             self.suppressed = suppressed
         if parameters is not None:
             self.parameters = parameters
-        if feature_id is not None:
-            self.feature_id = feature_id
         if feature_type is not None:
             self.feature_type = feature_type
+        if feature_id is not None:
+            self.feature_id = feature_id
         if sub_features is not None:
             self.sub_features = sub_features
         if return_after_subfeatures is not None:
             self.return_after_subfeatures = return_after_subfeatures
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def node_id(self):
@@ -226,27 +231,6 @@ class BTMFeature(object):
         self._parameters = parameters
 
     @property
-    def feature_id(self):
-        """Gets the feature_id of this BTMFeature.  # noqa: E501
-
-
-        :return: The feature_id of this BTMFeature.  # noqa: E501
-        :rtype: str
-        """
-        return self._feature_id
-
-    @feature_id.setter
-    def feature_id(self, feature_id):
-        """Sets the feature_id of this BTMFeature.
-
-
-        :param feature_id: The feature_id of this BTMFeature.  # noqa: E501
-        :type: str
-        """
-
-        self._feature_id = feature_id
-
-    @property
     def feature_type(self):
         """Gets the feature_type of this BTMFeature.  # noqa: E501
 
@@ -266,6 +250,27 @@ class BTMFeature(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def feature_id(self):
+        """Gets the feature_id of this BTMFeature.  # noqa: E501
+
+
+        :return: The feature_id of this BTMFeature.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_id
+
+    @feature_id.setter
+    def feature_id(self, feature_id):
+        """Sets the feature_id of this BTMFeature.
+
+
+        :param feature_id: The feature_id of this BTMFeature.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_id = feature_id
 
     @property
     def sub_features(self):
@@ -308,6 +313,27 @@ class BTMFeature(object):
         """
 
         self._return_after_subfeatures = return_after_subfeatures
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMFeature.  # noqa: E501
+
+
+        :return: The bt_type of this BTMFeature.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMFeature.
+
+
+        :param bt_type: The bt_type of this BTMFeature.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -133,7 +133,7 @@ class Encoding(object):
         :param style: The style of this Encoding.  # noqa: E501
         :type: str
         """
-        allowed_values = ["form", "spaceDelimited", "pipeDelimited", "deepObject"]  # noqa: E501
+        allowed_values = ["FORM", "SPACE_DELIMITED", "PIPE_DELIMITED", "DEEP_OBJECT"]  # noqa: E501
         if style not in allowed_values:
             raise ValueError(
                 "Invalid value for `style` ({0}), must be one of {1}"  # noqa: E501

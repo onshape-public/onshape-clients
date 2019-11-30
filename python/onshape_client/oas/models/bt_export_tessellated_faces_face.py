@@ -32,52 +32,36 @@ class BTExportTessellatedFacesFace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'error_message': 'str',
         'facets': 'list[BTExportTessellatedFacesFacet]',
-        'id': 'str'
+        'id': 'str',
+        'error_message': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'error_message': 'errorMessage',
         'facets': 'facets',
-        'id': 'id'
+        'id': 'id',
+        'error_message': 'errorMessage',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, error_message=None, facets=None, id=None):  # noqa: E501
+    def __init__(self, facets=None, id=None, error_message=None, bt_type=None):  # noqa: E501
         """BTExportTessellatedFacesFace - a model defined in OpenAPI"""  # noqa: E501
 
-        self._error_message = None
         self._facets = None
         self._id = None
+        self._error_message = None
+        self._bt_type = None
         self.discriminator = None
 
-        if error_message is not None:
-            self.error_message = error_message
         if facets is not None:
             self.facets = facets
         if id is not None:
             self.id = id
-
-    @property
-    def error_message(self):
-        """Gets the error_message of this BTExportTessellatedFacesFace.  # noqa: E501
-
-
-        :return: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_message
-
-    @error_message.setter
-    def error_message(self, error_message):
-        """Sets the error_message of this BTExportTessellatedFacesFace.
-
-
-        :param error_message: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
-        :type: str
-        """
-
-        self._error_message = error_message
+        if error_message is not None:
+            self.error_message = error_message
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def facets(self):
@@ -120,6 +104,48 @@ class BTExportTessellatedFacesFace(object):
         """
 
         self._id = id
+
+    @property
+    def error_message(self):
+        """Gets the error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+
+
+        :return: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_message
+
+    @error_message.setter
+    def error_message(self, error_message):
+        """Sets the error_message of this BTExportTessellatedFacesFace.
+
+
+        :param error_message: The error_message of this BTExportTessellatedFacesFace.  # noqa: E501
+        :type: str
+        """
+
+        self._error_message = error_message
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportTessellatedFacesFace.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportTessellatedFacesFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportTessellatedFacesFace.
+
+
+        :param bt_type: The bt_type of this BTExportTessellatedFacesFace.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

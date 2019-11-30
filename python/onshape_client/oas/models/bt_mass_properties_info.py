@@ -40,7 +40,8 @@ class BTMassPropertiesInfo(object):
         'periphery': 'list[float]',
         'centroid': 'list[float]',
         'inertia': 'list[float]',
-        'mass_missing_count': 'int'
+        'mass_missing_count': 'int',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class BTMassPropertiesInfo(object):
         'periphery': 'periphery',
         'centroid': 'centroid',
         'inertia': 'inertia',
-        'mass_missing_count': 'massMissingCount'
+        'mass_missing_count': 'massMissingCount',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, principal_inertia=None, principal_axes=None, has_mass=None, mass=None, volume=None, periphery=None, centroid=None, inertia=None, mass_missing_count=None):  # noqa: E501
+    def __init__(self, principal_inertia=None, principal_axes=None, has_mass=None, mass=None, volume=None, periphery=None, centroid=None, inertia=None, mass_missing_count=None, bt_type=None):  # noqa: E501
         """BTMassPropertiesInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._principal_inertia = None
@@ -67,6 +69,7 @@ class BTMassPropertiesInfo(object):
         self._centroid = None
         self._inertia = None
         self._mass_missing_count = None
+        self._bt_type = None
         self.discriminator = None
 
         if principal_inertia is not None:
@@ -87,6 +90,8 @@ class BTMassPropertiesInfo(object):
             self.inertia = inertia
         if mass_missing_count is not None:
             self.mass_missing_count = mass_missing_count
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def principal_inertia(self):
@@ -276,6 +281,27 @@ class BTMassPropertiesInfo(object):
         """
 
         self._mass_missing_count = mass_missing_count
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMassPropertiesInfo.  # noqa: E501
+
+
+        :return: The bt_type of this BTMassPropertiesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMassPropertiesInfo.
+
+
+        :param bt_type: The bt_type of this BTMassPropertiesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

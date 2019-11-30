@@ -36,10 +36,10 @@ class BTRootAssemblyInfo(object):
         'instances': 'list[BTAssemblyInstanceInfo]',
         'features': 'list[BTAssemblyFeatureInfo]',
         'document_microversion': 'str',
-        'document_id': 'str',
-        'element_id': 'str',
-        'revision': 'str',
         'configuration': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
+        'revision': 'str',
         'full_configuration': 'str',
         'document_version': 'str'
     }
@@ -49,25 +49,25 @@ class BTRootAssemblyInfo(object):
         'instances': 'instances',
         'features': 'features',
         'document_microversion': 'documentMicroversion',
-        'document_id': 'documentId',
-        'element_id': 'elementId',
-        'revision': 'revision',
         'configuration': 'configuration',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
+        'revision': 'revision',
         'full_configuration': 'fullConfiguration',
         'document_version': 'documentVersion'
     }
 
-    def __init__(self, occurrences=None, instances=None, features=None, document_microversion=None, document_id=None, element_id=None, revision=None, configuration=None, full_configuration=None, document_version=None):  # noqa: E501
+    def __init__(self, occurrences=None, instances=None, features=None, document_microversion=None, configuration=None, element_id=None, document_id=None, revision=None, full_configuration=None, document_version=None):  # noqa: E501
         """BTRootAssemblyInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._occurrences = None
         self._instances = None
         self._features = None
         self._document_microversion = None
-        self._document_id = None
-        self._element_id = None
-        self._revision = None
         self._configuration = None
+        self._element_id = None
+        self._document_id = None
+        self._revision = None
         self._full_configuration = None
         self._document_version = None
         self.discriminator = None
@@ -80,14 +80,14 @@ class BTRootAssemblyInfo(object):
             self.features = features
         if document_microversion is not None:
             self.document_microversion = document_microversion
-        if document_id is not None:
-            self.document_id = document_id
-        if element_id is not None:
-            self.element_id = element_id
-        if revision is not None:
-            self.revision = revision
         if configuration is not None:
             self.configuration = configuration
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if revision is not None:
+            self.revision = revision
         if full_configuration is not None:
             self.full_configuration = full_configuration
         if document_version is not None:
@@ -178,25 +178,25 @@ class BTRootAssemblyInfo(object):
         self._document_microversion = document_microversion
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTRootAssemblyInfo.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTRootAssemblyInfo.  # noqa: E501
 
 
-        :return: The document_id of this BTRootAssemblyInfo.  # noqa: E501
+        :return: The configuration of this BTRootAssemblyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document_id
+        return self._configuration
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTRootAssemblyInfo.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTRootAssemblyInfo.
 
 
-        :param document_id: The document_id of this BTRootAssemblyInfo.  # noqa: E501
+        :param configuration: The configuration of this BTRootAssemblyInfo.  # noqa: E501
         :type: str
         """
 
-        self._document_id = document_id
+        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -220,6 +220,27 @@ class BTRootAssemblyInfo(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTRootAssemblyInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTRootAssemblyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTRootAssemblyInfo.
+
+
+        :param document_id: The document_id of this BTRootAssemblyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def revision(self):
         """Gets the revision of this BTRootAssemblyInfo.  # noqa: E501
 
@@ -239,27 +260,6 @@ class BTRootAssemblyInfo(object):
         """
 
         self._revision = revision
-
-    @property
-    def configuration(self):
-        """Gets the configuration of this BTRootAssemblyInfo.  # noqa: E501
-
-
-        :return: The configuration of this BTRootAssemblyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTRootAssemblyInfo.
-
-
-        :param configuration: The configuration of this BTRootAssemblyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration = configuration
 
     @property
     def full_configuration(self):

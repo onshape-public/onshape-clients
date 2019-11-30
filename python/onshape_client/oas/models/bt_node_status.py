@@ -36,7 +36,8 @@ class BTNodeStatus(object):
         'status_enum': 'str',
         'status_type': 'str',
         'status_msg': 'str',
-        'faulty_parameters': 'list[str]'
+        'faulty_parameters': 'list[str]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class BTNodeStatus(object):
         'status_enum': 'statusEnum',
         'status_type': 'statusType',
         'status_msg': 'statusMsg',
-        'faulty_parameters': 'faultyParameters'
+        'faulty_parameters': 'faultyParameters',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, error=None, status_enum=None, status_type=None, status_msg=None, faulty_parameters=None):  # noqa: E501
+    def __init__(self, error=None, status_enum=None, status_type=None, status_msg=None, faulty_parameters=None, bt_type=None):  # noqa: E501
         """BTNodeStatus - a model defined in OpenAPI"""  # noqa: E501
 
         self._error = None
@@ -55,6 +57,7 @@ class BTNodeStatus(object):
         self._status_type = None
         self._status_msg = None
         self._faulty_parameters = None
+        self._bt_type = None
         self.discriminator = None
 
         if error is not None:
@@ -67,6 +70,8 @@ class BTNodeStatus(object):
             self.status_msg = status_msg
         if faulty_parameters is not None:
             self.faulty_parameters = faulty_parameters
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def error(self):
@@ -184,6 +189,27 @@ class BTNodeStatus(object):
         """
 
         self._faulty_parameters = faulty_parameters
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTNodeStatus.  # noqa: E501
+
+
+        :return: The bt_type of this BTNodeStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTNodeStatus.
+
+
+        :param bt_type: The bt_type of this BTNodeStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

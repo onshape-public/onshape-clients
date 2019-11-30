@@ -34,9 +34,9 @@ class BTForeignItemInfo(object):
     openapi_types = {
         'microversion_id': 'str',
         'foreign_id': 'str',
+        'media_type': 'str',
         'filename': 'str',
         'file_size': 'int',
-        'media_type': 'str',
         'uploaded_at': 'datetime',
         'uploaded_by': 'str'
     }
@@ -44,21 +44,21 @@ class BTForeignItemInfo(object):
     attribute_map = {
         'microversion_id': 'microversionId',
         'foreign_id': 'foreignId',
+        'media_type': 'mediaType',
         'filename': 'filename',
         'file_size': 'fileSize',
-        'media_type': 'mediaType',
         'uploaded_at': 'uploadedAt',
         'uploaded_by': 'uploadedBy'
     }
 
-    def __init__(self, microversion_id=None, foreign_id=None, filename=None, file_size=None, media_type=None, uploaded_at=None, uploaded_by=None):  # noqa: E501
+    def __init__(self, microversion_id=None, foreign_id=None, media_type=None, filename=None, file_size=None, uploaded_at=None, uploaded_by=None):  # noqa: E501
         """BTForeignItemInfo - a model defined in OpenAPI"""  # noqa: E501
 
         self._microversion_id = None
         self._foreign_id = None
+        self._media_type = None
         self._filename = None
         self._file_size = None
-        self._media_type = None
         self._uploaded_at = None
         self._uploaded_by = None
         self.discriminator = None
@@ -67,12 +67,12 @@ class BTForeignItemInfo(object):
             self.microversion_id = microversion_id
         if foreign_id is not None:
             self.foreign_id = foreign_id
+        if media_type is not None:
+            self.media_type = media_type
         if filename is not None:
             self.filename = filename
         if file_size is not None:
             self.file_size = file_size
-        if media_type is not None:
-            self.media_type = media_type
         if uploaded_at is not None:
             self.uploaded_at = uploaded_at
         if uploaded_by is not None:
@@ -121,6 +121,27 @@ class BTForeignItemInfo(object):
         self._foreign_id = foreign_id
 
     @property
+    def media_type(self):
+        """Gets the media_type of this BTForeignItemInfo.  # noqa: E501
+
+
+        :return: The media_type of this BTForeignItemInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._media_type
+
+    @media_type.setter
+    def media_type(self, media_type):
+        """Sets the media_type of this BTForeignItemInfo.
+
+
+        :param media_type: The media_type of this BTForeignItemInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._media_type = media_type
+
+    @property
     def filename(self):
         """Gets the filename of this BTForeignItemInfo.  # noqa: E501
 
@@ -161,27 +182,6 @@ class BTForeignItemInfo(object):
         """
 
         self._file_size = file_size
-
-    @property
-    def media_type(self):
-        """Gets the media_type of this BTForeignItemInfo.  # noqa: E501
-
-
-        :return: The media_type of this BTForeignItemInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._media_type
-
-    @media_type.setter
-    def media_type(self, media_type):
-        """Sets the media_type of this BTForeignItemInfo.
-
-
-        :param media_type: The media_type of this BTForeignItemInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._media_type = media_type
 
     @property
     def uploaded_at(self):

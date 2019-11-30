@@ -56,7 +56,7 @@ class BTMFeatureQueryWithOccurrence(object):
         self._part_studio_mate_connector_query = None
         self._feature_id = None
         self._query_data = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if feature_id_with_occurrence is not None:
             self.feature_id_with_occurrence = feature_id_with_occurrence

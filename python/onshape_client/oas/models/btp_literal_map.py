@@ -34,8 +34,8 @@ class BTPLiteralMap(object):
     openapi_types = {
         'short_descriptor': 'str',
         'entries': 'list[BTPLiteralMapEntry]',
-        'space_in_empty_list': 'BTPSpace',
         'trailing_comma': 'bool',
+        'space_in_empty_list': 'BTPSpace',
         'start_source_location': 'int',
         'end_source_location': 'int',
         'atomic': 'bool',
@@ -43,14 +43,15 @@ class BTPLiteralMap(object):
         'space_before': 'BTPSpace',
         'space_default': 'bool',
         'space_after': 'BTPSpace',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'short_descriptor': 'shortDescriptor',
         'entries': 'entries',
-        'space_in_empty_list': 'spaceInEmptyList',
         'trailing_comma': 'trailingComma',
+        'space_in_empty_list': 'spaceInEmptyList',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
         'atomic': 'atomic',
@@ -58,16 +59,17 @@ class BTPLiteralMap(object):
         'space_before': 'spaceBefore',
         'space_default': 'spaceDefault',
         'space_after': 'spaceAfter',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, short_descriptor=None, entries=None, space_in_empty_list=None, trailing_comma=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None):  # noqa: E501
+    def __init__(self, short_descriptor=None, entries=None, trailing_comma=None, space_in_empty_list=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPLiteralMap - a model defined in OpenAPI"""  # noqa: E501
 
         self._short_descriptor = None
         self._entries = None
-        self._space_in_empty_list = None
         self._trailing_comma = None
+        self._space_in_empty_list = None
         self._start_source_location = None
         self._end_source_location = None
         self._atomic = None
@@ -76,16 +78,17 @@ class BTPLiteralMap(object):
         self._space_default = None
         self._space_after = None
         self._node_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
         if entries is not None:
             self.entries = entries
-        if space_in_empty_list is not None:
-            self.space_in_empty_list = space_in_empty_list
         if trailing_comma is not None:
             self.trailing_comma = trailing_comma
+        if space_in_empty_list is not None:
+            self.space_in_empty_list = space_in_empty_list
         if start_source_location is not None:
             self.start_source_location = start_source_location
         if end_source_location is not None:
@@ -102,6 +105,8 @@ class BTPLiteralMap(object):
             self.space_after = space_after
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def short_descriptor(self):
@@ -146,27 +151,6 @@ class BTPLiteralMap(object):
         self._entries = entries
 
     @property
-    def space_in_empty_list(self):
-        """Gets the space_in_empty_list of this BTPLiteralMap.  # noqa: E501
-
-
-        :return: The space_in_empty_list of this BTPLiteralMap.  # noqa: E501
-        :rtype: BTPSpace
-        """
-        return self._space_in_empty_list
-
-    @space_in_empty_list.setter
-    def space_in_empty_list(self, space_in_empty_list):
-        """Sets the space_in_empty_list of this BTPLiteralMap.
-
-
-        :param space_in_empty_list: The space_in_empty_list of this BTPLiteralMap.  # noqa: E501
-        :type: BTPSpace
-        """
-
-        self._space_in_empty_list = space_in_empty_list
-
-    @property
     def trailing_comma(self):
         """Gets the trailing_comma of this BTPLiteralMap.  # noqa: E501
 
@@ -186,6 +170,27 @@ class BTPLiteralMap(object):
         """
 
         self._trailing_comma = trailing_comma
+
+    @property
+    def space_in_empty_list(self):
+        """Gets the space_in_empty_list of this BTPLiteralMap.  # noqa: E501
+
+
+        :return: The space_in_empty_list of this BTPLiteralMap.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_in_empty_list
+
+    @space_in_empty_list.setter
+    def space_in_empty_list(self, space_in_empty_list):
+        """Sets the space_in_empty_list of this BTPLiteralMap.
+
+
+        :param space_in_empty_list: The space_in_empty_list of this BTPLiteralMap.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_in_empty_list = space_in_empty_list
 
     @property
     def start_source_location(self):
@@ -360,6 +365,27 @@ class BTPLiteralMap(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPLiteralMap.  # noqa: E501
+
+
+        :return: The bt_type of this BTPLiteralMap.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPLiteralMap.
+
+
+        :param bt_type: The bt_type of this BTPLiteralMap.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,52 +32,31 @@ class BTAppElementHistoryEntryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'created_at': 'datetime',
         'change_id': 'str',
-        'description': 'str'
+        'description': 'str',
+        'created_at': 'datetime'
     }
 
     attribute_map = {
-        'created_at': 'createdAt',
         'change_id': 'changeId',
-        'description': 'description'
+        'description': 'description',
+        'created_at': 'createdAt'
     }
 
-    def __init__(self, created_at=None, change_id=None, description=None):  # noqa: E501
+    def __init__(self, change_id=None, description=None, created_at=None):  # noqa: E501
         """BTAppElementHistoryEntryInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._created_at = None
         self._change_id = None
         self._description = None
+        self._created_at = None
         self.discriminator = None
 
-        if created_at is not None:
-            self.created_at = created_at
         if change_id is not None:
             self.change_id = change_id
         if description is not None:
             self.description = description
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
-
-
-        :return: The created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this BTAppElementHistoryEntryInfo.
-
-
-        :param created_at: The created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
+        if created_at is not None:
+            self.created_at = created_at
 
     @property
     def change_id(self):
@@ -120,6 +99,27 @@ class BTAppElementHistoryEntryInfo(object):
         """
 
         self._description = description
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
+
+
+        :return: The created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this BTAppElementHistoryEntryInfo.
+
+
+        :param created_at: The created_at of this BTAppElementHistoryEntryInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

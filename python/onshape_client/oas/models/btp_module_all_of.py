@@ -39,8 +39,8 @@ class BTPModuleAllOf(object):
         'path_map': 'dict(str, BTMicroversionId)',
         'version': 'BTPLiteralNumber',
         'top_level': 'list[BTPTopLevelNode]',
-        'path_to_cache': 'BTCacheDataPath',
         'is_blob': 'bool',
+        'path_to_cache': 'BTCacheDataPath',
         'may_have_implicit_imports': 'bool'
     }
 
@@ -52,12 +52,12 @@ class BTPModuleAllOf(object):
         'path_map': 'pathMap',
         'version': 'version',
         'top_level': 'topLevel',
-        'path_to_cache': 'pathToCache',
         'is_blob': 'isBlob',
+        'path_to_cache': 'pathToCache',
         'may_have_implicit_imports': 'mayHaveImplicitImports'
     }
 
-    def __init__(self, version_number=None, deep_imports=None, is_internal_module=None, imports=None, path_map=None, version=None, top_level=None, path_to_cache=None, is_blob=None, may_have_implicit_imports=None):  # noqa: E501
+    def __init__(self, version_number=None, deep_imports=None, is_internal_module=None, imports=None, path_map=None, version=None, top_level=None, is_blob=None, path_to_cache=None, may_have_implicit_imports=None):  # noqa: E501
         """BTPModuleAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._version_number = None
@@ -67,8 +67,8 @@ class BTPModuleAllOf(object):
         self._path_map = None
         self._version = None
         self._top_level = None
-        self._path_to_cache = None
         self._is_blob = None
+        self._path_to_cache = None
         self._may_have_implicit_imports = None
         self.discriminator = None
 
@@ -86,10 +86,10 @@ class BTPModuleAllOf(object):
             self.version = version
         if top_level is not None:
             self.top_level = top_level
-        if path_to_cache is not None:
-            self.path_to_cache = path_to_cache
         if is_blob is not None:
             self.is_blob = is_blob
+        if path_to_cache is not None:
+            self.path_to_cache = path_to_cache
         if may_have_implicit_imports is not None:
             self.may_have_implicit_imports = may_have_implicit_imports
 
@@ -241,27 +241,6 @@ class BTPModuleAllOf(object):
         self._top_level = top_level
 
     @property
-    def path_to_cache(self):
-        """Gets the path_to_cache of this BTPModuleAllOf.  # noqa: E501
-
-
-        :return: The path_to_cache of this BTPModuleAllOf.  # noqa: E501
-        :rtype: BTCacheDataPath
-        """
-        return self._path_to_cache
-
-    @path_to_cache.setter
-    def path_to_cache(self, path_to_cache):
-        """Sets the path_to_cache of this BTPModuleAllOf.
-
-
-        :param path_to_cache: The path_to_cache of this BTPModuleAllOf.  # noqa: E501
-        :type: BTCacheDataPath
-        """
-
-        self._path_to_cache = path_to_cache
-
-    @property
     def is_blob(self):
         """Gets the is_blob of this BTPModuleAllOf.  # noqa: E501
 
@@ -281,6 +260,27 @@ class BTPModuleAllOf(object):
         """
 
         self._is_blob = is_blob
+
+    @property
+    def path_to_cache(self):
+        """Gets the path_to_cache of this BTPModuleAllOf.  # noqa: E501
+
+
+        :return: The path_to_cache of this BTPModuleAllOf.  # noqa: E501
+        :rtype: BTCacheDataPath
+        """
+        return self._path_to_cache
+
+    @path_to_cache.setter
+    def path_to_cache(self, path_to_cache):
+        """Sets the path_to_cache of this BTPModuleAllOf.
+
+
+        :param path_to_cache: The path_to_cache of this BTPModuleAllOf.  # noqa: E501
+        :type: BTCacheDataPath
+        """
+
+        self._path_to_cache = path_to_cache
 
     @property
     def may_have_implicit_imports(self):

@@ -33,25 +33,30 @@ class BTShadedRenderDocumentResponse(object):
     """
     openapi_types = {
         'image_data': 'list[str]',
-        'status': 'BTNodeStatus'
+        'status': 'BTNodeStatus',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'image_data': 'imageData',
-        'status': 'status'
+        'status': 'status',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, image_data=None, status=None):  # noqa: E501
+    def __init__(self, image_data=None, status=None, bt_type=None):  # noqa: E501
         """BTShadedRenderDocumentResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._image_data = None
         self._status = None
+        self._bt_type = None
         self.discriminator = None
 
         if image_data is not None:
             self.image_data = image_data
         if status is not None:
             self.status = status
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def image_data(self):
@@ -94,6 +99,27 @@ class BTShadedRenderDocumentResponse(object):
         """
 
         self._status = status
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTShadedRenderDocumentResponse.  # noqa: E501
+
+
+        :return: The bt_type of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTShadedRenderDocumentResponse.
+
+
+        :param bt_type: The bt_type of this BTShadedRenderDocumentResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

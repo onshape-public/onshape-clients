@@ -32,13 +32,15 @@ class BTStringFormatCondition(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'should_reset_value_when_confirmed': 'bool',
         'error_message': 'str',
-        'should_reset_value_when_confirmed': 'bool'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'should_reset_value_when_confirmed': 'shouldResetValueWhenConfirmed',
         'error_message': 'errorMessage',
-        'should_reset_value_when_confirmed': 'shouldResetValueWhenConfirmed'
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -48,17 +50,41 @@ class BTStringFormatCondition(object):
         'BTStringFormatMatchPattern': 'BTStringFormatMatchPattern'
     }
 
-    def __init__(self, error_message=None, should_reset_value_when_confirmed=None):  # noqa: E501
+    def __init__(self, should_reset_value_when_confirmed=None, error_message=None, bt_type=None):  # noqa: E501
         """BTStringFormatCondition - a model defined in OpenAPI"""  # noqa: E501
 
-        self._error_message = None
         self._should_reset_value_when_confirmed = None
-        self.discriminator = 'type'
+        self._error_message = None
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
-        if error_message is not None:
-            self.error_message = error_message
         if should_reset_value_when_confirmed is not None:
             self.should_reset_value_when_confirmed = should_reset_value_when_confirmed
+        if error_message is not None:
+            self.error_message = error_message
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def should_reset_value_when_confirmed(self):
+        """Gets the should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
+
+
+        :return: The should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._should_reset_value_when_confirmed
+
+    @should_reset_value_when_confirmed.setter
+    def should_reset_value_when_confirmed(self, should_reset_value_when_confirmed):
+        """Sets the should_reset_value_when_confirmed of this BTStringFormatCondition.
+
+
+        :param should_reset_value_when_confirmed: The should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
+        :type: bool
+        """
+
+        self._should_reset_value_when_confirmed = should_reset_value_when_confirmed
 
     @property
     def error_message(self):
@@ -82,25 +108,25 @@ class BTStringFormatCondition(object):
         self._error_message = error_message
 
     @property
-    def should_reset_value_when_confirmed(self):
-        """Gets the should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTStringFormatCondition.  # noqa: E501
 
 
-        :return: The should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
-        :rtype: bool
+        :return: The bt_type of this BTStringFormatCondition.  # noqa: E501
+        :rtype: str
         """
-        return self._should_reset_value_when_confirmed
+        return self._bt_type
 
-    @should_reset_value_when_confirmed.setter
-    def should_reset_value_when_confirmed(self, should_reset_value_when_confirmed):
-        """Sets the should_reset_value_when_confirmed of this BTStringFormatCondition.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTStringFormatCondition.
 
 
-        :param should_reset_value_when_confirmed: The should_reset_value_when_confirmed of this BTStringFormatCondition.  # noqa: E501
-        :type: bool
+        :param bt_type: The bt_type of this BTStringFormatCondition.  # noqa: E501
+        :type: str
         """
 
-        self._should_reset_value_when_confirmed = should_reset_value_when_confirmed
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

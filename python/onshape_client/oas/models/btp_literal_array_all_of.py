@@ -32,47 +32,26 @@ class BTPLiteralArrayAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'space_in_empty_list': 'BTPSpace',
-        'trailing_comma': 'bool'
+        'trailing_comma': 'bool',
+        'space_in_empty_list': 'BTPSpace'
     }
 
     attribute_map = {
-        'space_in_empty_list': 'spaceInEmptyList',
-        'trailing_comma': 'trailingComma'
+        'trailing_comma': 'trailingComma',
+        'space_in_empty_list': 'spaceInEmptyList'
     }
 
-    def __init__(self, space_in_empty_list=None, trailing_comma=None):  # noqa: E501
+    def __init__(self, trailing_comma=None, space_in_empty_list=None):  # noqa: E501
         """BTPLiteralArrayAllOf - a model defined in OpenAPI"""  # noqa: E501
 
-        self._space_in_empty_list = None
         self._trailing_comma = None
+        self._space_in_empty_list = None
         self.discriminator = None
 
-        if space_in_empty_list is not None:
-            self.space_in_empty_list = space_in_empty_list
         if trailing_comma is not None:
             self.trailing_comma = trailing_comma
-
-    @property
-    def space_in_empty_list(self):
-        """Gets the space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
-
-
-        :return: The space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
-        :rtype: BTPSpace
-        """
-        return self._space_in_empty_list
-
-    @space_in_empty_list.setter
-    def space_in_empty_list(self, space_in_empty_list):
-        """Sets the space_in_empty_list of this BTPLiteralArrayAllOf.
-
-
-        :param space_in_empty_list: The space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
-        :type: BTPSpace
-        """
-
-        self._space_in_empty_list = space_in_empty_list
+        if space_in_empty_list is not None:
+            self.space_in_empty_list = space_in_empty_list
 
     @property
     def trailing_comma(self):
@@ -94,6 +73,27 @@ class BTPLiteralArrayAllOf(object):
         """
 
         self._trailing_comma = trailing_comma
+
+    @property
+    def space_in_empty_list(self):
+        """Gets the space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
+
+
+        :return: The space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_in_empty_list
+
+    @space_in_empty_list.setter
+    def space_in_empty_list(self, space_in_empty_list):
+        """Sets the space_in_empty_list of this BTPLiteralArrayAllOf.
+
+
+        :param space_in_empty_list: The space_in_empty_list of this BTPLiteralArrayAllOf.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_in_empty_list = space_in_empty_list
 
     def to_dict(self):
         """Returns the model properties as a dict"""

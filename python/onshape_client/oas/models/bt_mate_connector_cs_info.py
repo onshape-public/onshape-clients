@@ -32,57 +32,57 @@ class BTMateConnectorCSInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'getx_axis': 'list[float]',
-        'gety_axis': 'list[float]',
         'getz_axis': 'list[float]',
+        'gety_axis': 'list[float]',
+        'getx_axis': 'list[float]',
         'origin': 'list[float]'
     }
 
     attribute_map = {
-        'getx_axis': 'getxAxis',
-        'gety_axis': 'getyAxis',
         'getz_axis': 'getzAxis',
+        'gety_axis': 'getyAxis',
+        'getx_axis': 'getxAxis',
         'origin': 'origin'
     }
 
-    def __init__(self, getx_axis=None, gety_axis=None, getz_axis=None, origin=None):  # noqa: E501
+    def __init__(self, getz_axis=None, gety_axis=None, getx_axis=None, origin=None):  # noqa: E501
         """BTMateConnectorCSInfo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._getx_axis = None
-        self._gety_axis = None
         self._getz_axis = None
+        self._gety_axis = None
+        self._getx_axis = None
         self._origin = None
         self.discriminator = None
 
-        if getx_axis is not None:
-            self.getx_axis = getx_axis
-        if gety_axis is not None:
-            self.gety_axis = gety_axis
         if getz_axis is not None:
             self.getz_axis = getz_axis
+        if gety_axis is not None:
+            self.gety_axis = gety_axis
+        if getx_axis is not None:
+            self.getx_axis = getx_axis
         if origin is not None:
             self.origin = origin
 
     @property
-    def getx_axis(self):
-        """Gets the getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
+    def getz_axis(self):
+        """Gets the getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
 
 
-        :return: The getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
+        :return: The getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
         :rtype: list[float]
         """
-        return self._getx_axis
+        return self._getz_axis
 
-    @getx_axis.setter
-    def getx_axis(self, getx_axis):
-        """Sets the getx_axis of this BTMateConnectorCSInfo.
+    @getz_axis.setter
+    def getz_axis(self, getz_axis):
+        """Sets the getz_axis of this BTMateConnectorCSInfo.
 
 
-        :param getx_axis: The getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
+        :param getz_axis: The getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
         :type: list[float]
         """
 
-        self._getx_axis = getx_axis
+        self._getz_axis = getz_axis
 
     @property
     def gety_axis(self):
@@ -106,25 +106,25 @@ class BTMateConnectorCSInfo(object):
         self._gety_axis = gety_axis
 
     @property
-    def getz_axis(self):
-        """Gets the getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
+    def getx_axis(self):
+        """Gets the getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
 
 
-        :return: The getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
+        :return: The getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
         :rtype: list[float]
         """
-        return self._getz_axis
+        return self._getx_axis
 
-    @getz_axis.setter
-    def getz_axis(self, getz_axis):
-        """Sets the getz_axis of this BTMateConnectorCSInfo.
+    @getx_axis.setter
+    def getx_axis(self, getx_axis):
+        """Sets the getx_axis of this BTMateConnectorCSInfo.
 
 
-        :param getz_axis: The getz_axis of this BTMateConnectorCSInfo.  # noqa: E501
+        :param getx_axis: The getx_axis of this BTMateConnectorCSInfo.  # noqa: E501
         :type: list[float]
         """
 
-        self._getz_axis = getz_axis
+        self._getx_axis = getx_axis
 
     @property
     def origin(self):

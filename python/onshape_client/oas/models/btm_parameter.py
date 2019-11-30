@@ -34,13 +34,15 @@ class BTMParameter(object):
     openapi_types = {
         'parameter_id': 'str',
         'import_microversion': 'str',
-        'node_id': 'str'
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'parameter_id': 'parameterId',
         'import_microversion': 'importMicroversion',
-        'node_id': 'nodeId'
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -63,13 +65,14 @@ class BTMParameter(object):
         'BTMParameterMaterial': 'BTMParameterMaterial'
     }
 
-    def __init__(self, parameter_id=None, import_microversion=None, node_id=None):  # noqa: E501
+    def __init__(self, parameter_id=None, import_microversion=None, node_id=None, bt_type=None):  # noqa: E501
         """BTMParameter - a model defined in OpenAPI"""  # noqa: E501
 
         self._parameter_id = None
         self._import_microversion = None
         self._node_id = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if parameter_id is not None:
             self.parameter_id = parameter_id
@@ -77,6 +80,8 @@ class BTMParameter(object):
             self.import_microversion = import_microversion
         if node_id is not None:
             self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def parameter_id(self):
@@ -140,6 +145,27 @@ class BTMParameter(object):
         """
 
         self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameter.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameter.
+
+
+        :param bt_type: The bt_type of this BTMParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -34,49 +34,52 @@ class BTParameterGroupSpec(object):
     openapi_types = {
         'localized_name': 'str',
         'localizable_name': 'str',
-        'additional_localized_strings': 'int',
         'strings_to_localize': 'list[str]',
+        'additional_localized_strings': 'int',
         'group_name': 'str',
         'group_id': 'str',
         'driving_parameter_id': 'str',
         'collapsed_by_default': 'bool',
-        'group_or_parameter_ids': 'list[str]'
+        'group_or_parameter_ids': 'list[str]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'localized_name': 'localizedName',
         'localizable_name': 'localizableName',
-        'additional_localized_strings': 'additionalLocalizedStrings',
         'strings_to_localize': 'stringsToLocalize',
+        'additional_localized_strings': 'additionalLocalizedStrings',
         'group_name': 'groupName',
         'group_id': 'groupId',
         'driving_parameter_id': 'drivingParameterId',
         'collapsed_by_default': 'collapsedByDefault',
-        'group_or_parameter_ids': 'groupOrParameterIds'
+        'group_or_parameter_ids': 'groupOrParameterIds',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, group_name=None, group_id=None, driving_parameter_id=None, collapsed_by_default=None, group_or_parameter_ids=None):  # noqa: E501
+    def __init__(self, localized_name=None, localizable_name=None, strings_to_localize=None, additional_localized_strings=None, group_name=None, group_id=None, driving_parameter_id=None, collapsed_by_default=None, group_or_parameter_ids=None, bt_type=None):  # noqa: E501
         """BTParameterGroupSpec - a model defined in OpenAPI"""  # noqa: E501
 
         self._localized_name = None
         self._localizable_name = None
-        self._additional_localized_strings = None
         self._strings_to_localize = None
+        self._additional_localized_strings = None
         self._group_name = None
         self._group_id = None
         self._driving_parameter_id = None
         self._collapsed_by_default = None
         self._group_or_parameter_ids = None
+        self._bt_type = None
         self.discriminator = None
 
         if localized_name is not None:
             self.localized_name = localized_name
         if localizable_name is not None:
             self.localizable_name = localizable_name
-        if additional_localized_strings is not None:
-            self.additional_localized_strings = additional_localized_strings
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
+        if additional_localized_strings is not None:
+            self.additional_localized_strings = additional_localized_strings
         if group_name is not None:
             self.group_name = group_name
         if group_id is not None:
@@ -87,6 +90,8 @@ class BTParameterGroupSpec(object):
             self.collapsed_by_default = collapsed_by_default
         if group_or_parameter_ids is not None:
             self.group_or_parameter_ids = group_or_parameter_ids
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def localized_name(self):
@@ -131,27 +136,6 @@ class BTParameterGroupSpec(object):
         self._localizable_name = localizable_name
 
     @property
-    def additional_localized_strings(self):
-        """Gets the additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
-
-
-        :return: The additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
-        :rtype: int
-        """
-        return self._additional_localized_strings
-
-    @additional_localized_strings.setter
-    def additional_localized_strings(self, additional_localized_strings):
-        """Sets the additional_localized_strings of this BTParameterGroupSpec.
-
-
-        :param additional_localized_strings: The additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
-        :type: int
-        """
-
-        self._additional_localized_strings = additional_localized_strings
-
-    @property
     def strings_to_localize(self):
         """Gets the strings_to_localize of this BTParameterGroupSpec.  # noqa: E501
 
@@ -171,6 +155,27 @@ class BTParameterGroupSpec(object):
         """
 
         self._strings_to_localize = strings_to_localize
+
+    @property
+    def additional_localized_strings(self):
+        """Gets the additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
+
+
+        :return: The additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
+        :rtype: int
+        """
+        return self._additional_localized_strings
+
+    @additional_localized_strings.setter
+    def additional_localized_strings(self, additional_localized_strings):
+        """Sets the additional_localized_strings of this BTParameterGroupSpec.
+
+
+        :param additional_localized_strings: The additional_localized_strings of this BTParameterGroupSpec.  # noqa: E501
+        :type: int
+        """
+
+        self._additional_localized_strings = additional_localized_strings
 
     @property
     def group_name(self):
@@ -276,6 +281,27 @@ class BTParameterGroupSpec(object):
         """
 
         self._group_or_parameter_ids = group_or_parameter_ids
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterGroupSpec.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterGroupSpec.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterGroupSpec.
+
+
+        :param bt_type: The bt_type of this BTParameterGroupSpec.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

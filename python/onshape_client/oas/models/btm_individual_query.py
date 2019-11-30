@@ -56,7 +56,7 @@ class BTMIndividualQuery(object):
         self._persistent_query = None
         self._variable_name = None
         self._query_statement = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if persistent_query is not None:
             self.persistent_query = persistent_query

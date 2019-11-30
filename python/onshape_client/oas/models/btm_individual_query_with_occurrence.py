@@ -47,7 +47,7 @@ class BTMIndividualQueryWithOccurrence(object):
         """BTMIndividualQueryWithOccurrence - a model defined in OpenAPI"""  # noqa: E501
 
         self._entity_query = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if entity_query is not None:
             self.entity_query = entity_query

@@ -39,7 +39,8 @@ class BTMSketchGeomEntity(object):
         'node_id': 'str',
         'namespace': 'str',
         'import_microversion': 'str',
-        'entity_id': 'str'
+        'entity_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,7 +51,8 @@ class BTMSketchGeomEntity(object):
         'node_id': 'nodeId',
         'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
-        'entity_id': 'entityId'
+        'entity_id': 'entityId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -60,7 +62,7 @@ class BTMSketchGeomEntity(object):
         'BTMSketchPoint': 'BTMSketchPoint'
     }
 
-    def __init__(self, control_box_ids=None, is_construction=None, parameters=None, entity_id_and_replace_in_dependent_fields=None, node_id=None, namespace=None, import_microversion=None, entity_id=None):  # noqa: E501
+    def __init__(self, control_box_ids=None, is_construction=None, parameters=None, entity_id_and_replace_in_dependent_fields=None, node_id=None, namespace=None, import_microversion=None, entity_id=None, bt_type=None):  # noqa: E501
         """BTMSketchGeomEntity - a model defined in OpenAPI"""  # noqa: E501
 
         self._control_box_ids = None
@@ -71,7 +73,8 @@ class BTMSketchGeomEntity(object):
         self._namespace = None
         self._import_microversion = None
         self._entity_id = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if control_box_ids is not None:
             self.control_box_ids = control_box_ids
@@ -89,6 +92,8 @@ class BTMSketchGeomEntity(object):
             self.import_microversion = import_microversion
         if entity_id is not None:
             self.entity_id = entity_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def control_box_ids(self):
@@ -257,6 +262,27 @@ class BTMSketchGeomEntity(object):
         """
 
         self._entity_id = entity_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchGeomEntity.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchGeomEntity.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchGeomEntity.
+
+
+        :param bt_type: The bt_type of this BTMSketchGeomEntity.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

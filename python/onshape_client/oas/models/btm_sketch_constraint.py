@@ -48,7 +48,8 @@ class BTMSketchConstraint(object):
         'node_id': 'str',
         'namespace': 'str',
         'import_microversion': 'str',
-        'entity_id': 'str'
+        'entity_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class BTMSketchConstraint(object):
         'node_id': 'nodeId',
         'namespace': 'namespace',
         'import_microversion': 'importMicroversion',
-        'entity_id': 'entityId'
+        'entity_id': 'entityId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, driven_dimension=None, constraint_type=None, has_offset_data1=None, offset_orientation1=None, offset_distance1=None, has_offset_data2=None, offset_orientation2=None, offset_distance2=None, has_pierce_parameter=None, pierce_parameter=None, help_parameters=None, parameters=None, entity_id_and_replace_in_dependent_fields=None, node_id=None, namespace=None, import_microversion=None, entity_id=None):  # noqa: E501
+    def __init__(self, driven_dimension=None, constraint_type=None, has_offset_data1=None, offset_orientation1=None, offset_distance1=None, has_offset_data2=None, offset_orientation2=None, offset_distance2=None, has_pierce_parameter=None, pierce_parameter=None, help_parameters=None, parameters=None, entity_id_and_replace_in_dependent_fields=None, node_id=None, namespace=None, import_microversion=None, entity_id=None, bt_type=None):  # noqa: E501
         """BTMSketchConstraint - a model defined in OpenAPI"""  # noqa: E501
 
         self._driven_dimension = None
@@ -91,6 +93,7 @@ class BTMSketchConstraint(object):
         self._namespace = None
         self._import_microversion = None
         self._entity_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if driven_dimension is not None:
@@ -127,6 +130,8 @@ class BTMSketchConstraint(object):
             self.import_microversion = import_microversion
         if entity_id is not None:
             self.entity_id = entity_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def driven_dimension(self):
@@ -490,6 +495,27 @@ class BTMSketchConstraint(object):
         """
 
         self._entity_id = entity_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchConstraint.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchConstraint.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchConstraint.
+
+
+        :param bt_type: The bt_type of this BTMSketchConstraint.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

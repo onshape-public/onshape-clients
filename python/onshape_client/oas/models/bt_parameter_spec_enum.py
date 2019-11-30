@@ -32,57 +32,36 @@ class BTParameterSpecEnum(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'enum_name': 'str',
         'option_names': 'list[str]',
+        'enum_name': 'str',
         'options': 'list[str]',
         'namespace': 'str'
     }
 
     attribute_map = {
-        'enum_name': 'enumName',
         'option_names': 'optionNames',
+        'enum_name': 'enumName',
         'options': 'options',
         'namespace': 'namespace'
     }
 
-    def __init__(self, enum_name=None, option_names=None, options=None, namespace=None):  # noqa: E501
+    def __init__(self, option_names=None, enum_name=None, options=None, namespace=None):  # noqa: E501
         """BTParameterSpecEnum - a model defined in OpenAPI"""  # noqa: E501
 
-        self._enum_name = None
         self._option_names = None
+        self._enum_name = None
         self._options = None
         self._namespace = None
         self.discriminator = None
 
-        if enum_name is not None:
-            self.enum_name = enum_name
         if option_names is not None:
             self.option_names = option_names
+        if enum_name is not None:
+            self.enum_name = enum_name
         if options is not None:
             self.options = options
         if namespace is not None:
             self.namespace = namespace
-
-    @property
-    def enum_name(self):
-        """Gets the enum_name of this BTParameterSpecEnum.  # noqa: E501
-
-
-        :return: The enum_name of this BTParameterSpecEnum.  # noqa: E501
-        :rtype: str
-        """
-        return self._enum_name
-
-    @enum_name.setter
-    def enum_name(self, enum_name):
-        """Sets the enum_name of this BTParameterSpecEnum.
-
-
-        :param enum_name: The enum_name of this BTParameterSpecEnum.  # noqa: E501
-        :type: str
-        """
-
-        self._enum_name = enum_name
 
     @property
     def option_names(self):
@@ -104,6 +83,27 @@ class BTParameterSpecEnum(object):
         """
 
         self._option_names = option_names
+
+    @property
+    def enum_name(self):
+        """Gets the enum_name of this BTParameterSpecEnum.  # noqa: E501
+
+
+        :return: The enum_name of this BTParameterSpecEnum.  # noqa: E501
+        :rtype: str
+        """
+        return self._enum_name
+
+    @enum_name.setter
+    def enum_name(self, enum_name):
+        """Sets the enum_name of this BTParameterSpecEnum.
+
+
+        :param enum_name: The enum_name of this BTParameterSpecEnum.  # noqa: E501
+        :type: str
+        """
+
+        self._enum_name = enum_name
 
     @property
     def options(self):

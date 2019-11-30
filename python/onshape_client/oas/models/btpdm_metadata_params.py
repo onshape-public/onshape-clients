@@ -32,68 +32,74 @@ class BTPDMMetadataParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'configuration': 'str',
         'element_id': 'str',
+        'project': 'str',
         'part_number': 'str',
+        'part_id': 'str',
         'vendor': 'str',
         'product_line': 'str',
         'title1': 'str',
         'title2': 'str',
         'title3': 'str',
-        'part_id': 'str',
         'custom_properties': 'list[BTNameValuePair]',
-        'configuration': 'str',
         'name': 'str',
         'id': 'str',
         'state': 'str',
         'description': 'str',
-        'revision': 'str',
-        'project': 'str'
+        'revision': 'str'
     }
 
     attribute_map = {
+        'configuration': 'configuration',
         'element_id': 'elementId',
+        'project': 'project',
         'part_number': 'partNumber',
+        'part_id': 'partId',
         'vendor': 'vendor',
         'product_line': 'productLine',
         'title1': 'title1',
         'title2': 'title2',
         'title3': 'title3',
-        'part_id': 'partId',
         'custom_properties': 'customProperties',
-        'configuration': 'configuration',
         'name': 'name',
         'id': 'id',
         'state': 'state',
         'description': 'description',
-        'revision': 'revision',
-        'project': 'project'
+        'revision': 'revision'
     }
 
-    def __init__(self, element_id=None, part_number=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, part_id=None, custom_properties=None, configuration=None, name=None, id=None, state=None, description=None, revision=None, project=None):  # noqa: E501
+    def __init__(self, configuration=None, element_id=None, project=None, part_number=None, part_id=None, vendor=None, product_line=None, title1=None, title2=None, title3=None, custom_properties=None, name=None, id=None, state=None, description=None, revision=None):  # noqa: E501
         """BTPDMMetadataParams - a model defined in OpenAPI"""  # noqa: E501
 
+        self._configuration = None
         self._element_id = None
+        self._project = None
         self._part_number = None
+        self._part_id = None
         self._vendor = None
         self._product_line = None
         self._title1 = None
         self._title2 = None
         self._title3 = None
-        self._part_id = None
         self._custom_properties = None
-        self._configuration = None
         self._name = None
         self._id = None
         self._state = None
         self._description = None
         self._revision = None
-        self._project = None
         self.discriminator = None
 
+        if configuration is not None:
+            self.configuration = configuration
         if element_id is not None:
             self.element_id = element_id
+        if project is not None:
+            self.project = project
         if part_number is not None:
             self.part_number = part_number
+        if part_id is not None:
+            self.part_id = part_id
         if vendor is not None:
             self.vendor = vendor
         if product_line is not None:
@@ -104,12 +110,8 @@ class BTPDMMetadataParams(object):
             self.title2 = title2
         if title3 is not None:
             self.title3 = title3
-        if part_id is not None:
-            self.part_id = part_id
         if custom_properties is not None:
             self.custom_properties = custom_properties
-        if configuration is not None:
-            self.configuration = configuration
         if name is not None:
             self.name = name
         if id is not None:
@@ -120,8 +122,27 @@ class BTPDMMetadataParams(object):
             self.description = description
         if revision is not None:
             self.revision = revision
-        if project is not None:
-            self.project = project
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The configuration of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTPDMMetadataParams.
+
+
+        :param configuration: The configuration of this BTPDMMetadataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -145,6 +166,27 @@ class BTPDMMetadataParams(object):
         self._element_id = element_id
 
     @property
+    def project(self):
+        """Gets the project of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The project of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this BTPDMMetadataParams.
+
+
+        :param project: The project of this BTPDMMetadataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._project = project
+
+    @property
     def part_number(self):
         """Gets the part_number of this BTPDMMetadataParams.  # noqa: E501
 
@@ -164,6 +206,27 @@ class BTPDMMetadataParams(object):
         """
 
         self._part_number = part_number
+
+    @property
+    def part_id(self):
+        """Gets the part_id of this BTPDMMetadataParams.  # noqa: E501
+
+
+        :return: The part_id of this BTPDMMetadataParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._part_id
+
+    @part_id.setter
+    def part_id(self, part_id):
+        """Sets the part_id of this BTPDMMetadataParams.
+
+
+        :param part_id: The part_id of this BTPDMMetadataParams.  # noqa: E501
+        :type: str
+        """
+
+        self._part_id = part_id
 
     @property
     def vendor(self):
@@ -271,27 +334,6 @@ class BTPDMMetadataParams(object):
         self._title3 = title3
 
     @property
-    def part_id(self):
-        """Gets the part_id of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The part_id of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._part_id
-
-    @part_id.setter
-    def part_id(self, part_id):
-        """Sets the part_id of this BTPDMMetadataParams.
-
-
-        :param part_id: The part_id of this BTPDMMetadataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._part_id = part_id
-
-    @property
     def custom_properties(self):
         """Gets the custom_properties of this BTPDMMetadataParams.  # noqa: E501
 
@@ -311,27 +353,6 @@ class BTPDMMetadataParams(object):
         """
 
         self._custom_properties = custom_properties
-
-    @property
-    def configuration(self):
-        """Gets the configuration of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The configuration of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTPDMMetadataParams.
-
-
-        :param configuration: The configuration of this BTPDMMetadataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._configuration = configuration
 
     @property
     def name(self):
@@ -443,27 +464,6 @@ class BTPDMMetadataParams(object):
         """
 
         self._revision = revision
-
-    @property
-    def project(self):
-        """Gets the project of this BTPDMMetadataParams.  # noqa: E501
-
-
-        :return: The project of this BTPDMMetadataParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this BTPDMMetadataParams.
-
-
-        :param project: The project of this BTPDMMetadataParams.  # noqa: E501
-        :type: str
-        """
-
-        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

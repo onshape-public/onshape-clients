@@ -640,7 +640,10 @@ class ApiClient(object):
         instance = klass(**kwargs)
 
         if hasattr(instance, 'get_real_child_model'):
-            klass_name = instance.get_real_child_model(data)
+            try:
+                klass_name = instance.get_real_child_model(data)
+            except KeyError as e:
+                print("hi")
             if klass_name:
                 instance = self.__deserialize(data, klass_name)
         return instance

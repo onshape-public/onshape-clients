@@ -33,30 +33,30 @@ class BTPExpressionSwitchAllOf(object):
     """
     openapi_types = {
         'selector': 'BTPExpression',
-        'choices': 'BTPLiteralMap',
-        'space_after_switch': 'BTPSpace'
+        'space_after_switch': 'BTPSpace',
+        'choices': 'BTPLiteralMap'
     }
 
     attribute_map = {
         'selector': 'selector',
-        'choices': 'choices',
-        'space_after_switch': 'spaceAfterSwitch'
+        'space_after_switch': 'spaceAfterSwitch',
+        'choices': 'choices'
     }
 
-    def __init__(self, selector=None, choices=None, space_after_switch=None):  # noqa: E501
+    def __init__(self, selector=None, space_after_switch=None, choices=None):  # noqa: E501
         """BTPExpressionSwitchAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._selector = None
-        self._choices = None
         self._space_after_switch = None
+        self._choices = None
         self.discriminator = None
 
         if selector is not None:
             self.selector = selector
-        if choices is not None:
-            self.choices = choices
         if space_after_switch is not None:
             self.space_after_switch = space_after_switch
+        if choices is not None:
+            self.choices = choices
 
     @property
     def selector(self):
@@ -80,27 +80,6 @@ class BTPExpressionSwitchAllOf(object):
         self._selector = selector
 
     @property
-    def choices(self):
-        """Gets the choices of this BTPExpressionSwitchAllOf.  # noqa: E501
-
-
-        :return: The choices of this BTPExpressionSwitchAllOf.  # noqa: E501
-        :rtype: BTPLiteralMap
-        """
-        return self._choices
-
-    @choices.setter
-    def choices(self, choices):
-        """Sets the choices of this BTPExpressionSwitchAllOf.
-
-
-        :param choices: The choices of this BTPExpressionSwitchAllOf.  # noqa: E501
-        :type: BTPLiteralMap
-        """
-
-        self._choices = choices
-
-    @property
     def space_after_switch(self):
         """Gets the space_after_switch of this BTPExpressionSwitchAllOf.  # noqa: E501
 
@@ -120,6 +99,27 @@ class BTPExpressionSwitchAllOf(object):
         """
 
         self._space_after_switch = space_after_switch
+
+    @property
+    def choices(self):
+        """Gets the choices of this BTPExpressionSwitchAllOf.  # noqa: E501
+
+
+        :return: The choices of this BTPExpressionSwitchAllOf.  # noqa: E501
+        :rtype: BTPLiteralMap
+        """
+        return self._choices
+
+    @choices.setter
+    def choices(self, choices):
+        """Sets the choices of this BTPExpressionSwitchAllOf.
+
+
+        :param choices: The choices of this BTPExpressionSwitchAllOf.  # noqa: E501
+        :type: BTPLiteralMap
+        """
+
+        self._choices = choices
 
     def to_dict(self):
         """Returns the model properties as a dict"""

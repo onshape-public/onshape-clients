@@ -32,11 +32,13 @@ class BTSurfaceDescription(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'type': 'str'
+        'type': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'type': 'type'
+        'type': 'type',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -49,14 +51,17 @@ class BTSurfaceDescription(object):
         'BTCylinderDescription': 'BTCylinderDescription'
     }
 
-    def __init__(self, type=None):  # noqa: E501
+    def __init__(self, type=None, bt_type=None):  # noqa: E501
         """BTSurfaceDescription - a model defined in OpenAPI"""  # noqa: E501
 
         self._type = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if type is not None:
             self.type = type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def type(self):
@@ -84,6 +89,27 @@ class BTSurfaceDescription(object):
             )
 
         self._type = type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSurfaceDescription.  # noqa: E501
+
+
+        :return: The bt_type of this BTSurfaceDescription.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSurfaceDescription.
+
+
+        :param bt_type: The bt_type of this BTSurfaceDescription.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

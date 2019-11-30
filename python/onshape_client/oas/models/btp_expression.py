@@ -32,9 +32,29 @@ class BTPExpression(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'start_source_location': 'int',
+        'end_source_location': 'int',
+        'atomic': 'bool',
+        'short_descriptor': 'str',
+        'documentation_type': 'str',
+        'space_before': 'BTPSpace',
+        'space_default': 'bool',
+        'space_after': 'BTPSpace',
+        'node_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'start_source_location': 'startSourceLocation',
+        'end_source_location': 'endSourceLocation',
+        'atomic': 'atomic',
+        'short_descriptor': 'shortDescriptor',
+        'documentation_type': 'documentationType',
+        'space_before': 'spaceBefore',
+        'space_default': 'spaceDefault',
+        'space_after': 'spaceAfter',
+        'node_id': 'nodeId',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -53,9 +73,257 @@ class BTPExpression(object):
         'BTPExpressionVarReference': 'BTPExpressionVarReference'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, start_source_location=None, end_source_location=None, atomic=None, short_descriptor=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None):  # noqa: E501
         """BTPExpression - a model defined in OpenAPI"""  # noqa: E501
-        self.discriminator = 'type'
+
+        self._start_source_location = None
+        self._end_source_location = None
+        self._atomic = None
+        self._short_descriptor = None
+        self._documentation_type = None
+        self._space_before = None
+        self._space_default = None
+        self._space_after = None
+        self._node_id = None
+        self._bt_type = None
+        self.discriminator = 'bt_type'
+
+        if start_source_location is not None:
+            self.start_source_location = start_source_location
+        if end_source_location is not None:
+            self.end_source_location = end_source_location
+        if atomic is not None:
+            self.atomic = atomic
+        if short_descriptor is not None:
+            self.short_descriptor = short_descriptor
+        if documentation_type is not None:
+            self.documentation_type = documentation_type
+        if space_before is not None:
+            self.space_before = space_before
+        if space_default is not None:
+            self.space_default = space_default
+        if space_after is not None:
+            self.space_after = space_after
+        if node_id is not None:
+            self.node_id = node_id
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def start_source_location(self):
+        """Gets the start_source_location of this BTPExpression.  # noqa: E501
+
+
+        :return: The start_source_location of this BTPExpression.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_source_location
+
+    @start_source_location.setter
+    def start_source_location(self, start_source_location):
+        """Sets the start_source_location of this BTPExpression.
+
+
+        :param start_source_location: The start_source_location of this BTPExpression.  # noqa: E501
+        :type: int
+        """
+
+        self._start_source_location = start_source_location
+
+    @property
+    def end_source_location(self):
+        """Gets the end_source_location of this BTPExpression.  # noqa: E501
+
+
+        :return: The end_source_location of this BTPExpression.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_source_location
+
+    @end_source_location.setter
+    def end_source_location(self, end_source_location):
+        """Sets the end_source_location of this BTPExpression.
+
+
+        :param end_source_location: The end_source_location of this BTPExpression.  # noqa: E501
+        :type: int
+        """
+
+        self._end_source_location = end_source_location
+
+    @property
+    def atomic(self):
+        """Gets the atomic of this BTPExpression.  # noqa: E501
+
+
+        :return: The atomic of this BTPExpression.  # noqa: E501
+        :rtype: bool
+        """
+        return self._atomic
+
+    @atomic.setter
+    def atomic(self, atomic):
+        """Sets the atomic of this BTPExpression.
+
+
+        :param atomic: The atomic of this BTPExpression.  # noqa: E501
+        :type: bool
+        """
+
+        self._atomic = atomic
+
+    @property
+    def short_descriptor(self):
+        """Gets the short_descriptor of this BTPExpression.  # noqa: E501
+
+
+        :return: The short_descriptor of this BTPExpression.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_descriptor
+
+    @short_descriptor.setter
+    def short_descriptor(self, short_descriptor):
+        """Sets the short_descriptor of this BTPExpression.
+
+
+        :param short_descriptor: The short_descriptor of this BTPExpression.  # noqa: E501
+        :type: str
+        """
+
+        self._short_descriptor = short_descriptor
+
+    @property
+    def documentation_type(self):
+        """Gets the documentation_type of this BTPExpression.  # noqa: E501
+
+
+        :return: The documentation_type of this BTPExpression.  # noqa: E501
+        :rtype: str
+        """
+        return self._documentation_type
+
+    @documentation_type.setter
+    def documentation_type(self, documentation_type):
+        """Sets the documentation_type of this BTPExpression.
+
+
+        :param documentation_type: The documentation_type of this BTPExpression.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["FUNCTION", "PREDICATE", "CONSTANT", "ENUM", "USER_TYPE", "FEATURE_DEFINITION", "FILE_HEADER", "UNDOCUMENTABLE", "UNKNOWN"]  # noqa: E501
+        if documentation_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `documentation_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(documentation_type, allowed_values)
+            )
+
+        self._documentation_type = documentation_type
+
+    @property
+    def space_before(self):
+        """Gets the space_before of this BTPExpression.  # noqa: E501
+
+
+        :return: The space_before of this BTPExpression.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_before
+
+    @space_before.setter
+    def space_before(self, space_before):
+        """Sets the space_before of this BTPExpression.
+
+
+        :param space_before: The space_before of this BTPExpression.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_before = space_before
+
+    @property
+    def space_default(self):
+        """Gets the space_default of this BTPExpression.  # noqa: E501
+
+
+        :return: The space_default of this BTPExpression.  # noqa: E501
+        :rtype: bool
+        """
+        return self._space_default
+
+    @space_default.setter
+    def space_default(self, space_default):
+        """Sets the space_default of this BTPExpression.
+
+
+        :param space_default: The space_default of this BTPExpression.  # noqa: E501
+        :type: bool
+        """
+
+        self._space_default = space_default
+
+    @property
+    def space_after(self):
+        """Gets the space_after of this BTPExpression.  # noqa: E501
+
+
+        :return: The space_after of this BTPExpression.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_after
+
+    @space_after.setter
+    def space_after(self, space_after):
+        """Sets the space_after of this BTPExpression.
+
+
+        :param space_after: The space_after of this BTPExpression.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_after = space_after
+
+    @property
+    def node_id(self):
+        """Gets the node_id of this BTPExpression.  # noqa: E501
+
+
+        :return: The node_id of this BTPExpression.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_id
+
+    @node_id.setter
+    def node_id(self, node_id):
+        """Sets the node_id of this BTPExpression.
+
+
+        :param node_id: The node_id of this BTPExpression.  # noqa: E501
+        :type: str
+        """
+
+        self._node_id = node_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpression.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpression.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpression.
+
+
+        :param bt_type: The bt_type of this BTPExpression.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

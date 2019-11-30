@@ -33,33 +33,33 @@ class BTPTopLevelEnumDeclarationAllOf(object):
     """
     openapi_types = {
         'annotations': 'list[BTPAnnotation]',
-        'space_in_empty_list': 'BTPSpace',
         'trailing_comma': 'bool',
+        'space_in_empty_list': 'BTPSpace',
         'values': 'list[BTPIdentifier]'
     }
 
     attribute_map = {
         'annotations': 'annotations',
-        'space_in_empty_list': 'spaceInEmptyList',
         'trailing_comma': 'trailingComma',
+        'space_in_empty_list': 'spaceInEmptyList',
         'values': 'values'
     }
 
-    def __init__(self, annotations=None, space_in_empty_list=None, trailing_comma=None, values=None):  # noqa: E501
+    def __init__(self, annotations=None, trailing_comma=None, space_in_empty_list=None, values=None):  # noqa: E501
         """BTPTopLevelEnumDeclarationAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._annotations = None
-        self._space_in_empty_list = None
         self._trailing_comma = None
+        self._space_in_empty_list = None
         self._values = None
         self.discriminator = None
 
         if annotations is not None:
             self.annotations = annotations
-        if space_in_empty_list is not None:
-            self.space_in_empty_list = space_in_empty_list
         if trailing_comma is not None:
             self.trailing_comma = trailing_comma
+        if space_in_empty_list is not None:
+            self.space_in_empty_list = space_in_empty_list
         if values is not None:
             self.values = values
 
@@ -85,27 +85,6 @@ class BTPTopLevelEnumDeclarationAllOf(object):
         self._annotations = annotations
 
     @property
-    def space_in_empty_list(self):
-        """Gets the space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
-
-
-        :return: The space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
-        :rtype: BTPSpace
-        """
-        return self._space_in_empty_list
-
-    @space_in_empty_list.setter
-    def space_in_empty_list(self, space_in_empty_list):
-        """Sets the space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.
-
-
-        :param space_in_empty_list: The space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
-        :type: BTPSpace
-        """
-
-        self._space_in_empty_list = space_in_empty_list
-
-    @property
     def trailing_comma(self):
         """Gets the trailing_comma of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
 
@@ -125,6 +104,27 @@ class BTPTopLevelEnumDeclarationAllOf(object):
         """
 
         self._trailing_comma = trailing_comma
+
+    @property
+    def space_in_empty_list(self):
+        """Gets the space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
+
+
+        :return: The space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
+        :rtype: BTPSpace
+        """
+        return self._space_in_empty_list
+
+    @space_in_empty_list.setter
+    def space_in_empty_list(self, space_in_empty_list):
+        """Sets the space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.
+
+
+        :param space_in_empty_list: The space_in_empty_list of this BTPTopLevelEnumDeclarationAllOf.  # noqa: E501
+        :type: BTPSpace
+        """
+
+        self._space_in_empty_list = space_in_empty_list
 
     @property
     def values(self):
