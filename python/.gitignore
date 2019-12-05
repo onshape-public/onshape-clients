@@ -65,3 +65,5 @@ target/
 
 **/tmp/
 pip-wheel-metadata
+
+openapi-generator/

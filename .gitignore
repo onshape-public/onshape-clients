@@ -2,6 +2,7 @@ openapi-generator-cli.jar
 .idea/
 secrets.sh
 .onshape_client_config.yaml
+openapi-generator
 
 # For NPM
 node_modules
