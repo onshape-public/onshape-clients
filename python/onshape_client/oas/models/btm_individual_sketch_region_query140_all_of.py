@@ -35,15 +35,17 @@ class BTMIndividualSketchRegionQuery140AllOf(object):
     """
     openapi_types = {
         'feature_id': 'str',
-        'filter_inner_loops': 'bool'
+        'filter_inner_loops': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'feature_id': 'featureId',
-        'filter_inner_loops': 'filterInnerLoops'
+        'filter_inner_loops': 'filterInnerLoops',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, feature_id=None, filter_inner_loops=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_id=None, filter_inner_loops=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualSketchRegionQuery140AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMIndividualSketchRegionQuery140AllOf(object):
 
         self._feature_id = None
         self._filter_inner_loops = None
+        self._bt_type = None
         self.discriminator = None
 
         if feature_id is not None:
             self.feature_id = feature_id
         if filter_inner_loops is not None:
             self.filter_inner_loops = filter_inner_loops
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def feature_id(self):
@@ -99,6 +104,27 @@ class BTMIndividualSketchRegionQuery140AllOf(object):
         """
 
         self._filter_inner_loops = filter_inner_loops
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMIndividualSketchRegionQuery140AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMIndividualSketchRegionQuery140AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMIndividualSketchRegionQuery140AllOf.
+
+
+        :param bt_type: The bt_type of this BTMIndividualSketchRegionQuery140AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,15 +35,17 @@ class BTMParameterForeignId146(object):
     """
     openapi_types = {
         'foreign_id': 'str',
-        'foreign_name': 'str'
+        'foreign_name': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'foreign_id': 'foreignId',
-        'foreign_name': 'foreignName'
+        'foreign_name': 'foreignName',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, foreign_id=None, foreign_name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, foreign_id=None, foreign_name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterForeignId146 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMParameterForeignId146(object):
 
         self._foreign_id = None
         self._foreign_name = None
+        self._bt_type = None
         self.discriminator = None
 
         if foreign_id is not None:
             self.foreign_id = foreign_id
         if foreign_name is not None:
             self.foreign_name = foreign_name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def foreign_id(self):
@@ -99,6 +104,27 @@ class BTMParameterForeignId146(object):
         """
 
         self._foreign_name = foreign_name
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterForeignId146.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterForeignId146.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterForeignId146.
+
+
+        :param bt_type: The bt_type of this BTMParameterForeignId146.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

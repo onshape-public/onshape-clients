@@ -34,75 +34,54 @@ class BTThumbnailSizeInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'unique_id': 'str',
         'href': 'str',
-        'render_mode': 'str',
         'media_type': 'str',
+        'unique_id': 'str',
         'view_orientation': 'str',
+        'render_mode': 'str',
         'sheet_name': 'str',
         'size': 'str'
     }
 
     attribute_map = {
-        'unique_id': 'uniqueId',
         'href': 'href',
-        'render_mode': 'renderMode',
         'media_type': 'mediaType',
+        'unique_id': 'uniqueId',
         'view_orientation': 'viewOrientation',
+        'render_mode': 'renderMode',
         'sheet_name': 'sheetName',
         'size': 'size'
     }
 
-    def __init__(self, unique_id=None, href=None, render_mode=None, media_type=None, view_orientation=None, sheet_name=None, size=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, href=None, media_type=None, unique_id=None, view_orientation=None, render_mode=None, sheet_name=None, size=None, local_vars_configuration=None):  # noqa: E501
         """BTThumbnailSizeInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._unique_id = None
         self._href = None
-        self._render_mode = None
         self._media_type = None
+        self._unique_id = None
         self._view_orientation = None
+        self._render_mode = None
         self._sheet_name = None
         self._size = None
         self.discriminator = None
 
-        if unique_id is not None:
-            self.unique_id = unique_id
         if href is not None:
             self.href = href
-        if render_mode is not None:
-            self.render_mode = render_mode
         if media_type is not None:
             self.media_type = media_type
+        if unique_id is not None:
+            self.unique_id = unique_id
         if view_orientation is not None:
             self.view_orientation = view_orientation
+        if render_mode is not None:
+            self.render_mode = render_mode
         if sheet_name is not None:
             self.sheet_name = sheet_name
         if size is not None:
             self.size = size
-
-    @property
-    def unique_id(self):
-        """Gets the unique_id of this BTThumbnailSizeInfo.  # noqa: E501
-
-
-        :return: The unique_id of this BTThumbnailSizeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._unique_id
-
-    @unique_id.setter
-    def unique_id(self, unique_id):
-        """Sets the unique_id of this BTThumbnailSizeInfo.
-
-
-        :param unique_id: The unique_id of this BTThumbnailSizeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._unique_id = unique_id
 
     @property
     def href(self):
@@ -126,27 +105,6 @@ class BTThumbnailSizeInfo(object):
         self._href = href
 
     @property
-    def render_mode(self):
-        """Gets the render_mode of this BTThumbnailSizeInfo.  # noqa: E501
-
-
-        :return: The render_mode of this BTThumbnailSizeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._render_mode
-
-    @render_mode.setter
-    def render_mode(self, render_mode):
-        """Sets the render_mode of this BTThumbnailSizeInfo.
-
-
-        :param render_mode: The render_mode of this BTThumbnailSizeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._render_mode = render_mode
-
-    @property
     def media_type(self):
         """Gets the media_type of this BTThumbnailSizeInfo.  # noqa: E501
 
@@ -168,6 +126,27 @@ class BTThumbnailSizeInfo(object):
         self._media_type = media_type
 
     @property
+    def unique_id(self):
+        """Gets the unique_id of this BTThumbnailSizeInfo.  # noqa: E501
+
+
+        :return: The unique_id of this BTThumbnailSizeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._unique_id
+
+    @unique_id.setter
+    def unique_id(self, unique_id):
+        """Sets the unique_id of this BTThumbnailSizeInfo.
+
+
+        :param unique_id: The unique_id of this BTThumbnailSizeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._unique_id = unique_id
+
+    @property
     def view_orientation(self):
         """Gets the view_orientation of this BTThumbnailSizeInfo.  # noqa: E501
 
@@ -187,6 +166,27 @@ class BTThumbnailSizeInfo(object):
         """
 
         self._view_orientation = view_orientation
+
+    @property
+    def render_mode(self):
+        """Gets the render_mode of this BTThumbnailSizeInfo.  # noqa: E501
+
+
+        :return: The render_mode of this BTThumbnailSizeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._render_mode
+
+    @render_mode.setter
+    def render_mode(self, render_mode):
+        """Sets the render_mode of this BTThumbnailSizeInfo.
+
+
+        :param render_mode: The render_mode of this BTThumbnailSizeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._render_mode = render_mode
 
     @property
     def sheet_name(self):

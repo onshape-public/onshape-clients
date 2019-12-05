@@ -37,17 +37,19 @@ class BTMFeatureQueryWithOccurrence157AllOf(object):
         'feature_id_with_occurrence': 'str',
         'part_studio_mate_connector_query': 'bool',
         'feature_id': 'str',
-        'query_data': 'str'
+        'query_data': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'feature_id_with_occurrence': 'featureIdWithOccurrence',
         'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',
         'feature_id': 'featureId',
-        'query_data': 'queryData'
+        'query_data': 'queryData',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, feature_id_with_occurrence=None, part_studio_mate_connector_query=None, feature_id=None, query_data=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_id_with_occurrence=None, part_studio_mate_connector_query=None, feature_id=None, query_data=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMFeatureQueryWithOccurrence157AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class BTMFeatureQueryWithOccurrence157AllOf(object):
         self._part_studio_mate_connector_query = None
         self._feature_id = None
         self._query_data = None
+        self._bt_type = None
         self.discriminator = None
 
         if feature_id_with_occurrence is not None:
@@ -67,6 +70,8 @@ class BTMFeatureQueryWithOccurrence157AllOf(object):
             self.feature_id = feature_id
         if query_data is not None:
             self.query_data = query_data
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def feature_id_with_occurrence(self):
@@ -151,6 +156,27 @@ class BTMFeatureQueryWithOccurrence157AllOf(object):
         """
 
         self._query_data = query_data
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMFeatureQueryWithOccurrence157AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMFeatureQueryWithOccurrence157AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMFeatureQueryWithOccurrence157AllOf.
+
+
+        :param bt_type: The bt_type of this BTMFeatureQueryWithOccurrence157AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

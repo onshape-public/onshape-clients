@@ -34,60 +34,39 @@ class BTVector3d389(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'y': 'float',
         'z': 'float',
+        'y': 'float',
         'x': 'float',
         'bt_type': 'str'
     }
 
     attribute_map = {
-        'y': 'y',
         'z': 'z',
+        'y': 'y',
         'x': 'x',
         'bt_type': 'btType'
     }
 
-    def __init__(self, y=None, z=None, x=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, z=None, y=None, x=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTVector3d389 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._y = None
         self._z = None
+        self._y = None
         self._x = None
         self._bt_type = None
         self.discriminator = None
 
-        if y is not None:
-            self.y = y
         if z is not None:
             self.z = z
+        if y is not None:
+            self.y = y
         if x is not None:
             self.x = x
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def y(self):
-        """Gets the y of this BTVector3d389.  # noqa: E501
-
-
-        :return: The y of this BTVector3d389.  # noqa: E501
-        :rtype: float
-        """
-        return self._y
-
-    @y.setter
-    def y(self, y):
-        """Sets the y of this BTVector3d389.
-
-
-        :param y: The y of this BTVector3d389.  # noqa: E501
-        :type: float
-        """
-
-        self._y = y
 
     @property
     def z(self):
@@ -109,6 +88,27 @@ class BTVector3d389(object):
         """
 
         self._z = z
+
+    @property
+    def y(self):
+        """Gets the y of this BTVector3d389.  # noqa: E501
+
+
+        :return: The y of this BTVector3d389.  # noqa: E501
+        :rtype: float
+        """
+        return self._y
+
+    @y.setter
+    def y(self, y):
+        """Sets the y of this BTVector3d389.
+
+
+        :param y: The y of this BTVector3d389.  # noqa: E501
+        :type: float
+        """
+
+        self._y = y
 
     @property
     def x(self):

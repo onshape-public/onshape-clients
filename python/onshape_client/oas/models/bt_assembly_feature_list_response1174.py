@@ -36,16 +36,18 @@ class BTAssemblyFeatureListResponse1174(object):
     openapi_types = {
         'features': 'list[BTMAssemblyFeature887]',
         'is_complete': 'bool',
-        'feature_states': 'dict(str, BTFeatureState1688)'
+        'feature_states': 'dict(str, BTFeatureState1688)',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'features': 'features',
         'is_complete': 'isComplete',
-        'feature_states': 'featureStates'
+        'feature_states': 'featureStates',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, features=None, is_complete=None, feature_states=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, features=None, is_complete=None, feature_states=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyFeatureListResponse1174 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTAssemblyFeatureListResponse1174(object):
         self._features = None
         self._is_complete = None
         self._feature_states = None
+        self._bt_type = None
         self.discriminator = None
 
         if features is not None:
@@ -62,6 +65,8 @@ class BTAssemblyFeatureListResponse1174(object):
             self.is_complete = is_complete
         if feature_states is not None:
             self.feature_states = feature_states
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def features(self):
@@ -125,6 +130,27 @@ class BTAssemblyFeatureListResponse1174(object):
         """
 
         self._feature_states = feature_states
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTAssemblyFeatureListResponse1174.  # noqa: E501
+
+
+        :return: The bt_type of this BTAssemblyFeatureListResponse1174.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTAssemblyFeatureListResponse1174.
+
+
+        :param bt_type: The bt_type of this BTAssemblyFeatureListResponse1174.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

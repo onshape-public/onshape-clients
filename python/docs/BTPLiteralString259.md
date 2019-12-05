@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **short_descriptor** | **str** |  | [optional] 
-**text** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
+**text** | **str** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **atomic** | **bool** |  | [optional] 

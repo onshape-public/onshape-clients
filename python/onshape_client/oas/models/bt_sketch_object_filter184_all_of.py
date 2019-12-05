@@ -35,15 +35,17 @@ class BTSketchObjectFilter184AllOf(object):
     """
     openapi_types = {
         'object_type': 'str',
-        'is_sketch_object': 'bool'
+        'is_sketch_object': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'object_type': 'objectType',
-        'is_sketch_object': 'isSketchObject'
+        'is_sketch_object': 'isSketchObject',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, object_type=None, is_sketch_object=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, object_type=None, is_sketch_object=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTSketchObjectFilter184AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTSketchObjectFilter184AllOf(object):
 
         self._object_type = None
         self._is_sketch_object = None
+        self._bt_type = None
         self.discriminator = None
 
         if object_type is not None:
             self.object_type = object_type
         if is_sketch_object is not None:
             self.is_sketch_object = is_sketch_object
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def object_type(self):
@@ -105,6 +110,27 @@ class BTSketchObjectFilter184AllOf(object):
         """
 
         self._is_sketch_object = is_sketch_object
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSketchObjectFilter184AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTSketchObjectFilter184AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSketchObjectFilter184AllOf.
+
+
+        :param bt_type: The bt_type of this BTSketchObjectFilter184AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,24 +34,29 @@ class BTMateConnectorFilter163(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'requires_occurrence': 'bool'
+        'requires_occurrence': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'requires_occurrence': 'requiresOccurrence'
+        'requires_occurrence': 'requiresOccurrence',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, requires_occurrence=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, requires_occurrence=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMateConnectorFilter163 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._requires_occurrence = None
+        self._bt_type = None
         self.discriminator = None
 
         if requires_occurrence is not None:
             self.requires_occurrence = requires_occurrence
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def requires_occurrence(self):
@@ -73,6 +78,27 @@ class BTMateConnectorFilter163(object):
         """
 
         self._requires_occurrence = requires_occurrence
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMateConnectorFilter163.  # noqa: E501
+
+
+        :return: The bt_type of this BTMateConnectorFilter163.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMateConnectorFilter163.
+
+
+        :param bt_type: The bt_type of this BTMateConnectorFilter163.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

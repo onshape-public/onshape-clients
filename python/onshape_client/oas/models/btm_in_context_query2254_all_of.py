@@ -34,24 +34,29 @@ class BTMInContextQuery2254AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'path': 'list[str]'
+        'path': 'list[str]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'path': 'path'
+        'path': 'path',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, path=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, path=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMInContextQuery2254AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._path = None
+        self._bt_type = None
         self.discriminator = None
 
         if path is not None:
             self.path = path
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def path(self):
@@ -73,6 +78,27 @@ class BTMInContextQuery2254AllOf(object):
         """
 
         self._path = path
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMInContextQuery2254AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMInContextQuery2254AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMInContextQuery2254AllOf.
+
+
+        :param bt_type: The bt_type of this BTMInContextQuery2254AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

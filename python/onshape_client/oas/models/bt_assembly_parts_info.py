@@ -35,64 +35,64 @@ class BTAssemblyPartsInfo(object):
     """
     openapi_types = {
         'part_id': 'str',
-        'body_type': 'str',
         'standard_content': 'bool',
-        'document_microversion': 'str',
-        'document_id': 'str',
-        'element_id': 'str',
-        'revision': 'str',
+        'body_type': 'str',
         'configuration': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
+        'revision': 'str',
+        'document_microversion': 'str',
         'full_configuration': 'str',
         'document_version': 'str'
     }
 
     attribute_map = {
         'part_id': 'partId',
-        'body_type': 'bodyType',
         'standard_content': 'standardContent',
-        'document_microversion': 'documentMicroversion',
-        'document_id': 'documentId',
-        'element_id': 'elementId',
-        'revision': 'revision',
+        'body_type': 'bodyType',
         'configuration': 'configuration',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
+        'revision': 'revision',
+        'document_microversion': 'documentMicroversion',
         'full_configuration': 'fullConfiguration',
         'document_version': 'documentVersion'
     }
 
-    def __init__(self, part_id=None, body_type=None, standard_content=None, document_microversion=None, document_id=None, element_id=None, revision=None, configuration=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, part_id=None, standard_content=None, body_type=None, configuration=None, element_id=None, document_id=None, revision=None, document_microversion=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyPartsInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._part_id = None
-        self._body_type = None
         self._standard_content = None
-        self._document_microversion = None
-        self._document_id = None
-        self._element_id = None
-        self._revision = None
+        self._body_type = None
         self._configuration = None
+        self._element_id = None
+        self._document_id = None
+        self._revision = None
+        self._document_microversion = None
         self._full_configuration = None
         self._document_version = None
         self.discriminator = None
 
         if part_id is not None:
             self.part_id = part_id
-        if body_type is not None:
-            self.body_type = body_type
         if standard_content is not None:
             self.standard_content = standard_content
-        if document_microversion is not None:
-            self.document_microversion = document_microversion
-        if document_id is not None:
-            self.document_id = document_id
-        if element_id is not None:
-            self.element_id = element_id
-        if revision is not None:
-            self.revision = revision
+        if body_type is not None:
+            self.body_type = body_type
         if configuration is not None:
             self.configuration = configuration
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if revision is not None:
+            self.revision = revision
+        if document_microversion is not None:
+            self.document_microversion = document_microversion
         if full_configuration is not None:
             self.full_configuration = full_configuration
         if document_version is not None:
@@ -118,6 +118,27 @@ class BTAssemblyPartsInfo(object):
         """
 
         self._part_id = part_id
+
+    @property
+    def standard_content(self):
+        """Gets the standard_content of this BTAssemblyPartsInfo.  # noqa: E501
+
+
+        :return: The standard_content of this BTAssemblyPartsInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._standard_content
+
+    @standard_content.setter
+    def standard_content(self, standard_content):
+        """Sets the standard_content of this BTAssemblyPartsInfo.
+
+
+        :param standard_content: The standard_content of this BTAssemblyPartsInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._standard_content = standard_content
 
     @property
     def body_type(self):
@@ -147,67 +168,25 @@ class BTAssemblyPartsInfo(object):
         self._body_type = body_type
 
     @property
-    def standard_content(self):
-        """Gets the standard_content of this BTAssemblyPartsInfo.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTAssemblyPartsInfo.  # noqa: E501
 
 
-        :return: The standard_content of this BTAssemblyPartsInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._standard_content
-
-    @standard_content.setter
-    def standard_content(self, standard_content):
-        """Sets the standard_content of this BTAssemblyPartsInfo.
-
-
-        :param standard_content: The standard_content of this BTAssemblyPartsInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._standard_content = standard_content
-
-    @property
-    def document_microversion(self):
-        """Gets the document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
-
-
-        :return: The document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
+        :return: The configuration of this BTAssemblyPartsInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document_microversion
+        return self._configuration
 
-    @document_microversion.setter
-    def document_microversion(self, document_microversion):
-        """Sets the document_microversion of this BTAssemblyPartsInfo.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTAssemblyPartsInfo.
 
 
-        :param document_microversion: The document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
+        :param configuration: The configuration of this BTAssemblyPartsInfo.  # noqa: E501
         :type: str
         """
 
-        self._document_microversion = document_microversion
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTAssemblyPartsInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTAssemblyPartsInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAssemblyPartsInfo.
-
-
-        :param document_id: The document_id of this BTAssemblyPartsInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -231,6 +210,27 @@ class BTAssemblyPartsInfo(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTAssemblyPartsInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTAssemblyPartsInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAssemblyPartsInfo.
+
+
+        :param document_id: The document_id of this BTAssemblyPartsInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def revision(self):
         """Gets the revision of this BTAssemblyPartsInfo.  # noqa: E501
 
@@ -252,25 +252,25 @@ class BTAssemblyPartsInfo(object):
         self._revision = revision
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTAssemblyPartsInfo.  # noqa: E501
+    def document_microversion(self):
+        """Gets the document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
 
 
-        :return: The configuration of this BTAssemblyPartsInfo.  # noqa: E501
+        :return: The document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._document_microversion
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTAssemblyPartsInfo.
+    @document_microversion.setter
+    def document_microversion(self, document_microversion):
+        """Sets the document_microversion of this BTAssemblyPartsInfo.
 
 
-        :param configuration: The configuration of this BTAssemblyPartsInfo.  # noqa: E501
+        :param document_microversion: The document_microversion of this BTAssemblyPartsInfo.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._document_microversion = document_microversion
 
     @property
     def full_configuration(self):

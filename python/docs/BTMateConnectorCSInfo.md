@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**gety_axis** | **list[float]** |  | [optional] 
 **getz_axis** | **list[float]** |  | [optional] 
+**gety_axis** | **list[float]** |  | [optional] 
 **getx_axis** | **list[float]** |  | [optional] 
 **origin** | **list[float]** |  | [optional] 
 

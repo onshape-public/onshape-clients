@@ -34,57 +34,60 @@ class BTPModule234(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'deep_imports': 'dict(str, list[BTImport])',
-        'version_number': 'int',
         'is_internal_module': 'bool',
         'imports': 'list[BTPTopLevelImport285]',
+        'version_number': 'int',
+        'deep_imports': 'dict(str, list[BTImport])',
         'path_map': 'dict(str, BTMicroversionId366)',
         'version': 'BTPLiteralNumber258',
         'top_level': 'list[BTPTopLevelNode286]',
         'is_blob': 'bool',
         'path_to_cache': 'BTCacheDataPath191',
-        'may_have_implicit_imports': 'bool'
+        'may_have_implicit_imports': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'deep_imports': 'deepImports',
-        'version_number': 'versionNumber',
         'is_internal_module': 'isInternalModule',
         'imports': 'imports',
+        'version_number': 'versionNumber',
+        'deep_imports': 'deepImports',
         'path_map': 'pathMap',
         'version': 'version',
         'top_level': 'topLevel',
         'is_blob': 'isBlob',
         'path_to_cache': 'pathToCache',
-        'may_have_implicit_imports': 'mayHaveImplicitImports'
+        'may_have_implicit_imports': 'mayHaveImplicitImports',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, deep_imports=None, version_number=None, is_internal_module=None, imports=None, path_map=None, version=None, top_level=None, is_blob=None, path_to_cache=None, may_have_implicit_imports=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_internal_module=None, imports=None, version_number=None, deep_imports=None, path_map=None, version=None, top_level=None, is_blob=None, path_to_cache=None, may_have_implicit_imports=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPModule234 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._deep_imports = None
-        self._version_number = None
         self._is_internal_module = None
         self._imports = None
+        self._version_number = None
+        self._deep_imports = None
         self._path_map = None
         self._version = None
         self._top_level = None
         self._is_blob = None
         self._path_to_cache = None
         self._may_have_implicit_imports = None
+        self._bt_type = None
         self.discriminator = None
 
-        if deep_imports is not None:
-            self.deep_imports = deep_imports
-        if version_number is not None:
-            self.version_number = version_number
         if is_internal_module is not None:
             self.is_internal_module = is_internal_module
         if imports is not None:
             self.imports = imports
+        if version_number is not None:
+            self.version_number = version_number
+        if deep_imports is not None:
+            self.deep_imports = deep_imports
         if path_map is not None:
             self.path_map = path_map
         if version is not None:
@@ -97,48 +100,8 @@ class BTPModule234(object):
             self.path_to_cache = path_to_cache
         if may_have_implicit_imports is not None:
             self.may_have_implicit_imports = may_have_implicit_imports
-
-    @property
-    def deep_imports(self):
-        """Gets the deep_imports of this BTPModule234.  # noqa: E501
-
-
-        :return: The deep_imports of this BTPModule234.  # noqa: E501
-        :rtype: dict(str, list[BTImport])
-        """
-        return self._deep_imports
-
-    @deep_imports.setter
-    def deep_imports(self, deep_imports):
-        """Sets the deep_imports of this BTPModule234.
-
-
-        :param deep_imports: The deep_imports of this BTPModule234.  # noqa: E501
-        :type: dict(str, list[BTImport])
-        """
-
-        self._deep_imports = deep_imports
-
-    @property
-    def version_number(self):
-        """Gets the version_number of this BTPModule234.  # noqa: E501
-
-
-        :return: The version_number of this BTPModule234.  # noqa: E501
-        :rtype: int
-        """
-        return self._version_number
-
-    @version_number.setter
-    def version_number(self, version_number):
-        """Sets the version_number of this BTPModule234.
-
-
-        :param version_number: The version_number of this BTPModule234.  # noqa: E501
-        :type: int
-        """
-
-        self._version_number = version_number
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_internal_module(self):
@@ -181,6 +144,48 @@ class BTPModule234(object):
         """
 
         self._imports = imports
+
+    @property
+    def version_number(self):
+        """Gets the version_number of this BTPModule234.  # noqa: E501
+
+
+        :return: The version_number of this BTPModule234.  # noqa: E501
+        :rtype: int
+        """
+        return self._version_number
+
+    @version_number.setter
+    def version_number(self, version_number):
+        """Sets the version_number of this BTPModule234.
+
+
+        :param version_number: The version_number of this BTPModule234.  # noqa: E501
+        :type: int
+        """
+
+        self._version_number = version_number
+
+    @property
+    def deep_imports(self):
+        """Gets the deep_imports of this BTPModule234.  # noqa: E501
+
+
+        :return: The deep_imports of this BTPModule234.  # noqa: E501
+        :rtype: dict(str, list[BTImport])
+        """
+        return self._deep_imports
+
+    @deep_imports.setter
+    def deep_imports(self, deep_imports):
+        """Sets the deep_imports of this BTPModule234.
+
+
+        :param deep_imports: The deep_imports of this BTPModule234.  # noqa: E501
+        :type: dict(str, list[BTImport])
+        """
+
+        self._deep_imports = deep_imports
 
     @property
     def path_map(self):
@@ -307,6 +312,27 @@ class BTPModule234(object):
         """
 
         self._may_have_implicit_imports = may_have_implicit_imports
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPModule234.  # noqa: E501
+
+
+        :return: The bt_type of this BTPModule234.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPModule234.
+
+
+        :param bt_type: The bt_type of this BTPModule234.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
 **client_id** | **str** |  | [optional] 
-**id** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
+**id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

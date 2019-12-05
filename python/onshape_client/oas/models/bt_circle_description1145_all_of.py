@@ -36,16 +36,18 @@ class BTCircleDescription1145AllOf(object):
     openapi_types = {
         'normal': 'BTVector3d389',
         'radius': 'float',
-        'origin': 'BTVector3d389'
+        'origin': 'BTVector3d389',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'normal': 'normal',
         'radius': 'radius',
-        'origin': 'origin'
+        'origin': 'origin',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, normal=None, radius=None, origin=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, normal=None, radius=None, origin=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTCircleDescription1145AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTCircleDescription1145AllOf(object):
         self._normal = None
         self._radius = None
         self._origin = None
+        self._bt_type = None
         self.discriminator = None
 
         if normal is not None:
@@ -62,6 +65,8 @@ class BTCircleDescription1145AllOf(object):
             self.radius = radius
         if origin is not None:
             self.origin = origin
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def normal(self):
@@ -125,6 +130,27 @@ class BTCircleDescription1145AllOf(object):
         """
 
         self._origin = origin
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTCircleDescription1145AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTCircleDescription1145AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTCircleDescription1145AllOf.
+
+
+        :param bt_type: The bt_type of this BTCircleDescription1145AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

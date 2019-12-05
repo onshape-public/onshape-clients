@@ -37,8 +37,8 @@ class BTMConfigurationParameter819(object):
         'parameter_type': 'str',
         'generated_parameter_id': 'BTTreeNode20',
         'valid': 'bool',
-        'parameter_name': 'str',
         'parameter_id': 'str',
+        'parameter_name': 'str',
         'import_microversion': 'str',
         'node_id': 'str',
         'bt_type': 'str'
@@ -48,8 +48,8 @@ class BTMConfigurationParameter819(object):
         'parameter_type': 'parameterType',
         'generated_parameter_id': 'generatedParameterId',
         'valid': 'valid',
-        'parameter_name': 'parameterName',
         'parameter_id': 'parameterId',
+        'parameter_name': 'parameterName',
         'import_microversion': 'importMicroversion',
         'node_id': 'nodeId',
         'bt_type': 'btType'
@@ -62,7 +62,7 @@ class BTMConfigurationParameter819(object):
         'BTMConfigurationParameterEnum-105': 'BTMConfigurationParameterEnum105'
     }
 
-    def __init__(self, parameter_type=None, generated_parameter_id=None, valid=None, parameter_name=None, parameter_id=None, import_microversion=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, parameter_type=None, generated_parameter_id=None, valid=None, parameter_id=None, parameter_name=None, import_microversion=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMConfigurationParameter819 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -71,12 +71,12 @@ class BTMConfigurationParameter819(object):
         self._parameter_type = None
         self._generated_parameter_id = None
         self._valid = None
-        self._parameter_name = None
         self._parameter_id = None
+        self._parameter_name = None
         self._import_microversion = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if parameter_type is not None:
             self.parameter_type = parameter_type
@@ -84,10 +84,10 @@ class BTMConfigurationParameter819(object):
             self.generated_parameter_id = generated_parameter_id
         if valid is not None:
             self.valid = valid
-        if parameter_name is not None:
-            self.parameter_name = parameter_name
         if parameter_id is not None:
             self.parameter_id = parameter_id
+        if parameter_name is not None:
+            self.parameter_name = parameter_name
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if node_id is not None:
@@ -165,27 +165,6 @@ class BTMConfigurationParameter819(object):
         self._valid = valid
 
     @property
-    def parameter_name(self):
-        """Gets the parameter_name of this BTMConfigurationParameter819.  # noqa: E501
-
-
-        :return: The parameter_name of this BTMConfigurationParameter819.  # noqa: E501
-        :rtype: str
-        """
-        return self._parameter_name
-
-    @parameter_name.setter
-    def parameter_name(self, parameter_name):
-        """Sets the parameter_name of this BTMConfigurationParameter819.
-
-
-        :param parameter_name: The parameter_name of this BTMConfigurationParameter819.  # noqa: E501
-        :type: str
-        """
-
-        self._parameter_name = parameter_name
-
-    @property
     def parameter_id(self):
         """Gets the parameter_id of this BTMConfigurationParameter819.  # noqa: E501
 
@@ -205,6 +184,27 @@ class BTMConfigurationParameter819(object):
         """
 
         self._parameter_id = parameter_id
+
+    @property
+    def parameter_name(self):
+        """Gets the parameter_name of this BTMConfigurationParameter819.  # noqa: E501
+
+
+        :return: The parameter_name of this BTMConfigurationParameter819.  # noqa: E501
+        :rtype: str
+        """
+        return self._parameter_name
+
+    @parameter_name.setter
+    def parameter_name(self, parameter_name):
+        """Sets the parameter_name of this BTMConfigurationParameter819.
+
+
+        :param parameter_name: The parameter_name of this BTMConfigurationParameter819.  # noqa: E501
+        :type: str
+        """
+
+        self._parameter_name = parameter_name
 
     @property
     def import_microversion(self):

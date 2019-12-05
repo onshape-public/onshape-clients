@@ -79,7 +79,7 @@ class BTMSketchGeomEntity5(object):
         self._import_microversion = None
         self._entity_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if control_box_ids is not None:
             self.control_box_ids = control_box_ids

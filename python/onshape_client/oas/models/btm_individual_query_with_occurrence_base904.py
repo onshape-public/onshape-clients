@@ -37,8 +37,8 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         'path': 'list[str]',
         'deterministic_ids': 'list[str]',
         'deterministic_id_list': 'BTMIndividualQueryBase139',
-        'query': 'BTMIndividualQueryBase139',
         'query_string': 'str',
+        'query': 'BTMIndividualQueryBase139',
         'import_microversion': 'str',
         'node_id': 'str',
         'bt_type': 'str'
@@ -48,8 +48,8 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         'path': 'path',
         'deterministic_ids': 'deterministicIds',
         'deterministic_id_list': 'deterministicIdList',
-        'query': 'query',
         'query_string': 'queryString',
+        'query': 'query',
         'import_microversion': 'importMicroversion',
         'node_id': 'nodeId',
         'bt_type': 'btType'
@@ -61,7 +61,7 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         'BTMIndividualQueryWithOccurrence-811': 'BTMIndividualQueryWithOccurrence811'
     }
 
-    def __init__(self, path=None, deterministic_ids=None, deterministic_id_list=None, query=None, query_string=None, import_microversion=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, path=None, deterministic_ids=None, deterministic_id_list=None, query_string=None, query=None, import_microversion=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualQueryWithOccurrenceBase904 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,12 +70,12 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         self._path = None
         self._deterministic_ids = None
         self._deterministic_id_list = None
-        self._query = None
         self._query_string = None
+        self._query = None
         self._import_microversion = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if path is not None:
             self.path = path
@@ -83,10 +83,10 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
             self.deterministic_ids = deterministic_ids
         if deterministic_id_list is not None:
             self.deterministic_id_list = deterministic_id_list
-        if query is not None:
-            self.query = query
         if query_string is not None:
             self.query_string = query_string
+        if query is not None:
+            self.query = query
         if import_microversion is not None:
             self.import_microversion = import_microversion
         if node_id is not None:
@@ -158,27 +158,6 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         self._deterministic_id_list = deterministic_id_list
 
     @property
-    def query(self):
-        """Gets the query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
-
-
-        :return: The query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
-        :rtype: BTMIndividualQueryBase139
-        """
-        return self._query
-
-    @query.setter
-    def query(self, query):
-        """Sets the query of this BTMIndividualQueryWithOccurrenceBase904.
-
-
-        :param query: The query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
-        :type: BTMIndividualQueryBase139
-        """
-
-        self._query = query
-
-    @property
     def query_string(self):
         """Gets the query_string of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
 
@@ -198,6 +177,27 @@ class BTMIndividualQueryWithOccurrenceBase904(object):
         """
 
         self._query_string = query_string
+
+    @property
+    def query(self):
+        """Gets the query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
+
+
+        :return: The query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
+        :rtype: BTMIndividualQueryBase139
+        """
+        return self._query
+
+    @query.setter
+    def query(self, query):
+        """Sets the query of this BTMIndividualQueryWithOccurrenceBase904.
+
+
+        :param query: The query of this BTMIndividualQueryWithOccurrenceBase904.  # noqa: E501
+        :type: BTMIndividualQueryBase139
+        """
+
+        self._query = query
 
     @property
     def import_microversion(self):

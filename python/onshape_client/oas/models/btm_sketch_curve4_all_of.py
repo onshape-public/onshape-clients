@@ -36,16 +36,18 @@ class BTMSketchCurve4AllOf(object):
     openapi_types = {
         'geometry': 'BTCurveGeometry114',
         'center_id': 'str',
-        'internal_ids': 'list[str]'
+        'internal_ids': 'list[str]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'geometry': 'geometry',
         'center_id': 'centerId',
-        'internal_ids': 'internalIds'
+        'internal_ids': 'internalIds',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, geometry=None, center_id=None, internal_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, geometry=None, center_id=None, internal_ids=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchCurve4AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMSketchCurve4AllOf(object):
         self._geometry = None
         self._center_id = None
         self._internal_ids = None
+        self._bt_type = None
         self.discriminator = None
 
         if geometry is not None:
@@ -62,6 +65,8 @@ class BTMSketchCurve4AllOf(object):
             self.center_id = center_id
         if internal_ids is not None:
             self.internal_ids = internal_ids
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def geometry(self):
@@ -125,6 +130,27 @@ class BTMSketchCurve4AllOf(object):
         """
 
         self._internal_ids = internal_ids
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchCurve4AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchCurve4AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchCurve4AllOf.
+
+
+        :param bt_type: The bt_type of this BTMSketchCurve4AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

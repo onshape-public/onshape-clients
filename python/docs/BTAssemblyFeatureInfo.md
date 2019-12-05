@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**suppressed** | **bool** |  | [optional] 
 **feature_type** | **str** |  | [optional] 
+**suppressed** | **bool** |  | [optional] 
 **feature_data** | [**BTAssemblyFeatureDataInfo**](BTAssemblyFeatureDataInfo.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 

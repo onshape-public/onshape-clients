@@ -35,75 +35,77 @@ class BTPModuleId235AllOf(object):
     """
     openapi_types = {
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
-        'element_import': 'bool',
-        'imported_element_id': 'str',
-        'dbimport_string': 'str',
+        'external_document_with_version': 'BTDocumentWithVersionId',
+        'external_import': 'bool',
         'potentially_valid': 'bool',
         'version_and_microversion': 'str',
-        'external_import': 'bool',
         'imported_document_id': 'str',
         'legacy': 'bool',
+        'dbimport_string': 'str',
+        'imported_element_id': 'str',
+        'element_import': 'bool',
         'path_potentially_valid': 'bool',
         'version_potentially_valid': 'bool',
         'valid_legacy_version': 'bool',
         'path_version': 'str',
         'imported_version_id': 'str',
-        'external_document_with_version': 'BTDocumentWithVersionId',
         'microversion': 'str',
         'space_before_path': 'BTPSpace10',
         'space_after_path': 'BTPSpace10',
         'space_before_version': 'BTPSpace10',
         'space_after_version': 'BTPSpace10',
         'version': 'BTPLiteralString259',
-        'path': 'BTPLiteralString259'
+        'path': 'BTPLiteralString259',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
-        'element_import': 'elementImport',
-        'imported_element_id': 'importedElementId',
-        'dbimport_string': 'dbimportString',
+        'external_document_with_version': 'externalDocumentWithVersion',
+        'external_import': 'externalImport',
         'potentially_valid': 'potentiallyValid',
         'version_and_microversion': 'versionAndMicroversion',
-        'external_import': 'externalImport',
         'imported_document_id': 'importedDocumentId',
         'legacy': 'legacy',
+        'dbimport_string': 'dbimportString',
+        'imported_element_id': 'importedElementId',
+        'element_import': 'elementImport',
         'path_potentially_valid': 'pathPotentiallyValid',
         'version_potentially_valid': 'versionPotentiallyValid',
         'valid_legacy_version': 'validLegacyVersion',
         'path_version': 'pathVersion',
         'imported_version_id': 'importedVersionId',
-        'external_document_with_version': 'externalDocumentWithVersion',
         'microversion': 'microversion',
         'space_before_path': 'spaceBeforePath',
         'space_after_path': 'spaceAfterPath',
         'space_before_version': 'spaceBeforeVersion',
         'space_after_version': 'spaceAfterVersion',
         'version': 'version',
-        'path': 'path'
+        'path': 'path',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, external_document_with_version_and_element_id=None, element_import=None, imported_element_id=None, dbimport_string=None, potentially_valid=None, version_and_microversion=None, external_import=None, imported_document_id=None, legacy=None, path_potentially_valid=None, version_potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, external_document_with_version=None, microversion=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, version=None, path=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, external_document_with_version_and_element_id=None, external_document_with_version=None, external_import=None, potentially_valid=None, version_and_microversion=None, imported_document_id=None, legacy=None, dbimport_string=None, imported_element_id=None, element_import=None, path_potentially_valid=None, version_potentially_valid=None, valid_legacy_version=None, path_version=None, imported_version_id=None, microversion=None, space_before_path=None, space_after_path=None, space_before_version=None, space_after_version=None, version=None, path=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPModuleId235AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._external_document_with_version_and_element_id = None
-        self._element_import = None
-        self._imported_element_id = None
-        self._dbimport_string = None
+        self._external_document_with_version = None
+        self._external_import = None
         self._potentially_valid = None
         self._version_and_microversion = None
-        self._external_import = None
         self._imported_document_id = None
         self._legacy = None
+        self._dbimport_string = None
+        self._imported_element_id = None
+        self._element_import = None
         self._path_potentially_valid = None
         self._version_potentially_valid = None
         self._valid_legacy_version = None
         self._path_version = None
         self._imported_version_id = None
-        self._external_document_with_version = None
         self._microversion = None
         self._space_before_path = None
         self._space_after_path = None
@@ -111,26 +113,29 @@ class BTPModuleId235AllOf(object):
         self._space_after_version = None
         self._version = None
         self._path = None
+        self._bt_type = None
         self.discriminator = None
 
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
-        if element_import is not None:
-            self.element_import = element_import
-        if imported_element_id is not None:
-            self.imported_element_id = imported_element_id
-        if dbimport_string is not None:
-            self.dbimport_string = dbimport_string
+        if external_document_with_version is not None:
+            self.external_document_with_version = external_document_with_version
+        if external_import is not None:
+            self.external_import = external_import
         if potentially_valid is not None:
             self.potentially_valid = potentially_valid
         if version_and_microversion is not None:
             self.version_and_microversion = version_and_microversion
-        if external_import is not None:
-            self.external_import = external_import
         if imported_document_id is not None:
             self.imported_document_id = imported_document_id
         if legacy is not None:
             self.legacy = legacy
+        if dbimport_string is not None:
+            self.dbimport_string = dbimport_string
+        if imported_element_id is not None:
+            self.imported_element_id = imported_element_id
+        if element_import is not None:
+            self.element_import = element_import
         if path_potentially_valid is not None:
             self.path_potentially_valid = path_potentially_valid
         if version_potentially_valid is not None:
@@ -141,8 +146,6 @@ class BTPModuleId235AllOf(object):
             self.path_version = path_version
         if imported_version_id is not None:
             self.imported_version_id = imported_version_id
-        if external_document_with_version is not None:
-            self.external_document_with_version = external_document_with_version
         if microversion is not None:
             self.microversion = microversion
         if space_before_path is not None:
@@ -157,6 +160,8 @@ class BTPModuleId235AllOf(object):
             self.version = version
         if path is not None:
             self.path = path
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def external_document_with_version_and_element_id(self):
@@ -180,67 +185,46 @@ class BTPModuleId235AllOf(object):
         self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
 
     @property
-    def element_import(self):
-        """Gets the element_import of this BTPModuleId235AllOf.  # noqa: E501
+    def external_document_with_version(self):
+        """Gets the external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
 
 
-        :return: The element_import of this BTPModuleId235AllOf.  # noqa: E501
+        :return: The external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
+        :rtype: BTDocumentWithVersionId
+        """
+        return self._external_document_with_version
+
+    @external_document_with_version.setter
+    def external_document_with_version(self, external_document_with_version):
+        """Sets the external_document_with_version of this BTPModuleId235AllOf.
+
+
+        :param external_document_with_version: The external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
+        :type: BTDocumentWithVersionId
+        """
+
+        self._external_document_with_version = external_document_with_version
+
+    @property
+    def external_import(self):
+        """Gets the external_import of this BTPModuleId235AllOf.  # noqa: E501
+
+
+        :return: The external_import of this BTPModuleId235AllOf.  # noqa: E501
         :rtype: bool
         """
-        return self._element_import
+        return self._external_import
 
-    @element_import.setter
-    def element_import(self, element_import):
-        """Sets the element_import of this BTPModuleId235AllOf.
+    @external_import.setter
+    def external_import(self, external_import):
+        """Sets the external_import of this BTPModuleId235AllOf.
 
 
-        :param element_import: The element_import of this BTPModuleId235AllOf.  # noqa: E501
+        :param external_import: The external_import of this BTPModuleId235AllOf.  # noqa: E501
         :type: bool
         """
 
-        self._element_import = element_import
-
-    @property
-    def imported_element_id(self):
-        """Gets the imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
-
-
-        :return: The imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._imported_element_id
-
-    @imported_element_id.setter
-    def imported_element_id(self, imported_element_id):
-        """Sets the imported_element_id of this BTPModuleId235AllOf.
-
-
-        :param imported_element_id: The imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._imported_element_id = imported_element_id
-
-    @property
-    def dbimport_string(self):
-        """Gets the dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
-
-
-        :return: The dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._dbimport_string
-
-    @dbimport_string.setter
-    def dbimport_string(self, dbimport_string):
-        """Sets the dbimport_string of this BTPModuleId235AllOf.
-
-
-        :param dbimport_string: The dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._dbimport_string = dbimport_string
+        self._external_import = external_import
 
     @property
     def potentially_valid(self):
@@ -285,27 +269,6 @@ class BTPModuleId235AllOf(object):
         self._version_and_microversion = version_and_microversion
 
     @property
-    def external_import(self):
-        """Gets the external_import of this BTPModuleId235AllOf.  # noqa: E501
-
-
-        :return: The external_import of this BTPModuleId235AllOf.  # noqa: E501
-        :rtype: bool
-        """
-        return self._external_import
-
-    @external_import.setter
-    def external_import(self, external_import):
-        """Sets the external_import of this BTPModuleId235AllOf.
-
-
-        :param external_import: The external_import of this BTPModuleId235AllOf.  # noqa: E501
-        :type: bool
-        """
-
-        self._external_import = external_import
-
-    @property
     def imported_document_id(self):
         """Gets the imported_document_id of this BTPModuleId235AllOf.  # noqa: E501
 
@@ -346,6 +309,69 @@ class BTPModuleId235AllOf(object):
         """
 
         self._legacy = legacy
+
+    @property
+    def dbimport_string(self):
+        """Gets the dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
+
+
+        :return: The dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._dbimport_string
+
+    @dbimport_string.setter
+    def dbimport_string(self, dbimport_string):
+        """Sets the dbimport_string of this BTPModuleId235AllOf.
+
+
+        :param dbimport_string: The dbimport_string of this BTPModuleId235AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._dbimport_string = dbimport_string
+
+    @property
+    def imported_element_id(self):
+        """Gets the imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
+
+
+        :return: The imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._imported_element_id
+
+    @imported_element_id.setter
+    def imported_element_id(self, imported_element_id):
+        """Sets the imported_element_id of this BTPModuleId235AllOf.
+
+
+        :param imported_element_id: The imported_element_id of this BTPModuleId235AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._imported_element_id = imported_element_id
+
+    @property
+    def element_import(self):
+        """Gets the element_import of this BTPModuleId235AllOf.  # noqa: E501
+
+
+        :return: The element_import of this BTPModuleId235AllOf.  # noqa: E501
+        :rtype: bool
+        """
+        return self._element_import
+
+    @element_import.setter
+    def element_import(self, element_import):
+        """Sets the element_import of this BTPModuleId235AllOf.
+
+
+        :param element_import: The element_import of this BTPModuleId235AllOf.  # noqa: E501
+        :type: bool
+        """
+
+        self._element_import = element_import
 
     @property
     def path_potentially_valid(self):
@@ -451,27 +477,6 @@ class BTPModuleId235AllOf(object):
         """
 
         self._imported_version_id = imported_version_id
-
-    @property
-    def external_document_with_version(self):
-        """Gets the external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
-
-
-        :return: The external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
-        :rtype: BTDocumentWithVersionId
-        """
-        return self._external_document_with_version
-
-    @external_document_with_version.setter
-    def external_document_with_version(self, external_document_with_version):
-        """Sets the external_document_with_version of this BTPModuleId235AllOf.
-
-
-        :param external_document_with_version: The external_document_with_version of this BTPModuleId235AllOf.  # noqa: E501
-        :type: BTDocumentWithVersionId
-        """
-
-        self._external_document_with_version = external_document_with_version
 
     @property
     def microversion(self):
@@ -619,6 +624,27 @@ class BTPModuleId235AllOf(object):
         """
 
         self._path = path
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPModuleId235AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPModuleId235AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPModuleId235AllOf.
+
+
+        :param bt_type: The bt_type of this BTPModuleId235AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

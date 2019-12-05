@@ -36,16 +36,18 @@ class BTMParameterDerived864AllOf(object):
     openapi_types = {
         'module_id': 'BTPModuleId235',
         'namespace': 'str',
-        'imports': 'list[BTMImport136]'
+        'imports': 'list[BTMImport136]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'module_id': 'moduleId',
         'namespace': 'namespace',
-        'imports': 'imports'
+        'imports': 'imports',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, module_id=None, namespace=None, imports=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, module_id=None, namespace=None, imports=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterDerived864AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMParameterDerived864AllOf(object):
         self._module_id = None
         self._namespace = None
         self._imports = None
+        self._bt_type = None
         self.discriminator = None
 
         if module_id is not None:
@@ -62,6 +65,8 @@ class BTMParameterDerived864AllOf(object):
             self.namespace = namespace
         if imports is not None:
             self.imports = imports
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def module_id(self):
@@ -125,6 +130,27 @@ class BTMParameterDerived864AllOf(object):
         """
 
         self._imports = imports
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterDerived864AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterDerived864AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterDerived864AllOf.
+
+
+        :param bt_type: The bt_type of this BTMParameterDerived864AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

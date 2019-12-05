@@ -34,24 +34,29 @@ class BTPStatementLoopWhile280(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'condition': 'BTPExpression9'
+        'condition': 'BTPExpression9',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'condition': 'condition'
+        'condition': 'condition',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, condition=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, condition=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementLoopWhile280 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._condition = None
+        self._bt_type = None
         self.discriminator = None
 
         if condition is not None:
             self.condition = condition
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def condition(self):
@@ -73,6 +78,27 @@ class BTPStatementLoopWhile280(object):
         """
 
         self._condition = condition
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementLoopWhile280.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementLoopWhile280.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementLoopWhile280.
+
+
+        :param bt_type: The bt_type of this BTPStatementLoopWhile280.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

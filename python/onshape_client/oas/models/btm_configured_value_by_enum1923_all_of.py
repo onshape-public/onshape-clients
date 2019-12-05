@@ -35,33 +35,38 @@ class BTMConfiguredValueByEnum1923AllOf(object):
     """
     openapi_types = {
         'namespace': 'str',
+        'enum_value': 'str',
         'enum_name': 'str',
-        'enum_value': 'str'
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'namespace': 'namespace',
+        'enum_value': 'enumValue',
         'enum_name': 'enumName',
-        'enum_value': 'enumValue'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, namespace=None, enum_name=None, enum_value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, namespace=None, enum_value=None, enum_name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMConfiguredValueByEnum1923AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._namespace = None
-        self._enum_name = None
         self._enum_value = None
+        self._enum_name = None
+        self._bt_type = None
         self.discriminator = None
 
         if namespace is not None:
             self.namespace = namespace
-        if enum_name is not None:
-            self.enum_name = enum_name
         if enum_value is not None:
             self.enum_value = enum_value
+        if enum_name is not None:
+            self.enum_name = enum_name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def namespace(self):
@@ -85,6 +90,27 @@ class BTMConfiguredValueByEnum1923AllOf(object):
         self._namespace = namespace
 
     @property
+    def enum_value(self):
+        """Gets the enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+
+
+        :return: The enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._enum_value
+
+    @enum_value.setter
+    def enum_value(self, enum_value):
+        """Sets the enum_value of this BTMConfiguredValueByEnum1923AllOf.
+
+
+        :param enum_value: The enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._enum_value = enum_value
+
+    @property
     def enum_name(self):
         """Gets the enum_name of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
 
@@ -106,25 +132,25 @@ class BTMConfiguredValueByEnum1923AllOf(object):
         self._enum_name = enum_name
 
     @property
-    def enum_value(self):
-        """Gets the enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
 
 
-        :return: The enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+        :return: The bt_type of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
         :rtype: str
         """
-        return self._enum_value
+        return self._bt_type
 
-    @enum_value.setter
-    def enum_value(self, enum_value):
-        """Sets the enum_value of this BTMConfiguredValueByEnum1923AllOf.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMConfiguredValueByEnum1923AllOf.
 
 
-        :param enum_value: The enum_value of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
+        :param bt_type: The bt_type of this BTMConfiguredValueByEnum1923AllOf.  # noqa: E501
         :type: str
         """
 
-        self._enum_value = enum_value
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

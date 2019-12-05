@@ -34,92 +34,92 @@ class BTRootDiffInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'target_version_id': 'str',
         'target_microversion_id': 'str',
-        'source_version_id': 'str',
-        'source_microversion_id': 'str',
         'source_workspace_id': 'str',
         'source_configuration': 'str',
         'target_configuration': 'str',
+        'source_microversion_id': 'str',
+        'source_version_id': 'str',
         'target_workspace_id': 'str',
+        'target_version_id': 'str',
         'changes': 'dict(str, BTDiffInfo)',
         'source_id': 'str',
-        'entity_type': 'str',
+        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'geometry_change_messages': 'list[str]',
         'source_value': 'str',
         'target_value': 'str',
         'target_id': 'str',
-        'type': 'str',
-        'collection_changes': 'dict(str, list[BTDiffInfo])'
+        'entity_type': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'target_version_id': 'targetVersionId',
         'target_microversion_id': 'targetMicroversionId',
-        'source_version_id': 'sourceVersionId',
-        'source_microversion_id': 'sourceMicroversionId',
         'source_workspace_id': 'sourceWorkspaceId',
         'source_configuration': 'sourceConfiguration',
         'target_configuration': 'targetConfiguration',
+        'source_microversion_id': 'sourceMicroversionId',
+        'source_version_id': 'sourceVersionId',
         'target_workspace_id': 'targetWorkspaceId',
+        'target_version_id': 'targetVersionId',
         'changes': 'changes',
         'source_id': 'sourceId',
-        'entity_type': 'entityType',
+        'collection_changes': 'collectionChanges',
         'geometry_change_messages': 'geometryChangeMessages',
         'source_value': 'sourceValue',
         'target_value': 'targetValue',
         'target_id': 'targetId',
-        'type': 'type',
-        'collection_changes': 'collectionChanges'
+        'entity_type': 'entityType',
+        'type': 'type'
     }
 
-    def __init__(self, target_version_id=None, target_microversion_id=None, source_version_id=None, source_microversion_id=None, source_workspace_id=None, source_configuration=None, target_configuration=None, target_workspace_id=None, changes=None, source_id=None, entity_type=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, type=None, collection_changes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, target_microversion_id=None, source_workspace_id=None, source_configuration=None, target_configuration=None, source_microversion_id=None, source_version_id=None, target_workspace_id=None, target_version_id=None, changes=None, source_id=None, collection_changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None, local_vars_configuration=None):  # noqa: E501
         """BTRootDiffInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._target_version_id = None
         self._target_microversion_id = None
-        self._source_version_id = None
-        self._source_microversion_id = None
         self._source_workspace_id = None
         self._source_configuration = None
         self._target_configuration = None
+        self._source_microversion_id = None
+        self._source_version_id = None
         self._target_workspace_id = None
+        self._target_version_id = None
         self._changes = None
         self._source_id = None
-        self._entity_type = None
+        self._collection_changes = None
         self._geometry_change_messages = None
         self._source_value = None
         self._target_value = None
         self._target_id = None
+        self._entity_type = None
         self._type = None
-        self._collection_changes = None
         self.discriminator = None
 
-        if target_version_id is not None:
-            self.target_version_id = target_version_id
         if target_microversion_id is not None:
             self.target_microversion_id = target_microversion_id
-        if source_version_id is not None:
-            self.source_version_id = source_version_id
-        if source_microversion_id is not None:
-            self.source_microversion_id = source_microversion_id
         if source_workspace_id is not None:
             self.source_workspace_id = source_workspace_id
         if source_configuration is not None:
             self.source_configuration = source_configuration
         if target_configuration is not None:
             self.target_configuration = target_configuration
+        if source_microversion_id is not None:
+            self.source_microversion_id = source_microversion_id
+        if source_version_id is not None:
+            self.source_version_id = source_version_id
         if target_workspace_id is not None:
             self.target_workspace_id = target_workspace_id
+        if target_version_id is not None:
+            self.target_version_id = target_version_id
         if changes is not None:
             self.changes = changes
         if source_id is not None:
             self.source_id = source_id
-        if entity_type is not None:
-            self.entity_type = entity_type
+        if collection_changes is not None:
+            self.collection_changes = collection_changes
         if geometry_change_messages is not None:
             self.geometry_change_messages = geometry_change_messages
         if source_value is not None:
@@ -128,31 +128,10 @@ class BTRootDiffInfo(object):
             self.target_value = target_value
         if target_id is not None:
             self.target_id = target_id
+        if entity_type is not None:
+            self.entity_type = entity_type
         if type is not None:
             self.type = type
-        if collection_changes is not None:
-            self.collection_changes = collection_changes
-
-    @property
-    def target_version_id(self):
-        """Gets the target_version_id of this BTRootDiffInfo.  # noqa: E501
-
-
-        :return: The target_version_id of this BTRootDiffInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_version_id
-
-    @target_version_id.setter
-    def target_version_id(self, target_version_id):
-        """Sets the target_version_id of this BTRootDiffInfo.
-
-
-        :param target_version_id: The target_version_id of this BTRootDiffInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._target_version_id = target_version_id
 
     @property
     def target_microversion_id(self):
@@ -174,48 +153,6 @@ class BTRootDiffInfo(object):
         """
 
         self._target_microversion_id = target_microversion_id
-
-    @property
-    def source_version_id(self):
-        """Gets the source_version_id of this BTRootDiffInfo.  # noqa: E501
-
-
-        :return: The source_version_id of this BTRootDiffInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_version_id
-
-    @source_version_id.setter
-    def source_version_id(self, source_version_id):
-        """Sets the source_version_id of this BTRootDiffInfo.
-
-
-        :param source_version_id: The source_version_id of this BTRootDiffInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._source_version_id = source_version_id
-
-    @property
-    def source_microversion_id(self):
-        """Gets the source_microversion_id of this BTRootDiffInfo.  # noqa: E501
-
-
-        :return: The source_microversion_id of this BTRootDiffInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_microversion_id
-
-    @source_microversion_id.setter
-    def source_microversion_id(self, source_microversion_id):
-        """Sets the source_microversion_id of this BTRootDiffInfo.
-
-
-        :param source_microversion_id: The source_microversion_id of this BTRootDiffInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._source_microversion_id = source_microversion_id
 
     @property
     def source_workspace_id(self):
@@ -281,6 +218,48 @@ class BTRootDiffInfo(object):
         self._target_configuration = target_configuration
 
     @property
+    def source_microversion_id(self):
+        """Gets the source_microversion_id of this BTRootDiffInfo.  # noqa: E501
+
+
+        :return: The source_microversion_id of this BTRootDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_microversion_id
+
+    @source_microversion_id.setter
+    def source_microversion_id(self, source_microversion_id):
+        """Sets the source_microversion_id of this BTRootDiffInfo.
+
+
+        :param source_microversion_id: The source_microversion_id of this BTRootDiffInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._source_microversion_id = source_microversion_id
+
+    @property
+    def source_version_id(self):
+        """Gets the source_version_id of this BTRootDiffInfo.  # noqa: E501
+
+
+        :return: The source_version_id of this BTRootDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_version_id
+
+    @source_version_id.setter
+    def source_version_id(self, source_version_id):
+        """Sets the source_version_id of this BTRootDiffInfo.
+
+
+        :param source_version_id: The source_version_id of this BTRootDiffInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._source_version_id = source_version_id
+
+    @property
     def target_workspace_id(self):
         """Gets the target_workspace_id of this BTRootDiffInfo.  # noqa: E501
 
@@ -300,6 +279,27 @@ class BTRootDiffInfo(object):
         """
 
         self._target_workspace_id = target_workspace_id
+
+    @property
+    def target_version_id(self):
+        """Gets the target_version_id of this BTRootDiffInfo.  # noqa: E501
+
+
+        :return: The target_version_id of this BTRootDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_version_id
+
+    @target_version_id.setter
+    def target_version_id(self, target_version_id):
+        """Sets the target_version_id of this BTRootDiffInfo.
+
+
+        :param target_version_id: The target_version_id of this BTRootDiffInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._target_version_id = target_version_id
 
     @property
     def changes(self):
@@ -344,31 +344,25 @@ class BTRootDiffInfo(object):
         self._source_id = source_id
 
     @property
-    def entity_type(self):
-        """Gets the entity_type of this BTRootDiffInfo.  # noqa: E501
+    def collection_changes(self):
+        """Gets the collection_changes of this BTRootDiffInfo.  # noqa: E501
 
 
-        :return: The entity_type of this BTRootDiffInfo.  # noqa: E501
-        :rtype: str
+        :return: The collection_changes of this BTRootDiffInfo.  # noqa: E501
+        :rtype: dict(str, list[BTDiffInfo])
         """
-        return self._entity_type
+        return self._collection_changes
 
-    @entity_type.setter
-    def entity_type(self, entity_type):
-        """Sets the entity_type of this BTRootDiffInfo.
+    @collection_changes.setter
+    def collection_changes(self, collection_changes):
+        """Sets the collection_changes of this BTRootDiffInfo.
 
 
-        :param entity_type: The entity_type of this BTRootDiffInfo.  # noqa: E501
-        :type: str
+        :param collection_changes: The collection_changes of this BTRootDiffInfo.  # noqa: E501
+        :type: dict(str, list[BTDiffInfo])
         """
-        allowed_values = ["PARTS", "SKETCHES", "POINTS", "MATE_CONNECTORS", "PLANES", "CURVES", "SURFACES"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and entity_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `entity_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(entity_type, allowed_values)
-            )
 
-        self._entity_type = entity_type
+        self._collection_changes = collection_changes
 
     @property
     def geometry_change_messages(self):
@@ -455,6 +449,33 @@ class BTRootDiffInfo(object):
         self._target_id = target_id
 
     @property
+    def entity_type(self):
+        """Gets the entity_type of this BTRootDiffInfo.  # noqa: E501
+
+
+        :return: The entity_type of this BTRootDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._entity_type
+
+    @entity_type.setter
+    def entity_type(self, entity_type):
+        """Sets the entity_type of this BTRootDiffInfo.
+
+
+        :param entity_type: The entity_type of this BTRootDiffInfo.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["PARTS", "SKETCHES", "POINTS", "MATE_CONNECTORS", "PLANES", "CURVES", "SURFACES"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and entity_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `entity_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(entity_type, allowed_values)
+            )
+
+        self._entity_type = entity_type
+
+    @property
     def type(self):
         """Gets the type of this BTRootDiffInfo.  # noqa: E501
 
@@ -480,27 +501,6 @@ class BTRootDiffInfo(object):
             )
 
         self._type = type
-
-    @property
-    def collection_changes(self):
-        """Gets the collection_changes of this BTRootDiffInfo.  # noqa: E501
-
-
-        :return: The collection_changes of this BTRootDiffInfo.  # noqa: E501
-        :rtype: dict(str, list[BTDiffInfo])
-        """
-        return self._collection_changes
-
-    @collection_changes.setter
-    def collection_changes(self, collection_changes):
-        """Sets the collection_changes of this BTRootDiffInfo.
-
-
-        :param collection_changes: The collection_changes of this BTRootDiffInfo.  # noqa: E501
-        :type: dict(str, list[BTDiffInfo])
-        """
-
-        self._collection_changes = collection_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

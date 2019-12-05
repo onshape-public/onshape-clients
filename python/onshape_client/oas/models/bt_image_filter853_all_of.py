@@ -34,24 +34,29 @@ class BTImageFilter853AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_image': 'bool'
+        'is_image': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_image': 'isImage'
+        'is_image': 'isImage',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_image=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_image=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTImageFilter853AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_image = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_image is not None:
             self.is_image = is_image
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_image(self):
@@ -73,6 +78,27 @@ class BTImageFilter853AllOf(object):
         """
 
         self._is_image = is_image
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTImageFilter853AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTImageFilter853AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTImageFilter853AllOf.
+
+
+        :param bt_type: The bt_type of this BTImageFilter853AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

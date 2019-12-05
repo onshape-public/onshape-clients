@@ -40,7 +40,8 @@ class BTPTopLevelNode286AllOf(object):
         'deprecated_explanation': 'str',
         'for_export': 'bool',
         'space_after_export': 'BTPSpace10',
-        'annotation': 'BTPAnnotation231'
+        'annotation': 'BTPAnnotation231',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class BTPTopLevelNode286AllOf(object):
         'deprecated_explanation': 'deprecatedExplanation',
         'for_export': 'forExport',
         'space_after_export': 'spaceAfterExport',
-        'annotation': 'annotation'
+        'annotation': 'annotation',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, deprecated=None, symbol_name=None, arguments_to_document=None, deprecated_explanation=None, for_export=None, space_after_export=None, annotation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, deprecated=None, symbol_name=None, arguments_to_document=None, deprecated_explanation=None, for_export=None, space_after_export=None, annotation=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelNode286AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class BTPTopLevelNode286AllOf(object):
         self._for_export = None
         self._space_after_export = None
         self._annotation = None
+        self._bt_type = None
         self.discriminator = None
 
         if deprecated is not None:
@@ -82,6 +85,8 @@ class BTPTopLevelNode286AllOf(object):
             self.space_after_export = space_after_export
         if annotation is not None:
             self.annotation = annotation
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def deprecated(self):
@@ -229,6 +234,27 @@ class BTPTopLevelNode286AllOf(object):
         """
 
         self._annotation = annotation
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelNode286AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelNode286AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelNode286AllOf.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelNode286AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

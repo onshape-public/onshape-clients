@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**start_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
+**end_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **mid_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **quarter_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **start_vector** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **end_vector** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
-**start_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
-**end_point** | [**BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **length** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

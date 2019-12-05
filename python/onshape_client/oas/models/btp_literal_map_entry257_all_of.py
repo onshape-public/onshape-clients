@@ -34,29 +34,55 @@ class BTPLiteralMapEntry257AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'key': 'BTPPropertyAccessor23',
         'value': 'BTPExpression9',
-        'key': 'BTPPropertyAccessor23'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'key': 'key',
         'value': 'value',
-        'key': 'key'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, value=None, key=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, key=None, value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPLiteralMapEntry257AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._value = None
         self._key = None
+        self._value = None
+        self._bt_type = None
         self.discriminator = None
 
-        if value is not None:
-            self.value = value
         if key is not None:
             self.key = key
+        if value is not None:
+            self.value = value
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def key(self):
+        """Gets the key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+
+
+        :return: The key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+        :rtype: BTPPropertyAccessor23
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this BTPLiteralMapEntry257AllOf.
+
+
+        :param key: The key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+        :type: BTPPropertyAccessor23
+        """
+
+        self._key = key
 
     @property
     def value(self):
@@ -80,25 +106,25 @@ class BTPLiteralMapEntry257AllOf(object):
         self._value = value
 
     @property
-    def key(self):
-        """Gets the key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTPLiteralMapEntry257AllOf.  # noqa: E501
 
 
-        :return: The key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
-        :rtype: BTPPropertyAccessor23
+        :return: The bt_type of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+        :rtype: str
         """
-        return self._key
+        return self._bt_type
 
-    @key.setter
-    def key(self, key):
-        """Sets the key of this BTPLiteralMapEntry257AllOf.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPLiteralMapEntry257AllOf.
 
 
-        :param key: The key of this BTPLiteralMapEntry257AllOf.  # noqa: E501
-        :type: BTPPropertyAccessor23
+        :param bt_type: The bt_type of this BTPLiteralMapEntry257AllOf.  # noqa: E501
+        :type: str
         """
 
-        self._key = key
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

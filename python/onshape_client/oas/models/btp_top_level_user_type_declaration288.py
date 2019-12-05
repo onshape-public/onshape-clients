@@ -34,24 +34,29 @@ class BTPTopLevelUserTypeDeclaration288(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'typecheck': 'BTPName261'
+        'typecheck': 'BTPName261',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'typecheck': 'typecheck'
+        'typecheck': 'typecheck',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, typecheck=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, typecheck=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelUserTypeDeclaration288 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._typecheck = None
+        self._bt_type = None
         self.discriminator = None
 
         if typecheck is not None:
             self.typecheck = typecheck
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def typecheck(self):
@@ -73,6 +78,27 @@ class BTPTopLevelUserTypeDeclaration288(object):
         """
 
         self._typecheck = typecheck
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelUserTypeDeclaration288.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelUserTypeDeclaration288.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelUserTypeDeclaration288.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelUserTypeDeclaration288.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

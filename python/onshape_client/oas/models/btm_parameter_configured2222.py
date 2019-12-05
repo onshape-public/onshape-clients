@@ -37,17 +37,19 @@ class BTMParameterConfigured2222(object):
         'values_field_index': 'int',
         'configuration_parameter_id_field_index': 'int',
         'configuration_parameter_id': 'str',
-        'values': 'list[BTMConfiguredValue1341]'
+        'values': 'list[BTMConfiguredValue1341]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'values_field_index': 'valuesFieldIndex',
         'configuration_parameter_id_field_index': 'configurationParameterIdFieldIndex',
         'configuration_parameter_id': 'configurationParameterId',
-        'values': 'values'
+        'values': 'values',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, values_field_index=None, configuration_parameter_id_field_index=None, configuration_parameter_id=None, values=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, values_field_index=None, configuration_parameter_id_field_index=None, configuration_parameter_id=None, values=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterConfigured2222 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class BTMParameterConfigured2222(object):
         self._configuration_parameter_id_field_index = None
         self._configuration_parameter_id = None
         self._values = None
+        self._bt_type = None
         self.discriminator = None
 
         if values_field_index is not None:
@@ -67,6 +70,8 @@ class BTMParameterConfigured2222(object):
             self.configuration_parameter_id = configuration_parameter_id
         if values is not None:
             self.values = values
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def values_field_index(self):
@@ -151,6 +156,27 @@ class BTMParameterConfigured2222(object):
         """
 
         self._values = values
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterConfigured2222.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterConfigured2222.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterConfigured2222.
+
+
+        :param bt_type: The bt_type of this BTMParameterConfigured2222.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

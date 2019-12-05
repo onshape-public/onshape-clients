@@ -34,55 +34,34 @@ class BTPurchaseUserParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_id': 'str',
         'consumed_quantity': 'int',
-        'purchase_id': 'str'
+        'purchase_id': 'str',
+        'user_id': 'str'
     }
 
     attribute_map = {
-        'user_id': 'userId',
         'consumed_quantity': 'consumedQuantity',
-        'purchase_id': 'purchaseId'
+        'purchase_id': 'purchaseId',
+        'user_id': 'userId'
     }
 
-    def __init__(self, user_id=None, consumed_quantity=None, purchase_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, consumed_quantity=None, purchase_id=None, user_id=None, local_vars_configuration=None):  # noqa: E501
         """BTPurchaseUserParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._user_id = None
         self._consumed_quantity = None
         self._purchase_id = None
+        self._user_id = None
         self.discriminator = None
 
-        if user_id is not None:
-            self.user_id = user_id
         if consumed_quantity is not None:
             self.consumed_quantity = consumed_quantity
         if purchase_id is not None:
             self.purchase_id = purchase_id
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this BTPurchaseUserParams.  # noqa: E501
-
-
-        :return: The user_id of this BTPurchaseUserParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this BTPurchaseUserParams.
-
-
-        :param user_id: The user_id of this BTPurchaseUserParams.  # noqa: E501
-        :type: str
-        """
-
-        self._user_id = user_id
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def consumed_quantity(self):
@@ -125,6 +104,27 @@ class BTPurchaseUserParams(object):
         """
 
         self._purchase_id = purchase_id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this BTPurchaseUserParams.  # noqa: E501
+
+
+        :return: The user_id of this BTPurchaseUserParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this BTPurchaseUserParams.
+
+
+        :param user_id: The user_id of this BTPurchaseUserParams.  # noqa: E501
+        :type: str
+        """
+
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

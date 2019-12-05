@@ -37,17 +37,19 @@ class BTParameterSpecEnum171(object):
         'enum_name': 'str',
         'option_names': 'list[str]',
         'options': 'list[str]',
-        'namespace': 'str'
+        'namespace': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'enum_name': 'enumName',
         'option_names': 'optionNames',
         'options': 'options',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, enum_name=None, option_names=None, options=None, namespace=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, enum_name=None, option_names=None, options=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecEnum171 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class BTParameterSpecEnum171(object):
         self._option_names = None
         self._options = None
         self._namespace = None
+        self._bt_type = None
         self.discriminator = None
 
         if enum_name is not None:
@@ -67,6 +70,8 @@ class BTParameterSpecEnum171(object):
             self.options = options
         if namespace is not None:
             self.namespace = namespace
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def enum_name(self):
@@ -151,6 +156,27 @@ class BTParameterSpecEnum171(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecEnum171.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecEnum171.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecEnum171.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecEnum171.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

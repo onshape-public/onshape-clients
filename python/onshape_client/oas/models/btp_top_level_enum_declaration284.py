@@ -35,38 +35,43 @@ class BTPTopLevelEnumDeclaration284(object):
     """
     openapi_types = {
         'annotations': 'list[BTPAnnotation231]',
-        'space_in_empty_list': 'BTPSpace10',
         'trailing_comma': 'bool',
-        'values': 'list[BTPIdentifier8]'
+        'space_in_empty_list': 'BTPSpace10',
+        'values': 'list[BTPIdentifier8]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'annotations': 'annotations',
-        'space_in_empty_list': 'spaceInEmptyList',
         'trailing_comma': 'trailingComma',
-        'values': 'values'
+        'space_in_empty_list': 'spaceInEmptyList',
+        'values': 'values',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, annotations=None, space_in_empty_list=None, trailing_comma=None, values=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, annotations=None, trailing_comma=None, space_in_empty_list=None, values=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelEnumDeclaration284 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._annotations = None
-        self._space_in_empty_list = None
         self._trailing_comma = None
+        self._space_in_empty_list = None
         self._values = None
+        self._bt_type = None
         self.discriminator = None
 
         if annotations is not None:
             self.annotations = annotations
-        if space_in_empty_list is not None:
-            self.space_in_empty_list = space_in_empty_list
         if trailing_comma is not None:
             self.trailing_comma = trailing_comma
+        if space_in_empty_list is not None:
+            self.space_in_empty_list = space_in_empty_list
         if values is not None:
             self.values = values
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def annotations(self):
@@ -90,27 +95,6 @@ class BTPTopLevelEnumDeclaration284(object):
         self._annotations = annotations
 
     @property
-    def space_in_empty_list(self):
-        """Gets the space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
-
-
-        :return: The space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
-        :rtype: BTPSpace10
-        """
-        return self._space_in_empty_list
-
-    @space_in_empty_list.setter
-    def space_in_empty_list(self, space_in_empty_list):
-        """Sets the space_in_empty_list of this BTPTopLevelEnumDeclaration284.
-
-
-        :param space_in_empty_list: The space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
-        :type: BTPSpace10
-        """
-
-        self._space_in_empty_list = space_in_empty_list
-
-    @property
     def trailing_comma(self):
         """Gets the trailing_comma of this BTPTopLevelEnumDeclaration284.  # noqa: E501
 
@@ -132,6 +116,27 @@ class BTPTopLevelEnumDeclaration284(object):
         self._trailing_comma = trailing_comma
 
     @property
+    def space_in_empty_list(self):
+        """Gets the space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+
+
+        :return: The space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_in_empty_list
+
+    @space_in_empty_list.setter
+    def space_in_empty_list(self, space_in_empty_list):
+        """Sets the space_in_empty_list of this BTPTopLevelEnumDeclaration284.
+
+
+        :param space_in_empty_list: The space_in_empty_list of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_in_empty_list = space_in_empty_list
+
+    @property
     def values(self):
         """Gets the values of this BTPTopLevelEnumDeclaration284.  # noqa: E501
 
@@ -151,6 +156,27 @@ class BTPTopLevelEnumDeclaration284(object):
         """
 
         self._values = values
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelEnumDeclaration284.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelEnumDeclaration284.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

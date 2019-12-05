@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_localized_strings** | **int** |  | [optional] 
+**display_name** | **str** |  | [optional] 
 **entries** | [**list[BTParameterLookupTableEntry1667]**](BTParameterLookupTableEntry1667.md) |  | [optional] 
 **default_index** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**display_name** | **str** |  | [optional] 
 **localized_name** | **str** |  | [optional] 
 **localizable_name** | **str** |  | [optional] 
 **strings_to_localize** | **list[str]** |  | [optional] 

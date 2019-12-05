@@ -36,16 +36,18 @@ class BTPExpressionBuiltinCall239(object):
     openapi_types = {
         'arguments': 'list[BTPExpression9]',
         'space_in_empty_list': 'BTPSpace10',
-        'name': 'BTPBuiltinIdentifier233'
+        'name': 'BTPBuiltinIdentifier233',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'arguments': 'arguments',
         'space_in_empty_list': 'spaceInEmptyList',
-        'name': 'name'
+        'name': 'name',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, arguments=None, space_in_empty_list=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, arguments=None, space_in_empty_list=None, name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionBuiltinCall239 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPExpressionBuiltinCall239(object):
         self._arguments = None
         self._space_in_empty_list = None
         self._name = None
+        self._bt_type = None
         self.discriminator = None
 
         if arguments is not None:
@@ -62,6 +65,8 @@ class BTPExpressionBuiltinCall239(object):
             self.space_in_empty_list = space_in_empty_list
         if name is not None:
             self.name = name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def arguments(self):
@@ -125,6 +130,27 @@ class BTPExpressionBuiltinCall239(object):
         """
 
         self._name = name
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionBuiltinCall239.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionBuiltinCall239.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionBuiltinCall239.
+
+
+        :param bt_type: The bt_type of this BTPExpressionBuiltinCall239.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

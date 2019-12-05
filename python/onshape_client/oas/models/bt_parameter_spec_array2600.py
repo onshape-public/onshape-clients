@@ -36,16 +36,18 @@ class BTParameterSpecArray2600(object):
     openapi_types = {
         'item_name': 'str',
         'item_label_template': 'str',
-        'driven_query': 'str'
+        'driven_query': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'item_name': 'itemName',
         'item_label_template': 'itemLabelTemplate',
-        'driven_query': 'drivenQuery'
+        'driven_query': 'drivenQuery',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, item_name=None, item_label_template=None, driven_query=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, item_name=None, item_label_template=None, driven_query=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecArray2600 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTParameterSpecArray2600(object):
         self._item_name = None
         self._item_label_template = None
         self._driven_query = None
+        self._bt_type = None
         self.discriminator = None
 
         if item_name is not None:
@@ -62,6 +65,8 @@ class BTParameterSpecArray2600(object):
             self.item_label_template = item_label_template
         if driven_query is not None:
             self.driven_query = driven_query
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def item_name(self):
@@ -125,6 +130,27 @@ class BTParameterSpecArray2600(object):
         """
 
         self._driven_query = driven_query
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecArray2600.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecArray2600.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecArray2600.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecArray2600.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

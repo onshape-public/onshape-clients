@@ -36,18 +36,18 @@ class BTLocationInfo226(object):
     openapi_types = {
         'from_node': 'BTPNode7',
         'document': 'str',
-        'top_level': 'str',
         'element_microversion': 'str',
+        'top_level': 'str',
         'module_ids': 'BTDocumentVersionElementIds1897',
         'language_version': 'int',
         'column': 'int',
         'end_line': 'int',
         'end_column': 'int',
         'line': 'int',
-        'character': 'int',
         'parse_node_id': 'str',
         'end_character': 'int',
         'parse_node_id_raw': 'BTObjectId',
+        'character': 'int',
         'version': 'str',
         'node_id': 'str',
         'bt_type': 'str'
@@ -56,24 +56,24 @@ class BTLocationInfo226(object):
     attribute_map = {
         'from_node': 'fromNode',
         'document': 'document',
-        'top_level': 'topLevel',
         'element_microversion': 'elementMicroversion',
+        'top_level': 'topLevel',
         'module_ids': 'moduleIds',
         'language_version': 'languageVersion',
         'column': 'column',
         'end_line': 'endLine',
         'end_column': 'endColumn',
         'line': 'line',
-        'character': 'character',
         'parse_node_id': 'parseNodeId',
         'end_character': 'endCharacter',
         'parse_node_id_raw': 'parseNodeIdRaw',
+        'character': 'character',
         'version': 'version',
         'node_id': 'nodeId',
         'bt_type': 'btType'
     }
 
-    def __init__(self, from_node=None, document=None, top_level=None, element_microversion=None, module_ids=None, language_version=None, column=None, end_line=None, end_column=None, line=None, character=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, version=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, from_node=None, document=None, element_microversion=None, top_level=None, module_ids=None, language_version=None, column=None, end_line=None, end_column=None, line=None, parse_node_id=None, end_character=None, parse_node_id_raw=None, character=None, version=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTLocationInfo226 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -81,18 +81,18 @@ class BTLocationInfo226(object):
 
         self._from_node = None
         self._document = None
-        self._top_level = None
         self._element_microversion = None
+        self._top_level = None
         self._module_ids = None
         self._language_version = None
         self._column = None
         self._end_line = None
         self._end_column = None
         self._line = None
-        self._character = None
         self._parse_node_id = None
         self._end_character = None
         self._parse_node_id_raw = None
+        self._character = None
         self._version = None
         self._node_id = None
         self._bt_type = None
@@ -102,10 +102,10 @@ class BTLocationInfo226(object):
             self.from_node = from_node
         if document is not None:
             self.document = document
-        if top_level is not None:
-            self.top_level = top_level
         if element_microversion is not None:
             self.element_microversion = element_microversion
+        if top_level is not None:
+            self.top_level = top_level
         if module_ids is not None:
             self.module_ids = module_ids
         if language_version is not None:
@@ -118,14 +118,14 @@ class BTLocationInfo226(object):
             self.end_column = end_column
         if line is not None:
             self.line = line
-        if character is not None:
-            self.character = character
         if parse_node_id is not None:
             self.parse_node_id = parse_node_id
         if end_character is not None:
             self.end_character = end_character
         if parse_node_id_raw is not None:
             self.parse_node_id_raw = parse_node_id_raw
+        if character is not None:
+            self.character = character
         if version is not None:
             self.version = version
         if node_id is not None:
@@ -176,27 +176,6 @@ class BTLocationInfo226(object):
         self._document = document
 
     @property
-    def top_level(self):
-        """Gets the top_level of this BTLocationInfo226.  # noqa: E501
-
-
-        :return: The top_level of this BTLocationInfo226.  # noqa: E501
-        :rtype: str
-        """
-        return self._top_level
-
-    @top_level.setter
-    def top_level(self, top_level):
-        """Sets the top_level of this BTLocationInfo226.
-
-
-        :param top_level: The top_level of this BTLocationInfo226.  # noqa: E501
-        :type: str
-        """
-
-        self._top_level = top_level
-
-    @property
     def element_microversion(self):
         """Gets the element_microversion of this BTLocationInfo226.  # noqa: E501
 
@@ -216,6 +195,27 @@ class BTLocationInfo226(object):
         """
 
         self._element_microversion = element_microversion
+
+    @property
+    def top_level(self):
+        """Gets the top_level of this BTLocationInfo226.  # noqa: E501
+
+
+        :return: The top_level of this BTLocationInfo226.  # noqa: E501
+        :rtype: str
+        """
+        return self._top_level
+
+    @top_level.setter
+    def top_level(self, top_level):
+        """Sets the top_level of this BTLocationInfo226.
+
+
+        :param top_level: The top_level of this BTLocationInfo226.  # noqa: E501
+        :type: str
+        """
+
+        self._top_level = top_level
 
     @property
     def module_ids(self):
@@ -344,27 +344,6 @@ class BTLocationInfo226(object):
         self._line = line
 
     @property
-    def character(self):
-        """Gets the character of this BTLocationInfo226.  # noqa: E501
-
-
-        :return: The character of this BTLocationInfo226.  # noqa: E501
-        :rtype: int
-        """
-        return self._character
-
-    @character.setter
-    def character(self, character):
-        """Sets the character of this BTLocationInfo226.
-
-
-        :param character: The character of this BTLocationInfo226.  # noqa: E501
-        :type: int
-        """
-
-        self._character = character
-
-    @property
     def parse_node_id(self):
         """Gets the parse_node_id of this BTLocationInfo226.  # noqa: E501
 
@@ -426,6 +405,27 @@ class BTLocationInfo226(object):
         """
 
         self._parse_node_id_raw = parse_node_id_raw
+
+    @property
+    def character(self):
+        """Gets the character of this BTLocationInfo226.  # noqa: E501
+
+
+        :return: The character of this BTLocationInfo226.  # noqa: E501
+        :rtype: int
+        """
+        return self._character
+
+    @character.setter
+    def character(self, character):
+        """Sets the character of this BTLocationInfo226.
+
+
+        :param character: The character of this BTLocationInfo226.  # noqa: E501
+        :type: int
+        """
+
+        self._character = character
 
     @property
     def version(self):

@@ -699,12 +699,12 @@ class ElementsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_translator_formats1(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+    def get_element_translator_formats(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
         """Get Element Translator Formats  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_element_translator_formats1(did, wv, wvid, eid, async_req=True)
+        >>> thread = api.get_element_translator_formats(did, wv, wvid, eid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -726,14 +726,14 @@ class ElementsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_element_translator_formats1_with_http_info(did, wv, wvid, eid, **kwargs)  # noqa: E501
+        return self.get_element_translator_formats_with_http_info(did, wv, wvid, eid, **kwargs)  # noqa: E501
 
-    def get_element_translator_formats1_with_http_info(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+    def get_element_translator_formats_with_http_info(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
         """Get Element Translator Formats  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_element_translator_formats1_with_http_info(did, wv, wvid, eid, async_req=True)
+        >>> thread = api.get_element_translator_formats_with_http_info(did, wv, wvid, eid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -769,26 +769,26 @@ class ElementsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_element_translator_formats1" % key
+                    " to method get_element_translator_formats" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'did' is set
         if self.api_client.client_side_validation and ('did' not in local_var_params or  # noqa: E501
                                                         local_var_params['did'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `did` when calling `get_element_translator_formats1`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `did` when calling `get_element_translator_formats`")  # noqa: E501
         # verify the required parameter 'wv' is set
         if self.api_client.client_side_validation and ('wv' not in local_var_params or  # noqa: E501
                                                         local_var_params['wv'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `wv` when calling `get_element_translator_formats1`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `wv` when calling `get_element_translator_formats`")  # noqa: E501
         # verify the required parameter 'wvid' is set
         if self.api_client.client_side_validation and ('wvid' not in local_var_params or  # noqa: E501
                                                         local_var_params['wvid'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `wvid` when calling `get_element_translator_formats1`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `wvid` when calling `get_element_translator_formats`")  # noqa: E501
         # verify the required parameter 'eid' is set
         if self.api_client.client_side_validation and ('eid' not in local_var_params or  # noqa: E501
                                                         local_var_params['eid'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `eid` when calling `get_element_translator_formats1`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `eid` when calling `get_element_translator_formats`")  # noqa: E501
 
         collection_formats = {}
 

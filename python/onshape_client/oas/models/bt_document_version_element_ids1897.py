@@ -34,60 +34,39 @@ class BTDocumentVersionElementIds1897(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_id': 'str',
         'element_id': 'str',
+        'document_id': 'str',
         'version_id': 'str',
         'bt_type': 'str'
     }
 
     attribute_map = {
-        'document_id': 'documentId',
         'element_id': 'elementId',
+        'document_id': 'documentId',
         'version_id': 'versionId',
         'bt_type': 'btType'
     }
 
-    def __init__(self, document_id=None, element_id=None, version_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, document_id=None, version_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTDocumentVersionElementIds1897 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._document_id = None
         self._element_id = None
+        self._document_id = None
         self._version_id = None
         self._bt_type = None
         self.discriminator = None
 
-        if document_id is not None:
-            self.document_id = document_id
         if element_id is not None:
             self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
         if version_id is not None:
             self.version_id = version_id
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
-
-
-        :return: The document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTDocumentVersionElementIds1897.
-
-
-        :param document_id: The document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     @property
     def element_id(self):
@@ -109,6 +88,27 @@ class BTDocumentVersionElementIds1897(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
+
+
+        :return: The document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTDocumentVersionElementIds1897.
+
+
+        :param document_id: The document_id of this BTDocumentVersionElementIds1897.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def version_id(self):

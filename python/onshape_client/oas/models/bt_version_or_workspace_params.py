@@ -34,66 +34,58 @@ class BTVersionOrWorkspaceParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'microversion_id': 'str',
-        'version_id': 'str',
         'workspace_id': 'str',
         'document_id': 'str',
-        'client_interaction_mode': 'str',
-        'name': 'str',
-        'description': 'str',
+        'microversion_id': 'str',
         'read_only': 'bool',
         'is_release': 'bool',
         'from_history': 'bool',
-        'purpose': 'int'
+        'purpose': 'int',
+        'client_interaction_mode': 'str',
+        'version_id': 'str',
+        'name': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'microversion_id': 'microversionId',
-        'version_id': 'versionId',
         'workspace_id': 'workspaceId',
         'document_id': 'documentId',
-        'client_interaction_mode': 'clientInteractionMode',
-        'name': 'name',
-        'description': 'description',
+        'microversion_id': 'microversionId',
         'read_only': 'readOnly',
         'is_release': 'isRelease',
         'from_history': 'fromHistory',
-        'purpose': 'purpose'
+        'purpose': 'purpose',
+        'client_interaction_mode': 'clientInteractionMode',
+        'version_id': 'versionId',
+        'name': 'name',
+        'description': 'description'
     }
 
-    def __init__(self, microversion_id=None, version_id=None, workspace_id=None, document_id=None, client_interaction_mode=None, name=None, description=None, read_only=None, is_release=None, from_history=None, purpose=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, workspace_id=None, document_id=None, microversion_id=None, read_only=None, is_release=None, from_history=None, purpose=None, client_interaction_mode=None, version_id=None, name=None, description=None, local_vars_configuration=None):  # noqa: E501
         """BTVersionOrWorkspaceParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._microversion_id = None
-        self._version_id = None
         self._workspace_id = None
         self._document_id = None
-        self._client_interaction_mode = None
-        self._name = None
-        self._description = None
+        self._microversion_id = None
         self._read_only = None
         self._is_release = None
         self._from_history = None
         self._purpose = None
+        self._client_interaction_mode = None
+        self._version_id = None
+        self._name = None
+        self._description = None
         self.discriminator = None
 
-        if microversion_id is not None:
-            self.microversion_id = microversion_id
-        if version_id is not None:
-            self.version_id = version_id
         if workspace_id is not None:
             self.workspace_id = workspace_id
         if document_id is not None:
             self.document_id = document_id
-        if client_interaction_mode is not None:
-            self.client_interaction_mode = client_interaction_mode
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
+        if microversion_id is not None:
+            self.microversion_id = microversion_id
         if read_only is not None:
             self.read_only = read_only
         if is_release is not None:
@@ -102,48 +94,14 @@ class BTVersionOrWorkspaceParams(object):
             self.from_history = from_history
         if purpose is not None:
             self.purpose = purpose
-
-    @property
-    def microversion_id(self):
-        """Gets the microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._microversion_id
-
-    @microversion_id.setter
-    def microversion_id(self, microversion_id):
-        """Sets the microversion_id of this BTVersionOrWorkspaceParams.
-
-
-        :param microversion_id: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._microversion_id = microversion_id
-
-    @property
-    def version_id(self):
-        """Gets the version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._version_id
-
-    @version_id.setter
-    def version_id(self, version_id):
-        """Sets the version_id of this BTVersionOrWorkspaceParams.
-
-
-        :param version_id: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._version_id = version_id
+        if client_interaction_mode is not None:
+            self.client_interaction_mode = client_interaction_mode
+        if version_id is not None:
+            self.version_id = version_id
+        if name is not None:
+            self.name = name
+        if description is not None:
+            self.description = description
 
     @property
     def workspace_id(self):
@@ -188,67 +146,25 @@ class BTVersionOrWorkspaceParams(object):
         self._document_id = document_id
 
     @property
-    def client_interaction_mode(self):
-        """Gets the client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+    def microversion_id(self):
+        """Gets the microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
 
 
-        :return: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :return: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
         :rtype: str
         """
-        return self._client_interaction_mode
+        return self._microversion_id
 
-    @client_interaction_mode.setter
-    def client_interaction_mode(self, client_interaction_mode):
-        """Sets the client_interaction_mode of this BTVersionOrWorkspaceParams.
+    @microversion_id.setter
+    def microversion_id(self, microversion_id):
+        """Sets the microversion_id of this BTVersionOrWorkspaceParams.
 
 
-        :param client_interaction_mode: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :param microversion_id: The microversion_id of this BTVersionOrWorkspaceParams.  # noqa: E501
         :type: str
         """
 
-        self._client_interaction_mode = client_interaction_mode
-
-    @property
-    def name(self):
-        """Gets the name of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The name of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BTVersionOrWorkspaceParams.
-
-
-        :param name: The name of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this BTVersionOrWorkspaceParams.  # noqa: E501
-
-
-        :return: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTVersionOrWorkspaceParams.
-
-
-        :param description: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
+        self._microversion_id = microversion_id
 
     @property
     def read_only(self):
@@ -333,6 +249,90 @@ class BTVersionOrWorkspaceParams(object):
         """
 
         self._purpose = purpose
+
+    @property
+    def client_interaction_mode(self):
+        """Gets the client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_interaction_mode
+
+    @client_interaction_mode.setter
+    def client_interaction_mode(self, client_interaction_mode):
+        """Sets the client_interaction_mode of this BTVersionOrWorkspaceParams.
+
+
+        :param client_interaction_mode: The client_interaction_mode of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._client_interaction_mode = client_interaction_mode
+
+    @property
+    def version_id(self):
+        """Gets the version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._version_id
+
+    @version_id.setter
+    def version_id(self, version_id):
+        """Sets the version_id of this BTVersionOrWorkspaceParams.
+
+
+        :param version_id: The version_id of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._version_id = version_id
+
+    @property
+    def name(self):
+        """Gets the name of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The name of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BTVersionOrWorkspaceParams.
+
+
+        :param name: The name of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this BTVersionOrWorkspaceParams.  # noqa: E501
+
+
+        :return: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTVersionOrWorkspaceParams.
+
+
+        :param description: The description of this BTVersionOrWorkspaceParams.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

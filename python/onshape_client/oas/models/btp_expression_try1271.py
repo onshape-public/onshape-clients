@@ -34,39 +34,65 @@ class BTPExpressionTry1271(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'expression': 'BTPExpression9',
         'space_after_try': 'BTPSpace10',
-        'silent': 'bool',
         'space_after_silent': 'BTPSpace10',
-        'expression': 'BTPExpression9'
+        'silent': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'expression': 'expression',
         'space_after_try': 'spaceAfterTry',
-        'silent': 'silent',
         'space_after_silent': 'spaceAfterSilent',
-        'expression': 'expression'
+        'silent': 'silent',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_after_try=None, silent=None, space_after_silent=None, expression=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, expression=None, space_after_try=None, space_after_silent=None, silent=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionTry1271 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._space_after_try = None
-        self._silent = None
-        self._space_after_silent = None
         self._expression = None
+        self._space_after_try = None
+        self._space_after_silent = None
+        self._silent = None
+        self._bt_type = None
         self.discriminator = None
 
-        if space_after_try is not None:
-            self.space_after_try = space_after_try
-        if silent is not None:
-            self.silent = silent
-        if space_after_silent is not None:
-            self.space_after_silent = space_after_silent
         if expression is not None:
             self.expression = expression
+        if space_after_try is not None:
+            self.space_after_try = space_after_try
+        if space_after_silent is not None:
+            self.space_after_silent = space_after_silent
+        if silent is not None:
+            self.silent = silent
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def expression(self):
+        """Gets the expression of this BTPExpressionTry1271.  # noqa: E501
+
+
+        :return: The expression of this BTPExpressionTry1271.  # noqa: E501
+        :rtype: BTPExpression9
+        """
+        return self._expression
+
+    @expression.setter
+    def expression(self, expression):
+        """Sets the expression of this BTPExpressionTry1271.
+
+
+        :param expression: The expression of this BTPExpressionTry1271.  # noqa: E501
+        :type: BTPExpression9
+        """
+
+        self._expression = expression
 
     @property
     def space_after_try(self):
@@ -90,27 +116,6 @@ class BTPExpressionTry1271(object):
         self._space_after_try = space_after_try
 
     @property
-    def silent(self):
-        """Gets the silent of this BTPExpressionTry1271.  # noqa: E501
-
-
-        :return: The silent of this BTPExpressionTry1271.  # noqa: E501
-        :rtype: bool
-        """
-        return self._silent
-
-    @silent.setter
-    def silent(self, silent):
-        """Sets the silent of this BTPExpressionTry1271.
-
-
-        :param silent: The silent of this BTPExpressionTry1271.  # noqa: E501
-        :type: bool
-        """
-
-        self._silent = silent
-
-    @property
     def space_after_silent(self):
         """Gets the space_after_silent of this BTPExpressionTry1271.  # noqa: E501
 
@@ -132,25 +137,46 @@ class BTPExpressionTry1271(object):
         self._space_after_silent = space_after_silent
 
     @property
-    def expression(self):
-        """Gets the expression of this BTPExpressionTry1271.  # noqa: E501
+    def silent(self):
+        """Gets the silent of this BTPExpressionTry1271.  # noqa: E501
 
 
-        :return: The expression of this BTPExpressionTry1271.  # noqa: E501
-        :rtype: BTPExpression9
+        :return: The silent of this BTPExpressionTry1271.  # noqa: E501
+        :rtype: bool
         """
-        return self._expression
+        return self._silent
 
-    @expression.setter
-    def expression(self, expression):
-        """Sets the expression of this BTPExpressionTry1271.
+    @silent.setter
+    def silent(self, silent):
+        """Sets the silent of this BTPExpressionTry1271.
 
 
-        :param expression: The expression of this BTPExpressionTry1271.  # noqa: E501
-        :type: BTPExpression9
+        :param silent: The silent of this BTPExpressionTry1271.  # noqa: E501
+        :type: bool
         """
 
-        self._expression = expression
+        self._silent = silent
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionTry1271.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionTry1271.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionTry1271.
+
+
+        :param bt_type: The bt_type of this BTPExpressionTry1271.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

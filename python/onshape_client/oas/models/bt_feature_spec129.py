@@ -44,15 +44,15 @@ class BTFeatureSpec129(object):
         'namespace_including_enums': 'str',
         'signature': 'str',
         'strings_to_localize': 'list[str]',
-        'feature_type': 'str',
+        'source_microversion_id': 'str',
         'feature_type_name': 'str',
+        'feature_type': 'str',
         'groups': 'list[BTParameterGroupSpec3469]',
-        'ui_hints': 'list[str]',
         'source_location': 'BTLocationInfo226',
         'linked_location_name': 'str',
-        'icon_uri': 'str',
+        'ui_hints': 'list[str]',
         'language_version': 'int',
-        'source_microversion_id': 'str',
+        'icon_uri': 'str',
         'feature_name_template': 'str',
         'manipulator_change_function': 'str',
         'filter_selectors': 'list[str]',
@@ -73,15 +73,15 @@ class BTFeatureSpec129(object):
         'namespace_including_enums': 'namespaceIncludingEnums',
         'signature': 'signature',
         'strings_to_localize': 'stringsToLocalize',
-        'feature_type': 'featureType',
+        'source_microversion_id': 'sourceMicroversionId',
         'feature_type_name': 'featureTypeName',
+        'feature_type': 'featureType',
         'groups': 'groups',
-        'ui_hints': 'uiHints',
         'source_location': 'sourceLocation',
         'linked_location_name': 'linkedLocationName',
-        'icon_uri': 'iconUri',
+        'ui_hints': 'uiHints',
         'language_version': 'languageVersion',
-        'source_microversion_id': 'sourceMicroversionId',
+        'icon_uri': 'iconUri',
         'feature_name_template': 'featureNameTemplate',
         'manipulator_change_function': 'manipulatorChangeFunction',
         'filter_selectors': 'filterSelectors',
@@ -91,7 +91,7 @@ class BTFeatureSpec129(object):
         'bt_type': 'btType'
     }
 
-    def __init__(self, full_feature_type=None, all_parameters=None, localized_name=None, localizable_name=None, additional_localized_strings=None, location_infos=None, namespace_the_source=None, namespace_including_enums=None, signature=None, strings_to_localize=None, feature_type=None, feature_type_name=None, groups=None, ui_hints=None, source_location=None, linked_location_name=None, icon_uri=None, language_version=None, source_microversion_id=None, feature_name_template=None, manipulator_change_function=None, filter_selectors=None, editing_logic=None, parameters=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, full_feature_type=None, all_parameters=None, localized_name=None, localizable_name=None, additional_localized_strings=None, location_infos=None, namespace_the_source=None, namespace_including_enums=None, signature=None, strings_to_localize=None, source_microversion_id=None, feature_type_name=None, feature_type=None, groups=None, source_location=None, linked_location_name=None, ui_hints=None, language_version=None, icon_uri=None, feature_name_template=None, manipulator_change_function=None, filter_selectors=None, editing_logic=None, parameters=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFeatureSpec129 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -107,15 +107,15 @@ class BTFeatureSpec129(object):
         self._namespace_including_enums = None
         self._signature = None
         self._strings_to_localize = None
-        self._feature_type = None
+        self._source_microversion_id = None
         self._feature_type_name = None
+        self._feature_type = None
         self._groups = None
-        self._ui_hints = None
         self._source_location = None
         self._linked_location_name = None
-        self._icon_uri = None
+        self._ui_hints = None
         self._language_version = None
-        self._source_microversion_id = None
+        self._icon_uri = None
         self._feature_name_template = None
         self._manipulator_change_function = None
         self._filter_selectors = None
@@ -145,24 +145,24 @@ class BTFeatureSpec129(object):
             self.signature = signature
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
-        if feature_type is not None:
-            self.feature_type = feature_type
+        if source_microversion_id is not None:
+            self.source_microversion_id = source_microversion_id
         if feature_type_name is not None:
             self.feature_type_name = feature_type_name
+        if feature_type is not None:
+            self.feature_type = feature_type
         if groups is not None:
             self.groups = groups
-        if ui_hints is not None:
-            self.ui_hints = ui_hints
         if source_location is not None:
             self.source_location = source_location
         if linked_location_name is not None:
             self.linked_location_name = linked_location_name
-        if icon_uri is not None:
-            self.icon_uri = icon_uri
+        if ui_hints is not None:
+            self.ui_hints = ui_hints
         if language_version is not None:
             self.language_version = language_version
-        if source_microversion_id is not None:
-            self.source_microversion_id = source_microversion_id
+        if icon_uri is not None:
+            self.icon_uri = icon_uri
         if feature_name_template is not None:
             self.feature_name_template = feature_name_template
         if manipulator_change_function is not None:
@@ -389,25 +389,25 @@ class BTFeatureSpec129(object):
         self._strings_to_localize = strings_to_localize
 
     @property
-    def feature_type(self):
-        """Gets the feature_type of this BTFeatureSpec129.  # noqa: E501
+    def source_microversion_id(self):
+        """Gets the source_microversion_id of this BTFeatureSpec129.  # noqa: E501
 
 
-        :return: The feature_type of this BTFeatureSpec129.  # noqa: E501
+        :return: The source_microversion_id of this BTFeatureSpec129.  # noqa: E501
         :rtype: str
         """
-        return self._feature_type
+        return self._source_microversion_id
 
-    @feature_type.setter
-    def feature_type(self, feature_type):
-        """Sets the feature_type of this BTFeatureSpec129.
+    @source_microversion_id.setter
+    def source_microversion_id(self, source_microversion_id):
+        """Sets the source_microversion_id of this BTFeatureSpec129.
 
 
-        :param feature_type: The feature_type of this BTFeatureSpec129.  # noqa: E501
+        :param source_microversion_id: The source_microversion_id of this BTFeatureSpec129.  # noqa: E501
         :type: str
         """
 
-        self._feature_type = feature_type
+        self._source_microversion_id = source_microversion_id
 
     @property
     def feature_type_name(self):
@@ -431,6 +431,27 @@ class BTFeatureSpec129(object):
         self._feature_type_name = feature_type_name
 
     @property
+    def feature_type(self):
+        """Gets the feature_type of this BTFeatureSpec129.  # noqa: E501
+
+
+        :return: The feature_type of this BTFeatureSpec129.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_type
+
+    @feature_type.setter
+    def feature_type(self, feature_type):
+        """Sets the feature_type of this BTFeatureSpec129.
+
+
+        :param feature_type: The feature_type of this BTFeatureSpec129.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_type = feature_type
+
+    @property
     def groups(self):
         """Gets the groups of this BTFeatureSpec129.  # noqa: E501
 
@@ -450,35 +471,6 @@ class BTFeatureSpec129(object):
         """
 
         self._groups = groups
-
-    @property
-    def ui_hints(self):
-        """Gets the ui_hints of this BTFeatureSpec129.  # noqa: E501
-
-
-        :return: The ui_hints of this BTFeatureSpec129.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._ui_hints
-
-    @ui_hints.setter
-    def ui_hints(self, ui_hints):
-        """Sets the ui_hints of this BTFeatureSpec129.
-
-
-        :param ui_hints: The ui_hints of this BTFeatureSpec129.  # noqa: E501
-        :type: list[str]
-        """
-        allowed_values = ["OPPOSITE_DIRECTION", "ALWAYS_HIDDEN", "SHOW_CREATE_SELECTION", "CONTROL_VISIBILITY", "NO_PREVIEW_PROVIDED", "REMEMBER_PREVIOUS_VALUE", "DISPLAY_SHORT", "ALLOW_FEATURE_SELECTION", "MATE_CONNECTOR_AXIS_TYPE", "PRIMARY_AXIS", "SHOW_EXPRESSION", "OPPOSITE_DIRECTION_CIRCULAR", "SHOW_LABEL", "HORIZONTAL_ENUM", "UNCONFIGURABLE", "MATCH_LAST_ARRAY_ITEM", "COLLAPSE_ARRAY_ITEMS", "INITIAL_FOCUS_ON_EDIT", "INITIAL_FOCUS", "DISPLAY_CURRENT_VALUE_ONLY", "READ_ONLY", "PREVENT_CREATING_NEW_MATE_CONNECTORS", "FIRST_IN_ROW", "ALLOW_QUERY_ORDER", "PREVENT_ARRAY_REORDER", "UNKNOWN"]  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                not set(ui_hints).issubset(set(allowed_values))):  # noqa: E501
-            raise ValueError(
-                "Invalid values for `ui_hints` [{0}], must be a subset of [{1}]"  # noqa: E501
-                .format(", ".join(map(str, set(ui_hints) - set(allowed_values))),  # noqa: E501
-                        ", ".join(map(str, allowed_values)))
-            )
-
-        self._ui_hints = ui_hints
 
     @property
     def source_location(self):
@@ -523,25 +515,33 @@ class BTFeatureSpec129(object):
         self._linked_location_name = linked_location_name
 
     @property
-    def icon_uri(self):
-        """Gets the icon_uri of this BTFeatureSpec129.  # noqa: E501
+    def ui_hints(self):
+        """Gets the ui_hints of this BTFeatureSpec129.  # noqa: E501
 
 
-        :return: The icon_uri of this BTFeatureSpec129.  # noqa: E501
-        :rtype: str
+        :return: The ui_hints of this BTFeatureSpec129.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._icon_uri
+        return self._ui_hints
 
-    @icon_uri.setter
-    def icon_uri(self, icon_uri):
-        """Sets the icon_uri of this BTFeatureSpec129.
+    @ui_hints.setter
+    def ui_hints(self, ui_hints):
+        """Sets the ui_hints of this BTFeatureSpec129.
 
 
-        :param icon_uri: The icon_uri of this BTFeatureSpec129.  # noqa: E501
-        :type: str
+        :param ui_hints: The ui_hints of this BTFeatureSpec129.  # noqa: E501
+        :type: list[str]
         """
+        allowed_values = ["OPPOSITE_DIRECTION", "ALWAYS_HIDDEN", "SHOW_CREATE_SELECTION", "CONTROL_VISIBILITY", "NO_PREVIEW_PROVIDED", "REMEMBER_PREVIOUS_VALUE", "DISPLAY_SHORT", "ALLOW_FEATURE_SELECTION", "MATE_CONNECTOR_AXIS_TYPE", "PRIMARY_AXIS", "SHOW_EXPRESSION", "OPPOSITE_DIRECTION_CIRCULAR", "SHOW_LABEL", "HORIZONTAL_ENUM", "UNCONFIGURABLE", "MATCH_LAST_ARRAY_ITEM", "COLLAPSE_ARRAY_ITEMS", "INITIAL_FOCUS_ON_EDIT", "INITIAL_FOCUS", "DISPLAY_CURRENT_VALUE_ONLY", "READ_ONLY", "PREVENT_CREATING_NEW_MATE_CONNECTORS", "FIRST_IN_ROW", "ALLOW_QUERY_ORDER", "PREVENT_ARRAY_REORDER", "UNKNOWN"]  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                not set(ui_hints).issubset(set(allowed_values))):  # noqa: E501
+            raise ValueError(
+                "Invalid values for `ui_hints` [{0}], must be a subset of [{1}]"  # noqa: E501
+                .format(", ".join(map(str, set(ui_hints) - set(allowed_values))),  # noqa: E501
+                        ", ".join(map(str, allowed_values)))
+            )
 
-        self._icon_uri = icon_uri
+        self._ui_hints = ui_hints
 
     @property
     def language_version(self):
@@ -565,25 +565,25 @@ class BTFeatureSpec129(object):
         self._language_version = language_version
 
     @property
-    def source_microversion_id(self):
-        """Gets the source_microversion_id of this BTFeatureSpec129.  # noqa: E501
+    def icon_uri(self):
+        """Gets the icon_uri of this BTFeatureSpec129.  # noqa: E501
 
 
-        :return: The source_microversion_id of this BTFeatureSpec129.  # noqa: E501
+        :return: The icon_uri of this BTFeatureSpec129.  # noqa: E501
         :rtype: str
         """
-        return self._source_microversion_id
+        return self._icon_uri
 
-    @source_microversion_id.setter
-    def source_microversion_id(self, source_microversion_id):
-        """Sets the source_microversion_id of this BTFeatureSpec129.
+    @icon_uri.setter
+    def icon_uri(self, icon_uri):
+        """Sets the icon_uri of this BTFeatureSpec129.
 
 
-        :param source_microversion_id: The source_microversion_id of this BTFeatureSpec129.  # noqa: E501
+        :param icon_uri: The icon_uri of this BTFeatureSpec129.  # noqa: E501
         :type: str
         """
 
-        self._source_microversion_id = source_microversion_id
+        self._icon_uri = icon_uri
 
     @property
     def feature_name_template(self):

@@ -34,24 +34,29 @@ class BTConstructionObjectFilter113AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_construction': 'bool'
+        'is_construction': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_construction': 'isConstruction'
+        'is_construction': 'isConstruction',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_construction=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_construction=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTConstructionObjectFilter113AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_construction = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_construction is not None:
             self.is_construction = is_construction
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_construction(self):
@@ -73,6 +78,27 @@ class BTConstructionObjectFilter113AllOf(object):
         """
 
         self._is_construction = is_construction
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTConstructionObjectFilter113AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTConstructionObjectFilter113AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTConstructionObjectFilter113AllOf.
+
+
+        :param bt_type: The bt_type of this BTConstructionObjectFilter113AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

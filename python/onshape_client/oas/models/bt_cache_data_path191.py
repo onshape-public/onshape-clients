@@ -34,8 +34,8 @@ class BTCacheDataPath191(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'document_id': 'str',
         'element_id': 'str',
+        'document_id': 'str',
         'url': 'str',
         'is_persisted': 'bool',
         'full_file_path': 'str',
@@ -46,8 +46,8 @@ class BTCacheDataPath191(object):
     }
 
     attribute_map = {
-        'document_id': 'documentId',
         'element_id': 'elementId',
+        'document_id': 'documentId',
         'url': 'url',
         'is_persisted': 'isPersisted',
         'full_file_path': 'fullFilePath',
@@ -57,14 +57,14 @@ class BTCacheDataPath191(object):
         'bt_type': 'btType'
     }
 
-    def __init__(self, document_id=None, element_id=None, url=None, is_persisted=None, full_file_path=None, use_local_file_cache=None, expire_secs=None, key=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, document_id=None, url=None, is_persisted=None, full_file_path=None, use_local_file_cache=None, expire_secs=None, key=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTCacheDataPath191 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._document_id = None
         self._element_id = None
+        self._document_id = None
         self._url = None
         self._is_persisted = None
         self._full_file_path = None
@@ -74,10 +74,10 @@ class BTCacheDataPath191(object):
         self._bt_type = None
         self.discriminator = None
 
-        if document_id is not None:
-            self.document_id = document_id
         if element_id is not None:
             self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
         if url is not None:
             self.url = url
         if is_persisted is not None:
@@ -92,27 +92,6 @@ class BTCacheDataPath191(object):
             self.key = key
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTCacheDataPath191.  # noqa: E501
-
-
-        :return: The document_id of this BTCacheDataPath191.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTCacheDataPath191.
-
-
-        :param document_id: The document_id of this BTCacheDataPath191.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
 
     @property
     def element_id(self):
@@ -134,6 +113,27 @@ class BTCacheDataPath191(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this BTCacheDataPath191.  # noqa: E501
+
+
+        :return: The document_id of this BTCacheDataPath191.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTCacheDataPath191.
+
+
+        :param document_id: The document_id of this BTCacheDataPath191.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def url(self):

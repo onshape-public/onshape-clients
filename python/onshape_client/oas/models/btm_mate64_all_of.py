@@ -38,7 +38,8 @@ class BTMMate64AllOf(object):
         'primary_axis_alignment': 'bool',
         'secondary_axis_alignment': 'str',
         'mate_offset': 'BTVector3d389',
-        'mate_connectors': 'list[BTMMateConnector66]'
+        'mate_connectors': 'list[BTMMateConnector66]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class BTMMate64AllOf(object):
         'primary_axis_alignment': 'primaryAxisAlignment',
         'secondary_axis_alignment': 'secondaryAxisAlignment',
         'mate_offset': 'mateOffset',
-        'mate_connectors': 'mateConnectors'
+        'mate_connectors': 'mateConnectors',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, mate_connector_query_list=None, primary_axis_alignment=None, secondary_axis_alignment=None, mate_offset=None, mate_connectors=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, mate_connector_query_list=None, primary_axis_alignment=None, secondary_axis_alignment=None, mate_offset=None, mate_connectors=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMMate64AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class BTMMate64AllOf(object):
         self._secondary_axis_alignment = None
         self._mate_offset = None
         self._mate_connectors = None
+        self._bt_type = None
         self.discriminator = None
 
         if mate_connector_query_list is not None:
@@ -72,6 +75,8 @@ class BTMMate64AllOf(object):
             self.mate_offset = mate_offset
         if mate_connectors is not None:
             self.mate_connectors = mate_connectors
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def mate_connector_query_list(self):
@@ -183,6 +188,27 @@ class BTMMate64AllOf(object):
         """
 
         self._mate_connectors = mate_connectors
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMMate64AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMMate64AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMMate64AllOf.
+
+
+        :param bt_type: The bt_type of this BTMMate64AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

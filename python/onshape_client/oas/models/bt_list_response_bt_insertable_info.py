@@ -34,60 +34,39 @@ class BTListResponseBTInsertableInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[BTInsertableInfo]',
         'href': 'str',
+        'items': 'list[BTInsertableInfo]',
         'previous': 'str',
         'next': 'str'
     }
 
     attribute_map = {
-        'items': 'items',
         'href': 'href',
+        'items': 'items',
         'previous': 'previous',
         'next': 'next'
     }
 
-    def __init__(self, items=None, href=None, previous=None, next=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, href=None, items=None, previous=None, next=None, local_vars_configuration=None):  # noqa: E501
         """BTListResponseBTInsertableInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._items = None
         self._href = None
+        self._items = None
         self._previous = None
         self._next = None
         self.discriminator = None
 
-        if items is not None:
-            self.items = items
         if href is not None:
             self.href = href
+        if items is not None:
+            self.items = items
         if previous is not None:
             self.previous = previous
         if next is not None:
             self.next = next
-
-    @property
-    def items(self):
-        """Gets the items of this BTListResponseBTInsertableInfo.  # noqa: E501
-
-
-        :return: The items of this BTListResponseBTInsertableInfo.  # noqa: E501
-        :rtype: list[BTInsertableInfo]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BTListResponseBTInsertableInfo.
-
-
-        :param items: The items of this BTListResponseBTInsertableInfo.  # noqa: E501
-        :type: list[BTInsertableInfo]
-        """
-
-        self._items = items
 
     @property
     def href(self):
@@ -109,6 +88,27 @@ class BTListResponseBTInsertableInfo(object):
         """
 
         self._href = href
+
+    @property
+    def items(self):
+        """Gets the items of this BTListResponseBTInsertableInfo.  # noqa: E501
+
+
+        :return: The items of this BTListResponseBTInsertableInfo.  # noqa: E501
+        :rtype: list[BTInsertableInfo]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BTListResponseBTInsertableInfo.
+
+
+        :param items: The items of this BTListResponseBTInsertableInfo.  # noqa: E501
+        :type: list[BTInsertableInfo]
+        """
+
+        self._items = items
 
     @property
     def previous(self):

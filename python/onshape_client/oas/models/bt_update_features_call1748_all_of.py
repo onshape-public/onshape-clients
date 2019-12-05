@@ -35,15 +35,17 @@ class BTUpdateFeaturesCall1748AllOf(object):
     """
     openapi_types = {
         'features': 'list[BTMFeature134]',
-        'update_suppression_attributes': 'bool'
+        'update_suppression_attributes': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'features': 'features',
-        'update_suppression_attributes': 'updateSuppressionAttributes'
+        'update_suppression_attributes': 'updateSuppressionAttributes',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, features=None, update_suppression_attributes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, features=None, update_suppression_attributes=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTUpdateFeaturesCall1748AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTUpdateFeaturesCall1748AllOf(object):
 
         self._features = None
         self._update_suppression_attributes = None
+        self._bt_type = None
         self.discriminator = None
 
         if features is not None:
             self.features = features
         if update_suppression_attributes is not None:
             self.update_suppression_attributes = update_suppression_attributes
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def features(self):
@@ -99,6 +104,27 @@ class BTUpdateFeaturesCall1748AllOf(object):
         """
 
         self._update_suppression_attributes = update_suppression_attributes
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTUpdateFeaturesCall1748AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTUpdateFeaturesCall1748AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTUpdateFeaturesCall1748AllOf.
+
+
+        :param bt_type: The bt_type of this BTUpdateFeaturesCall1748AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

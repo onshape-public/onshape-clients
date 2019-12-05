@@ -36,16 +36,18 @@ class BTPlaneDescription692AllOf(object):
     openapi_types = {
         'normal': 'BTVector3d389',
         'is_oriented_with_face': 'bool',
-        'origin': 'BTVector3d389'
+        'origin': 'BTVector3d389',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'normal': 'normal',
         'is_oriented_with_face': 'isOrientedWithFace',
-        'origin': 'origin'
+        'origin': 'origin',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, normal=None, is_oriented_with_face=None, origin=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, normal=None, is_oriented_with_face=None, origin=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPlaneDescription692AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPlaneDescription692AllOf(object):
         self._normal = None
         self._is_oriented_with_face = None
         self._origin = None
+        self._bt_type = None
         self.discriminator = None
 
         if normal is not None:
@@ -62,6 +65,8 @@ class BTPlaneDescription692AllOf(object):
             self.is_oriented_with_face = is_oriented_with_face
         if origin is not None:
             self.origin = origin
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def normal(self):
@@ -125,6 +130,27 @@ class BTPlaneDescription692AllOf(object):
         """
 
         self._origin = origin
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPlaneDescription692AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPlaneDescription692AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPlaneDescription692AllOf.
+
+
+        :param bt_type: The bt_type of this BTPlaneDescription692AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

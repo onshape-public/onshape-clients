@@ -35,15 +35,17 @@ class BTMParameterBlobReference1679AllOf(object):
     """
     openapi_types = {
         'namespace': 'str',
-        'blob_import': 'BTMImport136'
+        'blob_import': 'BTMImport136',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'namespace': 'namespace',
-        'blob_import': 'blobImport'
+        'blob_import': 'blobImport',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, namespace=None, blob_import=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, namespace=None, blob_import=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterBlobReference1679AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMParameterBlobReference1679AllOf(object):
 
         self._namespace = None
         self._blob_import = None
+        self._bt_type = None
         self.discriminator = None
 
         if namespace is not None:
             self.namespace = namespace
         if blob_import is not None:
             self.blob_import = blob_import
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def namespace(self):
@@ -99,6 +104,27 @@ class BTMParameterBlobReference1679AllOf(object):
         """
 
         self._blob_import = blob_import
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterBlobReference1679AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterBlobReference1679AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterBlobReference1679AllOf.
+
+
+        :param bt_type: The bt_type of this BTMParameterBlobReference1679AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

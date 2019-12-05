@@ -34,24 +34,29 @@ class BTStringFormatBlockPattern1755AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'reg_exp_to_block': 'str'
+        'reg_exp_to_block': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'reg_exp_to_block': 'regExpToBlock'
+        'reg_exp_to_block': 'regExpToBlock',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, reg_exp_to_block=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, reg_exp_to_block=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTStringFormatBlockPattern1755AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._reg_exp_to_block = None
+        self._bt_type = None
         self.discriminator = None
 
         if reg_exp_to_block is not None:
             self.reg_exp_to_block = reg_exp_to_block
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def reg_exp_to_block(self):
@@ -73,6 +78,27 @@ class BTStringFormatBlockPattern1755AllOf(object):
         """
 
         self._reg_exp_to_block = reg_exp_to_block
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTStringFormatBlockPattern1755AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTStringFormatBlockPattern1755AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTStringFormatBlockPattern1755AllOf.
+
+
+        :param bt_type: The bt_type of this BTStringFormatBlockPattern1755AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,15 +35,17 @@ class BTParameterSpecQuantity173(object):
     """
     openapi_types = {
         'quantity_type': 'str',
-        'ranges': 'list[BTQuantityRange181]'
+        'ranges': 'list[BTQuantityRange181]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'quantity_type': 'quantityType',
-        'ranges': 'ranges'
+        'ranges': 'ranges',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, quantity_type=None, ranges=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, quantity_type=None, ranges=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecQuantity173 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTParameterSpecQuantity173(object):
 
         self._quantity_type = None
         self._ranges = None
+        self._bt_type = None
         self.discriminator = None
 
         if quantity_type is not None:
             self.quantity_type = quantity_type
         if ranges is not None:
             self.ranges = ranges
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def quantity_type(self):
@@ -105,6 +110,27 @@ class BTParameterSpecQuantity173(object):
         """
 
         self._ranges = ranges
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecQuantity173.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecQuantity173.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecQuantity173.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecQuantity173.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

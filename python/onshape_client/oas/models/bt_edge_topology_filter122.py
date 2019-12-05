@@ -34,24 +34,29 @@ class BTEdgeTopologyFilter122(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_internal_edge': 'bool'
+        'is_internal_edge': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_internal_edge': 'isInternalEdge'
+        'is_internal_edge': 'isInternalEdge',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_internal_edge=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_internal_edge=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTEdgeTopologyFilter122 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_internal_edge = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_internal_edge is not None:
             self.is_internal_edge = is_internal_edge
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_internal_edge(self):
@@ -73,6 +78,27 @@ class BTEdgeTopologyFilter122(object):
         """
 
         self._is_internal_edge = is_internal_edge
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTEdgeTopologyFilter122.  # noqa: E501
+
+
+        :return: The bt_type of this BTEdgeTopologyFilter122.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTEdgeTopologyFilter122.
+
+
+        :param bt_type: The bt_type of this BTEdgeTopologyFilter122.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

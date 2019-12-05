@@ -34,75 +34,54 @@ class BTMoveElementInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'error_message': 'str',
         'new_document_id': 'str',
         'new_document_name': 'str',
         'new_workspace_id': 'str',
-        'new_document_version_id': 'str',
+        'error_message': 'str',
         'element_original_to_new_map': 'dict(str, str)',
-        'is_new_document': 'bool'
+        'is_new_document': 'bool',
+        'new_document_version_id': 'str'
     }
 
     attribute_map = {
-        'error_message': 'errorMessage',
         'new_document_id': 'newDocumentId',
         'new_document_name': 'newDocumentName',
         'new_workspace_id': 'newWorkspaceId',
-        'new_document_version_id': 'newDocumentVersionId',
+        'error_message': 'errorMessage',
         'element_original_to_new_map': 'elementOriginalToNewMap',
-        'is_new_document': 'isNewDocument'
+        'is_new_document': 'isNewDocument',
+        'new_document_version_id': 'newDocumentVersionId'
     }
 
-    def __init__(self, error_message=None, new_document_id=None, new_document_name=None, new_workspace_id=None, new_document_version_id=None, element_original_to_new_map=None, is_new_document=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, new_document_id=None, new_document_name=None, new_workspace_id=None, error_message=None, element_original_to_new_map=None, is_new_document=None, new_document_version_id=None, local_vars_configuration=None):  # noqa: E501
         """BTMoveElementInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._error_message = None
         self._new_document_id = None
         self._new_document_name = None
         self._new_workspace_id = None
-        self._new_document_version_id = None
+        self._error_message = None
         self._element_original_to_new_map = None
         self._is_new_document = None
+        self._new_document_version_id = None
         self.discriminator = None
 
-        if error_message is not None:
-            self.error_message = error_message
         if new_document_id is not None:
             self.new_document_id = new_document_id
         if new_document_name is not None:
             self.new_document_name = new_document_name
         if new_workspace_id is not None:
             self.new_workspace_id = new_workspace_id
-        if new_document_version_id is not None:
-            self.new_document_version_id = new_document_version_id
+        if error_message is not None:
+            self.error_message = error_message
         if element_original_to_new_map is not None:
             self.element_original_to_new_map = element_original_to_new_map
         if is_new_document is not None:
             self.is_new_document = is_new_document
-
-    @property
-    def error_message(self):
-        """Gets the error_message of this BTMoveElementInfo.  # noqa: E501
-
-
-        :return: The error_message of this BTMoveElementInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_message
-
-    @error_message.setter
-    def error_message(self, error_message):
-        """Sets the error_message of this BTMoveElementInfo.
-
-
-        :param error_message: The error_message of this BTMoveElementInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._error_message = error_message
+        if new_document_version_id is not None:
+            self.new_document_version_id = new_document_version_id
 
     @property
     def new_document_id(self):
@@ -168,25 +147,25 @@ class BTMoveElementInfo(object):
         self._new_workspace_id = new_workspace_id
 
     @property
-    def new_document_version_id(self):
-        """Gets the new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+    def error_message(self):
+        """Gets the error_message of this BTMoveElementInfo.  # noqa: E501
 
 
-        :return: The new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+        :return: The error_message of this BTMoveElementInfo.  # noqa: E501
         :rtype: str
         """
-        return self._new_document_version_id
+        return self._error_message
 
-    @new_document_version_id.setter
-    def new_document_version_id(self, new_document_version_id):
-        """Sets the new_document_version_id of this BTMoveElementInfo.
+    @error_message.setter
+    def error_message(self, error_message):
+        """Sets the error_message of this BTMoveElementInfo.
 
 
-        :param new_document_version_id: The new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+        :param error_message: The error_message of this BTMoveElementInfo.  # noqa: E501
         :type: str
         """
 
-        self._new_document_version_id = new_document_version_id
+        self._error_message = error_message
 
     @property
     def element_original_to_new_map(self):
@@ -229,6 +208,27 @@ class BTMoveElementInfo(object):
         """
 
         self._is_new_document = is_new_document
+
+    @property
+    def new_document_version_id(self):
+        """Gets the new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+
+
+        :return: The new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_document_version_id
+
+    @new_document_version_id.setter
+    def new_document_version_id(self, new_document_version_id):
+        """Sets the new_document_version_id of this BTMoveElementInfo.
+
+
+        :param new_document_version_id: The new_document_version_id of this BTMoveElementInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._new_document_version_id = new_document_version_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -39,7 +39,8 @@ class BTPProcedureDeclarationBase266(object):
         'precondition': 'BTPStatement269',
         'space_after_arglist': 'BTPSpace10',
         'space_in_empty_list': 'BTPSpace10',
-        'return_type': 'BTPTypeName290'
+        'return_type': 'BTPTypeName290',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -48,7 +49,8 @@ class BTPProcedureDeclarationBase266(object):
         'precondition': 'precondition',
         'space_after_arglist': 'spaceAfterArglist',
         'space_in_empty_list': 'spaceInEmptyList',
-        'return_type': 'returnType'
+        'return_type': 'returnType',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -57,7 +59,7 @@ class BTPProcedureDeclarationBase266(object):
         'BTPFunctionOrPredicateDeclaration-247': 'BTPFunctionOrPredicateDeclaration247'
     }
 
-    def __init__(self, arguments=None, body=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, return_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, arguments=None, body=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, return_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPProcedureDeclarationBase266 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,7 +71,8 @@ class BTPProcedureDeclarationBase266(object):
         self._space_after_arglist = None
         self._space_in_empty_list = None
         self._return_type = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if arguments is not None:
             self.arguments = arguments
@@ -83,6 +86,8 @@ class BTPProcedureDeclarationBase266(object):
             self.space_in_empty_list = space_in_empty_list
         if return_type is not None:
             self.return_type = return_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def arguments(self):
@@ -209,6 +214,27 @@ class BTPProcedureDeclarationBase266(object):
         """
 
         self._return_type = return_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPProcedureDeclarationBase266.  # noqa: E501
+
+
+        :return: The bt_type of this BTPProcedureDeclarationBase266.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPProcedureDeclarationBase266.
+
+
+        :param bt_type: The bt_type of this BTPProcedureDeclarationBase266.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

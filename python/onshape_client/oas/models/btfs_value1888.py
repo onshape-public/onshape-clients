@@ -69,7 +69,7 @@ class BTFSValue1888(object):
         self._configuration_value_string = None
         self._type_tag = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if value_object is not None:
             self.value_object = value_object

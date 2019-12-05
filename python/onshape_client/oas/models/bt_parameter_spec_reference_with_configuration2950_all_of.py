@@ -36,16 +36,18 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(object):
     openapi_types = {
         'max_number_of_picks': 'int',
         'allowed_insertable_types': 'list[str]',
-        'allow_assemblies': 'bool'
+        'allow_assemblies': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'max_number_of_picks': 'maxNumberOfPicks',
         'allowed_insertable_types': 'allowedInsertableTypes',
-        'allow_assemblies': 'allowAssemblies'
+        'allow_assemblies': 'allowAssemblies',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, max_number_of_picks=None, allowed_insertable_types=None, allow_assemblies=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, max_number_of_picks=None, allowed_insertable_types=None, allow_assemblies=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecReferenceWithConfiguration2950AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(object):
         self._max_number_of_picks = None
         self._allowed_insertable_types = None
         self._allow_assemblies = None
+        self._bt_type = None
         self.discriminator = None
 
         if max_number_of_picks is not None:
@@ -62,6 +65,8 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(object):
             self.allowed_insertable_types = allowed_insertable_types
         if allow_assemblies is not None:
             self.allow_assemblies = allow_assemblies
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def max_number_of_picks(self):
@@ -133,6 +138,27 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(object):
         """
 
         self._allow_assemblies = allow_assemblies
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecReferenceWithConfiguration2950AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecReferenceWithConfiguration2950AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecReferenceWithConfiguration2950AllOf.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecReferenceWithConfiguration2950AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

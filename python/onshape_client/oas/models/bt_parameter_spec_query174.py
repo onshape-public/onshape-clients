@@ -36,16 +36,18 @@ class BTParameterSpecQuery174(object):
     openapi_types = {
         'max_number_of_picks': 'int',
         'additional_box_select_filter': 'BTQueryFilter183',
-        'filter': 'BTQueryFilter183'
+        'filter': 'BTQueryFilter183',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'max_number_of_picks': 'maxNumberOfPicks',
         'additional_box_select_filter': 'additionalBoxSelectFilter',
-        'filter': 'filter'
+        'filter': 'filter',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, max_number_of_picks=None, additional_box_select_filter=None, filter=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, max_number_of_picks=None, additional_box_select_filter=None, filter=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecQuery174 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTParameterSpecQuery174(object):
         self._max_number_of_picks = None
         self._additional_box_select_filter = None
         self._filter = None
+        self._bt_type = None
         self.discriminator = None
 
         if max_number_of_picks is not None:
@@ -62,6 +65,8 @@ class BTParameterSpecQuery174(object):
             self.additional_box_select_filter = additional_box_select_filter
         if filter is not None:
             self.filter = filter
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def max_number_of_picks(self):
@@ -125,6 +130,27 @@ class BTParameterSpecQuery174(object):
         """
 
         self._filter = filter
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecQuery174.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecQuery174.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecQuery174.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecQuery174.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

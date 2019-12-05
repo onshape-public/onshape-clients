@@ -35,15 +35,17 @@ class BTExplosion2754AllOf(object):
     """
     openapi_types = {
         'explode_steps': 'list[BTExplosionStepFeature3008]',
-        'starting_position_id': 'BTMicroversionIdAndConfiguration2338'
+        'starting_position_id': 'BTMicroversionIdAndConfiguration2338',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'explode_steps': 'explodeSteps',
-        'starting_position_id': 'startingPositionId'
+        'starting_position_id': 'startingPositionId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, explode_steps=None, starting_position_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, explode_steps=None, starting_position_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTExplosion2754AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTExplosion2754AllOf(object):
 
         self._explode_steps = None
         self._starting_position_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if explode_steps is not None:
             self.explode_steps = explode_steps
         if starting_position_id is not None:
             self.starting_position_id = starting_position_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def explode_steps(self):
@@ -99,6 +104,27 @@ class BTExplosion2754AllOf(object):
         """
 
         self._starting_position_id = starting_position_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExplosion2754AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTExplosion2754AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExplosion2754AllOf.
+
+
+        :param bt_type: The bt_type of this BTExplosion2754AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

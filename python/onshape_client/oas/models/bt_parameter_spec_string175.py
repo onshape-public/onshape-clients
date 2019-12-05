@@ -34,24 +34,29 @@ class BTParameterSpecString175(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'format_conditions': 'list[BTStringFormatCondition683]'
+        'format_conditions': 'list[BTStringFormatCondition683]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'format_conditions': 'formatConditions'
+        'format_conditions': 'formatConditions',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, format_conditions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, format_conditions=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecString175 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._format_conditions = None
+        self._bt_type = None
         self.discriminator = None
 
         if format_conditions is not None:
             self.format_conditions = format_conditions
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def format_conditions(self):
@@ -73,6 +78,27 @@ class BTParameterSpecString175(object):
         """
 
         self._format_conditions = format_conditions
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecString175.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecString175.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecString175.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecString175.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,24 +36,26 @@ class BTPExpressionFunction1325AllOf(object):
     openapi_types = {
         'arguments': 'list[BTPArgumentDeclaration232]',
         'body': 'BTPStatementBlock271',
+        'space_after_function': 'BTPSpace10',
         'precondition': 'BTPStatement269',
         'space_after_arglist': 'BTPSpace10',
         'space_in_empty_list': 'BTPSpace10',
-        'space_after_function': 'BTPSpace10',
-        'return_type': 'BTPTypeName290'
+        'return_type': 'BTPTypeName290',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'arguments': 'arguments',
         'body': 'body',
+        'space_after_function': 'spaceAfterFunction',
         'precondition': 'precondition',
         'space_after_arglist': 'spaceAfterArglist',
         'space_in_empty_list': 'spaceInEmptyList',
-        'space_after_function': 'spaceAfterFunction',
-        'return_type': 'returnType'
+        'return_type': 'returnType',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, arguments=None, body=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, space_after_function=None, return_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, arguments=None, body=None, space_after_function=None, precondition=None, space_after_arglist=None, space_in_empty_list=None, return_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionFunction1325AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,27 +63,30 @@ class BTPExpressionFunction1325AllOf(object):
 
         self._arguments = None
         self._body = None
+        self._space_after_function = None
         self._precondition = None
         self._space_after_arglist = None
         self._space_in_empty_list = None
-        self._space_after_function = None
         self._return_type = None
+        self._bt_type = None
         self.discriminator = None
 
         if arguments is not None:
             self.arguments = arguments
         if body is not None:
             self.body = body
+        if space_after_function is not None:
+            self.space_after_function = space_after_function
         if precondition is not None:
             self.precondition = precondition
         if space_after_arglist is not None:
             self.space_after_arglist = space_after_arglist
         if space_in_empty_list is not None:
             self.space_in_empty_list = space_in_empty_list
-        if space_after_function is not None:
-            self.space_after_function = space_after_function
         if return_type is not None:
             self.return_type = return_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def arguments(self):
@@ -124,6 +129,27 @@ class BTPExpressionFunction1325AllOf(object):
         """
 
         self._body = body
+
+    @property
+    def space_after_function(self):
+        """Gets the space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
+
+
+        :return: The space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_after_function
+
+    @space_after_function.setter
+    def space_after_function(self, space_after_function):
+        """Sets the space_after_function of this BTPExpressionFunction1325AllOf.
+
+
+        :param space_after_function: The space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_after_function = space_after_function
 
     @property
     def precondition(self):
@@ -189,27 +215,6 @@ class BTPExpressionFunction1325AllOf(object):
         self._space_in_empty_list = space_in_empty_list
 
     @property
-    def space_after_function(self):
-        """Gets the space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
-
-
-        :return: The space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
-        :rtype: BTPSpace10
-        """
-        return self._space_after_function
-
-    @space_after_function.setter
-    def space_after_function(self, space_after_function):
-        """Sets the space_after_function of this BTPExpressionFunction1325AllOf.
-
-
-        :param space_after_function: The space_after_function of this BTPExpressionFunction1325AllOf.  # noqa: E501
-        :type: BTPSpace10
-        """
-
-        self._space_after_function = space_after_function
-
-    @property
     def return_type(self):
         """Gets the return_type of this BTPExpressionFunction1325AllOf.  # noqa: E501
 
@@ -229,6 +234,27 @@ class BTPExpressionFunction1325AllOf(object):
         """
 
         self._return_type = return_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionFunction1325AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionFunction1325AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionFunction1325AllOf.
+
+
+        :param bt_type: The bt_type of this BTPExpressionFunction1325AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

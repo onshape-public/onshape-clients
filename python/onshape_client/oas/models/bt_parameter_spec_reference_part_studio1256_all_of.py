@@ -36,16 +36,18 @@ class BTParameterSpecReferencePartStudio1256AllOf(object):
     openapi_types = {
         'max_number_of_picks': 'int',
         'allowed_insertable_types': 'list[str]',
-        'computed_configuration_inputs': 'list[BTComputedConfigurationInputSpec2525]'
+        'computed_configuration_inputs': 'list[BTComputedConfigurationInputSpec2525]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'max_number_of_picks': 'maxNumberOfPicks',
         'allowed_insertable_types': 'allowedInsertableTypes',
-        'computed_configuration_inputs': 'computedConfigurationInputs'
+        'computed_configuration_inputs': 'computedConfigurationInputs',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, max_number_of_picks=None, allowed_insertable_types=None, computed_configuration_inputs=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, max_number_of_picks=None, allowed_insertable_types=None, computed_configuration_inputs=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecReferencePartStudio1256AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTParameterSpecReferencePartStudio1256AllOf(object):
         self._max_number_of_picks = None
         self._allowed_insertable_types = None
         self._computed_configuration_inputs = None
+        self._bt_type = None
         self.discriminator = None
 
         if max_number_of_picks is not None:
@@ -62,6 +65,8 @@ class BTParameterSpecReferencePartStudio1256AllOf(object):
             self.allowed_insertable_types = allowed_insertable_types
         if computed_configuration_inputs is not None:
             self.computed_configuration_inputs = computed_configuration_inputs
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def max_number_of_picks(self):
@@ -133,6 +138,27 @@ class BTParameterSpecReferencePartStudio1256AllOf(object):
         """
 
         self._computed_configuration_inputs = computed_configuration_inputs
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecReferencePartStudio1256AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecReferencePartStudio1256AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecReferencePartStudio1256AllOf.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecReferencePartStudio1256AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

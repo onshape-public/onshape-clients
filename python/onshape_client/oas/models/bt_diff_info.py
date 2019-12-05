@@ -35,46 +35,46 @@ class BTDiffInfo(object):
     """
     openapi_types = {
         'source_id': 'str',
-        'entity_type': 'str',
+        'collection_changes': 'dict(str, list[BTDiffInfo])',
         'geometry_change_messages': 'list[str]',
         'source_value': 'str',
         'target_value': 'str',
         'target_id': 'str',
-        'type': 'str',
-        'collection_changes': 'dict(str, list[BTDiffInfo])'
+        'entity_type': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
         'source_id': 'sourceId',
-        'entity_type': 'entityType',
+        'collection_changes': 'collectionChanges',
         'geometry_change_messages': 'geometryChangeMessages',
         'source_value': 'sourceValue',
         'target_value': 'targetValue',
         'target_id': 'targetId',
-        'type': 'type',
-        'collection_changes': 'collectionChanges'
+        'entity_type': 'entityType',
+        'type': 'type'
     }
 
-    def __init__(self, source_id=None, entity_type=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, type=None, collection_changes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, source_id=None, collection_changes=None, geometry_change_messages=None, source_value=None, target_value=None, target_id=None, entity_type=None, type=None, local_vars_configuration=None):  # noqa: E501
         """BTDiffInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._source_id = None
-        self._entity_type = None
+        self._collection_changes = None
         self._geometry_change_messages = None
         self._source_value = None
         self._target_value = None
         self._target_id = None
+        self._entity_type = None
         self._type = None
-        self._collection_changes = None
         self.discriminator = None
 
         if source_id is not None:
             self.source_id = source_id
-        if entity_type is not None:
-            self.entity_type = entity_type
+        if collection_changes is not None:
+            self.collection_changes = collection_changes
         if geometry_change_messages is not None:
             self.geometry_change_messages = geometry_change_messages
         if source_value is not None:
@@ -83,10 +83,10 @@ class BTDiffInfo(object):
             self.target_value = target_value
         if target_id is not None:
             self.target_id = target_id
+        if entity_type is not None:
+            self.entity_type = entity_type
         if type is not None:
             self.type = type
-        if collection_changes is not None:
-            self.collection_changes = collection_changes
 
     @property
     def source_id(self):
@@ -110,31 +110,25 @@ class BTDiffInfo(object):
         self._source_id = source_id
 
     @property
-    def entity_type(self):
-        """Gets the entity_type of this BTDiffInfo.  # noqa: E501
+    def collection_changes(self):
+        """Gets the collection_changes of this BTDiffInfo.  # noqa: E501
 
 
-        :return: The entity_type of this BTDiffInfo.  # noqa: E501
-        :rtype: str
+        :return: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :rtype: dict(str, list[BTDiffInfo])
         """
-        return self._entity_type
+        return self._collection_changes
 
-    @entity_type.setter
-    def entity_type(self, entity_type):
-        """Sets the entity_type of this BTDiffInfo.
+    @collection_changes.setter
+    def collection_changes(self, collection_changes):
+        """Sets the collection_changes of this BTDiffInfo.
 
 
-        :param entity_type: The entity_type of this BTDiffInfo.  # noqa: E501
-        :type: str
+        :param collection_changes: The collection_changes of this BTDiffInfo.  # noqa: E501
+        :type: dict(str, list[BTDiffInfo])
         """
-        allowed_values = ["PARTS", "SKETCHES", "POINTS", "MATE_CONNECTORS", "PLANES", "CURVES", "SURFACES"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and entity_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `entity_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(entity_type, allowed_values)
-            )
 
-        self._entity_type = entity_type
+        self._collection_changes = collection_changes
 
     @property
     def geometry_change_messages(self):
@@ -221,6 +215,33 @@ class BTDiffInfo(object):
         self._target_id = target_id
 
     @property
+    def entity_type(self):
+        """Gets the entity_type of this BTDiffInfo.  # noqa: E501
+
+
+        :return: The entity_type of this BTDiffInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._entity_type
+
+    @entity_type.setter
+    def entity_type(self, entity_type):
+        """Sets the entity_type of this BTDiffInfo.
+
+
+        :param entity_type: The entity_type of this BTDiffInfo.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["PARTS", "SKETCHES", "POINTS", "MATE_CONNECTORS", "PLANES", "CURVES", "SURFACES"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and entity_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `entity_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(entity_type, allowed_values)
+            )
+
+        self._entity_type = entity_type
+
+    @property
     def type(self):
         """Gets the type of this BTDiffInfo.  # noqa: E501
 
@@ -246,27 +267,6 @@ class BTDiffInfo(object):
             )
 
         self._type = type
-
-    @property
-    def collection_changes(self):
-        """Gets the collection_changes of this BTDiffInfo.  # noqa: E501
-
-
-        :return: The collection_changes of this BTDiffInfo.  # noqa: E501
-        :rtype: dict(str, list[BTDiffInfo])
-        """
-        return self._collection_changes
-
-    @collection_changes.setter
-    def collection_changes(self, collection_changes):
-        """Sets the collection_changes of this BTDiffInfo.
-
-
-        :param collection_changes: The collection_changes of this BTDiffInfo.  # noqa: E501
-        :type: dict(str, list[BTDiffInfo])
-        """
-
-        self._collection_changes = collection_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

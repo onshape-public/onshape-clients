@@ -36,16 +36,18 @@ class BTPTopLevelTypeDeclaration287AllOf(object):
     openapi_types = {
         'space_after_version': 'BTPSpace10',
         'version': 'BTPLiteralNumber258',
-        'name': 'BTPIdentifier8'
+        'name': 'BTPIdentifier8',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'space_after_version': 'spaceAfterVersion',
         'version': 'version',
-        'name': 'name'
+        'name': 'name',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_after_version=None, version=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_after_version=None, version=None, name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelTypeDeclaration287AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPTopLevelTypeDeclaration287AllOf(object):
         self._space_after_version = None
         self._version = None
         self._name = None
+        self._bt_type = None
         self.discriminator = None
 
         if space_after_version is not None:
@@ -62,6 +65,8 @@ class BTPTopLevelTypeDeclaration287AllOf(object):
             self.version = version
         if name is not None:
             self.name = name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def space_after_version(self):
@@ -125,6 +130,27 @@ class BTPTopLevelTypeDeclaration287AllOf(object):
         """
 
         self._name = name
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelTypeDeclaration287AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelTypeDeclaration287AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelTypeDeclaration287AllOf.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelTypeDeclaration287AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

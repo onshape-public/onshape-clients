@@ -61,7 +61,7 @@ class BTStringFormatCondition683(object):
         self._error_message = None
         self._should_reset_value_when_confirmed = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if error_message is not None:
             self.error_message = error_message

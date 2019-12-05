@@ -35,8 +35,8 @@ class BTExportTessellatedFacesBody1321(object):
     """
     openapi_types = {
         'faces': 'list[BTExportTessellatedFacesFace1192]',
-        'body_type': 'str',
         'appearance': 'BTGraphicsAppearance1152',
+        'body_type': 'str',
         'facet_points': 'list[BTVector3d389]',
         'id': 'str',
         'bt_type': 'str'
@@ -44,22 +44,22 @@ class BTExportTessellatedFacesBody1321(object):
 
     attribute_map = {
         'faces': 'faces',
-        'body_type': 'bodyType',
         'appearance': 'appearance',
+        'body_type': 'bodyType',
         'facet_points': 'facetPoints',
         'id': 'id',
         'bt_type': 'btType'
     }
 
-    def __init__(self, faces=None, body_type=None, appearance=None, facet_points=None, id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, faces=None, appearance=None, body_type=None, facet_points=None, id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTExportTessellatedFacesBody1321 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._faces = None
-        self._body_type = None
         self._appearance = None
+        self._body_type = None
         self._facet_points = None
         self._id = None
         self._bt_type = None
@@ -67,10 +67,10 @@ class BTExportTessellatedFacesBody1321(object):
 
         if faces is not None:
             self.faces = faces
-        if body_type is not None:
-            self.body_type = body_type
         if appearance is not None:
             self.appearance = appearance
+        if body_type is not None:
+            self.body_type = body_type
         if facet_points is not None:
             self.facet_points = facet_points
         if id is not None:
@@ -100,6 +100,27 @@ class BTExportTessellatedFacesBody1321(object):
         self._faces = faces
 
     @property
+    def appearance(self):
+        """Gets the appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
+
+
+        :return: The appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
+        :rtype: BTGraphicsAppearance1152
+        """
+        return self._appearance
+
+    @appearance.setter
+    def appearance(self, appearance):
+        """Sets the appearance of this BTExportTessellatedFacesBody1321.
+
+
+        :param appearance: The appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
+        :type: BTGraphicsAppearance1152
+        """
+
+        self._appearance = appearance
+
+    @property
     def body_type(self):
         """Gets the body_type of this BTExportTessellatedFacesBody1321.  # noqa: E501
 
@@ -125,27 +146,6 @@ class BTExportTessellatedFacesBody1321(object):
             )
 
         self._body_type = body_type
-
-    @property
-    def appearance(self):
-        """Gets the appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
-
-
-        :return: The appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
-        :rtype: BTGraphicsAppearance1152
-        """
-        return self._appearance
-
-    @appearance.setter
-    def appearance(self, appearance):
-        """Sets the appearance of this BTExportTessellatedFacesBody1321.
-
-
-        :param appearance: The appearance of this BTExportTessellatedFacesBody1321.  # noqa: E501
-        :type: BTGraphicsAppearance1152
-        """
-
-        self._appearance = appearance
 
     @property
     def facet_points(self):

@@ -35,12 +35,14 @@ class BTPStatementLoop277(object):
     """
     openapi_types = {
         'body': 'BTPStatement269',
-        'space_after_loop_type': 'BTPSpace10'
+        'space_after_loop_type': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'body': 'body',
-        'space_after_loop_type': 'spaceAfterLoopType'
+        'space_after_loop_type': 'spaceAfterLoopType',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -49,7 +51,7 @@ class BTPStatementLoop277(object):
         'BTPStatementLoopWhile-280': 'BTPStatementLoopWhile280'
     }
 
-    def __init__(self, body=None, space_after_loop_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, body=None, space_after_loop_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementLoop277 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,12 +59,15 @@ class BTPStatementLoop277(object):
 
         self._body = None
         self._space_after_loop_type = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if body is not None:
             self.body = body
         if space_after_loop_type is not None:
             self.space_after_loop_type = space_after_loop_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def body(self):
@@ -105,6 +110,27 @@ class BTPStatementLoop277(object):
         """
 
         self._space_after_loop_type = space_after_loop_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementLoop277.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementLoop277.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementLoop277.
+
+
+        :param bt_type: The bt_type of this BTPStatementLoop277.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

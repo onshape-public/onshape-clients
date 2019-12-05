@@ -34,34 +34,60 @@ class BTPExpressionSwitch2632(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'selector': 'BTPExpression9',
         'choices': 'BTPLiteralMap256',
         'space_after_switch': 'BTPSpace10',
-        'selector': 'BTPExpression9'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'selector': 'selector',
         'choices': 'choices',
         'space_after_switch': 'spaceAfterSwitch',
-        'selector': 'selector'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, choices=None, space_after_switch=None, selector=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, selector=None, choices=None, space_after_switch=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionSwitch2632 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._selector = None
         self._choices = None
         self._space_after_switch = None
-        self._selector = None
+        self._bt_type = None
         self.discriminator = None
 
+        if selector is not None:
+            self.selector = selector
         if choices is not None:
             self.choices = choices
         if space_after_switch is not None:
             self.space_after_switch = space_after_switch
-        if selector is not None:
-            self.selector = selector
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def selector(self):
+        """Gets the selector of this BTPExpressionSwitch2632.  # noqa: E501
+
+
+        :return: The selector of this BTPExpressionSwitch2632.  # noqa: E501
+        :rtype: BTPExpression9
+        """
+        return self._selector
+
+    @selector.setter
+    def selector(self, selector):
+        """Sets the selector of this BTPExpressionSwitch2632.
+
+
+        :param selector: The selector of this BTPExpressionSwitch2632.  # noqa: E501
+        :type: BTPExpression9
+        """
+
+        self._selector = selector
 
     @property
     def choices(self):
@@ -106,25 +132,25 @@ class BTPExpressionSwitch2632(object):
         self._space_after_switch = space_after_switch
 
     @property
-    def selector(self):
-        """Gets the selector of this BTPExpressionSwitch2632.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionSwitch2632.  # noqa: E501
 
 
-        :return: The selector of this BTPExpressionSwitch2632.  # noqa: E501
-        :rtype: BTPExpression9
+        :return: The bt_type of this BTPExpressionSwitch2632.  # noqa: E501
+        :rtype: str
         """
-        return self._selector
+        return self._bt_type
 
-    @selector.setter
-    def selector(self, selector):
-        """Sets the selector of this BTPExpressionSwitch2632.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionSwitch2632.
 
 
-        :param selector: The selector of this BTPExpressionSwitch2632.  # noqa: E501
-        :type: BTPExpression9
+        :param bt_type: The bt_type of this BTPExpressionSwitch2632.  # noqa: E501
+        :type: str
         """
 
-        self._selector = selector
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

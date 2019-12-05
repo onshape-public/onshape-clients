@@ -34,29 +34,55 @@ class BTPLValueBoxDereference251(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'space_inside': 'BTPSpace10',
         'box': 'BTPExpression9',
-        'space_inside': 'BTPSpace10'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'space_inside': 'spaceInside',
         'box': 'box',
-        'space_inside': 'spaceInside'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, box=None, space_inside=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_inside=None, box=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPLValueBoxDereference251 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._box = None
         self._space_inside = None
+        self._box = None
+        self._bt_type = None
         self.discriminator = None
 
-        if box is not None:
-            self.box = box
         if space_inside is not None:
             self.space_inside = space_inside
+        if box is not None:
+            self.box = box
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def space_inside(self):
+        """Gets the space_inside of this BTPLValueBoxDereference251.  # noqa: E501
+
+
+        :return: The space_inside of this BTPLValueBoxDereference251.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_inside
+
+    @space_inside.setter
+    def space_inside(self, space_inside):
+        """Sets the space_inside of this BTPLValueBoxDereference251.
+
+
+        :param space_inside: The space_inside of this BTPLValueBoxDereference251.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_inside = space_inside
 
     @property
     def box(self):
@@ -80,25 +106,25 @@ class BTPLValueBoxDereference251(object):
         self._box = box
 
     @property
-    def space_inside(self):
-        """Gets the space_inside of this BTPLValueBoxDereference251.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTPLValueBoxDereference251.  # noqa: E501
 
 
-        :return: The space_inside of this BTPLValueBoxDereference251.  # noqa: E501
-        :rtype: BTPSpace10
+        :return: The bt_type of this BTPLValueBoxDereference251.  # noqa: E501
+        :rtype: str
         """
-        return self._space_inside
+        return self._bt_type
 
-    @space_inside.setter
-    def space_inside(self, space_inside):
-        """Sets the space_inside of this BTPLValueBoxDereference251.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPLValueBoxDereference251.
 
 
-        :param space_inside: The space_inside of this BTPLValueBoxDereference251.  # noqa: E501
-        :type: BTPSpace10
+        :param bt_type: The bt_type of this BTPLValueBoxDereference251.  # noqa: E501
+        :type: str
         """
 
-        self._space_inside = space_inside
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

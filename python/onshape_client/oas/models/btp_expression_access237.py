@@ -34,55 +34,39 @@ class BTPExpressionAccess237(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'space_in_accessor': 'BTPSpace10',
         'accessor': 'BTPPropertyAccessor23',
-        'base': 'BTPExpression9'
+        'space_in_accessor': 'BTPSpace10',
+        'base': 'BTPExpression9',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'space_in_accessor': 'spaceInAccessor',
         'accessor': 'accessor',
-        'base': 'base'
+        'space_in_accessor': 'spaceInAccessor',
+        'base': 'base',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_in_accessor=None, accessor=None, base=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, accessor=None, space_in_accessor=None, base=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionAccess237 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._space_in_accessor = None
         self._accessor = None
+        self._space_in_accessor = None
         self._base = None
+        self._bt_type = None
         self.discriminator = None
 
-        if space_in_accessor is not None:
-            self.space_in_accessor = space_in_accessor
         if accessor is not None:
             self.accessor = accessor
+        if space_in_accessor is not None:
+            self.space_in_accessor = space_in_accessor
         if base is not None:
             self.base = base
-
-    @property
-    def space_in_accessor(self):
-        """Gets the space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
-
-
-        :return: The space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
-        :rtype: BTPSpace10
-        """
-        return self._space_in_accessor
-
-    @space_in_accessor.setter
-    def space_in_accessor(self, space_in_accessor):
-        """Sets the space_in_accessor of this BTPExpressionAccess237.
-
-
-        :param space_in_accessor: The space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
-        :type: BTPSpace10
-        """
-
-        self._space_in_accessor = space_in_accessor
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def accessor(self):
@@ -106,6 +90,27 @@ class BTPExpressionAccess237(object):
         self._accessor = accessor
 
     @property
+    def space_in_accessor(self):
+        """Gets the space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
+
+
+        :return: The space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_in_accessor
+
+    @space_in_accessor.setter
+    def space_in_accessor(self, space_in_accessor):
+        """Sets the space_in_accessor of this BTPExpressionAccess237.
+
+
+        :param space_in_accessor: The space_in_accessor of this BTPExpressionAccess237.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_in_accessor = space_in_accessor
+
+    @property
     def base(self):
         """Gets the base of this BTPExpressionAccess237.  # noqa: E501
 
@@ -125,6 +130,27 @@ class BTPExpressionAccess237(object):
         """
 
         self._base = base
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionAccess237.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionAccess237.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionAccess237.
+
+
+        :param bt_type: The bt_type of this BTPExpressionAccess237.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

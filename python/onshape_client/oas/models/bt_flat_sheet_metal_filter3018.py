@@ -34,24 +34,29 @@ class BTFlatSheetMetalFilter3018(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'allows': 'str'
+        'allows': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'allows': 'allows'
+        'allows': 'allows',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, allows=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, allows=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFlatSheetMetalFilter3018 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._allows = None
+        self._bt_type = None
         self.discriminator = None
 
         if allows is not None:
             self.allows = allows
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def allows(self):
@@ -79,6 +84,27 @@ class BTFlatSheetMetalFilter3018(object):
             )
 
         self._allows = allows
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFlatSheetMetalFilter3018.  # noqa: E501
+
+
+        :return: The bt_type of this BTFlatSheetMetalFilter3018.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFlatSheetMetalFilter3018.
+
+
+        :param bt_type: The bt_type of this BTFlatSheetMetalFilter3018.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

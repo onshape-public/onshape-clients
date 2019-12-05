@@ -36,18 +36,18 @@ class BTWorkspaceInfo(object):
     openapi_types = {
         'is_read_only': 'bool',
         'can_delete': 'bool',
-        'creator': 'BTUserBasicSummaryInfo',
         'created_at': 'datetime',
+        'modified_at': 'datetime',
+        'last_modifier': 'BTUserBasicSummaryInfo',
         'document_id': 'str',
         'thumbnail': 'BTThumbnailInfo',
         'microversion': 'str',
-        'modified_at': 'datetime',
+        'parents': 'list[BTVersionInfo]',
+        'creator': 'BTUserBasicSummaryInfo',
         'description': 'str',
-        'last_modifier': 'BTUserBasicSummaryInfo',
         'override_date': 'datetime',
         'parent': 'str',
         'type': 'str',
-        'parents': 'list[BTVersionInfo]',
         'href': 'str',
         'view_ref': 'str',
         'name': 'str',
@@ -57,25 +57,25 @@ class BTWorkspaceInfo(object):
     attribute_map = {
         'is_read_only': 'isReadOnly',
         'can_delete': 'canDelete',
-        'creator': 'creator',
         'created_at': 'createdAt',
+        'modified_at': 'modifiedAt',
+        'last_modifier': 'lastModifier',
         'document_id': 'documentId',
         'thumbnail': 'thumbnail',
         'microversion': 'microversion',
-        'modified_at': 'modifiedAt',
+        'parents': 'parents',
+        'creator': 'creator',
         'description': 'description',
-        'last_modifier': 'lastModifier',
         'override_date': 'overrideDate',
         'parent': 'parent',
         'type': 'type',
-        'parents': 'parents',
         'href': 'href',
         'view_ref': 'viewRef',
         'name': 'name',
         'id': 'id'
     }
 
-    def __init__(self, is_read_only=None, can_delete=None, creator=None, created_at=None, document_id=None, thumbnail=None, microversion=None, modified_at=None, description=None, last_modifier=None, override_date=None, parent=None, type=None, parents=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_read_only=None, can_delete=None, created_at=None, modified_at=None, last_modifier=None, document_id=None, thumbnail=None, microversion=None, parents=None, creator=None, description=None, override_date=None, parent=None, type=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
         """BTWorkspaceInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -83,18 +83,18 @@ class BTWorkspaceInfo(object):
 
         self._is_read_only = None
         self._can_delete = None
-        self._creator = None
         self._created_at = None
+        self._modified_at = None
+        self._last_modifier = None
         self._document_id = None
         self._thumbnail = None
         self._microversion = None
-        self._modified_at = None
+        self._parents = None
+        self._creator = None
         self._description = None
-        self._last_modifier = None
         self._override_date = None
         self._parent = None
         self._type = None
-        self._parents = None
         self._href = None
         self._view_ref = None
         self._name = None
@@ -105,30 +105,30 @@ class BTWorkspaceInfo(object):
             self.is_read_only = is_read_only
         if can_delete is not None:
             self.can_delete = can_delete
-        if creator is not None:
-            self.creator = creator
         if created_at is not None:
             self.created_at = created_at
+        if modified_at is not None:
+            self.modified_at = modified_at
+        if last_modifier is not None:
+            self.last_modifier = last_modifier
         if document_id is not None:
             self.document_id = document_id
         if thumbnail is not None:
             self.thumbnail = thumbnail
         if microversion is not None:
             self.microversion = microversion
-        if modified_at is not None:
-            self.modified_at = modified_at
+        if parents is not None:
+            self.parents = parents
+        if creator is not None:
+            self.creator = creator
         if description is not None:
             self.description = description
-        if last_modifier is not None:
-            self.last_modifier = last_modifier
         if override_date is not None:
             self.override_date = override_date
         if parent is not None:
             self.parent = parent
         if type is not None:
             self.type = type
-        if parents is not None:
-            self.parents = parents
         if href is not None:
             self.href = href
         if view_ref is not None:
@@ -181,27 +181,6 @@ class BTWorkspaceInfo(object):
         self._can_delete = can_delete
 
     @property
-    def creator(self):
-        """Gets the creator of this BTWorkspaceInfo.  # noqa: E501
-
-
-        :return: The creator of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._creator
-
-    @creator.setter
-    def creator(self, creator):
-        """Sets the creator of this BTWorkspaceInfo.
-
-
-        :param creator: The creator of this BTWorkspaceInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._creator = creator
-
-    @property
     def created_at(self):
         """Gets the created_at of this BTWorkspaceInfo.  # noqa: E501
 
@@ -221,6 +200,48 @@ class BTWorkspaceInfo(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def modified_at(self):
+        """Gets the modified_at of this BTWorkspaceInfo.  # noqa: E501
+
+
+        :return: The modified_at of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._modified_at
+
+    @modified_at.setter
+    def modified_at(self, modified_at):
+        """Sets the modified_at of this BTWorkspaceInfo.
+
+
+        :param modified_at: The modified_at of this BTWorkspaceInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._modified_at = modified_at
+
+    @property
+    def last_modifier(self):
+        """Gets the last_modifier of this BTWorkspaceInfo.  # noqa: E501
+
+
+        :return: The last_modifier of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._last_modifier
+
+    @last_modifier.setter
+    def last_modifier(self, last_modifier):
+        """Sets the last_modifier of this BTWorkspaceInfo.
+
+
+        :param last_modifier: The last_modifier of this BTWorkspaceInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._last_modifier = last_modifier
 
     @property
     def document_id(self):
@@ -286,25 +307,46 @@ class BTWorkspaceInfo(object):
         self._microversion = microversion
 
     @property
-    def modified_at(self):
-        """Gets the modified_at of this BTWorkspaceInfo.  # noqa: E501
+    def parents(self):
+        """Gets the parents of this BTWorkspaceInfo.  # noqa: E501
 
 
-        :return: The modified_at of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: datetime
+        :return: The parents of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: list[BTVersionInfo]
         """
-        return self._modified_at
+        return self._parents
 
-    @modified_at.setter
-    def modified_at(self, modified_at):
-        """Sets the modified_at of this BTWorkspaceInfo.
+    @parents.setter
+    def parents(self, parents):
+        """Sets the parents of this BTWorkspaceInfo.
 
 
-        :param modified_at: The modified_at of this BTWorkspaceInfo.  # noqa: E501
-        :type: datetime
+        :param parents: The parents of this BTWorkspaceInfo.  # noqa: E501
+        :type: list[BTVersionInfo]
         """
 
-        self._modified_at = modified_at
+        self._parents = parents
+
+    @property
+    def creator(self):
+        """Gets the creator of this BTWorkspaceInfo.  # noqa: E501
+
+
+        :return: The creator of this BTWorkspaceInfo.  # noqa: E501
+        :rtype: BTUserBasicSummaryInfo
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this BTWorkspaceInfo.
+
+
+        :param creator: The creator of this BTWorkspaceInfo.  # noqa: E501
+        :type: BTUserBasicSummaryInfo
+        """
+
+        self._creator = creator
 
     @property
     def description(self):
@@ -326,27 +368,6 @@ class BTWorkspaceInfo(object):
         """
 
         self._description = description
-
-    @property
-    def last_modifier(self):
-        """Gets the last_modifier of this BTWorkspaceInfo.  # noqa: E501
-
-
-        :return: The last_modifier of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: BTUserBasicSummaryInfo
-        """
-        return self._last_modifier
-
-    @last_modifier.setter
-    def last_modifier(self, last_modifier):
-        """Sets the last_modifier of this BTWorkspaceInfo.
-
-
-        :param last_modifier: The last_modifier of this BTWorkspaceInfo.  # noqa: E501
-        :type: BTUserBasicSummaryInfo
-        """
-
-        self._last_modifier = last_modifier
 
     @property
     def override_date(self):
@@ -410,27 +431,6 @@ class BTWorkspaceInfo(object):
         """
 
         self._type = type
-
-    @property
-    def parents(self):
-        """Gets the parents of this BTWorkspaceInfo.  # noqa: E501
-
-
-        :return: The parents of this BTWorkspaceInfo.  # noqa: E501
-        :rtype: list[BTVersionInfo]
-        """
-        return self._parents
-
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this BTWorkspaceInfo.
-
-
-        :param parents: The parents of this BTWorkspaceInfo.  # noqa: E501
-        :type: list[BTVersionInfo]
-        """
-
-        self._parents = parents
 
     @property
     def href(self):

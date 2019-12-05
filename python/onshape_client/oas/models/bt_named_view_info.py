@@ -34,86 +34,44 @@ class BTNamedViewInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'view_matrix': 'list[float]',
-        'perspective': 'bool',
         'camera_viewport': 'list[float]',
         'angle': 'float',
+        'view_matrix': 'list[float]',
+        'perspective': 'bool',
         'section_planes': 'list[BTSectionPlaneInfo]'
     }
 
     attribute_map = {
-        'view_matrix': 'viewMatrix',
-        'perspective': 'perspective',
         'camera_viewport': 'cameraViewport',
         'angle': 'angle',
+        'view_matrix': 'viewMatrix',
+        'perspective': 'perspective',
         'section_planes': 'sectionPlanes'
     }
 
-    def __init__(self, view_matrix=None, perspective=None, camera_viewport=None, angle=None, section_planes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, camera_viewport=None, angle=None, view_matrix=None, perspective=None, section_planes=None, local_vars_configuration=None):  # noqa: E501
         """BTNamedViewInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._view_matrix = None
-        self._perspective = None
         self._camera_viewport = None
         self._angle = None
+        self._view_matrix = None
+        self._perspective = None
         self._section_planes = None
         self.discriminator = None
 
-        if view_matrix is not None:
-            self.view_matrix = view_matrix
-        if perspective is not None:
-            self.perspective = perspective
         if camera_viewport is not None:
             self.camera_viewport = camera_viewport
         if angle is not None:
             self.angle = angle
+        if view_matrix is not None:
+            self.view_matrix = view_matrix
+        if perspective is not None:
+            self.perspective = perspective
         if section_planes is not None:
             self.section_planes = section_planes
-
-    @property
-    def view_matrix(self):
-        """Gets the view_matrix of this BTNamedViewInfo.  # noqa: E501
-
-
-        :return: The view_matrix of this BTNamedViewInfo.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._view_matrix
-
-    @view_matrix.setter
-    def view_matrix(self, view_matrix):
-        """Sets the view_matrix of this BTNamedViewInfo.
-
-
-        :param view_matrix: The view_matrix of this BTNamedViewInfo.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._view_matrix = view_matrix
-
-    @property
-    def perspective(self):
-        """Gets the perspective of this BTNamedViewInfo.  # noqa: E501
-
-
-        :return: The perspective of this BTNamedViewInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._perspective
-
-    @perspective.setter
-    def perspective(self, perspective):
-        """Sets the perspective of this BTNamedViewInfo.
-
-
-        :param perspective: The perspective of this BTNamedViewInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._perspective = perspective
 
     @property
     def camera_viewport(self):
@@ -156,6 +114,48 @@ class BTNamedViewInfo(object):
         """
 
         self._angle = angle
+
+    @property
+    def view_matrix(self):
+        """Gets the view_matrix of this BTNamedViewInfo.  # noqa: E501
+
+
+        :return: The view_matrix of this BTNamedViewInfo.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._view_matrix
+
+    @view_matrix.setter
+    def view_matrix(self, view_matrix):
+        """Sets the view_matrix of this BTNamedViewInfo.
+
+
+        :param view_matrix: The view_matrix of this BTNamedViewInfo.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._view_matrix = view_matrix
+
+    @property
+    def perspective(self):
+        """Gets the perspective of this BTNamedViewInfo.  # noqa: E501
+
+
+        :return: The perspective of this BTNamedViewInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._perspective
+
+    @perspective.setter
+    def perspective(self, perspective):
+        """Sets the perspective of this BTNamedViewInfo.
+
+
+        :param perspective: The perspective of this BTNamedViewInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._perspective = perspective
 
     @property
     def section_planes(self):

@@ -34,24 +34,29 @@ class BTModifiableEntityOnlyFilter1593AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'modifiable_only': 'bool'
+        'modifiable_only': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'modifiable_only': 'modifiableOnly'
+        'modifiable_only': 'modifiableOnly',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, modifiable_only=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, modifiable_only=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTModifiableEntityOnlyFilter1593AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._modifiable_only = None
+        self._bt_type = None
         self.discriminator = None
 
         if modifiable_only is not None:
             self.modifiable_only = modifiable_only
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def modifiable_only(self):
@@ -73,6 +78,27 @@ class BTModifiableEntityOnlyFilter1593AllOf(object):
         """
 
         self._modifiable_only = modifiable_only
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTModifiableEntityOnlyFilter1593AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTModifiableEntityOnlyFilter1593AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTModifiableEntityOnlyFilter1593AllOf.
+
+
+        :param bt_type: The bt_type of this BTModifiableEntityOnlyFilter1593AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

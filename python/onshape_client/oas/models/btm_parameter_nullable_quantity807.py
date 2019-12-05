@@ -35,15 +35,17 @@ class BTMParameterNullableQuantity807(object):
     """
     openapi_types = {
         'null_value': 'str',
-        'is_null': 'bool'
+        'is_null': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'null_value': 'nullValue',
-        'is_null': 'isNull'
+        'is_null': 'isNull',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, null_value=None, is_null=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, null_value=None, is_null=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterNullableQuantity807 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMParameterNullableQuantity807(object):
 
         self._null_value = None
         self._is_null = None
+        self._bt_type = None
         self.discriminator = None
 
         if null_value is not None:
             self.null_value = null_value
         if is_null is not None:
             self.is_null = is_null
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def null_value(self):
@@ -99,6 +104,27 @@ class BTMParameterNullableQuantity807(object):
         """
 
         self._is_null = is_null
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterNullableQuantity807.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterNullableQuantity807.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterNullableQuantity807.
+
+
+        :param bt_type: The bt_type of this BTMParameterNullableQuantity807.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

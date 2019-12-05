@@ -36,16 +36,18 @@ class BTMParameterReferencePartStudio3302(object):
     openapi_types = {
         'part_query': 'BTMParameterQueryList148',
         'block_build_function_access': 'bool',
-        'standard_content_parameters_id': 'str'
+        'standard_content_parameters_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'part_query': 'partQuery',
         'block_build_function_access': 'blockBuildFunctionAccess',
-        'standard_content_parameters_id': 'standardContentParametersId'
+        'standard_content_parameters_id': 'standardContentParametersId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, part_query=None, block_build_function_access=None, standard_content_parameters_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, part_query=None, block_build_function_access=None, standard_content_parameters_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterReferencePartStudio3302 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMParameterReferencePartStudio3302(object):
         self._part_query = None
         self._block_build_function_access = None
         self._standard_content_parameters_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if part_query is not None:
@@ -62,6 +65,8 @@ class BTMParameterReferencePartStudio3302(object):
             self.block_build_function_access = block_build_function_access
         if standard_content_parameters_id is not None:
             self.standard_content_parameters_id = standard_content_parameters_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def part_query(self):
@@ -125,6 +130,27 @@ class BTMParameterReferencePartStudio3302(object):
         """
 
         self._standard_content_parameters_id = standard_content_parameters_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterReferencePartStudio3302.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterReferencePartStudio3302.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterReferencePartStudio3302.
+
+
+        :param bt_type: The bt_type of this BTMParameterReferencePartStudio3302.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

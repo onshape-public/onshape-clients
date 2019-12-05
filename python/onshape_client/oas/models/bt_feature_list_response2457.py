@@ -37,14 +37,14 @@ class BTFeatureListResponse2457(object):
         'features': 'list[BTMFeature134]',
         'is_complete': 'bool',
         'feature_states': 'dict(str, BTFeatureState1688)',
-        'default_features': 'list[BTMFeature134]',
-        'imports': 'list[BTMImport136]',
         'rollback_index': 'int',
-        'microversion_skew': 'bool',
+        'imports': 'list[BTMImport136]',
+        'default_features': 'list[BTMFeature134]',
         'serialization_version': 'str',
-        'library_version': 'int',
-        'reject_microversion_skew': 'bool',
         'source_microversion': 'str',
+        'reject_microversion_skew': 'bool',
+        'microversion_skew': 'bool',
+        'library_version': 'int',
         'bt_type': 'str'
     }
 
@@ -52,18 +52,18 @@ class BTFeatureListResponse2457(object):
         'features': 'features',
         'is_complete': 'isComplete',
         'feature_states': 'featureStates',
-        'default_features': 'defaultFeatures',
-        'imports': 'imports',
         'rollback_index': 'rollbackIndex',
-        'microversion_skew': 'microversionSkew',
+        'imports': 'imports',
+        'default_features': 'defaultFeatures',
         'serialization_version': 'serializationVersion',
-        'library_version': 'libraryVersion',
-        'reject_microversion_skew': 'rejectMicroversionSkew',
         'source_microversion': 'sourceMicroversion',
+        'reject_microversion_skew': 'rejectMicroversionSkew',
+        'microversion_skew': 'microversionSkew',
+        'library_version': 'libraryVersion',
         'bt_type': 'btType'
     }
 
-    def __init__(self, features=None, is_complete=None, feature_states=None, default_features=None, imports=None, rollback_index=None, microversion_skew=None, serialization_version=None, library_version=None, reject_microversion_skew=None, source_microversion=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, features=None, is_complete=None, feature_states=None, rollback_index=None, imports=None, default_features=None, serialization_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None, library_version=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFeatureListResponse2457 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,14 +72,14 @@ class BTFeatureListResponse2457(object):
         self._features = None
         self._is_complete = None
         self._feature_states = None
-        self._default_features = None
-        self._imports = None
         self._rollback_index = None
-        self._microversion_skew = None
+        self._imports = None
+        self._default_features = None
         self._serialization_version = None
-        self._library_version = None
-        self._reject_microversion_skew = None
         self._source_microversion = None
+        self._reject_microversion_skew = None
+        self._microversion_skew = None
+        self._library_version = None
         self._bt_type = None
         self.discriminator = None
 
@@ -89,22 +89,22 @@ class BTFeatureListResponse2457(object):
             self.is_complete = is_complete
         if feature_states is not None:
             self.feature_states = feature_states
-        if default_features is not None:
-            self.default_features = default_features
-        if imports is not None:
-            self.imports = imports
         if rollback_index is not None:
             self.rollback_index = rollback_index
-        if microversion_skew is not None:
-            self.microversion_skew = microversion_skew
+        if imports is not None:
+            self.imports = imports
+        if default_features is not None:
+            self.default_features = default_features
         if serialization_version is not None:
             self.serialization_version = serialization_version
-        if library_version is not None:
-            self.library_version = library_version
-        if reject_microversion_skew is not None:
-            self.reject_microversion_skew = reject_microversion_skew
         if source_microversion is not None:
             self.source_microversion = source_microversion
+        if reject_microversion_skew is not None:
+            self.reject_microversion_skew = reject_microversion_skew
+        if microversion_skew is not None:
+            self.microversion_skew = microversion_skew
+        if library_version is not None:
+            self.library_version = library_version
         if bt_type is not None:
             self.bt_type = bt_type
 
@@ -172,25 +172,25 @@ class BTFeatureListResponse2457(object):
         self._feature_states = feature_states
 
     @property
-    def default_features(self):
-        """Gets the default_features of this BTFeatureListResponse2457.  # noqa: E501
+    def rollback_index(self):
+        """Gets the rollback_index of this BTFeatureListResponse2457.  # noqa: E501
 
 
-        :return: The default_features of this BTFeatureListResponse2457.  # noqa: E501
-        :rtype: list[BTMFeature134]
+        :return: The rollback_index of this BTFeatureListResponse2457.  # noqa: E501
+        :rtype: int
         """
-        return self._default_features
+        return self._rollback_index
 
-    @default_features.setter
-    def default_features(self, default_features):
-        """Sets the default_features of this BTFeatureListResponse2457.
+    @rollback_index.setter
+    def rollback_index(self, rollback_index):
+        """Sets the rollback_index of this BTFeatureListResponse2457.
 
 
-        :param default_features: The default_features of this BTFeatureListResponse2457.  # noqa: E501
-        :type: list[BTMFeature134]
+        :param rollback_index: The rollback_index of this BTFeatureListResponse2457.  # noqa: E501
+        :type: int
         """
 
-        self._default_features = default_features
+        self._rollback_index = rollback_index
 
     @property
     def imports(self):
@@ -214,46 +214,25 @@ class BTFeatureListResponse2457(object):
         self._imports = imports
 
     @property
-    def rollback_index(self):
-        """Gets the rollback_index of this BTFeatureListResponse2457.  # noqa: E501
+    def default_features(self):
+        """Gets the default_features of this BTFeatureListResponse2457.  # noqa: E501
 
 
-        :return: The rollback_index of this BTFeatureListResponse2457.  # noqa: E501
-        :rtype: int
+        :return: The default_features of this BTFeatureListResponse2457.  # noqa: E501
+        :rtype: list[BTMFeature134]
         """
-        return self._rollback_index
+        return self._default_features
 
-    @rollback_index.setter
-    def rollback_index(self, rollback_index):
-        """Sets the rollback_index of this BTFeatureListResponse2457.
-
-
-        :param rollback_index: The rollback_index of this BTFeatureListResponse2457.  # noqa: E501
-        :type: int
-        """
-
-        self._rollback_index = rollback_index
-
-    @property
-    def microversion_skew(self):
-        """Gets the microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
+    @default_features.setter
+    def default_features(self, default_features):
+        """Sets the default_features of this BTFeatureListResponse2457.
 
 
-        :return: The microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
-        :rtype: bool
-        """
-        return self._microversion_skew
-
-    @microversion_skew.setter
-    def microversion_skew(self, microversion_skew):
-        """Sets the microversion_skew of this BTFeatureListResponse2457.
-
-
-        :param microversion_skew: The microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
-        :type: bool
+        :param default_features: The default_features of this BTFeatureListResponse2457.  # noqa: E501
+        :type: list[BTMFeature134]
         """
 
-        self._microversion_skew = microversion_skew
+        self._default_features = default_features
 
     @property
     def serialization_version(self):
@@ -277,25 +256,25 @@ class BTFeatureListResponse2457(object):
         self._serialization_version = serialization_version
 
     @property
-    def library_version(self):
-        """Gets the library_version of this BTFeatureListResponse2457.  # noqa: E501
+    def source_microversion(self):
+        """Gets the source_microversion of this BTFeatureListResponse2457.  # noqa: E501
 
 
-        :return: The library_version of this BTFeatureListResponse2457.  # noqa: E501
-        :rtype: int
+        :return: The source_microversion of this BTFeatureListResponse2457.  # noqa: E501
+        :rtype: str
         """
-        return self._library_version
+        return self._source_microversion
 
-    @library_version.setter
-    def library_version(self, library_version):
-        """Sets the library_version of this BTFeatureListResponse2457.
+    @source_microversion.setter
+    def source_microversion(self, source_microversion):
+        """Sets the source_microversion of this BTFeatureListResponse2457.
 
 
-        :param library_version: The library_version of this BTFeatureListResponse2457.  # noqa: E501
-        :type: int
+        :param source_microversion: The source_microversion of this BTFeatureListResponse2457.  # noqa: E501
+        :type: str
         """
 
-        self._library_version = library_version
+        self._source_microversion = source_microversion
 
     @property
     def reject_microversion_skew(self):
@@ -319,25 +298,46 @@ class BTFeatureListResponse2457(object):
         self._reject_microversion_skew = reject_microversion_skew
 
     @property
-    def source_microversion(self):
-        """Gets the source_microversion of this BTFeatureListResponse2457.  # noqa: E501
+    def microversion_skew(self):
+        """Gets the microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
 
 
-        :return: The source_microversion of this BTFeatureListResponse2457.  # noqa: E501
-        :rtype: str
+        :return: The microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
+        :rtype: bool
         """
-        return self._source_microversion
+        return self._microversion_skew
 
-    @source_microversion.setter
-    def source_microversion(self, source_microversion):
-        """Sets the source_microversion of this BTFeatureListResponse2457.
+    @microversion_skew.setter
+    def microversion_skew(self, microversion_skew):
+        """Sets the microversion_skew of this BTFeatureListResponse2457.
 
 
-        :param source_microversion: The source_microversion of this BTFeatureListResponse2457.  # noqa: E501
-        :type: str
+        :param microversion_skew: The microversion_skew of this BTFeatureListResponse2457.  # noqa: E501
+        :type: bool
         """
 
-        self._source_microversion = source_microversion
+        self._microversion_skew = microversion_skew
+
+    @property
+    def library_version(self):
+        """Gets the library_version of this BTFeatureListResponse2457.  # noqa: E501
+
+
+        :return: The library_version of this BTFeatureListResponse2457.  # noqa: E501
+        :rtype: int
+        """
+        return self._library_version
+
+    @library_version.setter
+    def library_version(self, library_version):
+        """Sets the library_version of this BTFeatureListResponse2457.
+
+
+        :param library_version: The library_version of this BTFeatureListResponse2457.  # noqa: E501
+        :type: int
+        """
+
+        self._library_version = library_version
 
     @property
     def bt_type(self):

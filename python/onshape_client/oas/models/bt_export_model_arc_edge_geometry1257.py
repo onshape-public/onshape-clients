@@ -35,15 +35,17 @@ class BTExportModelArcEdgeGeometry1257(object):
     """
     openapi_types = {
         'arc_is_clockwise': 'bool',
-        'arc_sweep': 'float'
+        'arc_sweep': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'arc_is_clockwise': 'arcIsClockwise',
-        'arc_sweep': 'arcSweep'
+        'arc_sweep': 'arcSweep',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, arc_is_clockwise=None, arc_sweep=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, arc_is_clockwise=None, arc_sweep=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTExportModelArcEdgeGeometry1257 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTExportModelArcEdgeGeometry1257(object):
 
         self._arc_is_clockwise = None
         self._arc_sweep = None
+        self._bt_type = None
         self.discriminator = None
 
         if arc_is_clockwise is not None:
             self.arc_is_clockwise = arc_is_clockwise
         if arc_sweep is not None:
             self.arc_sweep = arc_sweep
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def arc_is_clockwise(self):
@@ -99,6 +104,27 @@ class BTExportModelArcEdgeGeometry1257(object):
         """
 
         self._arc_sweep = arc_sweep
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTExportModelArcEdgeGeometry1257.  # noqa: E501
+
+
+        :return: The bt_type of this BTExportModelArcEdgeGeometry1257.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTExportModelArcEdgeGeometry1257.
+
+
+        :param bt_type: The bt_type of this BTExportModelArcEdgeGeometry1257.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

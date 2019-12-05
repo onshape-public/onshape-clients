@@ -34,24 +34,29 @@ class BTMConfiguredValueByBoolean1501(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'boolean_value': 'bool'
+        'boolean_value': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'boolean_value': 'booleanValue'
+        'boolean_value': 'booleanValue',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, boolean_value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, boolean_value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMConfiguredValueByBoolean1501 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._boolean_value = None
+        self._bt_type = None
         self.discriminator = None
 
         if boolean_value is not None:
             self.boolean_value = boolean_value
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def boolean_value(self):
@@ -73,6 +78,27 @@ class BTMConfiguredValueByBoolean1501(object):
         """
 
         self._boolean_value = boolean_value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMConfiguredValueByBoolean1501.  # noqa: E501
+
+
+        :return: The bt_type of this BTMConfiguredValueByBoolean1501.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMConfiguredValueByBoolean1501.
+
+
+        :param bt_type: The bt_type of this BTMConfiguredValueByBoolean1501.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

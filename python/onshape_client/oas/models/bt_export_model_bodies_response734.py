@@ -34,55 +34,34 @@ class BTExportModelBodiesResponse734(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'bodies': 'list[BTExportModelBody1272]',
         'error_enum': 'str',
+        'bodies': 'list[BTExportModelBody1272]',
         'bt_type': 'str'
     }
 
     attribute_map = {
-        'bodies': 'bodies',
         'error_enum': 'errorEnum',
+        'bodies': 'bodies',
         'bt_type': 'btType'
     }
 
-    def __init__(self, bodies=None, error_enum=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, error_enum=None, bodies=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTExportModelBodiesResponse734 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._bodies = None
         self._error_enum = None
+        self._bodies = None
         self._bt_type = None
         self.discriminator = None
 
-        if bodies is not None:
-            self.bodies = bodies
         if error_enum is not None:
             self.error_enum = error_enum
+        if bodies is not None:
+            self.bodies = bodies
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def bodies(self):
-        """Gets the bodies of this BTExportModelBodiesResponse734.  # noqa: E501
-
-
-        :return: The bodies of this BTExportModelBodiesResponse734.  # noqa: E501
-        :rtype: list[BTExportModelBody1272]
-        """
-        return self._bodies
-
-    @bodies.setter
-    def bodies(self, bodies):
-        """Sets the bodies of this BTExportModelBodiesResponse734.
-
-
-        :param bodies: The bodies of this BTExportModelBodiesResponse734.  # noqa: E501
-        :type: list[BTExportModelBody1272]
-        """
-
-        self._bodies = bodies
 
     @property
     def error_enum(self):
@@ -110,6 +89,27 @@ class BTExportModelBodiesResponse734(object):
             )
 
         self._error_enum = error_enum
+
+    @property
+    def bodies(self):
+        """Gets the bodies of this BTExportModelBodiesResponse734.  # noqa: E501
+
+
+        :return: The bodies of this BTExportModelBodiesResponse734.  # noqa: E501
+        :rtype: list[BTExportModelBody1272]
+        """
+        return self._bodies
+
+    @bodies.setter
+    def bodies(self, bodies):
+        """Sets the bodies of this BTExportModelBodiesResponse734.
+
+
+        :param bodies: The bodies of this BTExportModelBodiesResponse734.  # noqa: E501
+        :type: list[BTExportModelBody1272]
+        """
+
+        self._bodies = bodies
 
     @property
     def bt_type(self):

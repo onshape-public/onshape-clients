@@ -36,11 +36,11 @@ class BTAssemblyPSFeatureInfo(object):
     openapi_types = {
         'feature_type': 'str',
         'feature_id': 'str',
-        'document_microversion': 'str',
-        'document_id': 'str',
-        'element_id': 'str',
-        'revision': 'str',
         'configuration': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
+        'revision': 'str',
+        'document_microversion': 'str',
         'full_configuration': 'str',
         'document_version': 'str'
     }
@@ -48,16 +48,16 @@ class BTAssemblyPSFeatureInfo(object):
     attribute_map = {
         'feature_type': 'featureType',
         'feature_id': 'featureId',
-        'document_microversion': 'documentMicroversion',
-        'document_id': 'documentId',
-        'element_id': 'elementId',
-        'revision': 'revision',
         'configuration': 'configuration',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
+        'revision': 'revision',
+        'document_microversion': 'documentMicroversion',
         'full_configuration': 'fullConfiguration',
         'document_version': 'documentVersion'
     }
 
-    def __init__(self, feature_type=None, feature_id=None, document_microversion=None, document_id=None, element_id=None, revision=None, configuration=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_type=None, feature_id=None, configuration=None, element_id=None, document_id=None, revision=None, document_microversion=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyPSFeatureInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,11 +65,11 @@ class BTAssemblyPSFeatureInfo(object):
 
         self._feature_type = None
         self._feature_id = None
-        self._document_microversion = None
-        self._document_id = None
-        self._element_id = None
-        self._revision = None
         self._configuration = None
+        self._element_id = None
+        self._document_id = None
+        self._revision = None
+        self._document_microversion = None
         self._full_configuration = None
         self._document_version = None
         self.discriminator = None
@@ -78,16 +78,16 @@ class BTAssemblyPSFeatureInfo(object):
             self.feature_type = feature_type
         if feature_id is not None:
             self.feature_id = feature_id
-        if document_microversion is not None:
-            self.document_microversion = document_microversion
-        if document_id is not None:
-            self.document_id = document_id
-        if element_id is not None:
-            self.element_id = element_id
-        if revision is not None:
-            self.revision = revision
         if configuration is not None:
             self.configuration = configuration
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if revision is not None:
+            self.revision = revision
+        if document_microversion is not None:
+            self.document_microversion = document_microversion
         if full_configuration is not None:
             self.full_configuration = full_configuration
         if document_version is not None:
@@ -136,46 +136,25 @@ class BTAssemblyPSFeatureInfo(object):
         self._feature_id = feature_id
 
     @property
-    def document_microversion(self):
-        """Gets the document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
 
 
-        :return: The document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :return: The configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document_microversion
+        return self._configuration
 
-    @document_microversion.setter
-    def document_microversion(self, document_microversion):
-        """Sets the document_microversion of this BTAssemblyPSFeatureInfo.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTAssemblyPSFeatureInfo.
 
 
-        :param document_microversion: The document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :param configuration: The configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
         :type: str
         """
 
-        self._document_microversion = document_microversion
-
-    @property
-    def document_id(self):
-        """Gets the document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
-
-
-        :return: The document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTAssemblyPSFeatureInfo.
-
-
-        :param document_id: The document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._document_id = document_id
+        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -199,6 +178,27 @@ class BTAssemblyPSFeatureInfo(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTAssemblyPSFeatureInfo.
+
+
+        :param document_id: The document_id of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def revision(self):
         """Gets the revision of this BTAssemblyPSFeatureInfo.  # noqa: E501
 
@@ -220,25 +220,25 @@ class BTAssemblyPSFeatureInfo(object):
         self._revision = revision
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
+    def document_microversion(self):
+        """Gets the document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
 
 
-        :return: The configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :return: The document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._document_microversion
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTAssemblyPSFeatureInfo.
+    @document_microversion.setter
+    def document_microversion(self, document_microversion):
+        """Sets the document_microversion of this BTAssemblyPSFeatureInfo.
 
 
-        :param configuration: The configuration of this BTAssemblyPSFeatureInfo.  # noqa: E501
+        :param document_microversion: The document_microversion of this BTAssemblyPSFeatureInfo.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._document_microversion = document_microversion
 
     @property
     def full_configuration(self):

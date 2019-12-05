@@ -40,7 +40,8 @@ class BTMSketchTextEntity1761(object):
         'baseline_start_x': 'float',
         'baseline_start_y': 'float',
         'baseline_direction_x': 'float',
-        'baseline_direction_y': 'float'
+        'baseline_direction_y': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class BTMSketchTextEntity1761(object):
         'baseline_start_x': 'baselineStartX',
         'baseline_start_y': 'baselineStartY',
         'baseline_direction_x': 'baselineDirectionX',
-        'baseline_direction_y': 'baselineDirectionY'
+        'baseline_direction_y': 'baselineDirectionY',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, font_name=None, text=None, ascent=None, baseline_start_x=None, baseline_start_y=None, baseline_direction_x=None, baseline_direction_y=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, font_name=None, text=None, ascent=None, baseline_start_x=None, baseline_start_y=None, baseline_direction_x=None, baseline_direction_y=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchTextEntity1761 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class BTMSketchTextEntity1761(object):
         self._baseline_start_y = None
         self._baseline_direction_x = None
         self._baseline_direction_y = None
+        self._bt_type = None
         self.discriminator = None
 
         if font_name is not None:
@@ -82,6 +85,8 @@ class BTMSketchTextEntity1761(object):
             self.baseline_direction_x = baseline_direction_x
         if baseline_direction_y is not None:
             self.baseline_direction_y = baseline_direction_y
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def font_name(self):
@@ -229,6 +234,27 @@ class BTMSketchTextEntity1761(object):
         """
 
         self._baseline_direction_y = baseline_direction_y
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchTextEntity1761.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchTextEntity1761.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchTextEntity1761.
+
+
+        :param bt_type: The bt_type of this BTMSketchTextEntity1761.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,22 +36,24 @@ class BTPStatementLoopFor3278(object):
     openapi_types = {
         'condition': 'BTPExpression9',
         'initialization': 'BTPStatement269',
-        'space_after_initialization': 'BTPSpace10',
         'space_before_condition': 'BTPSpace10',
         'space_before_increment': 'BTPSpace10',
-        'increment': 'BTPStatement269'
+        'space_after_initialization': 'BTPSpace10',
+        'increment': 'BTPStatement269',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'condition': 'condition',
         'initialization': 'initialization',
-        'space_after_initialization': 'spaceAfterInitialization',
         'space_before_condition': 'spaceBeforeCondition',
         'space_before_increment': 'spaceBeforeIncrement',
-        'increment': 'increment'
+        'space_after_initialization': 'spaceAfterInitialization',
+        'increment': 'increment',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, condition=None, initialization=None, space_after_initialization=None, space_before_condition=None, space_before_increment=None, increment=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, condition=None, initialization=None, space_before_condition=None, space_before_increment=None, space_after_initialization=None, increment=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementLoopFor3278 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,24 +61,27 @@ class BTPStatementLoopFor3278(object):
 
         self._condition = None
         self._initialization = None
-        self._space_after_initialization = None
         self._space_before_condition = None
         self._space_before_increment = None
+        self._space_after_initialization = None
         self._increment = None
+        self._bt_type = None
         self.discriminator = None
 
         if condition is not None:
             self.condition = condition
         if initialization is not None:
             self.initialization = initialization
-        if space_after_initialization is not None:
-            self.space_after_initialization = space_after_initialization
         if space_before_condition is not None:
             self.space_before_condition = space_before_condition
         if space_before_increment is not None:
             self.space_before_increment = space_before_increment
+        if space_after_initialization is not None:
+            self.space_after_initialization = space_after_initialization
         if increment is not None:
             self.increment = increment
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def condition(self):
@@ -121,27 +126,6 @@ class BTPStatementLoopFor3278(object):
         self._initialization = initialization
 
     @property
-    def space_after_initialization(self):
-        """Gets the space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
-
-
-        :return: The space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
-        :rtype: BTPSpace10
-        """
-        return self._space_after_initialization
-
-    @space_after_initialization.setter
-    def space_after_initialization(self, space_after_initialization):
-        """Sets the space_after_initialization of this BTPStatementLoopFor3278.
-
-
-        :param space_after_initialization: The space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
-        :type: BTPSpace10
-        """
-
-        self._space_after_initialization = space_after_initialization
-
-    @property
     def space_before_condition(self):
         """Gets the space_before_condition of this BTPStatementLoopFor3278.  # noqa: E501
 
@@ -184,6 +168,27 @@ class BTPStatementLoopFor3278(object):
         self._space_before_increment = space_before_increment
 
     @property
+    def space_after_initialization(self):
+        """Gets the space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
+
+
+        :return: The space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_after_initialization
+
+    @space_after_initialization.setter
+    def space_after_initialization(self, space_after_initialization):
+        """Sets the space_after_initialization of this BTPStatementLoopFor3278.
+
+
+        :param space_after_initialization: The space_after_initialization of this BTPStatementLoopFor3278.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_after_initialization = space_after_initialization
+
+    @property
     def increment(self):
         """Gets the increment of this BTPStatementLoopFor3278.  # noqa: E501
 
@@ -203,6 +208,27 @@ class BTPStatementLoopFor3278(object):
         """
 
         self._increment = increment
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementLoopFor3278.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementLoopFor3278.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementLoopFor3278.
+
+
+        :param bt_type: The bt_type of this BTPStatementLoopFor3278.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

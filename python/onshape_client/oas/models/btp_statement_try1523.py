@@ -38,11 +38,12 @@ class BTPStatementTry1523(object):
         'name': 'BTPIdentifier8',
         'type_name': 'str',
         'body': 'BTPStatementBlock271',
+        'space_before_silent': 'BTPSpace10',
         'silent': 'bool',
         'catch_variable': 'BTPIdentifier8',
-        'space_before_silent': 'BTPSpace10',
         'catch_block': 'BTPStatementBlock271',
-        'space_after_catch': 'BTPSpace10'
+        'space_after_catch': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,14 +51,15 @@ class BTPStatementTry1523(object):
         'name': 'name',
         'type_name': 'typeName',
         'body': 'body',
+        'space_before_silent': 'spaceBeforeSilent',
         'silent': 'silent',
         'catch_variable': 'catchVariable',
-        'space_before_silent': 'spaceBeforeSilent',
         'catch_block': 'catchBlock',
-        'space_after_catch': 'spaceAfterCatch'
+        'space_after_catch': 'spaceAfterCatch',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, standard_type=None, name=None, type_name=None, body=None, silent=None, catch_variable=None, space_before_silent=None, catch_block=None, space_after_catch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, standard_type=None, name=None, type_name=None, body=None, space_before_silent=None, silent=None, catch_variable=None, catch_block=None, space_after_catch=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementTry1523 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,11 +69,12 @@ class BTPStatementTry1523(object):
         self._name = None
         self._type_name = None
         self._body = None
+        self._space_before_silent = None
         self._silent = None
         self._catch_variable = None
-        self._space_before_silent = None
         self._catch_block = None
         self._space_after_catch = None
+        self._bt_type = None
         self.discriminator = None
 
         if standard_type is not None:
@@ -82,16 +85,18 @@ class BTPStatementTry1523(object):
             self.type_name = type_name
         if body is not None:
             self.body = body
+        if space_before_silent is not None:
+            self.space_before_silent = space_before_silent
         if silent is not None:
             self.silent = silent
         if catch_variable is not None:
             self.catch_variable = catch_variable
-        if space_before_silent is not None:
-            self.space_before_silent = space_before_silent
         if catch_block is not None:
             self.catch_block = catch_block
         if space_after_catch is not None:
             self.space_after_catch = space_after_catch
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def standard_type(self):
@@ -184,6 +189,27 @@ class BTPStatementTry1523(object):
         self._body = body
 
     @property
+    def space_before_silent(self):
+        """Gets the space_before_silent of this BTPStatementTry1523.  # noqa: E501
+
+
+        :return: The space_before_silent of this BTPStatementTry1523.  # noqa: E501
+        :rtype: BTPSpace10
+        """
+        return self._space_before_silent
+
+    @space_before_silent.setter
+    def space_before_silent(self, space_before_silent):
+        """Sets the space_before_silent of this BTPStatementTry1523.
+
+
+        :param space_before_silent: The space_before_silent of this BTPStatementTry1523.  # noqa: E501
+        :type: BTPSpace10
+        """
+
+        self._space_before_silent = space_before_silent
+
+    @property
     def silent(self):
         """Gets the silent of this BTPStatementTry1523.  # noqa: E501
 
@@ -226,27 +252,6 @@ class BTPStatementTry1523(object):
         self._catch_variable = catch_variable
 
     @property
-    def space_before_silent(self):
-        """Gets the space_before_silent of this BTPStatementTry1523.  # noqa: E501
-
-
-        :return: The space_before_silent of this BTPStatementTry1523.  # noqa: E501
-        :rtype: BTPSpace10
-        """
-        return self._space_before_silent
-
-    @space_before_silent.setter
-    def space_before_silent(self, space_before_silent):
-        """Sets the space_before_silent of this BTPStatementTry1523.
-
-
-        :param space_before_silent: The space_before_silent of this BTPStatementTry1523.  # noqa: E501
-        :type: BTPSpace10
-        """
-
-        self._space_before_silent = space_before_silent
-
-    @property
     def catch_block(self):
         """Gets the catch_block of this BTPStatementTry1523.  # noqa: E501
 
@@ -287,6 +292,27 @@ class BTPStatementTry1523(object):
         """
 
         self._space_after_catch = space_after_catch
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementTry1523.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementTry1523.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementTry1523.
+
+
+        :param bt_type: The bt_type of this BTPStatementTry1523.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

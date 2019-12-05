@@ -34,66 +34,44 @@ class BTMIndividualCreatedByQuery137AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'body_type': 'str',
         'feature_id': 'str',
         'entity_type': 'str',
-        'filter_construction': 'bool'
+        'body_type': 'str',
+        'filter_construction': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'body_type': 'bodyType',
         'feature_id': 'featureId',
         'entity_type': 'entityType',
-        'filter_construction': 'filterConstruction'
+        'body_type': 'bodyType',
+        'filter_construction': 'filterConstruction',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, body_type=None, feature_id=None, entity_type=None, filter_construction=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_id=None, entity_type=None, body_type=None, filter_construction=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualCreatedByQuery137AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._body_type = None
         self._feature_id = None
         self._entity_type = None
+        self._body_type = None
         self._filter_construction = None
+        self._bt_type = None
         self.discriminator = None
 
-        if body_type is not None:
-            self.body_type = body_type
         if feature_id is not None:
             self.feature_id = feature_id
         if entity_type is not None:
             self.entity_type = entity_type
+        if body_type is not None:
+            self.body_type = body_type
         if filter_construction is not None:
             self.filter_construction = filter_construction
-
-    @property
-    def body_type(self):
-        """Gets the body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
-
-
-        :return: The body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._body_type
-
-    @body_type.setter
-    def body_type(self, body_type):
-        """Sets the body_type of this BTMIndividualCreatedByQuery137AllOf.
-
-
-        :param body_type: The body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["SOLID", "SHEET", "WIRE", "POINT", "MATE_CONNECTOR", "COMPOSITE", "UNKNOWN"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and body_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `body_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(body_type, allowed_values)
-            )
-
-        self._body_type = body_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def feature_id(self):
@@ -144,6 +122,33 @@ class BTMIndividualCreatedByQuery137AllOf(object):
         self._entity_type = entity_type
 
     @property
+    def body_type(self):
+        """Gets the body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+
+
+        :return: The body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._body_type
+
+    @body_type.setter
+    def body_type(self, body_type):
+        """Sets the body_type of this BTMIndividualCreatedByQuery137AllOf.
+
+
+        :param body_type: The body_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["SOLID", "SHEET", "WIRE", "POINT", "MATE_CONNECTOR", "COMPOSITE", "UNKNOWN"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and body_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `body_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(body_type, allowed_values)
+            )
+
+        self._body_type = body_type
+
+    @property
     def filter_construction(self):
         """Gets the filter_construction of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
 
@@ -163,6 +168,27 @@ class BTMIndividualCreatedByQuery137AllOf(object):
         """
 
         self._filter_construction = filter_construction
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMIndividualCreatedByQuery137AllOf.
+
+
+        :param bt_type: The bt_type of this BTMIndividualCreatedByQuery137AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

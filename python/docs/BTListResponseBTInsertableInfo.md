@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**list[BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

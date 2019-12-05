@@ -34,60 +34,39 @@ class NextCharge(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'current_period_end': 'datetime',
         'interval': 'str',
         'amount': 'int',
+        'current_period_end': 'datetime',
         'total': 'int'
     }
 
     attribute_map = {
-        'current_period_end': 'currentPeriodEnd',
         'interval': 'interval',
         'amount': 'amount',
+        'current_period_end': 'currentPeriodEnd',
         'total': 'total'
     }
 
-    def __init__(self, current_period_end=None, interval=None, amount=None, total=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, interval=None, amount=None, current_period_end=None, total=None, local_vars_configuration=None):  # noqa: E501
         """NextCharge - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._current_period_end = None
         self._interval = None
         self._amount = None
+        self._current_period_end = None
         self._total = None
         self.discriminator = None
 
-        if current_period_end is not None:
-            self.current_period_end = current_period_end
         if interval is not None:
             self.interval = interval
         if amount is not None:
             self.amount = amount
+        if current_period_end is not None:
+            self.current_period_end = current_period_end
         if total is not None:
             self.total = total
-
-    @property
-    def current_period_end(self):
-        """Gets the current_period_end of this NextCharge.  # noqa: E501
-
-
-        :return: The current_period_end of this NextCharge.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._current_period_end
-
-    @current_period_end.setter
-    def current_period_end(self, current_period_end):
-        """Sets the current_period_end of this NextCharge.
-
-
-        :param current_period_end: The current_period_end of this NextCharge.  # noqa: E501
-        :type: datetime
-        """
-
-        self._current_period_end = current_period_end
 
     @property
     def interval(self):
@@ -130,6 +109,27 @@ class NextCharge(object):
         """
 
         self._amount = amount
+
+    @property
+    def current_period_end(self):
+        """Gets the current_period_end of this NextCharge.  # noqa: E501
+
+
+        :return: The current_period_end of this NextCharge.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._current_period_end
+
+    @current_period_end.setter
+    def current_period_end(self, current_period_end):
+        """Sets the current_period_end of this NextCharge.
+
+
+        :param current_period_end: The current_period_end of this NextCharge.  # noqa: E501
+        :type: datetime
+        """
+
+        self._current_period_end = current_period_end
 
     @property
     def total(self):

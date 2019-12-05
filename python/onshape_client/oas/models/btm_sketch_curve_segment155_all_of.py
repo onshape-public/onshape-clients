@@ -37,17 +37,19 @@ class BTMSketchCurveSegment155AllOf(object):
         'start_point_id': 'str',
         'end_point_id': 'str',
         'start_param': 'float',
-        'end_param': 'float'
+        'end_param': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'start_point_id': 'startPointId',
         'end_point_id': 'endPointId',
         'start_param': 'startParam',
-        'end_param': 'endParam'
+        'end_param': 'endParam',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, start_point_id=None, end_point_id=None, start_param=None, end_param=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, start_point_id=None, end_point_id=None, start_param=None, end_param=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchCurveSegment155AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class BTMSketchCurveSegment155AllOf(object):
         self._end_point_id = None
         self._start_param = None
         self._end_param = None
+        self._bt_type = None
         self.discriminator = None
 
         if start_point_id is not None:
@@ -67,6 +70,8 @@ class BTMSketchCurveSegment155AllOf(object):
             self.start_param = start_param
         if end_param is not None:
             self.end_param = end_param
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def start_point_id(self):
@@ -151,6 +156,27 @@ class BTMSketchCurveSegment155AllOf(object):
         """
 
         self._end_param = end_param
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchCurveSegment155AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchCurveSegment155AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchCurveSegment155AllOf.
+
+
+        :param bt_type: The bt_type of this BTMSketchCurveSegment155AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,24 +34,29 @@ class BTSMDefinitionEntityTypeFilter1651(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'sm_definition_entity_type': 'str'
+        'sm_definition_entity_type': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'sm_definition_entity_type': 'smDefinitionEntityType'
+        'sm_definition_entity_type': 'smDefinitionEntityType',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, sm_definition_entity_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, sm_definition_entity_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTSMDefinitionEntityTypeFilter1651 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._sm_definition_entity_type = None
+        self._bt_type = None
         self.discriminator = None
 
         if sm_definition_entity_type is not None:
             self.sm_definition_entity_type = sm_definition_entity_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def sm_definition_entity_type(self):
@@ -79,6 +84,27 @@ class BTSMDefinitionEntityTypeFilter1651(object):
             )
 
         self._sm_definition_entity_type = sm_definition_entity_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSMDefinitionEntityTypeFilter1651.  # noqa: E501
+
+
+        :return: The bt_type of this BTSMDefinitionEntityTypeFilter1651.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSMDefinitionEntityTypeFilter1651.
+
+
+        :param bt_type: The bt_type of this BTSMDefinitionEntityTypeFilter1651.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

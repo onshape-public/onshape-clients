@@ -34,39 +34,65 @@ class BTMParameterQuantity147AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'expression': 'str',
         'units': 'str',
         'is_integer': 'bool',
-        'expression': 'str',
-        'value': 'float'
+        'value': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'expression': 'expression',
         'units': 'units',
         'is_integer': 'isInteger',
-        'expression': 'expression',
-        'value': 'value'
+        'value': 'value',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, units=None, is_integer=None, expression=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, expression=None, units=None, is_integer=None, value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterQuantity147AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._expression = None
         self._units = None
         self._is_integer = None
-        self._expression = None
         self._value = None
+        self._bt_type = None
         self.discriminator = None
 
+        if expression is not None:
+            self.expression = expression
         if units is not None:
             self.units = units
         if is_integer is not None:
             self.is_integer = is_integer
-        if expression is not None:
-            self.expression = expression
         if value is not None:
             self.value = value
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def expression(self):
+        """Gets the expression of this BTMParameterQuantity147AllOf.  # noqa: E501
+
+
+        :return: The expression of this BTMParameterQuantity147AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._expression
+
+    @expression.setter
+    def expression(self, expression):
+        """Sets the expression of this BTMParameterQuantity147AllOf.
+
+
+        :param expression: The expression of this BTMParameterQuantity147AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._expression = expression
 
     @property
     def units(self):
@@ -111,27 +137,6 @@ class BTMParameterQuantity147AllOf(object):
         self._is_integer = is_integer
 
     @property
-    def expression(self):
-        """Gets the expression of this BTMParameterQuantity147AllOf.  # noqa: E501
-
-
-        :return: The expression of this BTMParameterQuantity147AllOf.  # noqa: E501
-        :rtype: str
-        """
-        return self._expression
-
-    @expression.setter
-    def expression(self, expression):
-        """Sets the expression of this BTMParameterQuantity147AllOf.
-
-
-        :param expression: The expression of this BTMParameterQuantity147AllOf.  # noqa: E501
-        :type: str
-        """
-
-        self._expression = expression
-
-    @property
     def value(self):
         """Gets the value of this BTMParameterQuantity147AllOf.  # noqa: E501
 
@@ -151,6 +156,27 @@ class BTMParameterQuantity147AllOf(object):
         """
 
         self._value = value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterQuantity147AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterQuantity147AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterQuantity147AllOf.
+
+
+        :param bt_type: The bt_type of this BTMParameterQuantity147AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

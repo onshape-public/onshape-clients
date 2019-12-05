@@ -34,50 +34,29 @@ class TransformGroup(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'transform': 'list[float]',
-        'instances': 'list[BTAssemblyInstanceDefinitionParams]'
+        'instances': 'list[BTAssemblyInstanceDefinitionParams]',
+        'transform': 'list[float]'
     }
 
     attribute_map = {
-        'transform': 'transform',
-        'instances': 'instances'
+        'instances': 'instances',
+        'transform': 'transform'
     }
 
-    def __init__(self, transform=None, instances=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, instances=None, transform=None, local_vars_configuration=None):  # noqa: E501
         """TransformGroup - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._transform = None
         self._instances = None
+        self._transform = None
         self.discriminator = None
 
-        if transform is not None:
-            self.transform = transform
         if instances is not None:
             self.instances = instances
-
-    @property
-    def transform(self):
-        """Gets the transform of this TransformGroup.  # noqa: E501
-
-
-        :return: The transform of this TransformGroup.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._transform
-
-    @transform.setter
-    def transform(self, transform):
-        """Sets the transform of this TransformGroup.
-
-
-        :param transform: The transform of this TransformGroup.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._transform = transform
+        if transform is not None:
+            self.transform = transform
 
     @property
     def instances(self):
@@ -99,6 +78,27 @@ class TransformGroup(object):
         """
 
         self._instances = instances
+
+    @property
+    def transform(self):
+        """Gets the transform of this TransformGroup.  # noqa: E501
+
+
+        :return: The transform of this TransformGroup.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._transform
+
+    @transform.setter
+    def transform(self, transform):
+        """Sets the transform of this TransformGroup.
+
+
+        :param transform: The transform of this TransformGroup.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._transform = transform
 
     def to_dict(self):
         """Returns the model properties as a dict"""

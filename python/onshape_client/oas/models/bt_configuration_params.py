@@ -34,50 +34,29 @@ class BTConfigurationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'parameters': 'list[ConfigurationEntry]',
-        'standard_content_parameters_id': 'str'
+        'standard_content_parameters_id': 'str',
+        'parameters': 'list[ConfigurationEntry]'
     }
 
     attribute_map = {
-        'parameters': 'parameters',
-        'standard_content_parameters_id': 'standardContentParametersId'
+        'standard_content_parameters_id': 'standardContentParametersId',
+        'parameters': 'parameters'
     }
 
-    def __init__(self, parameters=None, standard_content_parameters_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, standard_content_parameters_id=None, parameters=None, local_vars_configuration=None):  # noqa: E501
         """BTConfigurationParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._parameters = None
         self._standard_content_parameters_id = None
+        self._parameters = None
         self.discriminator = None
 
-        if parameters is not None:
-            self.parameters = parameters
         if standard_content_parameters_id is not None:
             self.standard_content_parameters_id = standard_content_parameters_id
-
-    @property
-    def parameters(self):
-        """Gets the parameters of this BTConfigurationParams.  # noqa: E501
-
-
-        :return: The parameters of this BTConfigurationParams.  # noqa: E501
-        :rtype: list[ConfigurationEntry]
-        """
-        return self._parameters
-
-    @parameters.setter
-    def parameters(self, parameters):
-        """Sets the parameters of this BTConfigurationParams.
-
-
-        :param parameters: The parameters of this BTConfigurationParams.  # noqa: E501
-        :type: list[ConfigurationEntry]
-        """
-
-        self._parameters = parameters
+        if parameters is not None:
+            self.parameters = parameters
 
     @property
     def standard_content_parameters_id(self):
@@ -99,6 +78,27 @@ class BTConfigurationParams(object):
         """
 
         self._standard_content_parameters_id = standard_content_parameters_id
+
+    @property
+    def parameters(self):
+        """Gets the parameters of this BTConfigurationParams.  # noqa: E501
+
+
+        :return: The parameters of this BTConfigurationParams.  # noqa: E501
+        :rtype: list[ConfigurationEntry]
+        """
+        return self._parameters
+
+    @parameters.setter
+    def parameters(self, parameters):
+        """Sets the parameters of this BTConfigurationParams.
+
+
+        :param parameters: The parameters of this BTConfigurationParams.  # noqa: E501
+        :type: list[ConfigurationEntry]
+        """
+
+        self._parameters = parameters
 
     def to_dict(self):
         """Returns the model properties as a dict"""

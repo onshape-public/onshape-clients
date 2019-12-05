@@ -35,33 +35,38 @@ class BTMSketchPoint158AllOf(object):
     """
     openapi_types = {
         'y': 'float',
+        'is_user_point': 'bool',
         'x': 'float',
-        'is_user_point': 'bool'
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'y': 'y',
+        'is_user_point': 'isUserPoint',
         'x': 'x',
-        'is_user_point': 'isUserPoint'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, y=None, x=None, is_user_point=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, y=None, is_user_point=None, x=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchPoint158AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._y = None
-        self._x = None
         self._is_user_point = None
+        self._x = None
+        self._bt_type = None
         self.discriminator = None
 
         if y is not None:
             self.y = y
-        if x is not None:
-            self.x = x
         if is_user_point is not None:
             self.is_user_point = is_user_point
+        if x is not None:
+            self.x = x
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def y(self):
@@ -85,6 +90,27 @@ class BTMSketchPoint158AllOf(object):
         self._y = y
 
     @property
+    def is_user_point(self):
+        """Gets the is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
+
+
+        :return: The is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_user_point
+
+    @is_user_point.setter
+    def is_user_point(self, is_user_point):
+        """Sets the is_user_point of this BTMSketchPoint158AllOf.
+
+
+        :param is_user_point: The is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_user_point = is_user_point
+
+    @property
     def x(self):
         """Gets the x of this BTMSketchPoint158AllOf.  # noqa: E501
 
@@ -106,25 +132,25 @@ class BTMSketchPoint158AllOf(object):
         self._x = x
 
     @property
-    def is_user_point(self):
-        """Gets the is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchPoint158AllOf.  # noqa: E501
 
 
-        :return: The is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
-        :rtype: bool
+        :return: The bt_type of this BTMSketchPoint158AllOf.  # noqa: E501
+        :rtype: str
         """
-        return self._is_user_point
+        return self._bt_type
 
-    @is_user_point.setter
-    def is_user_point(self, is_user_point):
-        """Sets the is_user_point of this BTMSketchPoint158AllOf.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchPoint158AllOf.
 
 
-        :param is_user_point: The is_user_point of this BTMSketchPoint158AllOf.  # noqa: E501
-        :type: bool
+        :param bt_type: The bt_type of this BTMSketchPoint158AllOf.  # noqa: E501
+        :type: str
         """
 
-        self._is_user_point = is_user_point
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

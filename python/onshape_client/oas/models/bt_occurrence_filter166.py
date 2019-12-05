@@ -34,6 +34,7 @@ class BTOccurrenceFilter166(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'top_level_only': 'bool',
         'solid_or_composite_body_only': 'bool',
         'exclude_sub_assemblies': 'bool',
         'exclude_suppressed': 'bool',
@@ -43,10 +44,11 @@ class BTOccurrenceFilter166(object):
         'exclude_studio_inserts': 'bool',
         'exclude_standard_content': 'bool',
         'include_assembly_root': 'bool',
-        'top_level_only': 'bool'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'top_level_only': 'topLevelOnly',
         'solid_or_composite_body_only': 'solidOrCompositeBodyOnly',
         'exclude_sub_assemblies': 'excludeSubAssemblies',
         'exclude_suppressed': 'excludeSuppressed',
@@ -56,15 +58,16 @@ class BTOccurrenceFilter166(object):
         'exclude_studio_inserts': 'excludeStudioInserts',
         'exclude_standard_content': 'excludeStandardContent',
         'include_assembly_root': 'includeAssemblyRoot',
-        'top_level_only': 'topLevelOnly'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, solid_or_composite_body_only=None, exclude_sub_assemblies=None, exclude_suppressed=None, exclude_flattened_parts=None, exclude_pattern_instances=None, include_pattern_occurrence=None, exclude_studio_inserts=None, exclude_standard_content=None, include_assembly_root=None, top_level_only=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, top_level_only=None, solid_or_composite_body_only=None, exclude_sub_assemblies=None, exclude_suppressed=None, exclude_flattened_parts=None, exclude_pattern_instances=None, include_pattern_occurrence=None, exclude_studio_inserts=None, exclude_standard_content=None, include_assembly_root=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTOccurrenceFilter166 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._top_level_only = None
         self._solid_or_composite_body_only = None
         self._exclude_sub_assemblies = None
         self._exclude_suppressed = None
@@ -74,9 +77,11 @@ class BTOccurrenceFilter166(object):
         self._exclude_studio_inserts = None
         self._exclude_standard_content = None
         self._include_assembly_root = None
-        self._top_level_only = None
+        self._bt_type = None
         self.discriminator = None
 
+        if top_level_only is not None:
+            self.top_level_only = top_level_only
         if solid_or_composite_body_only is not None:
             self.solid_or_composite_body_only = solid_or_composite_body_only
         if exclude_sub_assemblies is not None:
@@ -95,8 +100,29 @@ class BTOccurrenceFilter166(object):
             self.exclude_standard_content = exclude_standard_content
         if include_assembly_root is not None:
             self.include_assembly_root = include_assembly_root
-        if top_level_only is not None:
-            self.top_level_only = top_level_only
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def top_level_only(self):
+        """Gets the top_level_only of this BTOccurrenceFilter166.  # noqa: E501
+
+
+        :return: The top_level_only of this BTOccurrenceFilter166.  # noqa: E501
+        :rtype: bool
+        """
+        return self._top_level_only
+
+    @top_level_only.setter
+    def top_level_only(self, top_level_only):
+        """Sets the top_level_only of this BTOccurrenceFilter166.
+
+
+        :param top_level_only: The top_level_only of this BTOccurrenceFilter166.  # noqa: E501
+        :type: bool
+        """
+
+        self._top_level_only = top_level_only
 
     @property
     def solid_or_composite_body_only(self):
@@ -288,25 +314,25 @@ class BTOccurrenceFilter166(object):
         self._include_assembly_root = include_assembly_root
 
     @property
-    def top_level_only(self):
-        """Gets the top_level_only of this BTOccurrenceFilter166.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTOccurrenceFilter166.  # noqa: E501
 
 
-        :return: The top_level_only of this BTOccurrenceFilter166.  # noqa: E501
-        :rtype: bool
+        :return: The bt_type of this BTOccurrenceFilter166.  # noqa: E501
+        :rtype: str
         """
-        return self._top_level_only
+        return self._bt_type
 
-    @top_level_only.setter
-    def top_level_only(self, top_level_only):
-        """Sets the top_level_only of this BTOccurrenceFilter166.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTOccurrenceFilter166.
 
 
-        :param top_level_only: The top_level_only of this BTOccurrenceFilter166.  # noqa: E501
-        :type: bool
+        :param bt_type: The bt_type of this BTOccurrenceFilter166.  # noqa: E501
+        :type: str
         """
 
-        self._top_level_only = top_level_only
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

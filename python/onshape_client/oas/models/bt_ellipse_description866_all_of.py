@@ -35,43 +35,48 @@ class BTEllipseDescription866AllOf(object):
     """
     openapi_types = {
         'normal': 'BTVector3d389',
-        'major_radius': 'float',
-        'major_axis': 'BTVector3d389',
         'minor_radius': 'float',
-        'origin': 'BTVector3d389'
+        'major_axis': 'BTVector3d389',
+        'major_radius': 'float',
+        'origin': 'BTVector3d389',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'normal': 'normal',
-        'major_radius': 'majorRadius',
-        'major_axis': 'majorAxis',
         'minor_radius': 'minorRadius',
-        'origin': 'origin'
+        'major_axis': 'majorAxis',
+        'major_radius': 'majorRadius',
+        'origin': 'origin',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, normal=None, major_radius=None, major_axis=None, minor_radius=None, origin=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, normal=None, minor_radius=None, major_axis=None, major_radius=None, origin=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTEllipseDescription866AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._normal = None
-        self._major_radius = None
-        self._major_axis = None
         self._minor_radius = None
+        self._major_axis = None
+        self._major_radius = None
         self._origin = None
+        self._bt_type = None
         self.discriminator = None
 
         if normal is not None:
             self.normal = normal
-        if major_radius is not None:
-            self.major_radius = major_radius
-        if major_axis is not None:
-            self.major_axis = major_axis
         if minor_radius is not None:
             self.minor_radius = minor_radius
+        if major_axis is not None:
+            self.major_axis = major_axis
+        if major_radius is not None:
+            self.major_radius = major_radius
         if origin is not None:
             self.origin = origin
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def normal(self):
@@ -95,25 +100,25 @@ class BTEllipseDescription866AllOf(object):
         self._normal = normal
 
     @property
-    def major_radius(self):
-        """Gets the major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+    def minor_radius(self):
+        """Gets the minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
 
 
-        :return: The major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+        :return: The minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
         :rtype: float
         """
-        return self._major_radius
+        return self._minor_radius
 
-    @major_radius.setter
-    def major_radius(self, major_radius):
-        """Sets the major_radius of this BTEllipseDescription866AllOf.
+    @minor_radius.setter
+    def minor_radius(self, minor_radius):
+        """Sets the minor_radius of this BTEllipseDescription866AllOf.
 
 
-        :param major_radius: The major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+        :param minor_radius: The minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
         :type: float
         """
 
-        self._major_radius = major_radius
+        self._minor_radius = minor_radius
 
     @property
     def major_axis(self):
@@ -137,25 +142,25 @@ class BTEllipseDescription866AllOf(object):
         self._major_axis = major_axis
 
     @property
-    def minor_radius(self):
-        """Gets the minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+    def major_radius(self):
+        """Gets the major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
 
 
-        :return: The minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+        :return: The major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
         :rtype: float
         """
-        return self._minor_radius
+        return self._major_radius
 
-    @minor_radius.setter
-    def minor_radius(self, minor_radius):
-        """Sets the minor_radius of this BTEllipseDescription866AllOf.
+    @major_radius.setter
+    def major_radius(self, major_radius):
+        """Sets the major_radius of this BTEllipseDescription866AllOf.
 
 
-        :param minor_radius: The minor_radius of this BTEllipseDescription866AllOf.  # noqa: E501
+        :param major_radius: The major_radius of this BTEllipseDescription866AllOf.  # noqa: E501
         :type: float
         """
 
-        self._minor_radius = minor_radius
+        self._major_radius = major_radius
 
     @property
     def origin(self):
@@ -177,6 +182,27 @@ class BTEllipseDescription866AllOf(object):
         """
 
         self._origin = origin
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTEllipseDescription866AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTEllipseDescription866AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTEllipseDescription866AllOf.
+
+
+        :param bt_type: The bt_type of this BTEllipseDescription866AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

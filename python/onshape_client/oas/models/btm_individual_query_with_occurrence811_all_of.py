@@ -34,24 +34,29 @@ class BTMIndividualQueryWithOccurrence811AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'entity_query': 'str'
+        'entity_query': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'entity_query': 'entityQuery'
+        'entity_query': 'entityQuery',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, entity_query=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, entity_query=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualQueryWithOccurrence811AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._entity_query = None
+        self._bt_type = None
         self.discriminator = None
 
         if entity_query is not None:
             self.entity_query = entity_query
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def entity_query(self):
@@ -73,6 +78,27 @@ class BTMIndividualQueryWithOccurrence811AllOf(object):
         """
 
         self._entity_query = entity_query
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMIndividualQueryWithOccurrence811AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMIndividualQueryWithOccurrence811AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMIndividualQueryWithOccurrence811AllOf.
+
+
+        :param bt_type: The bt_type of this BTMIndividualQueryWithOccurrence811AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

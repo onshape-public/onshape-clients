@@ -34,59 +34,101 @@ class BTPartMaterialProperty1453(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'display_name': 'str',
+        'category': 'str',
         'description': 'str',
         'units': 'str',
-        'category': 'str',
         'name': 'str',
         'value': 'str',
         'type': 'str',
-        'display_name': 'str',
         'bt_type': 'str'
     }
 
     attribute_map = {
+        'display_name': 'displayName',
+        'category': 'category',
         'description': 'description',
         'units': 'units',
-        'category': 'category',
         'name': 'name',
         'value': 'value',
         'type': 'type',
-        'display_name': 'displayName',
         'bt_type': 'btType'
     }
 
-    def __init__(self, description=None, units=None, category=None, name=None, value=None, type=None, display_name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, display_name=None, category=None, description=None, units=None, name=None, value=None, type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPartMaterialProperty1453 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._display_name = None
+        self._category = None
         self._description = None
         self._units = None
-        self._category = None
         self._name = None
         self._value = None
         self._type = None
-        self._display_name = None
         self._bt_type = None
         self.discriminator = None
 
+        if display_name is not None:
+            self.display_name = display_name
+        if category is not None:
+            self.category = category
         if description is not None:
             self.description = description
         if units is not None:
             self.units = units
-        if category is not None:
-            self.category = category
         if name is not None:
             self.name = name
         if value is not None:
             self.value = value
         if type is not None:
             self.type = type
-        if display_name is not None:
-            self.display_name = display_name
         if bt_type is not None:
             self.bt_type = bt_type
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this BTPartMaterialProperty1453.  # noqa: E501
+
+
+        :return: The display_name of this BTPartMaterialProperty1453.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this BTPartMaterialProperty1453.
+
+
+        :param display_name: The display_name of this BTPartMaterialProperty1453.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
+
+    @property
+    def category(self):
+        """Gets the category of this BTPartMaterialProperty1453.  # noqa: E501
+
+
+        :return: The category of this BTPartMaterialProperty1453.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this BTPartMaterialProperty1453.
+
+
+        :param category: The category of this BTPartMaterialProperty1453.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
 
     @property
     def description(self):
@@ -129,27 +171,6 @@ class BTPartMaterialProperty1453(object):
         """
 
         self._units = units
-
-    @property
-    def category(self):
-        """Gets the category of this BTPartMaterialProperty1453.  # noqa: E501
-
-
-        :return: The category of this BTPartMaterialProperty1453.  # noqa: E501
-        :rtype: str
-        """
-        return self._category
-
-    @category.setter
-    def category(self, category):
-        """Sets the category of this BTPartMaterialProperty1453.
-
-
-        :param category: The category of this BTPartMaterialProperty1453.  # noqa: E501
-        :type: str
-        """
-
-        self._category = category
 
     @property
     def name(self):
@@ -213,27 +234,6 @@ class BTPartMaterialProperty1453(object):
         """
 
         self._type = type
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this BTPartMaterialProperty1453.  # noqa: E501
-
-
-        :return: The display_name of this BTPartMaterialProperty1453.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this BTPartMaterialProperty1453.
-
-
-        :param display_name: The display_name of this BTPartMaterialProperty1453.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
 
     @property
     def bt_type(self):

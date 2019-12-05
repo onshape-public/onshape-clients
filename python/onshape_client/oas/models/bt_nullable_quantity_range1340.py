@@ -34,34 +34,60 @@ class BTNullableQuantityRange1340(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'has_min_value': 'bool',
         'has_default_value': 'bool',
         'has_max_value': 'bool',
-        'has_min_value': 'bool'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'has_min_value': 'hasMinValue',
         'has_default_value': 'hasDefaultValue',
         'has_max_value': 'hasMaxValue',
-        'has_min_value': 'hasMinValue'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, has_default_value=None, has_max_value=None, has_min_value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, has_min_value=None, has_default_value=None, has_max_value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTNullableQuantityRange1340 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._has_min_value = None
         self._has_default_value = None
         self._has_max_value = None
-        self._has_min_value = None
+        self._bt_type = None
         self.discriminator = None
 
+        if has_min_value is not None:
+            self.has_min_value = has_min_value
         if has_default_value is not None:
             self.has_default_value = has_default_value
         if has_max_value is not None:
             self.has_max_value = has_max_value
-        if has_min_value is not None:
-            self.has_min_value = has_min_value
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def has_min_value(self):
+        """Gets the has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
+
+
+        :return: The has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_min_value
+
+    @has_min_value.setter
+    def has_min_value(self, has_min_value):
+        """Sets the has_min_value of this BTNullableQuantityRange1340.
+
+
+        :param has_min_value: The has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_min_value = has_min_value
 
     @property
     def has_default_value(self):
@@ -106,25 +132,25 @@ class BTNullableQuantityRange1340(object):
         self._has_max_value = has_max_value
 
     @property
-    def has_min_value(self):
-        """Gets the has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTNullableQuantityRange1340.  # noqa: E501
 
 
-        :return: The has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
-        :rtype: bool
+        :return: The bt_type of this BTNullableQuantityRange1340.  # noqa: E501
+        :rtype: str
         """
-        return self._has_min_value
+        return self._bt_type
 
-    @has_min_value.setter
-    def has_min_value(self, has_min_value):
-        """Sets the has_min_value of this BTNullableQuantityRange1340.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTNullableQuantityRange1340.
 
 
-        :param has_min_value: The has_min_value of this BTNullableQuantityRange1340.  # noqa: E501
-        :type: bool
+        :param bt_type: The bt_type of this BTNullableQuantityRange1340.  # noqa: E501
+        :type: str
         """
 
-        self._has_min_value = has_min_value
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

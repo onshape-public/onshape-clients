@@ -36,16 +36,18 @@ class BTMMateConnector66(object):
     openapi_types = {
         'saved_feature_type': 'str',
         'is_hidden': 'bool',
-        'implicit': 'bool'
+        'implicit': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'saved_feature_type': 'savedFeatureType',
         'is_hidden': 'isHidden',
-        'implicit': 'implicit'
+        'implicit': 'implicit',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, saved_feature_type=None, is_hidden=None, implicit=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, saved_feature_type=None, is_hidden=None, implicit=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMMateConnector66 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMMateConnector66(object):
         self._saved_feature_type = None
         self._is_hidden = None
         self._implicit = None
+        self._bt_type = None
         self.discriminator = None
 
         if saved_feature_type is not None:
@@ -62,6 +65,8 @@ class BTMMateConnector66(object):
             self.is_hidden = is_hidden
         if implicit is not None:
             self.implicit = implicit
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def saved_feature_type(self):
@@ -125,6 +130,27 @@ class BTMMateConnector66(object):
         """
 
         self._implicit = implicit
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMMateConnector66.  # noqa: E501
+
+
+        :return: The bt_type of this BTMMateConnector66.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMMateConnector66.
+
+
+        :param bt_type: The bt_type of this BTMMateConnector66.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

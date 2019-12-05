@@ -34,29 +34,55 @@ class BTMSketch151AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'constraints': 'list[BTMSketchConstraint2]',
         'entities': 'list[BTMSketchGeomEntity5]',
-        'constraints': 'list[BTMSketchConstraint2]'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'constraints': 'constraints',
         'entities': 'entities',
-        'constraints': 'constraints'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, entities=None, constraints=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, constraints=None, entities=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketch151AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._entities = None
         self._constraints = None
+        self._entities = None
+        self._bt_type = None
         self.discriminator = None
 
-        if entities is not None:
-            self.entities = entities
         if constraints is not None:
             self.constraints = constraints
+        if entities is not None:
+            self.entities = entities
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def constraints(self):
+        """Gets the constraints of this BTMSketch151AllOf.  # noqa: E501
+
+
+        :return: The constraints of this BTMSketch151AllOf.  # noqa: E501
+        :rtype: list[BTMSketchConstraint2]
+        """
+        return self._constraints
+
+    @constraints.setter
+    def constraints(self, constraints):
+        """Sets the constraints of this BTMSketch151AllOf.
+
+
+        :param constraints: The constraints of this BTMSketch151AllOf.  # noqa: E501
+        :type: list[BTMSketchConstraint2]
+        """
+
+        self._constraints = constraints
 
     @property
     def entities(self):
@@ -80,25 +106,25 @@ class BTMSketch151AllOf(object):
         self._entities = entities
 
     @property
-    def constraints(self):
-        """Gets the constraints of this BTMSketch151AllOf.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketch151AllOf.  # noqa: E501
 
 
-        :return: The constraints of this BTMSketch151AllOf.  # noqa: E501
-        :rtype: list[BTMSketchConstraint2]
+        :return: The bt_type of this BTMSketch151AllOf.  # noqa: E501
+        :rtype: str
         """
-        return self._constraints
+        return self._bt_type
 
-    @constraints.setter
-    def constraints(self, constraints):
-        """Sets the constraints of this BTMSketch151AllOf.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketch151AllOf.
 
 
-        :param constraints: The constraints of this BTMSketch151AllOf.  # noqa: E501
-        :type: list[BTMSketchConstraint2]
+        :param bt_type: The bt_type of this BTMSketch151AllOf.  # noqa: E501
+        :type: str
         """
 
-        self._constraints = constraints
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

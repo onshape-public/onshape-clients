@@ -34,11 +34,13 @@ class BTPStatement269(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'annotation': 'BTPAnnotation231'
+        'annotation': 'BTPAnnotation231',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'annotation': 'annotation'
+        'annotation': 'annotation',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -57,17 +59,20 @@ class BTPStatement269(object):
         'BTPStatementContinue-274': 'BTPStatementContinue274'
     }
 
-    def __init__(self, annotation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, annotation=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatement269 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._annotation = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if annotation is not None:
             self.annotation = annotation
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def annotation(self):
@@ -89,6 +94,27 @@ class BTPStatement269(object):
         """
 
         self._annotation = annotation
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatement269.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatement269.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatement269.
+
+
+        :param bt_type: The bt_type of this BTPStatement269.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

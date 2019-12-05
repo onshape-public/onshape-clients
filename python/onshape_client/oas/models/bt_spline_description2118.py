@@ -35,43 +35,48 @@ class BTSplineDescription2118(object):
     """
     openapi_types = {
         'degree': 'int',
+        'knots': 'list[float]',
         'is_rational': 'bool',
         'control_points': 'list[float]',
-        'knots': 'list[float]',
-        'is_periodic': 'bool'
+        'is_periodic': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'degree': 'degree',
+        'knots': 'knots',
         'is_rational': 'isRational',
         'control_points': 'controlPoints',
-        'knots': 'knots',
-        'is_periodic': 'isPeriodic'
+        'is_periodic': 'isPeriodic',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, degree=None, is_rational=None, control_points=None, knots=None, is_periodic=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, degree=None, knots=None, is_rational=None, control_points=None, is_periodic=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTSplineDescription2118 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._degree = None
+        self._knots = None
         self._is_rational = None
         self._control_points = None
-        self._knots = None
         self._is_periodic = None
+        self._bt_type = None
         self.discriminator = None
 
         if degree is not None:
             self.degree = degree
+        if knots is not None:
+            self.knots = knots
         if is_rational is not None:
             self.is_rational = is_rational
         if control_points is not None:
             self.control_points = control_points
-        if knots is not None:
-            self.knots = knots
         if is_periodic is not None:
             self.is_periodic = is_periodic
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def degree(self):
@@ -93,6 +98,27 @@ class BTSplineDescription2118(object):
         """
 
         self._degree = degree
+
+    @property
+    def knots(self):
+        """Gets the knots of this BTSplineDescription2118.  # noqa: E501
+
+
+        :return: The knots of this BTSplineDescription2118.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._knots
+
+    @knots.setter
+    def knots(self, knots):
+        """Sets the knots of this BTSplineDescription2118.
+
+
+        :param knots: The knots of this BTSplineDescription2118.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._knots = knots
 
     @property
     def is_rational(self):
@@ -137,27 +163,6 @@ class BTSplineDescription2118(object):
         self._control_points = control_points
 
     @property
-    def knots(self):
-        """Gets the knots of this BTSplineDescription2118.  # noqa: E501
-
-
-        :return: The knots of this BTSplineDescription2118.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._knots
-
-    @knots.setter
-    def knots(self, knots):
-        """Sets the knots of this BTSplineDescription2118.
-
-
-        :param knots: The knots of this BTSplineDescription2118.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._knots = knots
-
-    @property
     def is_periodic(self):
         """Gets the is_periodic of this BTSplineDescription2118.  # noqa: E501
 
@@ -177,6 +182,27 @@ class BTSplineDescription2118(object):
         """
 
         self._is_periodic = is_periodic
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSplineDescription2118.  # noqa: E501
+
+
+        :return: The bt_type of this BTSplineDescription2118.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSplineDescription2118.
+
+
+        :param bt_type: The bt_type of this BTSplineDescription2118.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

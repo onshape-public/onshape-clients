@@ -34,24 +34,29 @@ class BTActiveSheetMetalFilter2944(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_from_active_sheet_metal': 'bool'
+        'is_from_active_sheet_metal': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_from_active_sheet_metal': 'isFromActiveSheetMetal'
+        'is_from_active_sheet_metal': 'isFromActiveSheetMetal',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_from_active_sheet_metal=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_from_active_sheet_metal=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTActiveSheetMetalFilter2944 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_from_active_sheet_metal = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_from_active_sheet_metal is not None:
             self.is_from_active_sheet_metal = is_from_active_sheet_metal
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_from_active_sheet_metal(self):
@@ -73,6 +78,27 @@ class BTActiveSheetMetalFilter2944(object):
         """
 
         self._is_from_active_sheet_metal = is_from_active_sheet_metal
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTActiveSheetMetalFilter2944.  # noqa: E501
+
+
+        :return: The bt_type of this BTActiveSheetMetalFilter2944.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTActiveSheetMetalFilter2944.
+
+
+        :param bt_type: The bt_type of this BTActiveSheetMetalFilter2944.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

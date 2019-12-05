@@ -36,16 +36,18 @@ class BTPStatementAssignment270AllOf(object):
     openapi_types = {
         'operator': 'str',
         'lvalue': 'BTPLValue249',
-        'rvalue': 'BTPExpression9'
+        'rvalue': 'BTPExpression9',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'operator': 'operator',
         'lvalue': 'lvalue',
-        'rvalue': 'rvalue'
+        'rvalue': 'rvalue',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, operator=None, lvalue=None, rvalue=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, operator=None, lvalue=None, rvalue=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementAssignment270AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPStatementAssignment270AllOf(object):
         self._operator = None
         self._lvalue = None
         self._rvalue = None
+        self._bt_type = None
         self.discriminator = None
 
         if operator is not None:
@@ -62,6 +65,8 @@ class BTPStatementAssignment270AllOf(object):
             self.lvalue = lvalue
         if rvalue is not None:
             self.rvalue = rvalue
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def operator(self):
@@ -131,6 +136,27 @@ class BTPStatementAssignment270AllOf(object):
         """
 
         self._rvalue = rvalue
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementAssignment270AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementAssignment270AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementAssignment270AllOf.
+
+
+        :param bt_type: The bt_type of this BTPStatementAssignment270AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

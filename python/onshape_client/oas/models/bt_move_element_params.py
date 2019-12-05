@@ -34,94 +34,98 @@ class BTMoveElementParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'target_document_id': 'str',
+        'owner_type': 'int',
         'owner_id': 'str',
         'project_id': 'str',
         'parent_id': 'str',
         'is_public': 'bool',
         'version_name': 'str',
-        'target_document_id': 'str',
-        'is_group_anchor': 'bool',
-        'import_data': 'list[str]',
-        'owner_email': 'str',
-        'generate_unknown_messages': 'bool',
-        'anchor_element_id': 'str',
-        'is_selective_part_out': 'bool',
         'is_copy': 'bool',
         'is_deep_copy': 'bool',
+        'is_selective_part_out': 'bool',
+        'source_document_id': 'str',
+        'source_workspace_id': 'str',
+        'anchor_element_id': 'str',
+        'is_group_anchor': 'bool',
+        'element_original_to_new_map': 'dict(str, str)',
+        'target_workspace_id': 'str',
+        'generate_unknown_messages': 'bool',
+        'import_data': 'list[str]',
         'need_new_version': 'bool',
+        'is_new_document': 'bool',
+        'owner_email': 'str',
         'name': 'str',
         'description': 'str',
         'tags': 'list[str]',
-        'source_document_id': 'str',
-        'source_workspace_id': 'str',
-        'owner_type': 'int',
-        'element_original_to_new_map': 'dict(str, str)',
-        'target_workspace_id': 'str',
-        'is_new_document': 'bool',
         'elements': 'list[str]'
     }
 
     attribute_map = {
+        'target_document_id': 'targetDocumentId',
+        'owner_type': 'ownerType',
         'owner_id': 'ownerId',
         'project_id': 'projectId',
         'parent_id': 'parentId',
         'is_public': 'isPublic',
         'version_name': 'versionName',
-        'target_document_id': 'targetDocumentId',
-        'is_group_anchor': 'isGroupAnchor',
-        'import_data': 'importData',
-        'owner_email': 'ownerEmail',
-        'generate_unknown_messages': 'generateUnknownMessages',
-        'anchor_element_id': 'anchorElementId',
-        'is_selective_part_out': 'isSelectivePartOut',
         'is_copy': 'isCopy',
         'is_deep_copy': 'isDeepCopy',
+        'is_selective_part_out': 'isSelectivePartOut',
+        'source_document_id': 'sourceDocumentId',
+        'source_workspace_id': 'sourceWorkspaceId',
+        'anchor_element_id': 'anchorElementId',
+        'is_group_anchor': 'isGroupAnchor',
+        'element_original_to_new_map': 'elementOriginalToNewMap',
+        'target_workspace_id': 'targetWorkspaceId',
+        'generate_unknown_messages': 'generateUnknownMessages',
+        'import_data': 'importData',
         'need_new_version': 'needNewVersion',
+        'is_new_document': 'isNewDocument',
+        'owner_email': 'ownerEmail',
         'name': 'name',
         'description': 'description',
         'tags': 'tags',
-        'source_document_id': 'sourceDocumentId',
-        'source_workspace_id': 'sourceWorkspaceId',
-        'owner_type': 'ownerType',
-        'element_original_to_new_map': 'elementOriginalToNewMap',
-        'target_workspace_id': 'targetWorkspaceId',
-        'is_new_document': 'isNewDocument',
         'elements': 'elements'
     }
 
-    def __init__(self, owner_id=None, project_id=None, parent_id=None, is_public=None, version_name=None, target_document_id=None, is_group_anchor=None, import_data=None, owner_email=None, generate_unknown_messages=None, anchor_element_id=None, is_selective_part_out=None, is_copy=None, is_deep_copy=None, need_new_version=None, name=None, description=None, tags=None, source_document_id=None, source_workspace_id=None, owner_type=None, element_original_to_new_map=None, target_workspace_id=None, is_new_document=None, elements=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, target_document_id=None, owner_type=None, owner_id=None, project_id=None, parent_id=None, is_public=None, version_name=None, is_copy=None, is_deep_copy=None, is_selective_part_out=None, source_document_id=None, source_workspace_id=None, anchor_element_id=None, is_group_anchor=None, element_original_to_new_map=None, target_workspace_id=None, generate_unknown_messages=None, import_data=None, need_new_version=None, is_new_document=None, owner_email=None, name=None, description=None, tags=None, elements=None, local_vars_configuration=None):  # noqa: E501
         """BTMoveElementParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._target_document_id = None
+        self._owner_type = None
         self._owner_id = None
         self._project_id = None
         self._parent_id = None
         self._is_public = None
         self._version_name = None
-        self._target_document_id = None
-        self._is_group_anchor = None
-        self._import_data = None
-        self._owner_email = None
-        self._generate_unknown_messages = None
-        self._anchor_element_id = None
-        self._is_selective_part_out = None
         self._is_copy = None
         self._is_deep_copy = None
+        self._is_selective_part_out = None
+        self._source_document_id = None
+        self._source_workspace_id = None
+        self._anchor_element_id = None
+        self._is_group_anchor = None
+        self._element_original_to_new_map = None
+        self._target_workspace_id = None
+        self._generate_unknown_messages = None
+        self._import_data = None
         self._need_new_version = None
+        self._is_new_document = None
+        self._owner_email = None
         self._name = None
         self._description = None
         self._tags = None
-        self._source_document_id = None
-        self._source_workspace_id = None
-        self._owner_type = None
-        self._element_original_to_new_map = None
-        self._target_workspace_id = None
-        self._is_new_document = None
         self._elements = None
         self.discriminator = None
 
+        if target_document_id is not None:
+            self.target_document_id = target_document_id
+        if owner_type is not None:
+            self.owner_type = owner_type
         if owner_id is not None:
             self.owner_id = owner_id
         if project_id is not None:
@@ -132,46 +136,84 @@ class BTMoveElementParams(object):
             self.is_public = is_public
         if version_name is not None:
             self.version_name = version_name
-        if target_document_id is not None:
-            self.target_document_id = target_document_id
-        if is_group_anchor is not None:
-            self.is_group_anchor = is_group_anchor
-        if import_data is not None:
-            self.import_data = import_data
-        if owner_email is not None:
-            self.owner_email = owner_email
-        if generate_unknown_messages is not None:
-            self.generate_unknown_messages = generate_unknown_messages
-        if anchor_element_id is not None:
-            self.anchor_element_id = anchor_element_id
-        if is_selective_part_out is not None:
-            self.is_selective_part_out = is_selective_part_out
         if is_copy is not None:
             self.is_copy = is_copy
         if is_deep_copy is not None:
             self.is_deep_copy = is_deep_copy
+        if is_selective_part_out is not None:
+            self.is_selective_part_out = is_selective_part_out
+        if source_document_id is not None:
+            self.source_document_id = source_document_id
+        if source_workspace_id is not None:
+            self.source_workspace_id = source_workspace_id
+        if anchor_element_id is not None:
+            self.anchor_element_id = anchor_element_id
+        if is_group_anchor is not None:
+            self.is_group_anchor = is_group_anchor
+        if element_original_to_new_map is not None:
+            self.element_original_to_new_map = element_original_to_new_map
+        if target_workspace_id is not None:
+            self.target_workspace_id = target_workspace_id
+        if generate_unknown_messages is not None:
+            self.generate_unknown_messages = generate_unknown_messages
+        if import_data is not None:
+            self.import_data = import_data
         if need_new_version is not None:
             self.need_new_version = need_new_version
+        if is_new_document is not None:
+            self.is_new_document = is_new_document
+        if owner_email is not None:
+            self.owner_email = owner_email
         if name is not None:
             self.name = name
         if description is not None:
             self.description = description
         if tags is not None:
             self.tags = tags
-        if source_document_id is not None:
-            self.source_document_id = source_document_id
-        if source_workspace_id is not None:
-            self.source_workspace_id = source_workspace_id
-        if owner_type is not None:
-            self.owner_type = owner_type
-        if element_original_to_new_map is not None:
-            self.element_original_to_new_map = element_original_to_new_map
-        if target_workspace_id is not None:
-            self.target_workspace_id = target_workspace_id
-        if is_new_document is not None:
-            self.is_new_document = is_new_document
         if elements is not None:
             self.elements = elements
+
+    @property
+    def target_document_id(self):
+        """Gets the target_document_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The target_document_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_document_id
+
+    @target_document_id.setter
+    def target_document_id(self, target_document_id):
+        """Sets the target_document_id of this BTMoveElementParams.
+
+
+        :param target_document_id: The target_document_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._target_document_id = target_document_id
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The owner_type of this BTMoveElementParams.  # noqa: E501
+        :rtype: int
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this BTMoveElementParams.
+
+
+        :param owner_type: The owner_type of this BTMoveElementParams.  # noqa: E501
+        :type: int
+        """
+
+        self._owner_type = owner_type
 
     @property
     def owner_id(self):
@@ -279,153 +321,6 @@ class BTMoveElementParams(object):
         self._version_name = version_name
 
     @property
-    def target_document_id(self):
-        """Gets the target_document_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The target_document_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_document_id
-
-    @target_document_id.setter
-    def target_document_id(self, target_document_id):
-        """Sets the target_document_id of this BTMoveElementParams.
-
-
-        :param target_document_id: The target_document_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._target_document_id = target_document_id
-
-    @property
-    def is_group_anchor(self):
-        """Gets the is_group_anchor of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The is_group_anchor of this BTMoveElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_group_anchor
-
-    @is_group_anchor.setter
-    def is_group_anchor(self, is_group_anchor):
-        """Sets the is_group_anchor of this BTMoveElementParams.
-
-
-        :param is_group_anchor: The is_group_anchor of this BTMoveElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_group_anchor = is_group_anchor
-
-    @property
-    def import_data(self):
-        """Gets the import_data of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The import_data of this BTMoveElementParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._import_data
-
-    @import_data.setter
-    def import_data(self, import_data):
-        """Sets the import_data of this BTMoveElementParams.
-
-
-        :param import_data: The import_data of this BTMoveElementParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._import_data = import_data
-
-    @property
-    def owner_email(self):
-        """Gets the owner_email of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The owner_email of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._owner_email
-
-    @owner_email.setter
-    def owner_email(self, owner_email):
-        """Sets the owner_email of this BTMoveElementParams.
-
-
-        :param owner_email: The owner_email of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._owner_email = owner_email
-
-    @property
-    def generate_unknown_messages(self):
-        """Gets the generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._generate_unknown_messages
-
-    @generate_unknown_messages.setter
-    def generate_unknown_messages(self, generate_unknown_messages):
-        """Sets the generate_unknown_messages of this BTMoveElementParams.
-
-
-        :param generate_unknown_messages: The generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._generate_unknown_messages = generate_unknown_messages
-
-    @property
-    def anchor_element_id(self):
-        """Gets the anchor_element_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The anchor_element_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._anchor_element_id
-
-    @anchor_element_id.setter
-    def anchor_element_id(self, anchor_element_id):
-        """Sets the anchor_element_id of this BTMoveElementParams.
-
-
-        :param anchor_element_id: The anchor_element_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._anchor_element_id = anchor_element_id
-
-    @property
-    def is_selective_part_out(self):
-        """Gets the is_selective_part_out of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The is_selective_part_out of this BTMoveElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_selective_part_out
-
-    @is_selective_part_out.setter
-    def is_selective_part_out(self, is_selective_part_out):
-        """Sets the is_selective_part_out of this BTMoveElementParams.
-
-
-        :param is_selective_part_out: The is_selective_part_out of this BTMoveElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_selective_part_out = is_selective_part_out
-
-    @property
     def is_copy(self):
         """Gets the is_copy of this BTMoveElementParams.  # noqa: E501
 
@@ -468,6 +363,195 @@ class BTMoveElementParams(object):
         self._is_deep_copy = is_deep_copy
 
     @property
+    def is_selective_part_out(self):
+        """Gets the is_selective_part_out of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The is_selective_part_out of this BTMoveElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_selective_part_out
+
+    @is_selective_part_out.setter
+    def is_selective_part_out(self, is_selective_part_out):
+        """Sets the is_selective_part_out of this BTMoveElementParams.
+
+
+        :param is_selective_part_out: The is_selective_part_out of this BTMoveElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_selective_part_out = is_selective_part_out
+
+    @property
+    def source_document_id(self):
+        """Gets the source_document_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The source_document_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_document_id
+
+    @source_document_id.setter
+    def source_document_id(self, source_document_id):
+        """Sets the source_document_id of this BTMoveElementParams.
+
+
+        :param source_document_id: The source_document_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._source_document_id = source_document_id
+
+    @property
+    def source_workspace_id(self):
+        """Gets the source_workspace_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The source_workspace_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_workspace_id
+
+    @source_workspace_id.setter
+    def source_workspace_id(self, source_workspace_id):
+        """Sets the source_workspace_id of this BTMoveElementParams.
+
+
+        :param source_workspace_id: The source_workspace_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._source_workspace_id = source_workspace_id
+
+    @property
+    def anchor_element_id(self):
+        """Gets the anchor_element_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The anchor_element_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._anchor_element_id
+
+    @anchor_element_id.setter
+    def anchor_element_id(self, anchor_element_id):
+        """Sets the anchor_element_id of this BTMoveElementParams.
+
+
+        :param anchor_element_id: The anchor_element_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._anchor_element_id = anchor_element_id
+
+    @property
+    def is_group_anchor(self):
+        """Gets the is_group_anchor of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The is_group_anchor of this BTMoveElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_group_anchor
+
+    @is_group_anchor.setter
+    def is_group_anchor(self, is_group_anchor):
+        """Sets the is_group_anchor of this BTMoveElementParams.
+
+
+        :param is_group_anchor: The is_group_anchor of this BTMoveElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_group_anchor = is_group_anchor
+
+    @property
+    def element_original_to_new_map(self):
+        """Gets the element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._element_original_to_new_map
+
+    @element_original_to_new_map.setter
+    def element_original_to_new_map(self, element_original_to_new_map):
+        """Sets the element_original_to_new_map of this BTMoveElementParams.
+
+
+        :param element_original_to_new_map: The element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
+        :type: dict(str, str)
+        """
+
+        self._element_original_to_new_map = element_original_to_new_map
+
+    @property
+    def target_workspace_id(self):
+        """Gets the target_workspace_id of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The target_workspace_id of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_workspace_id
+
+    @target_workspace_id.setter
+    def target_workspace_id(self, target_workspace_id):
+        """Sets the target_workspace_id of this BTMoveElementParams.
+
+
+        :param target_workspace_id: The target_workspace_id of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._target_workspace_id = target_workspace_id
+
+    @property
+    def generate_unknown_messages(self):
+        """Gets the generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._generate_unknown_messages
+
+    @generate_unknown_messages.setter
+    def generate_unknown_messages(self, generate_unknown_messages):
+        """Sets the generate_unknown_messages of this BTMoveElementParams.
+
+
+        :param generate_unknown_messages: The generate_unknown_messages of this BTMoveElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._generate_unknown_messages = generate_unknown_messages
+
+    @property
+    def import_data(self):
+        """Gets the import_data of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The import_data of this BTMoveElementParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._import_data
+
+    @import_data.setter
+    def import_data(self, import_data):
+        """Sets the import_data of this BTMoveElementParams.
+
+
+        :param import_data: The import_data of this BTMoveElementParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._import_data = import_data
+
+    @property
     def need_new_version(self):
         """Gets the need_new_version of this BTMoveElementParams.  # noqa: E501
 
@@ -487,6 +571,48 @@ class BTMoveElementParams(object):
         """
 
         self._need_new_version = need_new_version
+
+    @property
+    def is_new_document(self):
+        """Gets the is_new_document of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The is_new_document of this BTMoveElementParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_new_document
+
+    @is_new_document.setter
+    def is_new_document(self, is_new_document):
+        """Sets the is_new_document of this BTMoveElementParams.
+
+
+        :param is_new_document: The is_new_document of this BTMoveElementParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_new_document = is_new_document
+
+    @property
+    def owner_email(self):
+        """Gets the owner_email of this BTMoveElementParams.  # noqa: E501
+
+
+        :return: The owner_email of this BTMoveElementParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_email
+
+    @owner_email.setter
+    def owner_email(self, owner_email):
+        """Sets the owner_email of this BTMoveElementParams.
+
+
+        :param owner_email: The owner_email of this BTMoveElementParams.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_email = owner_email
 
     @property
     def name(self):
@@ -550,132 +676,6 @@ class BTMoveElementParams(object):
         """
 
         self._tags = tags
-
-    @property
-    def source_document_id(self):
-        """Gets the source_document_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The source_document_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_document_id
-
-    @source_document_id.setter
-    def source_document_id(self, source_document_id):
-        """Sets the source_document_id of this BTMoveElementParams.
-
-
-        :param source_document_id: The source_document_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._source_document_id = source_document_id
-
-    @property
-    def source_workspace_id(self):
-        """Gets the source_workspace_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The source_workspace_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_workspace_id
-
-    @source_workspace_id.setter
-    def source_workspace_id(self, source_workspace_id):
-        """Sets the source_workspace_id of this BTMoveElementParams.
-
-
-        :param source_workspace_id: The source_workspace_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._source_workspace_id = source_workspace_id
-
-    @property
-    def owner_type(self):
-        """Gets the owner_type of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The owner_type of this BTMoveElementParams.  # noqa: E501
-        :rtype: int
-        """
-        return self._owner_type
-
-    @owner_type.setter
-    def owner_type(self, owner_type):
-        """Sets the owner_type of this BTMoveElementParams.
-
-
-        :param owner_type: The owner_type of this BTMoveElementParams.  # noqa: E501
-        :type: int
-        """
-
-        self._owner_type = owner_type
-
-    @property
-    def element_original_to_new_map(self):
-        """Gets the element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._element_original_to_new_map
-
-    @element_original_to_new_map.setter
-    def element_original_to_new_map(self, element_original_to_new_map):
-        """Sets the element_original_to_new_map of this BTMoveElementParams.
-
-
-        :param element_original_to_new_map: The element_original_to_new_map of this BTMoveElementParams.  # noqa: E501
-        :type: dict(str, str)
-        """
-
-        self._element_original_to_new_map = element_original_to_new_map
-
-    @property
-    def target_workspace_id(self):
-        """Gets the target_workspace_id of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The target_workspace_id of this BTMoveElementParams.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_workspace_id
-
-    @target_workspace_id.setter
-    def target_workspace_id(self, target_workspace_id):
-        """Sets the target_workspace_id of this BTMoveElementParams.
-
-
-        :param target_workspace_id: The target_workspace_id of this BTMoveElementParams.  # noqa: E501
-        :type: str
-        """
-
-        self._target_workspace_id = target_workspace_id
-
-    @property
-    def is_new_document(self):
-        """Gets the is_new_document of this BTMoveElementParams.  # noqa: E501
-
-
-        :return: The is_new_document of this BTMoveElementParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_new_document
-
-    @is_new_document.setter
-    def is_new_document(self, is_new_document):
-        """Sets the is_new_document of this BTMoveElementParams.
-
-
-        :param is_new_document: The is_new_document of this BTMoveElementParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_new_document = is_new_document
 
     @property
     def elements(self):

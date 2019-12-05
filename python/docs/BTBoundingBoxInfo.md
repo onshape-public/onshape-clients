@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**high_x** | **float** |  | [optional] 
 **low_x** | **float** |  | [optional] 
 **low_y** | **float** |  | [optional] 
 **low_z** | **float** |  | [optional] 
+**high_x** | **float** |  | [optional] 
 **high_y** | **float** |  | [optional] 
 **high_z** | **float** |  | [optional] 
 

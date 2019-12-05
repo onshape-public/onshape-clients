@@ -35,59 +35,59 @@ class BTNotice227(object):
     """
     openapi_types = {
         'location_infos': 'list[BTLocationInfo226]',
+        'parameter_id': 'str',
         'try_node': 'BTNodeReference21',
-        'level': 'str',
         'message': 'str',
         'stack_trace': 'list[BTLocationInfo226]',
         'type': 'str',
-        'parameter_id': 'str',
+        'level': 'str',
         'node_id': 'str',
         'bt_type': 'str'
     }
 
     attribute_map = {
         'location_infos': 'locationInfos',
+        'parameter_id': 'parameterId',
         'try_node': 'tryNode',
-        'level': 'level',
         'message': 'message',
         'stack_trace': 'stackTrace',
         'type': 'type',
-        'parameter_id': 'parameterId',
+        'level': 'level',
         'node_id': 'nodeId',
         'bt_type': 'btType'
     }
 
-    def __init__(self, location_infos=None, try_node=None, level=None, message=None, stack_trace=None, type=None, parameter_id=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, location_infos=None, parameter_id=None, try_node=None, message=None, stack_trace=None, type=None, level=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTNotice227 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._location_infos = None
+        self._parameter_id = None
         self._try_node = None
-        self._level = None
         self._message = None
         self._stack_trace = None
         self._type = None
-        self._parameter_id = None
+        self._level = None
         self._node_id = None
         self._bt_type = None
         self.discriminator = None
 
         if location_infos is not None:
             self.location_infos = location_infos
+        if parameter_id is not None:
+            self.parameter_id = parameter_id
         if try_node is not None:
             self.try_node = try_node
-        if level is not None:
-            self.level = level
         if message is not None:
             self.message = message
         if stack_trace is not None:
             self.stack_trace = stack_trace
         if type is not None:
             self.type = type
-        if parameter_id is not None:
-            self.parameter_id = parameter_id
+        if level is not None:
+            self.level = level
         if node_id is not None:
             self.node_id = node_id
         if bt_type is not None:
@@ -115,6 +115,27 @@ class BTNotice227(object):
         self._location_infos = location_infos
 
     @property
+    def parameter_id(self):
+        """Gets the parameter_id of this BTNotice227.  # noqa: E501
+
+
+        :return: The parameter_id of this BTNotice227.  # noqa: E501
+        :rtype: str
+        """
+        return self._parameter_id
+
+    @parameter_id.setter
+    def parameter_id(self, parameter_id):
+        """Sets the parameter_id of this BTNotice227.
+
+
+        :param parameter_id: The parameter_id of this BTNotice227.  # noqa: E501
+        :type: str
+        """
+
+        self._parameter_id = parameter_id
+
+    @property
     def try_node(self):
         """Gets the try_node of this BTNotice227.  # noqa: E501
 
@@ -134,33 +155,6 @@ class BTNotice227(object):
         """
 
         self._try_node = try_node
-
-    @property
-    def level(self):
-        """Gets the level of this BTNotice227.  # noqa: E501
-
-
-        :return: The level of this BTNotice227.  # noqa: E501
-        :rtype: str
-        """
-        return self._level
-
-    @level.setter
-    def level(self, level):
-        """Sets the level of this BTNotice227.
-
-
-        :param level: The level of this BTNotice227.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["INTERNAL", "ERROR", "WARNING", "INFO", "UNKNOWN"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and level not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `level` ({0}), must be one of {1}"  # noqa: E501
-                .format(level, allowed_values)
-            )
-
-        self._level = level
 
     @property
     def message(self):
@@ -232,25 +226,31 @@ class BTNotice227(object):
         self._type = type
 
     @property
-    def parameter_id(self):
-        """Gets the parameter_id of this BTNotice227.  # noqa: E501
+    def level(self):
+        """Gets the level of this BTNotice227.  # noqa: E501
 
 
-        :return: The parameter_id of this BTNotice227.  # noqa: E501
+        :return: The level of this BTNotice227.  # noqa: E501
         :rtype: str
         """
-        return self._parameter_id
+        return self._level
 
-    @parameter_id.setter
-    def parameter_id(self, parameter_id):
-        """Sets the parameter_id of this BTNotice227.
+    @level.setter
+    def level(self, level):
+        """Sets the level of this BTNotice227.
 
 
-        :param parameter_id: The parameter_id of this BTNotice227.  # noqa: E501
+        :param level: The level of this BTNotice227.  # noqa: E501
         :type: str
         """
+        allowed_values = ["INTERNAL", "ERROR", "WARNING", "INFO", "UNKNOWN"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and level not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `level` ({0}), must be one of {1}"  # noqa: E501
+                .format(level, allowed_values)
+            )
 
-        self._parameter_id = parameter_id
+        self._level = level
 
     @property
     def node_id(self):

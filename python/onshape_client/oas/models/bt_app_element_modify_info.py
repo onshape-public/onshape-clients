@@ -35,9 +35,9 @@ class BTAppElementModifyInfo(object):
     """
     openapi_types = {
         'element_id': 'str',
+        'transaction_id': 'str',
         'change_id': 'str',
         'parent_change_id': 'str',
-        'transaction_id': 'str',
         'error_code': 'int',
         'error_value': 'str',
         'error_description': 'str'
@@ -45,24 +45,24 @@ class BTAppElementModifyInfo(object):
 
     attribute_map = {
         'element_id': 'elementId',
+        'transaction_id': 'transactionId',
         'change_id': 'changeId',
         'parent_change_id': 'parentChangeId',
-        'transaction_id': 'transactionId',
         'error_code': 'errorCode',
         'error_value': 'errorValue',
         'error_description': 'errorDescription'
     }
 
-    def __init__(self, element_id=None, change_id=None, parent_change_id=None, transaction_id=None, error_code=None, error_value=None, error_description=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, transaction_id=None, change_id=None, parent_change_id=None, error_code=None, error_value=None, error_description=None, local_vars_configuration=None):  # noqa: E501
         """BTAppElementModifyInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._element_id = None
+        self._transaction_id = None
         self._change_id = None
         self._parent_change_id = None
-        self._transaction_id = None
         self._error_code = None
         self._error_value = None
         self._error_description = None
@@ -70,12 +70,12 @@ class BTAppElementModifyInfo(object):
 
         if element_id is not None:
             self.element_id = element_id
+        if transaction_id is not None:
+            self.transaction_id = transaction_id
         if change_id is not None:
             self.change_id = change_id
         if parent_change_id is not None:
             self.parent_change_id = parent_change_id
-        if transaction_id is not None:
-            self.transaction_id = transaction_id
         if error_code is not None:
             self.error_code = error_code
         if error_value is not None:
@@ -103,6 +103,27 @@ class BTAppElementModifyInfo(object):
         """
 
         self._element_id = element_id
+
+    @property
+    def transaction_id(self):
+        """Gets the transaction_id of this BTAppElementModifyInfo.  # noqa: E501
+
+
+        :return: The transaction_id of this BTAppElementModifyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._transaction_id
+
+    @transaction_id.setter
+    def transaction_id(self, transaction_id):
+        """Sets the transaction_id of this BTAppElementModifyInfo.
+
+
+        :param transaction_id: The transaction_id of this BTAppElementModifyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._transaction_id = transaction_id
 
     @property
     def change_id(self):
@@ -145,27 +166,6 @@ class BTAppElementModifyInfo(object):
         """
 
         self._parent_change_id = parent_change_id
-
-    @property
-    def transaction_id(self):
-        """Gets the transaction_id of this BTAppElementModifyInfo.  # noqa: E501
-
-
-        :return: The transaction_id of this BTAppElementModifyInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._transaction_id
-
-    @transaction_id.setter
-    def transaction_id(self, transaction_id):
-        """Sets the transaction_id of this BTAppElementModifyInfo.
-
-
-        :param transaction_id: The transaction_id of this BTAppElementModifyInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._transaction_id = transaction_id
 
     @property
     def error_code(self):

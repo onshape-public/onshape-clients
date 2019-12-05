@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | Delete Element
 [**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | Encode Configuration
 [**get_configuration**](ElementsApi.md#get_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
-[**get_element_translator_formats1**](ElementsApi.md#get_element_translator_formats1) | **GET** /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid} | Get Element Translator Formats
+[**get_element_translator_formats**](ElementsApi.md#get_element_translator_formats) | **GET** /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid} | Get Element Translator Formats
 [**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
 [**update_references**](ElementsApi.md#update_references) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | Update or replace node references
 
@@ -339,8 +339,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_translator_formats1**
-> list[BTModelFormatInfo] get_element_translator_formats1(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+# **get_element_translator_formats**
+> list[BTModelFormatInfo] get_element_translator_formats(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
 
 Get Element Translator Formats
 
@@ -364,10 +364,10 @@ configuration = '' # str |  (optional) (default to '')
 
 try:
     # Get Element Translator Formats
-    api_response = api_instance.get_element_translator_formats1(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+    api_response = api_instance.get_element_translator_formats(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_translator_formats1: %s\n" % e)
+    print("Exception when calling ElementsApi->get_element_translator_formats: %s\n" % e)
 ```
 
 ### Parameters

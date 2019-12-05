@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **location_infos** | [**list[BTLocationInfo226]**](BTLocationInfo226.md) |  | [optional] 
+**parameter_id** | **str** |  | [optional] 
 **try_node** | [**BTNodeReference21**](BTNodeReference21.md) |  | [optional] 
-**level** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **stack_trace** | [**list[BTLocationInfo226]**](BTLocationInfo226.md) |  | [optional] 
 **type** | **str** |  | [optional] 
-**parameter_id** | **str** |  | [optional] 
+**level** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

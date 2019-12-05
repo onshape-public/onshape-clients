@@ -34,24 +34,29 @@ class BTSetFeatureRollbackCall1899AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'rollback_index': 'int'
+        'rollback_index': 'int',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'rollback_index': 'rollbackIndex'
+        'rollback_index': 'rollbackIndex',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, rollback_index=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, rollback_index=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTSetFeatureRollbackCall1899AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._rollback_index = None
+        self._bt_type = None
         self.discriminator = None
 
         if rollback_index is not None:
             self.rollback_index = rollback_index
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def rollback_index(self):
@@ -73,6 +78,27 @@ class BTSetFeatureRollbackCall1899AllOf(object):
         """
 
         self._rollback_index = rollback_index
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSetFeatureRollbackCall1899AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTSetFeatureRollbackCall1899AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSetFeatureRollbackCall1899AllOf.
+
+
+        :param bt_type: The bt_type of this BTSetFeatureRollbackCall1899AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

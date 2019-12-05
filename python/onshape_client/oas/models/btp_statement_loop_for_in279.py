@@ -40,7 +40,8 @@ class BTPStatementLoopForIn279(object):
         'container': 'BTPExpression9',
         'var': 'BTPIdentifier8',
         'is_var_declared_here': 'bool',
-        'space_before_var': 'BTPSpace10'
+        'space_before_var': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class BTPStatementLoopForIn279(object):
         'container': 'container',
         'var': 'var',
         'is_var_declared_here': 'isVarDeclaredHere',
-        'space_before_var': 'spaceBeforeVar'
+        'space_before_var': 'spaceBeforeVar',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, standard_type=None, name=None, type_name=None, container=None, var=None, is_var_declared_here=None, space_before_var=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, standard_type=None, name=None, type_name=None, container=None, var=None, is_var_declared_here=None, space_before_var=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementLoopForIn279 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class BTPStatementLoopForIn279(object):
         self._var = None
         self._is_var_declared_here = None
         self._space_before_var = None
+        self._bt_type = None
         self.discriminator = None
 
         if standard_type is not None:
@@ -82,6 +85,8 @@ class BTPStatementLoopForIn279(object):
             self.is_var_declared_here = is_var_declared_here
         if space_before_var is not None:
             self.space_before_var = space_before_var
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def standard_type(self):
@@ -235,6 +240,27 @@ class BTPStatementLoopForIn279(object):
         """
 
         self._space_before_var = space_before_var
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementLoopForIn279.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementLoopForIn279.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementLoopForIn279.
+
+
+        :param bt_type: The bt_type of this BTPStatementLoopForIn279.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

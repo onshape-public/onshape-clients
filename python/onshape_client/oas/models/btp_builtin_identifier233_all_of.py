@@ -34,24 +34,29 @@ class BTPBuiltinIdentifier233AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identifier': 'str'
+        'identifier': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'identifier': 'identifier'
+        'identifier': 'identifier',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, identifier=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, identifier=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPBuiltinIdentifier233AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._identifier = None
+        self._bt_type = None
         self.discriminator = None
 
         if identifier is not None:
             self.identifier = identifier
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def identifier(self):
@@ -73,6 +78,27 @@ class BTPBuiltinIdentifier233AllOf(object):
         """
 
         self._identifier = identifier
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPBuiltinIdentifier233AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPBuiltinIdentifier233AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPBuiltinIdentifier233AllOf.
+
+
+        :param bt_type: The bt_type of this BTPBuiltinIdentifier233AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

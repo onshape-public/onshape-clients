@@ -37,17 +37,19 @@ class BTPExpressionCall240AllOf(object):
         'function_name': 'BTPName261',
         'function_name_string': 'str',
         'function_expression': 'BTPExpression9',
-        'space_in_empty_list': 'BTPSpace10'
+        'space_in_empty_list': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'function_name': 'functionName',
         'function_name_string': 'functionNameString',
         'function_expression': 'functionExpression',
-        'space_in_empty_list': 'spaceInEmptyList'
+        'space_in_empty_list': 'spaceInEmptyList',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, function_name=None, function_name_string=None, function_expression=None, space_in_empty_list=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, function_name=None, function_name_string=None, function_expression=None, space_in_empty_list=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionCall240AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class BTPExpressionCall240AllOf(object):
         self._function_name_string = None
         self._function_expression = None
         self._space_in_empty_list = None
+        self._bt_type = None
         self.discriminator = None
 
         if function_name is not None:
@@ -67,6 +70,8 @@ class BTPExpressionCall240AllOf(object):
             self.function_expression = function_expression
         if space_in_empty_list is not None:
             self.space_in_empty_list = space_in_empty_list
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def function_name(self):
@@ -151,6 +156,27 @@ class BTPExpressionCall240AllOf(object):
         """
 
         self._space_in_empty_list = space_in_empty_list
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionCall240AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionCall240AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionCall240AllOf.
+
+
+        :param bt_type: The bt_type of this BTPExpressionCall240AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

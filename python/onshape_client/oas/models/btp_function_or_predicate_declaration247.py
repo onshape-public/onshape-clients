@@ -34,11 +34,13 @@ class BTPFunctionOrPredicateDeclaration247(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'BTPIdentifier8'
+        'name': 'BTPIdentifier8',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -46,17 +48,20 @@ class BTPFunctionOrPredicateDeclaration247(object):
         'BTPPredicateDeclaration-265': 'BTPPredicateDeclaration265'
     }
 
-    def __init__(self, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPFunctionOrPredicateDeclaration247 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if name is not None:
             self.name = name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def name(self):
@@ -78,6 +83,27 @@ class BTPFunctionOrPredicateDeclaration247(object):
         """
 
         self._name = name
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPFunctionOrPredicateDeclaration247.  # noqa: E501
+
+
+        :return: The bt_type of this BTPFunctionOrPredicateDeclaration247.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPFunctionOrPredicateDeclaration247.
+
+
+        :param bt_type: The bt_type of this BTPFunctionOrPredicateDeclaration247.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -34,24 +34,29 @@ class BTMDatabaseParameter2229AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'database_id': 'str'
+        'database_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'database_id': 'databaseId'
+        'database_id': 'databaseId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, database_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, database_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMDatabaseParameter2229AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._database_id = None
+        self._bt_type = None
         self.discriminator = None
 
         if database_id is not None:
             self.database_id = database_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def database_id(self):
@@ -73,6 +78,27 @@ class BTMDatabaseParameter2229AllOf(object):
         """
 
         self._database_id = database_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMDatabaseParameter2229AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMDatabaseParameter2229AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMDatabaseParameter2229AllOf.
+
+
+        :param bt_type: The bt_type of this BTMDatabaseParameter2229AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

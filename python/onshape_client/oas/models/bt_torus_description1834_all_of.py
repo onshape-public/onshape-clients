@@ -34,60 +34,44 @@ class BTTorusDescription1834AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'major_radius': 'float',
         'minor_radius': 'float',
         'axis': 'BTVector3d389',
-        'origin': 'BTVector3d389'
+        'major_radius': 'float',
+        'origin': 'BTVector3d389',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'major_radius': 'majorRadius',
         'minor_radius': 'minorRadius',
         'axis': 'axis',
-        'origin': 'origin'
+        'major_radius': 'majorRadius',
+        'origin': 'origin',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, major_radius=None, minor_radius=None, axis=None, origin=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, minor_radius=None, axis=None, major_radius=None, origin=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTTorusDescription1834AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._major_radius = None
         self._minor_radius = None
         self._axis = None
+        self._major_radius = None
         self._origin = None
+        self._bt_type = None
         self.discriminator = None
 
-        if major_radius is not None:
-            self.major_radius = major_radius
         if minor_radius is not None:
             self.minor_radius = minor_radius
         if axis is not None:
             self.axis = axis
+        if major_radius is not None:
+            self.major_radius = major_radius
         if origin is not None:
             self.origin = origin
-
-    @property
-    def major_radius(self):
-        """Gets the major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
-
-
-        :return: The major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
-        :rtype: float
-        """
-        return self._major_radius
-
-    @major_radius.setter
-    def major_radius(self, major_radius):
-        """Sets the major_radius of this BTTorusDescription1834AllOf.
-
-
-        :param major_radius: The major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
-        :type: float
-        """
-
-        self._major_radius = major_radius
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def minor_radius(self):
@@ -132,6 +116,27 @@ class BTTorusDescription1834AllOf(object):
         self._axis = axis
 
     @property
+    def major_radius(self):
+        """Gets the major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
+
+
+        :return: The major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._major_radius
+
+    @major_radius.setter
+    def major_radius(self, major_radius):
+        """Sets the major_radius of this BTTorusDescription1834AllOf.
+
+
+        :param major_radius: The major_radius of this BTTorusDescription1834AllOf.  # noqa: E501
+        :type: float
+        """
+
+        self._major_radius = major_radius
+
+    @property
     def origin(self):
         """Gets the origin of this BTTorusDescription1834AllOf.  # noqa: E501
 
@@ -151,6 +156,27 @@ class BTTorusDescription1834AllOf(object):
         """
 
         self._origin = origin
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTTorusDescription1834AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTTorusDescription1834AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTTorusDescription1834AllOf.
+
+
+        :param bt_type: The bt_type of this BTTorusDescription1834AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

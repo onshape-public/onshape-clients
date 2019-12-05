@@ -34,11 +34,11 @@ class BTElementReference725(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'microversion_id_and_configuration': 'BTMicroversionIdAndConfiguration2338',
         'element_id': 'str',
+        'microversion_id_and_configuration': 'BTMicroversionIdAndConfiguration2338',
         'external_document_with_version_and_element_id': 'BTDocumentWithVersionAndElementId',
-        'external_reference': 'bool',
         'external_document_with_version': 'BTDocumentWithVersionId',
+        'external_reference': 'bool',
         'configured': 'bool',
         'full_element_id': 'BTFullElementId756',
         'node_id': 'str',
@@ -46,11 +46,11 @@ class BTElementReference725(object):
     }
 
     attribute_map = {
-        'microversion_id_and_configuration': 'microversionIdAndConfiguration',
         'element_id': 'elementId',
+        'microversion_id_and_configuration': 'microversionIdAndConfiguration',
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',
-        'external_reference': 'externalReference',
         'external_document_with_version': 'externalDocumentWithVersion',
+        'external_reference': 'externalReference',
         'configured': 'configured',
         'full_element_id': 'fullElementId',
         'node_id': 'nodeId',
@@ -61,33 +61,33 @@ class BTElementReference725(object):
         'BTExternalReference-1936': 'BTExternalReference1936'
     }
 
-    def __init__(self, microversion_id_and_configuration=None, element_id=None, external_document_with_version_and_element_id=None, external_reference=None, external_document_with_version=None, configured=None, full_element_id=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, microversion_id_and_configuration=None, external_document_with_version_and_element_id=None, external_document_with_version=None, external_reference=None, configured=None, full_element_id=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTElementReference725 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._microversion_id_and_configuration = None
         self._element_id = None
+        self._microversion_id_and_configuration = None
         self._external_document_with_version_and_element_id = None
-        self._external_reference = None
         self._external_document_with_version = None
+        self._external_reference = None
         self._configured = None
         self._full_element_id = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
-        if microversion_id_and_configuration is not None:
-            self.microversion_id_and_configuration = microversion_id_and_configuration
         if element_id is not None:
             self.element_id = element_id
+        if microversion_id_and_configuration is not None:
+            self.microversion_id_and_configuration = microversion_id_and_configuration
         if external_document_with_version_and_element_id is not None:
             self.external_document_with_version_and_element_id = external_document_with_version_and_element_id
-        if external_reference is not None:
-            self.external_reference = external_reference
         if external_document_with_version is not None:
             self.external_document_with_version = external_document_with_version
+        if external_reference is not None:
+            self.external_reference = external_reference
         if configured is not None:
             self.configured = configured
         if full_element_id is not None:
@@ -96,27 +96,6 @@ class BTElementReference725(object):
             self.node_id = node_id
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def microversion_id_and_configuration(self):
-        """Gets the microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
-
-
-        :return: The microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
-        :rtype: BTMicroversionIdAndConfiguration2338
-        """
-        return self._microversion_id_and_configuration
-
-    @microversion_id_and_configuration.setter
-    def microversion_id_and_configuration(self, microversion_id_and_configuration):
-        """Sets the microversion_id_and_configuration of this BTElementReference725.
-
-
-        :param microversion_id_and_configuration: The microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
-        :type: BTMicroversionIdAndConfiguration2338
-        """
-
-        self._microversion_id_and_configuration = microversion_id_and_configuration
 
     @property
     def element_id(self):
@@ -140,6 +119,27 @@ class BTElementReference725(object):
         self._element_id = element_id
 
     @property
+    def microversion_id_and_configuration(self):
+        """Gets the microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
+
+
+        :return: The microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
+        :rtype: BTMicroversionIdAndConfiguration2338
+        """
+        return self._microversion_id_and_configuration
+
+    @microversion_id_and_configuration.setter
+    def microversion_id_and_configuration(self, microversion_id_and_configuration):
+        """Sets the microversion_id_and_configuration of this BTElementReference725.
+
+
+        :param microversion_id_and_configuration: The microversion_id_and_configuration of this BTElementReference725.  # noqa: E501
+        :type: BTMicroversionIdAndConfiguration2338
+        """
+
+        self._microversion_id_and_configuration = microversion_id_and_configuration
+
+    @property
     def external_document_with_version_and_element_id(self):
         """Gets the external_document_with_version_and_element_id of this BTElementReference725.  # noqa: E501
 
@@ -161,27 +161,6 @@ class BTElementReference725(object):
         self._external_document_with_version_and_element_id = external_document_with_version_and_element_id
 
     @property
-    def external_reference(self):
-        """Gets the external_reference of this BTElementReference725.  # noqa: E501
-
-
-        :return: The external_reference of this BTElementReference725.  # noqa: E501
-        :rtype: bool
-        """
-        return self._external_reference
-
-    @external_reference.setter
-    def external_reference(self, external_reference):
-        """Sets the external_reference of this BTElementReference725.
-
-
-        :param external_reference: The external_reference of this BTElementReference725.  # noqa: E501
-        :type: bool
-        """
-
-        self._external_reference = external_reference
-
-    @property
     def external_document_with_version(self):
         """Gets the external_document_with_version of this BTElementReference725.  # noqa: E501
 
@@ -201,6 +180,27 @@ class BTElementReference725(object):
         """
 
         self._external_document_with_version = external_document_with_version
+
+    @property
+    def external_reference(self):
+        """Gets the external_reference of this BTElementReference725.  # noqa: E501
+
+
+        :return: The external_reference of this BTElementReference725.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_reference
+
+    @external_reference.setter
+    def external_reference(self, external_reference):
+        """Sets the external_reference of this BTElementReference725.
+
+
+        :param external_reference: The external_reference of this BTElementReference725.  # noqa: E501
+        :type: bool
+        """
+
+        self._external_reference = external_reference
 
     @property
     def configured(self):

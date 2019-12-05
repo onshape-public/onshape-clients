@@ -70,7 +70,7 @@ class BTParameterLookupTableEntry1667(object):
         self._label = None
         self._localized_label = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if localized_name is not None:
             self.localized_name = localized_name

@@ -40,7 +40,8 @@ class BTPTopLevelNode286(object):
         'deprecated_explanation': 'str',
         'for_export': 'bool',
         'space_after_export': 'BTPSpace10',
-        'annotation': 'BTPAnnotation231'
+        'annotation': 'BTPAnnotation231',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -50,7 +51,8 @@ class BTPTopLevelNode286(object):
         'deprecated_explanation': 'deprecatedExplanation',
         'for_export': 'forExport',
         'space_after_export': 'spaceAfterExport',
-        'annotation': 'annotation'
+        'annotation': 'annotation',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -60,7 +62,7 @@ class BTPTopLevelNode286(object):
         'BTPProcedureDeclarationBase-266': 'BTPProcedureDeclarationBase266'
     }
 
-    def __init__(self, deprecated=None, symbol_name=None, arguments_to_document=None, deprecated_explanation=None, for_export=None, space_after_export=None, annotation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, deprecated=None, symbol_name=None, arguments_to_document=None, deprecated_explanation=None, for_export=None, space_after_export=None, annotation=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelNode286 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,7 +75,8 @@ class BTPTopLevelNode286(object):
         self._for_export = None
         self._space_after_export = None
         self._annotation = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if deprecated is not None:
             self.deprecated = deprecated
@@ -89,6 +92,8 @@ class BTPTopLevelNode286(object):
             self.space_after_export = space_after_export
         if annotation is not None:
             self.annotation = annotation
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def deprecated(self):
@@ -236,6 +241,27 @@ class BTPTopLevelNode286(object):
         """
 
         self._annotation = annotation
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelNode286.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelNode286.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelNode286.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelNode286.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

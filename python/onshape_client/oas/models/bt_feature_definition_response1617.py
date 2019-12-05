@@ -36,26 +36,26 @@ class BTFeatureDefinitionResponse1617(object):
     openapi_types = {
         'feature_state': 'BTFeatureState1688',
         'feature': 'BTMFeature134',
-        'microversion_skew': 'bool',
         'serialization_version': 'str',
-        'library_version': 'int',
-        'reject_microversion_skew': 'bool',
         'source_microversion': 'str',
+        'reject_microversion_skew': 'bool',
+        'microversion_skew': 'bool',
+        'library_version': 'int',
         'bt_type': 'str'
     }
 
     attribute_map = {
         'feature_state': 'featureState',
         'feature': 'feature',
-        'microversion_skew': 'microversionSkew',
         'serialization_version': 'serializationVersion',
-        'library_version': 'libraryVersion',
-        'reject_microversion_skew': 'rejectMicroversionSkew',
         'source_microversion': 'sourceMicroversion',
+        'reject_microversion_skew': 'rejectMicroversionSkew',
+        'microversion_skew': 'microversionSkew',
+        'library_version': 'libraryVersion',
         'bt_type': 'btType'
     }
 
-    def __init__(self, feature_state=None, feature=None, microversion_skew=None, serialization_version=None, library_version=None, reject_microversion_skew=None, source_microversion=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_state=None, feature=None, serialization_version=None, source_microversion=None, reject_microversion_skew=None, microversion_skew=None, library_version=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFeatureDefinitionResponse1617 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -63,11 +63,11 @@ class BTFeatureDefinitionResponse1617(object):
 
         self._feature_state = None
         self._feature = None
-        self._microversion_skew = None
         self._serialization_version = None
-        self._library_version = None
-        self._reject_microversion_skew = None
         self._source_microversion = None
+        self._reject_microversion_skew = None
+        self._microversion_skew = None
+        self._library_version = None
         self._bt_type = None
         self.discriminator = None
 
@@ -75,16 +75,16 @@ class BTFeatureDefinitionResponse1617(object):
             self.feature_state = feature_state
         if feature is not None:
             self.feature = feature
-        if microversion_skew is not None:
-            self.microversion_skew = microversion_skew
         if serialization_version is not None:
             self.serialization_version = serialization_version
-        if library_version is not None:
-            self.library_version = library_version
-        if reject_microversion_skew is not None:
-            self.reject_microversion_skew = reject_microversion_skew
         if source_microversion is not None:
             self.source_microversion = source_microversion
+        if reject_microversion_skew is not None:
+            self.reject_microversion_skew = reject_microversion_skew
+        if microversion_skew is not None:
+            self.microversion_skew = microversion_skew
+        if library_version is not None:
+            self.library_version = library_version
         if bt_type is not None:
             self.bt_type = bt_type
 
@@ -131,27 +131,6 @@ class BTFeatureDefinitionResponse1617(object):
         self._feature = feature
 
     @property
-    def microversion_skew(self):
-        """Gets the microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
-
-
-        :return: The microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :rtype: bool
-        """
-        return self._microversion_skew
-
-    @microversion_skew.setter
-    def microversion_skew(self, microversion_skew):
-        """Sets the microversion_skew of this BTFeatureDefinitionResponse1617.
-
-
-        :param microversion_skew: The microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :type: bool
-        """
-
-        self._microversion_skew = microversion_skew
-
-    @property
     def serialization_version(self):
         """Gets the serialization_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
 
@@ -173,25 +152,25 @@ class BTFeatureDefinitionResponse1617(object):
         self._serialization_version = serialization_version
 
     @property
-    def library_version(self):
-        """Gets the library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
+    def source_microversion(self):
+        """Gets the source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
 
 
-        :return: The library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :rtype: int
+        :return: The source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :rtype: str
         """
-        return self._library_version
+        return self._source_microversion
 
-    @library_version.setter
-    def library_version(self, library_version):
-        """Sets the library_version of this BTFeatureDefinitionResponse1617.
+    @source_microversion.setter
+    def source_microversion(self, source_microversion):
+        """Sets the source_microversion of this BTFeatureDefinitionResponse1617.
 
 
-        :param library_version: The library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :type: int
+        :param source_microversion: The source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :type: str
         """
 
-        self._library_version = library_version
+        self._source_microversion = source_microversion
 
     @property
     def reject_microversion_skew(self):
@@ -215,25 +194,46 @@ class BTFeatureDefinitionResponse1617(object):
         self._reject_microversion_skew = reject_microversion_skew
 
     @property
-    def source_microversion(self):
-        """Gets the source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
+    def microversion_skew(self):
+        """Gets the microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
 
 
-        :return: The source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :rtype: str
+        :return: The microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :rtype: bool
         """
-        return self._source_microversion
+        return self._microversion_skew
 
-    @source_microversion.setter
-    def source_microversion(self, source_microversion):
-        """Sets the source_microversion of this BTFeatureDefinitionResponse1617.
+    @microversion_skew.setter
+    def microversion_skew(self, microversion_skew):
+        """Sets the microversion_skew of this BTFeatureDefinitionResponse1617.
 
 
-        :param source_microversion: The source_microversion of this BTFeatureDefinitionResponse1617.  # noqa: E501
-        :type: str
+        :param microversion_skew: The microversion_skew of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :type: bool
         """
 
-        self._source_microversion = source_microversion
+        self._microversion_skew = microversion_skew
+
+    @property
+    def library_version(self):
+        """Gets the library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
+
+
+        :return: The library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :rtype: int
+        """
+        return self._library_version
+
+    @library_version.setter
+    def library_version(self, library_version):
+        """Sets the library_version of this BTFeatureDefinitionResponse1617.
+
+
+        :param library_version: The library_version of this BTFeatureDefinitionResponse1617.  # noqa: E501
+        :type: int
+        """
+
+        self._library_version = library_version
 
     @property
     def bt_type(self):

@@ -35,41 +35,41 @@ class BTAppElementUpdateParams(object):
     """
     openapi_types = {
         'changes': 'list[BTAppElementChangeParams]',
+        'return_error': 'bool',
         'transaction_id': 'str',
         'parent_change_id': 'str',
-        'return_error': 'bool',
         'description': 'str'
     }
 
     attribute_map = {
         'changes': 'changes',
+        'return_error': 'returnError',
         'transaction_id': 'transactionId',
         'parent_change_id': 'parentChangeId',
-        'return_error': 'returnError',
         'description': 'description'
     }
 
-    def __init__(self, changes=None, transaction_id=None, parent_change_id=None, return_error=None, description=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, changes=None, return_error=None, transaction_id=None, parent_change_id=None, description=None, local_vars_configuration=None):  # noqa: E501
         """BTAppElementUpdateParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._changes = None
+        self._return_error = None
         self._transaction_id = None
         self._parent_change_id = None
-        self._return_error = None
         self._description = None
         self.discriminator = None
 
         if changes is not None:
             self.changes = changes
+        if return_error is not None:
+            self.return_error = return_error
         if transaction_id is not None:
             self.transaction_id = transaction_id
         if parent_change_id is not None:
             self.parent_change_id = parent_change_id
-        if return_error is not None:
-            self.return_error = return_error
         if description is not None:
             self.description = description
 
@@ -93,6 +93,27 @@ class BTAppElementUpdateParams(object):
         """
 
         self._changes = changes
+
+    @property
+    def return_error(self):
+        """Gets the return_error of this BTAppElementUpdateParams.  # noqa: E501
+
+
+        :return: The return_error of this BTAppElementUpdateParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._return_error
+
+    @return_error.setter
+    def return_error(self, return_error):
+        """Sets the return_error of this BTAppElementUpdateParams.
+
+
+        :param return_error: The return_error of this BTAppElementUpdateParams.  # noqa: E501
+        :type: bool
+        """
+
+        self._return_error = return_error
 
     @property
     def transaction_id(self):
@@ -135,27 +156,6 @@ class BTAppElementUpdateParams(object):
         """
 
         self._parent_change_id = parent_change_id
-
-    @property
-    def return_error(self):
-        """Gets the return_error of this BTAppElementUpdateParams.  # noqa: E501
-
-
-        :return: The return_error of this BTAppElementUpdateParams.  # noqa: E501
-        :rtype: bool
-        """
-        return self._return_error
-
-    @return_error.setter
-    def return_error(self, return_error):
-        """Sets the return_error of this BTAppElementUpdateParams.
-
-
-        :param return_error: The return_error of this BTAppElementUpdateParams.  # noqa: E501
-        :type: bool
-        """
-
-        self._return_error = return_error
 
     @property
     def description(self):

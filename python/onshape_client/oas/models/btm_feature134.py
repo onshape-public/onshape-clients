@@ -84,7 +84,7 @@ class BTMFeature134(object):
         self._sub_features = None
         self._return_after_subfeatures = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if node_id is not None:
             self.node_id = node_id

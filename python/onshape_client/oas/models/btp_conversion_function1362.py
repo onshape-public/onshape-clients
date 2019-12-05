@@ -34,39 +34,65 @@ class BTPConversionFunction1362(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'to': 'BTPLiteralNumber258',
         '_from': 'BTPLiteralNumber258',
         'type_name': 'BTPIdentifier8',
         'space_after_type': 'BTPSpace10',
-        'to': 'BTPLiteralNumber258'
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'to': 'to',
         '_from': 'from',
         'type_name': 'typeName',
         'space_after_type': 'spaceAfterType',
-        'to': 'to'
+        'bt_type': 'btType'
     }
 
-    def __init__(self, _from=None, type_name=None, space_after_type=None, to=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, to=None, _from=None, type_name=None, space_after_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPConversionFunction1362 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._to = None
         self.__from = None
         self._type_name = None
         self._space_after_type = None
-        self._to = None
+        self._bt_type = None
         self.discriminator = None
 
+        if to is not None:
+            self.to = to
         if _from is not None:
             self._from = _from
         if type_name is not None:
             self.type_name = type_name
         if space_after_type is not None:
             self.space_after_type = space_after_type
-        if to is not None:
-            self.to = to
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def to(self):
+        """Gets the to of this BTPConversionFunction1362.  # noqa: E501
+
+
+        :return: The to of this BTPConversionFunction1362.  # noqa: E501
+        :rtype: BTPLiteralNumber258
+        """
+        return self._to
+
+    @to.setter
+    def to(self, to):
+        """Sets the to of this BTPConversionFunction1362.
+
+
+        :param to: The to of this BTPConversionFunction1362.  # noqa: E501
+        :type: BTPLiteralNumber258
+        """
+
+        self._to = to
 
     @property
     def _from(self):
@@ -132,25 +158,25 @@ class BTPConversionFunction1362(object):
         self._space_after_type = space_after_type
 
     @property
-    def to(self):
-        """Gets the to of this BTPConversionFunction1362.  # noqa: E501
+    def bt_type(self):
+        """Gets the bt_type of this BTPConversionFunction1362.  # noqa: E501
 
 
-        :return: The to of this BTPConversionFunction1362.  # noqa: E501
-        :rtype: BTPLiteralNumber258
+        :return: The bt_type of this BTPConversionFunction1362.  # noqa: E501
+        :rtype: str
         """
-        return self._to
+        return self._bt_type
 
-    @to.setter
-    def to(self, to):
-        """Sets the to of this BTPConversionFunction1362.
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPConversionFunction1362.
 
 
-        :param to: The to of this BTPConversionFunction1362.  # noqa: E501
-        :type: BTPLiteralNumber258
+        :param bt_type: The bt_type of this BTPConversionFunction1362.  # noqa: E501
+        :type: str
         """
 
-        self._to = to
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

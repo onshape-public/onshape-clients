@@ -36,16 +36,18 @@ class BTMParameterReference2434AllOf(object):
     openapi_types = {
         'element_id': 'str',
         'feature_script_type': 'str',
-        'namespace': 'str'
+        'namespace': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'element_id': 'elementId',
         'feature_script_type': 'featureScriptType',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, element_id=None, feature_script_type=None, namespace=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, feature_script_type=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterReference2434AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMParameterReference2434AllOf(object):
         self._element_id = None
         self._feature_script_type = None
         self._namespace = None
+        self._bt_type = None
         self.discriminator = None
 
         if element_id is not None:
@@ -62,6 +65,8 @@ class BTMParameterReference2434AllOf(object):
             self.feature_script_type = feature_script_type
         if namespace is not None:
             self.namespace = namespace
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def element_id(self):
@@ -125,6 +130,27 @@ class BTMParameterReference2434AllOf(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterReference2434AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterReference2434AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterReference2434AllOf.
+
+
+        :param bt_type: The bt_type of this BTMParameterReference2434AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

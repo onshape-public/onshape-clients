@@ -34,75 +34,54 @@ class BTAPIApplicationSummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'description': 'str',
         'client_id': 'str',
-        'id': 'str',
+        'description': 'str',
         'state': 'int',
+        'id': 'str',
         'href': 'str',
         'view_ref': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
         'client_id': 'clientId',
-        'id': 'id',
+        'description': 'description',
         'state': 'state',
+        'id': 'id',
         'href': 'href',
         'view_ref': 'viewRef',
         'name': 'name'
     }
 
-    def __init__(self, description=None, client_id=None, id=None, state=None, href=None, view_ref=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, client_id=None, description=None, state=None, id=None, href=None, view_ref=None, name=None, local_vars_configuration=None):  # noqa: E501
         """BTAPIApplicationSummaryInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._description = None
         self._client_id = None
-        self._id = None
+        self._description = None
         self._state = None
+        self._id = None
         self._href = None
         self._view_ref = None
         self._name = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
         if client_id is not None:
             self.client_id = client_id
-        if id is not None:
-            self.id = id
+        if description is not None:
+            self.description = description
         if state is not None:
             self.state = state
+        if id is not None:
+            self.id = id
         if href is not None:
             self.href = href
         if view_ref is not None:
             self.view_ref = view_ref
         if name is not None:
             self.name = name
-
-    @property
-    def description(self):
-        """Gets the description of this BTAPIApplicationSummaryInfo.  # noqa: E501
-
-
-        :return: The description of this BTAPIApplicationSummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTAPIApplicationSummaryInfo.
-
-
-        :param description: The description of this BTAPIApplicationSummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def client_id(self):
@@ -126,25 +105,25 @@ class BTAPIApplicationSummaryInfo(object):
         self._client_id = client_id
 
     @property
-    def id(self):
-        """Gets the id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+    def description(self):
+        """Gets the description of this BTAPIApplicationSummaryInfo.  # noqa: E501
 
 
-        :return: The id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+        :return: The description of this BTAPIApplicationSummaryInfo.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._description
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BTAPIApplicationSummaryInfo.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTAPIApplicationSummaryInfo.
 
 
-        :param id: The id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+        :param description: The description of this BTAPIApplicationSummaryInfo.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._description = description
 
     @property
     def state(self):
@@ -166,6 +145,27 @@ class BTAPIApplicationSummaryInfo(object):
         """
 
         self._state = state
+
+    @property
+    def id(self):
+        """Gets the id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+
+
+        :return: The id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BTAPIApplicationSummaryInfo.
+
+
+        :param id: The id of this BTAPIApplicationSummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def href(self):

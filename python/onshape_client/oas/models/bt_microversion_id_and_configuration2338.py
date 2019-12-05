@@ -35,8 +35,8 @@ class BTMicroversionIdAndConfiguration2338(object):
     """
     openapi_types = {
         'deleted': 'bool',
-        'description': 'str',
         'cache_key': 'str',
+        'description': 'str',
         'microversion': 'BTMicroversionId366',
         'configuration_parameter_id_to_value': 'dict(str, BTFSValue1888)',
         'bt_type': 'str'
@@ -44,22 +44,22 @@ class BTMicroversionIdAndConfiguration2338(object):
 
     attribute_map = {
         'deleted': 'deleted',
-        'description': 'description',
         'cache_key': 'cacheKey',
+        'description': 'description',
         'microversion': 'microversion',
         'configuration_parameter_id_to_value': 'configurationParameterIdToValue',
         'bt_type': 'btType'
     }
 
-    def __init__(self, deleted=None, description=None, cache_key=None, microversion=None, configuration_parameter_id_to_value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, deleted=None, cache_key=None, description=None, microversion=None, configuration_parameter_id_to_value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMicroversionIdAndConfiguration2338 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._deleted = None
-        self._description = None
         self._cache_key = None
+        self._description = None
         self._microversion = None
         self._configuration_parameter_id_to_value = None
         self._bt_type = None
@@ -67,10 +67,10 @@ class BTMicroversionIdAndConfiguration2338(object):
 
         if deleted is not None:
             self.deleted = deleted
-        if description is not None:
-            self.description = description
         if cache_key is not None:
             self.cache_key = cache_key
+        if description is not None:
+            self.description = description
         if microversion is not None:
             self.microversion = microversion
         if configuration_parameter_id_to_value is not None:
@@ -100,27 +100,6 @@ class BTMicroversionIdAndConfiguration2338(object):
         self._deleted = deleted
 
     @property
-    def description(self):
-        """Gets the description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
-
-
-        :return: The description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this BTMicroversionIdAndConfiguration2338.
-
-
-        :param description: The description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def cache_key(self):
         """Gets the cache_key of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
 
@@ -140,6 +119,27 @@ class BTMicroversionIdAndConfiguration2338(object):
         """
 
         self._cache_key = cache_key
+
+    @property
+    def description(self):
+        """Gets the description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
+
+
+        :return: The description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BTMicroversionIdAndConfiguration2338.
+
+
+        :param description: The description of this BTMicroversionIdAndConfiguration2338.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def microversion(self):

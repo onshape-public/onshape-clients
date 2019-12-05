@@ -35,15 +35,17 @@ class BTPLValueAccess250AllOf(object):
     """
     openapi_types = {
         'accessor': 'BTPPropertyAccessor23',
-        'base': 'BTPLValue249'
+        'base': 'BTPLValue249',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'accessor': 'accessor',
-        'base': 'base'
+        'base': 'base',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, accessor=None, base=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, accessor=None, base=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPLValueAccess250AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTPLValueAccess250AllOf(object):
 
         self._accessor = None
         self._base = None
+        self._bt_type = None
         self.discriminator = None
 
         if accessor is not None:
             self.accessor = accessor
         if base is not None:
             self.base = base
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def accessor(self):
@@ -99,6 +104,27 @@ class BTPLValueAccess250AllOf(object):
         """
 
         self._base = base
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPLValueAccess250AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPLValueAccess250AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPLValueAccess250AllOf.
+
+
+        :param bt_type: The bt_type of this BTPLValueAccess250AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

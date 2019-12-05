@@ -34,8 +34,8 @@ class BTAclInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'inherited_acls': 'list[BTInheritedAclInfo]',
         'admin': 'bool',
+        'inherited_acls': 'list[BTInheritedAclInfo]',
         'shared_with_support': 'bool',
         'entries': 'list[BTAclEntryInfo]',
         'object_id': 'str',
@@ -50,8 +50,8 @@ class BTAclInfo(object):
     }
 
     attribute_map = {
-        'inherited_acls': 'inheritedAcls',
         'admin': 'admin',
+        'inherited_acls': 'inheritedAcls',
         'shared_with_support': 'sharedWithSupport',
         'entries': 'entries',
         'object_id': 'objectId',
@@ -65,14 +65,14 @@ class BTAclInfo(object):
         'id': 'id'
     }
 
-    def __init__(self, inherited_acls=None, admin=None, shared_with_support=None, entries=None, object_id=None, object_type=None, visibility=None, public=None, owner=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, admin=None, inherited_acls=None, shared_with_support=None, entries=None, object_id=None, object_type=None, visibility=None, public=None, owner=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
         """BTAclInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._inherited_acls = None
         self._admin = None
+        self._inherited_acls = None
         self._shared_with_support = None
         self._entries = None
         self._object_id = None
@@ -86,10 +86,10 @@ class BTAclInfo(object):
         self._id = None
         self.discriminator = None
 
-        if inherited_acls is not None:
-            self.inherited_acls = inherited_acls
         if admin is not None:
             self.admin = admin
+        if inherited_acls is not None:
+            self.inherited_acls = inherited_acls
         if shared_with_support is not None:
             self.shared_with_support = shared_with_support
         if entries is not None:
@@ -114,27 +114,6 @@ class BTAclInfo(object):
             self.id = id
 
     @property
-    def inherited_acls(self):
-        """Gets the inherited_acls of this BTAclInfo.  # noqa: E501
-
-
-        :return: The inherited_acls of this BTAclInfo.  # noqa: E501
-        :rtype: list[BTInheritedAclInfo]
-        """
-        return self._inherited_acls
-
-    @inherited_acls.setter
-    def inherited_acls(self, inherited_acls):
-        """Sets the inherited_acls of this BTAclInfo.
-
-
-        :param inherited_acls: The inherited_acls of this BTAclInfo.  # noqa: E501
-        :type: list[BTInheritedAclInfo]
-        """
-
-        self._inherited_acls = inherited_acls
-
-    @property
     def admin(self):
         """Gets the admin of this BTAclInfo.  # noqa: E501
 
@@ -154,6 +133,27 @@ class BTAclInfo(object):
         """
 
         self._admin = admin
+
+    @property
+    def inherited_acls(self):
+        """Gets the inherited_acls of this BTAclInfo.  # noqa: E501
+
+
+        :return: The inherited_acls of this BTAclInfo.  # noqa: E501
+        :rtype: list[BTInheritedAclInfo]
+        """
+        return self._inherited_acls
+
+    @inherited_acls.setter
+    def inherited_acls(self, inherited_acls):
+        """Sets the inherited_acls of this BTAclInfo.
+
+
+        :param inherited_acls: The inherited_acls of this BTAclInfo.  # noqa: E501
+        :type: list[BTInheritedAclInfo]
+        """
+
+        self._inherited_acls = inherited_acls
 
     @property
     def shared_with_support(self):

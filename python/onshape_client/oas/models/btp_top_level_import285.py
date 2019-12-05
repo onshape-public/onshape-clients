@@ -39,7 +39,8 @@ class BTPTopLevelImport285(object):
         'combined_namespace_path_and_version': 'str',
         'module_id': 'BTPModuleId235',
         'space_before_import': 'BTPSpace10',
-        'namespace': 'list[BTPIdentifier8]'
+        'namespace': 'list[BTPIdentifier8]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class BTPTopLevelImport285(object):
         'combined_namespace_path_and_version': 'combinedNamespacePathAndVersion',
         'module_id': 'moduleId',
         'space_before_import': 'spaceBeforeImport',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, import_microversion=None, namespace_string=None, combined_namespace_path_and_version=None, module_id=None, space_before_import=None, namespace=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, import_microversion=None, namespace_string=None, combined_namespace_path_and_version=None, module_id=None, space_before_import=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelImport285 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -63,6 +65,7 @@ class BTPTopLevelImport285(object):
         self._module_id = None
         self._space_before_import = None
         self._namespace = None
+        self._bt_type = None
         self.discriminator = None
 
         if import_microversion is not None:
@@ -77,6 +80,8 @@ class BTPTopLevelImport285(object):
             self.space_before_import = space_before_import
         if namespace is not None:
             self.namespace = namespace
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def import_microversion(self):
@@ -203,6 +208,27 @@ class BTPTopLevelImport285(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelImport285.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelImport285.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelImport285.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelImport285.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

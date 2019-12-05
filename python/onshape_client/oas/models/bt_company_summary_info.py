@@ -34,10 +34,10 @@ class BTCompanySummaryInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'domain_prefix': 'str',
+        'admin': 'bool',
         'owner_id': 'str',
         'image': 'str',
-        'admin': 'bool',
-        'domain_prefix': 'str',
         'description': 'str',
         'no_public_documents': 'bool',
         'enterprise_base_url': 'str',
@@ -50,10 +50,10 @@ class BTCompanySummaryInfo(object):
     }
 
     attribute_map = {
+        'domain_prefix': 'domainPrefix',
+        'admin': 'admin',
         'owner_id': 'ownerId',
         'image': 'image',
-        'admin': 'admin',
-        'domain_prefix': 'domainPrefix',
         'description': 'description',
         'no_public_documents': 'noPublicDocuments',
         'enterprise_base_url': 'enterpriseBaseUrl',
@@ -65,16 +65,16 @@ class BTCompanySummaryInfo(object):
         'id': 'id'
     }
 
-    def __init__(self, owner_id=None, image=None, admin=None, domain_prefix=None, description=None, no_public_documents=None, enterprise_base_url=None, state=None, type=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, domain_prefix=None, admin=None, owner_id=None, image=None, description=None, no_public_documents=None, enterprise_base_url=None, state=None, type=None, href=None, view_ref=None, name=None, id=None, local_vars_configuration=None):  # noqa: E501
         """BTCompanySummaryInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._domain_prefix = None
+        self._admin = None
         self._owner_id = None
         self._image = None
-        self._admin = None
-        self._domain_prefix = None
         self._description = None
         self._no_public_documents = None
         self._enterprise_base_url = None
@@ -86,14 +86,14 @@ class BTCompanySummaryInfo(object):
         self._id = None
         self.discriminator = None
 
+        if domain_prefix is not None:
+            self.domain_prefix = domain_prefix
+        if admin is not None:
+            self.admin = admin
         if owner_id is not None:
             self.owner_id = owner_id
         if image is not None:
             self.image = image
-        if admin is not None:
-            self.admin = admin
-        if domain_prefix is not None:
-            self.domain_prefix = domain_prefix
         if description is not None:
             self.description = description
         if no_public_documents is not None:
@@ -112,6 +112,48 @@ class BTCompanySummaryInfo(object):
             self.name = name
         if id is not None:
             self.id = id
+
+    @property
+    def domain_prefix(self):
+        """Gets the domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_prefix
+
+    @domain_prefix.setter
+    def domain_prefix(self, domain_prefix):
+        """Sets the domain_prefix of this BTCompanySummaryInfo.
+
+
+        :param domain_prefix: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._domain_prefix = domain_prefix
+
+    @property
+    def admin(self):
+        """Gets the admin of this BTCompanySummaryInfo.  # noqa: E501
+
+
+        :return: The admin of this BTCompanySummaryInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._admin
+
+    @admin.setter
+    def admin(self, admin):
+        """Sets the admin of this BTCompanySummaryInfo.
+
+
+        :param admin: The admin of this BTCompanySummaryInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._admin = admin
 
     @property
     def owner_id(self):
@@ -154,48 +196,6 @@ class BTCompanySummaryInfo(object):
         """
 
         self._image = image
-
-    @property
-    def admin(self):
-        """Gets the admin of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The admin of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._admin
-
-    @admin.setter
-    def admin(self, admin):
-        """Sets the admin of this BTCompanySummaryInfo.
-
-
-        :param admin: The admin of this BTCompanySummaryInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._admin = admin
-
-    @property
-    def domain_prefix(self):
-        """Gets the domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-
-
-        :return: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_prefix
-
-    @domain_prefix.setter
-    def domain_prefix(self, domain_prefix):
-        """Sets the domain_prefix of this BTCompanySummaryInfo.
-
-
-        :param domain_prefix: The domain_prefix of this BTCompanySummaryInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._domain_prefix = domain_prefix
 
     @property
     def description(self):

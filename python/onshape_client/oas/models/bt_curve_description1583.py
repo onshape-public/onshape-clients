@@ -58,7 +58,7 @@ class BTCurveDescription1583(object):
 
         self._type = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if type is not None:
             self.type = type

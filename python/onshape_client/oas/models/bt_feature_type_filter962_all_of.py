@@ -34,24 +34,29 @@ class BTFeatureTypeFilter962AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'feature_type': 'str'
+        'feature_type': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'feature_type': 'featureType'
+        'feature_type': 'featureType',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, feature_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFeatureTypeFilter962AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._feature_type = None
+        self._bt_type = None
         self.discriminator = None
 
         if feature_type is not None:
             self.feature_type = feature_type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def feature_type(self):
@@ -73,6 +78,27 @@ class BTFeatureTypeFilter962AllOf(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFeatureTypeFilter962AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTFeatureTypeFilter962AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFeatureTypeFilter962AllOf.
+
+
+        :param bt_type: The bt_type of this BTFeatureTypeFilter962AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

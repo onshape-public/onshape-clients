@@ -67,7 +67,7 @@ class BTQuantityRange181(object):
         self._location = None
         self._default_value = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if min_value is not None:
             self.min_value = min_value

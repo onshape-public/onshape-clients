@@ -34,34 +34,36 @@ class BTCustomPropertyDefinitionInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'template': 'str',
         'description': 'str',
         'enum_definition': 'list[str]',
         'name': 'str',
-        'type': 'str',
-        'template': 'str'
+        'type': 'str'
     }
 
     attribute_map = {
+        'template': 'template',
         'description': 'description',
         'enum_definition': 'enumDefinition',
         'name': 'name',
-        'type': 'type',
-        'template': 'template'
+        'type': 'type'
     }
 
-    def __init__(self, description=None, enum_definition=None, name=None, type=None, template=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, template=None, description=None, enum_definition=None, name=None, type=None, local_vars_configuration=None):  # noqa: E501
         """BTCustomPropertyDefinitionInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._template = None
         self._description = None
         self._enum_definition = None
         self._name = None
         self._type = None
-        self._template = None
         self.discriminator = None
 
+        if template is not None:
+            self.template = template
         if description is not None:
             self.description = description
         if enum_definition is not None:
@@ -70,8 +72,27 @@ class BTCustomPropertyDefinitionInfo(object):
             self.name = name
         if type is not None:
             self.type = type
-        if template is not None:
-            self.template = template
+
+    @property
+    def template(self):
+        """Gets the template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+
+
+        :return: The template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """Sets the template of this BTCustomPropertyDefinitionInfo.
+
+
+        :param template: The template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._template = template
 
     @property
     def description(self):
@@ -162,27 +183,6 @@ class BTCustomPropertyDefinitionInfo(object):
             )
 
         self._type = type
-
-    @property
-    def template(self):
-        """Gets the template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-
-
-        :return: The template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._template
-
-    @template.setter
-    def template(self, template):
-        """Sets the template of this BTCustomPropertyDefinitionInfo.
-
-
-        :param template: The template of this BTCustomPropertyDefinitionInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._template = template
 
     def to_dict(self):
         """Returns the model properties as a dict"""

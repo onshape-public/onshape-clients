@@ -4,14 +4,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **purpose** | **int** |  | [optional] 
-**creator** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**modified_at** | **datetime** |  | [optional] 
+**last_modifier** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **document_id** | **str** |  | [optional] 
 **thumbnail** | [**BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
 **microversion** | **str** |  | [optional] 
-**modified_at** | **datetime** |  | [optional] 
+**parents** | [**list[BTVersionInfo]**](BTVersionInfo.md) |  | [optional] 
+**creator** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**last_modifier** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **override_date** | **datetime** |  | [optional] 
 **parent** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

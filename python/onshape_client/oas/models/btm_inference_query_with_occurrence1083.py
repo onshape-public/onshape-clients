@@ -34,55 +34,39 @@ class BTMInferenceQueryWithOccurrence1083(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'second_deterministic_id': 'str',
         'second_entity_query': 'str',
-        'inference_type': 'str'
+        'inference_type': 'str',
+        'second_deterministic_id': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'second_deterministic_id': 'secondDeterministicId',
         'second_entity_query': 'secondEntityQuery',
-        'inference_type': 'inferenceType'
+        'inference_type': 'inferenceType',
+        'second_deterministic_id': 'secondDeterministicId',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, second_deterministic_id=None, second_entity_query=None, inference_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, second_entity_query=None, inference_type=None, second_deterministic_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMInferenceQueryWithOccurrence1083 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._second_deterministic_id = None
         self._second_entity_query = None
         self._inference_type = None
+        self._second_deterministic_id = None
+        self._bt_type = None
         self.discriminator = None
 
-        if second_deterministic_id is not None:
-            self.second_deterministic_id = second_deterministic_id
         if second_entity_query is not None:
             self.second_entity_query = second_entity_query
         if inference_type is not None:
             self.inference_type = inference_type
-
-    @property
-    def second_deterministic_id(self):
-        """Gets the second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
-
-
-        :return: The second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
-        :rtype: str
-        """
-        return self._second_deterministic_id
-
-    @second_deterministic_id.setter
-    def second_deterministic_id(self, second_deterministic_id):
-        """Sets the second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.
-
-
-        :param second_deterministic_id: The second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
-        :type: str
-        """
-
-        self._second_deterministic_id = second_deterministic_id
+        if second_deterministic_id is not None:
+            self.second_deterministic_id = second_deterministic_id
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def second_entity_query(self):
@@ -131,6 +115,48 @@ class BTMInferenceQueryWithOccurrence1083(object):
             )
 
         self._inference_type = inference_type
+
+    @property
+    def second_deterministic_id(self):
+        """Gets the second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+
+
+        :return: The second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+        :rtype: str
+        """
+        return self._second_deterministic_id
+
+    @second_deterministic_id.setter
+    def second_deterministic_id(self, second_deterministic_id):
+        """Sets the second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.
+
+
+        :param second_deterministic_id: The second_deterministic_id of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+        :type: str
+        """
+
+        self._second_deterministic_id = second_deterministic_id
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+
+
+        :return: The bt_type of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMInferenceQueryWithOccurrence1083.
+
+
+        :param bt_type: The bt_type of this BTMInferenceQueryWithOccurrence1083.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

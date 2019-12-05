@@ -34,43 +34,45 @@ class BTAddressInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'zip': 'str',
         'address': 'str',
         'city': 'str',
         'state_code': 'str',
         'country': 'str',
         'country_code': 'str',
-        'zip': 'str',
-        'id': 'str',
-        'state': 'str'
+        'state': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
+        'zip': 'zip',
         'address': 'address',
         'city': 'city',
         'state_code': 'stateCode',
         'country': 'country',
         'country_code': 'countryCode',
-        'zip': 'zip',
-        'id': 'id',
-        'state': 'state'
+        'state': 'state',
+        'id': 'id'
     }
 
-    def __init__(self, address=None, city=None, state_code=None, country=None, country_code=None, zip=None, id=None, state=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, zip=None, address=None, city=None, state_code=None, country=None, country_code=None, state=None, id=None, local_vars_configuration=None):  # noqa: E501
         """BTAddressInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._zip = None
         self._address = None
         self._city = None
         self._state_code = None
         self._country = None
         self._country_code = None
-        self._zip = None
-        self._id = None
         self._state = None
+        self._id = None
         self.discriminator = None
 
+        if zip is not None:
+            self.zip = zip
         if address is not None:
             self.address = address
         if city is not None:
@@ -81,12 +83,31 @@ class BTAddressInfo(object):
             self.country = country
         if country_code is not None:
             self.country_code = country_code
-        if zip is not None:
-            self.zip = zip
-        if id is not None:
-            self.id = id
         if state is not None:
             self.state = state
+        if id is not None:
+            self.id = id
+
+    @property
+    def zip(self):
+        """Gets the zip of this BTAddressInfo.  # noqa: E501
+
+
+        :return: The zip of this BTAddressInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._zip
+
+    @zip.setter
+    def zip(self, zip):
+        """Sets the zip of this BTAddressInfo.
+
+
+        :param zip: The zip of this BTAddressInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._zip = zip
 
     @property
     def address(self):
@@ -194,25 +215,25 @@ class BTAddressInfo(object):
         self._country_code = country_code
 
     @property
-    def zip(self):
-        """Gets the zip of this BTAddressInfo.  # noqa: E501
+    def state(self):
+        """Gets the state of this BTAddressInfo.  # noqa: E501
 
 
-        :return: The zip of this BTAddressInfo.  # noqa: E501
+        :return: The state of this BTAddressInfo.  # noqa: E501
         :rtype: str
         """
-        return self._zip
+        return self._state
 
-    @zip.setter
-    def zip(self, zip):
-        """Sets the zip of this BTAddressInfo.
+    @state.setter
+    def state(self, state):
+        """Sets the state of this BTAddressInfo.
 
 
-        :param zip: The zip of this BTAddressInfo.  # noqa: E501
+        :param state: The state of this BTAddressInfo.  # noqa: E501
         :type: str
         """
 
-        self._zip = zip
+        self._state = state
 
     @property
     def id(self):
@@ -234,27 +255,6 @@ class BTAddressInfo(object):
         """
 
         self._id = id
-
-    @property
-    def state(self):
-        """Gets the state of this BTAddressInfo.  # noqa: E501
-
-
-        :return: The state of this BTAddressInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._state
-
-    @state.setter
-    def state(self, state):
-        """Sets the state of this BTAddressInfo.
-
-
-        :param state: The state of this BTAddressInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._state = state
 
     def to_dict(self):
         """Returns the model properties as a dict"""

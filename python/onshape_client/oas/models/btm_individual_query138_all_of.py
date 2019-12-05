@@ -36,16 +36,18 @@ class BTMIndividualQuery138AllOf(object):
     openapi_types = {
         'persistent_query': 'BTPStatement269',
         'variable_name': 'BTMIndividualQuery138',
-        'query_statement': 'BTPStatement269'
+        'query_statement': 'BTPStatement269',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'persistent_query': 'persistentQuery',
         'variable_name': 'variableName',
-        'query_statement': 'queryStatement'
+        'query_statement': 'queryStatement',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, persistent_query=None, variable_name=None, query_statement=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, persistent_query=None, variable_name=None, query_statement=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualQuery138AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTMIndividualQuery138AllOf(object):
         self._persistent_query = None
         self._variable_name = None
         self._query_statement = None
+        self._bt_type = None
         self.discriminator = None
 
         if persistent_query is not None:
@@ -62,6 +65,8 @@ class BTMIndividualQuery138AllOf(object):
             self.variable_name = variable_name
         if query_statement is not None:
             self.query_statement = query_statement
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def persistent_query(self):
@@ -125,6 +130,27 @@ class BTMIndividualQuery138AllOf(object):
         """
 
         self._query_statement = query_statement
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMIndividualQuery138AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMIndividualQuery138AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMIndividualQuery138AllOf.
+
+
+        :param bt_type: The bt_type of this BTMIndividualQuery138AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,60 +34,39 @@ class BTAssemblyFeatureInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'suppressed': 'bool',
         'feature_type': 'str',
+        'suppressed': 'bool',
         'feature_data': 'BTAssemblyFeatureDataInfo',
         'id': 'str'
     }
 
     attribute_map = {
-        'suppressed': 'suppressed',
         'feature_type': 'featureType',
+        'suppressed': 'suppressed',
         'feature_data': 'featureData',
         'id': 'id'
     }
 
-    def __init__(self, suppressed=None, feature_type=None, feature_data=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, feature_type=None, suppressed=None, feature_data=None, id=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyFeatureInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._suppressed = None
         self._feature_type = None
+        self._suppressed = None
         self._feature_data = None
         self._id = None
         self.discriminator = None
 
-        if suppressed is not None:
-            self.suppressed = suppressed
         if feature_type is not None:
             self.feature_type = feature_type
+        if suppressed is not None:
+            self.suppressed = suppressed
         if feature_data is not None:
             self.feature_data = feature_data
         if id is not None:
             self.id = id
-
-    @property
-    def suppressed(self):
-        """Gets the suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
-
-
-        :return: The suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppressed
-
-    @suppressed.setter
-    def suppressed(self, suppressed):
-        """Sets the suppressed of this BTAssemblyFeatureInfo.
-
-
-        :param suppressed: The suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppressed = suppressed
 
     @property
     def feature_type(self):
@@ -109,6 +88,27 @@ class BTAssemblyFeatureInfo(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def suppressed(self):
+        """Gets the suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
+
+
+        :return: The suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._suppressed
+
+    @suppressed.setter
+    def suppressed(self, suppressed):
+        """Sets the suppressed of this BTAssemblyFeatureInfo.
+
+
+        :param suppressed: The suppressed of this BTAssemblyFeatureInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._suppressed = suppressed
 
     @property
     def feature_data(self):

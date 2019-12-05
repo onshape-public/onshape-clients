@@ -36,13 +36,15 @@ class BTMParameterReference2434(object):
     openapi_types = {
         'element_id': 'str',
         'feature_script_type': 'str',
-        'namespace': 'str'
+        'namespace': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'element_id': 'elementId',
         'feature_script_type': 'featureScriptType',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -50,7 +52,7 @@ class BTMParameterReference2434(object):
         'BTMParameterReferenceBlob-3281': 'BTMParameterReferenceBlob3281'
     }
 
-    def __init__(self, element_id=None, feature_script_type=None, namespace=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, element_id=None, feature_script_type=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMParameterReference2434 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,7 +61,8 @@ class BTMParameterReference2434(object):
         self._element_id = None
         self._feature_script_type = None
         self._namespace = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if element_id is not None:
             self.element_id = element_id
@@ -67,6 +70,8 @@ class BTMParameterReference2434(object):
             self.feature_script_type = feature_script_type
         if namespace is not None:
             self.namespace = namespace
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def element_id(self):
@@ -130,6 +135,27 @@ class BTMParameterReference2434(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMParameterReference2434.  # noqa: E501
+
+
+        :return: The bt_type of this BTMParameterReference2434.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMParameterReference2434.
+
+
+        :param bt_type: The bt_type of this BTMParameterReference2434.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

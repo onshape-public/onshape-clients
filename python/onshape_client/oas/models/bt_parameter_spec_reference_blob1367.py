@@ -34,9 +34,11 @@ class BTParameterSpecReferenceBlob1367(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'bt_type': 'str'
     }
 
     attribute_map = {
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -46,12 +48,38 @@ class BTParameterSpecReferenceBlob1367(object):
         'BTParameterSpecReferenceTable-1520': 'BTParameterSpecReferenceTable1520'
     }
 
-    def __init__(self, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpecReferenceBlob1367 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
-        self.discriminator = 'type'
+
+        self._bt_type = None
+        self.discriminator = 'bt_type'
+
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTParameterSpecReferenceBlob1367.  # noqa: E501
+
+
+        :return: The bt_type of this BTParameterSpecReferenceBlob1367.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTParameterSpecReferenceBlob1367.
+
+
+        :param bt_type: The bt_type of this BTParameterSpecReferenceBlob1367.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

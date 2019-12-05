@@ -65,7 +65,7 @@ class BTMConfiguredValue1341(object):
         self._import_microversion = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if configuration_value_string is not None:
             self.configuration_value_string = configuration_value_string

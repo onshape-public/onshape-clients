@@ -38,7 +38,8 @@ class BTPStatementVarDeclaration282(object):
         'type_name': 'str',
         'name': 'BTPIdentifier8',
         'value': 'BTPExpression9',
-        'type': 'BTPTypeName290'
+        'type': 'BTPTypeName290',
+        'bt_type': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class BTPStatementVarDeclaration282(object):
         'type_name': 'typeName',
         'name': 'name',
         'value': 'value',
-        'type': 'type'
+        'type': 'type',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, standard_type=None, type_name=None, name=None, value=None, type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, standard_type=None, type_name=None, name=None, value=None, type=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementVarDeclaration282 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class BTPStatementVarDeclaration282(object):
         self._name = None
         self._value = None
         self._type = None
+        self._bt_type = None
         self.discriminator = None
 
         if standard_type is not None:
@@ -72,6 +75,8 @@ class BTPStatementVarDeclaration282(object):
             self.value = value
         if type is not None:
             self.type = type
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def standard_type(self):
@@ -183,6 +188,27 @@ class BTPStatementVarDeclaration282(object):
         """
 
         self._type = type
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementVarDeclaration282.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementVarDeclaration282.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementVarDeclaration282.
+
+
+        :param bt_type: The bt_type of this BTPStatementVarDeclaration282.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

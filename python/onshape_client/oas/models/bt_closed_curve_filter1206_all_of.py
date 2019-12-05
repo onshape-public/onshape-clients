@@ -34,24 +34,29 @@ class BTClosedCurveFilter1206AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_closed': 'bool'
+        'is_closed': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_closed': 'isClosed'
+        'is_closed': 'isClosed',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_closed=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_closed=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTClosedCurveFilter1206AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_closed = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_closed is not None:
             self.is_closed = is_closed
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_closed(self):
@@ -73,6 +78,27 @@ class BTClosedCurveFilter1206AllOf(object):
         """
 
         self._is_closed = is_closed
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTClosedCurveFilter1206AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTClosedCurveFilter1206AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTClosedCurveFilter1206AllOf.
+
+
+        :param bt_type: The bt_type of this BTClosedCurveFilter1206AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

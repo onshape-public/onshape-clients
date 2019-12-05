@@ -36,20 +36,22 @@ class BTMConfigurationParameterEnum105(object):
     openapi_types = {
         'option_ids': 'list[str]',
         'enum_name': 'str',
-        'options': 'list[BTMEnumOption592]',
         'default_value': 'str',
-        'namespace': 'str'
+        'options': 'list[BTMEnumOption592]',
+        'namespace': 'str',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'option_ids': 'optionIds',
         'enum_name': 'enumName',
-        'options': 'options',
         'default_value': 'defaultValue',
-        'namespace': 'namespace'
+        'options': 'options',
+        'namespace': 'namespace',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, option_ids=None, enum_name=None, options=None, default_value=None, namespace=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, option_ids=None, enum_name=None, default_value=None, options=None, namespace=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMConfigurationParameterEnum105 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,21 +59,24 @@ class BTMConfigurationParameterEnum105(object):
 
         self._option_ids = None
         self._enum_name = None
-        self._options = None
         self._default_value = None
+        self._options = None
         self._namespace = None
+        self._bt_type = None
         self.discriminator = None
 
         if option_ids is not None:
             self.option_ids = option_ids
         if enum_name is not None:
             self.enum_name = enum_name
-        if options is not None:
-            self.options = options
         if default_value is not None:
             self.default_value = default_value
+        if options is not None:
+            self.options = options
         if namespace is not None:
             self.namespace = namespace
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def option_ids(self):
@@ -116,27 +121,6 @@ class BTMConfigurationParameterEnum105(object):
         self._enum_name = enum_name
 
     @property
-    def options(self):
-        """Gets the options of this BTMConfigurationParameterEnum105.  # noqa: E501
-
-
-        :return: The options of this BTMConfigurationParameterEnum105.  # noqa: E501
-        :rtype: list[BTMEnumOption592]
-        """
-        return self._options
-
-    @options.setter
-    def options(self, options):
-        """Sets the options of this BTMConfigurationParameterEnum105.
-
-
-        :param options: The options of this BTMConfigurationParameterEnum105.  # noqa: E501
-        :type: list[BTMEnumOption592]
-        """
-
-        self._options = options
-
-    @property
     def default_value(self):
         """Gets the default_value of this BTMConfigurationParameterEnum105.  # noqa: E501
 
@@ -158,6 +142,27 @@ class BTMConfigurationParameterEnum105(object):
         self._default_value = default_value
 
     @property
+    def options(self):
+        """Gets the options of this BTMConfigurationParameterEnum105.  # noqa: E501
+
+
+        :return: The options of this BTMConfigurationParameterEnum105.  # noqa: E501
+        :rtype: list[BTMEnumOption592]
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """Sets the options of this BTMConfigurationParameterEnum105.
+
+
+        :param options: The options of this BTMConfigurationParameterEnum105.  # noqa: E501
+        :type: list[BTMEnumOption592]
+        """
+
+        self._options = options
+
+    @property
     def namespace(self):
         """Gets the namespace of this BTMConfigurationParameterEnum105.  # noqa: E501
 
@@ -177,6 +182,27 @@ class BTMConfigurationParameterEnum105(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMConfigurationParameterEnum105.  # noqa: E501
+
+
+        :return: The bt_type of this BTMConfigurationParameterEnum105.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMConfigurationParameterEnum105.
+
+
+        :param bt_type: The bt_type of this BTMConfigurationParameterEnum105.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

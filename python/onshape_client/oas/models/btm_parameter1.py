@@ -77,7 +77,7 @@ class BTMParameter1(object):
         self._import_microversion = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if parameter_id is not None:
             self.parameter_id = parameter_id

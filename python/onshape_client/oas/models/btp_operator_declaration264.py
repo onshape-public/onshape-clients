@@ -36,16 +36,18 @@ class BTPOperatorDeclaration264(object):
     openapi_types = {
         'operator': 'str',
         'space_before_operator': 'BTPSpace10',
-        'space_after_operator': 'BTPSpace10'
+        'space_after_operator': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'operator': 'operator',
         'space_before_operator': 'spaceBeforeOperator',
-        'space_after_operator': 'spaceAfterOperator'
+        'space_after_operator': 'spaceAfterOperator',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, operator=None, space_before_operator=None, space_after_operator=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, operator=None, space_before_operator=None, space_after_operator=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPOperatorDeclaration264 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPOperatorDeclaration264(object):
         self._operator = None
         self._space_before_operator = None
         self._space_after_operator = None
+        self._bt_type = None
         self.discriminator = None
 
         if operator is not None:
@@ -62,6 +65,8 @@ class BTPOperatorDeclaration264(object):
             self.space_before_operator = space_before_operator
         if space_after_operator is not None:
             self.space_after_operator = space_after_operator
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def operator(self):
@@ -131,6 +136,27 @@ class BTPOperatorDeclaration264(object):
         """
 
         self._space_after_operator = space_after_operator
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPOperatorDeclaration264.  # noqa: E501
+
+
+        :return: The bt_type of this BTPOperatorDeclaration264.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPOperatorDeclaration264.
+
+
+        :param bt_type: The bt_type of this BTPOperatorDeclaration264.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

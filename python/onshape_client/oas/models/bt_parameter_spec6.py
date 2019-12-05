@@ -38,14 +38,14 @@ class BTParameterSpec6(object):
         'localizable_name': 'str',
         'additional_localized_strings': 'int',
         'strings_to_localize': 'list[str]',
-        'parameter_name': 'str',
-        'visibility_condition': 'BTParameterVisibilityCondition177',
+        'parameter_id': 'str',
         'ui_hint': 'str',
+        'visibility_condition': 'BTParameterVisibilityCondition177',
+        'parameter_name': 'str',
         'ui_hints': 'list[str]',
         'column_name': 'str',
         'icon_uri': 'str',
         'default_value': 'BTMParameter1',
-        'parameter_id': 'str',
         'bt_type': 'str'
     }
 
@@ -54,14 +54,14 @@ class BTParameterSpec6(object):
         'localizable_name': 'localizableName',
         'additional_localized_strings': 'additionalLocalizedStrings',
         'strings_to_localize': 'stringsToLocalize',
-        'parameter_name': 'parameterName',
-        'visibility_condition': 'visibilityCondition',
+        'parameter_id': 'parameterId',
         'ui_hint': 'uiHint',
+        'visibility_condition': 'visibilityCondition',
+        'parameter_name': 'parameterName',
         'ui_hints': 'uiHints',
         'column_name': 'columnName',
         'icon_uri': 'iconUri',
         'default_value': 'defaultValue',
-        'parameter_id': 'parameterId',
         'bt_type': 'btType'
     }
 
@@ -83,7 +83,7 @@ class BTParameterSpec6(object):
         'BTParameterSpecLookupTablePath-761': 'BTParameterSpecLookupTablePath761'
     }
 
-    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, parameter_name=None, visibility_condition=None, ui_hint=None, ui_hints=None, column_name=None, icon_uri=None, default_value=None, parameter_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, localized_name=None, localizable_name=None, additional_localized_strings=None, strings_to_localize=None, parameter_id=None, ui_hint=None, visibility_condition=None, parameter_name=None, ui_hints=None, column_name=None, icon_uri=None, default_value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTParameterSpec6 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -93,16 +93,16 @@ class BTParameterSpec6(object):
         self._localizable_name = None
         self._additional_localized_strings = None
         self._strings_to_localize = None
-        self._parameter_name = None
-        self._visibility_condition = None
+        self._parameter_id = None
         self._ui_hint = None
+        self._visibility_condition = None
+        self._parameter_name = None
         self._ui_hints = None
         self._column_name = None
         self._icon_uri = None
         self._default_value = None
-        self._parameter_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if localized_name is not None:
             self.localized_name = localized_name
@@ -112,12 +112,14 @@ class BTParameterSpec6(object):
             self.additional_localized_strings = additional_localized_strings
         if strings_to_localize is not None:
             self.strings_to_localize = strings_to_localize
-        if parameter_name is not None:
-            self.parameter_name = parameter_name
-        if visibility_condition is not None:
-            self.visibility_condition = visibility_condition
+        if parameter_id is not None:
+            self.parameter_id = parameter_id
         if ui_hint is not None:
             self.ui_hint = ui_hint
+        if visibility_condition is not None:
+            self.visibility_condition = visibility_condition
+        if parameter_name is not None:
+            self.parameter_name = parameter_name
         if ui_hints is not None:
             self.ui_hints = ui_hints
         if column_name is not None:
@@ -126,8 +128,6 @@ class BTParameterSpec6(object):
             self.icon_uri = icon_uri
         if default_value is not None:
             self.default_value = default_value
-        if parameter_id is not None:
-            self.parameter_id = parameter_id
         if bt_type is not None:
             self.bt_type = bt_type
 
@@ -216,25 +216,46 @@ class BTParameterSpec6(object):
         self._strings_to_localize = strings_to_localize
 
     @property
-    def parameter_name(self):
-        """Gets the parameter_name of this BTParameterSpec6.  # noqa: E501
+    def parameter_id(self):
+        """Gets the parameter_id of this BTParameterSpec6.  # noqa: E501
 
 
-        :return: The parameter_name of this BTParameterSpec6.  # noqa: E501
+        :return: The parameter_id of this BTParameterSpec6.  # noqa: E501
         :rtype: str
         """
-        return self._parameter_name
+        return self._parameter_id
 
-    @parameter_name.setter
-    def parameter_name(self, parameter_name):
-        """Sets the parameter_name of this BTParameterSpec6.
+    @parameter_id.setter
+    def parameter_id(self, parameter_id):
+        """Sets the parameter_id of this BTParameterSpec6.
 
 
-        :param parameter_name: The parameter_name of this BTParameterSpec6.  # noqa: E501
+        :param parameter_id: The parameter_id of this BTParameterSpec6.  # noqa: E501
         :type: str
         """
 
-        self._parameter_name = parameter_name
+        self._parameter_id = parameter_id
+
+    @property
+    def ui_hint(self):
+        """Gets the ui_hint of this BTParameterSpec6.  # noqa: E501
+
+
+        :return: The ui_hint of this BTParameterSpec6.  # noqa: E501
+        :rtype: str
+        """
+        return self._ui_hint
+
+    @ui_hint.setter
+    def ui_hint(self, ui_hint):
+        """Sets the ui_hint of this BTParameterSpec6.
+
+
+        :param ui_hint: The ui_hint of this BTParameterSpec6.  # noqa: E501
+        :type: str
+        """
+
+        self._ui_hint = ui_hint
 
     @property
     def visibility_condition(self):
@@ -258,25 +279,25 @@ class BTParameterSpec6(object):
         self._visibility_condition = visibility_condition
 
     @property
-    def ui_hint(self):
-        """Gets the ui_hint of this BTParameterSpec6.  # noqa: E501
+    def parameter_name(self):
+        """Gets the parameter_name of this BTParameterSpec6.  # noqa: E501
 
 
-        :return: The ui_hint of this BTParameterSpec6.  # noqa: E501
+        :return: The parameter_name of this BTParameterSpec6.  # noqa: E501
         :rtype: str
         """
-        return self._ui_hint
+        return self._parameter_name
 
-    @ui_hint.setter
-    def ui_hint(self, ui_hint):
-        """Sets the ui_hint of this BTParameterSpec6.
+    @parameter_name.setter
+    def parameter_name(self, parameter_name):
+        """Sets the parameter_name of this BTParameterSpec6.
 
 
-        :param ui_hint: The ui_hint of this BTParameterSpec6.  # noqa: E501
+        :param parameter_name: The parameter_name of this BTParameterSpec6.  # noqa: E501
         :type: str
         """
 
-        self._ui_hint = ui_hint
+        self._parameter_name = parameter_name
 
     @property
     def ui_hints(self):
@@ -369,27 +390,6 @@ class BTParameterSpec6(object):
         """
 
         self._default_value = default_value
-
-    @property
-    def parameter_id(self):
-        """Gets the parameter_id of this BTParameterSpec6.  # noqa: E501
-
-
-        :return: The parameter_id of this BTParameterSpec6.  # noqa: E501
-        :rtype: str
-        """
-        return self._parameter_id
-
-    @parameter_id.setter
-    def parameter_id(self, parameter_id):
-        """Sets the parameter_id of this BTParameterSpec6.
-
-
-        :param parameter_id: The parameter_id of this BTParameterSpec6.  # noqa: E501
-        :type: str
-        """
-
-        self._parameter_id = parameter_id
 
     @property
     def bt_type(self):

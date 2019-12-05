@@ -35,15 +35,17 @@ class BTConfigurationUpdateCall2933(object):
     """
     openapi_types = {
         'current_configuration': 'list[BTMParameter1]',
-        'configuration_parameters': 'list[BTMConfigurationParameter819]'
+        'configuration_parameters': 'list[BTMConfigurationParameter819]',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'current_configuration': 'currentConfiguration',
-        'configuration_parameters': 'configurationParameters'
+        'configuration_parameters': 'configurationParameters',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, current_configuration=None, configuration_parameters=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, current_configuration=None, configuration_parameters=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTConfigurationUpdateCall2933 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTConfigurationUpdateCall2933(object):
 
         self._current_configuration = None
         self._configuration_parameters = None
+        self._bt_type = None
         self.discriminator = None
 
         if current_configuration is not None:
             self.current_configuration = current_configuration
         if configuration_parameters is not None:
             self.configuration_parameters = configuration_parameters
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def current_configuration(self):
@@ -99,6 +104,27 @@ class BTConfigurationUpdateCall2933(object):
         """
 
         self._configuration_parameters = configuration_parameters
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTConfigurationUpdateCall2933.  # noqa: E501
+
+
+        :return: The bt_type of this BTConfigurationUpdateCall2933.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTConfigurationUpdateCall2933.
+
+
+        :param bt_type: The bt_type of this BTConfigurationUpdateCall2933.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,55 +34,34 @@ class BTFSValueMapEntry2077(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'value': 'BTFSValue1888',
         'key': 'BTFSValue1888',
+        'value': 'BTFSValue1888',
         'bt_type': 'str'
     }
 
     attribute_map = {
-        'value': 'value',
         'key': 'key',
+        'value': 'value',
         'bt_type': 'btType'
     }
 
-    def __init__(self, value=None, key=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, key=None, value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFSValueMapEntry2077 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._value = None
         self._key = None
+        self._value = None
         self._bt_type = None
         self.discriminator = None
 
-        if value is not None:
-            self.value = value
         if key is not None:
             self.key = key
+        if value is not None:
+            self.value = value
         if bt_type is not None:
             self.bt_type = bt_type
-
-    @property
-    def value(self):
-        """Gets the value of this BTFSValueMapEntry2077.  # noqa: E501
-
-
-        :return: The value of this BTFSValueMapEntry2077.  # noqa: E501
-        :rtype: BTFSValue1888
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        """Sets the value of this BTFSValueMapEntry2077.
-
-
-        :param value: The value of this BTFSValueMapEntry2077.  # noqa: E501
-        :type: BTFSValue1888
-        """
-
-        self._value = value
 
     @property
     def key(self):
@@ -104,6 +83,27 @@ class BTFSValueMapEntry2077(object):
         """
 
         self._key = key
+
+    @property
+    def value(self):
+        """Gets the value of this BTFSValueMapEntry2077.  # noqa: E501
+
+
+        :return: The value of this BTFSValueMapEntry2077.  # noqa: E501
+        :rtype: BTFSValue1888
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this BTFSValueMapEntry2077.
+
+
+        :param value: The value of this BTFSValueMapEntry2077.  # noqa: E501
+        :type: BTFSValue1888
+        """
+
+        self._value = value
 
     @property
     def bt_type(self):

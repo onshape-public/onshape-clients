@@ -37,21 +37,23 @@ class BTMSketchCurveSegment155(object):
         'start_point_id': 'str',
         'end_point_id': 'str',
         'start_param': 'float',
-        'end_param': 'float'
+        'end_param': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'start_point_id': 'startPointId',
         'end_point_id': 'endPointId',
         'start_param': 'startParam',
-        'end_param': 'endParam'
+        'end_param': 'endParam',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
         
     }
 
-    def __init__(self, start_point_id=None, end_point_id=None, start_param=None, end_param=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, start_point_id=None, end_point_id=None, start_param=None, end_param=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchCurveSegment155 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class BTMSketchCurveSegment155(object):
         self._end_point_id = None
         self._start_param = None
         self._end_param = None
+        self._bt_type = None
         self.discriminator = 'bt_type'
 
         if start_point_id is not None:
@@ -71,6 +74,8 @@ class BTMSketchCurveSegment155(object):
             self.start_param = start_param
         if end_param is not None:
             self.end_param = end_param
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def start_point_id(self):
@@ -155,6 +160,27 @@ class BTMSketchCurveSegment155(object):
         """
 
         self._end_param = end_param
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchCurveSegment155.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchCurveSegment155.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchCurveSegment155.
+
+
+        :param bt_type: The bt_type of this BTMSketchCurveSegment155.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

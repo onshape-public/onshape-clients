@@ -34,39 +34,60 @@ class BTAssemblyOccurrenceInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'hidden': 'bool',
         'transform': 'list[float]',
         'fixed': 'bool',
-        'path': 'list[str]',
-        'hidden': 'bool'
+        'path': 'list[str]'
     }
 
     attribute_map = {
+        'hidden': 'hidden',
         'transform': 'transform',
         'fixed': 'fixed',
-        'path': 'path',
-        'hidden': 'hidden'
+        'path': 'path'
     }
 
-    def __init__(self, transform=None, fixed=None, path=None, hidden=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, hidden=None, transform=None, fixed=None, path=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyOccurrenceInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._hidden = None
         self._transform = None
         self._fixed = None
         self._path = None
-        self._hidden = None
         self.discriminator = None
 
+        if hidden is not None:
+            self.hidden = hidden
         if transform is not None:
             self.transform = transform
         if fixed is not None:
             self.fixed = fixed
         if path is not None:
             self.path = path
-        if hidden is not None:
-            self.hidden = hidden
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
+
+
+        :return: The hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this BTAssemblyOccurrenceInfo.
+
+
+        :param hidden: The hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     @property
     def transform(self):
@@ -130,27 +151,6 @@ class BTAssemblyOccurrenceInfo(object):
         """
 
         self._path = path
-
-    @property
-    def hidden(self):
-        """Gets the hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
-
-
-        :return: The hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._hidden
-
-    @hidden.setter
-    def hidden(self, hidden):
-        """Sets the hidden of this BTAssemblyOccurrenceInfo.
-
-
-        :param hidden: The hidden of this BTAssemblyOccurrenceInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._hidden = hidden
 
     def to_dict(self):
         """Returns the model properties as a dict"""

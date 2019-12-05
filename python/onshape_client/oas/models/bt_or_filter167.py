@@ -35,15 +35,17 @@ class BTOrFilter167(object):
     """
     openapi_types = {
         'operand1': 'BTQueryFilter183',
-        'operand2': 'BTQueryFilter183'
+        'operand2': 'BTQueryFilter183',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'operand1': 'operand1',
-        'operand2': 'operand2'
+        'operand2': 'operand2',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, operand1=None, operand2=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, operand1=None, operand2=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTOrFilter167 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTOrFilter167(object):
 
         self._operand1 = None
         self._operand2 = None
+        self._bt_type = None
         self.discriminator = None
 
         if operand1 is not None:
             self.operand1 = operand1
         if operand2 is not None:
             self.operand2 = operand2
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def operand1(self):
@@ -99,6 +104,27 @@ class BTOrFilter167(object):
         """
 
         self._operand2 = operand2
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTOrFilter167.  # noqa: E501
+
+
+        :return: The bt_type of this BTOrFilter167.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTOrFilter167.
+
+
+        :param bt_type: The bt_type of this BTOrFilter167.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

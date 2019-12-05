@@ -34,24 +34,29 @@ class BTPStatementBlock271(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'space_after_open': 'BTPSpace10'
+        'space_after_open': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'space_after_open': 'spaceAfterOpen'
+        'space_after_open': 'spaceAfterOpen',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_after_open=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_after_open=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementBlock271 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._space_after_open = None
+        self._bt_type = None
         self.discriminator = None
 
         if space_after_open is not None:
             self.space_after_open = space_after_open
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def space_after_open(self):
@@ -73,6 +78,27 @@ class BTPStatementBlock271(object):
         """
 
         self._space_after_open = space_after_open
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementBlock271.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementBlock271.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementBlock271.
+
+
+        :param bt_type: The bt_type of this BTPStatementBlock271.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

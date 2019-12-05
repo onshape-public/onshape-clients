@@ -35,15 +35,17 @@ class BTMConfigurationParameterQuantity1826AllOf(object):
     """
     openapi_types = {
         'quantity_type': 'str',
-        'range_and_default': 'BTQuantityRange181'
+        'range_and_default': 'BTQuantityRange181',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'quantity_type': 'quantityType',
-        'range_and_default': 'rangeAndDefault'
+        'range_and_default': 'rangeAndDefault',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, quantity_type=None, range_and_default=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, quantity_type=None, range_and_default=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMConfigurationParameterQuantity1826AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMConfigurationParameterQuantity1826AllOf(object):
 
         self._quantity_type = None
         self._range_and_default = None
+        self._bt_type = None
         self.discriminator = None
 
         if quantity_type is not None:
             self.quantity_type = quantity_type
         if range_and_default is not None:
             self.range_and_default = range_and_default
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def quantity_type(self):
@@ -105,6 +110,27 @@ class BTMConfigurationParameterQuantity1826AllOf(object):
         """
 
         self._range_and_default = range_and_default
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMConfigurationParameterQuantity1826AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMConfigurationParameterQuantity1826AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMConfigurationParameterQuantity1826AllOf.
+
+
+        :param bt_type: The bt_type of this BTMConfigurationParameterQuantity1826AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

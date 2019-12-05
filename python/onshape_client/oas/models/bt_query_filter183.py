@@ -77,7 +77,7 @@ class BTQueryFilter183(object):
         self.local_vars_configuration = local_vars_configuration
 
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if bt_type is not None:
             self.bt_type = bt_type

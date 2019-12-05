@@ -36,13 +36,15 @@ class BTPTopLevelTypeDeclaration287(object):
     openapi_types = {
         'space_after_version': 'BTPSpace10',
         'version': 'BTPLiteralNumber258',
-        'name': 'BTPIdentifier8'
+        'name': 'BTPIdentifier8',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'space_after_version': 'spaceAfterVersion',
         'version': 'version',
-        'name': 'name'
+        'name': 'name',
+        'bt_type': 'btType'
     }
 
     discriminator_value_class_map = {
@@ -50,7 +52,7 @@ class BTPTopLevelTypeDeclaration287(object):
         'BTPTopLevelUserTypeDeclaration-288': 'BTPTopLevelUserTypeDeclaration288'
     }
 
-    def __init__(self, space_after_version=None, version=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_after_version=None, version=None, name=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPTopLevelTypeDeclaration287 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,7 +61,8 @@ class BTPTopLevelTypeDeclaration287(object):
         self._space_after_version = None
         self._version = None
         self._name = None
-        self.discriminator = 'type'
+        self._bt_type = None
+        self.discriminator = 'bt_type'
 
         if space_after_version is not None:
             self.space_after_version = space_after_version
@@ -67,6 +70,8 @@ class BTPTopLevelTypeDeclaration287(object):
             self.version = version
         if name is not None:
             self.name = name
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def space_after_version(self):
@@ -130,6 +135,27 @@ class BTPTopLevelTypeDeclaration287(object):
         """
 
         self._name = name
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPTopLevelTypeDeclaration287.  # noqa: E501
+
+
+        :return: The bt_type of this BTPTopLevelTypeDeclaration287.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPTopLevelTypeDeclaration287.
+
+
+        :param bt_type: The bt_type of this BTPTopLevelTypeDeclaration287.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

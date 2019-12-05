@@ -34,107 +34,49 @@ class BTMSketchImageEntity763AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'origin_x': 'float',
-        'origin_y': 'float',
-        'xaxis_x': 'float',
         'xaxis_y': 'float',
-        'aspect_ratio': 'float'
+        'xaxis_x': 'float',
+        'aspect_ratio': 'float',
+        'origin_y': 'float',
+        'origin_x': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'origin_x': 'originX',
-        'origin_y': 'originY',
-        'xaxis_x': 'xaxisX',
         'xaxis_y': 'xaxisY',
-        'aspect_ratio': 'aspectRatio'
+        'xaxis_x': 'xaxisX',
+        'aspect_ratio': 'aspectRatio',
+        'origin_y': 'originY',
+        'origin_x': 'originX',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, origin_x=None, origin_y=None, xaxis_x=None, xaxis_y=None, aspect_ratio=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, xaxis_y=None, xaxis_x=None, aspect_ratio=None, origin_y=None, origin_x=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMSketchImageEntity763AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._origin_x = None
-        self._origin_y = None
-        self._xaxis_x = None
         self._xaxis_y = None
+        self._xaxis_x = None
         self._aspect_ratio = None
+        self._origin_y = None
+        self._origin_x = None
+        self._bt_type = None
         self.discriminator = None
 
-        if origin_x is not None:
-            self.origin_x = origin_x
-        if origin_y is not None:
-            self.origin_y = origin_y
-        if xaxis_x is not None:
-            self.xaxis_x = xaxis_x
         if xaxis_y is not None:
             self.xaxis_y = xaxis_y
+        if xaxis_x is not None:
+            self.xaxis_x = xaxis_x
         if aspect_ratio is not None:
             self.aspect_ratio = aspect_ratio
-
-    @property
-    def origin_x(self):
-        """Gets the origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-
-
-        :return: The origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :rtype: float
-        """
-        return self._origin_x
-
-    @origin_x.setter
-    def origin_x(self, origin_x):
-        """Sets the origin_x of this BTMSketchImageEntity763AllOf.
-
-
-        :param origin_x: The origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :type: float
-        """
-
-        self._origin_x = origin_x
-
-    @property
-    def origin_y(self):
-        """Gets the origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
-
-
-        :return: The origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :rtype: float
-        """
-        return self._origin_y
-
-    @origin_y.setter
-    def origin_y(self, origin_y):
-        """Sets the origin_y of this BTMSketchImageEntity763AllOf.
-
-
-        :param origin_y: The origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :type: float
-        """
-
-        self._origin_y = origin_y
-
-    @property
-    def xaxis_x(self):
-        """Gets the xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-
-
-        :return: The xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :rtype: float
-        """
-        return self._xaxis_x
-
-    @xaxis_x.setter
-    def xaxis_x(self, xaxis_x):
-        """Sets the xaxis_x of this BTMSketchImageEntity763AllOf.
-
-
-        :param xaxis_x: The xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
-        :type: float
-        """
-
-        self._xaxis_x = xaxis_x
+        if origin_y is not None:
+            self.origin_y = origin_y
+        if origin_x is not None:
+            self.origin_x = origin_x
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def xaxis_y(self):
@@ -158,6 +100,27 @@ class BTMSketchImageEntity763AllOf(object):
         self._xaxis_y = xaxis_y
 
     @property
+    def xaxis_x(self):
+        """Gets the xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+
+
+        :return: The xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._xaxis_x
+
+    @xaxis_x.setter
+    def xaxis_x(self, xaxis_x):
+        """Sets the xaxis_x of this BTMSketchImageEntity763AllOf.
+
+
+        :param xaxis_x: The xaxis_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :type: float
+        """
+
+        self._xaxis_x = xaxis_x
+
+    @property
     def aspect_ratio(self):
         """Gets the aspect_ratio of this BTMSketchImageEntity763AllOf.  # noqa: E501
 
@@ -177,6 +140,69 @@ class BTMSketchImageEntity763AllOf(object):
         """
 
         self._aspect_ratio = aspect_ratio
+
+    @property
+    def origin_y(self):
+        """Gets the origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
+
+
+        :return: The origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._origin_y
+
+    @origin_y.setter
+    def origin_y(self, origin_y):
+        """Sets the origin_y of this BTMSketchImageEntity763AllOf.
+
+
+        :param origin_y: The origin_y of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :type: float
+        """
+
+        self._origin_y = origin_y
+
+    @property
+    def origin_x(self):
+        """Gets the origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+
+
+        :return: The origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._origin_x
+
+    @origin_x.setter
+    def origin_x(self, origin_x):
+        """Sets the origin_x of this BTMSketchImageEntity763AllOf.
+
+
+        :param origin_x: The origin_x of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :type: float
+        """
+
+        self._origin_x = origin_x
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMSketchImageEntity763AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMSketchImageEntity763AllOf.
+
+
+        :param bt_type: The bt_type of this BTMSketchImageEntity763AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -89,7 +89,7 @@ class BTPNode7(object):
         self._space_after = None
         self._node_id = None
         self._bt_type = None
-        self.discriminator = 'type'
+        self.discriminator = 'bt_type'
 
         if start_source_location is not None:
             self.start_source_location = start_source_location

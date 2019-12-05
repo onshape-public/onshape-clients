@@ -34,36 +34,34 @@ class BTIdTranslationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'ids': 'list[str]',
         'link_document_id': 'str',
         'source_document_microversion': 'str',
         'source_configuration': 'str',
-        'target_configuration': 'str'
+        'target_configuration': 'str',
+        'ids': 'list[str]'
     }
 
     attribute_map = {
-        'ids': 'ids',
         'link_document_id': 'linkDocumentId',
         'source_document_microversion': 'sourceDocumentMicroversion',
         'source_configuration': 'sourceConfiguration',
-        'target_configuration': 'targetConfiguration'
+        'target_configuration': 'targetConfiguration',
+        'ids': 'ids'
     }
 
-    def __init__(self, ids=None, link_document_id=None, source_document_microversion=None, source_configuration=None, target_configuration=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, link_document_id=None, source_document_microversion=None, source_configuration=None, target_configuration=None, ids=None, local_vars_configuration=None):  # noqa: E501
         """BTIdTranslationParams - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._ids = None
         self._link_document_id = None
         self._source_document_microversion = None
         self._source_configuration = None
         self._target_configuration = None
+        self._ids = None
         self.discriminator = None
 
-        if ids is not None:
-            self.ids = ids
         if link_document_id is not None:
             self.link_document_id = link_document_id
         if source_document_microversion is not None:
@@ -72,27 +70,8 @@ class BTIdTranslationParams(object):
             self.source_configuration = source_configuration
         if target_configuration is not None:
             self.target_configuration = target_configuration
-
-    @property
-    def ids(self):
-        """Gets the ids of this BTIdTranslationParams.  # noqa: E501
-
-
-        :return: The ids of this BTIdTranslationParams.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._ids
-
-    @ids.setter
-    def ids(self, ids):
-        """Sets the ids of this BTIdTranslationParams.
-
-
-        :param ids: The ids of this BTIdTranslationParams.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._ids = ids
+        if ids is not None:
+            self.ids = ids
 
     @property
     def link_document_id(self):
@@ -177,6 +156,27 @@ class BTIdTranslationParams(object):
         """
 
         self._target_configuration = target_configuration
+
+    @property
+    def ids(self):
+        """Gets the ids of this BTIdTranslationParams.  # noqa: E501
+
+
+        :return: The ids of this BTIdTranslationParams.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ids
+
+    @ids.setter
+    def ids(self, ids):
+        """Sets the ids of this BTIdTranslationParams.
+
+
+        :param ids: The ids of this BTIdTranslationParams.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._ids = ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

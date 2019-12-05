@@ -34,34 +34,55 @@ class BTAssemblyFeatureDataInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'mated_entities': 'list[BTAssemblyMatedEntity]',
         'mate_type': 'str',
-        'name': 'str',
-        'mated_entities': 'list[BTAssemblyMatedEntity]'
+        'name': 'str'
     }
 
     attribute_map = {
+        'mated_entities': 'matedEntities',
         'mate_type': 'mateType',
-        'name': 'name',
-        'mated_entities': 'matedEntities'
+        'name': 'name'
     }
 
-    def __init__(self, mate_type=None, name=None, mated_entities=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, mated_entities=None, mate_type=None, name=None, local_vars_configuration=None):  # noqa: E501
         """BTAssemblyFeatureDataInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._mated_entities = None
         self._mate_type = None
         self._name = None
-        self._mated_entities = None
         self.discriminator = None
 
+        if mated_entities is not None:
+            self.mated_entities = mated_entities
         if mate_type is not None:
             self.mate_type = mate_type
         if name is not None:
             self.name = name
-        if mated_entities is not None:
-            self.mated_entities = mated_entities
+
+    @property
+    def mated_entities(self):
+        """Gets the mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
+
+
+        :return: The mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
+        :rtype: list[BTAssemblyMatedEntity]
+        """
+        return self._mated_entities
+
+    @mated_entities.setter
+    def mated_entities(self, mated_entities):
+        """Sets the mated_entities of this BTAssemblyFeatureDataInfo.
+
+
+        :param mated_entities: The mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
+        :type: list[BTAssemblyMatedEntity]
+        """
+
+        self._mated_entities = mated_entities
 
     @property
     def mate_type(self):
@@ -104,27 +125,6 @@ class BTAssemblyFeatureDataInfo(object):
         """
 
         self._name = name
-
-    @property
-    def mated_entities(self):
-        """Gets the mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
-
-
-        :return: The mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
-        :rtype: list[BTAssemblyMatedEntity]
-        """
-        return self._mated_entities
-
-    @mated_entities.setter
-    def mated_entities(self, mated_entities):
-        """Sets the mated_entities of this BTAssemblyFeatureDataInfo.
-
-
-        :param mated_entities: The mated_entities of this BTAssemblyFeatureDataInfo.  # noqa: E501
-        :type: list[BTAssemblyMatedEntity]
-        """
-
-        self._mated_entities = mated_entities
 
     def to_dict(self):
         """Returns the model properties as a dict"""

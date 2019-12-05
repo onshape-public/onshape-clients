@@ -34,34 +34,55 @@ class BTIdTranslationResultInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'target': 'list[str]',
         'source': 'str',
-        'status': 'str',
-        'target': 'list[str]'
+        'status': 'str'
     }
 
     attribute_map = {
+        'target': 'target',
         'source': 'source',
-        'status': 'status',
-        'target': 'target'
+        'status': 'status'
     }
 
-    def __init__(self, source=None, status=None, target=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, target=None, source=None, status=None, local_vars_configuration=None):  # noqa: E501
         """BTIdTranslationResultInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._target = None
         self._source = None
         self._status = None
-        self._target = None
         self.discriminator = None
 
+        if target is not None:
+            self.target = target
         if source is not None:
             self.source = source
         if status is not None:
             self.status = status
-        if target is not None:
-            self.target = target
+
+    @property
+    def target(self):
+        """Gets the target of this BTIdTranslationResultInfo.  # noqa: E501
+
+
+        :return: The target of this BTIdTranslationResultInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._target
+
+    @target.setter
+    def target(self, target):
+        """Sets the target of this BTIdTranslationResultInfo.
+
+
+        :param target: The target of this BTIdTranslationResultInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._target = target
 
     @property
     def source(self):
@@ -104,27 +125,6 @@ class BTIdTranslationResultInfo(object):
         """
 
         self._status = status
-
-    @property
-    def target(self):
-        """Gets the target of this BTIdTranslationResultInfo.  # noqa: E501
-
-
-        :return: The target of this BTIdTranslationResultInfo.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._target
-
-    @target.setter
-    def target(self, target):
-        """Sets the target of this BTIdTranslationResultInfo.
-
-
-        :param target: The target of this BTIdTranslationResultInfo.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._target = target
 
     def to_dict(self):
         """Returns the model properties as a dict"""

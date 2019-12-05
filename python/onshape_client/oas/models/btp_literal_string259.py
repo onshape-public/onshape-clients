@@ -35,8 +35,8 @@ class BTPLiteralString259(object):
     """
     openapi_types = {
         'short_descriptor': 'str',
-        'text': 'str',
         'value': 'str',
+        'text': 'str',
         'start_source_location': 'int',
         'end_source_location': 'int',
         'atomic': 'bool',
@@ -50,8 +50,8 @@ class BTPLiteralString259(object):
 
     attribute_map = {
         'short_descriptor': 'shortDescriptor',
-        'text': 'text',
         'value': 'value',
+        'text': 'text',
         'start_source_location': 'startSourceLocation',
         'end_source_location': 'endSourceLocation',
         'atomic': 'atomic',
@@ -63,15 +63,15 @@ class BTPLiteralString259(object):
         'bt_type': 'btType'
     }
 
-    def __init__(self, short_descriptor=None, text=None, value=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, short_descriptor=None, value=None, text=None, start_source_location=None, end_source_location=None, atomic=None, documentation_type=None, space_before=None, space_default=None, space_after=None, node_id=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPLiteralString259 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._short_descriptor = None
-        self._text = None
         self._value = None
+        self._text = None
         self._start_source_location = None
         self._end_source_location = None
         self._atomic = None
@@ -85,10 +85,10 @@ class BTPLiteralString259(object):
 
         if short_descriptor is not None:
             self.short_descriptor = short_descriptor
-        if text is not None:
-            self.text = text
         if value is not None:
             self.value = value
+        if text is not None:
+            self.text = text
         if start_source_location is not None:
             self.start_source_location = start_source_location
         if end_source_location is not None:
@@ -130,27 +130,6 @@ class BTPLiteralString259(object):
         self._short_descriptor = short_descriptor
 
     @property
-    def text(self):
-        """Gets the text of this BTPLiteralString259.  # noqa: E501
-
-
-        :return: The text of this BTPLiteralString259.  # noqa: E501
-        :rtype: str
-        """
-        return self._text
-
-    @text.setter
-    def text(self, text):
-        """Sets the text of this BTPLiteralString259.
-
-
-        :param text: The text of this BTPLiteralString259.  # noqa: E501
-        :type: str
-        """
-
-        self._text = text
-
-    @property
     def value(self):
         """Gets the value of this BTPLiteralString259.  # noqa: E501
 
@@ -170,6 +149,27 @@ class BTPLiteralString259(object):
         """
 
         self._value = value
+
+    @property
+    def text(self):
+        """Gets the text of this BTPLiteralString259.  # noqa: E501
+
+
+        :return: The text of this BTPLiteralString259.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this BTPLiteralString259.
+
+
+        :param text: The text of this BTPLiteralString259.  # noqa: E501
+        :type: str
+        """
+
+        self._text = text
 
     @property
     def start_source_location(self):

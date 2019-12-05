@@ -36,16 +36,18 @@ class BTPExpressionNew243AllOf(object):
     openapi_types = {
         'space_between_new_box': 'BTPSpace10',
         'space_after_box': 'BTPSpace10',
-        'value': 'BTPExpression9'
+        'value': 'BTPExpression9',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'space_between_new_box': 'spaceBetweenNewBox',
         'space_after_box': 'spaceAfterBox',
-        'value': 'value'
+        'value': 'value',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_between_new_box=None, space_after_box=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_between_new_box=None, space_after_box=None, value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPExpressionNew243AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class BTPExpressionNew243AllOf(object):
         self._space_between_new_box = None
         self._space_after_box = None
         self._value = None
+        self._bt_type = None
         self.discriminator = None
 
         if space_between_new_box is not None:
@@ -62,6 +65,8 @@ class BTPExpressionNew243AllOf(object):
             self.space_after_box = space_after_box
         if value is not None:
             self.value = value
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def space_between_new_box(self):
@@ -125,6 +130,27 @@ class BTPExpressionNew243AllOf(object):
         """
 
         self._value = value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPExpressionNew243AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPExpressionNew243AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPExpressionNew243AllOf.
+
+
+        :param bt_type: The bt_type of this BTPExpressionNew243AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

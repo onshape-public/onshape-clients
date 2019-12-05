@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **short_descriptor** | **str** |  | [optional] 
 **entries** | [**list[BTPLiteralMapEntry257]**](BTPLiteralMapEntry257.md) |  | [optional] 
-**space_in_empty_list** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **trailing_comma** | **bool** |  | [optional] 
+**space_in_empty_list** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **atomic** | **bool** |  | [optional] 

@@ -34,24 +34,29 @@ class BTTextStrokeFilter461AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'is_stroke': 'bool'
+        'is_stroke': 'bool',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'is_stroke': 'isStroke'
+        'is_stroke': 'isStroke',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, is_stroke=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_stroke=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTTextStrokeFilter461AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._is_stroke = None
+        self._bt_type = None
         self.discriminator = None
 
         if is_stroke is not None:
             self.is_stroke = is_stroke
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def is_stroke(self):
@@ -73,6 +78,27 @@ class BTTextStrokeFilter461AllOf(object):
         """
 
         self._is_stroke = is_stroke
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTTextStrokeFilter461AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTTextStrokeFilter461AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTTextStrokeFilter461AllOf.
+
+
+        :param bt_type: The bt_type of this BTTextStrokeFilter461AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

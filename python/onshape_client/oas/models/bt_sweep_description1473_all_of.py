@@ -35,15 +35,17 @@ class BTSweepDescription1473AllOf(object):
     """
     openapi_types = {
         'profile': 'BTSplineDescription2118',
-        'direction': 'BTVector3d389'
+        'direction': 'BTVector3d389',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'profile': 'profile',
-        'direction': 'direction'
+        'direction': 'direction',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, profile=None, direction=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, profile=None, direction=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTSweepDescription1473AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTSweepDescription1473AllOf(object):
 
         self._profile = None
         self._direction = None
+        self._bt_type = None
         self.discriminator = None
 
         if profile is not None:
             self.profile = profile
         if direction is not None:
             self.direction = direction
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def profile(self):
@@ -99,6 +104,27 @@ class BTSweepDescription1473AllOf(object):
         """
 
         self._direction = direction
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTSweepDescription1473AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTSweepDescription1473AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTSweepDescription1473AllOf.
+
+
+        :param bt_type: The bt_type of this BTSweepDescription1473AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

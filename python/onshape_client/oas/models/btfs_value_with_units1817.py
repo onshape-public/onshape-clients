@@ -34,39 +34,65 @@ class BTFSValueWithUnits1817(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'quantity_type': 'str',
         'value_object': 'float',
+        'quantity_type': 'str',
         'unit_to_power': 'dict(str, int)',
-        'value': 'float'
+        'value': 'float',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'quantity_type': 'quantityType',
         'value_object': 'valueObject',
+        'quantity_type': 'quantityType',
         'unit_to_power': 'unitToPower',
-        'value': 'value'
+        'value': 'value',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, quantity_type=None, value_object=None, unit_to_power=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, value_object=None, quantity_type=None, unit_to_power=None, value=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTFSValueWithUnits1817 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._quantity_type = None
         self._value_object = None
+        self._quantity_type = None
         self._unit_to_power = None
         self._value = None
+        self._bt_type = None
         self.discriminator = None
 
-        if quantity_type is not None:
-            self.quantity_type = quantity_type
         if value_object is not None:
             self.value_object = value_object
+        if quantity_type is not None:
+            self.quantity_type = quantity_type
         if unit_to_power is not None:
             self.unit_to_power = unit_to_power
         if value is not None:
             self.value = value
+        if bt_type is not None:
+            self.bt_type = bt_type
+
+    @property
+    def value_object(self):
+        """Gets the value_object of this BTFSValueWithUnits1817.  # noqa: E501
+
+
+        :return: The value_object of this BTFSValueWithUnits1817.  # noqa: E501
+        :rtype: float
+        """
+        return self._value_object
+
+    @value_object.setter
+    def value_object(self, value_object):
+        """Sets the value_object of this BTFSValueWithUnits1817.
+
+
+        :param value_object: The value_object of this BTFSValueWithUnits1817.  # noqa: E501
+        :type: float
+        """
+
+        self._value_object = value_object
 
     @property
     def quantity_type(self):
@@ -94,27 +120,6 @@ class BTFSValueWithUnits1817(object):
             )
 
         self._quantity_type = quantity_type
-
-    @property
-    def value_object(self):
-        """Gets the value_object of this BTFSValueWithUnits1817.  # noqa: E501
-
-
-        :return: The value_object of this BTFSValueWithUnits1817.  # noqa: E501
-        :rtype: float
-        """
-        return self._value_object
-
-    @value_object.setter
-    def value_object(self, value_object):
-        """Sets the value_object of this BTFSValueWithUnits1817.
-
-
-        :param value_object: The value_object of this BTFSValueWithUnits1817.  # noqa: E501
-        :type: float
-        """
-
-        self._value_object = value_object
 
     @property
     def unit_to_power(self):
@@ -157,6 +162,27 @@ class BTFSValueWithUnits1817(object):
         """
 
         self._value = value
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTFSValueWithUnits1817.  # noqa: E501
+
+
+        :return: The bt_type of this BTFSValueWithUnits1817.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTFSValueWithUnits1817.
+
+
+        :param bt_type: The bt_type of this BTFSValueWithUnits1817.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

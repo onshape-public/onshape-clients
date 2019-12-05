@@ -35,44 +35,44 @@ class BTNodeStatus342(object):
     """
     openapi_types = {
         'error': 'bool',
-        'status_msg': 'str',
-        'status_enum': 'str',
         'status_type': 'str',
+        'status_enum': 'str',
+        'status_msg': 'str',
         'faulty_parameters': 'list[str]',
         'bt_type': 'str'
     }
 
     attribute_map = {
         'error': 'error',
-        'status_msg': 'statusMsg',
-        'status_enum': 'statusEnum',
         'status_type': 'statusType',
+        'status_enum': 'statusEnum',
+        'status_msg': 'statusMsg',
         'faulty_parameters': 'faultyParameters',
         'bt_type': 'btType'
     }
 
-    def __init__(self, error=None, status_msg=None, status_enum=None, status_type=None, faulty_parameters=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, error=None, status_type=None, status_enum=None, status_msg=None, faulty_parameters=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTNodeStatus342 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._error = None
-        self._status_msg = None
-        self._status_enum = None
         self._status_type = None
+        self._status_enum = None
+        self._status_msg = None
         self._faulty_parameters = None
         self._bt_type = None
         self.discriminator = None
 
         if error is not None:
             self.error = error
-        if status_msg is not None:
-            self.status_msg = status_msg
-        if status_enum is not None:
-            self.status_enum = status_enum
         if status_type is not None:
             self.status_type = status_type
+        if status_enum is not None:
+            self.status_enum = status_enum
+        if status_msg is not None:
+            self.status_msg = status_msg
         if faulty_parameters is not None:
             self.faulty_parameters = faulty_parameters
         if bt_type is not None:
@@ -100,25 +100,31 @@ class BTNodeStatus342(object):
         self._error = error
 
     @property
-    def status_msg(self):
-        """Gets the status_msg of this BTNodeStatus342.  # noqa: E501
+    def status_type(self):
+        """Gets the status_type of this BTNodeStatus342.  # noqa: E501
 
 
-        :return: The status_msg of this BTNodeStatus342.  # noqa: E501
+        :return: The status_type of this BTNodeStatus342.  # noqa: E501
         :rtype: str
         """
-        return self._status_msg
+        return self._status_type
 
-    @status_msg.setter
-    def status_msg(self, status_msg):
-        """Sets the status_msg of this BTNodeStatus342.
+    @status_type.setter
+    def status_type(self, status_type):
+        """Sets the status_type of this BTNodeStatus342.
 
 
-        :param status_msg: The status_msg of this BTNodeStatus342.  # noqa: E501
+        :param status_type: The status_type of this BTNodeStatus342.  # noqa: E501
         :type: str
         """
+        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and status_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(status_type, allowed_values)
+            )
 
-        self._status_msg = status_msg
+        self._status_type = status_type
 
     @property
     def status_enum(self):
@@ -148,31 +154,25 @@ class BTNodeStatus342(object):
         self._status_enum = status_enum
 
     @property
-    def status_type(self):
-        """Gets the status_type of this BTNodeStatus342.  # noqa: E501
+    def status_msg(self):
+        """Gets the status_msg of this BTNodeStatus342.  # noqa: E501
 
 
-        :return: The status_type of this BTNodeStatus342.  # noqa: E501
+        :return: The status_msg of this BTNodeStatus342.  # noqa: E501
         :rtype: str
         """
-        return self._status_type
+        return self._status_msg
 
-    @status_type.setter
-    def status_type(self, status_type):
-        """Sets the status_type of this BTNodeStatus342.
+    @status_msg.setter
+    def status_msg(self, status_msg):
+        """Sets the status_msg of this BTNodeStatus342.
 
 
-        :param status_type: The status_type of this BTNodeStatus342.  # noqa: E501
+        :param status_msg: The status_msg of this BTNodeStatus342.  # noqa: E501
         :type: str
         """
-        allowed_values = ["OK", "INFO", "WARNING", "ERROR", "UNKNOWN"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and status_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `status_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(status_type, allowed_values)
-            )
 
-        self._status_type = status_type
+        self._status_msg = status_msg
 
     @property
     def faulty_parameters(self):

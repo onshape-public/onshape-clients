@@ -34,24 +34,29 @@ class BTPStatementBreak272AllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'space_after_break': 'BTPSpace10'
+        'space_after_break': 'BTPSpace10',
+        'bt_type': 'str'
     }
 
     attribute_map = {
-        'space_after_break': 'spaceAfterBreak'
+        'space_after_break': 'spaceAfterBreak',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, space_after_break=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, space_after_break=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTPStatementBreak272AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._space_after_break = None
+        self._bt_type = None
         self.discriminator = None
 
         if space_after_break is not None:
             self.space_after_break = space_after_break
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def space_after_break(self):
@@ -73,6 +78,27 @@ class BTPStatementBreak272AllOf(object):
         """
 
         self._space_after_break = space_after_break
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTPStatementBreak272AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTPStatementBreak272AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTPStatementBreak272AllOf.
+
+
+        :param bt_type: The bt_type of this BTPStatementBreak272AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -24,7 +24,7 @@ def test_create_features(client, part_studio, assets):
     feature['feature']['message']['constraints'][11]['message']['parameters'][2]['message']['expression'] = width
     # Set length:
     feature['feature']['message']['constraints'][12]['message']['parameters'][2]['message']['expression'] = length
-    client.part_studios_api.add_feature1(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, body=feature)
+    client.part_studios_api.add_feature1(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, body=feature, _preload_content=False)
     result_features2 = client.part_studios_api.get_features1(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid)
     result_features = json.loads(client.part_studios_api.get_features1(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, _preload_content=False).data.decode('UTF-8'))
     assert result_features['features'][0]['constraints'][11]['parameters'][2]['expression'] == width

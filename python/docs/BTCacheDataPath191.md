@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **is_persisted** | **bool** |  | [optional] 
 **full_file_path** | **str** |  | [optional] 

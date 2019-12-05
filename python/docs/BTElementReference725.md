@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**microversion_id_and_configuration** | [**BTMicroversionIdAndConfiguration2338**](BTMicroversionIdAndConfiguration2338.md) |  | [optional] 
 **element_id** | **str** |  | [optional] 
+**microversion_id_and_configuration** | [**BTMicroversionIdAndConfiguration2338**](BTMicroversionIdAndConfiguration2338.md) |  | [optional] 
 **external_document_with_version_and_element_id** | [**BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
-**external_reference** | **bool** |  | [optional] 
 **external_document_with_version** | [**BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 
+**external_reference** | **bool** |  | [optional] 
 **configured** | **bool** |  | [optional] 
 **full_element_id** | [**BTFullElementId756**](BTFullElementId756.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 

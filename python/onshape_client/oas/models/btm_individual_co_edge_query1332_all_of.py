@@ -35,15 +35,17 @@ class BTMIndividualCoEdgeQuery1332AllOf(object):
     """
     openapi_types = {
         'face_query': 'BTMIndividualQuery138',
-        'edge_query': 'BTMIndividualQuery138'
+        'edge_query': 'BTMIndividualQuery138',
+        'bt_type': 'str'
     }
 
     attribute_map = {
         'face_query': 'faceQuery',
-        'edge_query': 'edgeQuery'
+        'edge_query': 'edgeQuery',
+        'bt_type': 'btType'
     }
 
-    def __init__(self, face_query=None, edge_query=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, face_query=None, edge_query=None, bt_type=None, local_vars_configuration=None):  # noqa: E501
         """BTMIndividualCoEdgeQuery1332AllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class BTMIndividualCoEdgeQuery1332AllOf(object):
 
         self._face_query = None
         self._edge_query = None
+        self._bt_type = None
         self.discriminator = None
 
         if face_query is not None:
             self.face_query = face_query
         if edge_query is not None:
             self.edge_query = edge_query
+        if bt_type is not None:
+            self.bt_type = bt_type
 
     @property
     def face_query(self):
@@ -99,6 +104,27 @@ class BTMIndividualCoEdgeQuery1332AllOf(object):
         """
 
         self._edge_query = edge_query
+
+    @property
+    def bt_type(self):
+        """Gets the bt_type of this BTMIndividualCoEdgeQuery1332AllOf.  # noqa: E501
+
+
+        :return: The bt_type of this BTMIndividualCoEdgeQuery1332AllOf.  # noqa: E501
+        :rtype: str
+        """
+        return self._bt_type
+
+    @bt_type.setter
+    def bt_type(self, bt_type):
+        """Sets the bt_type of this BTMIndividualCoEdgeQuery1332AllOf.
+
+
+        :param bt_type: The bt_type of this BTMIndividualCoEdgeQuery1332AllOf.  # noqa: E501
+        :type: str
+        """
+
+        self._bt_type = bt_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

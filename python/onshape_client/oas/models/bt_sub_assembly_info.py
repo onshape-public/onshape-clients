@@ -34,85 +34,64 @@ class BTSubAssemblyInfo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'instances': 'list[BTAssemblyInstanceInfo]',
         'features': 'list[BTAssemblyFeatureInfo]',
-        'document_microversion': 'str',
-        'document_id': 'str',
-        'element_id': 'str',
-        'revision': 'str',
+        'instances': 'list[BTAssemblyInstanceInfo]',
         'configuration': 'str',
+        'element_id': 'str',
+        'document_id': 'str',
+        'revision': 'str',
+        'document_microversion': 'str',
         'full_configuration': 'str',
         'document_version': 'str'
     }
 
     attribute_map = {
-        'instances': 'instances',
         'features': 'features',
-        'document_microversion': 'documentMicroversion',
-        'document_id': 'documentId',
-        'element_id': 'elementId',
-        'revision': 'revision',
+        'instances': 'instances',
         'configuration': 'configuration',
+        'element_id': 'elementId',
+        'document_id': 'documentId',
+        'revision': 'revision',
+        'document_microversion': 'documentMicroversion',
         'full_configuration': 'fullConfiguration',
         'document_version': 'documentVersion'
     }
 
-    def __init__(self, instances=None, features=None, document_microversion=None, document_id=None, element_id=None, revision=None, configuration=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, features=None, instances=None, configuration=None, element_id=None, document_id=None, revision=None, document_microversion=None, full_configuration=None, document_version=None, local_vars_configuration=None):  # noqa: E501
         """BTSubAssemblyInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._instances = None
         self._features = None
-        self._document_microversion = None
-        self._document_id = None
-        self._element_id = None
-        self._revision = None
+        self._instances = None
         self._configuration = None
+        self._element_id = None
+        self._document_id = None
+        self._revision = None
+        self._document_microversion = None
         self._full_configuration = None
         self._document_version = None
         self.discriminator = None
 
-        if instances is not None:
-            self.instances = instances
         if features is not None:
             self.features = features
-        if document_microversion is not None:
-            self.document_microversion = document_microversion
-        if document_id is not None:
-            self.document_id = document_id
-        if element_id is not None:
-            self.element_id = element_id
-        if revision is not None:
-            self.revision = revision
+        if instances is not None:
+            self.instances = instances
         if configuration is not None:
             self.configuration = configuration
+        if element_id is not None:
+            self.element_id = element_id
+        if document_id is not None:
+            self.document_id = document_id
+        if revision is not None:
+            self.revision = revision
+        if document_microversion is not None:
+            self.document_microversion = document_microversion
         if full_configuration is not None:
             self.full_configuration = full_configuration
         if document_version is not None:
             self.document_version = document_version
-
-    @property
-    def instances(self):
-        """Gets the instances of this BTSubAssemblyInfo.  # noqa: E501
-
-
-        :return: The instances of this BTSubAssemblyInfo.  # noqa: E501
-        :rtype: list[BTAssemblyInstanceInfo]
-        """
-        return self._instances
-
-    @instances.setter
-    def instances(self, instances):
-        """Sets the instances of this BTSubAssemblyInfo.
-
-
-        :param instances: The instances of this BTSubAssemblyInfo.  # noqa: E501
-        :type: list[BTAssemblyInstanceInfo]
-        """
-
-        self._instances = instances
 
     @property
     def features(self):
@@ -136,46 +115,46 @@ class BTSubAssemblyInfo(object):
         self._features = features
 
     @property
-    def document_microversion(self):
-        """Gets the document_microversion of this BTSubAssemblyInfo.  # noqa: E501
+    def instances(self):
+        """Gets the instances of this BTSubAssemblyInfo.  # noqa: E501
 
 
-        :return: The document_microversion of this BTSubAssemblyInfo.  # noqa: E501
-        :rtype: str
+        :return: The instances of this BTSubAssemblyInfo.  # noqa: E501
+        :rtype: list[BTAssemblyInstanceInfo]
         """
-        return self._document_microversion
+        return self._instances
 
-    @document_microversion.setter
-    def document_microversion(self, document_microversion):
-        """Sets the document_microversion of this BTSubAssemblyInfo.
+    @instances.setter
+    def instances(self, instances):
+        """Sets the instances of this BTSubAssemblyInfo.
 
 
-        :param document_microversion: The document_microversion of this BTSubAssemblyInfo.  # noqa: E501
-        :type: str
+        :param instances: The instances of this BTSubAssemblyInfo.  # noqa: E501
+        :type: list[BTAssemblyInstanceInfo]
         """
 
-        self._document_microversion = document_microversion
+        self._instances = instances
 
     @property
-    def document_id(self):
-        """Gets the document_id of this BTSubAssemblyInfo.  # noqa: E501
+    def configuration(self):
+        """Gets the configuration of this BTSubAssemblyInfo.  # noqa: E501
 
 
-        :return: The document_id of this BTSubAssemblyInfo.  # noqa: E501
+        :return: The configuration of this BTSubAssemblyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._document_id
+        return self._configuration
 
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this BTSubAssemblyInfo.
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this BTSubAssemblyInfo.
 
 
-        :param document_id: The document_id of this BTSubAssemblyInfo.  # noqa: E501
+        :param configuration: The configuration of this BTSubAssemblyInfo.  # noqa: E501
         :type: str
         """
 
-        self._document_id = document_id
+        self._configuration = configuration
 
     @property
     def element_id(self):
@@ -199,6 +178,27 @@ class BTSubAssemblyInfo(object):
         self._element_id = element_id
 
     @property
+    def document_id(self):
+        """Gets the document_id of this BTSubAssemblyInfo.  # noqa: E501
+
+
+        :return: The document_id of this BTSubAssemblyInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this BTSubAssemblyInfo.
+
+
+        :param document_id: The document_id of this BTSubAssemblyInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
+
+    @property
     def revision(self):
         """Gets the revision of this BTSubAssemblyInfo.  # noqa: E501
 
@@ -220,25 +220,25 @@ class BTSubAssemblyInfo(object):
         self._revision = revision
 
     @property
-    def configuration(self):
-        """Gets the configuration of this BTSubAssemblyInfo.  # noqa: E501
+    def document_microversion(self):
+        """Gets the document_microversion of this BTSubAssemblyInfo.  # noqa: E501
 
 
-        :return: The configuration of this BTSubAssemblyInfo.  # noqa: E501
+        :return: The document_microversion of this BTSubAssemblyInfo.  # noqa: E501
         :rtype: str
         """
-        return self._configuration
+        return self._document_microversion
 
-    @configuration.setter
-    def configuration(self, configuration):
-        """Sets the configuration of this BTSubAssemblyInfo.
+    @document_microversion.setter
+    def document_microversion(self, document_microversion):
+        """Sets the document_microversion of this BTSubAssemblyInfo.
 
 
-        :param configuration: The configuration of this BTSubAssemblyInfo.  # noqa: E501
+        :param document_microversion: The document_microversion of this BTSubAssemblyInfo.  # noqa: E501
         :type: str
         """
 
-        self._configuration = configuration
+        self._document_microversion = document_microversion
 
     @property
     def full_configuration(self):
