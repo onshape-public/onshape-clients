@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**admin** | **bool** |  | [optional] 
 **inherited_acls** | [**list[BTInheritedAclInfo]**](BTInheritedAclInfo.md) |  | [optional] 
+**admin** | **bool** |  | [optional] 
 **shared_with_support** | **bool** |  | [optional] 
 **entries** | [**list[BTAclEntryInfo]**](BTAclEntryInfo.md) |  | [optional] 
 **object_id** | **str** |  | [optional] 

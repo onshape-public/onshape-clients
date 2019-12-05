@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**owner_id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**owner_id** | **str** |  | [optional] 
+**trial_end_date** | **str** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
 **created_by** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **percent_off** | **int** |  | [optional] 
@@ -13,7 +14,6 @@ Name | Type | Description | Notes
 **coupon_valid_months** | **int** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
 **used_at** | **datetime** |  | [optional] 
-**trial_end_date** | **str** |  | [optional] 
 **account_balance** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 

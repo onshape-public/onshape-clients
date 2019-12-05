@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from_node** | [**BTPNode7**](BTPNode7.md) |  | [optional] 
-**top_level** | **str** |  | [optional] 
 **document** | **str** |  | [optional] 
+**top_level** | **str** |  | [optional] 
 **element_microversion** | **str** |  | [optional] 
-**language_version** | **int** |  | [optional] 
 **module_ids** | [**BTDocumentVersionElementIds1897**](BTDocumentVersionElementIds1897.md) |  | [optional] 
+**language_version** | **int** |  | [optional] 
 **column** | **int** |  | [optional] 
 **end_line** | **int** |  | [optional] 
 **end_column** | **int** |  | [optional] 

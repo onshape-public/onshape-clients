@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**body** | [**BTPStatementBlock271**](BTPStatementBlock271.md) |  | [optional] 
 **arguments** | [**list[BTPArgumentDeclaration232]**](BTPArgumentDeclaration232.md) |  | [optional] 
+**body** | [**BTPStatementBlock271**](BTPStatementBlock271.md) |  | [optional] 
 **precondition** | [**BTPStatement269**](BTPStatement269.md) |  | [optional] 
 **space_after_arglist** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_in_empty_list** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 

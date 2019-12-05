@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **download_file_workspace**
-> BTForeignItemInfo download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
+> file download_file_workspace(did, wid, eid, content_disposition=content_disposition, if_none_match=if_none_match, link_document_id=link_document_id)
 
 Download File From Blob Element.
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTForeignItemInfo**](BTForeignItemInfo.md)
+**file**
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+octet-stream;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09, application/octet-stream
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |

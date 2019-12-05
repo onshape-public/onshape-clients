@@ -1,5 +1,6 @@
 # BTExportTessellatedFacesBody1321
 
+Array of information for each body.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

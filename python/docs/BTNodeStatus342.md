@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error** | **bool** |  | [optional] 
-**status_type** | **str** |  | [optional] 
-**status_enum** | **str** |  | [optional] 
 **status_msg** | **str** |  | [optional] 
+**status_enum** | **str** |  | [optional] 
+**status_type** | **str** |  | [optional] 
 **faulty_parameters** | **list[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

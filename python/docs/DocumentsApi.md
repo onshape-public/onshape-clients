@@ -4,34 +4,38 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**copy_workspace**](DocumentsApi.md#copy_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/copy | 
+[**copy_workspace**](DocumentsApi.md#copy_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/copy | Copy Workspace
 [**create_document**](DocumentsApi.md#create_document) | **POST** /api/documents | Create document.
-[**create_version**](DocumentsApi.md#create_version) | **POST** /api/documents/d/{did}/versions | 
-[**create_workspace**](DocumentsApi.md#create_workspace) | **POST** /api/documents/d/{did}/workspaces | 
-[**delete7**](DocumentsApi.md#delete7) | **DELETE** /api/documents/{did} | 
-[**delete_workspace**](DocumentsApi.md#delete_workspace) | **DELETE** /api/documents/d/{did}/workspaces/{wid} | 
+[**create_version**](DocumentsApi.md#create_version) | **POST** /api/documents/d/{did}/versions | Create Version.
+[**create_workspace**](DocumentsApi.md#create_workspace) | **POST** /api/documents/d/{did}/workspaces | Create Workspace
+[**delete7**](DocumentsApi.md#delete7) | **DELETE** /api/documents/{did} | Delete Document
+[**delete_workspace**](DocumentsApi.md#delete_workspace) | **DELETE** /api/documents/d/{did}/workspaces/{wid} | Delete Workspace
 [**download_external_data**](DocumentsApi.md#download_external_data) | **GET** /api/documents/d/{did}/externaldata/{fid} | Download External Data
 [**export2_json**](DocumentsApi.md#export2_json) | **POST** /api/documents/d/{did}/{wv}/{wvid}/e/{eid}/export | 
-[**get_acl**](DocumentsApi.md#get_acl) | **GET** /api/documents/{did}/acl | 
+[**get_acl**](DocumentsApi.md#get_acl) | **GET** /api/documents/{did}/acl | Get Access Control List
 [**get_current_microversion**](DocumentsApi.md#get_current_microversion) | **GET** /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion | Get Current Document Microversion
 [**get_document**](DocumentsApi.md#get_document) | **GET** /api/documents/{did} | Get Document
-[**get_document_permission_set**](DocumentsApi.md#get_document_permission_set) | **GET** /api/documents/{did}/permissionset | 
+[**get_document_permission_set**](DocumentsApi.md#get_document_permission_set) | **GET** /api/documents/{did}/permissionset | Get Document Permissions
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /api/documents | Get Documents
-[**get_elements2**](DocumentsApi.md#get_elements2) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
-[**get_insertables**](DocumentsApi.md#get_insertables) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/insertables | 
+[**get_elements_in_document**](DocumentsApi.md#get_elements_in_document) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/elements | Get a list of elements in the workspace, version, or microversion of the document.
+[**get_insertables**](DocumentsApi.md#get_insertables) | **GET** /api/documents/d/{did}/{wvm}/{wvmid}/insertables | Insertable List for Document Version.
 [**get_version**](DocumentsApi.md#get_version) | **GET** /api/documents/d/{did}/versions/{vid} | Get Version
 [**get_versions1**](DocumentsApi.md#get_versions1) | **GET** /api/documents/d/{did}/versions | Get Versions
 [**get_workspaces1**](DocumentsApi.md#get_workspaces1) | **GET** /api/documents/d/{did}/workspaces | Get Workspaces
 [**merge_into_workspace**](DocumentsApi.md#merge_into_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/merge | Merge into workspace
-[**restore_rendition**](DocumentsApi.md#restore_rendition) | **POST** /api/documents/{did}/workspaces/{wid}/restore/{mvid} | 
-[**sync_application_elements**](DocumentsApi.md#sync_application_elements) | **POST** /api/documents/d/{did}/w/{wid}/syncApplicationElements | 
-[**update_external_references_to_latest_documents**](DocumentsApi.md#update_external_references_to_latest_documents) | **POST** /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences | 
+[**move_elements_to_document**](DocumentsApi.md#move_elements_to_document) | **POST** /api/documents/d/{did}/w/{wid}/moveelement | Move Elements
+[**restore_from_history**](DocumentsApi.md#restore_from_history) | **POST** /api/documents/{did}/w/{wid}/restore/{vm}/{vmid} | Restore version or microversion to workspace.
+[**share**](DocumentsApi.md#share) | **POST** /api/documents/{did}/share | Share Document
+[**sync_application_elements**](DocumentsApi.md#sync_application_elements) | **POST** /api/documents/d/{did}/w/{wid}/syncApplicationElements | Sync Application Elements
+[**un_share**](DocumentsApi.md#un_share) | **DELETE** /api/documents/{did}/share/{eid} | Unshare Document
+[**update_document_attributes**](DocumentsApi.md#update_document_attributes) | **POST** /api/documents/{did} | Update Document Attributes.
+[**update_external_references_to_latest_documents**](DocumentsApi.md#update_external_references_to_latest_documents) | **POST** /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences | Update External References to Latest
 
 
 # **copy_workspace**
-> copy_workspace(did, wid, bt_copy_document_params=bt_copy_document_params)
+> BTCopyDocumentInfo copy_workspace(did, wid, bt_copy_document_params=bt_copy_document_params)
 
-
+Copy Workspace
 
 ### Example
 
@@ -55,7 +59,9 @@ wid = 'wid_example' # str |
 bt_copy_document_params = onshape_client.oas.BTCopyDocumentParams() # BTCopyDocumentParams |  (optional)
 
 try:
-    api_instance.copy_workspace(did, wid, bt_copy_document_params=bt_copy_document_params)
+    # Copy Workspace
+    api_response = api_instance.copy_workspace(did, wid, bt_copy_document_params=bt_copy_document_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->copy_workspace: %s\n" % e)
 ```
@@ -70,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTCopyDocumentInfo**](BTCopyDocumentInfo.md)
 
 ### Authorization
 
@@ -84,7 +90,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -147,9 +153,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_version**
-> create_version(did, bt_version_or_workspace_params)
+> BTVersionInfo create_version(did, bt_version_or_workspace_params)
 
-
+Create Version.
 
 ### Example
 
@@ -172,7 +178,9 @@ did = 'did_example' # str |
 bt_version_or_workspace_params = onshape_client.oas.BTVersionOrWorkspaceParams() # BTVersionOrWorkspaceParams | 
 
 try:
-    api_instance.create_version(did, bt_version_or_workspace_params)
+    # Create Version.
+    api_response = api_instance.create_version(did, bt_version_or_workspace_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->create_version: %s\n" % e)
 ```
@@ -186,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTVersionInfo**](BTVersionInfo.md)
 
 ### Authorization
 
@@ -205,9 +213,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_workspace**
-> create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
+> BTWorkspaceInfo create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
 
-
+Create Workspace
 
 ### Example
 
@@ -230,7 +238,9 @@ did = 'did_example' # str |
 bt_version_or_workspace_params = onshape_client.oas.BTVersionOrWorkspaceParams() # BTVersionOrWorkspaceParams |  (optional)
 
 try:
-    api_instance.create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
+    # Create Workspace
+    api_response = api_instance.create_workspace(did, bt_version_or_workspace_params=bt_version_or_workspace_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->create_workspace: %s\n" % e)
 ```
@@ -244,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTWorkspaceInfo**](BTWorkspaceInfo.md)
 
 ### Authorization
 
@@ -265,7 +275,7 @@ void (empty response body)
 # **delete7**
 > delete7(did, forever=forever)
 
-
+Delete Document
 
 ### Example
 
@@ -288,6 +298,7 @@ did = 'did_example' # str |
 forever = False # bool |  (optional) (default to False)
 
 try:
+    # Delete Document
     api_instance.delete7(did, forever=forever)
 except ApiException as e:
     print("Exception when calling DocumentsApi->delete7: %s\n" % e)
@@ -323,7 +334,7 @@ void (empty response body)
 # **delete_workspace**
 > delete_workspace(did, wid)
 
-
+Delete Workspace
 
 ### Example
 
@@ -346,6 +357,7 @@ did = 'did_example' # str |
 wid = 'wid_example' # str | 
 
 try:
+    # Delete Workspace
     api_instance.delete_workspace(did, wid)
 except ApiException as e:
     print("Exception when calling DocumentsApi->delete_workspace: %s\n" % e)
@@ -505,9 +517,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_acl**
-> get_acl(did)
+> BTAclInfo get_acl(did)
 
-
+Get Access Control List
 
 ### Example
 
@@ -529,7 +541,9 @@ api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(conf
 did = 'did_example' # str | 
 
 try:
-    api_instance.get_acl(did)
+    # Get Access Control List
+    api_response = api_instance.get_acl(did)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->get_acl: %s\n" % e)
 ```
@@ -542,7 +556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTAclInfo**](BTAclInfo.md)
 
 ### Authorization
 
@@ -556,7 +570,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -618,7 +632,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -681,9 +695,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_permission_set**
-> get_document_permission_set(did)
+> object get_document_permission_set(did)
 
-
+Get Document Permissions
 
 ### Example
 
@@ -705,7 +719,9 @@ api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(conf
 did = 'did_example' # str | 
 
 try:
-    api_instance.get_document_permission_set(did)
+    # Get Document Permissions
+    api_response = api_instance.get_document_permission_set(did)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->get_document_permission_set: %s\n" % e)
 ```
@@ -718,7 +734,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -732,7 +748,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -805,7 +821,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -814,8 +830,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_elements2**
-> list[BTDocumentElementInfo] get_elements2(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+# **get_elements_in_document**
+> list[BTDocumentElementInfo] get_elements_in_document(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
 
 Get a list of elements in the workspace, version, or microversion of the document.
 
@@ -846,10 +862,10 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
     # Get a list of elements in the workspace, version, or microversion of the document.
-    api_response = api_instance.get_elements2(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
+    api_response = api_instance.get_elements_in_document(did, wvm, wvmid, element_type=element_type, element_id=element_id, with_thumbnails=with_thumbnails, link_document_id=link_document_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->get_elements2: %s\n" % e)
+    print("Exception when calling DocumentsApi->get_elements_in_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -885,9 +901,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_insertables**
-> get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types)
+> BTInsertablesListResponse get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
 
-
+Insertable List for Document Version.
 
 ### Example
 
@@ -926,9 +942,12 @@ allowed_blob_mime_types = '' # str |  (optional) (default to '')
 max_feature_script_version = 0 # int |  (optional) (default to 0)
 include_applications = False # bool |  (optional) (default to False)
 allowed_application_mime_types = '' # str |  (optional) (default to '')
+include_composite_parts = False # bool |  (optional) (default to False)
 
 try:
-    api_instance.get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types)
+    # Insertable List for Document Version.
+    api_response = api_instance.get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->get_insertables: %s\n" % e)
 ```
@@ -957,10 +976,11 @@ Name | Type | Description  | Notes
  **max_feature_script_version** | **int**|  | [optional] [default to 0]
  **include_applications** | **bool**|  | [optional] [default to False]
  **allowed_application_mime_types** | **str**|  | [optional] [default to &#39;&#39;]
+ **include_composite_parts** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
-void (empty response body)
+[**BTInsertablesListResponse**](BTInsertablesListResponse.md)
 
 ### Authorization
 
@@ -974,7 +994,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1100,7 +1120,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1220,14 +1240,14 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **restore_rendition**
-> restore_rendition(did, wid, mvid)
+# **move_elements_to_document**
+> BTMoveElementInfo move_elements_to_document(did, wid, bt_move_element_params)
 
-
+Move Elements
 
 ### Example
 
@@ -1248,12 +1268,14 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
-mvid = 'mvid_example' # str | 
+bt_move_element_params = onshape_client.oas.BTMoveElementParams() # BTMoveElementParams | 
 
 try:
-    api_instance.restore_rendition(did, wid, mvid)
+    # Move Elements
+    api_response = api_instance.move_elements_to_document(did, wid, bt_move_element_params)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DocumentsApi->restore_rendition: %s\n" % e)
+    print("Exception when calling DocumentsApi->move_elements_to_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -1262,7 +1284,70 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  | 
  **wid** | **str**|  | 
- **mvid** | **str**|  | 
+ **bt_move_element_params** | [**BTMoveElementParams**](BTMoveElementParams.md)|  | 
+
+### Return type
+
+[**BTMoveElementInfo**](BTMoveElementInfo.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **restore_from_history**
+> restore_from_history(did, wid, vm, vmid)
+
+Restore version or microversion to workspace.
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(configuration))
+did = 'did_example' # str | 
+wid = 'wid_example' # str | 
+vm = 'vm_example' # str | 
+vmid = 'vmid_example' # str | 
+
+try:
+    # Restore version or microversion to workspace.
+    api_instance.restore_from_history(did, wid, vm, vmid)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->restore_from_history: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **wid** | **str**|  | 
+ **vm** | **str**|  | 
+ **vmid** | **str**|  | 
 
 ### Return type
 
@@ -1284,10 +1369,70 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **share**
+> BTAclInfo share(did, bt_share_params)
+
+Share Document
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(configuration))
+did = 'did_example' # str | 
+bt_share_params = onshape_client.oas.BTShareParams() # BTShareParams | 
+
+try:
+    # Share Document
+    api_response = api_instance.share(did, bt_share_params)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->share: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **bt_share_params** | [**BTShareParams**](BTShareParams.md)|  | 
+
+### Return type
+
+[**BTAclInfo**](BTAclInfo.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sync_application_elements**
 > sync_application_elements(did, wid, application_element_ids, description=description)
 
-
+Sync Application Elements
 
 ### Example
 
@@ -1312,6 +1457,7 @@ application_element_ids = ['application_element_ids_example'] # list[str] |
 description = 'description_example' # str |  (optional)
 
 try:
+    # Sync Application Elements
     api_instance.sync_application_elements(did, wid, application_element_ids, description=description)
 except ApiException as e:
     print("Exception when calling DocumentsApi->sync_application_elements: %s\n" % e)
@@ -1346,10 +1492,130 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **un_share**
+> un_share(did, eid, entry_type=entry_type)
+
+Unshare Document
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(configuration))
+did = 'did_example' # str | 
+eid = 'eid_example' # str | 
+entry_type = 0 # int |  (optional) (default to 0)
+
+try:
+    # Unshare Document
+    api_instance.un_share(did, eid, entry_type=entry_type)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->un_share: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **eid** | **str**|  | 
+ **entry_type** | **int**|  | [optional] [default to 0]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_document_attributes**
+> update_document_attributes(did, bt_document_params)
+
+Update Document Attributes.
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from onshape_client.oas.rest import ApiException
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Create an instance of the API class
+api_instance = onshape_client.oas.DocumentsApi(onshape_client.oas.ApiClient(configuration))
+did = 'did_example' # str | 
+bt_document_params = onshape_client.oas.BTDocumentParams() # BTDocumentParams | 
+
+try:
+    # Update Document Attributes.
+    api_instance.update_document_attributes(did, bt_document_params)
+except ApiException as e:
+    print("Exception when calling DocumentsApi->update_document_attributes: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  | 
+ **bt_document_params** | [**BTDocumentParams**](BTDocumentParams.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_external_references_to_latest_documents**
-> update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
+> BTLinkToLatestDocumentInfo update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
 
-
+Update External References to Latest
 
 ### Example
 
@@ -1374,7 +1640,9 @@ eid = 'eid_example' # str |
 bt_link_to_latest_document_params = onshape_client.oas.BTLinkToLatestDocumentParams() # BTLinkToLatestDocumentParams |  (optional)
 
 try:
-    api_instance.update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
+    # Update External References to Latest
+    api_response = api_instance.update_external_references_to_latest_documents(did, wid, eid, bt_link_to_latest_document_params=bt_link_to_latest_document_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DocumentsApi->update_external_references_to_latest_documents: %s\n" % e)
 ```
@@ -1390,7 +1658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTLinkToLatestDocumentInfo**](BTLinkToLatestDocumentInfo.md)
 
 ### Authorization
 
@@ -1404,7 +1672,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | Success! |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

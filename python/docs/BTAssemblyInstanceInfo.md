@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **document_microversion** | **str** |  | [optional] 
-**configuration** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
 **revision** | **str** |  | [optional] 
+**configuration** | **str** |  | [optional] 
 **full_configuration** | **str** |  | [optional] 
 **document_version** | **str** |  | [optional] 
 

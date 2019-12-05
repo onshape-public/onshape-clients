@@ -4,16 +4,16 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_feature_studio**](FeatureStudiosApi.md#create_feature_studio) | **POST** /api/featurestudios/d/{did}/w/{wid} | 
+[**create_feature_studio**](FeatureStudiosApi.md#create_feature_studio) | **POST** /api/featurestudios/d/{did}/w/{wid} | Create Feature Studio
 [**get_feature_studio_contents**](FeatureStudiosApi.md#get_feature_studio_contents) | **GET** /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid} | Get Feature Studio Contents.
-[**get_feature_studio_specs**](FeatureStudiosApi.md#get_feature_studio_specs) | **GET** /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | 
-[**update_feature_studio_contents**](FeatureStudiosApi.md#update_feature_studio_contents) | **POST** /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid} | 
+[**get_feature_studio_specs**](FeatureStudiosApi.md#get_feature_studio_specs) | **GET** /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Studio Specs
+[**update_feature_studio_contents**](FeatureStudiosApi.md#update_feature_studio_contents) | **POST** /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid} | Update Feature Studio contents
 
 
 # **create_feature_studio**
-> create_feature_studio(did, wid, bt_model_element_params)
+> BTDocumentElementInfo create_feature_studio(did, wid, bt_model_element_params)
 
-
+Create Feature Studio
 
 ### Example
 
@@ -37,7 +37,9 @@ wid = 'wid_example' # str |
 bt_model_element_params = onshape_client.oas.BTModelElementParams() # BTModelElementParams | 
 
 try:
-    api_instance.create_feature_studio(did, wid, bt_model_element_params)
+    # Create Feature Studio
+    api_response = api_instance.create_feature_studio(did, wid, bt_model_element_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling FeatureStudiosApi->create_feature_studio: %s\n" % e)
 ```
@@ -52,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -71,7 +73,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_studio_contents**
-> BTFeatureStudioContents get_feature_studio_contents(did, wvm, wvmid, eid)
+> BTFeatureStudioContents2239 get_feature_studio_contents(did, wvm, wvmid, eid)
 
 Get Feature Studio Contents.
 
@@ -116,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureStudioContents**](BTFeatureStudioContents.md)
+[**BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
 
 ### Authorization
 
@@ -130,14 +132,14 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_studio_specs**
-> get_feature_studio_specs(did, wvm, wvmid, eid)
+> BTFeatureSpecsResponse664 get_feature_studio_specs(did, wvm, wvmid, eid)
 
-
+Get Feature Studio Specs
 
 ### Example
 
@@ -162,7 +164,9 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_feature_studio_specs(did, wvm, wvmid, eid)
+    # Get Feature Studio Specs
+    api_response = api_instance.get_feature_studio_specs(did, wvm, wvmid, eid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling FeatureStudiosApi->get_feature_studio_specs: %s\n" % e)
 ```
@@ -178,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureSpecsResponse664**](BTFeatureSpecsResponse664.md)
 
 ### Authorization
 
@@ -197,9 +201,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_feature_studio_contents**
-> update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
+> BTFeatureStudioContents2239 update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
 
-
+Update Feature Studio contents
 
 ### Example
 
@@ -225,7 +229,9 @@ eid = 'eid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
+    # Update Feature Studio contents
+    api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
 ```
@@ -242,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
 
 ### Authorization
 

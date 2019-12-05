@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 
 # **add_feature1**
-> BTFeatureDefinitionResponse add_feature1(did, wvm, wvmid, eid, body=body)
+> BTFeatureDefinitionResponse1617 add_feature1(did, wvm, wvmid, eid, body=body)
 
 Add Feature
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureDefinitionResponse**](BTFeatureDefinitionResponse.md)
+[**BTFeatureDefinitionResponse1617**](BTFeatureDefinitionResponse1617.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **eval_feature_script**
-> BTFeatureScriptEvalResponse eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call=bt_feature_script_eval_call)
+> BTFeatureScriptEvalResponse1859 eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call2377=bt_feature_script_eval_call2377)
 
 Evaluate FeatureScript
 
@@ -323,11 +323,11 @@ wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a worksp
 wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
 eid = 'eid_example' # str | Element ID.
 configuration = 'configuration_example' # str | Configuration string. (optional)
-bt_feature_script_eval_call = onshape_client.oas.BTFeatureScriptEvalCall() # BTFeatureScriptEvalCall |  (optional)
+bt_feature_script_eval_call2377 = onshape_client.oas.BTFeatureScriptEvalCall2377() # BTFeatureScriptEvalCall2377 |  (optional)
 
 try:
     # Evaluate FeatureScript
-    api_response = api_instance.eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call=bt_feature_script_eval_call)
+    api_response = api_instance.eval_feature_script(did, wvm, wvmid, eid, configuration=configuration, bt_feature_script_eval_call2377=bt_feature_script_eval_call2377)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PartStudiosApi->eval_feature_script: %s\n" % e)
@@ -342,11 +342,11 @@ Name | Type | Description  | Notes
  **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. | 
  **eid** | **str**| Element ID. | 
  **configuration** | **str**| Configuration string. | [optional] 
- **bt_feature_script_eval_call** | [**BTFeatureScriptEvalCall**](BTFeatureScriptEvalCall.md)|  | [optional] 
+ **bt_feature_script_eval_call2377** | [**BTFeatureScriptEvalCall2377**](BTFeatureScriptEvalCall2377.md)|  | [optional] 
 
 ### Return type
 
-[**BTFeatureScriptEvalResponse**](BTFeatureScriptEvalResponse.md)
+[**BTFeatureScriptEvalResponse1859**](BTFeatureScriptEvalResponse1859.md)
 
 ### Authorization
 
@@ -523,7 +523,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_body_details2**
-> BTExportModelBodiesResponse get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, rollback_bar_index=rollback_bar_index)
+> BTExportModelBodiesResponse734 get_body_details2(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, rollback_bar_index=rollback_bar_index)
 
 Array of body information
 
@@ -574,7 +574,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTExportModelBodiesResponse**](BTExportModelBodiesResponse.md)
+[**BTExportModelBodiesResponse734**](BTExportModelBodiesResponse734.md)
 
 ### Authorization
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bounding_boxes2**
-> BTBoundingBox get_bounding_boxes2(did, wvm, wvmid, eid, include_hidden=include_hidden, include_wire_bodies=include_wire_bodies, configuration=configuration, link_document_id=link_document_id)
+> BTBoundingBox1052 get_bounding_boxes2(did, wvm, wvmid, eid, include_hidden=include_hidden, include_wire_bodies=include_wire_bodies, configuration=configuration, link_document_id=link_document_id)
 
 Mass properties of parts or a PartStudio.
 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTBoundingBox**](BTBoundingBox.md)
+[**BTBoundingBox1052**](BTBoundingBox1052.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_edges2**
-> BTExportTessellatedEdgesResponse get_edges2(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, part_id=part_id, edge_id=edge_id, configuration=configuration, link_document_id=link_document_id)
+> BTExportTessellatedEdgesResponse327 get_edges2(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, part_id=part_id, edge_id=edge_id, configuration=configuration, link_document_id=link_document_id)
 
 Tesselated edges from a PartStudio.
 
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTExportTessellatedEdgesResponse**](BTExportTessellatedEdgesResponse.md)
+[**BTExportTessellatedEdgesResponse327**](BTExportTessellatedEdgesResponse327.md)
 
 ### Authorization
 
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_faces2**
-> BTExportTessellatedFacesResponse get_faces2(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, part_id=part_id, face_id=face_id, output_error_faces=output_error_faces, configuration=configuration, link_document_id=link_document_id)
+> BTExportTessellatedFacesResponse898 get_faces2(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, part_id=part_id, face_id=face_id, output_error_faces=output_error_faces, configuration=configuration, link_document_id=link_document_id)
 
 Tesselated faces of the parts in the Part Studio.
 
@@ -873,7 +873,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTExportTessellatedFacesResponse**](BTExportTessellatedFacesResponse.md)
+[**BTExportTessellatedFacesResponse898**](BTExportTessellatedFacesResponse898.md)
 
 ### Authorization
 
@@ -955,7 +955,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_features1**
-> BTFeatureListResponse get_features1(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
+> BTFeatureListResponse2457 get_features1(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id, no_sketch_geometry=no_sketch_geometry, body=body)
 
 Get Feature List
 
@@ -1008,7 +1008,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureListResponse**](BTFeatureListResponse.md)
+[**BTFeatureListResponse2457**](BTFeatureListResponse2457.md)
 
 ### Authorization
 
@@ -1161,7 +1161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_shaded_views2**
-> BTShadedRenderDocumentResponse get_shaded_views2(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
+> BTShadedRenderDocumentResponse1375 get_shaded_views2(did, wvm, wvmid, eid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
 
 Get Shaded Views
 
@@ -1226,7 +1226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTShadedRenderDocumentResponse**](BTShadedRenderDocumentResponse.md)
+[**BTShadedRenderDocumentResponse1375**](BTShadedRenderDocumentResponse1375.md)
 
 ### Authorization
 

@@ -4,27 +4,20 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**copy_element_from_source_document**](ElementsApi.md#copy_element_from_source_document) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | 
-[**decode_configuration**](ElementsApi.md#decode_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid} | 
-[**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | 
-[**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | 
-[**get_configuration**](ElementsApi.md#get_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
-[**get_element_by_version_deprecated**](ElementsApi.md#get_element_by_version_deprecated) | **GET** /api/elements/{did}/version/{vid} | 
-[**get_element_by_workspace_deprecated**](ElementsApi.md#get_element_by_workspace_deprecated) | **GET** /api/elements/{did}/workspace/{wid} | 
-[**get_element_metadata**](ElementsApi.md#get_element_metadata) | **GET** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
-[**get_element_metadata_deprecated**](ElementsApi.md#get_element_metadata_deprecated) | **GET** /api/elements/{emid} | 
-[**get_element_translator_formats**](ElementsApi.md#get_element_translator_formats) | **GET** /api/elements/translatorFormats/{did}/{wid}/{eid} | 
-[**get_translator_formats3**](ElementsApi.md#get_translator_formats3) | **GET** /api/elements/translatorFormats | 
-[**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | 
-[**update_element_metadata**](ElementsApi.md#update_element_metadata) | **POST** /api/elements/d/{did}/{wv}/{wvid}/e/{eid}/metadata | 
-[**update_references**](ElementsApi.md#update_references) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | 
-[**upload_file1**](ElementsApi.md#upload_file1) | **POST** /api/elements/upload/{did} | 
+[**copy_element_from_source_document**](ElementsApi.md#copy_element_from_source_document) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | Copy Element
+[**decode_configuration**](ElementsApi.md#decode_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid} | Decode Configuration String
+[**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | Delete Element
+[**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | Encode Configuration
+[**get_configuration**](ElementsApi.md#get_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
+[**get_element_translator_formats1**](ElementsApi.md#get_element_translator_formats1) | **GET** /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid} | Get Element Translator Formats
+[**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
+[**update_references**](ElementsApi.md#update_references) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | Update or replace node references
 
 
 # **copy_element_from_source_document**
-> copy_element_from_source_document(did, wid, bt_copy_element_params)
+> BTDocumentElementInfo copy_element_from_source_document(did, wid, bt_copy_element_params)
 
-
+Copy Element
 
 ### Example
 
@@ -48,7 +41,9 @@ wid = 'wid_example' # str |
 bt_copy_element_params = onshape_client.oas.BTCopyElementParams() # BTCopyElementParams | 
 
 try:
-    api_instance.copy_element_from_source_document(did, wid, bt_copy_element_params)
+    # Copy Element
+    api_response = api_instance.copy_element_from_source_document(did, wid, bt_copy_element_params)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ElementsApi->copy_element_from_source_document: %s\n" % e)
 ```
@@ -63,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -82,9 +77,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **decode_configuration**
-> decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
+> BTConfigurationInfo decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
 
-
+Decode Configuration String
 
 ### Example
 
@@ -113,7 +108,9 @@ include_display = False # bool |  (optional) (default to False)
 configuration_is_id = False # bool |  (optional) (default to False)
 
 try:
-    api_instance.decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
+    # Decode Configuration String
+    api_response = api_instance.decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ElementsApi->decode_configuration: %s\n" % e)
 ```
@@ -133,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -154,7 +151,7 @@ void (empty response body)
 # **delete8**
 > delete8(did, wid, eid)
 
-
+Delete Element
 
 ### Example
 
@@ -178,6 +175,7 @@ wid = 'wid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
+    # Delete Element
     api_instance.delete8(did, wid, eid)
 except ApiException as e:
     print("Exception when calling ElementsApi->delete8: %s\n" % e)
@@ -212,9 +210,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **encode_configuration_map**
-> encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+> BTEncodedConfigurationInfo encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
 
-
+Encode Configuration
 
 ### Example
 
@@ -240,7 +238,9 @@ version_id = 'version_id_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
 try:
-    api_instance.encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+    # Encode Configuration
+    api_response = api_instance.encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ElementsApi->encode_configuration_map: %s\n" % e)
 ```
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTEncodedConfigurationInfo**](BTEncodedConfigurationInfo.md)
 
 ### Authorization
 
@@ -276,9 +276,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration**
-> get_configuration(did, wvm, wvmid, eid)
+> BTConfigurationInfo get_configuration(did, wvm, wvmid, eid)
 
-
+Get Configuration
 
 ### Example
 
@@ -303,7 +303,9 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_configuration(did, wvm, wvmid, eid)
+    # Get Configuration
+    api_response = api_instance.get_configuration(did, wvm, wvmid, eid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ElementsApi->get_configuration: %s\n" % e)
 ```
@@ -319,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -337,158 +339,35 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_by_version_deprecated**
-> get_element_by_version_deprecated(did, vid, with_thumbnails=with_thumbnails)
+# **get_element_translator_formats1**
+> list[BTModelFormatInfo] get_element_translator_formats1(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
 
-
+Get Element Translator Formats
 
 ### Example
 
-* OAuth Authentication (OAuth2):
 ```python
 from __future__ import print_function
 import time
 import onshape_client.oas
 from onshape_client.oas.rest import ApiException
 from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
 # Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-with_thumbnails = False # bool |  (optional) (default to False)
-
-try:
-    api_instance.get_element_by_version_deprecated(did, vid, with_thumbnails=with_thumbnails)
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_by_version_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **vid** | **str**|  | 
- **with_thumbnails** | **bool**|  | [optional] [default to False]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_by_workspace_deprecated**
-> get_element_by_workspace_deprecated(did, wid, with_thumbnails=with_thumbnails)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-with_thumbnails = False # bool |  (optional) (default to False)
-
-try:
-    api_instance.get_element_by_workspace_deprecated(did, wid, with_thumbnails=with_thumbnails)
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_by_workspace_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **with_thumbnails** | **bool**|  | [optional] [default to False]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_metadata**
-> get_element_metadata(did, wv, wvid, eid, link_document_id=link_document_id)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
+api_instance = onshape_client.oas.ElementsApi()
 did = 'did_example' # str | 
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 eid = 'eid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+check_content = True # bool |  (optional) (default to True)
+configuration = '' # str |  (optional) (default to '')
 
 try:
-    api_instance.get_element_metadata(did, wv, wvid, eid, link_document_id=link_document_id)
+    # Get Element Translator Formats
+    api_response = api_instance.get_element_translator_formats1(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_metadata: %s\n" % e)
+    print("Exception when calling ElementsApi->get_element_translator_formats1: %s\n" % e)
 ```
 
 ### Parameters
@@ -499,171 +378,12 @@ Name | Type | Description  | Notes
  **wv** | **str**|  | 
  **wvid** | **str**|  | 
  **eid** | **str**|  | 
- **link_document_id** | **str**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_metadata_deprecated**
-> get_element_metadata_deprecated(emid)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
-emid = 'emid_example' # str | 
-
-try:
-    api_instance.get_element_metadata_deprecated(emid)
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_metadata_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **emid** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_translator_formats**
-> get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
-
-
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi()
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-check_content = True # bool |  (optional) (default to True)
-configuration = '' # str |  (optional) (default to '')
-
-try:
-    api_instance.get_element_translator_formats(did, wid, eid, check_content=check_content, configuration=configuration)
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_translator_formats: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **eid** | **str**|  | 
  **check_content** | **bool**|  | [optional] [default to True]
  **configuration** | **str**|  | [optional] [default to &#39;&#39;]
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_translator_formats3**
-> get_translator_formats3()
-
-
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi()
-
-try:
-    api_instance.get_translator_formats3()
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_translator_formats3: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
+[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
 
 ### Authorization
 
@@ -682,9 +402,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_configuration**
-> update_configuration(did, wvm, wvmid, eid, body=body)
+> BTConfigurationInfo update_configuration(did, wvm, wvmid, eid, body=body)
 
-
+Update Configuration
 
 ### Example
 
@@ -710,7 +430,9 @@ eid = 'eid_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
-    api_instance.update_configuration(did, wvm, wvmid, eid, body=body)
+    # Update Configuration
+    api_response = api_instance.update_configuration(did, wvm, wvmid, eid, body=body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ElementsApi->update_configuration: %s\n" % e)
 ```
@@ -727,71 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_element_metadata**
-> update_element_metadata(did, wv, wvid, eid, btpdm_metadata_params)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-btpdm_metadata_params = onshape_client.oas.BTPDMMetadataParams() # BTPDMMetadataParams | 
-
-try:
-    api_instance.update_element_metadata(did, wv, wvid, eid, btpdm_metadata_params)
-except ApiException as e:
-    print("Exception when calling ElementsApi->update_element_metadata: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **eid** | **str**|  | 
- **btpdm_metadata_params** | [**BTPDMMetadataParams**](BTPDMMetadataParams.md)|  | 
-
-### Return type
-
-void (empty response body)
+[**BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -812,7 +470,7 @@ void (empty response body)
 # **update_references**
 > update_references(did, wid, eid, bt_update_reference_params)
 
-
+Update or replace node references
 
 ### Example
 
@@ -837,6 +495,7 @@ eid = 'eid_example' # str |
 bt_update_reference_params = onshape_client.oas.BTUpdateReferenceParams() # BTUpdateReferenceParams | 
 
 try:
+    # Update or replace node references
     api_instance.update_references(did, wid, eid, bt_update_reference_params)
 except ApiException as e:
     print("Exception when calling ElementsApi->update_references: %s\n" % e)
@@ -862,80 +521,6 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **upload_file1**
-> upload_file1(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-element_id = 'element_id_example' # str |  (optional)
-workspace_id = 'workspace_id_example' # str |  (optional)
-content_disposition = onshape_client.oas.ContentDisposition() # ContentDisposition |  (optional)
-entity = None # object |  (optional)
-media_type = onshape_client.oas.BodyPartMediaType() # BodyPartMediaType |  (optional)
-message_body_workers = None # object |  (optional)
-parent = onshape_client.oas.MultiPart() # MultiPart |  (optional)
-providers = None # object |  (optional)
-body_parts = onshape_client.oas.BodyPart() # list[BodyPart] |  (optional)
-
-try:
-    api_instance.upload_file1(did, element_id=element_id, workspace_id=workspace_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
-except ApiException as e:
-    print("Exception when calling ElementsApi->upload_file1: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **element_id** | **str**|  | [optional] 
- **workspace_id** | **str**|  | [optional] 
- **content_disposition** | [**ContentDisposition**](ContentDisposition.md)|  | [optional] 
- **entity** | [**object**](object.md)|  | [optional] 
- **media_type** | [**BodyPartMediaType**](BodyPartMediaType.md)|  | [optional] 
- **message_body_workers** | [**object**](object.md)|  | [optional] 
- **parent** | [**MultiPart**](MultiPart.md)|  | [optional] 
- **providers** | [**object**](object.md)|  | [optional] 
- **body_parts** | [**list[BodyPart]**](BodyPart.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details

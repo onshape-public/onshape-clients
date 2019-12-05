@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**delete_feature**](AssembliesApi.md#delete_feature) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid} | Delete Feature
 [**delete_instance**](AssembliesApi.md#delete_instance) | **DELETE** /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid} | Delete assembly instance.
 [**get_assembly_definition**](AssembliesApi.md#get_assembly_definition) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid} | Assembly Definition.
-[**get_bill_of_materials**](AssembliesApi.md#get_bill_of_materials) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom | 
+[**get_bill_of_materials**](AssembliesApi.md#get_bill_of_materials) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom | Get Bill of Materials
 [**get_bounding_boxes**](AssembliesApi.md#get_bounding_boxes) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes | Bounding Boxes.
 [**get_feature_specs**](AssembliesApi.md#get_feature_specs) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs | Get Feature Specs
 [**get_features**](AssembliesApi.md#get_features) | **GET** /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Get Feature List
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 # **add_feature**
-> BTFeatureDefinitionResponse add_feature(did, wvm, wvmid, eid, body=body)
+> BTFeatureDefinitionResponse1617 add_feature(did, wvm, wvmid, eid, body=body)
 
 Add Feature
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureDefinitionResponse**](BTFeatureDefinitionResponse.md)
+[**BTFeatureDefinitionResponse1617**](BTFeatureDefinitionResponse1617.md)
 
 ### Authorization
 
@@ -148,12 +148,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_instance**
-> list[BTOccurrence] create_instance(did, wid, eid, bt_assembly_instance_definition_params)
+> list[BTOccurrence74] create_instance(did, wid, eid, bt_assembly_instance_definition_params)
 
 Create assembly instance
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[BTOccurrence]**](BTOccurrence.md)
+[**list[BTOccurrence74]**](BTOccurrence74.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_feature**
-> BTFeatureApiBase delete_feature(did, wid, eid, fid)
+> BTFeatureApiBase1430 delete_feature(did, wid, eid, fid)
 
 Delete Feature
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureApiBase**](BTFeatureApiBase.md)
+[**BTFeatureApiBase1430**](BTFeatureApiBase1430.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 # **get_bill_of_materials**
 > get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
 
-
+Get Bill of Materials
 
 ### Example
 
@@ -452,6 +452,7 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
 try:
+    # Get Bill of Materials
     api_instance.get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
@@ -568,7 +569,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_specs**
-> BTFeatureSpecsResponse get_feature_specs(did, wvm, wvmid, eid)
+> BTFeatureSpecsResponse664 get_feature_specs(did, wvm, wvmid, eid)
 
 Get Feature Specs
 
@@ -613,7 +614,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureSpecsResponse**](BTFeatureSpecsResponse.md)
+[**BTFeatureSpecsResponse664**](BTFeatureSpecsResponse664.md)
 
 ### Authorization
 
@@ -632,7 +633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_features**
-> BTAssemblyFeatureListResponse get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+> BTAssemblyFeatureListResponse1174 get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
 
 Get Feature List
 
@@ -681,7 +682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTAssemblyFeatureListResponse**](BTAssemblyFeatureListResponse.md)
+[**BTAssemblyFeatureListResponse1174**](BTAssemblyFeatureListResponse1174.md)
 
 ### Authorization
 
@@ -762,7 +763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_or_create_bill_of_materials_element**
-> BTDocumentElementInfo get_or_create_bill_of_materials_element(did, wid, eid)
+> get_or_create_bill_of_materials_element(did, wid, eid)
 
 Get or Create Bill of Materials Element
 
@@ -789,8 +790,7 @@ eid = 'eid_example' # str |
 
 try:
     # Get or Create Bill of Materials Element
-    api_response = api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
-    pprint(api_response)
+    api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
 except ApiException as e:
     print("Exception when calling AssembliesApi->get_or_create_bill_of_materials_element: %s\n" % e)
 ```
@@ -805,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
+void (empty response body)
 
 ### Authorization
 
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -965,7 +965,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1162,7 +1162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_feature**
-> BTFeatureDefinitionResponse update_feature(did, wid, eid, fid, body=body)
+> BTFeatureDefinitionResponse1617 update_feature(did, wid, eid, fid, body=body)
 
 Update Feature
 
@@ -1209,7 +1209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BTFeatureDefinitionResponse**](BTFeatureDefinitionResponse.md)
+[**BTFeatureDefinitionResponse1617**](BTFeatureDefinitionResponse1617.md)
 
 ### Authorization
 

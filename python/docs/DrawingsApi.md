@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_translator_formats2**
-> get_translator_formats2(did, wid, eid)
+> list[BTModelFormatInfo] get_translator_formats2(did, wid, eid)
 
 
 
@@ -29,7 +29,8 @@ wid = 'wid_example' # str |
 eid = 'eid_example' # str | 
 
 try:
-    api_instance.get_translator_formats2(did, wid, eid)
+    api_response = api_instance.get_translator_formats2(did, wid, eid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DrawingsApi->get_translator_formats2: %s\n" % e)
 ```
@@ -44,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
 
 ### Authorization
 
@@ -124,7 +125,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
