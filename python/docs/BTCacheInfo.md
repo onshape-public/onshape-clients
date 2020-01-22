@@ -1,10 +1,10 @@
-# BTCacheInfo
+# bt_cache_info.BTCacheInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cache_names** | **list[str]** |  | [optional] 
-**cache_stats** | **dict(str, dict(str, str))** |  | [optional] 
+**cache_names** | **[str]** |  | [optional] 
+**cache_stats** | **{str: ({str: (str,)},)}** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

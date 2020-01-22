@@ -1,4 +1,4 @@
-# BTPublishedWorkflowId
+# bt_published_workflow_id.BTPublishedWorkflowId
 
 ## Properties
 Name | Type | Description | Notes

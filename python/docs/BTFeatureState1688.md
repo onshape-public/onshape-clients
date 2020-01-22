@@ -1,4 +1,4 @@
-# BTFeatureState1688
+# bt_feature_state1688.BTFeatureState1688
 
 ## Properties
 Name | Type | Description | Notes

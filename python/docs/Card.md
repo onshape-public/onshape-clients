@@ -1,4 +1,4 @@
-# Card
+# card.Card
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **object** | **str** |  | [optional] 
 **account** | **str** |  | [optional] 
 **customer** | **str** |  | [optional] 
-**metadata** | **dict(str, str)** |  | [optional] 
+**metadata** | **{str: (str,)}** |  | [optional] 
 **address_city** | **str** |  | [optional] 
 **address_country** | **str** |  | [optional] 
 **address_line1** | **str** |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **address_state** | **str** |  | [optional] 
 **address_zip** | **str** |  | [optional] 
 **address_zip_check** | **str** |  | [optional] 
-**available_payout_methods** | **list[str]** |  | [optional] 
+**available_payout_methods** | **[str]** |  | [optional] 
 **brand** | **str** |  | [optional] 
 **country** | **str** |  | [optional] 
 **currency** | **str** |  | [optional] 
@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **recipient** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
-**three_d_secure** | [**ThreeDSecure**](ThreeDSecure.md) |  | [optional] 
+**three_d_secure** | [**three_d_secure.ThreeDSecure**](ThreeDSecure.md) |  | [optional] 
 **tokenization_method** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **iin** | **str** |  | [optional] 

@@ -1,11 +1,11 @@
-# BTFSValueWithUnits1817AllOf
+# btfs_value_with_units1817_all_of.BTFSValueWithUnits1817AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value_object** | **float** |  | [optional] 
 **quantity_type** | **str** |  | [optional] 
-**unit_to_power** | **dict(str, int)** |  | [optional] 
+**value_object** | **float** |  | [optional] 
+**unit_to_power** | **{str: (int,)}** |  | [optional] 
 **value** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

@@ -1,4 +1,4 @@
-# BTSketchObjectFilter184AllOf
+# bt_sketch_object_filter184_all_of.BTSketchObjectFilter184AllOf
 
 ## Properties
 Name | Type | Description | Notes

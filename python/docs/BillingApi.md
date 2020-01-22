@@ -18,17 +18,17 @@ Get billing plans for client.
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
 api_instance = onshape_client.oas.BillingApi()
 cid = 'cid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Get billing plans for client.
     api_instance.get_client_plans(cid)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling BillingApi->get_client_plans: %s\n" % e)
 ```
 
@@ -36,7 +36,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cid** | **str**|  | 
+ **cid** | **str**|  |
 
 ### Return type
 

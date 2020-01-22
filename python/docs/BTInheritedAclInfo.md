@@ -1,16 +1,16 @@
-# BTInheritedAclInfo
+# bt_inherited_acl_info.BTInheritedAclInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object_name** | **str** |  | [optional] 
-**shared_with_support** | **bool** |  | [optional] 
-**entries** | [**list[BTAclEntryInfo]**](BTAclEntryInfo.md) |  | [optional] 
+**visibility** | **str** |  | [optional] 
 **object_id** | **str** |  | [optional] 
 **object_type** | **int** |  | [optional] 
-**visibility** | **str** |  | [optional] 
+**shared_with_support** | **bool** |  | [optional] 
 **public** | **bool** |  | [optional] 
-**owner** | [**BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
+**entries** | [**[bt_acl_entry_info.BTAclEntryInfo]**](BTAclEntryInfo.md) |  | [optional] 
+**owner** | [**bt_owner_info.BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

@@ -1,4 +1,4 @@
-# BTWebClientCapabilitiesParams
+# bt_web_client_capabilities_params.BTWebClientCapabilitiesParams
 
 ## Properties
 Name | Type | Description | Notes

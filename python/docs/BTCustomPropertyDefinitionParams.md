@@ -1,10 +1,10 @@
-# BTCustomPropertyDefinitionParams
+# bt_custom_property_definition_params.BTCustomPropertyDefinitionParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **template** | **str** |  | [optional] 
-**enum_definition** | **list[str]** |  | [optional] 
+**enum_definition** | **[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 

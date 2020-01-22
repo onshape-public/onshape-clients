@@ -1,4 +1,4 @@
-# BTMParameterForeignId146AllOf
+# btm_parameter_foreign_id146_all_of.BTMParameterForeignId146AllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,13 +1,13 @@
-# BTMIndividualQueryWithOccurrenceBase904
+# btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **list[str]** |  | [optional] 
-**deterministic_ids** | **list[str]** |  | [optional] 
-**deterministic_id_list** | [**BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
+**path** | **[str]** |  | [optional] 
+**deterministic_ids** | **[str]** |  | [optional] 
+**deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **query_string** | **str** |  | [optional] 
-**query** | [**BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
+**query** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

@@ -1,4 +1,4 @@
-# BTVersionOrWorkspaceInfo
+# bt_version_or_workspace_info.BTVersionOrWorkspaceInfo
 
 ## Properties
 Name | Type | Description | Notes

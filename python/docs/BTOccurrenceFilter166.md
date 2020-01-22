@@ -1,9 +1,10 @@
-# BTOccurrenceFilter166
+# bt_occurrence_filter166.BTOccurrenceFilter166
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **top_level_only** | **bool** |  | [optional] 
+**exclude_sketch** | **bool** |  | [optional] 
 **solid_or_composite_body_only** | **bool** |  | [optional] 
 **exclude_sub_assemblies** | **bool** |  | [optional] 
 **exclude_suppressed** | **bool** |  | [optional] 

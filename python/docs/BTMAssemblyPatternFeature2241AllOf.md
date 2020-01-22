@@ -1,4 +1,4 @@
-# BTMAssemblyPatternFeature2241AllOf
+# btm_assembly_pattern_feature2241_all_of.BTMAssemblyPatternFeature2241AllOf
 
 ## Properties
 Name | Type | Description | Notes

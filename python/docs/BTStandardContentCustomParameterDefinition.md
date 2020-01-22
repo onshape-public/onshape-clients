@@ -1,9 +1,9 @@
-# BTStandardContentCustomParameterDefinition
+# bt_standard_content_custom_parameter_definition.BTStandardContentCustomParameterDefinition
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**BTStandardContentCustomParameterDefinitionId**](BTStandardContentCustomParameterDefinitionId.md) |  | [optional] 
+**id** | [**bt_standard_content_custom_parameter_definition_id.BTStandardContentCustomParameterDefinitionId**](BTStandardContentCustomParameterDefinitionId.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **created_by** | **str** |  | [optional] 

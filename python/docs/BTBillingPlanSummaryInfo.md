@@ -1,16 +1,16 @@
-# BTBillingPlanSummaryInfo
+# bt_billing_plan_summary_info.BTBillingPlanSummaryInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**amount_cents** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 **onshape_plan** | **bool** |  | [optional] 
 **application_id** | **str** |  | [optional] 
 **deprecated** | **bool** |  | [optional] 
 **plan_type** | **int** |  | [optional] 
 **consumable_quantity** | **int** |  | [optional] 
-**amount_cents** | **int** |  | [optional] 
 **interval** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
 **company_plan** | **bool** |  | [optional] 
 **hidden** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 

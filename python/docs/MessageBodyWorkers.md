@@ -1,4 +1,4 @@
-# MessageBodyWorkers
+# message_body_workers.MessageBodyWorkers
 
 ## Properties
 Name | Type | Description | Notes

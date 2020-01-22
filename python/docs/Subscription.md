@@ -1,4 +1,4 @@
-# Subscription
+# subscription.Subscription
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,18 +14,18 @@ Name | Type | Description | Notes
 **current_period_start** | **int** |  | [optional] 
 **customer** | **str** |  | [optional] 
 **days_until_due** | **int** |  | [optional] 
-**discount** | [**Discount**](Discount.md) |  | [optional] 
+**discount** | [**discount.Discount**](Discount.md) |  | [optional] 
 **ended_at** | **int** |  | [optional] 
-**metadata** | **dict(str, str)** |  | [optional] 
-**plan** | [**Plan**](Plan.md) |  | [optional] 
+**metadata** | **{str: (str,)}** |  | [optional] 
+**plan** | [**plan.Plan**](Plan.md) |  | [optional] 
 **quantity** | **int** |  | [optional] 
 **start** | **int** |  | [optional] 
 **status** | **str** |  | [optional] 
 **tax_percent** | **float** |  | [optional] 
 **trial_end** | **int** |  | [optional] 
 **trial_start** | **int** |  | [optional] 
-**customer_object** | [**Customer**](Customer.md) |  | [optional] 
-**subscription_items** | [**SubscriptionItemCollection**](SubscriptionItemCollection.md) |  | [optional] 
+**customer_object** | [**customer.Customer**](Customer.md) |  | [optional] 
+**subscription_items** | [**subscription_item_collection.SubscriptionItemCollection**](SubscriptionItemCollection.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

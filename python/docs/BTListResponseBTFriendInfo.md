@@ -1,10 +1,10 @@
-# BTListResponseBTFriendInfo
+# bt_list_response_bt_friend_info.BTListResponseBTFriendInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTFriendInfo]**](BTFriendInfo.md) |  | [optional] 
+**items** | [**[bt_friend_info.BTFriendInfo]**](BTFriendInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

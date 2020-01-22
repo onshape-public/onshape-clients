@@ -1,11 +1,11 @@
-# BTIdentityInfo
+# bt_identity_info.BTIdentityInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**team** | [**bt_team_summary_info.BTTeamSummaryInfo**](BTTeamSummaryInfo.md) |  | [optional] 
 **identity_type** | **int** |  | [optional] 
-**user** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
-**team** | [**BTTeamSummaryInfo**](BTTeamSummaryInfo.md) |  | [optional] 
+**user** | [**bt_user_summary_info.BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

@@ -1,4 +1,4 @@
-# BTEncodedConfigurationInfo
+# bt_encoded_configuration_info.BTEncodedConfigurationInfo
 
 ## Properties
 Name | Type | Description | Notes

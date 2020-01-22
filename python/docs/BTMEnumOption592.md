@@ -1,4 +1,4 @@
-# BTMEnumOption592
+# btm_enum_option592.BTMEnumOption592
 
 ## Properties
 Name | Type | Description | Notes

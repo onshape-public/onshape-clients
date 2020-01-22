@@ -1,4 +1,4 @@
-# BTMFeatureQueryWithOccurrenceAllOf
+# btm_feature_query_with_occurrence_all_of.BTMFeatureQueryWithOccurrenceAllOf
 
 ## Properties
 Name | Type | Description | Notes

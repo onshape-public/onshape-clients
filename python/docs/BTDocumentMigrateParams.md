@@ -1,4 +1,4 @@
-# BTDocumentMigrateParams
+# bt_document_migrate_params.BTDocumentMigrateParams
 
 ## Properties
 Name | Type | Description | Notes

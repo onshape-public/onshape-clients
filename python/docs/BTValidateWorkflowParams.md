@@ -1,4 +1,4 @@
-# BTValidateWorkflowParams
+# bt_validate_workflow_params.BTValidateWorkflowParams
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTUpgradeOnDemandParams
+# bt_upgrade_on_demand_params.BTUpgradeOnDemandParams
 
 ## Properties
 Name | Type | Description | Notes

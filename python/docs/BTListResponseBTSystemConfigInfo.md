@@ -1,10 +1,10 @@
-# BTListResponseBTSystemConfigInfo
+# bt_list_response_bt_system_config_info.BTListResponseBTSystemConfigInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTSystemConfigInfo]**](BTSystemConfigInfo.md) |  | [optional] 
+**items** | [**[bt_system_config_info.BTSystemConfigInfo]**](BTSystemConfigInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

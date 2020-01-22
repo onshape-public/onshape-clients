@@ -1,4 +1,4 @@
-# BTStringFormatBlockPattern1755AllOf
+# bt_string_format_block_pattern1755_all_of.BTStringFormatBlockPattern1755AllOf
 
 ## Properties
 Name | Type | Description | Notes

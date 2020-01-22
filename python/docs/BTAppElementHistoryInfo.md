@@ -1,9 +1,9 @@
-# BTAppElementHistoryInfo
+# bt_app_element_history_info.BTAppElementHistoryInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changes** | [**list[BTAppElementHistoryEntryInfo]**](BTAppElementHistoryEntryInfo.md) |  | [optional] 
+**changes** | [**[bt_app_element_history_entry_info.BTAppElementHistoryEntryInfo]**](BTAppElementHistoryEntryInfo.md) |  | [optional] 
 **error_code** | **int** |  | [optional] 
 **error_value** | **str** |  | [optional] 
 **error_description** | **str** |  | [optional] 

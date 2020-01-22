@@ -1,4 +1,4 @@
-# BTBetaCapabilityMetricsInfo
+# bt_beta_capability_metrics_info.BTBetaCapabilityMetricsInfo
 
 ## Properties
 Name | Type | Description | Notes

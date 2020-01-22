@@ -1,4 +1,4 @@
-# BTAPIApplicationDeprecateParams
+# btapi_application_deprecate_params.BTAPIApplicationDeprecateParams
 
 ## Properties
 Name | Type | Description | Notes

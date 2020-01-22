@@ -1,10 +1,10 @@
-# BTParameterSpecReferenceWithConfiguration2950AllOf
+# bt_parameter_spec_reference_with_configuration2950_all_of.BTParameterSpecReferenceWithConfiguration2950AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **max_number_of_picks** | **int** |  | [optional] 
-**allowed_insertable_types** | **list[str]** |  | [optional] 
+**allowed_insertable_types** | **[str]** |  | [optional] 
 **allow_assemblies** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

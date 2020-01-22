@@ -1,10 +1,10 @@
-# BTListResponseBTPurchaseInfo
+# bt_list_response_bt_purchase_info.BTListResponseBTPurchaseInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**items** | [**[bt_purchase_info.BTPurchaseInfo]**](BTPurchaseInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
-**items** | [**list[BTPurchaseInfo]**](BTPurchaseInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

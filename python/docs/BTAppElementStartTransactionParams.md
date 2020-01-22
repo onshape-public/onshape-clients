@@ -1,4 +1,4 @@
-# BTAppElementStartTransactionParams
+# bt_app_element_start_transaction_params.BTAppElementStartTransactionParams
 
 ## Properties
 Name | Type | Description | Notes

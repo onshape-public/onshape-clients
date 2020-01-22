@@ -1,12 +1,12 @@
-# BTCacheItemInfo
+# bt_cache_item_info.BTCacheItemInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cache_name** | **str** |  | [optional] 
 **cache_key** | **str** |  | [optional] 
-**last_modified_at** | **int** |  | [optional] 
 **cached** | **bool** |  | [optional] 
+**last_modified_at** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

@@ -1,4 +1,4 @@
-# Plan
+# plan.Plan
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **interval** | **str** |  | [optional] 
 **interval_count** | **int** |  | [optional] 
 **livemode** | **bool** |  | [optional] 
-**metadata** | **dict(str, str)** |  | [optional] 
+**metadata** | **{str: (str,)}** |  | [optional] 
 **name** | **str** |  | [optional] 
 **statement_descriptor** | **str** |  | [optional] 
 **trial_period_days** | **int** |  | [optional] 

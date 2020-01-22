@@ -1,10 +1,10 @@
-# BTListResponseBTInAppMessageInfo
+# bt_list_response_bt_in_app_message_info.BTListResponseBTInAppMessageInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTInAppMessageInfo]**](BTInAppMessageInfo.md) |  | [optional] 
+**items** | [**[bt_in_app_message_info.BTInAppMessageInfo]**](BTInAppMessageInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

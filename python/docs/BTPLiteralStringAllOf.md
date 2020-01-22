@@ -1,4 +1,4 @@
-# BTPLiteralStringAllOf
+# btp_literal_string_all_of.BTPLiteralStringAllOf
 
 ## Properties
 Name | Type | Description | Notes

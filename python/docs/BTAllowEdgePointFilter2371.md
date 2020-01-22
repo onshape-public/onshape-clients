@@ -1,4 +1,4 @@
-# BTAllowEdgePointFilter2371
+# bt_allow_edge_point_filter2371.BTAllowEdgePointFilter2371
 
 ## Properties
 Name | Type | Description | Notes

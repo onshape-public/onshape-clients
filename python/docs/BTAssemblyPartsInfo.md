@@ -1,4 +1,4 @@
-# BTAssemblyPartsInfo
+# bt_assembly_parts_info.BTAssemblyPartsInfo
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **part_id** | **str** |  | [optional] 
 **standard_content** | **bool** |  | [optional] 
 **body_type** | **str** |  | [optional] 
+**revision** | **str** |  | [optional] 
+**document_microversion** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**revision** | **str** |  | [optional] 
-**document_microversion** | **str** |  | [optional] 
 **full_configuration** | **str** |  | [optional] 
 **document_version** | **str** |  | [optional] 
 

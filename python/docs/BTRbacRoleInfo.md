@@ -1,10 +1,10 @@
-# BTRbacRoleInfo
+# bt_rbac_role_info.BTRbacRoleInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
 **predefined_role** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 

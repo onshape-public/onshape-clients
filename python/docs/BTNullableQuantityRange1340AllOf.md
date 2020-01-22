@@ -1,4 +1,4 @@
-# BTNullableQuantityRange1340AllOf
+# bt_nullable_quantity_range1340_all_of.BTNullableQuantityRange1340AllOf
 
 ## Properties
 Name | Type | Description | Notes

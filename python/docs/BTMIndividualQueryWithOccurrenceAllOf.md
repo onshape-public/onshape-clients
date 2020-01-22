@@ -1,4 +1,4 @@
-# BTMIndividualQueryWithOccurrenceAllOf
+# btm_individual_query_with_occurrence_all_of.BTMIndividualQueryWithOccurrenceAllOf
 
 ## Properties
 Name | Type | Description | Notes

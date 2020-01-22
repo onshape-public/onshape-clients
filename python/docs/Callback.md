@@ -1,9 +1,9 @@
-# Callback
+# callback.Callback
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**extensions** | **dict(str, object)** |  | [optional] 
+**extensions** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 **getref** | **str** |  | [optional] 
 **empty** | **bool** |  | [optional] 
 

@@ -1,9 +1,9 @@
-# BTPLValueVarReferenceAllOf
+# btpl_value_var_reference_all_of.BTPLValueVarReferenceAllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | [**BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
+**name** | [**btp_identifier.BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

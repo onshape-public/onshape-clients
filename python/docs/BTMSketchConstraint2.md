@@ -1,4 +1,4 @@
-# BTMSketchConstraint2
+# btm_sketch_constraint2.BTMSketchConstraint2
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **offset_distance2** | **float** |  | [optional] 
 **has_pierce_parameter** | **bool** |  | [optional] 
 **pierce_parameter** | **float** |  | [optional] 
-**help_parameters** | **list[float]** |  | [optional] 
-**parameters** | [**list[BTMParameter1]**](BTMParameter1.md) |  | [optional] 
+**help_parameters** | **[float]** |  | [optional] 
+**parameters** | [**[btm_parameter1.BTMParameter1]**](BTMParameter1.md) |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 

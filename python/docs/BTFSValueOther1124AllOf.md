@@ -1,4 +1,4 @@
-# BTFSValueOther1124AllOf
+# btfs_value_other1124_all_of.BTFSValueOther1124AllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTEntityTypeFilter124
+# bt_entity_type_filter124.BTEntityTypeFilter124
 
 ## Properties
 Name | Type | Description | Notes

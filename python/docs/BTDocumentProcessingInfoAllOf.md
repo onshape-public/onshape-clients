@@ -1,4 +1,4 @@
-# BTDocumentProcessingInfoAllOf
+# bt_document_processing_info_all_of.BTDocumentProcessingInfoAllOf
 
 ## Properties
 Name | Type | Description | Notes

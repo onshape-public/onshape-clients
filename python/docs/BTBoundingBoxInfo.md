@@ -1,4 +1,4 @@
-# BTBoundingBoxInfo
+# bt_bounding_box_info.BTBoundingBoxInfo
 
 ## Properties
 Name | Type | Description | Notes

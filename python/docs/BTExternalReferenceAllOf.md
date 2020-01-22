@@ -1,4 +1,4 @@
-# BTExternalReferenceAllOf
+# bt_external_reference_all_of.BTExternalReferenceAllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTDocumentWithVersionId
+# bt_document_with_version_id.BTDocumentWithVersionId
 
 ## Properties
 Name | Type | Description | Notes

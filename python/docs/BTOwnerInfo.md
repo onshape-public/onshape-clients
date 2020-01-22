@@ -1,4 +1,4 @@
-# BTOwnerInfo
+# bt_owner_info.BTOwnerInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTStandardContentCustomParameterDefinitionId
+# bt_standard_content_custom_parameter_definition_id.BTStandardContentCustomParameterDefinitionId
 
 ## Properties
 Name | Type | Description | Notes

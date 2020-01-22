@@ -1,24 +1,24 @@
-# BTTeamInfo
+# bt_team_info.BTTeamInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **predefined_team** | **int** |  | [optional] 
 **active** | **bool** |  | [optional] 
+**is_enterprise_owned** | **bool** |  | [optional] 
+**created_at** | **datetime** |  | [optional] 
+**created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
+**modified_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
+**project_id** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
+**modified_at** | **datetime** |  | [optional] 
 **tree_href** | **str** |  | [optional] 
 **is_mutable** | **bool** |  | [optional] 
 **resource_type** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**modified_at** | **datetime** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
-**created_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
-**modified_by** | [**BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
-**project_id** | **str** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **is_container** | **bool** |  | [optional] 
-**is_enterprise_owned** | **bool** |  | [optional] 
 **has_pending_owner** | **bool** |  | [optional] 
-**owner** | [**BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
+**owner** | [**bt_owner_info.BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

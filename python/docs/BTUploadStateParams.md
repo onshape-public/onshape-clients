@@ -1,4 +1,4 @@
-# BTUploadStateParams
+# bt_upload_state_params.BTUploadStateParams
 
 ## Properties
 Name | Type | Description | Notes

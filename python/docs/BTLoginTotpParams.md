@@ -1,4 +1,4 @@
-# BTLoginTotpParams
+# bt_login_totp_params.BTLoginTotpParams
 
 ## Properties
 Name | Type | Description | Notes

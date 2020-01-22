@@ -1,10 +1,10 @@
-# BTListResponseBTStandardContentHierarchyInfo
+# bt_list_response_bt_standard_content_hierarchy_info.BTListResponseBTStandardContentHierarchyInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTStandardContentHierarchyInfo]**](BTStandardContentHierarchyInfo.md) |  | [optional] 
+**items** | [**[bt_standard_content_hierarchy_info.BTStandardContentHierarchyInfo]**](BTStandardContentHierarchyInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

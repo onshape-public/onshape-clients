@@ -1,4 +1,4 @@
-# BTFlatSheetMetalFilter3018AllOf
+# bt_flat_sheet_metal_filter3018_all_of.BTFlatSheetMetalFilter3018AllOf
 
 ## Properties
 Name | Type | Description | Notes

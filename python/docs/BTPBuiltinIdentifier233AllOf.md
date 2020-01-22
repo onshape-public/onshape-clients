@@ -1,4 +1,4 @@
-# BTPBuiltinIdentifier233AllOf
+# btp_builtin_identifier233_all_of.BTPBuiltinIdentifier233AllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTUpdateWorkflowParams
+# bt_update_workflow_params.BTUpdateWorkflowParams
 
 ## Properties
 Name | Type | Description | Notes

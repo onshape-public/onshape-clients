@@ -1,4 +1,4 @@
-# BTMParameterReference2434AllOf
+# btm_parameter_reference2434_all_of.BTMParameterReference2434AllOf
 
 ## Properties
 Name | Type | Description | Notes

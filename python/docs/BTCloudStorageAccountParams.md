@@ -1,4 +1,4 @@
-# BTCloudStorageAccountParams
+# bt_cloud_storage_account_params.BTCloudStorageAccountParams
 
 ## Properties
 Name | Type | Description | Notes

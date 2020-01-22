@@ -1,4 +1,4 @@
-# BTBulkDocumentUpdateParams
+# bt_bulk_document_update_params.BTBulkDocumentUpdateParams
 
 ## Properties
 Name | Type | Description | Notes

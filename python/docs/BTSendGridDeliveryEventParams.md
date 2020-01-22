@@ -1,4 +1,4 @@
-# BTSendGridDeliveryEventParams
+# bt_send_grid_delivery_event_params.BTSendGridDeliveryEventParams
 
 ## Properties
 Name | Type | Description | Notes

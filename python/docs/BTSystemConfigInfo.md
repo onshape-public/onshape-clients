@@ -1,4 +1,4 @@
-# BTSystemConfigInfo
+# bt_system_config_info.BTSystemConfigInfo
 
 ## Properties
 Name | Type | Description | Notes

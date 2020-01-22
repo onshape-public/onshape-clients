@@ -1,4 +1,4 @@
-# BTMArrayParameterItem1843
+# btm_array_parameter_item1843.BTMArrayParameterItem1843
 
 ## Properties
 Name | Type | Description | Notes

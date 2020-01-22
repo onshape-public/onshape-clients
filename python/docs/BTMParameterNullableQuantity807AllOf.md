@@ -1,4 +1,4 @@
-# BTMParameterNullableQuantity807AllOf
+# btm_parameter_nullable_quantity807_all_of.BTMParameterNullableQuantity807AllOf
 
 ## Properties
 Name | Type | Description | Notes

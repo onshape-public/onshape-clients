@@ -1,4 +1,4 @@
-# BTMicroversionInfo
+# bt_microversion_info.BTMicroversionInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTOccurrence74
+# bt_occurrence74.BTOccurrence74
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **occurrence_without_tail** | [**BTOccurrence74**](BTOccurrence74.md) |  | [optional] 
 **pattern_descendant** | **bool** |  | [optional] 
 **parent** | [**BTOccurrence74**](BTOccurrence74.md) |  | [optional] 
-**path** | **list[str]** |  | [optional] 
+**path** | **[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

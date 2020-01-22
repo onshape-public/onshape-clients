@@ -1,4 +1,4 @@
-# NextRecurringCharge
+# next_recurring_charge.NextRecurringCharge
 
 ## Properties
 Name | Type | Description | Notes

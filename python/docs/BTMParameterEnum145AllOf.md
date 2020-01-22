@@ -1,4 +1,4 @@
-# BTMParameterEnum145AllOf
+# btm_parameter_enum145_all_of.BTMParameterEnum145AllOf
 
 ## Properties
 Name | Type | Description | Notes

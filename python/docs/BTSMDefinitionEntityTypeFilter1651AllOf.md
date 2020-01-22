@@ -1,4 +1,4 @@
-# BTSMDefinitionEntityTypeFilter1651AllOf
+# btsm_definition_entity_type_filter1651_all_of.BTSMDefinitionEntityTypeFilter1651AllOf
 
 ## Properties
 Name | Type | Description | Notes

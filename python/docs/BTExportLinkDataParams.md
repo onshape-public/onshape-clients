@@ -1,4 +1,4 @@
-# BTExportLinkDataParams
+# bt_export_link_data_params.BTExportLinkDataParams
 
 ## Properties
 Name | Type | Description | Notes

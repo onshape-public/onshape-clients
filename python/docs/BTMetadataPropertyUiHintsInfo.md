@@ -1,4 +1,4 @@
-# BTMetadataPropertyUiHintsInfo
+# bt_metadata_property_ui_hints_info.BTMetadataPropertyUiHintsInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTPIdentifierAllOf
+# btp_identifier_all_of.BTPIdentifierAllOf
 
 ## Properties
 Name | Type | Description | Notes

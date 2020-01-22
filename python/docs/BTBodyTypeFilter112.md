@@ -1,4 +1,4 @@
-# BTBodyTypeFilter112
+# bt_body_type_filter112.BTBodyTypeFilter112
 
 ## Properties
 Name | Type | Description | Notes

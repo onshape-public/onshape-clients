@@ -1,9 +1,9 @@
-# BTUpdateFeaturesCall1748AllOf
+# bt_update_features_call1748_all_of.BTUpdateFeaturesCall1748AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**features** | [**list[BTMFeature134]**](BTMFeature134.md) |  | [optional] 
+**features** | [**[btm_feature134.BTMFeature134]**](BTMFeature134.md) |  | [optional] 
 **update_suppression_attributes** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

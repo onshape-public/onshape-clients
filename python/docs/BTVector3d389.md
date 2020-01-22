@@ -1,4 +1,4 @@
-# BTVector3d389
+# bt_vector3d389.BTVector3d389
 
 ## Properties
 Name | Type | Description | Notes

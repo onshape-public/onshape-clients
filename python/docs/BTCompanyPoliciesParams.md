@@ -1,11 +1,11 @@
-# BTCompanyPoliciesParams
+# bt_company_policies_params.BTCompanyPoliciesParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **require_totp** | **bool** |  | [optional] 
 **use_light_ui** | **bool** |  | [optional] 
-**integrations** | [**IntegrationsParams**](IntegrationsParams.md) |  | [optional] 
+**integrations** | [**integrations_params.IntegrationsParams**](IntegrationsParams.md) |  | [optional] 
 **require_approved_drawing_templates** | **bool** |  | [optional] 
 **approved_drawing_templates_document_id** | **str** |  | [optional] 
 **add_company_owned_libraries_in_user_account** | **bool** |  | [optional] 
@@ -39,8 +39,8 @@ Name | Type | Description | Notes
 **require_peer_review** | **bool** |  | [optional] 
 **drawing_can_duplicate_part_number** | **bool** |  | [optional] 
 **enabled_active_multiple_workflows** | **bool** |  | [optional] 
-**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 **use_company_features_toolbar** | **bool** |  | [optional] 
+**only_admins_can_mark_objects_as_not_revision_managed** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

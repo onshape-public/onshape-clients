@@ -1,9 +1,9 @@
-# BTPSpace10
+# btp_space10.BTPSpace10
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lines** | **list[str]** |  | [optional] 
+**lines** | **[str]** |  | [optional] 
 **text** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

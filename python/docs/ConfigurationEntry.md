@@ -1,4 +1,4 @@
-# ConfigurationEntry
+# configuration_entry.ConfigurationEntry
 
 ## Properties
 Name | Type | Description | Notes

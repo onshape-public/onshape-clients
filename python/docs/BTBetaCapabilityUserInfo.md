@@ -1,4 +1,4 @@
-# BTBetaCapabilityUserInfo
+# bt_beta_capability_user_info.BTBetaCapabilityUserInfo
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,17 +8,17 @@ Name | Type | Description | Notes
 **approved_at** | **datetime** |  | [optional] 
 **removed_at** | **datetime** |  | [optional] 
 **capability_state** | **int** |  | [optional] 
-**is_guest** | **bool** |  | [optional] 
-**is_light** | **bool** |  | [optional] 
-**global_permissions** | [**GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
-**company** | [**BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
+**company** | [**bt_company_summary_info.BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
+**is_guest** | **bool** |  | [optional] 
+**is_light** | **bool** |  | [optional] 
+**global_permissions** | [**global_permission_info.GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
 **last_login_time** | **datetime** |  | [optional] 
 **source** | **int** |  | [optional] 
-**image** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
+**image** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

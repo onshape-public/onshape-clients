@@ -1,4 +1,4 @@
-# BTMMateConnector66AllOf
+# btm_mate_connector66_all_of.BTMMateConnector66AllOf
 
 ## Properties
 Name | Type | Description | Notes

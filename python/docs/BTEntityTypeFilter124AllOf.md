@@ -1,4 +1,4 @@
-# BTEntityTypeFilter124AllOf
+# bt_entity_type_filter124_all_of.BTEntityTypeFilter124AllOf
 
 ## Properties
 Name | Type | Description | Notes

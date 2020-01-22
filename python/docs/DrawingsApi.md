@@ -4,67 +4,12 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_translator_formats2**](DrawingsApi.md#get_translator_formats2) | **GET** /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats | 
-[**translate_format4**](DrawingsApi.md#translate_format4) | **POST** /api/drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Drawing translation
+[**create_drawing_translation**](DrawingsApi.md#create_drawing_translation) | **POST** /api/drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Drawing translation
+[**get_drawing_translator_formats**](DrawingsApi.md#get_drawing_translator_formats) | **GET** /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats | 
 
 
-# **get_translator_formats2**
-> list[BTModelFormatInfo] get_translator_formats2(did, wid, eid)
-
-
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from onshape_client.oas.rest import ApiException
-from pprint import pprint
-
-# Create an instance of the API class
-api_instance = onshape_client.oas.DrawingsApi()
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-
-try:
-    api_response = api_instance.get_translator_formats2(did, wid, eid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DrawingsApi->get_translator_formats2: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **eid** | **str**|  | 
-
-### Return type
-
-[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **translate_format4**
-> BTTranslationRequestInfo translate_format4(did, wv, wvid, eid, bt_translate_format_params)
+# **create_drawing_translation**
+> bt_translation_request_info.BTTranslationRequestInfo create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
 
 Create Drawing translation
 
@@ -75,7 +20,6 @@ Create Drawing translation
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -89,29 +33,30 @@ did = 'did_example' # str |
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 eid = 'eid_example' # str | 
-bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # BTTranslateFormatParams | 
+bt_translate_format_params_bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # bt_translate_format_params.BTTranslateFormatParams | 
 
+# example passing only required values which don't have defaults set
 try:
     # Create Drawing translation
-    api_response = api_instance.translate_format4(did, wv, wvid, eid, bt_translate_format_params)
+    api_response = api_instance.create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
     pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DrawingsApi->translate_format4: %s\n" % e)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling DrawingsApi->create_drawing_translation: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **eid** | **str**|  | 
- **bt_translate_format_params** | [**BTTranslateFormatParams**](BTTranslateFormatParams.md)|  | 
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **eid** | **str**|  |
+ **bt_translate_format_params_bt_translate_format_params** | [**bt_translate_format_params.BTTranslateFormatParams**](BTTranslateFormatParams.md)|  |
 
 ### Return type
 
-[**BTTranslationRequestInfo**](BTTranslationRequestInfo.md)
+[**bt_translation_request_info.BTTranslationRequestInfo**](BTTranslationRequestInfo.md)
 
 ### Authorization
 
@@ -120,6 +65,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_drawing_translator_formats**
+> [bt_model_format_info.BTModelFormatInfo] get_drawing_translator_formats(did, wid, eid)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from pprint import pprint
+
+# Create an instance of the API class
+api_instance = onshape_client.oas.DrawingsApi()
+did = 'did_example' # str | 
+wid = 'wid_example' # str | 
+eid = 'eid_example' # str | 
+
+# example passing only required values which don't have defaults set
+try:
+    api_response = api_instance.get_drawing_translator_formats(did, wid, eid)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling DrawingsApi->get_drawing_translator_formats: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  |
+ **wid** | **str**|  |
+ **eid** | **str**|  |
+
+### Return type
+
+[**[bt_model_format_info.BTModelFormatInfo]**](BTModelFormatInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details

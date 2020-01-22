@@ -1,10 +1,10 @@
-# BTUserSettingsParams
+# bt_user_settings_params.BTUserSettingsParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**substitute_approvers** | [**list[BTSubstituteApproverParams]**](BTSubstituteApproverParams.md) |  | [optional] 
-**key_values** | **dict(str, str)** |  | [optional] 
+**key_values** | **{str: (str,)}** |  | [optional] 
+**substitute_approvers** | [**[bt_substitute_approver_params.BTSubstituteApproverParams]**](BTSubstituteApproverParams.md) |  | [optional] 
 **value** | **str** |  | [optional] 
 **key** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

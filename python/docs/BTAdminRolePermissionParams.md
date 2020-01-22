@@ -1,4 +1,4 @@
-# BTAdminRolePermissionParams
+# bt_admin_role_permission_params.BTAdminRolePermissionParams
 
 ## Properties
 Name | Type | Description | Notes

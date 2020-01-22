@@ -1,4 +1,4 @@
-# BTTextStrokeFilter461AllOf
+# bt_text_stroke_filter461_all_of.BTTextStrokeFilter461AllOf
 
 ## Properties
 Name | Type | Description | Notes

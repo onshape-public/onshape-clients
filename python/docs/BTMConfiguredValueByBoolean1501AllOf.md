@@ -1,4 +1,4 @@
-# BTMConfiguredValueByBoolean1501AllOf
+# btm_configured_value_by_boolean1501_all_of.BTMConfiguredValueByBoolean1501AllOf
 
 ## Properties
 Name | Type | Description | Notes

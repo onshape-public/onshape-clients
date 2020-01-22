@@ -1,4 +1,4 @@
-# BTCapableInfo
+# bt_capable_info.BTCapableInfo
 
 ## Properties
 Name | Type | Description | Notes

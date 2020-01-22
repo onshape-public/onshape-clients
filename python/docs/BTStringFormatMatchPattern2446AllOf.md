@@ -1,4 +1,4 @@
-# BTStringFormatMatchPattern2446AllOf
+# bt_string_format_match_pattern2446_all_of.BTStringFormatMatchPattern2446AllOf
 
 ## Properties
 Name | Type | Description | Notes

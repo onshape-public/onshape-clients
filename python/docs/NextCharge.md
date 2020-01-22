@@ -1,4 +1,4 @@
-# NextCharge
+# next_charge.NextCharge
 
 ## Properties
 Name | Type | Description | Notes

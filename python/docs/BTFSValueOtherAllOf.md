@@ -1,4 +1,4 @@
-# BTFSValueOtherAllOf
+# btfs_value_other_all_of.BTFSValueOtherAllOf
 
 ## Properties
 Name | Type | Description | Notes

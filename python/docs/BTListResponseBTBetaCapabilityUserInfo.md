@@ -1,10 +1,10 @@
-# BTListResponseBTBetaCapabilityUserInfo
+# bt_list_response_bt_beta_capability_user_info.BTListResponseBTBetaCapabilityUserInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTBetaCapabilityUserInfo]**](BTBetaCapabilityUserInfo.md) |  | [optional] 
+**items** | [**[bt_beta_capability_user_info.BTBetaCapabilityUserInfo]**](BTBetaCapabilityUserInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

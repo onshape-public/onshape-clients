@@ -1,4 +1,4 @@
-# BTExternalReference1936AllOf
+# bt_external_reference1936_all_of.BTExternalReference1936AllOf
 
 ## Properties
 Name | Type | Description | Notes

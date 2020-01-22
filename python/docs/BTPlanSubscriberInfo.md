@@ -1,4 +1,4 @@
-# BTPlanSubscriberInfo
+# bt_plan_subscriber_info.BTPlanSubscriberInfo
 
 ## Properties
 Name | Type | Description | Notes

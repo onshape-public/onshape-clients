@@ -1,4 +1,4 @@
-# BTStringMinimumLengthPattern895AllOf
+# bt_string_minimum_length_pattern895_all_of.BTStringMinimumLengthPattern895AllOf
 
 ## Properties
 Name | Type | Description | Notes

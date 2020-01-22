@@ -1,12 +1,17 @@
-# BTAssemblyFeatureListResponse1174
+# bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**features** | [**list[BTMAssemblyFeature887]**](BTMAssemblyFeature887.md) |  | [optional] 
+**features** | [**[btm_assembly_feature887.BTMAssemblyFeature887]**](BTMAssemblyFeature887.md) |  | [optional] 
 **is_complete** | **bool** |  | [optional] 
-**feature_states** | [**dict(str, BTFeatureState1688)**](BTFeatureState1688.md) |  | [optional] 
+**feature_states** | [**{str: (bt_feature_state1688.BTFeatureState1688,)}**](BTFeatureState1688.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**source_microversion** | **str** |  | [optional] 
+**serialization_version** | **str** |  | [optional] 
+**library_version** | **int** |  | [optional] 
+**reject_microversion_skew** | **bool** |  | [optional] 
+**microversion_skew** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

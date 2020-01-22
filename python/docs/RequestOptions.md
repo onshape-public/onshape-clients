@@ -1,4 +1,4 @@
-# RequestOptions
+# request_options.RequestOptions
 
 ## Properties
 Name | Type | Description | Notes

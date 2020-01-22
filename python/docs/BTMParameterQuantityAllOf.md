@@ -1,10 +1,10 @@
-# BTMParameterQuantityAllOf
+# btm_parameter_quantity_all_of.BTMParameterQuantityAllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**units** | **str** |  | [optional] 
 **is_integer** | **bool** |  | [optional] 
+**units** | **str** |  | [optional] 
 **value** | **float** |  | [optional] 
 **expression** | **str** |  | [optional] 
 

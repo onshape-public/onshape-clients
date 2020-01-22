@@ -1,9 +1,9 @@
-# BTMIndividualQueryBase139
+# btm_individual_query_base139.BTMIndividualQueryBase139
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deterministic_ids** | **list[str]** |  | [optional] 
+**deterministic_ids** | **[str]** |  | [optional] 
 **deterministic_id_list** | [**BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **query_string** | **str** |  | [optional] 
 **query** | [**BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 

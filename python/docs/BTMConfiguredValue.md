@@ -1,10 +1,10 @@
-# BTMConfiguredValue
+# btm_configured_value.BTMConfiguredValue
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration_value_string** | **str** |  | [optional] 
-**value** | [**BTMParameter**](BTMParameter.md) |  | [optional] 
+**value** | [**btm_parameter.BTMParameter**](BTMParameter.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

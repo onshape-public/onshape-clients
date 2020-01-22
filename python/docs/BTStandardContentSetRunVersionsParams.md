@@ -1,4 +1,4 @@
-# BTStandardContentSetRunVersionsParams
+# bt_standard_content_set_run_versions_params.BTStandardContentSetRunVersionsParams
 
 ## Properties
 Name | Type | Description | Notes

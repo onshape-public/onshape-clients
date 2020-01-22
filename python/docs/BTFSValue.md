@@ -1,10 +1,10 @@
-# BTFSValue
+# btfs_value.BTFSValue
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value_object** | [**object**](.md) |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
+**value_object** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
 **type_tag** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

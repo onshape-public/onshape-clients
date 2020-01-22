@@ -1,4 +1,4 @@
-# BTTextObjectFilter1515
+# bt_text_object_filter1515.BTTextObjectFilter1515
 
 ## Properties
 Name | Type | Description | Notes

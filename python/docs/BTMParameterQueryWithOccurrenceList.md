@@ -1,10 +1,10 @@
-# BTMParameterQueryWithOccurrenceList
+# btm_parameter_query_with_occurrence_list.BTMParameterQueryWithOccurrenceList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**occurrences** | [**list[BTOccurrence]**](BTOccurrence.md) |  | [optional] 
-**queries** | [**list[BTMIndividualQueryWithOccurrenceBase]**](BTMIndividualQueryWithOccurrenceBase.md) |  | [optional] 
+**occurrences** | [**[bt_occurrence.BTOccurrence]**](BTOccurrence.md) |  | [optional] 
+**queries** | [**[btm_individual_query_with_occurrence_base.BTMIndividualQueryWithOccurrenceBase]**](BTMIndividualQueryWithOccurrenceBase.md) |  | [optional] 
 **parameter_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

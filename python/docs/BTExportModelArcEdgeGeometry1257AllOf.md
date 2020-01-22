@@ -1,4 +1,4 @@
-# BTExportModelArcEdgeGeometry1257AllOf
+# bt_export_model_arc_edge_geometry1257_all_of.BTExportModelArcEdgeGeometry1257AllOf
 
 ## Properties
 Name | Type | Description | Notes

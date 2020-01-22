@@ -1,4 +1,4 @@
-# BTActiveSheetMetalFilter2944
+# bt_active_sheet_metal_filter2944.BTActiveSheetMetalFilter2944
 
 ## Properties
 Name | Type | Description | Notes

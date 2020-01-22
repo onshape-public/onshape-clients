@@ -1,4 +1,4 @@
-# BTReleasePackageItemError
+# bt_release_package_item_error.BTReleasePackageItemError
 
 ## Properties
 Name | Type | Description | Notes

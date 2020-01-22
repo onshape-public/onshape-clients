@@ -1,4 +1,4 @@
-# BTMConfigurationParameterString872AllOf
+# btm_configuration_parameter_string872_all_of.BTMConfigurationParameterString872AllOf
 
 ## Properties
 Name | Type | Description | Notes

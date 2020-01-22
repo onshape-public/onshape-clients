@@ -1,4 +1,4 @@
-# BTAllowMeshGeometryFilter1026AllOf
+# bt_allow_mesh_geometry_filter1026_all_of.BTAllowMeshGeometryFilter1026AllOf
 
 ## Properties
 Name | Type | Description | Notes

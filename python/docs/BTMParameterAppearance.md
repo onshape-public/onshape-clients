@@ -1,9 +1,13 @@
-# BTMParameterAppearance
+# btm_parameter_appearance.BTMParameterAppearance
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**appearance** | [**BTGraphicsAppearance**](BTGraphicsAppearance.md) |  | [optional] 
+**appearance** | [**bt_graphics_appearance.BTGraphicsAppearance**](BTGraphicsAppearance.md) |  | [optional] 
+**parameter_id** | **str** |  | [optional] 
+**import_microversion** | **str** |  | [optional] 
+**node_id** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

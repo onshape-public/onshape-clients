@@ -1,4 +1,4 @@
-# Parameter
+# parameter.Parameter
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,11 +13,11 @@ Name | Type | Description | Notes
 **style** | **str** |  | [optional] 
 **explode** | **bool** |  | [optional] 
 **allow_reserved** | **bool** |  | [optional] 
-**schema** | [**Schema**](Schema.md) |  | [optional] 
-**examples** | [**dict(str, Example)**](Example.md) |  | [optional] 
-**example** | [**object**](.md) |  | [optional] 
-**content** | [**dict(str, MediaType)**](MediaType.md) |  | [optional] 
-**extensions** | **dict(str, object)** |  | [optional] 
+**schema** | [**schema.Schema**](Schema.md) |  | [optional] 
+**examples** | [**{str: (example.Example,)}**](Example.md) |  | [optional] 
+**example** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**content** | [**{str: (media_type.MediaType,)}**](MediaType.md) |  | [optional] 
+**extensions** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

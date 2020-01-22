@@ -1,4 +1,4 @@
-# VersionSpecs
+# version_specs.VersionSpecs
 
 ## Properties
 Name | Type | Description | Notes

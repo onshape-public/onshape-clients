@@ -1,4 +1,4 @@
-# BTMArrayParameterItem
+# btm_array_parameter_item.BTMArrayParameterItem
 
 ## Properties
 Name | Type | Description | Notes

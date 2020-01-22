@@ -1,4 +1,4 @@
-# BTMParameter
+# btm_parameter.BTMParameter
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,11 +1,11 @@
-# BTBetaCapabilityImportInfo
+# bt_beta_capability_import_info.BTBetaCapabilityImportInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**succeeded** | **list[str]** |  | [optional] 
-**existing** | **list[str]** |  | [optional] 
-**failed** | **list[str]** |  | [optional] 
+**succeeded** | **[str]** |  | [optional] 
+**failed** | **[str]** |  | [optional] 
+**existing** | **[str]** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

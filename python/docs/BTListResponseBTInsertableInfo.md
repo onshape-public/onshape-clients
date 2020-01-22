@@ -1,10 +1,10 @@
-# BTListResponseBTInsertableInfo
+# bt_list_response_bt_insertable_info.BTListResponseBTInsertableInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**items** | [**[bt_insertable_info.BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
-**items** | [**list[BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

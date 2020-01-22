@@ -1,4 +1,4 @@
-# BTAppElementCommitTransactionParams
+# bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams
 
 ## Properties
 Name | Type | Description | Notes

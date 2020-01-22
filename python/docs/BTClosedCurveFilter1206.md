@@ -1,4 +1,4 @@
-# BTClosedCurveFilter1206
+# bt_closed_curve_filter1206.BTClosedCurveFilter1206
 
 ## Properties
 Name | Type | Description | Notes

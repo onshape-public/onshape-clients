@@ -1,4 +1,4 @@
-# BTElementLocationParams
+# bt_element_location_params.BTElementLocationParams
 
 ## Properties
 Name | Type | Description | Notes

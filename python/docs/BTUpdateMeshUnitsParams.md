@@ -1,4 +1,4 @@
-# BTUpdateMeshUnitsParams
+# bt_update_mesh_units_params.BTUpdateMeshUnitsParams
 
 ## Properties
 Name | Type | Description | Notes

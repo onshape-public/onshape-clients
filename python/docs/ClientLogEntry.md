@@ -1,4 +1,4 @@
-# ClientLogEntry
+# client_log_entry.ClientLogEntry
 
 ## Properties
 Name | Type | Description | Notes

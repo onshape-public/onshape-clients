@@ -1,10 +1,10 @@
-# BTVector3d
+# bt_vector3d.BTVector3d
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**z** | **float** |  | [optional] 
 **x** | **float** |  | [optional] 
+**z** | **float** |  | [optional] 
 **y** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

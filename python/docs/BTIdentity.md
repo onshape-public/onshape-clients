@@ -1,4 +1,4 @@
-# BTIdentity
+# bt_identity.BTIdentity
 
 ## Properties
 Name | Type | Description | Notes

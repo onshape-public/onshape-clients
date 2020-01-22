@@ -1,18 +1,18 @@
-# BTWorkflowableTestObjectInfo
+# bt_workflowable_test_object_info.BTWorkflowableTestObjectInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**info** | **dict(str, str)** |  | [optional] 
-**description** | **str** |  | [optional] 
+**info** | **{str: (str,)}** |  | [optional] 
 **company_id** | **str** |  | [optional] 
+**workflow** | [**bt_workflow_snapshot_info.BTWorkflowSnapshotInfo**](BTWorkflowSnapshotInfo.md) |  | [optional] 
+**description** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**workflow** | [**BTWorkflowSnapshotInfo**](BTWorkflowSnapshotInfo.md) |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 
-**workflow_id** | [**BTPublishedWorkflowId**](BTPublishedWorkflowId.md) |  | [optional] 
+**workflow_id** | [**bt_published_workflow_id.BTPublishedWorkflowId**](BTPublishedWorkflowId.md) |  | [optional] 
 **name_as_property** | **str** |  | [optional] 
 **description_as_property** | **str** |  | [optional] 
-**properties** | [**list[BTWorkflowPropertyInfo]**](BTWorkflowPropertyInfo.md) |  | [optional] 
+**properties** | [**[bt_workflow_property_info.BTWorkflowPropertyInfo]**](BTWorkflowPropertyInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

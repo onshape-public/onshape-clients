@@ -1,4 +1,4 @@
-# BTObjectId
+# bt_object_id.BTObjectId
 
 ## Properties
 Name | Type | Description | Notes

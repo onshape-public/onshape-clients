@@ -1,4 +1,4 @@
-# BTAllowFlattenedGeometryFilter2140AllOf
+# bt_allow_flattened_geometry_filter2140_all_of.BTAllowFlattenedGeometryFilter2140AllOf
 
 ## Properties
 Name | Type | Description | Notes

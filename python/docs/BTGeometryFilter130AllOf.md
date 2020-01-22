@@ -1,4 +1,4 @@
-# BTGeometryFilter130AllOf
+# bt_geometry_filter130_all_of.BTGeometryFilter130AllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
-# BTCloudStorageAccountListInfo
+# bt_cloud_storage_account_list_info.BTCloudStorageAccountListInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTCloudStorageAccountInfo]**](BTCloudStorageAccountInfo.md) |  | [optional] 
+**items** | [**[bt_cloud_storage_account_info.BTCloudStorageAccountInfo]**](BTCloudStorageAccountInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

@@ -1,13 +1,13 @@
-# SubscriptionItemCollection
+# subscription_item_collection.SubscriptionItemCollection
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**list[SubscriptionItem]**](SubscriptionItem.md) |  | [optional] 
+**data** | [**[subscription_item.SubscriptionItem]**](SubscriptionItem.md) |  | [optional] 
 **total_count** | **int** |  | [optional] 
 **has_more** | **bool** |  | [optional] 
-**request_options** | [**RequestOptions**](RequestOptions.md) |  | [optional] 
-**request_params** | **dict(str, object)** |  | [optional] 
+**request_options** | [**request_options.RequestOptions**](RequestOptions.md) |  | [optional] 
+**request_params** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 **url** | **str** |  | [optional] 
 **count** | **int** |  | [optional] 
 

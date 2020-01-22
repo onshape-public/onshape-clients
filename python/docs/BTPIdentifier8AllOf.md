@@ -1,4 +1,4 @@
-# BTPIdentifier8AllOf
+# btp_identifier8_all_of.BTPIdentifier8AllOf
 
 ## Properties
 Name | Type | Description | Notes

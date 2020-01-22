@@ -1,4 +1,4 @@
-# BTMDatabaseParameter2229AllOf
+# btm_database_parameter2229_all_of.BTMDatabaseParameter2229AllOf
 
 ## Properties
 Name | Type | Description | Notes

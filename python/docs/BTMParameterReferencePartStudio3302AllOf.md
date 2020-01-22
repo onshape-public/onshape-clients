@@ -1,9 +1,9 @@
-# BTMParameterReferencePartStudio3302AllOf
+# btm_parameter_reference_part_studio3302_all_of.BTMParameterReferencePartStudio3302AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**part_query** | [**BTMParameterQueryList148**](BTMParameterQueryList148.md) |  | [optional] 
+**part_query** | [**btm_parameter_query_list148.BTMParameterQueryList148**](BTMParameterQueryList148.md) |  | [optional] 
 **block_build_function_access** | **bool** |  | [optional] 
 **standard_content_parameters_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

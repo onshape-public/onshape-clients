@@ -1,4 +1,4 @@
-# BTFeatureTypeFilter962AllOf
+# bt_feature_type_filter962_all_of.BTFeatureTypeFilter962AllOf
 
 ## Properties
 Name | Type | Description | Notes

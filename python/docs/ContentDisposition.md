@@ -1,10 +1,10 @@
-# ContentDisposition
+# content_disposition.ContentDisposition
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** |  | [optional] 
-**parameters** | **dict(str, str)** |  | [optional] 
+**parameters** | **{str: (str,)}** |  | [optional] 
 **file_name** | **str** |  | [optional] 
 **creation_date** | **datetime** |  | [optional] 
 **modification_date** | **datetime** |  | [optional] 

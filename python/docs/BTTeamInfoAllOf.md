@@ -1,4 +1,4 @@
-# BTTeamInfoAllOf
+# bt_team_info_all_of.BTTeamInfoAllOf
 
 ## Properties
 Name | Type | Description | Notes

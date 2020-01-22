@@ -1,4 +1,4 @@
-# BTFeatureTypeFilter962
+# bt_feature_type_filter962.BTFeatureTypeFilter962
 
 ## Properties
 Name | Type | Description | Notes

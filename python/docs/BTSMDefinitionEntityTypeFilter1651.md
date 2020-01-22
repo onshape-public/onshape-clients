@@ -1,4 +1,4 @@
-# BTSMDefinitionEntityTypeFilter1651
+# btsm_definition_entity_type_filter1651.BTSMDefinitionEntityTypeFilter1651
 
 ## Properties
 Name | Type | Description | Notes

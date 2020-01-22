@@ -1,12 +1,12 @@
-# Server
+# server.Server
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**variables** | [**dict(str, ServerVariable)**](ServerVariable.md) |  | [optional] 
-**extensions** | **dict(str, object)** |  | [optional] 
+**variables** | [**{str: (server_variable.ServerVariable,)}**](ServerVariable.md) |  | [optional] 
+**extensions** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

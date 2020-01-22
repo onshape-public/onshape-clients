@@ -1,4 +1,4 @@
-# BTCompanyTransferParams
+# bt_company_transfer_params.BTCompanyTransferParams
 
 ## Properties
 Name | Type | Description | Notes

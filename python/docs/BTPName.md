@@ -1,21 +1,21 @@
-# BTPName
+# btp_name.BTPName
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**import_microversion** | **str** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
+**import_microversion** | **str** |  | [optional] 
 **for_export** | **bool** |  | [optional] 
 **global_namespace** | **bool** |  | [optional] 
-**identifier** | [**BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
-**namespace** | [**list[BTPIdentifier]**](BTPIdentifier.md) |  | [optional] 
+**identifier** | [**btp_identifier.BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
+**namespace** | [**[btp_identifier.BTPIdentifier]**](BTPIdentifier.md) |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
-**space_before** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_before** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_after** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
-**space_after** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

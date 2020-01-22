@@ -1,4 +1,4 @@
-# BTAutoPartNumberingSchemeParams
+# bt_auto_part_numbering_scheme_params.BTAutoPartNumberingSchemeParams
 
 ## Properties
 Name | Type | Description | Notes

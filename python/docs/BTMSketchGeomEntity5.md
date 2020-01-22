@@ -1,11 +1,11 @@
-# BTMSketchGeomEntity5
+# btm_sketch_geom_entity5.BTMSketchGeomEntity5
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**control_box_ids** | **list[str]** |  | [optional] 
+**control_box_ids** | **[str]** |  | [optional] 
 **is_construction** | **bool** |  | [optional] 
-**parameters** | [**list[BTMParameter1]**](BTMParameter1.md) |  | [optional] 
+**parameters** | [**[btm_parameter1.BTMParameter1]**](BTMParameter1.md) |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 

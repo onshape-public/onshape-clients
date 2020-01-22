@@ -1,4 +1,4 @@
-# BTTextStrokeFilter461
+# bt_text_stroke_filter461.BTTextStrokeFilter461
 
 ## Properties
 Name | Type | Description | Notes

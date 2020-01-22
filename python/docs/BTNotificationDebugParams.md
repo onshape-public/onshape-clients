@@ -1,4 +1,4 @@
-# BTNotificationDebugParams
+# bt_notification_debug_params.BTNotificationDebugParams
 
 ## Properties
 Name | Type | Description | Notes

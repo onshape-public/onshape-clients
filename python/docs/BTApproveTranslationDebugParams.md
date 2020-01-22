@@ -1,4 +1,4 @@
-# BTApproveTranslationDebugParams
+# bt_approve_translation_debug_params.BTApproveTranslationDebugParams
 
 ## Properties
 Name | Type | Description | Notes

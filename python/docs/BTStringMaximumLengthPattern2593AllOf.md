@@ -1,4 +1,4 @@
-# BTStringMaximumLengthPattern2593AllOf
+# bt_string_maximum_length_pattern2593_all_of.BTStringMaximumLengthPattern2593AllOf
 
 ## Properties
 Name | Type | Description | Notes

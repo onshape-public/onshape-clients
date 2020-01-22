@@ -1,4 +1,4 @@
-# BTInAppMessageContentItem
+# bt_in_app_message_content_item.BTInAppMessageContentItem
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **height** | **int** |  | [optional] 
 **width** | **int** |  | [optional] 
 **player** | **str** |  | [optional] 
-**pause_points** | **list[float]** |  | [optional] 
+**pause_points** | **[float]** |  | [optional] 
 **position** | **str** |  | [optional] 
 **item_title** | **str** |  | [optional] 
 **vertical_offset** | **int** |  | [optional] 

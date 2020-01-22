@@ -1,11 +1,11 @@
-# BTRbacPermissionSchemeListInfo
+# bt_rbac_permission_scheme_list_info.BTRbacPermissionSchemeListInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_index** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
-**items** | [**list[BTRbacPermissionSchemeInfo]**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
+**items** | [**[bt_rbac_permission_scheme_info.BTRbacPermissionSchemeInfo]**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

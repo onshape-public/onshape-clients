@@ -1,20 +1,20 @@
-# BTAclEntryInfo
+# bt_acl_entry_info.BTAclEntryInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **str** |  | [optional] 
-**entry_type** | **int** |  | [optional] 
-**entry_id** | **str** |  | [optional] 
-**permission_set** | [**object**](.md) |  | [optional] 
-**image** | **str** |  | [optional] 
 **entry_state** | **str** |  | [optional] 
 **enterprise_member** | **bool** |  | [optional] 
-**pending_owner_transfer** | **bool** |  | [optional] 
 **accept_owner_transfer** | **bool** |  | [optional] 
-**object_id** | **str** |  | [optional] 
 **team_name** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
+**entry_id** | **str** |  | [optional] 
+**entry_type** | **int** |  | [optional] 
+**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**object_id** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
 **company_name** | **str** |  | [optional] 
+**pending_owner_transfer** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **permission** | **int** |  | [optional] 
 

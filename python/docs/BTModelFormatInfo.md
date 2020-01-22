@@ -1,4 +1,4 @@
-# BTModelFormatInfo
+# bt_model_format_info.BTModelFormatInfo
 
 ## Properties
 Name | Type | Description | Notes

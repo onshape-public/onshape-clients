@@ -1,4 +1,4 @@
-# BTAclParams
+# bt_acl_params.BTAclParams
 
 ## Properties
 Name | Type | Description | Notes

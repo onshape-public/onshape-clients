@@ -6,16 +6,16 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**copy_element_from_source_document**](ElementsApi.md#copy_element_from_source_document) | **POST** /api/elements/copyelement/{did}/workspace/{wid} | Copy Element
 [**decode_configuration**](ElementsApi.md#decode_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid} | Decode Configuration String
-[**delete8**](ElementsApi.md#delete8) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | Delete Element
+[**delete_element**](ElementsApi.md#delete_element) | **DELETE** /api/elements/d/{did}/w/{wid}/e/{eid} | Delete Element
 [**encode_configuration_map**](ElementsApi.md#encode_configuration_map) | **POST** /api/elements/d/{did}/e/{eid}/configurationencodings | Encode Configuration
 [**get_configuration**](ElementsApi.md#get_configuration) | **GET** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Get Configuration
-[**get_element_translator_formats**](ElementsApi.md#get_element_translator_formats) | **GET** /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid} | Get Element Translator Formats
+[**get_element_translator_formats_by_version_or_workspace**](ElementsApi.md#get_element_translator_formats_by_version_or_workspace) | **GET** /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid} | Get Element Translator Formats
 [**update_configuration**](ElementsApi.md#update_configuration) | **POST** /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration | Update Configuration
 [**update_references**](ElementsApi.md#update_references) | **POST** /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences | Update or replace node references
 
 
 # **copy_element_from_source_document**
-> BTDocumentElementInfo copy_element_from_source_document(did, wid, bt_copy_element_params)
+> bt_document_element_info.BTDocumentElementInfo copy_element_from_source_document(did, wid, bt_copy_element_params_bt_copy_element_params)
 
 Copy Element
 
@@ -26,7 +26,6 @@ Copy Element
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -38,13 +37,14 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
-bt_copy_element_params = onshape_client.oas.BTCopyElementParams() # BTCopyElementParams | 
+bt_copy_element_params_bt_copy_element_params = onshape_client.oas.BTCopyElementParams() # bt_copy_element_params.BTCopyElementParams | 
 
+# example passing only required values which don't have defaults set
 try:
     # Copy Element
-    api_response = api_instance.copy_element_from_source_document(did, wid, bt_copy_element_params)
+    api_response = api_instance.copy_element_from_source_document(did, wid, bt_copy_element_params_bt_copy_element_params)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->copy_element_from_source_document: %s\n" % e)
 ```
 
@@ -52,13 +52,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **bt_copy_element_params** | [**BTCopyElementParams**](BTCopyElementParams.md)|  | 
+ **did** | **str**|  |
+ **wid** | **str**|  |
+ **bt_copy_element_params_bt_copy_element_params** | [**bt_copy_element_params.BTCopyElementParams**](BTCopyElementParams.md)|  |
 
 ### Return type
 
-[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
+[**bt_document_element_info.BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **decode_configuration**
-> BTConfigurationInfo decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
+> bt_configuration_info.BTConfigurationInfo decode_configuration(did, wvm, wvmid, eid, cid)
 
 Decode Configuration String
 
@@ -88,7 +88,6 @@ Decode Configuration String
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -104,14 +103,24 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 cid = 'cid_example' # str | 
 link_document_id = 'link_document_id_example' # str |  (optional)
-include_display = False # bool |  (optional) (default to False)
-configuration_is_id = False # bool |  (optional) (default to False)
+include_display = False # bool |  (optional) if omitted the server will use the default value of False
+configuration_is_id = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    # Decode Configuration String
+    api_response = api_instance.decode_configuration(did, wvm, wvmid, eid, cid)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->decode_configuration: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Decode Configuration String
     api_response = api_instance.decode_configuration(did, wvm, wvmid, eid, cid, link_document_id=link_document_id, include_display=include_display, configuration_is_id=configuration_is_id)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->decode_configuration: %s\n" % e)
 ```
 
@@ -119,18 +128,18 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **cid** | **str**|  | 
- **link_document_id** | **str**|  | [optional] 
- **include_display** | **bool**|  | [optional] [default to False]
- **configuration_is_id** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **cid** | **str**|  |
+ **link_document_id** | **str**|  | [optional]
+ **include_display** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **configuration_is_id** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
-[**BTConfigurationInfo**](BTConfigurationInfo.md)
+[**bt_configuration_info.BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -148,8 +157,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete8**
-> delete8(did, wid, eid)
+# **delete_element**
+> delete_element(did, wid, eid)
 
 Delete Element
 
@@ -160,7 +169,6 @@ Delete Element
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -174,20 +182,21 @@ did = 'did_example' # str |
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Delete Element
-    api_instance.delete8(did, wid, eid)
-except ApiException as e:
-    print("Exception when calling ElementsApi->delete8: %s\n" % e)
+    api_instance.delete_element(did, wid, eid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->delete_element: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **eid** | **str**|  | 
+ **did** | **str**|  |
+ **wid** | **str**|  |
+ **eid** | **str**|  |
 
 ### Return type
 
@@ -210,7 +219,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **encode_configuration_map**
-> BTEncodedConfigurationInfo encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+> bt_encoded_configuration_info.BTEncodedConfigurationInfo encode_configuration_map(did, eid, bt_configuration_params_bt_configuration_params)
 
 Encode Configuration
 
@@ -221,7 +230,6 @@ Encode Configuration
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -233,15 +241,25 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 eid = 'eid_example' # str | 
-bt_configuration_params = onshape_client.oas.BTConfigurationParams() # BTConfigurationParams | 
+bt_configuration_params_bt_configuration_params = onshape_client.oas.BTConfigurationParams() # bt_configuration_params.BTConfigurationParams | 
 version_id = 'version_id_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
+# example passing only required values which don't have defaults set
 try:
     # Encode Configuration
-    api_response = api_instance.encode_configuration_map(did, eid, bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+    api_response = api_instance.encode_configuration_map(did, eid, bt_configuration_params_bt_configuration_params)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->encode_configuration_map: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
+try:
+    # Encode Configuration
+    api_response = api_instance.encode_configuration_map(did, eid, bt_configuration_params_bt_configuration_params, version_id=version_id, link_document_id=link_document_id)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->encode_configuration_map: %s\n" % e)
 ```
 
@@ -249,15 +267,15 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **eid** | **str**|  | 
- **bt_configuration_params** | [**BTConfigurationParams**](BTConfigurationParams.md)|  | 
- **version_id** | **str**|  | [optional] 
- **link_document_id** | **str**|  | [optional] 
+ **did** | **str**|  |
+ **eid** | **str**|  |
+ **bt_configuration_params_bt_configuration_params** | [**bt_configuration_params.BTConfigurationParams**](BTConfigurationParams.md)|  |
+ **version_id** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
 
 ### Return type
 
-[**BTEncodedConfigurationInfo**](BTEncodedConfigurationInfo.md)
+[**bt_encoded_configuration_info.BTEncodedConfigurationInfo**](BTEncodedConfigurationInfo.md)
 
 ### Authorization
 
@@ -276,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration**
-> BTConfigurationInfo get_configuration(did, wvm, wvmid, eid)
+> bt_configuration_info.BTConfigurationInfo get_configuration(did, wvm, wvmid, eid)
 
 Get Configuration
 
@@ -287,7 +305,6 @@ Get Configuration
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -302,11 +319,12 @@ wvm = 'wvm_example' # str |
 wvmid = 'wvmid_example' # str | 
 eid = 'eid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Get Configuration
     api_response = api_instance.get_configuration(did, wvm, wvmid, eid)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->get_configuration: %s\n" % e)
 ```
 
@@ -314,14 +332,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
 
 ### Return type
 
-[**BTConfigurationInfo**](BTConfigurationInfo.md)
+[**bt_configuration_info.BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -339,8 +357,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_translator_formats**
-> list[BTModelFormatInfo] get_element_translator_formats(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+# **get_element_translator_formats_by_version_or_workspace**
+> [bt_model_format_info.BTModelFormatInfo] get_element_translator_formats_by_version_or_workspace(did, wv, wvid, eid)
 
 Get Element Translator Formats
 
@@ -350,7 +368,6 @@ Get Element Translator Formats
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
@@ -359,31 +376,41 @@ did = 'did_example' # str |
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 eid = 'eid_example' # str | 
-check_content = True # bool |  (optional) (default to True)
-configuration = '' # str |  (optional) (default to '')
+check_content = True # bool |  (optional) if omitted the server will use the default value of True
+configuration = '' # str |  (optional) if omitted the server will use the default value of ''
 
+# example passing only required values which don't have defaults set
 try:
     # Get Element Translator Formats
-    api_response = api_instance.get_element_translator_formats(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+    api_response = api_instance.get_element_translator_formats_by_version_or_workspace(did, wv, wvid, eid)
     pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ElementsApi->get_element_translator_formats: %s\n" % e)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->get_element_translator_formats_by_version_or_workspace: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
+try:
+    # Get Element Translator Formats
+    api_response = api_instance.get_element_translator_formats_by_version_or_workspace(did, wv, wvid, eid, check_content=check_content, configuration=configuration)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->get_element_translator_formats_by_version_or_workspace: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **eid** | **str**|  | 
- **check_content** | **bool**|  | [optional] [default to True]
- **configuration** | **str**|  | [optional] [default to &#39;&#39;]
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **eid** | **str**|  |
+ **check_content** | **bool**|  | [optional] if omitted the server will use the default value of True
+ **configuration** | **str**|  | [optional] if omitted the server will use the default value of ''
 
 ### Return type
 
-[**list[BTModelFormatInfo]**](BTModelFormatInfo.md)
+[**[bt_model_format_info.BTModelFormatInfo]**](BTModelFormatInfo.md)
 
 ### Authorization
 
@@ -402,7 +429,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_configuration**
-> BTConfigurationInfo update_configuration(did, wvm, wvmid, eid, body=body)
+> bt_configuration_info.BTConfigurationInfo update_configuration(did, wvm, wvmid, eid)
 
 Update Configuration
 
@@ -413,7 +440,6 @@ Update Configuration
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -429,11 +455,21 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 body = 'body_example' # str |  (optional)
 
+# example passing only required values which don't have defaults set
+try:
+    # Update Configuration
+    api_response = api_instance.update_configuration(did, wvm, wvmid, eid)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling ElementsApi->update_configuration: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Update Configuration
     api_response = api_instance.update_configuration(did, wvm, wvmid, eid, body=body)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->update_configuration: %s\n" % e)
 ```
 
@@ -441,15 +477,15 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **body** | **str**|  | [optional] 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **body** | **str**|  | [optional]
 
 ### Return type
 
-[**BTConfigurationInfo**](BTConfigurationInfo.md)
+[**bt_configuration_info.BTConfigurationInfo**](BTConfigurationInfo.md)
 
 ### Authorization
 
@@ -468,7 +504,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_references**
-> update_references(did, wid, eid, bt_update_reference_params)
+> update_references(did, wid, eid, bt_update_reference_params_bt_update_reference_params)
 
 Update or replace node references
 
@@ -479,7 +515,6 @@ Update or replace node references
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -492,12 +527,13 @@ api_instance = onshape_client.oas.ElementsApi(onshape_client.oas.ApiClient(confi
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
 eid = 'eid_example' # str | 
-bt_update_reference_params = onshape_client.oas.BTUpdateReferenceParams() # BTUpdateReferenceParams | 
+bt_update_reference_params_bt_update_reference_params = onshape_client.oas.BTUpdateReferenceParams() # bt_update_reference_params.BTUpdateReferenceParams | 
 
+# example passing only required values which don't have defaults set
 try:
     # Update or replace node references
-    api_instance.update_references(did, wid, eid, bt_update_reference_params)
-except ApiException as e:
+    api_instance.update_references(did, wid, eid, bt_update_reference_params_bt_update_reference_params)
+except onshape_client.oas.ApiException as e:
     print("Exception when calling ElementsApi->update_references: %s\n" % e)
 ```
 
@@ -505,10 +541,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **eid** | **str**|  | 
- **bt_update_reference_params** | [**BTUpdateReferenceParams**](BTUpdateReferenceParams.md)|  | 
+ **did** | **str**|  |
+ **wid** | **str**|  |
+ **eid** | **str**|  |
+ **bt_update_reference_params_bt_update_reference_params** | [**bt_update_reference_params.BTUpdateReferenceParams**](BTUpdateReferenceParams.md)|  |
 
 ### Return type
 

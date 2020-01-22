@@ -1,4 +1,4 @@
-# BTMSketchCurveSegment155AllOf
+# btm_sketch_curve_segment155_all_of.BTMSketchCurveSegment155AllOf
 
 ## Properties
 Name | Type | Description | Notes

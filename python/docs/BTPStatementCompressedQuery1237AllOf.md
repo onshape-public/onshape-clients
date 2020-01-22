@@ -1,4 +1,4 @@
-# BTPStatementCompressedQuery1237AllOf
+# btp_statement_compressed_query1237_all_of.BTPStatementCompressedQuery1237AllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTMateFilter162
+# bt_mate_filter162.BTMateFilter162
 
 ## Properties
 Name | Type | Description | Notes

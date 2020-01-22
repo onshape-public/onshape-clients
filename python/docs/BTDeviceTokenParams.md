@@ -1,4 +1,4 @@
-# BTDeviceTokenParams
+# bt_device_token_params.BTDeviceTokenParams
 
 ## Properties
 Name | Type | Description | Notes

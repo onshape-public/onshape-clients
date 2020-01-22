@@ -1,12 +1,12 @@
-# BTSplineDescription2118AllOf
+# bt_spline_description2118_all_of.BTSplineDescription2118AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **degree** | **int** |  | [optional] 
-**knots** | **list[float]** |  | [optional] 
+**knots** | **[float]** |  | [optional] 
 **is_rational** | **bool** |  | [optional] 
-**control_points** | **list[float]** |  | [optional] 
+**control_points** | **[float]** |  | [optional] 
 **is_periodic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

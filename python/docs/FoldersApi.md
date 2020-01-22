@@ -4,13 +4,13 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_acl1**](FoldersApi.md#get_acl1) | **GET** /api/folders/{fid}/acl | Get Access Control List
-[**share1**](FoldersApi.md#share1) | **POST** /api/folders/{fid}/share | Share Folder
-[**un_share1**](FoldersApi.md#un_share1) | **DELETE** /api/folders/{fid}/share/{eid} | Unshare Folder
+[**get_folder_acl**](FoldersApi.md#get_folder_acl) | **GET** /api/folders/{fid}/acl | Get Access Control List
+[**share**](FoldersApi.md#share) | **POST** /api/folders/{fid}/share | Share Folder
+[**un_share**](FoldersApi.md#un_share) | **DELETE** /api/folders/{fid}/share/{eid} | Unshare Folder
 
 
-# **get_acl1**
-> BTAclInfo get_acl1(fid)
+# **get_folder_acl**
+> bt_acl_info.BTAclInfo get_folder_acl(fid)
 
 Get Access Control List
 
@@ -21,7 +21,6 @@ Get Access Control List
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -33,23 +32,24 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
 fid = 'fid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Get Access Control List
-    api_response = api_instance.get_acl1(fid)
+    api_response = api_instance.get_folder_acl(fid)
     pprint(api_response)
-except ApiException as e:
-    print("Exception when calling FoldersApi->get_acl1: %s\n" % e)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling FoldersApi->get_folder_acl: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fid** | **str**|  | 
+ **fid** | **str**|  |
 
 ### Return type
 
-[**BTAclInfo**](BTAclInfo.md)
+[**bt_acl_info.BTAclInfo**](BTAclInfo.md)
 
 ### Authorization
 
@@ -67,8 +67,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **share1**
-> BTAclInfo share1(fid, bt_share_params)
+# **share**
+> bt_acl_info.BTAclInfo share(fid, bt_share_params_bt_share_params)
 
 Share Folder
 
@@ -79,7 +79,6 @@ Share Folder
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -90,26 +89,27 @@ configuration.host = "https://cad.onshape.com"
 # Create an instance of the API class
 api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
 fid = 'fid_example' # str | 
-bt_share_params = onshape_client.oas.BTShareParams() # BTShareParams | 
+bt_share_params_bt_share_params = onshape_client.oas.BTShareParams() # bt_share_params.BTShareParams | 
 
+# example passing only required values which don't have defaults set
 try:
     # Share Folder
-    api_response = api_instance.share1(fid, bt_share_params)
+    api_response = api_instance.share(fid, bt_share_params_bt_share_params)
     pprint(api_response)
-except ApiException as e:
-    print("Exception when calling FoldersApi->share1: %s\n" % e)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling FoldersApi->share: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fid** | **str**|  | 
- **bt_share_params** | [**BTShareParams**](BTShareParams.md)|  | 
+ **fid** | **str**|  |
+ **bt_share_params_bt_share_params** | [**bt_share_params.BTShareParams**](BTShareParams.md)|  |
 
 ### Return type
 
-[**BTAclInfo**](BTAclInfo.md)
+[**bt_acl_info.BTAclInfo**](BTAclInfo.md)
 
 ### Authorization
 
@@ -127,8 +127,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **un_share1**
-> un_share1(fid, eid, entry_type=entry_type)
+# **un_share**
+> un_share(fid, eid)
 
 Unshare Folder
 
@@ -139,7 +139,6 @@ Unshare Folder
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -151,22 +150,31 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
 fid = 'fid_example' # str | 
 eid = 'eid_example' # str | 
-entry_type = 0 # int |  (optional) (default to 0)
+entry_type = 0 # int |  (optional) if omitted the server will use the default value of 0
 
+# example passing only required values which don't have defaults set
 try:
     # Unshare Folder
-    api_instance.un_share1(fid, eid, entry_type=entry_type)
-except ApiException as e:
-    print("Exception when calling FoldersApi->un_share1: %s\n" % e)
+    api_instance.un_share(fid, eid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling FoldersApi->un_share: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
+try:
+    # Unshare Folder
+    api_instance.un_share(fid, eid, entry_type=entry_type)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling FoldersApi->un_share: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fid** | **str**|  | 
- **eid** | **str**|  | 
- **entry_type** | **int**|  | [optional] [default to 0]
+ **fid** | **str**|  |
+ **eid** | **str**|  |
+ **entry_type** | **int**|  | [optional] if omitted the server will use the default value of 0
 
 ### Return type
 

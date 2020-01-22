@@ -1,4 +1,4 @@
-# BTBaseInfo
+# bt_base_info.BTBaseInfo
 
 ## Properties
 Name | Type | Description | Notes

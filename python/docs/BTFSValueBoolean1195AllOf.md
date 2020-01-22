@@ -1,4 +1,4 @@
-# BTFSValueBoolean1195AllOf
+# btfs_value_boolean1195_all_of.BTFSValueBoolean1195AllOf
 
 ## Properties
 Name | Type | Description | Notes

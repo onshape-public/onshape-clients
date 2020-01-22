@@ -1,4 +1,4 @@
-# BTEdgeTopologyFilter122AllOf
+# bt_edge_topology_filter122_all_of.BTEdgeTopologyFilter122AllOf
 
 ## Properties
 Name | Type | Description | Notes

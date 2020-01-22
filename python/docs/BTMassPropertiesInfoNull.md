@@ -1,18 +1,17 @@
-# BTMassPropertiesInfoNull
+# bt_mass_properties_info_null.BTMassPropertiesInfoNull
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**principal_inertia** | **list[float]** |  | [optional] 
-**principal_axes** | [**list[BTVector3d389]**](BTVector3d389.md) |  | [optional] 
+**principal_inertia** | **[float]** |  | [optional] 
+**principal_axes** | [**[bt_vector3d389.BTVector3d389]**](BTVector3d389.md) |  | [optional] 
+**inertia** | **[float]** |  | [optional] 
+**volume** | **[float]** |  | [optional] 
+**mass** | **[float]** |  | [optional] 
 **has_mass** | **bool** |  | [optional] 
-**mass** | **list[float]** |  | [optional] 
-**volume** | **list[float]** |  | [optional] 
-**periphery** | **list[float]** |  | [optional] 
-**centroid** | **list[float]** |  | [optional] 
-**inertia** | **list[float]** |  | [optional] 
+**periphery** | **[float]** |  | [optional] 
+**centroid** | **[float]** |  | [optional] 
 **mass_missing_count** | **int** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

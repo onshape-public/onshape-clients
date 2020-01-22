@@ -1,4 +1,4 @@
-# BTIdentityParams
+# bt_identity_params.BTIdentityParams
 
 ## Properties
 Name | Type | Description | Notes

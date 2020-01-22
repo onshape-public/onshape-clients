@@ -1,10 +1,10 @@
-# BTAppElementUpdateParams
+# bt_app_element_update_params.BTAppElementUpdateParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changes** | [**list[BTAppElementChangeParams]**](BTAppElementChangeParams.md) |  | [optional] 
 **return_error** | **bool** |  | [optional] 
+**changes** | [**[bt_app_element_change_params.BTAppElementChangeParams]**](BTAppElementChangeParams.md) |  | [optional] 
 **transaction_id** | **str** |  | [optional] 
 **parent_change_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 

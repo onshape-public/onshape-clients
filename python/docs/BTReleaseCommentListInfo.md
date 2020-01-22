@@ -1,9 +1,9 @@
-# BTReleaseCommentListInfo
+# bt_release_comment_list_info.BTReleaseCommentListInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**comments** | [**list[BTCommentInfo]**](BTCommentInfo.md) |  | [optional] 
+**comments** | [**[bt_comment_info.BTCommentInfo]**](BTCommentInfo.md) |  | [optional] 
 **rp_id** | **str** |  | [optional] 
 **rp_name** | **str** |  | [optional] 
 

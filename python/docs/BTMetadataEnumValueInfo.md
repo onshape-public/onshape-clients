@@ -1,4 +1,4 @@
-# BTMetadataEnumValueInfo
+# bt_metadata_enum_value_info.BTMetadataEnumValueInfo
 
 ## Properties
 Name | Type | Description | Notes

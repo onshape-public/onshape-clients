@@ -1,4 +1,4 @@
-# BTItemParams
+# bt_item_params.BTItemParams
 
 ## Properties
 Name | Type | Description | Notes

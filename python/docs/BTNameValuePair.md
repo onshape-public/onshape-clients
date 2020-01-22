@@ -1,4 +1,4 @@
-# BTNameValuePair
+# bt_name_value_pair.BTNameValuePair
 
 ## Properties
 Name | Type | Description | Notes

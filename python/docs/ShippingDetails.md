@@ -1,9 +1,9 @@
-# ShippingDetails
+# shipping_details.ShippingDetails
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**Address**](Address.md) |  | [optional] 
+**address** | [**address.Address**](Address.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **phone** | **str** |  | [optional] 
 

@@ -1,4 +1,4 @@
-# BTColorParams
+# bt_color_params.BTColorParams
 
 ## Properties
 Name | Type | Description | Notes

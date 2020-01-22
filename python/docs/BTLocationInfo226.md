@@ -1,21 +1,21 @@
-# BTLocationInfo226
+# bt_location_info226.BTLocationInfo226
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**from_node** | [**BTPNode7**](BTPNode7.md) |  | [optional] 
+**from_node** | [**btp_node7.BTPNode7**](BTPNode7.md) |  | [optional] 
 **document** | **str** |  | [optional] 
-**element_microversion** | **str** |  | [optional] 
 **top_level** | **str** |  | [optional] 
-**module_ids** | [**BTDocumentVersionElementIds1897**](BTDocumentVersionElementIds1897.md) |  | [optional] 
 **language_version** | **int** |  | [optional] 
+**element_microversion** | **str** |  | [optional] 
+**module_ids** | [**bt_document_version_element_ids1897.BTDocumentVersionElementIds1897**](BTDocumentVersionElementIds1897.md) |  | [optional] 
 **column** | **int** |  | [optional] 
 **end_line** | **int** |  | [optional] 
-**end_column** | **int** |  | [optional] 
 **line** | **int** |  | [optional] 
+**end_column** | **int** |  | [optional] 
 **parse_node_id** | **str** |  | [optional] 
 **end_character** | **int** |  | [optional] 
-**parse_node_id_raw** | [**BTObjectId**](BTObjectId.md) |  | [optional] 
+**parse_node_id_raw** | [**bt_object_id.BTObjectId**](BTObjectId.md) |  | [optional] 
 **character** | **int** |  | [optional] 
 **version** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

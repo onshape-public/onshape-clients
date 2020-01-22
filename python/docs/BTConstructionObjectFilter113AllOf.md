@@ -1,4 +1,4 @@
-# BTConstructionObjectFilter113AllOf
+# bt_construction_object_filter113_all_of.BTConstructionObjectFilter113AllOf
 
 ## Properties
 Name | Type | Description | Notes

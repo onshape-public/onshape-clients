@@ -1,4 +1,4 @@
-# BTStringFormatCondition683
+# bt_string_format_condition683.BTStringFormatCondition683
 
 ## Properties
 Name | Type | Description | Notes

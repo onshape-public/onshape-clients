@@ -1,4 +1,4 @@
-# BTPermissionSet
+# bt_permission_set.BTPermissionSet
 
 ## Properties
 Name | Type | Description | Notes

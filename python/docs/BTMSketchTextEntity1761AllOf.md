@@ -1,4 +1,4 @@
-# BTMSketchTextEntity1761AllOf
+# btm_sketch_text_entity1761_all_of.BTMSketchTextEntity1761AllOf
 
 ## Properties
 Name | Type | Description | Notes

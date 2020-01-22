@@ -1,4 +1,4 @@
-# BTInsertablesListResponse
+# bt_insertables_list_response.BTInsertablesListResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **changes_since_version_save** | **int** |  | [optional] 
 **has_multiple_versions** | **bool** |  | [optional] 
 **can_save_version** | **bool** |  | [optional] 
+**items** | [**[bt_insertable_info.BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
-**items** | [**list[BTInsertableInfo]**](BTInsertableInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

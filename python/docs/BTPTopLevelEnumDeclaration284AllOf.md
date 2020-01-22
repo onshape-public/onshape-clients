@@ -1,12 +1,12 @@
-# BTPTopLevelEnumDeclaration284AllOf
+# btp_top_level_enum_declaration284_all_of.BTPTopLevelEnumDeclaration284AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**annotations** | [**list[BTPAnnotation231]**](BTPAnnotation231.md) |  | [optional] 
+**annotations** | [**[btp_annotation231.BTPAnnotation231]**](BTPAnnotation231.md) |  | [optional] 
 **trailing_comma** | **bool** |  | [optional] 
-**space_in_empty_list** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**values** | [**list[BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 
+**space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**values** | [**[btp_identifier8.BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

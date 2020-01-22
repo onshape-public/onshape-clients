@@ -1,4 +1,4 @@
-# BTTraceSamplingRateParams
+# bt_trace_sampling_rate_params.BTTraceSamplingRateParams
 
 ## Properties
 Name | Type | Description | Notes

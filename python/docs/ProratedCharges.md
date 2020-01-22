@@ -1,4 +1,4 @@
-# ProratedCharges
+# prorated_charges.ProratedCharges
 
 ## Properties
 Name | Type | Description | Notes

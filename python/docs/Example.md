@@ -1,14 +1,14 @@
-# Example
+# example.Example
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **summary** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**value** | [**object**](.md) |  | [optional] 
+**value** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
 **external_value** | **str** |  | [optional] 
 **getref** | **str** |  | [optional] 
-**extensions** | **dict(str, object)** |  | [optional] 
+**extensions** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

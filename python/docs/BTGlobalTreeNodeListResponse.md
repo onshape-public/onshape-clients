@@ -1,10 +1,10 @@
-# BTGlobalTreeNodeListResponse
+# bt_global_tree_node_list_response.BTGlobalTreeNodeListResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**items** | [**[bt_global_tree_node_info.BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
-**items** | [**list[BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

@@ -1,4 +1,4 @@
-# BTWebRendererPerformanceMeasurementParams
+# bt_web_renderer_performance_measurement_params.BTWebRendererPerformanceMeasurementParams
 
 ## Properties
 Name | Type | Description | Notes

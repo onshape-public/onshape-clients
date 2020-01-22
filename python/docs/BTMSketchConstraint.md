@@ -1,10 +1,9 @@
-# BTMSketchConstraint
+# btm_sketch_constraint.BTMSketchConstraint
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **driven_dimension** | **bool** |  | [optional] 
-**constraint_type** | **str** |  | [optional] 
 **has_offset_data1** | **bool** |  | [optional] 
 **offset_orientation1** | **bool** |  | [optional] 
 **offset_distance1** | **float** |  | [optional] 
@@ -13,11 +12,12 @@ Name | Type | Description | Notes
 **offset_distance2** | **float** |  | [optional] 
 **has_pierce_parameter** | **bool** |  | [optional] 
 **pierce_parameter** | **float** |  | [optional] 
-**help_parameters** | **list[float]** |  | [optional] 
-**parameters** | [**list[BTMParameter]**](BTMParameter.md) |  | [optional] 
+**help_parameters** | **[float]** |  | [optional] 
+**parameters** | [**[btm_parameter.BTMParameter]**](BTMParameter.md) |  | [optional] 
+**constraint_type** | **str** |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 
-**node_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
+**node_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

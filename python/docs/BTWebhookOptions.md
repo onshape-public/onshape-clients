@@ -1,4 +1,4 @@
-# BTWebhookOptions
+# bt_webhook_options.BTWebhookOptions
 
 ## Properties
 Name | Type | Description | Notes

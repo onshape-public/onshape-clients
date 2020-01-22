@@ -1,4 +1,4 @@
-# BTModelBodyParams
+# bt_model_body_params.BTModelBodyParams
 
 ## Properties
 Name | Type | Description | Notes

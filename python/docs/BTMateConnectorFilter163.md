@@ -1,4 +1,4 @@
-# BTMateConnectorFilter163
+# bt_mate_connector_filter163.BTMateConnectorFilter163
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
-# BTListResponseBTBillingAccountInfo
+# bt_list_response_bt_billing_account_info.BTListResponseBTBillingAccountInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** |  | [optional] 
-**items** | [**list[BTBillingAccountInfo]**](BTBillingAccountInfo.md) |  | [optional] 
+**items** | [**[bt_billing_account_info.BTBillingAccountInfo]**](BTBillingAccountInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

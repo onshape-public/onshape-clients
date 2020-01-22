@@ -1,4 +1,4 @@
-# Contact
+# contact.Contact
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
-**extensions** | **dict(str, object)** |  | [optional] 
+**extensions** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

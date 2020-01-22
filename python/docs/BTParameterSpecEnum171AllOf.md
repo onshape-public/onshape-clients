@@ -1,11 +1,11 @@
-# BTParameterSpecEnum171AllOf
+# bt_parameter_spec_enum171_all_of.BTParameterSpecEnum171AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**option_names** | **[str]** |  | [optional] 
 **enum_name** | **str** |  | [optional] 
-**option_names** | **list[str]** |  | [optional] 
-**options** | **list[str]** |  | [optional] 
+**options** | **[str]** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

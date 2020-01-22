@@ -1,4 +1,4 @@
-# BTCompanyNoPublicDocumentParams
+# bt_company_no_public_document_params.BTCompanyNoPublicDocumentParams
 
 ## Properties
 Name | Type | Description | Notes

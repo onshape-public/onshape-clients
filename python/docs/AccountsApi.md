@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **cancel_purchase_new**
-> cancel_purchase_new(aid, pid, cancel_immediately=cancel_immediately)
+> cancel_purchase_new(aid, pid)
 
 Cancel Recurring Subscription
 
@@ -22,7 +22,6 @@ Cancel Recurring Subscription
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -34,12 +33,21 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.AccountsApi(onshape_client.oas.ApiClient(configuration))
 aid = 'aid_example' # str | 
 pid = 'pid_example' # str | 
-cancel_immediately = False # bool |  (optional) (default to False)
+cancel_immediately = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    # Cancel Recurring Subscription
+    api_instance.cancel_purchase_new(aid, pid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Cancel Recurring Subscription
     api_instance.cancel_purchase_new(aid, pid, cancel_immediately=cancel_immediately)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
 ```
 
@@ -47,9 +55,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aid** | **str**|  | 
- **pid** | **str**|  | 
- **cancel_immediately** | **bool**|  | [optional] [default to False]
+ **aid** | **str**|  |
+ **pid** | **str**|  |
+ **cancel_immediately** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -72,7 +80,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consume_purchase**
-> BTPurchaseInfo consume_purchase(pid, bt_purchase_user_params=bt_purchase_user_params)
+> bt_purchase_info.BTPurchaseInfo consume_purchase(pid)
 
 Mark Purchase Consumed For User
 
@@ -83,7 +91,6 @@ Mark Purchase Consumed For User
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -94,13 +101,23 @@ configuration.host = "https://cad.onshape.com"
 # Create an instance of the API class
 api_instance = onshape_client.oas.AccountsApi(onshape_client.oas.ApiClient(configuration))
 pid = 'pid_example' # str | 
-bt_purchase_user_params = onshape_client.oas.BTPurchaseUserParams() # BTPurchaseUserParams |  (optional)
+bt_purchase_user_params_bt_purchase_user_params = onshape_client.oas.BTPurchaseUserParams() # bt_purchase_user_params.BTPurchaseUserParams |  (optional)
 
+# example passing only required values which don't have defaults set
 try:
     # Mark Purchase Consumed For User
-    api_response = api_instance.consume_purchase(pid, bt_purchase_user_params=bt_purchase_user_params)
+    api_response = api_instance.consume_purchase(pid)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
+try:
+    # Mark Purchase Consumed For User
+    api_response = api_instance.consume_purchase(pid, bt_purchase_user_params_bt_purchase_user_params=bt_purchase_user_params_bt_purchase_user_params)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
     print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
 ```
 
@@ -108,12 +125,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pid** | **str**|  | 
- **bt_purchase_user_params** | [**BTPurchaseUserParams**](BTPurchaseUserParams.md)|  | [optional] 
+ **pid** | **str**|  |
+ **bt_purchase_user_params_bt_purchase_user_params** | [**bt_purchase_user_params.BTPurchaseUserParams**](BTPurchaseUserParams.md)|  | [optional]
 
 ### Return type
 
-[**BTPurchaseInfo**](BTPurchaseInfo.md)
+[**bt_purchase_info.BTPurchaseInfo**](BTPurchaseInfo.md)
 
 ### Authorization
 
@@ -132,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_plan_purchases**
-> BTListResponseBTPurchaseInfo get_plan_purchases(plan_id, offset=offset, limit=limit)
+> bt_list_response_bt_purchase_info.BTListResponseBTPurchaseInfo get_plan_purchases(plan_id)
 
 Get Plan Purchases
 
@@ -142,20 +159,29 @@ Get Plan Purchases
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
 api_instance = onshape_client.oas.AccountsApi()
 plan_id = 'plan_id_example' # str | 
-offset = 0 # int |  (optional) (default to 0)
-limit = 20 # int |  (optional) (default to 20)
+offset = 0 # int |  (optional) if omitted the server will use the default value of 0
+limit = 20 # int |  (optional) if omitted the server will use the default value of 20
 
+# example passing only required values which don't have defaults set
+try:
+    # Get Plan Purchases
+    api_response = api_instance.get_plan_purchases(plan_id)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Get Plan Purchases
     api_response = api_instance.get_plan_purchases(plan_id, offset=offset, limit=limit)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
 ```
 
@@ -163,13 +189,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **plan_id** | **str**|  | 
- **offset** | **int**|  | [optional] [default to 0]
- **limit** | **int**|  | [optional] [default to 20]
+ **plan_id** | **str**|  |
+ **offset** | **int**|  | [optional] if omitted the server will use the default value of 0
+ **limit** | **int**|  | [optional] if omitted the server will use the default value of 20
 
 ### Return type
 
-[**BTListResponseBTPurchaseInfo**](BTListResponseBTPurchaseInfo.md)
+[**bt_list_response_bt_purchase_info.BTListResponseBTPurchaseInfo**](BTListResponseBTPurchaseInfo.md)
 
 ### Authorization
 
@@ -188,7 +214,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_purchases**
-> list[BTPurchaseInfo] get_purchases(all=all, own_purchase_only=own_purchase_only)
+> [bt_purchase_info.BTPurchaseInfo] get_purchases()
 
 Get User's Appstore Purchases.
 
@@ -198,19 +224,20 @@ Get User's Appstore Purchases.
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 
 # Create an instance of the API class
 api_instance = onshape_client.oas.AccountsApi()
-all = False # bool |  (optional) (default to False)
-own_purchase_only = False # bool |  (optional) (default to False)
+all = False # bool |  (optional) if omitted the server will use the default value of False
+own_purchase_only = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Get User's Appstore Purchases.
     api_response = api_instance.get_purchases(all=all, own_purchase_only=own_purchase_only)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling AccountsApi->get_purchases: %s\n" % e)
 ```
 
@@ -218,12 +245,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **all** | **bool**|  | [optional] [default to False]
- **own_purchase_only** | **bool**|  | [optional] [default to False]
+ **all** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **own_purchase_only** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
-[**list[BTPurchaseInfo]**](BTPurchaseInfo.md)
+[**[bt_purchase_info.BTPurchaseInfo]**](BTPurchaseInfo.md)
 
 ### Authorization
 

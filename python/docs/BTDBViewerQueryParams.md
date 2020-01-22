@@ -1,11 +1,11 @@
-# BTDBViewerQueryParams
+# btdb_viewer_query_params.BTDBViewerQueryParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **collection** | **str** |  | [optional] 
 **db** | **str** |  | [optional] 
-**field_values** | **dict(str, str)** |  | [optional] 
+**field_values** | **{str: (str,)}** |  | [optional] 
 **from_date** | **datetime** |  | [optional] 
 **to_date** | **datetime** |  | [optional] 
 

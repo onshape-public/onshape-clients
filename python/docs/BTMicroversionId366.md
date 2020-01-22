@@ -1,4 +1,4 @@
-# BTMicroversionId366
+# bt_microversion_id366.BTMicroversionId366
 
 ## Properties
 Name | Type | Description | Notes

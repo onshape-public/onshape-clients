@@ -1,11 +1,11 @@
-# BTDiscountInfo
+# bt_discount_info.BTDiscountInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
-**created_by** | [**BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
+**created_by** | [**bt_user_summary_info.BTUserSummaryInfo**](BTUserSummaryInfo.md) |  | [optional] 
 **owner_id** | **str** |  | [optional] 
 **percent_off** | **int** |  | [optional] 
 **amount_off** | **int** |  | [optional] 

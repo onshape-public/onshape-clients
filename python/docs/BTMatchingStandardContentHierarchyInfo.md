@@ -1,17 +1,17 @@
-# BTMatchingStandardContentHierarchyInfo
+# bt_matching_standard_content_hierarchy_info.BTMatchingStandardContentHierarchyInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**types** | **list[str]** |  | [optional] 
+**category** | **[str]** |  | [optional] 
+**standard** | **[str]** |  | [optional] 
+**types** | **[str]** |  | [optional] 
 **component_document_id** | **str** |  | [optional] 
 **standard_default** | **str** |  | [optional] 
 **category_default** | **str** |  | [optional] 
 **types_default** | **str** |  | [optional] 
 **type_default** | **str** |  | [optional] 
-**category** | **list[str]** |  | [optional] 
-**standard** | **list[str]** |  | [optional] 
-**type** | **list[str]** |  | [optional] 
+**type** | **[str]** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

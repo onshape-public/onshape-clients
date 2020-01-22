@@ -1,4 +1,4 @@
-# BTMConfiguredValueByEnum1923AllOf
+# btm_configured_value_by_enum1923_all_of.BTMConfiguredValueByEnum1923AllOf
 
 ## Properties
 Name | Type | Description | Notes

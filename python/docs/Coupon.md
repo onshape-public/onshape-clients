@@ -1,4 +1,4 @@
-# Coupon
+# coupon.Coupon
 
 ## Properties
 Name | Type | Description | Notes
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **duration_in_months** | **int** |  | [optional] 
 **livemode** | **bool** |  | [optional] 
 **max_redemptions** | **int** |  | [optional] 
-**metadata** | **dict(str, str)** |  | [optional] 
+**metadata** | **{str: (str,)}** |  | [optional] 
 **percent_off** | **int** |  | [optional] 
 **redeem_by** | **int** |  | [optional] 
 **times_redeemed** | **int** |  | [optional] 

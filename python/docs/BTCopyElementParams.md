@@ -1,4 +1,4 @@
-# BTCopyElementParams
+# bt_copy_element_params.BTCopyElementParams
 
 ## Properties
 Name | Type | Description | Notes

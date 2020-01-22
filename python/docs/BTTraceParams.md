@@ -1,4 +1,4 @@
-# BTTraceParams
+# bt_trace_params.BTTraceParams
 
 ## Properties
 Name | Type | Description | Notes

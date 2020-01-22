@@ -1,4 +1,4 @@
-# BTImageFilter853AllOf
+# bt_image_filter853_all_of.BTImageFilter853AllOf
 
 ## Properties
 Name | Type | Description | Notes

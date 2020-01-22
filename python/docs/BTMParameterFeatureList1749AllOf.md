@@ -1,9 +1,9 @@
-# BTMParameterFeatureList1749AllOf
+# btm_parameter_feature_list1749_all_of.BTMParameterFeatureList1749AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature_ids** | **list[str]** |  | [optional] 
+**feature_ids** | **[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

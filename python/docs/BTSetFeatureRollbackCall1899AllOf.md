@@ -1,4 +1,4 @@
-# BTSetFeatureRollbackCall1899AllOf
+# bt_set_feature_rollback_call1899_all_of.BTSetFeatureRollbackCall1899AllOf
 
 ## Properties
 Name | Type | Description | Notes

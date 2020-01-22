@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_feature_studio**
-> BTDocumentElementInfo create_feature_studio(did, wid, bt_model_element_params)
+> bt_document_element_info.BTDocumentElementInfo create_feature_studio(did, wid, bt_model_element_params_bt_model_element_params)
 
 Create Feature Studio
 
@@ -22,7 +22,6 @@ Create Feature Studio
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -34,13 +33,14 @@ configuration.host = "https://cad.onshape.com"
 api_instance = onshape_client.oas.FeatureStudiosApi(onshape_client.oas.ApiClient(configuration))
 did = 'did_example' # str | 
 wid = 'wid_example' # str | 
-bt_model_element_params = onshape_client.oas.BTModelElementParams() # BTModelElementParams | 
+bt_model_element_params_bt_model_element_params = onshape_client.oas.BTModelElementParams() # bt_model_element_params.BTModelElementParams | 
 
+# example passing only required values which don't have defaults set
 try:
     # Create Feature Studio
-    api_response = api_instance.create_feature_studio(did, wid, bt_model_element_params)
+    api_response = api_instance.create_feature_studio(did, wid, bt_model_element_params_bt_model_element_params)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling FeatureStudiosApi->create_feature_studio: %s\n" % e)
 ```
 
@@ -48,13 +48,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wid** | **str**|  | 
- **bt_model_element_params** | [**BTModelElementParams**](BTModelElementParams.md)|  | 
+ **did** | **str**|  |
+ **wid** | **str**|  |
+ **bt_model_element_params_bt_model_element_params** | [**bt_model_element_params.BTModelElementParams**](BTModelElementParams.md)|  |
 
 ### Return type
 
-[**BTDocumentElementInfo**](BTDocumentElementInfo.md)
+[**bt_document_element_info.BTDocumentElementInfo**](BTDocumentElementInfo.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_studio_contents**
-> BTFeatureStudioContents2239 get_feature_studio_contents(did, wvm, wvmid, eid)
+> bt_feature_studio_contents2239.BTFeatureStudioContents2239 get_feature_studio_contents(did, wvm, wvmid, eid)
 
 Get Feature Studio Contents.
 
@@ -84,7 +84,6 @@ Get Feature Studio Contents.
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -99,11 +98,12 @@ wvm = 'wvm_example' # str |
 wvmid = 'wvmid_example' # str | 
 eid = 'eid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Get Feature Studio Contents.
     api_response = api_instance.get_feature_studio_contents(did, wvm, wvmid, eid)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling FeatureStudiosApi->get_feature_studio_contents: %s\n" % e)
 ```
 
@@ -111,14 +111,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
 
 ### Return type
 
-[**BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
+[**bt_feature_studio_contents2239.BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feature_studio_specs**
-> BTFeatureSpecsResponse664 get_feature_studio_specs(did, wvm, wvmid, eid)
+> bt_feature_specs_response664.BTFeatureSpecsResponse664 get_feature_studio_specs(did, wvm, wvmid, eid)
 
 Get Feature Studio Specs
 
@@ -148,7 +148,6 @@ Get Feature Studio Specs
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -163,11 +162,12 @@ wvm = 'wvm_example' # str |
 wvmid = 'wvmid_example' # str | 
 eid = 'eid_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     # Get Feature Studio Specs
     api_response = api_instance.get_feature_studio_specs(did, wvm, wvmid, eid)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling FeatureStudiosApi->get_feature_studio_specs: %s\n" % e)
 ```
 
@@ -175,14 +175,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
 
 ### Return type
 
-[**BTFeatureSpecsResponse664**](BTFeatureSpecsResponse664.md)
+[**bt_feature_specs_response664.BTFeatureSpecsResponse664**](BTFeatureSpecsResponse664.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_feature_studio_contents**
-> BTFeatureStudioContents2239 update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
+> bt_feature_studio_contents2239.BTFeatureStudioContents2239 update_feature_studio_contents(did, wvm, wvmid, eid)
 
 Update Feature Studio contents
 
@@ -212,7 +212,6 @@ Update Feature Studio contents
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -228,11 +227,21 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 body = 'body_example' # str |  (optional)
 
+# example passing only required values which don't have defaults set
+try:
+    # Update Feature Studio contents
+    api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid)
+    pprint(api_response)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     # Update Feature Studio contents
     api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
     pprint(api_response)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
 ```
 
@@ -240,15 +249,15 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **body** | **str**|  | [optional] 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **body** | **str**|  | [optional]
 
 ### Return type
 
-[**BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
+[**bt_feature_studio_contents2239.BTFeatureStudioContents2239**](BTFeatureStudioContents2239.md)
 
 ### Authorization
 

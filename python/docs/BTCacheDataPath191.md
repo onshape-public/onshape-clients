@@ -1,14 +1,14 @@
-# BTCacheDataPath191
+# bt_cache_data_path191.BTCacheDataPath191
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
 **is_persisted** | **bool** |  | [optional] 
-**full_file_path** | **str** |  | [optional] 
+**url_path** | **str** |  | [optional] 
 **use_local_file_cache** | **bool** |  | [optional] 
+**full_file_path** | **str** |  | [optional] 
 **expire_secs** | **str** |  | [optional] 
 **key** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

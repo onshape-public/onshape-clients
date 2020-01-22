@@ -1,4 +1,4 @@
-# BTIdTranslationParams
+# bt_id_translation_params.BTIdTranslationParams
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **source_document_microversion** | **str** |  | [optional] 
 **source_configuration** | **str** |  | [optional] 
 **target_configuration** | **str** |  | [optional] 
-**ids** | **list[str]** |  | [optional] 
+**ids** | **[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

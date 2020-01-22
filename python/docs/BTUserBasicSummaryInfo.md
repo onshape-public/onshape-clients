@@ -1,4 +1,4 @@
-# BTUserBasicSummaryInfo
+# bt_user_basic_summary_info.BTUserBasicSummaryInfo
 
 ## Properties
 Name | Type | Description | Notes

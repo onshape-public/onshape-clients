@@ -1,4 +1,4 @@
-# BTAppElementChangeParams
+# bt_app_element_change_params.BTAppElementChangeParams
 
 ## Properties
 Name | Type | Description | Notes

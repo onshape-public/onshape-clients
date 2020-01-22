@@ -1,10 +1,20 @@
-# BTPStatementContinue274
+# btp_statement_continue274.BTPStatementContinue274
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**space_after_continue** | [**BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**space_after_continue** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**start_source_location** | **int** |  | [optional] 
+**end_source_location** | **int** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
+**short_descriptor** | **str** |  | [optional] 
+**documentation_type** | **str** |  | [optional] 
+**space_before** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**space_default** | **bool** |  | [optional] 
+**space_after** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**node_id** | **str** |  | [optional] 
+**annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

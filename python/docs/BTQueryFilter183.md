@@ -1,4 +1,4 @@
-# BTQueryFilter183
+# bt_query_filter183.BTQueryFilter183
 
 ## Properties
 Name | Type | Description | Notes

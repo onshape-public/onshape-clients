@@ -1,13 +1,13 @@
-# BTFriendInfo
+# bt_friend_info.BTFriendInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**token** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **image_url** | **str** |  | [optional] 
-**token** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

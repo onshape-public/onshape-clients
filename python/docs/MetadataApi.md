@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **get_veop_standard_content_metadata**
-> get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id)
+> get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid)
 
 
 
@@ -28,7 +28,6 @@ Method | HTTP request | Description
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -47,9 +46,17 @@ pid = 'pid_example' # str |
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
 ```
 
@@ -57,14 +64,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **vid** | **str**|  | 
- **eid** | **str**|  | 
- **otype** | **str**|  | 
- **oid** | **str**|  | 
- **pid** | **str**|  | 
- **configuration** | **str**|  | [optional] 
- **link_document_id** | **str**|  | [optional] 
+ **did** | **str**|  |
+ **vid** | **str**|  |
+ **eid** | **str**|  |
+ **otype** | **str**|  |
+ **oid** | **str**|  |
+ **pid** | **str**|  |
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -87,7 +94,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wmve_ps_metadata**
-> get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+> get_wmve_ps_metadata(did, wvm, wvmid, eid)
 
 
 
@@ -98,7 +105,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -114,11 +120,19 @@ wvmid = 'wvmid_example' # str |
 eid = 'eid_example' # str | 
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) (default to False)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
 ```
 
@@ -126,13 +140,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **configuration** | **str**|  | [optional] 
- **link_document_id** | **str**|  | [optional] 
- **infer_metadata_owner** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -155,7 +169,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wmvep_metadata**
-> get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+> get_wmvep_metadata(did, wvm, wvmid, eid, pid)
 
 
 
@@ -166,7 +180,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -183,11 +196,19 @@ eid = 'eid_example' # str |
 pid = 'pid_example' # str | 
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) (default to False)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
 ```
 
@@ -195,14 +216,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **pid** | **str**|  | 
- **configuration** | **str**|  | [optional] 
- **link_document_id** | **str**|  | [optional] 
- **infer_metadata_owner** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **pid** | **str**|  |
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -225,7 +246,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wv_es_metadata**
-> get_wv_es_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+> get_wv_es_metadata(did, wv, wvid)
 
 
 
@@ -236,7 +257,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -250,11 +270,19 @@ did = 'did_example' # str |
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) (default to False)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_wv_es_metadata(did, wv, wvid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_wv_es_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
 ```
 
@@ -262,11 +290,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **link_document_id** | **str**|  | [optional] 
- **infer_metadata_owner** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -289,7 +317,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wv_metadata**
-> get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+> get_wv_metadata(did, wv, wvid)
 
 
 
@@ -300,7 +328,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -314,11 +341,19 @@ did = 'did_example' # str |
 wv = 'wv_example' # str | 
 wvid = 'wvid_example' # str | 
 link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) (default to False)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_wv_metadata(did, wv, wvid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
 ```
 
@@ -326,11 +361,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **link_document_id** | **str**|  | [optional] 
- **infer_metadata_owner** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -353,7 +388,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wve_metadata**
-> get_wve_metadata(did, wv, wvid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+> get_wve_metadata(did, wv, wvid, eid)
 
 
 
@@ -364,7 +399,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -380,11 +414,19 @@ wvid = 'wvid_example' # str |
 eid = 'eid_example' # str | 
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) (default to False)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.get_wve_metadata(did, wv, wvid, eid)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.get_wve_metadata(did, wv, wvid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
 ```
 
@@ -392,13 +434,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **eid** | **str**|  | 
- **configuration** | **str**|  | [optional] 
- **link_document_id** | **str**|  | [optional] 
- **infer_metadata_owner** | **bool**|  | [optional] [default to False]
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **eid** | **str**|  |
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -421,7 +463,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_veop_standard_content_part_metadata**
-> update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body, link_document_id=link_document_id)
+> update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body)
 
 
 
@@ -432,7 +474,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -451,9 +492,17 @@ pid = 'pid_example' # str |
 body = 'body_example' # str | 
 link_document_id = 'link_document_id_example' # str |  (optional)
 
+# example passing only required values which don't have defaults set
+try:
+    api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body)
+except onshape_client.oas.ApiException as e:
+    print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
+
+# example passing only required values which don't have defaults set
+# and optional values
 try:
     api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body, link_document_id=link_document_id)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
 ```
 
@@ -461,14 +510,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **vid** | **str**|  | 
- **eid** | **str**|  | 
- **otype** | **str**|  | 
- **oid** | **str**|  | 
- **pid** | **str**|  | 
- **body** | **str**|  | 
- **link_document_id** | **str**|  | [optional] 
+ **did** | **str**|  |
+ **vid** | **str**|  |
+ **eid** | **str**|  |
+ **otype** | **str**|  |
+ **oid** | **str**|  |
+ **pid** | **str**|  |
+ **body** | **str**|  |
+ **link_document_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -502,7 +551,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -517,9 +565,10 @@ wv = 'wv_example' # str |
 wvid = 'wvid_example' # str | 
 body = 'body_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     api_instance.update_wv_metadata(did, wv, wvid, body)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->update_wv_metadata: %s\n" % e)
 ```
 
@@ -527,10 +576,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **body** | **str**|  | 
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **body** | **str**|  |
 
 ### Return type
 
@@ -564,7 +613,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -580,9 +628,10 @@ wvid = 'wvid_example' # str |
 eid = 'eid_example' # str | 
 body = 'body_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     api_instance.update_wve_metadata(did, wv, wvid, eid, body)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
 ```
 
@@ -590,11 +639,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wv** | **str**|  | 
- **wvid** | **str**|  | 
- **eid** | **str**|  | 
- **body** | **str**|  | 
+ **did** | **str**|  |
+ **wv** | **str**|  |
+ **wvid** | **str**|  |
+ **eid** | **str**|  |
+ **body** | **str**|  |
 
 ### Return type
 
@@ -628,7 +677,6 @@ void (empty response body)
 from __future__ import print_function
 import time
 import onshape_client.oas
-from onshape_client.oas.rest import ApiException
 from pprint import pprint
 configuration = onshape_client.oas.Configuration()
 # Configure OAuth2 access token for authorization: OAuth2
@@ -646,9 +694,10 @@ pid = 'pid_example' # str |
 sub_resource = 'sub_resource_example' # str | 
 body = 'body_example' # str | 
 
+# example passing only required values which don't have defaults set
 try:
     api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
-except ApiException as e:
+except onshape_client.oas.ApiException as e:
     print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
 ```
 
@@ -656,13 +705,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**|  | 
- **wvm** | **str**|  | 
- **wvmid** | **str**|  | 
- **eid** | **str**|  | 
- **pid** | **str**|  | 
- **sub_resource** | **str**|  | 
- **body** | **str**|  | 
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **pid** | **str**|  |
+ **sub_resource** | **str**|  |
+ **body** | **str**|  |
 
 ### Return type
 

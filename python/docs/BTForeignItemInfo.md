@@ -1,12 +1,12 @@
-# BTForeignItemInfo
+# bt_foreign_item_info.BTForeignItemInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**filename** | **str** |  | [optional] 
+**media_type** | **str** |  | [optional] 
 **microversion_id** | **str** |  | [optional] 
 **foreign_id** | **str** |  | [optional] 
-**media_type** | **str** |  | [optional] 
-**filename** | **str** |  | [optional] 
 **file_size** | **int** |  | [optional] 
 **uploaded_at** | **datetime** |  | [optional] 
 **uploaded_by** | **str** |  | [optional] 

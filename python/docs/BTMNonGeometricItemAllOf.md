@@ -1,4 +1,4 @@
-# BTMNonGeometricItemAllOf
+# btm_non_geometric_item_all_of.BTMNonGeometricItemAllOf
 
 ## Properties
 Name | Type | Description | Notes

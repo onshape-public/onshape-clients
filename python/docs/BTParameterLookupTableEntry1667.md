@@ -1,4 +1,4 @@
-# BTParameterLookupTableEntry1667
+# bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **localized_name** | **str** |  | [optional] 
 **localizable_name** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
-**strings_to_localize** | **list[str]** |  | [optional] 
+**strings_to_localize** | **[str]** |  | [optional] 
 **label** | **str** |  | [optional] 
 **localized_label** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

@@ -1,4 +1,4 @@
-# BTAssemblyInstanceInfo
+# bt_assembly_instance_info.BTAssemblyInstanceInfo
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
+**revision** | **str** |  | [optional] 
+**document_microversion** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**revision** | **str** |  | [optional] 
-**document_microversion** | **str** |  | [optional] 
 **full_configuration** | **str** |  | [optional] 
 **document_version** | **str** |  | [optional] 
 

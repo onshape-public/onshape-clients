@@ -1,4 +1,4 @@
-# BTImport
+# bt_import.BTImport
 
 ## Properties
 Name | Type | Description | Notes

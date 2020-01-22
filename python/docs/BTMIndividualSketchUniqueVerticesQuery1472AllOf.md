@@ -1,4 +1,4 @@
-# BTMIndividualSketchUniqueVerticesQuery1472AllOf
+# btm_individual_sketch_unique_vertices_query1472_all_of.BTMIndividualSketchUniqueVerticesQuery1472AllOf
 
 ## Properties
 Name | Type | Description | Notes

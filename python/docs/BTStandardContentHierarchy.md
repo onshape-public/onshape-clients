@@ -1,4 +1,4 @@
-# BTStandardContentHierarchy
+# bt_standard_content_hierarchy.BTStandardContentHierarchy
 
 ## Properties
 Name | Type | Description | Notes

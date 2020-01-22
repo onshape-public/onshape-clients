@@ -1,4 +1,4 @@
-# BTApiKeyUpdateParams
+# bt_api_key_update_params.BTApiKeyUpdateParams
 
 ## Properties
 Name | Type | Description | Notes

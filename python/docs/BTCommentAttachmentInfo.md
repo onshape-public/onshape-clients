@@ -1,4 +1,4 @@
-# BTCommentAttachmentInfo
+# bt_comment_attachment_info.BTCommentAttachmentInfo
 
 ## Properties
 Name | Type | Description | Notes

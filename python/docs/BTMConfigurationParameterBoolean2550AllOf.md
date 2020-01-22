@@ -1,4 +1,4 @@
-# BTMConfigurationParameterBoolean2550AllOf
+# btm_configuration_parameter_boolean2550_all_of.BTMConfigurationParameterBoolean2550AllOf
 
 ## Properties
 Name | Type | Description | Notes

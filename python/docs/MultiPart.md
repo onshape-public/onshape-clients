@@ -1,17 +1,17 @@
-# MultiPart
+# multi_part.MultiPart
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content_disposition** | [**ContentDisposition**](ContentDisposition.md) |  | [optional] 
-**entity** | [**object**](.md) |  | [optional] 
-**headers** | **dict(str, list[str])** |  | [optional] 
-**media_type** | [**BodyPartMediaType**](BodyPartMediaType.md) |  | [optional] 
-**message_body_workers** | [**object**](.md) |  | [optional] 
+**content_disposition** | [**content_disposition.ContentDisposition**](ContentDisposition.md) |  | [optional] 
+**entity** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**headers** | **{str: ([str],)}** |  | [optional] 
+**media_type** | [**body_part_media_type.BodyPartMediaType**](BodyPartMediaType.md) |  | [optional] 
+**message_body_workers** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
 **parent** | [**MultiPart**](MultiPart.md) |  | [optional] 
-**providers** | [**object**](.md) |  | [optional] 
-**body_parts** | [**list[BodyPart]**](BodyPart.md) |  | [optional] 
-**parameterized_headers** | **dict(str, list[ParameterizedHeader])** |  | [optional] 
+**providers** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**body_parts** | [**[body_part.BodyPart]**](BodyPart.md) |  | [optional] 
+**parameterized_headers** | **{str: ([parameterized_header.ParameterizedHeader],)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,10 +1,10 @@
-# BTDocumentInfoAllOf
+# bt_document_info_all_of.BTDocumentInfoAllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **document_thumbnail_element_id** | **str** |  | [optional] 
-**beta_capability_ids** | **list[str]** |  | [optional] 
+**beta_capability_ids** | **[str]** |  | [optional] 
 **duplicate_name_violation_error** | **str** |  | [optional] 
 **is_upgraded_to_latest_version** | **bool** |  | [optional] 
 

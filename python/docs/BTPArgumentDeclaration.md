@@ -1,4 +1,4 @@
-# BTPArgumentDeclaration
+# btp_argument_declaration.BTPArgumentDeclaration
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **type_name** | **str** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**name** | [**BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
-**type** | [**BTPTypeName**](BTPTypeName.md) |  | [optional] 
+**name** | [**btp_identifier.BTPIdentifier**](BTPIdentifier.md) |  | [optional] 
+**type** | [**btp_type_name.BTPTypeName**](BTPTypeName.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
-**space_before** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_before** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_after** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
-**space_after** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

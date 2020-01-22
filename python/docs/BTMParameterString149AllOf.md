@@ -1,4 +1,4 @@
-# BTMParameterString149AllOf
+# btm_parameter_string149_all_of.BTMParameterString149AllOf
 
 ## Properties
 Name | Type | Description | Notes

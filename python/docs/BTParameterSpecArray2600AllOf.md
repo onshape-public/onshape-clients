@@ -1,4 +1,4 @@
-# BTParameterSpecArray2600AllOf
+# bt_parameter_spec_array2600_all_of.BTParameterSpecArray2600AllOf
 
 ## Properties
 Name | Type | Description | Notes

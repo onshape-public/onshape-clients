@@ -1,4 +1,4 @@
-# BTMParameterBooleanAllOf
+# btm_parameter_boolean_all_of.BTMParameterBooleanAllOf
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# BTAppElementContentDeltaInfo
+# bt_app_element_content_delta_info.BTAppElementContentDeltaInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,9 +1,9 @@
-# BTSetFeatureRollbackResponse1042AllOf
+# bt_set_feature_rollback_response1042_all_of.BTSetFeatureRollbackResponse1042AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**microversion_id** | [**BTMicroversionId366**](BTMicroversionId366.md) |  | [optional] 
+**microversion_id** | [**bt_microversion_id366.BTMicroversionId366**](BTMicroversionId366.md) |  | [optional] 
 **rollback_index** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

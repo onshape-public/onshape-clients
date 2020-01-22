@@ -1,4 +1,4 @@
-# BTModifiableEntityOnlyFilter1593AllOf
+# bt_modifiable_entity_only_filter1593_all_of.BTModifiableEntityOnlyFilter1593AllOf
 
 ## Properties
 Name | Type | Description | Notes

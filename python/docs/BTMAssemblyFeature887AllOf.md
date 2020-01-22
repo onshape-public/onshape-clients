@@ -1,11 +1,11 @@
-# BTMAssemblyFeature887AllOf
+# btm_assembly_feature887_all_of.BTMAssemblyFeature887AllOf
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature_list_field_index** | **int** |  | [optional] 
 **auxiliary_assembly_feature** | **bool** |  | [optional] 
-**occurrence_queries_from_all_configurations** | [**list[BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
+**feature_list_field_index** | **int** |  | [optional] 
+**occurrence_queries_from_all_configurations** | [**[btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
 **version** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

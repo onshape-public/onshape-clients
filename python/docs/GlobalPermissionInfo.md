@@ -1,4 +1,4 @@
-# GlobalPermissionInfo
+# global_permission_info.GlobalPermissionInfo
 
 ## Properties
 Name | Type | Description | Notes

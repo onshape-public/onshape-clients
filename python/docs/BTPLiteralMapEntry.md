@@ -1,18 +1,18 @@
-# BTPLiteralMapEntry
+# btp_literal_map_entry.BTPLiteralMapEntry
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **short_descriptor** | **str** |  | [optional] 
-**value** | [**BTPExpression**](BTPExpression.md) |  | [optional] 
-**key** | [**BTPPropertyAccessor**](BTPPropertyAccessor.md) |  | [optional] 
+**value** | [**btp_expression.BTPExpression**](BTPExpression.md) |  | [optional] 
+**key** | [**btp_property_accessor.BTPPropertyAccessor**](BTPPropertyAccessor.md) |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
-**space_before** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_before** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
+**space_after** | [**btp_space.BTPSpace**](BTPSpace.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
-**space_after** | [**BTPSpace**](BTPSpace.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

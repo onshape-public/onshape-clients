@@ -1,14 +1,14 @@
-# JsonNode
+# json_node.JsonNode
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**node_type** | **str** |  | [optional] 
 **textual** | **bool** |  | [optional] 
 **object** | **bool** |  | [optional] 
-**node_type** | **str** |  | [optional] 
-**binary** | **bool** |  | [optional] 
-**missing_node** | **bool** |  | [optional] 
 **boolean** | **bool** |  | [optional] 
+**missing_node** | **bool** |  | [optional] 
+**binary** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 
 **pojo** | **bool** |  | [optional] 

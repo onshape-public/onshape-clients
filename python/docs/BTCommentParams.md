@@ -1,19 +1,19 @@
-# BTCommentParams
+# bt_comment_params.BTCommentParams
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**version_id** | **str** |  | [optional] 
+**assignee** | **str** |  | [optional] 
+**view_data** | [**bt_view_data_params.BTViewDataParams**](BTViewDataParams.md) |  | [optional] 
 **element_query** | **str** |  | [optional] 
 **element_feature** | **str** |  | [optional] 
 **element_occurrence** | **str** |  | [optional] 
 **assembly_feature** | **str** |  | [optional] 
-**version_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
-**assignee** | **str** |  | [optional] 
-**view_data** | [**BTViewDataParams**](BTViewDataParams.md) |  | [optional] 
 **message** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 

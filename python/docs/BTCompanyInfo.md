@@ -1,17 +1,17 @@
-# BTCompanyInfo
+# bt_company_info.BTCompanyInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**BTAddressInfo**](BTAddressInfo.md) |  | [optional] 
-**purchase** | [**BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
+**address** | [**bt_address_info.BTAddressInfo**](BTAddressInfo.md) |  | [optional] 
+**purchase** | [**bt_purchase_info.BTPurchaseInfo**](BTPurchaseInfo.md) |  | [optional] 
 **domain_prefix** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
 **admin** | **bool** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
-**enterprise_base_url** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **no_public_documents** | **bool** |  | [optional] 
+**enterprise_base_url** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **type** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 

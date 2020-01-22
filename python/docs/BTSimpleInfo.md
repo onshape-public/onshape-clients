@@ -1,4 +1,4 @@
-# BTSimpleInfo
+# bt_simple_info.BTSimpleInfo
 
 ## Properties
 Name | Type | Description | Notes

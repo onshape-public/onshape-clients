@@ -1,4 +1,4 @@
-# ThreeDSecure
+# three_d_secure.ThreeDSecure
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **object** | **str** |  | [optional] 
 **amount** | **int** |  | [optional] 
 **authenticated** | **bool** |  | [optional] 
-**card** | [**Card**](Card.md) |  | [optional] 
+**card** | [**card.Card**](Card.md) |  | [optional] 
 **created** | **int** |  | [optional] 
 **currency** | **str** |  | [optional] 
 **livemode** | **bool** |  | [optional] 

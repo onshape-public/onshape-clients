@@ -1,13 +1,13 @@
-# BTWorkflowStateInfo
+# bt_workflow_state_info.BTWorkflowStateInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**required_properties** | **list[str]** |  | [optional] 
-**required_item_properties** | **list[str]** |  | [optional] 
+**required_item_properties** | **[str]** |  | [optional] 
+**required_properties** | **[str]** |  | [optional] 
 **approver_source_property** | **str** |  | [optional] 
 **notifier_source_property** | **str** |  | [optional] 
-**editable_properties** | **list[str]** |  | [optional] 
+**editable_properties** | **[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 **display_name** | **str** |  | [optional] 
 

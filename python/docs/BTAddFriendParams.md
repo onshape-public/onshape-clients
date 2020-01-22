@@ -1,4 +1,4 @@
-# BTAddFriendParams
+# bt_add_friend_params.BTAddFriendParams
 
 ## Properties
 Name | Type | Description | Notes

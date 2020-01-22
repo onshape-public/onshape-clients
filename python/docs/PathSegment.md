@@ -1,11 +1,11 @@
-# PathSegment
+# path_segment.PathSegment
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sub_type** | **int** |  | [optional] 
 **tree_href** | **str** |  | [optional] 
 **resource_type** | **str** |  | [optional] 
+**sub_type** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 

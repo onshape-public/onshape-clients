@@ -1,16 +1,16 @@
-# BTStandardContentHierarchyInfo
+# bt_standard_content_hierarchy_info.BTStandardContentHierarchyInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**types** | **str** |  | [optional] 
-**document_type** | **int** |  | [optional] 
-**production_version_id** | **str** |  | [optional] 
-**test_version_id** | **str** |  | [optional] 
 **default_workspace** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
-**existing_versions** | [**list[VersionSpecs]**](VersionSpecs.md) |  | [optional] 
 **standard** | **str** |  | [optional] 
+**production_version_id** | **str** |  | [optional] 
+**test_version_id** | **str** |  | [optional] 
+**types** | **str** |  | [optional] 
+**document_type** | **int** |  | [optional] 
+**existing_versions** | [**[version_specs.VersionSpecs]**](VersionSpecs.md) |  | [optional] 
 **type** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 

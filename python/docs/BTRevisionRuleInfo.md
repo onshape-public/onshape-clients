@@ -1,12 +1,12 @@
-# BTRevisionRuleInfo
+# bt_revision_rule_info.BTRevisionRuleInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**revision_list** | **list[str]** |  | [optional] 
-**rule_type** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
 **company_id** | **str** |  | [optional] 
+**revision_list** | **[str]** |  | [optional] 
+**rule_type** | **int** |  | [optional] 
 **script** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
