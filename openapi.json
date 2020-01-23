@@ -17064,9 +17064,6 @@
         }
       },
       "BTBaseInfo": {
-        "required": [
-          "jsonType"
-        ],
         "type": "object",
         "properties": {
           "href": {
