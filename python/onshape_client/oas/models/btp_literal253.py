@@ -141,6 +141,8 @@ class BTPLiteral253(ModelComposed):
                 'BTPLiteralString-259': btp_literal_string259.BTPLiteralString259,
                 'BTPLiteralArray-254': btp_literal_array254.BTPLiteralArray254,
                 'BTPLiteralUndefined-260': btp_literal_undefined260.BTPLiteralUndefined260,
+                'BTPLiteralNumber-258': btp_literal_number258.BTPLiteralNumber258,
+                'BTPLiteralMap-256': btp_literal_map256.BTPLiteralMap256,
             },
         }
 

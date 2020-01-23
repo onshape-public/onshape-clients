@@ -58,4 +58,4 @@ def test_insert_line_sketch(client, part_studio):
     feature_definition = BTFeatureDefinitionCall1406(feature=sketch)
     client.part_studios_api.add_part_studio_feature(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, bt_feature_definition_call1406_bt_feature_definition_call1406=feature_definition, _preload_content=False)
     features = client.part_studios_api.get_part_studio_features(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid)
-    assert client.part_studios_api.get_features()[0].name == FEATURE_NAME
+    assert features.features[0].name == FEATURE_NAME

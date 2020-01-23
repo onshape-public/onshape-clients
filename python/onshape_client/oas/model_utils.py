@@ -296,7 +296,10 @@ class ModelComposed(OpenApiModel):
             values = set()
             for model_instance in model_instances:
                 if name in model_instance._data_store:
-                    values.add(model_instance._data_store[name])
+                    try:
+                        values.add(model_instance._data_store[name])
+                    except TypeError as e:
+                        return model_instance._data_store[name]
             if len(values) == 1:
                 return list(values)[0]
             raise ApiValueError(
