@@ -98,7 +98,6 @@ class BTVersionInfoBase(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'json_type': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'modified_at': (datetime,),  # noqa: E501
             'thumbnail': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
@@ -115,6 +114,7 @@ class BTVersionInfoBase(ModelComposed):
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
+            'json_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -127,7 +127,6 @@ class BTVersionInfoBase(ModelComposed):
         }
 
     attribute_map = {
-        'json_type': 'jsonType',  # noqa: E501
         'type': 'type',  # noqa: E501
         'modified_at': 'modifiedAt',  # noqa: E501
         'thumbnail': 'thumbnail',  # noqa: E501
@@ -144,6 +143,7 @@ class BTVersionInfoBase(ModelComposed):
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'json_type': 'jsonType',  # noqa: E501
     }
 
     required_properties = set([
@@ -157,11 +157,9 @@ class BTVersionInfoBase(ModelComposed):
         '_additional_properties_model_instances',
     ])
 
-    def __init__(self, json_type, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
         """bt_version_info_base.BTVersionInfoBase - a model defined in OpenAPI
 
-        Args:
-            json_type (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -193,6 +191,7 @@ class BTVersionInfoBase(ModelComposed):
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
+            json_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
@@ -208,7 +207,6 @@ class BTVersionInfoBase(ModelComposed):
             '_configuration': _configuration,
         }
         model_args = {
-            'json_type': json_type,
         }
         model_args.update(kwargs)
         composed_info = validate_get_composed_info(
@@ -217,7 +215,6 @@ class BTVersionInfoBase(ModelComposed):
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
 
-        self.json_type = json_type
         for var_name, var_value in six.iteritems(kwargs):
             setattr(self, var_name, var_value)
 

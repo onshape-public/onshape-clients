@@ -43,7 +43,7 @@ def client():
         client = Client.get_client()
     except Exception as e:
         # client = Client(stack_key='onshape_client_test')
-        client = Client(stack_key='local')
+        client = Client(stack_key='local3')
     return client
 
 @pytest.fixture

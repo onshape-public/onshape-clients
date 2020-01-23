@@ -78,11 +78,11 @@ class BTBaseInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'json_type': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
+            'json_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,11 +94,11 @@ class BTBaseInfo(ModelNormal):
         }
 
     attribute_map = {
-        'json_type': 'jsonType',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'json_type': 'jsonType',  # noqa: E501
     }
 
     @staticmethod
@@ -113,11 +113,9 @@ class BTBaseInfo(ModelNormal):
         '_configuration',
     ])
 
-    def __init__(self, json_type, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
         """bt_base_info.BTBaseInfo - a model defined in OpenAPI
 
-        Args:
-            json_type (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -137,6 +135,7 @@ class BTBaseInfo(ModelNormal):
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
+            json_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
@@ -145,7 +144,6 @@ class BTBaseInfo(ModelNormal):
         self._path_to_item = _path_to_item
         self._configuration = _configuration
 
-        self.json_type = json_type
         for var_name, var_value in six.iteritems(kwargs):
             setattr(self, var_name, var_value)
 
