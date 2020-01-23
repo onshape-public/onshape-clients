@@ -197,13 +197,9 @@ class PartStudiosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json;charset=UTF-8; qs=0.09',
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
                     'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
                 ],
                 'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09',
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
                     'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
                 ]
             },
@@ -1937,8 +1933,6 @@ class PartStudiosApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json;charset=UTF-8; qs=0.09',
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
                     'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
                 ],
                 'content_type': [],

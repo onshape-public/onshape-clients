@@ -919,7 +919,11 @@ def get_discriminator_class(model_class, from_server, data):
     discr_propertyname_py = list(discriminator.keys())[0]
     discr_propertyname_js = model_class.attribute_map[discr_propertyname_py]
     if from_server:
-        class_name = data[discr_propertyname_js]
+        try:
+            class_name = data[discr_propertyname_js]
+        # Happens when a discriminator is specified in the spec, but not provided from the response.
+        except KeyError as e:
+            return model_class
     else:
         class_name = data[discr_propertyname_py]
     class_name_to_discr_class = discriminator[discr_propertyname_py]
