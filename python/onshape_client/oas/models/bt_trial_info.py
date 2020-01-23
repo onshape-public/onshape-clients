@@ -74,10 +74,10 @@ class BTTrialInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'paid_customer_in_past': (bool,),  # noqa: E501
             'plan_id': (str,),  # noqa: E501
-            'trial_end_date': (datetime,),  # noqa: E501
             'seats': (int,),  # noqa: E501
+            'paid_customer_in_past': (bool,),  # noqa: E501
+            'trial_end_date': (datetime,),  # noqa: E501
             'plan_interval': (str,),  # noqa: E501
             'trial_start_date': (datetime,),  # noqa: E501
             'trial_days_remaining': (int,),  # noqa: E501
@@ -88,10 +88,10 @@ class BTTrialInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'paid_customer_in_past': 'paidCustomerInPast',  # noqa: E501
         'plan_id': 'planId',  # noqa: E501
-        'trial_end_date': 'trialEndDate',  # noqa: E501
         'seats': 'seats',  # noqa: E501
+        'paid_customer_in_past': 'paidCustomerInPast',  # noqa: E501
+        'trial_end_date': 'trialEndDate',  # noqa: E501
         'plan_interval': 'planInterval',  # noqa: E501
         'trial_start_date': 'trialStartDate',  # noqa: E501
         'trial_days_remaining': 'trialDaysRemaining',  # noqa: E501
@@ -127,10 +127,10 @@ class BTTrialInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            paid_customer_in_past (bool): [optional]  # noqa: E501
             plan_id (str): [optional]  # noqa: E501
-            trial_end_date (datetime): [optional]  # noqa: E501
             seats (int): [optional]  # noqa: E501
+            paid_customer_in_past (bool): [optional]  # noqa: E501
+            trial_end_date (datetime): [optional]  # noqa: E501
             plan_interval (str): [optional]  # noqa: E501
             trial_start_date (datetime): [optional]  # noqa: E501
             trial_days_remaining (int): [optional]  # noqa: E501

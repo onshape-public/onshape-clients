@@ -139,8 +139,8 @@ class BTPNode7(ModelNormal):
         return {
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -153,25 +153,25 @@ class BTPNode7(ModelNormal):
     def discriminator():
         return {
             'bt_type': {
-                'BTPTopLevelNode-286': btp_top_level_node286.BTPTopLevelNode286,
                 'BTPStatement-269': btp_statement269.BTPStatement269,
-                'BTPPropertyAccessor-23': btp_property_accessor23.BTPPropertyAccessor23,
-                'BTPTypeName-290': btp_type_name290.BTPTypeName290,
                 'BTPModule-234': btp_module234.BTPModule234,
-                'BTPLValue-249': btpl_value249.BTPLValue249,
                 'BTPBuiltinIdentifier-233': btp_builtin_identifier233.BTPBuiltinIdentifier233,
-                'BTPName-261': btp_name261.BTPName261,
                 'BTPLiteralMapEntry-257': btp_literal_map_entry257.BTPLiteralMapEntry257,
                 'BTPArgumentDeclaration-232': btp_argument_declaration232.BTPArgumentDeclaration232,
                 'BTPModuleId-235': btp_module_id235.BTPModuleId235,
+                'BTPTopLevelNode-286': btp_top_level_node286.BTPTopLevelNode286,
+                'BTPPropertyAccessor-23': btp_property_accessor23.BTPPropertyAccessor23,
+                'BTPTypeName-290': btp_type_name290.BTPTypeName290,
+                'BTPLValue-249': btpl_value249.BTPLValue249,
+                'BTPName-261': btp_name261.BTPName261,
             },
         }
 
     attribute_map = {
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -212,8 +212,8 @@ class BTPNode7(ModelNormal):
                                 If omitted no type conversion is done.
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

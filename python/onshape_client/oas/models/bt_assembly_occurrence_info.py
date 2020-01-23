@@ -74,10 +74,10 @@ class BTAssemblyOccurrenceInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'transform': ([float],),  # noqa: E501
-            'fixed': (bool,),  # noqa: E501
-            'path': ([str],),  # noqa: E501
             'hidden': (bool,),  # noqa: E501
+            'fixed': (bool,),  # noqa: E501
+            'transform': ([float],),  # noqa: E501
+            'path': ([str],),  # noqa: E501
         }
 
     @staticmethod
@@ -85,10 +85,10 @@ class BTAssemblyOccurrenceInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'transform': 'transform',  # noqa: E501
-        'fixed': 'fixed',  # noqa: E501
-        'path': 'path',  # noqa: E501
         'hidden': 'hidden',  # noqa: E501
+        'fixed': 'fixed',  # noqa: E501
+        'transform': 'transform',  # noqa: E501
+        'path': 'path',  # noqa: E501
     }
 
     @staticmethod
@@ -121,10 +121,10 @@ class BTAssemblyOccurrenceInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            transform ([float]): [optional]  # noqa: E501
-            fixed (bool): [optional]  # noqa: E501
-            path ([str]): [optional]  # noqa: E501
             hidden (bool): [optional]  # noqa: E501
+            fixed (bool): [optional]  # noqa: E501
+            transform ([float]): [optional]  # noqa: E501
+            path ([str]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

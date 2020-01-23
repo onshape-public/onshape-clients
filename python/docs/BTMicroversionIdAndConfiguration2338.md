@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deleted** | **bool** |  | [optional] 
-**cache_key** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**cache_key** | **str** |  | [optional] 
 **microversion** | [**bt_microversion_id366.BTMicroversionId366**](BTMicroversionId366.md) |  | [optional] 
 **configuration_parameter_id_to_value** | [**{str: (btfs_value1888.BTFSValue1888,)}**](BTFSValue1888.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 

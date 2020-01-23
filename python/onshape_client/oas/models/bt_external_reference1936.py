@@ -101,10 +101,10 @@ class BTExternalReference1936(ModelComposed):
             'document_version_id': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
-            'external_reference': (bool,),  # noqa: E501
             'microversion_id_and_configuration': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
             'external_document_with_version_and_element_id': (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,),  # noqa: E501
             'external_document_with_version': (bt_document_with_version_id.BTDocumentWithVersionId,),  # noqa: E501
+            'external_reference': (bool,),  # noqa: E501
             'configured': (bool,),  # noqa: E501
             'full_element_id': (bt_full_element_id756.BTFullElementId756,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -118,10 +118,10 @@ class BTExternalReference1936(ModelComposed):
         'document_version_id': 'documentVersionId',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
-        'external_reference': 'externalReference',  # noqa: E501
         'microversion_id_and_configuration': 'microversionIdAndConfiguration',  # noqa: E501
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',  # noqa: E501
         'external_document_with_version': 'externalDocumentWithVersion',  # noqa: E501
+        'external_reference': 'externalReference',  # noqa: E501
         'configured': 'configured',  # noqa: E501
         'full_element_id': 'fullElementId',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -159,10 +159,10 @@ class BTExternalReference1936(ModelComposed):
             document_version_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
-            external_reference (bool): [optional]  # noqa: E501
             microversion_id_and_configuration (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338): [optional]  # noqa: E501
             external_document_with_version_and_element_id (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId): [optional]  # noqa: E501
             external_document_with_version (bt_document_with_version_id.BTDocumentWithVersionId): [optional]  # noqa: E501
+            external_reference (bool): [optional]  # noqa: E501
             configured (bool): [optional]  # noqa: E501
             full_element_id (bt_full_element_id756.BTFullElementId756): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

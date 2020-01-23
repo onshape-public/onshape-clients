@@ -86,6 +86,7 @@ class BTParameterVisibilityOnMateDOFType2114(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'type': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
@@ -100,6 +101,7 @@ class BTParameterVisibilityOnMateDOFType2114(ModelComposed):
         }
 
     attribute_map = {
+        'type': '@type',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
         'value': 'value',  # noqa: E501
@@ -134,6 +136,7 @@ class BTParameterVisibilityOnMateDOFType2114(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501

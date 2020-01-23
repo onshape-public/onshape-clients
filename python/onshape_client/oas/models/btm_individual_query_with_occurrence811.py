@@ -90,13 +90,13 @@ class BTMIndividualQueryWithOccurrence811(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'entity_query': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'entity_query': (str,),  # noqa: E501
             'path': ([str],),  # noqa: E501
             'deterministic_ids': ([str],),  # noqa: E501
             'deterministic_id_list': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
-            'query_string': (str,),  # noqa: E501
             'query': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
+            'query_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
         }
@@ -110,13 +110,13 @@ class BTMIndividualQueryWithOccurrence811(ModelComposed):
         }
 
     attribute_map = {
-        'entity_query': 'entityQuery',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'entity_query': 'entityQuery',  # noqa: E501
         'path': 'path',  # noqa: E501
         'deterministic_ids': 'deterministicIds',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
-        'query_string': 'queryString',  # noqa: E501
         'query': 'query',  # noqa: E501
+        'query_string': 'queryString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
     }
@@ -150,13 +150,13 @@ class BTMIndividualQueryWithOccurrence811(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entity_query (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            entity_query (str): [optional]  # noqa: E501
             path ([str]): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
-            query_string (str): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
+            query_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
         """

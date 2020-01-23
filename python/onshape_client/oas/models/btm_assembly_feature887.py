@@ -134,11 +134,11 @@ class BTMAssemblyFeature887(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'auxiliary_assembly_feature': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'feature_list_field_index': (int,),  # noqa: E501
+            'auxiliary_assembly_feature': (bool,),  # noqa: E501
             'occurrence_queries_from_all_configurations': ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904],),  # noqa: E501
             'version': (int,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
@@ -146,35 +146,35 @@ class BTMAssemblyFeature887(ModelComposed):
             'suppressed': (bool,),  # noqa: E501
             'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
             'feature_type': (str,),  # noqa: E501
+            'feature_id': (str,),  # noqa: E501
             'sub_features': ([btm_feature134.BTMFeature134],),  # noqa: E501
             'return_after_subfeatures': (bool,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
             'bt_type': {
-                'BTMGeometryMate-1260': btm_geometry_mate1260.BTMGeometryMate1260,
                 'BTMMateGroup-65': btm_mate_group65.BTMMateGroup65,
                 'BTMAssemblyFeature2-1022': btm_assembly_feature21022.BTMAssemblyFeature21022,
                 'BTExplosion-2754': bt_explosion2754.BTExplosion2754,
                 'BTExplosionStepFeature-3008': bt_explosion_step_feature3008.BTExplosionStepFeature3008,
-                'BTMMate-64': btm_mate64.BTMMate64,
                 'BTMMateConnector-66': btm_mate_connector66.BTMMateConnector66,
-                'BTMNonGeometricItem-1864': btm_non_geometric_item1864.BTMNonGeometricItem1864,
                 'BTMAssemblyFeature1-2218': btm_assembly_feature12218.BTMAssemblyFeature12218,
                 'BTMAssemblyPatternFeature-2241': btm_assembly_pattern_feature2241.BTMAssemblyPatternFeature2241,
+                'BTMGeometryMate-1260': btm_geometry_mate1260.BTMGeometryMate1260,
+                'BTMMate-64': btm_mate64.BTMMate64,
+                'BTMNonGeometricItem-1864': btm_non_geometric_item1864.BTMNonGeometricItem1864,
                 'BTMMateRelation-1412': btm_mate_relation1412.BTMMateRelation1412,
             },
         }
 
     attribute_map = {
-        'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'feature_list_field_index': 'featureListFieldIndex',  # noqa: E501
+        'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',  # noqa: E501
         'occurrence_queries_from_all_configurations': 'occurrenceQueriesFromAllConfigurations',  # noqa: E501
         'version': 'version',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
@@ -182,9 +182,9 @@ class BTMAssemblyFeature887(ModelComposed):
         'suppressed': 'suppressed',  # noqa: E501
         'parameters': 'parameters',  # noqa: E501
         'feature_type': 'featureType',  # noqa: E501
+        'feature_id': 'featureId',  # noqa: E501
         'sub_features': 'subFeatures',  # noqa: E501
         'return_after_subfeatures': 'returnAfterSubfeatures',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
     }
 
     required_properties = set([
@@ -216,11 +216,11 @@ class BTMAssemblyFeature887(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            auxiliary_assembly_feature (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             feature_list_field_index (int): [optional]  # noqa: E501
+            auxiliary_assembly_feature (bool): [optional]  # noqa: E501
             occurrence_queries_from_all_configurations ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]): [optional]  # noqa: E501
             version (int): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
@@ -228,9 +228,9 @@ class BTMAssemblyFeature887(ModelComposed):
             suppressed (bool): [optional]  # noqa: E501
             parameters ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
             sub_features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
             return_after_subfeatures (bool): [optional]  # noqa: E501
-            feature_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

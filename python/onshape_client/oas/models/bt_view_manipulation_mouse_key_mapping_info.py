@@ -81,9 +81,9 @@ class BTViewManipulationMouseKeyMappingInfo(ModelNormal):
             'pan2_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
             'zoom2_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
             'rotate3_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
-            'axis_rotate3_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
             'pan3_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
             'zoom3_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
+            'axis_rotate3_d_mapping': ([bt_key_mouse_values_info.BTKeyMouseValuesInfo],),  # noqa: E501
         }
 
     @staticmethod
@@ -94,9 +94,9 @@ class BTViewManipulationMouseKeyMappingInfo(ModelNormal):
         'pan2_d_mapping': 'pan2DMapping',  # noqa: E501
         'zoom2_d_mapping': 'zoom2DMapping',  # noqa: E501
         'rotate3_d_mapping': 'rotate3DMapping',  # noqa: E501
-        'axis_rotate3_d_mapping': 'axisRotate3DMapping',  # noqa: E501
         'pan3_d_mapping': 'pan3DMapping',  # noqa: E501
         'zoom3_d_mapping': 'zoom3DMapping',  # noqa: E501
+        'axis_rotate3_d_mapping': 'axisRotate3DMapping',  # noqa: E501
     }
 
     @staticmethod
@@ -132,9 +132,9 @@ class BTViewManipulationMouseKeyMappingInfo(ModelNormal):
             pan2_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
             zoom2_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
             rotate3_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
-            axis_rotate3_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
             pan3_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
             zoom3_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
+            axis_rotate3_d_mapping ([bt_key_mouse_values_info.BTKeyMouseValuesInfo]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

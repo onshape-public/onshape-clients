@@ -86,21 +86,22 @@ class BTCommentInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'resolved_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'view_data': (bt_view_data_info.BTViewDataInfo,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
             'parent_id': (str,),  # noqa: E501
             'thumbnail': (bt_comment_attachment_info.BTCommentAttachmentInfo,),  # noqa: E501
+            'release_package_id': (str,),  # noqa: E501
+            'view_data': (bt_view_data_info.BTViewDataInfo,),  # noqa: E501
+            'message': (str,),  # noqa: E501
+            'assignee': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
+            'resolved_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'workspace_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'user': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'can_delete': (bool,),  # noqa: E501
-            'release_package_id': (str,),  # noqa: E501
             'element_query': (str,),  # noqa: E501
             'element_feature': (str,),  # noqa: E501
-            'assignee': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
             'assigned_at': (datetime,),  # noqa: E501
             'top_level': (bool,),  # noqa: E501
             'reopened_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
@@ -111,7 +112,6 @@ class BTCommentInfo(ModelNormal):
             'element_occurrences': ([str],),  # noqa: E501
             'assembly_features': ([str],),  # noqa: E501
             'can_resolve_or_reopen': (bool,),  # noqa: E501
-            'message': (str,),  # noqa: E501
             'state': (int,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
@@ -124,21 +124,22 @@ class BTCommentInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'resolved_by': 'resolvedBy',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'view_data': 'viewData',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
         'parent_id': 'parentId',  # noqa: E501
         'thumbnail': 'thumbnail',  # noqa: E501
+        'release_package_id': 'releasePackageId',  # noqa: E501
+        'view_data': 'viewData',  # noqa: E501
+        'message': 'message',  # noqa: E501
+        'assignee': 'assignee',  # noqa: E501
+        'resolved_by': 'resolvedBy',  # noqa: E501
+        'created_at': 'createdAt',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'workspace_id': 'workspaceId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'user': 'user',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'can_delete': 'canDelete',  # noqa: E501
-        'release_package_id': 'releasePackageId',  # noqa: E501
         'element_query': 'elementQuery',  # noqa: E501
         'element_feature': 'elementFeature',  # noqa: E501
-        'assignee': 'assignee',  # noqa: E501
         'assigned_at': 'assignedAt',  # noqa: E501
         'top_level': 'topLevel',  # noqa: E501
         'reopened_by': 'reopenedBy',  # noqa: E501
@@ -149,7 +150,6 @@ class BTCommentInfo(ModelNormal):
         'element_occurrences': 'elementOccurrences',  # noqa: E501
         'assembly_features': 'assemblyFeatures',  # noqa: E501
         'can_resolve_or_reopen': 'canResolveOrReopen',  # noqa: E501
-        'message': 'message',  # noqa: E501
         'state': 'state',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
@@ -187,21 +187,22 @@ class BTCommentInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            resolved_by (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            view_data (bt_view_data_info.BTViewDataInfo): [optional]  # noqa: E501
-            created_at (datetime): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
             thumbnail (bt_comment_attachment_info.BTCommentAttachmentInfo): [optional]  # noqa: E501
+            release_package_id (str): [optional]  # noqa: E501
+            view_data (bt_view_data_info.BTViewDataInfo): [optional]  # noqa: E501
+            message (str): [optional]  # noqa: E501
+            assignee (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
+            resolved_by (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             user (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             can_delete (bool): [optional]  # noqa: E501
-            release_package_id (str): [optional]  # noqa: E501
             element_query (str): [optional]  # noqa: E501
             element_feature (str): [optional]  # noqa: E501
-            assignee (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
             assigned_at (datetime): [optional]  # noqa: E501
             top_level (bool): [optional]  # noqa: E501
             reopened_by (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
@@ -212,7 +213,6 @@ class BTCommentInfo(ModelNormal):
             element_occurrences ([str]): [optional]  # noqa: E501
             assembly_features ([str]): [optional]  # noqa: E501
             can_resolve_or_reopen (bool): [optional]  # noqa: E501
-            message (str): [optional]  # noqa: E501
             state (int): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501

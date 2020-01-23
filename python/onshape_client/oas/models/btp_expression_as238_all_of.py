@@ -82,8 +82,8 @@ class BTPExpressionAs238AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'operand': (btp_expression9.BTPExpression9,),  # noqa: E501
             'type_name': (btp_type_name290.BTPTypeName290,),  # noqa: E501
+            'operand': (btp_expression9.BTPExpression9,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -92,8 +92,8 @@ class BTPExpressionAs238AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'operand': 'operand',  # noqa: E501
         'type_name': 'typeName',  # noqa: E501
+        'operand': 'operand',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -127,8 +127,8 @@ class BTPExpressionAs238AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operand (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             type_name (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
+            operand (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

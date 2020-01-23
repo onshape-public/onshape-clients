@@ -94,9 +94,9 @@ class BTMFeatureInvalid1031(ModelComposed):
             'suppressed': (bool,),  # noqa: E501
             'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
             'feature_type': (str,),  # noqa: E501
+            'feature_id': (str,),  # noqa: E501
             'sub_features': ([btm_feature134.BTMFeature134],),  # noqa: E501
             'return_after_subfeatures': (bool,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -112,9 +112,9 @@ class BTMFeatureInvalid1031(ModelComposed):
         'suppressed': 'suppressed',  # noqa: E501
         'parameters': 'parameters',  # noqa: E501
         'feature_type': 'featureType',  # noqa: E501
+        'feature_id': 'featureId',  # noqa: E501
         'sub_features': 'subFeatures',  # noqa: E501
         'return_after_subfeatures': 'returnAfterSubfeatures',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
     }
 
     required_properties = set([
@@ -154,9 +154,9 @@ class BTMFeatureInvalid1031(ModelComposed):
             suppressed (bool): [optional]  # noqa: E501
             parameters ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
             sub_features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
             return_after_subfeatures (bool): [optional]  # noqa: E501
-            feature_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

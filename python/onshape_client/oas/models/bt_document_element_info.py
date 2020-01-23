@@ -89,18 +89,18 @@ class BTDocumentElementInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'element_type': (str,),  # noqa: E501
             'thumbnail_info': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
             'filename': (str,),  # noqa: E501
-            'data_type': (str,),  # noqa: E501
-            'thumbnails': (str,),  # noqa: E501
-            'microversion_id': (str,),  # noqa: E501
             'length_units': (str,),  # noqa: E501
             'angle_units': (str,),  # noqa: E501
             'mass_units': (str,),  # noqa: E501
+            'microversion_id': (str,),  # noqa: E501
+            'data_type': (str,),  # noqa: E501
             'foreign_data_id': (str,),  # noqa: E501
             'unupdatable': (bool,),  # noqa: E501
             'specified_unit': (str,),  # noqa: E501
+            'element_type': (str,),  # noqa: E501
+            'thumbnails': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
@@ -111,18 +111,18 @@ class BTDocumentElementInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'element_type': 'elementType',  # noqa: E501
         'thumbnail_info': 'thumbnailInfo',  # noqa: E501
         'filename': 'filename',  # noqa: E501
-        'data_type': 'dataType',  # noqa: E501
-        'thumbnails': 'thumbnails',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
         'length_units': 'lengthUnits',  # noqa: E501
         'angle_units': 'angleUnits',  # noqa: E501
         'mass_units': 'massUnits',  # noqa: E501
+        'microversion_id': 'microversionId',  # noqa: E501
+        'data_type': 'dataType',  # noqa: E501
         'foreign_data_id': 'foreignDataId',  # noqa: E501
         'unupdatable': 'unupdatable',  # noqa: E501
         'specified_unit': 'specifiedUnit',  # noqa: E501
+        'element_type': 'elementType',  # noqa: E501
+        'thumbnails': 'thumbnails',  # noqa: E501
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
         'type': 'type',  # noqa: E501
@@ -158,18 +158,18 @@ class BTDocumentElementInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            element_type (str): [optional]  # noqa: E501
             thumbnail_info (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
             filename (str): [optional]  # noqa: E501
-            data_type (str): [optional]  # noqa: E501
-            thumbnails (str): [optional]  # noqa: E501
-            microversion_id (str): [optional]  # noqa: E501
             length_units (str): [optional]  # noqa: E501
             angle_units (str): [optional]  # noqa: E501
             mass_units (str): [optional]  # noqa: E501
+            microversion_id (str): [optional]  # noqa: E501
+            data_type (str): [optional]  # noqa: E501
             foreign_data_id (str): [optional]  # noqa: E501
             unupdatable (bool): [optional]  # noqa: E501
             specified_unit (str): [optional]  # noqa: E501
+            element_type (str): [optional]  # noqa: E501
+            thumbnails (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501

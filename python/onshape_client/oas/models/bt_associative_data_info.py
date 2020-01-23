@@ -86,14 +86,14 @@ class BTAssociativeDataInfo(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
+            'microversion_id': (str,),  # noqa: E501
+            'data': ([bt_name_value_pair.BTNameValuePair],),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'document_microversion': (str,),  # noqa: E501
             'associative_data_id': (str,),  # noqa: E501
             'occurrence_id': (str,),  # noqa: E501
             'id_tag': (str,),  # noqa: E501
-            'data': ([bt_name_value_pair.BTNameValuePair],),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'microversion_id': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -103,14 +103,14 @@ class BTAssociativeDataInfo(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
+        'microversion_id': 'microversionId',  # noqa: E501
+        'data': 'data',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'document_microversion': 'documentMicroversion',  # noqa: E501
         'associative_data_id': 'associativeDataId',  # noqa: E501
         'occurrence_id': 'occurrenceId',  # noqa: E501
         'id_tag': 'idTag',  # noqa: E501
-        'data': 'data',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
@@ -145,14 +145,14 @@ class BTAssociativeDataInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
+            microversion_id (str): [optional]  # noqa: E501
+            data ([bt_name_value_pair.BTNameValuePair]): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             document_microversion (str): [optional]  # noqa: E501
             associative_data_id (str): [optional]  # noqa: E501
             occurrence_id (str): [optional]  # noqa: E501
             id_tag (str): [optional]  # noqa: E501
-            data ([bt_name_value_pair.BTNameValuePair]): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
-            microversion_id (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

@@ -93,12 +93,12 @@ class BTDiffInfo(ModelNormal):
         """
         return {
             'source_id': (str,),  # noqa: E501
+            'collection_changes': ({str: ([bt_diff_info.BTDiffInfo],)},),  # noqa: E501
             'geometry_change_messages': ([str],),  # noqa: E501
             'source_value': (str,),  # noqa: E501
             'target_value': (str,),  # noqa: E501
             'target_id': (str,),  # noqa: E501
             'entity_type': (str,),  # noqa: E501
-            'collection_changes': ({str: ([bt_diff_info.BTDiffInfo],)},),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -108,12 +108,12 @@ class BTDiffInfo(ModelNormal):
 
     attribute_map = {
         'source_id': 'sourceId',  # noqa: E501
+        'collection_changes': 'collectionChanges',  # noqa: E501
         'geometry_change_messages': 'geometryChangeMessages',  # noqa: E501
         'source_value': 'sourceValue',  # noqa: E501
         'target_value': 'targetValue',  # noqa: E501
         'target_id': 'targetId',  # noqa: E501
         'entity_type': 'entityType',  # noqa: E501
-        'collection_changes': 'collectionChanges',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
@@ -148,12 +148,12 @@ class BTDiffInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             source_id (str): [optional]  # noqa: E501
+            collection_changes ({str: ([bt_diff_info.BTDiffInfo],)}): [optional]  # noqa: E501
             geometry_change_messages ([str]): [optional]  # noqa: E501
             source_value (str): [optional]  # noqa: E501
             target_value (str): [optional]  # noqa: E501
             target_id (str): [optional]  # noqa: E501
             entity_type (str): [optional]  # noqa: E501
-            collection_changes ({str: ([bt_diff_info.BTDiffInfo],)}): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

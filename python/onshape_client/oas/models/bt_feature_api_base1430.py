@@ -131,10 +131,11 @@ class BTFeatureApiBase1430(ModelNormal):
         """
         return {
             'source_microversion': (str,),  # noqa: E501
+            'reject_microversion_skew': (bool,),  # noqa: E501
             'serialization_version': (str,),  # noqa: E501
             'library_version': (int,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
             'microversion_skew': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -142,23 +143,24 @@ class BTFeatureApiBase1430(ModelNormal):
         return {
             'bt_type': {
                 'BTUpdateFeaturesCall-1748': bt_update_features_call1748.BTUpdateFeaturesCall1748,
+                'BTFeatureListResponse-2457': bt_feature_list_response2457.BTFeatureListResponse2457,
+                'BTAssemblyFeatureListResponse-1174': bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174,
+                'BTSetFeatureRollbackCall-1899': bt_set_feature_rollback_call1899.BTSetFeatureRollbackCall1899,
                 'BTFeatureDefinitionResponse-1617': bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,
                 'BTConfigurationUpdateCall-2933': bt_configuration_update_call2933.BTConfigurationUpdateCall2933,
                 'BTFeatureDefinitionCall-1406': bt_feature_definition_call1406.BTFeatureDefinitionCall1406,
                 'BTUpdateFeaturesResponse-1333': bt_update_features_response1333.BTUpdateFeaturesResponse1333,
-                'BTFeatureListResponse-2457': bt_feature_list_response2457.BTFeatureListResponse2457,
                 'BTFeatureStudioContents-2239': bt_feature_studio_contents2239.BTFeatureStudioContents2239,
-                'BTAssemblyFeatureListResponse-1174': bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174,
-                'BTSetFeatureRollbackCall-1899': bt_set_feature_rollback_call1899.BTSetFeatureRollbackCall1899,
             },
         }
 
     attribute_map = {
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'serialization_version': 'serializationVersion',  # noqa: E501
         'library_version': 'libraryVersion',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'microversion_skew': 'microversionSkew',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -192,10 +194,11 @@ class BTFeatureApiBase1430(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             source_microversion (str): [optional]  # noqa: E501
+            reject_microversion_skew (bool): [optional]  # noqa: E501
             serialization_version (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
-            reject_microversion_skew (bool): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

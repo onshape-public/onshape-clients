@@ -89,9 +89,9 @@ class BTFeatureDefinitionCall1406(ModelComposed):
             'feature': (btm_feature134.BTMFeature134,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'source_microversion': (str,),  # noqa: E501
+            'reject_microversion_skew': (bool,),  # noqa: E501
             'serialization_version': (str,),  # noqa: E501
             'library_version': (int,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
             'microversion_skew': (bool,),  # noqa: E501
         }
 
@@ -103,9 +103,9 @@ class BTFeatureDefinitionCall1406(ModelComposed):
         'feature': 'feature',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'serialization_version': 'serializationVersion',  # noqa: E501
         'library_version': 'libraryVersion',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'microversion_skew': 'microversionSkew',  # noqa: E501
     }
 
@@ -141,9 +141,9 @@ class BTFeatureDefinitionCall1406(ModelComposed):
             feature (btm_feature134.BTMFeature134): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             source_microversion (str): [optional]  # noqa: E501
+            reject_microversion_skew (bool): [optional]  # noqa: E501
             serialization_version (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
-            reject_microversion_skew (bool): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
         """
 

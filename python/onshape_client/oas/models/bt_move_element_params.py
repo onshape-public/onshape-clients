@@ -74,18 +74,12 @@ class BTMoveElementParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'version_name': (str,),  # noqa: E501
-            'target_document_id': (str,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
             'project_id': (str,),  # noqa: E501
             'parent_id': (str,),  # noqa: E501
-            'generate_unknown_messages': (bool,),  # noqa: E501
-            'import_data': ([str],),  # noqa: E501
-            'need_new_version': (bool,),  # noqa: E501
-            'target_workspace_id': (str,),  # noqa: E501
-            'element_original_to_new_map': ({str: (str,)},),  # noqa: E501
-            'is_new_document': (bool,),  # noqa: E501
             'is_public': (bool,),  # noqa: E501
+            'version_name': (str,),  # noqa: E501
+            'target_document_id': (str,),  # noqa: E501
             'is_copy': (bool,),  # noqa: E501
             'is_deep_copy': (bool,),  # noqa: E501
             'is_selective_part_out': (bool,),  # noqa: E501
@@ -94,6 +88,12 @@ class BTMoveElementParams(ModelNormal):
             'owner_type': (int,),  # noqa: E501
             'anchor_element_id': (str,),  # noqa: E501
             'is_group_anchor': (bool,),  # noqa: E501
+            'element_original_to_new_map': ({str: (str,)},),  # noqa: E501
+            'target_workspace_id': (str,),  # noqa: E501
+            'generate_unknown_messages': (bool,),  # noqa: E501
+            'import_data': ([str],),  # noqa: E501
+            'need_new_version': (bool,),  # noqa: E501
+            'is_new_document': (bool,),  # noqa: E501
             'owner_email': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
@@ -106,18 +106,12 @@ class BTMoveElementParams(ModelNormal):
         return None
 
     attribute_map = {
-        'version_name': 'versionName',  # noqa: E501
-        'target_document_id': 'targetDocumentId',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
         'project_id': 'projectId',  # noqa: E501
         'parent_id': 'parentId',  # noqa: E501
-        'generate_unknown_messages': 'generateUnknownMessages',  # noqa: E501
-        'import_data': 'importData',  # noqa: E501
-        'need_new_version': 'needNewVersion',  # noqa: E501
-        'target_workspace_id': 'targetWorkspaceId',  # noqa: E501
-        'element_original_to_new_map': 'elementOriginalToNewMap',  # noqa: E501
-        'is_new_document': 'isNewDocument',  # noqa: E501
         'is_public': 'isPublic',  # noqa: E501
+        'version_name': 'versionName',  # noqa: E501
+        'target_document_id': 'targetDocumentId',  # noqa: E501
         'is_copy': 'isCopy',  # noqa: E501
         'is_deep_copy': 'isDeepCopy',  # noqa: E501
         'is_selective_part_out': 'isSelectivePartOut',  # noqa: E501
@@ -126,6 +120,12 @@ class BTMoveElementParams(ModelNormal):
         'owner_type': 'ownerType',  # noqa: E501
         'anchor_element_id': 'anchorElementId',  # noqa: E501
         'is_group_anchor': 'isGroupAnchor',  # noqa: E501
+        'element_original_to_new_map': 'elementOriginalToNewMap',  # noqa: E501
+        'target_workspace_id': 'targetWorkspaceId',  # noqa: E501
+        'generate_unknown_messages': 'generateUnknownMessages',  # noqa: E501
+        'import_data': 'importData',  # noqa: E501
+        'need_new_version': 'needNewVersion',  # noqa: E501
+        'is_new_document': 'isNewDocument',  # noqa: E501
         'owner_email': 'ownerEmail',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -163,18 +163,12 @@ class BTMoveElementParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            version_name (str): [optional]  # noqa: E501
-            target_document_id (str): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
             project_id (str): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
-            generate_unknown_messages (bool): [optional]  # noqa: E501
-            import_data ([str]): [optional]  # noqa: E501
-            need_new_version (bool): [optional]  # noqa: E501
-            target_workspace_id (str): [optional]  # noqa: E501
-            element_original_to_new_map ({str: (str,)}): [optional]  # noqa: E501
-            is_new_document (bool): [optional]  # noqa: E501
             is_public (bool): [optional]  # noqa: E501
+            version_name (str): [optional]  # noqa: E501
+            target_document_id (str): [optional]  # noqa: E501
             is_copy (bool): [optional]  # noqa: E501
             is_deep_copy (bool): [optional]  # noqa: E501
             is_selective_part_out (bool): [optional]  # noqa: E501
@@ -183,6 +177,12 @@ class BTMoveElementParams(ModelNormal):
             owner_type (int): [optional]  # noqa: E501
             anchor_element_id (str): [optional]  # noqa: E501
             is_group_anchor (bool): [optional]  # noqa: E501
+            element_original_to_new_map ({str: (str,)}): [optional]  # noqa: E501
+            target_workspace_id (str): [optional]  # noqa: E501
+            generate_unknown_messages (bool): [optional]  # noqa: E501
+            import_data ([str]): [optional]  # noqa: E501
+            need_new_version (bool): [optional]  # noqa: E501
+            is_new_document (bool): [optional]  # noqa: E501
             owner_email (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501

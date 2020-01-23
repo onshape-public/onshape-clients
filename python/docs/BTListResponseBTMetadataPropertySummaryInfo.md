@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_metadata_property_summary_info.BTMetadataPropertySummaryInfo]**](BTMetadataPropertySummaryInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_metadata_property_summary_info.BTMetadataPropertySummaryInfo]**](BTMetadataPropertySummaryInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

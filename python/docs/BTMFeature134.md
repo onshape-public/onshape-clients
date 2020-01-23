@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **suppressed** | **bool** |  | [optional] 
 **parameters** | [**[btm_parameter1.BTMParameter1]**](BTMParameter1.md) |  | [optional] 
 **feature_type** | **str** |  | [optional] 
+**feature_id** | **str** |  | [optional] 
 **sub_features** | [**[BTMFeature134]**](BTMFeature134.md) |  | [optional] 
 **return_after_subfeatures** | **bool** |  | [optional] 
-**feature_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

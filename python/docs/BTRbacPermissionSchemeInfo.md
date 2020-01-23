@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**predefined_permission_scheme** | **int** |  | [optional] 
-**description** | **str** |  | [optional] 
-**active** | **bool** |  | [optional] 
 **entries** | [**[entry.Entry]**](Entry.md) |  | [optional] 
+**description** | **str** |  | [optional] 
+**predefined_permission_scheme** | **int** |  | [optional] 
+**active** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

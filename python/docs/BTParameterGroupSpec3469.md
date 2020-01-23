@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**localized_name** | **str** |  | [optional] 
 **localizable_name** | **str** |  | [optional] 
+**localized_name** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **strings_to_localize** | **[str]** |  | [optional] 
 **group_name** | **str** |  | [optional] 
-**group_id** | **str** |  | [optional] 
 **driving_parameter_id** | **str** |  | [optional] 
+**group_id** | **str** |  | [optional] 
 **collapsed_by_default** | **bool** |  | [optional] 
 **group_or_parameter_ids** | **[str]** |  | [optional] 
 

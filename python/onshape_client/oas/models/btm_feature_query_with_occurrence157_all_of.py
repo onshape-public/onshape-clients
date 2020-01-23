@@ -76,8 +76,8 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
         return {
             'feature_id_with_occurrence': (str,),  # noqa: E501
             'part_studio_mate_connector_query': (bool,),  # noqa: E501
-            'query_data': (str,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
+            'query_data': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -88,8 +88,8 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
     attribute_map = {
         'feature_id_with_occurrence': 'featureIdWithOccurrence',  # noqa: E501
         'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',  # noqa: E501
-        'query_data': 'queryData',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
+        'query_data': 'queryData',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -125,8 +125,8 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             feature_id_with_occurrence (str): [optional]  # noqa: E501
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
-            query_data (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
+            query_data (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

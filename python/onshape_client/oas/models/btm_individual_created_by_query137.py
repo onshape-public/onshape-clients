@@ -72,14 +72,6 @@ class BTMIndividualCreatedByQuery137(ModelComposed):
     """
 
     allowed_values = {
-        ('entity_type',): {
-            'VERTEX': "VERTEX",
-            'EDGE': "EDGE",
-            'FACE': "FACE",
-            'BODY': "BODY",
-            'DEGENERATE_EDGE': "DEGENERATE_EDGE",
-            'UNKNOWN': "UNKNOWN",
-        },
         ('body_type',): {
             'SOLID': "SOLID",
             'SHEET': "SHEET",
@@ -87,6 +79,14 @@ class BTMIndividualCreatedByQuery137(ModelComposed):
             'POINT': "POINT",
             'MATE_CONNECTOR': "MATE_CONNECTOR",
             'COMPOSITE': "COMPOSITE",
+            'UNKNOWN': "UNKNOWN",
+        },
+        ('entity_type',): {
+            'VERTEX': "VERTEX",
+            'EDGE': "EDGE",
+            'FACE': "FACE",
+            'BODY': "BODY",
+            'DEGENERATE_EDGE': "DEGENERATE_EDGE",
             'UNKNOWN': "UNKNOWN",
         },
     }
@@ -107,15 +107,15 @@ class BTMIndividualCreatedByQuery137(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'entity_type': (str,),  # noqa: E501
-            'body_type': (str,),  # noqa: E501
-            'filter_construction': (bool,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
+            'body_type': (str,),  # noqa: E501
+            'entity_type': (str,),  # noqa: E501
+            'filter_construction': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'deterministic_ids': ([str],),  # noqa: E501
             'deterministic_id_list': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
-            'query_string': (str,),  # noqa: E501
             'query': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
+            'query_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
             'persistent_query': (btp_statement269.BTPStatement269,),  # noqa: E501
@@ -128,15 +128,15 @@ class BTMIndividualCreatedByQuery137(ModelComposed):
         return None
 
     attribute_map = {
-        'entity_type': 'entityType',  # noqa: E501
-        'body_type': 'bodyType',  # noqa: E501
-        'filter_construction': 'filterConstruction',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
+        'body_type': 'bodyType',  # noqa: E501
+        'entity_type': 'entityType',  # noqa: E501
+        'filter_construction': 'filterConstruction',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'deterministic_ids': 'deterministicIds',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
-        'query_string': 'queryString',  # noqa: E501
         'query': 'query',  # noqa: E501
+        'query_string': 'queryString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
         'persistent_query': 'persistentQuery',  # noqa: E501
@@ -173,15 +173,15 @@ class BTMIndividualCreatedByQuery137(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entity_type (str): [optional]  # noqa: E501
-            body_type (str): [optional]  # noqa: E501
-            filter_construction (bool): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
+            body_type (str): [optional]  # noqa: E501
+            entity_type (str): [optional]  # noqa: E501
+            filter_construction (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
-            query_string (str): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
+            query_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501

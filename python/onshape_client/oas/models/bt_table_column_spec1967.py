@@ -92,8 +92,8 @@ class BTTableColumnSpec1967(ModelNormal):
         return {
             'read_only': (bool,),  # noqa: E501
             'default_header_name': (str,),  # noqa: E501
-            'default_text_alignment': (str,),  # noqa: E501
             'default_cell_spec': (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
+            'default_text_alignment': (str,),  # noqa: E501
             'default_column_width_value': (int,),  # noqa: E501
             'default_column_width_units': (str,),  # noqa: E501
         }
@@ -105,8 +105,8 @@ class BTTableColumnSpec1967(ModelNormal):
     attribute_map = {
         'read_only': 'readOnly',  # noqa: E501
         'default_header_name': 'defaultHeaderName',  # noqa: E501
-        'default_text_alignment': 'defaultTextAlignment',  # noqa: E501
         'default_cell_spec': 'defaultCellSpec',  # noqa: E501
+        'default_text_alignment': 'defaultTextAlignment',  # noqa: E501
         'default_column_width_value': 'defaultColumnWidthValue',  # noqa: E501
         'default_column_width_units': 'defaultColumnWidthUnits',  # noqa: E501
     }
@@ -143,8 +143,8 @@ class BTTableColumnSpec1967(ModelNormal):
                                 If omitted no type conversion is done.
             read_only (bool): [optional]  # noqa: E501
             default_header_name (str): [optional]  # noqa: E501
-            default_text_alignment (str): [optional]  # noqa: E501
             default_cell_spec (bt_parameter_spec6.BTParameterSpec6): [optional]  # noqa: E501
+            default_text_alignment (str): [optional]  # noqa: E501
             default_column_width_value (int): [optional]  # noqa: E501
             default_column_width_units (str): [optional]  # noqa: E501
         """

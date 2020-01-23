@@ -86,17 +86,17 @@ class BTMetadataPropertyInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'property_id': (str,),  # noqa: E501
-            'editable': (bool,),  # noqa: E501
-            'value_type': (str,),  # noqa: E501
-            'schema_id': (str,),  # noqa: E501
-            'required': (bool,),  # noqa: E501
-            'enum_values': ([bt_metadata_enum_value_info.BTMetadataEnumValueInfo],),  # noqa: E501
             'validator': (bt_metadata_property_validator_info.BTMetadataPropertyValidatorInfo,),  # noqa: E501
-            'property_source': (int,),  # noqa: E501
+            'required': (bool,),  # noqa: E501
+            'editable': (bool,),  # noqa: E501
             'initial_value': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
             'editable_in_ui': (bool,),  # noqa: E501
+            'property_id': (str,),  # noqa: E501
+            'value_type': (str,),  # noqa: E501
+            'schema_id': (str,),  # noqa: E501
+            'enum_values': ([bt_metadata_enum_value_info.BTMetadataEnumValueInfo],),  # noqa: E501
             'ui_hints': (bt_metadata_property_ui_hints_info.BTMetadataPropertyUiHintsInfo,),  # noqa: E501
+            'property_source': (int,),  # noqa: E501
             'dirty': (bool,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'default_value': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
@@ -107,17 +107,17 @@ class BTMetadataPropertyInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'property_id': 'propertyId',  # noqa: E501
-        'editable': 'editable',  # noqa: E501
-        'value_type': 'valueType',  # noqa: E501
-        'schema_id': 'schemaId',  # noqa: E501
-        'required': 'required',  # noqa: E501
-        'enum_values': 'enumValues',  # noqa: E501
         'validator': 'validator',  # noqa: E501
-        'property_source': 'propertySource',  # noqa: E501
+        'required': 'required',  # noqa: E501
+        'editable': 'editable',  # noqa: E501
         'initial_value': 'initialValue',  # noqa: E501
         'editable_in_ui': 'editableInUi',  # noqa: E501
+        'property_id': 'propertyId',  # noqa: E501
+        'value_type': 'valueType',  # noqa: E501
+        'schema_id': 'schemaId',  # noqa: E501
+        'enum_values': 'enumValues',  # noqa: E501
         'ui_hints': 'uiHints',  # noqa: E501
+        'property_source': 'propertySource',  # noqa: E501
         'dirty': 'dirty',  # noqa: E501
         'name': 'name',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
@@ -153,17 +153,17 @@ class BTMetadataPropertyInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            property_id (str): [optional]  # noqa: E501
-            editable (bool): [optional]  # noqa: E501
-            value_type (str): [optional]  # noqa: E501
-            schema_id (str): [optional]  # noqa: E501
-            required (bool): [optional]  # noqa: E501
-            enum_values ([bt_metadata_enum_value_info.BTMetadataEnumValueInfo]): [optional]  # noqa: E501
             validator (bt_metadata_property_validator_info.BTMetadataPropertyValidatorInfo): [optional]  # noqa: E501
-            property_source (int): [optional]  # noqa: E501
+            required (bool): [optional]  # noqa: E501
+            editable (bool): [optional]  # noqa: E501
             initial_value (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             editable_in_ui (bool): [optional]  # noqa: E501
+            property_id (str): [optional]  # noqa: E501
+            value_type (str): [optional]  # noqa: E501
+            schema_id (str): [optional]  # noqa: E501
+            enum_values ([bt_metadata_enum_value_info.BTMetadataEnumValueInfo]): [optional]  # noqa: E501
             ui_hints (bt_metadata_property_ui_hints_info.BTMetadataPropertyUiHintsInfo): [optional]  # noqa: E501
+            property_source (int): [optional]  # noqa: E501
             dirty (bool): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             default_value (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501

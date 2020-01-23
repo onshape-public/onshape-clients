@@ -75,8 +75,8 @@ class BTDeviceLoginSecretInfo(ModelNormal):
         """
         return {
             'modified_at': (datetime,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
             'random_token': (str,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,8 +85,8 @@ class BTDeviceLoginSecretInfo(ModelNormal):
 
     attribute_map = {
         'modified_at': 'modifiedAt',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
         'random_token': 'randomToken',  # noqa: E501
+        'created_at': 'createdAt',  # noqa: E501
     }
 
     @staticmethod
@@ -120,8 +120,8 @@ class BTDeviceLoginSecretInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             modified_at (datetime): [optional]  # noqa: E501
-            created_at (datetime): [optional]  # noqa: E501
             random_token (str): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
         """
 
         self._data_store = {}

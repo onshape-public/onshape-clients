@@ -102,6 +102,7 @@ class BTUserSettingsInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'default_units': (bt_default_units_info.BTDefaultUnitsInfo,),  # noqa: E501
             'startup_page': (int,),  # noqa: E501
             'substitute_approvers': ([bt_substitute_approver_info.BTSubstituteApproverInfo],),  # noqa: E501
             'units_display_precision': (bt_units_display_precision.BTUnitsDisplayPrecision,),  # noqa: E501
@@ -113,7 +114,6 @@ class BTUserSettingsInfo(ModelNormal):
             'export_drawing_options': (str,),  # noqa: E501
             'import_options': (str,),  # noqa: E501
             'use24_hour_time': (bool,),  # noqa: E501
-            'default_units': (bt_default_units_info.BTDefaultUnitsInfo,),  # noqa: E501
             'common_units': (bt_common_units_info.BTCommonUnitsInfo,),  # noqa: E501
             'units_maximum_display_precision': (bt_units_maximum_display_precision_info.BTUnitsMaximumDisplayPrecisionInfo,),  # noqa: E501
             'mini_toolbar_settings': (str,),  # noqa: E501
@@ -130,6 +130,7 @@ class BTUserSettingsInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'default_units': 'defaultUnits',  # noqa: E501
         'startup_page': 'startupPage',  # noqa: E501
         'substitute_approvers': 'substituteApprovers',  # noqa: E501
         'units_display_precision': 'unitsDisplayPrecision',  # noqa: E501
@@ -141,7 +142,6 @@ class BTUserSettingsInfo(ModelNormal):
         'export_drawing_options': 'exportDrawingOptions',  # noqa: E501
         'import_options': 'importOptions',  # noqa: E501
         'use24_hour_time': 'use24HourTime',  # noqa: E501
-        'default_units': 'defaultUnits',  # noqa: E501
         'common_units': 'commonUnits',  # noqa: E501
         'units_maximum_display_precision': 'unitsMaximumDisplayPrecision',  # noqa: E501
         'mini_toolbar_settings': 'miniToolbarSettings',  # noqa: E501
@@ -183,6 +183,7 @@ class BTUserSettingsInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            default_units (bt_default_units_info.BTDefaultUnitsInfo): [optional]  # noqa: E501
             startup_page (int): [optional]  # noqa: E501
             substitute_approvers ([bt_substitute_approver_info.BTSubstituteApproverInfo]): [optional]  # noqa: E501
             units_display_precision (bt_units_display_precision.BTUnitsDisplayPrecision): [optional]  # noqa: E501
@@ -194,7 +195,6 @@ class BTUserSettingsInfo(ModelNormal):
             export_drawing_options (str): [optional]  # noqa: E501
             import_options (str): [optional]  # noqa: E501
             use24_hour_time (bool): [optional]  # noqa: E501
-            default_units (bt_default_units_info.BTDefaultUnitsInfo): [optional]  # noqa: E501
             common_units (bt_common_units_info.BTCommonUnitsInfo): [optional]  # noqa: E501
             units_maximum_display_precision (bt_units_maximum_display_precision_info.BTUnitsMaximumDisplayPrecisionInfo): [optional]  # noqa: E501
             mini_toolbar_settings (str): [optional]  # noqa: E501

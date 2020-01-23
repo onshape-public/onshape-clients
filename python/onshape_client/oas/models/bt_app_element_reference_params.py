@@ -74,25 +74,25 @@ class BTAppElementReferenceParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'revision': (str,),  # noqa: E501
-            'id_tag': (str,),  # noqa: E501
-            'target_element_id': (str,),  # noqa: E501
-            'target_version_id': (str,),  # noqa: E501
-            'pure_sketch': (bool,),  # noqa: E501
-            'is_sketch_only': (bool,),  # noqa: E501
-            'sketch_ids': ([str],),  # noqa: E501
-            'reference_type': (int,),  # noqa: E501
+            'target_document_id': (str,),  # noqa: E501
             'return_error': (bool,),  # noqa: E501
             'has_document_microversions': (bool,),  # noqa: E501
             'target_microversion_id': (str,),  # noqa: E501
             'id_tag_microversion_id': (str,),  # noqa: E501
-            'track_new_versions': (bool,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'target_document_id': (str,),  # noqa: E501
-            'update_sketch_info': (bool,),  # noqa: E501
             'transaction_id': (str,),  # noqa: E501
             'parent_change_id': (str,),  # noqa: E501
+            'part_number': (str,),  # noqa: E501
+            'revision': (str,),  # noqa: E501
+            'id_tag': (str,),  # noqa: E501
             'target_configuration': (str,),  # noqa: E501
+            'sketch_ids': ([str],),  # noqa: E501
+            'target_element_id': (str,),  # noqa: E501
+            'target_version_id': (str,),  # noqa: E501
+            'pure_sketch': (bool,),  # noqa: E501
+            'is_sketch_only': (bool,),  # noqa: E501
+            'reference_type': (int,),  # noqa: E501
+            'track_new_versions': (bool,),  # noqa: E501
+            'update_sketch_info': (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,25 +100,25 @@ class BTAppElementReferenceParams(ModelNormal):
         return None
 
     attribute_map = {
-        'revision': 'revision',  # noqa: E501
-        'id_tag': 'idTag',  # noqa: E501
-        'target_element_id': 'targetElementId',  # noqa: E501
-        'target_version_id': 'targetVersionId',  # noqa: E501
-        'pure_sketch': 'pureSketch',  # noqa: E501
-        'is_sketch_only': 'isSketchOnly',  # noqa: E501
-        'sketch_ids': 'sketchIds',  # noqa: E501
-        'reference_type': 'referenceType',  # noqa: E501
+        'target_document_id': 'targetDocumentId',  # noqa: E501
         'return_error': 'returnError',  # noqa: E501
         'has_document_microversions': 'hasDocumentMicroversions',  # noqa: E501
         'target_microversion_id': 'targetMicroversionId',  # noqa: E501
         'id_tag_microversion_id': 'idTagMicroversionId',  # noqa: E501
-        'track_new_versions': 'trackNewVersions',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'target_document_id': 'targetDocumentId',  # noqa: E501
-        'update_sketch_info': 'updateSketchInfo',  # noqa: E501
         'transaction_id': 'transactionId',  # noqa: E501
         'parent_change_id': 'parentChangeId',  # noqa: E501
+        'part_number': 'partNumber',  # noqa: E501
+        'revision': 'revision',  # noqa: E501
+        'id_tag': 'idTag',  # noqa: E501
         'target_configuration': 'targetConfiguration',  # noqa: E501
+        'sketch_ids': 'sketchIds',  # noqa: E501
+        'target_element_id': 'targetElementId',  # noqa: E501
+        'target_version_id': 'targetVersionId',  # noqa: E501
+        'pure_sketch': 'pureSketch',  # noqa: E501
+        'is_sketch_only': 'isSketchOnly',  # noqa: E501
+        'reference_type': 'referenceType',  # noqa: E501
+        'track_new_versions': 'trackNewVersions',  # noqa: E501
+        'update_sketch_info': 'updateSketchInfo',  # noqa: E501
     }
 
     @staticmethod
@@ -151,25 +151,25 @@ class BTAppElementReferenceParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            revision (str): [optional]  # noqa: E501
-            id_tag (str): [optional]  # noqa: E501
-            target_element_id (str): [optional]  # noqa: E501
-            target_version_id (str): [optional]  # noqa: E501
-            pure_sketch (bool): [optional]  # noqa: E501
-            is_sketch_only (bool): [optional]  # noqa: E501
-            sketch_ids ([str]): [optional]  # noqa: E501
-            reference_type (int): [optional]  # noqa: E501
+            target_document_id (str): [optional]  # noqa: E501
             return_error (bool): [optional]  # noqa: E501
             has_document_microversions (bool): [optional]  # noqa: E501
             target_microversion_id (str): [optional]  # noqa: E501
             id_tag_microversion_id (str): [optional]  # noqa: E501
-            track_new_versions (bool): [optional]  # noqa: E501
-            part_number (str): [optional]  # noqa: E501
-            target_document_id (str): [optional]  # noqa: E501
-            update_sketch_info (bool): [optional]  # noqa: E501
             transaction_id (str): [optional]  # noqa: E501
             parent_change_id (str): [optional]  # noqa: E501
+            part_number (str): [optional]  # noqa: E501
+            revision (str): [optional]  # noqa: E501
+            id_tag (str): [optional]  # noqa: E501
             target_configuration (str): [optional]  # noqa: E501
+            sketch_ids ([str]): [optional]  # noqa: E501
+            target_element_id (str): [optional]  # noqa: E501
+            target_version_id (str): [optional]  # noqa: E501
+            pure_sketch (bool): [optional]  # noqa: E501
+            is_sketch_only (bool): [optional]  # noqa: E501
+            reference_type (int): [optional]  # noqa: E501
+            track_new_versions (bool): [optional]  # noqa: E501
+            update_sketch_info (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

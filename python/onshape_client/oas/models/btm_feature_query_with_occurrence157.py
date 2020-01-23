@@ -90,16 +90,16 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'feature_id_with_occurrence': (str,),  # noqa: E501
             'part_studio_mate_connector_query': (bool,),  # noqa: E501
-            'query_data': (str,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            'query_data': (str,),  # noqa: E501
             'path': ([str],),  # noqa: E501
             'deterministic_ids': ([str],),  # noqa: E501
             'deterministic_id_list': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
-            'query_string': (str,),  # noqa: E501
             'query': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
+            'query_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
         }
@@ -113,16 +113,16 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'feature_id_with_occurrence': 'featureIdWithOccurrence',  # noqa: E501
         'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',  # noqa: E501
-        'query_data': 'queryData',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        'query_data': 'queryData',  # noqa: E501
         'path': 'path',  # noqa: E501
         'deterministic_ids': 'deterministicIds',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
-        'query_string': 'queryString',  # noqa: E501
         'query': 'query',  # noqa: E501
+        'query_string': 'queryString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
     }
@@ -156,16 +156,16 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             feature_id_with_occurrence (str): [optional]  # noqa: E501
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
-            query_data (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            query_data (str): [optional]  # noqa: E501
             path ([str]): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
-            query_string (str): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
+            query_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
         """

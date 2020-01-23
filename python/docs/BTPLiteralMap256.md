@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **short_descriptor** | **str** |  | [optional] 
-**trailing_comma** | **bool** |  | [optional] 
-**space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **entries** | [**[btp_literal_map_entry257.BTPLiteralMapEntry257]**](BTPLiteralMapEntry257.md) |  | [optional] 
+**space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**trailing_comma** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **atomic** | **bool** |  | [optional] 

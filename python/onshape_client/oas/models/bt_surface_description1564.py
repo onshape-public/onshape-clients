@@ -117,24 +117,26 @@ class BTSurfaceDescription1564(ModelNormal):
         """
         return {
             'type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
             'bt_type': {
-                'BTCylinderDescription-686': bt_cylinder_description686.BTCylinderDescription686,
-                'BTSweepDescription-1473': bt_sweep_description1473.BTSweepDescription1473,
                 'BTTorusDescription-1834': bt_torus_description1834.BTTorusDescription1834,
                 'BTSpunDescription-657': bt_spun_description657.BTSpunDescription657,
                 'BTPlaneDescription-692': bt_plane_description692.BTPlaneDescription692,
-                'BTConeDescription-860': bt_cone_description860.BTConeDescription860,
                 'BTSphereDescription-1263': bt_sphere_description1263.BTSphereDescription1263,
+                'BTCylinderDescription-686': bt_cylinder_description686.BTCylinderDescription686,
+                'BTSweepDescription-1473': bt_sweep_description1473.BTSweepDescription1473,
+                'BTConeDescription-860': bt_cone_description860.BTConeDescription860,
             },
         }
 
     attribute_map = {
         'type': 'type',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -168,6 +170,7 @@ class BTSurfaceDescription1564(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

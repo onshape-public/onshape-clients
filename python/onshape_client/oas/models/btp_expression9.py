@@ -152,8 +152,8 @@ class BTPExpression9(ModelComposed):
             'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -166,18 +166,18 @@ class BTPExpression9(ModelComposed):
         return {
             'bt_type': {
                 'BTPExpressionGroup-241': btp_expression_group241.BTPExpressionGroup241,
-                'BTPExpressionIs-242': btp_expression_is242.BTPExpressionIs242,
                 'BTPExpressionBuiltinCall-239': btp_expression_builtin_call239.BTPExpressionBuiltinCall239,
                 'BTPLiteral-253': btp_literal253.BTPLiteral253,
                 'BTPExpressionOperator-244': btp_expression_operator244.BTPExpressionOperator244,
                 'BTPExpressionAs-238': btp_expression_as238.BTPExpressionAs238,
+                'BTPExpressionCall-240': btp_expression_call240.BTPExpressionCall240,
+                'BTPExpressionFunction-1325': btp_expression_function1325.BTPExpressionFunction1325,
+                'BTPExpressionIs-242': btp_expression_is242.BTPExpressionIs242,
                 'BTPExpressionVarReference-245': btp_expression_var_reference245.BTPExpressionVarReference245,
                 'BTPExpressionSwitch-2632': btp_expression_switch2632.BTPExpressionSwitch2632,
                 'BTPExpressionNew-243': btp_expression_new243.BTPExpressionNew243,
-                'BTPExpressionCall-240': btp_expression_call240.BTPExpressionCall240,
                 'BTPExpressionTry-1271': btp_expression_try1271.BTPExpressionTry1271,
                 'BTPExpressionAccess-237': btp_expression_access237.BTPExpressionAccess237,
-                'BTPExpressionFunction-1325': btp_expression_function1325.BTPExpressionFunction1325,
             },
         }
 
@@ -185,8 +185,8 @@ class BTPExpression9(ModelComposed):
         'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -226,8 +226,8 @@ class BTPExpression9(ModelComposed):
             bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

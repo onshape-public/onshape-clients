@@ -86,14 +86,14 @@ class BTAclInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'admin': (bool,),  # noqa: E501
             'inherited_acls': ([bt_inherited_acl_info.BTInheritedAclInfo],),  # noqa: E501
-            'visibility': (str,),  # noqa: E501
+            'admin': (bool,),  # noqa: E501
             'object_id': (str,),  # noqa: E501
-            'object_type': (int,),  # noqa: E501
             'shared_with_support': (bool,),  # noqa: E501
-            'public': (bool,),  # noqa: E501
             'entries': ([bt_acl_entry_info.BTAclEntryInfo],),  # noqa: E501
+            'object_type': (int,),  # noqa: E501
+            'visibility': (str,),  # noqa: E501
+            'public': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
@@ -106,14 +106,14 @@ class BTAclInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'admin': 'admin',  # noqa: E501
         'inherited_acls': 'inheritedAcls',  # noqa: E501
-        'visibility': 'visibility',  # noqa: E501
+        'admin': 'admin',  # noqa: E501
         'object_id': 'objectId',  # noqa: E501
-        'object_type': 'objectType',  # noqa: E501
         'shared_with_support': 'sharedWithSupport',  # noqa: E501
-        'public': 'public',  # noqa: E501
         'entries': 'entries',  # noqa: E501
+        'object_type': 'objectType',  # noqa: E501
+        'visibility': 'visibility',  # noqa: E501
+        'public': 'public',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
@@ -151,14 +151,14 @@ class BTAclInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            admin (bool): [optional]  # noqa: E501
             inherited_acls ([bt_inherited_acl_info.BTInheritedAclInfo]): [optional]  # noqa: E501
-            visibility (str): [optional]  # noqa: E501
+            admin (bool): [optional]  # noqa: E501
             object_id (str): [optional]  # noqa: E501
-            object_type (int): [optional]  # noqa: E501
             shared_with_support (bool): [optional]  # noqa: E501
-            public (bool): [optional]  # noqa: E501
             entries ([bt_acl_entry_info.BTAclEntryInfo]): [optional]  # noqa: E501
+            object_type (int): [optional]  # noqa: E501
+            visibility (str): [optional]  # noqa: E501
+            public (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501

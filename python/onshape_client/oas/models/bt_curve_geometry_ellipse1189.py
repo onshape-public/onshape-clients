@@ -84,11 +84,11 @@ class BTCurveGeometryEllipse1189(ModelComposed):
         return {
             'minor_radius': (float,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
-            'xcenter': (float,),  # noqa: E501
-            'ydir': (float,),  # noqa: E501
-            'xdir': (float,),  # noqa: E501
-            'ycenter': (float,),  # noqa: E501
             'radius': (float,),  # noqa: E501
+            'ycenter': (float,),  # noqa: E501
+            'xcenter': (float,),  # noqa: E501
+            'xdir': (float,),  # noqa: E501
+            'ydir': (float,),  # noqa: E501
             'clockwise': (bool,),  # noqa: E501
         }
 
@@ -99,11 +99,11 @@ class BTCurveGeometryEllipse1189(ModelComposed):
     attribute_map = {
         'minor_radius': 'minorRadius',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
-        'xcenter': 'xcenter',  # noqa: E501
-        'ydir': 'ydir',  # noqa: E501
-        'xdir': 'xdir',  # noqa: E501
-        'ycenter': 'ycenter',  # noqa: E501
         'radius': 'radius',  # noqa: E501
+        'ycenter': 'ycenter',  # noqa: E501
+        'xcenter': 'xcenter',  # noqa: E501
+        'xdir': 'xdir',  # noqa: E501
+        'ydir': 'ydir',  # noqa: E501
         'clockwise': 'clockwise',  # noqa: E501
     }
 
@@ -138,11 +138,11 @@ class BTCurveGeometryEllipse1189(ModelComposed):
                                 If omitted no type conversion is done.
             minor_radius (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
-            xcenter (float): [optional]  # noqa: E501
-            ydir (float): [optional]  # noqa: E501
-            xdir (float): [optional]  # noqa: E501
-            ycenter (float): [optional]  # noqa: E501
             radius (float): [optional]  # noqa: E501
+            ycenter (float): [optional]  # noqa: E501
+            xcenter (float): [optional]  # noqa: E501
+            xdir (float): [optional]  # noqa: E501
+            ydir (float): [optional]  # noqa: E501
             clockwise (bool): [optional]  # noqa: E501
         """
 

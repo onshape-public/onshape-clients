@@ -78,8 +78,8 @@ class Entry(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'role': (bt_rbac_role_info.BTRbacRoleInfo,),  # noqa: E501
             'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
+            'role': (bt_rbac_role_info.BTRbacRoleInfo,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class Entry(ModelNormal):
         return None
 
     attribute_map = {
-        'role': 'role',  # noqa: E501
         'permission_set': 'permissionSet',  # noqa: E501
+        'role': 'role',  # noqa: E501
     }
 
     @staticmethod
@@ -121,8 +121,8 @@ class Entry(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            role (bt_rbac_role_info.BTRbacRoleInfo): [optional]  # noqa: E501
             permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            role (bt_rbac_role_info.BTRbacRoleInfo): [optional]  # noqa: E501
         """
 
         self._data_store = {}

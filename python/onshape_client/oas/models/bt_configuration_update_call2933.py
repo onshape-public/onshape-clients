@@ -94,9 +94,9 @@ class BTConfigurationUpdateCall2933(ModelComposed):
             'configuration_parameters': ([btm_configuration_parameter819.BTMConfigurationParameter819],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'source_microversion': (str,),  # noqa: E501
+            'reject_microversion_skew': (bool,),  # noqa: E501
             'serialization_version': (str,),  # noqa: E501
             'library_version': (int,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
             'microversion_skew': (bool,),  # noqa: E501
         }
 
@@ -109,9 +109,9 @@ class BTConfigurationUpdateCall2933(ModelComposed):
         'configuration_parameters': 'configurationParameters',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'serialization_version': 'serializationVersion',  # noqa: E501
         'library_version': 'libraryVersion',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'microversion_skew': 'microversionSkew',  # noqa: E501
     }
 
@@ -148,9 +148,9 @@ class BTConfigurationUpdateCall2933(ModelComposed):
             configuration_parameters ([btm_configuration_parameter819.BTMConfigurationParameter819]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             source_microversion (str): [optional]  # noqa: E501
+            reject_microversion_skew (bool): [optional]  # noqa: E501
             serialization_version (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
-            reject_microversion_skew (bool): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
         """
 

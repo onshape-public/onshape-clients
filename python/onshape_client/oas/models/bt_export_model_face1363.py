@@ -88,9 +88,9 @@ class BTExportModelFace1363(ModelNormal):
         return {
             'orientation': (bool,),  # noqa: E501
             'area': (float,),  # noqa: E501
-            'box': (bt_bounding_box1052.BTBoundingBox1052,),  # noqa: E501
             'surface': (bt_surface_description1564.BTSurfaceDescription1564,),  # noqa: E501
             'loops': ([bt_export_model_loop1182.BTExportModelLoop1182],),  # noqa: E501
+            'box': (bt_bounding_box1052.BTBoundingBox1052,),  # noqa: E501
             'id': (str,),  # noqa: E501
         }
 
@@ -101,9 +101,9 @@ class BTExportModelFace1363(ModelNormal):
     attribute_map = {
         'orientation': 'orientation',  # noqa: E501
         'area': 'area',  # noqa: E501
-        'box': 'box',  # noqa: E501
         'surface': 'surface',  # noqa: E501
         'loops': 'loops',  # noqa: E501
+        'box': 'box',  # noqa: E501
         'id': 'id',  # noqa: E501
     }
 
@@ -139,9 +139,9 @@ class BTExportModelFace1363(ModelNormal):
                                 If omitted no type conversion is done.
             orientation (bool): [optional]  # noqa: E501
             area (float): [optional]  # noqa: E501
-            box (bt_bounding_box1052.BTBoundingBox1052): [optional]  # noqa: E501
             surface (bt_surface_description1564.BTSurfaceDescription1564): [optional]  # noqa: E501
             loops ([bt_export_model_loop1182.BTExportModelLoop1182]): [optional]  # noqa: E501
+            box (bt_bounding_box1052.BTBoundingBox1052): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
         """
 

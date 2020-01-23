@@ -86,9 +86,9 @@ class BTPTopLevelImport285AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'combined_namespace_path_and_version': (str,),  # noqa: E501
-            'namespace_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
+            'namespace_string': (str,),  # noqa: E501
+            'combined_namespace_path_and_version': (str,),  # noqa: E501
             'module_id': (btp_module_id235.BTPModuleId235,),  # noqa: E501
             'space_before_import': (btp_space10.BTPSpace10,),  # noqa: E501
             'namespace': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
@@ -100,9 +100,9 @@ class BTPTopLevelImport285AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'combined_namespace_path_and_version': 'combinedNamespacePathAndVersion',  # noqa: E501
-        'namespace_string': 'namespaceString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
+        'namespace_string': 'namespaceString',  # noqa: E501
+        'combined_namespace_path_and_version': 'combinedNamespacePathAndVersion',  # noqa: E501
         'module_id': 'moduleId',  # noqa: E501
         'space_before_import': 'spaceBeforeImport',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
@@ -139,9 +139,9 @@ class BTPTopLevelImport285AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            combined_namespace_path_and_version (str): [optional]  # noqa: E501
-            namespace_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
+            namespace_string (str): [optional]  # noqa: E501
+            combined_namespace_path_and_version (str): [optional]  # noqa: E501
             module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
             space_before_import (btp_space10.BTPSpace10): [optional]  # noqa: E501
             namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501

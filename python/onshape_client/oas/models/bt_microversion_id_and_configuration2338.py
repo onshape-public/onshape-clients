@@ -83,8 +83,8 @@ class BTMicroversionIdAndConfiguration2338(ModelNormal):
         """
         return {
             'deleted': (bool,),  # noqa: E501
-            'cache_key': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'cache_key': (str,),  # noqa: E501
             'microversion': (bt_microversion_id366.BTMicroversionId366,),  # noqa: E501
             'configuration_parameter_id_to_value': ({str: (btfs_value1888.BTFSValue1888,)},),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -96,8 +96,8 @@ class BTMicroversionIdAndConfiguration2338(ModelNormal):
 
     attribute_map = {
         'deleted': 'deleted',  # noqa: E501
-        'cache_key': 'cacheKey',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'cache_key': 'cacheKey',  # noqa: E501
         'microversion': 'microversion',  # noqa: E501
         'configuration_parameter_id_to_value': 'configurationParameterIdToValue',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -134,8 +134,8 @@ class BTMicroversionIdAndConfiguration2338(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             deleted (bool): [optional]  # noqa: E501
-            cache_key (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            cache_key (str): [optional]  # noqa: E501
             microversion (bt_microversion_id366.BTMicroversionId366): [optional]  # noqa: E501
             configuration_parameter_id_to_value ({str: (btfs_value1888.BTFSValue1888,)}): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

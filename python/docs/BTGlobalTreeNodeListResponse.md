@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_global_tree_node_info.BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_global_tree_node_info.BTGlobalTreeNodeInfo]**](BTGlobalTreeNodeInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

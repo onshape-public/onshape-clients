@@ -89,6 +89,7 @@ class BTExportModelEdgeGeometry1125(ModelNormal):
             'start_vector': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'end_vector': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'length': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -107,6 +108,7 @@ class BTExportModelEdgeGeometry1125(ModelNormal):
         'start_vector': 'startVector',  # noqa: E501
         'end_vector': 'endVector',  # noqa: E501
         'length': 'length',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -146,6 +148,7 @@ class BTExportModelEdgeGeometry1125(ModelNormal):
             start_vector (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             end_vector (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             length (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

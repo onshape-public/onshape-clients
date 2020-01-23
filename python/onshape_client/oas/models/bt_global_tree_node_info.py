@@ -30,9 +30,37 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_cloud_storage_account_info
+except ImportError:
+    bt_cloud_storage_account_info = sys.modules['onshape_client.oas.models.bt_cloud_storage_account_info']
+try:
+    from onshape_client.oas.models import bt_document_label_info
+except ImportError:
+    bt_document_label_info = sys.modules['onshape_client.oas.models.bt_document_label_info']
+try:
+    from onshape_client.oas.models import bt_document_summary_info
+except ImportError:
+    bt_document_summary_info = sys.modules['onshape_client.oas.models.bt_document_summary_info']
+try:
+    from onshape_client.oas.models import bt_folder_info
+except ImportError:
+    bt_folder_info = sys.modules['onshape_client.oas.models.bt_folder_info']
+try:
+    from onshape_client.oas.models import bt_global_tree_magic_node_info
+except ImportError:
+    bt_global_tree_magic_node_info = sys.modules['onshape_client.oas.models.bt_global_tree_magic_node_info']
+try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
     bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+try:
+    from onshape_client.oas.models import bt_project_info
+except ImportError:
+    bt_project_info = sys.modules['onshape_client.oas.models.bt_project_info']
+try:
+    from onshape_client.oas.models import bt_team_summary_info
+except ImportError:
+    bt_team_summary_info = sys.modules['onshape_client.oas.models.bt_team_summary_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
@@ -83,18 +111,18 @@ class BTGlobalTreeNodeInfo(ModelNormal):
         """
         return {
             'json_type': (str,),  # noqa: E501
+            'modified_at': (datetime,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
             'is_enterprise_owned': (bool,),  # noqa: E501
+            'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'modified_at': (datetime,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -107,23 +135,27 @@ class BTGlobalTreeNodeInfo(ModelNormal):
     def discriminator():
         return {
             'json_type': {
+                'BTGlobalTreeMagicNodeInfo': bt_global_tree_magic_node_info.BTGlobalTreeMagicNodeInfo,
+                'BTFolderInfo': bt_folder_info.BTFolderInfo,
+                'BTCloudStorageAccountInfo': bt_cloud_storage_account_info.BTCloudStorageAccountInfo,
+                'BTDocumentSummaryInfo': bt_document_summary_info.BTDocumentSummaryInfo,
             },
         }
 
     attribute_map = {
         'json_type': 'jsonType',  # noqa: E501
+        'modified_at': 'modifiedAt',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
         'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
         'modified_by': 'modifiedBy',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'modified_at': 'modifiedAt',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -164,18 +196,18 @@ class BTGlobalTreeNodeInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            modified_at (datetime): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
             is_enterprise_owned (bool): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            modified_at (datetime): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

@@ -98,10 +98,10 @@ class BTPModule234AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'is_internal_module': (bool,),  # noqa: E501
-            'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
             'version_number': (int,),  # noqa: E501
             'deep_imports': ({str: ([bt_import.BTImport],)},),  # noqa: E501
+            'is_internal_module': (bool,),  # noqa: E501
+            'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
             'path_map': ({str: (bt_microversion_id366.BTMicroversionId366,)},),  # noqa: E501
             'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             'top_level': ([btp_top_level_node286.BTPTopLevelNode286],),  # noqa: E501
@@ -116,10 +116,10 @@ class BTPModule234AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'is_internal_module': 'isInternalModule',  # noqa: E501
-        'imports': 'imports',  # noqa: E501
         'version_number': 'versionNumber',  # noqa: E501
         'deep_imports': 'deepImports',  # noqa: E501
+        'is_internal_module': 'isInternalModule',  # noqa: E501
+        'imports': 'imports',  # noqa: E501
         'path_map': 'pathMap',  # noqa: E501
         'version': 'version',  # noqa: E501
         'top_level': 'topLevel',  # noqa: E501
@@ -159,10 +159,10 @@ class BTPModule234AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_internal_module (bool): [optional]  # noqa: E501
-            imports ([btp_top_level_import285.BTPTopLevelImport285]): [optional]  # noqa: E501
             version_number (int): [optional]  # noqa: E501
             deep_imports ({str: ([bt_import.BTImport],)}): [optional]  # noqa: E501
+            is_internal_module (bool): [optional]  # noqa: E501
+            imports ([btp_top_level_import285.BTPTopLevelImport285]): [optional]  # noqa: E501
             path_map ({str: (bt_microversion_id366.BTMicroversionId366,)}): [optional]  # noqa: E501
             version (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             top_level ([btp_top_level_node286.BTPTopLevelNode286]): [optional]  # noqa: E501

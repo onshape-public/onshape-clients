@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **result_element_ids** | **[str]** |  | [optional] 
 **result_document_id** | **str** |  | [optional] 
 **failure_reason** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
 **result_workspace_id** | **str** |  | [optional] 
 **request_state** | **str** |  | [optional] 
 **request_element_id** | **str** |  | [optional] 

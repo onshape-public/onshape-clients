@@ -90,14 +90,14 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
             'path': ([str],),  # noqa: E501
             'deterministic_ids': ([str],),  # noqa: E501
             'deterministic_id_list': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
-            'query_string': (str,),  # noqa: E501
             'query': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
+            'query_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
             'feature_id_with_occurrence': (str,),  # noqa: E501
             'part_studio_mate_connector_query': (bool,),  # noqa: E501
-            'query_data': (str,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
+            'query_data': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -109,14 +109,14 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
         'path': 'path',  # noqa: E501
         'deterministic_ids': 'deterministicIds',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
-        'query_string': 'queryString',  # noqa: E501
         'query': 'query',  # noqa: E501
+        'query_string': 'queryString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
         'feature_id_with_occurrence': 'featureIdWithOccurrence',  # noqa: E501
         'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',  # noqa: E501
-        'query_data': 'queryData',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
+        'query_data': 'queryData',  # noqa: E501
     }
 
     required_properties = set([
@@ -152,14 +152,14 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
             path ([str]): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
-            query_string (str): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
+            query_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             feature_id_with_occurrence (str): [optional]  # noqa: E501
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
-            query_data (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
+            query_data (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

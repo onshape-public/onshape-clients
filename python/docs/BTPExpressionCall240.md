@@ -3,15 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**function_name** | [**btp_name261.BTPName261**](BTPName261.md) |  | [optional] 
+**arguments** | [**[btp_expression9.BTPExpression9]**](BTPExpression9.md) |  | [optional] 
 **function_name_string** | **str** |  | [optional] 
-**function_expression** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
+**function_name** | [**btp_name261.BTPName261**](BTPName261.md) |  | [optional] 
 **space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
+**function_expression** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **space_before** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 

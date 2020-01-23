@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**combined_namespace_path_and_version** | **str** |  | [optional] 
-**namespace_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
+**namespace_string** | **str** |  | [optional] 
+**combined_namespace_path_and_version** | **str** |  | [optional] 
 **module_id** | [**btp_module_id235.BTPModuleId235**](BTPModuleId235.md) |  | [optional] 
 **space_before_import** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **namespace** | [**[btp_identifier8.BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 

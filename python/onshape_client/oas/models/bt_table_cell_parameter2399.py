@@ -94,9 +94,9 @@ class BTTableCellParameter2399(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'override_spec': (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
             'parameter': (btm_parameter1.BTMParameter1,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'is_read_only': (bool,),  # noqa: E501
             'is_ever_visible': (bool,),  # noqa: E501
         }
@@ -110,9 +110,9 @@ class BTTableCellParameter2399(ModelComposed):
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'override_spec': 'overrideSpec',  # noqa: E501
         'parameter': 'parameter',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'is_read_only': 'isReadOnly',  # noqa: E501
         'is_ever_visible': 'isEverVisible',  # noqa: E501
     }
@@ -146,9 +146,9 @@ class BTTableCellParameter2399(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             override_spec (bt_parameter_spec6.BTParameterSpec6): [optional]  # noqa: E501
             parameter (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             is_read_only (bool): [optional]  # noqa: E501
             is_ever_visible (bool): [optional]  # noqa: E501
         """

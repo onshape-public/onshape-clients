@@ -82,11 +82,15 @@ class BTOwnerInfo(ModelNormal):
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
+            'json_type': (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
-        return None
+        return {
+            'json_type': {
+            },
+        }
 
     attribute_map = {
         'image': 'image',  # noqa: E501
@@ -97,6 +101,7 @@ class BTOwnerInfo(ModelNormal):
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'json_type': 'jsonType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,6 +142,7 @@ class BTOwnerInfo(ModelNormal):
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
+            json_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
@@ -147,3 +153,16 @@ class BTOwnerInfo(ModelNormal):
 
         for var_name, var_value in six.iteritems(kwargs):
             setattr(self, var_name, var_value)
+
+    @classmethod
+    def get_discriminator_class(cls, from_server, data):
+        """Returns the child class specified by the discriminator"""
+        discriminator = cls.discriminator()
+        discr_propertyname_py = list(discriminator.keys())[0]
+        discr_propertyname_js = cls.attribute_map[discr_propertyname_py]
+        if from_server:
+            class_name = data[discr_propertyname_js]
+        else:
+            class_name = data[discr_propertyname_py]
+        class_name_to_discr_class = discriminator[discr_propertyname_py]
+        return class_name_to_discr_class.get(class_name)

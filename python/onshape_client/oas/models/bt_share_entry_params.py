@@ -74,12 +74,12 @@ class BTShareEntryParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'email': (str,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'entry_type': (int,),  # noqa: E501
             'user_id': (str,),  # noqa: E501
+            'email': (str,),  # noqa: E501
+            'entry_type': (int,),  # noqa: E501
             'team_id': (str,),  # noqa: E501
             'application_id': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,12 +87,12 @@ class BTShareEntryParams(ModelNormal):
         return None
 
     attribute_map = {
-        'email': 'email',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'entry_type': 'entryType',  # noqa: E501
         'user_id': 'userId',  # noqa: E501
+        'email': 'email',  # noqa: E501
+        'entry_type': 'entryType',  # noqa: E501
         'team_id': 'teamId',  # noqa: E501
         'application_id': 'applicationId',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
     }
 
     @staticmethod
@@ -125,12 +125,12 @@ class BTShareEntryParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            email (str): [optional]  # noqa: E501
-            company_id (str): [optional]  # noqa: E501
-            entry_type (int): [optional]  # noqa: E501
             user_id (str): [optional]  # noqa: E501
+            email (str): [optional]  # noqa: E501
+            entry_type (int): [optional]  # noqa: E501
             team_id (str): [optional]  # noqa: E501
             application_id (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

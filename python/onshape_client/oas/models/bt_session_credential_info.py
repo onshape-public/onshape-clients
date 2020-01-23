@@ -74,8 +74,8 @@ class BTSessionCredentialInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'provider': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
+            'provider': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,8 +83,8 @@ class BTSessionCredentialInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'provider': 'provider',  # noqa: E501
         'type': 'type',  # noqa: E501
+        'provider': 'provider',  # noqa: E501
     }
 
     @staticmethod
@@ -117,8 +117,8 @@ class BTSessionCredentialInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            provider (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
+            provider (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

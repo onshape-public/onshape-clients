@@ -82,6 +82,7 @@ class BTTableBaseCrossHighlightData2609(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,6 +95,7 @@ class BTTableBaseCrossHighlightData2609(ModelNormal):
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -126,6 +128,7 @@ class BTTableBaseCrossHighlightData2609(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

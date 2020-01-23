@@ -103,20 +103,21 @@ class BTMConfigurationParameter819(ModelNormal):
             'parameter_type': (str,),  # noqa: E501
             'generated_parameter_id': (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             'valid': (bool,),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
+            'parameter_name': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
             'bt_type': {
-                'BTMConfigurationParameterString-872': btm_configuration_parameter_string872.BTMConfigurationParameterString872,
                 'BTMConfigurationParameterEnum-105': btm_configuration_parameter_enum105.BTMConfigurationParameterEnum105,
                 'BTMConfigurationParameterQuantity-1826': btm_configuration_parameter_quantity1826.BTMConfigurationParameterQuantity1826,
                 'BTMConfigurationParameterBoolean-2550': btm_configuration_parameter_boolean2550.BTMConfigurationParameterBoolean2550,
+                'BTMConfigurationParameterString-872': btm_configuration_parameter_string872.BTMConfigurationParameterString872,
             },
         }
 
@@ -124,10 +125,11 @@ class BTMConfigurationParameter819(ModelNormal):
         'parameter_type': 'parameterType',  # noqa: E501
         'generated_parameter_id': 'generatedParameterId',  # noqa: E501
         'valid': 'valid',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
+        'parameter_name': 'parameterName',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -163,10 +165,11 @@ class BTMConfigurationParameter819(ModelNormal):
             parameter_type (str): [optional]  # noqa: E501
             generated_parameter_id (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             valid (bool): [optional]  # noqa: E501
-            parameter_name (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
+            parameter_name (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

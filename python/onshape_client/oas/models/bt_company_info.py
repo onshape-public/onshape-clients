@@ -85,12 +85,12 @@ class BTCompanyInfo(ModelNormal):
             'address': (bt_address_info.BTAddressInfo,),  # noqa: E501
             'purchase': (bt_purchase_info.BTPurchaseInfo,),  # noqa: E501
             'domain_prefix': (str,),  # noqa: E501
-            'admin': (bool,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
+            'image': (str,),  # noqa: E501
+            'admin': (bool,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'no_public_documents': (bool,),  # noqa: E501
             'enterprise_base_url': (str,),  # noqa: E501
-            'image': (str,),  # noqa: E501
             'state': (int,),  # noqa: E501
             'type': (int,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -107,12 +107,12 @@ class BTCompanyInfo(ModelNormal):
         'address': 'address',  # noqa: E501
         'purchase': 'purchase',  # noqa: E501
         'domain_prefix': 'domainPrefix',  # noqa: E501
-        'admin': 'admin',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
+        'image': 'image',  # noqa: E501
+        'admin': 'admin',  # noqa: E501
         'description': 'description',  # noqa: E501
         'no_public_documents': 'noPublicDocuments',  # noqa: E501
         'enterprise_base_url': 'enterpriseBaseUrl',  # noqa: E501
-        'image': 'image',  # noqa: E501
         'state': 'state',  # noqa: E501
         'type': 'type',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -154,12 +154,12 @@ class BTCompanyInfo(ModelNormal):
             address (bt_address_info.BTAddressInfo): [optional]  # noqa: E501
             purchase (bt_purchase_info.BTPurchaseInfo): [optional]  # noqa: E501
             domain_prefix (str): [optional]  # noqa: E501
-            admin (bool): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
+            image (str): [optional]  # noqa: E501
+            admin (bool): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             no_public_documents (bool): [optional]  # noqa: E501
             enterprise_base_url (str): [optional]  # noqa: E501
-            image (str): [optional]  # noqa: E501
             state (int): [optional]  # noqa: E501
             type (int): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

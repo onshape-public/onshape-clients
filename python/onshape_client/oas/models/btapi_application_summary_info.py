@@ -74,8 +74,8 @@ class BTAPIApplicationSummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'client_id': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'client_id': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'state': (int,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -88,8 +88,8 @@ class BTAPIApplicationSummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'client_id': 'clientId',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'client_id': 'clientId',  # noqa: E501
         'id': 'id',  # noqa: E501
         'state': 'state',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -127,8 +127,8 @@ class BTAPIApplicationSummaryInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            client_id (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            client_id (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             state (int): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

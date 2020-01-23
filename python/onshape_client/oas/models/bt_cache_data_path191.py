@@ -74,12 +74,12 @@ class BTCacheDataPath191(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'is_persisted': (bool,),  # noqa: E501
             'url_path': (str,),  # noqa: E501
-            'use_local_file_cache': (bool,),  # noqa: E501
             'full_file_path': (str,),  # noqa: E501
+            'use_local_file_cache': (bool,),  # noqa: E501
             'expire_secs': (str,),  # noqa: E501
             'key': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -90,12 +90,12 @@ class BTCacheDataPath191(ModelNormal):
         return None
 
     attribute_map = {
-        'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'is_persisted': 'isPersisted',  # noqa: E501
         'url_path': 'urlPath',  # noqa: E501
-        'use_local_file_cache': 'useLocalFileCache',  # noqa: E501
         'full_file_path': 'fullFilePath',  # noqa: E501
+        'use_local_file_cache': 'useLocalFileCache',  # noqa: E501
         'expire_secs': 'expireSecs',  # noqa: E501
         'key': 'key',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -131,12 +131,12 @@ class BTCacheDataPath191(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             is_persisted (bool): [optional]  # noqa: E501
             url_path (str): [optional]  # noqa: E501
-            use_local_file_cache (bool): [optional]  # noqa: E501
             full_file_path (str): [optional]  # noqa: E501
+            use_local_file_cache (bool): [optional]  # noqa: E501
             expire_secs (str): [optional]  # noqa: E501
             key (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

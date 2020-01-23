@@ -89,7 +89,7 @@ class BTParameterVisibilityLogical178(ModelComposed):
         """
         return {
             'operation': (str,),  # noqa: E501
-            'children': ([object],),  # noqa: E501
+            'children': ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -133,7 +133,7 @@ class BTParameterVisibilityLogical178(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             operation (str): [optional]  # noqa: E501
-            children ([object]): [optional]  # noqa: E501
+            children ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**change_id** | **str** |  | [optional] 
 **data** | [**[bt_app_element_content_entry_info.BTAppElementContentEntryInfo]**](BTAppElementContentEntryInfo.md) |  | [optional] 
+**change_id** | **str** |  | [optional] 
 **error_code** | **int** |  | [optional] 
 **error_value** | **str** |  | [optional] 
 **error_description** | **str** |  | [optional] 

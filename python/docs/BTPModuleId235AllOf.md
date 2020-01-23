@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**standard_library** | **bool** |  | [optional] 
 **external_document_with_version_and_element_id** | [**bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId**](BTDocumentWithVersionAndElementId.md) |  | [optional] 
 **external_document_with_version** | [**bt_document_with_version_id.BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 
+**external_import** | **bool** |  | [optional] 
 **version_and_microversion** | **str** |  | [optional] 
 **imported_document_id** | **str** |  | [optional] 
 **legacy** | **bool** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **path_version** | **str** |  | [optional] 
 **imported_version_id** | **str** |  | [optional] 
 **potentially_valid** | **bool** |  | [optional] 
-**external_import** | **bool** |  | [optional] 
+**standard_library** | **bool** |  | [optional] 
 **microversion** | **str** |  | [optional] 
 **space_before_path** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_after_path** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 

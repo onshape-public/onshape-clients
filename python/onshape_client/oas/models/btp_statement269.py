@@ -153,12 +153,12 @@ class BTPStatement269(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -172,27 +172,27 @@ class BTPStatement269(ModelComposed):
             'bt_type': {
                 'BTPStatementTry-1523': btp_statement_try1523.BTPStatementTry1523,
                 'BTPStatementThrow-1080': btp_statement_throw1080.BTPStatementThrow1080,
-                'BTPStatementConstantDeclaration-273': btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
-                'BTPStatementBreak-272': btp_statement_break272.BTPStatementBreak272,
                 'BTPStatementCompressedQuery-1237': btp_statement_compressed_query1237.BTPStatementCompressedQuery1237,
-                'BTPStatementContinue-274': btp_statement_continue274.BTPStatementContinue274,
-                'BTPStatementExpression-275': btp_statement_expression275.BTPStatementExpression275,
                 'BTPStatementReturn-281': btp_statement_return281.BTPStatementReturn281,
                 'BTPStatementAssignment-270': btp_statement_assignment270.BTPStatementAssignment270,
-                'BTPStatementLoop-277': btp_statement_loop277.BTPStatementLoop277,
                 'BTPStatementBlock-271': btp_statement_block271.BTPStatementBlock271,
-                'BTPStatementIf-276': btp_statement_if276.BTPStatementIf276,
                 'BTPStatementVarDeclaration-282': btp_statement_var_declaration282.BTPStatementVarDeclaration282,
+                'BTPStatementConstantDeclaration-273': btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
+                'BTPStatementBreak-272': btp_statement_break272.BTPStatementBreak272,
+                'BTPStatementContinue-274': btp_statement_continue274.BTPStatementContinue274,
+                'BTPStatementExpression-275': btp_statement_expression275.BTPStatementExpression275,
+                'BTPStatementLoop-277': btp_statement_loop277.BTPStatementLoop277,
+                'BTPStatementIf-276': btp_statement_if276.BTPStatementIf276,
             },
         }
 
     attribute_map = {
-        'annotation': 'annotation',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'annotation': 'annotation',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -229,12 +229,12 @@ class BTPStatement269(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_from** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
-**to** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
 **type_name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
+**to** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
 **space_after_type** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

@@ -75,12 +75,12 @@ class BTVersionOrWorkspaceParams(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'read_only': (bool,),  # noqa: E501
             'is_release': (bool,),  # noqa: E501
             'from_history': (bool,),  # noqa: E501
             'purpose': (int,),  # noqa: E501
+            'workspace_id': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'microversion_id': (str,),  # noqa: E501
             'client_interaction_mode': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -93,12 +93,12 @@ class BTVersionOrWorkspaceParams(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'read_only': 'readOnly',  # noqa: E501
         'is_release': 'isRelease',  # noqa: E501
         'from_history': 'fromHistory',  # noqa: E501
         'purpose': 'purpose',  # noqa: E501
+        'workspace_id': 'workspaceId',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'microversion_id': 'microversionId',  # noqa: E501
         'client_interaction_mode': 'clientInteractionMode',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -136,12 +136,12 @@ class BTVersionOrWorkspaceParams(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            workspace_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             read_only (bool): [optional]  # noqa: E501
             is_release (bool): [optional]  # noqa: E501
             from_history (bool): [optional]  # noqa: E501
             purpose (int): [optional]  # noqa: E501
+            workspace_id (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             microversion_id (str): [optional]  # noqa: E501
             client_interaction_mode (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

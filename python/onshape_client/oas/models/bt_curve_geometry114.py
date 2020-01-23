@@ -101,9 +101,9 @@ class BTCurveGeometry114(ModelNormal):
     def discriminator():
         return {
             'bt_type': {
-                'BTCurveGeometryLine-117': bt_curve_geometry_line117.BTCurveGeometryLine117,
                 'BTCurveGeometryInterpolatedSpline-116': bt_curve_geometry_interpolated_spline116.BTCurveGeometryInterpolatedSpline116,
                 'BTCurveGeometryCircle-115': bt_curve_geometry_circle115.BTCurveGeometryCircle115,
+                'BTCurveGeometryLine-117': bt_curve_geometry_line117.BTCurveGeometryLine117,
                 'BTCurveGeometrySpline-118': bt_curve_geometry_spline118.BTCurveGeometrySpline118,
                 'BTCurveGeometryConic-2284': bt_curve_geometry_conic2284.BTCurveGeometryConic2284,
             },

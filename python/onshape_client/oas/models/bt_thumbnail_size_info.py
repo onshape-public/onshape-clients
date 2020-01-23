@@ -76,9 +76,9 @@ class BTThumbnailSizeInfo(ModelNormal):
         return {
             'href': (str,),  # noqa: E501
             'media_type': (str,),  # noqa: E501
+            'unique_id': (str,),  # noqa: E501
             'view_orientation': (str,),  # noqa: E501
             'render_mode': (str,),  # noqa: E501
-            'unique_id': (str,),  # noqa: E501
             'sheet_name': (str,),  # noqa: E501
             'size': (str,),  # noqa: E501
         }
@@ -90,9 +90,9 @@ class BTThumbnailSizeInfo(ModelNormal):
     attribute_map = {
         'href': 'href',  # noqa: E501
         'media_type': 'mediaType',  # noqa: E501
+        'unique_id': 'uniqueId',  # noqa: E501
         'view_orientation': 'viewOrientation',  # noqa: E501
         'render_mode': 'renderMode',  # noqa: E501
-        'unique_id': 'uniqueId',  # noqa: E501
         'sheet_name': 'sheetName',  # noqa: E501
         'size': 'size',  # noqa: E501
     }
@@ -129,9 +129,9 @@ class BTThumbnailSizeInfo(ModelNormal):
                                 If omitted no type conversion is done.
             href (str): [optional]  # noqa: E501
             media_type (str): [optional]  # noqa: E501
+            unique_id (str): [optional]  # noqa: E501
             view_orientation (str): [optional]  # noqa: E501
             render_mode (str): [optional]  # noqa: E501
-            unique_id (str): [optional]  # noqa: E501
             sheet_name (str): [optional]  # noqa: E501
             size (str): [optional]  # noqa: E501
         """

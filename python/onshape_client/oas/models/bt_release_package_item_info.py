@@ -82,25 +82,25 @@ class BTReleasePackageItemInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'errors': ([bt_release_package_item_error.BTReleasePackageItemError],),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'element_type': (int,),  # noqa: E501
-            'configuration_key': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
             'part_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
+            'configuration': (str,),  # noqa: E501
             'diff_thumbnail_configuration_key': (str,),  # noqa: E501
             'small_thumbnail_href': (str,),  # noqa: E501
             'is_revision_managed': (bool,),  # noqa: E501
-            'errors': ([bt_release_package_item_error.BTReleasePackageItemError],),  # noqa: E501
             'is_included_editable': (bool,),  # noqa: E501
-            'rpid': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'workspace_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
+            'element_type': (int,),  # noqa: E501
+            'can_export': (bool,),  # noqa: E501
+            'obsoletion_revision_id': (str,),  # noqa: E501
+            'configuration_key': (str,),  # noqa: E501
             'mime_type': (str,),  # noqa: E501
             'part_type': (str,),  # noqa: E501
-            'obsoletion_revision_id': (str,),  # noqa: E501
-            'can_export': (bool,),  # noqa: E501
+            'rpid': (str,),  # noqa: E501
             'is_translatable': (bool,),  # noqa: E501
             'properties': ([bt_metadata_property_info.BTMetadataPropertyInfo],),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -114,25 +114,25 @@ class BTReleasePackageItemInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'errors': 'errors',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'element_type': 'elementType',  # noqa: E501
-        'configuration_key': 'configurationKey',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
         'part_id': 'partId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
+        'configuration': 'configuration',  # noqa: E501
         'diff_thumbnail_configuration_key': 'diffThumbnailConfigurationKey',  # noqa: E501
         'small_thumbnail_href': 'smallThumbnailHref',  # noqa: E501
         'is_revision_managed': 'isRevisionManaged',  # noqa: E501
-        'errors': 'errors',  # noqa: E501
         'is_included_editable': 'isIncludedEditable',  # noqa: E501
-        'rpid': 'rpid',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'workspace_id': 'workspaceId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
+        'element_type': 'elementType',  # noqa: E501
+        'can_export': 'canExport',  # noqa: E501
+        'obsoletion_revision_id': 'obsoletionRevisionId',  # noqa: E501
+        'configuration_key': 'configurationKey',  # noqa: E501
         'mime_type': 'mimeType',  # noqa: E501
         'part_type': 'partType',  # noqa: E501
-        'obsoletion_revision_id': 'obsoletionRevisionId',  # noqa: E501
-        'can_export': 'canExport',  # noqa: E501
+        'rpid': 'rpid',  # noqa: E501
         'is_translatable': 'isTranslatable',  # noqa: E501
         'properties': 'properties',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -171,25 +171,25 @@ class BTReleasePackageItemInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            errors ([bt_release_package_item_error.BTReleasePackageItemError]): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            company_id (str): [optional]  # noqa: E501
-            element_type (int): [optional]  # noqa: E501
-            configuration_key (str): [optional]  # noqa: E501
-            configuration (str): [optional]  # noqa: E501
             part_id (str): [optional]  # noqa: E501
-            workspace_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
+            configuration (str): [optional]  # noqa: E501
             diff_thumbnail_configuration_key (str): [optional]  # noqa: E501
             small_thumbnail_href (str): [optional]  # noqa: E501
             is_revision_managed (bool): [optional]  # noqa: E501
-            errors ([bt_release_package_item_error.BTReleasePackageItemError]): [optional]  # noqa: E501
             is_included_editable (bool): [optional]  # noqa: E501
-            rpid (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            workspace_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
+            element_type (int): [optional]  # noqa: E501
+            can_export (bool): [optional]  # noqa: E501
+            obsoletion_revision_id (str): [optional]  # noqa: E501
+            configuration_key (str): [optional]  # noqa: E501
             mime_type (str): [optional]  # noqa: E501
             part_type (str): [optional]  # noqa: E501
-            obsoletion_revision_id (str): [optional]  # noqa: E501
-            can_export (bool): [optional]  # noqa: E501
+            rpid (str): [optional]  # noqa: E501
             is_translatable (bool): [optional]  # noqa: E501
             properties ([bt_metadata_property_info.BTMetadataPropertyInfo]): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

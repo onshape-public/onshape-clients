@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**major_radius** | **float** |  | [optional] 
 **minor_radius** | **float** |  | [optional] 
 **axis** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
-**major_radius** | **float** |  | [optional] 
 **origin** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

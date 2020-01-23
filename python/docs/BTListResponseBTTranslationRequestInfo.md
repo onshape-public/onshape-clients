@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_translation_request_info.BTTranslationRequestInfo]**](BTTranslationRequestInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_translation_request_info.BTTranslationRequestInfo]**](BTTranslationRequestInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

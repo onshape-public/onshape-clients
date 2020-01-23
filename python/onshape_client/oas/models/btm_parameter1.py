@@ -149,6 +149,7 @@ class BTMParameter1(ModelNormal):
             'parameter_id': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -156,23 +157,23 @@ class BTMParameter1(ModelNormal):
         return {
             'bt_type': {
                 'BTMParameterQuantity-147': btm_parameter_quantity147.BTMParameterQuantity147,
-                'BTMParameterLookupTablePath-1419': btm_parameter_lookup_table_path1419.BTMParameterLookupTablePath1419,
                 'BTMParameterMaterial-1388': btm_parameter_material1388.BTMParameterMaterial1388,
+                'BTMParameterBoolean-144': btm_parameter_boolean144.BTMParameterBoolean144,
+                'BTMParameterString-149': btm_parameter_string149.BTMParameterString149,
+                'BTMParameterQueryList-148': btm_parameter_query_list148.BTMParameterQueryList148,
+                'BTMParameterQueryWithOccurrenceList-67': btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
+                'BTMParameterAppearance-627': btm_parameter_appearance627.BTMParameterAppearance627,
+                'BTMParameterLookupTablePath-1419': btm_parameter_lookup_table_path1419.BTMParameterLookupTablePath1419,
                 'BTMParameterEnum-145': btm_parameter_enum145.BTMParameterEnum145,
                 'BTMParameterDerived-864': btm_parameter_derived864.BTMParameterDerived864,
-                'BTMParameterBoolean-144': btm_parameter_boolean144.BTMParameterBoolean144,
                 'BTMParameterFeatureList-1749': btm_parameter_feature_list1749.BTMParameterFeatureList1749,
                 'BTMParameterConfigured-2222': btm_parameter_configured2222.BTMParameterConfigured2222,
-                'BTMParameterString-149': btm_parameter_string149.BTMParameterString149,
                 'BTMDatabaseParameter-2229': btm_database_parameter2229.BTMDatabaseParameter2229,
                 'BTMParameterReference-2434': btm_parameter_reference2434.BTMParameterReference2434,
                 'BTMParameterForeignId-146': btm_parameter_foreign_id146.BTMParameterForeignId146,
-                'BTMParameterQueryList-148': btm_parameter_query_list148.BTMParameterQueryList148,
                 'BTMParameterBlobReference-1679': btm_parameter_blob_reference1679.BTMParameterBlobReference1679,
-                'BTMParameterQueryWithOccurrenceList-67': btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
                 'BTMParameterArray-2025': btm_parameter_array2025.BTMParameterArray2025,
                 'BTMParameterInvalid-1664': btm_parameter_invalid1664.BTMParameterInvalid1664,
-                'BTMParameterAppearance-627': btm_parameter_appearance627.BTMParameterAppearance627,
             },
         }
 
@@ -180,6 +181,7 @@ class BTMParameter1(ModelNormal):
         'parameter_id': 'parameterId',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -215,6 +217,7 @@ class BTMParameter1(ModelNormal):
             parameter_id (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

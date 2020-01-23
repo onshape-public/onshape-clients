@@ -95,6 +95,7 @@ class BTTableRow1054(ModelNormal):
             'meta_data': (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,6 +112,7 @@ class BTTableRow1054(ModelNormal):
         'meta_data': 'metaData',  # noqa: E501
         'id': 'id',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -148,6 +150,7 @@ class BTTableRow1054(ModelNormal):
             meta_data (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

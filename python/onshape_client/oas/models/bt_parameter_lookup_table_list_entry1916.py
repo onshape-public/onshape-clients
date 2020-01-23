@@ -79,15 +79,15 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
         """
         return {
             'additional_localized_strings': (int,),  # noqa: E501
-            'default_index': (int,),  # noqa: E501
             'entries': ([bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667],),  # noqa: E501
-            'name': (str,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
-            'localized_name': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'default_index': (int,),  # noqa: E501
             'localizable_name': (str,),  # noqa: E501
+            'localized_name': (str,),  # noqa: E501
             'strings_to_localize': ([str],),  # noqa: E501
-            'label': (str,),  # noqa: E501
             'localized_label': (str,),  # noqa: E501
+            'label': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -97,15 +97,15 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
 
     attribute_map = {
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
-        'default_index': 'defaultIndex',  # noqa: E501
         'entries': 'entries',  # noqa: E501
-        'name': 'name',  # noqa: E501
         'display_name': 'displayName',  # noqa: E501
-        'localized_name': 'localizedName',  # noqa: E501
+        'name': 'name',  # noqa: E501
+        'default_index': 'defaultIndex',  # noqa: E501
         'localizable_name': 'localizableName',  # noqa: E501
+        'localized_name': 'localizedName',  # noqa: E501
         'strings_to_localize': 'stringsToLocalize',  # noqa: E501
-        'label': 'label',  # noqa: E501
         'localized_label': 'localizedLabel',  # noqa: E501
+        'label': 'label',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -140,15 +140,15 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             additional_localized_strings (int): [optional]  # noqa: E501
-            default_index (int): [optional]  # noqa: E501
             entries ([bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667]): [optional]  # noqa: E501
-            name (str): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
-            localized_name (str): [optional]  # noqa: E501
+            name (str): [optional]  # noqa: E501
+            default_index (int): [optional]  # noqa: E501
             localizable_name (str): [optional]  # noqa: E501
+            localized_name (str): [optional]  # noqa: E501
             strings_to_localize ([str]): [optional]  # noqa: E501
-            label (str): [optional]  # noqa: E501
             localized_label (str): [optional]  # noqa: E501
+            label (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

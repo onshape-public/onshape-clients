@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_purchase_info.BTPurchaseInfo]**](BTPurchaseInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_purchase_info.BTPurchaseInfo]**](BTPurchaseInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

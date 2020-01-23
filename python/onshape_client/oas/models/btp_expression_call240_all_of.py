@@ -86,10 +86,11 @@ class BTPExpressionCall240AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'function_name': (btp_name261.BTPName261,),  # noqa: E501
+            'arguments': ([btp_expression9.BTPExpression9],),  # noqa: E501
             'function_name_string': (str,),  # noqa: E501
-            'function_expression': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'function_name': (btp_name261.BTPName261,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
+            'function_expression': (btp_expression9.BTPExpression9,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -98,10 +99,11 @@ class BTPExpressionCall240AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'function_name': 'functionName',  # noqa: E501
+        'arguments': 'arguments',  # noqa: E501
         'function_name_string': 'functionNameString',  # noqa: E501
-        'function_expression': 'functionExpression',  # noqa: E501
+        'function_name': 'functionName',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
+        'function_expression': 'functionExpression',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -135,10 +137,11 @@ class BTPExpressionCall240AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            function_name (btp_name261.BTPName261): [optional]  # noqa: E501
+            arguments ([btp_expression9.BTPExpression9]): [optional]  # noqa: E501
             function_name_string (str): [optional]  # noqa: E501
-            function_expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            function_name (btp_name261.BTPName261): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            function_expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

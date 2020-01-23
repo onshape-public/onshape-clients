@@ -93,13 +93,14 @@ class BTTable1825(ModelNormal):
             'column_count': (int,),  # noqa: E501
             'row_count': (int,),  # noqa: E501
             'all_row_values': ([[str]],),  # noqa: E501
-            'title': (str,),  # noqa: E501
             'read_only': (bool,),  # noqa: E501
-            'table_id': (str,),  # noqa: E501
+            'title': (str,),  # noqa: E501
             'table_rows': ([bt_table_row1054.BTTableRow1054],),  # noqa: E501
             'table_columns': ([bt_table_column_info1222.BTTableColumnInfo1222],),  # noqa: E501
+            'table_id': (str,),  # noqa: E501
             'frozen_columns': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -115,13 +116,14 @@ class BTTable1825(ModelNormal):
         'column_count': 'columnCount',  # noqa: E501
         'row_count': 'rowCount',  # noqa: E501
         'all_row_values': 'allRowValues',  # noqa: E501
-        'title': 'title',  # noqa: E501
         'read_only': 'readOnly',  # noqa: E501
-        'table_id': 'tableId',  # noqa: E501
+        'title': 'title',  # noqa: E501
         'table_rows': 'tableRows',  # noqa: E501
         'table_columns': 'tableColumns',  # noqa: E501
+        'table_id': 'tableId',  # noqa: E501
         'frozen_columns': 'frozenColumns',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -157,13 +159,14 @@ class BTTable1825(ModelNormal):
             column_count (int): [optional]  # noqa: E501
             row_count (int): [optional]  # noqa: E501
             all_row_values ([[str]]): [optional]  # noqa: E501
-            title (str): [optional]  # noqa: E501
             read_only (bool): [optional]  # noqa: E501
-            table_id (str): [optional]  # noqa: E501
+            title (str): [optional]  # noqa: E501
             table_rows ([bt_table_row1054.BTTableRow1054]): [optional]  # noqa: E501
             table_columns ([bt_table_column_info1222.BTTableColumnInfo1222]): [optional]  # noqa: E501
+            table_id (str): [optional]  # noqa: E501
             frozen_columns (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

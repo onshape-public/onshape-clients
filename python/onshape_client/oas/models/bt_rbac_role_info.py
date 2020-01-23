@@ -74,8 +74,8 @@ class BTRbacRoleInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'predefined_role': (int,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'predefined_role': (int,),  # noqa: E501
             'active': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
@@ -88,8 +88,8 @@ class BTRbacRoleInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'predefined_role': 'predefinedRole',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'predefined_role': 'predefinedRole',  # noqa: E501
         'active': 'active',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
@@ -127,8 +127,8 @@ class BTRbacRoleInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            predefined_role (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            predefined_role (int): [optional]  # noqa: E501
             active (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501

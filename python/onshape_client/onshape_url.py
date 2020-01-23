@@ -85,7 +85,7 @@ class OnshapeElement(object):
 
     @property
     def element_type(self):
-        elements = Client.get_client().documents_api.get_elements1(self.did, self.wvm, self.wvmid)
+        elements = Client.get_client().documents_api.get_elements_in_document(self.did, self.wvm, self.wvmid)
         for element in elements:
             if element.id == self.eid:
                 return element.type
@@ -149,7 +149,7 @@ class OnshapeElement(object):
         return OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=asm["id"])
 
     def delete(self):
-        Client.get_client().documents_api.delete7(self.did)
+        Client.get_client().documents_api.delete_document(self.did)
 
     def _get_element_info(self):
         return next(i for i in self._get_element_infos() if i.id == self.eid)
@@ -158,7 +158,7 @@ class OnshapeElement(object):
         return Client.get_client().documents_api.get_document(self.did)
 
     def _get_element_infos(self):
-        return Client.get_client().documents_api.get_elements1(self.did, self.wvm, self.wvmid)
+        return Client.get_client().documents_api.get_elements_in_document(self.did, self.wvm, self.wvmid)
 
 class ConfiguredOnshapeElement(OnshapeElement):
 

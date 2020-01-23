@@ -79,8 +79,8 @@ class BTFeatureFilter127AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'exclusion': (str,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
+            'exclusion': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -89,8 +89,8 @@ class BTFeatureFilter127AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'exclusion': 'exclusion',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
+        'exclusion': 'exclusion',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -124,8 +124,8 @@ class BTFeatureFilter127AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            exclusion (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
+            exclusion (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

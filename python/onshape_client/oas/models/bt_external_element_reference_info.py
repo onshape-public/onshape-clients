@@ -75,9 +75,9 @@ class BTExternalElementReferenceInfo(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'element_microversion_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
+            'element_microversion_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -86,9 +86,9 @@ class BTExternalElementReferenceInfo(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'element_microversion_id': 'elementMicroversionId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
+        'element_microversion_id': 'elementMicroversionId',  # noqa: E501
     }
 
     @staticmethod
@@ -122,9 +122,9 @@ class BTExternalElementReferenceInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            element_microversion_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
+            element_microversion_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

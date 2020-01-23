@@ -74,17 +74,17 @@ class BTDocumentParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'not_revision_managed': (bool,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
             'project_id': (str,),  # noqa: E501
             'parent_id': (str,),  # noqa: E501
-            'generate_unknown_messages': (bool,),  # noqa: E501
             'is_public': (bool,),  # noqa: E501
             'is_empty_content': (bool,),  # noqa: E501
+            'owner_type': (int,),  # noqa: E501
+            'generate_unknown_messages': (bool,),  # noqa: E501
+            'not_revision_managed': (bool,),  # noqa: E501
             'beta_capability_ids': ([str],),  # noqa: E501
             'owner_email': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'owner_type': (int,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
         }
@@ -94,17 +94,17 @@ class BTDocumentParams(ModelNormal):
         return None
 
     attribute_map = {
-        'not_revision_managed': 'notRevisionManaged',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
         'project_id': 'projectId',  # noqa: E501
         'parent_id': 'parentId',  # noqa: E501
-        'generate_unknown_messages': 'generateUnknownMessages',  # noqa: E501
         'is_public': 'isPublic',  # noqa: E501
         'is_empty_content': 'isEmptyContent',  # noqa: E501
+        'owner_type': 'ownerType',  # noqa: E501
+        'generate_unknown_messages': 'generateUnknownMessages',  # noqa: E501
+        'not_revision_managed': 'notRevisionManaged',  # noqa: E501
         'beta_capability_ids': 'betaCapabilityIds',  # noqa: E501
         'owner_email': 'ownerEmail',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
         'description': 'description',  # noqa: E501
         'tags': 'tags',  # noqa: E501
     }
@@ -139,17 +139,17 @@ class BTDocumentParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            not_revision_managed (bool): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
             project_id (str): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
-            generate_unknown_messages (bool): [optional]  # noqa: E501
             is_public (bool): [optional]  # noqa: E501
             is_empty_content (bool): [optional]  # noqa: E501
+            owner_type (int): [optional]  # noqa: E501
+            generate_unknown_messages (bool): [optional]  # noqa: E501
+            not_revision_managed (bool): [optional]  # noqa: E501
             beta_capability_ids ([str]): [optional]  # noqa: E501
             owner_email (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            owner_type (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
         """

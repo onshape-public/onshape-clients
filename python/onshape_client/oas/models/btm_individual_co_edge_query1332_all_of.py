@@ -78,8 +78,8 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'edge_query': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
             'face_query': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
+            'edge_query': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -88,8 +88,8 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'edge_query': 'edgeQuery',  # noqa: E501
         'face_query': 'faceQuery',  # noqa: E501
+        'edge_query': 'edgeQuery',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -123,8 +123,8 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            edge_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             face_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
+            edge_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

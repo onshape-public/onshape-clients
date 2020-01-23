@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **geometry** | [**bt_curve_geometry114.BTCurveGeometry114**](BTCurveGeometry114.md) |  | [optional] 
 **center_id** | **str** |  | [optional] 
 **internal_ids** | **[str]** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **is_construction** | **bool** |  | [optional] 
 **parameters** | [**[btm_parameter1.BTMParameter1]**](BTMParameter1.md) |  | [optional] 

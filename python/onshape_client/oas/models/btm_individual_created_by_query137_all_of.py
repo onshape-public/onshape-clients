@@ -56,14 +56,6 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('entity_type',): {
-            'VERTEX': "VERTEX",
-            'EDGE': "EDGE",
-            'FACE': "FACE",
-            'BODY': "BODY",
-            'DEGENERATE_EDGE': "DEGENERATE_EDGE",
-            'UNKNOWN': "UNKNOWN",
-        },
         ('body_type',): {
             'SOLID': "SOLID",
             'SHEET': "SHEET",
@@ -71,6 +63,14 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
             'POINT': "POINT",
             'MATE_CONNECTOR': "MATE_CONNECTOR",
             'COMPOSITE': "COMPOSITE",
+            'UNKNOWN': "UNKNOWN",
+        },
+        ('entity_type',): {
+            'VERTEX': "VERTEX",
+            'EDGE': "EDGE",
+            'FACE': "FACE",
+            'BODY': "BODY",
+            'DEGENERATE_EDGE': "DEGENERATE_EDGE",
             'UNKNOWN': "UNKNOWN",
         },
     }
@@ -91,10 +91,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'entity_type': (str,),  # noqa: E501
-            'body_type': (str,),  # noqa: E501
-            'filter_construction': (bool,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
+            'body_type': (str,),  # noqa: E501
+            'entity_type': (str,),  # noqa: E501
+            'filter_construction': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -103,10 +103,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'entity_type': 'entityType',  # noqa: E501
-        'body_type': 'bodyType',  # noqa: E501
-        'filter_construction': 'filterConstruction',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
+        'body_type': 'bodyType',  # noqa: E501
+        'entity_type': 'entityType',  # noqa: E501
+        'filter_construction': 'filterConstruction',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -140,10 +140,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entity_type (str): [optional]  # noqa: E501
-            body_type (str): [optional]  # noqa: E501
-            filter_construction (bool): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
+            body_type (str): [optional]  # noqa: E501
+            entity_type (str): [optional]  # noqa: E501
+            filter_construction (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

@@ -74,12 +74,12 @@ class BTAddressInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'zip': (str,),  # noqa: E501
             'address': (str,),  # noqa: E501
             'city': (str,),  # noqa: E501
             'state_code': (str,),  # noqa: E501
             'country': (str,),  # noqa: E501
             'country_code': (str,),  # noqa: E501
-            'zip': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'state': (str,),  # noqa: E501
         }
@@ -89,12 +89,12 @@ class BTAddressInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'zip': 'zip',  # noqa: E501
         'address': 'address',  # noqa: E501
         'city': 'city',  # noqa: E501
         'state_code': 'stateCode',  # noqa: E501
         'country': 'country',  # noqa: E501
         'country_code': 'countryCode',  # noqa: E501
-        'zip': 'zip',  # noqa: E501
         'id': 'id',  # noqa: E501
         'state': 'state',  # noqa: E501
     }
@@ -129,12 +129,12 @@ class BTAddressInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            zip (str): [optional]  # noqa: E501
             address (str): [optional]  # noqa: E501
             city (str): [optional]  # noqa: E501
             state_code (str): [optional]  # noqa: E501
             country (str): [optional]  # noqa: E501
             country_code (str): [optional]  # noqa: E501
-            zip (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             state (str): [optional]  # noqa: E501
         """

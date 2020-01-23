@@ -114,8 +114,8 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
             'parameter_type': (str,),  # noqa: E501
             'generated_parameter_id': (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             'valid': (bool,),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
+            'parameter_name': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
         }
@@ -131,8 +131,8 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
         'parameter_type': 'parameterType',  # noqa: E501
         'generated_parameter_id': 'generatedParameterId',  # noqa: E501
         'valid': 'valid',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
+        'parameter_name': 'parameterName',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
     }
@@ -172,8 +172,8 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
             parameter_type (str): [optional]  # noqa: E501
             generated_parameter_id (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             valid (bool): [optional]  # noqa: E501
-            parameter_name (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
+            parameter_name (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
         """

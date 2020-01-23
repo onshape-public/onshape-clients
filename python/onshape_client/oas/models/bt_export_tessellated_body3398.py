@@ -84,6 +84,7 @@ class BTExportTessellatedBody3398(ModelNormal):
         return {
             'constituents': ([str],),  # noqa: E501
             'id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -98,6 +99,7 @@ class BTExportTessellatedBody3398(ModelNormal):
     attribute_map = {
         'constituents': 'constituents',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -132,6 +134,7 @@ class BTExportTessellatedBody3398(ModelNormal):
                                 If omitted no type conversion is done.
             constituents ([str]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -82,11 +82,11 @@ class BTPartMaterialInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'display_name': (str,),  # noqa: E501
             'library_name': (str,),  # noqa: E501
             'library_reference': (bt_external_element_reference_info.BTExternalElementReferenceInfo,),  # noqa: E501
             'properties': ([bt_part_material_property_info.BTPartMaterialPropertyInfo],),  # noqa: E501
             'id': (str,),  # noqa: E501
-            'display_name': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,11 +94,11 @@ class BTPartMaterialInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'display_name': 'displayName',  # noqa: E501
         'library_name': 'libraryName',  # noqa: E501
         'library_reference': 'libraryReference',  # noqa: E501
         'properties': 'properties',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'display_name': 'displayName',  # noqa: E501
     }
 
     @staticmethod
@@ -131,11 +131,11 @@ class BTPartMaterialInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            display_name (str): [optional]  # noqa: E501
             library_name (str): [optional]  # noqa: E501
             library_reference (bt_external_element_reference_info.BTExternalElementReferenceInfo): [optional]  # noqa: E501
             properties ([bt_part_material_property_info.BTPartMaterialPropertyInfo]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
-            display_name (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

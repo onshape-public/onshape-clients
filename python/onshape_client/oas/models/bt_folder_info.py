@@ -91,27 +91,27 @@ class BTFolderInfo(ModelComposed):
         """
         return {
             'json_type': (str,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
-            'trashed_at': (datetime,),  # noqa: E501
-            'is_orphaned': (bool,),  # noqa: E501
-            'can_unshare': (bool,),  # noqa: E501
             'parent_id': (str,),  # noqa: E501
             'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
             'trash': (bool,),  # noqa: E501
+            'can_unshare': (bool,),  # noqa: E501
+            'active': (bool,),  # noqa: E501
+            'trashed_at': (datetime,),  # noqa: E501
+            'is_orphaned': (bool,),  # noqa: E501
             'modified_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
+            'is_enterprise_owned': (bool,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'is_enterprise_owned': (bool,),  # noqa: E501
+            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -124,27 +124,27 @@ class BTFolderInfo(ModelComposed):
 
     attribute_map = {
         'json_type': 'jsonType',  # noqa: E501
-        'active': 'active',  # noqa: E501
-        'trashed_at': 'trashedAt',  # noqa: E501
-        'is_orphaned': 'isOrphaned',  # noqa: E501
-        'can_unshare': 'canUnshare',  # noqa: E501
         'parent_id': 'parentId',  # noqa: E501
         'permission_set': 'permissionSet',  # noqa: E501
         'trash': 'trash',  # noqa: E501
+        'can_unshare': 'canUnshare',  # noqa: E501
+        'active': 'active',  # noqa: E501
+        'trashed_at': 'trashedAt',  # noqa: E501
+        'is_orphaned': 'isOrphaned',  # noqa: E501
         'modified_at': 'modifiedAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'modified_by': 'modifiedBy',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
+        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
         'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
-        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'created_by': 'createdBy',  # noqa: E501
+        'modified_by': 'modifiedBy',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -182,27 +182,27 @@ class BTFolderInfo(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            active (bool): [optional]  # noqa: E501
-            trashed_at (datetime): [optional]  # noqa: E501
-            is_orphaned (bool): [optional]  # noqa: E501
-            can_unshare (bool): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
             permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             trash (bool): [optional]  # noqa: E501
+            can_unshare (bool): [optional]  # noqa: E501
+            active (bool): [optional]  # noqa: E501
+            trashed_at (datetime): [optional]  # noqa: E501
+            is_orphaned (bool): [optional]  # noqa: E501
             modified_at (datetime): [optional]  # noqa: E501
-            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
+            is_enterprise_owned (bool): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            is_enterprise_owned (bool): [optional]  # noqa: E501
+            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

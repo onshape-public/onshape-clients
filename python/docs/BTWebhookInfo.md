@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**company_id** | **str** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
-**filter** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
-**events** | **[str]** |  | [optional] 
-**data** | **str** |  | [optional] 
 **getproject_id** | **str** |  | [optional] 
+**events** | **[str]** |  | [optional] 
+**url** | **str** |  | [optional] 
+**data** | **str** |  | [optional] 
+**company_id** | **str** |  | [optional] 
+**filter** | **str** |  | [optional] 
 **dropped_event_count** | **int** |  | [optional] 
 **options** | [**bt_webhook_options.BTWebhookOptions**](BTWebhookOptions.md) |  | [optional] 
 **href** | **str** |  | [optional] 

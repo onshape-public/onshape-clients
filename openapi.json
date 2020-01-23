@@ -21339,6 +21339,12 @@
           {
             "type": "object",
             "properties": {
+              "arguments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTPExpression-9"
+                }
+              },
               "functionNameString": {
                 "type": "string"
               },

@@ -96,25 +96,25 @@ class BTCloudStorageAccountInfo(ModelComposed):
         return {
             'json_type': (str,),  # noqa: E501
             'cloud_storage_account_id_': (str,),  # noqa: E501
+            'cloud_storage_account_id': (str,),  # noqa: E501
+            'cloud_storage_provider': (int,),  # noqa: E501
             'import_folder': (bt_cloud_storage_object_info.BTCloudStorageObjectInfo,),  # noqa: E501
             'export_folder': (bt_cloud_storage_object_info.BTCloudStorageObjectInfo,),  # noqa: E501
-            'cloud_storage_provider': (int,),  # noqa: E501
-            'cloud_storage_account_id': (str,),  # noqa: E501
             'enabled': (bool,),  # noqa: E501
             'modified_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
+            'is_enterprise_owned': (bool,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'is_enterprise_owned': (bool,),  # noqa: E501
+            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -128,25 +128,25 @@ class BTCloudStorageAccountInfo(ModelComposed):
     attribute_map = {
         'json_type': 'jsonType',  # noqa: E501
         'cloud_storage_account_id_': 'cloudStorageAccountId_',  # noqa: E501
+        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
+        'cloud_storage_provider': 'cloudStorageProvider',  # noqa: E501
         'import_folder': 'importFolder',  # noqa: E501
         'export_folder': 'exportFolder',  # noqa: E501
-        'cloud_storage_provider': 'cloudStorageProvider',  # noqa: E501
-        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
         'enabled': 'enabled',  # noqa: E501
         'modified_at': 'modifiedAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'modified_by': 'modifiedBy',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
+        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
         'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
-        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'created_by': 'createdBy',  # noqa: E501
+        'modified_by': 'modifiedBy',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -185,25 +185,25 @@ class BTCloudStorageAccountInfo(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             cloud_storage_account_id_ (str): [optional]  # noqa: E501
+            cloud_storage_account_id (str): [optional]  # noqa: E501
+            cloud_storage_provider (int): [optional]  # noqa: E501
             import_folder (bt_cloud_storage_object_info.BTCloudStorageObjectInfo): [optional]  # noqa: E501
             export_folder (bt_cloud_storage_object_info.BTCloudStorageObjectInfo): [optional]  # noqa: E501
-            cloud_storage_provider (int): [optional]  # noqa: E501
-            cloud_storage_account_id (str): [optional]  # noqa: E501
             enabled (bool): [optional]  # noqa: E501
             modified_at (datetime): [optional]  # noqa: E501
-            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
+            is_enterprise_owned (bool): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            is_enterprise_owned (bool): [optional]  # noqa: E501
+            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

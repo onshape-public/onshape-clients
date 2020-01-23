@@ -78,10 +78,10 @@ class BTCardInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'billing_address': (bt_address_info.BTAddressInfo,),  # noqa: E501
             'last4': (str,),  # noqa: E501
             'exp_month': (int,),  # noqa: E501
             'exp_year': (int,),  # noqa: E501
+            'billing_address': (bt_address_info.BTAddressInfo,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -90,10 +90,10 @@ class BTCardInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'billing_address': 'billingAddress',  # noqa: E501
         'last4': 'last4',  # noqa: E501
         'exp_month': 'expMonth',  # noqa: E501
         'exp_year': 'expYear',  # noqa: E501
+        'billing_address': 'billingAddress',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
@@ -127,10 +127,10 @@ class BTCardInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            billing_address (bt_address_info.BTAddressInfo): [optional]  # noqa: E501
             last4 (str): [optional]  # noqa: E501
             exp_month (int): [optional]  # noqa: E501
             exp_year (int): [optional]  # noqa: E501
+            billing_address (bt_address_info.BTAddressInfo): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

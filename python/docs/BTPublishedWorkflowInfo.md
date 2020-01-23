@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version_id** | **str** |  | [optional] 
-**company_id** | **str** |  | [optional] 
-**object_type** | **int** |  | [optional] 
-**description** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 
 **owner_type** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
+**company_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**object_type** | **int** |  | [optional] 
 **image_src** | **str** |  | [optional] 
 **is_pickable** | **bool** |  | [optional] 
 **json** | **str** |  | [optional] 

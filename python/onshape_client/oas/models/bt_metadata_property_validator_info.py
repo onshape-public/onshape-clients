@@ -74,14 +74,14 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'max': (float,),  # noqa: E501
-            'min': (float,),  # noqa: E501
             'min_length': (int,),  # noqa: E501
             'max_length': (int,),  # noqa: E501
             'min_date': (datetime,),  # noqa: E501
             'max_date': (datetime,),  # noqa: E501
             'min_count': (int,),  # noqa: E501
             'max_count': (int,),  # noqa: E501
+            'min': (float,),  # noqa: E501
+            'max': (float,),  # noqa: E501
             'pattern': (str,),  # noqa: E501
         }
 
@@ -90,14 +90,14 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'max': 'max',  # noqa: E501
-        'min': 'min',  # noqa: E501
         'min_length': 'minLength',  # noqa: E501
         'max_length': 'maxLength',  # noqa: E501
         'min_date': 'minDate',  # noqa: E501
         'max_date': 'maxDate',  # noqa: E501
         'min_count': 'minCount',  # noqa: E501
         'max_count': 'maxCount',  # noqa: E501
+        'min': 'min',  # noqa: E501
+        'max': 'max',  # noqa: E501
         'pattern': 'pattern',  # noqa: E501
     }
 
@@ -131,14 +131,14 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            max (float): [optional]  # noqa: E501
-            min (float): [optional]  # noqa: E501
             min_length (int): [optional]  # noqa: E501
             max_length (int): [optional]  # noqa: E501
             min_date (datetime): [optional]  # noqa: E501
             max_date (datetime): [optional]  # noqa: E501
             min_count (int): [optional]  # noqa: E501
             max_count (int): [optional]  # noqa: E501
+            min (float): [optional]  # noqa: E501
+            max (float): [optional]  # noqa: E501
             pattern (str): [optional]  # noqa: E501
         """
 

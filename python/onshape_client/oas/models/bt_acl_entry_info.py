@@ -84,18 +84,18 @@ class BTAclEntryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'entry_state': (str,),  # noqa: E501
-            'enterprise_member': (bool,),  # noqa: E501
-            'accept_owner_transfer': (bool,),  # noqa: E501
-            'team_name': (str,),  # noqa: E501
             'email': (str,),  # noqa: E501
+            'object_id': (str,),  # noqa: E501
             'entry_id': (str,),  # noqa: E501
             'entry_type': (int,),  # noqa: E501
             'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'object_id': (str,),  # noqa: E501
             'image': (str,),  # noqa: E501
-            'company_name': (str,),  # noqa: E501
+            'entry_state': (str,),  # noqa: E501
+            'enterprise_member': (bool,),  # noqa: E501
             'pending_owner_transfer': (bool,),  # noqa: E501
+            'accept_owner_transfer': (bool,),  # noqa: E501
+            'team_name': (str,),  # noqa: E501
+            'company_name': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'permission': (int,),  # noqa: E501
         }
@@ -105,18 +105,18 @@ class BTAclEntryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'entry_state': 'entryState',  # noqa: E501
-        'enterprise_member': 'enterpriseMember',  # noqa: E501
-        'accept_owner_transfer': 'acceptOwnerTransfer',  # noqa: E501
-        'team_name': 'teamName',  # noqa: E501
         'email': 'email',  # noqa: E501
+        'object_id': 'objectId',  # noqa: E501
         'entry_id': 'entryId',  # noqa: E501
         'entry_type': 'entryType',  # noqa: E501
         'permission_set': 'permissionSet',  # noqa: E501
-        'object_id': 'objectId',  # noqa: E501
         'image': 'image',  # noqa: E501
-        'company_name': 'companyName',  # noqa: E501
+        'entry_state': 'entryState',  # noqa: E501
+        'enterprise_member': 'enterpriseMember',  # noqa: E501
         'pending_owner_transfer': 'pendingOwnerTransfer',  # noqa: E501
+        'accept_owner_transfer': 'acceptOwnerTransfer',  # noqa: E501
+        'team_name': 'teamName',  # noqa: E501
+        'company_name': 'companyName',  # noqa: E501
         'name': 'name',  # noqa: E501
         'permission': 'permission',  # noqa: E501
     }
@@ -151,18 +151,18 @@ class BTAclEntryInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entry_state (str): [optional]  # noqa: E501
-            enterprise_member (bool): [optional]  # noqa: E501
-            accept_owner_transfer (bool): [optional]  # noqa: E501
-            team_name (str): [optional]  # noqa: E501
             email (str): [optional]  # noqa: E501
+            object_id (str): [optional]  # noqa: E501
             entry_id (str): [optional]  # noqa: E501
             entry_type (int): [optional]  # noqa: E501
             permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
-            object_id (str): [optional]  # noqa: E501
             image (str): [optional]  # noqa: E501
-            company_name (str): [optional]  # noqa: E501
+            entry_state (str): [optional]  # noqa: E501
+            enterprise_member (bool): [optional]  # noqa: E501
             pending_owner_transfer (bool): [optional]  # noqa: E501
+            accept_owner_transfer (bool): [optional]  # noqa: E501
+            team_name (str): [optional]  # noqa: E501
+            company_name (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             permission (int): [optional]  # noqa: E501
         """

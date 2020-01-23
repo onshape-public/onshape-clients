@@ -82,16 +82,16 @@ class BTReleasePackageItemParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'configuration': (str,),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
+            'configuration': (str,),  # noqa: E501
             'is_included': (bool,),  # noqa: E501
             'not_editable_in_version_properties': (bt_release_package_item_params_not_editable_in_version_properties.BTReleasePackageItemParamsNotEditableInVersionProperties,),  # noqa: E501
             'part_number': (str,),  # noqa: E501
             'part_id': (str,),  # noqa: E501
+            'workspace_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'properties': ([bt_property_value_param.BTPropertyValueParam],),  # noqa: E501
             'id': (str,),  # noqa: E501
         }
@@ -101,16 +101,16 @@ class BTReleasePackageItemParams(ModelNormal):
         return None
 
     attribute_map = {
-        'configuration': 'configuration',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'href': 'href',  # noqa: E501
+        'configuration': 'configuration',  # noqa: E501
         'is_included': 'isIncluded',  # noqa: E501
         'not_editable_in_version_properties': 'notEditableInVersionProperties',  # noqa: E501
         'part_number': 'partNumber',  # noqa: E501
         'part_id': 'partId',  # noqa: E501
+        'workspace_id': 'workspaceId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'properties': 'properties',  # noqa: E501
         'id': 'id',  # noqa: E501
     }
@@ -145,16 +145,16 @@ class BTReleasePackageItemParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            configuration (str): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            workspace_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
+            configuration (str): [optional]  # noqa: E501
             is_included (bool): [optional]  # noqa: E501
             not_editable_in_version_properties (bt_release_package_item_params_not_editable_in_version_properties.BTReleasePackageItemParamsNotEditableInVersionProperties): [optional]  # noqa: E501
             part_number (str): [optional]  # noqa: E501
             part_id (str): [optional]  # noqa: E501
+            workspace_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             properties ([bt_property_value_param.BTPropertyValueParam]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
         """

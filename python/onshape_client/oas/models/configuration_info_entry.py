@@ -74,10 +74,10 @@ class ConfigurationInfoEntry(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parameter_name': (str,),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
             'parameter_value': (str,),  # noqa: E501
             'explicit': (bool,),  # noqa: E501
+            'parameter_name': (str,),  # noqa: E501
             'parameter_display_value': (str,),  # noqa: E501
         }
 
@@ -86,10 +86,10 @@ class ConfigurationInfoEntry(ModelNormal):
         return None
 
     attribute_map = {
-        'parameter_name': 'parameterName',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
         'parameter_value': 'parameterValue',  # noqa: E501
         'explicit': 'explicit',  # noqa: E501
+        'parameter_name': 'parameterName',  # noqa: E501
         'parameter_display_value': 'parameterDisplayValue',  # noqa: E501
     }
 
@@ -123,10 +123,10 @@ class ConfigurationInfoEntry(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            parameter_name (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
             parameter_value (str): [optional]  # noqa: E501
             explicit (bool): [optional]  # noqa: E501
+            parameter_name (str): [optional]  # noqa: E501
             parameter_display_value (str): [optional]  # noqa: E501
         """
 

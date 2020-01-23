@@ -74,8 +74,8 @@ class BTIdTranslationResultInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'source': (str,),  # noqa: E501
             'target': ([str],),  # noqa: E501
+            'source': (str,),  # noqa: E501
             'status': (str,),  # noqa: E501
         }
 
@@ -84,8 +84,8 @@ class BTIdTranslationResultInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'source': 'source',  # noqa: E501
         'target': 'target',  # noqa: E501
+        'source': 'source',  # noqa: E501
         'status': 'status',  # noqa: E501
     }
 
@@ -119,8 +119,8 @@ class BTIdTranslationResultInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            source (str): [optional]  # noqa: E501
             target ([str]): [optional]  # noqa: E501
+            source (str): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501
         """
 

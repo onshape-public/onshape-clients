@@ -94,8 +94,8 @@ class BTFullElementIdWithDocument1729(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'document_id': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'target': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
             'configured': (bool,),  # noqa: E501
@@ -112,8 +112,8 @@ class BTFullElementIdWithDocument1729(ModelComposed):
         }
 
     attribute_map = {
-        'document_id': 'documentId',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'target': 'target',  # noqa: E501
         'configured': 'configured',  # noqa: E501
@@ -150,8 +150,8 @@ class BTFullElementIdWithDocument1729(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            document_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             target (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338): [optional]  # noqa: E501
             configured (bool): [optional]  # noqa: E501

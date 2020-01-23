@@ -86,9 +86,9 @@ class BTFeatureScriptEvalResponse1859(ModelNormal):
             'console': (str,),  # noqa: E501
             'result': (btfs_value1888.BTFSValue1888,),  # noqa: E501
             'source_microversion': (str,),  # noqa: E501
+            'reject_microversion_skew': (bool,),  # noqa: E501
             'serialization_version': (str,),  # noqa: E501
             'library_version': (int,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
             'microversion_skew': (bool,),  # noqa: E501
         }
 
@@ -101,9 +101,9 @@ class BTFeatureScriptEvalResponse1859(ModelNormal):
         'console': 'console',  # noqa: E501
         'result': 'result',  # noqa: E501
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'serialization_version': 'serializationVersion',  # noqa: E501
         'library_version': 'libraryVersion',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'microversion_skew': 'microversionSkew',  # noqa: E501
     }
 
@@ -141,9 +141,9 @@ class BTFeatureScriptEvalResponse1859(ModelNormal):
             console (str): [optional]  # noqa: E501
             result (btfs_value1888.BTFSValue1888): [optional]  # noqa: E501
             source_microversion (str): [optional]  # noqa: E501
+            reject_microversion_skew (bool): [optional]  # noqa: E501
             serialization_version (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
-            reject_microversion_skew (bool): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
         """
 

@@ -76,8 +76,8 @@ class BTCommonUnitInfo(ModelNormal):
         return {
             'unit': (str,),  # noqa: E501
             'unit_type': (str,),  # noqa: E501
-            'value_in_base_units': (float,),  # noqa: E501
             'abbreviation': (str,),  # noqa: E501
+            'value_in_base_units': (float,),  # noqa: E501
             'unit_name': (str,),  # noqa: E501
         }
 
@@ -88,8 +88,8 @@ class BTCommonUnitInfo(ModelNormal):
     attribute_map = {
         'unit': 'unit',  # noqa: E501
         'unit_type': 'unitType',  # noqa: E501
-        'value_in_base_units': 'valueInBaseUnits',  # noqa: E501
         'abbreviation': 'abbreviation',  # noqa: E501
+        'value_in_base_units': 'valueInBaseUnits',  # noqa: E501
         'unit_name': 'unitName',  # noqa: E501
     }
 
@@ -125,8 +125,8 @@ class BTCommonUnitInfo(ModelNormal):
                                 If omitted no type conversion is done.
             unit (str): [optional]  # noqa: E501
             unit_type (str): [optional]  # noqa: E501
-            value_in_base_units (float): [optional]  # noqa: E501
             abbreviation (str): [optional]  # noqa: E501
+            value_in_base_units (float): [optional]  # noqa: E501
             unit_name (str): [optional]  # noqa: E501
         """
 

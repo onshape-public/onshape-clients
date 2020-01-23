@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**default_units** | [**bt_default_units_info.BTDefaultUnitsInfo**](BTDefaultUnitsInfo.md) |  | [optional] 
 **startup_page** | **int** |  | [optional] 
 **substitute_approvers** | [**[bt_substitute_approver_info.BTSubstituteApproverInfo]**](BTSubstituteApproverInfo.md) |  | [optional] 
 **units_display_precision** | [**bt_units_display_precision.BTUnitsDisplayPrecision**](BTUnitsDisplayPrecision.md) |  | [optional] 
@@ -14,7 +15,6 @@ Name | Type | Description | Notes
 **export_drawing_options** | **str** |  | [optional] 
 **import_options** | **str** |  | [optional] 
 **use24_hour_time** | **bool** |  | [optional] 
-**default_units** | [**bt_default_units_info.BTDefaultUnitsInfo**](BTDefaultUnitsInfo.md) |  | [optional] 
 **common_units** | [**bt_common_units_info.BTCommonUnitsInfo**](BTCommonUnitsInfo.md) |  | [optional] 
 **units_maximum_display_precision** | [**bt_units_maximum_display_precision_info.BTUnitsMaximumDisplayPrecisionInfo**](BTUnitsMaximumDisplayPrecisionInfo.md) |  | [optional] 
 **mini_toolbar_settings** | **str** |  | [optional] 

@@ -85,6 +85,7 @@ class BTTableColumnInfo1222(ModelNormal):
             'specification': (bt_table_column_spec1967.BTTableColumnSpec1967,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,6 +100,7 @@ class BTTableColumnInfo1222(ModelNormal):
         'specification': 'specification',  # noqa: E501
         'id': 'id',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -134,6 +136,7 @@ class BTTableColumnInfo1222(ModelNormal):
             specification (bt_table_column_spec1967.BTTableColumnSpec1967): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

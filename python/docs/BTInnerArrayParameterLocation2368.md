@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **str** |  | [optional] 
 **outer_parameter_id** | **str** |  | [optional] 
 **index** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

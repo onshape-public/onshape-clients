@@ -114,14 +114,14 @@ class BTPTopLevelEnumDeclaration284(ModelComposed):
         """
         return {
             'annotations': ([btp_annotation231.BTPAnnotation231],),  # noqa: E501
-            'trailing_comma': (bool,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
+            'trailing_comma': (bool,),  # noqa: E501
             'values': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -145,14 +145,14 @@ class BTPTopLevelEnumDeclaration284(ModelComposed):
 
     attribute_map = {
         'annotations': 'annotations',  # noqa: E501
-        'trailing_comma': 'trailingComma',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
+        'trailing_comma': 'trailingComma',  # noqa: E501
         'values': 'values',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -200,14 +200,14 @@ class BTPTopLevelEnumDeclaration284(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             annotations ([btp_annotation231.BTPAnnotation231]): [optional]  # noqa: E501
-            trailing_comma (bool): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            trailing_comma (bool): [optional]  # noqa: E501
             values ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

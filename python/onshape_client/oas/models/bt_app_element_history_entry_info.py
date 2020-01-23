@@ -75,8 +75,8 @@ class BTAppElementHistoryEntryInfo(ModelNormal):
         """
         return {
             'change_id': (str,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,8 +85,8 @@ class BTAppElementHistoryEntryInfo(ModelNormal):
 
     attribute_map = {
         'change_id': 'changeId',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'created_at': 'createdAt',  # noqa: E501
     }
 
     @staticmethod
@@ -120,8 +120,8 @@ class BTAppElementHistoryEntryInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             change_id (str): [optional]  # noqa: E501
-            created_at (datetime): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
         """
 
         self._data_store = {}

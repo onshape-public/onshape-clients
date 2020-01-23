@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **feature_id_with_occurrence** | **str** |  | [optional] 
 **part_studio_mate_connector_query** | **bool** |  | [optional] 
-**query_data** | **str** |  | [optional] 
 **feature_id** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
+**query_data** | **str** |  | [optional] 
 **path** | **[str]** |  | [optional] 
 **deterministic_ids** | **[str]** |  | [optional] 
 **deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
-**query_string** | **str** |  | [optional] 
 **query** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
+**query_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 

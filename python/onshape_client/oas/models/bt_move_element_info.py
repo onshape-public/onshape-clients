@@ -74,11 +74,11 @@ class BTMoveElementInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'error_message': (str,),  # noqa: E501
             'element_original_to_new_map': ({str: (str,)},),  # noqa: E501
-            'is_new_document': (bool,),  # noqa: E501
             'new_document_id': (str,),  # noqa: E501
             'new_workspace_id': (str,),  # noqa: E501
+            'error_message': (str,),  # noqa: E501
+            'is_new_document': (bool,),  # noqa: E501
             'new_document_name': (str,),  # noqa: E501
             'new_document_version_id': (str,),  # noqa: E501
         }
@@ -88,11 +88,11 @@ class BTMoveElementInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'error_message': 'errorMessage',  # noqa: E501
         'element_original_to_new_map': 'elementOriginalToNewMap',  # noqa: E501
-        'is_new_document': 'isNewDocument',  # noqa: E501
         'new_document_id': 'newDocumentId',  # noqa: E501
         'new_workspace_id': 'newWorkspaceId',  # noqa: E501
+        'error_message': 'errorMessage',  # noqa: E501
+        'is_new_document': 'isNewDocument',  # noqa: E501
         'new_document_name': 'newDocumentName',  # noqa: E501
         'new_document_version_id': 'newDocumentVersionId',  # noqa: E501
     }
@@ -127,11 +127,11 @@ class BTMoveElementInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            error_message (str): [optional]  # noqa: E501
             element_original_to_new_map ({str: (str,)}): [optional]  # noqa: E501
-            is_new_document (bool): [optional]  # noqa: E501
             new_document_id (str): [optional]  # noqa: E501
             new_workspace_id (str): [optional]  # noqa: E501
+            error_message (str): [optional]  # noqa: E501
+            is_new_document (bool): [optional]  # noqa: E501
             new_document_name (str): [optional]  # noqa: E501
             new_document_version_id (str): [optional]  # noqa: E501
         """

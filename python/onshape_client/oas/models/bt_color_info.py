@@ -74,9 +74,9 @@ class BTColorInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'red': (int,),  # noqa: E501
             'green': (int,),  # noqa: E501
             'blue': (int,),  # noqa: E501
-            'red': (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,9 +84,9 @@ class BTColorInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'red': 'red',  # noqa: E501
         'green': 'green',  # noqa: E501
         'blue': 'blue',  # noqa: E501
-        'red': 'red',  # noqa: E501
     }
 
     @staticmethod
@@ -119,9 +119,9 @@ class BTColorInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            red (int): [optional]  # noqa: E501
             green (int): [optional]  # noqa: E501
             blue (int): [optional]  # noqa: E501
-            red (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}

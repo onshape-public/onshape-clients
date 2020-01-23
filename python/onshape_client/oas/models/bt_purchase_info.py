@@ -113,23 +113,24 @@ class BTPurchaseInfo(ModelNormal):
             'application': (btapi_application_summary_info.BTAPIApplicationSummaryInfo,),  # noqa: E501
             'client_id': (str,),  # noqa: E501
             'subscription_type': (int,),  # noqa: E501
+            'duration': (int,),  # noqa: E501
+            'currency': (str,),  # noqa: E501
+            'last_modified_by': (str,),  # noqa: E501
             'amount_cents': (int,),  # noqa: E501
             'next_charge': (next_charge.NextCharge,),  # noqa: E501
             'created_by': (str,),  # noqa: E501
-            'plan_type': (int,),  # noqa: E501
-            'group': (str,),  # noqa: E501
-            'subscribers': ([bt_plan_subscriber_info.BTPlanSubscriberInfo],),  # noqa: E501
             'card': (bt_card_info.BTCardInfo,),  # noqa: E501
             'light_seats': (int,),  # noqa: E501
             'canceled_at': (datetime,),  # noqa: E501
+            'subscribers': ([bt_plan_subscriber_info.BTPlanSubscriberInfo],),  # noqa: E501
+            'plan_type': (int,),  # noqa: E501
+            'group': (str,),  # noqa: E501
             'trial_end': (datetime,),  # noqa: E501
             'actual_amount_paid_cents': (int,),  # noqa: E501
-            'coupon_percent_off': (int,),  # noqa: E501
+            'plan_name': (str,),  # noqa: E501
             'trial_initiated_by': (str,),  # noqa: E501
             'reseller_name': (str,),  # noqa: E501
-            'plan_name': (str,),  # noqa: E501
-            'last_modified_by': (str,),  # noqa: E501
-            'duration': (int,),  # noqa: E501
+            'coupon_percent_off': (int,),  # noqa: E501
             'subscription_fields': (subscription.Subscription,),  # noqa: E501
             'purchase_date': (datetime,),  # noqa: E501
             'pending_cancelation': (bool,),  # noqa: E501
@@ -139,7 +140,6 @@ class BTPurchaseInfo(ModelNormal):
             'duration_months': (int,),  # noqa: E501
             'state': (int,),  # noqa: E501
             'last_modified': (datetime,),  # noqa: E501
-            'currency': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -162,23 +162,24 @@ class BTPurchaseInfo(ModelNormal):
         'application': 'application',  # noqa: E501
         'client_id': 'clientId',  # noqa: E501
         'subscription_type': 'subscriptionType',  # noqa: E501
+        'duration': 'duration',  # noqa: E501
+        'currency': 'currency',  # noqa: E501
+        'last_modified_by': 'lastModifiedBy',  # noqa: E501
         'amount_cents': 'amountCents',  # noqa: E501
         'next_charge': 'nextCharge',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
-        'plan_type': 'planType',  # noqa: E501
-        'group': 'group',  # noqa: E501
-        'subscribers': 'subscribers',  # noqa: E501
         'card': 'card',  # noqa: E501
         'light_seats': 'lightSeats',  # noqa: E501
         'canceled_at': 'canceledAt',  # noqa: E501
+        'subscribers': 'subscribers',  # noqa: E501
+        'plan_type': 'planType',  # noqa: E501
+        'group': 'group',  # noqa: E501
         'trial_end': 'trialEnd',  # noqa: E501
         'actual_amount_paid_cents': 'actualAmountPaidCents',  # noqa: E501
-        'coupon_percent_off': 'couponPercentOff',  # noqa: E501
+        'plan_name': 'planName',  # noqa: E501
         'trial_initiated_by': 'trialInitiatedBy',  # noqa: E501
         'reseller_name': 'resellerName',  # noqa: E501
-        'plan_name': 'planName',  # noqa: E501
-        'last_modified_by': 'lastModifiedBy',  # noqa: E501
-        'duration': 'duration',  # noqa: E501
+        'coupon_percent_off': 'couponPercentOff',  # noqa: E501
         'subscription_fields': 'subscriptionFields',  # noqa: E501
         'purchase_date': 'purchaseDate',  # noqa: E501
         'pending_cancelation': 'pendingCancelation',  # noqa: E501
@@ -188,7 +189,6 @@ class BTPurchaseInfo(ModelNormal):
         'duration_months': 'durationMonths',  # noqa: E501
         'state': 'state',  # noqa: E501
         'last_modified': 'lastModified',  # noqa: E501
-        'currency': 'currency',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -236,23 +236,24 @@ class BTPurchaseInfo(ModelNormal):
             application (btapi_application_summary_info.BTAPIApplicationSummaryInfo): [optional]  # noqa: E501
             client_id (str): [optional]  # noqa: E501
             subscription_type (int): [optional]  # noqa: E501
+            duration (int): [optional]  # noqa: E501
+            currency (str): [optional]  # noqa: E501
+            last_modified_by (str): [optional]  # noqa: E501
             amount_cents (int): [optional]  # noqa: E501
             next_charge (next_charge.NextCharge): [optional]  # noqa: E501
             created_by (str): [optional]  # noqa: E501
-            plan_type (int): [optional]  # noqa: E501
-            group (str): [optional]  # noqa: E501
-            subscribers ([bt_plan_subscriber_info.BTPlanSubscriberInfo]): [optional]  # noqa: E501
             card (bt_card_info.BTCardInfo): [optional]  # noqa: E501
             light_seats (int): [optional]  # noqa: E501
             canceled_at (datetime): [optional]  # noqa: E501
+            subscribers ([bt_plan_subscriber_info.BTPlanSubscriberInfo]): [optional]  # noqa: E501
+            plan_type (int): [optional]  # noqa: E501
+            group (str): [optional]  # noqa: E501
             trial_end (datetime): [optional]  # noqa: E501
             actual_amount_paid_cents (int): [optional]  # noqa: E501
-            coupon_percent_off (int): [optional]  # noqa: E501
+            plan_name (str): [optional]  # noqa: E501
             trial_initiated_by (str): [optional]  # noqa: E501
             reseller_name (str): [optional]  # noqa: E501
-            plan_name (str): [optional]  # noqa: E501
-            last_modified_by (str): [optional]  # noqa: E501
-            duration (int): [optional]  # noqa: E501
+            coupon_percent_off (int): [optional]  # noqa: E501
             subscription_fields (subscription.Subscription): [optional]  # noqa: E501
             purchase_date (datetime): [optional]  # noqa: E501
             pending_cancelation (bool): [optional]  # noqa: E501
@@ -262,7 +263,6 @@ class BTPurchaseInfo(ModelNormal):
             duration_months (int): [optional]  # noqa: E501
             state (int): [optional]  # noqa: E501
             last_modified (datetime): [optional]  # noqa: E501
-            currency (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

@@ -94,9 +94,9 @@ class BTBaseSMJointTableRowMetadata2232(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'cross_highlight_data_if_any': (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753,),  # noqa: E501
             'cross_highlight_data': (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -109,9 +109,9 @@ class BTBaseSMJointTableRowMetadata2232(ModelComposed):
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'cross_highlight_data_if_any': 'crossHighlightDataIfAny',  # noqa: E501
         'cross_highlight_data': 'crossHighlightData',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
     }
 
     required_properties = set([
@@ -143,9 +143,9 @@ class BTBaseSMJointTableRowMetadata2232(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             cross_highlight_data_if_any (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753): [optional]  # noqa: E501
             cross_highlight_data (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

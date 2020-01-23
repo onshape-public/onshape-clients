@@ -89,11 +89,11 @@ class BTRootAssemblyInfo(ModelNormal):
             'occurrences': ([bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo],),  # noqa: E501
             'features': ([bt_assembly_feature_info.BTAssemblyFeatureInfo],),  # noqa: E501
             'instances': ([bt_assembly_instance_info.BTAssemblyInstanceInfo],),  # noqa: E501
+            'configuration': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'revision': (str,),  # noqa: E501
             'document_microversion': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'full_configuration': (str,),  # noqa: E501
             'document_version': (str,),  # noqa: E501
         }
@@ -106,11 +106,11 @@ class BTRootAssemblyInfo(ModelNormal):
         'occurrences': 'occurrences',  # noqa: E501
         'features': 'features',  # noqa: E501
         'instances': 'instances',  # noqa: E501
+        'configuration': 'configuration',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'revision': 'revision',  # noqa: E501
         'document_microversion': 'documentMicroversion',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'full_configuration': 'fullConfiguration',  # noqa: E501
         'document_version': 'documentVersion',  # noqa: E501
     }
@@ -148,11 +148,11 @@ class BTRootAssemblyInfo(ModelNormal):
             occurrences ([bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo]): [optional]  # noqa: E501
             features ([bt_assembly_feature_info.BTAssemblyFeatureInfo]): [optional]  # noqa: E501
             instances ([bt_assembly_instance_info.BTAssemblyInstanceInfo]): [optional]  # noqa: E501
+            configuration (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             revision (str): [optional]  # noqa: E501
             document_microversion (str): [optional]  # noqa: E501
-            configuration (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             full_configuration (str): [optional]  # noqa: E501
             document_version (str): [optional]  # noqa: E501
         """

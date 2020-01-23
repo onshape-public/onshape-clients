@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_company_info.BTCompanyInfo]**](BTCompanyInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_company_info.BTCompanyInfo]**](BTCompanyInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

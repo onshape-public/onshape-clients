@@ -74,12 +74,12 @@ class BTBoundingBoxInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'low_x': (float,),  # noqa: E501
-            'low_y': (float,),  # noqa: E501
-            'low_z': (float,),  # noqa: E501
             'high_x': (float,),  # noqa: E501
             'high_y': (float,),  # noqa: E501
             'high_z': (float,),  # noqa: E501
+            'low_z': (float,),  # noqa: E501
+            'low_y': (float,),  # noqa: E501
+            'low_x': (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,12 +87,12 @@ class BTBoundingBoxInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'low_x': 'lowX',  # noqa: E501
-        'low_y': 'lowY',  # noqa: E501
-        'low_z': 'lowZ',  # noqa: E501
         'high_x': 'highX',  # noqa: E501
         'high_y': 'highY',  # noqa: E501
         'high_z': 'highZ',  # noqa: E501
+        'low_z': 'lowZ',  # noqa: E501
+        'low_y': 'lowY',  # noqa: E501
+        'low_x': 'lowX',  # noqa: E501
     }
 
     @staticmethod
@@ -125,12 +125,12 @@ class BTBoundingBoxInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            low_x (float): [optional]  # noqa: E501
-            low_y (float): [optional]  # noqa: E501
-            low_z (float): [optional]  # noqa: E501
             high_x (float): [optional]  # noqa: E501
             high_y (float): [optional]  # noqa: E501
             high_z (float): [optional]  # noqa: E501
+            low_z (float): [optional]  # noqa: E501
+            low_y (float): [optional]  # noqa: E501
+            low_x (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

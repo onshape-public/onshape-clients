@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**y** | **float** |  | [optional] 
 **x** | **float** |  | [optional] 
+**y** | **float** |  | [optional] 
 **is_user_point** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 

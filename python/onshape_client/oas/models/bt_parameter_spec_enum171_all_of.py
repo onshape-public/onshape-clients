@@ -74,8 +74,8 @@ class BTParameterSpecEnum171AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'option_names': ([str],),  # noqa: E501
             'enum_name': (str,),  # noqa: E501
+            'option_names': ([str],),  # noqa: E501
             'options': ([str],),  # noqa: E501
             'namespace': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -86,8 +86,8 @@ class BTParameterSpecEnum171AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'option_names': 'optionNames',  # noqa: E501
         'enum_name': 'enumName',  # noqa: E501
+        'option_names': 'optionNames',  # noqa: E501
         'options': 'options',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -123,8 +123,8 @@ class BTParameterSpecEnum171AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            option_names ([str]): [optional]  # noqa: E501
             enum_name (str): [optional]  # noqa: E501
+            option_names ([str]): [optional]  # noqa: E501
             options ([str]): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

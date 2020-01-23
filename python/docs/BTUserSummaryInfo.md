@@ -3,15 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | **int** |  | [optional] 
-**global_permissions** | [**global_permission_info.GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **last_login_time** | **datetime** |  | [optional] 
 **company** | [**bt_company_summary_info.BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
+**global_permissions** | [**global_permission_info.GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
 **is_guest** | **bool** |  | [optional] 
 **is_light** | **bool** |  | [optional] 
+**source** | **int** |  | [optional] 
 **image** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 

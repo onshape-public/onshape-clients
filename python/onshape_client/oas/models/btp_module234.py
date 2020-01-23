@@ -121,10 +121,10 @@ class BTPModule234(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'is_internal_module': (bool,),  # noqa: E501
-            'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
             'version_number': (int,),  # noqa: E501
             'deep_imports': ({str: ([bt_import.BTImport],)},),  # noqa: E501
+            'is_internal_module': (bool,),  # noqa: E501
+            'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
             'path_map': ({str: (bt_microversion_id366.BTMicroversionId366,)},),  # noqa: E501
             'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             'top_level': ([btp_top_level_node286.BTPTopLevelNode286],),  # noqa: E501
@@ -134,8 +134,8 @@ class BTPModule234(ModelComposed):
             'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -148,10 +148,10 @@ class BTPModule234(ModelComposed):
         return None
 
     attribute_map = {
-        'is_internal_module': 'isInternalModule',  # noqa: E501
-        'imports': 'imports',  # noqa: E501
         'version_number': 'versionNumber',  # noqa: E501
         'deep_imports': 'deepImports',  # noqa: E501
+        'is_internal_module': 'isInternalModule',  # noqa: E501
+        'imports': 'imports',  # noqa: E501
         'path_map': 'pathMap',  # noqa: E501
         'version': 'version',  # noqa: E501
         'top_level': 'topLevel',  # noqa: E501
@@ -161,8 +161,8 @@ class BTPModule234(ModelComposed):
         'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -199,10 +199,10 @@ class BTPModule234(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_internal_module (bool): [optional]  # noqa: E501
-            imports ([btp_top_level_import285.BTPTopLevelImport285]): [optional]  # noqa: E501
             version_number (int): [optional]  # noqa: E501
             deep_imports ({str: ([bt_import.BTImport],)}): [optional]  # noqa: E501
+            is_internal_module (bool): [optional]  # noqa: E501
+            imports ([btp_top_level_import285.BTPTopLevelImport285]): [optional]  # noqa: E501
             path_map ({str: (bt_microversion_id366.BTMicroversionId366,)}): [optional]  # noqa: E501
             version (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             top_level ([btp_top_level_node286.BTPTopLevelNode286]): [optional]  # noqa: E501
@@ -212,8 +212,8 @@ class BTPModule234(ModelComposed):
             bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

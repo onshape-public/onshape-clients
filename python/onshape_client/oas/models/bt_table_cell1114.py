@@ -88,6 +88,7 @@ class BTTableCell1114(ModelNormal):
         return {
             'is_read_only': (bool,),  # noqa: E501
             'is_ever_visible': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -103,6 +104,7 @@ class BTTableCell1114(ModelNormal):
     attribute_map = {
         'is_read_only': 'isReadOnly',  # noqa: E501
         'is_ever_visible': 'isEverVisible',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,6 +139,7 @@ class BTTableCell1114(ModelNormal):
                                 If omitted no type conversion is done.
             is_read_only (bool): [optional]  # noqa: E501
             is_ever_visible (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

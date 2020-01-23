@@ -1,4 +1,4 @@
-# BTGlobalTreeMagicNodeInfoAllOf
+# bt_global_tree_magic_node_info_all_of.BTGlobalTreeMagicNodeInfoAllOf
 
 ## Properties
 Name | Type | Description | Notes

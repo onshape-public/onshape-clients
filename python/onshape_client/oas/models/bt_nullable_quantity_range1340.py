@@ -86,8 +86,8 @@ class BTNullableQuantityRange1340(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'has_min_value': (bool,),  # noqa: E501
             'has_default_value': (bool,),  # noqa: E501
+            'has_min_value': (bool,),  # noqa: E501
             'has_max_value': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'units': (str,),  # noqa: E501
@@ -102,8 +102,8 @@ class BTNullableQuantityRange1340(ModelComposed):
         return None
 
     attribute_map = {
-        'has_min_value': 'hasMinValue',  # noqa: E501
         'has_default_value': 'hasDefaultValue',  # noqa: E501
+        'has_min_value': 'hasMinValue',  # noqa: E501
         'has_max_value': 'hasMaxValue',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'units': 'units',  # noqa: E501
@@ -142,8 +142,8 @@ class BTNullableQuantityRange1340(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            has_min_value (bool): [optional]  # noqa: E501
             has_default_value (bool): [optional]  # noqa: E501
+            has_min_value (bool): [optional]  # noqa: E501
             has_max_value (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             units (str): [optional]  # noqa: E501

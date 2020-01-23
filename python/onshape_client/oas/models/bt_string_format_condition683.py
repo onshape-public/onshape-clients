@@ -100,8 +100,8 @@ class BTStringFormatCondition683(ModelNormal):
         return {
             'bt_type': {
                 'BTStringFormatMatchPattern-2446': bt_string_format_match_pattern2446.BTStringFormatMatchPattern2446,
-                'BTStringMaximumLengthPattern-2593': bt_string_maximum_length_pattern2593.BTStringMaximumLengthPattern2593,
                 'BTStringFormatBlockPattern-1755': bt_string_format_block_pattern1755.BTStringFormatBlockPattern1755,
+                'BTStringMaximumLengthPattern-2593': bt_string_maximum_length_pattern2593.BTStringMaximumLengthPattern2593,
                 'BTStringMinimumLengthPattern-895': bt_string_minimum_length_pattern895.BTStringMinimumLengthPattern895,
             },
         }

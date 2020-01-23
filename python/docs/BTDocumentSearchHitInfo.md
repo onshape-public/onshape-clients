@@ -1,16 +1,15 @@
-# BTDocumentSearchHitInfo
+# bt_document_search_hit_info.BTDocumentSearchHitInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**element_name** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
-**highlighted_fields** | **dict(str, list[str])** |  | [optional] 
-**source_map** | **dict(str, object)** |  | [optional] 
+**highlighted_fields** | **{str: ([str],)}** |  | [optional] 
+**source_map** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
-**element_name** | **str** |  | [optional] 
 **version_or_workspace_name** | **str** |  | [optional] 
-**hit** | [**BTESDocumentHit**](BTESDocumentHit.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

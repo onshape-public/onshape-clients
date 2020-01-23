@@ -88,18 +88,18 @@ class BTLocationInfo226(ModelNormal):
         return {
             'from_node': (btp_node7.BTPNode7,),  # noqa: E501
             'document': (str,),  # noqa: E501
-            'top_level': (str,),  # noqa: E501
-            'language_version': (int,),  # noqa: E501
             'element_microversion': (str,),  # noqa: E501
+            'top_level': (str,),  # noqa: E501
+            'end_character': (int,),  # noqa: E501
+            'end_column': (int,),  # noqa: E501
             'module_ids': (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897,),  # noqa: E501
+            'language_version': (int,),  # noqa: E501
             'column': (int,),  # noqa: E501
             'end_line': (int,),  # noqa: E501
-            'line': (int,),  # noqa: E501
-            'end_column': (int,),  # noqa: E501
             'parse_node_id': (str,),  # noqa: E501
-            'end_character': (int,),  # noqa: E501
-            'parse_node_id_raw': (bt_object_id.BTObjectId,),  # noqa: E501
+            'line': (int,),  # noqa: E501
             'character': (int,),  # noqa: E501
+            'parse_node_id_raw': (bt_object_id.BTObjectId,),  # noqa: E501
             'version': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -112,18 +112,18 @@ class BTLocationInfo226(ModelNormal):
     attribute_map = {
         'from_node': 'fromNode',  # noqa: E501
         'document': 'document',  # noqa: E501
-        'top_level': 'topLevel',  # noqa: E501
-        'language_version': 'languageVersion',  # noqa: E501
         'element_microversion': 'elementMicroversion',  # noqa: E501
+        'top_level': 'topLevel',  # noqa: E501
+        'end_character': 'endCharacter',  # noqa: E501
+        'end_column': 'endColumn',  # noqa: E501
         'module_ids': 'moduleIds',  # noqa: E501
+        'language_version': 'languageVersion',  # noqa: E501
         'column': 'column',  # noqa: E501
         'end_line': 'endLine',  # noqa: E501
-        'line': 'line',  # noqa: E501
-        'end_column': 'endColumn',  # noqa: E501
         'parse_node_id': 'parseNodeId',  # noqa: E501
-        'end_character': 'endCharacter',  # noqa: E501
-        'parse_node_id_raw': 'parseNodeIdRaw',  # noqa: E501
+        'line': 'line',  # noqa: E501
         'character': 'character',  # noqa: E501
+        'parse_node_id_raw': 'parseNodeIdRaw',  # noqa: E501
         'version': 'version',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -161,18 +161,18 @@ class BTLocationInfo226(ModelNormal):
                                 If omitted no type conversion is done.
             from_node (btp_node7.BTPNode7): [optional]  # noqa: E501
             document (str): [optional]  # noqa: E501
-            top_level (str): [optional]  # noqa: E501
-            language_version (int): [optional]  # noqa: E501
             element_microversion (str): [optional]  # noqa: E501
+            top_level (str): [optional]  # noqa: E501
+            end_character (int): [optional]  # noqa: E501
+            end_column (int): [optional]  # noqa: E501
             module_ids (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897): [optional]  # noqa: E501
+            language_version (int): [optional]  # noqa: E501
             column (int): [optional]  # noqa: E501
             end_line (int): [optional]  # noqa: E501
-            line (int): [optional]  # noqa: E501
-            end_column (int): [optional]  # noqa: E501
             parse_node_id (str): [optional]  # noqa: E501
-            end_character (int): [optional]  # noqa: E501
-            parse_node_id_raw (bt_object_id.BTObjectId): [optional]  # noqa: E501
+            line (int): [optional]  # noqa: E501
             character (int): [optional]  # noqa: E501
+            parse_node_id_raw (bt_object_id.BTObjectId): [optional]  # noqa: E501
             version (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

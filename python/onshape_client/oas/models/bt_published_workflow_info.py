@@ -75,13 +75,13 @@ class BTPublishedWorkflowInfo(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'object_type': (int,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'is_obsoletion': (bool,),  # noqa: E501
             'owner_type': (int,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
+            'object_type': (int,),  # noqa: E501
             'image_src': (str,),  # noqa: E501
             'is_pickable': (bool,),  # noqa: E501
             'json': (str,),  # noqa: E501
@@ -96,13 +96,13 @@ class BTPublishedWorkflowInfo(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'object_type': 'objectType',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'is_obsoletion': 'isObsoletion',  # noqa: E501
         'owner_type': 'ownerType',  # noqa: E501
+        'description': 'description',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
+        'object_type': 'objectType',  # noqa: E501
         'image_src': 'imageSrc',  # noqa: E501
         'is_pickable': 'isPickable',  # noqa: E501
         'json': 'json',  # noqa: E501
@@ -142,13 +142,13 @@ class BTPublishedWorkflowInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            company_id (str): [optional]  # noqa: E501
-            object_type (int): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             is_obsoletion (bool): [optional]  # noqa: E501
             owner_type (int): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
+            object_type (int): [optional]  # noqa: E501
             image_src (str): [optional]  # noqa: E501
             is_pickable (bool): [optional]  # noqa: E501
             json (str): [optional]  # noqa: E501

@@ -78,10 +78,10 @@ class BTIdTranslationInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
-            'ids': ([bt_id_translation_result_info.BTIdTranslationResultInfo],),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'source_document_microversion': (str,),  # noqa: E501
+            'ids': ([bt_id_translation_result_info.BTIdTranslationResultInfo],),  # noqa: E501
             'target_document_microversion': (str,),  # noqa: E501
         }
 
@@ -90,10 +90,10 @@ class BTIdTranslationInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
-        'ids': 'ids',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'source_document_microversion': 'sourceDocumentMicroversion',  # noqa: E501
+        'ids': 'ids',  # noqa: E501
         'target_document_microversion': 'targetDocumentMicroversion',  # noqa: E501
     }
 
@@ -127,10 +127,10 @@ class BTIdTranslationInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
-            ids ([bt_id_translation_result_info.BTIdTranslationResultInfo]): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             source_document_microversion (str): [optional]  # noqa: E501
+            ids ([bt_id_translation_result_info.BTIdTranslationResultInfo]): [optional]  # noqa: E501
             target_document_microversion (str): [optional]  # noqa: E501
         """
 

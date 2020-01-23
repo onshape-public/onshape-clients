@@ -78,10 +78,10 @@ class BTDiscountInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'created_at': (datetime,),  # noqa: E501
-            'plan_id': (str,),  # noqa: E501
-            'created_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
+            'plan_id': (str,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
+            'created_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
             'percent_off': (int,),  # noqa: E501
             'amount_off': (int,),  # noqa: E501
             'coupon_type': (int,),  # noqa: E501
@@ -101,10 +101,10 @@ class BTDiscountInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'created_at': 'createdAt',  # noqa: E501
-        'plan_id': 'planId',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
+        'plan_id': 'planId',  # noqa: E501
+        'created_at': 'createdAt',  # noqa: E501
+        'created_by': 'createdBy',  # noqa: E501
         'percent_off': 'percentOff',  # noqa: E501
         'amount_off': 'amountOff',  # noqa: E501
         'coupon_type': 'couponType',  # noqa: E501
@@ -149,10 +149,10 @@ class BTDiscountInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            created_at (datetime): [optional]  # noqa: E501
-            plan_id (str): [optional]  # noqa: E501
-            created_by (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
+            plan_id (str): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
+            created_by (bt_user_summary_info.BTUserSummaryInfo): [optional]  # noqa: E501
             percent_off (int): [optional]  # noqa: E501
             amount_off (int): [optional]  # noqa: E501
             coupon_type (int): [optional]  # noqa: E501

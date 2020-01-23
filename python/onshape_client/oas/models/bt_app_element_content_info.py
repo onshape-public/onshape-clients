@@ -84,8 +84,8 @@ class BTAppElementContentInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'change_id': (str,),  # noqa: E501
             'data': ([bt_app_element_content_entry_info.BTAppElementContentEntryInfo],),  # noqa: E501
+            'change_id': (str,),  # noqa: E501
             'error_code': (int,),  # noqa: E501
             'error_value': (str,),  # noqa: E501
             'error_description': (str,),  # noqa: E501
@@ -96,8 +96,8 @@ class BTAppElementContentInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'change_id': 'changeId',  # noqa: E501
         'data': 'data',  # noqa: E501
+        'change_id': 'changeId',  # noqa: E501
         'error_code': 'errorCode',  # noqa: E501
         'error_value': 'errorValue',  # noqa: E501
         'error_description': 'errorDescription',  # noqa: E501
@@ -133,8 +133,8 @@ class BTAppElementContentInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            change_id (str): [optional]  # noqa: E501
             data ([bt_app_element_content_entry_info.BTAppElementContentEntryInfo]): [optional]  # noqa: E501
+            change_id (str): [optional]  # noqa: E501
             error_code (int): [optional]  # noqa: E501
             error_value (str): [optional]  # noqa: E501
             error_description (str): [optional]  # noqa: E501

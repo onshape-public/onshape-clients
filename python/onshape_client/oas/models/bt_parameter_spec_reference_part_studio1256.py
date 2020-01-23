@@ -42,6 +42,10 @@ try:
 except ImportError:
     bt_parameter_spec_reference_part_studio1256_all_of = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_part_studio1256_all_of']
 try:
+    from onshape_client.oas.models import bt_parameter_visibility_condition177
+except ImportError:
+    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
+try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
     btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
@@ -134,17 +138,17 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
             'allowed_insertable_types': ([str],),  # noqa: E501
             'computed_configuration_inputs': ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
-            'localized_name': (str,),  # noqa: E501
-            'localizable_name': (str,),  # noqa: E501
             'additional_localized_strings': (int,),  # noqa: E501
+            'localizable_name': (str,),  # noqa: E501
+            'localized_name': (str,),  # noqa: E501
             'strings_to_localize': ([str],),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
-            'icon_uri': (str,),  # noqa: E501
-            'visibility_condition': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
             'ui_hint': (str,),  # noqa: E501
+            'parameter_name': (str,),  # noqa: E501
+            'visibility_condition': (bt_parameter_visibility_condition177.BTParameterVisibilityCondition177,),  # noqa: E501
             'ui_hints': ([str],),  # noqa: E501
             'column_name': (str,),  # noqa: E501
+            'icon_uri': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
         }
 
@@ -157,17 +161,17 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         'allowed_insertable_types': 'allowedInsertableTypes',  # noqa: E501
         'computed_configuration_inputs': 'computedConfigurationInputs',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
-        'localized_name': 'localizedName',  # noqa: E501
-        'localizable_name': 'localizableName',  # noqa: E501
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
+        'localizable_name': 'localizableName',  # noqa: E501
+        'localized_name': 'localizedName',  # noqa: E501
         'strings_to_localize': 'stringsToLocalize',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
-        'icon_uri': 'iconUri',  # noqa: E501
-        'visibility_condition': 'visibilityCondition',  # noqa: E501
         'ui_hint': 'uiHint',  # noqa: E501
+        'parameter_name': 'parameterName',  # noqa: E501
+        'visibility_condition': 'visibilityCondition',  # noqa: E501
         'ui_hints': 'uiHints',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
+        'icon_uri': 'iconUri',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
     }
 
@@ -204,17 +208,17 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
             allowed_insertable_types ([str]): [optional]  # noqa: E501
             computed_configuration_inputs ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
-            localized_name (str): [optional]  # noqa: E501
-            localizable_name (str): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
+            localizable_name (str): [optional]  # noqa: E501
+            localized_name (str): [optional]  # noqa: E501
             strings_to_localize ([str]): [optional]  # noqa: E501
-            parameter_name (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
-            icon_uri (str): [optional]  # noqa: E501
-            visibility_condition (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             ui_hint (str): [optional]  # noqa: E501
+            parameter_name (str): [optional]  # noqa: E501
+            visibility_condition (bt_parameter_visibility_condition177.BTParameterVisibilityCondition177): [optional]  # noqa: E501
             ui_hints ([str]): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
+            icon_uri (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
         """
 

@@ -78,21 +78,21 @@ class BTWebhookParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'company_id': (str,),  # noqa: E501
-            'client_id': (str,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'folder_id': (str,),  # noqa: E501
             'user_id': (str,),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'url': (str,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'folder_id': (str,),  # noqa: E501
             'events': ([str],),  # noqa: E501
+            'url': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
+            'client_id': (str,),  # noqa: E501
+            'part_id': (str,),  # noqa: E501
             'workspace_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
-            'filter': (str,),  # noqa: E501
             'options': (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
+            'filter': (str,),  # noqa: E501
             'data': (str,),  # noqa: E501
         }
 
@@ -101,21 +101,21 @@ class BTWebhookParams(ModelNormal):
         return None
 
     attribute_map = {
-        'company_id': 'companyId',  # noqa: E501
-        'client_id': 'clientId',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'folder_id': 'folderId',  # noqa: E501
         'user_id': 'userId',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'url': 'url',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'folder_id': 'folderId',  # noqa: E501
         'events': 'events',  # noqa: E501
+        'url': 'url',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
+        'client_id': 'clientId',  # noqa: E501
+        'part_id': 'partId',  # noqa: E501
         'workspace_id': 'workspaceId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'filter': 'filter',  # noqa: E501
         'options': 'options',  # noqa: E501
+        'filter': 'filter',  # noqa: E501
         'data': 'data',  # noqa: E501
     }
 
@@ -149,21 +149,21 @@ class BTWebhookParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            company_id (str): [optional]  # noqa: E501
-            client_id (str): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
-            folder_id (str): [optional]  # noqa: E501
             user_id (str): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            folder_id (str): [optional]  # noqa: E501
             events ([str]): [optional]  # noqa: E501
+            url (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
+            client_id (str): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
-            part_id (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
-            filter (str): [optional]  # noqa: E501
             options (bt_webhook_options.BTWebhookOptions): [optional]  # noqa: E501
+            filter (str): [optional]  # noqa: E501
             data (str): [optional]  # noqa: E501
         """
 

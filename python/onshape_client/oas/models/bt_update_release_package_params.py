@@ -82,8 +82,8 @@ class BTUpdateReleasePackageParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'items': ([bt_release_package_item_params.BTReleasePackageItemParams],),  # noqa: E501
             'item_ids': ([str],),  # noqa: E501
+            'items': ([bt_release_package_item_params.BTReleasePackageItemParams],),  # noqa: E501
             'empty': (bool,),  # noqa: E501
             'properties': ([bt_property_value_param.BTPropertyValueParam],),  # noqa: E501
         }
@@ -93,8 +93,8 @@ class BTUpdateReleasePackageParams(ModelNormal):
         return None
 
     attribute_map = {
-        'items': 'items',  # noqa: E501
         'item_ids': 'itemIds',  # noqa: E501
+        'items': 'items',  # noqa: E501
         'empty': 'empty',  # noqa: E501
         'properties': 'properties',  # noqa: E501
     }
@@ -129,8 +129,8 @@ class BTUpdateReleasePackageParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            items ([bt_release_package_item_params.BTReleasePackageItemParams]): [optional]  # noqa: E501
             item_ids ([str]): [optional]  # noqa: E501
+            items ([bt_release_package_item_params.BTReleasePackageItemParams]): [optional]  # noqa: E501
             empty (bool): [optional]  # noqa: E501
             properties ([bt_property_value_param.BTPropertyValueParam]): [optional]  # noqa: E501
         """

@@ -78,8 +78,8 @@ class BTMAssemblyFeature887AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'auxiliary_assembly_feature': (bool,),  # noqa: E501
             'feature_list_field_index': (int,),  # noqa: E501
+            'auxiliary_assembly_feature': (bool,),  # noqa: E501
             'occurrence_queries_from_all_configurations': ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904],),  # noqa: E501
             'version': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -90,8 +90,8 @@ class BTMAssemblyFeature887AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',  # noqa: E501
         'feature_list_field_index': 'featureListFieldIndex',  # noqa: E501
+        'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',  # noqa: E501
         'occurrence_queries_from_all_configurations': 'occurrenceQueriesFromAllConfigurations',  # noqa: E501
         'version': 'version',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -127,8 +127,8 @@ class BTMAssemblyFeature887AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            auxiliary_assembly_feature (bool): [optional]  # noqa: E501
             feature_list_field_index (int): [optional]  # noqa: E501
+            auxiliary_assembly_feature (bool): [optional]  # noqa: E501
             occurrence_queries_from_all_configurations ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]): [optional]  # noqa: E501
             version (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

@@ -91,17 +91,17 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
             'unique_element_id': (BTBillOfMaterialsUniqueItemId2029,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'full_element_id': (bt_full_element_id756.BTFullElementId756,),  # noqa: E501
             'non_geometric': (bool,),  # noqa: E501
-            'workspace_reference': (bool,),  # noqa: E501
             'document_version_element_id': (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897,),  # noqa: E501
             'standard_content_owner': (bt_owner3114.BTOwner3114,),  # noqa: E501
             'workspace_part_item': (bool,),  # noqa: E501
             'ambiguous_unique_id': (BTBillOfMaterialsUniqueItemId2029,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
+            'workspace_reference': (bool,),  # noqa: E501
             'is_standard_content': (bool,),  # noqa: E501
+            'part_id': (str,),  # noqa: E501
             'api_configuration': (str,),  # noqa: E501
             'item_definition_id': (str,),  # noqa: E501
             'source_element': (bt_element_reference725.BTElementReference725,),  # noqa: E501
@@ -114,17 +114,17 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
         'unique_element_id': 'uniqueElementId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'full_element_id': 'fullElementId',  # noqa: E501
         'non_geometric': 'nonGeometric',  # noqa: E501
-        'workspace_reference': 'workspaceReference',  # noqa: E501
         'document_version_element_id': 'documentVersionElementId',  # noqa: E501
         'standard_content_owner': 'standardContentOwner',  # noqa: E501
         'workspace_part_item': 'workspacePartItem',  # noqa: E501
         'ambiguous_unique_id': 'ambiguousUniqueId',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
+        'workspace_reference': 'workspaceReference',  # noqa: E501
         'is_standard_content': 'isStandardContent',  # noqa: E501
+        'part_id': 'partId',  # noqa: E501
         'api_configuration': 'apiConfiguration',  # noqa: E501
         'item_definition_id': 'itemDefinitionId',  # noqa: E501
         'source_element': 'sourceElement',  # noqa: E501
@@ -162,17 +162,17 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
             unique_element_id (BTBillOfMaterialsUniqueItemId2029): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             full_element_id (bt_full_element_id756.BTFullElementId756): [optional]  # noqa: E501
             non_geometric (bool): [optional]  # noqa: E501
-            workspace_reference (bool): [optional]  # noqa: E501
             document_version_element_id (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897): [optional]  # noqa: E501
             standard_content_owner (bt_owner3114.BTOwner3114): [optional]  # noqa: E501
             workspace_part_item (bool): [optional]  # noqa: E501
             ambiguous_unique_id (BTBillOfMaterialsUniqueItemId2029): [optional]  # noqa: E501
-            part_id (str): [optional]  # noqa: E501
+            workspace_reference (bool): [optional]  # noqa: E501
             is_standard_content (bool): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             api_configuration (str): [optional]  # noqa: E501
             item_definition_id (str): [optional]  # noqa: E501
             source_element (bt_element_reference725.BTElementReference725): [optional]  # noqa: E501

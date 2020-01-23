@@ -75,8 +75,8 @@ class BTDocumentVersionElementIds1897(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -86,8 +86,8 @@ class BTDocumentVersionElementIds1897(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -122,8 +122,8 @@ class BTDocumentVersionElementIds1897(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **units** | **str** |  | [optional] 
 **is_integer** | **bool** |  | [optional] 
 **value** | **float** |  | [optional] 
 **expression** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

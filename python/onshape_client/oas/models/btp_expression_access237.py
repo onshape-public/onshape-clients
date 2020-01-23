@@ -101,14 +101,14 @@ class BTPExpressionAccess237(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'accessor': (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
             'space_in_accessor': (btp_space10.BTPSpace10,),  # noqa: E501
+            'accessor': (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
             'base': (btp_expression9.BTPExpression9,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -121,14 +121,14 @@ class BTPExpressionAccess237(ModelComposed):
         return None
 
     attribute_map = {
-        'accessor': 'accessor',  # noqa: E501
         'space_in_accessor': 'spaceInAccessor',  # noqa: E501
+        'accessor': 'accessor',  # noqa: E501
         'base': 'base',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -165,14 +165,14 @@ class BTPExpressionAccess237(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            accessor (btp_property_accessor23.BTPPropertyAccessor23): [optional]  # noqa: E501
             space_in_accessor (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            accessor (btp_property_accessor23.BTPPropertyAccessor23): [optional]  # noqa: E501
             base (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

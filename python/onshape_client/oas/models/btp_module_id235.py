@@ -109,9 +109,9 @@ class BTPModuleId235(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'standard_library': (bool,),  # noqa: E501
             'external_document_with_version_and_element_id': (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,),  # noqa: E501
             'external_document_with_version': (bt_document_with_version_id.BTDocumentWithVersionId,),  # noqa: E501
+            'external_import': (bool,),  # noqa: E501
             'version_and_microversion': (str,),  # noqa: E501
             'imported_document_id': (str,),  # noqa: E501
             'legacy': (bool,),  # noqa: E501
@@ -124,7 +124,7 @@ class BTPModuleId235(ModelComposed):
             'path_version': (str,),  # noqa: E501
             'imported_version_id': (str,),  # noqa: E501
             'potentially_valid': (bool,),  # noqa: E501
-            'external_import': (bool,),  # noqa: E501
+            'standard_library': (bool,),  # noqa: E501
             'microversion': (str,),  # noqa: E501
             'space_before_path': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_after_path': (btp_space10.BTPSpace10,),  # noqa: E501
@@ -135,8 +135,8 @@ class BTPModuleId235(ModelComposed):
             'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -149,9 +149,9 @@ class BTPModuleId235(ModelComposed):
         return None
 
     attribute_map = {
-        'standard_library': 'standardLibrary',  # noqa: E501
         'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',  # noqa: E501
         'external_document_with_version': 'externalDocumentWithVersion',  # noqa: E501
+        'external_import': 'externalImport',  # noqa: E501
         'version_and_microversion': 'versionAndMicroversion',  # noqa: E501
         'imported_document_id': 'importedDocumentId',  # noqa: E501
         'legacy': 'legacy',  # noqa: E501
@@ -164,7 +164,7 @@ class BTPModuleId235(ModelComposed):
         'path_version': 'pathVersion',  # noqa: E501
         'imported_version_id': 'importedVersionId',  # noqa: E501
         'potentially_valid': 'potentiallyValid',  # noqa: E501
-        'external_import': 'externalImport',  # noqa: E501
+        'standard_library': 'standardLibrary',  # noqa: E501
         'microversion': 'microversion',  # noqa: E501
         'space_before_path': 'spaceBeforePath',  # noqa: E501
         'space_after_path': 'spaceAfterPath',  # noqa: E501
@@ -175,8 +175,8 @@ class BTPModuleId235(ModelComposed):
         'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -213,9 +213,9 @@ class BTPModuleId235(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            standard_library (bool): [optional]  # noqa: E501
             external_document_with_version_and_element_id (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId): [optional]  # noqa: E501
             external_document_with_version (bt_document_with_version_id.BTDocumentWithVersionId): [optional]  # noqa: E501
+            external_import (bool): [optional]  # noqa: E501
             version_and_microversion (str): [optional]  # noqa: E501
             imported_document_id (str): [optional]  # noqa: E501
             legacy (bool): [optional]  # noqa: E501
@@ -228,7 +228,7 @@ class BTPModuleId235(ModelComposed):
             path_version (str): [optional]  # noqa: E501
             imported_version_id (str): [optional]  # noqa: E501
             potentially_valid (bool): [optional]  # noqa: E501
-            external_import (bool): [optional]  # noqa: E501
+            standard_library (bool): [optional]  # noqa: E501
             microversion (str): [optional]  # noqa: E501
             space_before_path (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_after_path (btp_space10.BTPSpace10): [optional]  # noqa: E501
@@ -239,8 +239,8 @@ class BTPModuleId235(ModelComposed):
             bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

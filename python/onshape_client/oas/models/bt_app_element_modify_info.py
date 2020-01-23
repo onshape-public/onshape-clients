@@ -82,8 +82,8 @@ class BTAppElementModifyInfo(ModelNormal):
         return {
             'element_id': (str,),  # noqa: E501
             'change_id': (str,),  # noqa: E501
-            'parent_change_id': (str,),  # noqa: E501
             'transaction_id': (str,),  # noqa: E501
+            'parent_change_id': (str,),  # noqa: E501
             'error_code': (int,),  # noqa: E501
             'error_value': (str,),  # noqa: E501
             'error_description': (str,),  # noqa: E501
@@ -96,8 +96,8 @@ class BTAppElementModifyInfo(ModelNormal):
     attribute_map = {
         'element_id': 'elementId',  # noqa: E501
         'change_id': 'changeId',  # noqa: E501
-        'parent_change_id': 'parentChangeId',  # noqa: E501
         'transaction_id': 'transactionId',  # noqa: E501
+        'parent_change_id': 'parentChangeId',  # noqa: E501
         'error_code': 'errorCode',  # noqa: E501
         'error_value': 'errorValue',  # noqa: E501
         'error_description': 'errorDescription',  # noqa: E501
@@ -135,8 +135,8 @@ class BTAppElementModifyInfo(ModelNormal):
                                 If omitted no type conversion is done.
             element_id (str): [optional]  # noqa: E501
             change_id (str): [optional]  # noqa: E501
-            parent_change_id (str): [optional]  # noqa: E501
             transaction_id (str): [optional]  # noqa: E501
+            parent_change_id (str): [optional]  # noqa: E501
             error_code (int): [optional]  # noqa: E501
             error_value (str): [optional]  # noqa: E501
             error_description (str): [optional]  # noqa: E501

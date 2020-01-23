@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_team_info.BTTeamInfo]**](BTTeamInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_team_info.BTTeamInfo]**](BTTeamInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

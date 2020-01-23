@@ -74,8 +74,8 @@ class BTDocumentProcessingInfoAllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'translation_id': (str,),  # noqa: E501
             'translation_event_key': (str,),  # noqa: E501
+            'translation_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,8 +83,8 @@ class BTDocumentProcessingInfoAllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'translation_id': 'translationId',  # noqa: E501
         'translation_event_key': 'translationEventKey',  # noqa: E501
+        'translation_id': 'translationId',  # noqa: E501
     }
 
     @staticmethod
@@ -117,8 +117,8 @@ class BTDocumentProcessingInfoAllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            translation_id (str): [optional]  # noqa: E501
             translation_event_key (str): [optional]  # noqa: E501
+            translation_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

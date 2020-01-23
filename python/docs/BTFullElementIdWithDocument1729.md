@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **target** | [**bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338**](BTMicroversionIdAndConfiguration2338.md) |  | [optional] 
 **configured** | **bool** |  | [optional] 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**imported_external_document_id** | **str** |  | [optional] 
 **element_import** | **bool** |  | [optional] 
+**imported_external_document_id** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

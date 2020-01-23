@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_min_value** | **bool** |  | [optional] 
 **has_default_value** | **bool** |  | [optional] 
+**has_min_value** | **bool** |  | [optional] 
 **has_max_value** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 

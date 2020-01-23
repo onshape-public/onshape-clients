@@ -78,15 +78,15 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'value_type': (int,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
+            'owner_type': (int,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'value_type': (int,),  # noqa: E501
             'editable_in_version': (bool,),  # noqa: E501
             'editable_in_microversion': (bool,),  # noqa: E501
             'ui_readonly_in_version': (bool,),  # noqa: E501
             'ui_readonly_in_microversion': (bool,),  # noqa: E501
             'property_config_summary_info_list': ([bt_metadata_property_config_summary_info.BTMetadataPropertyConfigSummaryInfo],),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'owner_type': (int,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
@@ -99,15 +99,15 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'value_type': 'valueType',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
+        'owner_type': 'ownerType',  # noqa: E501
+        'description': 'description',  # noqa: E501
+        'value_type': 'valueType',  # noqa: E501
         'editable_in_version': 'editableInVersion',  # noqa: E501
         'editable_in_microversion': 'editableInMicroversion',  # noqa: E501
         'ui_readonly_in_version': 'uiReadonlyInVersion',  # noqa: E501
         'ui_readonly_in_microversion': 'uiReadonlyInMicroversion',  # noqa: E501
         'property_config_summary_info_list': 'propertyConfigSummaryInfoList',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
@@ -145,15 +145,15 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value_type (int): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
+            owner_type (int): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            value_type (int): [optional]  # noqa: E501
             editable_in_version (bool): [optional]  # noqa: E501
             editable_in_microversion (bool): [optional]  # noqa: E501
             ui_readonly_in_version (bool): [optional]  # noqa: E501
             ui_readonly_in_microversion (bool): [optional]  # noqa: E501
             property_config_summary_info_list ([bt_metadata_property_config_summary_info.BTMetadataPropertyConfigSummaryInfo]): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            owner_type (int): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501

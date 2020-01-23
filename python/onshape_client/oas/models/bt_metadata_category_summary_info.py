@@ -75,10 +75,10 @@ class BTMetadataCategorySummaryInfo(ModelNormal):
         """
         return {
             'owner_id': (str,),  # noqa: E501
-            'publish_state': (int,),  # noqa: E501
-            'description': (str,),  # noqa: E501
             'owner_type': (int,),  # noqa: E501
+            'description': (str,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
+            'publish_state': (int,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -91,10 +91,10 @@ class BTMetadataCategorySummaryInfo(ModelNormal):
 
     attribute_map = {
         'owner_id': 'ownerId',  # noqa: E501
-        'publish_state': 'publishState',  # noqa: E501
-        'description': 'description',  # noqa: E501
         'owner_type': 'ownerType',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'display_name': 'displayName',  # noqa: E501
+        'publish_state': 'publishState',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -132,10 +132,10 @@ class BTMetadataCategorySummaryInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             owner_id (str): [optional]  # noqa: E501
-            publish_state (int): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
             owner_type (int): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
+            publish_state (int): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

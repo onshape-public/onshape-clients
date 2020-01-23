@@ -81,8 +81,8 @@ class BTInsertablesListResponse(ModelNormal):
             'changes_since_version_save': (int,),  # noqa: E501
             'has_multiple_versions': (bool,),  # noqa: E501
             'can_save_version': (bool,),  # noqa: E501
-            'items': ([bt_insertable_info.BTInsertableInfo],),  # noqa: E501
             'href': (str,),  # noqa: E501
+            'items': ([bt_insertable_info.BTInsertableInfo],),  # noqa: E501
             'previous': (str,),  # noqa: E501
             'next': (str,),  # noqa: E501
         }
@@ -95,8 +95,8 @@ class BTInsertablesListResponse(ModelNormal):
         'changes_since_version_save': 'changesSinceVersionSave',  # noqa: E501
         'has_multiple_versions': 'hasMultipleVersions',  # noqa: E501
         'can_save_version': 'canSaveVersion',  # noqa: E501
-        'items': 'items',  # noqa: E501
         'href': 'href',  # noqa: E501
+        'items': 'items',  # noqa: E501
         'previous': 'previous',  # noqa: E501
         'next': 'next',  # noqa: E501
     }
@@ -134,8 +134,8 @@ class BTInsertablesListResponse(ModelNormal):
             changes_since_version_save (int): [optional]  # noqa: E501
             has_multiple_versions (bool): [optional]  # noqa: E501
             can_save_version (bool): [optional]  # noqa: E501
-            items ([bt_insertable_info.BTInsertableInfo]): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
+            items ([bt_insertable_info.BTInsertableInfo]): [optional]  # noqa: E501
             previous (str): [optional]  # noqa: E501
             next (str): [optional]  # noqa: E501
         """

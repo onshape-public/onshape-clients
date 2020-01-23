@@ -37,6 +37,10 @@ try:
     from onshape_client.oas.models import bt_bill_of_materials_table_row_metadata1300
 except ImportError:
     bt_bill_of_materials_table_row_metadata1300 = sys.modules['onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300']
+try:
+    from onshape_client.oas.models import bt_table_base_cross_highlight_data2609
+except ImportError:
+    bt_table_base_cross_highlight_data2609 = sys.modules['onshape_client.oas.models.bt_table_base_cross_highlight_data2609']
 
 
 class BTTableBaseRowMetadata3181(ModelNormal):
@@ -82,7 +86,8 @@ class BTTableBaseRowMetadata3181(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'cross_highlight_data_if_any': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
+            'cross_highlight_data_if_any': (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,6 +101,7 @@ class BTTableBaseRowMetadata3181(ModelNormal):
 
     attribute_map = {
         'cross_highlight_data_if_any': 'crossHighlightDataIfAny',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -128,7 +134,8 @@ class BTTableBaseRowMetadata3181(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            cross_highlight_data_if_any (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            cross_highlight_data_if_any (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -74,9 +74,9 @@ class BTMateConnectorCSInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'gety_axis': ([float],),  # noqa: E501
             'getz_axis': ([float],),  # noqa: E501
             'getx_axis': ([float],),  # noqa: E501
+            'gety_axis': ([float],),  # noqa: E501
             'origin': ([float],),  # noqa: E501
         }
 
@@ -85,9 +85,9 @@ class BTMateConnectorCSInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'gety_axis': 'getyAxis',  # noqa: E501
         'getz_axis': 'getzAxis',  # noqa: E501
         'getx_axis': 'getxAxis',  # noqa: E501
+        'gety_axis': 'getyAxis',  # noqa: E501
         'origin': 'origin',  # noqa: E501
     }
 
@@ -121,9 +121,9 @@ class BTMateConnectorCSInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            gety_axis ([float]): [optional]  # noqa: E501
             getz_axis ([float]): [optional]  # noqa: E501
             getx_axis ([float]): [optional]  # noqa: E501
+            gety_axis ([float]): [optional]  # noqa: E501
             origin ([float]): [optional]  # noqa: E501
         """
 

@@ -96,22 +96,22 @@ class BTRootDiffInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'target_version_id': (str,),  # noqa: E501
-            'target_microversion_id': (str,),  # noqa: E501
-            'target_workspace_id': (str,),  # noqa: E501
             'source_workspace_id': (str,),  # noqa: E501
-            'source_version_id': (str,),  # noqa: E501
-            'source_microversion_id': (str,),  # noqa: E501
+            'target_microversion_id': (str,),  # noqa: E501
             'source_configuration': (str,),  # noqa: E501
             'target_configuration': (str,),  # noqa: E501
+            'source_microversion_id': (str,),  # noqa: E501
+            'source_version_id': (str,),  # noqa: E501
+            'target_workspace_id': (str,),  # noqa: E501
+            'target_version_id': (str,),  # noqa: E501
             'source_id': (str,),  # noqa: E501
+            'changes': ({str: (bt_diff_info.BTDiffInfo,)},),  # noqa: E501
+            'collection_changes': ({str: ([bt_diff_info.BTDiffInfo],)},),  # noqa: E501
             'geometry_change_messages': ([str],),  # noqa: E501
             'source_value': (str,),  # noqa: E501
             'target_value': (str,),  # noqa: E501
             'target_id': (str,),  # noqa: E501
             'entity_type': (str,),  # noqa: E501
-            'changes': ({str: (bt_diff_info.BTDiffInfo,)},),  # noqa: E501
-            'collection_changes': ({str: ([bt_diff_info.BTDiffInfo],)},),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -120,22 +120,22 @@ class BTRootDiffInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'target_version_id': 'targetVersionId',  # noqa: E501
-        'target_microversion_id': 'targetMicroversionId',  # noqa: E501
-        'target_workspace_id': 'targetWorkspaceId',  # noqa: E501
         'source_workspace_id': 'sourceWorkspaceId',  # noqa: E501
-        'source_version_id': 'sourceVersionId',  # noqa: E501
-        'source_microversion_id': 'sourceMicroversionId',  # noqa: E501
+        'target_microversion_id': 'targetMicroversionId',  # noqa: E501
         'source_configuration': 'sourceConfiguration',  # noqa: E501
         'target_configuration': 'targetConfiguration',  # noqa: E501
+        'source_microversion_id': 'sourceMicroversionId',  # noqa: E501
+        'source_version_id': 'sourceVersionId',  # noqa: E501
+        'target_workspace_id': 'targetWorkspaceId',  # noqa: E501
+        'target_version_id': 'targetVersionId',  # noqa: E501
         'source_id': 'sourceId',  # noqa: E501
+        'changes': 'changes',  # noqa: E501
+        'collection_changes': 'collectionChanges',  # noqa: E501
         'geometry_change_messages': 'geometryChangeMessages',  # noqa: E501
         'source_value': 'sourceValue',  # noqa: E501
         'target_value': 'targetValue',  # noqa: E501
         'target_id': 'targetId',  # noqa: E501
         'entity_type': 'entityType',  # noqa: E501
-        'changes': 'changes',  # noqa: E501
-        'collection_changes': 'collectionChanges',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
@@ -169,22 +169,22 @@ class BTRootDiffInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            target_version_id (str): [optional]  # noqa: E501
-            target_microversion_id (str): [optional]  # noqa: E501
-            target_workspace_id (str): [optional]  # noqa: E501
             source_workspace_id (str): [optional]  # noqa: E501
-            source_version_id (str): [optional]  # noqa: E501
-            source_microversion_id (str): [optional]  # noqa: E501
+            target_microversion_id (str): [optional]  # noqa: E501
             source_configuration (str): [optional]  # noqa: E501
             target_configuration (str): [optional]  # noqa: E501
+            source_microversion_id (str): [optional]  # noqa: E501
+            source_version_id (str): [optional]  # noqa: E501
+            target_workspace_id (str): [optional]  # noqa: E501
+            target_version_id (str): [optional]  # noqa: E501
             source_id (str): [optional]  # noqa: E501
+            changes ({str: (bt_diff_info.BTDiffInfo,)}): [optional]  # noqa: E501
+            collection_changes ({str: ([bt_diff_info.BTDiffInfo],)}): [optional]  # noqa: E501
             geometry_change_messages ([str]): [optional]  # noqa: E501
             source_value (str): [optional]  # noqa: E501
             target_value (str): [optional]  # noqa: E501
             target_id (str): [optional]  # noqa: E501
             entity_type (str): [optional]  # noqa: E501
-            changes ({str: (bt_diff_info.BTDiffInfo,)}): [optional]  # noqa: E501
-            collection_changes ({str: ([bt_diff_info.BTDiffInfo],)}): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

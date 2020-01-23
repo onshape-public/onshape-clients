@@ -74,10 +74,10 @@ class BTGraphicsAppearance1152(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'reset': (bool,),  # noqa: E501
             'non_trivial': (bool,),  # noqa: E501
-            'opacity': (int,),  # noqa: E501
+            'reset': (bool,),  # noqa: E501
             'color': ([str],),  # noqa: E501
+            'opacity': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -86,10 +86,10 @@ class BTGraphicsAppearance1152(ModelNormal):
         return None
 
     attribute_map = {
-        'reset': 'reset',  # noqa: E501
         'non_trivial': 'nonTrivial',  # noqa: E501
-        'opacity': 'opacity',  # noqa: E501
+        'reset': 'reset',  # noqa: E501
         'color': 'color',  # noqa: E501
+        'opacity': 'opacity',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -123,10 +123,10 @@ class BTGraphicsAppearance1152(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            reset (bool): [optional]  # noqa: E501
             non_trivial (bool): [optional]  # noqa: E501
-            opacity (int): [optional]  # noqa: E501
+            reset (bool): [optional]  # noqa: E501
             color ([str]): [optional]  # noqa: E501
+            opacity (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

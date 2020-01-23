@@ -102,14 +102,14 @@ class BTMIndividualQuery138(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'persistent_query': (btp_statement269.BTPStatement269,),  # noqa: E501
             'variable_name': (BTMIndividualQuery138,),  # noqa: E501
             'query_statement': (btp_statement269.BTPStatement269,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'deterministic_ids': ([str],),  # noqa: E501
             'deterministic_id_list': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
-            'query_string': (str,),  # noqa: E501
             'query': (btm_individual_query_base139.BTMIndividualQueryBase139,),  # noqa: E501
+            'query_string': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
         }
@@ -118,22 +118,22 @@ class BTMIndividualQuery138(ModelComposed):
     def discriminator():
         return {
             'bt_type': {
+                'BTMIndividualSketchRegionQuery-140': btm_individual_sketch_region_query140.BTMIndividualSketchRegionQuery140,
                 'BTMIndividualSketchUniqueVerticesQuery-1472': btm_individual_sketch_unique_vertices_query1472.BTMIndividualSketchUniqueVerticesQuery1472,
                 'BTMIndividualCoEdgeQuery-1332': btm_individual_co_edge_query1332.BTMIndividualCoEdgeQuery1332,
-                'BTMIndividualSketchRegionQuery-140': btm_individual_sketch_region_query140.BTMIndividualSketchRegionQuery140,
                 'BTMIndividualCreatedByQuery-137': btm_individual_created_by_query137.BTMIndividualCreatedByQuery137,
             },
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'persistent_query': 'persistentQuery',  # noqa: E501
         'variable_name': 'variableName',  # noqa: E501
         'query_statement': 'queryStatement',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'deterministic_ids': 'deterministicIds',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
-        'query_string': 'queryString',  # noqa: E501
         'query': 'query',  # noqa: E501
+        'query_string': 'queryString',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
     }
@@ -167,14 +167,14 @@ class BTMIndividualQuery138(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             variable_name (BTMIndividualQuery138): [optional]  # noqa: E501
             query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
-            query_string (str): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
+            query_string (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
         """

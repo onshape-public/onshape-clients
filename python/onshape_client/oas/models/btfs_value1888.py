@@ -113,19 +113,20 @@ class BTFSValue1888(ModelNormal):
             'value_object': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
             'configuration_value_string': (str,),  # noqa: E501
             'type_tag': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
             'bt_type': {
-                'BTFSValueArray-1499': btfs_value_array1499.BTFSValueArray1499,
                 'BTFSValueString-1422': btfs_value_string1422.BTFSValueString1422,
-                'BTFSValueWithUnits-1817': btfs_value_with_units1817.BTFSValueWithUnits1817,
                 'BTFSValueOther-1124': btfs_value_other1124.BTFSValueOther1124,
+                'BTFSValueUndefined-2003': btfs_value_undefined2003.BTFSValueUndefined2003,
+                'BTFSValueArray-1499': btfs_value_array1499.BTFSValueArray1499,
+                'BTFSValueWithUnits-1817': btfs_value_with_units1817.BTFSValueWithUnits1817,
                 'BTFSValueTooBig-1247': btfs_value_too_big1247.BTFSValueTooBig1247,
                 'BTFSValueNumber-772': btfs_value_number772.BTFSValueNumber772,
-                'BTFSValueUndefined-2003': btfs_value_undefined2003.BTFSValueUndefined2003,
                 'BTFSValueBoolean-1195': btfs_value_boolean1195.BTFSValueBoolean1195,
             },
         }
@@ -134,6 +135,7 @@ class BTFSValue1888(ModelNormal):
         'value_object': 'valueObject',  # noqa: E501
         'configuration_value_string': 'configurationValueString',  # noqa: E501
         'type_tag': 'typeTag',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -169,6 +171,7 @@ class BTFSValue1888(ModelNormal):
             value_object (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             configuration_value_string (str): [optional]  # noqa: E501
             type_tag (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

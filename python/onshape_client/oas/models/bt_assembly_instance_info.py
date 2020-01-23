@@ -78,11 +78,11 @@ class BTAssemblyInstanceInfo(ModelNormal):
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
+            'configuration': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'revision': (str,),  # noqa: E501
             'document_microversion': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'full_configuration': (str,),  # noqa: E501
             'document_version': (str,),  # noqa: E501
         }
@@ -96,11 +96,11 @@ class BTAssemblyInstanceInfo(ModelNormal):
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
         'type': 'type',  # noqa: E501
+        'configuration': 'configuration',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'revision': 'revision',  # noqa: E501
         'document_microversion': 'documentMicroversion',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'full_configuration': 'fullConfiguration',  # noqa: E501
         'document_version': 'documentVersion',  # noqa: E501
     }
@@ -139,11 +139,11 @@ class BTAssemblyInstanceInfo(ModelNormal):
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
+            configuration (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             revision (str): [optional]  # noqa: E501
             document_microversion (str): [optional]  # noqa: E501
-            configuration (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             full_configuration (str): [optional]  # noqa: E501
             document_version (str): [optional]  # noqa: E501
         """

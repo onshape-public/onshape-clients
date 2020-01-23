@@ -125,6 +125,7 @@ class BTPTopLevelNode286(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'deprecated': (bool,),  # noqa: E501
             'symbol_name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'arguments_to_document': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
@@ -132,11 +133,10 @@ class BTPTopLevelNode286(ModelComposed):
             'for_export': (bool,),  # noqa: E501
             'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
             'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -150,12 +150,13 @@ class BTPTopLevelNode286(ModelComposed):
             'bt_type': {
                 'BTPTopLevelTypeDeclaration-287': btp_top_level_type_declaration287.BTPTopLevelTypeDeclaration287,
                 'BTPTopLevelImport-285': btp_top_level_import285.BTPTopLevelImport285,
-                'BTPProcedureDeclarationBase-266': btp_procedure_declaration_base266.BTPProcedureDeclarationBase266,
                 'BTPTopLevelConstantDeclaration-283': btp_top_level_constant_declaration283.BTPTopLevelConstantDeclaration283,
+                'BTPProcedureDeclarationBase-266': btp_procedure_declaration_base266.BTPProcedureDeclarationBase266,
             },
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'deprecated': 'deprecated',  # noqa: E501
         'symbol_name': 'symbolName',  # noqa: E501
         'arguments_to_document': 'argumentsToDocument',  # noqa: E501
@@ -163,11 +164,10 @@ class BTPTopLevelNode286(ModelComposed):
         'for_export': 'forExport',  # noqa: E501
         'space_after_export': 'spaceAfterExport',  # noqa: E501
         'annotation': 'annotation',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -204,6 +204,7 @@ class BTPTopLevelNode286(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             deprecated (bool): [optional]  # noqa: E501
             symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             arguments_to_document ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
@@ -211,11 +212,10 @@ class BTPTopLevelNode286(ModelComposed):
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
             annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

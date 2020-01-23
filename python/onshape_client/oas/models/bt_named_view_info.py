@@ -79,9 +79,9 @@ class BTNamedViewInfo(ModelNormal):
         """
         return {
             'view_matrix': ([float],),  # noqa: E501
-            'perspective': (bool,),  # noqa: E501
             'camera_viewport': ([float],),  # noqa: E501
             'angle': (float,),  # noqa: E501
+            'perspective': (bool,),  # noqa: E501
             'section_planes': ([bt_section_plane_info.BTSectionPlaneInfo],),  # noqa: E501
         }
 
@@ -91,9 +91,9 @@ class BTNamedViewInfo(ModelNormal):
 
     attribute_map = {
         'view_matrix': 'viewMatrix',  # noqa: E501
-        'perspective': 'perspective',  # noqa: E501
         'camera_viewport': 'cameraViewport',  # noqa: E501
         'angle': 'angle',  # noqa: E501
+        'perspective': 'perspective',  # noqa: E501
         'section_planes': 'sectionPlanes',  # noqa: E501
     }
 
@@ -128,9 +128,9 @@ class BTNamedViewInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             view_matrix ([float]): [optional]  # noqa: E501
-            perspective (bool): [optional]  # noqa: E501
             camera_viewport ([float]): [optional]  # noqa: E501
             angle (float): [optional]  # noqa: E501
+            perspective (bool): [optional]  # noqa: E501
             section_planes ([bt_section_plane_info.BTSectionPlaneInfo]): [optional]  # noqa: E501
         """
 

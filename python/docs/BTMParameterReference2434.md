@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **feature_script_type** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

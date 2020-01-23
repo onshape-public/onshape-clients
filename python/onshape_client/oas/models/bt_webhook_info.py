@@ -78,13 +78,13 @@ class BTWebhookInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'company_id': (str,),  # noqa: E501
             'folder_id': (str,),  # noqa: E501
-            'filter': (str,),  # noqa: E501
-            'url': (str,),  # noqa: E501
-            'events': ([str],),  # noqa: E501
-            'data': (str,),  # noqa: E501
             'getproject_id': (str,),  # noqa: E501
+            'events': ([str],),  # noqa: E501
+            'url': (str,),  # noqa: E501
+            'data': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
+            'filter': (str,),  # noqa: E501
             'dropped_event_count': (int,),  # noqa: E501
             'options': (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -98,13 +98,13 @@ class BTWebhookInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'company_id': 'companyId',  # noqa: E501
         'folder_id': 'folderId',  # noqa: E501
-        'filter': 'filter',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'events': 'events',  # noqa: E501
-        'data': 'data',  # noqa: E501
         'getproject_id': 'getprojectId',  # noqa: E501
+        'events': 'events',  # noqa: E501
+        'url': 'url',  # noqa: E501
+        'data': 'data',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
+        'filter': 'filter',  # noqa: E501
         'dropped_event_count': 'droppedEventCount',  # noqa: E501
         'options': 'options',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -143,13 +143,13 @@ class BTWebhookInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            company_id (str): [optional]  # noqa: E501
             folder_id (str): [optional]  # noqa: E501
-            filter (str): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
-            events ([str]): [optional]  # noqa: E501
-            data (str): [optional]  # noqa: E501
             getproject_id (str): [optional]  # noqa: E501
+            events ([str]): [optional]  # noqa: E501
+            url (str): [optional]  # noqa: E501
+            data (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
+            filter (str): [optional]  # noqa: E501
             dropped_event_count (int): [optional]  # noqa: E501
             options (bt_webhook_options.BTWebhookOptions): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

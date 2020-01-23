@@ -79,19 +79,19 @@ class BTActiveWorkflowInfo(ModelNormal):
         """
         return {
             'company_id': (str,),  # noqa: E501
-            'release_workflow_id': (str,),  # noqa: E501
-            'obsoletion_workflow_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'using_managed_workflow': (bool,),  # noqa: E501
             'can_current_user_create_releases': (bool,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'release_workflow': (bt_published_workflow_info.BTPublishedWorkflowInfo,),  # noqa: E501
             'obsoletion_workflow': (bt_published_workflow_info.BTPublishedWorkflowInfo,),  # noqa: E501
+            'release_workflow_id': (str,),  # noqa: E501
+            'obsoletion_workflow_id': (str,),  # noqa: E501
+            'drawing_can_duplicate_part_number': (bool,),  # noqa: E501
+            'enabled_active_multiple_workflows': (bool,),  # noqa: E501
             'using_auto_part_numbering': (bool,),  # noqa: E501
             'pickable_workflows': ([bt_published_workflow_info.BTPublishedWorkflowInfo],),  # noqa: E501
             'using_auto_part_numbering_scheme': (bool,),  # noqa: E501
             'can_create_releases': (bool,),  # noqa: E501
-            'drawing_can_duplicate_part_number': (bool,),  # noqa: E501
-            'enabled_active_multiple_workflows': (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,19 +100,19 @@ class BTActiveWorkflowInfo(ModelNormal):
 
     attribute_map = {
         'company_id': 'companyId',  # noqa: E501
-        'release_workflow_id': 'releaseWorkflowId',  # noqa: E501
-        'obsoletion_workflow_id': 'obsoletionWorkflowId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'using_managed_workflow': 'usingManagedWorkflow',  # noqa: E501
         'can_current_user_create_releases': 'canCurrentUserCreateReleases',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'release_workflow': 'releaseWorkflow',  # noqa: E501
         'obsoletion_workflow': 'obsoletionWorkflow',  # noqa: E501
+        'release_workflow_id': 'releaseWorkflowId',  # noqa: E501
+        'obsoletion_workflow_id': 'obsoletionWorkflowId',  # noqa: E501
+        'drawing_can_duplicate_part_number': 'drawingCanDuplicatePartNumber',  # noqa: E501
+        'enabled_active_multiple_workflows': 'enabledActiveMultipleWorkflows',  # noqa: E501
         'using_auto_part_numbering': 'usingAutoPartNumbering',  # noqa: E501
         'pickable_workflows': 'pickableWorkflows',  # noqa: E501
         'using_auto_part_numbering_scheme': 'usingAutoPartNumberingScheme',  # noqa: E501
         'can_create_releases': 'canCreateReleases',  # noqa: E501
-        'drawing_can_duplicate_part_number': 'drawingCanDuplicatePartNumber',  # noqa: E501
-        'enabled_active_multiple_workflows': 'enabledActiveMultipleWorkflows',  # noqa: E501
     }
 
     @staticmethod
@@ -146,19 +146,19 @@ class BTActiveWorkflowInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             company_id (str): [optional]  # noqa: E501
-            release_workflow_id (str): [optional]  # noqa: E501
-            obsoletion_workflow_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             using_managed_workflow (bool): [optional]  # noqa: E501
             can_current_user_create_releases (bool): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             release_workflow (bt_published_workflow_info.BTPublishedWorkflowInfo): [optional]  # noqa: E501
             obsoletion_workflow (bt_published_workflow_info.BTPublishedWorkflowInfo): [optional]  # noqa: E501
+            release_workflow_id (str): [optional]  # noqa: E501
+            obsoletion_workflow_id (str): [optional]  # noqa: E501
+            drawing_can_duplicate_part_number (bool): [optional]  # noqa: E501
+            enabled_active_multiple_workflows (bool): [optional]  # noqa: E501
             using_auto_part_numbering (bool): [optional]  # noqa: E501
             pickable_workflows ([bt_published_workflow_info.BTPublishedWorkflowInfo]): [optional]  # noqa: E501
             using_auto_part_numbering_scheme (bool): [optional]  # noqa: E501
             can_create_releases (bool): [optional]  # noqa: E501
-            drawing_can_duplicate_part_number (bool): [optional]  # noqa: E501
-            enabled_active_multiple_workflows (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

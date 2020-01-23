@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paid_customer_in_past** | **bool** |  | [optional] 
 **plan_id** | **str** |  | [optional] 
-**trial_end_date** | **datetime** |  | [optional] 
 **seats** | **int** |  | [optional] 
+**paid_customer_in_past** | **bool** |  | [optional] 
+**trial_end_date** | **datetime** |  | [optional] 
 **plan_interval** | **str** |  | [optional] 
 **trial_start_date** | **datetime** |  | [optional] 
 **trial_days_remaining** | **int** |  | [optional] 

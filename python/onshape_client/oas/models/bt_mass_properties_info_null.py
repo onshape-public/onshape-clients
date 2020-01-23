@@ -80,12 +80,12 @@ class BTMassPropertiesInfoNull(ModelNormal):
         return {
             'principal_inertia': ([float],),  # noqa: E501
             'principal_axes': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
-            'inertia': ([float],),  # noqa: E501
-            'volume': ([float],),  # noqa: E501
-            'mass': ([float],),  # noqa: E501
             'has_mass': (bool,),  # noqa: E501
+            'mass': ([float],),  # noqa: E501
+            'volume': ([float],),  # noqa: E501
             'periphery': ([float],),  # noqa: E501
             'centroid': ([float],),  # noqa: E501
+            'inertia': ([float],),  # noqa: E501
             'mass_missing_count': (int,),  # noqa: E501
         }
 
@@ -96,12 +96,12 @@ class BTMassPropertiesInfoNull(ModelNormal):
     attribute_map = {
         'principal_inertia': 'principalInertia',  # noqa: E501
         'principal_axes': 'principalAxes',  # noqa: E501
-        'inertia': 'inertia',  # noqa: E501
-        'volume': 'volume',  # noqa: E501
-        'mass': 'mass',  # noqa: E501
         'has_mass': 'hasMass',  # noqa: E501
+        'mass': 'mass',  # noqa: E501
+        'volume': 'volume',  # noqa: E501
         'periphery': 'periphery',  # noqa: E501
         'centroid': 'centroid',  # noqa: E501
+        'inertia': 'inertia',  # noqa: E501
         'mass_missing_count': 'massMissingCount',  # noqa: E501
     }
 
@@ -137,12 +137,12 @@ class BTMassPropertiesInfoNull(ModelNormal):
                                 If omitted no type conversion is done.
             principal_inertia ([float]): [optional]  # noqa: E501
             principal_axes ([bt_vector3d389.BTVector3d389]): [optional]  # noqa: E501
-            inertia ([float]): [optional]  # noqa: E501
-            volume ([float]): [optional]  # noqa: E501
-            mass ([float]): [optional]  # noqa: E501
             has_mass (bool): [optional]  # noqa: E501
+            mass ([float]): [optional]  # noqa: E501
+            volume ([float]): [optional]  # noqa: E501
             periphery ([float]): [optional]  # noqa: E501
             centroid ([float]): [optional]  # noqa: E501
+            inertia ([float]): [optional]  # noqa: E501
             mass_missing_count (int): [optional]  # noqa: E501
         """
 

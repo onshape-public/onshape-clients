@@ -78,9 +78,9 @@ class BTTorusDescription1834AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'major_radius': (float,),  # noqa: E501
             'minor_radius': (float,),  # noqa: E501
             'axis': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'major_radius': (float,),  # noqa: E501
             'origin': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
@@ -90,9 +90,9 @@ class BTTorusDescription1834AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        'major_radius': 'majorRadius',  # noqa: E501
         'minor_radius': 'minorRadius',  # noqa: E501
         'axis': 'axis',  # noqa: E501
-        'major_radius': 'majorRadius',  # noqa: E501
         'origin': 'origin',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
@@ -127,9 +127,9 @@ class BTTorusDescription1834AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            major_radius (float): [optional]  # noqa: E501
             minor_radius (float): [optional]  # noqa: E501
             axis (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
-            major_radius (float): [optional]  # noqa: E501
             origin (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """

@@ -84,18 +84,18 @@ class BTDocumentLabelInfo(ModelNormal):
         return {
             'parent_label_id': (str,),  # noqa: E501
             'path': (str,),  # noqa: E501
+            'modified_at': (datetime,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
             'is_enterprise_owned': (bool,),  # noqa: E501
+            'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'modified_at': (datetime,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -111,18 +111,18 @@ class BTDocumentLabelInfo(ModelNormal):
     attribute_map = {
         'parent_label_id': 'parentLabelId',  # noqa: E501
         'path': 'path',  # noqa: E501
+        'modified_at': 'modifiedAt',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
         'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
         'modified_by': 'modifiedBy',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'modified_at': 'modifiedAt',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -163,18 +163,18 @@ class BTDocumentLabelInfo(ModelNormal):
                                 If omitted no type conversion is done.
             parent_label_id (str): [optional]  # noqa: E501
             path (str): [optional]  # noqa: E501
+            modified_at (datetime): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
             is_enterprise_owned (bool): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            modified_at (datetime): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501

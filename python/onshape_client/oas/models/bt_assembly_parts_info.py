@@ -83,14 +83,14 @@ class BTAssemblyPartsInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'part_id': (str,),  # noqa: E501
             'standard_content': (bool,),  # noqa: E501
+            'part_id': (str,),  # noqa: E501
             'body_type': (str,),  # noqa: E501
+            'configuration': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'revision': (str,),  # noqa: E501
             'document_microversion': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'full_configuration': (str,),  # noqa: E501
             'document_version': (str,),  # noqa: E501
         }
@@ -100,14 +100,14 @@ class BTAssemblyPartsInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'part_id': 'partId',  # noqa: E501
         'standard_content': 'standardContent',  # noqa: E501
+        'part_id': 'partId',  # noqa: E501
         'body_type': 'bodyType',  # noqa: E501
+        'configuration': 'configuration',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'revision': 'revision',  # noqa: E501
         'document_microversion': 'documentMicroversion',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'full_configuration': 'fullConfiguration',  # noqa: E501
         'document_version': 'documentVersion',  # noqa: E501
     }
@@ -142,14 +142,14 @@ class BTAssemblyPartsInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            part_id (str): [optional]  # noqa: E501
             standard_content (bool): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             body_type (str): [optional]  # noqa: E501
+            configuration (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             revision (str): [optional]  # noqa: E501
             document_microversion (str): [optional]  # noqa: E501
-            configuration (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             full_configuration (str): [optional]  # noqa: E501
             document_version (str): [optional]  # noqa: E501
         """

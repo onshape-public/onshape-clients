@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **second_deterministic_id** | **str** |  | [optional] 
-**second_entity_query** | **str** |  | [optional] 
 **inference_type** | **str** |  | [optional] 
+**second_entity_query** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **path** | **[str]** |  | [optional] 
 **deterministic_ids** | **[str]** |  | [optional] 
 **deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
-**query_string** | **str** |  | [optional] 
 **query** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
+**query_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **entity_query** | **str** |  | [optional] 

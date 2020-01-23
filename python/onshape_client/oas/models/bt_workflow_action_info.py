@@ -74,15 +74,15 @@ class BTWorkflowActionInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'action': (str,),  # noqa: E501
-            'is_approver_action': (bool,),  # noqa: E501
-            'required_properties': ([str],),  # noqa: E501
-            'ui_hint': (str,),  # noqa: E501
-            'is_admin_override': (bool,),  # noqa: E501
-            'label': (str,),  # noqa: E501
             'allow_if_no_approvers': (bool,),  # noqa: E501
             'allow_if_approvers': (bool,),  # noqa: E501
             'always_allow': (bool,),  # noqa: E501
+            'is_approver_action': (bool,),  # noqa: E501
+            'action': (str,),  # noqa: E501
+            'is_admin_override': (bool,),  # noqa: E501
+            'required_properties': ([str],),  # noqa: E501
+            'ui_hint': (str,),  # noqa: E501
+            'label': (str,),  # noqa: E501
             'tooltip': (str,),  # noqa: E501
         }
 
@@ -91,15 +91,15 @@ class BTWorkflowActionInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'action': 'action',  # noqa: E501
-        'is_approver_action': 'isApproverAction',  # noqa: E501
-        'required_properties': 'requiredProperties',  # noqa: E501
-        'ui_hint': 'uiHint',  # noqa: E501
-        'is_admin_override': 'isAdminOverride',  # noqa: E501
-        'label': 'label',  # noqa: E501
         'allow_if_no_approvers': 'allowIfNoApprovers',  # noqa: E501
         'allow_if_approvers': 'allowIfApprovers',  # noqa: E501
         'always_allow': 'alwaysAllow',  # noqa: E501
+        'is_approver_action': 'isApproverAction',  # noqa: E501
+        'action': 'action',  # noqa: E501
+        'is_admin_override': 'isAdminOverride',  # noqa: E501
+        'required_properties': 'requiredProperties',  # noqa: E501
+        'ui_hint': 'uiHint',  # noqa: E501
+        'label': 'label',  # noqa: E501
         'tooltip': 'tooltip',  # noqa: E501
     }
 
@@ -133,15 +133,15 @@ class BTWorkflowActionInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            action (str): [optional]  # noqa: E501
-            is_approver_action (bool): [optional]  # noqa: E501
-            required_properties ([str]): [optional]  # noqa: E501
-            ui_hint (str): [optional]  # noqa: E501
-            is_admin_override (bool): [optional]  # noqa: E501
-            label (str): [optional]  # noqa: E501
             allow_if_no_approvers (bool): [optional]  # noqa: E501
             allow_if_approvers (bool): [optional]  # noqa: E501
             always_allow (bool): [optional]  # noqa: E501
+            is_approver_action (bool): [optional]  # noqa: E501
+            action (str): [optional]  # noqa: E501
+            is_admin_override (bool): [optional]  # noqa: E501
+            required_properties ([str]): [optional]  # noqa: E501
+            ui_hint (str): [optional]  # noqa: E501
+            label (str): [optional]  # noqa: E501
             tooltip (str): [optional]  # noqa: E501
         """
 

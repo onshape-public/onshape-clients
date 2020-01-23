@@ -118,29 +118,29 @@ class BTFeatureSpec129(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'all_parameters': ([bt_parameter_spec6.BTParameterSpec6],),  # noqa: E501
-            'full_feature_type': (str,),  # noqa: E501
-            'localized_name': (str,),  # noqa: E501
-            'localizable_name': (str,),  # noqa: E501
             'additional_localized_strings': (int,),  # noqa: E501
+            'full_feature_type': (str,),  # noqa: E501
+            'all_parameters': ([bt_parameter_spec6.BTParameterSpec6],),  # noqa: E501
+            'localizable_name': (str,),  # noqa: E501
+            'localized_name': (str,),  # noqa: E501
             'location_infos': ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
             'namespace_the_source': (bool,),  # noqa: E501
             'namespace_including_enums': (str,),  # noqa: E501
             'signature': (str,),  # noqa: E501
             'strings_to_localize': ([str],),  # noqa: E501
+            'source_microversion_id': (str,),  # noqa: E501
             'feature_type_name': (str,),  # noqa: E501
             'feature_type': (str,),  # noqa: E501
             'groups': ([bt_parameter_group_spec3469.BTParameterGroupSpec3469],),  # noqa: E501
-            'source_location': (bt_location_info226.BTLocationInfo226,),  # noqa: E501
-            'icon_uri': (str,),  # noqa: E501
             'ui_hints': ([str],),  # noqa: E501
+            'source_location': (bt_location_info226.BTLocationInfo226,),  # noqa: E501
             'language_version': (int,),  # noqa: E501
             'linked_location_name': (str,),  # noqa: E501
+            'icon_uri': (str,),  # noqa: E501
+            'feature_name_template': (str,),  # noqa: E501
             'manipulator_change_function': (str,),  # noqa: E501
             'filter_selectors': ([str],),  # noqa: E501
             'editing_logic': (bt_editing_logic2350.BTEditingLogic2350,),  # noqa: E501
-            'source_microversion_id': (str,),  # noqa: E501
-            'feature_name_template': (str,),  # noqa: E501
             'parameters': ([bt_parameter_spec6.BTParameterSpec6],),  # noqa: E501
             'namespace': (str,),  # noqa: E501
         }
@@ -150,29 +150,29 @@ class BTFeatureSpec129(ModelNormal):
         return None
 
     attribute_map = {
-        'all_parameters': 'allParameters',  # noqa: E501
-        'full_feature_type': 'fullFeatureType',  # noqa: E501
-        'localized_name': 'localizedName',  # noqa: E501
-        'localizable_name': 'localizableName',  # noqa: E501
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
+        'full_feature_type': 'fullFeatureType',  # noqa: E501
+        'all_parameters': 'allParameters',  # noqa: E501
+        'localizable_name': 'localizableName',  # noqa: E501
+        'localized_name': 'localizedName',  # noqa: E501
         'location_infos': 'locationInfos',  # noqa: E501
         'namespace_the_source': 'namespaceTheSource',  # noqa: E501
         'namespace_including_enums': 'namespaceIncludingEnums',  # noqa: E501
         'signature': 'signature',  # noqa: E501
         'strings_to_localize': 'stringsToLocalize',  # noqa: E501
+        'source_microversion_id': 'sourceMicroversionId',  # noqa: E501
         'feature_type_name': 'featureTypeName',  # noqa: E501
         'feature_type': 'featureType',  # noqa: E501
         'groups': 'groups',  # noqa: E501
-        'source_location': 'sourceLocation',  # noqa: E501
-        'icon_uri': 'iconUri',  # noqa: E501
         'ui_hints': 'uiHints',  # noqa: E501
+        'source_location': 'sourceLocation',  # noqa: E501
         'language_version': 'languageVersion',  # noqa: E501
         'linked_location_name': 'linkedLocationName',  # noqa: E501
+        'icon_uri': 'iconUri',  # noqa: E501
+        'feature_name_template': 'featureNameTemplate',  # noqa: E501
         'manipulator_change_function': 'manipulatorChangeFunction',  # noqa: E501
         'filter_selectors': 'filterSelectors',  # noqa: E501
         'editing_logic': 'editingLogic',  # noqa: E501
-        'source_microversion_id': 'sourceMicroversionId',  # noqa: E501
-        'feature_name_template': 'featureNameTemplate',  # noqa: E501
         'parameters': 'parameters',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
     }
@@ -207,29 +207,29 @@ class BTFeatureSpec129(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            all_parameters ([bt_parameter_spec6.BTParameterSpec6]): [optional]  # noqa: E501
-            full_feature_type (str): [optional]  # noqa: E501
-            localized_name (str): [optional]  # noqa: E501
-            localizable_name (str): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
+            full_feature_type (str): [optional]  # noqa: E501
+            all_parameters ([bt_parameter_spec6.BTParameterSpec6]): [optional]  # noqa: E501
+            localizable_name (str): [optional]  # noqa: E501
+            localized_name (str): [optional]  # noqa: E501
             location_infos ([bt_location_info226.BTLocationInfo226]): [optional]  # noqa: E501
             namespace_the_source (bool): [optional]  # noqa: E501
             namespace_including_enums (str): [optional]  # noqa: E501
             signature (str): [optional]  # noqa: E501
             strings_to_localize ([str]): [optional]  # noqa: E501
+            source_microversion_id (str): [optional]  # noqa: E501
             feature_type_name (str): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
             groups ([bt_parameter_group_spec3469.BTParameterGroupSpec3469]): [optional]  # noqa: E501
-            source_location (bt_location_info226.BTLocationInfo226): [optional]  # noqa: E501
-            icon_uri (str): [optional]  # noqa: E501
             ui_hints ([str]): [optional]  # noqa: E501
+            source_location (bt_location_info226.BTLocationInfo226): [optional]  # noqa: E501
             language_version (int): [optional]  # noqa: E501
             linked_location_name (str): [optional]  # noqa: E501
+            icon_uri (str): [optional]  # noqa: E501
+            feature_name_template (str): [optional]  # noqa: E501
             manipulator_change_function (str): [optional]  # noqa: E501
             filter_selectors ([str]): [optional]  # noqa: E501
             editing_logic (bt_editing_logic2350.BTEditingLogic2350): [optional]  # noqa: E501
-            source_microversion_id (str): [optional]  # noqa: E501
-            feature_name_template (str): [optional]  # noqa: E501
             parameters ([bt_parameter_spec6.BTParameterSpec6]): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
         """

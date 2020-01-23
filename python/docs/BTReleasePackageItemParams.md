@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | **str** |  | [optional] 
 **version_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
+**configuration** | **str** |  | [optional] 
 **is_included** | **bool** |  | [optional] 
 **not_editable_in_version_properties** | [**bt_release_package_item_params_not_editable_in_version_properties.BTReleasePackageItemParamsNotEditableInVersionProperties**](BTReleasePackageItemParamsNotEditableInVersionProperties.md) |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **properties** | [**[bt_property_value_param.BTPropertyValueParam]**](BTPropertyValueParam.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 

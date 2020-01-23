@@ -78,13 +78,13 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'display_name': (str,),  # noqa: E501
             'property_id': (str,),  # noqa: E501
             'publish_state': (int,),  # noqa: E501
             'schema_id': (str,),  # noqa: E501
             'object_type': (int,),  # noqa: E501
             'category_id': (str,),  # noqa: E501
             'category_summary_info': (bt_metadata_category_summary_info.BTMetadataCategorySummaryInfo,),  # noqa: E501
-            'display_name': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,13 +92,13 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
+        'display_name': 'displayName',  # noqa: E501
         'property_id': 'propertyId',  # noqa: E501
         'publish_state': 'publishState',  # noqa: E501
         'schema_id': 'schemaId',  # noqa: E501
         'object_type': 'objectType',  # noqa: E501
         'category_id': 'categoryId',  # noqa: E501
         'category_summary_info': 'categorySummaryInfo',  # noqa: E501
-        'display_name': 'displayName',  # noqa: E501
     }
 
     @staticmethod
@@ -131,13 +131,13 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            display_name (str): [optional]  # noqa: E501
             property_id (str): [optional]  # noqa: E501
             publish_state (int): [optional]  # noqa: E501
             schema_id (str): [optional]  # noqa: E501
             object_type (int): [optional]  # noqa: E501
             category_id (str): [optional]  # noqa: E501
             category_summary_info (bt_metadata_category_summary_info.BTMetadataCategorySummaryInfo): [optional]  # noqa: E501
-            display_name (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

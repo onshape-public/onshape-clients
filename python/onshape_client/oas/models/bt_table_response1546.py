@@ -78,8 +78,8 @@ class BTTableResponse1546(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'table': (bt_table1825.BTTable1825,),  # noqa: E501
             'source_microversion': (str,),  # noqa: E501
+            'table': (bt_table1825.BTTable1825,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTTableResponse1546(ModelNormal):
         return None
 
     attribute_map = {
-        'table': 'table',  # noqa: E501
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'table': 'table',  # noqa: E501
     }
 
     @staticmethod
@@ -121,8 +121,8 @@ class BTTableResponse1546(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            table (bt_table1825.BTTable1825): [optional]  # noqa: E501
             source_microversion (str): [optional]  # noqa: E501
+            table (bt_table1825.BTTable1825): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**predefined_role** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
+**predefined_role** | **int** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 

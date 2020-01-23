@@ -75,10 +75,10 @@ class BTMaterialPropertyParams(ModelNormal):
         """
         return {
             'category': (str,),  # noqa: E501
+            'units': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
-            'units': (str,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
         }
@@ -89,10 +89,10 @@ class BTMaterialPropertyParams(ModelNormal):
 
     attribute_map = {
         'category': 'category',  # noqa: E501
+        'units': 'units',  # noqa: E501
         'name': 'name',  # noqa: E501
         'value': 'value',  # noqa: E501
         'type': 'type',  # noqa: E501
-        'units': 'units',  # noqa: E501
         'display_name': 'displayName',  # noqa: E501
         'description': 'description',  # noqa: E501
     }
@@ -128,10 +128,10 @@ class BTMaterialPropertyParams(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             category (str): [optional]  # noqa: E501
+            units (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
-            units (str): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
         """

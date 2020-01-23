@@ -87,11 +87,11 @@ class BTFeatureListResponse2457AllOf(ModelNormal):
         """
         return {
             'features': ([btm_feature134.BTMFeature134],),  # noqa: E501
+            'rollback_index': (int,),  # noqa: E501
             'is_complete': (bool,),  # noqa: E501
             'feature_states': ({str: (bt_feature_state1688.BTFeatureState1688,)},),  # noqa: E501
-            'imports': ([btm_import136.BTMImport136],),  # noqa: E501
             'default_features': ([btm_feature134.BTMFeature134],),  # noqa: E501
-            'rollback_index': (int,),  # noqa: E501
+            'imports': ([btm_import136.BTMImport136],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -101,11 +101,11 @@ class BTFeatureListResponse2457AllOf(ModelNormal):
 
     attribute_map = {
         'features': 'features',  # noqa: E501
+        'rollback_index': 'rollbackIndex',  # noqa: E501
         'is_complete': 'isComplete',  # noqa: E501
         'feature_states': 'featureStates',  # noqa: E501
-        'imports': 'imports',  # noqa: E501
         'default_features': 'defaultFeatures',  # noqa: E501
-        'rollback_index': 'rollbackIndex',  # noqa: E501
+        'imports': 'imports',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -140,11 +140,11 @@ class BTFeatureListResponse2457AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
+            rollback_index (int): [optional]  # noqa: E501
             is_complete (bool): [optional]  # noqa: E501
             feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
-            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
             default_features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
-            rollback_index (int): [optional]  # noqa: E501
+            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

@@ -75,24 +75,30 @@ class BTTranslateFormatParams(ModelNormal):
         """
         return {
             'configuration': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
             'link_document_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
             'link_document_workspace_id': (str,),  # noqa: E501
             'store_in_document': (bool,),  # noqa: E501
             'from_user_id': (str,),  # noqa: E501
             'cloud_storage_account_id': (str,),  # noqa: E501
+            'connection_id': (str,),  # noqa: E501
+            'notify_user': (bool,),  # noqa: E501
+            'part_ids': (str,),  # noqa: E501
             'cloud_object_id': (str,),  # noqa: E501
             'email_link': (bool,),  # noqa: E501
-            'notify_user': (bool,),  # noqa: E501
-            'connection_id': (str,),  # noqa: E501
+            'password_required': (bool,),  # noqa: E501
+            'email_subject': (str,),  # noqa: E501
+            'email_message': (str,),  # noqa: E501
+            'email_to': ([str],),  # noqa: E501
+            'send_copy_to_me': (bool,),  # noqa: E501
             'trigger_auto_download': (bool,),  # noqa: E501
             'destination_name': (str,),  # noqa: E501
             'source_name': (str,),  # noqa: E501
             'distance_tolerance': (float,),  # noqa: E501
             'angular_tolerance': (float,),  # noqa: E501
             'maximum_chord_length': (float,),  # noqa: E501
-            'version_string': (str,),  # noqa: E501
             'valid_for_days': (int,),  # noqa: E501
+            'version_string': (str,),  # noqa: E501
             'format_name': (str,),  # noqa: E501
             'flatten': (bool,),  # noqa: E501
             'include_export_ids': (bool,),  # noqa: E501
@@ -106,17 +112,13 @@ class BTTranslateFormatParams(ModelNormal):
             'selectable_pdf_text': (bool,),  # noqa: E501
             'grouping': (bool,),  # noqa: E501
             'import_in_background': (bool,),  # noqa: E501
-            'part_ids': (str,),  # noqa: E501
-            'password_required': (bool,),  # noqa: E501
-            'email_to': ([str],),  # noqa: E501
-            'email_subject': (str,),  # noqa: E501
-            'email_message': (str,),  # noqa: E501
-            'send_copy_to_me': (bool,),  # noqa: E501
             'password': (str,),  # noqa: E501
-            'unit': (str,),  # noqa: E501
-            'specify_units': (bool,),  # noqa: E501
             'project_id': (str,),  # noqa: E501
             'parent_id': (str,),  # noqa: E501
+            'foreign_id': (str,),  # noqa: E501
+            'upload_id': (str,),  # noqa: E501
+            'specify_units': (bool,),  # noqa: E501
+            'unit': (str,),  # noqa: E501
             'split_assemblies_into_multiple_documents': (bool,),  # noqa: E501
             'flatten_assemblies': (bool,),  # noqa: E501
             'gety_axis_is_up': (bool,),  # noqa: E501
@@ -124,13 +126,11 @@ class BTTranslateFormatParams(ModelNormal):
             'create_composite': (bool,),  # noqa: E501
             'extract_assembly_hierarchy': (bool,),  # noqa: E501
             'join_adjacent_surfaces': (bool,),  # noqa: E501
-            'foreign_id': (str,),  # noqa: E501
-            'upload_id': (str,),  # noqa: E501
+            'processed_foreign_id': (str,),  # noqa: E501
             'original_foreign_id': (str,),  # noqa: E501
             'import_within_document': (bool,),  # noqa: E501
             'blob_element_id': (str,),  # noqa: E501
             'blob_microversion_id': (str,),  # noqa: E501
-            'processed_foreign_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -139,24 +139,30 @@ class BTTranslateFormatParams(ModelNormal):
 
     attribute_map = {
         'configuration': 'configuration',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
         'link_document_id': 'linkDocumentId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
         'link_document_workspace_id': 'linkDocumentWorkspaceId',  # noqa: E501
         'store_in_document': 'storeInDocument',  # noqa: E501
         'from_user_id': 'fromUserId',  # noqa: E501
         'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
+        'connection_id': 'connectionId',  # noqa: E501
+        'notify_user': 'notifyUser',  # noqa: E501
+        'part_ids': 'partIds',  # noqa: E501
         'cloud_object_id': 'cloudObjectId',  # noqa: E501
         'email_link': 'emailLink',  # noqa: E501
-        'notify_user': 'notifyUser',  # noqa: E501
-        'connection_id': 'connectionId',  # noqa: E501
+        'password_required': 'passwordRequired',  # noqa: E501
+        'email_subject': 'emailSubject',  # noqa: E501
+        'email_message': 'emailMessage',  # noqa: E501
+        'email_to': 'emailTo',  # noqa: E501
+        'send_copy_to_me': 'sendCopyToMe',  # noqa: E501
         'trigger_auto_download': 'triggerAutoDownload',  # noqa: E501
         'destination_name': 'destinationName',  # noqa: E501
         'source_name': 'sourceName',  # noqa: E501
         'distance_tolerance': 'distanceTolerance',  # noqa: E501
         'angular_tolerance': 'angularTolerance',  # noqa: E501
         'maximum_chord_length': 'maximumChordLength',  # noqa: E501
-        'version_string': 'versionString',  # noqa: E501
         'valid_for_days': 'validForDays',  # noqa: E501
+        'version_string': 'versionString',  # noqa: E501
         'format_name': 'formatName',  # noqa: E501
         'flatten': 'flatten',  # noqa: E501
         'include_export_ids': 'includeExportIds',  # noqa: E501
@@ -170,17 +176,13 @@ class BTTranslateFormatParams(ModelNormal):
         'selectable_pdf_text': 'selectablePdfText',  # noqa: E501
         'grouping': 'grouping',  # noqa: E501
         'import_in_background': 'importInBackground',  # noqa: E501
-        'part_ids': 'partIds',  # noqa: E501
-        'password_required': 'passwordRequired',  # noqa: E501
-        'email_to': 'emailTo',  # noqa: E501
-        'email_subject': 'emailSubject',  # noqa: E501
-        'email_message': 'emailMessage',  # noqa: E501
-        'send_copy_to_me': 'sendCopyToMe',  # noqa: E501
         'password': 'password',  # noqa: E501
-        'unit': 'unit',  # noqa: E501
-        'specify_units': 'specifyUnits',  # noqa: E501
         'project_id': 'projectId',  # noqa: E501
         'parent_id': 'parentId',  # noqa: E501
+        'foreign_id': 'foreignId',  # noqa: E501
+        'upload_id': 'uploadId',  # noqa: E501
+        'specify_units': 'specifyUnits',  # noqa: E501
+        'unit': 'unit',  # noqa: E501
         'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',  # noqa: E501
         'flatten_assemblies': 'flattenAssemblies',  # noqa: E501
         'gety_axis_is_up': 'getyAxisIsUp',  # noqa: E501
@@ -188,13 +190,11 @@ class BTTranslateFormatParams(ModelNormal):
         'create_composite': 'createComposite',  # noqa: E501
         'extract_assembly_hierarchy': 'extractAssemblyHierarchy',  # noqa: E501
         'join_adjacent_surfaces': 'joinAdjacentSurfaces',  # noqa: E501
-        'foreign_id': 'foreignId',  # noqa: E501
-        'upload_id': 'uploadId',  # noqa: E501
+        'processed_foreign_id': 'processedForeignId',  # noqa: E501
         'original_foreign_id': 'originalForeignId',  # noqa: E501
         'import_within_document': 'importWithinDocument',  # noqa: E501
         'blob_element_id': 'blobElementId',  # noqa: E501
         'blob_microversion_id': 'blobMicroversionId',  # noqa: E501
-        'processed_foreign_id': 'processedForeignId',  # noqa: E501
     }
 
     @staticmethod
@@ -228,24 +228,30 @@ class BTTranslateFormatParams(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             configuration (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
             link_document_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
             link_document_workspace_id (str): [optional]  # noqa: E501
             store_in_document (bool): [optional]  # noqa: E501
             from_user_id (str): [optional]  # noqa: E501
             cloud_storage_account_id (str): [optional]  # noqa: E501
+            connection_id (str): [optional]  # noqa: E501
+            notify_user (bool): [optional]  # noqa: E501
+            part_ids (str): [optional]  # noqa: E501
             cloud_object_id (str): [optional]  # noqa: E501
             email_link (bool): [optional]  # noqa: E501
-            notify_user (bool): [optional]  # noqa: E501
-            connection_id (str): [optional]  # noqa: E501
+            password_required (bool): [optional]  # noqa: E501
+            email_subject (str): [optional]  # noqa: E501
+            email_message (str): [optional]  # noqa: E501
+            email_to ([str]): [optional]  # noqa: E501
+            send_copy_to_me (bool): [optional]  # noqa: E501
             trigger_auto_download (bool): [optional]  # noqa: E501
             destination_name (str): [optional]  # noqa: E501
             source_name (str): [optional]  # noqa: E501
             distance_tolerance (float): [optional]  # noqa: E501
             angular_tolerance (float): [optional]  # noqa: E501
             maximum_chord_length (float): [optional]  # noqa: E501
-            version_string (str): [optional]  # noqa: E501
             valid_for_days (int): [optional]  # noqa: E501
+            version_string (str): [optional]  # noqa: E501
             format_name (str): [optional]  # noqa: E501
             flatten (bool): [optional]  # noqa: E501
             include_export_ids (bool): [optional]  # noqa: E501
@@ -259,17 +265,13 @@ class BTTranslateFormatParams(ModelNormal):
             selectable_pdf_text (bool): [optional]  # noqa: E501
             grouping (bool): [optional]  # noqa: E501
             import_in_background (bool): [optional]  # noqa: E501
-            part_ids (str): [optional]  # noqa: E501
-            password_required (bool): [optional]  # noqa: E501
-            email_to ([str]): [optional]  # noqa: E501
-            email_subject (str): [optional]  # noqa: E501
-            email_message (str): [optional]  # noqa: E501
-            send_copy_to_me (bool): [optional]  # noqa: E501
             password (str): [optional]  # noqa: E501
-            unit (str): [optional]  # noqa: E501
-            specify_units (bool): [optional]  # noqa: E501
             project_id (str): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
+            foreign_id (str): [optional]  # noqa: E501
+            upload_id (str): [optional]  # noqa: E501
+            specify_units (bool): [optional]  # noqa: E501
+            unit (str): [optional]  # noqa: E501
             split_assemblies_into_multiple_documents (bool): [optional]  # noqa: E501
             flatten_assemblies (bool): [optional]  # noqa: E501
             gety_axis_is_up (bool): [optional]  # noqa: E501
@@ -277,13 +279,11 @@ class BTTranslateFormatParams(ModelNormal):
             create_composite (bool): [optional]  # noqa: E501
             extract_assembly_hierarchy (bool): [optional]  # noqa: E501
             join_adjacent_surfaces (bool): [optional]  # noqa: E501
-            foreign_id (str): [optional]  # noqa: E501
-            upload_id (str): [optional]  # noqa: E501
+            processed_foreign_id (str): [optional]  # noqa: E501
             original_foreign_id (str): [optional]  # noqa: E501
             import_within_document (bool): [optional]  # noqa: E501
             blob_element_id (str): [optional]  # noqa: E501
             blob_microversion_id (str): [optional]  # noqa: E501
-            processed_foreign_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

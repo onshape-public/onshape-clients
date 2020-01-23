@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **read_only** | **bool** |  | [optional] 
 **default_header_name** | **str** |  | [optional] 
-**default_text_alignment** | **str** |  | [optional] 
 **default_cell_spec** | [**bt_parameter_spec6.BTParameterSpec6**](BTParameterSpec6.md) |  | [optional] 
+**default_text_alignment** | **str** |  | [optional] 
 **default_column_width_value** | **int** |  | [optional] 
 **default_column_width_units** | **str** |  | [optional] 
 

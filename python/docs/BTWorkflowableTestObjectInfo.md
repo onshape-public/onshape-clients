@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **info** | **{str: (str,)}** |  | [optional] 
-**company_id** | **str** |  | [optional] 
-**workflow** | [**bt_workflow_snapshot_info.BTWorkflowSnapshotInfo**](BTWorkflowSnapshotInfo.md) |  | [optional] 
-**description** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
 **is_obsoletion** | **bool** |  | [optional] 
+**description** | **str** |  | [optional] 
+**company_id** | **str** |  | [optional] 
 **workflow_id** | [**bt_published_workflow_id.BTPublishedWorkflowId**](BTPublishedWorkflowId.md) |  | [optional] 
+**workflow** | [**bt_workflow_snapshot_info.BTWorkflowSnapshotInfo**](BTWorkflowSnapshotInfo.md) |  | [optional] 
+**document_id** | **str** |  | [optional] 
 **name_as_property** | **str** |  | [optional] 
 **description_as_property** | **str** |  | [optional] 
 **properties** | [**[bt_workflow_property_info.BTWorkflowPropertyInfo]**](BTWorkflowPropertyInfo.md) |  | [optional] 

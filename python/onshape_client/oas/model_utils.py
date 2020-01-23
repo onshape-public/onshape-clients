@@ -903,6 +903,8 @@ def recursive_discriminator(model_class):
     for discriminator_key, discriminator_dict in model_class.discriminator().items():
         for child_class in discriminator_dict.values():
             for child_discriminator_key, child_discriminator_dict in recursive_discriminator(child_class).items():
+                if 'BTPLiteralBoolean-255' in child_discriminator_dict.keys():
+                    y=5
                 if child_discriminator_key in recursive_discriminated_types:
                     recursive_discriminated_types[child_discriminator_key].update(child_discriminator_dict)
                 else:

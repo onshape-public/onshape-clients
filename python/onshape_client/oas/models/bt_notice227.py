@@ -100,8 +100,8 @@ class BTNotice227(ModelNormal):
         return {
             'location_infos': ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
             'parameter_id': (str,),  # noqa: E501
-            'try_node': (bt_node_reference21.BTNodeReference21,),  # noqa: E501
             'message': (str,),  # noqa: E501
+            'try_node': (bt_node_reference21.BTNodeReference21,),  # noqa: E501
             'stack_trace': ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
             'type': (str,),  # noqa: E501
             'level': (str,),  # noqa: E501
@@ -115,8 +115,8 @@ class BTNotice227(ModelNormal):
     attribute_map = {
         'location_infos': 'locationInfos',  # noqa: E501
         'parameter_id': 'parameterId',  # noqa: E501
-        'try_node': 'tryNode',  # noqa: E501
         'message': 'message',  # noqa: E501
+        'try_node': 'tryNode',  # noqa: E501
         'stack_trace': 'stackTrace',  # noqa: E501
         'type': 'type',  # noqa: E501
         'level': 'level',  # noqa: E501
@@ -155,8 +155,8 @@ class BTNotice227(ModelNormal):
                                 If omitted no type conversion is done.
             location_infos ([bt_location_info226.BTLocationInfo226]): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501
-            try_node (bt_node_reference21.BTNodeReference21): [optional]  # noqa: E501
             message (str): [optional]  # noqa: E501
+            try_node (bt_node_reference21.BTNodeReference21): [optional]  # noqa: E501
             stack_trace ([bt_location_info226.BTLocationInfo226]): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
             level (str): [optional]  # noqa: E501

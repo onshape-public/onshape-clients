@@ -90,6 +90,7 @@ class BTInnerArrayParameterLocation2368(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'type': (str,),  # noqa: E501
             'outer_parameter_id': (str,),  # noqa: E501
             'index': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -105,6 +106,7 @@ class BTInnerArrayParameterLocation2368(ModelComposed):
         }
 
     attribute_map = {
+        'type': '@type',  # noqa: E501
         'outer_parameter_id': 'outerParameterId',  # noqa: E501
         'index': 'index',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -139,6 +141,7 @@ class BTInnerArrayParameterLocation2368(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            type (str): [optional]  # noqa: E501
             outer_parameter_id (str): [optional]  # noqa: E501
             index (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

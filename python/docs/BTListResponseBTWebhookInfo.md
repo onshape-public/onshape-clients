@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_webhook_info.BTWebhookInfo]**](BTWebhookInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_webhook_info.BTWebhookInfo]**](BTWebhookInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

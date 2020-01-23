@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain_prefix** | **str** |  | [optional] 
-**admin** | **bool** |  | [optional] 
 **owner_id** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
+**admin** | **bool** |  | [optional] 
 **description** | **str** |  | [optional] 
 **no_public_documents** | **bool** |  | [optional] 
 **enterprise_base_url** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
 **state** | **int** |  | [optional] 
 **type** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 

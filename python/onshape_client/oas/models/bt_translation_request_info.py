@@ -80,11 +80,11 @@ class BTTranslationRequestInfo(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
             'result_element_ids': ([str],),  # noqa: E501
             'result_document_id': (str,),  # noqa: E501
             'failure_reason': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
+            'workspace_id': (str,),  # noqa: E501
             'result_workspace_id': (str,),  # noqa: E501
             'request_state': (str,),  # noqa: E501
             'request_element_id': (str,),  # noqa: E501
@@ -101,11 +101,11 @@ class BTTranslationRequestInfo(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
         'result_element_ids': 'resultElementIds',  # noqa: E501
         'result_document_id': 'resultDocumentId',  # noqa: E501
         'failure_reason': 'failureReason',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
+        'workspace_id': 'workspaceId',  # noqa: E501
         'result_workspace_id': 'resultWorkspaceId',  # noqa: E501
         'request_state': 'requestState',  # noqa: E501
         'request_element_id': 'requestElementId',  # noqa: E501
@@ -147,11 +147,11 @@ class BTTranslationRequestInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            workspace_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             result_element_ids ([str]): [optional]  # noqa: E501
             result_document_id (str): [optional]  # noqa: E501
             failure_reason (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            workspace_id (str): [optional]  # noqa: E501
             result_workspace_id (str): [optional]  # noqa: E501
             request_state (str): [optional]  # noqa: E501
             request_element_id (str): [optional]  # noqa: E501

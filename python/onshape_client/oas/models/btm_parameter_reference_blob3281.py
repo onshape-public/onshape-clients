@@ -112,9 +112,9 @@ class BTMParameterReferenceBlob3281(ModelComposed):
         return {
             'bt_type': {
                 'BTMParameterReferenceJSON-790': btm_parameter_reference_json790.BTMParameterReferenceJSON790,
-                'BTMParameterReferenceImage-2014': btm_parameter_reference_image2014.BTMParameterReferenceImage2014,
                 'BTMParameterReferenceTable-917': btm_parameter_reference_table917.BTMParameterReferenceTable917,
                 'BTMParameterReferenceCADImport-2016': btm_parameter_reference_cad_import2016.BTMParameterReferenceCADImport2016,
+                'BTMParameterReferenceImage-2014': btm_parameter_reference_image2014.BTMParameterReferenceImage2014,
             },
         }
 

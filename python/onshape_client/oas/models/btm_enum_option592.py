@@ -74,8 +74,8 @@ class BTMEnumOption592(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'option_name': (str,),  # noqa: E501
             'option': (str,),  # noqa: E501
+            'option_name': (str,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -86,8 +86,8 @@ class BTMEnumOption592(ModelNormal):
         return None
 
     attribute_map = {
-        'option_name': 'optionName',  # noqa: E501
         'option': 'option',  # noqa: E501
+        'option_name': 'optionName',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -123,8 +123,8 @@ class BTMEnumOption592(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            option_name (str): [optional]  # noqa: E501
             option (str): [optional]  # noqa: E501
+            option_name (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

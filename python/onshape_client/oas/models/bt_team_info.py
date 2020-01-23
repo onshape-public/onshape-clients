@@ -34,6 +34,10 @@ try:
 except ImportError:
     bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
 try:
+    from onshape_client.oas.models import bt_team_info
+except ImportError:
+    bt_team_info = sys.modules['onshape_client.oas.models.bt_team_info']
+try:
     from onshape_client.oas.models import bt_team_info_all_of
 except ImportError:
     bt_team_info_all_of = sys.modules['onshape_client.oas.models.bt_team_info_all_of']
@@ -90,59 +94,65 @@ class BTTeamInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'json_type': (str,),  # noqa: E501
+            'admin': (bool,),  # noqa: E501
+            'member': (bool,),  # noqa: E501
+            'size': (int,),  # noqa: E501
             'predefined_team': (int,),  # noqa: E501
             'active': (bool,),  # noqa: E501
+            'modified_at': (datetime,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
             'is_enterprise_owned': (bool,),  # noqa: E501
+            'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'modified_at': (datetime,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
-            'admin': (bool,),  # noqa: E501
-            'member': (bool,),  # noqa: E501
-            'size': (int,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
-        return None
+        return {
+            'json_type': {
+                'team': bt_team_info.BTTeamInfo,
+            },
+        }
 
     attribute_map = {
+        'json_type': 'jsonType',  # noqa: E501
+        'admin': 'admin',  # noqa: E501
+        'member': 'member',  # noqa: E501
+        'size': 'size',  # noqa: E501
         'predefined_team': 'predefinedTeam',  # noqa: E501
         'active': 'active',  # noqa: E501
+        'modified_at': 'modifiedAt',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
         'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
         'modified_by': 'modifiedBy',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'modified_at': 'modifiedAt',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'admin': 'admin',  # noqa: E501
-        'member': 'member',  # noqa: E501
-        'size': 'size',  # noqa: E501
     }
 
     required_properties = set([
@@ -174,29 +184,30 @@ class BTTeamInfo(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            json_type (str): [optional]  # noqa: E501
+            admin (bool): [optional]  # noqa: E501
+            member (bool): [optional]  # noqa: E501
+            size (int): [optional]  # noqa: E501
             predefined_team (int): [optional]  # noqa: E501
             active (bool): [optional]  # noqa: E501
+            modified_at (datetime): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
             is_enterprise_owned (bool): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            modified_at (datetime): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
-            admin (bool): [optional]  # noqa: E501
-            member (bool): [optional]  # noqa: E501
-            size (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}
@@ -242,3 +253,16 @@ class BTTeamInfo(ModelComposed):
           'oneOf': [
           ],
         }
+
+    @classmethod
+    def get_discriminator_class(cls, from_server, data):
+        """Returns the child class specified by the discriminator"""
+        discriminator = cls.discriminator()
+        discr_propertyname_py = list(discriminator.keys())[0]
+        discr_propertyname_js = cls.attribute_map[discr_propertyname_py]
+        if from_server:
+            class_name = data[discr_propertyname_js]
+        else:
+            class_name = data[discr_propertyname_py]
+        class_name_to_discr_class = discriminator[discr_propertyname_py]
+        return class_name_to_discr_class.get(class_name)

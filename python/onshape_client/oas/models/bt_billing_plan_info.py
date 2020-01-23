@@ -82,16 +82,16 @@ class BTBillingPlanInfo(ModelNormal):
             'discount_info': (bt_discount_info.BTDiscountInfo,),  # noqa: E501
             'trial_period_days': (int,),  # noqa: E501
             'group': (str,),  # noqa: E501
+            'application_id': (str,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'hidden': (bool,),  # noqa: E501
+            'interval': (str,),  # noqa: E501
+            'company_plan': (bool,),  # noqa: E501
             'amount_cents': (int,),  # noqa: E501
+            'onshape_plan': (bool,),  # noqa: E501
             'deprecated': (bool,),  # noqa: E501
             'plan_type': (int,),  # noqa: E501
             'consumable_quantity': (int,),  # noqa: E501
-            'interval': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'onshape_plan': (bool,),  # noqa: E501
-            'application_id': (str,),  # noqa: E501
-            'company_plan': (bool,),  # noqa: E501
-            'hidden': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -107,16 +107,16 @@ class BTBillingPlanInfo(ModelNormal):
         'discount_info': 'discountInfo',  # noqa: E501
         'trial_period_days': 'trialPeriodDays',  # noqa: E501
         'group': 'group',  # noqa: E501
+        'application_id': 'applicationId',  # noqa: E501
+        'description': 'description',  # noqa: E501
+        'hidden': 'hidden',  # noqa: E501
+        'interval': 'interval',  # noqa: E501
+        'company_plan': 'companyPlan',  # noqa: E501
         'amount_cents': 'amountCents',  # noqa: E501
+        'onshape_plan': 'onshapePlan',  # noqa: E501
         'deprecated': 'deprecated',  # noqa: E501
         'plan_type': 'planType',  # noqa: E501
         'consumable_quantity': 'consumableQuantity',  # noqa: E501
-        'interval': 'interval',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'onshape_plan': 'onshapePlan',  # noqa: E501
-        'application_id': 'applicationId',  # noqa: E501
-        'company_plan': 'companyPlan',  # noqa: E501
-        'hidden': 'hidden',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -157,16 +157,16 @@ class BTBillingPlanInfo(ModelNormal):
             discount_info (bt_discount_info.BTDiscountInfo): [optional]  # noqa: E501
             trial_period_days (int): [optional]  # noqa: E501
             group (str): [optional]  # noqa: E501
+            application_id (str): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            hidden (bool): [optional]  # noqa: E501
+            interval (str): [optional]  # noqa: E501
+            company_plan (bool): [optional]  # noqa: E501
             amount_cents (int): [optional]  # noqa: E501
+            onshape_plan (bool): [optional]  # noqa: E501
             deprecated (bool): [optional]  # noqa: E501
             plan_type (int): [optional]  # noqa: E501
             consumable_quantity (int): [optional]  # noqa: E501
-            interval (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            onshape_plan (bool): [optional]  # noqa: E501
-            application_id (str): [optional]  # noqa: E501
-            company_plan (bool): [optional]  # noqa: E501
-            hidden (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

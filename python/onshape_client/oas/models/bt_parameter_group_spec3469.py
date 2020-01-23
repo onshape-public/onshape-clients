@@ -74,13 +74,13 @@ class BTParameterGroupSpec3469(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'localized_name': (str,),  # noqa: E501
             'localizable_name': (str,),  # noqa: E501
+            'localized_name': (str,),  # noqa: E501
             'additional_localized_strings': (int,),  # noqa: E501
             'strings_to_localize': ([str],),  # noqa: E501
             'group_name': (str,),  # noqa: E501
-            'group_id': (str,),  # noqa: E501
             'driving_parameter_id': (str,),  # noqa: E501
+            'group_id': (str,),  # noqa: E501
             'collapsed_by_default': (bool,),  # noqa: E501
             'group_or_parameter_ids': ([str],),  # noqa: E501
         }
@@ -90,13 +90,13 @@ class BTParameterGroupSpec3469(ModelNormal):
         return None
 
     attribute_map = {
-        'localized_name': 'localizedName',  # noqa: E501
         'localizable_name': 'localizableName',  # noqa: E501
+        'localized_name': 'localizedName',  # noqa: E501
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'strings_to_localize': 'stringsToLocalize',  # noqa: E501
         'group_name': 'groupName',  # noqa: E501
-        'group_id': 'groupId',  # noqa: E501
         'driving_parameter_id': 'drivingParameterId',  # noqa: E501
+        'group_id': 'groupId',  # noqa: E501
         'collapsed_by_default': 'collapsedByDefault',  # noqa: E501
         'group_or_parameter_ids': 'groupOrParameterIds',  # noqa: E501
     }
@@ -131,13 +131,13 @@ class BTParameterGroupSpec3469(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            localized_name (str): [optional]  # noqa: E501
             localizable_name (str): [optional]  # noqa: E501
+            localized_name (str): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
             strings_to_localize ([str]): [optional]  # noqa: E501
             group_name (str): [optional]  # noqa: E501
-            group_id (str): [optional]  # noqa: E501
             driving_parameter_id (str): [optional]  # noqa: E501
+            group_id (str): [optional]  # noqa: E501
             collapsed_by_default (bool): [optional]  # noqa: E501
             group_or_parameter_ids ([str]): [optional]  # noqa: E501
         """

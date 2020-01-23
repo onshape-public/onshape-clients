@@ -74,9 +74,9 @@ class BTVector3d389(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'x': (float,),  # noqa: E501
             'z': (float,),  # noqa: E501
             'y': (float,),  # noqa: E501
-            'x': (float,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -85,9 +85,9 @@ class BTVector3d389(ModelNormal):
         return None
 
     attribute_map = {
+        'x': 'x',  # noqa: E501
         'z': 'z',  # noqa: E501
         'y': 'y',  # noqa: E501
-        'x': 'x',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -121,9 +121,9 @@ class BTVector3d389(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            x (float): [optional]  # noqa: E501
             z (float): [optional]  # noqa: E501
             y (float): [optional]  # noqa: E501
-            x (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

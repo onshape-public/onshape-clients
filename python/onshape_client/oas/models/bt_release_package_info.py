@@ -99,22 +99,22 @@ class BTReleasePackageInfo(ModelNormal):
         """
         return {
             'items': ([bt_release_package_item_info.BTReleasePackageItemInfo],),  # noqa: E501
-            'comments': ([bt_comment_info.BTCommentInfo],),  # noqa: E501
             'detailed': (bool,),  # noqa: E501
             'column_names': ({str: (str,)},),  # noqa: E501
+            'comments': ([bt_comment_info.BTCommentInfo],),  # noqa: E501
             'parent_comments': ([bt_release_comment_list_info.BTReleaseCommentListInfo],),  # noqa: E501
             'package_thumbnail': (str,),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
             'revision_rule_id': (str,),  # noqa: E501
             'parent_packages': ([str],),  # noqa: E501
             'linked_version_ids': ([str],),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'workflow': (bt_workflow_snapshot_info.BTWorkflowSnapshotInfo,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
+            'workspace_id': (str,),  # noqa: E501
             'is_obsoletion': (bool,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'company_id': (str,),  # noqa: E501
             'workflow_id': (bt_published_workflow_id.BTPublishedWorkflowId,),  # noqa: E501
+            'workflow': (bt_workflow_snapshot_info.BTWorkflowSnapshotInfo,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'name_as_property': (str,),  # noqa: E501
             'description_as_property': (str,),  # noqa: E501
             'properties': ([bt_workflow_property_info.BTWorkflowPropertyInfo],),  # noqa: E501
@@ -130,22 +130,22 @@ class BTReleasePackageInfo(ModelNormal):
 
     attribute_map = {
         'items': 'items',  # noqa: E501
-        'comments': 'comments',  # noqa: E501
         'detailed': 'detailed',  # noqa: E501
         'column_names': 'columnNames',  # noqa: E501
+        'comments': 'comments',  # noqa: E501
         'parent_comments': 'parentComments',  # noqa: E501
         'package_thumbnail': 'packageThumbnail',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
         'revision_rule_id': 'revisionRuleId',  # noqa: E501
         'parent_packages': 'parentPackages',  # noqa: E501
         'linked_version_ids': 'linkedVersionIds',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'workflow': 'workflow',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
+        'workspace_id': 'workspaceId',  # noqa: E501
         'is_obsoletion': 'isObsoletion',  # noqa: E501
+        'description': 'description',  # noqa: E501
+        'company_id': 'companyId',  # noqa: E501
         'workflow_id': 'workflowId',  # noqa: E501
+        'workflow': 'workflow',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'name_as_property': 'nameAsProperty',  # noqa: E501
         'description_as_property': 'descriptionAsProperty',  # noqa: E501
         'properties': 'properties',  # noqa: E501
@@ -186,22 +186,22 @@ class BTReleasePackageInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             items ([bt_release_package_item_info.BTReleasePackageItemInfo]): [optional]  # noqa: E501
-            comments ([bt_comment_info.BTCommentInfo]): [optional]  # noqa: E501
             detailed (bool): [optional]  # noqa: E501
             column_names ({str: (str,)}): [optional]  # noqa: E501
+            comments ([bt_comment_info.BTCommentInfo]): [optional]  # noqa: E501
             parent_comments ([bt_release_comment_list_info.BTReleaseCommentListInfo]): [optional]  # noqa: E501
             package_thumbnail (str): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            workspace_id (str): [optional]  # noqa: E501
             revision_rule_id (str): [optional]  # noqa: E501
             parent_packages ([str]): [optional]  # noqa: E501
             linked_version_ids ([str]): [optional]  # noqa: E501
-            company_id (str): [optional]  # noqa: E501
-            workflow (bt_workflow_snapshot_info.BTWorkflowSnapshotInfo): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
+            workspace_id (str): [optional]  # noqa: E501
             is_obsoletion (bool): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            company_id (str): [optional]  # noqa: E501
             workflow_id (bt_published_workflow_id.BTPublishedWorkflowId): [optional]  # noqa: E501
+            workflow (bt_workflow_snapshot_info.BTWorkflowSnapshotInfo): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             name_as_property (str): [optional]  # noqa: E501
             description_as_property (str): [optional]  # noqa: E501
             properties ([bt_workflow_property_info.BTWorkflowPropertyInfo]): [optional]  # noqa: E501

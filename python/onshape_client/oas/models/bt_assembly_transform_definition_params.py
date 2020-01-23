@@ -78,8 +78,8 @@ class BTAssemblyTransformDefinitionParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'occurrences': ([bt_occurrence74.BTOccurrence74],),  # noqa: E501
             'transform': ([float],),  # noqa: E501
+            'occurrences': ([bt_occurrence74.BTOccurrence74],),  # noqa: E501
             'is_relative': (bool,),  # noqa: E501
         }
 
@@ -88,8 +88,8 @@ class BTAssemblyTransformDefinitionParams(ModelNormal):
         return None
 
     attribute_map = {
-        'occurrences': 'occurrences',  # noqa: E501
         'transform': 'transform',  # noqa: E501
+        'occurrences': 'occurrences',  # noqa: E501
         'is_relative': 'isRelative',  # noqa: E501
     }
 
@@ -123,8 +123,8 @@ class BTAssemblyTransformDefinitionParams(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            occurrences ([bt_occurrence74.BTOccurrence74]): [optional]  # noqa: E501
             transform ([float]): [optional]  # noqa: E501
+            occurrences ([bt_occurrence74.BTOccurrence74]): [optional]  # noqa: E501
             is_relative (bool): [optional]  # noqa: E501
         """
 

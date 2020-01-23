@@ -78,10 +78,10 @@ class BTRbacPermissionSchemeInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'predefined_permission_scheme': (int,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
             'entries': ([entry.Entry],),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'predefined_permission_scheme': (int,),  # noqa: E501
+            'active': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -93,10 +93,10 @@ class BTRbacPermissionSchemeInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'predefined_permission_scheme': 'predefinedPermissionScheme',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'active': 'active',  # noqa: E501
         'entries': 'entries',  # noqa: E501
+        'description': 'description',  # noqa: E501
+        'predefined_permission_scheme': 'predefinedPermissionScheme',  # noqa: E501
+        'active': 'active',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -133,10 +133,10 @@ class BTRbacPermissionSchemeInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            predefined_permission_scheme (int): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            active (bool): [optional]  # noqa: E501
             entries ([entry.Entry]): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            predefined_permission_scheme (int): [optional]  # noqa: E501
+            active (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

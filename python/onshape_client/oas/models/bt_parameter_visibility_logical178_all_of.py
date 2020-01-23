@@ -29,6 +29,10 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+try:
+    from onshape_client.oas.models import bt_parameter_visibility_condition177
+except ImportError:
+    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
 
 
 class BTParameterVisibilityLogical178AllOf(ModelNormal):
@@ -81,7 +85,7 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
         """
         return {
             'operation': (str,),  # noqa: E501
-            'children': ([object],),  # noqa: E501
+            'children': ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -126,7 +130,7 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             operation (str): [optional]  # noqa: E501
-            children ([object]): [optional]  # noqa: E501
+            children ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

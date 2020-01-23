@@ -110,8 +110,8 @@ class BTMSketchGeomEntity5(ModelNormal):
         return {
             'bt_type': {
                 'BTMSketchImageEntity-763': btm_sketch_image_entity763.BTMSketchImageEntity763,
-                'BTMSketchCurve-4': btm_sketch_curve4.BTMSketchCurve4,
                 'BTMSketchTextEntity-1761': btm_sketch_text_entity1761.BTMSketchTextEntity1761,
+                'BTMSketchCurve-4': btm_sketch_curve4.BTMSketchCurve4,
                 'BTMSketchPoint-158': btm_sketch_point158.BTMSketchPoint158,
             },
         }

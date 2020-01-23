@@ -82,13 +82,13 @@ class BTWorkflowSnapshotInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'is_setup': (bool,),  # noqa: E501
-            'approver_ids': ([str],),  # noqa: E501
-            'notifier_ids': ([str],),  # noqa: E501
             'is_frozen': (bool,),  # noqa: E501
             'metadata_state': (str,),  # noqa: E501
+            'is_setup': (bool,),  # noqa: E501
             'is_discarded': (bool,),  # noqa: E501
             'actions': ([bt_workflow_action_info.BTWorkflowActionInfo],),  # noqa: E501
+            'approver_ids': ([str],),  # noqa: E501
+            'notifier_ids': ([str],),  # noqa: E501
             'state': (bt_workflow_state_info.BTWorkflowStateInfo,),  # noqa: E501
         }
 
@@ -97,13 +97,13 @@ class BTWorkflowSnapshotInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'is_setup': 'isSetup',  # noqa: E501
-        'approver_ids': 'approverIds',  # noqa: E501
-        'notifier_ids': 'notifierIds',  # noqa: E501
         'is_frozen': 'isFrozen',  # noqa: E501
         'metadata_state': 'metadataState',  # noqa: E501
+        'is_setup': 'isSetup',  # noqa: E501
         'is_discarded': 'isDiscarded',  # noqa: E501
         'actions': 'actions',  # noqa: E501
+        'approver_ids': 'approverIds',  # noqa: E501
+        'notifier_ids': 'notifierIds',  # noqa: E501
         'state': 'state',  # noqa: E501
     }
 
@@ -137,13 +137,13 @@ class BTWorkflowSnapshotInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_setup (bool): [optional]  # noqa: E501
-            approver_ids ([str]): [optional]  # noqa: E501
-            notifier_ids ([str]): [optional]  # noqa: E501
             is_frozen (bool): [optional]  # noqa: E501
             metadata_state (str): [optional]  # noqa: E501
+            is_setup (bool): [optional]  # noqa: E501
             is_discarded (bool): [optional]  # noqa: E501
             actions ([bt_workflow_action_info.BTWorkflowActionInfo]): [optional]  # noqa: E501
+            approver_ids ([str]): [optional]  # noqa: E501
+            notifier_ids ([str]): [optional]  # noqa: E501
             state (bt_workflow_state_info.BTWorkflowStateInfo): [optional]  # noqa: E501
         """
 

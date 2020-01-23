@@ -78,8 +78,8 @@ class BTPartAppearanceInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'opacity': (int,),  # noqa: E501
             'color': (bt_color_info.BTColorInfo,),  # noqa: E501
+            'opacity': (int,),  # noqa: E501
             'is_generated': (bool,),  # noqa: E501
         }
 
@@ -88,8 +88,8 @@ class BTPartAppearanceInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'opacity': 'opacity',  # noqa: E501
         'color': 'color',  # noqa: E501
+        'opacity': 'opacity',  # noqa: E501
         'is_generated': 'isGenerated',  # noqa: E501
     }
 
@@ -123,8 +123,8 @@ class BTPartAppearanceInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            opacity (int): [optional]  # noqa: E501
             color (bt_color_info.BTColorInfo): [optional]  # noqa: E501
+            opacity (int): [optional]  # noqa: E501
             is_generated (bool): [optional]  # noqa: E501
         """
 

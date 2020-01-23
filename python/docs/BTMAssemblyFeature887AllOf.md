@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auxiliary_assembly_feature** | **bool** |  | [optional] 
 **feature_list_field_index** | **int** |  | [optional] 
+**auxiliary_assembly_feature** | **bool** |  | [optional] 
 **occurrence_queries_from_all_configurations** | [**[btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
 **version** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

@@ -80,11 +80,11 @@ class BTShareParams(ModelNormal):
         return {
             'folder_id': (str,),  # noqa: E501
             'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
+            'update': (bool,),  # noqa: E501
+            'encoded_configuration': (str,),  # noqa: E501
             'workspace_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
-            'encoded_configuration': (str,),  # noqa: E501
-            'update': (bool,),  # noqa: E501
             'message': (str,),  # noqa: E501
             'entries': ([bt_share_entry_params.BTShareEntryParams],),  # noqa: E501
             'permission': (int,),  # noqa: E501
@@ -97,11 +97,11 @@ class BTShareParams(ModelNormal):
     attribute_map = {
         'folder_id': 'folderId',  # noqa: E501
         'permission_set': 'permissionSet',  # noqa: E501
+        'update': 'update',  # noqa: E501
+        'encoded_configuration': 'encodedConfiguration',  # noqa: E501
         'workspace_id': 'workspaceId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
-        'encoded_configuration': 'encodedConfiguration',  # noqa: E501
-        'update': 'update',  # noqa: E501
         'message': 'message',  # noqa: E501
         'entries': 'entries',  # noqa: E501
         'permission': 'permission',  # noqa: E501
@@ -139,11 +139,11 @@ class BTShareParams(ModelNormal):
                                 If omitted no type conversion is done.
             folder_id (str): [optional]  # noqa: E501
             permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            update (bool): [optional]  # noqa: E501
+            encoded_configuration (str): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
-            encoded_configuration (str): [optional]  # noqa: E501
-            update (bool): [optional]  # noqa: E501
             message (str): [optional]  # noqa: E501
             entries ([bt_share_entry_params.BTShareEntryParams]): [optional]  # noqa: E501
             permission (int): [optional]  # noqa: E501

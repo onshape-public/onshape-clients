@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[bt_revision_info.BTRevisionInfo]**](BTRevisionInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
+**items** | [**[bt_revision_info.BTRevisionInfo]**](BTRevisionInfo.md) |  | [optional] 
 **previous** | **str** |  | [optional] 
 **next** | **str** |  | [optional] 
 

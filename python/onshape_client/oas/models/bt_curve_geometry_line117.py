@@ -82,10 +82,10 @@ class BTCurveGeometryLine117(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'pnt_x': (float,),  # noqa: E501
-            'pnt_y': (float,),  # noqa: E501
-            'dir_x': (float,),  # noqa: E501
             'dir_y': (float,),  # noqa: E501
+            'dir_x': (float,),  # noqa: E501
+            'pnt_y': (float,),  # noqa: E501
+            'pnt_x': (float,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -94,10 +94,10 @@ class BTCurveGeometryLine117(ModelComposed):
         return None
 
     attribute_map = {
-        'pnt_x': 'pntX',  # noqa: E501
-        'pnt_y': 'pntY',  # noqa: E501
-        'dir_x': 'dirX',  # noqa: E501
         'dir_y': 'dirY',  # noqa: E501
+        'dir_x': 'dirX',  # noqa: E501
+        'pnt_y': 'pntY',  # noqa: E501
+        'pnt_x': 'pntX',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -130,10 +130,10 @@ class BTCurveGeometryLine117(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            pnt_x (float): [optional]  # noqa: E501
-            pnt_y (float): [optional]  # noqa: E501
-            dir_x (float): [optional]  # noqa: E501
             dir_y (float): [optional]  # noqa: E501
+            dir_x (float): [optional]  # noqa: E501
+            pnt_y (float): [optional]  # noqa: E501
+            pnt_x (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

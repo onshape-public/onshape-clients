@@ -133,17 +133,17 @@ class BTPProcedureDeclarationBase266(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
+            'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
             'precondition': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_arglist': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
             'return_type': (btp_type_name290.BTPTypeName290,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'short_descriptor': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
@@ -162,24 +162,24 @@ class BTPProcedureDeclarationBase266(ModelComposed):
     def discriminator():
         return {
             'bt_type': {
+                'BTPConversionFunction-1362': btp_conversion_function1362.BTPConversionFunction1362,
                 'BTPOperatorDeclaration-264': btp_operator_declaration264.BTPOperatorDeclaration264,
                 'BTPFunctionOrPredicateDeclaration-247': btp_function_or_predicate_declaration247.BTPFunctionOrPredicateDeclaration247,
-                'BTPConversionFunction-1362': btp_conversion_function1362.BTPConversionFunction1362,
             },
         }
 
     attribute_map = {
-        'body': 'body',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'arguments': 'arguments',  # noqa: E501
+        'body': 'body',  # noqa: E501
         'precondition': 'precondition',  # noqa: E501
         'space_after_arglist': 'spaceAfterArglist',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
         'return_type': 'returnType',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'short_descriptor': 'shortDescriptor',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
@@ -223,17 +223,17 @@ class BTPProcedureDeclarationBase266(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
+            body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
             return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             short_descriptor (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501

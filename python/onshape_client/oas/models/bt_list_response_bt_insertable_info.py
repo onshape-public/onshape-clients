@@ -78,8 +78,8 @@ class BTListResponseBTInsertableInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'items': ([bt_insertable_info.BTInsertableInfo],),  # noqa: E501
             'href': (str,),  # noqa: E501
+            'items': ([bt_insertable_info.BTInsertableInfo],),  # noqa: E501
             'previous': (str,),  # noqa: E501
             'next': (str,),  # noqa: E501
         }
@@ -89,8 +89,8 @@ class BTListResponseBTInsertableInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'items': 'items',  # noqa: E501
         'href': 'href',  # noqa: E501
+        'items': 'items',  # noqa: E501
         'previous': 'previous',  # noqa: E501
         'next': 'next',  # noqa: E501
     }
@@ -125,8 +125,8 @@ class BTListResponseBTInsertableInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            items ([bt_insertable_info.BTInsertableInfo]): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
+            items ([bt_insertable_info.BTInsertableInfo]): [optional]  # noqa: E501
             previous (str): [optional]  # noqa: E501
             next (str): [optional]  # noqa: E501
         """

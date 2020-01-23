@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**node_type** | **str** |  | [optional] 
-**textual** | **bool** |  | [optional] 
 **object** | **bool** |  | [optional] 
-**boolean** | **bool** |  | [optional] 
+**textual** | **bool** |  | [optional] 
+**node_type** | **str** |  | [optional] 
 **missing_node** | **bool** |  | [optional] 
+**boolean** | **bool** |  | [optional] 
 **binary** | **bool** |  | [optional] 
 **value_node** | **bool** |  | [optional] 
 **container_node** | **bool** |  | [optional] 

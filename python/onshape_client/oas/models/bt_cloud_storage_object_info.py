@@ -86,31 +86,31 @@ class BTCloudStorageObjectInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'mime_type': (str,),  # noqa: E501
             'thumbnail_info': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            'cloud_storage_account_id': (str,),  # noqa: E501
+            'parent_id': (str,),  # noqa: E501
             'cloud_storage_provider': (int,),  # noqa: E501
             'cloud_storage_object_id': (str,),  # noqa: E501
             'size_bytes': (int,),  # noqa: E501
-            'cloud_storage_account_id': (str,),  # noqa: E501
+            'mime_type': (str,),  # noqa: E501
             'web_view_link': (str,),  # noqa: E501
             'icon_link': (str,),  # noqa: E501
             'created_by_id': (str,),  # noqa: E501
             'modified_by_id': (str,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
             'modified_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'project_id': (str,),  # noqa: E501
+            'can_move': (bool,),  # noqa: E501
+            'is_container': (bool,),  # noqa: E501
+            'is_enterprise_owned': (bool,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'is_enterprise_owned': (bool,),  # noqa: E501
+            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
+            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
             'has_pending_owner': (bool,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -122,31 +122,31 @@ class BTCloudStorageObjectInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'mime_type': 'mimeType',  # noqa: E501
         'thumbnail_info': 'thumbnailInfo',  # noqa: E501
+        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
+        'parent_id': 'parentId',  # noqa: E501
         'cloud_storage_provider': 'cloudStorageProvider',  # noqa: E501
         'cloud_storage_object_id': 'cloudStorageObjectId',  # noqa: E501
         'size_bytes': 'sizeBytes',  # noqa: E501
-        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
+        'mime_type': 'mimeType',  # noqa: E501
         'web_view_link': 'webViewLink',  # noqa: E501
         'icon_link': 'iconLink',  # noqa: E501
         'created_by_id': 'createdById',  # noqa: E501
         'modified_by_id': 'modifiedById',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
         'modified_at': 'modifiedAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'modified_by': 'modifiedBy',  # noqa: E501
+        'project_id': 'projectId',  # noqa: E501
+        'can_move': 'canMove',  # noqa: E501
+        'is_container': 'isContainer',  # noqa: E501
+        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
         'description': 'description',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
-        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
+        'created_by': 'createdBy',  # noqa: E501
+        'modified_by': 'modifiedBy',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
         'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'owner': 'owner',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
         'href': 'href',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -183,31 +183,31 @@ class BTCloudStorageObjectInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            mime_type (str): [optional]  # noqa: E501
             thumbnail_info (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            cloud_storage_account_id (str): [optional]  # noqa: E501
+            parent_id (str): [optional]  # noqa: E501
             cloud_storage_provider (int): [optional]  # noqa: E501
             cloud_storage_object_id (str): [optional]  # noqa: E501
             size_bytes (int): [optional]  # noqa: E501
-            cloud_storage_account_id (str): [optional]  # noqa: E501
+            mime_type (str): [optional]  # noqa: E501
             web_view_link (str): [optional]  # noqa: E501
             icon_link (str): [optional]  # noqa: E501
             created_by_id (str): [optional]  # noqa: E501
             modified_by_id (str): [optional]  # noqa: E501
-            parent_id (str): [optional]  # noqa: E501
             modified_at (datetime): [optional]  # noqa: E501
-            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            project_id (str): [optional]  # noqa: E501
+            can_move (bool): [optional]  # noqa: E501
+            is_container (bool): [optional]  # noqa: E501
+            is_enterprise_owned (bool): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            is_enterprise_owned (bool): [optional]  # noqa: E501
+            created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
+            modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            is_container (bool): [optional]  # noqa: E501
-            can_move (bool): [optional]  # noqa: E501
             has_pending_owner (bool): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
-            project_id (str): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

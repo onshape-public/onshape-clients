@@ -79,8 +79,8 @@ class BTAssemblyFeatureInfo(ModelNormal):
         """
         return {
             'feature_type': (str,),  # noqa: E501
-            'feature_data': (bt_assembly_feature_data_info.BTAssemblyFeatureDataInfo,),  # noqa: E501
             'suppressed': (bool,),  # noqa: E501
+            'feature_data': (bt_assembly_feature_data_info.BTAssemblyFeatureDataInfo,),  # noqa: E501
             'id': (str,),  # noqa: E501
         }
 
@@ -90,8 +90,8 @@ class BTAssemblyFeatureInfo(ModelNormal):
 
     attribute_map = {
         'feature_type': 'featureType',  # noqa: E501
-        'feature_data': 'featureData',  # noqa: E501
         'suppressed': 'suppressed',  # noqa: E501
+        'feature_data': 'featureData',  # noqa: E501
         'id': 'id',  # noqa: E501
     }
 
@@ -126,8 +126,8 @@ class BTAssemblyFeatureInfo(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             feature_type (str): [optional]  # noqa: E501
-            feature_data (bt_assembly_feature_data_info.BTAssemblyFeatureDataInfo): [optional]  # noqa: E501
             suppressed (bool): [optional]  # noqa: E501
+            feature_data (bt_assembly_feature_data_info.BTAssemblyFeatureDataInfo): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
         """
 

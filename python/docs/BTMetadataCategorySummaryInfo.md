@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner_id** | **str** |  | [optional] 
-**publish_state** | **int** |  | [optional] 
-**description** | **str** |  | [optional] 
 **owner_type** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 **display_name** | **str** |  | [optional] 
+**publish_state** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

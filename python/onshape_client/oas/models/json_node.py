@@ -85,11 +85,11 @@ class JsonNode(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'node_type': (str,),  # noqa: E501
-            'textual': (bool,),  # noqa: E501
             'object': (bool,),  # noqa: E501
-            'boolean': (bool,),  # noqa: E501
+            'textual': (bool,),  # noqa: E501
+            'node_type': (str,),  # noqa: E501
             'missing_node': (bool,),  # noqa: E501
+            'boolean': (bool,),  # noqa: E501
             'binary': (bool,),  # noqa: E501
             'value_node': (bool,),  # noqa: E501
             'container_node': (bool,),  # noqa: E501
@@ -113,11 +113,11 @@ class JsonNode(ModelNormal):
         return None
 
     attribute_map = {
-        'node_type': 'nodeType',  # noqa: E501
-        'textual': 'textual',  # noqa: E501
         'object': 'object',  # noqa: E501
-        'boolean': 'boolean',  # noqa: E501
+        'textual': 'textual',  # noqa: E501
+        'node_type': 'nodeType',  # noqa: E501
         'missing_node': 'missingNode',  # noqa: E501
+        'boolean': 'boolean',  # noqa: E501
         'binary': 'binary',  # noqa: E501
         'value_node': 'valueNode',  # noqa: E501
         'container_node': 'containerNode',  # noqa: E501
@@ -166,11 +166,11 @@ class JsonNode(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            node_type (str): [optional]  # noqa: E501
-            textual (bool): [optional]  # noqa: E501
             object (bool): [optional]  # noqa: E501
-            boolean (bool): [optional]  # noqa: E501
+            textual (bool): [optional]  # noqa: E501
+            node_type (str): [optional]  # noqa: E501
             missing_node (bool): [optional]  # noqa: E501
+            boolean (bool): [optional]  # noqa: E501
             binary (bool): [optional]  # noqa: E501
             value_node (bool): [optional]  # noqa: E501
             container_node (bool): [optional]  # noqa: E501

@@ -75,12 +75,12 @@ class BTUniqueDocumentItemParams(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
+            'part_number': (str,),  # noqa: E501
+            'part_id': (str,),  # noqa: E501
             'workspace_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
             'api_configuration': (str,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
             'element_type': (str,),  # noqa: E501
             'revision': (str,),  # noqa: E501
         }
@@ -91,12 +91,12 @@ class BTUniqueDocumentItemParams(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
+        'part_number': 'partNumber',  # noqa: E501
+        'part_id': 'partId',  # noqa: E501
         'workspace_id': 'workspaceId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
         'api_configuration': 'apiConfiguration',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
         'element_type': 'elementType',  # noqa: E501
         'revision': 'revision',  # noqa: E501
     }
@@ -132,12 +132,12 @@ class BTUniqueDocumentItemParams(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
+            part_number (str): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
             api_configuration (str): [optional]  # noqa: E501
-            part_number (str): [optional]  # noqa: E501
-            part_id (str): [optional]  # noqa: E501
             element_type (str): [optional]  # noqa: E501
             revision (str): [optional]  # noqa: E501
         """

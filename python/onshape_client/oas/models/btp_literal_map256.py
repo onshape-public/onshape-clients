@@ -94,9 +94,9 @@ class BTPLiteralMap256(ModelNormal):
         """
         return {
             'short_descriptor': (str,),  # noqa: E501
-            'trailing_comma': (bool,),  # noqa: E501
-            'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
             'entries': ([btp_literal_map_entry257.BTPLiteralMapEntry257],),  # noqa: E501
+            'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
+            'trailing_comma': (bool,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'atomic': (bool,),  # noqa: E501
@@ -114,9 +114,9 @@ class BTPLiteralMap256(ModelNormal):
 
     attribute_map = {
         'short_descriptor': 'shortDescriptor',  # noqa: E501
-        'trailing_comma': 'trailingComma',  # noqa: E501
-        'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
         'entries': 'entries',  # noqa: E501
+        'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
+        'trailing_comma': 'trailingComma',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'atomic': 'atomic',  # noqa: E501
@@ -159,9 +159,9 @@ class BTPLiteralMap256(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             short_descriptor (str): [optional]  # noqa: E501
-            trailing_comma (bool): [optional]  # noqa: E501
-            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
             entries ([btp_literal_map_entry257.BTPLiteralMapEntry257]): [optional]  # noqa: E501
+            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            trailing_comma (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501

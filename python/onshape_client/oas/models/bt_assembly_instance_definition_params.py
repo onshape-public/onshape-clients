@@ -75,18 +75,18 @@ class BTAssemblyInstanceDefinitionParams(ModelNormal):
         """
         return {
             'version_id': (str,),  # noqa: E501
-            'revision': (str,),  # noqa: E501
+            'microversion_id': (str,),  # noqa: E501
+            'part_id': (str,),  # noqa: E501
             'configuration': (str,),  # noqa: E501
             'part_number': (str,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
-            'microversion_id': (str,),  # noqa: E501
+            'element_id': (str,),  # noqa: E501
+            'revision': (str,),  # noqa: E501
+            'feature_id': (str,),  # noqa: E501
             'is_hidden': (bool,),  # noqa: E501
             'is_suppressed': (bool,),  # noqa: E501
             'is_assembly': (bool,),  # noqa: E501
             'is_whole_part_studio': (bool,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,18 +95,18 @@ class BTAssemblyInstanceDefinitionParams(ModelNormal):
 
     attribute_map = {
         'version_id': 'versionId',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
+        'microversion_id': 'microversionId',  # noqa: E501
+        'part_id': 'partId',  # noqa: E501
         'configuration': 'configuration',  # noqa: E501
         'part_number': 'partNumber',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
+        'element_id': 'elementId',  # noqa: E501
+        'revision': 'revision',  # noqa: E501
+        'feature_id': 'featureId',  # noqa: E501
         'is_hidden': 'isHidden',  # noqa: E501
         'is_suppressed': 'isSuppressed',  # noqa: E501
         'is_assembly': 'isAssembly',  # noqa: E501
         'is_whole_part_studio': 'isWholePartStudio',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
     }
 
     @staticmethod
@@ -140,18 +140,18 @@ class BTAssemblyInstanceDefinitionParams(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             version_id (str): [optional]  # noqa: E501
-            revision (str): [optional]  # noqa: E501
+            microversion_id (str): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             configuration (str): [optional]  # noqa: E501
             part_number (str): [optional]  # noqa: E501
-            part_id (str): [optional]  # noqa: E501
-            element_id (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
-            microversion_id (str): [optional]  # noqa: E501
+            element_id (str): [optional]  # noqa: E501
+            revision (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
             is_hidden (bool): [optional]  # noqa: E501
             is_suppressed (bool): [optional]  # noqa: E501
             is_assembly (bool): [optional]  # noqa: E501
             is_whole_part_studio (bool): [optional]  # noqa: E501
-            feature_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

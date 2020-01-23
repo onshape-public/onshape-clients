@@ -94,10 +94,10 @@ class BTMSketchCurve4(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'geometry': (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
             'center_id': (str,),  # noqa: E501
             'internal_ids': ([str],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'control_box_ids': ([str],),  # noqa: E501
             'is_construction': (bool,),  # noqa: E501
             'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
@@ -117,10 +117,10 @@ class BTMSketchCurve4(ModelComposed):
         }
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'geometry': 'geometry',  # noqa: E501
         'center_id': 'centerId',  # noqa: E501
         'internal_ids': 'internalIds',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'control_box_ids': 'controlBoxIds',  # noqa: E501
         'is_construction': 'isConstruction',  # noqa: E501
         'parameters': 'parameters',  # noqa: E501
@@ -160,10 +160,10 @@ class BTMSketchCurve4(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
             center_id (str): [optional]  # noqa: E501
             internal_ids ([str]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             is_construction (bool): [optional]  # noqa: E501
             parameters ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501

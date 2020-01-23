@@ -74,14 +74,14 @@ class BTMaterialLibraryMetadataInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'document_name': (str,),  # noqa: E501
             'version_id': (str,),  # noqa: E501
-            'owner_name': (str,),  # noqa: E501
+            'is_public': (bool,),  # noqa: E501
+            'document_name': (str,),  # noqa: E501
             'library_name': (str,),  # noqa: E501
+            'document_id': (str,),  # noqa: E501
             'workspace_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'is_public': (bool,),  # noqa: E501
+            'owner_name': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,14 +89,14 @@ class BTMaterialLibraryMetadataInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'document_name': 'documentName',  # noqa: E501
         'version_id': 'versionId',  # noqa: E501
-        'owner_name': 'ownerName',  # noqa: E501
+        'is_public': 'isPublic',  # noqa: E501
+        'document_name': 'documentName',  # noqa: E501
         'library_name': 'libraryName',  # noqa: E501
+        'document_id': 'documentId',  # noqa: E501
         'workspace_id': 'workspaceId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'is_public': 'isPublic',  # noqa: E501
+        'owner_name': 'ownerName',  # noqa: E501
     }
 
     @staticmethod
@@ -129,14 +129,14 @@ class BTMaterialLibraryMetadataInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            document_name (str): [optional]  # noqa: E501
             version_id (str): [optional]  # noqa: E501
-            owner_name (str): [optional]  # noqa: E501
+            is_public (bool): [optional]  # noqa: E501
+            document_name (str): [optional]  # noqa: E501
             library_name (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
-            is_public (bool): [optional]  # noqa: E501
+            owner_name (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
