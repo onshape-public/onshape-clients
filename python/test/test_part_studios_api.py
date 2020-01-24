@@ -51,10 +51,15 @@ def test_insert_line_sketch(client, part_studio):
     LINE_ID = "myLine"
     START = "start"
     END = "end"
+    POINT_ID = "myPoint"
 
-    line_geometry = BTCurveGeometryLine117(pnt_x=0., pnt_y=0., dir_x=0., dir_y=1.)
+    point_string_param = BTMParameterString149(value=POINT_ID, parameter_id="localFirst")
+    line_end_string_param = BTMParameterString149(value=f"{LINE_ID}.{START}", parameter_id="localSecond")
+    coincident_constraint = BTMSketchConstraint2(constraint_type="COINCIDENT", parameters=[point_string_param, line_end_string_param], entity_id="constrainId", bt_type="BTMSketchConstraint-2")
+    point = BTMSketchPoint158(y=-0.071735, x=-0.0564367610245, is_user_point=True, is_construction=False, entity_id=POINT_ID)
+    line_geometry = BTCurveGeometryLine117(pnt_x=0., pnt_y=0., dir_x=0.5, dir_y=0.5)
     line = BTMSketchCurveSegment155(start_point_id=f"{LINE_ID}.{START}", end_point_id=f"{LINE_ID}.{END}", start_param= 0., end_param=1., geometry=line_geometry, entity_id=LINE_ID)
-    sketch = BTMSketch151(entities=[line], name="My New Line", parameters=[plane_query])
+    sketch = BTMSketch151(entities=[line, point], name="My New Line", parameters=[plane_query], constraints=[coincident_constraint])
     feature_definition = BTFeatureDefinitionCall1406(feature=sketch)
     client.part_studios_api.add_part_studio_feature(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, bt_feature_definition_call1406_bt_feature_definition_call1406=feature_definition)
     features = client.part_studios_api.get_part_studio_features(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid)
