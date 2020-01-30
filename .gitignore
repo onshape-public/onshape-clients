@@ -7,3 +7,4 @@ openapi-generator
 # For NPM
 node_modules
 .npmrc
+**.env
