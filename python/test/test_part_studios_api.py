@@ -3,6 +3,10 @@ from onshape_client.oas import BTMParameterString149, BTMSketch151, BTMSketchCon
 from onshape_client.oas.models.bt_feature_definition_call1406 import BTFeatureDefinitionCall1406
 from onshape_client.oas.models.bt_id_translation_params import BTIdTranslationParams
 from onshape_client.oas.models.btm_feature134 import BTMFeature134
+from onshape_client.oas.models.btm_parameter_boolean144 import BTMParameterBoolean144
+from onshape_client.oas.models.btm_parameter_quantity147 import BTMParameterQuantity147
+from onshape_client.oas.models.btm_parameter_enum145 import BTMParameterEnum145
+
 import json
 
 from onshape_client.onshape_url import OnshapeElement
@@ -64,3 +68,17 @@ def test_insert_line_sketch(client, part_studio):
     client.part_studios_api.add_part_studio_feature(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid, bt_feature_definition_call1406_bt_feature_definition_call1406=feature_definition)
     features = client.part_studios_api.get_part_studio_features(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid, eid=part_studio.eid)
     assert features.features[0].name == FEATURE_NAME
+
+def test_create_surface(client, part_studio):
+    test_insert_line_sketch(client, part_studio)
+    tool_body_type = BTMParameterEnum145(value="SURFACE", enum_name="ToolBodyType", parameter_id="bodyType")
+    operation_type = BTMParameterEnum145(value="NEW", enum_name="NewSurfaceOperationType", parameter_id="surfaceOperationType")
+    line_query = BTMParameterQueryList148(parameter_id="surfaceEntities",
+                                           queries=[BTMIndividualQuery138(deterministic_ids=["JFB"])])
+    length = BTMParameterQuantity147(expression="3.03*in", parameter_id="depth")
+    extrude_feature = BTMFeature134(bt_type="BTMFeature-134", name="My extrude", feature_type="extrude", parameters=[tool_body_type, operation_type, line_query, length])
+    feature_definition = BTFeatureDefinitionCall1406(feature=extrude_feature)
+    client.part_studios_api.add_part_studio_feature(did=part_studio.did, wvm=part_studio.wvm, wvmid=part_studio.wvmid,
+                                                    eid=part_studio.eid,
+                                                    bt_feature_definition_call1406_bt_feature_definition_call1406=feature_definition)
+
