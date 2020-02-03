@@ -61,7 +61,7 @@ def new_document(client, name_factory):
 
 @pytest.fixture
 def assembly(client, new_document):
-    elements = client.documents_api.get_elements1(new_document.did, new_document.wvm, new_document.wvmid)
+    elements = client.documents_api.get_elements_in_document(new_document.did, new_document.wvm, new_document.wvmid)
     for element in elements:
         if element.type == 'Assembly':
             element = OnshapeElement.create_from_oas_models(element, did=new_document.did, wvmid=new_document.wvmid,

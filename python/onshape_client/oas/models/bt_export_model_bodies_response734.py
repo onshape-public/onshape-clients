@@ -1047,6 +1047,7 @@ class BTExportModelBodiesResponse734(ModelNormal):
         return {
             'microversion_id': (bt_microversion_id366.BTMicroversionId366,),  # noqa: E501
             'error_enum': (str,),  # noqa: E501
+            'document_microversion': (str,),
             'bodies': ([bt_export_model_body1272.BTExportModelBody1272],),  # noqa: E501
         }
 
@@ -1057,6 +1058,7 @@ class BTExportModelBodiesResponse734(ModelNormal):
     attribute_map = {
         'microversion_id': 'microversionId',  # noqa: E501
         'error_enum': 'errorEnum',  # noqa: E501
+        'document_microversion' : 'documentMicroversion',
         'bodies': 'bodies',  # noqa: E501
     }
 
