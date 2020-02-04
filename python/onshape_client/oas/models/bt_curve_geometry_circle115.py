@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_geometry114
 except ImportError:
-    bt_curve_geometry114 = sys.modules['onshape_client.oas.models.bt_curve_geometry114']
+    bt_curve_geometry114 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry114']
 try:
     from onshape_client.oas.models import bt_curve_geometry_circle115_all_of
 except ImportError:
-    bt_curve_geometry_circle115_all_of = sys.modules['onshape_client.oas.models.bt_curve_geometry_circle115_all_of']
+    bt_curve_geometry_circle115_all_of = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_circle115_all_of']
 try:
     from onshape_client.oas.models import bt_curve_geometry_ellipse1189
 except ImportError:
-    bt_curve_geometry_ellipse1189 = sys.modules['onshape_client.oas.models.bt_curve_geometry_ellipse1189']
+    bt_curve_geometry_ellipse1189 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_ellipse1189']
 
 
 class BTCurveGeometryCircle115(ModelComposed):

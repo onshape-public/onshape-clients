@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
-    btm_assembly_feature887 = sys.modules['onshape_client.oas.models.btm_assembly_feature887']
+    btm_assembly_feature887 = sys.modules[
+        'onshape_client.oas.models.btm_assembly_feature887']
 try:
     from onshape_client.oas.models import btm_feature_invalid1031
 except ImportError:
-    btm_feature_invalid1031 = sys.modules['onshape_client.oas.models.btm_feature_invalid1031']
+    btm_feature_invalid1031 = sys.modules[
+        'onshape_client.oas.models.btm_feature_invalid1031']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_sketch151
 except ImportError:
-    btm_sketch151 = sys.modules['onshape_client.oas.models.btm_sketch151']
+    btm_sketch151 = sys.modules[
+        'onshape_client.oas.models.btm_sketch151']
 
 
 class BTMFeature134(ModelNormal):

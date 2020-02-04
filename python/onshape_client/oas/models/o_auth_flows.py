@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import o_auth_flow
 except ImportError:
-    o_auth_flow = sys.modules['onshape_client.oas.models.o_auth_flow']
+    o_auth_flow = sys.modules[
+        'onshape_client.oas.models.o_auth_flow']
 
 
 class OAuthFlows(ModelNormal):

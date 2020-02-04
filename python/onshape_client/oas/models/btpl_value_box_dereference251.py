@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btpl_value249
 except ImportError:
-    btpl_value249 = sys.modules['onshape_client.oas.models.btpl_value249']
+    btpl_value249 = sys.modules[
+        'onshape_client.oas.models.btpl_value249']
 try:
     from onshape_client.oas.models import btpl_value_box_dereference251_all_of
 except ImportError:
-    btpl_value_box_dereference251_all_of = sys.modules['onshape_client.oas.models.btpl_value_box_dereference251_all_of']
+    btpl_value_box_dereference251_all_of = sys.modules[
+        'onshape_client.oas.models.btpl_value_box_dereference251_all_of']
 
 
 class BTPLValueBoxDereference251(ModelComposed):

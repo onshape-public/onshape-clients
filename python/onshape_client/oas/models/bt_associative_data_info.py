@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_name_value_pair
 except ImportError:
-    bt_name_value_pair = sys.modules['onshape_client.oas.models.bt_name_value_pair']
+    bt_name_value_pair = sys.modules[
+        'onshape_client.oas.models.bt_name_value_pair']
 
 
 class BTAssociativeDataInfo(ModelNormal):

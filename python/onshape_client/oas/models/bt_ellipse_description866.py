@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_description1583
 except ImportError:
-    bt_curve_description1583 = sys.modules['onshape_client.oas.models.bt_curve_description1583']
+    bt_curve_description1583 = sys.modules[
+        'onshape_client.oas.models.bt_curve_description1583']
 try:
     from onshape_client.oas.models import bt_ellipse_description866_all_of
 except ImportError:
-    bt_ellipse_description866_all_of = sys.modules['onshape_client.oas.models.bt_ellipse_description866_all_of']
+    bt_ellipse_description866_all_of = sys.modules[
+        'onshape_client.oas.models.bt_ellipse_description866_all_of']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTEllipseDescription866(ModelComposed):

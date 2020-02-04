@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import body_part
 except ImportError:
-    body_part = sys.modules['onshape_client.oas.models.body_part']
+    body_part = sys.modules[
+        'onshape_client.oas.models.body_part']
 try:
     from onshape_client.oas.models import body_part_media_type
 except ImportError:
-    body_part_media_type = sys.modules['onshape_client.oas.models.body_part_media_type']
+    body_part_media_type = sys.modules[
+        'onshape_client.oas.models.body_part_media_type']
 try:
     from onshape_client.oas.models import content_disposition
 except ImportError:
-    content_disposition = sys.modules['onshape_client.oas.models.content_disposition']
+    content_disposition = sys.modules[
+        'onshape_client.oas.models.content_disposition']
 try:
     from onshape_client.oas.models import parameterized_header
 except ImportError:
-    parameterized_header = sys.modules['onshape_client.oas.models.parameterized_header']
+    parameterized_header = sys.modules[
+        'onshape_client.oas.models.parameterized_header']
 
 
 class MultiPart(ModelNormal):

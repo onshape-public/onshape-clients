@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_tessellated_body3398
 except ImportError:
-    bt_export_tessellated_body3398 = sys.modules['onshape_client.oas.models.bt_export_tessellated_body3398']
+    bt_export_tessellated_body3398 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_body3398']
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_body1321_all_of
 except ImportError:
-    bt_export_tessellated_faces_body1321_all_of = sys.modules['onshape_client.oas.models.bt_export_tessellated_faces_body1321_all_of']
+    bt_export_tessellated_faces_body1321_all_of = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_faces_body1321_all_of']
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_face1192
 except ImportError:
-    bt_export_tessellated_faces_face1192 = sys.modules['onshape_client.oas.models.bt_export_tessellated_faces_face1192']
+    bt_export_tessellated_faces_face1192 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_faces_face1192']
 try:
     from onshape_client.oas.models import bt_graphics_appearance1152
 except ImportError:
-    bt_graphics_appearance1152 = sys.modules['onshape_client.oas.models.bt_graphics_appearance1152']
+    bt_graphics_appearance1152 = sys.modules[
+        'onshape_client.oas.models.bt_graphics_appearance1152']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTExportTessellatedFacesBody1321(ModelComposed):

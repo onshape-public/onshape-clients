@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_feature_list_response1174_all_of
 except ImportError:
-    bt_assembly_feature_list_response1174_all_of = sys.modules['onshape_client.oas.models.bt_assembly_feature_list_response1174_all_of']
+    bt_assembly_feature_list_response1174_all_of = sys.modules[
+        'onshape_client.oas.models.bt_assembly_feature_list_response1174_all_of']
 try:
     from onshape_client.oas.models import bt_feature_api_base1430
 except ImportError:
-    bt_feature_api_base1430 = sys.modules['onshape_client.oas.models.bt_feature_api_base1430']
+    bt_feature_api_base1430 = sys.modules[
+        'onshape_client.oas.models.bt_feature_api_base1430']
 try:
     from onshape_client.oas.models import bt_feature_state1688
 except ImportError:
-    bt_feature_state1688 = sys.modules['onshape_client.oas.models.bt_feature_state1688']
+    bt_feature_state1688 = sys.modules[
+        'onshape_client.oas.models.bt_feature_state1688']
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
-    btm_assembly_feature887 = sys.modules['onshape_client.oas.models.btm_assembly_feature887']
+    btm_assembly_feature887 = sys.modules[
+        'onshape_client.oas.models.btm_assembly_feature887']
 
 
 class BTAssemblyFeatureListResponse1174(ModelComposed):

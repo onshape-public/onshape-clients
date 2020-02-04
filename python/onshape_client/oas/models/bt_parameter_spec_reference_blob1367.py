@@ -32,35 +32,43 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference2789
 except ImportError:
-    bt_parameter_spec_reference2789 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference2789']
+    bt_parameter_spec_reference2789 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference2789']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference_cad_import1792
 except ImportError:
-    bt_parameter_spec_reference_cad_import1792 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_cad_import1792']
+    bt_parameter_spec_reference_cad_import1792 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference_cad_import1792']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference_image1722
 except ImportError:
-    bt_parameter_spec_reference_image1722 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_image1722']
+    bt_parameter_spec_reference_image1722 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference_image1722']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference_json1816
 except ImportError:
-    bt_parameter_spec_reference_json1816 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_json1816']
+    bt_parameter_spec_reference_json1816 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference_json1816']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference_table1520
 except ImportError:
-    bt_parameter_spec_reference_table1520 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_table1520']
+    bt_parameter_spec_reference_table1520 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference_table1520']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
-    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
+    bt_parameter_visibility_condition177 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_condition177']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTParameterSpecReferenceBlob1367(ModelComposed):

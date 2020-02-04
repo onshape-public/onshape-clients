@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_configured_value_by_boolean1501
 except ImportError:
-    btm_configured_value_by_boolean1501 = sys.modules['onshape_client.oas.models.btm_configured_value_by_boolean1501']
+    btm_configured_value_by_boolean1501 = sys.modules[
+        'onshape_client.oas.models.btm_configured_value_by_boolean1501']
 try:
     from onshape_client.oas.models import btm_configured_value_by_enum1923
 except ImportError:
-    btm_configured_value_by_enum1923 = sys.modules['onshape_client.oas.models.btm_configured_value_by_enum1923']
+    btm_configured_value_by_enum1923 = sys.modules[
+        'onshape_client.oas.models.btm_configured_value_by_enum1923']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTMConfiguredValue1341(ModelNormal):

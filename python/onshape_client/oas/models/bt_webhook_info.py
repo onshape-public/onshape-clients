@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_webhook_options
 except ImportError:
-    bt_webhook_options = sys.modules['onshape_client.oas.models.bt_webhook_options']
+    bt_webhook_options = sys.modules[
+        'onshape_client.oas.models.bt_webhook_options']
 
 
 class BTWebhookInfo(ModelNormal):

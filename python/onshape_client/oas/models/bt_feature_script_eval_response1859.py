@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_notice227
 except ImportError:
-    bt_notice227 = sys.modules['onshape_client.oas.models.bt_notice227']
+    bt_notice227 = sys.modules[
+        'onshape_client.oas.models.bt_notice227']
 try:
     from onshape_client.oas.models import btfs_value1888
 except ImportError:
-    btfs_value1888 = sys.modules['onshape_client.oas.models.btfs_value1888']
+    btfs_value1888 = sys.modules[
+        'onshape_client.oas.models.btfs_value1888']
 
 
 class BTFeatureScriptEvalResponse1859(ModelNormal):

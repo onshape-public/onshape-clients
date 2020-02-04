@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_version_element_ids1897
 except ImportError:
-    bt_document_version_element_ids1897 = sys.modules['onshape_client.oas.models.bt_document_version_element_ids1897']
+    bt_document_version_element_ids1897 = sys.modules[
+        'onshape_client.oas.models.bt_document_version_element_ids1897']
 try:
     from onshape_client.oas.models import bt_object_id
 except ImportError:
-    bt_object_id = sys.modules['onshape_client.oas.models.bt_object_id']
+    bt_object_id = sys.modules[
+        'onshape_client.oas.models.bt_object_id']
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules['onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules[
+        'onshape_client.oas.models.btp_node7']
 
 
 class BTLocationInfo226(ModelNormal):

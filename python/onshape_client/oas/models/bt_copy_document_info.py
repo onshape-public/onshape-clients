@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 
 
 class BTCopyDocumentInfo(ModelNormal):

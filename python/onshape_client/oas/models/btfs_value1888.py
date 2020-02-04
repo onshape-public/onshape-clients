@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btfs_value_array1499
 except ImportError:
-    btfs_value_array1499 = sys.modules['onshape_client.oas.models.btfs_value_array1499']
+    btfs_value_array1499 = sys.modules[
+        'onshape_client.oas.models.btfs_value_array1499']
 try:
     from onshape_client.oas.models import btfs_value_boolean1195
 except ImportError:
-    btfs_value_boolean1195 = sys.modules['onshape_client.oas.models.btfs_value_boolean1195']
+    btfs_value_boolean1195 = sys.modules[
+        'onshape_client.oas.models.btfs_value_boolean1195']
 try:
     from onshape_client.oas.models import btfs_value_map2062
 except ImportError:
-    btfs_value_map2062 = sys.modules['onshape_client.oas.models.btfs_value_map2062']
+    btfs_value_map2062 = sys.modules[
+        'onshape_client.oas.models.btfs_value_map2062']
 try:
     from onshape_client.oas.models import btfs_value_number772
 except ImportError:
-    btfs_value_number772 = sys.modules['onshape_client.oas.models.btfs_value_number772']
+    btfs_value_number772 = sys.modules[
+        'onshape_client.oas.models.btfs_value_number772']
 try:
     from onshape_client.oas.models import btfs_value_other1124
 except ImportError:
-    btfs_value_other1124 = sys.modules['onshape_client.oas.models.btfs_value_other1124']
+    btfs_value_other1124 = sys.modules[
+        'onshape_client.oas.models.btfs_value_other1124']
 try:
     from onshape_client.oas.models import btfs_value_string1422
 except ImportError:
-    btfs_value_string1422 = sys.modules['onshape_client.oas.models.btfs_value_string1422']
+    btfs_value_string1422 = sys.modules[
+        'onshape_client.oas.models.btfs_value_string1422']
 try:
     from onshape_client.oas.models import btfs_value_too_big1247
 except ImportError:
-    btfs_value_too_big1247 = sys.modules['onshape_client.oas.models.btfs_value_too_big1247']
+    btfs_value_too_big1247 = sys.modules[
+        'onshape_client.oas.models.btfs_value_too_big1247']
 try:
     from onshape_client.oas.models import btfs_value_undefined2003
 except ImportError:
-    btfs_value_undefined2003 = sys.modules['onshape_client.oas.models.btfs_value_undefined2003']
+    btfs_value_undefined2003 = sys.modules[
+        'onshape_client.oas.models.btfs_value_undefined2003']
 try:
     from onshape_client.oas.models import btfs_value_with_units1817
 except ImportError:
-    btfs_value_with_units1817 = sys.modules['onshape_client.oas.models.btfs_value_with_units1817']
+    btfs_value_with_units1817 = sys.modules[
+        'onshape_client.oas.models.btfs_value_with_units1817']
 
 
 class BTFSValue1888(ModelNormal):

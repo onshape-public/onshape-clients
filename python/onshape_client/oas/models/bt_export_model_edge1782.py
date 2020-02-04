@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_description1583
 except ImportError:
-    bt_curve_description1583 = sys.modules['onshape_client.oas.models.bt_curve_description1583']
+    bt_curve_description1583 = sys.modules[
+        'onshape_client.oas.models.bt_curve_description1583']
 try:
     from onshape_client.oas.models import bt_export_model_edge_geometry1125
 except ImportError:
-    bt_export_model_edge_geometry1125 = sys.modules['onshape_client.oas.models.bt_export_model_edge_geometry1125']
+    bt_export_model_edge_geometry1125 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_edge_geometry1125']
 
 
 class BTExportModelEdge1782(ModelNormal):

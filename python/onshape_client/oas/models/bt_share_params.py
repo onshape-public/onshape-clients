@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_share_entry_params
 except ImportError:
-    bt_share_entry_params = sys.modules['onshape_client.oas.models.bt_share_entry_params']
+    bt_share_entry_params = sys.modules[
+        'onshape_client.oas.models.bt_share_entry_params']
 
 
 class BTShareParams(ModelNormal):

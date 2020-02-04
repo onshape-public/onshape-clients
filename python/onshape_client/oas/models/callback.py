@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import path_item
 except ImportError:
-    path_item = sys.modules['onshape_client.oas.models.path_item']
+    path_item = sys.modules[
+        'onshape_client.oas.models.path_item']
 
 
 class Callback(ModelNormal):

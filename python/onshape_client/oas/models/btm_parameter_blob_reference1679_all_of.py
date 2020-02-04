@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_import136
 except ImportError:
-    btm_import136 = sys.modules['onshape_client.oas.models.btm_import136']
+    btm_import136 = sys.modules[
+        'onshape_client.oas.models.btm_import136']
 
 
 class BTMParameterBlobReference1679AllOf(ModelNormal):

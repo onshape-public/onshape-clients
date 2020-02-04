@@ -58,7 +58,15 @@ class PartsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __export_ps(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __export_ps(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """Export Part to Parasolid.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -66,37 +74,41 @@ class PartsApi(object):
             >>> thread = api.export_ps(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param str version:
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: file_type
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                version (str): [optional] if omitted the server will use the default value of '0'
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                file_type
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -117,11 +129,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.export_ps = Endpoint(
@@ -166,14 +183,22 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'version': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'version':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -209,7 +234,15 @@ class PartsApi(object):
             callable=__export_ps
         )
 
-        def __get_bend_table(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_bend_table(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """Get Sheet Metal Bend Table.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -217,35 +250,39 @@ class PartsApi(object):
             >>> thread = api.get_bend_table(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_table_response1546.BTTableResponse1546
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_table_response1546.BTTableResponse1546
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -266,11 +303,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_bend_table = Endpoint(
@@ -313,12 +355,18 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -350,7 +398,15 @@ class PartsApi(object):
             callable=__get_bend_table
         )
 
-        def __get_body_details(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_body_details(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """get_body_details  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -358,36 +414,40 @@ class PartsApi(object):
             >>> thread = api.get_body_details(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_export_model_bodies_response734.BTExportModelBodiesResponse734
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_export_model_bodies_response734.BTExportModelBodiesResponse734
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -408,11 +468,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_body_details = Endpoint(
@@ -456,13 +521,20 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -496,7 +568,15 @@ class PartsApi(object):
             callable=__get_body_details
         )
 
-        def __get_bounding_boxes(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_bounding_boxes(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """get_bounding_boxes  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -504,37 +584,41 @@ class PartsApi(object):
             >>> thread = api.get_bounding_boxes(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param bool include_hidden:
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_bounding_box_info.BTBoundingBoxInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                include_hidden (bool): [optional] if omitted the server will use the default value of False
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_bounding_box_info.BTBoundingBoxInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -555,11 +639,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_bounding_boxes = Endpoint(
@@ -604,14 +693,22 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'include_hidden': (bool,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'include_hidden':
+                        (bool,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -647,7 +744,15 @@ class PartsApi(object):
             callable=__get_bounding_boxes
         )
 
-        def __get_edges(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_edges(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """Tessellated Edges  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -655,40 +760,44 @@ class PartsApi(object):
             >>> thread = api.get_edges(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param float angle_tolerance:
-            :param float chord_tolerance:
-            :param [str] edge_id:
-            :param str configuration:
-            :param str link_document_id:
-            :param str body:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_export_tessellated_edges_response327.BTExportTessellatedEdgesResponse327
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                angle_tolerance (float): [optional]
+                chord_tolerance (float): [optional]
+                edge_id ([str]): [optional]
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                body (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_export_tessellated_edges_response327.BTExportTessellatedEdgesResponse327
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -709,11 +818,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_edges = Endpoint(
@@ -761,17 +875,28 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'angle_tolerance': (float,),
-                    'chord_tolerance': (float,),
-                    'edge_id': ([str],),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'angle_tolerance':
+                        (float,),
+                    'chord_tolerance':
+                        (float,),
+                    'edge_id':
+                        ([str],),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -815,7 +940,15 @@ class PartsApi(object):
             callable=__get_edges
         )
 
-        def __get_faces1(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_faces1(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """Get Tessellated Faces  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -823,46 +956,50 @@ class PartsApi(object):
             >>> thread = api.get_faces1(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param float angle_tolerance:
-            :param float chord_tolerance:
-            :param float max_facet_width:
-            :param bool output_vertex_normals:
-            :param bool output_facet_normals:
-            :param bool output_texture_coordinates:
-            :param bool output_index_table:
-            :param [str] face_id:
-            :param str configuration:
-            :param bool output_error_faces:
-            :param str link_document_id:
-            :param str body:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_export_tessellated_faces_response898.BTExportTessellatedFacesResponse898
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                angle_tolerance (float): [optional]
+                chord_tolerance (float): [optional]
+                max_facet_width (float): [optional]
+                output_vertex_normals (bool): [optional] if omitted the server will use the default value of False
+                output_facet_normals (bool): [optional] if omitted the server will use the default value of True
+                output_texture_coordinates (bool): [optional] if omitted the server will use the default value of False
+                output_index_table (bool): [optional] if omitted the server will use the default value of False
+                face_id ([str]): [optional]
+                configuration (str): [optional]
+                output_error_faces (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                body (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_export_tessellated_faces_response898.BTExportTessellatedFacesResponse898
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -883,11 +1020,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_faces1 = Endpoint(
@@ -941,23 +1083,40 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'angle_tolerance': (float,),
-                    'chord_tolerance': (float,),
-                    'max_facet_width': (float,),
-                    'output_vertex_normals': (bool,),
-                    'output_facet_normals': (bool,),
-                    'output_texture_coordinates': (bool,),
-                    'output_index_table': (bool,),
-                    'face_id': ([str],),
-                    'configuration': (str,),
-                    'output_error_faces': (bool,),
-                    'link_document_id': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'angle_tolerance':
+                        (float,),
+                    'chord_tolerance':
+                        (float,),
+                    'max_facet_width':
+                        (float,),
+                    'output_vertex_normals':
+                        (bool,),
+                    'output_facet_normals':
+                        (bool,),
+                    'output_texture_coordinates':
+                        (bool,),
+                    'output_index_table':
+                        (bool,),
+                    'face_id':
+                        ([str],),
+                    'configuration':
+                        (str,),
+                    'output_error_faces':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1013,7 +1172,15 @@ class PartsApi(object):
             callable=__get_faces1
         )
 
-        def __get_mass_properties(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_mass_properties(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """get_mass_properties  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1021,37 +1188,41 @@ class PartsApi(object):
             >>> thread = api.get_mass_properties(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param bool infer_metadata_owner:
-            :param str link_document_id:
-            :param str configuration:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_mass_properties_bulk_info.BTMassPropertiesBulkInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of True
+                link_document_id (str): [optional]
+                configuration (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_mass_properties_bulk_info.BTMassPropertiesBulkInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1072,11 +1243,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_mass_properties = Endpoint(
@@ -1121,14 +1297,22 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'infer_metadata_owner': (bool,),
-                    'link_document_id': (str,),
-                    'configuration': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
+                    'configuration':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1164,7 +1348,15 @@ class PartsApi(object):
             callable=__get_mass_properties
         )
 
-        def __get_part_metadata(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_part_metadata(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """get_part_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1172,39 +1364,43 @@ class PartsApi(object):
             >>> thread = api.get_part_metadata(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param bool infer_metadata_owner:
-            :param bool include_property_defaults:
-            :param bool friendly_user_ids:
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_part_metadata_info.BTPartMetadataInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                include_property_defaults (bool): [optional] if omitted the server will use the default value of False
+                friendly_user_ids (bool): [optional] if omitted the server will use the default value of False
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_part_metadata_info.BTPartMetadataInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1225,11 +1421,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_part_metadata = Endpoint(
@@ -1276,16 +1477,26 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'infer_metadata_owner': (bool,),
-                    'include_property_defaults': (bool,),
-                    'friendly_user_ids': (bool,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
+                    'include_property_defaults':
+                        (bool,),
+                    'friendly_user_ids':
+                        (bool,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1325,7 +1536,13 @@ class PartsApi(object):
             callable=__get_part_metadata
         )
 
-        def __get_parts_wmv(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_parts_wmv(
+            self,
+            did,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Get list of parts  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1333,37 +1550,41 @@ class PartsApi(object):
             >>> thread = api.get_parts_wmv(did, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: Document ID. (required)
-            :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
-            :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
-            :param str element_id: Element ID
-            :param bool with_thumbnails: Whether or not to include thumbnails (not supported for microversion)
-            :param bool include_property_defaults: If true, include metadata schema property defaults in response
-            :param str link_document_id: Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.
-            :param str configuration: Configuration string.
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_part_metadata_info.BTPartMetadataInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str): Document ID.
+                wvm (str): One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+                wvmid (str): Workspace (w), Version (v) or Microversion (m) ID.
+
+            Keyword Args:
+                element_id (str): Element ID. [optional]
+                with_thumbnails (bool): Whether or not to include thumbnails (not supported for microversion). [optional] if omitted the server will use the default value of False
+                include_property_defaults (bool): If true, include metadata schema property defaults in response. [optional] if omitted the server will use the default value of False
+                link_document_id (str): Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.. [optional]
+                configuration (str): Configuration string.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_part_metadata_info.BTPartMetadataInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1384,9 +1605,12 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_parts_wmv = Endpoint(
@@ -1429,14 +1653,22 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'element_id': (str,),
-                    'with_thumbnails': (bool,),
-                    'include_property_defaults': (bool,),
-                    'link_document_id': (str,),
-                    'configuration': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'element_id':
+                        (str,),
+                    'with_thumbnails':
+                        (bool,),
+                    'include_property_defaults':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
+                    'configuration':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1472,7 +1704,14 @@ class PartsApi(object):
             callable=__get_parts_wmv
         )
 
-        def __get_parts_wmve(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_parts_wmve(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """Get parts from an element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1480,37 +1719,41 @@ class PartsApi(object):
             >>> thread = api.get_parts_wmve(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: Document ID. (required)
-            :param str wvm: One of w or v or m corresponding to whether a workspace or version or microversion was entered. (required)
-            :param str wvmid: Workspace (w), Version (v) or Microversion (m) ID. (required)
-            :param str eid: Element ID. (required)
-            :param bool with_thumbnails: Whether or not to include thumbnails (not supported for microversion)
-            :param bool include_property_defaults: If true, include metadata schema property defaults in response
-            :param str configuration: Configuration string.
-            :param str link_document_id: Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_part_metadata_info.BTPartMetadataInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str): Document ID.
+                wvm (str): One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+                wvmid (str): Workspace (w), Version (v) or Microversion (m) ID.
+                eid (str): Element ID.
+
+            Keyword Args:
+                with_thumbnails (bool): Whether or not to include thumbnails (not supported for microversion). [optional] if omitted the server will use the default value of False
+                include_property_defaults (bool): If true, include metadata schema property defaults in response. [optional] if omitted the server will use the default value of False
+                configuration (str): Configuration string.. [optional]
+                link_document_id (str): Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_part_metadata_info.BTPartMetadataInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1531,10 +1774,14 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_parts_wmve = Endpoint(
@@ -1578,14 +1825,22 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'with_thumbnails': (bool,),
-                    'include_property_defaults': (bool,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'with_thumbnails':
+                        (bool,),
+                    'include_property_defaults':
+                        (bool,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1621,7 +1876,15 @@ class PartsApi(object):
             callable=__get_parts_wmve
         )
 
-        def __get_shaded_views(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __get_shaded_views(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """get_shaded_views  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1629,42 +1892,46 @@ class PartsApi(object):
             >>> thread = api.get_shaded_views(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param str view_matrix:
-            :param int output_height:
-            :param int output_width:
-            :param float pixel_size:
-            :param str edges:
-            :param bool use_anti_aliasing:
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_shaded_views_info.BTShadedViewsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                view_matrix (str): [optional] if omitted the server will use the default value of 'front'
+                output_height (int): [optional] if omitted the server will use the default value of 500
+                output_width (int): [optional] if omitted the server will use the default value of 500
+                pixel_size (float): [optional] if omitted the server will use the default value of 0.003
+                edges (str): [optional] if omitted the server will use the default value of 'show'
+                use_anti_aliasing (bool): [optional] if omitted the server will use the default value of False
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_shaded_views_info.BTShadedViewsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1685,11 +1952,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_shaded_views = Endpoint(
@@ -1739,19 +2011,32 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'view_matrix': (str,),
-                    'output_height': (int,),
-                    'output_width': (int,),
-                    'pixel_size': (float,),
-                    'edges': (str,),
-                    'use_anti_aliasing': (bool,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'view_matrix':
+                        (str,),
+                    'output_height':
+                        (int,),
+                    'output_width':
+                        (int,),
+                    'pixel_size':
+                        (float,),
+                    'edges':
+                        (str,),
+                    'use_anti_aliasing':
+                        (bool,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1797,7 +2082,16 @@ class PartsApi(object):
             callable=__get_shaded_views
         )
 
-        def __get_standard_content_part_metadata(self, did, vid, eid, otype, oid, partid, **kwargs):  # noqa: E501
+        def __get_standard_content_part_metadata(
+            self,
+            did,
+            vid,
+            eid,
+            otype,
+            oid,
+            partid,
+            **kwargs
+        ):
             """get_standard_content_part_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1805,38 +2099,42 @@ class PartsApi(object):
             >>> thread = api.get_standard_content_part_metadata(did, vid, eid, otype, oid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str vid: (required)
-            :param str eid: (required)
-            :param str otype: (required)
-            :param str oid: (required)
-            :param str partid: (required)
-            :param bool include_property_defaults:
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_part_metadata_info.BTPartMetadataInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                vid (str):
+                eid (str):
+                otype (str):
+                oid (str):
+                partid (str):
+
+            Keyword Args:
+                include_property_defaults (bool): [optional] if omitted the server will use the default value of False
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_part_metadata_info.BTPartMetadataInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1857,12 +2155,18 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['vid'] = vid
-            kwargs['eid'] = eid
-            kwargs['otype'] = otype
-            kwargs['oid'] = oid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['vid'] = \
+                vid
+            kwargs['eid'] = \
+                eid
+            kwargs['otype'] = \
+                otype
+            kwargs['oid'] = \
+                oid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.get_standard_content_part_metadata = Endpoint(
@@ -1909,15 +2213,24 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'vid': (str,),
-                    'eid': (str,),
-                    'otype': (str,),
-                    'oid': (str,),
-                    'partid': (str,),
-                    'include_property_defaults': (bool,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'vid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'otype':
+                        (str,),
+                    'oid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'include_property_defaults':
+                        (bool,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1955,7 +2268,15 @@ class PartsApi(object):
             callable=__get_standard_content_part_metadata
         )
 
-        def __update_part_metadata(self, did, wvm, wvmid, eid, partid, **kwargs):  # noqa: E501
+        def __update_part_metadata(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            partid,
+            **kwargs
+        ):
             """update_part_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1963,35 +2284,39 @@ class PartsApi(object):
             >>> thread = api.update_part_metadata(did, wvm, wvmid, eid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str partid: (required)
-            :param str body:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_part_metadata_info.BTPartMetadataInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                partid (str):
+
+            Keyword Args:
+                body (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_part_metadata_info.BTPartMetadataInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2012,11 +2337,16 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.update_part_metadata = Endpoint(
@@ -2059,12 +2389,18 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'partid': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2097,7 +2433,16 @@ class PartsApi(object):
             callable=__update_part_metadata
         )
 
-        def __update_standard_content_part_metadata(self, did, vid, eid, otype, oid, partid, **kwargs):  # noqa: E501
+        def __update_standard_content_part_metadata(
+            self,
+            did,
+            vid,
+            eid,
+            otype,
+            oid,
+            partid,
+            **kwargs
+        ):
             """update_standard_content_part_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2105,38 +2450,42 @@ class PartsApi(object):
             >>> thread = api.update_standard_content_part_metadata(did, vid, eid, otype, oid, partid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str vid: (required)
-            :param str eid: (required)
-            :param str otype: (required)
-            :param str oid: (required)
-            :param str partid: (required)
-            :param str link_document_id:
-            :param bool include_property_defaults:
-            :param bt_workspace_part_params.BTWorkspacePartParams bt_workspace_part_params_bt_workspace_part_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_part_metadata_info.BTPartMetadataInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                vid (str):
+                eid (str):
+                otype (str):
+                oid (str):
+                partid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                include_property_defaults (bool): [optional] if omitted the server will use the default value of False
+                bt_workspace_part_params (bt_workspace_part_params.BTWorkspacePartParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_part_metadata_info.BTPartMetadataInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2157,12 +2506,18 @@ class PartsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['vid'] = vid
-            kwargs['eid'] = eid
-            kwargs['otype'] = otype
-            kwargs['oid'] = oid
-            kwargs['partid'] = partid
+            kwargs['did'] = \
+                did
+            kwargs['vid'] = \
+                vid
+            kwargs['eid'] = \
+                eid
+            kwargs['otype'] = \
+                otype
+            kwargs['oid'] = \
+                oid
+            kwargs['partid'] = \
+                partid
             return self.call_with_http_info(**kwargs)
 
         self.update_standard_content_part_metadata = Endpoint(
@@ -2186,7 +2541,7 @@ class PartsApi(object):
                     'partid',
                     'link_document_id',
                     'include_property_defaults',
-                    'bt_workspace_part_params_bt_workspace_part_params',
+                    'bt_workspace_part_params',
                 ],
                 'required': [
                     'did',
@@ -2209,15 +2564,24 @@ class PartsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'vid': (str,),
-                    'eid': (str,),
-                    'otype': (str,),
-                    'oid': (str,),
-                    'partid': (str,),
-                    'link_document_id': (str,),
-                    'include_property_defaults': (bool,),
-                    'bt_workspace_part_params_bt_workspace_part_params': (bt_workspace_part_params.BTWorkspacePartParams,),
+                    'did':
+                        (str,),
+                    'vid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'otype':
+                        (str,),
+                    'oid':
+                        (str,),
+                    'partid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'include_property_defaults':
+                        (bool,),
+                    'bt_workspace_part_params':
+                        (bt_workspace_part_params.BTWorkspacePartParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2238,7 +2602,7 @@ class PartsApi(object):
                     'partid': 'path',
                     'link_document_id': 'query',
                     'include_property_defaults': 'query',
-                    'bt_workspace_part_params_bt_workspace_part_params': 'body',
+                    'bt_workspace_part_params': 'body',
                 },
                 'collection_format_map': {
                 }

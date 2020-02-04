@@ -52,7 +52,10 @@ class WebhooksApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_webhook(self, **kwargs):  # noqa: E501
+        def __create_webhook(
+            self,
+            **kwargs
+        ):
             """create_webhook  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -60,30 +63,33 @@ class WebhooksApi(object):
             >>> thread = api.create_webhook(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param bt_webhook_params.BTWebhookParams bt_webhook_params_bt_webhook_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_webhook_info.BTWebhookInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                bt_webhook_params (bt_webhook_params.BTWebhookParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_webhook_info.BTWebhookInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -119,7 +125,7 @@ class WebhooksApi(object):
             },
             params_map={
                 'all': [
-                    'bt_webhook_params_bt_webhook_params',
+                    'bt_webhook_params',
                 ],
                 'required': [],
                 'nullable': [
@@ -135,12 +141,13 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'bt_webhook_params_bt_webhook_params': (bt_webhook_params.BTWebhookParams,),
+                    'bt_webhook_params':
+                        (bt_webhook_params.BTWebhookParams,),
                 },
                 'attribute_map': {
                 },
                 'location_map': {
-                    'bt_webhook_params_bt_webhook_params': 'body',
+                    'bt_webhook_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -158,7 +165,11 @@ class WebhooksApi(object):
             callable=__create_webhook
         )
 
-        def __get_webhook(self, webhookid, **kwargs):  # noqa: E501
+        def __get_webhook(
+            self,
+            webhookid,
+            **kwargs
+        ):
             """get_webhook  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -166,30 +177,34 @@ class WebhooksApi(object):
             >>> thread = api.get_webhook(webhookid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str webhookid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_webhook_info.BTWebhookInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                webhookid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_webhook_info.BTWebhookInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -210,7 +225,8 @@ class WebhooksApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['webhookid'] = webhookid
+            kwargs['webhookid'] = \
+                webhookid
             return self.call_with_http_info(**kwargs)
 
         self.get_webhook = Endpoint(
@@ -244,7 +260,8 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'webhookid': (str,),
+                    'webhookid':
+                        (str,),
                 },
                 'attribute_map': {
                     'webhookid': 'webhookid',
@@ -266,7 +283,10 @@ class WebhooksApi(object):
             callable=__get_webhook
         )
 
-        def __get_webhooks(self, **kwargs):  # noqa: E501
+        def __get_webhooks(
+            self,
+            **kwargs
+        ):
             """get_webhooks  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -274,33 +294,36 @@ class WebhooksApi(object):
             >>> thread = api.get_webhooks(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str company:
-            :param str user:
-            :param int offset:
-            :param int limit:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_webhook_info.BTListResponseBTWebhookInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                company (str): [optional] if omitted the server will use the default value of ''
+                user (str): [optional]
+                offset (int): [optional] if omitted the server will use the default value of 0
+                limit (int): [optional] if omitted the server will use the default value of 20
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_webhook_info.BTListResponseBTWebhookInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -355,10 +378,14 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'company': (str,),
-                    'user': (str,),
-                    'offset': (int,),
-                    'limit': (int,),
+                    'company':
+                        (str,),
+                    'user':
+                        (str,),
+                    'offset':
+                        (int,),
+                    'limit':
+                        (int,),
                 },
                 'attribute_map': {
                     'company': 'company',
@@ -386,7 +413,11 @@ class WebhooksApi(object):
             callable=__get_webhooks
         )
 
-        def __ping_webhook(self, webhookid, **kwargs):  # noqa: E501
+        def __ping_webhook(
+            self,
+            webhookid,
+            **kwargs
+        ):
             """ping_webhook  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -394,30 +425,34 @@ class WebhooksApi(object):
             >>> thread = api.ping_webhook(webhookid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str webhookid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                webhookid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -438,7 +473,8 @@ class WebhooksApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['webhookid'] = webhookid
+            kwargs['webhookid'] = \
+                webhookid
             return self.call_with_http_info(**kwargs)
 
         self.ping_webhook = Endpoint(
@@ -472,7 +508,8 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'webhookid': (str,),
+                    'webhookid':
+                        (str,),
                 },
                 'attribute_map': {
                     'webhookid': 'webhookid',
@@ -494,7 +531,11 @@ class WebhooksApi(object):
             callable=__ping_webhook
         )
 
-        def __unregister_webhook(self, webhookid, **kwargs):  # noqa: E501
+        def __unregister_webhook(
+            self,
+            webhookid,
+            **kwargs
+        ):
             """unregister_webhook  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -502,30 +543,34 @@ class WebhooksApi(object):
             >>> thread = api.unregister_webhook(webhookid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str webhookid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                webhookid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -546,7 +591,8 @@ class WebhooksApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['webhookid'] = webhookid
+            kwargs['webhookid'] = \
+                webhookid
             return self.call_with_http_info(**kwargs)
 
         self.unregister_webhook = Endpoint(
@@ -580,7 +626,8 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'webhookid': (str,),
+                    'webhookid':
+                        (str,),
                 },
                 'attribute_map': {
                     'webhookid': 'webhookid',
@@ -602,7 +649,11 @@ class WebhooksApi(object):
             callable=__unregister_webhook
         )
 
-        def __update_webhook(self, webhookid, **kwargs):  # noqa: E501
+        def __update_webhook(
+            self,
+            webhookid,
+            **kwargs
+        ):
             """update_webhook  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -610,31 +661,35 @@ class WebhooksApi(object):
             >>> thread = api.update_webhook(webhookid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str webhookid: (required)
-            :param bt_webhook_params.BTWebhookParams bt_webhook_params_bt_webhook_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_webhook_info.BTWebhookInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                webhookid (str):
+
+            Keyword Args:
+                bt_webhook_params (bt_webhook_params.BTWebhookParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_webhook_info.BTWebhookInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -655,7 +710,8 @@ class WebhooksApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['webhookid'] = webhookid
+            kwargs['webhookid'] = \
+                webhookid
             return self.call_with_http_info(**kwargs)
 
         self.update_webhook = Endpoint(
@@ -672,7 +728,7 @@ class WebhooksApi(object):
             params_map={
                 'all': [
                     'webhookid',
-                    'bt_webhook_params_bt_webhook_params',
+                    'bt_webhook_params',
                 ],
                 'required': [
                     'webhookid',
@@ -690,15 +746,17 @@ class WebhooksApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'webhookid': (str,),
-                    'bt_webhook_params_bt_webhook_params': (bt_webhook_params.BTWebhookParams,),
+                    'webhookid':
+                        (str,),
+                    'bt_webhook_params':
+                        (bt_webhook_params.BTWebhookParams,),
                 },
                 'attribute_map': {
                     'webhookid': 'webhookid',
                 },
                 'location_map': {
                     'webhookid': 'path',
-                    'bt_webhook_params_bt_webhook_params': 'body',
+                    'bt_webhook_params': 'body',
                 },
                 'collection_format_map': {
                 }

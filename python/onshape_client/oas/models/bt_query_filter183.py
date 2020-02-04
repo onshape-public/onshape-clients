@@ -32,107 +32,133 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_active_sheet_metal_filter2944
 except ImportError:
-    bt_active_sheet_metal_filter2944 = sys.modules['onshape_client.oas.models.bt_active_sheet_metal_filter2944']
+    bt_active_sheet_metal_filter2944 = sys.modules[
+        'onshape_client.oas.models.bt_active_sheet_metal_filter2944']
 try:
     from onshape_client.oas.models import bt_allow_edge_point_filter2371
 except ImportError:
-    bt_allow_edge_point_filter2371 = sys.modules['onshape_client.oas.models.bt_allow_edge_point_filter2371']
+    bt_allow_edge_point_filter2371 = sys.modules[
+        'onshape_client.oas.models.bt_allow_edge_point_filter2371']
 try:
     from onshape_client.oas.models import bt_allow_flattened_geometry_filter2140
 except ImportError:
-    bt_allow_flattened_geometry_filter2140 = sys.modules['onshape_client.oas.models.bt_allow_flattened_geometry_filter2140']
+    bt_allow_flattened_geometry_filter2140 = sys.modules[
+        'onshape_client.oas.models.bt_allow_flattened_geometry_filter2140']
 try:
     from onshape_client.oas.models import bt_allow_mesh_geometry_filter1026
 except ImportError:
-    bt_allow_mesh_geometry_filter1026 = sys.modules['onshape_client.oas.models.bt_allow_mesh_geometry_filter1026']
+    bt_allow_mesh_geometry_filter1026 = sys.modules[
+        'onshape_client.oas.models.bt_allow_mesh_geometry_filter1026']
 try:
     from onshape_client.oas.models import bt_and_filter110
 except ImportError:
-    bt_and_filter110 = sys.modules['onshape_client.oas.models.bt_and_filter110']
+    bt_and_filter110 = sys.modules[
+        'onshape_client.oas.models.bt_and_filter110']
 try:
     from onshape_client.oas.models import bt_body_type_filter112
 except ImportError:
-    bt_body_type_filter112 = sys.modules['onshape_client.oas.models.bt_body_type_filter112']
+    bt_body_type_filter112 = sys.modules[
+        'onshape_client.oas.models.bt_body_type_filter112']
 try:
     from onshape_client.oas.models import bt_closed_curve_filter1206
 except ImportError:
-    bt_closed_curve_filter1206 = sys.modules['onshape_client.oas.models.bt_closed_curve_filter1206']
+    bt_closed_curve_filter1206 = sys.modules[
+        'onshape_client.oas.models.bt_closed_curve_filter1206']
 try:
     from onshape_client.oas.models import bt_construction_object_filter113
 except ImportError:
-    bt_construction_object_filter113 = sys.modules['onshape_client.oas.models.bt_construction_object_filter113']
+    bt_construction_object_filter113 = sys.modules[
+        'onshape_client.oas.models.bt_construction_object_filter113']
 try:
     from onshape_client.oas.models import bt_edge_topology_filter122
 except ImportError:
-    bt_edge_topology_filter122 = sys.modules['onshape_client.oas.models.bt_edge_topology_filter122']
+    bt_edge_topology_filter122 = sys.modules[
+        'onshape_client.oas.models.bt_edge_topology_filter122']
 try:
     from onshape_client.oas.models import bt_entity_type_filter124
 except ImportError:
-    bt_entity_type_filter124 = sys.modules['onshape_client.oas.models.bt_entity_type_filter124']
+    bt_entity_type_filter124 = sys.modules[
+        'onshape_client.oas.models.bt_entity_type_filter124']
 try:
     from onshape_client.oas.models import bt_feature_filter127
 except ImportError:
-    bt_feature_filter127 = sys.modules['onshape_client.oas.models.bt_feature_filter127']
+    bt_feature_filter127 = sys.modules[
+        'onshape_client.oas.models.bt_feature_filter127']
 try:
     from onshape_client.oas.models import bt_feature_type_filter962
 except ImportError:
-    bt_feature_type_filter962 = sys.modules['onshape_client.oas.models.bt_feature_type_filter962']
+    bt_feature_type_filter962 = sys.modules[
+        'onshape_client.oas.models.bt_feature_type_filter962']
 try:
     from onshape_client.oas.models import bt_flat_sheet_metal_filter3018
 except ImportError:
-    bt_flat_sheet_metal_filter3018 = sys.modules['onshape_client.oas.models.bt_flat_sheet_metal_filter3018']
+    bt_flat_sheet_metal_filter3018 = sys.modules[
+        'onshape_client.oas.models.bt_flat_sheet_metal_filter3018']
 try:
     from onshape_client.oas.models import bt_geometry_filter130
 except ImportError:
-    bt_geometry_filter130 = sys.modules['onshape_client.oas.models.bt_geometry_filter130']
+    bt_geometry_filter130 = sys.modules[
+        'onshape_client.oas.models.bt_geometry_filter130']
 try:
     from onshape_client.oas.models import bt_image_filter853
 except ImportError:
-    bt_image_filter853 = sys.modules['onshape_client.oas.models.bt_image_filter853']
+    bt_image_filter853 = sys.modules[
+        'onshape_client.oas.models.bt_image_filter853']
 try:
     from onshape_client.oas.models import bt_mate_connector_filter163
 except ImportError:
-    bt_mate_connector_filter163 = sys.modules['onshape_client.oas.models.bt_mate_connector_filter163']
+    bt_mate_connector_filter163 = sys.modules[
+        'onshape_client.oas.models.bt_mate_connector_filter163']
 try:
     from onshape_client.oas.models import bt_mate_filter162
 except ImportError:
-    bt_mate_filter162 = sys.modules['onshape_client.oas.models.bt_mate_filter162']
+    bt_mate_filter162 = sys.modules[
+        'onshape_client.oas.models.bt_mate_filter162']
 try:
     from onshape_client.oas.models import bt_modifiable_entity_only_filter1593
 except ImportError:
-    bt_modifiable_entity_only_filter1593 = sys.modules['onshape_client.oas.models.bt_modifiable_entity_only_filter1593']
+    bt_modifiable_entity_only_filter1593 = sys.modules[
+        'onshape_client.oas.models.bt_modifiable_entity_only_filter1593']
 try:
     from onshape_client.oas.models import bt_not_filter165
 except ImportError:
-    bt_not_filter165 = sys.modules['onshape_client.oas.models.bt_not_filter165']
+    bt_not_filter165 = sys.modules[
+        'onshape_client.oas.models.bt_not_filter165']
 try:
     from onshape_client.oas.models import bt_occurrence_filter166
 except ImportError:
-    bt_occurrence_filter166 = sys.modules['onshape_client.oas.models.bt_occurrence_filter166']
+    bt_occurrence_filter166 = sys.modules[
+        'onshape_client.oas.models.bt_occurrence_filter166']
 try:
     from onshape_client.oas.models import bt_or_filter167
 except ImportError:
-    bt_or_filter167 = sys.modules['onshape_client.oas.models.bt_or_filter167']
+    bt_or_filter167 = sys.modules[
+        'onshape_client.oas.models.bt_or_filter167']
 try:
     from onshape_client.oas.models import bt_plane_orientation_filter1700
 except ImportError:
-    bt_plane_orientation_filter1700 = sys.modules['onshape_client.oas.models.bt_plane_orientation_filter1700']
+    bt_plane_orientation_filter1700 = sys.modules[
+        'onshape_client.oas.models.bt_plane_orientation_filter1700']
 try:
     from onshape_client.oas.models import bt_sketch_object_filter184
 except ImportError:
-    bt_sketch_object_filter184 = sys.modules['onshape_client.oas.models.bt_sketch_object_filter184']
+    bt_sketch_object_filter184 = sys.modules[
+        'onshape_client.oas.models.bt_sketch_object_filter184']
 try:
     from onshape_client.oas.models import bt_text_object_filter1515
 except ImportError:
-    bt_text_object_filter1515 = sys.modules['onshape_client.oas.models.bt_text_object_filter1515']
+    bt_text_object_filter1515 = sys.modules[
+        'onshape_client.oas.models.bt_text_object_filter1515']
 try:
     from onshape_client.oas.models import bt_text_stroke_filter461
 except ImportError:
-    bt_text_stroke_filter461 = sys.modules['onshape_client.oas.models.bt_text_stroke_filter461']
+    bt_text_stroke_filter461 = sys.modules[
+        'onshape_client.oas.models.bt_text_stroke_filter461']
 try:
     from onshape_client.oas.models import btsm_definition_entity_type_filter1651
 except ImportError:
-    btsm_definition_entity_type_filter1651 = sys.modules['onshape_client.oas.models.btsm_definition_entity_type_filter1651']
+    btsm_definition_entity_type_filter1651 = sys.modules[
+        'onshape_client.oas.models.btsm_definition_entity_type_filter1651']
 
 
 class BTQueryFilter183(ModelNormal):

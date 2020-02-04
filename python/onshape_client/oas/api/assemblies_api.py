@@ -68,7 +68,14 @@ class AssembliesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __add_feature(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __add_feature(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """add_feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -76,34 +83,38 @@ class AssembliesApi(object):
             >>> thread = api.add_feature(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str body:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_feature_definition_response1617.BTFeatureDefinitionResponse1617
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                body (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_feature_definition_response1617.BTFeatureDefinitionResponse1617
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -124,10 +135,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.add_feature = Endpoint(
@@ -168,11 +183,16 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -203,40 +223,50 @@ class AssembliesApi(object):
             callable=__add_feature
         )
 
-        def __create_assembly(self, did, wid, bt_model_element_params_bt_model_element_params, **kwargs):  # noqa: E501
+        def __create_assembly(
+            self,
+            did,
+            wid,
+            bt_model_element_params,
+            **kwargs
+        ):
             """Create Assembly  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_assembly(did, wid, bt_model_element_params_bt_model_element_params, async_req=True)
+            >>> thread = api.create_assembly(did, wid, bt_model_element_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param bt_model_element_params.BTModelElementParams bt_model_element_params_bt_model_element_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_element_info.BTDocumentElementInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                bt_model_element_params (bt_model_element_params.BTModelElementParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_info.BTDocumentElementInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -257,9 +287,12 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['bt_model_element_params_bt_model_element_params'] = bt_model_element_params_bt_model_element_params
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_model_element_params'] = \
+                bt_model_element_params
             return self.call_with_http_info(**kwargs)
 
         self.create_assembly = Endpoint(
@@ -277,12 +310,12 @@ class AssembliesApi(object):
                 'all': [
                     'did',
                     'wid',
-                    'bt_model_element_params_bt_model_element_params',
+                    'bt_model_element_params',
                 ],
                 'required': [
                     'did',
                     'wid',
-                    'bt_model_element_params_bt_model_element_params',
+                    'bt_model_element_params',
                 ],
                 'nullable': [
                 ],
@@ -297,9 +330,12 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'bt_model_element_params_bt_model_element_params': (bt_model_element_params.BTModelElementParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_model_element_params':
+                        (bt_model_element_params.BTModelElementParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -308,7 +344,7 @@ class AssembliesApi(object):
                 'location_map': {
                     'did': 'path',
                     'wid': 'path',
-                    'bt_model_element_params_bt_model_element_params': 'body',
+                    'bt_model_element_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -326,41 +362,52 @@ class AssembliesApi(object):
             callable=__create_assembly
         )
 
-        def __create_instance(self, did, wid, eid, bt_assembly_instance_definition_params_bt_assembly_instance_definition_params, **kwargs):  # noqa: E501
+        def __create_instance(
+            self,
+            did,
+            wid,
+            eid,
+            bt_assembly_instance_definition_params,
+            **kwargs
+        ):
             """Create assembly instance  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_instance(did, wid, eid, bt_assembly_instance_definition_params_bt_assembly_instance_definition_params, async_req=True)
+            >>> thread = api.create_instance(did, wid, eid, bt_assembly_instance_definition_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams bt_assembly_instance_definition_params_bt_assembly_instance_definition_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_occurrence74.BTOccurrence74]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+                bt_assembly_instance_definition_params (bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_occurrence74.BTOccurrence74]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -381,10 +428,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
-            kwargs['bt_assembly_instance_definition_params_bt_assembly_instance_definition_params'] = bt_assembly_instance_definition_params_bt_assembly_instance_definition_params
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
+            kwargs['bt_assembly_instance_definition_params'] = \
+                bt_assembly_instance_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.create_instance = Endpoint(
@@ -403,13 +454,13 @@ class AssembliesApi(object):
                     'did',
                     'wid',
                     'eid',
-                    'bt_assembly_instance_definition_params_bt_assembly_instance_definition_params',
+                    'bt_assembly_instance_definition_params',
                 ],
                 'required': [
                     'did',
                     'wid',
                     'eid',
-                    'bt_assembly_instance_definition_params_bt_assembly_instance_definition_params',
+                    'bt_assembly_instance_definition_params',
                 ],
                 'nullable': [
                 ],
@@ -424,10 +475,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'bt_assembly_instance_definition_params_bt_assembly_instance_definition_params': (bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_assembly_instance_definition_params':
+                        (bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -438,7 +493,7 @@ class AssembliesApi(object):
                     'did': 'path',
                     'wid': 'path',
                     'eid': 'path',
-                    'bt_assembly_instance_definition_params_bt_assembly_instance_definition_params': 'body',
+                    'bt_assembly_instance_definition_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -456,7 +511,14 @@ class AssembliesApi(object):
             callable=__create_instance
         )
 
-        def __delete_feature(self, did, wid, eid, fid, **kwargs):  # noqa: E501
+        def __delete_feature(
+            self,
+            did,
+            wid,
+            eid,
+            fid,
+            **kwargs
+        ):
             """Delete Feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -464,33 +526,37 @@ class AssembliesApi(object):
             >>> thread = api.delete_feature(did, wid, eid, fid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param str fid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_feature_api_base1430.BTFeatureApiBase1430
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+                fid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_feature_api_base1430.BTFeatureApiBase1430
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -511,10 +577,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
-            kwargs['fid'] = fid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
+            kwargs['fid'] = \
+                fid
             return self.call_with_http_info(**kwargs)
 
         self.delete_feature = Endpoint(
@@ -554,10 +624,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'fid': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'fid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -585,7 +659,14 @@ class AssembliesApi(object):
             callable=__delete_feature
         )
 
-        def __delete_instance(self, did, eid, wid, nid, **kwargs):  # noqa: E501
+        def __delete_instance(
+            self,
+            did,
+            eid,
+            wid,
+            nid,
+            **kwargs
+        ):
             """Delete assembly instance.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -593,33 +674,37 @@ class AssembliesApi(object):
             >>> thread = api.delete_instance(did, eid, wid, nid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param str nid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                nid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -640,10 +725,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['nid'] = nid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['nid'] = \
+                nid
             return self.call_with_http_info(**kwargs)
 
         self.delete_instance = Endpoint(
@@ -683,10 +772,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'nid': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'nid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -714,7 +807,14 @@ class AssembliesApi(object):
             callable=__delete_instance
         )
 
-        def __get_assembly_bounding_boxes(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_assembly_bounding_boxes(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """Bounding Boxes.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -722,38 +822,42 @@ class AssembliesApi(object):
             >>> thread = api.get_assembly_bounding_boxes(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str link_document_id:
-            :param bool include_hidden:
-            :param str display_state_id:
-            :param str configuration:
-            :param str exploded_view_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_bounding_box_info.BTBoundingBoxInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                include_hidden (bool): [optional]
+                display_state_id (str): [optional]
+                configuration (str): [optional]
+                exploded_view_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_bounding_box_info.BTBoundingBoxInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -774,10 +878,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_bounding_boxes = Endpoint(
@@ -822,15 +930,24 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'link_document_id': (str,),
-                    'include_hidden': (bool,),
-                    'display_state_id': (str,),
-                    'configuration': (str,),
-                    'exploded_view_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'include_hidden':
+                        (bool,),
+                    'display_state_id':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'exploded_view_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -867,7 +984,14 @@ class AssembliesApi(object):
             callable=__get_assembly_bounding_boxes
         )
 
-        def __get_assembly_definition(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_assembly_definition(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """Assembly Definition.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -875,38 +999,42 @@ class AssembliesApi(object):
             >>> thread = api.get_assembly_definition(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str link_document_id:
-            :param bool include_mate_features:
-            :param bool include_non_solids:
-            :param bool include_mate_connectors:
-            :param str configuration:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_assembly_definition_info.BTAssemblyDefinitionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                include_mate_features (bool): [optional]
+                include_non_solids (bool): [optional]
+                include_mate_connectors (bool): [optional]
+                configuration (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_assembly_definition_info.BTAssemblyDefinitionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -927,10 +1055,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_definition = Endpoint(
@@ -975,15 +1107,24 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'link_document_id': (str,),
-                    'include_mate_features': (bool,),
-                    'include_non_solids': (bool,),
-                    'include_mate_connectors': (bool,),
-                    'configuration': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'include_mate_features':
+                        (bool,),
+                    'include_non_solids':
+                        (bool,),
+                    'include_mate_connectors':
+                        (bool,),
+                    'configuration':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1021,7 +1162,14 @@ class AssembliesApi(object):
             callable=__get_assembly_definition
         )
 
-        def __get_assembly_shaded_views(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_assembly_shaded_views(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """get_assembly_shaded_views  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1029,45 +1177,49 @@ class AssembliesApi(object):
             >>> thread = api.get_assembly_shaded_views(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str link_document_id:
-            :param str view_matrix:
-            :param int output_height:
-            :param int output_width:
-            :param float pixel_size:
-            :param str edges:
-            :param bool show_all_parts:
-            :param bool include_surfaces:
-            :param bool use_anti_aliasing:
-            :param str display_state_id:
-            :param str configuration:
-            :param str exploded_view_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_shaded_views_info.BTShadedViewsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                view_matrix (str): [optional] if omitted the server will use the default value of 'front'
+                output_height (int): [optional] if omitted the server will use the default value of 500
+                output_width (int): [optional] if omitted the server will use the default value of 500
+                pixel_size (float): [optional] if omitted the server will use the default value of 0.003
+                edges (str): [optional] if omitted the server will use the default value of 'show'
+                show_all_parts (bool): [optional] if omitted the server will use the default value of False
+                include_surfaces (bool): [optional] if omitted the server will use the default value of True
+                use_anti_aliasing (bool): [optional] if omitted the server will use the default value of False
+                display_state_id (str): [optional]
+                configuration (str): [optional]
+                exploded_view_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_shaded_views_info.BTShadedViewsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1088,10 +1240,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_shaded_views = Endpoint(
@@ -1143,22 +1299,38 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'link_document_id': (str,),
-                    'view_matrix': (str,),
-                    'output_height': (int,),
-                    'output_width': (int,),
-                    'pixel_size': (float,),
-                    'edges': (str,),
-                    'show_all_parts': (bool,),
-                    'include_surfaces': (bool,),
-                    'use_anti_aliasing': (bool,),
-                    'display_state_id': (str,),
-                    'configuration': (str,),
-                    'exploded_view_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'view_matrix':
+                        (str,),
+                    'output_height':
+                        (int,),
+                    'output_width':
+                        (int,),
+                    'pixel_size':
+                        (float,),
+                    'edges':
+                        (str,),
+                    'show_all_parts':
+                        (bool,),
+                    'include_surfaces':
+                        (bool,),
+                    'use_anti_aliasing':
+                        (bool,),
+                    'display_state_id':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'exploded_view_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1210,7 +1382,14 @@ class AssembliesApi(object):
             callable=__get_assembly_shaded_views
         )
 
-        def __get_bill_of_materials(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_bill_of_materials(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """Get Bill of Materials  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1218,40 +1397,44 @@ class AssembliesApi(object):
             >>> thread = api.get_bill_of_materials(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str metadata_workspace_id:
-            :param [str] bom_column_ids:
-            :param bool indented:
-            :param bool multi_level:
-            :param bool generate_if_absent:
-            :param str link_document_id:
-            :param str configuration:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: json_node.JsonNode
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                metadata_workspace_id (str): [optional] if omitted the server will use the default value of ''
+                bom_column_ids ([str]): [optional]
+                indented (bool): [optional] if omitted the server will use the default value of True
+                multi_level (bool): [optional] if omitted the server will use the default value of False
+                generate_if_absent (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                configuration (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                json_node.JsonNode
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1272,10 +1455,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_bill_of_materials = Endpoint(
@@ -1322,17 +1509,28 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'metadata_workspace_id': (str,),
-                    'bom_column_ids': ([str],),
-                    'indented': (bool,),
-                    'multi_level': (bool,),
-                    'generate_if_absent': (bool,),
-                    'link_document_id': (str,),
-                    'configuration': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'metadata_workspace_id':
+                        (str,),
+                    'bom_column_ids':
+                        ([str],),
+                    'indented':
+                        (bool,),
+                    'multi_level':
+                        (bool,),
+                    'generate_if_absent':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
+                    'configuration':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1375,7 +1573,14 @@ class AssembliesApi(object):
             callable=__get_bill_of_materials
         )
 
-        def __get_feature_specs(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_feature_specs(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """get_feature_specs  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1383,33 +1588,37 @@ class AssembliesApi(object):
             >>> thread = api.get_feature_specs(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_feature_specs_response664.BTFeatureSpecsResponse664
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_feature_specs_response664.BTFeatureSpecsResponse664
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1430,10 +1639,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_feature_specs = Endpoint(
@@ -1473,10 +1686,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1504,7 +1721,14 @@ class AssembliesApi(object):
             callable=__get_feature_specs
         )
 
-        def __get_features(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_features(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """Get Feature List  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1512,35 +1736,39 @@ class AssembliesApi(object):
             >>> thread = api.get_features(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param [str] feature_id:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                feature_id ([str]): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1561,10 +1789,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_features = Endpoint(
@@ -1606,12 +1838,18 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'feature_id': ([str],),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'feature_id':
+                        ([str],),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1643,7 +1881,12 @@ class AssembliesApi(object):
             callable=__get_features
         )
 
-        def __get_named_views(self, did, eid, **kwargs):  # noqa: E501
+        def __get_named_views(
+            self,
+            did,
+            eid,
+            **kwargs
+        ):
             """get_named_views  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1651,32 +1894,36 @@ class AssembliesApi(object):
             >>> thread = api.get_named_views(did, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param bool skip_perspective:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_named_views_info.BTNamedViewsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+
+            Keyword Args:
+                skip_perspective (bool): [optional] if omitted the server will use the default value of True
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_named_views_info.BTNamedViewsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1697,8 +1944,10 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_named_views = Endpoint(
@@ -1735,9 +1984,12 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'skip_perspective': (bool,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'skip_perspective':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1763,7 +2015,13 @@ class AssembliesApi(object):
             callable=__get_named_views
         )
 
-        def __get_or_create_bill_of_materials_element(self, did, wid, eid, **kwargs):  # noqa: E501
+        def __get_or_create_bill_of_materials_element(
+            self,
+            did,
+            wid,
+            eid,
+            **kwargs
+        ):
             """Get or Create Bill of Materials Element  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1771,32 +2029,36 @@ class AssembliesApi(object):
             >>> thread = api.get_or_create_bill_of_materials_element(did, wid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_element_info.BTDocumentElementInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_info.BTDocumentElementInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1817,9 +2079,12 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_or_create_bill_of_materials_element = Endpoint(
@@ -1857,9 +2122,12 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1885,7 +2153,13 @@ class AssembliesApi(object):
             callable=__get_or_create_bill_of_materials_element
         )
 
-        def __get_translator_formats(self, did, wid, eid, **kwargs):  # noqa: E501
+        def __get_translator_formats(
+            self,
+            did,
+            wid,
+            eid,
+            **kwargs
+        ):
             """Get Translation Formats  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1893,33 +2167,37 @@ class AssembliesApi(object):
             >>> thread = api.get_translator_formats(did, wid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param bool check_content:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_model_format_info.BTModelFormatInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+
+            Keyword Args:
+                check_content (bool): [optional] if omitted the server will use the default value of True
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_model_format_info.BTModelFormatInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1940,9 +2218,12 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_translator_formats = Endpoint(
@@ -1979,10 +2260,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'check_content': (bool,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'check_content':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2010,41 +2295,52 @@ class AssembliesApi(object):
             callable=__get_translator_formats
         )
 
-        def __insert_transformed_instances(self, did, eid, wid, bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params, **kwargs):  # noqa: E501
+        def __insert_transformed_instances(
+            self,
+            did,
+            eid,
+            wid,
+            bt_assembly_transformed_instances_definition_params,
+            **kwargs
+        ):
             """Create and transform assembly instances  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params, async_req=True)
+            >>> thread = api.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                bt_assembly_transformed_instances_definition_params (bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2065,10 +2361,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params'] = bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_assembly_transformed_instances_definition_params'] = \
+                bt_assembly_transformed_instances_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.insert_transformed_instances = Endpoint(
@@ -2087,13 +2387,13 @@ class AssembliesApi(object):
                     'did',
                     'eid',
                     'wid',
-                    'bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params',
+                    'bt_assembly_transformed_instances_definition_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wid',
-                    'bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params',
+                    'bt_assembly_transformed_instances_definition_params',
                 ],
                 'nullable': [
                 ],
@@ -2108,10 +2408,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params': (bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_assembly_transformed_instances_definition_params':
+                        (bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2122,7 +2426,7 @@ class AssembliesApi(object):
                     'did': 'path',
                     'eid': 'path',
                     'wid': 'path',
-                    'bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params': 'body',
+                    'bt_assembly_transformed_instances_definition_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2140,41 +2444,52 @@ class AssembliesApi(object):
             callable=__insert_transformed_instances
         )
 
-        def __transform_occurrences(self, did, eid, wid, bt_assembly_transform_definition_params_bt_assembly_transform_definition_params, **kwargs):  # noqa: E501
+        def __transform_occurrences(
+            self,
+            did,
+            eid,
+            wid,
+            bt_assembly_transform_definition_params,
+            **kwargs
+        ):
             """Transform assembly occurrences.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params_bt_assembly_transform_definition_params, async_req=True)
+            >>> thread = api.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams bt_assembly_transform_definition_params_bt_assembly_transform_definition_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                bt_assembly_transform_definition_params (bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2195,10 +2510,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['bt_assembly_transform_definition_params_bt_assembly_transform_definition_params'] = bt_assembly_transform_definition_params_bt_assembly_transform_definition_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_assembly_transform_definition_params'] = \
+                bt_assembly_transform_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.transform_occurrences = Endpoint(
@@ -2217,13 +2536,13 @@ class AssembliesApi(object):
                     'did',
                     'eid',
                     'wid',
-                    'bt_assembly_transform_definition_params_bt_assembly_transform_definition_params',
+                    'bt_assembly_transform_definition_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wid',
-                    'bt_assembly_transform_definition_params_bt_assembly_transform_definition_params',
+                    'bt_assembly_transform_definition_params',
                 ],
                 'nullable': [
                 ],
@@ -2238,10 +2557,14 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'bt_assembly_transform_definition_params_bt_assembly_transform_definition_params': (bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_assembly_transform_definition_params':
+                        (bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2252,7 +2575,7 @@ class AssembliesApi(object):
                     'did': 'path',
                     'eid': 'path',
                     'wid': 'path',
-                    'bt_assembly_transform_definition_params_bt_assembly_transform_definition_params': 'body',
+                    'bt_assembly_transform_definition_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2270,42 +2593,54 @@ class AssembliesApi(object):
             callable=__transform_occurrences
         )
 
-        def __translate_format(self, did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, **kwargs):  # noqa: E501
+        def __translate_format(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            bt_translate_format_params,
+            **kwargs
+        ):
             """Create Assembly translation.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.translate_format(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, async_req=True)
+            >>> thread = api.translate_format(did, wv, wvid, eid, bt_translate_format_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param bt_translate_format_params.BTTranslateFormatParams bt_translate_format_params_bt_translate_format_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_translation_request_info.BTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+                bt_translate_format_params (bt_translate_format_params.BTTranslateFormatParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_translation_request_info.BTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2326,11 +2661,16 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
-            kwargs['bt_translate_format_params_bt_translate_format_params'] = bt_translate_format_params_bt_translate_format_params
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
+            kwargs['bt_translate_format_params'] = \
+                bt_translate_format_params
             return self.call_with_http_info(**kwargs)
 
         self.translate_format = Endpoint(
@@ -2350,14 +2690,14 @@ class AssembliesApi(object):
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'required': [
                     'did',
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'nullable': [
                 ],
@@ -2372,11 +2712,16 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'bt_translate_format_params_bt_translate_format_params': (bt_translate_format_params.BTTranslateFormatParams,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_translate_format_params':
+                        (bt_translate_format_params.BTTranslateFormatParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2389,7 +2734,7 @@ class AssembliesApi(object):
                     'wv': 'path',
                     'wvid': 'path',
                     'eid': 'path',
-                    'bt_translate_format_params_bt_translate_format_params': 'body',
+                    'bt_translate_format_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2407,7 +2752,14 @@ class AssembliesApi(object):
             callable=__translate_format
         )
 
-        def __update_feature(self, did, wid, eid, fid, **kwargs):  # noqa: E501
+        def __update_feature(
+            self,
+            did,
+            wid,
+            eid,
+            fid,
+            **kwargs
+        ):
             """update_feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2415,34 +2767,38 @@ class AssembliesApi(object):
             >>> thread = api.update_feature(did, wid, eid, fid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param str fid: (required)
-            :param str body:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_feature_definition_response1617.BTFeatureDefinitionResponse1617
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+                fid (str):
+
+            Keyword Args:
+                body (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_feature_definition_response1617.BTFeatureDefinitionResponse1617
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2463,10 +2819,14 @@ class AssembliesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
-            kwargs['fid'] = fid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
+            kwargs['fid'] = \
+                fid
             return self.call_with_http_info(**kwargs)
 
         self.update_feature = Endpoint(
@@ -2507,11 +2867,16 @@ class AssembliesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'fid': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'fid':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',

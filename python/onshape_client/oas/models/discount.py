@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import coupon
 except ImportError:
-    coupon = sys.modules['onshape_client.oas.models.coupon']
+    coupon = sys.modules[
+        'onshape_client.oas.models.coupon']
 
 
 class Discount(ModelNormal):

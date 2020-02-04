@@ -57,42 +57,54 @@ class BlobElementsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_blob_translation(self, did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, **kwargs):  # noqa: E501
+        def __create_blob_translation(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            bt_translate_format_params,
+            **kwargs
+        ):
             """Create Translation.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_blob_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, async_req=True)
+            >>> thread = api.create_blob_translation(did, wv, wvid, eid, bt_translate_format_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param bt_translate_format_params.BTTranslateFormatParams bt_translate_format_params_bt_translate_format_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_translation_request_info.BTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+                bt_translate_format_params (bt_translate_format_params.BTTranslateFormatParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_translation_request_info.BTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -113,11 +125,16 @@ class BlobElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
-            kwargs['bt_translate_format_params_bt_translate_format_params'] = bt_translate_format_params_bt_translate_format_params
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
+            kwargs['bt_translate_format_params'] = \
+                bt_translate_format_params
             return self.call_with_http_info(**kwargs)
 
         self.create_blob_translation = Endpoint(
@@ -137,14 +154,14 @@ class BlobElementsApi(object):
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'required': [
                     'did',
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'nullable': [
                 ],
@@ -159,11 +176,16 @@ class BlobElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'bt_translate_format_params_bt_translate_format_params': (bt_translate_format_params.BTTranslateFormatParams,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_translate_format_params':
+                        (bt_translate_format_params.BTTranslateFormatParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -176,7 +198,7 @@ class BlobElementsApi(object):
                     'wv': 'path',
                     'wvid': 'path',
                     'eid': 'path',
-                    'bt_translate_format_params_bt_translate_format_params': 'body',
+                    'bt_translate_format_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -194,7 +216,13 @@ class BlobElementsApi(object):
             callable=__create_blob_translation
         )
 
-        def __download_file_workspace(self, did, wid, eid, **kwargs):  # noqa: E501
+        def __download_file_workspace(
+            self,
+            did,
+            wid,
+            eid,
+            **kwargs
+        ):
             """Download File From Blob Element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -202,35 +230,39 @@ class BlobElementsApi(object):
             >>> thread = api.download_file_workspace(did, wid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param str content_disposition:
-            :param str if_none_match:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: file_type
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+
+            Keyword Args:
+                content_disposition (str): [optional]
+                if_none_match (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                file_type
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -251,9 +283,12 @@ class BlobElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.download_file_workspace = Endpoint(
@@ -294,12 +329,18 @@ class BlobElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'content_disposition': (str,),
-                    'if_none_match': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'content_disposition':
+                        (str,),
+                    'if_none_match':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -330,41 +371,52 @@ class BlobElementsApi(object):
             callable=__download_file_workspace
         )
 
-        def __update_units(self, did, eid, wid, bt_update_mesh_units_params_bt_update_mesh_units_params, **kwargs):  # noqa: E501
+        def __update_units(
+            self,
+            did,
+            eid,
+            wid,
+            bt_update_mesh_units_params,
+            **kwargs
+        ):
             """Update Mesh Units.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_units(did, eid, wid, bt_update_mesh_units_params_bt_update_mesh_units_params, async_req=True)
+            >>> thread = api.update_units(did, eid, wid, bt_update_mesh_units_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param bt_update_mesh_units_params.BTUpdateMeshUnitsParams bt_update_mesh_units_params_bt_update_mesh_units_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_element_processing_info.BTDocumentElementProcessingInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                bt_update_mesh_units_params (bt_update_mesh_units_params.BTUpdateMeshUnitsParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_processing_info.BTDocumentElementProcessingInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -385,10 +437,14 @@ class BlobElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['bt_update_mesh_units_params_bt_update_mesh_units_params'] = bt_update_mesh_units_params_bt_update_mesh_units_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_update_mesh_units_params'] = \
+                bt_update_mesh_units_params
             return self.call_with_http_info(**kwargs)
 
         self.update_units = Endpoint(
@@ -407,13 +463,13 @@ class BlobElementsApi(object):
                     'did',
                     'eid',
                     'wid',
-                    'bt_update_mesh_units_params_bt_update_mesh_units_params',
+                    'bt_update_mesh_units_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wid',
-                    'bt_update_mesh_units_params_bt_update_mesh_units_params',
+                    'bt_update_mesh_units_params',
                 ],
                 'nullable': [
                 ],
@@ -428,10 +484,14 @@ class BlobElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'bt_update_mesh_units_params_bt_update_mesh_units_params': (bt_update_mesh_units_params.BTUpdateMeshUnitsParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_update_mesh_units_params':
+                        (bt_update_mesh_units_params.BTUpdateMeshUnitsParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -442,7 +502,7 @@ class BlobElementsApi(object):
                     'did': 'path',
                     'eid': 'path',
                     'wid': 'path',
-                    'bt_update_mesh_units_params_bt_update_mesh_units_params': 'body',
+                    'bt_update_mesh_units_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -460,7 +520,12 @@ class BlobElementsApi(object):
             callable=__update_units
         )
 
-        def __upload_file_create_element(self, did, wid, **kwargs):  # noqa: E501
+        def __upload_file_create_element(
+            self,
+            did,
+            wid,
+            **kwargs
+        ):
             """Upload File to New Blob Element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -468,38 +533,42 @@ class BlobElementsApi(object):
             >>> thread = api.upload_file_create_element(did, wid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param content_disposition.ContentDisposition content_disposition:
-            :param bool, date, datetime, dict, float, int, list, str entity:
-            :param body_part_media_type.BodyPartMediaType media_type:
-            :param bool, date, datetime, dict, float, int, list, str message_body_workers:
-            :param multi_part.MultiPart parent:
-            :param bool, date, datetime, dict, float, int, list, str providers:
-            :param [body_part.BodyPart] body_parts:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_element_processing_info.BTDocumentElementProcessingInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+
+            Keyword Args:
+                content_disposition (content_disposition.ContentDisposition): [optional]
+                entity (bool, date, datetime, dict, float, int, list, str): [optional]
+                media_type (body_part_media_type.BodyPartMediaType): [optional]
+                message_body_workers (bool, date, datetime, dict, float, int, list, str): [optional]
+                parent (multi_part.MultiPart): [optional]
+                providers (bool, date, datetime, dict, float, int, list, str): [optional]
+                body_parts ([body_part.BodyPart]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_processing_info.BTDocumentElementProcessingInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -520,8 +589,10 @@ class BlobElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
             return self.call_with_http_info(**kwargs)
 
         self.upload_file_create_element = Endpoint(
@@ -564,15 +635,24 @@ class BlobElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'content_disposition': (content_disposition.ContentDisposition,),
-                    'entity': (bool, date, datetime, dict, float, int, list, str,),
-                    'media_type': (body_part_media_type.BodyPartMediaType,),
-                    'message_body_workers': (bool, date, datetime, dict, float, int, list, str,),
-                    'parent': (multi_part.MultiPart,),
-                    'providers': (bool, date, datetime, dict, float, int, list, str,),
-                    'body_parts': ([body_part.BodyPart],),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'content_disposition':
+                        (content_disposition.ContentDisposition,),
+                    'entity':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'media_type':
+                        (body_part_media_type.BodyPartMediaType,),
+                    'message_body_workers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'parent':
+                        (multi_part.MultiPart,),
+                    'providers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'body_parts':
+                        ([body_part.BodyPart],),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -613,7 +693,13 @@ class BlobElementsApi(object):
             callable=__upload_file_create_element
         )
 
-        def __upload_file_update_element(self, did, eid, wid, **kwargs):  # noqa: E501
+        def __upload_file_update_element(
+            self,
+            did,
+            eid,
+            wid,
+            **kwargs
+        ):
             """Update Blob Element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -621,40 +707,44 @@ class BlobElementsApi(object):
             >>> thread = api.upload_file_update_element(did, eid, wid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param str parent_change_id:
-            :param content_disposition.ContentDisposition content_disposition:
-            :param bool, date, datetime, dict, float, int, list, str entity:
-            :param body_part_media_type.BodyPartMediaType media_type:
-            :param bool, date, datetime, dict, float, int, list, str message_body_workers:
-            :param multi_part.MultiPart parent:
-            :param bool, date, datetime, dict, float, int, list, str providers:
-            :param [body_part.BodyPart] body_parts:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_element_processing_info.BTDocumentElementProcessingInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+
+            Keyword Args:
+                parent_change_id (str): [optional]
+                content_disposition (content_disposition.ContentDisposition): [optional]
+                entity (bool, date, datetime, dict, float, int, list, str): [optional]
+                media_type (body_part_media_type.BodyPartMediaType): [optional]
+                message_body_workers (bool, date, datetime, dict, float, int, list, str): [optional]
+                parent (multi_part.MultiPart): [optional]
+                providers (bool, date, datetime, dict, float, int, list, str): [optional]
+                body_parts ([body_part.BodyPart]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_processing_info.BTDocumentElementProcessingInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -675,9 +765,12 @@ class BlobElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
             return self.call_with_http_info(**kwargs)
 
         self.upload_file_update_element = Endpoint(
@@ -723,17 +816,28 @@ class BlobElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'parent_change_id': (str,),
-                    'content_disposition': (content_disposition.ContentDisposition,),
-                    'entity': (bool, date, datetime, dict, float, int, list, str,),
-                    'media_type': (body_part_media_type.BodyPartMediaType,),
-                    'message_body_workers': (bool, date, datetime, dict, float, int, list, str,),
-                    'parent': (multi_part.MultiPart,),
-                    'providers': (bool, date, datetime, dict, float, int, list, str,),
-                    'body_parts': ([body_part.BodyPart],),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'parent_change_id':
+                        (str,),
+                    'content_disposition':
+                        (content_disposition.ContentDisposition,),
+                    'entity':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'media_type':
+                        (body_part_media_type.BodyPartMediaType,),
+                    'message_body_workers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'parent':
+                        (multi_part.MultiPart,),
+                    'providers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'body_parts':
+                        ([body_part.BodyPart],),
                 },
                 'attribute_map': {
                     'did': 'did',

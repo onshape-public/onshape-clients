@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
-    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
+    bt_parameter_visibility_condition177 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_condition177']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_logical178_all_of
 except ImportError:
-    bt_parameter_visibility_logical178_all_of = sys.modules['onshape_client.oas.models.bt_parameter_visibility_logical178_all_of']
+    bt_parameter_visibility_logical178_all_of = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_logical178_all_of']
 
 
 class BTParameterVisibilityLogical178(ModelComposed):

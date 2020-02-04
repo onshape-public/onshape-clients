@@ -51,7 +51,11 @@ class FoldersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __get_folder_acl(self, fid, **kwargs):  # noqa: E501
+        def __get_folder_acl(
+            self,
+            fid,
+            **kwargs
+        ):
             """Get Access Control List  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,30 +63,34 @@ class FoldersApi(object):
             >>> thread = api.get_folder_acl(fid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str fid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_acl_info.BTAclInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                fid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_acl_info.BTAclInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -103,7 +111,8 @@ class FoldersApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['fid'] = fid
+            kwargs['fid'] = \
+                fid
             return self.call_with_http_info(**kwargs)
 
         self.get_folder_acl = Endpoint(
@@ -137,7 +146,8 @@ class FoldersApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'fid': (str,),
+                    'fid':
+                        (str,),
                 },
                 'attribute_map': {
                     'fid': 'fid',
@@ -159,39 +169,48 @@ class FoldersApi(object):
             callable=__get_folder_acl
         )
 
-        def __share(self, fid, bt_share_params_bt_share_params, **kwargs):  # noqa: E501
+        def __share(
+            self,
+            fid,
+            bt_share_params,
+            **kwargs
+        ):
             """Share Folder  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.share(fid, bt_share_params_bt_share_params, async_req=True)
+            >>> thread = api.share(fid, bt_share_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str fid: (required)
-            :param bt_share_params.BTShareParams bt_share_params_bt_share_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_acl_info.BTAclInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                fid (str):
+                bt_share_params (bt_share_params.BTShareParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_acl_info.BTAclInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -212,8 +231,10 @@ class FoldersApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['fid'] = fid
-            kwargs['bt_share_params_bt_share_params'] = bt_share_params_bt_share_params
+            kwargs['fid'] = \
+                fid
+            kwargs['bt_share_params'] = \
+                bt_share_params
             return self.call_with_http_info(**kwargs)
 
         self.share = Endpoint(
@@ -230,11 +251,11 @@ class FoldersApi(object):
             params_map={
                 'all': [
                     'fid',
-                    'bt_share_params_bt_share_params',
+                    'bt_share_params',
                 ],
                 'required': [
                     'fid',
-                    'bt_share_params_bt_share_params',
+                    'bt_share_params',
                 ],
                 'nullable': [
                 ],
@@ -249,15 +270,17 @@ class FoldersApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'fid': (str,),
-                    'bt_share_params_bt_share_params': (bt_share_params.BTShareParams,),
+                    'fid':
+                        (str,),
+                    'bt_share_params':
+                        (bt_share_params.BTShareParams,),
                 },
                 'attribute_map': {
                     'fid': 'fid',
                 },
                 'location_map': {
                     'fid': 'path',
-                    'bt_share_params_bt_share_params': 'body',
+                    'bt_share_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -275,7 +298,12 @@ class FoldersApi(object):
             callable=__share
         )
 
-        def __un_share(self, fid, eid, **kwargs):  # noqa: E501
+        def __un_share(
+            self,
+            fid,
+            eid,
+            **kwargs
+        ):
             """Unshare Folder  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -283,32 +311,36 @@ class FoldersApi(object):
             >>> thread = api.un_share(fid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str fid: (required)
-            :param str eid: (required)
-            :param int entry_type:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                fid (str):
+                eid (str):
+
+            Keyword Args:
+                entry_type (int): [optional] if omitted the server will use the default value of 0
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -329,8 +361,10 @@ class FoldersApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['fid'] = fid
-            kwargs['eid'] = eid
+            kwargs['fid'] = \
+                fid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.un_share = Endpoint(
@@ -367,9 +401,12 @@ class FoldersApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'fid': (str,),
-                    'eid': (str,),
-                    'entry_type': (int,),
+                    'fid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'entry_type':
+                        (int,),
                 },
                 'attribute_map': {
                     'fid': 'fid',

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_company_info
 except ImportError:
-    bt_company_info = sys.modules['onshape_client.oas.models.bt_company_info']
+    bt_company_info = sys.modules[
+        'onshape_client.oas.models.bt_company_info']
 
 
 class BTListResponseBTCompanyInfo(ModelNormal):

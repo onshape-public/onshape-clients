@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import update_params
 except ImportError:
-    update_params = sys.modules['onshape_client.oas.models.update_params']
+    update_params = sys.modules[
+        'onshape_client.oas.models.update_params']
 
 
 class BTUpdateReferenceParams(ModelNormal):

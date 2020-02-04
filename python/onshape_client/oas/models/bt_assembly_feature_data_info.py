@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_mated_entity
 except ImportError:
-    bt_assembly_mated_entity = sys.modules['onshape_client.oas.models.bt_assembly_mated_entity']
+    bt_assembly_mated_entity = sys.modules[
+        'onshape_client.oas.models.bt_assembly_mated_entity']
 
 
 class BTAssemblyFeatureDataInfo(ModelNormal):

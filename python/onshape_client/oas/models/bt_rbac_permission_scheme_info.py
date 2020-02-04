@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import entry
 except ImportError:
-    entry = sys.modules['onshape_client.oas.models.entry']
+    entry = sys.modules[
+        'onshape_client.oas.models.entry']
 
 
 class BTRbacPermissionSchemeInfo(ModelNormal):

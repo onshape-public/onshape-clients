@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_description1583
 except ImportError:
-    bt_curve_description1583 = sys.modules['onshape_client.oas.models.bt_curve_description1583']
+    bt_curve_description1583 = sys.modules[
+        'onshape_client.oas.models.bt_curve_description1583']
 try:
     from onshape_client.oas.models import bt_spline_description2118_all_of
 except ImportError:
-    bt_spline_description2118_all_of = sys.modules['onshape_client.oas.models.bt_spline_description2118_all_of']
+    bt_spline_description2118_all_of = sys.modules[
+        'onshape_client.oas.models.bt_spline_description2118_all_of']
 
 
 class BTSplineDescription2118(ModelComposed):

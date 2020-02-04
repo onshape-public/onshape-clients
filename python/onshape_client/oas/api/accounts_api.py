@@ -52,7 +52,12 @@ class AccountsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __cancel_purchase_new(self, aid, pid, **kwargs):  # noqa: E501
+        def __cancel_purchase_new(
+            self,
+            aid,
+            pid,
+            **kwargs
+        ):
             """Cancel Recurring Subscription  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -60,32 +65,36 @@ class AccountsApi(object):
             >>> thread = api.cancel_purchase_new(aid, pid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str aid: (required)
-            :param str pid: (required)
-            :param bool cancel_immediately:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                aid (str):
+                pid (str):
+
+            Keyword Args:
+                cancel_immediately (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -106,8 +115,10 @@ class AccountsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['aid'] = aid
-            kwargs['pid'] = pid
+            kwargs['aid'] = \
+                aid
+            kwargs['pid'] = \
+                pid
             return self.call_with_http_info(**kwargs)
 
         self.cancel_purchase_new = Endpoint(
@@ -144,9 +155,12 @@ class AccountsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'aid': (str,),
-                    'pid': (str,),
-                    'cancel_immediately': (bool,),
+                    'aid':
+                        (str,),
+                    'pid':
+                        (str,),
+                    'cancel_immediately':
+                        (bool,),
                 },
                 'attribute_map': {
                     'aid': 'aid',
@@ -172,7 +186,11 @@ class AccountsApi(object):
             callable=__cancel_purchase_new
         )
 
-        def __consume_purchase(self, pid, **kwargs):  # noqa: E501
+        def __consume_purchase(
+            self,
+            pid,
+            **kwargs
+        ):
             """Mark Purchase Consumed For User  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -180,31 +198,35 @@ class AccountsApi(object):
             >>> thread = api.consume_purchase(pid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str pid: (required)
-            :param bt_purchase_user_params.BTPurchaseUserParams bt_purchase_user_params_bt_purchase_user_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_purchase_info.BTPurchaseInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                pid (str):
+
+            Keyword Args:
+                bt_purchase_user_params (bt_purchase_user_params.BTPurchaseUserParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_purchase_info.BTPurchaseInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -225,7 +247,8 @@ class AccountsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['pid'] = pid
+            kwargs['pid'] = \
+                pid
             return self.call_with_http_info(**kwargs)
 
         self.consume_purchase = Endpoint(
@@ -242,7 +265,7 @@ class AccountsApi(object):
             params_map={
                 'all': [
                     'pid',
-                    'bt_purchase_user_params_bt_purchase_user_params',
+                    'bt_purchase_user_params',
                 ],
                 'required': [
                     'pid',
@@ -260,15 +283,17 @@ class AccountsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'pid': (str,),
-                    'bt_purchase_user_params_bt_purchase_user_params': (bt_purchase_user_params.BTPurchaseUserParams,),
+                    'pid':
+                        (str,),
+                    'bt_purchase_user_params':
+                        (bt_purchase_user_params.BTPurchaseUserParams,),
                 },
                 'attribute_map': {
                     'pid': 'pid',
                 },
                 'location_map': {
                     'pid': 'path',
-                    'bt_purchase_user_params_bt_purchase_user_params': 'body',
+                    'bt_purchase_user_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -286,7 +311,11 @@ class AccountsApi(object):
             callable=__consume_purchase
         )
 
-        def __get_plan_purchases(self, plan_id, **kwargs):  # noqa: E501
+        def __get_plan_purchases(
+            self,
+            plan_id,
+            **kwargs
+        ):
             """Get Plan Purchases  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -294,32 +323,36 @@ class AccountsApi(object):
             >>> thread = api.get_plan_purchases(plan_id, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str plan_id: (required)
-            :param int offset:
-            :param int limit:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_purchase_info.BTListResponseBTPurchaseInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                plan_id (str):
+
+            Keyword Args:
+                offset (int): [optional] if omitted the server will use the default value of 0
+                limit (int): [optional] if omitted the server will use the default value of 20
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_purchase_info.BTListResponseBTPurchaseInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -340,7 +373,8 @@ class AccountsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['plan_id'] = plan_id
+            kwargs['plan_id'] = \
+                plan_id
             return self.call_with_http_info(**kwargs)
 
         self.get_plan_purchases = Endpoint(
@@ -374,9 +408,12 @@ class AccountsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'plan_id': (str,),
-                    'offset': (int,),
-                    'limit': (int,),
+                    'plan_id':
+                        (str,),
+                    'offset':
+                        (int,),
+                    'limit':
+                        (int,),
                 },
                 'attribute_map': {
                     'plan_id': 'planId',
@@ -402,7 +439,10 @@ class AccountsApi(object):
             callable=__get_plan_purchases
         )
 
-        def __get_purchases(self, **kwargs):  # noqa: E501
+        def __get_purchases(
+            self,
+            **kwargs
+        ):
             """Get User's Appstore Purchases.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -410,31 +450,34 @@ class AccountsApi(object):
             >>> thread = api.get_purchases(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param bool all:
-            :param bool own_purchase_only:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_purchase_info.BTPurchaseInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                all (bool): [optional] if omitted the server will use the default value of False
+                own_purchase_only (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_purchase_info.BTPurchaseInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -485,8 +528,10 @@ class AccountsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'all': (bool,),
-                    'own_purchase_only': (bool,),
+                    'all':
+                        (bool,),
+                    'own_purchase_only':
+                        (bool,),
                 },
                 'attribute_map': {
                     'all': 'all',

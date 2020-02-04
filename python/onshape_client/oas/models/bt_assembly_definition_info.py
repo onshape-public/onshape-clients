@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_parts_info
 except ImportError:
-    bt_assembly_parts_info = sys.modules['onshape_client.oas.models.bt_assembly_parts_info']
+    bt_assembly_parts_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_parts_info']
 try:
     from onshape_client.oas.models import bt_assembly_ps_feature_info
 except ImportError:
-    bt_assembly_ps_feature_info = sys.modules['onshape_client.oas.models.bt_assembly_ps_feature_info']
+    bt_assembly_ps_feature_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_ps_feature_info']
 try:
     from onshape_client.oas.models import bt_root_assembly_info
 except ImportError:
-    bt_root_assembly_info = sys.modules['onshape_client.oas.models.bt_root_assembly_info']
+    bt_root_assembly_info = sys.modules[
+        'onshape_client.oas.models.bt_root_assembly_info']
 try:
     from onshape_client.oas.models import bt_sub_assembly_info
 except ImportError:
-    bt_sub_assembly_info = sys.modules['onshape_client.oas.models.bt_sub_assembly_info']
+    bt_sub_assembly_info = sys.modules[
+        'onshape_client.oas.models.bt_sub_assembly_info']
 
 
 class BTAssemblyDefinitionInfo(ModelNormal):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_rbac_role_info
 except ImportError:
-    bt_rbac_role_info = sys.modules['onshape_client.oas.models.bt_rbac_role_info']
+    bt_rbac_role_info = sys.modules[
+        'onshape_client.oas.models.bt_rbac_role_info']
 
 
 class Entry(ModelNormal):

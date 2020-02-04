@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_graphics_appearance1152
 except ImportError:
-    bt_graphics_appearance1152 = sys.modules['onshape_client.oas.models.bt_graphics_appearance1152']
+    bt_graphics_appearance1152 = sys.modules[
+        'onshape_client.oas.models.bt_graphics_appearance1152']
 
 
 class BTMParameterAppearance627AllOf(ModelNormal):

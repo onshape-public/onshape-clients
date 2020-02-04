@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter_nullable_quantity807_all_of
 except ImportError:
-    btm_parameter_nullable_quantity807_all_of = sys.modules['onshape_client.oas.models.btm_parameter_nullable_quantity807_all_of']
+    btm_parameter_nullable_quantity807_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_nullable_quantity807_all_of']
 try:
     from onshape_client.oas.models import btm_parameter_quantity147
 except ImportError:
-    btm_parameter_quantity147 = sys.modules['onshape_client.oas.models.btm_parameter_quantity147']
+    btm_parameter_quantity147 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_quantity147']
 
 
 class BTMParameterNullableQuantity807(ModelComposed):

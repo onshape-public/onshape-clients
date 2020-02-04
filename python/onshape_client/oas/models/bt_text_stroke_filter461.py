@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_query_filter183
 except ImportError:
-    bt_query_filter183 = sys.modules['onshape_client.oas.models.bt_query_filter183']
+    bt_query_filter183 = sys.modules[
+        'onshape_client.oas.models.bt_query_filter183']
 try:
     from onshape_client.oas.models import bt_text_stroke_filter461_all_of
 except ImportError:
-    bt_text_stroke_filter461_all_of = sys.modules['onshape_client.oas.models.bt_text_stroke_filter461_all_of']
+    bt_text_stroke_filter461_all_of = sys.modules[
+        'onshape_client.oas.models.bt_text_stroke_filter461_all_of']
 
 
 class BTTextStrokeFilter461(ModelComposed):

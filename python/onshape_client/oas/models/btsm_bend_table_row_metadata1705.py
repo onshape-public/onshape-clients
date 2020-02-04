@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_base_sm_joint_table_row_metadata2232
 except ImportError:
-    bt_base_sm_joint_table_row_metadata2232 = sys.modules['onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
+    bt_base_sm_joint_table_row_metadata2232 = sys.modules[
+        'onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
 try:
     from onshape_client.oas.models import bt_table_cross_highlight_data1753
 except ImportError:
-    bt_table_cross_highlight_data1753 = sys.modules['onshape_client.oas.models.bt_table_cross_highlight_data1753']
+    bt_table_cross_highlight_data1753 = sys.modules[
+        'onshape_client.oas.models.bt_table_cross_highlight_data1753']
 try:
     from onshape_client.oas.models import btsm_bend_table_row_metadata1705_all_of
 except ImportError:
-    btsm_bend_table_row_metadata1705_all_of = sys.modules['onshape_client.oas.models.btsm_bend_table_row_metadata1705_all_of']
+    btsm_bend_table_row_metadata1705_all_of = sys.modules[
+        'onshape_client.oas.models.btsm_bend_table_row_metadata1705_all_of']
 
 
 class BTSMBendTableRowMetadata1705(ModelComposed):

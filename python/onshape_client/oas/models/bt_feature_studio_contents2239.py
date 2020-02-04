@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_feature_api_base1430
 except ImportError:
-    bt_feature_api_base1430 = sys.modules['onshape_client.oas.models.bt_feature_api_base1430']
+    bt_feature_api_base1430 = sys.modules[
+        'onshape_client.oas.models.bt_feature_api_base1430']
 try:
     from onshape_client.oas.models import bt_feature_studio_contents2239_all_of
 except ImportError:
-    bt_feature_studio_contents2239_all_of = sys.modules['onshape_client.oas.models.bt_feature_studio_contents2239_all_of']
+    bt_feature_studio_contents2239_all_of = sys.modules[
+        'onshape_client.oas.models.bt_feature_studio_contents2239_all_of']
 
 
 class BTFeatureStudioContents2239(ModelComposed):

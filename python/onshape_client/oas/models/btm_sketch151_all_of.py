@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_sketch_constraint2
 except ImportError:
-    btm_sketch_constraint2 = sys.modules['onshape_client.oas.models.btm_sketch_constraint2']
+    btm_sketch_constraint2 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_constraint2']
 try:
     from onshape_client.oas.models import btm_sketch_geom_entity5
 except ImportError:
-    btm_sketch_geom_entity5 = sys.modules['onshape_client.oas.models.btm_sketch_geom_entity5']
+    btm_sketch_geom_entity5 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_geom_entity5']
 
 
 class BTMSketch151AllOf(ModelNormal):

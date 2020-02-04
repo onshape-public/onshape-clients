@@ -51,7 +51,10 @@ class TeamsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __find(self, **kwargs):  # noqa: E501
+        def __find(
+            self,
+            **kwargs
+        ):
             """find  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,33 +62,36 @@ class TeamsApi(object):
             >>> thread = api.find(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str prefix:
-            :param str uid:
-            :param str company_id:
-            :param bool include_company_owned_teams:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_global_tree_node_list_response_bt_team_info.BTGlobalTreeNodeListResponseBTTeamInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                prefix (str): [optional] if omitted the server will use the default value of ''
+                uid (str): [optional]
+                company_id (str): [optional]
+                include_company_owned_teams (bool): [optional] if omitted the server will use the default value of True
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_global_tree_node_list_response_bt_team_info.BTGlobalTreeNodeListResponseBTTeamInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -140,10 +146,14 @@ class TeamsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'prefix': (str,),
-                    'uid': (str,),
-                    'company_id': (str,),
-                    'include_company_owned_teams': (bool,),
+                    'prefix':
+                        (str,),
+                    'uid':
+                        (str,),
+                    'company_id':
+                        (str,),
+                    'include_company_owned_teams':
+                        (bool,),
                 },
                 'attribute_map': {
                     'prefix': 'prefix',
@@ -171,7 +181,11 @@ class TeamsApi(object):
             callable=__find
         )
 
-        def __get_team(self, tid, **kwargs):  # noqa: E501
+        def __get_team(
+            self,
+            tid,
+            **kwargs
+        ):
             """get_team  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -179,30 +193,34 @@ class TeamsApi(object):
             >>> thread = api.get_team(tid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str tid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_team_info.BTTeamInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                tid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_team_info.BTTeamInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -223,7 +241,8 @@ class TeamsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['tid'] = tid
+            kwargs['tid'] = \
+                tid
             return self.call_with_http_info(**kwargs)
 
         self.get_team = Endpoint(
@@ -257,7 +276,8 @@ class TeamsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'tid': (str,),
+                    'tid':
+                        (str,),
                 },
                 'attribute_map': {
                     'tid': 'tid',

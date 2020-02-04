@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTMSketchConstraint2(ModelNormal):

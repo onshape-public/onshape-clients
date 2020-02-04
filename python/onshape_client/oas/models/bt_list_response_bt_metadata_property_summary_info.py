@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_metadata_property_summary_info
 except ImportError:
-    bt_metadata_property_summary_info = sys.modules['onshape_client.oas.models.bt_metadata_property_summary_info']
+    bt_metadata_property_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_metadata_property_summary_info']
 
 
 class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):

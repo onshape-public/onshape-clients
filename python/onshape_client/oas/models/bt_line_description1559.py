@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_description1583
 except ImportError:
-    bt_curve_description1583 = sys.modules['onshape_client.oas.models.bt_curve_description1583']
+    bt_curve_description1583 = sys.modules[
+        'onshape_client.oas.models.bt_curve_description1583']
 try:
     from onshape_client.oas.models import bt_line_description1559_all_of
 except ImportError:
-    bt_line_description1559_all_of = sys.modules['onshape_client.oas.models.bt_line_description1559_all_of']
+    bt_line_description1559_all_of = sys.modules[
+        'onshape_client.oas.models.bt_line_description1559_all_of']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTLineDescription1559(ModelComposed):

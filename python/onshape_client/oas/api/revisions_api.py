@@ -51,7 +51,11 @@ class RevisionsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __enumerate_revisions(self, cid, **kwargs):  # noqa: E501
+        def __enumerate_revisions(
+            self,
+            cid,
+            **kwargs
+        ):
             """enumerate_revisions  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,35 +63,39 @@ class RevisionsApi(object):
             >>> thread = api.enumerate_revisions(cid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str cid: (required)
-            :param int element_type:
-            :param int limit:
-            :param int offset:
-            :param bool latest_only:
-            :param int after:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_revision_info.BTListResponseBTRevisionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                cid (str):
+
+            Keyword Args:
+                element_type (int): [optional]
+                limit (int): [optional] if omitted the server will use the default value of 20
+                offset (int): [optional] if omitted the server will use the default value of 0
+                latest_only (bool): [optional] if omitted the server will use the default value of False
+                after (int): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_revision_info.BTListResponseBTRevisionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -108,7 +116,8 @@ class RevisionsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['cid'] = cid
+            kwargs['cid'] = \
+                cid
             return self.call_with_http_info(**kwargs)
 
         self.enumerate_revisions = Endpoint(
@@ -147,12 +156,18 @@ class RevisionsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'cid': (str,),
-                    'element_type': (int,),
-                    'limit': (int,),
-                    'offset': (int,),
-                    'latest_only': (bool,),
-                    'after': (int,),
+                    'cid':
+                        (str,),
+                    'element_type':
+                        (int,),
+                    'limit':
+                        (int,),
+                    'offset':
+                        (int,),
+                    'latest_only':
+                        (bool,),
+                    'after':
+                        (int,),
                 },
                 'attribute_map': {
                     'cid': 'cid',
@@ -184,7 +199,13 @@ class RevisionsApi(object):
             callable=__enumerate_revisions
         )
 
-        def __get_latest_in_document_or_company(self, cd, cdid, pnum, **kwargs):  # noqa: E501
+        def __get_latest_in_document_or_company(
+            self,
+            cd,
+            cdid,
+            pnum,
+            **kwargs
+        ):
             """get_latest_in_document_or_company  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -192,33 +213,37 @@ class RevisionsApi(object):
             >>> thread = api.get_latest_in_document_or_company(cd, cdid, pnum, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str cd: (required)
-            :param str cdid: (required)
-            :param str pnum: (required)
-            :param str et:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_revision_info.BTRevisionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                cd (str):
+                cdid (str):
+                pnum (str):
+
+            Keyword Args:
+                et (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_revision_info.BTRevisionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -239,9 +264,12 @@ class RevisionsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['cd'] = cd
-            kwargs['cdid'] = cdid
-            kwargs['pnum'] = pnum
+            kwargs['cd'] = \
+                cd
+            kwargs['cdid'] = \
+                cdid
+            kwargs['pnum'] = \
+                pnum
             return self.call_with_http_info(**kwargs)
 
         self.get_latest_in_document_or_company = Endpoint(
@@ -280,10 +308,14 @@ class RevisionsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'cd': (str,),
-                    'cdid': (str,),
-                    'pnum': (str,),
-                    'et': (str,),
+                    'cd':
+                        (str,),
+                    'cdid':
+                        (str,),
+                    'pnum':
+                        (str,),
+                    'et':
+                        (str,),
                 },
                 'attribute_map': {
                     'cd': 'cd',
@@ -311,7 +343,12 @@ class RevisionsApi(object):
             callable=__get_latest_in_document_or_company
         )
 
-        def __get_revision_history_in_company(self, cid, pnum, **kwargs):  # noqa: E501
+        def __get_revision_history_in_company(
+            self,
+            cid,
+            pnum,
+            **kwargs
+        ):
             """get_revision_history_in_company  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -319,34 +356,38 @@ class RevisionsApi(object):
             >>> thread = api.get_revision_history_in_company(cid, pnum, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str cid: (required)
-            :param str pnum: (required)
-            :param str element_type:
-            :param bool fill_approvers:
-            :param bool fill_export_permission:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_revision_info.BTListResponseBTRevisionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                cid (str):
+                pnum (str):
+
+            Keyword Args:
+                element_type (str): [optional]
+                fill_approvers (bool): [optional] if omitted the server will use the default value of False
+                fill_export_permission (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_revision_info.BTListResponseBTRevisionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -367,8 +408,10 @@ class RevisionsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['cid'] = cid
-            kwargs['pnum'] = pnum
+            kwargs['cid'] = \
+                cid
+            kwargs['pnum'] = \
+                pnum
             return self.call_with_http_info(**kwargs)
 
         self.get_revision_history_in_company = Endpoint(
@@ -407,11 +450,16 @@ class RevisionsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'cid': (str,),
-                    'pnum': (str,),
-                    'element_type': (str,),
-                    'fill_approvers': (bool,),
-                    'fill_export_permission': (bool,),
+                    'cid':
+                        (str,),
+                    'pnum':
+                        (str,),
+                    'element_type':
+                        (str,),
+                    'fill_approvers':
+                        (bool,),
+                    'fill_export_permission':
+                        (bool,),
                 },
                 'attribute_map': {
                     'cid': 'cid',

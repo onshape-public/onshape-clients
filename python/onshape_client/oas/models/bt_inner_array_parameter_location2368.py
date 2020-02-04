@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_inner_array_parameter_location2368
 except ImportError:
-    bt_inner_array_parameter_location2368 = sys.modules['onshape_client.oas.models.bt_inner_array_parameter_location2368']
+    bt_inner_array_parameter_location2368 = sys.modules[
+        'onshape_client.oas.models.bt_inner_array_parameter_location2368']
 try:
     from onshape_client.oas.models import bt_inner_array_parameter_location2368_all_of
 except ImportError:
-    bt_inner_array_parameter_location2368_all_of = sys.modules['onshape_client.oas.models.bt_inner_array_parameter_location2368_all_of']
+    bt_inner_array_parameter_location2368_all_of = sys.modules[
+        'onshape_client.oas.models.bt_inner_array_parameter_location2368_all_of']
 try:
     from onshape_client.oas.models import bt_inner_derived_parameter_location591
 except ImportError:
-    bt_inner_derived_parameter_location591 = sys.modules['onshape_client.oas.models.bt_inner_derived_parameter_location591']
+    bt_inner_derived_parameter_location591 = sys.modules[
+        'onshape_client.oas.models.bt_inner_derived_parameter_location591']
 try:
     from onshape_client.oas.models import bt_inner_parameter_location1715
 except ImportError:
-    bt_inner_parameter_location1715 = sys.modules['onshape_client.oas.models.bt_inner_parameter_location1715']
+    bt_inner_parameter_location1715 = sys.modules[
+        'onshape_client.oas.models.bt_inner_parameter_location1715']
 
 
 class BTInnerArrayParameterLocation2368(ModelComposed):

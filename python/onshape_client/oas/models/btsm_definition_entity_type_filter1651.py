@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_query_filter183
 except ImportError:
-    bt_query_filter183 = sys.modules['onshape_client.oas.models.bt_query_filter183']
+    bt_query_filter183 = sys.modules[
+        'onshape_client.oas.models.bt_query_filter183']
 try:
     from onshape_client.oas.models import btsm_definition_entity_type_filter1651_all_of
 except ImportError:
-    btsm_definition_entity_type_filter1651_all_of = sys.modules['onshape_client.oas.models.btsm_definition_entity_type_filter1651_all_of']
+    btsm_definition_entity_type_filter1651_all_of = sys.modules[
+        'onshape_client.oas.models.btsm_definition_entity_type_filter1651_all_of']
 
 
 class BTSMDefinitionEntityTypeFilter1651(ModelComposed):

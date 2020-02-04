@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_element_info
 except ImportError:
-    bt_document_element_info = sys.modules['onshape_client.oas.models.bt_document_element_info']
+    bt_document_element_info = sys.modules[
+        'onshape_client.oas.models.bt_document_element_info']
 
 
 class BTDocumentMergeInfo(ModelNormal):

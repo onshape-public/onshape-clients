@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules['onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules[
+        'onshape_client.oas.models.btp_node7']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPPropertyAccessor23(ModelComposed):

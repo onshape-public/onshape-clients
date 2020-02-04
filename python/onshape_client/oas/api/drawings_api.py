@@ -52,42 +52,54 @@ class DrawingsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_drawing_translation(self, did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, **kwargs):  # noqa: E501
+        def __create_drawing_translation(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            bt_translate_format_params,
+            **kwargs
+        ):
             """Create Drawing translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params, async_req=True)
+            >>> thread = api.create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param bt_translate_format_params.BTTranslateFormatParams bt_translate_format_params_bt_translate_format_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_translation_request_info.BTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+                bt_translate_format_params (bt_translate_format_params.BTTranslateFormatParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_translation_request_info.BTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -108,11 +120,16 @@ class DrawingsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
-            kwargs['bt_translate_format_params_bt_translate_format_params'] = bt_translate_format_params_bt_translate_format_params
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
+            kwargs['bt_translate_format_params'] = \
+                bt_translate_format_params
             return self.call_with_http_info(**kwargs)
 
         self.create_drawing_translation = Endpoint(
@@ -132,14 +149,14 @@ class DrawingsApi(object):
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'required': [
                     'did',
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_translate_format_params_bt_translate_format_params',
+                    'bt_translate_format_params',
                 ],
                 'nullable': [
                 ],
@@ -154,11 +171,16 @@ class DrawingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'bt_translate_format_params_bt_translate_format_params': (bt_translate_format_params.BTTranslateFormatParams,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_translate_format_params':
+                        (bt_translate_format_params.BTTranslateFormatParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -171,7 +193,7 @@ class DrawingsApi(object):
                     'wv': 'path',
                     'wvid': 'path',
                     'eid': 'path',
-                    'bt_translate_format_params_bt_translate_format_params': 'body',
+                    'bt_translate_format_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -189,7 +211,13 @@ class DrawingsApi(object):
             callable=__create_drawing_translation
         )
 
-        def __get_drawing_translator_formats(self, did, wid, eid, **kwargs):  # noqa: E501
+        def __get_drawing_translator_formats(
+            self,
+            did,
+            wid,
+            eid,
+            **kwargs
+        ):
             """get_drawing_translator_formats  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -197,32 +225,36 @@ class DrawingsApi(object):
             >>> thread = api.get_drawing_translator_formats(did, wid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_model_format_info.BTModelFormatInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_model_format_info.BTModelFormatInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -243,9 +275,12 @@ class DrawingsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_drawing_translator_formats = Endpoint(
@@ -281,9 +316,12 @@ class DrawingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',

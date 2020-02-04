@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
-    btm_assembly_feature887 = sys.modules['onshape_client.oas.models.btm_assembly_feature887']
+    btm_assembly_feature887 = sys.modules[
+        'onshape_client.oas.models.btm_assembly_feature887']
 try:
     from onshape_client.oas.models import btm_assembly_pattern_feature2241_all_of
 except ImportError:
-    btm_assembly_pattern_feature2241_all_of = sys.modules['onshape_client.oas.models.btm_assembly_pattern_feature2241_all_of']
+    btm_assembly_pattern_feature2241_all_of = sys.modules[
+        'onshape_client.oas.models.btm_assembly_pattern_feature2241_all_of']
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules['onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules[
+        'onshape_client.oas.models.btm_feature134']
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence_base904
 except ImportError:
-    btm_individual_query_with_occurrence_base904 = sys.modules['onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
+    btm_individual_query_with_occurrence_base904 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTMAssemblyPatternFeature2241(ModelComposed):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
-    bt_microversion_id366 = sys.modules['onshape_client.oas.models.bt_microversion_id366']
+    bt_microversion_id366 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id366']
 
 
 class BTSetFeatureRollbackResponse1042(ModelNormal):

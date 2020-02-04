@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_configuration_update_call2933_all_of
 except ImportError:
-    bt_configuration_update_call2933_all_of = sys.modules['onshape_client.oas.models.bt_configuration_update_call2933_all_of']
+    bt_configuration_update_call2933_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configuration_update_call2933_all_of']
 try:
     from onshape_client.oas.models import bt_feature_api_base1430
 except ImportError:
-    bt_feature_api_base1430 = sys.modules['onshape_client.oas.models.bt_feature_api_base1430']
+    bt_feature_api_base1430 = sys.modules[
+        'onshape_client.oas.models.bt_feature_api_base1430']
 try:
     from onshape_client.oas.models import btm_configuration_parameter819
 except ImportError:
-    btm_configuration_parameter819 = sys.modules['onshape_client.oas.models.btm_configuration_parameter819']
+    btm_configuration_parameter819 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter819']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTConfigurationUpdateCall2933(ModelComposed):

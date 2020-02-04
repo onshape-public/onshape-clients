@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_sketch_curve4
 except ImportError:
-    btm_sketch_curve4 = sys.modules['onshape_client.oas.models.btm_sketch_curve4']
+    btm_sketch_curve4 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_curve4']
 try:
     from onshape_client.oas.models import btm_sketch_image_entity763
 except ImportError:
-    btm_sketch_image_entity763 = sys.modules['onshape_client.oas.models.btm_sketch_image_entity763']
+    btm_sketch_image_entity763 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_image_entity763']
 try:
     from onshape_client.oas.models import btm_sketch_point158
 except ImportError:
-    btm_sketch_point158 = sys.modules['onshape_client.oas.models.btm_sketch_point158']
+    btm_sketch_point158 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_point158']
 try:
     from onshape_client.oas.models import btm_sketch_text_entity1761
 except ImportError:
-    btm_sketch_text_entity1761 = sys.modules['onshape_client.oas.models.btm_sketch_text_entity1761']
+    btm_sketch_text_entity1761 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_text_entity1761']
 
 
 class BTMSketchGeomEntity5(ModelNormal):

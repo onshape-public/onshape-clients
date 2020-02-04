@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_instance_definition_params
 except ImportError:
-    bt_assembly_instance_definition_params = sys.modules['onshape_client.oas.models.bt_assembly_instance_definition_params']
+    bt_assembly_instance_definition_params = sys.modules[
+        'onshape_client.oas.models.bt_assembly_instance_definition_params']
 
 
 class TransformGroup(ModelNormal):

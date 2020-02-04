@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_closed_curve_filter1206_all_of
 except ImportError:
-    bt_closed_curve_filter1206_all_of = sys.modules['onshape_client.oas.models.bt_closed_curve_filter1206_all_of']
+    bt_closed_curve_filter1206_all_of = sys.modules[
+        'onshape_client.oas.models.bt_closed_curve_filter1206_all_of']
 try:
     from onshape_client.oas.models import bt_query_filter183
 except ImportError:
-    bt_query_filter183 = sys.modules['onshape_client.oas.models.bt_query_filter183']
+    bt_query_filter183 = sys.modules[
+        'onshape_client.oas.models.bt_query_filter183']
 
 
 class BTClosedCurveFilter1206(ModelComposed):

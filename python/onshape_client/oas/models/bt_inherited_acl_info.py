@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_acl_entry_info
 except ImportError:
-    bt_acl_entry_info = sys.modules['onshape_client.oas.models.bt_acl_entry_info']
+    bt_acl_entry_info = sys.modules[
+        'onshape_client.oas.models.bt_acl_entry_info']
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 
 
 class BTInheritedAclInfo(ModelNormal):

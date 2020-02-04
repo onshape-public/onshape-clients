@@ -49,7 +49,16 @@ class MetadataApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __get_veop_standard_content_metadata(self, did, vid, eid, otype, oid, pid, **kwargs):  # noqa: E501
+        def __get_veop_standard_content_metadata(
+            self,
+            did,
+            vid,
+            eid,
+            otype,
+            oid,
+            pid,
+            **kwargs
+        ):
             """get_veop_standard_content_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -57,37 +66,41 @@ class MetadataApi(object):
             >>> thread = api.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str vid: (required)
-            :param str eid: (required)
-            :param str otype: (required)
-            :param str oid: (required)
-            :param str pid: (required)
-            :param str configuration:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                vid (str):
+                eid (str):
+                otype (str):
+                oid (str):
+                pid (str):
+
+            Keyword Args:
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -108,12 +121,18 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['vid'] = vid
-            kwargs['eid'] = eid
-            kwargs['otype'] = otype
-            kwargs['oid'] = oid
-            kwargs['pid'] = pid
+            kwargs['did'] = \
+                did
+            kwargs['vid'] = \
+                vid
+            kwargs['eid'] = \
+                eid
+            kwargs['otype'] = \
+                otype
+            kwargs['oid'] = \
+                oid
+            kwargs['pid'] = \
+                pid
             return self.call_with_http_info(**kwargs)
 
         self.get_veop_standard_content_metadata = Endpoint(
@@ -159,14 +178,22 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'vid': (str,),
-                    'eid': (str,),
-                    'otype': (str,),
-                    'oid': (str,),
-                    'pid': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'vid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'otype':
+                        (str,),
+                    'oid':
+                        (str,),
+                    'pid':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -202,7 +229,14 @@ class MetadataApi(object):
             callable=__get_veop_standard_content_metadata
         )
 
-        def __get_wmve_ps_metadata(self, did, wvm, wvmid, eid, **kwargs):  # noqa: E501
+        def __get_wmve_ps_metadata(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            **kwargs
+        ):
             """get_wmve_ps_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -210,36 +244,40 @@ class MetadataApi(object):
             >>> thread = api.get_wmve_ps_metadata(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str configuration:
-            :param str link_document_id:
-            :param bool infer_metadata_owner:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+
+            Keyword Args:
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -260,10 +298,14 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_wmve_ps_metadata = Endpoint(
@@ -306,13 +348,20 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
-                    'infer_metadata_owner': (bool,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -346,7 +395,15 @@ class MetadataApi(object):
             callable=__get_wmve_ps_metadata
         )
 
-        def __get_wmvep_metadata(self, did, wvm, wvmid, eid, pid, **kwargs):  # noqa: E501
+        def __get_wmvep_metadata(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            pid,
+            **kwargs
+        ):
             """get_wmvep_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -354,37 +411,41 @@ class MetadataApi(object):
             >>> thread = api.get_wmvep_metadata(did, wvm, wvmid, eid, pid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str pid: (required)
-            :param str configuration:
-            :param str link_document_id:
-            :param bool infer_metadata_owner:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                pid (str):
+
+            Keyword Args:
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -405,11 +466,16 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['pid'] = pid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['pid'] = \
+                pid
             return self.call_with_http_info(**kwargs)
 
         self.get_wmvep_metadata = Endpoint(
@@ -454,14 +520,22 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'pid': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
-                    'infer_metadata_owner': (bool,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'pid':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -497,7 +571,13 @@ class MetadataApi(object):
             callable=__get_wmvep_metadata
         )
 
-        def __get_wv_es_metadata(self, did, wv, wvid, **kwargs):  # noqa: E501
+        def __get_wv_es_metadata(
+            self,
+            did,
+            wv,
+            wvid,
+            **kwargs
+        ):
             """get_wv_es_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -505,34 +585,38 @@ class MetadataApi(object):
             >>> thread = api.get_wv_es_metadata(did, wv, wvid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str link_document_id:
-            :param bool infer_metadata_owner:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -553,9 +637,12 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
             return self.call_with_http_info(**kwargs)
 
         self.get_wv_es_metadata = Endpoint(
@@ -595,11 +682,16 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'link_document_id': (str,),
-                    'infer_metadata_owner': (bool,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -629,7 +721,13 @@ class MetadataApi(object):
             callable=__get_wv_es_metadata
         )
 
-        def __get_wv_metadata(self, did, wv, wvid, **kwargs):  # noqa: E501
+        def __get_wv_metadata(
+            self,
+            did,
+            wv,
+            wvid,
+            **kwargs
+        ):
             """get_wv_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -637,34 +735,38 @@ class MetadataApi(object):
             >>> thread = api.get_wv_metadata(did, wv, wvid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str link_document_id:
-            :param bool infer_metadata_owner:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -685,9 +787,12 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
             return self.call_with_http_info(**kwargs)
 
         self.get_wv_metadata = Endpoint(
@@ -727,11 +832,16 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'link_document_id': (str,),
-                    'infer_metadata_owner': (bool,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -761,7 +871,14 @@ class MetadataApi(object):
             callable=__get_wv_metadata
         )
 
-        def __get_wve_metadata(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+        def __get_wve_metadata(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            **kwargs
+        ):
             """get_wve_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -769,36 +886,40 @@ class MetadataApi(object):
             >>> thread = api.get_wve_metadata(did, wv, wvid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param str configuration:
-            :param str link_document_id:
-            :param bool infer_metadata_owner:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+
+            Keyword Args:
+                configuration (str): [optional]
+                link_document_id (str): [optional]
+                infer_metadata_owner (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -819,10 +940,14 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.get_wve_metadata = Endpoint(
@@ -865,13 +990,20 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'configuration': (str,),
-                    'link_document_id': (str,),
-                    'infer_metadata_owner': (bool,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'configuration':
+                        (str,),
+                    'link_document_id':
+                        (str,),
+                    'infer_metadata_owner':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -905,7 +1037,17 @@ class MetadataApi(object):
             callable=__get_wve_metadata
         )
 
-        def __update_veop_standard_content_part_metadata(self, did, vid, eid, otype, oid, pid, body, **kwargs):  # noqa: E501
+        def __update_veop_standard_content_part_metadata(
+            self,
+            did,
+            vid,
+            eid,
+            otype,
+            oid,
+            pid,
+            body,
+            **kwargs
+        ):
             """update_veop_standard_content_part_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -913,37 +1055,41 @@ class MetadataApi(object):
             >>> thread = api.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str vid: (required)
-            :param str eid: (required)
-            :param str otype: (required)
-            :param str oid: (required)
-            :param str pid: (required)
-            :param str body: (required)
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                vid (str):
+                eid (str):
+                otype (str):
+                oid (str):
+                pid (str):
+                body (str):
+
+            Keyword Args:
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -964,13 +1110,20 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['vid'] = vid
-            kwargs['eid'] = eid
-            kwargs['otype'] = otype
-            kwargs['oid'] = oid
-            kwargs['pid'] = pid
-            kwargs['body'] = body
+            kwargs['did'] = \
+                did
+            kwargs['vid'] = \
+                vid
+            kwargs['eid'] = \
+                eid
+            kwargs['otype'] = \
+                otype
+            kwargs['oid'] = \
+                oid
+            kwargs['pid'] = \
+                pid
+            kwargs['body'] = \
+                body
             return self.call_with_http_info(**kwargs)
 
         self.update_veop_standard_content_part_metadata = Endpoint(
@@ -1017,14 +1170,22 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'vid': (str,),
-                    'eid': (str,),
-                    'otype': (str,),
-                    'oid': (str,),
-                    'pid': (str,),
-                    'body': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'vid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'otype':
+                        (str,),
+                    'oid':
+                        (str,),
+                    'pid':
+                        (str,),
+                    'body':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1061,7 +1222,14 @@ class MetadataApi(object):
             callable=__update_veop_standard_content_part_metadata
         )
 
-        def __update_wv_metadata(self, did, wv, wvid, body, **kwargs):  # noqa: E501
+        def __update_wv_metadata(
+            self,
+            did,
+            wv,
+            wvid,
+            body,
+            **kwargs
+        ):
             """update_wv_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1069,33 +1237,37 @@ class MetadataApi(object):
             >>> thread = api.update_wv_metadata(did, wv, wvid, body, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str body: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                body (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1116,10 +1288,14 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['body'] = body
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['body'] = \
+                body
             return self.call_with_http_info(**kwargs)
 
         self.update_wv_metadata = Endpoint(
@@ -1159,10 +1335,14 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1191,7 +1371,15 @@ class MetadataApi(object):
             callable=__update_wv_metadata
         )
 
-        def __update_wve_metadata(self, did, wv, wvid, eid, body, **kwargs):  # noqa: E501
+        def __update_wve_metadata(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            body,
+            **kwargs
+        ):
             """update_wve_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1199,34 +1387,38 @@ class MetadataApi(object):
             >>> thread = api.update_wve_metadata(did, wv, wvid, eid, body, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param str body: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+                body (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1247,11 +1439,16 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
-            kwargs['body'] = body
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
+            kwargs['body'] = \
+                body
             return self.call_with_http_info(**kwargs)
 
         self.update_wve_metadata = Endpoint(
@@ -1293,11 +1490,16 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1328,7 +1530,17 @@ class MetadataApi(object):
             callable=__update_wve_metadata
         )
 
-        def __update_wvep_metadata(self, did, wvm, wvmid, eid, pid, sub_resource, body, **kwargs):  # noqa: E501
+        def __update_wvep_metadata(
+            self,
+            did,
+            wvm,
+            wvmid,
+            eid,
+            pid,
+            sub_resource,
+            body,
+            **kwargs
+        ):
             """update_wvep_metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1336,36 +1548,40 @@ class MetadataApi(object):
             >>> thread = api.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str eid: (required)
-            :param str pid: (required)
-            :param str sub_resource: (required)
-            :param str body: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+                eid (str):
+                pid (str):
+                sub_resource (str):
+                body (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1386,13 +1602,20 @@ class MetadataApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['eid'] = eid
-            kwargs['pid'] = pid
-            kwargs['sub_resource'] = sub_resource
-            kwargs['body'] = body
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['eid'] = \
+                eid
+            kwargs['pid'] = \
+                pid
+            kwargs['sub_resource'] = \
+                sub_resource
+            kwargs['body'] = \
+                body
             return self.call_with_http_info(**kwargs)
 
         self.update_wvep_metadata = Endpoint(
@@ -1438,13 +1661,20 @@ class MetadataApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'eid': (str,),
-                    'pid': (str,),
-                    'sub_resource': (str,),
-                    'body': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'pid':
+                        (str,),
+                    'sub_resource':
+                        (str,),
+                    'body':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',

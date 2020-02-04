@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_tree_node20
 except ImportError:
-    bt_tree_node20 = sys.modules['onshape_client.oas.models.bt_tree_node20']
+    bt_tree_node20 = sys.modules[
+        'onshape_client.oas.models.bt_tree_node20']
 try:
     from onshape_client.oas.models import btm_configuration_parameter819
 except ImportError:
-    btm_configuration_parameter819 = sys.modules['onshape_client.oas.models.btm_configuration_parameter819']
+    btm_configuration_parameter819 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter819']
 try:
     from onshape_client.oas.models import btm_configuration_parameter_enum105_all_of
 except ImportError:
-    btm_configuration_parameter_enum105_all_of = sys.modules['onshape_client.oas.models.btm_configuration_parameter_enum105_all_of']
+    btm_configuration_parameter_enum105_all_of = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter_enum105_all_of']
 try:
     from onshape_client.oas.models import btm_enum_option592
 except ImportError:
-    btm_enum_option592 = sys.modules['onshape_client.oas.models.btm_enum_option592']
+    btm_enum_option592 = sys.modules[
+        'onshape_client.oas.models.btm_enum_option592']
 
 
 class BTMConfigurationParameterEnum105(ModelComposed):

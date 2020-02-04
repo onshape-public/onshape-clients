@@ -20,16 +20,18 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.BillingApi()
-cid = 'cid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get billing plans for client.
-    api_instance.get_client_plans(cid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling BillingApi->get_client_plans: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.BillingApi(api_client)
+    cid = 'cid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get billing plans for client.
+        api_instance.get_client_plans(cid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling BillingApi->get_client_plans: %s\n" % e)
 ```
 
 ### Parameters

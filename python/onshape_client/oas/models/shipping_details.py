@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import address
 except ImportError:
-    address = sys.modules['onshape_client.oas.models.address']
+    address = sys.modules[
+        'onshape_client.oas.models.address']
 
 
 class ShippingDetails(ModelNormal):

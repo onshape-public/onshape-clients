@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules['onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules[
+        'onshape_client.oas.models.btp_node7']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btpl_value_access250
 except ImportError:
-    btpl_value_access250 = sys.modules['onshape_client.oas.models.btpl_value_access250']
+    btpl_value_access250 = sys.modules[
+        'onshape_client.oas.models.btpl_value_access250']
 try:
     from onshape_client.oas.models import btpl_value_box_dereference251
 except ImportError:
-    btpl_value_box_dereference251 = sys.modules['onshape_client.oas.models.btpl_value_box_dereference251']
+    btpl_value_box_dereference251 = sys.modules[
+        'onshape_client.oas.models.btpl_value_box_dereference251']
 try:
     from onshape_client.oas.models import btpl_value_var_reference252
 except ImportError:
-    btpl_value_var_reference252 = sys.modules['onshape_client.oas.models.btpl_value_var_reference252']
+    btpl_value_var_reference252 = sys.modules[
+        'onshape_client.oas.models.btpl_value_var_reference252']
 
 
 class BTPLValue249(ModelComposed):

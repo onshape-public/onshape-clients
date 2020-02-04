@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import card
 except ImportError:
-    card = sys.modules['onshape_client.oas.models.card']
+    card = sys.modules[
+        'onshape_client.oas.models.card']
 try:
     from onshape_client.oas.models import request_options
 except ImportError:
-    request_options = sys.modules['onshape_client.oas.models.request_options']
+    request_options = sys.modules[
+        'onshape_client.oas.models.request_options']
 
 
 class CustomerCardCollection(ModelNormal):

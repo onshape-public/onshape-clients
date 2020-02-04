@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_type_name290
 except ImportError:
-    btp_type_name290 = sys.modules['onshape_client.oas.models.btp_type_name290']
+    btp_type_name290 = sys.modules[
+        'onshape_client.oas.models.btp_type_name290']
 
 
 class BTPArgumentDeclaration232AllOf(ModelNormal):

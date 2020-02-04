@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_cloud_storage_object_info
 except ImportError:
-    bt_cloud_storage_object_info = sys.modules['onshape_client.oas.models.bt_cloud_storage_object_info']
+    bt_cloud_storage_object_info = sys.modules[
+        'onshape_client.oas.models.bt_cloud_storage_object_info']
 
 
 class BTCloudStorageAccountInfoAllOf(ModelNormal):

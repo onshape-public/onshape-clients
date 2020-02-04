@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_occurrence74
 except ImportError:
-    bt_occurrence74 = sys.modules['onshape_client.oas.models.bt_occurrence74']
+    bt_occurrence74 = sys.modules[
+        'onshape_client.oas.models.bt_occurrence74']
 
 
 class BTAssemblyTransformDefinitionParams(ModelNormal):

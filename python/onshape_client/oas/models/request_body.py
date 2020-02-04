@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import media_type
 except ImportError:
-    media_type = sys.modules['onshape_client.oas.models.media_type']
+    media_type = sys.modules[
+        'onshape_client.oas.models.media_type']
 
 
 class RequestBody(ModelNormal):

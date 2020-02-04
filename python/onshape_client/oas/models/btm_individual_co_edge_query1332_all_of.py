@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_individual_query138
 except ImportError:
-    btm_individual_query138 = sys.modules['onshape_client.oas.models.btm_individual_query138']
+    btm_individual_query138 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query138']
 
 
 class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):

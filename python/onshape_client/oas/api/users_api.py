@@ -51,7 +51,11 @@ class UsersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __get_user_settings(self, uid, **kwargs):  # noqa: E501
+        def __get_user_settings(
+            self,
+            uid,
+            **kwargs
+        ):
             """get_user_settings  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,31 +63,35 @@ class UsersApi(object):
             >>> thread = api.get_user_settings(uid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str uid: (required)
-            :param bool includematerials:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_user_settings_info.BTUserSettingsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                uid (str):
+
+            Keyword Args:
+                includematerials (bool): [optional] if omitted the server will use the default value of True
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_user_settings_info.BTUserSettingsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -104,7 +112,8 @@ class UsersApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['uid'] = uid
+            kwargs['uid'] = \
+                uid
             return self.call_with_http_info(**kwargs)
 
         self.get_user_settings = Endpoint(
@@ -137,8 +146,10 @@ class UsersApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'uid': (str,),
-                    'includematerials': (bool,),
+                    'uid':
+                        (str,),
+                    'includematerials':
+                        (bool,),
                 },
                 'attribute_map': {
                     'uid': 'uid',
@@ -162,7 +173,10 @@ class UsersApi(object):
             callable=__get_user_settings
         )
 
-        def __get_user_settings_current_logged_in_user(self, **kwargs):  # noqa: E501
+        def __get_user_settings_current_logged_in_user(
+            self,
+            **kwargs
+        ):
             """get_user_settings_current_logged_in_user  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -170,30 +184,33 @@ class UsersApi(object):
             >>> thread = api.get_user_settings_current_logged_in_user(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param bool includematerials:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_user_settings_info.BTUserSettingsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                includematerials (bool): [optional] if omitted the server will use the default value of True
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_user_settings_info.BTUserSettingsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -243,7 +260,8 @@ class UsersApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'includematerials': (bool,),
+                    'includematerials':
+                        (bool,),
                 },
                 'attribute_map': {
                     'includematerials': 'includematerials',
@@ -265,7 +283,10 @@ class UsersApi(object):
             callable=__get_user_settings_current_logged_in_user
         )
 
-        def __session_info(self, **kwargs):  # noqa: E501
+        def __session_info(
+            self,
+            **kwargs
+        ):
             """session_info  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -273,29 +294,32 @@ class UsersApi(object):
             >>> thread = api.session_info(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_user_o_auth2_summary_info.BTUserOAuth2SummaryInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_user_o_auth2_summary_info.BTUserOAuth2SummaryInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False

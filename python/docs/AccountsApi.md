@@ -29,26 +29,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AccountsApi(onshape_client.oas.ApiClient(configuration))
-aid = 'aid_example' # str | 
-pid = 'pid_example' # str | 
-cancel_immediately = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AccountsApi(api_client)
+    aid = 'aid_example' # str | 
+    pid = 'pid_example' # str | 
+    cancel_immediately = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    # Cancel Recurring Subscription
-    api_instance.cancel_purchase_new(aid, pid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Cancel Recurring Subscription
+        api_instance.cancel_purchase_new(aid, pid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Cancel Recurring Subscription
-    api_instance.cancel_purchase_new(aid, pid, cancel_immediately=cancel_immediately)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Cancel Recurring Subscription
+        api_instance.cancel_purchase_new(aid, pid, cancel_immediately=cancel_immediately)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->cancel_purchase_new: %s\n" % e)
 ```
 
 ### Parameters
@@ -98,27 +100,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AccountsApi(onshape_client.oas.ApiClient(configuration))
-pid = 'pid_example' # str | 
-bt_purchase_user_params_bt_purchase_user_params = onshape_client.oas.BTPurchaseUserParams() # bt_purchase_user_params.BTPurchaseUserParams |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AccountsApi(api_client)
+    pid = 'pid_example' # str | 
+    bt_purchase_user_params = onshape_client.oas.BTPurchaseUserParams() # bt_purchase_user_params.BTPurchaseUserParams |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Mark Purchase Consumed For User
-    api_response = api_instance.consume_purchase(pid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Mark Purchase Consumed For User
+        api_response = api_instance.consume_purchase(pid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Mark Purchase Consumed For User
-    api_response = api_instance.consume_purchase(pid, bt_purchase_user_params_bt_purchase_user_params=bt_purchase_user_params_bt_purchase_user_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Mark Purchase Consumed For User
+        api_response = api_instance.consume_purchase(pid, bt_purchase_user_params=bt_purchase_user_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->consume_purchase: %s\n" % e)
 ```
 
 ### Parameters
@@ -126,7 +130,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pid** | **str**|  |
- **bt_purchase_user_params_bt_purchase_user_params** | [**bt_purchase_user_params.BTPurchaseUserParams**](BTPurchaseUserParams.md)|  | [optional]
+ **bt_purchase_user_params** | [**bt_purchase_user_params.BTPurchaseUserParams**](BTPurchaseUserParams.md)|  | [optional]
 
 ### Return type
 
@@ -161,28 +165,30 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.AccountsApi()
-plan_id = 'plan_id_example' # str | 
-offset = 0 # int |  (optional) if omitted the server will use the default value of 0
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AccountsApi(api_client)
+    plan_id = 'plan_id_example' # str | 
+    offset = 0 # int |  (optional) if omitted the server will use the default value of 0
 limit = 20 # int |  (optional) if omitted the server will use the default value of 20
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Plan Purchases
-    api_response = api_instance.get_plan_purchases(plan_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Plan Purchases
+        api_response = api_instance.get_plan_purchases(plan_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Plan Purchases
-    api_response = api_instance.get_plan_purchases(plan_id, offset=offset, limit=limit)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Plan Purchases
+        api_response = api_instance.get_plan_purchases(plan_id, offset=offset, limit=limit)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->get_plan_purchases: %s\n" % e)
 ```
 
 ### Parameters
@@ -226,19 +232,21 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.AccountsApi()
-all = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AccountsApi(api_client)
+    all = False # bool |  (optional) if omitted the server will use the default value of False
 own_purchase_only = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get User's Appstore Purchases.
-    api_response = api_instance.get_purchases(all=all, own_purchase_only=own_purchase_only)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AccountsApi->get_purchases: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get User's Appstore Purchases.
+        api_response = api_instance.get_purchases(all=all, own_purchase_only=own_purchase_only)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AccountsApi->get_purchases: %s\n" % e)
 ```
 
 ### Parameters

@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_app_element_change_params
 except ImportError:
-    bt_app_element_change_params = sys.modules['onshape_client.oas.models.bt_app_element_change_params']
+    bt_app_element_change_params = sys.modules[
+        'onshape_client.oas.models.bt_app_element_change_params']
 try:
     from onshape_client.oas.models import bt_element_location_params
 except ImportError:
-    bt_element_location_params = sys.modules['onshape_client.oas.models.bt_element_location_params']
+    bt_element_location_params = sys.modules[
+        'onshape_client.oas.models.bt_element_location_params']
 
 
 class BTAppElementParams(ModelNormal):

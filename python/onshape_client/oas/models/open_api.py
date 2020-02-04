@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import components
 except ImportError:
-    components = sys.modules['onshape_client.oas.models.components']
+    components = sys.modules[
+        'onshape_client.oas.models.components']
 try:
     from onshape_client.oas.models import external_documentation
 except ImportError:
-    external_documentation = sys.modules['onshape_client.oas.models.external_documentation']
+    external_documentation = sys.modules[
+        'onshape_client.oas.models.external_documentation']
 try:
     from onshape_client.oas.models import info
 except ImportError:
-    info = sys.modules['onshape_client.oas.models.info']
+    info = sys.modules[
+        'onshape_client.oas.models.info']
 try:
     from onshape_client.oas.models import path_item
 except ImportError:
-    path_item = sys.modules['onshape_client.oas.models.path_item']
+    path_item = sys.modules[
+        'onshape_client.oas.models.path_item']
 try:
     from onshape_client.oas.models import security_requirement
 except ImportError:
-    security_requirement = sys.modules['onshape_client.oas.models.security_requirement']
+    security_requirement = sys.modules[
+        'onshape_client.oas.models.security_requirement']
 try:
     from onshape_client.oas.models import server
 except ImportError:
-    server = sys.modules['onshape_client.oas.models.server']
+    server = sys.modules[
+        'onshape_client.oas.models.server']
 try:
     from onshape_client.oas.models import tag
 except ImportError:
-    tag = sys.modules['onshape_client.oas.models.tag']
+    tag = sys.modules[
+        'onshape_client.oas.models.tag']
 
 
 class OpenAPI(ModelNormal):

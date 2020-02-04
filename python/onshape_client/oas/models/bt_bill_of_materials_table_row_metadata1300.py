@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table_row_metadata1300_all_of
 except ImportError:
-    bt_bill_of_materials_table_row_metadata1300_all_of = sys.modules['onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300_all_of']
+    bt_bill_of_materials_table_row_metadata1300_all_of = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300_all_of']
 try:
     from onshape_client.oas.models import bt_table_assembly_cross_highlight_data2675
 except ImportError:
-    bt_table_assembly_cross_highlight_data2675 = sys.modules['onshape_client.oas.models.bt_table_assembly_cross_highlight_data2675']
+    bt_table_assembly_cross_highlight_data2675 = sys.modules[
+        'onshape_client.oas.models.bt_table_assembly_cross_highlight_data2675']
 try:
     from onshape_client.oas.models import bt_table_base_row_metadata3181
 except ImportError:
-    bt_table_base_row_metadata3181 = sys.modules['onshape_client.oas.models.bt_table_base_row_metadata3181']
+    bt_table_base_row_metadata3181 = sys.modules[
+        'onshape_client.oas.models.bt_table_base_row_metadata3181']
 
 
 class BTBillOfMaterialsTableRowMetadata1300(ModelComposed):

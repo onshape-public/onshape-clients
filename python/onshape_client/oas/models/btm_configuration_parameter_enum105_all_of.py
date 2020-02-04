@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_enum_option592
 except ImportError:
-    btm_enum_option592 = sys.modules['onshape_client.oas.models.btm_enum_option592']
+    btm_enum_option592 = sys.modules[
+        'onshape_client.oas.models.btm_enum_option592']
 
 
 class BTMConfigurationParameterEnum105AllOf(ModelNormal):

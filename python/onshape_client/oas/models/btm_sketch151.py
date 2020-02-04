@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules['onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules[
+        'onshape_client.oas.models.btm_feature134']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_sketch151_all_of
 except ImportError:
-    btm_sketch151_all_of = sys.modules['onshape_client.oas.models.btm_sketch151_all_of']
+    btm_sketch151_all_of = sys.modules[
+        'onshape_client.oas.models.btm_sketch151_all_of']
 try:
     from onshape_client.oas.models import btm_sketch_constraint2
 except ImportError:
-    btm_sketch_constraint2 = sys.modules['onshape_client.oas.models.btm_sketch_constraint2']
+    btm_sketch_constraint2 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_constraint2']
 try:
     from onshape_client.oas.models import btm_sketch_geom_entity5
 except ImportError:
-    btm_sketch_geom_entity5 = sys.modules['onshape_client.oas.models.btm_sketch_geom_entity5']
+    btm_sketch_geom_entity5 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_geom_entity5']
 
 
 class BTMSketch151(ModelComposed):

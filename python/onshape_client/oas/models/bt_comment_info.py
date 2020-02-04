@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_comment_attachment_info
 except ImportError:
-    bt_comment_attachment_info = sys.modules['onshape_client.oas.models.bt_comment_attachment_info']
+    bt_comment_attachment_info = sys.modules[
+        'onshape_client.oas.models.bt_comment_attachment_info']
 try:
     from onshape_client.oas.models import bt_user_summary_info
 except ImportError:
-    bt_user_summary_info = sys.modules['onshape_client.oas.models.bt_user_summary_info']
+    bt_user_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_summary_info']
 try:
     from onshape_client.oas.models import bt_view_data_info
 except ImportError:
-    bt_view_data_info = sys.modules['onshape_client.oas.models.bt_view_data_info']
+    bt_view_data_info = sys.modules[
+        'onshape_client.oas.models.bt_view_data_info']
 
 
 class BTCommentInfo(ModelNormal):

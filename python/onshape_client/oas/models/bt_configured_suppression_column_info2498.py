@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_configured_values_column_info1025
 except ImportError:
-    bt_configured_values_column_info1025 = sys.modules['onshape_client.oas.models.bt_configured_values_column_info1025']
+    bt_configured_values_column_info1025 = sys.modules[
+        'onshape_client.oas.models.bt_configured_values_column_info1025']
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_table_column_spec1967
 except ImportError:
-    bt_table_column_spec1967 = sys.modules['onshape_client.oas.models.bt_table_column_spec1967']
+    bt_table_column_spec1967 = sys.modules[
+        'onshape_client.oas.models.bt_table_column_spec1967']
 
 
 class BTConfiguredSuppressionColumnInfo2498(ModelComposed):

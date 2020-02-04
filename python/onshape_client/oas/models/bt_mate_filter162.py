@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_allowed_mate_type_filter1511
 except ImportError:
-    bt_allowed_mate_type_filter1511 = sys.modules['onshape_client.oas.models.bt_allowed_mate_type_filter1511']
+    bt_allowed_mate_type_filter1511 = sys.modules[
+        'onshape_client.oas.models.bt_allowed_mate_type_filter1511']
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_query_filter183
 except ImportError:
-    bt_query_filter183 = sys.modules['onshape_client.oas.models.bt_query_filter183']
+    bt_query_filter183 = sys.modules[
+        'onshape_client.oas.models.bt_query_filter183']
 
 
 class BTMateFilter162(ModelComposed):

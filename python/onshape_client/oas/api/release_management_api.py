@@ -53,7 +53,11 @@ class ReleaseManagementApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_obsoletion_package(self, wfid, **kwargs):  # noqa: E501
+        def __create_obsoletion_package(
+            self,
+            wfid,
+            **kwargs
+        ):
             """create_obsoletion_package  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -61,31 +65,35 @@ class ReleaseManagementApi(object):
             >>> thread = api.create_obsoletion_package(wfid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str wfid: (required)
-            :param str revision_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                wfid (str):
+
+            Keyword Args:
+                revision_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -106,7 +114,8 @@ class ReleaseManagementApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['wfid'] = wfid
+            kwargs['wfid'] = \
+                wfid
             return self.call_with_http_info(**kwargs)
 
         self.create_obsoletion_package = Endpoint(
@@ -141,8 +150,10 @@ class ReleaseManagementApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'wfid': (str,),
-                    'revision_id': (str,),
+                    'wfid':
+                        (str,),
+                    'revision_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'wfid': 'wfid',
@@ -166,39 +177,48 @@ class ReleaseManagementApi(object):
             callable=__create_obsoletion_package
         )
 
-        def __create_release_package(self, wfid, bt_release_package_params_bt_release_package_params, **kwargs):  # noqa: E501
+        def __create_release_package(
+            self,
+            wfid,
+            bt_release_package_params,
+            **kwargs
+        ):
             """create_release_package  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_release_package(wfid, bt_release_package_params_bt_release_package_params, async_req=True)
+            >>> thread = api.create_release_package(wfid, bt_release_package_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str wfid: (required)
-            :param bt_release_package_params.BTReleasePackageParams bt_release_package_params_bt_release_package_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                wfid (str):
+                bt_release_package_params (bt_release_package_params.BTReleasePackageParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -219,8 +239,10 @@ class ReleaseManagementApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['wfid'] = wfid
-            kwargs['bt_release_package_params_bt_release_package_params'] = bt_release_package_params_bt_release_package_params
+            kwargs['wfid'] = \
+                wfid
+            kwargs['bt_release_package_params'] = \
+                bt_release_package_params
             return self.call_with_http_info(**kwargs)
 
         self.create_release_package = Endpoint(
@@ -237,11 +259,11 @@ class ReleaseManagementApi(object):
             params_map={
                 'all': [
                     'wfid',
-                    'bt_release_package_params_bt_release_package_params',
+                    'bt_release_package_params',
                 ],
                 'required': [
                     'wfid',
-                    'bt_release_package_params_bt_release_package_params',
+                    'bt_release_package_params',
                 ],
                 'nullable': [
                 ],
@@ -256,15 +278,17 @@ class ReleaseManagementApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'wfid': (str,),
-                    'bt_release_package_params_bt_release_package_params': (bt_release_package_params.BTReleasePackageParams,),
+                    'wfid':
+                        (str,),
+                    'bt_release_package_params':
+                        (bt_release_package_params.BTReleasePackageParams,),
                 },
                 'attribute_map': {
                     'wfid': 'wfid',
                 },
                 'location_map': {
                     'wfid': 'path',
-                    'bt_release_package_params_bt_release_package_params': 'body',
+                    'bt_release_package_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -282,7 +306,10 @@ class ReleaseManagementApi(object):
             callable=__create_release_package
         )
 
-        def __get_company_release_workflow(self, **kwargs):  # noqa: E501
+        def __get_company_release_workflow(
+            self,
+            **kwargs
+        ):
             """get_company_release_workflow  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -290,30 +317,33 @@ class ReleaseManagementApi(object):
             >>> thread = api.get_company_release_workflow(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_active_workflow_info.BTActiveWorkflowInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_active_workflow_info.BTActiveWorkflowInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -365,7 +395,8 @@ class ReleaseManagementApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'document_id': (str,),
+                    'document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'document_id': 'documentId',
@@ -387,7 +418,11 @@ class ReleaseManagementApi(object):
             callable=__get_company_release_workflow
         )
 
-        def __get_release_package(self, rpid, **kwargs):  # noqa: E501
+        def __get_release_package(
+            self,
+            rpid,
+            **kwargs
+        ):
             """get_release_package  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -395,31 +430,35 @@ class ReleaseManagementApi(object):
             >>> thread = api.get_release_package(rpid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str rpid: (required)
-            :param bool detailed:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_release_package_info.BTReleasePackageInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                rpid (str):
+
+            Keyword Args:
+                detailed (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_release_package_info.BTReleasePackageInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -440,7 +479,8 @@ class ReleaseManagementApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['rpid'] = rpid
+            kwargs['rpid'] = \
+                rpid
             return self.call_with_http_info(**kwargs)
 
         self.get_release_package = Endpoint(
@@ -475,8 +515,10 @@ class ReleaseManagementApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'rpid': (str,),
-                    'detailed': (bool,),
+                    'rpid':
+                        (str,),
+                    'detailed':
+                        (bool,),
                 },
                 'attribute_map': {
                     'rpid': 'rpid',
@@ -500,41 +542,50 @@ class ReleaseManagementApi(object):
             callable=__get_release_package
         )
 
-        def __update_release_package(self, rpid, bt_update_release_package_params_bt_update_release_package_params, **kwargs):  # noqa: E501
+        def __update_release_package(
+            self,
+            rpid,
+            bt_update_release_package_params,
+            **kwargs
+        ):
             """update_release_package  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_release_package(rpid, bt_update_release_package_params_bt_update_release_package_params, async_req=True)
+            >>> thread = api.update_release_package(rpid, bt_update_release_package_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str rpid: (required)
-            :param bt_update_release_package_params.BTUpdateReleasePackageParams bt_update_release_package_params_bt_update_release_package_params: (required)
-            :param str action:
-            :param str wfaction:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_release_package_info.BTReleasePackageInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                rpid (str):
+                bt_update_release_package_params (bt_update_release_package_params.BTUpdateReleasePackageParams):
+
+            Keyword Args:
+                action (str): [optional] if omitted the server will use the default value of 'UPDATE'
+                wfaction (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_release_package_info.BTReleasePackageInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -555,8 +606,10 @@ class ReleaseManagementApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['rpid'] = rpid
-            kwargs['bt_update_release_package_params_bt_update_release_package_params'] = bt_update_release_package_params_bt_update_release_package_params
+            kwargs['rpid'] = \
+                rpid
+            kwargs['bt_update_release_package_params'] = \
+                bt_update_release_package_params
             return self.call_with_http_info(**kwargs)
 
         self.update_release_package = Endpoint(
@@ -573,13 +626,13 @@ class ReleaseManagementApi(object):
             params_map={
                 'all': [
                     'rpid',
-                    'bt_update_release_package_params_bt_update_release_package_params',
+                    'bt_update_release_package_params',
                     'action',
                     'wfaction',
                 ],
                 'required': [
                     'rpid',
-                    'bt_update_release_package_params_bt_update_release_package_params',
+                    'bt_update_release_package_params',
                 ],
                 'nullable': [
                 ],
@@ -594,10 +647,14 @@ class ReleaseManagementApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'rpid': (str,),
-                    'bt_update_release_package_params_bt_update_release_package_params': (bt_update_release_package_params.BTUpdateReleasePackageParams,),
-                    'action': (str,),
-                    'wfaction': (str,),
+                    'rpid':
+                        (str,),
+                    'bt_update_release_package_params':
+                        (bt_update_release_package_params.BTUpdateReleasePackageParams,),
+                    'action':
+                        (str,),
+                    'wfaction':
+                        (str,),
                 },
                 'attribute_map': {
                     'rpid': 'rpid',
@@ -606,7 +663,7 @@ class ReleaseManagementApi(object):
                 },
                 'location_map': {
                     'rpid': 'path',
-                    'bt_update_release_package_params_bt_update_release_package_params': 'body',
+                    'bt_update_release_package_params': 'body',
                     'action': 'query',
                     'wfaction': 'query',
                 },

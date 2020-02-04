@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_drawing_translation**
-> bt_translation_request_info.BTTranslationRequestInfo create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
+> bt_translation_request_info.BTTranslationRequestInfo create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params)
 
 Create Drawing translation
 
@@ -27,21 +27,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DrawingsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-bt_translate_format_params_bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # bt_translate_format_params.BTTranslateFormatParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Drawing translation
-    api_response = api_instance.create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DrawingsApi->create_drawing_translation: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DrawingsApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # bt_translate_format_params.BTTranslateFormatParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Drawing translation
+        api_response = api_instance.create_drawing_translation(did, wv, wvid, eid, bt_translate_format_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DrawingsApi->create_drawing_translation: %s\n" % e)
 ```
 
 ### Parameters
@@ -52,7 +54,7 @@ Name | Type | Description  | Notes
  **wv** | **str**|  |
  **wvid** | **str**|  |
  **eid** | **str**|  |
- **bt_translate_format_params_bt_translate_format_params** | [**bt_translate_format_params.BTTranslateFormatParams**](BTTranslateFormatParams.md)|  |
+ **bt_translate_format_params** | [**bt_translate_format_params.BTTranslateFormatParams**](BTTranslateFormatParams.md)|  |
 
 ### Return type
 
@@ -87,18 +89,20 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.DrawingsApi()
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_drawing_translator_formats(did, wid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DrawingsApi->get_drawing_translator_formats: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DrawingsApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_drawing_translator_formats(did, wid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DrawingsApi->get_drawing_translator_formats: %s\n" % e)
 ```
 
 ### Parameters

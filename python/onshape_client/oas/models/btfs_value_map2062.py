@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btfs_value1888
 except ImportError:
-    btfs_value1888 = sys.modules['onshape_client.oas.models.btfs_value1888']
+    btfs_value1888 = sys.modules[
+        'onshape_client.oas.models.btfs_value1888']
 try:
     from onshape_client.oas.models import btfs_value_map_entry2077
 except ImportError:
-    btfs_value_map_entry2077 = sys.modules['onshape_client.oas.models.btfs_value_map_entry2077']
+    btfs_value_map_entry2077 = sys.modules[
+        'onshape_client.oas.models.btfs_value_map_entry2077']
 
 
 class BTFSValueMap2062(ModelNormal):

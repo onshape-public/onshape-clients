@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_geometry_circle115
 except ImportError:
-    bt_curve_geometry_circle115 = sys.modules['onshape_client.oas.models.bt_curve_geometry_circle115']
+    bt_curve_geometry_circle115 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_circle115']
 try:
     from onshape_client.oas.models import bt_curve_geometry_conic2284
 except ImportError:
-    bt_curve_geometry_conic2284 = sys.modules['onshape_client.oas.models.bt_curve_geometry_conic2284']
+    bt_curve_geometry_conic2284 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_conic2284']
 try:
     from onshape_client.oas.models import bt_curve_geometry_interpolated_spline116
 except ImportError:
-    bt_curve_geometry_interpolated_spline116 = sys.modules['onshape_client.oas.models.bt_curve_geometry_interpolated_spline116']
+    bt_curve_geometry_interpolated_spline116 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_interpolated_spline116']
 try:
     from onshape_client.oas.models import bt_curve_geometry_line117
 except ImportError:
-    bt_curve_geometry_line117 = sys.modules['onshape_client.oas.models.bt_curve_geometry_line117']
+    bt_curve_geometry_line117 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_line117']
 try:
     from onshape_client.oas.models import bt_curve_geometry_spline118
 except ImportError:
-    bt_curve_geometry_spline118 = sys.modules['onshape_client.oas.models.bt_curve_geometry_spline118']
+    bt_curve_geometry_spline118 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry_spline118']
 
 
 class BTCurveGeometry114(ModelNormal):

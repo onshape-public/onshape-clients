@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_revision_approver_info
 except ImportError:
-    bt_revision_approver_info = sys.modules['onshape_client.oas.models.bt_revision_approver_info']
+    bt_revision_approver_info = sys.modules[
+        'onshape_client.oas.models.bt_revision_approver_info']
 try:
     from onshape_client.oas.models import bt_user_summary_info
 except ImportError:
-    bt_user_summary_info = sys.modules['onshape_client.oas.models.bt_user_summary_info']
+    bt_user_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_summary_info']
 
 
 class BTRevisionInfo(ModelNormal):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_feature_api_base1430
 except ImportError:
-    bt_feature_api_base1430 = sys.modules['onshape_client.oas.models.bt_feature_api_base1430']
+    bt_feature_api_base1430 = sys.modules[
+        'onshape_client.oas.models.bt_feature_api_base1430']
 try:
     from onshape_client.oas.models import bt_feature_definition_call1406_all_of
 except ImportError:
-    bt_feature_definition_call1406_all_of = sys.modules['onshape_client.oas.models.bt_feature_definition_call1406_all_of']
+    bt_feature_definition_call1406_all_of = sys.modules[
+        'onshape_client.oas.models.bt_feature_definition_call1406_all_of']
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules['onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules[
+        'onshape_client.oas.models.btm_feature134']
 
 
 class BTFeatureDefinitionCall1406(ModelComposed):

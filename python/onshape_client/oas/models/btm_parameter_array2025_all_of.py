@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_array_parameter_item1843
 except ImportError:
-    btm_array_parameter_item1843 = sys.modules['onshape_client.oas.models.btm_array_parameter_item1843']
+    btm_array_parameter_item1843 = sys.modules[
+        'onshape_client.oas.models.btm_array_parameter_item1843']
 
 
 class BTMParameterArray2025AllOf(ModelNormal):

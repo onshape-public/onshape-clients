@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_property_accessor23
 except ImportError:
-    btp_property_accessor23 = sys.modules['onshape_client.oas.models.btp_property_accessor23']
+    btp_property_accessor23 = sys.modules[
+        'onshape_client.oas.models.btp_property_accessor23']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btpl_value249
 except ImportError:
-    btpl_value249 = sys.modules['onshape_client.oas.models.btpl_value249']
+    btpl_value249 = sys.modules[
+        'onshape_client.oas.models.btpl_value249']
 try:
     from onshape_client.oas.models import btpl_value_access250_all_of
 except ImportError:
-    btpl_value_access250_all_of = sys.modules['onshape_client.oas.models.btpl_value_access250_all_of']
+    btpl_value_access250_all_of = sys.modules[
+        'onshape_client.oas.models.btpl_value_access250_all_of']
 
 
 class BTPLValueAccess250(ModelComposed):

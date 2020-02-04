@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_custom_property_definition_info
 except ImportError:
-    bt_custom_property_definition_info = sys.modules['onshape_client.oas.models.bt_custom_property_definition_info']
+    bt_custom_property_definition_info = sys.modules[
+        'onshape_client.oas.models.bt_custom_property_definition_info']
 try:
     from onshape_client.oas.models import bt_part_appearance_info
 except ImportError:
-    bt_part_appearance_info = sys.modules['onshape_client.oas.models.bt_part_appearance_info']
+    bt_part_appearance_info = sys.modules[
+        'onshape_client.oas.models.bt_part_appearance_info']
 try:
     from onshape_client.oas.models import bt_part_material_info
 except ImportError:
-    bt_part_material_info = sys.modules['onshape_client.oas.models.bt_part_material_info']
+    bt_part_material_info = sys.modules[
+        'onshape_client.oas.models.bt_part_material_info']
 try:
     from onshape_client.oas.models import bt_thumbnail_info
 except ImportError:
-    bt_thumbnail_info = sys.modules['onshape_client.oas.models.bt_thumbnail_info']
+    bt_thumbnail_info = sys.modules[
+        'onshape_client.oas.models.bt_thumbnail_info']
 
 
 class BTPartMetadataInfo(ModelNormal):

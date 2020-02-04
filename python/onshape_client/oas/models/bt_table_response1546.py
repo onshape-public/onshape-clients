@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_table1825
 except ImportError:
-    bt_table1825 = sys.modules['onshape_client.oas.models.bt_table1825']
+    bt_table1825 = sys.modules[
+        'onshape_client.oas.models.bt_table1825']
 
 
 class BTTableResponse1546(ModelNormal):

@@ -39,33 +39,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-version = '0' # str |  (optional) if omitted the server will use the default value of '0'
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    version = '0' # str |  (optional) if omitted the server will use the default value of '0'
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Export Part to Parasolid.
-    api_response = api_instance.export_ps(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->export_ps: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Export Part to Parasolid.
+        api_response = api_instance.export_ps(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->export_ps: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Export Part to Parasolid.
-    api_response = api_instance.export_ps(did, wvm, wvmid, eid, partid, version=version, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->export_ps: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Export Part to Parasolid.
+        api_response = api_instance.export_ps(did, wvm, wvmid, eid, partid, version=version, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->export_ps: %s\n" % e)
 ```
 
 ### Parameters
@@ -120,31 +122,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Sheet Metal Bend Table.
-    api_response = api_instance.get_bend_table(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_bend_table: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Sheet Metal Bend Table.
+        api_response = api_instance.get_bend_table(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_bend_table: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Sheet Metal Bend Table.
-    api_response = api_instance.get_bend_table(did, wvm, wvmid, eid, partid, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_bend_table: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Sheet Metal Bend Table.
+        api_response = api_instance.get_bend_table(did, wvm, wvmid, eid, partid, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_bend_table: %s\n" % e)
 ```
 
 ### Parameters
@@ -197,30 +201,32 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_body_details(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_body_details: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_body_details(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_body_details: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_body_details(did, wvm, wvmid, eid, partid, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_body_details: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_body_details(did, wvm, wvmid, eid, partid, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_body_details: %s\n" % e)
 ```
 
 ### Parameters
@@ -274,31 +280,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-include_hidden = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    include_hidden = False # bool |  (optional) if omitted the server will use the default value of False
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_bounding_boxes(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_bounding_boxes(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_bounding_boxes: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_bounding_boxes(did, wvm, wvmid, eid, partid, include_hidden=include_hidden, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_bounding_boxes(did, wvm, wvmid, eid, partid, include_hidden=include_hidden, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_bounding_boxes: %s\n" % e)
 ```
 
 ### Parameters
@@ -353,36 +361,38 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-angle_tolerance = 3.4 # float |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    angle_tolerance = 3.4 # float |  (optional)
 chord_tolerance = 3.4 # float |  (optional)
 edge_id = ['edge_id_example'] # [str] |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Tessellated Edges
-    api_response = api_instance.get_edges(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_edges: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Tessellated Edges
+        api_response = api_instance.get_edges(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_edges: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Tessellated Edges
-    api_response = api_instance.get_edges(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, edge_id=edge_id, configuration=configuration, link_document_id=link_document_id, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_edges: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Tessellated Edges
+        api_response = api_instance.get_edges(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, edge_id=edge_id, configuration=configuration, link_document_id=link_document_id, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_edges: %s\n" % e)
 ```
 
 ### Parameters
@@ -440,14 +450,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-angle_tolerance = 3.4 # float |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    angle_tolerance = 3.4 # float |  (optional)
 chord_tolerance = 3.4 # float |  (optional)
 max_facet_width = 3.4 # float |  (optional)
 output_vertex_normals = False # bool |  (optional) if omitted the server will use the default value of False
@@ -460,22 +472,22 @@ output_error_faces = False # bool |  (optional) if omitted the server will use t
 link_document_id = 'link_document_id_example' # str |  (optional)
 body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Tessellated Faces
-    api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_faces1: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Tessellated Faces
+        api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_faces1: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Tessellated Faces
-    api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, face_id=face_id, configuration=configuration, output_error_faces=output_error_faces, link_document_id=link_document_id, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_faces1: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Tessellated Faces
+        api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, face_id=face_id, configuration=configuration, output_error_faces=output_error_faces, link_document_id=link_document_id, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_faces1: %s\n" % e)
 ```
 
 ### Parameters
@@ -539,31 +551,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-infer_metadata_owner = True # bool |  (optional) if omitted the server will use the default value of True
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    infer_metadata_owner = True # bool |  (optional) if omitted the server will use the default value of True
 link_document_id = 'link_document_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_mass_properties(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_mass_properties: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_mass_properties(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_mass_properties: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_mass_properties(did, wvm, wvmid, eid, partid, infer_metadata_owner=infer_metadata_owner, link_document_id=link_document_id, configuration=configuration)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_mass_properties: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_mass_properties(did, wvm, wvmid, eid, partid, infer_metadata_owner=infer_metadata_owner, link_document_id=link_document_id, configuration=configuration)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_mass_properties: %s\n" % e)
 ```
 
 ### Parameters
@@ -618,33 +632,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 include_property_defaults = False # bool |  (optional) if omitted the server will use the default value of False
 friendly_user_ids = False # bool |  (optional) if omitted the server will use the default value of False
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_part_metadata(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_part_metadata(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_part_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_part_metadata(did, wvm, wvmid, eid, partid, infer_metadata_owner=infer_metadata_owner, include_property_defaults=include_property_defaults, friendly_user_ids=friendly_user_ids, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_part_metadata(did, wvm, wvmid, eid, partid, infer_metadata_owner=infer_metadata_owner, include_property_defaults=include_property_defaults, friendly_user_ids=friendly_user_ids, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_part_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -701,33 +717,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | Document ID.
-wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
-wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
-element_id = 'element_id_example' # str | Element ID (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | Document ID.
+    wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+    wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
+    element_id = 'element_id_example' # str | Element ID (optional)
 with_thumbnails = False # bool | Whether or not to include thumbnails (not supported for microversion) (optional) if omitted the server will use the default value of False
 include_property_defaults = False # bool | If true, include metadata schema property defaults in response (optional) if omitted the server will use the default value of False
 link_document_id = 'link_document_id_example' # str | Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. (optional)
 configuration = 'configuration_example' # str | Configuration string. (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get list of parts
-    api_response = api_instance.get_parts_wmv(did, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_parts_wmv: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get list of parts
+        api_response = api_instance.get_parts_wmv(did, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_parts_wmv: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get list of parts
-    api_response = api_instance.get_parts_wmv(did, wvm, wvmid, element_id=element_id, with_thumbnails=with_thumbnails, include_property_defaults=include_property_defaults, link_document_id=link_document_id, configuration=configuration)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_parts_wmv: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get list of parts
+        api_response = api_instance.get_parts_wmv(did, wvm, wvmid, element_id=element_id, with_thumbnails=with_thumbnails, include_property_defaults=include_property_defaults, link_document_id=link_document_id, configuration=configuration)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_parts_wmv: %s\n" % e)
 ```
 
 ### Parameters
@@ -782,33 +800,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | Document ID.
-wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
-wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
-eid = 'eid_example' # str | Element ID.
-with_thumbnails = False # bool | Whether or not to include thumbnails (not supported for microversion) (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | Document ID.
+    wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
+    wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
+    eid = 'eid_example' # str | Element ID.
+    with_thumbnails = False # bool | Whether or not to include thumbnails (not supported for microversion) (optional) if omitted the server will use the default value of False
 include_property_defaults = False # bool | If true, include metadata schema property defaults in response (optional) if omitted the server will use the default value of False
 configuration = 'configuration_example' # str | Configuration string. (optional)
 link_document_id = 'link_document_id_example' # str | Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get parts from an element.
-    api_response = api_instance.get_parts_wmve(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_parts_wmve: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get parts from an element.
+        api_response = api_instance.get_parts_wmve(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_parts_wmve: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get parts from an element.
-    api_response = api_instance.get_parts_wmve(did, wvm, wvmid, eid, with_thumbnails=with_thumbnails, include_property_defaults=include_property_defaults, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_parts_wmve: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get parts from an element.
+        api_response = api_instance.get_parts_wmve(did, wvm, wvmid, eid, with_thumbnails=with_thumbnails, include_property_defaults=include_property_defaults, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_parts_wmve: %s\n" % e)
 ```
 
 ### Parameters
@@ -863,14 +883,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-view_matrix = 'front' # str |  (optional) if omitted the server will use the default value of 'front'
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    view_matrix = 'front' # str |  (optional) if omitted the server will use the default value of 'front'
 output_height = 500 # int |  (optional) if omitted the server will use the default value of 500
 output_width = 500 # int |  (optional) if omitted the server will use the default value of 500
 pixel_size = 0.003 # float |  (optional) if omitted the server will use the default value of 0.003
@@ -879,20 +901,20 @@ use_anti_aliasing = False # bool |  (optional) if omitted the server will use th
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
 ```
 
 ### Parameters
@@ -952,32 +974,34 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-eid = 'eid_example' # str | 
-otype = 'otype_example' # str | 
-oid = 'oid_example' # str | 
-partid = 'partid_example' # str | 
-include_property_defaults = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    eid = 'eid_example' # str | 
+    otype = 'otype_example' # str | 
+    oid = 'oid_example' # str | 
+    partid = 'partid_example' # str | 
+    include_property_defaults = False # bool |  (optional) if omitted the server will use the default value of False
 configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_standard_content_part_metadata(did, vid, eid, otype, oid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_standard_content_part_metadata(did, vid, eid, otype, oid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_standard_content_part_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_standard_content_part_metadata(did, vid, eid, otype, oid, partid, include_property_defaults=include_property_defaults, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->get_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_standard_content_part_metadata(did, vid, eid, otype, oid, partid, include_property_defaults=include_property_defaults, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->get_standard_content_part_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -1033,29 +1057,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-partid = 'partid_example' # str | 
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    partid = 'partid_example' # str | 
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->update_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->update_part_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->update_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->update_part_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -1108,32 +1134,34 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.PartsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-eid = 'eid_example' # str | 
-otype = 'otype_example' # str | 
-oid = 'oid_example' # str | 
-partid = 'partid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.PartsApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    eid = 'eid_example' # str | 
+    otype = 'otype_example' # str | 
+    oid = 'oid_example' # str | 
+    partid = 'partid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 include_property_defaults = False # bool |  (optional) if omitted the server will use the default value of False
-bt_workspace_part_params_bt_workspace_part_params = onshape_client.oas.BTWorkspacePartParams() # bt_workspace_part_params.BTWorkspacePartParams |  (optional)
+bt_workspace_part_params = onshape_client.oas.BTWorkspacePartParams() # bt_workspace_part_params.BTWorkspacePartParams |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_standard_content_part_metadata(did, vid, eid, otype, oid, partid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->update_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_standard_content_part_metadata(did, vid, eid, otype, oid, partid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->update_standard_content_part_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.update_standard_content_part_metadata(did, vid, eid, otype, oid, partid, link_document_id=link_document_id, include_property_defaults=include_property_defaults, bt_workspace_part_params_bt_workspace_part_params=bt_workspace_part_params_bt_workspace_part_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling PartsApi->update_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.update_standard_content_part_metadata(did, vid, eid, otype, oid, partid, link_document_id=link_document_id, include_property_defaults=include_property_defaults, bt_workspace_part_params=bt_workspace_part_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling PartsApi->update_standard_content_part_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -1148,7 +1176,7 @@ Name | Type | Description  | Notes
  **partid** | **str**|  |
  **link_document_id** | **str**|  | [optional]
  **include_property_defaults** | **bool**|  | [optional] if omitted the server will use the default value of False
- **bt_workspace_part_params_bt_workspace_part_params** | [**bt_workspace_part_params.BTWorkspacePartParams**](BTWorkspacePartParams.md)|  | [optional]
+ **bt_workspace_part_params** | [**bt_workspace_part_params.BTWorkspacePartParams**](BTWorkspacePartParams.md)|  | [optional]
 
 ### Return type
 

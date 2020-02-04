@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_thumbnail_info
 except ImportError:
-    bt_thumbnail_info = sys.modules['onshape_client.oas.models.bt_thumbnail_info']
+    bt_thumbnail_info = sys.modules[
+        'onshape_client.oas.models.bt_thumbnail_info']
 
 
 class BTDocumentElementProcessingInfo(ModelNormal):

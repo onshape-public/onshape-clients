@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_curve_geometry114
 except ImportError:
-    bt_curve_geometry114 = sys.modules['onshape_client.oas.models.bt_curve_geometry114']
+    bt_curve_geometry114 = sys.modules[
+        'onshape_client.oas.models.bt_curve_geometry114']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_sketch_curve4
 except ImportError:
-    btm_sketch_curve4 = sys.modules['onshape_client.oas.models.btm_sketch_curve4']
+    btm_sketch_curve4 = sys.modules[
+        'onshape_client.oas.models.btm_sketch_curve4']
 try:
     from onshape_client.oas.models import btm_sketch_curve_segment155_all_of
 except ImportError:
-    btm_sketch_curve_segment155_all_of = sys.modules['onshape_client.oas.models.btm_sketch_curve_segment155_all_of']
+    btm_sketch_curve_segment155_all_of = sys.modules[
+        'onshape_client.oas.models.btm_sketch_curve_segment155_all_of']
 
 
 class BTMSketchCurveSegment155(ModelComposed):

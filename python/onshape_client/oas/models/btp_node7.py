@@ -32,55 +32,68 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_argument_declaration232
 except ImportError:
-    btp_argument_declaration232 = sys.modules['onshape_client.oas.models.btp_argument_declaration232']
+    btp_argument_declaration232 = sys.modules[
+        'onshape_client.oas.models.btp_argument_declaration232']
 try:
     from onshape_client.oas.models import btp_builtin_identifier233
 except ImportError:
-    btp_builtin_identifier233 = sys.modules['onshape_client.oas.models.btp_builtin_identifier233']
+    btp_builtin_identifier233 = sys.modules[
+        'onshape_client.oas.models.btp_builtin_identifier233']
 try:
     from onshape_client.oas.models import btp_literal_map_entry257
 except ImportError:
-    btp_literal_map_entry257 = sys.modules['onshape_client.oas.models.btp_literal_map_entry257']
+    btp_literal_map_entry257 = sys.modules[
+        'onshape_client.oas.models.btp_literal_map_entry257']
 try:
     from onshape_client.oas.models import btp_module234
 except ImportError:
-    btp_module234 = sys.modules['onshape_client.oas.models.btp_module234']
+    btp_module234 = sys.modules[
+        'onshape_client.oas.models.btp_module234']
 try:
     from onshape_client.oas.models import btp_module_id235
 except ImportError:
-    btp_module_id235 = sys.modules['onshape_client.oas.models.btp_module_id235']
+    btp_module_id235 = sys.modules[
+        'onshape_client.oas.models.btp_module_id235']
 try:
     from onshape_client.oas.models import btp_name261
 except ImportError:
-    btp_name261 = sys.modules['onshape_client.oas.models.btp_name261']
+    btp_name261 = sys.modules[
+        'onshape_client.oas.models.btp_name261']
 try:
     from onshape_client.oas.models import btp_property_accessor23
 except ImportError:
-    btp_property_accessor23 = sys.modules['onshape_client.oas.models.btp_property_accessor23']
+    btp_property_accessor23 = sys.modules[
+        'onshape_client.oas.models.btp_property_accessor23']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 try:
     from onshape_client.oas.models import btp_top_level_node286
 except ImportError:
-    btp_top_level_node286 = sys.modules['onshape_client.oas.models.btp_top_level_node286']
+    btp_top_level_node286 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_node286']
 try:
     from onshape_client.oas.models import btp_type_name290
 except ImportError:
-    btp_type_name290 = sys.modules['onshape_client.oas.models.btp_type_name290']
+    btp_type_name290 = sys.modules[
+        'onshape_client.oas.models.btp_type_name290']
 try:
     from onshape_client.oas.models import btpl_value249
 except ImportError:
-    btpl_value249 = sys.modules['onshape_client.oas.models.btpl_value249']
+    btpl_value249 = sys.modules[
+        'onshape_client.oas.models.btpl_value249']
 
 
 class BTPNode7(ModelNormal):

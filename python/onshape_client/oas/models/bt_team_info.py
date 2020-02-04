@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 try:
     from onshape_client.oas.models import bt_team_info
 except ImportError:
-    bt_team_info = sys.modules['onshape_client.oas.models.bt_team_info']
+    bt_team_info = sys.modules[
+        'onshape_client.oas.models.bt_team_info']
 try:
     from onshape_client.oas.models import bt_team_info_all_of
 except ImportError:
-    bt_team_info_all_of = sys.modules['onshape_client.oas.models.bt_team_info_all_of']
+    bt_team_info_all_of = sys.modules[
+        'onshape_client.oas.models.bt_team_info_all_of']
 try:
     from onshape_client.oas.models import bt_team_summary_info
 except ImportError:
-    bt_team_summary_info = sys.modules['onshape_client.oas.models.bt_team_summary_info']
+    bt_team_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_team_summary_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
-    bt_user_basic_summary_info = sys.modules['onshape_client.oas.models.bt_user_basic_summary_info']
+    bt_user_basic_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_basic_summary_info']
 
 
 class BTTeamInfo(ModelComposed):

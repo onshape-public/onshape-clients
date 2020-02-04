@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_feature_spec129
 except ImportError:
-    bt_feature_spec129 = sys.modules['onshape_client.oas.models.bt_feature_spec129']
+    bt_feature_spec129 = sys.modules[
+        'onshape_client.oas.models.bt_feature_spec129']
 
 
 class BTFeatureSpecsResponse664(ModelNormal):

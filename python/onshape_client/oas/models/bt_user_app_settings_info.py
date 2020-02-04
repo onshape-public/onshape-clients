@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_setting_info
 except ImportError:
-    bt_setting_info = sys.modules['onshape_client.oas.models.bt_setting_info']
+    bt_setting_info = sys.modules[
+        'onshape_client.oas.models.bt_setting_info']
 
 
 class BTUserAppSettingsInfo(ModelNormal):

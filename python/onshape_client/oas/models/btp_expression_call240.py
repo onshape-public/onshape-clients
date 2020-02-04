@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_expression_call240_all_of
 except ImportError:
-    btp_expression_call240_all_of = sys.modules['onshape_client.oas.models.btp_expression_call240_all_of']
+    btp_expression_call240_all_of = sys.modules[
+        'onshape_client.oas.models.btp_expression_call240_all_of']
 try:
     from onshape_client.oas.models import btp_name261
 except ImportError:
-    btp_name261 = sys.modules['onshape_client.oas.models.btp_name261']
+    btp_name261 = sys.modules[
+        'onshape_client.oas.models.btp_name261']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPExpressionCall240(ModelComposed):

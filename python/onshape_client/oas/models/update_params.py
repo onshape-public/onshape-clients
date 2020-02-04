@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_unique_document_item_params
 except ImportError:
-    bt_unique_document_item_params = sys.modules['onshape_client.oas.models.bt_unique_document_item_params']
+    bt_unique_document_item_params = sys.modules[
+        'onshape_client.oas.models.bt_unique_document_item_params']
 
 
 class UpdateParams(ModelNormal):

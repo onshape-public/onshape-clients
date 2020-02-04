@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import api_response
 except ImportError:
-    api_response = sys.modules['onshape_client.oas.models.api_response']
+    api_response = sys.modules[
+        'onshape_client.oas.models.api_response']
 try:
     from onshape_client.oas.models import callback
 except ImportError:
-    callback = sys.modules['onshape_client.oas.models.callback']
+    callback = sys.modules[
+        'onshape_client.oas.models.callback']
 try:
     from onshape_client.oas.models import external_documentation
 except ImportError:
-    external_documentation = sys.modules['onshape_client.oas.models.external_documentation']
+    external_documentation = sys.modules[
+        'onshape_client.oas.models.external_documentation']
 try:
     from onshape_client.oas.models import parameter
 except ImportError:
-    parameter = sys.modules['onshape_client.oas.models.parameter']
+    parameter = sys.modules[
+        'onshape_client.oas.models.parameter']
 try:
     from onshape_client.oas.models import request_body
 except ImportError:
-    request_body = sys.modules['onshape_client.oas.models.request_body']
+    request_body = sys.modules[
+        'onshape_client.oas.models.request_body']
 try:
     from onshape_client.oas.models import security_requirement
 except ImportError:
-    security_requirement = sys.modules['onshape_client.oas.models.security_requirement']
+    security_requirement = sys.modules[
+        'onshape_client.oas.models.security_requirement']
 try:
     from onshape_client.oas.models import server
 except ImportError:
-    server = sys.modules['onshape_client.oas.models.server']
+    server = sys.modules[
+        'onshape_client.oas.models.server']
 
 
 class Operation(ModelNormal):

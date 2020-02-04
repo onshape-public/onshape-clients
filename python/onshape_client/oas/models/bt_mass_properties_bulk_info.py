@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_mass_properties_info_null
 except ImportError:
-    bt_mass_properties_info_null = sys.modules['onshape_client.oas.models.bt_mass_properties_info_null']
+    bt_mass_properties_info_null = sys.modules[
+        'onshape_client.oas.models.bt_mass_properties_info_null']
 
 
 class BTMassPropertiesBulkInfo(ModelNormal):

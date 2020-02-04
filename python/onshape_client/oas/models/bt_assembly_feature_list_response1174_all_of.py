@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_feature_state1688
 except ImportError:
-    bt_feature_state1688 = sys.modules['onshape_client.oas.models.bt_feature_state1688']
+    bt_feature_state1688 = sys.modules[
+        'onshape_client.oas.models.bt_feature_state1688']
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
-    btm_assembly_feature887 = sys.modules['onshape_client.oas.models.btm_assembly_feature887']
+    btm_assembly_feature887 = sys.modules[
+        'onshape_client.oas.models.btm_assembly_feature887']
 
 
 class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):

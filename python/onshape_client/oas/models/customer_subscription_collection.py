@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import request_options
 except ImportError:
-    request_options = sys.modules['onshape_client.oas.models.request_options']
+    request_options = sys.modules[
+        'onshape_client.oas.models.request_options']
 try:
     from onshape_client.oas.models import subscription
 except ImportError:
-    subscription = sys.modules['onshape_client.oas.models.subscription']
+    subscription = sys.modules[
+        'onshape_client.oas.models.subscription']
 
 
 class CustomerSubscriptionCollection(ModelNormal):

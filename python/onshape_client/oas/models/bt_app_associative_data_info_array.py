@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_associative_data_info
 except ImportError:
-    bt_associative_data_info = sys.modules['onshape_client.oas.models.bt_associative_data_info']
+    bt_associative_data_info = sys.modules[
+        'onshape_client.oas.models.bt_associative_data_info']
 
 
 class BTAppAssociativeDataInfoArray(ModelNormal):

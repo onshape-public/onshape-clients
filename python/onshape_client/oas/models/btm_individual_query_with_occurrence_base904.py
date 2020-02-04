@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_feature_query_with_occurrence157
 except ImportError:
-    btm_feature_query_with_occurrence157 = sys.modules['onshape_client.oas.models.btm_feature_query_with_occurrence157']
+    btm_feature_query_with_occurrence157 = sys.modules[
+        'onshape_client.oas.models.btm_feature_query_with_occurrence157']
 try:
     from onshape_client.oas.models import btm_individual_occurrence_query626
 except ImportError:
-    btm_individual_occurrence_query626 = sys.modules['onshape_client.oas.models.btm_individual_occurrence_query626']
+    btm_individual_occurrence_query626 = sys.modules[
+        'onshape_client.oas.models.btm_individual_occurrence_query626']
 try:
     from onshape_client.oas.models import btm_individual_query_base139
 except ImportError:
-    btm_individual_query_base139 = sys.modules['onshape_client.oas.models.btm_individual_query_base139']
+    btm_individual_query_base139 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_base139']
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence811
 except ImportError:
-    btm_individual_query_with_occurrence811 = sys.modules['onshape_client.oas.models.btm_individual_query_with_occurrence811']
+    btm_individual_query_with_occurrence811 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_with_occurrence811']
 
 
 class BTMIndividualQueryWithOccurrenceBase904(ModelNormal):

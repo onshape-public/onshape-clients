@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_facet1417
 except ImportError:
-    bt_export_tessellated_faces_facet1417 = sys.modules['onshape_client.oas.models.bt_export_tessellated_faces_facet1417']
+    bt_export_tessellated_faces_facet1417 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_faces_facet1417']
 
 
 class BTExportTessellatedFacesFace1192(ModelNormal):

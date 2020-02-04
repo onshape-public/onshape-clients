@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import external_account
 except ImportError:
-    external_account = sys.modules['onshape_client.oas.models.external_account']
+    external_account = sys.modules[
+        'onshape_client.oas.models.external_account']
 try:
     from onshape_client.oas.models import request_options
 except ImportError:
-    request_options = sys.modules['onshape_client.oas.models.request_options']
+    request_options = sys.modules[
+        'onshape_client.oas.models.request_options']
 
 
 class ExternalAccountCollection(ModelNormal):

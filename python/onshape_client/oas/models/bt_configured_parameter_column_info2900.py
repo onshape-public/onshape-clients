@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_configured_parameter_column_info2900_all_of
 except ImportError:
-    bt_configured_parameter_column_info2900_all_of = sys.modules['onshape_client.oas.models.bt_configured_parameter_column_info2900_all_of']
+    bt_configured_parameter_column_info2900_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_parameter_column_info2900_all_of']
 try:
     from onshape_client.oas.models import bt_configured_values_column_info1025
 except ImportError:
-    bt_configured_values_column_info1025 = sys.modules['onshape_client.oas.models.bt_configured_values_column_info1025']
+    bt_configured_values_column_info1025 = sys.modules[
+        'onshape_client.oas.models.bt_configured_values_column_info1025']
 try:
     from onshape_client.oas.models import bt_inner_parameter_location1715
 except ImportError:
-    bt_inner_parameter_location1715 = sys.modules['onshape_client.oas.models.bt_inner_parameter_location1715']
+    bt_inner_parameter_location1715 = sys.modules[
+        'onshape_client.oas.models.bt_inner_parameter_location1715']
 try:
     from onshape_client.oas.models import bt_table_column_spec1967
 except ImportError:
-    bt_table_column_spec1967 = sys.modules['onshape_client.oas.models.bt_table_column_spec1967']
+    bt_table_column_spec1967 = sys.modules[
+        'onshape_client.oas.models.bt_table_column_spec1967']
 
 
 class BTConfiguredParameterColumnInfo2900(ModelComposed):

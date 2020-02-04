@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import card
 except ImportError:
-    card = sys.modules['onshape_client.oas.models.card']
+    card = sys.modules[
+        'onshape_client.oas.models.card']
 
 
 class ThreeDSecure(ModelNormal):

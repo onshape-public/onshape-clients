@@ -26,17 +26,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WorkflowApi(onshape_client.oas.ApiClient(configuration))
-document_id = '' # str |  (optional) if omitted the server will use the default value of ''
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WorkflowApi(api_client)
+    document_id = '' # str |  (optional) if omitted the server will use the default value of ''
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_active_workflows(document_id=document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WorkflowApi->get_active_workflows: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_active_workflows(document_id=document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WorkflowApi->get_active_workflows: %s\n" % e)
 ```
 
 ### Parameters

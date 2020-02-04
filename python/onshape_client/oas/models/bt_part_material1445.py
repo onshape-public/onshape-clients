@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_element_reference725
 except ImportError:
-    bt_element_reference725 = sys.modules['onshape_client.oas.models.bt_element_reference725']
+    bt_element_reference725 = sys.modules[
+        'onshape_client.oas.models.bt_element_reference725']
 try:
     from onshape_client.oas.models import bt_part_material_property1453
 except ImportError:
-    bt_part_material_property1453 = sys.modules['onshape_client.oas.models.bt_part_material_property1453']
+    bt_part_material_property1453 = sys.modules[
+        'onshape_client.oas.models.bt_part_material_property1453']
 
 
 class BTPartMaterial1445(ModelNormal):

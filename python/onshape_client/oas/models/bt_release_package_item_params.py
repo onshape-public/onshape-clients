@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_property_value_param
 except ImportError:
-    bt_property_value_param = sys.modules['onshape_client.oas.models.bt_property_value_param']
+    bt_property_value_param = sys.modules[
+        'onshape_client.oas.models.bt_property_value_param']
 try:
     from onshape_client.oas.models import bt_release_package_item_params_not_editable_in_version_properties
 except ImportError:
-    bt_release_package_item_params_not_editable_in_version_properties = sys.modules['onshape_client.oas.models.bt_release_package_item_params_not_editable_in_version_properties']
+    bt_release_package_item_params_not_editable_in_version_properties = sys.modules[
+        'onshape_client.oas.models.bt_release_package_item_params_not_editable_in_version_properties']
 
 
 class BTReleasePackageItemParams(ModelNormal):

@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_string_format_block_pattern1755_all_of
 except ImportError:
-    bt_string_format_block_pattern1755_all_of = sys.modules['onshape_client.oas.models.bt_string_format_block_pattern1755_all_of']
+    bt_string_format_block_pattern1755_all_of = sys.modules[
+        'onshape_client.oas.models.bt_string_format_block_pattern1755_all_of']
 try:
     from onshape_client.oas.models import bt_string_format_condition683
 except ImportError:
-    bt_string_format_condition683 = sys.modules['onshape_client.oas.models.bt_string_format_condition683']
+    bt_string_format_condition683 = sys.modules[
+        'onshape_client.oas.models.bt_string_format_condition683']
 
 
 class BTStringFormatBlockPattern1755(ModelComposed):

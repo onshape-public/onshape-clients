@@ -20,22 +20,24 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.OpenAPIApi()
-file_type = 'JSON' # str | The type of file to return. Defaults to JSON. (optional) if omitted the server will use the default value of 'JSON'
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.OpenAPIApi(api_client)
+    file_type = 'JSON' # str | The type of file to return. Defaults to JSON. (optional) if omitted the server will use the default value of 'JSON'
 excluded_tags = 'excluded_tags_example' # str | If an operation contains an excluded tag, it is not returned from this endpoint. (optional)
 included_tags = 'included_tags_example' # str | Return only operations with tags included in includedTags. (optional)
 include_deprecated = True # bool | Include deprecated endpoints. (optional)
 documentation_status = ['documentation_status_example'] # [str] | Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to. (optional)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # OpenAPI spec documentation for the Onshape REST API.
-    api_response = api_instance.get_open_api(file_type=file_type, excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling OpenAPIApi->get_open_api: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # OpenAPI spec documentation for the Onshape REST API.
+        api_response = api_instance.get_open_api(file_type=file_type, excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling OpenAPIApi->get_open_api: %s\n" % e)
 ```
 
 ### Parameters

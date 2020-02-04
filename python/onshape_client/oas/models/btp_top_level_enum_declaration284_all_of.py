@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):

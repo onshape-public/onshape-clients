@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_inner_parameter_location1715
 except ImportError:
-    bt_inner_parameter_location1715 = sys.modules['onshape_client.oas.models.bt_inner_parameter_location1715']
+    bt_inner_parameter_location1715 = sys.modules[
+        'onshape_client.oas.models.bt_inner_parameter_location1715']
 
 
 class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):

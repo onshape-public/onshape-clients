@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_configured_value1341
 except ImportError:
-    btm_configured_value1341 = sys.modules['onshape_client.oas.models.btm_configured_value1341']
+    btm_configured_value1341 = sys.modules[
+        'onshape_client.oas.models.btm_configured_value1341']
 
 
 class BTMParameterConfigured2222AllOf(ModelNormal):

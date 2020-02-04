@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_with_version_and_element_id
 except ImportError:
-    bt_document_with_version_and_element_id = sys.modules['onshape_client.oas.models.bt_document_with_version_and_element_id']
+    bt_document_with_version_and_element_id = sys.modules[
+        'onshape_client.oas.models.bt_document_with_version_and_element_id']
 try:
     from onshape_client.oas.models import bt_document_with_version_id
 except ImportError:
-    bt_document_with_version_id = sys.modules['onshape_client.oas.models.bt_document_with_version_id']
+    bt_document_with_version_id = sys.modules[
+        'onshape_client.oas.models.bt_document_with_version_id']
 try:
     from onshape_client.oas.models import bt_element_reference725
 except ImportError:
-    bt_element_reference725 = sys.modules['onshape_client.oas.models.bt_element_reference725']
+    bt_element_reference725 = sys.modules[
+        'onshape_client.oas.models.bt_element_reference725']
 try:
     from onshape_client.oas.models import bt_external_reference1936_all_of
 except ImportError:
-    bt_external_reference1936_all_of = sys.modules['onshape_client.oas.models.bt_external_reference1936_all_of']
+    bt_external_reference1936_all_of = sys.modules[
+        'onshape_client.oas.models.bt_external_reference1936_all_of']
 try:
     from onshape_client.oas.models import bt_full_element_id756
 except ImportError:
-    bt_full_element_id756 = sys.modules['onshape_client.oas.models.bt_full_element_id756']
+    bt_full_element_id756 = sys.modules[
+        'onshape_client.oas.models.bt_full_element_id756']
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
-    bt_microversion_id_and_configuration2338 = sys.modules['onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+    bt_microversion_id_and_configuration2338 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
 
 
 class BTExternalReference1936(ModelComposed):

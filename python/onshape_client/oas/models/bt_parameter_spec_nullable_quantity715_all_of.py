@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_nullable_quantity_range1340
 except ImportError:
-    bt_nullable_quantity_range1340 = sys.modules['onshape_client.oas.models.bt_nullable_quantity_range1340']
+    bt_nullable_quantity_range1340 = sys.modules[
+        'onshape_client.oas.models.bt_nullable_quantity_range1340']
 
 
 class BTParameterSpecNullableQuantity715AllOf(ModelNormal):

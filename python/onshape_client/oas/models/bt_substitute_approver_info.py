@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_identity_info
 except ImportError:
-    bt_identity_info = sys.modules['onshape_client.oas.models.bt_identity_info']
+    bt_identity_info = sys.modules[
+        'onshape_client.oas.models.bt_identity_info']
 
 
 class BTSubstituteApproverInfo(ModelNormal):

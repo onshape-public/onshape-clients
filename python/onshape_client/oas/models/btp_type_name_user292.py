@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_name261
 except ImportError:
-    btp_name261 = sys.modules['onshape_client.oas.models.btp_name261']
+    btp_name261 = sys.modules[
+        'onshape_client.oas.models.btp_name261']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_type_name290
 except ImportError:
-    btp_type_name290 = sys.modules['onshape_client.oas.models.btp_type_name290']
+    btp_type_name290 = sys.modules[
+        'onshape_client.oas.models.btp_type_name290']
 try:
     from onshape_client.oas.models import btp_type_name_user292_all_of
 except ImportError:
-    btp_type_name_user292_all_of = sys.modules['onshape_client.oas.models.btp_type_name_user292_all_of']
+    btp_type_name_user292_all_of = sys.modules[
+        'onshape_client.oas.models.btp_type_name_user292_all_of']
 
 
 class BTPTypeNameUser292(ModelComposed):

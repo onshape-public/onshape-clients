@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_parameter_reference2434_all_of
 except ImportError:
-    btm_parameter_reference2434_all_of = sys.modules['onshape_client.oas.models.btm_parameter_reference2434_all_of']
+    btm_parameter_reference2434_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference2434_all_of']
 try:
     from onshape_client.oas.models import btm_parameter_reference_blob3281
 except ImportError:
-    btm_parameter_reference_blob3281 = sys.modules['onshape_client.oas.models.btm_parameter_reference_blob3281']
+    btm_parameter_reference_blob3281 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_blob3281']
 try:
     from onshape_client.oas.models import btm_parameter_reference_with_configuration3028
 except ImportError:
-    btm_parameter_reference_with_configuration3028 = sys.modules['onshape_client.oas.models.btm_parameter_reference_with_configuration3028']
+    btm_parameter_reference_with_configuration3028 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_with_configuration3028']
 
 
 class BTMParameterReference2434(ModelComposed):

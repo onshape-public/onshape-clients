@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_database_parameter2229_all_of
 except ImportError:
-    btm_database_parameter2229_all_of = sys.modules['onshape_client.oas.models.btm_database_parameter2229_all_of']
+    btm_database_parameter2229_all_of = sys.modules[
+        'onshape_client.oas.models.btm_database_parameter2229_all_of']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTMDatabaseParameter2229(ModelComposed):

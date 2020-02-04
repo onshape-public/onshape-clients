@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import operation
 except ImportError:
-    operation = sys.modules['onshape_client.oas.models.operation']
+    operation = sys.modules[
+        'onshape_client.oas.models.operation']
 try:
     from onshape_client.oas.models import parameter
 except ImportError:
-    parameter = sys.modules['onshape_client.oas.models.parameter']
+    parameter = sys.modules[
+        'onshape_client.oas.models.parameter']
 try:
     from onshape_client.oas.models import server
 except ImportError:
-    server = sys.modules['onshape_client.oas.models.server']
+    server = sys.modules[
+        'onshape_client.oas.models.server']
 
 
 class PathItem(ModelNormal):

@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules['onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules[
+        'onshape_client.oas.models.bt_location_info226']
 try:
     from onshape_client.oas.models import bt_node_reference21
 except ImportError:
-    bt_node_reference21 = sys.modules['onshape_client.oas.models.bt_node_reference21']
+    bt_node_reference21 = sys.modules[
+        'onshape_client.oas.models.bt_node_reference21']
 
 
 class BTNotice227(ModelNormal):

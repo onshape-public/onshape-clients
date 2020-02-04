@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_circle_description1145
 except ImportError:
-    bt_circle_description1145 = sys.modules['onshape_client.oas.models.bt_circle_description1145']
+    bt_circle_description1145 = sys.modules[
+        'onshape_client.oas.models.bt_circle_description1145']
 try:
     from onshape_client.oas.models import bt_ellipse_description866
 except ImportError:
-    bt_ellipse_description866 = sys.modules['onshape_client.oas.models.bt_ellipse_description866']
+    bt_ellipse_description866 = sys.modules[
+        'onshape_client.oas.models.bt_ellipse_description866']
 try:
     from onshape_client.oas.models import bt_line_description1559
 except ImportError:
-    bt_line_description1559 = sys.modules['onshape_client.oas.models.bt_line_description1559']
+    bt_line_description1559 = sys.modules[
+        'onshape_client.oas.models.bt_line_description1559']
 try:
     from onshape_client.oas.models import bt_spline_description2118
 except ImportError:
-    bt_spline_description2118 = sys.modules['onshape_client.oas.models.bt_spline_description2118']
+    bt_spline_description2118 = sys.modules[
+        'onshape_client.oas.models.bt_spline_description2118']
 
 
 class BTCurveDescription1583(ModelNormal):

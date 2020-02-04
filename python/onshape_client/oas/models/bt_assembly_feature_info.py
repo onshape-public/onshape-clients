@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_feature_data_info
 except ImportError:
-    bt_assembly_feature_data_info = sys.modules['onshape_client.oas.models.bt_assembly_feature_data_info']
+    bt_assembly_feature_data_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_feature_data_info']
 
 
 class BTAssemblyFeatureInfo(ModelNormal):

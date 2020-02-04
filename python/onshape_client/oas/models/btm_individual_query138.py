@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_individual_co_edge_query1332
 except ImportError:
-    btm_individual_co_edge_query1332 = sys.modules['onshape_client.oas.models.btm_individual_co_edge_query1332']
+    btm_individual_co_edge_query1332 = sys.modules[
+        'onshape_client.oas.models.btm_individual_co_edge_query1332']
 try:
     from onshape_client.oas.models import btm_individual_created_by_query137
 except ImportError:
-    btm_individual_created_by_query137 = sys.modules['onshape_client.oas.models.btm_individual_created_by_query137']
+    btm_individual_created_by_query137 = sys.modules[
+        'onshape_client.oas.models.btm_individual_created_by_query137']
 try:
     from onshape_client.oas.models import btm_individual_query138_all_of
 except ImportError:
-    btm_individual_query138_all_of = sys.modules['onshape_client.oas.models.btm_individual_query138_all_of']
+    btm_individual_query138_all_of = sys.modules[
+        'onshape_client.oas.models.btm_individual_query138_all_of']
 try:
     from onshape_client.oas.models import btm_individual_query_base139
 except ImportError:
-    btm_individual_query_base139 = sys.modules['onshape_client.oas.models.btm_individual_query_base139']
+    btm_individual_query_base139 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_base139']
 try:
     from onshape_client.oas.models import btm_individual_sketch_region_query140
 except ImportError:
-    btm_individual_sketch_region_query140 = sys.modules['onshape_client.oas.models.btm_individual_sketch_region_query140']
+    btm_individual_sketch_region_query140 = sys.modules[
+        'onshape_client.oas.models.btm_individual_sketch_region_query140']
 try:
     from onshape_client.oas.models import btm_individual_sketch_unique_vertices_query1472
 except ImportError:
-    btm_individual_sketch_unique_vertices_query1472 = sys.modules['onshape_client.oas.models.btm_individual_sketch_unique_vertices_query1472']
+    btm_individual_sketch_unique_vertices_query1472 = sys.modules[
+        'onshape_client.oas.models.btm_individual_sketch_unique_vertices_query1472']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 
 
 class BTMIndividualQuery138(ModelComposed):

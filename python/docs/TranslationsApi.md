@@ -30,11 +30,13 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.TranslationsApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
 entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
 message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
@@ -42,20 +44,20 @@ parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
 providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.create_translation(did, wid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.create_translation(did, wid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.create_translation(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
 ```
 
 ### Parameters
@@ -111,15 +113,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
-tid = 'tid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.delete_translation(tid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->delete_translation: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.TranslationsApi(api_client)
+    tid = 'tid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.delete_translation(tid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->delete_translation: %s\n" % e)
 ```
 
 ### Parameters
@@ -161,15 +165,17 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.TranslationsApi()
-
-# example, this endpoint has no required or optional parameters
-try:
-    api_response = api_instance.get_all_translator_formats()
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->get_all_translator_formats: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.TranslationsApi(api_client)
+    
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.get_all_translator_formats()
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->get_all_translator_formats: %s\n" % e)
 ```
 
 ### Parameters
@@ -214,26 +220,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-offset = 0 # int |  (optional) if omitted the server will use the default value of 0
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.TranslationsApi(api_client)
+    did = 'did_example' # str | 
+    offset = 0 # int |  (optional) if omitted the server will use the default value of 0
 limit = 20 # int |  (optional) if omitted the server will use the default value of 20
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_document_translations(did)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->get_document_translations: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_document_translations(did)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->get_document_translations: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_document_translations(did, offset=offset, limit=limit)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->get_document_translations: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_document_translations(did, offset=offset, limit=limit)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->get_document_translations: %s\n" % e)
 ```
 
 ### Parameters
@@ -283,16 +291,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.TranslationsApi(onshape_client.oas.ApiClient(configuration))
-tid = 'tid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_translation(tid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling TranslationsApi->get_translation: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.TranslationsApi(api_client)
+    tid = 'tid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_translation(tid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling TranslationsApi->get_translation: %s\n" % e)
 ```
 
 ### Parameters

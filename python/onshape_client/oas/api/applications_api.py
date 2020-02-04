@@ -51,7 +51,12 @@ class ApplicationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __delete_app_settings(self, uid, cid, **kwargs):  # noqa: E501
+        def __delete_app_settings(
+            self,
+            uid,
+            cid,
+            **kwargs
+        ):
             """Delete Application Settings  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,32 +64,36 @@ class ApplicationsApi(object):
             >>> thread = api.delete_app_settings(uid, cid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str uid: (required)
-            :param str cid: (required)
-            :param [str] key:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                uid (str):
+                cid (str):
+
+            Keyword Args:
+                key ([str]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -105,8 +114,10 @@ class ApplicationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['uid'] = uid
-            kwargs['cid'] = cid
+            kwargs['uid'] = \
+                uid
+            kwargs['cid'] = \
+                cid
             return self.call_with_http_info(**kwargs)
 
         self.delete_app_settings = Endpoint(
@@ -141,9 +152,12 @@ class ApplicationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'uid': (str,),
-                    'cid': (str,),
-                    'key': ([str],),
+                    'uid':
+                        (str,),
+                    'cid':
+                        (str,),
+                    'key':
+                        ([str],),
                 },
                 'attribute_map': {
                     'uid': 'uid',
@@ -167,7 +181,12 @@ class ApplicationsApi(object):
             callable=__delete_app_settings
         )
 
-        def __get_user_app_settings(self, uid, cid, **kwargs):  # noqa: E501
+        def __get_user_app_settings(
+            self,
+            uid,
+            cid,
+            **kwargs
+        ):
             """Get User Application Settings  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -175,32 +194,36 @@ class ApplicationsApi(object):
             >>> thread = api.get_user_app_settings(uid, cid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str uid: (required)
-            :param str cid: (required)
-            :param [str] key:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_user_app_settings_info.BTUserAppSettingsInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                uid (str):
+                cid (str):
+
+            Keyword Args:
+                key ([str]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_user_app_settings_info.BTUserAppSettingsInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -221,8 +244,10 @@ class ApplicationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['uid'] = uid
-            kwargs['cid'] = cid
+            kwargs['uid'] = \
+                uid
+            kwargs['cid'] = \
+                cid
             return self.call_with_http_info(**kwargs)
 
         self.get_user_app_settings = Endpoint(
@@ -257,9 +282,12 @@ class ApplicationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'uid': (str,),
-                    'cid': (str,),
-                    'key': ([str],),
+                    'uid':
+                        (str,),
+                    'cid':
+                        (str,),
+                    'key':
+                        ([str],),
                 },
                 'attribute_map': {
                     'uid': 'uid',
@@ -286,40 +314,50 @@ class ApplicationsApi(object):
             callable=__get_user_app_settings
         )
 
-        def __update_app_settings(self, uid, cid, bt_user_app_settings_params_bt_user_app_settings_params, **kwargs):  # noqa: E501
+        def __update_app_settings(
+            self,
+            uid,
+            cid,
+            bt_user_app_settings_params,
+            **kwargs
+        ):
             """Update Application Settings  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_app_settings(uid, cid, bt_user_app_settings_params_bt_user_app_settings_params, async_req=True)
+            >>> thread = api.update_app_settings(uid, cid, bt_user_app_settings_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str uid: (required)
-            :param str cid: (required)
-            :param bt_user_app_settings_params.BTUserAppSettingsParams bt_user_app_settings_params_bt_user_app_settings_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                uid (str):
+                cid (str):
+                bt_user_app_settings_params (bt_user_app_settings_params.BTUserAppSettingsParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -340,9 +378,12 @@ class ApplicationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['uid'] = uid
-            kwargs['cid'] = cid
-            kwargs['bt_user_app_settings_params_bt_user_app_settings_params'] = bt_user_app_settings_params_bt_user_app_settings_params
+            kwargs['uid'] = \
+                uid
+            kwargs['cid'] = \
+                cid
+            kwargs['bt_user_app_settings_params'] = \
+                bt_user_app_settings_params
             return self.call_with_http_info(**kwargs)
 
         self.update_app_settings = Endpoint(
@@ -358,12 +399,12 @@ class ApplicationsApi(object):
                 'all': [
                     'uid',
                     'cid',
-                    'bt_user_app_settings_params_bt_user_app_settings_params',
+                    'bt_user_app_settings_params',
                 ],
                 'required': [
                     'uid',
                     'cid',
-                    'bt_user_app_settings_params_bt_user_app_settings_params',
+                    'bt_user_app_settings_params',
                 ],
                 'nullable': [
                 ],
@@ -378,9 +419,12 @@ class ApplicationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'uid': (str,),
-                    'cid': (str,),
-                    'bt_user_app_settings_params_bt_user_app_settings_params': (bt_user_app_settings_params.BTUserAppSettingsParams,),
+                    'uid':
+                        (str,),
+                    'cid':
+                        (str,),
+                    'bt_user_app_settings_params':
+                        (bt_user_app_settings_params.BTUserAppSettingsParams,),
                 },
                 'attribute_map': {
                     'uid': 'uid',
@@ -389,7 +433,7 @@ class ApplicationsApi(object):
                 'location_map': {
                     'uid': 'path',
                     'cid': 'path',
-                    'bt_user_app_settings_params_bt_user_app_settings_params': 'body',
+                    'bt_user_app_settings_params': 'body',
                 },
                 'collection_format_map': {
                 }

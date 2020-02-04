@@ -32,67 +32,83 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btp_expression_access237
 except ImportError:
-    btp_expression_access237 = sys.modules['onshape_client.oas.models.btp_expression_access237']
+    btp_expression_access237 = sys.modules[
+        'onshape_client.oas.models.btp_expression_access237']
 try:
     from onshape_client.oas.models import btp_expression_as238
 except ImportError:
-    btp_expression_as238 = sys.modules['onshape_client.oas.models.btp_expression_as238']
+    btp_expression_as238 = sys.modules[
+        'onshape_client.oas.models.btp_expression_as238']
 try:
     from onshape_client.oas.models import btp_expression_builtin_call239
 except ImportError:
-    btp_expression_builtin_call239 = sys.modules['onshape_client.oas.models.btp_expression_builtin_call239']
+    btp_expression_builtin_call239 = sys.modules[
+        'onshape_client.oas.models.btp_expression_builtin_call239']
 try:
     from onshape_client.oas.models import btp_expression_call240
 except ImportError:
-    btp_expression_call240 = sys.modules['onshape_client.oas.models.btp_expression_call240']
+    btp_expression_call240 = sys.modules[
+        'onshape_client.oas.models.btp_expression_call240']
 try:
     from onshape_client.oas.models import btp_expression_function1325
 except ImportError:
-    btp_expression_function1325 = sys.modules['onshape_client.oas.models.btp_expression_function1325']
+    btp_expression_function1325 = sys.modules[
+        'onshape_client.oas.models.btp_expression_function1325']
 try:
     from onshape_client.oas.models import btp_expression_group241
 except ImportError:
-    btp_expression_group241 = sys.modules['onshape_client.oas.models.btp_expression_group241']
+    btp_expression_group241 = sys.modules[
+        'onshape_client.oas.models.btp_expression_group241']
 try:
     from onshape_client.oas.models import btp_expression_is242
 except ImportError:
-    btp_expression_is242 = sys.modules['onshape_client.oas.models.btp_expression_is242']
+    btp_expression_is242 = sys.modules[
+        'onshape_client.oas.models.btp_expression_is242']
 try:
     from onshape_client.oas.models import btp_expression_new243
 except ImportError:
-    btp_expression_new243 = sys.modules['onshape_client.oas.models.btp_expression_new243']
+    btp_expression_new243 = sys.modules[
+        'onshape_client.oas.models.btp_expression_new243']
 try:
     from onshape_client.oas.models import btp_expression_operator244
 except ImportError:
-    btp_expression_operator244 = sys.modules['onshape_client.oas.models.btp_expression_operator244']
+    btp_expression_operator244 = sys.modules[
+        'onshape_client.oas.models.btp_expression_operator244']
 try:
     from onshape_client.oas.models import btp_expression_switch2632
 except ImportError:
-    btp_expression_switch2632 = sys.modules['onshape_client.oas.models.btp_expression_switch2632']
+    btp_expression_switch2632 = sys.modules[
+        'onshape_client.oas.models.btp_expression_switch2632']
 try:
     from onshape_client.oas.models import btp_expression_try1271
 except ImportError:
-    btp_expression_try1271 = sys.modules['onshape_client.oas.models.btp_expression_try1271']
+    btp_expression_try1271 = sys.modules[
+        'onshape_client.oas.models.btp_expression_try1271']
 try:
     from onshape_client.oas.models import btp_expression_var_reference245
 except ImportError:
-    btp_expression_var_reference245 = sys.modules['onshape_client.oas.models.btp_expression_var_reference245']
+    btp_expression_var_reference245 = sys.modules[
+        'onshape_client.oas.models.btp_expression_var_reference245']
 try:
     from onshape_client.oas.models import btp_literal253
 except ImportError:
-    btp_literal253 = sys.modules['onshape_client.oas.models.btp_literal253']
+    btp_literal253 = sys.modules[
+        'onshape_client.oas.models.btp_literal253']
 try:
     from onshape_client.oas.models import btp_property_accessor23
 except ImportError:
-    btp_property_accessor23 = sys.modules['onshape_client.oas.models.btp_property_accessor23']
+    btp_property_accessor23 = sys.modules[
+        'onshape_client.oas.models.btp_property_accessor23']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPExpression9(ModelComposed):

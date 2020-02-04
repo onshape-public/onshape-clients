@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_workflow_action_info
 except ImportError:
-    bt_workflow_action_info = sys.modules['onshape_client.oas.models.bt_workflow_action_info']
+    bt_workflow_action_info = sys.modules[
+        'onshape_client.oas.models.bt_workflow_action_info']
 try:
     from onshape_client.oas.models import bt_workflow_state_info
 except ImportError:
-    bt_workflow_state_info = sys.modules['onshape_client.oas.models.bt_workflow_state_info']
+    bt_workflow_state_info = sys.modules[
+        'onshape_client.oas.models.bt_workflow_state_info']
 
 
 class BTWorkflowSnapshotInfo(ModelNormal):

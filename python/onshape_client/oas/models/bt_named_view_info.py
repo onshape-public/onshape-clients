@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_section_plane_info
 except ImportError:
-    bt_section_plane_info = sys.modules['onshape_client.oas.models.bt_section_plane_info']
+    bt_section_plane_info = sys.modules[
+        'onshape_client.oas.models.bt_section_plane_info']
 
 
 class BTNamedViewInfo(ModelNormal):

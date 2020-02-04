@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import header
 except ImportError:
-    header = sys.modules['onshape_client.oas.models.header']
+    header = sys.modules[
+        'onshape_client.oas.models.header']
 try:
     from onshape_client.oas.models import link
 except ImportError:
-    link = sys.modules['onshape_client.oas.models.link']
+    link = sys.modules[
+        'onshape_client.oas.models.link']
 try:
     from onshape_client.oas.models import media_type
 except ImportError:
-    media_type = sys.modules['onshape_client.oas.models.media_type']
+    media_type = sys.modules[
+        'onshape_client.oas.models.media_type']
 
 
 class ApiResponse(ModelNormal):

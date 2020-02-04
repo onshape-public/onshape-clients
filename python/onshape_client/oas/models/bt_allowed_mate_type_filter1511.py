@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_allowed_mate_type_filter1511_all_of
 except ImportError:
-    bt_allowed_mate_type_filter1511_all_of = sys.modules['onshape_client.oas.models.bt_allowed_mate_type_filter1511_all_of']
+    bt_allowed_mate_type_filter1511_all_of = sys.modules[
+        'onshape_client.oas.models.bt_allowed_mate_type_filter1511_all_of']
 try:
     from onshape_client.oas.models import bt_mate_filter162
 except ImportError:
-    bt_mate_filter162 = sys.modules['onshape_client.oas.models.bt_mate_filter162']
+    bt_mate_filter162 = sys.modules[
+        'onshape_client.oas.models.bt_mate_filter162']
 
 
 class BTAllowedMateTypeFilter1511(ModelComposed):

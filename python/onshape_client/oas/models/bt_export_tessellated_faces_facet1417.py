@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_vector2d1812
 except ImportError:
-    bt_vector2d1812 = sys.modules['onshape_client.oas.models.bt_vector2d1812']
+    bt_vector2d1812 = sys.modules[
+        'onshape_client.oas.models.bt_vector2d1812']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTExportTessellatedFacesFacet1417(ModelNormal):

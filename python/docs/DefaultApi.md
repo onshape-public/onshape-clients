@@ -52,16 +52,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-wfid = 'wfid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.create_workflowable_test_object(wfid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->create_workflowable_test_object: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    wfid = 'wfid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.create_workflowable_test_object(wfid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->create_workflowable_test_object: %s\n" % e)
 ```
 
 ### Parameters
@@ -109,18 +111,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.delete_application_thumbnails(did, wv, wvid, eid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->delete_application_thumbnails: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.delete_application_thumbnails(did, wv, wvid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->delete_application_thumbnails: %s\n" % e)
 ```
 
 ### Parameters
@@ -171,13 +175,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-transaction_id = '' # str |  (optional) if omitted the server will use the default value of ''
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    transaction_id = '' # str |  (optional) if omitted the server will use the default value of ''
 parent_change_id = '' # str |  (optional) if omitted the server will use the default value of ''
 associative_data_id = ['associative_data_id_example'] # [str] |  (optional)
 element_id = '' # str |  (optional) if omitted the server will use the default value of ''
@@ -189,20 +195,20 @@ feature_id = '' # str |  (optional) if omitted the server will use the default v
 entity_id = '' # str |  (optional) if omitted the server will use the default value of ''
 occurrence_id = '' # str |  (optional) if omitted the server will use the default value of ''
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.delete_associative_data(did, eid, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->delete_associative_data: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.delete_associative_data(did, eid, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->delete_associative_data: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.delete_associative_data(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, associative_data_id=associative_data_id, element_id=element_id, view_id=view_id, microversion_id=microversion_id, document_microversion=document_microversion, deterministic_id=deterministic_id, feature_id=feature_id, entity_id=entity_id, occurrence_id=occurrence_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->delete_associative_data: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.delete_associative_data(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, associative_data_id=associative_data_id, element_id=element_id, view_id=view_id, microversion_id=microversion_id, document_microversion=document_microversion, deterministic_id=deterministic_id, feature_id=feature_id, entity_id=entity_id, occurrence_id=occurrence_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->delete_associative_data: %s\n" % e)
 ```
 
 ### Parameters
@@ -264,13 +270,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-transaction_id = '' # str |  (optional) if omitted the server will use the default value of ''
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    transaction_id = '' # str |  (optional) if omitted the server will use the default value of ''
 change_id = '' # str |  (optional) if omitted the server will use the default value of ''
 associative_data_id = ['associative_data_id_example'] # [str] |  (optional)
 element_id = '' # str |  (optional) if omitted the server will use the default value of ''
@@ -283,20 +291,20 @@ entity_id = '' # str |  (optional) if omitted the server will use the default va
 occurrence_id = '' # str |  (optional) if omitted the server will use the default value of ''
 return_id_tags = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_associative_data(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_associative_data: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_associative_data(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_associative_data: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_associative_data(did, wvm, wvmid, eid, transaction_id=transaction_id, change_id=change_id, associative_data_id=associative_data_id, element_id=element_id, view_id=view_id, microversion_id=microversion_id, document_microversion=document_microversion, deterministic_id=deterministic_id, feature_id=feature_id, entity_id=entity_id, occurrence_id=occurrence_id, return_id_tags=return_id_tags)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_associative_data: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_associative_data(did, wvm, wvmid, eid, transaction_id=transaction_id, change_id=change_id, associative_data_id=associative_data_id, element_id=element_id, view_id=view_id, microversion_id=microversion_id, document_microversion=document_microversion, deterministic_id=deterministic_id, feature_id=feature_id, entity_id=entity_id, occurrence_id=occurrence_id, return_id_tags=return_id_tags)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_associative_data: %s\n" % e)
 ```
 
 ### Parameters
@@ -359,28 +367,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-cid = 'cid_example' # str | 
-sz = 'sz_example' # str | 
-t = 't_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    cid = 'cid_example' # str | 
+    sz = 'sz_example' # str | 
+    t = 't_example' # str |  (optional)
 reject_empty = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_configured_element_thumbnail_with_size(did, wid, eid, cid, sz)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_configured_element_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_configured_element_thumbnail_with_size(did, wid, eid, cid, sz)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_configured_element_thumbnail_with_size: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_configured_element_thumbnail_with_size(did, wid, eid, cid, sz, t=t, reject_empty=reject_empty)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_configured_element_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_configured_element_thumbnail_with_size(did, wid, eid, cid, sz, t=t, reject_empty=reject_empty)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_configured_element_thumbnail_with_size: %s\n" % e)
 ```
 
 ### Parameters
@@ -434,17 +444,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_document_thumbnail(did, wid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_document_thumbnail: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_document_thumbnail(did, wid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_document_thumbnail: %s\n" % e)
 ```
 
 ### Parameters
@@ -493,25 +505,27 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-sz = 'sz_example' # str | 
-t = 't_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    sz = 'sz_example' # str | 
+    t = 't_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_document_thumbnail_with_size(did, wid, sz)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_document_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_document_thumbnail_with_size(did, wid, sz)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_document_thumbnail_with_size: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_document_thumbnail_with_size(did, wid, sz, t=t)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_document_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_document_thumbnail_with_size(did, wid, sz, t=t)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_document_thumbnail_with_size: %s\n" % e)
 ```
 
 ### Parameters
@@ -562,28 +576,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_element_thumbnail(did, wv, wvid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_element_thumbnail(did, wv, wvid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_element_thumbnail(did, wv, wvid, eid, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_element_thumbnail(did, wv, wvid, eid, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail: %s\n" % e)
 ```
 
 ### Parameters
@@ -635,28 +651,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-cid = 'cid_example' # str | 
-sz = 'sz_example' # str | 
-t = 't_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    cid = 'cid_example' # str | 
+    sz = 'sz_example' # str | 
+    t = 't_example' # str |  (optional)
 reject_empty = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_element_thumbnail_with_api_configuration(did, wid, eid, cid, sz)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail_with_api_configuration: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_element_thumbnail_with_api_configuration(did, wid, eid, cid, sz)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail_with_api_configuration: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_element_thumbnail_with_api_configuration(did, wid, eid, cid, sz, t=t, reject_empty=reject_empty)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail_with_api_configuration: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_element_thumbnail_with_api_configuration(did, wid, eid, cid, sz, t=t, reject_empty=reject_empty)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail_with_api_configuration: %s\n" % e)
 ```
 
 ### Parameters
@@ -710,27 +728,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-sz = 'sz_example' # str | 
-t = 't_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    sz = 'sz_example' # str | 
+    t = 't_example' # str |  (optional)
 reject_empty = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_element_thumbnail_with_size(did, wid, eid, sz)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_element_thumbnail_with_size(did, wid, eid, sz)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail_with_size: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_element_thumbnail_with_size(did, wid, eid, sz, t=t, reject_empty=reject_empty)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_element_thumbnail_with_size: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_element_thumbnail_with_size(did, wid, eid, sz, t=t, reject_empty=reject_empty)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_element_thumbnail_with_size: %s\n" % e)
 ```
 
 ### Parameters
@@ -783,10 +803,12 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-beta_capability_ids = ['beta_capability_ids_example'] # [str] |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    beta_capability_ids = ['beta_capability_ids_example'] # [str] |  (optional)
 include_parts = False # bool |  (optional) if omitted the server will use the default value of False
 include_surfaces = False # bool |  (optional) if omitted the server will use the default value of False
 include_wires = False # bool |  (optional) if omitted the server will use the default value of False
@@ -805,22 +827,22 @@ include_applications = False # bool |  (optional) if omitted the server will use
 allowed_application_mime_types = '' # str |  (optional) if omitted the server will use the default value of ''
 include_composite_parts = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    # insertables for a document
-    api_response = api_instance.get_latest_in_document(did)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_latest_in_document: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # insertables for a document
+        api_response = api_instance.get_latest_in_document(did)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_latest_in_document: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # insertables for a document
-    api_response = api_instance.get_latest_in_document(did, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_latest_in_document: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # insertables for a document
+        api_response = api_instance.get_latest_in_document(did, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_latest_in_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -886,27 +908,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-object_type = 56 # int | 
-owner_id = 'owner_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    object_type = 56 # int | 
+    owner_id = 'owner_id_example' # str |  (optional)
 document_id = 'document_id_example' # str |  (optional)
 owner_type = 1 # int |  (optional) if omitted the server will use the default value of 1
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_metadata_schema(object_type)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_metadata_schema: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_metadata_schema(object_type)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_metadata_schema: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_metadata_schema(object_type, owner_id=owner_id, document_id=document_id, owner_type=owner_type)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_metadata_schema: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_metadata_schema(object_type, owner_id=owner_id, document_id=document_id, owner_type=owner_type)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_metadata_schema: %s\n" % e)
 ```
 
 ### Parameters
@@ -957,9 +981,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-schema_id = 'schema_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    schema_id = 'schema_id_example' # str |  (optional)
 owner_id = 'owner_id_example' # str |  (optional)
 document_id = 'document_id_example' # str |  (optional)
 owner_type = 1 # int |  (optional) if omitted the server will use the default value of 1
@@ -969,13 +995,13 @@ active_only = False # bool |  (optional) if omitted the server will use the defa
 offset = 0 # int |  (optional) if omitted the server will use the default value of 0
 limit = 200 # int |  (optional) if omitted the server will use the default value of 200
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_properties(schema_id=schema_id, owner_id=owner_id, document_id=document_id, owner_type=owner_type, object_type=object_type, strict=strict, active_only=active_only, offset=offset, limit=limit)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_properties: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_properties(schema_id=schema_id, owner_id=owner_id, document_id=document_id, owner_type=owner_type, object_type=object_type, strict=strict, active_only=active_only, offset=offset, limit=limit)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_properties: %s\n" % e)
 ```
 
 ### Parameters
@@ -1031,29 +1057,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-pid = 'pid_example' # str | 
-document_id = 'document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    pid = 'pid_example' # str | 
+    document_id = 'document_id_example' # str |  (optional)
 schema_id = 'schema_id_example' # str |  (optional)
 owner_id = 'owner_id_example' # str |  (optional)
 owner_type = 1 # int |  (optional) if omitted the server will use the default value of 1
 object_type = 56 # int |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_property_info(pid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_property_info: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_property_info(pid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_property_info: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_property_info(pid, document_id=document_id, schema_id=schema_id, owner_id=owner_id, owner_type=owner_type, object_type=object_type)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_property_info: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_property_info(pid, document_id=document_id, schema_id=schema_id, owner_id=owner_id, owner_type=owner_type, object_type=object_type)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_property_info: %s\n" % e)
 ```
 
 ### Parameters
@@ -1106,25 +1134,27 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-sid = 'sid_example' # str | 
-document_id = 'document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    sid = 'sid_example' # str | 
+    document_id = 'document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_schema(sid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_schema: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_schema(sid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_schema: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_schema(sid, document_id=document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_schema: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_schema(sid, document_id=document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_schema: %s\n" % e)
 ```
 
 ### Parameters
@@ -1173,30 +1203,32 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-sid = 'sid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    sid = 'sid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_sketch_bounding_boxes(did, wvm, wvmid, eid, sid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_sketch_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_sketch_bounding_boxes(did, wvm, wvmid, eid, sid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_sketch_bounding_boxes: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_sketch_bounding_boxes(did, wvm, wvmid, eid, sid, configuration=configuration, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_sketch_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_sketch_bounding_boxes(did, wvm, wvmid, eid, sid, configuration=configuration, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_sketch_bounding_boxes: %s\n" % e)
 ```
 
 ### Parameters
@@ -1250,31 +1282,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 sketch_id = ['sketch_id_example'] # [str] |  (optional)
 output3_d = False # bool |  (optional) if omitted the server will use the default value of False
 curve_points = False # bool |  (optional) if omitted the server will use the default value of False
 include_geometry = True # bool |  (optional) if omitted the server will use the default value of True
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_sketch_info(did, wvm, wvmid, eid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_sketch_info: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_sketch_info(did, wvm, wvmid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_sketch_info: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_sketch_info(did, wvm, wvmid, eid, configuration=configuration, sketch_id=sketch_id, output3_d=output3_d, curve_points=curve_points, include_geometry=include_geometry, link_document_id=link_document_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_sketch_info: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_sketch_info(did, wvm, wvmid, eid, configuration=configuration, sketch_id=sketch_id, output3_d=output3_d, curve_points=curve_points, include_geometry=include_geometry, link_document_id=link_document_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_sketch_info: %s\n" % e)
 ```
 
 ### Parameters
@@ -1331,31 +1365,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-sid = 'sid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    sid = 'sid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 entity_id = ['entity_id_example'] # [str] |  (optional)
 angle_tolerance = 3.4 # float |  (optional)
 chord_tolerance = 3.4 # float |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_tessellated_entities(did, wvm, wvmid, eid, sid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_tessellated_entities: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_tessellated_entities(did, wvm, wvmid, eid, sid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_tessellated_entities: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_tessellated_entities(did, wvm, wvmid, eid, sid, configuration=configuration, entity_id=entity_id, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, link_document_id=link_document_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_tessellated_entities: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_tessellated_entities(did, wvm, wvmid, eid, sid, configuration=configuration, entity_id=entity_id, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, link_document_id=link_document_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_tessellated_entities: %s\n" % e)
 ```
 
 ### Parameters
@@ -1412,16 +1448,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_thumbnail_for_document(did)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_thumbnail_for_document: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_thumbnail_for_document(did)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_thumbnail_for_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -1469,24 +1507,26 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_thumbnail_for_document_and_version(did, vid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_thumbnail_for_document_and_version(did, vid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_thumbnail_for_document_and_version(did, vid, link_document_id=link_document_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_thumbnail_for_document_and_version(did, vid, link_document_id=link_document_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version: %s\n" % e)
 ```
 
 ### Parameters
@@ -1536,16 +1576,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_thumbnail_for_document_and_version_old(did, vid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version_old: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_thumbnail_for_document_and_version_old(did, vid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_thumbnail_for_document_and_version_old: %s\n" % e)
 ```
 
 ### Parameters
@@ -1594,16 +1636,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_thumbnail_for_document_old(did)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_thumbnail_for_document_old: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_thumbnail_for_document_old(did)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_thumbnail_for_document_old: %s\n" % e)
 ```
 
 ### Parameters
@@ -1651,16 +1695,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-oid = 'oid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_workflowable_test_object(oid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->get_workflowable_test_object: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    oid = 'oid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_workflowable_test_object(oid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->get_workflowable_test_object: %s\n" % e)
 ```
 
 ### Parameters
@@ -1708,20 +1754,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-body = 'body_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.post_associative_data(did, eid, wvm, wvmid, body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->post_associative_data: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    body = 'body_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.post_associative_data(did, eid, wvm, wvmid, body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->post_associative_data: %s\n" % e)
 ```
 
 ### Parameters
@@ -1755,7 +1803,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_application_element_thumbnail**
-> set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array_bt_application_element_thumbnail_params_array)
+> set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array)
 
 
 
@@ -1773,27 +1821,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-bt_application_element_thumbnail_params_array_bt_application_element_thumbnail_params_array = onshape_client.oas.BTApplicationElementThumbnailParamsArray() # bt_application_element_thumbnail_params_array.BTApplicationElementThumbnailParamsArray | 
-overwrite = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    bt_application_element_thumbnail_params_array = onshape_client.oas.BTApplicationElementThumbnailParamsArray() # bt_application_element_thumbnail_params_array.BTApplicationElementThumbnailParamsArray | 
+    overwrite = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array_bt_application_element_thumbnail_params_array)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->set_application_element_thumbnail: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->set_application_element_thumbnail: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array_bt_application_element_thumbnail_params_array, overwrite=overwrite)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->set_application_element_thumbnail: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.set_application_element_thumbnail(did, wv, wvid, eid, bt_application_element_thumbnail_params_array, overwrite=overwrite)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->set_application_element_thumbnail: %s\n" % e)
 ```
 
 ### Parameters
@@ -1804,7 +1854,7 @@ Name | Type | Description  | Notes
  **wv** | **str**|  |
  **wvid** | **str**|  |
  **eid** | **str**|  |
- **bt_application_element_thumbnail_params_array_bt_application_element_thumbnail_params_array** | [**bt_application_element_thumbnail_params_array.BTApplicationElementThumbnailParamsArray**](BTApplicationElementThumbnailParamsArray.md)|  |
+ **bt_application_element_thumbnail_params_array** | [**bt_application_element_thumbnail_params_array.BTApplicationElementThumbnailParamsArray**](BTApplicationElementThumbnailParamsArray.md)|  |
  **overwrite** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
@@ -1846,17 +1896,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-oid = 'oid_example' # str | 
-transition = 'transition_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.transition_workflowable_test_object(oid, transition)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->transition_workflowable_test_object: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    oid = 'oid_example' # str | 
+    transition = 'transition_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.transition_workflowable_test_object(oid, transition)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->transition_workflowable_test_object: %s\n" % e)
 ```
 
 ### Parameters
@@ -1887,7 +1939,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_workflowable_test_object**
-> bt_workflowable_test_object_info.BTWorkflowableTestObjectInfo update_workflowable_test_object(oid, bt_update_workflowable_test_object_params_bt_update_workflowable_test_object_params)
+> bt_workflowable_test_object_info.BTWorkflowableTestObjectInfo update_workflowable_test_object(oid, bt_update_workflowable_test_object_params)
 
 
 
@@ -1905,17 +1957,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.DefaultApi(onshape_client.oas.ApiClient(configuration))
-oid = 'oid_example' # str | 
-bt_update_workflowable_test_object_params_bt_update_workflowable_test_object_params = onshape_client.oas.BTUpdateWorkflowableTestObjectParams() # bt_update_workflowable_test_object_params.BTUpdateWorkflowableTestObjectParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_workflowable_test_object(oid, bt_update_workflowable_test_object_params_bt_update_workflowable_test_object_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling DefaultApi->update_workflowable_test_object: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DefaultApi(api_client)
+    oid = 'oid_example' # str | 
+    bt_update_workflowable_test_object_params = onshape_client.oas.BTUpdateWorkflowableTestObjectParams() # bt_update_workflowable_test_object_params.BTUpdateWorkflowableTestObjectParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_workflowable_test_object(oid, bt_update_workflowable_test_object_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DefaultApi->update_workflowable_test_object: %s\n" % e)
 ```
 
 ### Parameters
@@ -1923,7 +1977,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oid** | **str**|  |
- **bt_update_workflowable_test_object_params_bt_update_workflowable_test_object_params** | [**bt_update_workflowable_test_object_params.BTUpdateWorkflowableTestObjectParams**](BTUpdateWorkflowableTestObjectParams.md)|  |
+ **bt_update_workflowable_test_object_params** | [**bt_update_workflowable_test_object_params.BTUpdateWorkflowableTestObjectParams**](BTUpdateWorkflowableTestObjectParams.md)|  |
 
 ### Return type
 

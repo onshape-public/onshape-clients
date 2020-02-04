@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_in_context_query2254
 except ImportError:
-    btm_in_context_query2254 = sys.modules['onshape_client.oas.models.btm_in_context_query2254']
+    btm_in_context_query2254 = sys.modules[
+        'onshape_client.oas.models.btm_in_context_query2254']
 try:
     from onshape_client.oas.models import btm_individual_query138
 except ImportError:
-    btm_individual_query138 = sys.modules['onshape_client.oas.models.btm_individual_query138']
+    btm_individual_query138 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query138']
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence_base904
 except ImportError:
-    btm_individual_query_with_occurrence_base904 = sys.modules['onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
+    btm_individual_query_with_occurrence_base904 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
 
 
 class BTMIndividualQueryBase139(ModelNormal):

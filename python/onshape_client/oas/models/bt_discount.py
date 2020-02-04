@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_discount_owner_id_plan_id
 except ImportError:
-    bt_discount_owner_id_plan_id = sys.modules['onshape_client.oas.models.bt_discount_owner_id_plan_id']
+    bt_discount_owner_id_plan_id = sys.modules[
+        'onshape_client.oas.models.bt_discount_owner_id_plan_id']
 
 
 class BTDiscount(ModelNormal):

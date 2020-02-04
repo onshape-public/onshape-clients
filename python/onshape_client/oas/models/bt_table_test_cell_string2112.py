@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_table_cell1114
 except ImportError:
-    bt_table_cell1114 = sys.modules['onshape_client.oas.models.bt_table_cell1114']
+    bt_table_cell1114 = sys.modules[
+        'onshape_client.oas.models.bt_table_cell1114']
 try:
     from onshape_client.oas.models import bt_table_test_cell_string2112_all_of
 except ImportError:
-    bt_table_test_cell_string2112_all_of = sys.modules['onshape_client.oas.models.bt_table_test_cell_string2112_all_of']
+    bt_table_test_cell_string2112_all_of = sys.modules[
+        'onshape_client.oas.models.bt_table_test_cell_string2112_all_of']
 
 
 class BTTableTestCellString2112(ModelComposed):

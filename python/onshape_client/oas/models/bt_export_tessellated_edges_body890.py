@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_tessellated_body3398
 except ImportError:
-    bt_export_tessellated_body3398 = sys.modules['onshape_client.oas.models.bt_export_tessellated_body3398']
+    bt_export_tessellated_body3398 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_body3398']
 try:
     from onshape_client.oas.models import bt_export_tessellated_edges_body890_all_of
 except ImportError:
-    bt_export_tessellated_edges_body890_all_of = sys.modules['onshape_client.oas.models.bt_export_tessellated_edges_body890_all_of']
+    bt_export_tessellated_edges_body890_all_of = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_edges_body890_all_of']
 try:
     from onshape_client.oas.models import bt_export_tessellated_edges_edge1364
 except ImportError:
-    bt_export_tessellated_edges_edge1364 = sys.modules['onshape_client.oas.models.bt_export_tessellated_edges_edge1364']
+    bt_export_tessellated_edges_edge1364 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_edges_edge1364']
 
 
 class BTExportTessellatedEdgesBody890(ModelComposed):

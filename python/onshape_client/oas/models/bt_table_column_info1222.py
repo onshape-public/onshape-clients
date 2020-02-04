@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_configured_values_column_info1025
 except ImportError:
-    bt_configured_values_column_info1025 = sys.modules['onshape_client.oas.models.bt_configured_values_column_info1025']
+    bt_configured_values_column_info1025 = sys.modules[
+        'onshape_client.oas.models.bt_configured_values_column_info1025']
 try:
     from onshape_client.oas.models import bt_table_column_spec1967
 except ImportError:
-    bt_table_column_spec1967 = sys.modules['onshape_client.oas.models.bt_table_column_spec1967']
+    bt_table_column_spec1967 = sys.modules[
+        'onshape_client.oas.models.bt_table_column_spec1967']
 
 
 class BTTableColumnInfo1222(ModelNormal):

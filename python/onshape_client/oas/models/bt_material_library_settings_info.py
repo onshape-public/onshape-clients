@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_material_library_metadata_info
 except ImportError:
-    bt_material_library_metadata_info = sys.modules['onshape_client.oas.models.bt_material_library_metadata_info']
+    bt_material_library_metadata_info = sys.modules[
+        'onshape_client.oas.models.bt_material_library_metadata_info']
 
 
 class BTMaterialLibrarySettingsInfo(ModelNormal):

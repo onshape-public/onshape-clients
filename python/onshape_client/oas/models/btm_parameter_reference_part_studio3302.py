@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter_query_list148
 except ImportError:
-    btm_parameter_query_list148 = sys.modules['onshape_client.oas.models.btm_parameter_query_list148']
+    btm_parameter_query_list148 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_list148']
 try:
     from onshape_client.oas.models import btm_parameter_reference_part_studio3302_all_of
 except ImportError:
-    btm_parameter_reference_part_studio3302_all_of = sys.modules['onshape_client.oas.models.btm_parameter_reference_part_studio3302_all_of']
+    btm_parameter_reference_part_studio3302_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_part_studio3302_all_of']
 try:
     from onshape_client.oas.models import btm_parameter_reference_with_configuration3028
 except ImportError:
-    btm_parameter_reference_with_configuration3028 = sys.modules['onshape_client.oas.models.btm_parameter_reference_with_configuration3028']
+    btm_parameter_reference_with_configuration3028 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_with_configuration3028']
 
 
 class BTMParameterReferencePartStudio3302(ModelComposed):

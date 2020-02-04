@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import customer
 except ImportError:
-    customer = sys.modules['onshape_client.oas.models.customer']
+    customer = sys.modules[
+        'onshape_client.oas.models.customer']
 try:
     from onshape_client.oas.models import discount
 except ImportError:
-    discount = sys.modules['onshape_client.oas.models.discount']
+    discount = sys.modules[
+        'onshape_client.oas.models.discount']
 try:
     from onshape_client.oas.models import plan
 except ImportError:
-    plan = sys.modules['onshape_client.oas.models.plan']
+    plan = sys.modules[
+        'onshape_client.oas.models.plan']
 try:
     from onshape_client.oas.models import subscription_item_collection
 except ImportError:
-    subscription_item_collection = sys.modules['onshape_client.oas.models.subscription_item_collection']
+    subscription_item_collection = sys.modules[
+        'onshape_client.oas.models.subscription_item_collection']
 
 
 class Subscription(ModelNormal):

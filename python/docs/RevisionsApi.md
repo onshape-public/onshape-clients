@@ -28,29 +28,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.RevisionsApi(onshape_client.oas.ApiClient(configuration))
-cid = 'cid_example' # str | 
-element_type = 56 # int |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.RevisionsApi(api_client)
+    cid = 'cid_example' # str | 
+    element_type = 56 # int |  (optional)
 limit = 20 # int |  (optional) if omitted the server will use the default value of 20
 offset = 0 # int |  (optional) if omitted the server will use the default value of 0
 latest_only = False # bool |  (optional) if omitted the server will use the default value of False
 after = 56 # int |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.enumerate_revisions(cid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->enumerate_revisions: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.enumerate_revisions(cid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->enumerate_revisions: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.enumerate_revisions(cid, element_type=element_type, limit=limit, offset=offset, latest_only=latest_only, after=after)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->enumerate_revisions: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.enumerate_revisions(cid, element_type=element_type, limit=limit, offset=offset, latest_only=latest_only, after=after)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->enumerate_revisions: %s\n" % e)
 ```
 
 ### Parameters
@@ -103,27 +105,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.RevisionsApi(onshape_client.oas.ApiClient(configuration))
-cd = 'cd_example' # str | 
-cdid = 'cdid_example' # str | 
-pnum = 'pnum_example' # str | 
-et = 'et_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.RevisionsApi(api_client)
+    cd = 'cd_example' # str | 
+    cdid = 'cdid_example' # str | 
+    pnum = 'pnum_example' # str | 
+    et = 'et_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_latest_in_document_or_company(cd, cdid, pnum)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->get_latest_in_document_or_company: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_latest_in_document_or_company(cd, cdid, pnum)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->get_latest_in_document_or_company: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_latest_in_document_or_company(cd, cdid, pnum, et=et)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->get_latest_in_document_or_company: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_latest_in_document_or_company(cd, cdid, pnum, et=et)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->get_latest_in_document_or_company: %s\n" % e)
 ```
 
 ### Parameters
@@ -174,28 +178,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.RevisionsApi(onshape_client.oas.ApiClient(configuration))
-cid = 'cid_example' # str | 
-pnum = 'pnum_example' # str | 
-element_type = 'element_type_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.RevisionsApi(api_client)
+    cid = 'cid_example' # str | 
+    pnum = 'pnum_example' # str | 
+    element_type = 'element_type_example' # str |  (optional)
 fill_approvers = False # bool |  (optional) if omitted the server will use the default value of False
 fill_export_permission = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_revision_history_in_company(cid, pnum)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->get_revision_history_in_company: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_revision_history_in_company(cid, pnum)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->get_revision_history_in_company: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_revision_history_in_company(cid, pnum, element_type=element_type, fill_approvers=fill_approvers, fill_export_permission=fill_export_permission)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling RevisionsApi->get_revision_history_in_company: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_revision_history_in_company(cid, pnum, element_type=element_type, fill_approvers=fill_approvers, fill_export_permission=fill_export_permission)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling RevisionsApi->get_revision_history_in_company: %s\n" % e)
 ```
 
 ### Parameters

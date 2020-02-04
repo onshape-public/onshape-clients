@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_argument_declaration232
 except ImportError:
-    btp_argument_declaration232 = sys.modules['onshape_client.oas.models.btp_argument_declaration232']
+    btp_argument_declaration232 = sys.modules[
+        'onshape_client.oas.models.btp_argument_declaration232']
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_expression_function1325_all_of
 except ImportError:
-    btp_expression_function1325_all_of = sys.modules['onshape_client.oas.models.btp_expression_function1325_all_of']
+    btp_expression_function1325_all_of = sys.modules[
+        'onshape_client.oas.models.btp_expression_function1325_all_of']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 try:
     from onshape_client.oas.models import btp_statement_block271
 except ImportError:
-    btp_statement_block271 = sys.modules['onshape_client.oas.models.btp_statement_block271']
+    btp_statement_block271 = sys.modules[
+        'onshape_client.oas.models.btp_statement_block271']
 try:
     from onshape_client.oas.models import btp_type_name290
 except ImportError:
-    btp_type_name290 = sys.modules['onshape_client.oas.models.btp_type_name290']
+    btp_type_name290 = sys.modules[
+        'onshape_client.oas.models.btp_type_name290']
 
 
 class BTPExpressionFunction1325(ModelComposed):

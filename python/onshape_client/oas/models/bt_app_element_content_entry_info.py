@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_app_element_content_delta_info
 except ImportError:
-    bt_app_element_content_delta_info = sys.modules['onshape_client.oas.models.bt_app_element_content_delta_info']
+    bt_app_element_content_delta_info = sys.modules[
+        'onshape_client.oas.models.bt_app_element_content_delta_info']
 
 
 class BTAppElementContentEntryInfo(ModelNormal):

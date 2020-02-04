@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btpl_value249
 except ImportError:
-    btpl_value249 = sys.modules['onshape_client.oas.models.btpl_value249']
+    btpl_value249 = sys.modules[
+        'onshape_client.oas.models.btpl_value249']
 try:
     from onshape_client.oas.models import btpl_value_var_reference252_all_of
 except ImportError:
-    btpl_value_var_reference252_all_of = sys.modules['onshape_client.oas.models.btpl_value_var_reference252_all_of']
+    btpl_value_var_reference252_all_of = sys.modules[
+        'onshape_client.oas.models.btpl_value_var_reference252_all_of']
 
 
 class BTPLValueVarReference252(ModelComposed):

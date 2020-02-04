@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_parameter_lookup_table_list_entry1916
 except ImportError:
-    bt_parameter_lookup_table_list_entry1916 = sys.modules['onshape_client.oas.models.bt_parameter_lookup_table_list_entry1916']
+    bt_parameter_lookup_table_list_entry1916 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_lookup_table_list_entry1916']
 
 
 class BTParameterSpecLookupTablePath761AllOf(ModelNormal):

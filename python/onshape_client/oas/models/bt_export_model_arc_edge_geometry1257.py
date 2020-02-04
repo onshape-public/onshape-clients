@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_model_arc_edge_geometry1257_all_of
 except ImportError:
-    bt_export_model_arc_edge_geometry1257_all_of = sys.modules['onshape_client.oas.models.bt_export_model_arc_edge_geometry1257_all_of']
+    bt_export_model_arc_edge_geometry1257_all_of = sys.modules[
+        'onshape_client.oas.models.bt_export_model_arc_edge_geometry1257_all_of']
 try:
     from onshape_client.oas.models import bt_export_model_edge_geometry1125
 except ImportError:
-    bt_export_model_edge_geometry1125 = sys.modules['onshape_client.oas.models.bt_export_model_edge_geometry1125']
+    bt_export_model_edge_geometry1125 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_edge_geometry1125']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTExportModelArcEdgeGeometry1257(ModelComposed):

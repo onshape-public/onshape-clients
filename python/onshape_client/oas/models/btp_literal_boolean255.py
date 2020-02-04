@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter_boolean144_all_of
 except ImportError:
-    btm_parameter_boolean144_all_of = sys.modules['onshape_client.oas.models.btm_parameter_boolean144_all_of']
+    btm_parameter_boolean144_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_boolean144_all_of']
 try:
     from onshape_client.oas.models import btp_literal253
 except ImportError:
-    btp_literal253 = sys.modules['onshape_client.oas.models.btp_literal253']
+    btp_literal253 = sys.modules[
+        'onshape_client.oas.models.btp_literal253']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPLiteralBoolean255(ModelComposed):

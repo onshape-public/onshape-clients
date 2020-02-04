@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_base_sm_joint_table_row_metadata2232
 except ImportError:
-    bt_base_sm_joint_table_row_metadata2232 = sys.modules['onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
+    bt_base_sm_joint_table_row_metadata2232 = sys.modules[
+        'onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_table_cross_highlight_data1753
 except ImportError:
-    bt_table_cross_highlight_data1753 = sys.modules['onshape_client.oas.models.bt_table_cross_highlight_data1753']
+    bt_table_cross_highlight_data1753 = sys.modules[
+        'onshape_client.oas.models.bt_table_cross_highlight_data1753']
 
 
 class BTSMOtherJointTableRowMetadata2640(ModelComposed):

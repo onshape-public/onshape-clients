@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_quantity_range181
 except ImportError:
-    bt_quantity_range181 = sys.modules['onshape_client.oas.models.bt_quantity_range181']
+    bt_quantity_range181 = sys.modules[
+        'onshape_client.oas.models.bt_quantity_range181']
 
 
 class BTParameterSpecQuantity173AllOf(ModelNormal):

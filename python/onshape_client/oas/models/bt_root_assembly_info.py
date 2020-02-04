@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_feature_info
 except ImportError:
-    bt_assembly_feature_info = sys.modules['onshape_client.oas.models.bt_assembly_feature_info']
+    bt_assembly_feature_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_feature_info']
 try:
     from onshape_client.oas.models import bt_assembly_instance_info
 except ImportError:
-    bt_assembly_instance_info = sys.modules['onshape_client.oas.models.bt_assembly_instance_info']
+    bt_assembly_instance_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_instance_info']
 try:
     from onshape_client.oas.models import bt_assembly_occurrence_info
 except ImportError:
-    bt_assembly_occurrence_info = sys.modules['onshape_client.oas.models.bt_assembly_occurrence_info']
+    bt_assembly_occurrence_info = sys.modules[
+        'onshape_client.oas.models.bt_assembly_occurrence_info']
 
 
 class BTRootAssemblyInfo(ModelNormal):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_computed_configuration_input_spec2525
 except ImportError:
-    bt_computed_configuration_input_spec2525 = sys.modules['onshape_client.oas.models.bt_computed_configuration_input_spec2525']
+    bt_computed_configuration_input_spec2525 = sys.modules[
+        'onshape_client.oas.models.bt_computed_configuration_input_spec2525']
 
 
 class BTParameterSpecReferencePartStudio1256AllOf(ModelNormal):

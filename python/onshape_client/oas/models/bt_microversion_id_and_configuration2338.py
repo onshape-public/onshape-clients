@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
-    bt_microversion_id366 = sys.modules['onshape_client.oas.models.bt_microversion_id366']
+    bt_microversion_id366 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id366']
 try:
     from onshape_client.oas.models import btfs_value1888
 except ImportError:
-    btfs_value1888 = sys.modules['onshape_client.oas.models.btfs_value1888']
+    btfs_value1888 = sys.modules[
+        'onshape_client.oas.models.btfs_value1888']
 
 
 class BTMicroversionIdAndConfiguration2338(ModelNormal):

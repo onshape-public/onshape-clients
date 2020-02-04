@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_key_mouse_values_info
 except ImportError:
-    bt_key_mouse_values_info = sys.modules['onshape_client.oas.models.bt_key_mouse_values_info']
+    bt_key_mouse_values_info = sys.modules[
+        'onshape_client.oas.models.bt_key_mouse_values_info']
 
 
 class BTViewManipulationMouseKeyMappingInfo(ModelNormal):

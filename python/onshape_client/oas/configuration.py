@@ -29,15 +29,40 @@ class Configuration(object):
     Do not edit the class manually.
 
     :param host: Base url
-    :param api_key: Dict to store API key(s)
+    :param api_key: Dict to store API key(s).
+      Each entry in the dict specifies an API key.
+      The dict key is the name of the security scheme in the OAS specification.
+      The dict value is the API key secret.
     :param api_key_prefix: Dict to store API prefix (e.g. Bearer)
+      The dict key is the name of the security scheme in the OAS specification.
+      The dict value is an API key prefix when generating the auth data.
     :param username: Username for HTTP basic authentication
     :param password: Password for HTTP basic authentication
+
+    :Example:
+
+    API Key Authentication Example.
+    Given the following security scheme in the OpenAPI specification:
+      components:
+        securitySchemes:
+          cookieAuth:         # name for the security scheme
+            type: apiKey
+            in: cookie
+            name: JSESSIONID  # cookie name
+
+    You can programmatically set the cookie:
+      conf = onshape_client.oas.Configuration(
+        api_key={'cookieAuth': 'abc123'}
+        api_key_prefix={'cookieAuth': 'JSESSIONID'}
+      )
+    The following cookie will be added to the HTTP request:
+       Cookie: JSESSIONID abc123
     """
 
     def __init__(self, host="https://cad.onshape.com",
                  api_key=None, api_key_prefix=None,
-                 username="", password=""):
+                 username=None, password=None,
+                 ):
         """Constructor
         """
         self.host = host
@@ -66,7 +91,7 @@ class Configuration(object):
         self.password = password
         """Password for HTTP basic authentication
         """
-        self.access_token = ""
+        self.access_token = None
         """access token for OAuth/Bearer
         """
         self.logger = {}
@@ -237,8 +262,14 @@ class Configuration(object):
 
         :return: The token for basic HTTP authentication.
         """
+        username = ""
+        if self.username is not None:
+            username = self.username
+        password = ""
+        if self.password is not None:
+            password = self.password
         return urllib3.util.make_headers(
-            basic_auth=self.username + ':' + self.password
+            basic_auth=username + ':' + password
         ).get('authorization')
 
     def auth_settings(self):
@@ -246,22 +277,22 @@ class Configuration(object):
 
         :return: The Auth Settings information dict.
         """
-        return {
-            'ApiKey':
-                {
-                    'type': 'api_key',
-                    'in': 'header',
-                    'key': 'ApiKey',
-                    'value': self.get_api_key_with_prefix('ApiKey')
-                },
-            'OAuth2':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
-        }
+        auth = {}
+        if 'ApiKey' in self.api_key:
+            auth['ApiKey'] = {
+                'type': 'api_key',
+                'in': 'header',
+                'key': 'ApiKey',
+                'value': self.get_api_key_with_prefix('ApiKey')
+            }
+        if self.access_token is not None:
+            auth['OAuth2'] = {
+                'type': 'oauth2',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
+            }
+        return auth
 
     def to_debug_report(self):
         """Gets the essential information for debugging.

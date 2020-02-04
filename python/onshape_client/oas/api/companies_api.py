@@ -51,7 +51,10 @@ class CompaniesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __find_company(self, **kwargs):  # noqa: E501
+        def __find_company(
+            self,
+            **kwargs
+        ):
             """Get User companies.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -59,32 +62,35 @@ class CompaniesApi(object):
             >>> thread = api.find_company(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str uid:
-            :param bool active_only:
-            :param bool include_all:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_company_info.BTListResponseBTCompanyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                uid (str): [optional]
+                active_only (bool): [optional] if omitted the server will use the default value of True
+                include_all (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_company_info.BTListResponseBTCompanyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -136,9 +142,12 @@ class CompaniesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'uid': (str,),
-                    'active_only': (bool,),
-                    'include_all': (bool,),
+                    'uid':
+                        (str,),
+                    'active_only':
+                        (bool,),
+                    'include_all':
+                        (bool,),
                 },
                 'attribute_map': {
                     'uid': 'uid',
@@ -164,7 +173,11 @@ class CompaniesApi(object):
             callable=__find_company
         )
 
-        def __get_company(self, cid, **kwargs):  # noqa: E501
+        def __get_company(
+            self,
+            cid,
+            **kwargs
+        ):
             """Get company.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -172,30 +185,34 @@ class CompaniesApi(object):
             >>> thread = api.get_company(cid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str cid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_company_info.BTCompanyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                cid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_company_info.BTCompanyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -216,7 +233,8 @@ class CompaniesApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['cid'] = cid
+            kwargs['cid'] = \
+                cid
             return self.call_with_http_info(**kwargs)
 
         self.get_company = Endpoint(
@@ -248,7 +266,8 @@ class CompaniesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'cid': (str,),
+                    'cid':
+                        (str,),
                 },
                 'attribute_map': {
                     'cid': 'cid',

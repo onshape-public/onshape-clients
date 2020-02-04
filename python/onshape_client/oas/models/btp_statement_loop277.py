@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 try:
     from onshape_client.oas.models import btp_statement_loop277_all_of
 except ImportError:
-    btp_statement_loop277_all_of = sys.modules['onshape_client.oas.models.btp_statement_loop277_all_of']
+    btp_statement_loop277_all_of = sys.modules[
+        'onshape_client.oas.models.btp_statement_loop277_all_of']
 try:
     from onshape_client.oas.models import btp_statement_loop_for3278
 except ImportError:
-    btp_statement_loop_for3278 = sys.modules['onshape_client.oas.models.btp_statement_loop_for3278']
+    btp_statement_loop_for3278 = sys.modules[
+        'onshape_client.oas.models.btp_statement_loop_for3278']
 try:
     from onshape_client.oas.models import btp_statement_loop_for_in279
 except ImportError:
-    btp_statement_loop_for_in279 = sys.modules['onshape_client.oas.models.btp_statement_loop_for_in279']
+    btp_statement_loop_for_in279 = sys.modules[
+        'onshape_client.oas.models.btp_statement_loop_for_in279']
 try:
     from onshape_client.oas.models import btp_statement_loop_while280
 except ImportError:
-    btp_statement_loop_while280 = sys.modules['onshape_client.oas.models.btp_statement_loop_while280']
+    btp_statement_loop_while280 = sys.modules[
+        'onshape_client.oas.models.btp_statement_loop_while280']
 
 
 class BTPStatementLoop277(ModelComposed):

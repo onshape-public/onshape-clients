@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_diff_info
 except ImportError:
-    bt_diff_info = sys.modules['onshape_client.oas.models.bt_diff_info']
+    bt_diff_info = sys.modules[
+        'onshape_client.oas.models.bt_diff_info']
 
 
 class BTRootDiffInfo(ModelNormal):

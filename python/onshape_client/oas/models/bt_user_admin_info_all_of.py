@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_discount
 except ImportError:
-    bt_discount = sys.modules['onshape_client.oas.models.bt_discount']
+    bt_discount = sys.modules[
+        'onshape_client.oas.models.bt_discount']
 try:
     from onshape_client.oas.models import bt_privacy_consent_info
 except ImportError:
-    bt_privacy_consent_info = sys.modules['onshape_client.oas.models.bt_privacy_consent_info']
+    bt_privacy_consent_info = sys.modules[
+        'onshape_client.oas.models.bt_privacy_consent_info']
 try:
     from onshape_client.oas.models import bt_user_metrics_info
 except ImportError:
-    bt_user_metrics_info = sys.modules['onshape_client.oas.models.bt_user_metrics_info']
+    bt_user_metrics_info = sys.modules[
+        'onshape_client.oas.models.bt_user_metrics_info']
 
 
 class BTUserAdminInfoAllOf(ModelNormal):

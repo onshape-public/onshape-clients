@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008
 except ImportError:
-    bt_explosion_step_feature3008 = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008']
+    bt_explosion_step_feature3008 = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008']
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
-    bt_microversion_id_and_configuration2338 = sys.modules['onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+    bt_microversion_id_and_configuration2338 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
 
 
 class BTExplosion2754AllOf(ModelNormal):

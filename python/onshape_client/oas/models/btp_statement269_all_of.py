@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 
 
 class BTPStatement269AllOf(ModelNormal):

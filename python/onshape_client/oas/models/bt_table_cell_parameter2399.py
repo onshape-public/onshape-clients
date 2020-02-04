@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
-    bt_parameter_spec6 = sys.modules['onshape_client.oas.models.bt_parameter_spec6']
+    bt_parameter_spec6 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec6']
 try:
     from onshape_client.oas.models import bt_table_cell1114
 except ImportError:
-    bt_table_cell1114 = sys.modules['onshape_client.oas.models.bt_table_cell1114']
+    bt_table_cell1114 = sys.modules[
+        'onshape_client.oas.models.bt_table_cell1114']
 try:
     from onshape_client.oas.models import bt_table_cell_parameter2399_all_of
 except ImportError:
-    bt_table_cell_parameter2399_all_of = sys.modules['onshape_client.oas.models.bt_table_cell_parameter2399_all_of']
+    bt_table_cell_parameter2399_all_of = sys.modules[
+        'onshape_client.oas.models.bt_table_cell_parameter2399_all_of']
 try:
     from onshape_client.oas.models import bt_table_cell_property_parameter2983
 except ImportError:
-    bt_table_cell_property_parameter2983 = sys.modules['onshape_client.oas.models.bt_table_cell_property_parameter2983']
+    bt_table_cell_property_parameter2983 = sys.modules[
+        'onshape_client.oas.models.bt_table_cell_property_parameter2983']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTTableCellParameter2399(ModelComposed):

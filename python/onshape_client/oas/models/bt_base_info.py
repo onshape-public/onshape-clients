@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_version_info_base
 except ImportError:
-    bt_version_info_base = sys.modules['onshape_client.oas.models.bt_version_info_base']
+    bt_version_info_base = sys.modules[
+        'onshape_client.oas.models.bt_version_info_base']
 
 
 class BTBaseInfo(ModelNormal):

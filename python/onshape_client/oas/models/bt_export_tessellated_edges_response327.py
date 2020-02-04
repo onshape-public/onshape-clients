@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_tessellated_body3398
 except ImportError:
-    bt_export_tessellated_body3398 = sys.modules['onshape_client.oas.models.bt_export_tessellated_body3398']
+    bt_export_tessellated_body3398 = sys.modules[
+        'onshape_client.oas.models.bt_export_tessellated_body3398']
 
 
 class BTExportTessellatedEdgesResponse327(ModelNormal):

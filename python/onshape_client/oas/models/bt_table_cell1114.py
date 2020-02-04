@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_table_cell_parameter2399
 except ImportError:
-    bt_table_cell_parameter2399 = sys.modules['onshape_client.oas.models.bt_table_cell_parameter2399']
+    bt_table_cell_parameter2399 = sys.modules[
+        'onshape_client.oas.models.bt_table_cell_parameter2399']
 try:
     from onshape_client.oas.models import bt_table_test_cell_double2509
 except ImportError:
-    bt_table_test_cell_double2509 = sys.modules['onshape_client.oas.models.bt_table_test_cell_double2509']
+    bt_table_test_cell_double2509 = sys.modules[
+        'onshape_client.oas.models.bt_table_test_cell_double2509']
 try:
     from onshape_client.oas.models import bt_table_test_cell_string2112
 except ImportError:
-    bt_table_test_cell_string2112 = sys.modules['onshape_client.oas.models.bt_table_test_cell_string2112']
+    bt_table_test_cell_string2112 = sys.modules[
+        'onshape_client.oas.models.bt_table_test_cell_string2112']
 
 
 class BTTableCell1114(ModelNormal):

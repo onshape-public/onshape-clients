@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_inner_array_parameter_location2368
 except ImportError:
-    bt_inner_array_parameter_location2368 = sys.modules['onshape_client.oas.models.bt_inner_array_parameter_location2368']
+    bt_inner_array_parameter_location2368 = sys.modules[
+        'onshape_client.oas.models.bt_inner_array_parameter_location2368']
 try:
     from onshape_client.oas.models import bt_inner_derived_parameter_location591
 except ImportError:
-    bt_inner_derived_parameter_location591 = sys.modules['onshape_client.oas.models.bt_inner_derived_parameter_location591']
+    bt_inner_derived_parameter_location591 = sys.modules[
+        'onshape_client.oas.models.bt_inner_derived_parameter_location591']
 
 
 class BTInnerParameterLocation1715(ModelNormal):

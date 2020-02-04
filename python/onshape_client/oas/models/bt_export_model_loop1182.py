@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_model_coedge1342
 except ImportError:
-    bt_export_model_coedge1342 = sys.modules['onshape_client.oas.models.bt_export_model_coedge1342']
+    bt_export_model_coedge1342 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_coedge1342']
 
 
 class BTExportModelLoop1182(ModelNormal):

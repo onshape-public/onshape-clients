@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_application_element_thumbnail_params
 except ImportError:
-    bt_application_element_thumbnail_params = sys.modules['onshape_client.oas.models.bt_application_element_thumbnail_params']
+    bt_application_element_thumbnail_params = sys.modules[
+        'onshape_client.oas.models.bt_application_element_thumbnail_params']
 
 
 class BTApplicationElementThumbnailParamsArray(ModelNormal):

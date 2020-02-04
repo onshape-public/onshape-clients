@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_common_units_info
 except ImportError:
-    bt_common_units_info = sys.modules['onshape_client.oas.models.bt_common_units_info']
+    bt_common_units_info = sys.modules[
+        'onshape_client.oas.models.bt_common_units_info']
 try:
     from onshape_client.oas.models import bt_default_units_info
 except ImportError:
-    bt_default_units_info = sys.modules['onshape_client.oas.models.bt_default_units_info']
+    bt_default_units_info = sys.modules[
+        'onshape_client.oas.models.bt_default_units_info']
 try:
     from onshape_client.oas.models import bt_material_library_settings_info
 except ImportError:
-    bt_material_library_settings_info = sys.modules['onshape_client.oas.models.bt_material_library_settings_info']
+    bt_material_library_settings_info = sys.modules[
+        'onshape_client.oas.models.bt_material_library_settings_info']
 try:
     from onshape_client.oas.models import bt_substitute_approver_info
 except ImportError:
-    bt_substitute_approver_info = sys.modules['onshape_client.oas.models.bt_substitute_approver_info']
+    bt_substitute_approver_info = sys.modules[
+        'onshape_client.oas.models.bt_substitute_approver_info']
 try:
     from onshape_client.oas.models import bt_units_display_precision
 except ImportError:
-    bt_units_display_precision = sys.modules['onshape_client.oas.models.bt_units_display_precision']
+    bt_units_display_precision = sys.modules[
+        'onshape_client.oas.models.bt_units_display_precision']
 try:
     from onshape_client.oas.models import bt_units_maximum_display_precision_info
 except ImportError:
-    bt_units_maximum_display_precision_info = sys.modules['onshape_client.oas.models.bt_units_maximum_display_precision_info']
+    bt_units_maximum_display_precision_info = sys.modules[
+        'onshape_client.oas.models.bt_units_maximum_display_precision_info']
 try:
     from onshape_client.oas.models import bt_view_manipulation_mouse_key_mapping_info
 except ImportError:
-    bt_view_manipulation_mouse_key_mapping_info = sys.modules['onshape_client.oas.models.bt_view_manipulation_mouse_key_mapping_info']
+    bt_view_manipulation_mouse_key_mapping_info = sys.modules[
+        'onshape_client.oas.models.bt_view_manipulation_mouse_key_mapping_info']
 
 
 class BTUserSettingsInfo(ModelNormal):

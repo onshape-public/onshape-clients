@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import header
 except ImportError:
-    header = sys.modules['onshape_client.oas.models.header']
+    header = sys.modules[
+        'onshape_client.oas.models.header']
 try:
     from onshape_client.oas.models import server
 except ImportError:
-    server = sys.modules['onshape_client.oas.models.server']
+    server = sys.modules[
+        'onshape_client.oas.models.server']
 
 
 class Link(ModelNormal):

@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table1073
 except ImportError:
-    bt_bill_of_materials_table1073 = sys.modules['onshape_client.oas.models.bt_bill_of_materials_table1073']
+    bt_bill_of_materials_table1073 = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_table1073']
 try:
     from onshape_client.oas.models import bt_configured_part_properties_table2740
 except ImportError:
-    bt_configured_part_properties_table2740 = sys.modules['onshape_client.oas.models.bt_configured_part_properties_table2740']
+    bt_configured_part_properties_table2740 = sys.modules[
+        'onshape_client.oas.models.bt_configured_part_properties_table2740']
 try:
     from onshape_client.oas.models import bt_table_column_info1222
 except ImportError:
-    bt_table_column_info1222 = sys.modules['onshape_client.oas.models.bt_table_column_info1222']
+    bt_table_column_info1222 = sys.modules[
+        'onshape_client.oas.models.bt_table_column_info1222']
 try:
     from onshape_client.oas.models import bt_table_row1054
 except ImportError:
-    bt_table_row1054 = sys.modules['onshape_client.oas.models.bt_table_row1054']
+    bt_table_row1054 = sys.modules[
+        'onshape_client.oas.models.bt_table_row1054']
 
 
 class BTTable1825(ModelNormal):

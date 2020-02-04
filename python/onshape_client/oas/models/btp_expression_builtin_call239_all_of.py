@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_builtin_identifier233
 except ImportError:
-    btp_builtin_identifier233 = sys.modules['onshape_client.oas.models.btp_builtin_identifier233']
+    btp_builtin_identifier233 = sys.modules[
+        'onshape_client.oas.models.btp_builtin_identifier233']
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPExpressionBuiltinCall239AllOf(ModelNormal):

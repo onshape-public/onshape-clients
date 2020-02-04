@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_billing_plan_info
 except ImportError:
-    bt_billing_plan_info = sys.modules['onshape_client.oas.models.bt_billing_plan_info']
+    bt_billing_plan_info = sys.modules[
+        'onshape_client.oas.models.bt_billing_plan_info']
 try:
     from onshape_client.oas.models import bt_card_info
 except ImportError:
-    bt_card_info = sys.modules['onshape_client.oas.models.bt_card_info']
+    bt_card_info = sys.modules[
+        'onshape_client.oas.models.bt_card_info']
 try:
     from onshape_client.oas.models import bt_plan_subscriber_info
 except ImportError:
-    bt_plan_subscriber_info = sys.modules['onshape_client.oas.models.bt_plan_subscriber_info']
+    bt_plan_subscriber_info = sys.modules[
+        'onshape_client.oas.models.bt_plan_subscriber_info']
 try:
     from onshape_client.oas.models import btapi_application_summary_info
 except ImportError:
-    btapi_application_summary_info = sys.modules['onshape_client.oas.models.btapi_application_summary_info']
+    btapi_application_summary_info = sys.modules[
+        'onshape_client.oas.models.btapi_application_summary_info']
 try:
     from onshape_client.oas.models import next_charge
 except ImportError:
-    next_charge = sys.modules['onshape_client.oas.models.next_charge']
+    next_charge = sys.modules[
+        'onshape_client.oas.models.next_charge']
 try:
     from onshape_client.oas.models import prorated_charges
 except ImportError:
-    prorated_charges = sys.modules['onshape_client.oas.models.prorated_charges']
+    prorated_charges = sys.modules[
+        'onshape_client.oas.models.prorated_charges']
 try:
     from onshape_client.oas.models import subscription
 except ImportError:
-    subscription = sys.modules['onshape_client.oas.models.subscription']
+    subscription = sys.modules[
+        'onshape_client.oas.models.subscription']
 
 
 class BTPurchaseInfo(ModelNormal):

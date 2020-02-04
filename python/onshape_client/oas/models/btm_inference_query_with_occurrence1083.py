@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_individual_query_base139
 except ImportError:
-    btm_individual_query_base139 = sys.modules['onshape_client.oas.models.btm_individual_query_base139']
+    btm_individual_query_base139 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_base139']
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence811
 except ImportError:
-    btm_individual_query_with_occurrence811 = sys.modules['onshape_client.oas.models.btm_individual_query_with_occurrence811']
+    btm_individual_query_with_occurrence811 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_with_occurrence811']
 try:
     from onshape_client.oas.models import btm_inference_query_with_occurrence1083_all_of
 except ImportError:
-    btm_inference_query_with_occurrence1083_all_of = sys.modules['onshape_client.oas.models.btm_inference_query_with_occurrence1083_all_of']
+    btm_inference_query_with_occurrence1083_all_of = sys.modules[
+        'onshape_client.oas.models.btm_inference_query_with_occurrence1083_all_of']
 
 
 class BTMInferenceQueryWithOccurrence1083(ModelComposed):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_bounding_box1052
 except ImportError:
-    bt_bounding_box1052 = sys.modules['onshape_client.oas.models.bt_bounding_box1052']
+    bt_bounding_box1052 = sys.modules[
+        'onshape_client.oas.models.bt_bounding_box1052']
 try:
     from onshape_client.oas.models import bt_export_model_loop1182
 except ImportError:
-    bt_export_model_loop1182 = sys.modules['onshape_client.oas.models.bt_export_model_loop1182']
+    bt_export_model_loop1182 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_loop1182']
 try:
     from onshape_client.oas.models import bt_surface_description1564
 except ImportError:
-    bt_surface_description1564 = sys.modules['onshape_client.oas.models.bt_surface_description1564']
+    bt_surface_description1564 = sys.modules[
+        'onshape_client.oas.models.bt_surface_description1564']
 
 
 class BTExportModelFace1363(ModelNormal):

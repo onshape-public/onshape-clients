@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_string_format_block_pattern1755
 except ImportError:
-    bt_string_format_block_pattern1755 = sys.modules['onshape_client.oas.models.bt_string_format_block_pattern1755']
+    bt_string_format_block_pattern1755 = sys.modules[
+        'onshape_client.oas.models.bt_string_format_block_pattern1755']
 try:
     from onshape_client.oas.models import bt_string_format_match_pattern2446
 except ImportError:
-    bt_string_format_match_pattern2446 = sys.modules['onshape_client.oas.models.bt_string_format_match_pattern2446']
+    bt_string_format_match_pattern2446 = sys.modules[
+        'onshape_client.oas.models.bt_string_format_match_pattern2446']
 try:
     from onshape_client.oas.models import bt_string_maximum_length_pattern2593
 except ImportError:
-    bt_string_maximum_length_pattern2593 = sys.modules['onshape_client.oas.models.bt_string_maximum_length_pattern2593']
+    bt_string_maximum_length_pattern2593 = sys.modules[
+        'onshape_client.oas.models.bt_string_maximum_length_pattern2593']
 try:
     from onshape_client.oas.models import bt_string_minimum_length_pattern895
 except ImportError:
-    bt_string_minimum_length_pattern895 = sys.modules['onshape_client.oas.models.bt_string_minimum_length_pattern895']
+    bt_string_minimum_length_pattern895 = sys.modules[
+        'onshape_client.oas.models.bt_string_minimum_length_pattern895']
 
 
 class BTStringFormatCondition683(ModelNormal):

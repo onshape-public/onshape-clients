@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_base_info
 except ImportError:
-    bt_base_info = sys.modules['onshape_client.oas.models.bt_base_info']
+    bt_base_info = sys.modules[
+        'onshape_client.oas.models.bt_base_info']
 try:
     from onshape_client.oas.models import bt_document_info
 except ImportError:
-    bt_document_info = sys.modules['onshape_client.oas.models.bt_document_info']
+    bt_document_info = sys.modules[
+        'onshape_client.oas.models.bt_document_info']
 try:
     from onshape_client.oas.models import bt_document_label_info
 except ImportError:
-    bt_document_label_info = sys.modules['onshape_client.oas.models.bt_document_label_info']
+    bt_document_label_info = sys.modules[
+        'onshape_client.oas.models.bt_document_label_info']
 try:
     from onshape_client.oas.models import bt_document_summary_info_all_of
 except ImportError:
-    bt_document_summary_info_all_of = sys.modules['onshape_client.oas.models.bt_document_summary_info_all_of']
+    bt_document_summary_info_all_of = sys.modules[
+        'onshape_client.oas.models.bt_document_summary_info_all_of']
 try:
     from onshape_client.oas.models import bt_document_summary_search_info
 except ImportError:
-    bt_document_summary_search_info = sys.modules['onshape_client.oas.models.bt_document_summary_search_info']
+    bt_document_summary_search_info = sys.modules[
+        'onshape_client.oas.models.bt_document_summary_search_info']
 try:
     from onshape_client.oas.models import bt_global_tree_node_info
 except ImportError:
-    bt_global_tree_node_info = sys.modules['onshape_client.oas.models.bt_global_tree_node_info']
+    bt_global_tree_node_info = sys.modules[
+        'onshape_client.oas.models.bt_global_tree_node_info']
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 try:
     from onshape_client.oas.models import bt_thumbnail_info
 except ImportError:
-    bt_thumbnail_info = sys.modules['onshape_client.oas.models.bt_thumbnail_info']
+    bt_thumbnail_info = sys.modules[
+        'onshape_client.oas.models.bt_thumbnail_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
-    bt_user_basic_summary_info = sys.modules['onshape_client.oas.models.bt_user_basic_summary_info']
+    bt_user_basic_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_basic_summary_info']
 
 
 class BTDocumentSummaryInfo(ModelComposed):

@@ -32,75 +32,93 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_database_parameter2229
 except ImportError:
-    btm_database_parameter2229 = sys.modules['onshape_client.oas.models.btm_database_parameter2229']
+    btm_database_parameter2229 = sys.modules[
+        'onshape_client.oas.models.btm_database_parameter2229']
 try:
     from onshape_client.oas.models import btm_parameter_appearance627
 except ImportError:
-    btm_parameter_appearance627 = sys.modules['onshape_client.oas.models.btm_parameter_appearance627']
+    btm_parameter_appearance627 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_appearance627']
 try:
     from onshape_client.oas.models import btm_parameter_array2025
 except ImportError:
-    btm_parameter_array2025 = sys.modules['onshape_client.oas.models.btm_parameter_array2025']
+    btm_parameter_array2025 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_array2025']
 try:
     from onshape_client.oas.models import btm_parameter_blob_reference1679
 except ImportError:
-    btm_parameter_blob_reference1679 = sys.modules['onshape_client.oas.models.btm_parameter_blob_reference1679']
+    btm_parameter_blob_reference1679 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_blob_reference1679']
 try:
     from onshape_client.oas.models import btm_parameter_boolean144
 except ImportError:
-    btm_parameter_boolean144 = sys.modules['onshape_client.oas.models.btm_parameter_boolean144']
+    btm_parameter_boolean144 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_boolean144']
 try:
     from onshape_client.oas.models import btm_parameter_configured2222
 except ImportError:
-    btm_parameter_configured2222 = sys.modules['onshape_client.oas.models.btm_parameter_configured2222']
+    btm_parameter_configured2222 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_configured2222']
 try:
     from onshape_client.oas.models import btm_parameter_derived864
 except ImportError:
-    btm_parameter_derived864 = sys.modules['onshape_client.oas.models.btm_parameter_derived864']
+    btm_parameter_derived864 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_derived864']
 try:
     from onshape_client.oas.models import btm_parameter_enum145
 except ImportError:
-    btm_parameter_enum145 = sys.modules['onshape_client.oas.models.btm_parameter_enum145']
+    btm_parameter_enum145 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_enum145']
 try:
     from onshape_client.oas.models import btm_parameter_feature_list1749
 except ImportError:
-    btm_parameter_feature_list1749 = sys.modules['onshape_client.oas.models.btm_parameter_feature_list1749']
+    btm_parameter_feature_list1749 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_feature_list1749']
 try:
     from onshape_client.oas.models import btm_parameter_foreign_id146
 except ImportError:
-    btm_parameter_foreign_id146 = sys.modules['onshape_client.oas.models.btm_parameter_foreign_id146']
+    btm_parameter_foreign_id146 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_foreign_id146']
 try:
     from onshape_client.oas.models import btm_parameter_invalid1664
 except ImportError:
-    btm_parameter_invalid1664 = sys.modules['onshape_client.oas.models.btm_parameter_invalid1664']
+    btm_parameter_invalid1664 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_invalid1664']
 try:
     from onshape_client.oas.models import btm_parameter_lookup_table_path1419
 except ImportError:
-    btm_parameter_lookup_table_path1419 = sys.modules['onshape_client.oas.models.btm_parameter_lookup_table_path1419']
+    btm_parameter_lookup_table_path1419 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_lookup_table_path1419']
 try:
     from onshape_client.oas.models import btm_parameter_material1388
 except ImportError:
-    btm_parameter_material1388 = sys.modules['onshape_client.oas.models.btm_parameter_material1388']
+    btm_parameter_material1388 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_material1388']
 try:
     from onshape_client.oas.models import btm_parameter_quantity147
 except ImportError:
-    btm_parameter_quantity147 = sys.modules['onshape_client.oas.models.btm_parameter_quantity147']
+    btm_parameter_quantity147 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_quantity147']
 try:
     from onshape_client.oas.models import btm_parameter_query_list148
 except ImportError:
-    btm_parameter_query_list148 = sys.modules['onshape_client.oas.models.btm_parameter_query_list148']
+    btm_parameter_query_list148 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_list148']
 try:
     from onshape_client.oas.models import btm_parameter_query_with_occurrence_list67
 except ImportError:
-    btm_parameter_query_with_occurrence_list67 = sys.modules['onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
+    btm_parameter_query_with_occurrence_list67 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
 try:
     from onshape_client.oas.models import btm_parameter_reference2434
 except ImportError:
-    btm_parameter_reference2434 = sys.modules['onshape_client.oas.models.btm_parameter_reference2434']
+    btm_parameter_reference2434 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference2434']
 try:
     from onshape_client.oas.models import btm_parameter_string149
 except ImportError:
-    btm_parameter_string149 = sys.modules['onshape_client.oas.models.btm_parameter_string149']
+    btm_parameter_string149 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_string149']
 
 
 class BTMParameter1(ModelNormal):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_mate_connector_cs_info
 except ImportError:
-    bt_mate_connector_cs_info = sys.modules['onshape_client.oas.models.bt_mate_connector_cs_info']
+    bt_mate_connector_cs_info = sys.modules[
+        'onshape_client.oas.models.bt_mate_connector_cs_info']
 
 
 class BTAssemblyMatedEntity(ModelNormal):

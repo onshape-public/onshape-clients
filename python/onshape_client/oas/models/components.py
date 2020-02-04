@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import api_response
 except ImportError:
-    api_response = sys.modules['onshape_client.oas.models.api_response']
+    api_response = sys.modules[
+        'onshape_client.oas.models.api_response']
 try:
     from onshape_client.oas.models import callback
 except ImportError:
-    callback = sys.modules['onshape_client.oas.models.callback']
+    callback = sys.modules[
+        'onshape_client.oas.models.callback']
 try:
     from onshape_client.oas.models import example
 except ImportError:
-    example = sys.modules['onshape_client.oas.models.example']
+    example = sys.modules[
+        'onshape_client.oas.models.example']
 try:
     from onshape_client.oas.models import header
 except ImportError:
-    header = sys.modules['onshape_client.oas.models.header']
+    header = sys.modules[
+        'onshape_client.oas.models.header']
 try:
     from onshape_client.oas.models import link
 except ImportError:
-    link = sys.modules['onshape_client.oas.models.link']
+    link = sys.modules[
+        'onshape_client.oas.models.link']
 try:
     from onshape_client.oas.models import parameter
 except ImportError:
-    parameter = sys.modules['onshape_client.oas.models.parameter']
+    parameter = sys.modules[
+        'onshape_client.oas.models.parameter']
 try:
     from onshape_client.oas.models import request_body
 except ImportError:
-    request_body = sys.modules['onshape_client.oas.models.request_body']
+    request_body = sys.modules[
+        'onshape_client.oas.models.request_body']
 try:
     from onshape_client.oas.models import schema
 except ImportError:
-    schema = sys.modules['onshape_client.oas.models.schema']
+    schema = sys.modules[
+        'onshape_client.oas.models.schema']
 try:
     from onshape_client.oas.models import security_scheme
 except ImportError:
-    security_scheme = sys.modules['onshape_client.oas.models.security_scheme']
+    security_scheme = sys.modules[
+        'onshape_client.oas.models.security_scheme']
 
 
 class Components(ModelNormal):

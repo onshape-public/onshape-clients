@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_cone_description860
 except ImportError:
-    bt_cone_description860 = sys.modules['onshape_client.oas.models.bt_cone_description860']
+    bt_cone_description860 = sys.modules[
+        'onshape_client.oas.models.bt_cone_description860']
 try:
     from onshape_client.oas.models import bt_cylinder_description686
 except ImportError:
-    bt_cylinder_description686 = sys.modules['onshape_client.oas.models.bt_cylinder_description686']
+    bt_cylinder_description686 = sys.modules[
+        'onshape_client.oas.models.bt_cylinder_description686']
 try:
     from onshape_client.oas.models import bt_plane_description692
 except ImportError:
-    bt_plane_description692 = sys.modules['onshape_client.oas.models.bt_plane_description692']
+    bt_plane_description692 = sys.modules[
+        'onshape_client.oas.models.bt_plane_description692']
 try:
     from onshape_client.oas.models import bt_sphere_description1263
 except ImportError:
-    bt_sphere_description1263 = sys.modules['onshape_client.oas.models.bt_sphere_description1263']
+    bt_sphere_description1263 = sys.modules[
+        'onshape_client.oas.models.bt_sphere_description1263']
 try:
     from onshape_client.oas.models import bt_spun_description657
 except ImportError:
-    bt_spun_description657 = sys.modules['onshape_client.oas.models.bt_spun_description657']
+    bt_spun_description657 = sys.modules[
+        'onshape_client.oas.models.bt_spun_description657']
 try:
     from onshape_client.oas.models import bt_sweep_description1473
 except ImportError:
-    bt_sweep_description1473 = sys.modules['onshape_client.oas.models.bt_sweep_description1473']
+    bt_sweep_description1473 = sys.modules[
+        'onshape_client.oas.models.bt_sweep_description1473']
 try:
     from onshape_client.oas.models import bt_torus_description1834
 except ImportError:
-    bt_torus_description1834 = sys.modules['onshape_client.oas.models.bt_torus_description1834']
+    bt_torus_description1834 = sys.modules[
+        'onshape_client.oas.models.bt_torus_description1834']
 
 
 class BTSurfaceDescription1564(ModelNormal):

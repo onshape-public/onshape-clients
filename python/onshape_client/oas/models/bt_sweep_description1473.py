@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_spline_description2118
 except ImportError:
-    bt_spline_description2118 = sys.modules['onshape_client.oas.models.bt_spline_description2118']
+    bt_spline_description2118 = sys.modules[
+        'onshape_client.oas.models.bt_spline_description2118']
 try:
     from onshape_client.oas.models import bt_surface_description1564
 except ImportError:
-    bt_surface_description1564 = sys.modules['onshape_client.oas.models.bt_surface_description1564']
+    bt_surface_description1564 = sys.modules[
+        'onshape_client.oas.models.bt_surface_description1564']
 try:
     from onshape_client.oas.models import bt_sweep_description1473_all_of
 except ImportError:
-    bt_sweep_description1473_all_of = sys.modules['onshape_client.oas.models.bt_sweep_description1473_all_of']
+    bt_sweep_description1473_all_of = sys.modules[
+        'onshape_client.oas.models.bt_sweep_description1473_all_of']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTSweepDescription1473(ModelComposed):

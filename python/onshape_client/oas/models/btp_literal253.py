@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules['onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules[
+        'onshape_client.oas.models.btp_expression9']
 try:
     from onshape_client.oas.models import btp_literal_array254
 except ImportError:
-    btp_literal_array254 = sys.modules['onshape_client.oas.models.btp_literal_array254']
+    btp_literal_array254 = sys.modules[
+        'onshape_client.oas.models.btp_literal_array254']
 try:
     from onshape_client.oas.models import btp_literal_boolean255
 except ImportError:
-    btp_literal_boolean255 = sys.modules['onshape_client.oas.models.btp_literal_boolean255']
+    btp_literal_boolean255 = sys.modules[
+        'onshape_client.oas.models.btp_literal_boolean255']
 try:
     from onshape_client.oas.models import btp_literal_map256
 except ImportError:
-    btp_literal_map256 = sys.modules['onshape_client.oas.models.btp_literal_map256']
+    btp_literal_map256 = sys.modules[
+        'onshape_client.oas.models.btp_literal_map256']
 try:
     from onshape_client.oas.models import btp_literal_number258
 except ImportError:
-    btp_literal_number258 = sys.modules['onshape_client.oas.models.btp_literal_number258']
+    btp_literal_number258 = sys.modules[
+        'onshape_client.oas.models.btp_literal_number258']
 try:
     from onshape_client.oas.models import btp_literal_string259
 except ImportError:
-    btp_literal_string259 = sys.modules['onshape_client.oas.models.btp_literal_string259']
+    btp_literal_string259 = sys.modules[
+        'onshape_client.oas.models.btp_literal_string259']
 try:
     from onshape_client.oas.models import btp_literal_undefined260
 except ImportError:
-    btp_literal_undefined260 = sys.modules['onshape_client.oas.models.btp_literal_undefined260']
+    btp_literal_undefined260 = sys.modules[
+        'onshape_client.oas.models.btp_literal_undefined260']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPLiteral253(ModelComposed):
@@ -141,8 +150,6 @@ class BTPLiteral253(ModelComposed):
                 'BTPLiteralString-259': btp_literal_string259.BTPLiteralString259,
                 'BTPLiteralArray-254': btp_literal_array254.BTPLiteralArray254,
                 'BTPLiteralUndefined-260': btp_literal_undefined260.BTPLiteralUndefined260,
-                'BTPLiteralNumber-258': btp_literal_number258.BTPLiteralNumber258,
-                'BTPLiteralMap-256': btp_literal_map256.BTPLiteralMap256,
             },
         }
 

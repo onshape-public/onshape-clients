@@ -31,24 +31,26 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-bt_webhook_params_bt_webhook_params = onshape_client.oas.BTWebhookParams() # bt_webhook_params.BTWebhookParams |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    bt_webhook_params = onshape_client.oas.BTWebhookParams() # bt_webhook_params.BTWebhookParams |  (optional)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.create_webhook(bt_webhook_params_bt_webhook_params=bt_webhook_params_bt_webhook_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->create_webhook: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.create_webhook(bt_webhook_params=bt_webhook_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->create_webhook: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bt_webhook_params_bt_webhook_params** | [**bt_webhook_params.BTWebhookParams**](BTWebhookParams.md)|  | [optional]
+ **bt_webhook_params** | [**bt_webhook_params.BTWebhookParams**](BTWebhookParams.md)|  | [optional]
 
 ### Return type
 
@@ -89,16 +91,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-webhookid = 'webhookid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_webhook(webhookid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->get_webhook: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    webhookid = 'webhookid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_webhook(webhookid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->get_webhook: %s\n" % e)
 ```
 
 ### Parameters
@@ -146,20 +150,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-company = '' # str |  (optional) if omitted the server will use the default value of ''
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    company = '' # str |  (optional) if omitted the server will use the default value of ''
 user = 'user_example' # str |  (optional)
 offset = 0 # int |  (optional) if omitted the server will use the default value of 0
 limit = 20 # int |  (optional) if omitted the server will use the default value of 20
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_webhooks(company=company, user=user, offset=offset, limit=limit)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->get_webhooks: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_webhooks(company=company, user=user, offset=offset, limit=limit)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->get_webhooks: %s\n" % e)
 ```
 
 ### Parameters
@@ -210,15 +216,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-webhookid = 'webhookid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.ping_webhook(webhookid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->ping_webhook: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    webhookid = 'webhookid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.ping_webhook(webhookid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->ping_webhook: %s\n" % e)
 ```
 
 ### Parameters
@@ -266,15 +274,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-webhookid = 'webhookid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.unregister_webhook(webhookid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->unregister_webhook: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    webhookid = 'webhookid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.unregister_webhook(webhookid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->unregister_webhook: %s\n" % e)
 ```
 
 ### Parameters
@@ -322,25 +332,27 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.WebhooksApi(onshape_client.oas.ApiClient(configuration))
-webhookid = 'webhookid_example' # str | 
-bt_webhook_params_bt_webhook_params = onshape_client.oas.BTWebhookParams() # bt_webhook_params.BTWebhookParams |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.WebhooksApi(api_client)
+    webhookid = 'webhookid_example' # str | 
+    bt_webhook_params = onshape_client.oas.BTWebhookParams() # bt_webhook_params.BTWebhookParams |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_webhook(webhookid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_webhook(webhookid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.update_webhook(webhookid, bt_webhook_params_bt_webhook_params=bt_webhook_params_bt_webhook_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.update_webhook(webhookid, bt_webhook_params=bt_webhook_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
 ```
 
 ### Parameters
@@ -348,7 +360,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookid** | **str**|  |
- **bt_webhook_params_bt_webhook_params** | [**bt_webhook_params.BTWebhookParams**](BTWebhookParams.md)|  | [optional]
+ **bt_webhook_params** | [**bt_webhook_params.BTWebhookParams**](BTWebhookParams.md)|  | [optional]
 
 ### Return type
 

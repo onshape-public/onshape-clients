@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_version_element_ids1897
 except ImportError:
-    bt_document_version_element_ids1897 = sys.modules['onshape_client.oas.models.bt_document_version_element_ids1897']
+    bt_document_version_element_ids1897 = sys.modules[
+        'onshape_client.oas.models.bt_document_version_element_ids1897']
 try:
     from onshape_client.oas.models import bt_element_reference725
 except ImportError:
-    bt_element_reference725 = sys.modules['onshape_client.oas.models.bt_element_reference725']
+    bt_element_reference725 = sys.modules[
+        'onshape_client.oas.models.bt_element_reference725']
 try:
     from onshape_client.oas.models import bt_full_element_id756
 except ImportError:
-    bt_full_element_id756 = sys.modules['onshape_client.oas.models.bt_full_element_id756']
+    bt_full_element_id756 = sys.modules[
+        'onshape_client.oas.models.bt_full_element_id756']
 try:
     from onshape_client.oas.models import bt_owner3114
 except ImportError:
-    bt_owner3114 = sys.modules['onshape_client.oas.models.bt_owner3114']
+    bt_owner3114 = sys.modules[
+        'onshape_client.oas.models.bt_owner3114']
 
 
 class BTBillOfMaterialsUniqueItemId2029(ModelNormal):

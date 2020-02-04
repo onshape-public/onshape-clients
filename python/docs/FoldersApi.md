@@ -28,17 +28,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
-fid = 'fid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get Access Control List
-    api_response = api_instance.get_folder_acl(fid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FoldersApi->get_folder_acl: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FoldersApi(api_client)
+    fid = 'fid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Access Control List
+        api_response = api_instance.get_folder_acl(fid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FoldersApi->get_folder_acl: %s\n" % e)
 ```
 
 ### Parameters
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **share**
-> bt_acl_info.BTAclInfo share(fid, bt_share_params_bt_share_params)
+> bt_acl_info.BTAclInfo share(fid, bt_share_params)
 
 Share Folder
 
@@ -86,18 +88,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
-fid = 'fid_example' # str | 
-bt_share_params_bt_share_params = onshape_client.oas.BTShareParams() # bt_share_params.BTShareParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Share Folder
-    api_response = api_instance.share(fid, bt_share_params_bt_share_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FoldersApi->share: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FoldersApi(api_client)
+    fid = 'fid_example' # str | 
+    bt_share_params = onshape_client.oas.BTShareParams() # bt_share_params.BTShareParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Share Folder
+        api_response = api_instance.share(fid, bt_share_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FoldersApi->share: %s\n" % e)
 ```
 
 ### Parameters
@@ -105,7 +109,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fid** | **str**|  |
- **bt_share_params_bt_share_params** | [**bt_share_params.BTShareParams**](BTShareParams.md)|  |
+ **bt_share_params** | [**bt_share_params.BTShareParams**](BTShareParams.md)|  |
 
 ### Return type
 
@@ -146,26 +150,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FoldersApi(onshape_client.oas.ApiClient(configuration))
-fid = 'fid_example' # str | 
-eid = 'eid_example' # str | 
-entry_type = 0 # int |  (optional) if omitted the server will use the default value of 0
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FoldersApi(api_client)
+    fid = 'fid_example' # str | 
+    eid = 'eid_example' # str | 
+    entry_type = 0 # int |  (optional) if omitted the server will use the default value of 0
 
-# example passing only required values which don't have defaults set
-try:
-    # Unshare Folder
-    api_instance.un_share(fid, eid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FoldersApi->un_share: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Unshare Folder
+        api_instance.un_share(fid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FoldersApi->un_share: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Unshare Folder
-    api_instance.un_share(fid, eid, entry_type=entry_type)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FoldersApi->un_share: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Unshare Folder
+        api_instance.un_share(fid, eid, entry_type=entry_type)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FoldersApi->un_share: %s\n" % e)
 ```
 
 ### Parameters

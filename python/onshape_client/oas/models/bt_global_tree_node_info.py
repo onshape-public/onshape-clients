@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_cloud_storage_account_info
 except ImportError:
-    bt_cloud_storage_account_info = sys.modules['onshape_client.oas.models.bt_cloud_storage_account_info']
+    bt_cloud_storage_account_info = sys.modules[
+        'onshape_client.oas.models.bt_cloud_storage_account_info']
 try:
     from onshape_client.oas.models import bt_document_label_info
 except ImportError:
-    bt_document_label_info = sys.modules['onshape_client.oas.models.bt_document_label_info']
+    bt_document_label_info = sys.modules[
+        'onshape_client.oas.models.bt_document_label_info']
 try:
     from onshape_client.oas.models import bt_document_summary_info
 except ImportError:
-    bt_document_summary_info = sys.modules['onshape_client.oas.models.bt_document_summary_info']
+    bt_document_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_document_summary_info']
 try:
     from onshape_client.oas.models import bt_folder_info
 except ImportError:
-    bt_folder_info = sys.modules['onshape_client.oas.models.bt_folder_info']
+    bt_folder_info = sys.modules[
+        'onshape_client.oas.models.bt_folder_info']
 try:
     from onshape_client.oas.models import bt_global_tree_magic_node_info
 except ImportError:
-    bt_global_tree_magic_node_info = sys.modules['onshape_client.oas.models.bt_global_tree_magic_node_info']
+    bt_global_tree_magic_node_info = sys.modules[
+        'onshape_client.oas.models.bt_global_tree_magic_node_info']
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 try:
     from onshape_client.oas.models import bt_project_info
 except ImportError:
-    bt_project_info = sys.modules['onshape_client.oas.models.bt_project_info']
+    bt_project_info = sys.modules[
+        'onshape_client.oas.models.bt_project_info']
 try:
     from onshape_client.oas.models import bt_team_summary_info
 except ImportError:
-    bt_team_summary_info = sys.modules['onshape_client.oas.models.bt_team_summary_info']
+    bt_team_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_team_summary_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
-    bt_user_basic_summary_info = sys.modules['onshape_client.oas.models.bt_user_basic_summary_info']
+    bt_user_basic_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_basic_summary_info']
 
 
 class BTGlobalTreeNodeInfo(ModelNormal):

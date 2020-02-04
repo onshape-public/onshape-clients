@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_metadata_enum_value_info
 except ImportError:
-    bt_metadata_enum_value_info = sys.modules['onshape_client.oas.models.bt_metadata_enum_value_info']
+    bt_metadata_enum_value_info = sys.modules[
+        'onshape_client.oas.models.bt_metadata_enum_value_info']
 try:
     from onshape_client.oas.models import bt_metadata_property_ui_hints_info
 except ImportError:
-    bt_metadata_property_ui_hints_info = sys.modules['onshape_client.oas.models.bt_metadata_property_ui_hints_info']
+    bt_metadata_property_ui_hints_info = sys.modules[
+        'onshape_client.oas.models.bt_metadata_property_ui_hints_info']
 try:
     from onshape_client.oas.models import bt_metadata_property_validator_info
 except ImportError:
-    bt_metadata_property_validator_info = sys.modules['onshape_client.oas.models.bt_metadata_property_validator_info']
+    bt_metadata_property_validator_info = sys.modules[
+        'onshape_client.oas.models.bt_metadata_property_validator_info']
 
 
 class BTMetadataPropertyInfo(ModelNormal):

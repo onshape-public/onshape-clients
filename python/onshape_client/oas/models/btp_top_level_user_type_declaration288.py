@@ -32,35 +32,43 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_argument_declaration232
 except ImportError:
-    btp_argument_declaration232 = sys.modules['onshape_client.oas.models.btp_argument_declaration232']
+    btp_argument_declaration232 = sys.modules[
+        'onshape_client.oas.models.btp_argument_declaration232']
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_literal_number258
 except ImportError:
-    btp_literal_number258 = sys.modules['onshape_client.oas.models.btp_literal_number258']
+    btp_literal_number258 = sys.modules[
+        'onshape_client.oas.models.btp_literal_number258']
 try:
     from onshape_client.oas.models import btp_name261
 except ImportError:
-    btp_name261 = sys.modules['onshape_client.oas.models.btp_name261']
+    btp_name261 = sys.modules[
+        'onshape_client.oas.models.btp_name261']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_top_level_type_declaration287
 except ImportError:
-    btp_top_level_type_declaration287 = sys.modules['onshape_client.oas.models.btp_top_level_type_declaration287']
+    btp_top_level_type_declaration287 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_type_declaration287']
 try:
     from onshape_client.oas.models import btp_top_level_user_type_declaration288_all_of
 except ImportError:
-    btp_top_level_user_type_declaration288_all_of = sys.modules['onshape_client.oas.models.btp_top_level_user_type_declaration288_all_of']
+    btp_top_level_user_type_declaration288_all_of = sys.modules[
+        'onshape_client.oas.models.btp_top_level_user_type_declaration288_all_of']
 
 
 class BTPTopLevelUserTypeDeclaration288(ModelComposed):

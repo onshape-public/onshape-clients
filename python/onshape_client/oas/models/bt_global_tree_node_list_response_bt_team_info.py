@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_team_info
 except ImportError:
-    bt_team_info = sys.modules['onshape_client.oas.models.bt_team_info']
+    bt_team_info = sys.modules[
+        'onshape_client.oas.models.bt_team_info']
 
 
 class BTGlobalTreeNodeListResponseBTTeamInfo(ModelNormal):

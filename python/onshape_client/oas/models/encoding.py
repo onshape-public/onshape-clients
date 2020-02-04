@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import header
 except ImportError:
-    header = sys.modules['onshape_client.oas.models.header']
+    header = sys.modules[
+        'onshape_client.oas.models.header']
 
 
 class Encoding(ModelNormal):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 try:
     from onshape_client.oas.models import btm_mate_connector66
 except ImportError:
-    btm_mate_connector66 = sys.modules['onshape_client.oas.models.btm_mate_connector66']
+    btm_mate_connector66 = sys.modules[
+        'onshape_client.oas.models.btm_mate_connector66']
 try:
     from onshape_client.oas.models import btm_parameter_query_with_occurrence_list67
 except ImportError:
-    btm_parameter_query_with_occurrence_list67 = sys.modules['onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
+    btm_parameter_query_with_occurrence_list67 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
 
 
 class BTMMate64AllOf(ModelNormal):

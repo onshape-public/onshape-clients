@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules['onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules[
+        'onshape_client.oas.models.btm_feature134']
 
 
 class BTFeatureDefinitionCall1406AllOf(ModelNormal):

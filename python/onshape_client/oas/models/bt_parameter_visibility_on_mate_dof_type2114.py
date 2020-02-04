@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_on_equal180
 except ImportError:
-    bt_parameter_visibility_on_equal180 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_on_equal180']
+    bt_parameter_visibility_on_equal180 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_on_equal180']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_on_mate_dof_type2114
 except ImportError:
-    bt_parameter_visibility_on_mate_dof_type2114 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_on_mate_dof_type2114']
+    bt_parameter_visibility_on_mate_dof_type2114 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_on_mate_dof_type2114']
 
 
 class BTParameterVisibilityOnMateDOFType2114(ModelComposed):

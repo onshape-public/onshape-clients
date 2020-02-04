@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_table_assembly_cross_highlight_data2675
 except ImportError:
-    bt_table_assembly_cross_highlight_data2675 = sys.modules['onshape_client.oas.models.bt_table_assembly_cross_highlight_data2675']
+    bt_table_assembly_cross_highlight_data2675 = sys.modules[
+        'onshape_client.oas.models.bt_table_assembly_cross_highlight_data2675']
 try:
     from onshape_client.oas.models import bt_table_cross_highlight_data1753
 except ImportError:
-    bt_table_cross_highlight_data1753 = sys.modules['onshape_client.oas.models.bt_table_cross_highlight_data1753']
+    bt_table_cross_highlight_data1753 = sys.modules[
+        'onshape_client.oas.models.bt_table_cross_highlight_data1753']
 
 
 class BTTableBaseCrossHighlightData2609(ModelNormal):

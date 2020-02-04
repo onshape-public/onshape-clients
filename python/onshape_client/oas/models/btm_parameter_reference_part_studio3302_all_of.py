@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_parameter_query_list148
 except ImportError:
-    btm_parameter_query_list148 = sys.modules['onshape_client.oas.models.btm_parameter_query_list148']
+    btm_parameter_query_list148 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_list148']
 
 
 class BTMParameterReferencePartStudio3302AllOf(ModelNormal):

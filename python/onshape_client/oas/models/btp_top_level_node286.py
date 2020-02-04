@@ -32,43 +32,53 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_argument_declaration232
 except ImportError:
-    btp_argument_declaration232 = sys.modules['onshape_client.oas.models.btp_argument_declaration232']
+    btp_argument_declaration232 = sys.modules[
+        'onshape_client.oas.models.btp_argument_declaration232']
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules['onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules[
+        'onshape_client.oas.models.btp_node7']
 try:
     from onshape_client.oas.models import btp_procedure_declaration_base266
 except ImportError:
-    btp_procedure_declaration_base266 = sys.modules['onshape_client.oas.models.btp_procedure_declaration_base266']
+    btp_procedure_declaration_base266 = sys.modules[
+        'onshape_client.oas.models.btp_procedure_declaration_base266']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_top_level_constant_declaration283
 except ImportError:
-    btp_top_level_constant_declaration283 = sys.modules['onshape_client.oas.models.btp_top_level_constant_declaration283']
+    btp_top_level_constant_declaration283 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_constant_declaration283']
 try:
     from onshape_client.oas.models import btp_top_level_import285
 except ImportError:
-    btp_top_level_import285 = sys.modules['onshape_client.oas.models.btp_top_level_import285']
+    btp_top_level_import285 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_import285']
 try:
     from onshape_client.oas.models import btp_top_level_node286_all_of
 except ImportError:
-    btp_top_level_node286_all_of = sys.modules['onshape_client.oas.models.btp_top_level_node286_all_of']
+    btp_top_level_node286_all_of = sys.modules[
+        'onshape_client.oas.models.btp_top_level_node286_all_of']
 try:
     from onshape_client.oas.models import btp_top_level_type_declaration287
 except ImportError:
-    btp_top_level_type_declaration287 = sys.modules['onshape_client.oas.models.btp_top_level_type_declaration287']
+    btp_top_level_type_declaration287 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_type_declaration287']
 
 
 class BTPTopLevelNode286(ModelComposed):

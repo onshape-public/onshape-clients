@@ -21,16 +21,18 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.VersionsApi()
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.VersionsApi(api_client)
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.test_versions_get(body=body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling VersionsApi->test_versions_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.test_versions_get(body=body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling VersionsApi->test_versions_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -72,16 +74,18 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.VersionsApi()
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.VersionsApi(api_client)
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.test_versions_post(body=body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling VersionsApi->test_versions_post: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.test_versions_post(body=body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling VersionsApi->test_versions_post: %s\n" % e)
 ```
 
 ### Parameters

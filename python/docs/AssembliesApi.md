@@ -43,28 +43,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.add_feature(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.add_feature(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.add_feature(did, wvm, wvmid, eid, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.add_feature(did, wvm, wvmid, eid, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
 ```
 
 ### Parameters
@@ -98,7 +100,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_assembly**
-> bt_document_element_info.BTDocumentElementInfo create_assembly(did, wid, bt_model_element_params_bt_model_element_params)
+> bt_document_element_info.BTDocumentElementInfo create_assembly(did, wid, bt_model_element_params)
 
 Create Assembly
 
@@ -116,19 +118,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-bt_model_element_params_bt_model_element_params = onshape_client.oas.BTModelElementParams() # bt_model_element_params.BTModelElementParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Assembly
-    api_response = api_instance.create_assembly(did, wid, bt_model_element_params_bt_model_element_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->create_assembly: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_model_element_params = onshape_client.oas.BTModelElementParams() # bt_model_element_params.BTModelElementParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Assembly
+        api_response = api_instance.create_assembly(did, wid, bt_model_element_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->create_assembly: %s\n" % e)
 ```
 
 ### Parameters
@@ -137,7 +141,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
- **bt_model_element_params_bt_model_element_params** | [**bt_model_element_params.BTModelElementParams**](BTModelElementParams.md)|  |
+ **bt_model_element_params** | [**bt_model_element_params.BTModelElementParams**](BTModelElementParams.md)|  |
 
 ### Return type
 
@@ -160,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_instance**
-> [bt_occurrence74.BTOccurrence74] create_instance(did, wid, eid, bt_assembly_instance_definition_params_bt_assembly_instance_definition_params)
+> [bt_occurrence74.BTOccurrence74] create_instance(did, wid, eid, bt_assembly_instance_definition_params)
 
 Create assembly instance
 
@@ -178,20 +182,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-bt_assembly_instance_definition_params_bt_assembly_instance_definition_params = onshape_client.oas.BTAssemblyInstanceDefinitionParams() # bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create assembly instance
-    api_response = api_instance.create_instance(did, wid, eid, bt_assembly_instance_definition_params_bt_assembly_instance_definition_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->create_instance: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    bt_assembly_instance_definition_params = onshape_client.oas.BTAssemblyInstanceDefinitionParams() # bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create assembly instance
+        api_response = api_instance.create_instance(did, wid, eid, bt_assembly_instance_definition_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->create_instance: %s\n" % e)
 ```
 
 ### Parameters
@@ -201,7 +207,7 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **wid** | **str**|  |
  **eid** | **str**|  |
- **bt_assembly_instance_definition_params_bt_assembly_instance_definition_params** | [**bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams**](BTAssemblyInstanceDefinitionParams.md)|  |
+ **bt_assembly_instance_definition_params** | [**bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams**](BTAssemblyInstanceDefinitionParams.md)|  |
 
 ### Return type
 
@@ -242,20 +248,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-fid = 'fid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Delete Feature
-    api_response = api_instance.delete_feature(did, wid, eid, fid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->delete_feature: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    fid = 'fid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Feature
+        api_response = api_instance.delete_feature(did, wid, eid, fid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->delete_feature: %s\n" % e)
 ```
 
 ### Parameters
@@ -306,19 +314,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wid = 'wid_example' # str | 
-nid = 'nid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Delete assembly instance.
-    api_instance.delete_instance(did, eid, wid, nid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->delete_instance: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wid = 'wid_example' # str | 
+    nid = 'nid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete assembly instance.
+        api_instance.delete_instance(did, eid, wid, nid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->delete_instance: %s\n" % e)
 ```
 
 ### Parameters
@@ -369,34 +379,36 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 include_hidden = True # bool |  (optional)
 display_state_id = 'display_state_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Bounding Boxes.
-    api_response = api_instance.get_assembly_bounding_boxes(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Bounding Boxes.
+        api_response = api_instance.get_assembly_bounding_boxes(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_bounding_boxes: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Bounding Boxes.
-    api_response = api_instance.get_assembly_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_bounding_boxes: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Bounding Boxes.
+        api_response = api_instance.get_assembly_bounding_boxes(did, wvm, wvmid, eid, link_document_id=link_document_id, include_hidden=include_hidden, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_bounding_boxes: %s\n" % e)
 ```
 
 ### Parameters
@@ -452,34 +464,36 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 include_mate_features = True # bool |  (optional)
 include_non_solids = True # bool |  (optional)
 include_mate_connectors = True # bool |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Assembly Definition.
-    api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Assembly Definition.
+        api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Assembly Definition.
-    api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Assembly Definition.
+        api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
 ```
 
 ### Parameters
@@ -535,13 +549,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 view_matrix = 'front' # str |  (optional) if omitted the server will use the default value of 'front'
 output_height = 500 # int |  (optional) if omitted the server will use the default value of 500
 output_width = 500 # int |  (optional) if omitted the server will use the default value of 500
@@ -554,20 +570,20 @@ display_state_id = 'display_state_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_assembly_shaded_views(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_shaded_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_assembly_shaded_views(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_shaded_views: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_assembly_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_assembly_shaded_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_assembly_shaded_views(did, wvm, wvmid, eid, link_document_id=link_document_id, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, show_all_parts=show_all_parts, include_surfaces=include_surfaces, use_anti_aliasing=use_anti_aliasing, display_state_id=display_state_id, configuration=configuration, exploded_view_id=exploded_view_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_assembly_shaded_views: %s\n" % e)
 ```
 
 ### Parameters
@@ -630,13 +646,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-metadata_workspace_id = '' # str |  (optional) if omitted the server will use the default value of ''
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    metadata_workspace_id = '' # str |  (optional) if omitted the server will use the default value of ''
 bom_column_ids = ['bom_column_ids_example'] # [str] |  (optional)
 indented = True # bool |  (optional) if omitted the server will use the default value of True
 multi_level = False # bool |  (optional) if omitted the server will use the default value of False
@@ -644,22 +662,22 @@ generate_if_absent = False # bool |  (optional) if omitted the server will use t
 link_document_id = 'link_document_id_example' # str |  (optional)
 configuration = 'configuration_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Bill of Materials
-    api_response = api_instance.get_bill_of_materials(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Bill of Materials
+        api_response = api_instance.get_bill_of_materials(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Bill of Materials
-    api_response = api_instance.get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Bill of Materials
+        api_response = api_instance.get_bill_of_materials(did, wvm, wvmid, eid, metadata_workspace_id=metadata_workspace_id, bom_column_ids=bom_column_ids, indented=indented, multi_level=multi_level, generate_if_absent=generate_if_absent, link_document_id=link_document_id, configuration=configuration)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_bill_of_materials: %s\n" % e)
 ```
 
 ### Parameters
@@ -717,19 +735,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_feature_specs(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_feature_specs: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_feature_specs(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_feature_specs: %s\n" % e)
 ```
 
 ### Parameters
@@ -780,31 +800,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-feature_id = ['feature_id_example'] # [str] |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    feature_id = ['feature_id_example'] # [str] |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Feature List
-    api_response = api_instance.get_features(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_features: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Feature List
+        api_response = api_instance.get_features(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_features: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Feature List
-    api_response = api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_features: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Feature List
+        api_response = api_instance.get_features(did, wvm, wvmid, eid, feature_id=feature_id, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_features: %s\n" % e)
 ```
 
 ### Parameters
@@ -857,26 +879,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-skip_perspective = True # bool |  (optional) if omitted the server will use the default value of True
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    skip_perspective = True # bool |  (optional) if omitted the server will use the default value of True
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_named_views(did, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_named_views(did, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
 ```
 
 ### Parameters
@@ -926,19 +950,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get or Create Bill of Materials Element
-    api_response = api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_or_create_bill_of_materials_element: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get or Create Bill of Materials Element
+        api_response = api_instance.get_or_create_bill_of_materials_element(did, wid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_or_create_bill_of_materials_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -982,29 +1008,31 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi()
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-check_content = True # bool |  (optional) if omitted the server will use the default value of True
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    check_content = True # bool |  (optional) if omitted the server will use the default value of True
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Translation Formats
-    api_response = api_instance.get_translator_formats(did, wid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_translator_formats: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Translation Formats
+        api_response = api_instance.get_translator_formats(did, wid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_translator_formats: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Translation Formats
-    api_response = api_instance.get_translator_formats(did, wid, eid, check_content=check_content)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->get_translator_formats: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Translation Formats
+        api_response = api_instance.get_translator_formats(did, wid, eid, check_content=check_content)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->get_translator_formats: %s\n" % e)
 ```
 
 ### Parameters
@@ -1037,7 +1065,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **insert_transformed_instances**
-> [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo] insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params)
+> [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo] insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
 
 Create and transform assembly instances
 
@@ -1055,20 +1083,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wid = 'wid_example' # str | 
-bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params = onshape_client.oas.BTAssemblyTransformedInstancesDefinitionParams() # bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create and transform assembly instances
-    api_response = api_instance.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->insert_transformed_instances: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_assembly_transformed_instances_definition_params = onshape_client.oas.BTAssemblyTransformedInstancesDefinitionParams() # bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create and transform assembly instances
+        api_response = api_instance.insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->insert_transformed_instances: %s\n" % e)
 ```
 
 ### Parameters
@@ -1078,7 +1108,7 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **eid** | **str**|  |
  **wid** | **str**|  |
- **bt_assembly_transformed_instances_definition_params_bt_assembly_transformed_instances_definition_params** | [**bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams**](BTAssemblyTransformedInstancesDefinitionParams.md)|  |
+ **bt_assembly_transformed_instances_definition_params** | [**bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams**](BTAssemblyTransformedInstancesDefinitionParams.md)|  |
 
 ### Return type
 
@@ -1101,7 +1131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transform_occurrences**
-> transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params_bt_assembly_transform_definition_params)
+> transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params)
 
 Transform assembly occurrences.
 
@@ -1119,19 +1149,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wid = 'wid_example' # str | 
-bt_assembly_transform_definition_params_bt_assembly_transform_definition_params = onshape_client.oas.BTAssemblyTransformDefinitionParams() # bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Transform assembly occurrences.
-    api_instance.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params_bt_assembly_transform_definition_params)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->transform_occurrences: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_assembly_transform_definition_params = onshape_client.oas.BTAssemblyTransformDefinitionParams() # bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Transform assembly occurrences.
+        api_instance.transform_occurrences(did, eid, wid, bt_assembly_transform_definition_params)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->transform_occurrences: %s\n" % e)
 ```
 
 ### Parameters
@@ -1141,7 +1173,7 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **eid** | **str**|  |
  **wid** | **str**|  |
- **bt_assembly_transform_definition_params_bt_assembly_transform_definition_params** | [**bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams**](BTAssemblyTransformDefinitionParams.md)|  |
+ **bt_assembly_transform_definition_params** | [**bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams**](BTAssemblyTransformDefinitionParams.md)|  |
 
 ### Return type
 
@@ -1164,7 +1196,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translate_format**
-> bt_translation_request_info.BTTranslationRequestInfo translate_format(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
+> bt_translation_request_info.BTTranslationRequestInfo translate_format(did, wv, wvid, eid, bt_translate_format_params)
 
 Create Assembly translation.
 
@@ -1182,21 +1214,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-bt_translate_format_params_bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # bt_translate_format_params.BTTranslateFormatParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Assembly translation.
-    api_response = api_instance.translate_format(did, wv, wvid, eid, bt_translate_format_params_bt_translate_format_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->translate_format: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    bt_translate_format_params = onshape_client.oas.BTTranslateFormatParams() # bt_translate_format_params.BTTranslateFormatParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Assembly translation.
+        api_response = api_instance.translate_format(did, wv, wvid, eid, bt_translate_format_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->translate_format: %s\n" % e)
 ```
 
 ### Parameters
@@ -1207,7 +1241,7 @@ Name | Type | Description  | Notes
  **wv** | **str**|  |
  **wvid** | **str**|  |
  **eid** | **str**|  |
- **bt_translate_format_params_bt_translate_format_params** | [**bt_translate_format_params.BTTranslateFormatParams**](BTTranslateFormatParams.md)|  |
+ **bt_translate_format_params** | [**bt_translate_format_params.BTTranslateFormatParams**](BTTranslateFormatParams.md)|  |
 
 ### Return type
 
@@ -1248,28 +1282,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AssembliesApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-eid = 'eid_example' # str | 
-fid = 'fid_example' # str | 
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AssembliesApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    eid = 'eid_example' # str | 
+    fid = 'fid_example' # str | 
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_feature(did, wid, eid, fid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_feature(did, wid, eid, fid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.update_feature(did, wid, eid, fid, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.update_feature(did, wid, eid, fid, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AssembliesApi->update_feature: %s\n" % e)
 ```
 
 ### Parameters

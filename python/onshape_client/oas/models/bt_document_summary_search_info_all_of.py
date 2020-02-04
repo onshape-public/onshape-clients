@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_search_hit_info
 except ImportError:
-    bt_document_search_hit_info = sys.modules['onshape_client.oas.models.bt_document_search_hit_info']
+    bt_document_search_hit_info = sys.modules[
+        'onshape_client.oas.models.bt_document_search_hit_info']
 
 
 class BTDocumentSummarySearchInfoAllOf(ModelNormal):

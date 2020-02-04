@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_individual_query138
 except ImportError:
-    btm_individual_query138 = sys.modules['onshape_client.oas.models.btm_individual_query138']
+    btm_individual_query138 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query138']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 
 
 class BTMIndividualQuery138AllOf(ModelNormal):

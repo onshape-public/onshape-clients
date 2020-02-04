@@ -60,42 +60,54 @@ class AppElementsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __commit_transaction(self, did, eid, wid, tid, bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params, **kwargs):  # noqa: E501
+        def __commit_transaction(
+            self,
+            did,
+            eid,
+            wid,
+            tid,
+            bt_app_element_commit_transaction_params,
+            **kwargs
+        ):
             """Commit Transaction  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params, async_req=True)
+            >>> thread = api.commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param str tid: (required)
-            :param bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                tid (str):
+                bt_app_element_commit_transaction_params (bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -116,11 +128,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['tid'] = tid
-            kwargs['bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params'] = bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['tid'] = \
+                tid
+            kwargs['bt_app_element_commit_transaction_params'] = \
+                bt_app_element_commit_transaction_params
             return self.call_with_http_info(**kwargs)
 
         self.commit_transaction = Endpoint(
@@ -140,14 +157,14 @@ class AppElementsApi(object):
                     'eid',
                     'wid',
                     'tid',
-                    'bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params',
+                    'bt_app_element_commit_transaction_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wid',
                     'tid',
-                    'bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params',
+                    'bt_app_element_commit_transaction_params',
                 ],
                 'nullable': [
                 ],
@@ -162,11 +179,16 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'tid': (str,),
-                    'bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params': (bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'tid':
+                        (str,),
+                    'bt_app_element_commit_transaction_params':
+                        (bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -179,7 +201,7 @@ class AppElementsApi(object):
                     'eid': 'path',
                     'wid': 'path',
                     'tid': 'path',
-                    'bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params': 'body',
+                    'bt_app_element_commit_transaction_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -197,40 +219,50 @@ class AppElementsApi(object):
             callable=__commit_transaction
         )
 
-        def __create_element(self, did, wid, bt_app_element_params_bt_app_element_params, **kwargs):  # noqa: E501
+        def __create_element(
+            self,
+            did,
+            wid,
+            bt_app_element_params,
+            **kwargs
+        ):
             """Create Element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_element(did, wid, bt_app_element_params_bt_app_element_params, async_req=True)
+            >>> thread = api.create_element(did, wid, bt_app_element_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param bt_app_element_params.BTAppElementParams bt_app_element_params_bt_app_element_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                bt_app_element_params (bt_app_element_params.BTAppElementParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -251,9 +283,12 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['bt_app_element_params_bt_app_element_params'] = bt_app_element_params_bt_app_element_params
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_app_element_params'] = \
+                bt_app_element_params
             return self.call_with_http_info(**kwargs)
 
         self.create_element = Endpoint(
@@ -271,12 +306,12 @@ class AppElementsApi(object):
                 'all': [
                     'did',
                     'wid',
-                    'bt_app_element_params_bt_app_element_params',
+                    'bt_app_element_params',
                 ],
                 'required': [
                     'did',
                     'wid',
-                    'bt_app_element_params_bt_app_element_params',
+                    'bt_app_element_params',
                 ],
                 'nullable': [
                 ],
@@ -291,9 +326,12 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'bt_app_element_params_bt_app_element_params': (bt_app_element_params.BTAppElementParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_app_element_params':
+                        (bt_app_element_params.BTAppElementParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -302,7 +340,7 @@ class AppElementsApi(object):
                 'location_map': {
                     'did': 'path',
                     'wid': 'path',
-                    'bt_app_element_params_bt_app_element_params': 'body',
+                    'bt_app_element_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -320,42 +358,54 @@ class AppElementsApi(object):
             callable=__create_element
         )
 
-        def __create_reference(self, did, eid, wvm, wvmid, bt_app_element_reference_params_bt_app_element_reference_params, **kwargs):  # noqa: E501
+        def __create_reference(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            bt_app_element_reference_params,
+            **kwargs
+        ):
             """Create Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params_bt_app_element_reference_params, async_req=True)
+            >>> thread = api.create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param bt_app_element_reference_params.BTAppElementReferenceParams bt_app_element_reference_params_bt_app_element_reference_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_reference_info.BTAppElementReferenceInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                bt_app_element_reference_params (bt_app_element_reference_params.BTAppElementReferenceParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_reference_info.BTAppElementReferenceInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -376,11 +426,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['bt_app_element_reference_params_bt_app_element_reference_params'] = bt_app_element_reference_params_bt_app_element_reference_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['bt_app_element_reference_params'] = \
+                bt_app_element_reference_params
             return self.call_with_http_info(**kwargs)
 
         self.create_reference = Endpoint(
@@ -400,14 +455,14 @@ class AppElementsApi(object):
                     'eid',
                     'wvm',
                     'wvmid',
-                    'bt_app_element_reference_params_bt_app_element_reference_params',
+                    'bt_app_element_reference_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wvm',
                     'wvmid',
-                    'bt_app_element_reference_params_bt_app_element_reference_params',
+                    'bt_app_element_reference_params',
                 ],
                 'nullable': [
                 ],
@@ -422,11 +477,16 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'bt_app_element_reference_params_bt_app_element_reference_params': (bt_app_element_reference_params.BTAppElementReferenceParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'bt_app_element_reference_params':
+                        (bt_app_element_reference_params.BTAppElementReferenceParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -439,7 +499,7 @@ class AppElementsApi(object):
                     'eid': 'path',
                     'wvm': 'path',
                     'wvmid': 'path',
-                    'bt_app_element_reference_params_bt_app_element_reference_params': 'body',
+                    'bt_app_element_reference_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -457,7 +517,15 @@ class AppElementsApi(object):
             callable=__create_reference
         )
 
-        def __delete_app_element_content(self, did, eid, wvm, wvmid, sid, **kwargs):  # noqa: E501
+        def __delete_app_element_content(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            sid,
+            **kwargs
+        ):
             """Delete a Sub-element  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -465,37 +533,41 @@ class AppElementsApi(object):
             >>> thread = api.delete_app_element_content(did, eid, wvm, wvmid, sid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str sid: (required)
-            :param str transaction_id:
-            :param str parent_change_id:
-            :param str description:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                sid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                parent_change_id (str): [optional]
+                description (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -516,11 +588,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['sid'] = sid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['sid'] = \
+                sid
             return self.call_with_http_info(**kwargs)
 
         self.delete_app_element_content = Endpoint(
@@ -565,14 +642,22 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'sid': (str,),
-                    'transaction_id': (str,),
-                    'parent_change_id': (str,),
-                    'description': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'sid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'parent_change_id':
+                        (str,),
+                    'description':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -608,7 +693,15 @@ class AppElementsApi(object):
             callable=__delete_app_element_content
         )
 
-        def __delete_reference(self, did, eid, wvm, wvmid, rid, **kwargs):  # noqa: E501
+        def __delete_reference(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            rid,
+            **kwargs
+        ):
             """Delete Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -616,37 +709,41 @@ class AppElementsApi(object):
             >>> thread = api.delete_reference(did, eid, wvm, wvmid, rid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str rid: (required)
-            :param str transaction_id:
-            :param str parent_change_id:
-            :param str description:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_reference_info.BTAppElementReferenceInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                rid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                parent_change_id (str): [optional]
+                description (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_reference_info.BTAppElementReferenceInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -667,11 +764,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['rid'] = rid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['rid'] = \
+                rid
             return self.call_with_http_info(**kwargs)
 
         self.delete_reference = Endpoint(
@@ -716,14 +818,22 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'rid': (str,),
-                    'transaction_id': (str,),
-                    'parent_change_id': (str,),
-                    'description': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'rid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'parent_change_id':
+                        (str,),
+                    'description':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -759,7 +869,14 @@ class AppElementsApi(object):
             callable=__delete_reference
         )
 
-        def __get_app_element_history(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_app_element_history(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Get History  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -767,33 +884,37 @@ class AppElementsApi(object):
             >>> thread = api.get_app_element_history(did, eid, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_history_info.BTAppElementHistoryInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_history_info.BTAppElementHistoryInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -814,10 +935,14 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_app_element_history = Endpoint(
@@ -857,10 +982,14 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -888,7 +1017,14 @@ class AppElementsApi(object):
             callable=__get_app_element_history
         )
 
-        def __get_sub_element_content(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_sub_element_content(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Get Content  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -896,38 +1032,42 @@ class AppElementsApi(object):
             >>> thread = api.get_sub_element_content(did, eid, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str transaction_id:
-            :param str change_id:
-            :param str base_change_id:
-            :param str subelement_id:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_content_info.BTAppElementContentInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                change_id (str): [optional]
+                base_change_id (str): [optional]
+                subelement_id (str): [optional]
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_content_info.BTAppElementContentInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -948,10 +1088,14 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_sub_element_content = Endpoint(
@@ -996,15 +1140,24 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'transaction_id': (str,),
-                    'change_id': (str,),
-                    'base_change_id': (str,),
-                    'subelement_id': (str,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'change_id':
+                        (str,),
+                    'base_change_id':
+                        (str,),
+                    'subelement_id':
+                        (str,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1042,7 +1195,14 @@ class AppElementsApi(object):
             callable=__get_sub_element_content
         )
 
-        def __get_subelement_ids(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_subelement_ids(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Get Sub-element IDs  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1050,35 +1210,39 @@ class AppElementsApi(object):
             >>> thread = api.get_subelement_ids(did, eid, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str transaction_id:
-            :param str change_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                change_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1099,10 +1263,14 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_subelement_ids = Endpoint(
@@ -1144,12 +1312,18 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'transaction_id': (str,),
-                    'change_id': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'change_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1181,7 +1355,15 @@ class AppElementsApi(object):
             callable=__get_subelement_ids
         )
 
-        def __resolve_reference(self, did, eid, wvm, wvmid, rid, **kwargs):  # noqa: E501
+        def __resolve_reference(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            rid,
+            **kwargs
+        ):
             """Resolve Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1189,38 +1371,42 @@ class AppElementsApi(object):
             >>> thread = api.resolve_reference(did, eid, wvm, wvmid, rid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str rid: (required)
-            :param str transaction_id:
-            :param str parent_change_id:
-            :param bool include_internal:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_reference_resolve_info.BTAppElementReferenceResolveInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                rid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                parent_change_id (str): [optional]
+                include_internal (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_reference_resolve_info.BTAppElementReferenceResolveInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1241,11 +1427,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['rid'] = rid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['rid'] = \
+                rid
             return self.call_with_http_info(**kwargs)
 
         self.resolve_reference = Endpoint(
@@ -1291,15 +1482,24 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'rid': (str,),
-                    'transaction_id': (str,),
-                    'parent_change_id': (str,),
-                    'include_internal': (bool,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'rid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'parent_change_id':
+                        (str,),
+                    'include_internal':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1337,7 +1537,14 @@ class AppElementsApi(object):
             callable=__resolve_reference
         )
 
-        def __resolve_references(self, did, eid, wvm, wvmid, **kwargs):  # noqa: E501
+        def __resolve_references(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Resolve references.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1345,38 +1552,42 @@ class AppElementsApi(object):
             >>> thread = api.resolve_references(did, eid, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str transaction_id:
-            :param str parent_change_id:
-            :param bool include_internal:
-            :param str link_document_id:
-            :param str reference_ids:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_references_resolve_info.BTAppElementReferencesResolveInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                transaction_id (str): [optional]
+                parent_change_id (str): [optional]
+                include_internal (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                reference_ids (str): [optional] if omitted the server will use the default value of ''
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_references_resolve_info.BTAppElementReferencesResolveInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1397,10 +1608,14 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.resolve_references = Endpoint(
@@ -1445,15 +1660,24 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'transaction_id': (str,),
-                    'parent_change_id': (str,),
-                    'include_internal': (bool,),
-                    'link_document_id': (str,),
-                    'reference_ids': (str,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'transaction_id':
+                        (str,),
+                    'parent_change_id':
+                        (str,),
+                    'include_internal':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
+                    'reference_ids':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1491,41 +1715,52 @@ class AppElementsApi(object):
             callable=__resolve_references
         )
 
-        def __start_transaction(self, did, eid, wid, bt_app_element_start_transaction_params_bt_app_element_start_transaction_params, **kwargs):  # noqa: E501
+        def __start_transaction(
+            self,
+            did,
+            eid,
+            wid,
+            bt_app_element_start_transaction_params,
+            **kwargs
+        ):
             """Start Transaction  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.start_transaction(did, eid, wid, bt_app_element_start_transaction_params_bt_app_element_start_transaction_params, async_req=True)
+            >>> thread = api.start_transaction(did, eid, wid, bt_app_element_start_transaction_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wid: (required)
-            :param bt_app_element_start_transaction_params.BTAppElementStartTransactionParams bt_app_element_start_transaction_params_bt_app_element_start_transaction_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wid (str):
+                bt_app_element_start_transaction_params (bt_app_element_start_transaction_params.BTAppElementStartTransactionParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1546,10 +1781,14 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wid'] = wid
-            kwargs['bt_app_element_start_transaction_params_bt_app_element_start_transaction_params'] = bt_app_element_start_transaction_params_bt_app_element_start_transaction_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_app_element_start_transaction_params'] = \
+                bt_app_element_start_transaction_params
             return self.call_with_http_info(**kwargs)
 
         self.start_transaction = Endpoint(
@@ -1568,13 +1807,13 @@ class AppElementsApi(object):
                     'did',
                     'eid',
                     'wid',
-                    'bt_app_element_start_transaction_params_bt_app_element_start_transaction_params',
+                    'bt_app_element_start_transaction_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wid',
-                    'bt_app_element_start_transaction_params_bt_app_element_start_transaction_params',
+                    'bt_app_element_start_transaction_params',
                 ],
                 'nullable': [
                 ],
@@ -1589,10 +1828,14 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wid': (str,),
-                    'bt_app_element_start_transaction_params_bt_app_element_start_transaction_params': (bt_app_element_start_transaction_params.BTAppElementStartTransactionParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_app_element_start_transaction_params':
+                        (bt_app_element_start_transaction_params.BTAppElementStartTransactionParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1603,7 +1846,7 @@ class AppElementsApi(object):
                     'did': 'path',
                     'eid': 'path',
                     'wid': 'path',
-                    'bt_app_element_start_transaction_params_bt_app_element_start_transaction_params': 'body',
+                    'bt_app_element_start_transaction_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1621,42 +1864,54 @@ class AppElementsApi(object):
             callable=__start_transaction
         )
 
-        def __update_app_element(self, did, eid, wvm, wvmid, bt_app_element_update_params_bt_app_element_update_params, **kwargs):  # noqa: E501
+        def __update_app_element(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            bt_app_element_update_params,
+            **kwargs
+        ):
             """Update Element  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params_bt_app_element_update_params, async_req=True)
+            >>> thread = api.update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param bt_app_element_update_params.BTAppElementUpdateParams bt_app_element_update_params_bt_app_element_update_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_modify_info.BTAppElementModifyInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                bt_app_element_update_params (bt_app_element_update_params.BTAppElementUpdateParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_modify_info.BTAppElementModifyInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1677,11 +1932,16 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['bt_app_element_update_params_bt_app_element_update_params'] = bt_app_element_update_params_bt_app_element_update_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['bt_app_element_update_params'] = \
+                bt_app_element_update_params
             return self.call_with_http_info(**kwargs)
 
         self.update_app_element = Endpoint(
@@ -1701,14 +1961,14 @@ class AppElementsApi(object):
                     'eid',
                     'wvm',
                     'wvmid',
-                    'bt_app_element_update_params_bt_app_element_update_params',
+                    'bt_app_element_update_params',
                 ],
                 'required': [
                     'did',
                     'eid',
                     'wvm',
                     'wvmid',
-                    'bt_app_element_update_params_bt_app_element_update_params',
+                    'bt_app_element_update_params',
                 ],
                 'nullable': [
                 ],
@@ -1723,11 +1983,16 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'bt_app_element_update_params_bt_app_element_update_params': (bt_app_element_update_params.BTAppElementUpdateParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'bt_app_element_update_params':
+                        (bt_app_element_update_params.BTAppElementUpdateParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1740,7 +2005,7 @@ class AppElementsApi(object):
                     'eid': 'path',
                     'wvm': 'path',
                     'wvmid': 'path',
-                    'bt_app_element_update_params_bt_app_element_update_params': 'body',
+                    'bt_app_element_update_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1758,43 +2023,56 @@ class AppElementsApi(object):
             callable=__update_app_element
         )
 
-        def __update_reference(self, did, eid, wvm, wvmid, rid, bt_app_element_reference_params_bt_app_element_reference_params, **kwargs):  # noqa: E501
+        def __update_reference(
+            self,
+            did,
+            eid,
+            wvm,
+            wvmid,
+            rid,
+            bt_app_element_reference_params,
+            **kwargs
+        ):
             """Update Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params_bt_app_element_reference_params, async_req=True)
+            >>> thread = api.update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str rid: (required)
-            :param bt_app_element_reference_params.BTAppElementReferenceParams bt_app_element_reference_params_bt_app_element_reference_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_app_element_reference_info.BTAppElementReferenceInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+                wvm (str):
+                wvmid (str):
+                rid (str):
+                bt_app_element_reference_params (bt_app_element_reference_params.BTAppElementReferenceParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_app_element_reference_info.BTAppElementReferenceInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1815,12 +2093,18 @@ class AppElementsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
-            kwargs['rid'] = rid
-            kwargs['bt_app_element_reference_params_bt_app_element_reference_params'] = bt_app_element_reference_params_bt_app_element_reference_params
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
+            kwargs['rid'] = \
+                rid
+            kwargs['bt_app_element_reference_params'] = \
+                bt_app_element_reference_params
             return self.call_with_http_info(**kwargs)
 
         self.update_reference = Endpoint(
@@ -1841,7 +2125,7 @@ class AppElementsApi(object):
                     'wvm',
                     'wvmid',
                     'rid',
-                    'bt_app_element_reference_params_bt_app_element_reference_params',
+                    'bt_app_element_reference_params',
                 ],
                 'required': [
                     'did',
@@ -1849,7 +2133,7 @@ class AppElementsApi(object):
                     'wvm',
                     'wvmid',
                     'rid',
-                    'bt_app_element_reference_params_bt_app_element_reference_params',
+                    'bt_app_element_reference_params',
                 ],
                 'nullable': [
                 ],
@@ -1864,12 +2148,18 @@ class AppElementsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'rid': (str,),
-                    'bt_app_element_reference_params_bt_app_element_reference_params': (bt_app_element_reference_params.BTAppElementReferenceParams,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'rid':
+                        (str,),
+                    'bt_app_element_reference_params':
+                        (bt_app_element_reference_params.BTAppElementReferenceParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1884,7 +2174,7 @@ class AppElementsApi(object):
                     'wvm': 'path',
                     'wvmid': 'path',
                     'rid': 'path',
-                    'bt_app_element_reference_params_bt_app_element_reference_params': 'body',
+                    'bt_app_element_reference_params': 'body',
                 },
                 'collection_format_map': {
                 }

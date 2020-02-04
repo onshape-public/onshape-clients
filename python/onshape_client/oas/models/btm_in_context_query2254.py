@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_in_context_query2254_all_of
 except ImportError:
-    btm_in_context_query2254_all_of = sys.modules['onshape_client.oas.models.btm_in_context_query2254_all_of']
+    btm_in_context_query2254_all_of = sys.modules[
+        'onshape_client.oas.models.btm_in_context_query2254_all_of']
 try:
     from onshape_client.oas.models import btm_individual_query_base139
 except ImportError:
-    btm_individual_query_base139 = sys.modules['onshape_client.oas.models.btm_individual_query_base139']
+    btm_individual_query_base139 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_base139']
 
 
 class BTMInContextQuery2254(ModelComposed):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_sphere_description1263_all_of
 except ImportError:
-    bt_sphere_description1263_all_of = sys.modules['onshape_client.oas.models.bt_sphere_description1263_all_of']
+    bt_sphere_description1263_all_of = sys.modules[
+        'onshape_client.oas.models.bt_sphere_description1263_all_of']
 try:
     from onshape_client.oas.models import bt_surface_description1564
 except ImportError:
-    bt_surface_description1564 = sys.modules['onshape_client.oas.models.bt_surface_description1564']
+    bt_surface_description1564 = sys.modules[
+        'onshape_client.oas.models.bt_surface_description1564']
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules['onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules[
+        'onshape_client.oas.models.bt_vector3d389']
 
 
 class BTSphereDescription1263(ModelComposed):

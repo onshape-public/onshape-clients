@@ -69,7 +69,12 @@ class DocumentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __copy_workspace(self, did, wid, **kwargs):  # noqa: E501
+        def __copy_workspace(
+            self,
+            did,
+            wid,
+            **kwargs
+        ):
             """Copy Workspace  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -77,32 +82,36 @@ class DocumentsApi(object):
             >>> thread = api.copy_workspace(did, wid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param bt_copy_document_params.BTCopyDocumentParams bt_copy_document_params_bt_copy_document_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_copy_document_info.BTCopyDocumentInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+
+            Keyword Args:
+                bt_copy_document_params (bt_copy_document_params.BTCopyDocumentParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_copy_document_info.BTCopyDocumentInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -123,8 +132,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
             return self.call_with_http_info(**kwargs)
 
         self.copy_workspace = Endpoint(
@@ -142,7 +153,7 @@ class DocumentsApi(object):
                 'all': [
                     'did',
                     'wid',
-                    'bt_copy_document_params_bt_copy_document_params',
+                    'bt_copy_document_params',
                 ],
                 'required': [
                     'did',
@@ -161,9 +172,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'bt_copy_document_params_bt_copy_document_params': (bt_copy_document_params.BTCopyDocumentParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_copy_document_params':
+                        (bt_copy_document_params.BTCopyDocumentParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -172,7 +186,7 @@ class DocumentsApi(object):
                 'location_map': {
                     'did': 'path',
                     'wid': 'path',
-                    'bt_copy_document_params_bt_copy_document_params': 'body',
+                    'bt_copy_document_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -190,38 +204,46 @@ class DocumentsApi(object):
             callable=__copy_workspace
         )
 
-        def __create_document(self, bt_document_params_bt_document_params, **kwargs):  # noqa: E501
+        def __create_document(
+            self,
+            bt_document_params,
+            **kwargs
+        ):
             """Create document.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_document(bt_document_params_bt_document_params, async_req=True)
+            >>> thread = api.create_document(bt_document_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param bt_document_params.BTDocumentParams bt_document_params_bt_document_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_info.BTDocumentInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                bt_document_params (bt_document_params.BTDocumentParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_info.BTDocumentInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -242,7 +264,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['bt_document_params_bt_document_params'] = bt_document_params_bt_document_params
+            kwargs['bt_document_params'] = \
+                bt_document_params
             return self.call_with_http_info(**kwargs)
 
         self.create_document = Endpoint(
@@ -258,10 +281,10 @@ class DocumentsApi(object):
             },
             params_map={
                 'all': [
-                    'bt_document_params_bt_document_params',
+                    'bt_document_params',
                 ],
                 'required': [
-                    'bt_document_params_bt_document_params',
+                    'bt_document_params',
                 ],
                 'nullable': [
                 ],
@@ -276,12 +299,13 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'bt_document_params_bt_document_params': (bt_document_params.BTDocumentParams,),
+                    'bt_document_params':
+                        (bt_document_params.BTDocumentParams,),
                 },
                 'attribute_map': {
                 },
                 'location_map': {
-                    'bt_document_params_bt_document_params': 'body',
+                    'bt_document_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -299,39 +323,48 @@ class DocumentsApi(object):
             callable=__create_document
         )
 
-        def __create_version(self, did, bt_version_or_workspace_params_bt_version_or_workspace_params, **kwargs):  # noqa: E501
+        def __create_version(
+            self,
+            did,
+            bt_version_or_workspace_params,
+            **kwargs
+        ):
             """Create Version.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.create_version(did, bt_version_or_workspace_params_bt_version_or_workspace_params, async_req=True)
+            >>> thread = api.create_version(did, bt_version_or_workspace_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param bt_version_or_workspace_params.BTVersionOrWorkspaceParams bt_version_or_workspace_params_bt_version_or_workspace_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_version_info.BTVersionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                bt_version_or_workspace_params (bt_version_or_workspace_params.BTVersionOrWorkspaceParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_version_info.BTVersionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -352,8 +385,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['bt_version_or_workspace_params_bt_version_or_workspace_params'] = bt_version_or_workspace_params_bt_version_or_workspace_params
+            kwargs['did'] = \
+                did
+            kwargs['bt_version_or_workspace_params'] = \
+                bt_version_or_workspace_params
             return self.call_with_http_info(**kwargs)
 
         self.create_version = Endpoint(
@@ -370,11 +405,11 @@ class DocumentsApi(object):
             params_map={
                 'all': [
                     'did',
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params',
+                    'bt_version_or_workspace_params',
                 ],
                 'required': [
                     'did',
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params',
+                    'bt_version_or_workspace_params',
                 ],
                 'nullable': [
                 ],
@@ -389,15 +424,17 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params': (bt_version_or_workspace_params.BTVersionOrWorkspaceParams,),
+                    'did':
+                        (str,),
+                    'bt_version_or_workspace_params':
+                        (bt_version_or_workspace_params.BTVersionOrWorkspaceParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
                 },
                 'location_map': {
                     'did': 'path',
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params': 'body',
+                    'bt_version_or_workspace_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -415,7 +452,11 @@ class DocumentsApi(object):
             callable=__create_version
         )
 
-        def __create_workspace(self, did, **kwargs):  # noqa: E501
+        def __create_workspace(
+            self,
+            did,
+            **kwargs
+        ):
             """Create Workspace  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -423,31 +464,35 @@ class DocumentsApi(object):
             >>> thread = api.create_workspace(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param bt_version_or_workspace_params.BTVersionOrWorkspaceParams bt_version_or_workspace_params_bt_version_or_workspace_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_workspace_info.BTWorkspaceInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                bt_version_or_workspace_params (bt_version_or_workspace_params.BTVersionOrWorkspaceParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_workspace_info.BTWorkspaceInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -468,7 +513,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.create_workspace = Endpoint(
@@ -485,7 +531,7 @@ class DocumentsApi(object):
             params_map={
                 'all': [
                     'did',
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params',
+                    'bt_version_or_workspace_params',
                 ],
                 'required': [
                     'did',
@@ -503,15 +549,17 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params': (bt_version_or_workspace_params.BTVersionOrWorkspaceParams,),
+                    'did':
+                        (str,),
+                    'bt_version_or_workspace_params':
+                        (bt_version_or_workspace_params.BTVersionOrWorkspaceParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
                 },
                 'location_map': {
                     'did': 'path',
-                    'bt_version_or_workspace_params_bt_version_or_workspace_params': 'body',
+                    'bt_version_or_workspace_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -529,7 +577,11 @@ class DocumentsApi(object):
             callable=__create_workspace
         )
 
-        def __delete_document(self, did, **kwargs):  # noqa: E501
+        def __delete_document(
+            self,
+            did,
+            **kwargs
+        ):
             """Delete Document  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -537,31 +589,35 @@ class DocumentsApi(object):
             >>> thread = api.delete_document(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param bool forever:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                forever (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -582,7 +638,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.delete_document = Endpoint(
@@ -617,8 +674,10 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'forever': (bool,),
+                    'did':
+                        (str,),
+                    'forever':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -642,7 +701,12 @@ class DocumentsApi(object):
             callable=__delete_document
         )
 
-        def __delete_workspace(self, did, wid, **kwargs):  # noqa: E501
+        def __delete_workspace(
+            self,
+            did,
+            wid,
+            **kwargs
+        ):
             """Delete Workspace  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -650,31 +714,35 @@ class DocumentsApi(object):
             >>> thread = api.delete_workspace(did, wid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -695,8 +763,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
             return self.call_with_http_info(**kwargs)
 
         self.delete_workspace = Endpoint(
@@ -732,8 +802,10 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -757,7 +829,12 @@ class DocumentsApi(object):
             callable=__delete_workspace
         )
 
-        def __download_external_data(self, did, fid, **kwargs):  # noqa: E501
+        def __download_external_data(
+            self,
+            did,
+            fid,
+            **kwargs
+        ):
             """Download External Data  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -765,32 +842,36 @@ class DocumentsApi(object):
             >>> thread = api.download_external_data(did, fid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str fid: (required)
-            :param str if_none_match:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: file_type
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                fid (str):
+
+            Keyword Args:
+                if_none_match (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                file_type
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -811,8 +892,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['fid'] = fid
+            kwargs['did'] = \
+                did
+            kwargs['fid'] = \
+                fid
             return self.call_with_http_info(**kwargs)
 
         self.download_external_data = Endpoint(
@@ -849,9 +932,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'fid': (str,),
-                    'if_none_match': (str,),
+                    'did':
+                        (str,),
+                    'fid':
+                        (str,),
+                    'if_none_match':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -879,7 +965,14 @@ class DocumentsApi(object):
             callable=__download_external_data
         )
 
-        def __export2_json(self, did, wv, wvid, eid, **kwargs):  # noqa: E501
+        def __export2_json(
+            self,
+            did,
+            wv,
+            wvid,
+            eid,
+            **kwargs
+        ):
             """export2_json  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -887,34 +980,38 @@ class DocumentsApi(object):
             >>> thread = api.export2_json(did, wv, wvid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param str eid: (required)
-            :param bt_export_model_params.BTExportModelParams bt_export_model_params_bt_export_model_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+                eid (str):
+
+            Keyword Args:
+                bt_export_model_params (bt_export_model_params.BTExportModelParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -935,10 +1032,14 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.export2_json = Endpoint(
@@ -958,7 +1059,7 @@ class DocumentsApi(object):
                     'wv',
                     'wvid',
                     'eid',
-                    'bt_export_model_params_bt_export_model_params',
+                    'bt_export_model_params',
                 ],
                 'required': [
                     'did',
@@ -979,11 +1080,16 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
-                    'eid': (str,),
-                    'bt_export_model_params_bt_export_model_params': (bt_export_model_params.BTExportModelParams,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_export_model_params':
+                        (bt_export_model_params.BTExportModelParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -996,7 +1102,7 @@ class DocumentsApi(object):
                     'wv': 'path',
                     'wvid': 'path',
                     'eid': 'path',
-                    'bt_export_model_params_bt_export_model_params': 'body',
+                    'bt_export_model_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1014,7 +1120,13 @@ class DocumentsApi(object):
             callable=__export2_json
         )
 
-        def __get_current_microversion(self, did, wv, wvid, **kwargs):  # noqa: E501
+        def __get_current_microversion(
+            self,
+            did,
+            wv,
+            wvid,
+            **kwargs
+        ):
             """Get Current Document Microversion  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1022,32 +1134,36 @@ class DocumentsApi(object):
             >>> thread = api.get_current_microversion(did, wv, wvid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wv: (required)
-            :param str wvid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_microversion_info.BTMicroversionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wv (str):
+                wvid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_microversion_info.BTMicroversionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1068,9 +1184,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wv'] = wv
-            kwargs['wvid'] = wvid
+            kwargs['did'] = \
+                did
+            kwargs['wv'] = \
+                wv
+            kwargs['wvid'] = \
+                wvid
             return self.call_with_http_info(**kwargs)
 
         self.get_current_microversion = Endpoint(
@@ -1108,9 +1227,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wv': (str,),
-                    'wvid': (str,),
+                    'did':
+                        (str,),
+                    'wv':
+                        (str,),
+                    'wvid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1136,7 +1258,11 @@ class DocumentsApi(object):
             callable=__get_current_microversion
         )
 
-        def __get_document(self, did, **kwargs):  # noqa: E501
+        def __get_document(
+            self,
+            did,
+            **kwargs
+        ):
             """Get Document  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1144,30 +1270,34 @@ class DocumentsApi(object):
             >>> thread = api.get_document(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_info.BTDocumentInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_info.BTDocumentInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1188,7 +1318,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document = Endpoint(
@@ -1222,7 +1353,8 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
+                    'did':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1244,7 +1376,11 @@ class DocumentsApi(object):
             callable=__get_document
         )
 
-        def __get_document_acl(self, did, **kwargs):  # noqa: E501
+        def __get_document_acl(
+            self,
+            did,
+            **kwargs
+        ):
             """Get Access Control List  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1252,30 +1388,34 @@ class DocumentsApi(object):
             >>> thread = api.get_document_acl(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_acl_info.BTAclInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_acl_info.BTAclInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1296,7 +1436,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_acl = Endpoint(
@@ -1330,7 +1471,8 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
+                    'did':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1352,7 +1494,11 @@ class DocumentsApi(object):
             callable=__get_document_acl
         )
 
-        def __get_document_permission_set(self, did, **kwargs):  # noqa: E501
+        def __get_document_permission_set(
+            self,
+            did,
+            **kwargs
+        ):
             """Get Document Permissions  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1360,30 +1506,34 @@ class DocumentsApi(object):
             >>> thread = api.get_document_permission_set(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bool, date, datetime, dict, float, int, list, str
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bool, date, datetime, dict, float, int, list, str
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1404,7 +1554,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_permission_set = Endpoint(
@@ -1438,7 +1589,8 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
+                    'did':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1460,7 +1612,11 @@ class DocumentsApi(object):
             callable=__get_document_permission_set
         )
 
-        def __get_document_versions(self, did, **kwargs):  # noqa: E501
+        def __get_document_versions(
+            self,
+            did,
+            **kwargs
+        ):
             """Get Versions  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1468,32 +1624,36 @@ class DocumentsApi(object):
             >>> thread = api.get_document_versions(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param int offset:
-            :param int limit:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_version_info.BTVersionInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                offset (int): [optional] if omitted the server will use the default value of 0
+                limit (int): [optional] if omitted the server will use the default value of 0
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_version_info.BTVersionInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1514,7 +1674,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_versions = Endpoint(
@@ -1550,9 +1711,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'offset': (int,),
-                    'limit': (int,),
+                    'did':
+                        (str,),
+                    'offset':
+                        (int,),
+                    'limit':
+                        (int,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1578,7 +1742,11 @@ class DocumentsApi(object):
             callable=__get_document_versions
         )
 
-        def __get_document_workspaces(self, did, **kwargs):  # noqa: E501
+        def __get_document_workspaces(
+            self,
+            did,
+            **kwargs
+        ):
             """Get Workspaces  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1586,30 +1754,34 @@ class DocumentsApi(object):
             >>> thread = api.get_document_workspaces(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_workspace_info.BTWorkspaceInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_workspace_info.BTWorkspaceInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1630,7 +1802,8 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_workspaces = Endpoint(
@@ -1664,7 +1837,8 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
+                    'did':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1686,7 +1860,10 @@ class DocumentsApi(object):
             callable=__get_document_workspaces
         )
 
-        def __get_documents(self, **kwargs):  # noqa: E501
+        def __get_documents(
+            self,
+            **kwargs
+        ):
             """Get Documents  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1694,40 +1871,43 @@ class DocumentsApi(object):
             >>> thread = api.get_documents(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str q:
-            :param int filter:
-            :param str owner:
-            :param int owner_type:
-            :param str sort_column:
-            :param str sort_order:
-            :param int offset:
-            :param int limit:
-            :param str label:
-            :param str project:
-            :param str parent_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_global_tree_node_list_response.BTGlobalTreeNodeListResponse
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                q (str): [optional] if omitted the server will use the default value of ''
+                filter (int): [optional]
+                owner (str): [optional] if omitted the server will use the default value of ''
+                owner_type (int): [optional] if omitted the server will use the default value of 1
+                sort_column (str): [optional] if omitted the server will use the default value of 'createdAt'
+                sort_order (str): [optional] if omitted the server will use the default value of 'desc'
+                offset (int): [optional] if omitted the server will use the default value of 0
+                limit (int): [optional] if omitted the server will use the default value of 20
+                label (str): [optional]
+                project (str): [optional]
+                parent_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_global_tree_node_list_response.BTGlobalTreeNodeListResponse
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1789,17 +1969,28 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'q': (str,),
-                    'filter': (int,),
-                    'owner': (str,),
-                    'owner_type': (int,),
-                    'sort_column': (str,),
-                    'sort_order': (str,),
-                    'offset': (int,),
-                    'limit': (int,),
-                    'label': (str,),
-                    'project': (str,),
-                    'parent_id': (str,),
+                    'q':
+                        (str,),
+                    'filter':
+                        (int,),
+                    'owner':
+                        (str,),
+                    'owner_type':
+                        (int,),
+                    'sort_column':
+                        (str,),
+                    'sort_order':
+                        (str,),
+                    'offset':
+                        (int,),
+                    'limit':
+                        (int,),
+                    'label':
+                        (str,),
+                    'project':
+                        (str,),
+                    'parent_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'q': 'q',
@@ -1841,7 +2032,13 @@ class DocumentsApi(object):
             callable=__get_documents
         )
 
-        def __get_elements_in_document(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_elements_in_document(
+            self,
+            did,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Get a list of elements in the workspace, version, or microversion of the document.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1849,36 +2046,40 @@ class DocumentsApi(object):
             >>> thread = api.get_elements_in_document(did, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param str element_type:
-            :param str element_id:
-            :param bool with_thumbnails:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_document_element_info.BTDocumentElementInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                element_type (str): [optional] if omitted the server will use the default value of ''
+                element_id (str): [optional] if omitted the server will use the default value of ''
+                with_thumbnails (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_document_element_info.BTDocumentElementInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -1899,9 +2100,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_elements_in_document = Endpoint(
@@ -1943,13 +2147,20 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'element_type': (str,),
-                    'element_id': (str,),
-                    'with_thumbnails': (bool,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'element_type':
+                        (str,),
+                    'element_id':
+                        (str,),
+                    'with_thumbnails':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -1983,7 +2194,13 @@ class DocumentsApi(object):
             callable=__get_elements_in_document
         )
 
-        def __get_insertables(self, did, wvm, wvmid, **kwargs):  # noqa: E501
+        def __get_insertables(
+            self,
+            did,
+            wvm,
+            wvmid,
+            **kwargs
+        ):
             """Insertable List for Document Version.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1991,50 +2208,54 @@ class DocumentsApi(object):
             >>> thread = api.get_insertables(did, wvm, wvmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wvm: (required)
-            :param str wvmid: (required)
-            :param [str] beta_capability_ids:
-            :param bool include_parts:
-            :param bool include_surfaces:
-            :param bool include_wires:
-            :param bool include_sketches:
-            :param bool include_reference_features:
-            :param bool include_assemblies:
-            :param bool include_features:
-            :param bool include_feature_studios:
-            :param bool include_part_studios:
-            :param bool include_blobs:
-            :param bool include_meshes:
-            :param bool include_flattened_bodies:
-            :param str allowed_blob_mime_types:
-            :param int max_feature_script_version:
-            :param bool include_applications:
-            :param str allowed_application_mime_types:
-            :param bool include_composite_parts:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_insertables_list_response.BTInsertablesListResponse
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wvm (str):
+                wvmid (str):
+
+            Keyword Args:
+                beta_capability_ids ([str]): [optional]
+                include_parts (bool): [optional] if omitted the server will use the default value of False
+                include_surfaces (bool): [optional] if omitted the server will use the default value of False
+                include_wires (bool): [optional] if omitted the server will use the default value of False
+                include_sketches (bool): [optional] if omitted the server will use the default value of False
+                include_reference_features (bool): [optional] if omitted the server will use the default value of False
+                include_assemblies (bool): [optional] if omitted the server will use the default value of False
+                include_features (bool): [optional] if omitted the server will use the default value of False
+                include_feature_studios (bool): [optional] if omitted the server will use the default value of False
+                include_part_studios (bool): [optional] if omitted the server will use the default value of False
+                include_blobs (bool): [optional] if omitted the server will use the default value of False
+                include_meshes (bool): [optional] if omitted the server will use the default value of False
+                include_flattened_bodies (bool): [optional] if omitted the server will use the default value of False
+                allowed_blob_mime_types (str): [optional] if omitted the server will use the default value of ''
+                max_feature_script_version (int): [optional] if omitted the server will use the default value of 0
+                include_applications (bool): [optional] if omitted the server will use the default value of False
+                allowed_application_mime_types (str): [optional] if omitted the server will use the default value of ''
+                include_composite_parts (bool): [optional] if omitted the server will use the default value of False
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_insertables_list_response.BTInsertablesListResponse
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2055,9 +2276,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wvm'] = wvm
-            kwargs['wvmid'] = wvmid
+            kwargs['did'] = \
+                did
+            kwargs['wvm'] = \
+                wvm
+            kwargs['wvmid'] = \
+                wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_insertables = Endpoint(
@@ -2113,27 +2337,48 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wvm': (str,),
-                    'wvmid': (str,),
-                    'beta_capability_ids': ([str],),
-                    'include_parts': (bool,),
-                    'include_surfaces': (bool,),
-                    'include_wires': (bool,),
-                    'include_sketches': (bool,),
-                    'include_reference_features': (bool,),
-                    'include_assemblies': (bool,),
-                    'include_features': (bool,),
-                    'include_feature_studios': (bool,),
-                    'include_part_studios': (bool,),
-                    'include_blobs': (bool,),
-                    'include_meshes': (bool,),
-                    'include_flattened_bodies': (bool,),
-                    'allowed_blob_mime_types': (str,),
-                    'max_feature_script_version': (int,),
-                    'include_applications': (bool,),
-                    'allowed_application_mime_types': (str,),
-                    'include_composite_parts': (bool,),
+                    'did':
+                        (str,),
+                    'wvm':
+                        (str,),
+                    'wvmid':
+                        (str,),
+                    'beta_capability_ids':
+                        ([str],),
+                    'include_parts':
+                        (bool,),
+                    'include_surfaces':
+                        (bool,),
+                    'include_wires':
+                        (bool,),
+                    'include_sketches':
+                        (bool,),
+                    'include_reference_features':
+                        (bool,),
+                    'include_assemblies':
+                        (bool,),
+                    'include_features':
+                        (bool,),
+                    'include_feature_studios':
+                        (bool,),
+                    'include_part_studios':
+                        (bool,),
+                    'include_blobs':
+                        (bool,),
+                    'include_meshes':
+                        (bool,),
+                    'include_flattened_bodies':
+                        (bool,),
+                    'allowed_blob_mime_types':
+                        (str,),
+                    'max_feature_script_version':
+                        (int,),
+                    'include_applications':
+                        (bool,),
+                    'allowed_application_mime_types':
+                        (str,),
+                    'include_composite_parts':
+                        (bool,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2196,7 +2441,12 @@ class DocumentsApi(object):
             callable=__get_insertables
         )
 
-        def __get_version(self, did, vid, **kwargs):  # noqa: E501
+        def __get_version(
+            self,
+            did,
+            vid,
+            **kwargs
+        ):
             """Get Version  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2204,33 +2454,37 @@ class DocumentsApi(object):
             >>> thread = api.get_version(did, vid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str vid: (required)
-            :param bool parents:
-            :param str link_document_id:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_version_info.BTVersionInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                vid (str):
+
+            Keyword Args:
+                parents (bool): [optional] if omitted the server will use the default value of False
+                link_document_id (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_version_info.BTVersionInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2251,8 +2505,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['vid'] = vid
+            kwargs['did'] = \
+                did
+            kwargs['vid'] = \
+                vid
             return self.call_with_http_info(**kwargs)
 
         self.get_version = Endpoint(
@@ -2290,10 +2546,14 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'vid': (str,),
-                    'parents': (bool,),
-                    'link_document_id': (str,),
+                    'did':
+                        (str,),
+                    'vid':
+                        (str,),
+                    'parents':
+                        (bool,),
+                    'link_document_id':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2321,40 +2581,50 @@ class DocumentsApi(object):
             callable=__get_version
         )
 
-        def __merge_into_workspace(self, did, wid, bt_version_or_workspace_info_bt_version_or_workspace_info, **kwargs):  # noqa: E501
+        def __merge_into_workspace(
+            self,
+            did,
+            wid,
+            bt_version_or_workspace_info,
+            **kwargs
+        ):
             """Merge into workspace  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.merge_into_workspace(did, wid, bt_version_or_workspace_info_bt_version_or_workspace_info, async_req=True)
+            >>> thread = api.merge_into_workspace(did, wid, bt_version_or_workspace_info, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param bt_version_or_workspace_info.BTVersionOrWorkspaceInfo bt_version_or_workspace_info_bt_version_or_workspace_info: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_document_merge_info.BTDocumentMergeInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                bt_version_or_workspace_info (bt_version_or_workspace_info.BTVersionOrWorkspaceInfo):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_merge_info.BTDocumentMergeInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2375,9 +2645,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['bt_version_or_workspace_info_bt_version_or_workspace_info'] = bt_version_or_workspace_info_bt_version_or_workspace_info
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_version_or_workspace_info'] = \
+                bt_version_or_workspace_info
             return self.call_with_http_info(**kwargs)
 
         self.merge_into_workspace = Endpoint(
@@ -2395,12 +2668,12 @@ class DocumentsApi(object):
                 'all': [
                     'did',
                     'wid',
-                    'bt_version_or_workspace_info_bt_version_or_workspace_info',
+                    'bt_version_or_workspace_info',
                 ],
                 'required': [
                     'did',
                     'wid',
-                    'bt_version_or_workspace_info_bt_version_or_workspace_info',
+                    'bt_version_or_workspace_info',
                 ],
                 'nullable': [
                 ],
@@ -2415,9 +2688,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'bt_version_or_workspace_info_bt_version_or_workspace_info': (bt_version_or_workspace_info.BTVersionOrWorkspaceInfo,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_version_or_workspace_info':
+                        (bt_version_or_workspace_info.BTVersionOrWorkspaceInfo,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2426,7 +2702,7 @@ class DocumentsApi(object):
                 'location_map': {
                     'did': 'path',
                     'wid': 'path',
-                    'bt_version_or_workspace_info_bt_version_or_workspace_info': 'body',
+                    'bt_version_or_workspace_info': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2444,40 +2720,50 @@ class DocumentsApi(object):
             callable=__merge_into_workspace
         )
 
-        def __move_elements_to_document(self, did, wid, bt_move_element_params_bt_move_element_params, **kwargs):  # noqa: E501
+        def __move_elements_to_document(
+            self,
+            did,
+            wid,
+            bt_move_element_params,
+            **kwargs
+        ):
             """Move Elements  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.move_elements_to_document(did, wid, bt_move_element_params_bt_move_element_params, async_req=True)
+            >>> thread = api.move_elements_to_document(did, wid, bt_move_element_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param bt_move_element_params.BTMoveElementParams bt_move_element_params_bt_move_element_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_move_element_info.BTMoveElementInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                bt_move_element_params (bt_move_element_params.BTMoveElementParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_move_element_info.BTMoveElementInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2498,9 +2784,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['bt_move_element_params_bt_move_element_params'] = bt_move_element_params_bt_move_element_params
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['bt_move_element_params'] = \
+                bt_move_element_params
             return self.call_with_http_info(**kwargs)
 
         self.move_elements_to_document = Endpoint(
@@ -2518,12 +2807,12 @@ class DocumentsApi(object):
                 'all': [
                     'did',
                     'wid',
-                    'bt_move_element_params_bt_move_element_params',
+                    'bt_move_element_params',
                 ],
                 'required': [
                     'did',
                     'wid',
-                    'bt_move_element_params_bt_move_element_params',
+                    'bt_move_element_params',
                 ],
                 'nullable': [
                 ],
@@ -2538,9 +2827,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'bt_move_element_params_bt_move_element_params': (bt_move_element_params.BTMoveElementParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'bt_move_element_params':
+                        (bt_move_element_params.BTMoveElementParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2549,7 +2841,7 @@ class DocumentsApi(object):
                 'location_map': {
                     'did': 'path',
                     'wid': 'path',
-                    'bt_move_element_params_bt_move_element_params': 'body',
+                    'bt_move_element_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2567,7 +2859,14 @@ class DocumentsApi(object):
             callable=__move_elements_to_document
         )
 
-        def __restore_from_history(self, did, wid, vm, vmid, **kwargs):  # noqa: E501
+        def __restore_from_history(
+            self,
+            did,
+            wid,
+            vm,
+            vmid,
+            **kwargs
+        ):
             """Restore version or microversion to workspace.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2575,33 +2874,37 @@ class DocumentsApi(object):
             >>> thread = api.restore_from_history(did, wid, vm, vmid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str vm: (required)
-            :param str vmid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                vm (str):
+                vmid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2622,10 +2925,14 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['vm'] = vm
-            kwargs['vmid'] = vmid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['vm'] = \
+                vm
+            kwargs['vmid'] = \
+                vmid
             return self.call_with_http_info(**kwargs)
 
         self.restore_from_history = Endpoint(
@@ -2665,10 +2972,14 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'vm': (str,),
-                    'vmid': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'vm':
+                        (str,),
+                    'vmid':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2696,39 +3007,48 @@ class DocumentsApi(object):
             callable=__restore_from_history
         )
 
-        def __share_document(self, did, bt_share_params_bt_share_params, **kwargs):  # noqa: E501
+        def __share_document(
+            self,
+            did,
+            bt_share_params,
+            **kwargs
+        ):
             """Share Document  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.share_document(did, bt_share_params_bt_share_params, async_req=True)
+            >>> thread = api.share_document(did, bt_share_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param bt_share_params.BTShareParams bt_share_params_bt_share_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_acl_info.BTAclInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                bt_share_params (bt_share_params.BTShareParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_acl_info.BTAclInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2749,8 +3069,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['bt_share_params_bt_share_params'] = bt_share_params_bt_share_params
+            kwargs['did'] = \
+                did
+            kwargs['bt_share_params'] = \
+                bt_share_params
             return self.call_with_http_info(**kwargs)
 
         self.share_document = Endpoint(
@@ -2767,11 +3089,11 @@ class DocumentsApi(object):
             params_map={
                 'all': [
                     'did',
-                    'bt_share_params_bt_share_params',
+                    'bt_share_params',
                 ],
                 'required': [
                     'did',
-                    'bt_share_params_bt_share_params',
+                    'bt_share_params',
                 ],
                 'nullable': [
                 ],
@@ -2786,15 +3108,17 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'bt_share_params_bt_share_params': (bt_share_params.BTShareParams,),
+                    'did':
+                        (str,),
+                    'bt_share_params':
+                        (bt_share_params.BTShareParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
                 },
                 'location_map': {
                     'did': 'path',
-                    'bt_share_params_bt_share_params': 'body',
+                    'bt_share_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2812,7 +3136,13 @@ class DocumentsApi(object):
             callable=__share_document
         )
 
-        def __sync_application_elements(self, did, wid, application_element_ids, **kwargs):  # noqa: E501
+        def __sync_application_elements(
+            self,
+            did,
+            wid,
+            application_element_ids,
+            **kwargs
+        ):
             """Sync Application Elements  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2820,33 +3150,37 @@ class DocumentsApi(object):
             >>> thread = api.sync_application_elements(did, wid, application_element_ids, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param [str] application_element_ids: (required)
-            :param str description:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                application_element_ids ([str]):
+
+            Keyword Args:
+                description (str): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2867,9 +3201,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['application_element_ids'] = application_element_ids
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['application_element_ids'] = \
+                application_element_ids
             return self.call_with_http_info(**kwargs)
 
         self.sync_application_elements = Endpoint(
@@ -2908,10 +3245,14 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'application_element_ids': ([str],),
-                    'description': (str,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'application_element_ids':
+                        ([str],),
+                    'description':
+                        (str,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -2940,7 +3281,12 @@ class DocumentsApi(object):
             callable=__sync_application_elements
         )
 
-        def __un_share_document(self, did, eid, **kwargs):  # noqa: E501
+        def __un_share_document(
+            self,
+            did,
+            eid,
+            **kwargs
+        ):
             """Unshare Document  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2948,32 +3294,36 @@ class DocumentsApi(object):
             >>> thread = api.un_share_document(did, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str eid: (required)
-            :param int entry_type:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                eid (str):
+
+            Keyword Args:
+                entry_type (int): [optional] if omitted the server will use the default value of 0
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -2994,8 +3344,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.un_share_document = Endpoint(
@@ -3032,9 +3384,12 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'eid': (str,),
-                    'entry_type': (int,),
+                    'did':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'entry_type':
+                        (int,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -3060,39 +3415,48 @@ class DocumentsApi(object):
             callable=__un_share_document
         )
 
-        def __update_document_attributes(self, did, bt_document_params_bt_document_params, **kwargs):  # noqa: E501
+        def __update_document_attributes(
+            self,
+            did,
+            bt_document_params,
+            **kwargs
+        ):
             """Update Document Attributes.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.update_document_attributes(did, bt_document_params_bt_document_params, async_req=True)
+            >>> thread = api.update_document_attributes(did, bt_document_params, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param bt_document_params.BTDocumentParams bt_document_params_bt_document_params: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                bt_document_params (bt_document_params.BTDocumentParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -3113,8 +3477,10 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['bt_document_params_bt_document_params'] = bt_document_params_bt_document_params
+            kwargs['did'] = \
+                did
+            kwargs['bt_document_params'] = \
+                bt_document_params
             return self.call_with_http_info(**kwargs)
 
         self.update_document_attributes = Endpoint(
@@ -3131,11 +3497,11 @@ class DocumentsApi(object):
             params_map={
                 'all': [
                     'did',
-                    'bt_document_params_bt_document_params',
+                    'bt_document_params',
                 ],
                 'required': [
                     'did',
-                    'bt_document_params_bt_document_params',
+                    'bt_document_params',
                 ],
                 'nullable': [
                 ],
@@ -3150,15 +3516,17 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'bt_document_params_bt_document_params': (bt_document_params.BTDocumentParams,),
+                    'did':
+                        (str,),
+                    'bt_document_params':
+                        (bt_document_params.BTDocumentParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
                 },
                 'location_map': {
                     'did': 'path',
-                    'bt_document_params_bt_document_params': 'body',
+                    'bt_document_params': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -3176,7 +3544,13 @@ class DocumentsApi(object):
             callable=__update_document_attributes
         )
 
-        def __update_external_references_to_latest_documents(self, did, wid, eid, **kwargs):  # noqa: E501
+        def __update_external_references_to_latest_documents(
+            self,
+            did,
+            wid,
+            eid,
+            **kwargs
+        ):
             """Update External References to Latest  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -3184,33 +3558,37 @@ class DocumentsApi(object):
             >>> thread = api.update_external_references_to_latest_documents(did, wid, eid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param str eid: (required)
-            :param bt_link_to_latest_document_params.BTLinkToLatestDocumentParams bt_link_to_latest_document_params_bt_link_to_latest_document_params:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_link_to_latest_document_info.BTLinkToLatestDocumentInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+                eid (str):
+
+            Keyword Args:
+                bt_link_to_latest_document_params (bt_link_to_latest_document_params.BTLinkToLatestDocumentParams): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_link_to_latest_document_info.BTLinkToLatestDocumentInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -3231,9 +3609,12 @@ class DocumentsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
-            kwargs['eid'] = eid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
+            kwargs['eid'] = \
+                eid
             return self.call_with_http_info(**kwargs)
 
         self.update_external_references_to_latest_documents = Endpoint(
@@ -3252,7 +3633,7 @@ class DocumentsApi(object):
                     'did',
                     'wid',
                     'eid',
-                    'bt_link_to_latest_document_params_bt_link_to_latest_document_params',
+                    'bt_link_to_latest_document_params',
                 ],
                 'required': [
                     'did',
@@ -3272,10 +3653,14 @@ class DocumentsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'eid': (str,),
-                    'bt_link_to_latest_document_params_bt_link_to_latest_document_params': (bt_link_to_latest_document_params.BTLinkToLatestDocumentParams,),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'eid':
+                        (str,),
+                    'bt_link_to_latest_document_params':
+                        (bt_link_to_latest_document_params.BTLinkToLatestDocumentParams,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -3286,7 +3671,7 @@ class DocumentsApi(object):
                     'did': 'path',
                     'wid': 'path',
                     'eid': 'path',
-                    'bt_link_to_latest_document_params_bt_link_to_latest_document_params': 'body',
+                    'bt_link_to_latest_document_params': 'body',
                 },
                 'collection_format_map': {
                 }

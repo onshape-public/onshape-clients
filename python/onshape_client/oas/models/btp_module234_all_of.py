@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_cache_data_path191
 except ImportError:
-    bt_cache_data_path191 = sys.modules['onshape_client.oas.models.bt_cache_data_path191']
+    bt_cache_data_path191 = sys.modules[
+        'onshape_client.oas.models.bt_cache_data_path191']
 try:
     from onshape_client.oas.models import bt_import
 except ImportError:
-    bt_import = sys.modules['onshape_client.oas.models.bt_import']
+    bt_import = sys.modules[
+        'onshape_client.oas.models.bt_import']
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
-    bt_microversion_id366 = sys.modules['onshape_client.oas.models.bt_microversion_id366']
+    bt_microversion_id366 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id366']
 try:
     from onshape_client.oas.models import btp_literal_number258
 except ImportError:
-    btp_literal_number258 = sys.modules['onshape_client.oas.models.btp_literal_number258']
+    btp_literal_number258 = sys.modules[
+        'onshape_client.oas.models.btp_literal_number258']
 try:
     from onshape_client.oas.models import btp_top_level_import285
 except ImportError:
-    btp_top_level_import285 = sys.modules['onshape_client.oas.models.btp_top_level_import285']
+    btp_top_level_import285 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_import285']
 try:
     from onshape_client.oas.models import btp_top_level_node286
 except ImportError:
-    btp_top_level_node286 = sys.modules['onshape_client.oas.models.btp_top_level_node286']
+    btp_top_level_node286 = sys.modules[
+        'onshape_client.oas.models.btp_top_level_node286']
 
 
 class BTPModule234AllOf(ModelNormal):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import encoding
 except ImportError:
-    encoding = sys.modules['onshape_client.oas.models.encoding']
+    encoding = sys.modules[
+        'onshape_client.oas.models.encoding']
 try:
     from onshape_client.oas.models import example
 except ImportError:
-    example = sys.modules['onshape_client.oas.models.example']
+    example = sys.modules[
+        'onshape_client.oas.models.example']
 try:
     from onshape_client.oas.models import schema
 except ImportError:
-    schema = sys.modules['onshape_client.oas.models.schema']
+    schema = sys.modules[
+        'onshape_client.oas.models.schema']
 
 
 class MediaType(ModelNormal):

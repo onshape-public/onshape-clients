@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import contact
 except ImportError:
-    contact = sys.modules['onshape_client.oas.models.contact']
+    contact = sys.modules[
+        'onshape_client.oas.models.contact']
 try:
     from onshape_client.oas.models import license
 except ImportError:
-    license = sys.modules['onshape_client.oas.models.license']
+    license = sys.modules[
+        'onshape_client.oas.models.license']
 
 
 class Info(ModelNormal):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_bill_of_materials_unique_item_id2029
 except ImportError:
-    bt_bill_of_materials_unique_item_id2029 = sys.modules['onshape_client.oas.models.bt_bill_of_materials_unique_item_id2029']
+    bt_bill_of_materials_unique_item_id2029 = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_unique_item_id2029']
 
 
 class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):

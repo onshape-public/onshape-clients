@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_configured_part_properties_table2740_all_of
 except ImportError:
-    bt_configured_part_properties_table2740_all_of = sys.modules['onshape_client.oas.models.bt_configured_part_properties_table2740_all_of']
+    bt_configured_part_properties_table2740_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_part_properties_table2740_all_of']
 try:
     from onshape_client.oas.models import bt_table1825
 except ImportError:
-    bt_table1825 = sys.modules['onshape_client.oas.models.bt_table1825']
+    bt_table1825 = sys.modules[
+        'onshape_client.oas.models.bt_table1825']
 try:
     from onshape_client.oas.models import bt_table_column_info1222
 except ImportError:
-    bt_table_column_info1222 = sys.modules['onshape_client.oas.models.bt_table_column_info1222']
+    bt_table_column_info1222 = sys.modules[
+        'onshape_client.oas.models.bt_table_column_info1222']
 try:
     from onshape_client.oas.models import bt_table_row1054
 except ImportError:
-    bt_table_row1054 = sys.modules['onshape_client.oas.models.bt_table_row1054']
+    bt_table_row1054 = sys.modules[
+        'onshape_client.oas.models.bt_table_row1054']
 
 
 class BTConfiguredPartPropertiesTable2740(ModelComposed):

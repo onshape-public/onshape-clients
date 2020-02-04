@@ -56,7 +56,12 @@ class TranslationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_translation(self, did, wid, **kwargs):  # noqa: E501
+        def __create_translation(
+            self,
+            did,
+            wid,
+            **kwargs
+        ):
             """create_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -64,38 +69,42 @@ class TranslationsApi(object):
             >>> thread = api.create_translation(did, wid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param str wid: (required)
-            :param content_disposition.ContentDisposition content_disposition:
-            :param bool, date, datetime, dict, float, int, list, str entity:
-            :param body_part_media_type.BodyPartMediaType media_type:
-            :param bool, date, datetime, dict, float, int, list, str message_body_workers:
-            :param multi_part.MultiPart parent:
-            :param bool, date, datetime, dict, float, int, list, str providers:
-            :param [body_part.BodyPart] body_parts:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_translation_request_info.BTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+                wid (str):
+
+            Keyword Args:
+                content_disposition (content_disposition.ContentDisposition): [optional]
+                entity (bool, date, datetime, dict, float, int, list, str): [optional]
+                media_type (body_part_media_type.BodyPartMediaType): [optional]
+                message_body_workers (bool, date, datetime, dict, float, int, list, str): [optional]
+                parent (multi_part.MultiPart): [optional]
+                providers (bool, date, datetime, dict, float, int, list, str): [optional]
+                body_parts ([body_part.BodyPart]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_translation_request_info.BTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -116,8 +125,10 @@ class TranslationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
-            kwargs['wid'] = wid
+            kwargs['did'] = \
+                did
+            kwargs['wid'] = \
+                wid
             return self.call_with_http_info(**kwargs)
 
         self.create_translation = Endpoint(
@@ -160,15 +171,24 @@ class TranslationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'wid': (str,),
-                    'content_disposition': (content_disposition.ContentDisposition,),
-                    'entity': (bool, date, datetime, dict, float, int, list, str,),
-                    'media_type': (body_part_media_type.BodyPartMediaType,),
-                    'message_body_workers': (bool, date, datetime, dict, float, int, list, str,),
-                    'parent': (multi_part.MultiPart,),
-                    'providers': (bool, date, datetime, dict, float, int, list, str,),
-                    'body_parts': ([body_part.BodyPart],),
+                    'did':
+                        (str,),
+                    'wid':
+                        (str,),
+                    'content_disposition':
+                        (content_disposition.ContentDisposition,),
+                    'entity':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'media_type':
+                        (body_part_media_type.BodyPartMediaType,),
+                    'message_body_workers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'parent':
+                        (multi_part.MultiPart,),
+                    'providers':
+                        (bool, date, datetime, dict, float, int, list, str,),
+                    'body_parts':
+                        ([body_part.BodyPart],),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -209,7 +229,11 @@ class TranslationsApi(object):
             callable=__create_translation
         )
 
-        def __delete_translation(self, tid, **kwargs):  # noqa: E501
+        def __delete_translation(
+            self,
+            tid,
+            **kwargs
+        ):
             """delete_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -217,30 +241,34 @@ class TranslationsApi(object):
             >>> thread = api.delete_translation(tid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str tid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: None
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                tid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -261,7 +289,8 @@ class TranslationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['tid'] = tid
+            kwargs['tid'] = \
+                tid
             return self.call_with_http_info(**kwargs)
 
         self.delete_translation = Endpoint(
@@ -295,7 +324,8 @@ class TranslationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'tid': (str,),
+                    'tid':
+                        (str,),
                 },
                 'attribute_map': {
                     'tid': 'tid',
@@ -317,7 +347,10 @@ class TranslationsApi(object):
             callable=__delete_translation
         )
 
-        def __get_all_translator_formats(self, **kwargs):  # noqa: E501
+        def __get_all_translator_formats(
+            self,
+            **kwargs
+        ):
             """get_all_translator_formats  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -325,29 +358,32 @@ class TranslationsApi(object):
             >>> thread = api.get_all_translator_formats(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: [bt_model_format_full_info.BTModelFormatFullInfo]
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                [bt_model_format_full_info.BTModelFormatFullInfo]
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -415,7 +451,11 @@ class TranslationsApi(object):
             callable=__get_all_translator_formats
         )
 
-        def __get_document_translations(self, did, **kwargs):  # noqa: E501
+        def __get_document_translations(
+            self,
+            did,
+            **kwargs
+        ):
             """get_document_translations  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -423,32 +463,36 @@ class TranslationsApi(object):
             >>> thread = api.get_document_translations(did, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str did: (required)
-            :param int offset:
-            :param int limit:
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_list_response_bt_translation_request_info.BTListResponseBTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                did (str):
+
+            Keyword Args:
+                offset (int): [optional] if omitted the server will use the default value of 0
+                limit (int): [optional] if omitted the server will use the default value of 20
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_list_response_bt_translation_request_info.BTListResponseBTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -469,7 +513,8 @@ class TranslationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = did
+            kwargs['did'] = \
+                did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_translations = Endpoint(
@@ -505,9 +550,12 @@ class TranslationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'did': (str,),
-                    'offset': (int,),
-                    'limit': (int,),
+                    'did':
+                        (str,),
+                    'offset':
+                        (int,),
+                    'limit':
+                        (int,),
                 },
                 'attribute_map': {
                     'did': 'did',
@@ -533,7 +581,11 @@ class TranslationsApi(object):
             callable=__get_document_translations
         )
 
-        def __get_translation(self, tid, **kwargs):  # noqa: E501
+        def __get_translation(
+            self,
+            tid,
+            **kwargs
+        ):
             """get_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -541,30 +593,34 @@ class TranslationsApi(object):
             >>> thread = api.get_translation(tid, async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str tid: (required)
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: bt_translation_request_info.BTTranslationRequestInfo
-                If the method is called asynchronously, returns the request
-                thread.
+            Args:
+                tid (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_translation_request_info.BTTranslationRequestInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -585,7 +641,8 @@ class TranslationsApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['tid'] = tid
+            kwargs['tid'] = \
+                tid
             return self.call_with_http_info(**kwargs)
 
         self.get_translation = Endpoint(
@@ -619,7 +676,8 @@ class TranslationsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'tid': (str,),
+                    'tid':
+                        (str,),
                 },
                 'attribute_map': {
                     'tid': 'tid',

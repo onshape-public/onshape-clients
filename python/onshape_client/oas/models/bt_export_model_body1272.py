@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_model_edge1782
 except ImportError:
-    bt_export_model_edge1782 = sys.modules['onshape_client.oas.models.bt_export_model_edge1782']
+    bt_export_model_edge1782 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_edge1782']
 try:
     from onshape_client.oas.models import bt_export_model_face1363
 except ImportError:
-    bt_export_model_face1363 = sys.modules['onshape_client.oas.models.bt_export_model_face1363']
+    bt_export_model_face1363 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_face1363']
 try:
     from onshape_client.oas.models import bt_export_model_vertex858
 except ImportError:
-    bt_export_model_vertex858 = sys.modules['onshape_client.oas.models.bt_export_model_vertex858']
+    bt_export_model_vertex858 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_vertex858']
 
 
 class BTExportModelBody1272(ModelNormal):

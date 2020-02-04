@@ -32,59 +32,73 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_assembly_feature_list_response1174
 except ImportError:
-    bt_assembly_feature_list_response1174 = sys.modules['onshape_client.oas.models.bt_assembly_feature_list_response1174']
+    bt_assembly_feature_list_response1174 = sys.modules[
+        'onshape_client.oas.models.bt_assembly_feature_list_response1174']
 try:
     from onshape_client.oas.models import bt_configuration_response2019
 except ImportError:
-    bt_configuration_response2019 = sys.modules['onshape_client.oas.models.bt_configuration_response2019']
+    bt_configuration_response2019 = sys.modules[
+        'onshape_client.oas.models.bt_configuration_response2019']
 try:
     from onshape_client.oas.models import bt_configuration_update_call2933
 except ImportError:
-    bt_configuration_update_call2933 = sys.modules['onshape_client.oas.models.bt_configuration_update_call2933']
+    bt_configuration_update_call2933 = sys.modules[
+        'onshape_client.oas.models.bt_configuration_update_call2933']
 try:
     from onshape_client.oas.models import bt_feature_definition_call1406
 except ImportError:
-    bt_feature_definition_call1406 = sys.modules['onshape_client.oas.models.bt_feature_definition_call1406']
+    bt_feature_definition_call1406 = sys.modules[
+        'onshape_client.oas.models.bt_feature_definition_call1406']
 try:
     from onshape_client.oas.models import bt_feature_definition_response1617
 except ImportError:
-    bt_feature_definition_response1617 = sys.modules['onshape_client.oas.models.bt_feature_definition_response1617']
+    bt_feature_definition_response1617 = sys.modules[
+        'onshape_client.oas.models.bt_feature_definition_response1617']
 try:
     from onshape_client.oas.models import bt_feature_list_response2457
 except ImportError:
-    bt_feature_list_response2457 = sys.modules['onshape_client.oas.models.bt_feature_list_response2457']
+    bt_feature_list_response2457 = sys.modules[
+        'onshape_client.oas.models.bt_feature_list_response2457']
 try:
     from onshape_client.oas.models import bt_feature_script_eval_call2377
 except ImportError:
-    bt_feature_script_eval_call2377 = sys.modules['onshape_client.oas.models.bt_feature_script_eval_call2377']
+    bt_feature_script_eval_call2377 = sys.modules[
+        'onshape_client.oas.models.bt_feature_script_eval_call2377']
 try:
     from onshape_client.oas.models import bt_feature_script_eval_response1859
 except ImportError:
-    bt_feature_script_eval_response1859 = sys.modules['onshape_client.oas.models.bt_feature_script_eval_response1859']
+    bt_feature_script_eval_response1859 = sys.modules[
+        'onshape_client.oas.models.bt_feature_script_eval_response1859']
 try:
     from onshape_client.oas.models import bt_feature_specs_response664
 except ImportError:
-    bt_feature_specs_response664 = sys.modules['onshape_client.oas.models.bt_feature_specs_response664']
+    bt_feature_specs_response664 = sys.modules[
+        'onshape_client.oas.models.bt_feature_specs_response664']
 try:
     from onshape_client.oas.models import bt_feature_studio_contents2239
 except ImportError:
-    bt_feature_studio_contents2239 = sys.modules['onshape_client.oas.models.bt_feature_studio_contents2239']
+    bt_feature_studio_contents2239 = sys.modules[
+        'onshape_client.oas.models.bt_feature_studio_contents2239']
 try:
     from onshape_client.oas.models import bt_set_feature_rollback_call1899
 except ImportError:
-    bt_set_feature_rollback_call1899 = sys.modules['onshape_client.oas.models.bt_set_feature_rollback_call1899']
+    bt_set_feature_rollback_call1899 = sys.modules[
+        'onshape_client.oas.models.bt_set_feature_rollback_call1899']
 try:
     from onshape_client.oas.models import bt_set_feature_rollback_response1042
 except ImportError:
-    bt_set_feature_rollback_response1042 = sys.modules['onshape_client.oas.models.bt_set_feature_rollback_response1042']
+    bt_set_feature_rollback_response1042 = sys.modules[
+        'onshape_client.oas.models.bt_set_feature_rollback_response1042']
 try:
     from onshape_client.oas.models import bt_update_features_call1748
 except ImportError:
-    bt_update_features_call1748 = sys.modules['onshape_client.oas.models.bt_update_features_call1748']
+    bt_update_features_call1748 = sys.modules[
+        'onshape_client.oas.models.bt_update_features_call1748']
 try:
     from onshape_client.oas.models import bt_update_features_response1333
 except ImportError:
-    bt_update_features_response1333 = sys.modules['onshape_client.oas.models.bt_update_features_response1333']
+    bt_update_features_response1333 = sys.modules[
+        'onshape_client.oas.models.bt_update_features_response1333']
 
 
 class BTFeatureApiBase1430(ModelNormal):

@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_export_model_body1272
 except ImportError:
-    bt_export_model_body1272 = sys.modules['onshape_client.oas.models.bt_export_model_body1272']
+    bt_export_model_body1272 = sys.modules[
+        'onshape_client.oas.models.bt_export_model_body1272']
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
-    bt_microversion_id366 = sys.modules['onshape_client.oas.models.bt_microversion_id366']
+    bt_microversion_id366 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id366']
 
 
 class BTExportModelBodiesResponse734(ModelNormal):
@@ -1047,7 +1049,6 @@ class BTExportModelBodiesResponse734(ModelNormal):
         return {
             'microversion_id': (bt_microversion_id366.BTMicroversionId366,),  # noqa: E501
             'error_enum': (str,),  # noqa: E501
-            'document_microversion': (str,),
             'bodies': ([bt_export_model_body1272.BTExportModelBody1272],),  # noqa: E501
         }
 
@@ -1058,7 +1059,6 @@ class BTExportModelBodiesResponse734(ModelNormal):
     attribute_map = {
         'microversion_id': 'microversionId',  # noqa: E501
         'error_enum': 'errorEnum',  # noqa: E501
-        'document_microversion' : 'documentMicroversion',
         'bodies': 'bodies',  # noqa: E501
     }
 

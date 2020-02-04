@@ -32,31 +32,38 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion2754_all_of
 except ImportError:
-    bt_explosion2754_all_of = sys.modules['onshape_client.oas.models.bt_explosion2754_all_of']
+    bt_explosion2754_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion2754_all_of']
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008
 except ImportError:
-    bt_explosion_step_feature3008 = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008']
+    bt_explosion_step_feature3008 = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008']
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
-    bt_microversion_id_and_configuration2338 = sys.modules['onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+    bt_microversion_id_and_configuration2338 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
-    btm_assembly_feature887 = sys.modules['onshape_client.oas.models.btm_assembly_feature887']
+    btm_assembly_feature887 = sys.modules[
+        'onshape_client.oas.models.btm_assembly_feature887']
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules['onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules[
+        'onshape_client.oas.models.btm_feature134']
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence_base904
 except ImportError:
-    btm_individual_query_with_occurrence_base904 = sys.modules['onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
+    btm_individual_query_with_occurrence_base904 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTExplosion2754(ModelComposed):

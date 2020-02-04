@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_identifier8_all_of
 except ImportError:
-    btp_identifier8_all_of = sys.modules['onshape_client.oas.models.btp_identifier8_all_of']
+    btp_identifier8_all_of = sys.modules[
+        'onshape_client.oas.models.btp_identifier8_all_of']
 try:
     from onshape_client.oas.models import btp_property_accessor23
 except ImportError:
-    btp_property_accessor23 = sys.modules['onshape_client.oas.models.btp_property_accessor23']
+    btp_property_accessor23 = sys.modules[
+        'onshape_client.oas.models.btp_property_accessor23']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPIdentifier8(ModelComposed):

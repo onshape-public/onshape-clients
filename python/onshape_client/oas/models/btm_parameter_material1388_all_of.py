@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_part_material1445
 except ImportError:
-    bt_part_material1445 = sys.modules['onshape_client.oas.models.bt_part_material1445']
+    bt_part_material1445 = sys.modules[
+        'onshape_client.oas.models.bt_part_material1445']
 
 
 class BTMParameterMaterial1388AllOf(ModelNormal):

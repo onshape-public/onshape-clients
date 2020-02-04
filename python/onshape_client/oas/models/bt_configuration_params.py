@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import configuration_entry
 except ImportError:
-    configuration_entry = sys.modules['onshape_client.oas.models.configuration_entry']
+    configuration_entry = sys.modules[
+        'onshape_client.oas.models.configuration_entry']
 
 
 class BTConfigurationParams(ModelNormal):

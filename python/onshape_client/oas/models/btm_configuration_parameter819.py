@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_tree_node20
 except ImportError:
-    bt_tree_node20 = sys.modules['onshape_client.oas.models.bt_tree_node20']
+    bt_tree_node20 = sys.modules[
+        'onshape_client.oas.models.bt_tree_node20']
 try:
     from onshape_client.oas.models import btm_configuration_parameter_boolean2550
 except ImportError:
-    btm_configuration_parameter_boolean2550 = sys.modules['onshape_client.oas.models.btm_configuration_parameter_boolean2550']
+    btm_configuration_parameter_boolean2550 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter_boolean2550']
 try:
     from onshape_client.oas.models import btm_configuration_parameter_enum105
 except ImportError:
-    btm_configuration_parameter_enum105 = sys.modules['onshape_client.oas.models.btm_configuration_parameter_enum105']
+    btm_configuration_parameter_enum105 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter_enum105']
 try:
     from onshape_client.oas.models import btm_configuration_parameter_quantity1826
 except ImportError:
-    btm_configuration_parameter_quantity1826 = sys.modules['onshape_client.oas.models.btm_configuration_parameter_quantity1826']
+    btm_configuration_parameter_quantity1826 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter_quantity1826']
 try:
     from onshape_client.oas.models import btm_configuration_parameter_string872
 except ImportError:
-    btm_configuration_parameter_string872 = sys.modules['onshape_client.oas.models.btm_configuration_parameter_string872']
+    btm_configuration_parameter_string872 = sys.modules[
+        'onshape_client.oas.models.btm_configuration_parameter_string872']
 
 
 class BTMConfigurationParameter819(ModelNormal):

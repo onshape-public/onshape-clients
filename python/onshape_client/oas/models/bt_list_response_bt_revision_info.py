@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_revision_info
 except ImportError:
-    bt_revision_info = sys.modules['onshape_client.oas.models.bt_revision_info']
+    bt_revision_info = sys.modules[
+        'onshape_client.oas.models.bt_revision_info']
 
 
 class BTListResponseBTRevisionInfo(ModelNormal):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_literal253
 except ImportError:
-    btp_literal253 = sys.modules['onshape_client.oas.models.btp_literal253']
+    btp_literal253 = sys.modules[
+        'onshape_client.oas.models.btp_literal253']
 try:
     from onshape_client.oas.models import btp_literal_array254_all_of
 except ImportError:
-    btp_literal_array254_all_of = sys.modules['onshape_client.oas.models.btp_literal_array254_all_of']
+    btp_literal_array254_all_of = sys.modules[
+        'onshape_client.oas.models.btp_literal_array254_all_of']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPLiteralArray254(ModelComposed):

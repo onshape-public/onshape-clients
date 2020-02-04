@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btm_parameter_reference2434
 except ImportError:
-    btm_parameter_reference2434 = sys.modules['onshape_client.oas.models.btm_parameter_reference2434']
+    btm_parameter_reference2434 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference2434']
 try:
     from onshape_client.oas.models import btm_parameter_reference_assembly938
 except ImportError:
-    btm_parameter_reference_assembly938 = sys.modules['onshape_client.oas.models.btm_parameter_reference_assembly938']
+    btm_parameter_reference_assembly938 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_assembly938']
 try:
     from onshape_client.oas.models import btm_parameter_reference_part_studio3302
 except ImportError:
-    btm_parameter_reference_part_studio3302 = sys.modules['onshape_client.oas.models.btm_parameter_reference_part_studio3302']
+    btm_parameter_reference_part_studio3302 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_part_studio3302']
 
 
 class BTMParameterReferenceWithConfiguration3028(ModelComposed):

@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference_blob1367
 except ImportError:
-    bt_parameter_spec_reference_blob1367 = sys.modules['onshape_client.oas.models.bt_parameter_spec_reference_blob1367']
+    bt_parameter_spec_reference_blob1367 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_reference_blob1367']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
-    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
+    bt_parameter_visibility_condition177 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_condition177']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTParameterSpecReferenceCADImport1792(ModelComposed):

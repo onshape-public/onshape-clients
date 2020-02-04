@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_object_id
 except ImportError:
-    bt_object_id = sys.modules['onshape_client.oas.models.bt_object_id']
+    bt_object_id = sys.modules[
+        'onshape_client.oas.models.bt_object_id']
 
 
 class BTNodeReference21(ModelNormal):

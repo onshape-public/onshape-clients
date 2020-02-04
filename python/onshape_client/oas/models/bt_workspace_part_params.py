@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_custom_property_definition_params
 except ImportError:
-    bt_custom_property_definition_params = sys.modules['onshape_client.oas.models.bt_custom_property_definition_params']
+    bt_custom_property_definition_params = sys.modules[
+        'onshape_client.oas.models.bt_custom_property_definition_params']
 try:
     from onshape_client.oas.models import bt_material_params
 except ImportError:
-    bt_material_params = sys.modules['onshape_client.oas.models.bt_material_params']
+    bt_material_params = sys.modules[
+        'onshape_client.oas.models.bt_material_params']
 try:
     from onshape_client.oas.models import bt_name_value_pair
 except ImportError:
-    bt_name_value_pair = sys.modules['onshape_client.oas.models.bt_name_value_pair']
+    bt_name_value_pair = sys.modules[
+        'onshape_client.oas.models.bt_name_value_pair']
 try:
     from onshape_client.oas.models import bt_part_appearance_params
 except ImportError:
-    bt_part_appearance_params = sys.modules['onshape_client.oas.models.bt_part_appearance_params']
+    bt_part_appearance_params = sys.modules[
+        'onshape_client.oas.models.bt_part_appearance_params']
 
 
 class BTWorkspacePartParams(ModelNormal):

@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
-    bt_parameter_spec6 = sys.modules['onshape_client.oas.models.bt_parameter_spec6']
+    bt_parameter_spec6 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec6']
 try:
     from onshape_client.oas.models import bt_parameter_spec_string175_all_of
 except ImportError:
-    bt_parameter_spec_string175_all_of = sys.modules['onshape_client.oas.models.bt_parameter_spec_string175_all_of']
+    bt_parameter_spec_string175_all_of = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec_string175_all_of']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
-    bt_parameter_visibility_condition177 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_condition177']
+    bt_parameter_visibility_condition177 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_condition177']
 try:
     from onshape_client.oas.models import bt_string_format_condition683
 except ImportError:
-    bt_string_format_condition683 = sys.modules['onshape_client.oas.models.bt_string_format_condition683']
+    bt_string_format_condition683 = sys.modules[
+        'onshape_client.oas.models.bt_string_format_condition683']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTParameterSpecString175(ModelComposed):

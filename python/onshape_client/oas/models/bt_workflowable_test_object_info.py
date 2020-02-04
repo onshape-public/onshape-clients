@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_published_workflow_id
 except ImportError:
-    bt_published_workflow_id = sys.modules['onshape_client.oas.models.bt_published_workflow_id']
+    bt_published_workflow_id = sys.modules[
+        'onshape_client.oas.models.bt_published_workflow_id']
 try:
     from onshape_client.oas.models import bt_workflow_property_info
 except ImportError:
-    bt_workflow_property_info = sys.modules['onshape_client.oas.models.bt_workflow_property_info']
+    bt_workflow_property_info = sys.modules[
+        'onshape_client.oas.models.bt_workflow_property_info']
 try:
     from onshape_client.oas.models import bt_workflow_snapshot_info
 except ImportError:
-    bt_workflow_snapshot_info = sys.modules['onshape_client.oas.models.bt_workflow_snapshot_info']
+    bt_workflow_snapshot_info = sys.modules[
+        'onshape_client.oas.models.bt_workflow_snapshot_info']
 
 
 class BTWorkflowableTestObjectInfo(ModelNormal):

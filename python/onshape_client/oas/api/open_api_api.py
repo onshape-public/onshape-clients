@@ -50,7 +50,10 @@ class OpenAPIApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __get_open_api(self, **kwargs):  # noqa: E501
+        def __get_open_api(
+            self,
+            **kwargs
+        ):
             """OpenAPI spec documentation for the Onshape REST API.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -58,34 +61,37 @@ class OpenAPIApi(object):
             >>> thread = api.get_open_api(async_req=True)
             >>> result = thread.get()
 
-            :param async_req bool: execute request asynchronously
-                Default is False.
-            :param str file_type: The type of file to return. Defaults to JSON.
-            :param str excluded_tags: If an operation contains an excluded tag, it is not returned from this endpoint.
-            :param str included_tags: Return only operations with tags included in includedTags.
-            :param bool include_deprecated: Include deprecated endpoints.
-            :param [str] documentation_status: Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to.
-            :param _return_http_data_only: response data without head status
-                code and headers. Default is True.
-            :param _preload_content: if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            :param _request_timeout: timeout setting for this request. If one
-                number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            :param _check_input_type: boolean specifying if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            :param _check_return_type: boolean specifying if type checking
-                should be done one the data received from the server.
-                Default is True.
-            :param _host_index: integer specifying the index of the server
-                that we want to use.
-                Default is 0.
-            :return: open_api.OpenAPI
-                If the method is called asynchronously, returns the request
-                thread.
+
+            Keyword Args:
+                file_type (str): The type of file to return. Defaults to JSON.. [optional] if omitted the server will use the default value of 'JSON'
+                excluded_tags (str): If an operation contains an excluded tag, it is not returned from this endpoint.. [optional]
+                included_tags (str): Return only operations with tags included in includedTags.. [optional]
+                include_deprecated (bool): Include deprecated endpoints.. [optional]
+                documentation_status ([str]): Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                open_api.OpenAPI
+                    If the method is called asynchronously, returns the request
+                    thread.
             """
             kwargs['async_req'] = kwargs.get(
                 'async_req', False
@@ -155,11 +161,16 @@ class OpenAPIApi(object):
                     },
                 },
                 'openapi_types': {
-                    'file_type': (str,),
-                    'excluded_tags': (str,),
-                    'included_tags': (str,),
-                    'include_deprecated': (bool,),
-                    'documentation_status': ([str],),
+                    'file_type':
+                        (str,),
+                    'excluded_tags':
+                        (str,),
+                    'included_tags':
+                        (str,),
+                    'include_deprecated':
+                        (bool,),
+                    'documentation_status':
+                        ([str],),
                 },
                 'attribute_map': {
                     'file_type': 'fileType',

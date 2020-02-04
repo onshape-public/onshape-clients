@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import discriminator
 except ImportError:
-    discriminator = sys.modules['onshape_client.oas.models.discriminator']
+    discriminator = sys.modules[
+        'onshape_client.oas.models.discriminator']
 try:
     from onshape_client.oas.models import external_documentation
 except ImportError:
-    external_documentation = sys.modules['onshape_client.oas.models.external_documentation']
+    external_documentation = sys.modules[
+        'onshape_client.oas.models.external_documentation']
 try:
     from onshape_client.oas.models import xml
 except ImportError:
-    xml = sys.modules['onshape_client.oas.models.xml']
+    xml = sys.modules[
+        'onshape_client.oas.models.xml']
 
 
 class Schema(ModelNormal):

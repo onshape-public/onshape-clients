@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_id_translation_result_info
 except ImportError:
-    bt_id_translation_result_info = sys.modules['onshape_client.oas.models.bt_id_translation_result_info']
+    bt_id_translation_result_info = sys.modules[
+        'onshape_client.oas.models.bt_id_translation_result_info']
 
 
 class BTIdTranslationInfo(ModelNormal):

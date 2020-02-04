@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_name261
 except ImportError:
-    btp_name261 = sys.modules['onshape_client.oas.models.btp_name261']
+    btp_name261 = sys.modules[
+        'onshape_client.oas.models.btp_name261']
 
 
 class BTPTypeNameUser292AllOf(ModelNormal):

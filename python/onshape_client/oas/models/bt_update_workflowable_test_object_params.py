@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_property_value_param
 except ImportError:
-    bt_property_value_param = sys.modules['onshape_client.oas.models.bt_property_value_param']
+    bt_property_value_param = sys.modules[
+        'onshape_client.oas.models.bt_property_value_param']
 
 
 class BTUpdateWorkflowableTestObjectParams(ModelNormal):

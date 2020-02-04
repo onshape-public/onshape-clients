@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_statement_constant_declaration273
 except ImportError:
-    btp_statement_constant_declaration273 = sys.modules['onshape_client.oas.models.btp_statement_constant_declaration273']
+    btp_statement_constant_declaration273 = sys.modules[
+        'onshape_client.oas.models.btp_statement_constant_declaration273']
 
 
 class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):

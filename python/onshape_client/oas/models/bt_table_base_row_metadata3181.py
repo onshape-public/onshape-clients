@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_base_sm_joint_table_row_metadata2232
 except ImportError:
-    bt_base_sm_joint_table_row_metadata2232 = sys.modules['onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
+    bt_base_sm_joint_table_row_metadata2232 = sys.modules[
+        'onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table_row_metadata1300
 except ImportError:
-    bt_bill_of_materials_table_row_metadata1300 = sys.modules['onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300']
+    bt_bill_of_materials_table_row_metadata1300 = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300']
 try:
     from onshape_client.oas.models import bt_table_base_cross_highlight_data2609
 except ImportError:
-    bt_table_base_cross_highlight_data2609 = sys.modules['onshape_client.oas.models.bt_table_base_cross_highlight_data2609']
+    bt_table_base_cross_highlight_data2609 = sys.modules[
+        'onshape_client.oas.models.bt_table_base_cross_highlight_data2609']
 
 
 class BTTableBaseRowMetadata3181(ModelNormal):

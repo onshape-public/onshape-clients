@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_import136
 except ImportError:
-    btm_import136 = sys.modules['onshape_client.oas.models.btm_import136']
+    btm_import136 = sys.modules[
+        'onshape_client.oas.models.btm_import136']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_parameter_derived864_all_of
 except ImportError:
-    btm_parameter_derived864_all_of = sys.modules['onshape_client.oas.models.btm_parameter_derived864_all_of']
+    btm_parameter_derived864_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_derived864_all_of']
 try:
     from onshape_client.oas.models import btp_module_id235
 except ImportError:
-    btp_module_id235 = sys.modules['onshape_client.oas.models.btp_module_id235']
+    btp_module_id235 = sys.modules[
+        'onshape_client.oas.models.btp_module_id235']
 
 
 class BTMParameterDerived864(ModelComposed):

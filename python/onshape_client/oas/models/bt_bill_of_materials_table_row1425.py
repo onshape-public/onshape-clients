@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table_row1425_all_of
 except ImportError:
-    bt_bill_of_materials_table_row1425_all_of = sys.modules['onshape_client.oas.models.bt_bill_of_materials_table_row1425_all_of']
+    bt_bill_of_materials_table_row1425_all_of = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_table_row1425_all_of']
 try:
     from onshape_client.oas.models import bt_bill_of_materials_unique_item_id2029
 except ImportError:
-    bt_bill_of_materials_unique_item_id2029 = sys.modules['onshape_client.oas.models.bt_bill_of_materials_unique_item_id2029']
+    bt_bill_of_materials_unique_item_id2029 = sys.modules[
+        'onshape_client.oas.models.bt_bill_of_materials_unique_item_id2029']
 try:
     from onshape_client.oas.models import bt_table_base_row_metadata3181
 except ImportError:
-    bt_table_base_row_metadata3181 = sys.modules['onshape_client.oas.models.bt_table_base_row_metadata3181']
+    bt_table_base_row_metadata3181 = sys.modules[
+        'onshape_client.oas.models.bt_table_base_row_metadata3181']
 try:
     from onshape_client.oas.models import bt_table_cell1114
 except ImportError:
-    bt_table_cell1114 = sys.modules['onshape_client.oas.models.bt_table_cell1114']
+    bt_table_cell1114 = sys.modules[
+        'onshape_client.oas.models.bt_table_cell1114']
 try:
     from onshape_client.oas.models import bt_table_row1054
 except ImportError:
-    bt_table_row1054 = sys.modules['onshape_client.oas.models.bt_table_row1054']
+    bt_table_row1054 = sys.modules[
+        'onshape_client.oas.models.bt_table_row1054']
 try:
     from onshape_client.oas.models import bt_tree_node20
 except ImportError:
-    bt_tree_node20 = sys.modules['onshape_client.oas.models.bt_tree_node20']
+    bt_tree_node20 = sys.modules[
+        'onshape_client.oas.models.bt_tree_node20']
 
 
 class BTBillOfMaterialsTableRow1425(ModelComposed):

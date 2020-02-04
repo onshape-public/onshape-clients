@@ -32,39 +32,48 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_beta_capability_user_info
 except ImportError:
-    bt_beta_capability_user_info = sys.modules['onshape_client.oas.models.bt_beta_capability_user_info']
+    bt_beta_capability_user_info = sys.modules[
+        'onshape_client.oas.models.bt_beta_capability_user_info']
 try:
     from onshape_client.oas.models import bt_company_summary_info
 except ImportError:
-    bt_company_summary_info = sys.modules['onshape_client.oas.models.bt_company_summary_info']
+    bt_company_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_company_summary_info']
 try:
     from onshape_client.oas.models import bt_company_user_summary_info
 except ImportError:
-    bt_company_user_summary_info = sys.modules['onshape_client.oas.models.bt_company_user_summary_info']
+    bt_company_user_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_company_user_summary_info']
 try:
     from onshape_client.oas.models import bt_user_admin_summary_info
 except ImportError:
-    bt_user_admin_summary_info = sys.modules['onshape_client.oas.models.bt_user_admin_summary_info']
+    bt_user_admin_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_admin_summary_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
-    bt_user_basic_summary_info = sys.modules['onshape_client.oas.models.bt_user_basic_summary_info']
+    bt_user_basic_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_basic_summary_info']
 try:
     from onshape_client.oas.models import bt_user_info
 except ImportError:
-    bt_user_info = sys.modules['onshape_client.oas.models.bt_user_info']
+    bt_user_info = sys.modules[
+        'onshape_client.oas.models.bt_user_info']
 try:
     from onshape_client.oas.models import bt_user_o_auth2_summary_info
 except ImportError:
-    bt_user_o_auth2_summary_info = sys.modules['onshape_client.oas.models.bt_user_o_auth2_summary_info']
+    bt_user_o_auth2_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_o_auth2_summary_info']
 try:
     from onshape_client.oas.models import bt_user_summary_info_all_of
 except ImportError:
-    bt_user_summary_info_all_of = sys.modules['onshape_client.oas.models.bt_user_summary_info_all_of']
+    bt_user_summary_info_all_of = sys.modules[
+        'onshape_client.oas.models.bt_user_summary_info_all_of']
 try:
     from onshape_client.oas.models import global_permission_info
 except ImportError:
-    global_permission_info = sys.modules['onshape_client.oas.models.global_permission_info']
+    global_permission_info = sys.modules[
+        'onshape_client.oas.models.global_permission_info']
 
 
 class BTUserSummaryInfo(ModelComposed):

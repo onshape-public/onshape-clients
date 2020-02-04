@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_editing_logic2350
 except ImportError:
-    bt_editing_logic2350 = sys.modules['onshape_client.oas.models.bt_editing_logic2350']
+    bt_editing_logic2350 = sys.modules[
+        'onshape_client.oas.models.bt_editing_logic2350']
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules['onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules[
+        'onshape_client.oas.models.bt_location_info226']
 try:
     from onshape_client.oas.models import bt_parameter_group_spec3469
 except ImportError:
-    bt_parameter_group_spec3469 = sys.modules['onshape_client.oas.models.bt_parameter_group_spec3469']
+    bt_parameter_group_spec3469 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_group_spec3469']
 try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
-    bt_parameter_spec6 = sys.modules['onshape_client.oas.models.bt_parameter_spec6']
+    bt_parameter_spec6 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_spec6']
 
 
 class BTFeatureSpec129(ModelNormal):

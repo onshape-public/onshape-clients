@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 try:
     from onshape_client.oas.models import btp_statement_block271_all_of
 except ImportError:
-    btp_statement_block271_all_of = sys.modules['onshape_client.oas.models.btp_statement_block271_all_of']
+    btp_statement_block271_all_of = sys.modules[
+        'onshape_client.oas.models.btp_statement_block271_all_of']
 
 
 class BTPStatementBlock271(ModelComposed):

@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_named_view_info
 except ImportError:
-    bt_named_view_info = sys.modules['onshape_client.oas.models.bt_named_view_info']
+    bt_named_view_info = sys.modules[
+        'onshape_client.oas.models.bt_named_view_info']
 
 
 class BTNamedViewsInfo(ModelNormal):

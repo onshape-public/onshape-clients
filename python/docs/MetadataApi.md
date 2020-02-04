@@ -35,29 +35,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-eid = 'eid_example' # str | 
-otype = 'otype_example' # str | 
-oid = 'oid_example' # str | 
-pid = 'pid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    eid = 'eid_example' # str | 
+    otype = 'otype_example' # str | 
+    oid = 'oid_example' # str | 
+    pid = 'pid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -112,28 +114,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -187,29 +191,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-pid = 'pid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    pid = 'pid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -264,26 +270,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_wv_es_metadata(did, wv, wvid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wv_es_metadata(did, wv, wvid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_wv_es_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wv_es_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -335,26 +343,28 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_wv_metadata(did, wv, wvid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wv_metadata(did, wv, wvid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -406,28 +416,30 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-configuration = 'configuration_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.get_wve_metadata(did, wv, wvid, eid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wve_metadata(did, wv, wvid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.get_wve_metadata(did, wv, wvid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wve_metadata(did, wv, wvid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -481,29 +493,31 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-vid = 'vid_example' # str | 
-eid = 'eid_example' # str | 
-otype = 'otype_example' # str | 
-oid = 'oid_example' # str | 
-pid = 'pid_example' # str | 
-body = 'body_example' # str | 
-link_document_id = 'link_document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    vid = 'vid_example' # str | 
+    eid = 'eid_example' # str | 
+    otype = 'otype_example' # str | 
+    oid = 'oid_example' # str | 
+    pid = 'pid_example' # str | 
+    body = 'body_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body, link_document_id=link_document_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.update_veop_standard_content_part_metadata(did, vid, eid, otype, oid, pid, body, link_document_id=link_document_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_veop_standard_content_part_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -558,18 +572,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-body = 'body_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.update_wv_metadata(did, wv, wvid, body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->update_wv_metadata: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    body = 'body_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.update_wv_metadata(did, wv, wvid, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_wv_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -620,19 +636,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wv = 'wv_example' # str | 
-wvid = 'wvid_example' # str | 
-eid = 'eid_example' # str | 
-body = 'body_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.update_wve_metadata(did, wv, wvid, eid, body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wv = 'wv_example' # str | 
+    wvid = 'wvid_example' # str | 
+    eid = 'eid_example' # str | 
+    body = 'body_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.update_wve_metadata(did, wv, wvid, eid, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -684,21 +702,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.MetadataApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-pid = 'pid_example' # str | 
-sub_resource = 'sub_resource_example' # str | 
-body = 'body_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    pid = 'pid_example' # str | 
+    sub_resource = 'sub_resource_example' # str | 
+    body = 'body_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
 ```
 
 ### Parameters

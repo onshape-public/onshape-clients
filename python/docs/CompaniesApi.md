@@ -21,20 +21,22 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.CompaniesApi()
-uid = 'uid_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.CompaniesApi(api_client)
+    uid = 'uid_example' # str |  (optional)
 active_only = True # bool |  (optional) if omitted the server will use the default value of True
 include_all = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get User companies.
-    api_response = api_instance.find_company(uid=uid, active_only=active_only, include_all=include_all)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling CompaniesApi->find_company: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get User companies.
+        api_response = api_instance.find_company(uid=uid, active_only=active_only, include_all=include_all)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling CompaniesApi->find_company: %s\n" % e)
 ```
 
 ### Parameters
@@ -78,17 +80,19 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.CompaniesApi()
-cid = 'cid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get company.
-    api_response = api_instance.get_company(cid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling CompaniesApi->get_company: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.CompaniesApi(api_client)
+    cid = 'cid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get company.
+        api_response = api_instance.get_company(cid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling CompaniesApi->get_company: %s\n" % e)
 ```
 
 ### Parameters

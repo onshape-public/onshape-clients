@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **commit_transaction**
-> bt_app_element_modify_info.BTAppElementModifyInfo commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params)
+> bt_app_element_modify_info.BTAppElementModifyInfo commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params)
 
 Commit Transaction
 
@@ -38,21 +38,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wid = 'wid_example' # str | 
-tid = 'tid_example' # str | 
-bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params = onshape_client.oas.BTAppElementCommitTransactionParams() # bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Commit Transaction
-    api_response = api_instance.commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->commit_transaction: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wid = 'wid_example' # str | 
+    tid = 'tid_example' # str | 
+    bt_app_element_commit_transaction_params = onshape_client.oas.BTAppElementCommitTransactionParams() # bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Commit Transaction
+        api_response = api_instance.commit_transaction(did, eid, wid, tid, bt_app_element_commit_transaction_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->commit_transaction: %s\n" % e)
 ```
 
 ### Parameters
@@ -63,7 +65,7 @@ Name | Type | Description  | Notes
  **eid** | **str**|  |
  **wid** | **str**|  |
  **tid** | **str**|  |
- **bt_app_element_commit_transaction_params_bt_app_element_commit_transaction_params** | [**bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams**](BTAppElementCommitTransactionParams.md)|  |
+ **bt_app_element_commit_transaction_params** | [**bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams**](BTAppElementCommitTransactionParams.md)|  |
 
 ### Return type
 
@@ -86,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element**
-> bt_app_element_modify_info.BTAppElementModifyInfo create_element(did, wid, bt_app_element_params_bt_app_element_params)
+> bt_app_element_modify_info.BTAppElementModifyInfo create_element(did, wid, bt_app_element_params)
 
 Create Element.
 
@@ -104,19 +106,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-bt_app_element_params_bt_app_element_params = onshape_client.oas.BTAppElementParams() # bt_app_element_params.BTAppElementParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Element.
-    api_response = api_instance.create_element(did, wid, bt_app_element_params_bt_app_element_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->create_element: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_app_element_params = onshape_client.oas.BTAppElementParams() # bt_app_element_params.BTAppElementParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Element.
+        api_response = api_instance.create_element(did, wid, bt_app_element_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->create_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -125,7 +129,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
- **bt_app_element_params_bt_app_element_params** | [**bt_app_element_params.BTAppElementParams**](BTAppElementParams.md)|  |
+ **bt_app_element_params** | [**bt_app_element_params.BTAppElementParams**](BTAppElementParams.md)|  |
 
 ### Return type
 
@@ -148,7 +152,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_reference**
-> bt_app_element_reference_info.BTAppElementReferenceInfo create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params_bt_app_element_reference_params)
+> bt_app_element_reference_info.BTAppElementReferenceInfo create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params)
 
 Create Reference
 
@@ -166,21 +170,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-bt_app_element_reference_params_bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams() # bt_app_element_reference_params.BTAppElementReferenceParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Reference
-    api_response = api_instance.create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params_bt_app_element_reference_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->create_reference: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams() # bt_app_element_reference_params.BTAppElementReferenceParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Reference
+        api_response = api_instance.create_reference(did, eid, wvm, wvmid, bt_app_element_reference_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->create_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -191,7 +197,7 @@ Name | Type | Description  | Notes
  **eid** | **str**|  |
  **wvm** | **str**|  |
  **wvmid** | **str**|  |
- **bt_app_element_reference_params_bt_app_element_reference_params** | [**bt_app_element_reference_params.BTAppElementReferenceParams**](BTAppElementReferenceParams.md)|  |
+ **bt_app_element_reference_params** | [**bt_app_element_reference_params.BTAppElementReferenceParams**](BTAppElementReferenceParams.md)|  |
 
 ### Return type
 
@@ -232,33 +238,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-sid = 'sid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    sid = 'sid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 parent_change_id = 'parent_change_id_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Delete a Sub-element
-    api_response = api_instance.delete_app_element_content(did, eid, wvm, wvmid, sid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->delete_app_element_content: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete a Sub-element
+        api_response = api_instance.delete_app_element_content(did, eid, wvm, wvmid, sid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->delete_app_element_content: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Delete a Sub-element
-    api_response = api_instance.delete_app_element_content(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->delete_app_element_content: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete a Sub-element
+        api_response = api_instance.delete_app_element_content(did, eid, wvm, wvmid, sid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->delete_app_element_content: %s\n" % e)
 ```
 
 ### Parameters
@@ -313,33 +321,35 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-rid = 'rid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    rid = 'rid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 parent_change_id = 'parent_change_id_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Delete Reference
-    api_response = api_instance.delete_reference(did, eid, wvm, wvmid, rid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->delete_reference: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Reference
+        api_response = api_instance.delete_reference(did, eid, wvm, wvmid, rid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->delete_reference: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Delete Reference
-    api_response = api_instance.delete_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->delete_reference: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete Reference
+        api_response = api_instance.delete_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, description=description)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->delete_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -394,20 +404,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get History
-    api_response = api_instance.get_app_element_history(did, eid, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->get_app_element_history: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get History
+        api_response = api_instance.get_app_element_history(did, eid, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->get_app_element_history: %s\n" % e)
 ```
 
 ### Parameters
@@ -458,34 +470,36 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 change_id = 'change_id_example' # str |  (optional)
 base_change_id = 'base_change_id_example' # str |  (optional)
 subelement_id = 'subelement_id_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Content
-    api_response = api_instance.get_sub_element_content(did, eid, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->get_sub_element_content: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Content
+        api_response = api_instance.get_sub_element_content(did, eid, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->get_sub_element_content: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Content
-    api_response = api_instance.get_sub_element_content(did, eid, wvm, wvmid, transaction_id=transaction_id, change_id=change_id, base_change_id=base_change_id, subelement_id=subelement_id, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->get_sub_element_content: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Content
+        api_response = api_instance.get_sub_element_content(did, eid, wvm, wvmid, transaction_id=transaction_id, change_id=change_id, base_change_id=base_change_id, subelement_id=subelement_id, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->get_sub_element_content: %s\n" % e)
 ```
 
 ### Parameters
@@ -541,31 +555,33 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 change_id = 'change_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get Sub-element IDs
-    api_response = api_instance.get_subelement_ids(did, eid, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->get_subelement_ids: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Sub-element IDs
+        api_response = api_instance.get_subelement_ids(did, eid, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->get_subelement_ids: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get Sub-element IDs
-    api_response = api_instance.get_subelement_ids(did, eid, wvm, wvmid, transaction_id=transaction_id, change_id=change_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->get_subelement_ids: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get Sub-element IDs
+        api_response = api_instance.get_subelement_ids(did, eid, wvm, wvmid, transaction_id=transaction_id, change_id=change_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->get_subelement_ids: %s\n" % e)
 ```
 
 ### Parameters
@@ -618,34 +634,36 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-rid = 'rid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    rid = 'rid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 parent_change_id = 'parent_change_id_example' # str |  (optional)
 include_internal = False # bool |  (optional) if omitted the server will use the default value of False
 link_document_id = 'link_document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Resolve Reference
-    api_response = api_instance.resolve_reference(did, eid, wvm, wvmid, rid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->resolve_reference: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Resolve Reference
+        api_response = api_instance.resolve_reference(did, eid, wvm, wvmid, rid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->resolve_reference: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Resolve Reference
-    api_response = api_instance.resolve_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->resolve_reference: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Resolve Reference
+        api_response = api_instance.resolve_reference(did, eid, wvm, wvmid, rid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->resolve_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -701,34 +719,36 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-transaction_id = 'transaction_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    transaction_id = 'transaction_id_example' # str |  (optional)
 parent_change_id = 'parent_change_id_example' # str |  (optional)
 include_internal = False # bool |  (optional) if omitted the server will use the default value of False
 link_document_id = 'link_document_id_example' # str |  (optional)
 reference_ids = '' # str |  (optional) if omitted the server will use the default value of ''
 
-# example passing only required values which don't have defaults set
-try:
-    # Resolve references.
-    api_response = api_instance.resolve_references(did, eid, wvm, wvmid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Resolve references.
+        api_response = api_instance.resolve_references(did, eid, wvm, wvmid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Resolve references.
-    api_response = api_instance.resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Resolve references.
+        api_response = api_instance.resolve_references(did, eid, wvm, wvmid, transaction_id=transaction_id, parent_change_id=parent_change_id, include_internal=include_internal, link_document_id=link_document_id, reference_ids=reference_ids)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->resolve_references: %s\n" % e)
 ```
 
 ### Parameters
@@ -766,7 +786,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_transaction**
-> bt_app_element_modify_info.BTAppElementModifyInfo start_transaction(did, eid, wid, bt_app_element_start_transaction_params_bt_app_element_start_transaction_params)
+> bt_app_element_modify_info.BTAppElementModifyInfo start_transaction(did, eid, wid, bt_app_element_start_transaction_params)
 
 Start Transaction
 
@@ -784,20 +804,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wid = 'wid_example' # str | 
-bt_app_element_start_transaction_params_bt_app_element_start_transaction_params = onshape_client.oas.BTAppElementStartTransactionParams() # bt_app_element_start_transaction_params.BTAppElementStartTransactionParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Start Transaction
-    api_response = api_instance.start_transaction(did, eid, wid, bt_app_element_start_transaction_params_bt_app_element_start_transaction_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->start_transaction: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_app_element_start_transaction_params = onshape_client.oas.BTAppElementStartTransactionParams() # bt_app_element_start_transaction_params.BTAppElementStartTransactionParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Start Transaction
+        api_response = api_instance.start_transaction(did, eid, wid, bt_app_element_start_transaction_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->start_transaction: %s\n" % e)
 ```
 
 ### Parameters
@@ -807,7 +829,7 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **eid** | **str**|  |
  **wid** | **str**|  |
- **bt_app_element_start_transaction_params_bt_app_element_start_transaction_params** | [**bt_app_element_start_transaction_params.BTAppElementStartTransactionParams**](BTAppElementStartTransactionParams.md)|  |
+ **bt_app_element_start_transaction_params** | [**bt_app_element_start_transaction_params.BTAppElementStartTransactionParams**](BTAppElementStartTransactionParams.md)|  |
 
 ### Return type
 
@@ -830,7 +852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app_element**
-> bt_app_element_modify_info.BTAppElementModifyInfo update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params_bt_app_element_update_params)
+> bt_app_element_modify_info.BTAppElementModifyInfo update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params)
 
 Update Element
 
@@ -848,21 +870,23 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-bt_app_element_update_params_bt_app_element_update_params = onshape_client.oas.BTAppElementUpdateParams() # bt_app_element_update_params.BTAppElementUpdateParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Update Element
-    api_response = api_instance.update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params_bt_app_element_update_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->update_app_element: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    bt_app_element_update_params = onshape_client.oas.BTAppElementUpdateParams() # bt_app_element_update_params.BTAppElementUpdateParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Update Element
+        api_response = api_instance.update_app_element(did, eid, wvm, wvmid, bt_app_element_update_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->update_app_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -873,7 +897,7 @@ Name | Type | Description  | Notes
  **eid** | **str**|  |
  **wvm** | **str**|  |
  **wvmid** | **str**|  |
- **bt_app_element_update_params_bt_app_element_update_params** | [**bt_app_element_update_params.BTAppElementUpdateParams**](BTAppElementUpdateParams.md)|  |
+ **bt_app_element_update_params** | [**bt_app_element_update_params.BTAppElementUpdateParams**](BTAppElementUpdateParams.md)|  |
 
 ### Return type
 
@@ -896,7 +920,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_reference**
-> bt_app_element_reference_info.BTAppElementReferenceInfo update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params_bt_app_element_reference_params)
+> bt_app_element_reference_info.BTAppElementReferenceInfo update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
 
 Update Reference
 
@@ -914,22 +938,24 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.AppElementsApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-eid = 'eid_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-rid = 'rid_example' # str | 
-bt_app_element_reference_params_bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams() # bt_app_element_reference_params.BTAppElementReferenceParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Update Reference
-    api_response = api_instance.update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params_bt_app_element_reference_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling AppElementsApi->update_reference: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.AppElementsApi(api_client)
+    did = 'did_example' # str | 
+    eid = 'eid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    rid = 'rid_example' # str | 
+    bt_app_element_reference_params = onshape_client.oas.BTAppElementReferenceParams() # bt_app_element_reference_params.BTAppElementReferenceParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Update Reference
+        api_response = api_instance.update_reference(did, eid, wvm, wvmid, rid, bt_app_element_reference_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling AppElementsApi->update_reference: %s\n" % e)
 ```
 
 ### Parameters
@@ -941,7 +967,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**|  |
  **wvmid** | **str**|  |
  **rid** | **str**|  |
- **bt_app_element_reference_params_bt_app_element_reference_params** | [**bt_app_element_reference_params.BTAppElementReferenceParams**](BTAppElementReferenceParams.md)|  |
+ **bt_app_element_reference_params** | [**bt_app_element_reference_params.BTAppElementReferenceParams**](BTAppElementReferenceParams.md)|  |
 
 ### Return type
 

@@ -32,35 +32,43 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import customer_card_collection
 except ImportError:
-    customer_card_collection = sys.modules['onshape_client.oas.models.customer_card_collection']
+    customer_card_collection = sys.modules[
+        'onshape_client.oas.models.customer_card_collection']
 try:
     from onshape_client.oas.models import customer_subscription_collection
 except ImportError:
-    customer_subscription_collection = sys.modules['onshape_client.oas.models.customer_subscription_collection']
+    customer_subscription_collection = sys.modules[
+        'onshape_client.oas.models.customer_subscription_collection']
 try:
     from onshape_client.oas.models import discount
 except ImportError:
-    discount = sys.modules['onshape_client.oas.models.discount']
+    discount = sys.modules[
+        'onshape_client.oas.models.discount']
 try:
     from onshape_client.oas.models import external_account
 except ImportError:
-    external_account = sys.modules['onshape_client.oas.models.external_account']
+    external_account = sys.modules[
+        'onshape_client.oas.models.external_account']
 try:
     from onshape_client.oas.models import external_account_collection
 except ImportError:
-    external_account_collection = sys.modules['onshape_client.oas.models.external_account_collection']
+    external_account_collection = sys.modules[
+        'onshape_client.oas.models.external_account_collection']
 try:
     from onshape_client.oas.models import next_recurring_charge
 except ImportError:
-    next_recurring_charge = sys.modules['onshape_client.oas.models.next_recurring_charge']
+    next_recurring_charge = sys.modules[
+        'onshape_client.oas.models.next_recurring_charge']
 try:
     from onshape_client.oas.models import shipping_details
 except ImportError:
-    shipping_details = sys.modules['onshape_client.oas.models.shipping_details']
+    shipping_details = sys.modules[
+        'onshape_client.oas.models.shipping_details']
 try:
     from onshape_client.oas.models import subscription
 except ImportError:
-    subscription = sys.modules['onshape_client.oas.models.subscription']
+    subscription = sys.modules[
+        'onshape_client.oas.models.subscription']
 
 
 class Customer(ModelNormal):

@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_configured_value1341
 except ImportError:
-    btm_configured_value1341 = sys.modules['onshape_client.oas.models.btm_configured_value1341']
+    btm_configured_value1341 = sys.modules[
+        'onshape_client.oas.models.btm_configured_value1341']
 try:
     from onshape_client.oas.models import btm_configured_value_by_boolean1501_all_of
 except ImportError:
-    btm_configured_value_by_boolean1501_all_of = sys.modules['onshape_client.oas.models.btm_configured_value_by_boolean1501_all_of']
+    btm_configured_value_by_boolean1501_all_of = sys.modules[
+        'onshape_client.oas.models.btm_configured_value_by_boolean1501_all_of']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 
 
 class BTMConfiguredValueByBoolean1501(ModelComposed):

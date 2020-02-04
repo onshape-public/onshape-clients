@@ -22,25 +22,27 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.UsersApi()
-uid = 'uid_example' # str | 
-includematerials = True # bool |  (optional) if omitted the server will use the default value of True
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.UsersApi(api_client)
+    uid = 'uid_example' # str | 
+    includematerials = True # bool |  (optional) if omitted the server will use the default value of True
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_user_settings(uid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling UsersApi->get_user_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_user_settings(uid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling UsersApi->get_user_settings: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_user_settings(uid, includematerials=includematerials)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling UsersApi->get_user_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_user_settings(uid, includematerials=includematerials)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling UsersApi->get_user_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -83,17 +85,19 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.UsersApi()
-includematerials = True # bool |  (optional) if omitted the server will use the default value of True
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.UsersApi(api_client)
+    includematerials = True # bool |  (optional) if omitted the server will use the default value of True
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_user_settings_current_logged_in_user(includematerials=includematerials)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling UsersApi->get_user_settings_current_logged_in_user: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_user_settings_current_logged_in_user(includematerials=includematerials)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling UsersApi->get_user_settings_current_logged_in_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -135,15 +139,17 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.UsersApi()
-
-# example, this endpoint has no required or optional parameters
-try:
-    api_response = api_instance.session_info()
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling UsersApi->session_info: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.UsersApi(api_client)
+    
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.session_info()
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling UsersApi->session_info: %s\n" % e)
 ```
 
 ### Parameters

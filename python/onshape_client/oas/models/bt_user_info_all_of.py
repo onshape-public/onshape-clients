@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_billing_plan_info
 except ImportError:
-    bt_billing_plan_info = sys.modules['onshape_client.oas.models.bt_billing_plan_info']
+    bt_billing_plan_info = sys.modules[
+        'onshape_client.oas.models.bt_billing_plan_info']
 try:
     from onshape_client.oas.models import bt_device_login_secret_info
 except ImportError:
-    bt_device_login_secret_info = sys.modules['onshape_client.oas.models.bt_device_login_secret_info']
+    bt_device_login_secret_info = sys.modules[
+        'onshape_client.oas.models.bt_device_login_secret_info']
 try:
     from onshape_client.oas.models import bt_purchase_info
 except ImportError:
-    bt_purchase_info = sys.modules['onshape_client.oas.models.bt_purchase_info']
+    bt_purchase_info = sys.modules[
+        'onshape_client.oas.models.bt_purchase_info']
 try:
     from onshape_client.oas.models import bt_session_credential_info
 except ImportError:
-    bt_session_credential_info = sys.modules['onshape_client.oas.models.bt_session_credential_info']
+    bt_session_credential_info = sys.modules[
+        'onshape_client.oas.models.bt_session_credential_info']
 try:
     from onshape_client.oas.models import bt_trial_info
 except ImportError:
-    bt_trial_info = sys.modules['onshape_client.oas.models.bt_trial_info']
+    bt_trial_info = sys.modules[
+        'onshape_client.oas.models.bt_trial_info']
 
 
 class BTUserInfoAllOf(ModelNormal):

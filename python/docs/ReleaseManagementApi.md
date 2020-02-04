@@ -30,23 +30,25 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ReleaseManagementApi(onshape_client.oas.ApiClient(configuration))
-wfid = 'wfid_example' # str | 
-revision_id = 'revision_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ReleaseManagementApi(api_client)
+    wfid = 'wfid_example' # str | 
+    revision_id = 'revision_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_instance.create_obsoletion_package(wfid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->create_obsoletion_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.create_obsoletion_package(wfid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->create_obsoletion_package: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_instance.create_obsoletion_package(wfid, revision_id=revision_id)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->create_obsoletion_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.create_obsoletion_package(wfid, revision_id=revision_id)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->create_obsoletion_package: %s\n" % e)
 ```
 
 ### Parameters
@@ -77,7 +79,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_release_package**
-> create_release_package(wfid, bt_release_package_params_bt_release_package_params)
+> create_release_package(wfid, bt_release_package_params)
 
 
 
@@ -95,16 +97,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ReleaseManagementApi(onshape_client.oas.ApiClient(configuration))
-wfid = 'wfid_example' # str | 
-bt_release_package_params_bt_release_package_params = onshape_client.oas.BTReleasePackageParams() # bt_release_package_params.BTReleasePackageParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    api_instance.create_release_package(wfid, bt_release_package_params_bt_release_package_params)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->create_release_package: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ReleaseManagementApi(api_client)
+    wfid = 'wfid_example' # str | 
+    bt_release_package_params = onshape_client.oas.BTReleasePackageParams() # bt_release_package_params.BTReleasePackageParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.create_release_package(wfid, bt_release_package_params)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->create_release_package: %s\n" % e)
 ```
 
 ### Parameters
@@ -112,7 +116,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wfid** | **str**|  |
- **bt_release_package_params_bt_release_package_params** | [**bt_release_package_params.BTReleasePackageParams**](BTReleasePackageParams.md)|  |
+ **bt_release_package_params** | [**bt_release_package_params.BTReleasePackageParams**](BTReleasePackageParams.md)|  |
 
 ### Return type
 
@@ -153,17 +157,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ReleaseManagementApi(onshape_client.oas.ApiClient(configuration))
-document_id = 'document_id_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ReleaseManagementApi(api_client)
+    document_id = 'document_id_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_company_release_workflow(document_id=document_id)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->get_company_release_workflow: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_company_release_workflow(document_id=document_id)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->get_company_release_workflow: %s\n" % e)
 ```
 
 ### Parameters
@@ -211,25 +217,27 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ReleaseManagementApi(onshape_client.oas.ApiClient(configuration))
-rpid = 'rpid_example' # str | 
-detailed = False # bool |  (optional) if omitted the server will use the default value of False
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ReleaseManagementApi(api_client)
+    rpid = 'rpid_example' # str | 
+    detailed = False # bool |  (optional) if omitted the server will use the default value of False
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.get_release_package(rpid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->get_release_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_release_package(rpid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->get_release_package: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.get_release_package(rpid, detailed=detailed)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->get_release_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.get_release_package(rpid, detailed=detailed)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->get_release_package: %s\n" % e)
 ```
 
 ### Parameters
@@ -260,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_release_package**
-> bt_release_package_info.BTReleasePackageInfo update_release_package(rpid, bt_update_release_package_params_bt_update_release_package_params)
+> bt_release_package_info.BTReleasePackageInfo update_release_package(rpid, bt_update_release_package_params)
 
 
 
@@ -278,27 +286,29 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.ReleaseManagementApi(onshape_client.oas.ApiClient(configuration))
-rpid = 'rpid_example' # str | 
-bt_update_release_package_params_bt_update_release_package_params = onshape_client.oas.BTUpdateReleasePackageParams() # bt_update_release_package_params.BTUpdateReleasePackageParams | 
-action = 'UPDATE' # str |  (optional) if omitted the server will use the default value of 'UPDATE'
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ReleaseManagementApi(api_client)
+    rpid = 'rpid_example' # str | 
+    bt_update_release_package_params = onshape_client.oas.BTUpdateReleasePackageParams() # bt_update_release_package_params.BTUpdateReleasePackageParams | 
+    action = 'UPDATE' # str |  (optional) if omitted the server will use the default value of 'UPDATE'
 wfaction = 'wfaction_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    api_response = api_instance.update_release_package(rpid, bt_update_release_package_params_bt_update_release_package_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->update_release_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_release_package(rpid, bt_update_release_package_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->update_release_package: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    api_response = api_instance.update_release_package(rpid, bt_update_release_package_params_bt_update_release_package_params, action=action, wfaction=wfaction)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ReleaseManagementApi->update_release_package: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.update_release_package(rpid, bt_update_release_package_params, action=action, wfaction=wfaction)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ReleaseManagementApi->update_release_package: %s\n" % e)
 ```
 
 ### Parameters
@@ -306,7 +316,7 @@ except onshape_client.oas.ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rpid** | **str**|  |
- **bt_update_release_package_params_bt_update_release_package_params** | [**bt_update_release_package_params.BTUpdateReleasePackageParams**](BTUpdateReleasePackageParams.md)|  |
+ **bt_update_release_package_params** | [**bt_update_release_package_params.BTUpdateReleasePackageParams**](BTUpdateReleasePackageParams.md)|  |
  **action** | **str**|  | [optional] if omitted the server will use the default value of 'UPDATE'
  **wfaction** | **str**|  | [optional]
 

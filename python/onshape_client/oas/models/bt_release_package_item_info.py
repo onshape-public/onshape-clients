@@ -32,11 +32,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_metadata_property_info
 except ImportError:
-    bt_metadata_property_info = sys.modules['onshape_client.oas.models.bt_metadata_property_info']
+    bt_metadata_property_info = sys.modules[
+        'onshape_client.oas.models.bt_metadata_property_info']
 try:
     from onshape_client.oas.models import bt_release_package_item_error
 except ImportError:
-    bt_release_package_item_error = sys.modules['onshape_client.oas.models.bt_release_package_item_error']
+    bt_release_package_item_error = sys.modules[
+        'onshape_client.oas.models.bt_release_package_item_error']
 
 
 class BTReleasePackageItemInfo(ModelNormal):

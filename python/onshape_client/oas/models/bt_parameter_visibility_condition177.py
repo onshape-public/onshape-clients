@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_parameter_visibility_always_hidden176
 except ImportError:
-    bt_parameter_visibility_always_hidden176 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_always_hidden176']
+    bt_parameter_visibility_always_hidden176 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_always_hidden176']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_logical178
 except ImportError:
-    bt_parameter_visibility_logical178 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_logical178']
+    bt_parameter_visibility_logical178 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_logical178']
 try:
     from onshape_client.oas.models import bt_parameter_visibility_on_equal180
 except ImportError:
-    bt_parameter_visibility_on_equal180 = sys.modules['onshape_client.oas.models.bt_parameter_visibility_on_equal180']
+    bt_parameter_visibility_on_equal180 = sys.modules[
+        'onshape_client.oas.models.bt_parameter_visibility_on_equal180']
 
 
 class BTParameterVisibilityCondition177(ModelNormal):

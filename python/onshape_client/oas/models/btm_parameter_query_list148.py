@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btm_individual_query_base139
 except ImportError:
-    btm_individual_query_base139 = sys.modules['onshape_client.oas.models.btm_individual_query_base139']
+    btm_individual_query_base139 = sys.modules[
+        'onshape_client.oas.models.btm_individual_query_base139']
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules['onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules[
+        'onshape_client.oas.models.btm_parameter1']
 try:
     from onshape_client.oas.models import btm_parameter_query_list148_all_of
 except ImportError:
-    btm_parameter_query_list148_all_of = sys.modules['onshape_client.oas.models.btm_parameter_query_list148_all_of']
+    btm_parameter_query_list148_all_of = sys.modules[
+        'onshape_client.oas.models.btm_parameter_query_list148_all_of']
 
 
 class BTMParameterQueryList148(ModelComposed):

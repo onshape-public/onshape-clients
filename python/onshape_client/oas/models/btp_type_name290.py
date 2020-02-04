@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules['onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules[
+        'onshape_client.oas.models.btp_node7']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_type_name_standard291
 except ImportError:
-    btp_type_name_standard291 = sys.modules['onshape_client.oas.models.btp_type_name_standard291']
+    btp_type_name_standard291 = sys.modules[
+        'onshape_client.oas.models.btp_type_name_standard291']
 try:
     from onshape_client.oas.models import btp_type_name_user292
 except ImportError:
-    btp_type_name_user292 = sys.modules['onshape_client.oas.models.btp_type_name_user292']
+    btp_type_name_user292 = sys.modules[
+        'onshape_client.oas.models.btp_type_name_user292']
 
 
 class BTPTypeName290(ModelComposed):

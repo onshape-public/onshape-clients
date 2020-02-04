@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_color_info
 except ImportError:
-    bt_color_info = sys.modules['onshape_client.oas.models.bt_color_info']
+    bt_color_info = sys.modules[
+        'onshape_client.oas.models.bt_color_info']
 
 
 class BTPartAppearanceInfo(ModelNormal):

@@ -32,23 +32,28 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_full_element_id756
 except ImportError:
-    bt_full_element_id756 = sys.modules['onshape_client.oas.models.bt_full_element_id756']
+    bt_full_element_id756 = sys.modules[
+        'onshape_client.oas.models.bt_full_element_id756']
 try:
     from onshape_client.oas.models import bt_full_element_id_and_part_id643
 except ImportError:
-    bt_full_element_id_and_part_id643 = sys.modules['onshape_client.oas.models.bt_full_element_id_and_part_id643']
+    bt_full_element_id_and_part_id643 = sys.modules[
+        'onshape_client.oas.models.bt_full_element_id_and_part_id643']
 try:
     from onshape_client.oas.models import bt_full_element_id_with_document1729_all_of
 except ImportError:
-    bt_full_element_id_with_document1729_all_of = sys.modules['onshape_client.oas.models.bt_full_element_id_with_document1729_all_of']
+    bt_full_element_id_with_document1729_all_of = sys.modules[
+        'onshape_client.oas.models.bt_full_element_id_with_document1729_all_of']
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
-    bt_microversion_id366 = sys.modules['onshape_client.oas.models.bt_microversion_id366']
+    bt_microversion_id366 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id366']
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
-    bt_microversion_id_and_configuration2338 = sys.modules['onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+    bt_microversion_id_and_configuration2338 = sys.modules[
+        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
 
 
 class BTFullElementIdWithDocument1729(ModelComposed):

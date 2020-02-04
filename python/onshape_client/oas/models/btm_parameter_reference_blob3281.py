@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008_all_of
 except ImportError:
-    bt_explosion_step_feature3008_all_of = sys.modules['onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
+    bt_explosion_step_feature3008_all_of = sys.modules[
+        'onshape_client.oas.models.bt_explosion_step_feature3008_all_of']
 try:
     from onshape_client.oas.models import btm_parameter_reference2434
 except ImportError:
-    btm_parameter_reference2434 = sys.modules['onshape_client.oas.models.btm_parameter_reference2434']
+    btm_parameter_reference2434 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference2434']
 try:
     from onshape_client.oas.models import btm_parameter_reference_cad_import2016
 except ImportError:
-    btm_parameter_reference_cad_import2016 = sys.modules['onshape_client.oas.models.btm_parameter_reference_cad_import2016']
+    btm_parameter_reference_cad_import2016 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_cad_import2016']
 try:
     from onshape_client.oas.models import btm_parameter_reference_image2014
 except ImportError:
-    btm_parameter_reference_image2014 = sys.modules['onshape_client.oas.models.btm_parameter_reference_image2014']
+    btm_parameter_reference_image2014 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_image2014']
 try:
     from onshape_client.oas.models import btm_parameter_reference_json790
 except ImportError:
-    btm_parameter_reference_json790 = sys.modules['onshape_client.oas.models.btm_parameter_reference_json790']
+    btm_parameter_reference_json790 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_json790']
 try:
     from onshape_client.oas.models import btm_parameter_reference_table917
 except ImportError:
-    btm_parameter_reference_table917 = sys.modules['onshape_client.oas.models.btm_parameter_reference_table917']
+    btm_parameter_reference_table917 = sys.modules[
+        'onshape_client.oas.models.btm_parameter_reference_table917']
 
 
 class BTMParameterReferenceBlob3281(ModelComposed):

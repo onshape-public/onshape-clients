@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules['onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules[
+        'onshape_client.oas.models.bt_owner_info']
 try:
     from onshape_client.oas.models import bt_rbac_permission_scheme_info
 except ImportError:
-    bt_rbac_permission_scheme_info = sys.modules['onshape_client.oas.models.bt_rbac_permission_scheme_info']
+    bt_rbac_permission_scheme_info = sys.modules[
+        'onshape_client.oas.models.bt_rbac_permission_scheme_info']
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
-    bt_user_basic_summary_info = sys.modules['onshape_client.oas.models.bt_user_basic_summary_info']
+    bt_user_basic_summary_info = sys.modules[
+        'onshape_client.oas.models.bt_user_basic_summary_info']
 try:
     from onshape_client.oas.models import role_map_entry
 except ImportError:
-    role_map_entry = sys.modules['onshape_client.oas.models.role_map_entry']
+    role_map_entry = sys.modules[
+        'onshape_client.oas.models.role_map_entry']
 
 
 class BTProjectInfo(ModelNormal):

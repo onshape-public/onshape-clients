@@ -32,27 +32,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules['onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules[
+        'onshape_client.oas.models.btp_annotation231']
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules['onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules[
+        'onshape_client.oas.models.btp_identifier8']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules['onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules[
+        'onshape_client.oas.models.btp_statement269']
 try:
     from onshape_client.oas.models import btp_statement_block271
 except ImportError:
-    btp_statement_block271 = sys.modules['onshape_client.oas.models.btp_statement_block271']
+    btp_statement_block271 = sys.modules[
+        'onshape_client.oas.models.btp_statement_block271']
 try:
     from onshape_client.oas.models import btp_statement_try1523_all_of
 except ImportError:
-    btp_statement_try1523_all_of = sys.modules['onshape_client.oas.models.btp_statement_try1523_all_of']
+    btp_statement_try1523_all_of = sys.modules[
+        'onshape_client.oas.models.btp_statement_try1523_all_of']
 
 
 class BTPStatementTry1523(ModelComposed):

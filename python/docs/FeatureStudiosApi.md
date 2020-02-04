@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_feature_studio**
-> bt_document_element_info.BTDocumentElementInfo create_feature_studio(did, wid, bt_model_element_params_bt_model_element_params)
+> bt_document_element_info.BTDocumentElementInfo create_feature_studio(did, wid, bt_model_element_params)
 
 Create Feature Studio
 
@@ -29,19 +29,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FeatureStudiosApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wid = 'wid_example' # str | 
-bt_model_element_params_bt_model_element_params = onshape_client.oas.BTModelElementParams() # bt_model_element_params.BTModelElementParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Create Feature Studio
-    api_response = api_instance.create_feature_studio(did, wid, bt_model_element_params_bt_model_element_params)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FeatureStudiosApi->create_feature_studio: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FeatureStudiosApi(api_client)
+    did = 'did_example' # str | 
+    wid = 'wid_example' # str | 
+    bt_model_element_params = onshape_client.oas.BTModelElementParams() # bt_model_element_params.BTModelElementParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Create Feature Studio
+        api_response = api_instance.create_feature_studio(did, wid, bt_model_element_params)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FeatureStudiosApi->create_feature_studio: %s\n" % e)
 ```
 
 ### Parameters
@@ -50,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
- **bt_model_element_params_bt_model_element_params** | [**bt_model_element_params.BTModelElementParams**](BTModelElementParams.md)|  |
+ **bt_model_element_params** | [**bt_model_element_params.BTModelElementParams**](BTModelElementParams.md)|  |
 
 ### Return type
 
@@ -91,20 +93,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FeatureStudiosApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get Feature Studio Contents.
-    api_response = api_instance.get_feature_studio_contents(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FeatureStudiosApi->get_feature_studio_contents: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FeatureStudiosApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Feature Studio Contents.
+        api_response = api_instance.get_feature_studio_contents(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FeatureStudiosApi->get_feature_studio_contents: %s\n" % e)
 ```
 
 ### Parameters
@@ -155,20 +159,22 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FeatureStudiosApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Get Feature Studio Specs
-    api_response = api_instance.get_feature_studio_specs(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FeatureStudiosApi->get_feature_studio_specs: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FeatureStudiosApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Feature Studio Specs
+        api_response = api_instance.get_feature_studio_specs(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FeatureStudiosApi->get_feature_studio_specs: %s\n" % e)
 ```
 
 ### Parameters
@@ -219,30 +225,32 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
-# Create an instance of the API class
-api_instance = onshape_client.oas.FeatureStudiosApi(onshape_client.oas.ApiClient(configuration))
-did = 'did_example' # str | 
-wvm = 'wvm_example' # str | 
-wvmid = 'wvmid_example' # str | 
-eid = 'eid_example' # str | 
-body = 'body_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.FeatureStudiosApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    body = 'body_example' # str |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Update Feature Studio contents
-    api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Update Feature Studio contents
+        api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Update Feature Studio contents
-    api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update Feature Studio contents
+        api_response = api_instance.update_feature_studio_contents(did, wvm, wvmid, eid, body=body)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling FeatureStudiosApi->update_feature_studio_contents: %s\n" % e)
 ```
 
 ### Parameters

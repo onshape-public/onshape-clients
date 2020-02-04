@@ -22,26 +22,28 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.ApplicationsApi()
-uid = 'uid_example' # str | 
-cid = 'cid_example' # str | 
-key = ['key_example'] # [str] |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ApplicationsApi(api_client)
+    uid = 'uid_example' # str | 
+    cid = 'cid_example' # str | 
+    key = ['key_example'] # [str] |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Delete Application Settings
-    api_instance.delete_app_settings(uid, cid)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ApplicationsApi->delete_app_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Application Settings
+        api_instance.delete_app_settings(uid, cid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ApplicationsApi->delete_app_settings: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Delete Application Settings
-    api_instance.delete_app_settings(uid, cid, key=key)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ApplicationsApi->delete_app_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete Application Settings
+        api_instance.delete_app_settings(uid, cid, key=key)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ApplicationsApi->delete_app_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -85,28 +87,30 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.ApplicationsApi()
-uid = 'uid_example' # str | 
-cid = 'cid_example' # str | 
-key = ['key_example'] # [str] |  (optional)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ApplicationsApi(api_client)
+    uid = 'uid_example' # str | 
+    cid = 'cid_example' # str | 
+    key = ['key_example'] # [str] |  (optional)
 
-# example passing only required values which don't have defaults set
-try:
-    # Get User Application Settings
-    api_response = api_instance.get_user_app_settings(uid, cid)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ApplicationsApi->get_user_app_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        # Get User Application Settings
+        api_response = api_instance.get_user_app_settings(uid, cid)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ApplicationsApi->get_user_app_settings: %s\n" % e)
 
-# example passing only required values which don't have defaults set
-# and optional values
-try:
-    # Get User Application Settings
-    api_response = api_instance.get_user_app_settings(uid, cid, key=key)
-    pprint(api_response)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ApplicationsApi->get_user_app_settings: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get User Application Settings
+        api_response = api_instance.get_user_app_settings(uid, cid, key=key)
+        pprint(api_response)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ApplicationsApi->get_user_app_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -138,7 +142,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app_settings**
-> update_app_settings(uid, cid, bt_user_app_settings_params_bt_user_app_settings_params)
+> update_app_settings(uid, cid, bt_user_app_settings_params)
 
 Update Application Settings
 
@@ -150,18 +154,20 @@ import time
 import onshape_client.oas
 from pprint import pprint
 
-# Create an instance of the API class
-api_instance = onshape_client.oas.ApplicationsApi()
-uid = 'uid_example' # str | 
-cid = 'cid_example' # str | 
-bt_user_app_settings_params_bt_user_app_settings_params = onshape_client.oas.BTUserAppSettingsParams() # bt_user_app_settings_params.BTUserAppSettingsParams | 
-
-# example passing only required values which don't have defaults set
-try:
-    # Update Application Settings
-    api_instance.update_app_settings(uid, cid, bt_user_app_settings_params_bt_user_app_settings_params)
-except onshape_client.oas.ApiException as e:
-    print("Exception when calling ApplicationsApi->update_app_settings: %s\n" % e)
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.ApplicationsApi(api_client)
+    uid = 'uid_example' # str | 
+    cid = 'cid_example' # str | 
+    bt_user_app_settings_params = onshape_client.oas.BTUserAppSettingsParams() # bt_user_app_settings_params.BTUserAppSettingsParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        # Update Application Settings
+        api_instance.update_app_settings(uid, cid, bt_user_app_settings_params)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling ApplicationsApi->update_app_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -170,7 +176,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uid** | **str**|  |
  **cid** | **str**|  |
- **bt_user_app_settings_params_bt_user_app_settings_params** | [**bt_user_app_settings_params.BTUserAppSettingsParams**](BTUserAppSettingsParams.md)|  |
+ **bt_user_app_settings_params** | [**bt_user_app_settings_params.BTUserAppSettingsParams**](BTUserAppSettingsParams.md)|  |
 
 ### Return type
 

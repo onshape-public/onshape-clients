@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import external_documentation
 except ImportError:
-    external_documentation = sys.modules['onshape_client.oas.models.external_documentation']
+    external_documentation = sys.modules[
+        'onshape_client.oas.models.external_documentation']
 
 
 class Tag(ModelNormal):

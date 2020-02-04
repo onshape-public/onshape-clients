@@ -32,19 +32,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_document_with_version_and_element_id
 except ImportError:
-    bt_document_with_version_and_element_id = sys.modules['onshape_client.oas.models.bt_document_with_version_and_element_id']
+    bt_document_with_version_and_element_id = sys.modules[
+        'onshape_client.oas.models.bt_document_with_version_and_element_id']
 try:
     from onshape_client.oas.models import bt_document_with_version_id
 except ImportError:
-    bt_document_with_version_id = sys.modules['onshape_client.oas.models.bt_document_with_version_id']
+    bt_document_with_version_id = sys.modules[
+        'onshape_client.oas.models.bt_document_with_version_id']
 try:
     from onshape_client.oas.models import btp_literal_string259
 except ImportError:
-    btp_literal_string259 = sys.modules['onshape_client.oas.models.btp_literal_string259']
+    btp_literal_string259 = sys.modules[
+        'onshape_client.oas.models.btp_literal_string259']
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules['onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules[
+        'onshape_client.oas.models.btp_space10']
 
 
 class BTPModuleId235AllOf(ModelNormal):

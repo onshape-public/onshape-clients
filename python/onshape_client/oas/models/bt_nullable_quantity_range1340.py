@@ -32,15 +32,18 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules['onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules[
+        'onshape_client.oas.models.bt_location_info226']
 try:
     from onshape_client.oas.models import bt_nullable_quantity_range1340_all_of
 except ImportError:
-    bt_nullable_quantity_range1340_all_of = sys.modules['onshape_client.oas.models.bt_nullable_quantity_range1340_all_of']
+    bt_nullable_quantity_range1340_all_of = sys.modules[
+        'onshape_client.oas.models.bt_nullable_quantity_range1340_all_of']
 try:
     from onshape_client.oas.models import bt_quantity_range181
 except ImportError:
-    bt_quantity_range181 = sys.modules['onshape_client.oas.models.bt_quantity_range181']
+    bt_quantity_range181 = sys.modules[
+        'onshape_client.oas.models.bt_quantity_range181']
 
 
 class BTNullableQuantityRange1340(ModelComposed):

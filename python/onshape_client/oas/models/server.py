@@ -32,7 +32,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
 try:
     from onshape_client.oas.models import server_variable
 except ImportError:
-    server_variable = sys.modules['onshape_client.oas.models.server_variable']
+    server_variable = sys.modules[
+        'onshape_client.oas.models.server_variable']
 
 
 class Server(ModelNormal):
