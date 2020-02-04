@@ -12,15 +12,16 @@ from pathlib import Path
 collect_ignore = ["setup.py"]
 
 prod_element_bank = OrderedDict(
-    configurable_cube="https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/w/80887f5994121967bf4d59a6/e/69c9eedda86512966b20bc90",
+    configurable_cube="https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/c9b07497bec5975f317b0eb7/e/69c9eedda86512966b20bc90",
     three_axes_assembly="https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079"
 )
-local_element_bank = OrderedDict(
-    configurable_cube="http://localhost.dev.onshape.com:8080/documents/ffd7fa16077446a3dee5120b/v/fb4d34c4570a257439b4fd27/e/05c8a3ca269ebf676918ad3f"
+stage_element_bank = OrderedDict(
+    configurable_cube="https://staging.dev.onshape.com/documents/ffd7fa16077446a3dee5120b/v/fb4d34c4570a257439b4fd27/e/05c8a3ca269ebf676918ad3f"
 )
-local2_element_bank = OrderedDict(
-    configurable_cube="http://localhost.dev.onshape.com:8082/documents/5887e636419d22a788cb3dd1/w/f9d9ff9ac255733f190657a7/e/bc13e90647cc600404514d76"
+demo_c = OrderedDict(
+    configurable_cube="https://demo-c.dev.onshape.com/documents/5887e636419d22a788cb3dd1/w/f9d9ff9ac255733f190657a7/e/bc13e90647cc600404514d76"
 )
+
 
 @pytest.fixture(scope='module', params=['configurable_cube'])
 def insertable(request, client):
@@ -28,12 +29,12 @@ def insertable(request, client):
     host = client.configuration.host
     if host == "https://cad.onshape.com":
         element_bank = prod_element_bank
-    elif host == "http://localhost.dev.onshape.com:8080":
-        element_bank = local_element_bank
-    elif host == "http://localhost.dev.onshape.com:8082":
-        element_bank = local2_element_bank
+    elif host == "https://staging.dev.onshape.com/":
+        element_bank = stage_element_bank
+    elif host == "https://demo-c.dev.onshape.com/":
+        element_bank = demo_c
     else:
-        raise UserWarning("don't have an element bank for this stack")
+        raise UserWarning("No element bank for this stack")
     return OnshapeElement(element_bank[element_key])
 
 
@@ -61,20 +62,21 @@ def new_document(client, name_factory):
 
 @pytest.fixture
 def assembly(client, new_document):
-    elements = client.documents_api.get_elements_in_document(new_document.did, new_document.wvm, new_document.wvmid)
-    for element in elements:
-        if element.type == 'Assembly':
-            element = OnshapeElement.create_from_oas_models(element, did=new_document.did, wvmid=new_document.wvmid,
-                                                            wvm=new_document.wvm)
-            return element
+    return get_element_of_type(client, 'Assembly', new_document)
+
 
 @pytest.fixture
 def part_studio(client, new_document):
+    return get_element_of_type(client, 'Part Studio', new_document)
+
+
+def get_element_of_type(client, element_type, new_document):
     elements = client.documents_api.get_elements_in_document(new_document.did, new_document.wvm, new_document.wvmid)
     for element in elements:
-        if element.type == 'Part Studio':
+        if element.type == element_type:
             element = OnshapeElement.create_from_oas_models(element, did=new_document.did, wvmid=new_document.wvmid,
                                                             wvm=new_document.wvm)
+            webbrowser.open_new(element.get_url())
             return element
 
 
@@ -147,7 +149,6 @@ def new_copied_document_factory(client, name_factory):
         doc = client.documents_api.copy_workspace(copied_from.did, copied_from.default_workspace, bt_copy_document_params=params, _preload_content=False)
         doc = json.loads(doc.data.decode('utf-8'))
         doc = OnshapeElement.create_from_ids(did=doc["newDocumentId"], wvm='w', wvmid=doc['newWorkspaceId'])
-        webbrowser.open_new(doc.get_url())
         return doc
     yield copy_workspace
     for d in created_docs:

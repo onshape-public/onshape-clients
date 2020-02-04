@@ -23,19 +23,20 @@ def test_assembly_definition(client, configurable_cubes_assemblies):
     assert parts[0]["mateConnectors"]
 
 
-# Attempt to create an assembly from a 'prototype' by using the assembly definition to insert the various parts/assemblies/definitions.
+"""Attempt to create an assembly from a 'prototype' by using the assembly definition to insert the various 
+parts/assemblies/definitions. This is also useful for testing performance"""
 def test_roundtrip_instance_insert(client, insertable, assembly):
-    instances_to_insert = 10
+    instances_to_insert = 100
     res_start = client.assemblies_api.get_assembly_definition(assembly.did, assembly.wvm, assembly.wvmid, assembly.eid,
                                                               include_mate_features=True, include_mate_connectors=True,
                                                               _preload_content=False)
     instances_at_start = len(json.loads(res_start.data.decode('UTF-8'))['rootAssembly']['instances'])
     transforms = []
     for x_translation in range(0, instances_to_insert):
-        transforms.append([1, 0, 0, x_translation,
-                           0, 1, 0, 1,
-                           0, 0, 1, 1,
-                           1, 1, 1, 1])
+        transforms.append([1., 0., 0., float(x_translation),
+                           0., 1., 0., 1.,
+                           0., 0., 1., 1.,
+                           1., 1., 1., 1.])
     transform_groups = []
     for transform in transforms:
         transform_groups.append(TransformGroup(transform=transform, instances=[insertable.s_assembly_insert_message()]))
@@ -67,20 +68,20 @@ def test_sub_sub_sub_assembly_instance_insert(client, three_axes_assembly):
     assembly_pulled_x = OnshapeElement(
         "https://cad.onshape.com/documents/ba13458e7ebfd1755645d5d1/w/031ba2bcb4b13b77bc5c43f7/e/6c9bb5a752c0b5b66610b918")
 
-    origin_transform = [1, 0, 0, 0,
-                        0, 1, 0, 0,
-                        0, 0, 1, 0,
-                        0, 0, 0, 1]
+    origin_transform = [1., 0., 0., 0.,
+                        0., 1., 0., 0.,
+                        0., 0., 1., 0.,
+                        0., 0., 0., 1.]
 
-    push_x_transform = [1, 0, 0, 1,
-                        0, 1, 0, 0,
-                        0, 0, 1, 0,
-                        0, 0, 0, 1]
+    push_x_transform = [1., 0., 0., 1.,
+                        0., 1., 0., 0.,
+                        0., 0., 1., 0.,
+                        0., 0., 0., 1.]
 
-    pull_x_transform = [1, 0, 0, -1,
-                        0, 1, 0, 0,
-                        0, 0, 1, 0,
-                        0, 0, 0, 1]
+    pull_x_transform = [1., 0., 0., -1.,
+                        0., 1., 0., 0.,
+                        0., 0., 1., 0.,
+                        0., 0., 0., 1.]
 
     three_axes_instance = BTAssemblyInstanceDefinitionParams(document_id=three_axes_assembly.did,
                                                              version_id=three_axes_assembly.wvmid,
