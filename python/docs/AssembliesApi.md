@@ -1065,7 +1065,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **insert_transformed_instances**
-> [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo] insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
+> bt_assembly_insert_transformed_instances_response.BTAssemblyInsertTransformedInstancesResponse insert_transformed_instances(did, eid, wid, bt_assembly_transformed_instances_definition_params)
 
 Create and transform assembly instances
 
@@ -1112,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo]**](BTAssemblyOccurrenceInfo.md)
+[**bt_assembly_insert_transformed_instances_response.BTAssemblyInsertTransformedInstancesResponse**](BTAssemblyInsertTransformedInstancesResponse.md)
 
 ### Authorization
 

@@ -26,7 +26,7 @@ def test_assembly_definition(client, configurable_cubes_assemblies):
 """Attempt to create an assembly from a 'prototype' by using the assembly definition to insert the various 
 parts/assemblies/definitions. This is also useful for testing performance"""
 def test_roundtrip_instance_insert(client, insertable, assembly):
-    instances_to_insert = 100
+    instances_to_insert = 10
     res_start = client.assemblies_api.get_assembly_definition(assembly.did, assembly.wvm, assembly.wvmid, assembly.eid,
                                                               include_mate_features=True, include_mate_connectors=True,
                                                               _preload_content=False)

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
-**object** | **str** |  | [optional] 
 **coupon** | [**coupon.Coupon**](Coupon.md) |  | [optional] 
 **customer** | **str** |  | [optional] 
 **end** | **int** |  | [optional] 
+**id** | **str** |  | [optional] 
+**object** | **str** |  | [optional] 
 **start** | **int** |  | [optional] 
 **subscription** | **str** |  | [optional] 
 

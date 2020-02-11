@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**non_trivial** | **bool** |  | [optional] 
-**reset** | **bool** |  | [optional] 
 **color** | **[str]** |  | [optional] 
+**non_trivial** | **bool** |  | [optional] 
 **opacity** | **int** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
+**reset** | **bool** |  | [optional] 
+**rgba_color** | **[str]** |  | [optional] 
+**usable_appearance** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

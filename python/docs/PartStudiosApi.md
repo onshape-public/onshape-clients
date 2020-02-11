@@ -4,7 +4,7 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_part_studio_feature**](PartStudiosApi.md#add_part_studio_feature) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
+[**add_feature1**](PartStudiosApi.md#add_feature1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
 [**compare_part_studios**](PartStudiosApi.md#compare_part_studios) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare | Compare Part Studios
 [**create_part_studio**](PartStudiosApi.md#create_part_studio) | **POST** /api/partstudios/d/{did}/w/{wid} | Create Part Studio
 [**create_part_studio_translation**](PartStudiosApi.md#create_part_studio_translation) | **POST** /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Part Studio translation
@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**update_rollback**](PartStudiosApi.md#update_rollback) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/rollback | Update Feature Rollback
 
 
-# **add_part_studio_feature**
-> bt_feature_definition_response1617.BTFeatureDefinitionResponse1617 add_part_studio_feature(did, wvm, wvmid, eid)
+# **add_feature1**
+> bt_feature_definition_response1617.BTFeatureDefinitionResponse1617 add_feature1(did, wvm, wvmid, eid)
 
 Add Feature
 
@@ -52,38 +52,38 @@ configuration.host = "https://cad.onshape.com"
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.PartStudiosApi(api_client)
-    did = 'did_example' # str | Document ID.
-    wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
-    wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
-    eid = 'eid_example' # str | Element ID.
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
     bt_feature_definition_call_1406 = onshape_client.oas.BTFeatureDefinitionCall1406() # bt_feature_definition_call1406.BTFeatureDefinitionCall1406 | feature The serialized feature definition (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Add Feature
-        api_response = api_instance.add_part_studio_feature(did, wvm, wvmid, eid)
+        api_response = api_instance.add_feature1(did, wvm, wvmid, eid)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartStudiosApi->add_part_studio_feature: %s\n" % e)
+        print("Exception when calling PartStudiosApi->add_feature1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Add Feature
-        api_response = api_instance.add_part_studio_feature(did, wvm, wvmid, eid, bt_feature_definition_call_1406=bt_feature_definition_call_1406)
+        api_response = api_instance.add_feature1(did, wvm, wvmid, eid, bt_feature_definition_call_1406=bt_feature_definition_call_1406)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartStudiosApi->add_part_studio_feature: %s\n" % e)
+        print("Exception when calling PartStudiosApi->add_feature1: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**| Document ID. |
- **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. |
- **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. |
- **eid** | **str**| Element ID. |
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
  **bt_feature_definition_call_1406** | [**bt_feature_definition_call1406.BTFeatureDefinitionCall1406**](BTFeatureDefinitionCall1406.md)| feature The serialized feature definition | [optional]
 
 ### Return type
@@ -1381,22 +1381,24 @@ configuration.host = "https://cad.onshape.com"
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.PartStudiosApi(api_client)
-    did = 'did_example' # str | Document ID.
-    wvm = 'wvm_example' # str | One of w or v or m corresponding to whether a workspace or version or microversion was entered.
-    wvmid = 'wvmid_example' # str | Workspace (w), Version (v) or Microversion (m) ID.
-    eid = 'eid_example' # str | Element ID.
-    angle_tolerance = 3.4 # float | Angle tolerance (in radians). This specifies the limit on the sum of the angular deviations of a tessellation chord from the tangent vectors at two chord endpoints. The specified value must be less than PI/2. This parameter currently has a default value chosen based on the complexity of the parts being tessellated. (optional)
-chord_tolerance = 3.4 # float | Chord tolerance (in meters). This specifies the limit on the maximum deviation of a tessellation chord from the true surface/edge. This parameter currently has a default value chosen based on the size and complexity of the parts being tessellated. (optional)
-max_facet_width = 3.4 # float | Max facet width. This specifies the limit on the size of any side of a tessellation facet. (optional)
-output_vertex_normals = False # bool | If true, output vertex normals corresponding to surface normals at facet vertex points. (optional) if omitted the server will use the default value of False
-output_facet_normals = True # bool | Output facet normals. (optional) if omitted the server will use the default value of True
-output_texture_coordinates = False # bool | Output texture coordinates. (optional) if omitted the server will use the default value of False
-output_index_table = False # bool | Output index table. (optional) if omitted the server will use the default value of False
-part_id = ['part_id_example'] # [str] | IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId=JHK&partId=JHD). May not be combined with other ID filters (optional)
-face_id = ['face_id_example'] # [str] | IDs of the faces to tessellate (repeat query param to add more than one, i.e. faceId=JHK&faceId=JHD) (optional)
-output_error_faces = False # bool | Whether or not to output faces that cause an error (optional) if omitted the server will use the default value of False
-configuration = 'configuration_example' # str | Configuration string. (optional)
-link_document_id = 'link_document_id_example' # str | Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. (optional)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    angle_tolerance = 3.4 # float |  (optional)
+chord_tolerance = 3.4 # float |  (optional)
+max_facet_width = 3.4 # float |  (optional)
+output_vertex_normals = False # bool |  (optional) if omitted the server will use the default value of False
+output_facet_normals = True # bool |  (optional) if omitted the server will use the default value of True
+output_texture_coordinates = False # bool |  (optional) if omitted the server will use the default value of False
+output_face_appearances = False # bool |  (optional) if omitted the server will use the default value of False
+output_index_table = False # bool |  (optional) if omitted the server will use the default value of False
+part_id = ['part_id_example'] # [str] |  (optional)
+face_id = ['face_id_example'] # [str] |  (optional)
+output_error_faces = False # bool |  (optional) if omitted the server will use the default value of False
+configuration = 'configuration_example' # str |  (optional)
+link_document_id = 'link_document_id_example' # str |  (optional)
+body = 'body_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1410,7 +1412,7 @@ link_document_id = 'link_document_id_example' # str | Id of document that links 
     # and optional values
     try:
         # Tesselated faces of the parts in the Part Studio.
-        api_response = api_instance.get_part_studio_tessellated_faces(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, part_id=part_id, face_id=face_id, output_error_faces=output_error_faces, configuration=configuration, link_document_id=link_document_id)
+        api_response = api_instance.get_part_studio_tessellated_faces(did, wvm, wvmid, eid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_face_appearances=output_face_appearances, output_index_table=output_index_table, part_id=part_id, face_id=face_id, output_error_faces=output_error_faces, configuration=configuration, link_document_id=link_document_id, body=body)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling PartStudiosApi->get_part_studio_tessellated_faces: %s\n" % e)
@@ -1420,22 +1422,24 @@ link_document_id = 'link_document_id_example' # str | Id of document that links 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did** | **str**| Document ID. |
- **wvm** | **str**| One of w or v or m corresponding to whether a workspace or version or microversion was entered. |
- **wvmid** | **str**| Workspace (w), Version (v) or Microversion (m) ID. |
- **eid** | **str**| Element ID. |
- **angle_tolerance** | **float**| Angle tolerance (in radians). This specifies the limit on the sum of the angular deviations of a tessellation chord from the tangent vectors at two chord endpoints. The specified value must be less than PI/2. This parameter currently has a default value chosen based on the complexity of the parts being tessellated. | [optional]
- **chord_tolerance** | **float**| Chord tolerance (in meters). This specifies the limit on the maximum deviation of a tessellation chord from the true surface/edge. This parameter currently has a default value chosen based on the size and complexity of the parts being tessellated. | [optional]
- **max_facet_width** | **float**| Max facet width. This specifies the limit on the size of any side of a tessellation facet. | [optional]
- **output_vertex_normals** | **bool**| If true, output vertex normals corresponding to surface normals at facet vertex points. | [optional] if omitted the server will use the default value of False
- **output_facet_normals** | **bool**| Output facet normals. | [optional] if omitted the server will use the default value of True
- **output_texture_coordinates** | **bool**| Output texture coordinates. | [optional] if omitted the server will use the default value of False
- **output_index_table** | **bool**| Output index table. | [optional] if omitted the server will use the default value of False
- **part_id** | **[str]**| IDs of the parts to retrieve. Repeat query param to add more than one (i.e. partId&#x3D;JHK&amp;partId&#x3D;JHD). May not be combined with other ID filters | [optional]
- **face_id** | **[str]**| IDs of the faces to tessellate (repeat query param to add more than one, i.e. faceId&#x3D;JHK&amp;faceId&#x3D;JHD) | [optional]
- **output_error_faces** | **bool**| Whether or not to output faces that cause an error | [optional] if omitted the server will use the default value of False
- **configuration** | **str**| Configuration string. | [optional]
- **link_document_id** | **str**| Id of document that links to the document being accessed. This may provide additional access rights to the document. Allowed only with version (v) path parameter. | [optional]
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **angle_tolerance** | **float**|  | [optional]
+ **chord_tolerance** | **float**|  | [optional]
+ **max_facet_width** | **float**|  | [optional]
+ **output_vertex_normals** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **output_facet_normals** | **bool**|  | [optional] if omitted the server will use the default value of True
+ **output_texture_coordinates** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **output_face_appearances** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **output_index_table** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **part_id** | **[str]**|  | [optional]
+ **face_id** | **[str]**|  | [optional]
+ **output_error_faces** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
+ **body** | **str**|  | [optional]
 
 ### Return type
 
@@ -1447,7 +1451,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
  - **Accept**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details

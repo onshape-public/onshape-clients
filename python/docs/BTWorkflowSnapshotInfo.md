@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_frozen** | **bool** |  | [optional] 
-**metadata_state** | **str** |  | [optional] 
-**is_setup** | **bool** |  | [optional] 
-**is_discarded** | **bool** |  | [optional] 
 **actions** | [**[bt_workflow_action_info.BTWorkflowActionInfo]**](BTWorkflowActionInfo.md) |  | [optional] 
 **approver_ids** | **[str]** |  | [optional] 
+**is_discarded** | **bool** |  | [optional] 
+**is_frozen** | **bool** |  | [optional] 
+**is_setup** | **bool** |  | [optional] 
+**metadata_state** | **str** |  | [optional] 
 **notifier_ids** | **[str]** |  | [optional] 
 **state** | [**bt_workflow_state_info.BTWorkflowStateInfo**](BTWorkflowStateInfo.md) |  | [optional] 
 

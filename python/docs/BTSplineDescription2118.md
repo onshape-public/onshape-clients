@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **degree** | **int** |  | [optional] 
-**knots** | **[float]** |  | [optional] 
+**is_periodic** | **bool** |  | [optional] 
 **is_rational** | **bool** |  | [optional] 
 **control_points** | **[float]** |  | [optional] 
-**is_periodic** | **bool** |  | [optional] 
+**knots** | **[float]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 

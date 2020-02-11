@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**null_value** | **str** |  | [optional] 
 **is_null** | **bool** |  | [optional] 
+**null_value** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
-**parameter_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
+**parameter_id** | **str** |  | [optional] 
 **units** | **str** |  | [optional] 
 **is_integer** | **bool** |  | [optional] 
 **value** | **float** |  | [optional] 

@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_unchanged** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
-**is_read_only** | **bool** |  | [optional] 
 **is_ever_visible** | **bool** |  | [optional] 
+**is_read_only** | **bool** |  | [optional] 
 **override_spec** | [**bt_parameter_spec6.BTParameterSpec6**](BTParameterSpec6.md) |  | [optional] 
 **parameter** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 
 

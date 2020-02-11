@@ -826,6 +826,7 @@ max_feature_script_version = 0 # int |  (optional) if omitted the server will us
 include_applications = False # bool |  (optional) if omitted the server will use the default value of False
 allowed_application_mime_types = '' # str |  (optional) if omitted the server will use the default value of ''
 include_composite_parts = False # bool |  (optional) if omitted the server will use the default value of False
+include_fs_tables = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -839,7 +840,7 @@ include_composite_parts = False # bool |  (optional) if omitted the server will 
     # and optional values
     try:
         # insertables for a document
-        api_response = api_instance.get_latest_in_document(did, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
+        api_response = api_instance.get_latest_in_document(did, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts, include_fs_tables=include_fs_tables)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling DefaultApi->get_latest_in_document: %s\n" % e)
@@ -868,6 +869,7 @@ Name | Type | Description  | Notes
  **include_applications** | **bool**|  | [optional] if omitted the server will use the default value of False
  **allowed_application_mime_types** | **str**|  | [optional] if omitted the server will use the default value of ''
  **include_composite_parts** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **include_fs_tables** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 

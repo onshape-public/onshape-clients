@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**element_name** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**element_name** | **str** |  | [optional] 
 **highlighted_fields** | **{str: ([str],)}** |  | [optional] 
-**source_map** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 **name** | **str** |  | [optional] 
+**source_map** | **{str: (bool, date, datetime, dict, float, int, list, str,)}** |  | [optional] 
 **type** | **str** |  | [optional] 
 **version_or_workspace_name** | **str** |  | [optional] 
 

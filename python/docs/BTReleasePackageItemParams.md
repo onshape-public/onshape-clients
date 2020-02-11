@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version_id** | **str** |  | [optional] 
-**href** | **str** |  | [optional] 
 **configuration** | **str** |  | [optional] 
+**document_id** | **str** |  | [optional] 
+**element_id** | **str** |  | [optional] 
+**href** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
 **is_included** | **bool** |  | [optional] 
 **not_editable_in_version_properties** | [**bt_release_package_item_params_not_editable_in_version_properties.BTReleasePackageItemParamsNotEditableInVersionProperties**](BTReleasePackageItemParamsNotEditableInVersionProperties.md) |  | [optional] 
-**part_number** | **str** |  | [optional] 
 **part_id** | **str** |  | [optional] 
-**workspace_id** | **str** |  | [optional] 
-**element_id** | **str** |  | [optional] 
-**document_id** | **str** |  | [optional] 
+**part_number** | **str** |  | [optional] 
 **properties** | [**[bt_property_value_param.BTPropertyValueParam]**](BTPropertyValueParam.md) |  | [optional] 
-**id** | **str** |  | [optional] 
+**version_id** | **str** |  | [optional] 
+**workspace_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

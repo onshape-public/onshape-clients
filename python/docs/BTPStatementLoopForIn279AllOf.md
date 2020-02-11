@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **var** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 **is_var_declared_here** | **bool** |  | [optional] 
 **space_before_var** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

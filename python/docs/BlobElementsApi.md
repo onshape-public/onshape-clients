@@ -249,13 +249,13 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     api_instance = onshape_client.oas.BlobElementsApi(api_client)
     did = 'did_example' # str | 
     wid = 'wid_example' # str | 
-    content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
+    body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
+content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
 entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
 message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
 providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -269,7 +269,7 @@ body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
     # and optional values
     try:
         # Upload File to New Blob Element.
-        api_response = api_instance.upload_file_create_element(did, wid, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+        api_response = api_instance.upload_file_create_element(did, wid, body_parts=body_parts, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling BlobElementsApi->upload_file_create_element: %s\n" % e)
@@ -281,13 +281,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
+ **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
  **content_disposition** | [**content_disposition.ContentDisposition**](content_disposition.ContentDisposition.md)|  | [optional]
  **entity** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
  **media_type** | [**body_part_media_type.BodyPartMediaType**](body_part_media_type.BodyPartMediaType.md)|  | [optional]
  **message_body_workers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
  **parent** | [**multi_part.MultiPart**](multi_part.MultiPart.md)|  | [optional]
  **providers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
 
 ### Return type
 
@@ -336,13 +336,13 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     eid = 'eid_example' # str | 
     wid = 'wid_example' # str | 
     parent_change_id = 'parent_change_id_example' # str |  (optional)
+body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
 content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
 entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
 message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
 providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -356,7 +356,7 @@ body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
     # and optional values
     try:
         # Update Blob Element.
-        api_response = api_instance.upload_file_update_element(did, eid, wid, parent_change_id=parent_change_id, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers, body_parts=body_parts)
+        api_response = api_instance.upload_file_update_element(did, eid, wid, parent_change_id=parent_change_id, body_parts=body_parts, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling BlobElementsApi->upload_file_update_element: %s\n" % e)
@@ -370,13 +370,13 @@ Name | Type | Description  | Notes
  **eid** | **str**|  |
  **wid** | **str**|  |
  **parent_change_id** | **str**|  | [optional]
+ **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
  **content_disposition** | [**content_disposition.ContentDisposition**](content_disposition.ContentDisposition.md)|  | [optional]
  **entity** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
  **media_type** | [**body_part_media_type.BodyPartMediaType**](body_part_media_type.BodyPartMediaType.md)|  | [optional]
  **message_body_workers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
  **parent** | [**multi_part.MultiPart**](multi_part.MultiPart.md)|  | [optional]
  **providers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
 
 ### Return type
 

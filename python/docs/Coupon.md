@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
-**object** | **str** |  | [optional] 
 **amount_off** | **int** |  | [optional] 
 **created** | **int** |  | [optional] 
 **currency** | **str** |  | [optional] 
 **duration** | **str** |  | [optional] 
 **duration_in_months** | **int** |  | [optional] 
+**id** | **str** |  | [optional] 
 **livemode** | **bool** |  | [optional] 
 **max_redemptions** | **int** |  | [optional] 
 **metadata** | **{str: (str,)}** |  | [optional] 
+**object** | **str** |  | [optional] 
 **percent_off** | **int** |  | [optional] 
 **redeem_by** | **int** |  | [optional] 
 **times_redeemed** | **int** |  | [optional] 

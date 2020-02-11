@@ -24,8 +24,7 @@ from pprint import pprint
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.OpenAPIApi(api_client)
-    file_type = 'JSON' # str | The type of file to return. Defaults to JSON. (optional) if omitted the server will use the default value of 'JSON'
-excluded_tags = 'excluded_tags_example' # str | If an operation contains an excluded tag, it is not returned from this endpoint. (optional)
+    excluded_tags = 'excluded_tags_example' # str | If an operation contains an excluded tag, it is not returned from this endpoint. (optional)
 included_tags = 'included_tags_example' # str | Return only operations with tags included in includedTags. (optional)
 include_deprecated = True # bool | Include deprecated endpoints. (optional)
 documentation_status = ['documentation_status_example'] # [str] | Only return endpoints that have the specified document status. Default is to return all the endpoints the user should have access to. (optional)
@@ -34,7 +33,7 @@ documentation_status = ['documentation_status_example'] # [str] | Only return en
     # and optional values
     try:
         # OpenAPI spec documentation for the Onshape REST API.
-        api_response = api_instance.get_open_api(file_type=file_type, excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
+        api_response = api_instance.get_open_api(excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling OpenAPIApi->get_open_api: %s\n" % e)
@@ -44,7 +43,6 @@ documentation_status = ['documentation_status_example'] # [str] | Only return en
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_type** | **str**| The type of file to return. Defaults to JSON. | [optional] if omitted the server will use the default value of 'JSON'
  **excluded_tags** | **str**| If an operation contains an excluded tag, it is not returned from this endpoint. | [optional]
  **included_tags** | **str**| Return only operations with tags included in includedTags. | [optional]
  **include_deprecated** | **bool**| Include deprecated endpoints. | [optional]
@@ -61,12 +59,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v1+yaml;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2, application/json;charset=UTF-8; qs=0.09, application/yaml;charset=UTF-8; qs=0.09
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success! |  -  |
+**0** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

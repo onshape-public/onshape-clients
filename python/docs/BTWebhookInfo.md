@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**company_id** | **str** |  | [optional] 
+**data** | **str** |  | [optional] 
+**dropped_event_count** | **int** |  | [optional] 
+**events** | **[str]** |  | [optional] 
+**filter** | **str** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
 **getproject_id** | **str** |  | [optional] 
-**events** | **[str]** |  | [optional] 
-**url** | **str** |  | [optional] 
-**data** | **str** |  | [optional] 
-**company_id** | **str** |  | [optional] 
-**filter** | **str** |  | [optional] 
-**dropped_event_count** | **int** |  | [optional] 
-**options** | [**bt_webhook_options.BTWebhookOptions**](BTWebhookOptions.md) |  | [optional] 
 **href** | **str** |  | [optional] 
-**view_ref** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**options** | [**bt_webhook_options.BTWebhookOptions**](BTWebhookOptions.md) |  | [optional] 
+**url** | **str** |  | [optional] 
+**view_ref** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

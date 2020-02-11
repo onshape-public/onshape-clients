@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**get_part_metadata**](PartsApi.md#get_part_metadata) | **GET** /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/metadata | 
 [**get_parts_wmv**](PartsApi.md#get_parts_wmv) | **GET** /api/parts/d/{did}/{wvm}/{wvmid} | Get list of parts
 [**get_parts_wmve**](PartsApi.md#get_parts_wmve) | **GET** /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid} | Get parts from an element.
-[**get_shaded_views**](PartsApi.md#get_shaded_views) | **GET** /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/shadedviews | 
+[**get_shaded_views1**](PartsApi.md#get_shaded_views1) | **GET** /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/shadedviews | 
 [**get_standard_content_part_metadata**](PartsApi.md#get_standard_content_part_metadata) | **GET** /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata | 
 [**update_part_metadata**](PartsApi.md#update_part_metadata) | **POST** /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/metadata | 
 [**update_standard_content_part_metadata**](PartsApi.md#update_standard_content_part_metadata) | **POST** /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata | 
@@ -465,6 +465,7 @@ max_facet_width = 3.4 # float |  (optional)
 output_vertex_normals = False # bool |  (optional) if omitted the server will use the default value of False
 output_facet_normals = True # bool |  (optional) if omitted the server will use the default value of True
 output_texture_coordinates = False # bool |  (optional) if omitted the server will use the default value of False
+output_face_appearances = False # bool |  (optional) if omitted the server will use the default value of False
 output_index_table = False # bool |  (optional) if omitted the server will use the default value of False
 face_id = ['face_id_example'] # [str] |  (optional)
 configuration = 'configuration_example' # str |  (optional)
@@ -484,7 +485,7 @@ body = 'body_example' # str |  (optional)
     # and optional values
     try:
         # Get Tessellated Faces
-        api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_index_table=output_index_table, face_id=face_id, configuration=configuration, output_error_faces=output_error_faces, link_document_id=link_document_id, body=body)
+        api_response = api_instance.get_faces1(did, wvm, wvmid, eid, partid, angle_tolerance=angle_tolerance, chord_tolerance=chord_tolerance, max_facet_width=max_facet_width, output_vertex_normals=output_vertex_normals, output_facet_normals=output_facet_normals, output_texture_coordinates=output_texture_coordinates, output_face_appearances=output_face_appearances, output_index_table=output_index_table, face_id=face_id, configuration=configuration, output_error_faces=output_error_faces, link_document_id=link_document_id, body=body)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling PartsApi->get_faces1: %s\n" % e)
@@ -505,6 +506,7 @@ Name | Type | Description  | Notes
  **output_vertex_normals** | **bool**|  | [optional] if omitted the server will use the default value of False
  **output_facet_normals** | **bool**|  | [optional] if omitted the server will use the default value of True
  **output_texture_coordinates** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **output_face_appearances** | **bool**|  | [optional] if omitted the server will use the default value of False
  **output_index_table** | **bool**|  | [optional] if omitted the server will use the default value of False
  **face_id** | **[str]**|  | [optional]
  **configuration** | **str**|  | [optional]
@@ -864,8 +866,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_shaded_views**
-> bt_shaded_views_info.BTShadedViewsInfo get_shaded_views(did, wvm, wvmid, eid, partid)
+# **get_shaded_views1**
+> bt_shaded_views_info.BTShadedViewsInfo get_shaded_views1(did, wvm, wvmid, eid, partid)
 
 
 
@@ -903,18 +905,18 @@ link_document_id = 'link_document_id_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid)
+        api_response = api_instance.get_shaded_views1(did, wvm, wvmid, eid, partid)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
+        print("Exception when calling PartsApi->get_shaded_views1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.get_shaded_views(did, wvm, wvmid, eid, partid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
+        api_response = api_instance.get_shaded_views1(did, wvm, wvmid, eid, partid, view_matrix=view_matrix, output_height=output_height, output_width=output_width, pixel_size=pixel_size, edges=edges, use_anti_aliasing=use_anti_aliasing, configuration=configuration, link_document_id=link_document_id)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartsApi->get_shaded_views: %s\n" % e)
+        print("Exception when calling PartsApi->get_shaded_views1: %s\n" % e)
 ```
 
 ### Parameters

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hidden** | **bool** |  | [optional] 
 **fixed** | **bool** |  | [optional] 
-**transform** | **[float]** |  | [optional] 
+**hidden** | **bool** |  | [optional] 
 **path** | **[str]** |  | [optional] 
+**transform** | **[float]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

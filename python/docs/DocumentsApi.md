@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**merge_into_workspace**](DocumentsApi.md#merge_into_workspace) | **POST** /api/documents/{did}/workspaces/{wid}/merge | Merge into workspace
 [**move_elements_to_document**](DocumentsApi.md#move_elements_to_document) | **POST** /api/documents/d/{did}/w/{wid}/moveelement | Move Elements
 [**restore_from_history**](DocumentsApi.md#restore_from_history) | **POST** /api/documents/{did}/w/{wid}/restore/{vm}/{vmid} | Restore version or microversion to workspace.
+[**search**](DocumentsApi.md#search) | **POST** /api/documents/search | 
 [**share_document**](DocumentsApi.md#share_document) | **POST** /api/documents/{did}/share | Share Document
 [**sync_application_elements**](DocumentsApi.md#sync_application_elements) | **POST** /api/documents/d/{did}/w/{wid}/syncApplicationElements | Sync Application Elements
 [**un_share_document**](DocumentsApi.md#un_share_document) | **DELETE** /api/documents/{did}/share/{eid} | Unshare Document
@@ -1157,6 +1158,7 @@ max_feature_script_version = 0 # int |  (optional) if omitted the server will us
 include_applications = False # bool |  (optional) if omitted the server will use the default value of False
 allowed_application_mime_types = '' # str |  (optional) if omitted the server will use the default value of ''
 include_composite_parts = False # bool |  (optional) if omitted the server will use the default value of False
+include_fs_tables = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -1170,7 +1172,7 @@ include_composite_parts = False # bool |  (optional) if omitted the server will 
     # and optional values
     try:
         # Insertable List for Document Version.
-        api_response = api_instance.get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts)
+        api_response = api_instance.get_insertables(did, wvm, wvmid, beta_capability_ids=beta_capability_ids, include_parts=include_parts, include_surfaces=include_surfaces, include_wires=include_wires, include_sketches=include_sketches, include_reference_features=include_reference_features, include_assemblies=include_assemblies, include_features=include_features, include_feature_studios=include_feature_studios, include_part_studios=include_part_studios, include_blobs=include_blobs, include_meshes=include_meshes, include_flattened_bodies=include_flattened_bodies, allowed_blob_mime_types=allowed_blob_mime_types, max_feature_script_version=max_feature_script_version, include_applications=include_applications, allowed_application_mime_types=allowed_application_mime_types, include_composite_parts=include_composite_parts, include_fs_tables=include_fs_tables)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling DocumentsApi->get_insertables: %s\n" % e)
@@ -1201,6 +1203,7 @@ Name | Type | Description  | Notes
  **include_applications** | **bool**|  | [optional] if omitted the server will use the default value of False
  **allowed_application_mime_types** | **str**|  | [optional] if omitted the server will use the default value of ''
  **include_composite_parts** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **include_fs_tables** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -1481,6 +1484,64 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search**
+> search(bt_document_search_params)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.DocumentsApi(api_client)
+    bt_document_search_params = onshape_client.oas.BTDocumentSearchParams() # bt_document_search_params.BTDocumentSearchParams | 
+    
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.search(bt_document_search_params)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling DocumentsApi->search: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bt_document_search_params** | [**bt_document_search_params.BTDocumentSearchParams**](BTDocumentSearchParams.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8; qs=0.09
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details

@@ -3,20 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **str** |  | [optional] 
-**object_id** | **str** |  | [optional] 
-**entry_id** | **str** |  | [optional] 
-**entry_type** | **int** |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
-**image** | **str** |  | [optional] 
-**entry_state** | **str** |  | [optional] 
-**enterprise_member** | **bool** |  | [optional] 
-**pending_owner_transfer** | **bool** |  | [optional] 
 **accept_owner_transfer** | **bool** |  | [optional] 
-**team_name** | **str** |  | [optional] 
 **company_name** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
+**enterprise_member** | **bool** |  | [optional] 
+**entry_id** | **str** |  | [optional] 
+**entry_state** | **str** |  | [optional] 
+**entry_type** | **int** |  | [optional] 
+**image** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**object_id** | **str** |  | [optional] 
+**pending_owner_transfer** | **bool** |  | [optional] 
 **permission** | **int** |  | [optional] 
+**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**team_name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

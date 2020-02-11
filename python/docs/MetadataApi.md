@@ -645,10 +645,18 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     wvid = 'wvid_example' # str | 
     eid = 'eid_example' # str | 
     body = 'body_example' # str | 
-    
+    configuration = 'configuration_example' # str |  (optional)
+
     # example passing only required values which don't have defaults set
     try:
         api_instance.update_wve_metadata(did, wv, wvid, eid, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.update_wve_metadata(did, wv, wvid, eid, body, configuration=configuration)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
 ```
@@ -662,6 +670,7 @@ Name | Type | Description  | Notes
  **wvid** | **str**|  |
  **eid** | **str**|  |
  **body** | **str**|  |
+ **configuration** | **str**|  | [optional]
 
 ### Return type
 
@@ -713,10 +722,18 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     pid = 'pid_example' # str | 
     sub_resource = 'sub_resource_example' # str | 
     body = 'body_example' # str | 
-    
+    configuration = 'configuration_example' # str |  (optional)
+
     # example passing only required values which don't have defaults set
     try:
         api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.update_wvep_metadata(did, wvm, wvmid, eid, pid, sub_resource, body, configuration=configuration)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->update_wvep_metadata: %s\n" % e)
 ```
@@ -732,6 +749,7 @@ Name | Type | Description  | Notes
  **pid** | **str**|  |
  **sub_resource** | **str**|  |
  **body** | **str**|  |
+ **configuration** | **str**|  | [optional]
 
 ### Return type
 

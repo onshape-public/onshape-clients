@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **exclusion_status** | **str** |  | [optional] 
 **exclude_is_editable** | **bool** |  | [optional] 
 **metadata_update_href** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

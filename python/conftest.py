@@ -51,6 +51,11 @@ def assets():
     return Path(__file__).parent / 'test' / 'assets'
 
 @pytest.fixture
+def tmp_dir():
+    tmp = Path(__file__).parent / 'test' / 'tmp'
+    return Path(__file__).parent / 'test' / 'tmp'
+
+@pytest.fixture
 def new_document(client, name_factory):
     doc_params = BTDocumentParams(name=name_factory())
     doc = client.documents_api.create_document(doc_params)

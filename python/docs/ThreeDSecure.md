@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
-**object** | **str** |  | [optional] 
 **amount** | **int** |  | [optional] 
 **authenticated** | **bool** |  | [optional] 
 **card** | [**card.Card**](Card.md) |  | [optional] 
 **created** | **int** |  | [optional] 
 **currency** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
 **livemode** | **bool** |  | [optional] 
+**object** | **str** |  | [optional] 
 **redirect_url** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
 
