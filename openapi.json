@@ -16681,9 +16681,6 @@
           "id": {
             "type": "string"
           },
-          "jsonType": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },

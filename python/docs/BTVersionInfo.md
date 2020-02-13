@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
 **purpose** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

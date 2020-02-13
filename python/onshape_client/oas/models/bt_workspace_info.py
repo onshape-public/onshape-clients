@@ -99,7 +99,6 @@ class BTWorkspaceInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'json_type': (str,),  # noqa: E501
             'is_read_only': (bool,),  # noqa: E501
             'can_delete': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
@@ -125,7 +124,6 @@ class BTWorkspaceInfo(ModelComposed):
         return None
 
     attribute_map = {
-        'json_type': 'jsonType',  # noqa: E501
         'is_read_only': 'isReadOnly',  # noqa: E501
         'can_delete': 'canDelete',  # noqa: E501
         'href': 'href',  # noqa: E501
@@ -157,11 +155,9 @@ class BTWorkspaceInfo(ModelComposed):
         '_additional_properties_model_instances',
     ])
 
-    def __init__(self, json_type, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
         """bt_workspace_info.BTWorkspaceInfo - a model defined in OpenAPI
 
-        Args:
-            json_type (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -210,7 +206,6 @@ class BTWorkspaceInfo(ModelComposed):
             '_configuration': _configuration,
         }
         model_args = {
-            'json_type': json_type,
         }
         model_args.update(kwargs)
         composed_info = validate_get_composed_info(
@@ -219,7 +214,6 @@ class BTWorkspaceInfo(ModelComposed):
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
 
-        self.json_type = json_type
         for var_name, var_value in six.iteritems(kwargs):
             setattr(self, var_name, var_value)
 
