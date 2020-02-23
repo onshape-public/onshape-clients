@@ -11,7 +11,7 @@ import pytest
 from onshape_client.client import Client
 from onshape_client.oas import BTCopyDocumentParams
 from onshape_client.oas.models.bt_document_params import BTDocumentParams
-from onshape_client.onshape_url import ConfiguredOnshapeElement, OnshapeElement
+from onshape_client.onshape_url import OnshapeElement
 
 collect_ignore = ["setup.py"]
 
@@ -25,17 +25,21 @@ prod_element_bank = OrderedDict(
 
 @pytest.fixture
 def element(request, client):
-    """ Get a particular assembly from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly', ['three_axes'], indirect=True)`
+    """ Get a particular element from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly', ['three_axes'], indirect=True)`
     :param request:
     :param client:
     :return: OnshapeElement
     """
     element_key = request.param
-    return prod_element_bank[element_key]
+    try:
+        return prod_element_bank[element_key]
+    except KeyError as e:
+        raise KeyError(f"Cannot find '{element_key}' in the element bank.")
 
 
 @pytest.fixture(scope='session')
 def client():
+    """Client needed to make API calls."""
     try:
         client = Client.get_client()
     except Exception as e:
@@ -45,21 +49,26 @@ def client():
 
 @pytest.fixture
 def assets():
+    """Returns the general test assets folder."""
     return Path(__file__).parent / 'test' / 'assets'
+
 
 @pytest.fixture
 def json_assets(assets):
+    """Returns the JSON assets folder."""
     return assets / 'json'
 
 
 @pytest.fixture
 def tmp_dir():
+    """Returns a temporary directory Path object."""
     tmp = Path(__file__).parent / 'test' / 'tmp'
     return Path(__file__).parent / 'test' / 'tmp'
 
 
 @pytest.fixture
 def new_document(client, name_factory):
+    """Returns a blank new document."""
     doc_params = BTDocumentParams(name=name_factory())
     doc = client.documents_api.create_document(doc_params)
     doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
@@ -70,6 +79,7 @@ def new_document(client, name_factory):
 
 @pytest.fixture
 def new_copied_document_factory(client, name_factory):
+    """Factory to copy elements that cleans up created elements when done."""
     created_docs = []
 
     def copy_workspace(copied_from):
@@ -78,6 +88,7 @@ def new_copied_document_factory(client, name_factory):
                                                   bt_copy_document_params=params, _preload_content=False)
         doc = json.loads(doc.data.decode('utf-8'))
         doc = OnshapeElement.create_from_ids(did=doc["newDocumentId"], wvm='w', wvmid=doc['newWorkspaceId'])
+        created_docs.append(doc)
         return doc
 
     yield copy_workspace
@@ -87,6 +98,8 @@ def new_copied_document_factory(client, name_factory):
 
 @pytest.fixture
 def name_factory():
+    """Factory to generate a doc name."""
+
     def name_factory():
         return f"Python Onshape Client Doc {datetime.now()}"
 
