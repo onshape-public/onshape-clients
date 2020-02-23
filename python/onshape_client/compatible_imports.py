@@ -17,6 +17,13 @@ def get_parse():
         from urllib.parse import urlparse as parse
     return parse
 
+def get_parse_qs():
+    if six.PY2:
+        from urlparse import urlparse as parse
+    else:
+        from urllib.parse import parse_qs as parse
+    return parse
+
 def get_sendable():
     if six.PY2:
         def sendable(s):
@@ -38,3 +45,4 @@ HTTPServer, HTTPHandler = get_http_server()
 parse=get_parse()
 sendable=get_sendable()
 unquote=get_unquote()
+parse_qs=get_parse_qs()

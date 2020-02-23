@@ -1,0 +1,374 @@
+{
+  "rootAssembly": {
+    "documentId": "cca81d10f239db0db9481e6f",
+    "documentMicroversion": "f12432bddf42a4acc56d3f11",
+    "configuration": "default",
+    "fullConfiguration": "default",
+    "elementId": "19fb95609c4cb02622ca9079",
+    "occurrences": [
+      {
+        "path": [
+          "MCjSdc3aMWqqSbDI3"
+        ],
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      },
+      {
+        "path": [
+          "Mc2y48K2Vfkm4dvQ+"
+        ],
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          3.110602869834277e-18,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      },
+      {
+        "path": [
+          "MuVkXROSyhAxIT5rk"
+        ],
+        "transform": [
+          0.0,
+          0.0,
+          1.0,
+          3.110602869834277e-18,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      }
+    ],
+    "instances": [
+      {
+        "id": "MCjSdc3aMWqqSbDI3",
+        "name": "Part 1 <1>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "default",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Default",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      },
+      {
+        "id": "Mc2y48K2Vfkm4dvQ+",
+        "name": "Part 1 <2>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "List_lrzquFlMkTs0CQ=Green",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Green",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      },
+      {
+        "id": "MuVkXROSyhAxIT5rk",
+        "name": "Part 1 <3>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "List_lrzquFlMkTs0CQ=Red",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Red",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      }
+    ],
+    "features": [
+      {
+        "featureType": "mate",
+        "id": "M64q/vhurm9JIByEN",
+        "suppressed": false,
+        "featureData": {
+          "name": "Fastened 1",
+          "mateType": "FASTENED",
+          "matedEntities": [
+            {
+              "matedOccurrence": [
+                "Mc2y48K2Vfkm4dvQ+"
+              ],
+              "matedCS": {
+                "origin": [
+                  -3.110602869834277e-18,
+                  0.0,
+                  0.0
+                ],
+                "xAxis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                "yAxis": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "zAxis": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ]
+              }
+            },
+            {
+              "matedOccurrence": [
+                "MCjSdc3aMWqqSbDI3"
+              ],
+              "matedCS": {
+                "origin": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xAxis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                "yAxis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "zAxis": [
+                  -0.0,
+                  -1.0,
+                  -0.0
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "featureType": "mate",
+        "id": "Mq4Vxn4dWGZPg6qvA",
+        "suppressed": false,
+        "featureData": {
+          "name": "Fastened 2",
+          "mateType": "FASTENED",
+          "matedEntities": [
+            {
+              "matedOccurrence": [
+                "MuVkXROSyhAxIT5rk"
+              ],
+              "matedCS": {
+                "origin": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xAxis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                "yAxis": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "zAxis": [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "matedOccurrence": [
+                "Mc2y48K2Vfkm4dvQ+"
+              ],
+              "matedCS": {
+                "origin": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xAxis": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "yAxis": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ],
+                "zAxis": [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subAssemblies": [],
+  "parts": [
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "default",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Default",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false,
+      "mateConnectors": [
+        {
+          "featureId": "FFgOgOZNzP3SPwv_1",
+          "mateConnectorCS": {
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "xAxis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "yAxis": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "zAxis": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "List_lrzquFlMkTs0CQ=Green",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Green",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false,
+      "mateConnectors": [
+        {
+          "featureId": "FFgOgOZNzP3SPwv_1",
+          "mateConnectorCS": {
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "xAxis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "yAxis": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "zAxis": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "List_lrzquFlMkTs0CQ=Red",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Red",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false,
+      "mateConnectors": [
+        {
+          "featureId": "FFgOgOZNzP3SPwv_1",
+          "mateConnectorCS": {
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "xAxis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "yAxis": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "zAxis": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "partStudioFeatures": []
+}

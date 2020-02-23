@@ -1,0 +1,167 @@
+{
+  "rootAssembly": {
+    "documentId": "9f701e729dd0cdec47dd2d63",
+    "documentMicroversion": "b9789f04195d3e2d8d95bec7",
+    "configuration": "default",
+    "fullConfiguration": "default",
+    "elementId": "df83fcf6dd1be4981ddacbd1",
+    "occurrences": [
+      {
+        "path": [
+          "MoYvjWLpzMOsJf3SU"
+        ],
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      },
+      {
+        "path": [
+          "Mr1V2MevXYxvMgDeR"
+        ],
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          3.110602869834277e-18,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      },
+      {
+        "path": [
+          "M7/DvgqZaQawvWbT+"
+        ],
+        "transform": [
+          0.0,
+          0.0,
+          1.0,
+          3.110602869834277e-18,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "fixed": false,
+        "hidden": false
+      }
+    ],
+    "instances": [
+      {
+        "id": "MoYvjWLpzMOsJf3SU",
+        "name": "Part 1 <1>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "default",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Default",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentVersion": "3395c071ca9534c3b1151e4b",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      },
+      {
+        "id": "Mr1V2MevXYxvMgDeR",
+        "name": "Part 1 <2>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "List_lrzquFlMkTs0CQ=Green",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Green",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentVersion": "3395c071ca9534c3b1151e4b",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      },
+      {
+        "id": "M7/DvgqZaQawvWbT+",
+        "name": "Part 1 <3>",
+        "partId": "JHD",
+        "isStandardContent": false,
+        "configuration": "List_lrzquFlMkTs0CQ=Red",
+        "fullConfiguration": "List_lrzquFlMkTs0CQ=Red",
+        "type": "Part",
+        "suppressed": false,
+        "documentId": "cca81d10f239db0db9481e6f",
+        "documentVersion": "3395c071ca9534c3b1151e4b",
+        "documentMicroversion": "f12432bddf42a4acc56d3f11",
+        "elementId": "75cb0445bc2f284720bd011e"
+      }
+    ]
+  },
+  "subAssemblies": [],
+  "parts": [
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentVersion": "3395c071ca9534c3b1151e4b",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "default",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Default",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false
+    },
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentVersion": "3395c071ca9534c3b1151e4b",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "List_lrzquFlMkTs0CQ=Green",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Green",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false
+    },
+    {
+      "documentId": "cca81d10f239db0db9481e6f",
+      "documentVersion": "3395c071ca9534c3b1151e4b",
+      "documentMicroversion": "f12432bddf42a4acc56d3f11",
+      "configuration": "List_lrzquFlMkTs0CQ=Red",
+      "fullConfiguration": "List_lrzquFlMkTs0CQ=Red",
+      "elementId": "75cb0445bc2f284720bd011e",
+      "partId": "JHD",
+      "bodyType": "solid",
+      "isStandardContent": false
+    }
+  ],
+  "partStudioFeatures": []
+}

@@ -1,22 +1,23 @@
-from onshape_client.compatible_imports import parse
-from onshape_client.client import Client
-import json
-
 import copy
+import json
+import webbrowser
 
+from onshape_client.client import Client
+from onshape_client.compatible_imports import parse, parse_qs
 from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams
-from onshape_client.units import u
 from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
-from onshape_client.oas.models.configuration_entry import ConfigurationEntry
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
-import webbrowser
-from enum import Enum
+from onshape_client.oas.models.configuration_entry import ConfigurationEntry
+from onshape_client.units import u
 
 
 class OnshapeElement(object):
     """ Turn a standard Onshape URL into an OnshapeElement object. Ensure that the URL is correctly formatted, and
-    create the useful fields."""
+    create the useful fields. Example of valid urls:
+    https://cad.onshape.com/documents/c8f8013d34183b1de74fa930/w/574b77701d8b74987c273500/e/455ef770951fe37de0b8ff08
+    https://cad.onshape.com/documents/c8f8013d34183b1de74fa930/w/574b77701d8b74987c273500/e/455ef770951fe37de0b8ff08?configuration=List_TOpkWtvolR0KY4%3Dewf
+    """
 
     @staticmethod
     def create_from_oas_models(oas_model, **kwargs):
@@ -26,11 +27,14 @@ class OnshapeElement(object):
             return OnshapeElement.create_from_ids(did=oas_model.id, **kwargs)
 
     @staticmethod
-    def create_from_ids(did=None, wvm=None, wvmid=None, eid=None):
+    def create_from_ids(did=None, wvm=None, wvmid=None, eid=None, partid=None, configuration=None):
         client = Client.get_client()
         url = client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid
         url = url + "/e/" + eid if eid else url
-        return OnshapeElement(url)
+        url = url + "?configuration=" + configuration if configuration else url
+        result = OnshapeElement(url)
+        result.partid = partid
+        return result
 
     def __init__(self, url, *args, **kwargs):
         self.original_url = url
@@ -53,6 +57,13 @@ class OnshapeElement(object):
             eid = None
             optional_microversion = None
         self.eid = eid
+        if parsed_vals.query and "configuration" in parsed_vals.query:
+            qs = parse_qs(parsed_vals.query)
+            if len(qs["configuration"]) > 1:
+                raise UserWarning("There should only be one configuration query in the url. Ignoring all but first.")
+            self.configuration = qs["configuration"][0]
+        else:
+            self.configuration = None
         self.optional_microversion = optional_microversion
 
     def get_microversion_url(self):
@@ -62,9 +73,9 @@ class OnshapeElement(object):
             return self.get_url()
         else:
             res = Client.get_client().documents_api.get_current_microversion(self.did,
-                                                                     self.wvm,
-                                                                     self.wvmid,
-                                                                     _preload_content=False)
+                                                                             self.wvm,
+                                                                             self.wvmid,
+                                                                             _preload_content=False)
             microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
             self.optional_microversion = microversion
             return self.get_url()
@@ -81,6 +92,8 @@ class OnshapeElement(object):
             url = url + "m/" + self.optional_microversion + "/"
         if self.eid:
             url = url + "e/" + self.eid + "/"
+        if self.configuration:
+            url = url + "?configuration=" + self.configuration
         return url
 
     @property
@@ -94,10 +107,10 @@ class OnshapeElement(object):
         result = []
         for e in self._get_element_infos():
             ands = []
-            if filter_name and filter_name==self.name:
-                ands.append(True)
-            if filter_type and filter_type==self.element_type:
-                ands.append(True)
+            if filter_name and not filter_name == e.name:
+                ands.append(False)
+            if filter_type and not filter_type == e.element_type:
+                ands.append(False)
             if all(ands):
                 result.append(OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=e.id))
         return result
@@ -117,18 +130,13 @@ class OnshapeElement(object):
             return self._get_element_info().name
         return self._get_document_info().name
 
-
     @property
     def default_workspace(self):
         return self._get_document_info().default_workspace.id
 
     @property
     def assemblies(self):
-        result = []
-        for element in self._get_element_infos():
-            if element.element_type == 'Assembly':
-                result.append(element)
-        return result
+        return self.elements(filter_type="ASSEMBLY")
 
     def s_assembly_insert_message(self):
         e_type = self.element_type
@@ -144,12 +152,15 @@ class OnshapeElement(object):
         return message
 
     def new_assembly(self, name="Assembly"):
-        asm = Client.get_client().assemblies_api.create_assembly(self.did, self.wvmid, BTModelElementParams(name=name), _preload_content=False)
+        asm = Client.get_client().assemblies_api.create_assembly(self.did, self.wvmid, BTModelElementParams(name=name),
+                                                                 _preload_content=False)
         asm = json.loads(asm.data.decode('utf-8'))
         return OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=asm["id"])
 
     def delete(self):
         Client.get_client().documents_api.delete_document(self.did)
+
+    ########## Below methods call API methods and are not cached.
 
     def _get_element_info(self):
         return next(i for i in self._get_element_infos() if i.id == self.eid)
@@ -159,6 +170,7 @@ class OnshapeElement(object):
 
     def _get_element_infos(self):
         return Client.get_client().documents_api.get_elements_in_document(self.did, self.wvm, self.wvmid)
+
 
 class ConfiguredOnshapeElement(OnshapeElement):
 
@@ -204,7 +216,9 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return encoded_val["queryParam"]
 
     def _get_configuration_encoding_response(self):
-        res = Client.get_client().elements_api.encode_configuration_map(self.did, self.eid, self._get_bt_configuration_params_for_current_configuration(), _preload_content=False)
+        res = Client.get_client().elements_api.encode_configuration_map(self.did, self.eid,
+                                                                        self._get_bt_configuration_params_for_current_configuration(),
+                                                                        _preload_content=False)
         return json.loads(res.data.decode("utf-8"))
 
     def _make_configuration_map(self, update):
@@ -212,7 +226,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
 
     def _get_default_configuration_map(self):
         defaults_map = {}
-        for k,v in self._get_parameter_map().items():
+        for k, v in self._get_parameter_map().items():
             param_type = v["typeName"]
             if param_type == 'BTMConfigurationParameterEnum' or param_type == 'BTMConfigurationParameterBoolean':
                 default_value = v["message"]["defaultValue"]
@@ -229,7 +243,8 @@ class ConfiguredOnshapeElement(OnshapeElement):
     def _get_bt_configuration_params_for_current_configuration(self):
         final = []
         for k, v in self.current_configuration.items():
-            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k), parameter_value=str(v).replace(' ', '+'))
+            p = ConfigurationEntry(parameter_id=self._get_param_id_from_name(k),
+                                   parameter_value=str(v).replace(' ', '+'))
             final.append(p)
         return BTConfigurationParams(parameters=final)
 
@@ -251,10 +266,6 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return parameter_map
 
     def _get_raw_configuration_params(self):
-        response =Client.get_client().elements_api.get_configuration(self.did, self.wvm, self.wvmid, self.eid,
-                                                        _preload_content=False)
+        response = Client.get_client().elements_api.get_configuration(self.did, self.wvm, self.wvmid, self.eid,
+                                                                      _preload_content=False)
         return json.loads(response.data.decode("utf-8"))
-
-
-
-
