@@ -11,6 +11,7 @@ from onshape_client.oas.models.bt_version_or_workspace_params import BTVersionOr
 from onshape_client.oas.models.transform_group import TransformGroup
 from onshape_client.onshape_url import OnshapeElement
 from onshape_client.utility import get_field
+import time
 
 
 @pytest.mark.parametrize('element', ['asm_three_axes'], indirect=True)
@@ -58,8 +59,8 @@ def test_create_instance(client, element, new_copied_document_factory):
     assert response.status == 200
 
 
-@pytest.skip("Not a highly critical test - and currently broken.")
 @pytest.mark.parametrize('element', ['asm_three_axes'], indirect=True)
+@pytest.mark.skip("Not a highly critical test - and currently broken.")
 def test_sub_sub_sub_assembly_instance_insert(client, element):
     """Ensures inner assemblies are inserted as expected by inserting sub-assembly at +1 m in X, then inserting that
     assembly at +1 in X, and sees if we ended up back at the origin."""
@@ -136,3 +137,35 @@ def test_sub_sub_sub_assembly_instance_insert(client, element):
     result = json.loads(result.data.decode("UTF-8"))
     final_transform = [t['transform'] for t in result['rootAssembly']['occurrences'] if len(t['path']) == 4][0]
     assert final_transform == origin_transform
+
+
+def test_assembly_definition_performance(client):
+    n_calls = 10
+    calls = []
+    cube_asm = OnshapeElement("https://cad.onshape.com/documents/ee5f3dea1b2b6196cba97e4a/v/6935ab731cfe24915c2b4ac8/e/2e54df6ea6c0657369a57131")
+    for i in range(n_calls):
+        start_time = time.time()
+        client.assemblies_api.get_assembly_definition(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid, _preload_content=False)
+        calls.append(time.time() - start_time)
+    assert sum(calls)/len(calls) < 0.6
+
+def test_stl_performance(client):
+    cube_asm = OnshapeElement("https://cad.onshape.com/documents/ee5f3dea1b2b6196cba97e4a/v/6935ab731cfe24915c2b4ac8/e/23e18c935aaf18a2dcba486b")
+    assert performance_test_calls(lambda : client.part_studios_api.get_(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid, partid="JHD",
+                                           _preload_content=False)) < 0.6
+
+def test_metadata_performance(client):
+    cube_asm = OnshapeElement("https://cad.onshape.com/documents/ee5f3dea1b2b6196cba97e4a/v/6935ab731cfe24915c2b4ac8/e/23e18c935aaf18a2dcba486b")
+    assert performance_test_calls(lambda : client.parts_api.get_part_metadata(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid, partid="JHD",
+                                           _preload_content=False)) < 0.6
+
+def performance_test_calls(call):
+    n_calls = 10
+    calls = []
+    for i in range(n_calls):
+        start_time = time.time()
+        call()
+        calls.append(time.time() - start_time)
+    average = sum(calls)/len(calls)
+    print(average)
+    return average
