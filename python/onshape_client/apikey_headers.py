@@ -32,6 +32,12 @@ def add_onshape_specific_headers(method, url, configuration, query_params={}, he
     '''
     if not urlparse(configuration.host).netloc == urlparse(url).netloc:
         warnings.warn("Requesting a url from a different domain ({}) than in the client configuration: ({})".format(urlparse(url).netloc, urlparse(configuration.host).netloc))
+
+    multipart_boundary = None
+    if 'multipart/form-data' in headers['Content-Type']:
+        (multipart_boundary, ctype) = make_boundary_key_and_ctype_header()
+        headers['Content-Type'] = ctype
+
     access_key = configuration.get_api_key_with_prefix('ACCESS_KEY')
     secret_key = configuration.get_api_key_with_prefix('SECRET_KEY')
     if access_key and secret_key:
@@ -49,11 +55,7 @@ def add_onshape_specific_headers(method, url, configuration, query_params={}, he
         }
         headers.update(req_headers)
 
-    if headers['Content-Type'] == 'multipart/form-data':
-        (boundary_key, ctype) = make_boundary_key_and_ctype_header()
-        headers['Content-Type'] = ctype\
-
-    return headers
+    return headers, multipart_boundary
 
 
 def _make_nonce():

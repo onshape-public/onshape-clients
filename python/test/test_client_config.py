@@ -12,5 +12,6 @@ def test_specify_client_config_in_code():
     assert client.configuration.api_key["ACCESS_KEY"] == "USER_ACCESS_KEY"
 
     # Reset client:
-    Client()
+    client = Client()
     assert client.configuration.api_key["SECRET_KEY"] != "USER_SECRET_KEY"
+    assert client.configuration.api_key["ACCESS_KEY"] != "USER_ACCESS_KEY"

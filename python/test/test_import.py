@@ -35,5 +35,5 @@ def import_file(file_path, did, wid):
 
 def test_import_file(new_document, client, assets):
     imported_ps = import_file(assets / "Cube.x_t", new_document.did, new_document.wvmid)
-    response = client.part_studios_api.get_mass_properties1(imported_ps.did, imported_ps.wvm, imported_ps.wvmid, imported_ps.eid)
-    assert response.bodies == 0
+    response = client.parts_api.get_mass_properties(imported_ps.did, imported_ps.wvm, imported_ps.wvmid, imported_ps.eid, partid='JFD')
+    assert response.bodies['JFD'].volume[0] > 0
