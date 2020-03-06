@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1.110",
+    "version": "1.111",
     "x-logo": {
       "backgroundColor": "#ffffff",
       "altText": "Onshape",
@@ -2018,6 +2018,13 @@
               "type": "boolean",
               "default": true
             }
+          },
+          {
+            "name": "linkDocumentId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2729,6 +2736,13 @@
           },
           {
             "name": "configuration",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "explodedViewId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -3508,11 +3522,10 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/FormDataMultiPart"
+                "$ref": "#/components/schemas/BTTranslationRequestBean"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "default": {
@@ -3658,16 +3671,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "$ref": "#/components/schemas/FormDataMultiPart"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "default": {
             "description": "default response",
@@ -7071,6 +7074,230 @@
         "x-BTVisibility": "PRODUCTION"
       }
     },
+    "/api/metadata/d/{did}/{wvm}/{wvmid}/e": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "operationId": "getWMVEsMetadata",
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvm",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvmid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkDocumentId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inferMetadataOwner",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
+              "application/json;charset=UTF-8; qs=0.09": {}
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Read"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      }
+    },
+    "/api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "operationId": "getWMVEMetadata",
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvm",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvmid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "eid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "configuration",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linkDocumentId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inferMetadataOwner",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
+              "application/json;charset=UTF-8; qs=0.09": {}
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Read"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      },
+      "post": {
+        "tags": [
+          "Metadata"
+        ],
+        "operationId": "updateWVEMetadata",
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvm",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvmid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "eid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "configuration",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json;charset=UTF-8; qs=0.09": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
+              "application/json;charset=UTF-8; qs=0.09": {}
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Write"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      }
+    },
     "/api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p": {
       "get": {
         "tags": [
@@ -7426,230 +7653,6 @@
             "name": "wvid",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json;charset=UTF-8; qs=0.09": {
-              "schema": {
-                "type": "string"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
-              "application/json;charset=UTF-8; qs=0.09": {}
-            }
-          }
-        },
-        "deprecated": false,
-        "security": [
-          {
-            "OAuth2": [
-              "OAuth2Write"
-            ]
-          }
-        ],
-        "x-BTVisibility": "PRODUCTION"
-      }
-    },
-    "/api/metadata/d/{did}/{wv}/{wvid}/e": {
-      "get": {
-        "tags": [
-          "Metadata"
-        ],
-        "operationId": "getWVEsMetadata",
-        "parameters": [
-          {
-            "name": "did",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wv",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wvid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "linkDocumentId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "inferMetadataOwner",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
-              "application/json;charset=UTF-8; qs=0.09": {}
-            }
-          }
-        },
-        "deprecated": false,
-        "security": [
-          {
-            "OAuth2": [
-              "OAuth2Read"
-            ]
-          }
-        ],
-        "x-BTVisibility": "PRODUCTION"
-      }
-    },
-    "/api/metadata/d/{did}/{wv}/{wvid}/e/{eid}": {
-      "get": {
-        "tags": [
-          "Metadata"
-        ],
-        "operationId": "getWVEMetadata",
-        "parameters": [
-          {
-            "name": "did",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wv",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wvid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "eid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "configuration",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "linkDocumentId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "inferMetadataOwner",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {},
-              "application/json;charset=UTF-8; qs=0.09": {}
-            }
-          }
-        },
-        "deprecated": false,
-        "security": [
-          {
-            "OAuth2": [
-              "OAuth2Read"
-            ]
-          }
-        ],
-        "x-BTVisibility": "PRODUCTION"
-      },
-      "post": {
-        "tags": [
-          "Metadata"
-        ],
-        "operationId": "updateWVEMetadata",
-        "parameters": [
-          {
-            "name": "did",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wv",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wvid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "eid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "configuration",
-            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -9850,6 +9853,21 @@
             "schema": {
               "type": "boolean",
               "default": true
+            }
+          },
+          {
+            "name": "includeSectionCutViews",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "linkDocumentId",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -13961,16 +13979,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "$ref": "#/components/schemas/FormDataMultiPart"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "default": {
             "description": "default response",
@@ -14869,45 +14877,58 @@
       },
       "BTUserSummaryInfo": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+        "properties": {
+          "company": {
+            "$ref": "#/components/schemas/BTCompanySummaryInfo"
           },
-          {
-            "type": "object",
-            "properties": {
-              "source": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "lastLoginTime": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "company": {
-                "$ref": "#/components/schemas/BTCompanySummaryInfo"
-              },
-              "globalPermissions": {
-                "$ref": "#/components/schemas/GlobalPermissionInfo"
-              },
-              "isGuest": {
-                "type": "boolean"
-              },
-              "isLight": {
-                "type": "boolean"
-              },
-              "firstName": {
-                "type": "string"
-              },
-              "lastName": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              }
-            }
+          "email": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "globalPermissions": {
+            "$ref": "#/components/schemas/GlobalPermissionInfo"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "isGuest": {
+            "type": "boolean"
+          },
+          "isLight": {
+            "type": "boolean"
+          },
+          "lastLoginTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "source": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
           }
-        ]
+        }
       },
       "GlobalPermissionInfo": {
         "type": "object",
@@ -15167,92 +15188,6 @@
           },
           "type": {
             "type": "string"
-          }
-        }
-      },
-      "FormDataMultiPart": {
-        "type": "object",
-        "properties": {
-          "bodyParts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BodyPart"
-            }
-          },
-          "contentDisposition": {
-            "$ref": "#/components/schemas/ContentDisposition"
-          },
-          "entity": {
-            "type": "object"
-          },
-          "fields": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/FormDataBodyPart"
-              }
-            }
-          },
-          "headers": {
-            "type": "object",
-            "properties": {
-              "empty": {
-                "type": "boolean"
-              }
-            },
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "mediaType": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string"
-              },
-              "subtype": {
-                "type": "string"
-              },
-              "parameters": {
-                "type": "object",
-                "additionalProperties": {
-                  "type": "string"
-                }
-              },
-              "wildcardType": {
-                "type": "boolean"
-              },
-              "wildcardSubtype": {
-                "type": "boolean"
-              }
-            }
-          },
-          "messageBodyWorkers": {
-            "$ref": "#/components/schemas/MessageBodyWorkers"
-          },
-          "parameterizedHeaders": {
-            "type": "object",
-            "properties": {
-              "empty": {
-                "type": "boolean"
-              }
-            },
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ParameterizedHeader"
-              }
-            }
-          },
-          "parent": {
-            "$ref": "#/components/schemas/MultiPart"
-          },
-          "providers": {
-            "type": "object"
           }
         }
       },
@@ -16681,6 +16616,9 @@
           "id": {
             "type": "string"
           },
+          "jsonType": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
@@ -16788,30 +16726,33 @@
           {
             "type": "object",
             "properties": {
+              "thumbnail": {
+                "$ref": "#/components/schemas/BTThumbnailInfo"
+              },
               "parents": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTVersionInfo"
                 }
               },
-              "thumbnail": {
-                "$ref": "#/components/schemas/BTThumbnailInfo"
+              "creator": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              },
+              "lastModifier": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
               },
               "modifiedAt": {
                 "type": "string",
                 "format": "date-time"
               },
-              "description": {
+              "documentId": {
                 "type": "string"
               },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
               },
-              "lastModifier": {
-                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-              },
-              "documentId": {
+              "description": {
                 "type": "string"
               },
               "microversion": {
@@ -16821,14 +16762,11 @@
                 "type": "string",
                 "format": "date-time"
               },
-              "parent": {
-                "type": "string"
-              },
               "type": {
                 "type": "string"
               },
-              "creator": {
-                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              "parent": {
+                "type": "string"
               }
             }
           }
@@ -17079,6 +17017,106 @@
           }
         }
       },
+      "BTAppElementReferenceInfo": {
+        "type": "object",
+        "properties": {
+          "changeId": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorDescription": {
+            "type": "string"
+          },
+          "errorValue": {
+            "type": "string",
+            "writeOnly": true,
+            "enum": [
+              "OK",
+              "TRANSACTION_CONFLICT",
+              "NOT_FOUND",
+              "INCONSISTENT_CHANGES"
+            ]
+          },
+          "parentChangeId": {
+            "type": "string"
+          },
+          "referenceId": {
+            "type": "string"
+          },
+          "transactionId": {
+            "type": "string"
+          }
+        }
+      },
+      "BTAppElementReferenceParams": {
+        "type": "object",
+        "properties": {
+          "hasDocumentMicroversions": {
+            "type": "boolean"
+          },
+          "idTag": {
+            "type": "string"
+          },
+          "idTagMicroversionId": {
+            "type": "string"
+          },
+          "isSketchOnly": {
+            "type": "boolean"
+          },
+          "parentChangeId": {
+            "type": "string"
+          },
+          "partNumber": {
+            "type": "string"
+          },
+          "pureSketch": {
+            "type": "boolean"
+          },
+          "referenceType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returnError": {
+            "type": "boolean"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "sketchIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "targetConfiguration": {
+            "type": "string"
+          },
+          "targetDocumentId": {
+            "type": "string"
+          },
+          "targetElementId": {
+            "type": "string"
+          },
+          "targetMicroversionId": {
+            "type": "string"
+          },
+          "targetVersionId": {
+            "type": "string"
+          },
+          "trackNewVersions": {
+            "type": "boolean"
+          },
+          "transactionId": {
+            "type": "string"
+          },
+          "updateSketchInfo": {
+            "type": "boolean"
+          }
+        }
+      },
       "BTAppElementModifyInfo": {
         "type": "object",
         "properties": {
@@ -17315,106 +17353,6 @@
           }
         }
       },
-      "BTAppElementReferenceInfo": {
-        "type": "object",
-        "properties": {
-          "changeId": {
-            "type": "string"
-          },
-          "errorCode": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "errorDescription": {
-            "type": "string"
-          },
-          "errorValue": {
-            "type": "string",
-            "writeOnly": true,
-            "enum": [
-              "OK",
-              "TRANSACTION_CONFLICT",
-              "NOT_FOUND",
-              "INCONSISTENT_CHANGES"
-            ]
-          },
-          "parentChangeId": {
-            "type": "string"
-          },
-          "referenceId": {
-            "type": "string"
-          },
-          "transactionId": {
-            "type": "string"
-          }
-        }
-      },
-      "BTAppElementReferenceParams": {
-        "type": "object",
-        "properties": {
-          "hasDocumentMicroversions": {
-            "type": "boolean"
-          },
-          "idTag": {
-            "type": "string"
-          },
-          "idTagMicroversionId": {
-            "type": "string"
-          },
-          "isSketchOnly": {
-            "type": "boolean"
-          },
-          "parentChangeId": {
-            "type": "string"
-          },
-          "partNumber": {
-            "type": "string"
-          },
-          "pureSketch": {
-            "type": "boolean"
-          },
-          "referenceType": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "returnError": {
-            "type": "boolean"
-          },
-          "revision": {
-            "type": "string"
-          },
-          "sketchIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "targetConfiguration": {
-            "type": "string"
-          },
-          "targetDocumentId": {
-            "type": "string"
-          },
-          "targetElementId": {
-            "type": "string"
-          },
-          "targetMicroversionId": {
-            "type": "string"
-          },
-          "targetVersionId": {
-            "type": "string"
-          },
-          "trackNewVersions": {
-            "type": "boolean"
-          },
-          "transactionId": {
-            "type": "string"
-          },
-          "updateSketchInfo": {
-            "type": "boolean"
-          }
-        }
-      },
       "BTAppElementReferenceResolveInfo": {
         "type": "object",
         "properties": {
@@ -17518,35 +17456,6 @@
             "items": {
               "type": "string"
             }
-          }
-        }
-      },
-      "BTBoundingBoxInfo": {
-        "type": "object",
-        "properties": {
-          "highX": {
-            "type": "number",
-            "format": "double"
-          },
-          "highY": {
-            "type": "number",
-            "format": "double"
-          },
-          "highZ": {
-            "type": "number",
-            "format": "double"
-          },
-          "lowX": {
-            "type": "number",
-            "format": "double"
-          },
-          "lowY": {
-            "type": "number",
-            "format": "double"
-          },
-          "lowZ": {
-            "type": "number",
-            "format": "double"
           }
         }
       },
@@ -17874,6 +17783,35 @@
           },
           "revision": {
             "type": "string"
+          }
+        }
+      },
+      "BTBoundingBoxInfo": {
+        "type": "object",
+        "properties": {
+          "highX": {
+            "type": "number",
+            "format": "double"
+          },
+          "highY": {
+            "type": "number",
+            "format": "double"
+          },
+          "highZ": {
+            "type": "number",
+            "format": "double"
+          },
+          "lowX": {
+            "type": "number",
+            "format": "double"
+          },
+          "lowY": {
+            "type": "number",
+            "format": "double"
+          },
+          "lowZ": {
+            "type": "number",
+            "format": "double"
           }
         }
       },
@@ -18365,7 +18303,7 @@
                 "type": "number",
                 "format": "double"
               },
-              "ydir": {
+              "ycenter": {
                 "type": "number",
                 "format": "double"
               },
@@ -18373,7 +18311,7 @@
                 "type": "number",
                 "format": "double"
               },
-              "ycenter": {
+              "ydir": {
                 "type": "number",
                 "format": "double"
               },
@@ -18522,9 +18460,6 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "isPeriodic": {
-                "type": "boolean"
-              },
               "isRational": {
                 "type": "boolean"
               },
@@ -18545,6 +18480,9 @@
                   "type": "number",
                   "format": "double"
                 }
+              },
+              "isPeriodic": {
+                "type": "boolean"
               }
             }
           }
@@ -18879,6 +18817,10 @@
           {
             "type": "object",
             "properties": {
+              "valueObject": {
+                "type": "number",
+                "format": "double"
+              },
               "quantityType": {
                 "type": "string",
                 "enum": [
@@ -18893,10 +18835,6 @@
                   "CURRENT",
                   "ANYTHING"
                 ]
-              },
-              "valueObject": {
-                "type": "number",
-                "format": "double"
               },
               "unitToPower": {
                 "type": "object",
@@ -19119,18 +19057,18 @@
           {
             "type": "object",
             "properties": {
-              "occurrenceQueriesFromAllConfigurations": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTMIndividualQueryWithOccurrenceBase-904"
-                }
-              },
               "auxiliaryAssemblyFeature": {
                 "type": "boolean"
               },
               "featureListFieldIndex": {
                 "type": "integer",
                 "format": "int32"
+              },
+              "occurrenceQueriesFromAllConfigurations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTMIndividualQueryWithOccurrenceBase-904"
+                }
               },
               "version": {
                 "type": "integer",
@@ -19346,10 +19284,10 @@
               "partStudioMateConnectorQuery": {
                 "type": "boolean"
               },
-              "queryData": {
+              "featureId": {
                 "type": "string"
               },
-              "featureId": {
+              "queryData": {
                 "type": "string"
               }
             }
@@ -19705,6 +19643,9 @@
           {
             "type": "object",
             "properties": {
+              "mateConnectorQueryList": {
+                "$ref": "#/components/schemas/BTMParameterQueryWithOccurrenceList-67"
+              },
               "primaryAxisAlignment": {
                 "type": "boolean"
               },
@@ -19720,9 +19661,6 @@
               },
               "mateOffset": {
                 "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "mateConnectorQueryList": {
-                "$ref": "#/components/schemas/BTMParameterQueryWithOccurrenceList-67"
               },
               "mateConnectors": {
                 "type": "array",
@@ -20069,11 +20007,11 @@
           {
             "type": "object",
             "properties": {
-              "isNull": {
-                "type": "boolean"
-              },
               "nullValue": {
                 "type": "string"
+              },
+              "isNull": {
+                "type": "boolean"
               }
             }
           }
@@ -20105,12 +20043,12 @@
               "isInteger": {
                 "type": "boolean"
               },
+              "expression": {
+                "type": "string"
+              },
               "value": {
                 "type": "number",
                 "format": "double"
-              },
-              "expression": {
-                "type": "string"
               }
             }
           }
@@ -20573,15 +20511,15 @@
           {
             "type": "object",
             "properties": {
+              "originX": {
+                "type": "number",
+                "format": "double"
+              },
               "originY": {
                 "type": "number",
                 "format": "double"
               },
               "xaxisX": {
-                "type": "number",
-                "format": "double"
-              },
-              "originX": {
                 "type": "number",
                 "format": "double"
               },
@@ -20606,11 +20544,11 @@
           {
             "type": "object",
             "properties": {
-              "x": {
+              "y": {
                 "type": "number",
                 "format": "double"
               },
-              "y": {
+              "x": {
                 "type": "number",
                 "format": "double"
               },
@@ -20636,6 +20574,10 @@
               "text": {
                 "type": "string"
               },
+              "ascent": {
+                "type": "number",
+                "format": "double"
+              },
               "baselineStartX": {
                 "type": "number",
                 "format": "double"
@@ -20649,10 +20591,6 @@
                 "format": "double"
               },
               "baselineDirectionY": {
-                "type": "number",
-                "format": "double"
-              },
-              "ascent": {
                 "type": "number",
                 "format": "double"
               }
@@ -20862,48 +20800,8 @@
       "BTPExpression-9": {
         "type": "object",
         "properties": {
-          "atomic": {
-            "type": "boolean"
-          },
           "btType": {
             "type": "string"
-          },
-          "documentationType": {
-            "type": "string",
-            "enum": [
-              "FUNCTION",
-              "PREDICATE",
-              "CONSTANT",
-              "ENUM",
-              "USER_TYPE",
-              "FEATURE_DEFINITION",
-              "FILE_HEADER",
-              "UNDOCUMENTABLE",
-              "UNKNOWN"
-            ]
-          },
-          "endSourceLocation": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nodeId": {
-            "type": "string"
-          },
-          "shortDescriptor": {
-            "type": "string"
-          },
-          "spaceAfter": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceBefore": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceDefault": {
-            "type": "boolean"
-          },
-          "startSourceLocation": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "discriminator": {
@@ -20923,7 +20821,12 @@
             "BTPExpressionVarReference-245": "#/components/schemas/BTPExpressionVarReference-245",
             "BTPLiteral-253": "#/components/schemas/BTPLiteral-253"
           }
-        }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTPPropertyAccessor-23"
+          }
+        ]
       },
       "BTPExpressionAccess-237": {
         "type": "object",
@@ -21000,11 +20903,11 @@
           {
             "type": "object",
             "properties": {
-              "functionName": {
-                "$ref": "#/components/schemas/BTPName-261"
-              },
               "functionNameString": {
                 "type": "string"
+              },
+              "functionName": {
+                "$ref": "#/components/schemas/BTPName-261"
               },
               "functionExpression": {
                 "$ref": "#/components/schemas/BTPExpression-9"
@@ -21025,14 +20928,14 @@
           {
             "type": "object",
             "properties": {
-              "body": {
-                "$ref": "#/components/schemas/BTPStatementBlock-271"
-              },
               "arguments": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTPArgumentDeclaration-232"
                 }
+              },
+              "body": {
+                "$ref": "#/components/schemas/BTPStatementBlock-271"
               },
               "precondition": {
                 "$ref": "#/components/schemas/BTPStatement-269"
@@ -21556,12 +21459,12 @@
               "integer": {
                 "type": "boolean"
               },
+              "text": {
+                "type": "string"
+              },
               "value": {
                 "type": "number",
                 "format": "double"
-              },
-              "text": {
-                "type": "string"
               }
             }
           }
@@ -21576,10 +21479,10 @@
           {
             "type": "object",
             "properties": {
-              "value": {
+              "text": {
                 "type": "string"
               },
-              "text": {
+              "value": {
                 "type": "string"
               }
             }
@@ -21688,6 +21591,9 @@
             "type": "boolean"
           },
           "standardLibrary": {
+            "type": "boolean"
+          },
+          "standardLibraryCommon": {
             "type": "boolean"
           },
           "startSourceLocation": {
@@ -22034,11 +21940,11 @@
               "name": {
                 "$ref": "#/components/schemas/BTPIdentifier-8"
               },
-              "value": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "type": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
+              },
+              "value": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -22088,14 +21994,14 @@
               "condition": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
-              "spaceAfterIf": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "thenBody": {
                 "$ref": "#/components/schemas/BTPStatement-269"
               },
               "elseBody": {
                 "$ref": "#/components/schemas/BTPStatement-269"
+              },
+              "spaceAfterIf": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -22294,6 +22200,9 @@
               "body": {
                 "$ref": "#/components/schemas/BTPStatementBlock-271"
               },
+              "silent": {
+                "type": "boolean"
+              },
               "catchVariable": {
                 "$ref": "#/components/schemas/BTPIdentifier-8"
               },
@@ -22305,9 +22214,6 @@
               },
               "spaceAfterCatch": {
                 "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "silent": {
-                "type": "boolean"
               }
             }
           }
@@ -22343,11 +22249,11 @@
               "name": {
                 "$ref": "#/components/schemas/BTPIdentifier-8"
               },
-              "value": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "type": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
+              },
+              "value": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -23497,7 +23403,7 @@
               "enumName": {
                 "type": "string"
               },
-              "defaultValue": {
+              "namespace": {
                 "type": "string"
               },
               "options": {
@@ -23506,7 +23412,7 @@
                   "$ref": "#/components/schemas/BTMEnumOption-592"
                 }
               },
-              "namespace": {
+              "defaultValue": {
                 "type": "string"
               }
             }
@@ -23876,15 +23782,6 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "isInternalModule": {
-                "type": "boolean"
-              },
-              "imports": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTPTopLevelImport-285"
-                }
-              },
               "deepImports": {
                 "type": "object",
                 "additionalProperties": {
@@ -23892,6 +23789,15 @@
                   "items": {
                     "$ref": "#/components/schemas/BTImport"
                   }
+                }
+              },
+              "isInternalModule": {
+                "type": "boolean"
+              },
+              "imports": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTPTopLevelImport-285"
                 }
               },
               "pathMap": {
@@ -23903,6 +23809,9 @@
               "version": {
                 "$ref": "#/components/schemas/BTPLiteralNumber-258"
               },
+              "isBlob": {
+                "type": "boolean"
+              },
               "topLevel": {
                 "type": "array",
                 "items": {
@@ -23913,9 +23822,6 @@
                 "$ref": "#/components/schemas/BTCacheDataPath-191"
               },
               "mayHaveImplicitImports": {
-                "type": "boolean"
-              },
-              "isBlob": {
                 "type": "boolean"
               }
             }
@@ -24060,14 +23966,14 @@
           {
             "type": "object",
             "properties": {
-              "body": {
-                "$ref": "#/components/schemas/BTPStatementBlock-271"
-              },
               "arguments": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTPArgumentDeclaration-232"
                 }
+              },
+              "body": {
+                "$ref": "#/components/schemas/BTPStatementBlock-271"
               },
               "precondition": {
                 "$ref": "#/components/schemas/BTPStatement-269"
@@ -24242,11 +24148,11 @@
               "spaceAfterVersion": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "version": {
                 "$ref": "#/components/schemas/BTPLiteralNumber-258"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
               }
             }
           }
@@ -24556,16 +24462,10 @@
           {
             "type": "object",
             "properties": {
-              "optionNames": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "enumName": {
                 "type": "string"
               },
-              "options": {
+              "optionNames": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -24573,6 +24473,12 @@
               },
               "namespace": {
                 "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -25584,6 +25490,103 @@
           }
         }
       },
+      "BTTranslationRequestBean": {
+        "type": "object",
+        "properties": {
+          "allowFaultyParts": {
+            "type": "boolean"
+          },
+          "createComposite": {
+            "type": "boolean"
+          },
+          "createDrawingIfPossible": {
+            "type": "boolean"
+          },
+          "encodedFilename": {
+            "type": "string"
+          },
+          "extractAssemblyHierarchy": {
+            "type": "boolean"
+          },
+          "file": {
+            "type": "string",
+            "format":  "binary"
+          },
+          "fileBodyWithDetails": {
+            "$ref": "#/components/schemas/FormDataBodyPart"
+          },
+          "fileContentLength": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileDetail": {
+            "$ref": "#/components/schemas/FormDataContentDisposition"
+          },
+          "flattenAssemblies": {
+            "type": "boolean"
+          },
+          "formatName": {
+            "type": "string"
+          },
+          "isyAxisIsUp": {
+            "type": "boolean"
+          },
+          "joinAdjacentSurfaces": {
+            "type": "boolean"
+          },
+          "locationElementId": {
+            "type": "string"
+          },
+          "locationGroupId": {
+            "type": "string"
+          },
+          "locationPosition": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notifyUser": {
+            "type": "boolean"
+          },
+          "ownerId": {
+            "type": "string"
+          },
+          "ownerType": {
+            "type": "string",
+            "enum": [
+              "USER",
+              "COMPANY",
+              "ONSHAPE"
+            ]
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "splitAssembliesIntoMultipleDocuments": {
+            "type": "boolean"
+          },
+          "storeInDocument": {
+            "type": "boolean"
+          },
+          "translate": {
+            "type": "boolean"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "uploadId": {
+            "type": "string"
+          },
+          "versionString": {
+            "type": "string"
+          }
+        }
+      },
       "BTUpdateMeshUnitsParams": {
         "type": "object",
         "properties": {
@@ -25604,18 +25607,18 @@
               "cloudStorageAccountId_": {
                 "type": "string"
               },
-              "importFolder": {
-                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
-              },
-              "exportFolder": {
-                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
+              "cloudStorageAccountId": {
+                "type": "string"
               },
               "cloudStorageProvider": {
                 "type": "integer",
                 "format": "int32"
               },
-              "cloudStorageAccountId": {
-                "type": "string"
+              "importFolder": {
+                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
+              },
+              "exportFolder": {
+                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
               },
               "enabled": {
                 "type": "boolean"
@@ -25652,9 +25655,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "hasPendingOwner": {
-            "type": "boolean"
           },
           "href": {
             "type": "string",
@@ -25991,9 +25991,6 @@
           "description": {
             "type": "string"
           },
-          "hasPendingOwner": {
-            "type": "boolean"
-          },
           "href": {
             "type": "string",
             "format": "uri"
@@ -26077,150 +26074,6 @@
           }
         }
       },
-      "BTDocumentLabelInfo": {
-        "type": "object",
-        "properties": {
-          "canMove": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "description": {
-            "type": "string"
-          },
-          "hasPendingOwner": {
-            "type": "boolean"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isContainer": {
-            "type": "boolean"
-          },
-          "isEnterpriseOwned": {
-            "type": "boolean"
-          },
-          "isMutable": {
-            "type": "boolean"
-          },
-          "modifiedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modifiedBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "name": {
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "parentLabelId": {
-            "type": "string"
-          },
-          "path": {
-            "type": "string"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "resourceType": {
-            "type": "string"
-          },
-          "treeHref": {
-            "type": "string"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          }
-        }
-      },
-      "BTDocumentProcessingInfo": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTDocumentInfo"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "translationEventKey": {
-                "type": "string"
-              },
-              "translationId": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      "BTPermissionSet": {
-        "type": "object"
-      },
-      "BTCopyDocumentInfo": {
-        "type": "object",
-        "properties": {
-          "newDocumentId": {
-            "type": "string"
-          },
-          "newDocumentName": {
-            "type": "string"
-          },
-          "newOwner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "newParentId": {
-            "type": "string"
-          },
-          "newProjectId": {
-            "type": "string"
-          },
-          "newWorkspaceId": {
-            "type": "string"
-          }
-        }
-      },
-      "BTCopyDocumentParams": {
-        "type": "object",
-        "properties": {
-          "betaCapabilityIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "isPublic": {
-            "type": "boolean"
-          },
-          "newName": {
-            "type": "string"
-          },
-          "ownerId": {
-            "type": "string"
-          },
-          "ownerTypeIndex": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "parentId": {
-            "type": "string"
-          },
-          "projectId": {
-            "type": "string"
-          }
-        }
-      },
       "BTDocumentInfo": {
         "type": "object",
         "properties": {
@@ -26272,9 +26125,6 @@
           },
           "duplicateNameViolationError": {
             "type": "string"
-          },
-          "hasPendingOwner": {
-            "type": "boolean"
           },
           "hasReleaseRevisionableObjects": {
             "type": "boolean"
@@ -26415,6 +26265,817 @@
           "propertyName": "jsonType",
           "mapping": {
             "document-processing": "#/components/schemas/BTDocumentProcessingInfo"
+          }
+        }
+      },
+      "BTDocumentLabelInfo": {
+        "type": "object",
+        "properties": {
+          "canMove": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isContainer": {
+            "type": "boolean"
+          },
+          "isEnterpriseOwned": {
+            "type": "boolean"
+          },
+          "isMutable": {
+            "type": "boolean"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "parentLabelId": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "type": "string"
+          },
+          "treeHref": {
+            "type": "string"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "BTDocumentProcessingInfo": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTDocumentInfo"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "translationEventKey": {
+                "type": "string"
+              },
+              "translationId": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "BTDocumentSearchHitInfo": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string"
+          },
+          "elementName": {
+            "type": "string"
+          },
+          "highlightedFields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "sourceMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "versionOrWorkspaceName": {
+            "type": "string"
+          }
+        }
+      },
+      "BTDocumentSummaryInfo": {
+        "type": "object",
+        "properties": {
+          "jsonType": {
+            "type": "string"
+          }
+        },
+        "discriminator": {
+          "propertyName": "jsonType",
+          "mapping": {
+            "document": "#/components/schemas/BTDocumentInfo",
+            "document-summary-search": "#/components/schemas/BTDocumentSummarySearchInfo"
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "parentId": {
+                "type": "string"
+              },
+              "permissionSet": {
+                "$ref": "#/components/schemas/BTPermissionSet"
+              },
+              "trash": {
+                "type": "boolean"
+              },
+              "totalWorkspacesUpdating": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "totalWorkspacesScheduledForUpdate": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "canUnshare": {
+                "type": "boolean"
+              },
+              "thumbnail": {
+                "$ref": "#/components/schemas/BTThumbnailInfo"
+              },
+              "supportTeamUserAndShared": {
+                "type": "boolean"
+              },
+              "likedByCurrentUser": {
+                "type": "boolean"
+              },
+              "documentLabels": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTDocumentLabelInfo"
+                }
+              },
+              "numberOfTimesReferenced": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "numberOfTimesCopied": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "likes": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "recentVersion": {
+                "$ref": "#/components/schemas/BTBaseInfo"
+              },
+              "hasRelevantInsertables": {
+                "type": "boolean"
+              },
+              "createdWithEducationPlan": {
+                "type": "boolean"
+              },
+              "notRevisionManaged": {
+                "type": "boolean"
+              },
+              "anonymousAccessAllowed": {
+                "type": "boolean"
+              },
+              "anonymousAllowsExport": {
+                "type": "boolean"
+              },
+              "defaultElementId": {
+                "type": "string"
+              },
+              "defaultWorkspace": {
+                "$ref": "#/components/schemas/BTBaseInfo"
+              },
+              "trashedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isOrphaned": {
+                "type": "boolean"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hasReleaseRevisionableObjects": {
+                "type": "boolean"
+              },
+              "public": {
+                "type": "boolean"
+              },
+              "userAccountLimitsBreached": {
+                "type": "boolean"
+              },
+              "isUsingManagedWorkflow": {
+                "type": "boolean"
+              },
+              "permission": {
+                "type": "string",
+                "enum": [
+                  "NOACCESS",
+                  "ANONYMOUS_ACCESS",
+                  "READ",
+                  "READ_COPY_EXPORT",
+                  "COMMENT",
+                  "WRITE",
+                  "RESHARE",
+                  "FULL",
+                  "OWNER"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "BTDocumentSummarySearchInfo": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTDocumentSummaryInfo"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "searchHits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTDocumentSearchHitInfo"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BTFolderInfo": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "parentId": {
+                "type": "string"
+              },
+              "permissionSet": {
+                "$ref": "#/components/schemas/BTPermissionSet"
+              },
+              "trash": {
+                "type": "boolean"
+              },
+              "canUnshare": {
+                "type": "boolean"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "trashedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isOrphaned": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "BTGlobalTreeMagicNodeInfo": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "subType": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "BTGlobalTreeNodeInfo": {
+        "required": [
+          "jsonType"
+        ],
+        "type": "object",
+        "properties": {
+          "canMove": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isContainer": {
+            "type": "boolean"
+          },
+          "isEnterpriseOwned": {
+            "type": "boolean"
+          },
+          "isMutable": {
+            "type": "boolean"
+          },
+          "jsonType": {
+            "type": "string"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "type": "string"
+          },
+          "treeHref": {
+            "type": "string"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "discriminator": {
+          "propertyName": "jsonType",
+          "mapping": {
+            "document-summary": "#/components/schemas/BTDocumentSummaryInfo",
+            "folder": "#/components/schemas/BTFolderInfo",
+            "magic": "#/components/schemas/BTGlobalTreeMagicNodeInfo",
+            "project": "#/components/schemas/BTProjectInfo",
+            "label": "#/components/schemas/BTDocumentLabelInfo",
+            "team-summary": "#/components/schemas/BTTeamSummaryInfo",
+            "cloudstorageaccount": "#/components/schemas/BTCloudStorageAccountInfo"
+          }
+        }
+      },
+      "BTGlobalTreeNodeListResponse": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "items": {
+            "type": "array",
+            "properties": {
+              "empty": {
+                "type": "boolean"
+              }
+            },
+            "items": {
+              "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
+            }
+          },
+          "next": {
+            "type": "string",
+            "format": "uri"
+          },
+          "previous": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "BTPermissionSet": {
+        "type": "object"
+      },
+      "BTProjectInfo": {
+        "type": "object",
+        "properties": {
+          "canMove": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isContainer": {
+            "type": "boolean"
+          },
+          "isEnterpriseOwned": {
+            "type": "boolean"
+          },
+          "isMutable": {
+            "type": "boolean"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "permissionScheme": {
+            "$ref": "#/components/schemas/BTRbacPermissionSchemeInfo"
+          },
+          "permissionSet": {
+            "$ref": "#/components/schemas/BTPermissionSet"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "type": "string"
+          },
+          "roleMapEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleMapEntry"
+            }
+          },
+          "trash": {
+            "type": "boolean"
+          },
+          "treeHref": {
+            "type": "string"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "BTRbacPermissionSchemeInfo": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entry"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "predefinedPermissionScheme": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "BTRbacRoleInfo": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "predefinedRole": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "Entry": {
+        "type": "object",
+        "properties": {
+          "permissionSet": {
+            "$ref": "#/components/schemas/BTPermissionSet"
+          },
+          "role": {
+            "$ref": "#/components/schemas/BTRbacRoleInfo"
+          }
+        }
+      },
+      "RoleMapEntry": {
+        "type": "object",
+        "properties": {
+          "identities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTIdentityInfo"
+            }
+          },
+          "role": {
+            "$ref": "#/components/schemas/BTRbacRoleInfo"
+          }
+        }
+      },
+      "BTAclEntryInfo": {
+        "type": "object",
+        "properties": {
+          "acceptOwnerTransfer": {
+            "type": "boolean"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "enterpriseMember": {
+            "type": "boolean"
+          },
+          "entryId": {
+            "type": "string"
+          },
+          "entryState": {
+            "type": "string",
+            "enum": [
+              "DELETED",
+              "ACTIVE",
+              "INACTIVE",
+              "REQUESTED",
+              "APPROVED",
+              "REQUEST_EXPIRED",
+              "ALL",
+              "MARKED_FOR_DELETION"
+            ]
+          },
+          "entryType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "image": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "objectId": {
+            "type": "string"
+          },
+          "pendingOwnerTransfer": {
+            "type": "boolean"
+          },
+          "permission": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "permissionSet": {
+            "$ref": "#/components/schemas/BTPermissionSet"
+          },
+          "teamName": {
+            "type": "string"
+          }
+        }
+      },
+      "BTAclInfo": {
+        "type": "object",
+        "properties": {
+          "admin": {
+            "type": "boolean"
+          },
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTAclEntryInfo"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "inheritedAcls": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTInheritedAclInfo"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "objectId": {
+            "type": "string"
+          },
+          "objectType": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "sharedWithSupport": {
+            "type": "boolean"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          },
+          "visibility": {
+            "type": "string"
+          }
+        }
+      },
+      "BTInheritedAclInfo": {
+        "type": "object",
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTAclEntryInfo"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "objectId": {
+            "type": "string"
+          },
+          "objectName": {
+            "type": "string"
+          },
+          "objectType": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "sharedWithSupport": {
+            "type": "boolean"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
+          },
+          "visibility": {
+            "type": "string"
+          }
+        }
+      },
+      "BTCopyDocumentInfo": {
+        "type": "object",
+        "properties": {
+          "newDocumentId": {
+            "type": "string"
+          },
+          "newDocumentName": {
+            "type": "string"
+          },
+          "newOwner": {
+            "$ref": "#/components/schemas/BTOwnerInfo"
+          },
+          "newParentId": {
+            "type": "string"
+          },
+          "newProjectId": {
+            "type": "string"
+          },
+          "newWorkspaceId": {
+            "type": "string"
+          }
+        }
+      },
+      "BTCopyDocumentParams": {
+        "type": "object",
+        "properties": {
+          "betaCapabilityIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isPublic": {
+            "type": "boolean"
+          },
+          "newName": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "string"
+          },
+          "ownerTypeIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
           }
         }
       },
@@ -26603,165 +27264,6 @@
             "items": {
               "$ref": "#/components/schemas/BTDocumentElementInfo"
             }
-          }
-        }
-      },
-      "BTAclEntryInfo": {
-        "type": "object",
-        "properties": {
-          "acceptOwnerTransfer": {
-            "type": "boolean"
-          },
-          "companyName": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "enterpriseMember": {
-            "type": "boolean"
-          },
-          "entryId": {
-            "type": "string"
-          },
-          "entryState": {
-            "type": "string",
-            "enum": [
-              "DELETED",
-              "ACTIVE",
-              "INACTIVE",
-              "REQUESTED",
-              "APPROVED",
-              "REQUEST_EXPIRED",
-              "ALL",
-              "MARKED_FOR_DELETION"
-            ]
-          },
-          "entryType": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "image": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "objectId": {
-            "type": "string"
-          },
-          "pendingOwnerTransfer": {
-            "type": "boolean"
-          },
-          "permission": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
-          },
-          "teamName": {
-            "type": "string"
-          }
-        }
-      },
-      "BTAclInfo": {
-        "type": "object",
-        "properties": {
-          "admin": {
-            "type": "boolean"
-          },
-          "entries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTAclEntryInfo"
-            }
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "inheritedAcls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTInheritedAclInfo"
-            }
-          },
-          "name": {
-            "type": "string"
-          },
-          "objectId": {
-            "type": "string"
-          },
-          "objectType": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "public": {
-            "type": "boolean"
-          },
-          "sharedWithSupport": {
-            "type": "boolean"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          },
-          "visibility": {
-            "type": "string"
-          }
-        }
-      },
-      "BTInheritedAclInfo": {
-        "type": "object",
-        "properties": {
-          "entries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTAclEntryInfo"
-            }
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "objectId": {
-            "type": "string"
-          },
-          "objectName": {
-            "type": "string"
-          },
-          "objectType": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "public": {
-            "type": "boolean"
-          },
-          "sharedWithSupport": {
-            "type": "boolean"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          },
-          "visibility": {
-            "type": "string"
           }
         }
       },
@@ -27377,523 +27879,6 @@
           }
         }
       },
-      "BTDocumentSearchHitInfo": {
-        "type": "object",
-        "properties": {
-          "documentId": {
-            "type": "string"
-          },
-          "elementName": {
-            "type": "string"
-          },
-          "highlightedFields": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "name": {
-            "type": "string"
-          },
-          "sourceMap": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
-          },
-          "type": {
-            "type": "string"
-          },
-          "versionOrWorkspaceName": {
-            "type": "string"
-          }
-        }
-      },
-      "BTDocumentSummaryInfo": {
-        "type": "object",
-        "properties": {
-          "jsonType": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
-          "propertyName": "jsonType",
-          "mapping": {
-            "document": "#/components/schemas/BTDocumentInfo",
-            "document-summary-search": "#/components/schemas/BTDocumentSummarySearchInfo"
-          }
-        },
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "createdWithEducationPlan": {
-                "type": "boolean"
-              },
-              "notRevisionManaged": {
-                "type": "boolean"
-              },
-              "anonymousAccessAllowed": {
-                "type": "boolean"
-              },
-              "anonymousAllowsExport": {
-                "type": "boolean"
-              },
-              "thumbnail": {
-                "$ref": "#/components/schemas/BTThumbnailInfo"
-              },
-              "defaultElementId": {
-                "type": "string"
-              },
-              "defaultWorkspace": {
-                "$ref": "#/components/schemas/BTBaseInfo"
-              },
-              "parentId": {
-                "type": "string"
-              },
-              "permissionSet": {
-                "$ref": "#/components/schemas/BTPermissionSet"
-              },
-              "trash": {
-                "type": "boolean"
-              },
-              "totalWorkspacesUpdating": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "totalWorkspacesScheduledForUpdate": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "canUnshare": {
-                "type": "boolean"
-              },
-              "supportTeamUserAndShared": {
-                "type": "boolean"
-              },
-              "likedByCurrentUser": {
-                "type": "boolean"
-              },
-              "documentLabels": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTDocumentLabelInfo"
-                }
-              },
-              "numberOfTimesReferenced": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "numberOfTimesCopied": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "likes": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "recentVersion": {
-                "$ref": "#/components/schemas/BTBaseInfo"
-              },
-              "hasRelevantInsertables": {
-                "type": "boolean"
-              },
-              "trashedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "hasReleaseRevisionableObjects": {
-                "type": "boolean"
-              },
-              "isOrphaned": {
-                "type": "boolean"
-              },
-              "public": {
-                "type": "boolean"
-              },
-              "userAccountLimitsBreached": {
-                "type": "boolean"
-              },
-              "isUsingManagedWorkflow": {
-                "type": "boolean"
-              },
-              "permission": {
-                "type": "string",
-                "enum": [
-                  "NOACCESS",
-                  "ANONYMOUS_ACCESS",
-                  "READ",
-                  "READ_COPY_EXPORT",
-                  "COMMENT",
-                  "WRITE",
-                  "RESHARE",
-                  "FULL",
-                  "OWNER"
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "BTDocumentSummarySearchInfo": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTDocumentSummaryInfo"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "searchHits": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTDocumentSearchHitInfo"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "BTFolderInfo": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "active": {
-                "type": "boolean"
-              },
-              "parentId": {
-                "type": "string"
-              },
-              "permissionSet": {
-                "$ref": "#/components/schemas/BTPermissionSet"
-              },
-              "trash": {
-                "type": "boolean"
-              },
-              "canUnshare": {
-                "type": "boolean"
-              },
-              "trashedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "isOrphaned": {
-                "type": "boolean"
-              }
-            }
-          }
-        ]
-      },
-      "BTGlobalTreeMagicNodeInfo": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "subType": {
-                "type": "integer",
-                "format": "int32"
-              }
-            }
-          }
-        ]
-      },
-      "BTGlobalTreeNodeInfo": {
-        "required": [
-          "jsonType"
-        ],
-        "type": "object",
-        "properties": {
-          "canMove": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "description": {
-            "type": "string"
-          },
-          "hasPendingOwner": {
-            "type": "boolean"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isContainer": {
-            "type": "boolean"
-          },
-          "isEnterpriseOwned": {
-            "type": "boolean"
-          },
-          "isMutable": {
-            "type": "boolean"
-          },
-          "jsonType": {
-            "type": "string"
-          },
-          "modifiedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modifiedBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "name": {
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "resourceType": {
-            "type": "string"
-          },
-          "treeHref": {
-            "type": "string"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "discriminator": {
-          "propertyName": "jsonType",
-          "mapping": {
-            "document-summary": "#/components/schemas/BTDocumentSummaryInfo",
-            "folder": "#/components/schemas/BTFolderInfo",
-            "magic": "#/components/schemas/BTGlobalTreeMagicNodeInfo",
-            "project": "#/components/schemas/BTProjectInfo",
-            "label": "#/components/schemas/BTDocumentLabelInfo",
-            "team-summary": "#/components/schemas/BTTeamSummaryInfo",
-            "cloudstorageaccount": "#/components/schemas/BTCloudStorageAccountInfo"
-          }
-        }
-      },
-      "BTGlobalTreeNodeListResponse": {
-        "type": "object",
-        "properties": {
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "items": {
-            "type": "array",
-            "properties": {
-              "empty": {
-                "type": "boolean"
-              }
-            },
-            "items": {
-              "$ref": "#/components/schemas/BTGlobalTreeNodeInfo"
-            }
-          },
-          "next": {
-            "type": "string",
-            "format": "uri"
-          },
-          "previous": {
-            "type": "string",
-            "format": "uri"
-          }
-        }
-      },
-      "BTProjectInfo": {
-        "type": "object",
-        "properties": {
-          "canMove": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "description": {
-            "type": "string"
-          },
-          "hasPendingOwner": {
-            "type": "boolean"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isContainer": {
-            "type": "boolean"
-          },
-          "isEnterpriseOwned": {
-            "type": "boolean"
-          },
-          "isMutable": {
-            "type": "boolean"
-          },
-          "modifiedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modifiedBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "name": {
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "permissionScheme": {
-            "$ref": "#/components/schemas/BTRbacPermissionSchemeInfo"
-          },
-          "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "resourceType": {
-            "type": "string"
-          },
-          "roleMapEntries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RoleMapEntry"
-            }
-          },
-          "trash": {
-            "type": "boolean"
-          },
-          "treeHref": {
-            "type": "string"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          }
-        }
-      },
-      "BTRbacPermissionSchemeInfo": {
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "description": {
-            "type": "string"
-          },
-          "entries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Entry"
-            }
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "predefinedPermissionScheme": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          }
-        }
-      },
-      "BTRbacRoleInfo": {
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "description": {
-            "type": "string"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "predefinedRole": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
-          }
-        }
-      },
-      "Entry": {
-        "type": "object",
-        "properties": {
-          "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
-          },
-          "role": {
-            "$ref": "#/components/schemas/BTRbacRoleInfo"
-          }
-        }
-      },
-      "RoleMapEntry": {
-        "type": "object",
-        "properties": {
-          "identities": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTIdentityInfo"
-            }
-          },
-          "role": {
-            "$ref": "#/components/schemas/BTRbacRoleInfo"
-          }
-        }
-      },
       "BTLinkToLatestDocumentInfo": {
         "type": "object",
         "properties": {
@@ -27967,40 +27952,6 @@
           }
         }
       },
-      "BTConfigurationInfo": {
-        "type": "object",
-        "properties": {
-          "isStandardContent": {
-            "type": "boolean"
-          },
-          "parameters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ConfigurationInfoEntry"
-            }
-          }
-        }
-      },
-      "ConfigurationInfoEntry": {
-        "type": "object",
-        "properties": {
-          "explicit": {
-            "type": "boolean"
-          },
-          "parameterDisplayValue": {
-            "type": "string"
-          },
-          "parameterId": {
-            "type": "string"
-          },
-          "parameterName": {
-            "type": "string"
-          },
-          "parameterValue": {
-            "type": "string"
-          }
-        }
-      },
       "BTCopyElementParams": {
         "type": "object",
         "properties": {
@@ -28054,6 +28005,40 @@
         "type": "object",
         "properties": {
           "parameterId": {
+            "type": "string"
+          },
+          "parameterValue": {
+            "type": "string"
+          }
+        }
+      },
+      "BTConfigurationInfo": {
+        "type": "object",
+        "properties": {
+          "isStandardContent": {
+            "type": "boolean"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConfigurationInfoEntry"
+            }
+          }
+        }
+      },
+      "ConfigurationInfoEntry": {
+        "type": "object",
+        "properties": {
+          "explicit": {
+            "type": "boolean"
+          },
+          "parameterDisplayValue": {
+            "type": "string"
+          },
+          "parameterId": {
+            "type": "string"
+          },
+          "parameterName": {
             "type": "string"
           },
           "parameterValue": {
@@ -28461,6 +28446,12 @@
           {
             "type": "object",
             "properties": {
+              "faces": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTExportTessellatedFacesFace-1192"
+                }
+              },
               "bodyType": {
                 "type": "string",
                 "enum": [
@@ -28472,12 +28463,6 @@
                   "COMPOSITE",
                   "UNKNOWN"
                 ]
-              },
-              "faces": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTExportTessellatedFacesFace-1192"
-                }
               },
               "appearance": {
                 "$ref": "#/components/schemas/BTGraphicsAppearance-1152"
@@ -29518,6 +29503,7 @@
               "DELETE_COMPOSITE_PART_FAILED",
               "SURFACES_NOT_SUPPORTED_BY_PATTERN_REMOVE_AND_INTERSECT",
               "SHEET_METAL_TAB_MERGE_AND_SUBTRACT_SAME_FLANGE",
+              "EXPLODED_VIEW_INVALID_STARTING_POSITION",
               "UNKNOWN"
             ]
           },
@@ -30515,6 +30501,7 @@
               "DELETE_COMPOSITE_PART_FAILED",
               "SURFACES_NOT_SUPPORTED_BY_PATTERN_REMOVE_AND_INTERSECT",
               "SHEET_METAL_TAB_MERGE_AND_SUBTRACT_SAME_FLANGE",
+              "EXPLODED_VIEW_INVALID_STARTING_POSITION",
               "UNKNOWN"
             ]
           }
@@ -30634,12 +30621,12 @@
               "normal": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
+              "majorAxis": {
+                "$ref": "#/components/schemas/BTVector3d-389"
+              },
               "minorRadius": {
                 "type": "number",
                 "format": "double"
-              },
-              "majorAxis": {
-                "$ref": "#/components/schemas/BTVector3d-389"
               },
               "majorRadius": {
                 "type": "number",
@@ -31645,6 +31632,7 @@
               "DELETE_COMPOSITE_PART_FAILED",
               "SURFACES_NOT_SUPPORTED_BY_PATTERN_REMOVE_AND_INTERSECT",
               "SHEET_METAL_TAB_MERGE_AND_SUBTRACT_SAME_FLANGE",
+              "EXPLODED_VIEW_INVALID_STARTING_POSITION",
               "UNKNOWN"
             ]
           },
@@ -31887,9 +31875,6 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "isPeriodic": {
-                "type": "boolean"
-              },
               "isRational": {
                 "type": "boolean"
               },
@@ -31906,6 +31891,9 @@
                   "type": "number",
                   "format": "double"
                 }
+              },
+              "isPeriodic": {
+                "type": "boolean"
               }
             }
           }
@@ -33055,6 +33043,337 @@
           }
         }
       },
+      "BTColorInfo": {
+        "type": "object",
+        "properties": {
+          "blue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "green": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "red": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "BTCustomPropertyDefinitionInfo": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "enumDefinition": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "STRING",
+              "NUMBER",
+              "INTEGER",
+              "BOOLEAN",
+              "DATE",
+              "ENUM",
+              "BLOB",
+              "OBJECT",
+              "ARRAY",
+              "UNKNOWN"
+            ]
+          }
+        }
+      },
+      "BTExternalElementReferenceInfo": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string"
+          },
+          "elementId": {
+            "type": "string"
+          },
+          "elementMicroversionId": {
+            "type": "string"
+          },
+          "versionId": {
+            "type": "string"
+          }
+        }
+      },
+      "BTPartAppearanceInfo": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/BTColorInfo"
+          },
+          "isGenerated": {
+            "type": "boolean"
+          },
+          "opacity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "BTPartMaterialInfo": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "libraryName": {
+            "type": "string"
+          },
+          "libraryReference": {
+            "$ref": "#/components/schemas/BTExternalElementReferenceInfo"
+          },
+          "properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTPartMaterialPropertyInfo"
+            }
+          }
+        }
+      },
+      "BTPartMaterialPropertyInfo": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "BTPartMetadataInfo": {
+        "type": "object",
+        "properties": {
+          "appearance": {
+            "$ref": "#/components/schemas/BTPartAppearanceInfo"
+          },
+          "bodyType": {
+            "type": "string"
+          },
+          "configurationId": {
+            "type": "string"
+          },
+          "customProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "customPropertyDefinitions": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/BTCustomPropertyDefinitionInfo"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "elementId": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isFlattenedBody": {
+            "type": "boolean"
+          },
+          "isHidden": {
+            "type": "boolean"
+          },
+          "isMesh": {
+            "type": "boolean"
+          },
+          "material": {
+            "$ref": "#/components/schemas/BTPartMaterialInfo"
+          },
+          "microversionId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ordinal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partId": {
+            "type": "string"
+          },
+          "partNumber": {
+            "type": "string"
+          },
+          "partQuery": {
+            "type": "string"
+          },
+          "productLine": {
+            "type": "string"
+          },
+          "project": {
+            "type": "string"
+          },
+          "propertySourceTypes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "referencingConfiguredPartNodeIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "revision": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "IN_PROGRESS",
+              "PENDING",
+              "RELEASED",
+              "OBSOLETE",
+              "REJECTED",
+              "DISCARDED"
+            ]
+          },
+          "thumbnailConfigurationId": {
+            "type": "string"
+          },
+          "thumbnailInfo": {
+            "$ref": "#/components/schemas/BTThumbnailInfo"
+          },
+          "title1": {
+            "type": "string"
+          },
+          "title2": {
+            "type": "string"
+          },
+          "title3": {
+            "type": "string"
+          },
+          "unflattenedPartId": {
+            "type": "string"
+          },
+          "vendor": {
+            "type": "string"
+          }
+        }
+      },
+      "BTMassPropertiesBulkInfo": {
+        "type": "object",
+        "properties": {
+          "bodies": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/BTMassPropertiesInfo-null"
+            }
+          },
+          "microversionId": {
+            "type": "string"
+          }
+        }
+      },
+      "BTMassPropertiesInfo-null": {
+        "type": "object",
+        "properties": {
+          "centroid": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "hasMass": {
+            "type": "boolean"
+          },
+          "inertia": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "mass": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "massMissingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periphery": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "principalAxes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTVector3d-389"
+            }
+          },
+          "principalInertia": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "volume": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        }
+      },
       "BTBaseSMJointTableRowMetadata-2232": {
         "type": "object",
         "properties": {
@@ -33280,6 +33599,9 @@
             "type": "object",
             "properties": {
               "partDeterministicId": {
+                "type": "string"
+              },
+              "propertyNodeId": {
                 "type": "string"
               },
               "partDeterministicIds": {
@@ -33657,6 +33979,9 @@
           {
             "type": "object",
             "properties": {
+              "error": {
+                "type": "string"
+              },
               "overrideSpec": {
                 "$ref": "#/components/schemas/BTParameterSpec-6"
               },
@@ -33835,263 +34160,6 @@
             }
           }
         ]
-      },
-      "BTColorInfo": {
-        "type": "object",
-        "properties": {
-          "blue": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "green": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "red": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "BTCustomPropertyDefinitionInfo": {
-        "type": "object",
-        "properties": {
-          "description": {
-            "type": "string"
-          },
-          "enumDefinition": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "name": {
-            "type": "string"
-          },
-          "template": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "STRING",
-              "NUMBER",
-              "INTEGER",
-              "BOOLEAN",
-              "DATE",
-              "ENUM",
-              "BLOB",
-              "OBJECT",
-              "ARRAY",
-              "UNKNOWN"
-            ]
-          }
-        }
-      },
-      "BTExternalElementReferenceInfo": {
-        "type": "object",
-        "properties": {
-          "documentId": {
-            "type": "string"
-          },
-          "elementId": {
-            "type": "string"
-          },
-          "elementMicroversionId": {
-            "type": "string"
-          },
-          "versionId": {
-            "type": "string"
-          }
-        }
-      },
-      "BTPartAppearanceInfo": {
-        "type": "object",
-        "properties": {
-          "color": {
-            "$ref": "#/components/schemas/BTColorInfo"
-          },
-          "isGenerated": {
-            "type": "boolean"
-          },
-          "opacity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "BTPartMaterialInfo": {
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          },
-          "libraryName": {
-            "type": "string"
-          },
-          "libraryReference": {
-            "$ref": "#/components/schemas/BTExternalElementReferenceInfo"
-          },
-          "properties": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTPartMaterialPropertyInfo"
-            }
-          }
-        }
-      },
-      "BTPartMaterialPropertyInfo": {
-        "type": "object",
-        "properties": {
-          "category": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "units": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "BTPartMetadataInfo": {
-        "type": "object",
-        "properties": {
-          "appearance": {
-            "$ref": "#/components/schemas/BTPartAppearanceInfo"
-          },
-          "bodyType": {
-            "type": "string"
-          },
-          "configurationId": {
-            "type": "string"
-          },
-          "customProperties": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string"
-            }
-          },
-          "customPropertyDefinitions": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/BTCustomPropertyDefinitionInfo"
-            }
-          },
-          "description": {
-            "type": "string"
-          },
-          "elementId": {
-            "type": "string"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isFlattenedBody": {
-            "type": "boolean"
-          },
-          "isHidden": {
-            "type": "boolean"
-          },
-          "isMesh": {
-            "type": "boolean"
-          },
-          "material": {
-            "$ref": "#/components/schemas/BTPartMaterialInfo"
-          },
-          "microversionId": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "ordinal": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "partId": {
-            "type": "string"
-          },
-          "partNumber": {
-            "type": "string"
-          },
-          "partQuery": {
-            "type": "string"
-          },
-          "productLine": {
-            "type": "string"
-          },
-          "project": {
-            "type": "string"
-          },
-          "propertySourceTypes": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          "referencingConfiguredPartNodeIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "revision": {
-            "type": "string"
-          },
-          "state": {
-            "type": "string",
-            "enum": [
-              "IN_PROGRESS",
-              "PENDING",
-              "RELEASED",
-              "OBSOLETE",
-              "REJECTED",
-              "DISCARDED"
-            ]
-          },
-          "thumbnailConfigurationId": {
-            "type": "string"
-          },
-          "thumbnailInfo": {
-            "$ref": "#/components/schemas/BTThumbnailInfo"
-          },
-          "title1": {
-            "type": "string"
-          },
-          "title2": {
-            "type": "string"
-          },
-          "title3": {
-            "type": "string"
-          },
-          "unflattenedPartId": {
-            "type": "string"
-          },
-          "vendor": {
-            "type": "string"
-          }
-        }
       },
       "BTColorParams": {
         "type": "object",
@@ -34274,80 +34342,6 @@
           }
         }
       },
-      "BTMassPropertiesBulkInfo": {
-        "type": "object",
-        "properties": {
-          "bodies": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/BTMassPropertiesInfo-null"
-            }
-          },
-          "microversionId": {
-            "type": "string"
-          }
-        }
-      },
-      "BTMassPropertiesInfo-null": {
-        "type": "object",
-        "properties": {
-          "centroid": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          "hasMass": {
-            "type": "boolean"
-          },
-          "inertia": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          "mass": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          "massMissingCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "periphery": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          "principalAxes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTVector3d-389"
-            }
-          },
-          "principalInertia": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          "volume": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            }
-          }
-        }
-      },
       "BTMetadataEnumValueInfo": {
         "type": "object",
         "properties": {
@@ -34471,13 +34465,10 @@
       "BTDiffInfo": {
         "type": "object",
         "properties": {
-          "collectionChanges": {
+          "changes": {
             "type": "object",
             "additionalProperties": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/BTDiffInfo"
-              }
+              "$ref": "#/components/schemas/BTDiffInfo"
             }
           },
           "entityType": {
@@ -35347,23 +35338,6 @@
           }
         }
       },
-      "BTMaterialLibrarySettingsInfo": {
-        "type": "object",
-        "properties": {
-          "companyLibraries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTMaterialLibraryMetadataInfo"
-            }
-          },
-          "libraries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTMaterialLibraryMetadataInfo"
-            }
-          }
-        }
-      },
       "BTUserOAuth2SummaryInfo": {
         "type": "object",
         "properties": {
@@ -35522,6 +35496,23 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          }
+        }
+      },
+      "BTMaterialLibrarySettingsInfo": {
+        "type": "object",
+        "properties": {
+          "companyLibraries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTMaterialLibraryMetadataInfo"
+            }
+          },
+          "libraries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTMaterialLibraryMetadataInfo"
             }
           }
         }

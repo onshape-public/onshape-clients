@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **space_before_version** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
 **standard_library** | **bool** |  | [optional] 
+**standard_library_common** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
 **valid_legacy_version** | **bool** |  | [optional] 
 **version** | [**btp_literal_string259.BTPLiteralString259**](BTPLiteralString259.md) |  | [optional] 

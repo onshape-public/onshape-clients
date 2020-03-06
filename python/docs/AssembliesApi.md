@@ -477,6 +477,7 @@ include_mate_features = True # bool |  (optional)
 include_non_solids = True # bool |  (optional)
 include_mate_connectors = True # bool |  (optional)
 configuration = 'configuration_example' # str |  (optional)
+exploded_view_id = 'exploded_view_id_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -490,7 +491,7 @@ configuration = 'configuration_example' # str |  (optional)
     # and optional values
     try:
         # Assembly Definition.
-        api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration)
+        api_response = api_instance.get_assembly_definition(did, wvm, wvmid, eid, link_document_id=link_document_id, include_mate_features=include_mate_features, include_non_solids=include_non_solids, include_mate_connectors=include_mate_connectors, configuration=configuration, exploded_view_id=exploded_view_id)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling AssembliesApi->get_assembly_definition: %s\n" % e)
@@ -509,6 +510,7 @@ Name | Type | Description  | Notes
  **include_non_solids** | **bool**|  | [optional]
  **include_mate_connectors** | **bool**|  | [optional]
  **configuration** | **str**|  | [optional]
+ **exploded_view_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -886,6 +888,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     did = 'did_example' # str | 
     eid = 'eid_example' # str | 
     skip_perspective = True # bool |  (optional) if omitted the server will use the default value of True
+link_document_id = 'link_document_id_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -897,7 +900,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.get_named_views(did, eid, skip_perspective=skip_perspective)
+        api_response = api_instance.get_named_views(did, eid, skip_perspective=skip_perspective, link_document_id=link_document_id)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling AssembliesApi->get_named_views: %s\n" % e)
@@ -910,6 +913,7 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **eid** | **str**|  |
  **skip_perspective** | **bool**|  | [optional] if omitted the server will use the default value of True
+ **link_document_id** | **str**|  | [optional]
 
 ### Return type
 

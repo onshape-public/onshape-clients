@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **part_deterministic_id** | **str** |  | [optional] 
+**property_node_id** | **str** |  | [optional] 
 **part_deterministic_ids** | **[str]** |  | [optional] 
 **all_row_values** | **[[str]]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

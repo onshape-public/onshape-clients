@@ -5,14 +5,14 @@ All URIs are relative to *https://cad.onshape.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_veop_standard_content_metadata**](MetadataApi.md#get_veop_standard_content_metadata) | **GET** /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid} | 
+[**get_wmv_es_metadata**](MetadataApi.md#get_wmv_es_metadata) | **GET** /api/metadata/d/{did}/{wvm}/{wvmid}/e | 
+[**get_wmve_metadata**](MetadataApi.md#get_wmve_metadata) | **GET** /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid} | 
 [**get_wmve_ps_metadata**](MetadataApi.md#get_wmve_ps_metadata) | **GET** /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p | 
 [**get_wmvep_metadata**](MetadataApi.md#get_wmvep_metadata) | **GET** /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p/{pid} | 
-[**get_wv_es_metadata**](MetadataApi.md#get_wv_es_metadata) | **GET** /api/metadata/d/{did}/{wv}/{wvid}/e | 
 [**get_wv_metadata**](MetadataApi.md#get_wv_metadata) | **GET** /api/metadata/d/{did}/{wv}/{wvid} | 
-[**get_wve_metadata**](MetadataApi.md#get_wve_metadata) | **GET** /api/metadata/d/{did}/{wv}/{wvid}/e/{eid} | 
 [**update_veop_standard_content_part_metadata**](MetadataApi.md#update_veop_standard_content_part_metadata) | **POST** /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid} | 
 [**update_wv_metadata**](MetadataApi.md#update_wv_metadata) | **POST** /api/metadata/d/{did}/{wv}/{wvid} | 
-[**update_wve_metadata**](MetadataApi.md#update_wve_metadata) | **POST** /api/metadata/d/{did}/{wv}/{wvid}/e/{eid} | 
+[**update_wve_metadata**](MetadataApi.md#update_wve_metadata) | **POST** /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid} | 
 [**update_wvep_metadata**](MetadataApi.md#update_wvep_metadata) | **POST** /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p/{pid} | 
 
 
@@ -74,6 +74,156 @@ Name | Type | Description  | Notes
  **pid** | **str**|  |
  **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_wmv_es_metadata**
+> get_wmv_es_metadata(did, wvm, wvmid)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    link_document_id = 'link_document_id_example' # str |  (optional)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wmv_es_metadata(did, wvm, wvmid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmv_es_metadata: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wmv_es_metadata(did, wvm, wvmid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmv_es_metadata: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_wmve_metadata**
+> get_wmve_metadata(did, wvm, wvmid, eid)
+
+
+
+### Example
+
+* OAuth Authentication (OAuth2):
+```python
+from __future__ import print_function
+import time
+import onshape_client.oas
+from pprint import pprint
+configuration = onshape_client.oas.Configuration()
+# Configure OAuth2 access token for authorization: OAuth2
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://cad.onshape.com
+configuration.host = "https://cad.onshape.com"
+# Enter a context with an instance of the API client
+with onshape_client.oas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = onshape_client.oas.MetadataApi(api_client)
+    did = 'did_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
+    eid = 'eid_example' # str | 
+    configuration = 'configuration_example' # str |  (optional)
+link_document_id = 'link_document_id_example' # str |  (optional)
+infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.get_wmve_metadata(did, wvm, wvmid, eid)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmve_metadata: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.get_wmve_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+    except onshape_client.oas.ApiException as e:
+        print("Exception when calling MetadataApi->get_wmve_metadata: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
+ **eid** | **str**|  |
+ **configuration** | **str**|  | [optional]
+ **link_document_id** | **str**|  | [optional]
+ **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -251,79 +401,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_wv_es_metadata**
-> get_wv_es_metadata(did, wv, wvid)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = onshape_client.oas.MetadataApi(api_client)
-    did = 'did_example' # str | 
-    wv = 'wv_example' # str | 
-    wvid = 'wvid_example' # str | 
-    link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_instance.get_wv_es_metadata(did, wv, wvid)
-    except onshape_client.oas.ApiException as e:
-        print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        api_instance.get_wv_es_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-    except onshape_client.oas.ApiException as e:
-        print("Exception when calling MetadataApi->get_wv_es_metadata: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  |
- **wv** | **str**|  |
- **wvid** | **str**|  |
- **link_document_id** | **str**|  | [optional]
- **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_wv_metadata**
 > get_wv_metadata(did, wv, wvid)
 
@@ -374,83 +451,6 @@ Name | Type | Description  | Notes
  **did** | **str**|  |
  **wv** | **str**|  |
  **wvid** | **str**|  |
- **link_document_id** | **str**|  | [optional]
- **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | default response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_wve_metadata**
-> get_wve_metadata(did, wv, wvid, eid)
-
-
-
-### Example
-
-* OAuth Authentication (OAuth2):
-```python
-from __future__ import print_function
-import time
-import onshape_client.oas
-from pprint import pprint
-configuration = onshape_client.oas.Configuration()
-# Configure OAuth2 access token for authorization: OAuth2
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://cad.onshape.com
-configuration.host = "https://cad.onshape.com"
-# Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = onshape_client.oas.MetadataApi(api_client)
-    did = 'did_example' # str | 
-    wv = 'wv_example' # str | 
-    wvid = 'wvid_example' # str | 
-    eid = 'eid_example' # str | 
-    configuration = 'configuration_example' # str |  (optional)
-link_document_id = 'link_document_id_example' # str |  (optional)
-infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_instance.get_wve_metadata(did, wv, wvid, eid)
-    except onshape_client.oas.ApiException as e:
-        print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        api_instance.get_wve_metadata(did, wv, wvid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
-    except onshape_client.oas.ApiException as e:
-        print("Exception when calling MetadataApi->get_wve_metadata: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **did** | **str**|  |
- **wv** | **str**|  |
- **wvid** | **str**|  |
- **eid** | **str**|  |
- **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
 
@@ -618,7 +618,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_wve_metadata**
-> update_wve_metadata(did, wv, wvid, eid, body)
+> update_wve_metadata(did, wvm, wvmid, eid, body)
 
 
 
@@ -641,22 +641,22 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.MetadataApi(api_client)
     did = 'did_example' # str | 
-    wv = 'wv_example' # str | 
-    wvid = 'wvid_example' # str | 
+    wvm = 'wvm_example' # str | 
+    wvmid = 'wvmid_example' # str | 
     eid = 'eid_example' # str | 
     body = 'body_example' # str | 
     configuration = 'configuration_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        api_instance.update_wve_metadata(did, wv, wvid, eid, body)
+        api_instance.update_wve_metadata(did, wvm, wvmid, eid, body)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.update_wve_metadata(did, wv, wvid, eid, body, configuration=configuration)
+        api_instance.update_wve_metadata(did, wvm, wvmid, eid, body, configuration=configuration)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->update_wve_metadata: %s\n" % e)
 ```
@@ -666,8 +666,8 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
- **wv** | **str**|  |
- **wvid** | **str**|  |
+ **wvm** | **str**|  |
+ **wvmid** | **str**|  |
  **eid** | **str**|  |
  **body** | **str**|  |
  **configuration** | **str**|  | [optional]

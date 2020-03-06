@@ -1129,6 +1129,8 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     did = 'did_example' # str | Document ID.
     eid = 'eid_example' # str | Element ID.
     skip_perspective = True # bool | Whether views with a perspective projection should be omitted. (optional) if omitted the server will use the default value of True
+include_section_cut_views = False # bool |  (optional) if omitted the server will use the default value of False
+link_document_id = 'link_document_id_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1142,7 +1144,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get Named Views
-        api_response = api_instance.get_part_studio_named_views(did, eid, skip_perspective=skip_perspective)
+        api_response = api_instance.get_part_studio_named_views(did, eid, skip_perspective=skip_perspective, include_section_cut_views=include_section_cut_views, link_document_id=link_document_id)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling PartStudiosApi->get_part_studio_named_views: %s\n" % e)
@@ -1155,6 +1157,8 @@ Name | Type | Description  | Notes
  **did** | **str**| Document ID. |
  **eid** | **str**| Element ID. |
  **skip_perspective** | **bool**| Whether views with a perspective projection should be omitted. | [optional] if omitted the server will use the default value of True
+ **include_section_cut_views** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **link_document_id** | **str**|  | [optional]
 
 ### Return type
 

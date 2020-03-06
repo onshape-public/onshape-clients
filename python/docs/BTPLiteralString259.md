@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** |  | [optional] 
 **text** | **str** |  | [optional] 
+**value** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 

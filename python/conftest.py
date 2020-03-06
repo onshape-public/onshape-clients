@@ -43,7 +43,8 @@ def client():
     try:
         client = Client.get_client()
     except Exception as e:
-        client = Client(stack_key='onshape_client_test')
+        client = Client(stack_key='local')
+        # client = Client(stack_key='onshape_client_test')
     return client
 
 
@@ -67,12 +68,11 @@ def tmp_dir():
 
 
 @pytest.fixture
-def new_document(client, name_factory):
+def new_document(request, client, name_factory):
     """Returns a blank new document."""
     doc_params = BTDocumentParams(name=name_factory())
     doc = client.documents_api.create_document(doc_params)
     doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
-    webbrowser.open_new(doc.get_url())
     yield doc
     doc.delete()
 

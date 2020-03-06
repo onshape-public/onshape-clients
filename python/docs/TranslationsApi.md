@@ -36,25 +36,10 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     api_instance = onshape_client.oas.TranslationsApi(api_client)
     did = 'did_example' # str | 
     wid = 'wid_example' # str | 
-    body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
-content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
-entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
-message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
-providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-
+    
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.create_translation(did, wid)
-        pprint(api_response)
-    except onshape_client.oas.ApiException as e:
-        print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        api_response = api_instance.create_translation(did, wid, body_parts=body_parts, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling TranslationsApi->create_translation: %s\n" % e)
@@ -66,13 +51,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
- **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
- **content_disposition** | [**content_disposition.ContentDisposition**](content_disposition.ContentDisposition.md)|  | [optional]
- **entity** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **media_type** | [**body_part_media_type.BodyPartMediaType**](body_part_media_type.BodyPartMediaType.md)|  | [optional]
- **message_body_workers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **parent** | [**multi_part.MultiPart**](multi_part.MultiPart.md)|  | [optional]
- **providers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
 
 ### Return type
 
@@ -84,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details

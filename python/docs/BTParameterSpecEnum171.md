@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**option_names** | **[str]** |  | [optional] 
 **enum_name** | **str** |  | [optional] 
-**options** | **[str]** |  | [optional] 
+**option_names** | **[str]** |  | [optional] 
 **namespace** | **str** |  | [optional] 
+**options** | **[str]** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **column_name** | **str** |  | [optional] 

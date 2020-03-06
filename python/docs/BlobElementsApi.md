@@ -249,13 +249,34 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     api_instance = onshape_client.oas.BlobElementsApi(api_client)
     did = 'did_example' # str | 
     wid = 'wid_example' # str | 
-    body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
-content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
-entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
-message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
-providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
+    allow_faulty_parts = True # bool |  (optional)
+create_composite = True # bool |  (optional)
+create_drawing_if_possible = True # bool |  (optional)
+encoded_filename = 'encoded_filename_example' # str |  (optional)
+extract_assembly_hierarchy = True # bool |  (optional)
+file = open('/path/to/file', 'rb') # file_type |  (optional)
+file_body_with_details = onshape_client.oas.FormDataBodyPart() # form_data_body_part.FormDataBodyPart |  (optional)
+file_content_length = 56 # int |  (optional)
+file_detail = onshape_client.oas.FormDataContentDisposition() # form_data_content_disposition.FormDataContentDisposition |  (optional)
+flatten_assemblies = True # bool |  (optional)
+format_name = 'format_name_example' # str |  (optional)
+isy_axis_is_up = True # bool |  (optional)
+join_adjacent_surfaces = True # bool |  (optional)
+location_element_id = 'location_element_id_example' # str |  (optional)
+location_group_id = 'location_group_id_example' # str |  (optional)
+location_position = 56 # int |  (optional)
+notify_user = True # bool |  (optional)
+owner_id = 'owner_id_example' # str |  (optional)
+owner_type = 'owner_type_example' # str |  (optional)
+parent_id = 'parent_id_example' # str |  (optional)
+project_id = 'project_id_example' # str |  (optional)
+public = True # bool |  (optional)
+split_assemblies_into_multiple_documents = True # bool |  (optional)
+store_in_document = True # bool |  (optional)
+translate = True # bool |  (optional)
+unit = 'unit_example' # str |  (optional)
+upload_id = 'upload_id_example' # str |  (optional)
+version_string = 'version_string_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -269,7 +290,7 @@ providers = None # bool, date, datetime, dict, float, int, list, str |  (optiona
     # and optional values
     try:
         # Upload File to New Blob Element.
-        api_response = api_instance.upload_file_create_element(did, wid, body_parts=body_parts, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers)
+        api_response = api_instance.upload_file_create_element(did, wid, allow_faulty_parts=allow_faulty_parts, create_composite=create_composite, create_drawing_if_possible=create_drawing_if_possible, encoded_filename=encoded_filename, extract_assembly_hierarchy=extract_assembly_hierarchy, file=file, file_body_with_details=file_body_with_details, file_content_length=file_content_length, file_detail=file_detail, flatten_assemblies=flatten_assemblies, format_name=format_name, isy_axis_is_up=isy_axis_is_up, join_adjacent_surfaces=join_adjacent_surfaces, location_element_id=location_element_id, location_group_id=location_group_id, location_position=location_position, notify_user=notify_user, owner_id=owner_id, owner_type=owner_type, parent_id=parent_id, project_id=project_id, public=public, split_assemblies_into_multiple_documents=split_assemblies_into_multiple_documents, store_in_document=store_in_document, translate=translate, unit=unit, upload_id=upload_id, version_string=version_string)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling BlobElementsApi->upload_file_create_element: %s\n" % e)
@@ -281,13 +302,34 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **did** | **str**|  |
  **wid** | **str**|  |
- **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
- **content_disposition** | [**content_disposition.ContentDisposition**](content_disposition.ContentDisposition.md)|  | [optional]
- **entity** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **media_type** | [**body_part_media_type.BodyPartMediaType**](body_part_media_type.BodyPartMediaType.md)|  | [optional]
- **message_body_workers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **parent** | [**multi_part.MultiPart**](multi_part.MultiPart.md)|  | [optional]
- **providers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
+ **allow_faulty_parts** | **bool**|  | [optional]
+ **create_composite** | **bool**|  | [optional]
+ **create_drawing_if_possible** | **bool**|  | [optional]
+ **encoded_filename** | **str**|  | [optional]
+ **extract_assembly_hierarchy** | **bool**|  | [optional]
+ **file** | **file_type**|  | [optional]
+ **file_body_with_details** | [**form_data_body_part.FormDataBodyPart**](form_data_body_part.FormDataBodyPart.md)|  | [optional]
+ **file_content_length** | **int**|  | [optional]
+ **file_detail** | [**form_data_content_disposition.FormDataContentDisposition**](form_data_content_disposition.FormDataContentDisposition.md)|  | [optional]
+ **flatten_assemblies** | **bool**|  | [optional]
+ **format_name** | **str**|  | [optional]
+ **isy_axis_is_up** | **bool**|  | [optional]
+ **join_adjacent_surfaces** | **bool**|  | [optional]
+ **location_element_id** | **str**|  | [optional]
+ **location_group_id** | **str**|  | [optional]
+ **location_position** | **int**|  | [optional]
+ **notify_user** | **bool**|  | [optional]
+ **owner_id** | **str**|  | [optional]
+ **owner_type** | **str**|  | [optional]
+ **parent_id** | **str**|  | [optional]
+ **project_id** | **str**|  | [optional]
+ **public** | **bool**|  | [optional]
+ **split_assemblies_into_multiple_documents** | **bool**|  | [optional]
+ **store_in_document** | **bool**|  | [optional]
+ **translate** | **bool**|  | [optional]
+ **unit** | **str**|  | [optional]
+ **upload_id** | **str**|  | [optional]
+ **version_string** | **str**|  | [optional]
 
 ### Return type
 
@@ -336,13 +378,6 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     eid = 'eid_example' # str | 
     wid = 'wid_example' # str | 
     parent_change_id = 'parent_change_id_example' # str |  (optional)
-body_parts = onshape_client.oas.BodyPart() # [body_part.BodyPart] |  (optional)
-content_disposition = onshape_client.oas.ContentDisposition() # content_disposition.ContentDisposition |  (optional)
-entity = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-media_type = onshape_client.oas.BodyPartMediaType() # body_part_media_type.BodyPartMediaType |  (optional)
-message_body_workers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
-parent = onshape_client.oas.MultiPart() # multi_part.MultiPart |  (optional)
-providers = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -356,7 +391,7 @@ providers = None # bool, date, datetime, dict, float, int, list, str |  (optiona
     # and optional values
     try:
         # Update Blob Element.
-        api_response = api_instance.upload_file_update_element(did, eid, wid, parent_change_id=parent_change_id, body_parts=body_parts, content_disposition=content_disposition, entity=entity, media_type=media_type, message_body_workers=message_body_workers, parent=parent, providers=providers)
+        api_response = api_instance.upload_file_update_element(did, eid, wid, parent_change_id=parent_change_id)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling BlobElementsApi->upload_file_update_element: %s\n" % e)
@@ -370,13 +405,6 @@ Name | Type | Description  | Notes
  **eid** | **str**|  |
  **wid** | **str**|  |
  **parent_change_id** | **str**|  | [optional]
- **body_parts** | [**[body_part.BodyPart]**](body_part.BodyPart.md)|  | [optional]
- **content_disposition** | [**content_disposition.ContentDisposition**](content_disposition.ContentDisposition.md)|  | [optional]
- **entity** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **media_type** | [**body_part_media_type.BodyPartMediaType**](body_part_media_type.BodyPartMediaType.md)|  | [optional]
- **message_body_workers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
- **parent** | [**multi_part.MultiPart**](multi_part.MultiPart.md)|  | [optional]
- **providers** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
 
 ### Return type
 
@@ -388,7 +416,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
 
 ### HTTP response details

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **normal** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
-**minor_radius** | **float** |  | [optional] 
 **major_axis** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
+**minor_radius** | **float** |  | [optional] 
 **major_radius** | **float** |  | [optional] 
 **origin** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 

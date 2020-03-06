@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **option_ids** | **[str]** |  | [optional] 
 **enum_name** | **str** |  | [optional] 
-**default_value** | **str** |  | [optional] 
-**options** | [**[btm_enum_option592.BTMEnumOption592]**](BTMEnumOption592.md) |  | [optional] 
 **namespace** | **str** |  | [optional] 
+**options** | [**[btm_enum_option592.BTMEnumOption592]**](BTMEnumOption592.md) |  | [optional] 
+**default_value** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **generated_parameter_id** | [**bt_tree_node20.BTTreeNode20**](BTTreeNode20.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

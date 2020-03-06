@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **space_after_version** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 **version** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
+**name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

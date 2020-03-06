@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **created_at** | **datetime** |  | [optional] 
 **created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**has_pending_owner** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **is_container** | **bool** |  | [optional] 

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **integer** | **bool** |  | [optional] 
-**value** | **float** |  | [optional] 
 **text** | **str** |  | [optional] 
+**value** | **float** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 

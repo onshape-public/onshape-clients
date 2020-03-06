@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **created_by_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**has_pending_owner** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **icon_link** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

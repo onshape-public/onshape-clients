@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
-**occurrence_queries_from_all_configurations** | [**[btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
 **auxiliary_assembly_feature** | **bool** |  | [optional] 
 **feature_list_field_index** | **int** |  | [optional] 
+**occurrence_queries_from_all_configurations** | [**[btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
 **version** | **int** |  | [optional] 
 **feature_id** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 

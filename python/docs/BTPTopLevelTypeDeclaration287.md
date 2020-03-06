@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
 **space_after_version** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 **version** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
+**name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

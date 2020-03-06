@@ -17,7 +17,8 @@ def test_import_file(assets, new_document):
     client = Client()
     cube_path = assets / 'Cube.x_t'
     file = open(cube_path, 'rb').read()
-    r = client.blob_elements_api.upload_file_create_element(new_document.did, new_document.wvmid, media_type="application/stl", file=file, translate=True, encodedFilename=cube_path.name, _preload_content=False)
+    r = client.blob_elements_api.upload_file_create_element(new_document.did, new_document.wvmid, _preload_content=False)
+    # file=file, translate=True, encodedFilename=cube_path.name, media_type="application/stl",
     translation_id = get_field(r, 'translationId')
     print("The translationId is: {}.".format(translation_id))
 

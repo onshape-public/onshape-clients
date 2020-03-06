@@ -3,18 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**json_type** | **str** |  | 
 **type** | **str** |  | [optional] 
-**parents** | [**[bt_version_info.BTVersionInfo]**](BTVersionInfo.md) |  | [optional] 
 **thumbnail** | [**bt_thumbnail_info.BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
-**modified_at** | **datetime** |  | [optional] 
-**description** | **str** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
+**parents** | [**[bt_version_info.BTVersionInfo]**](BTVersionInfo.md) |  | [optional] 
+**creator** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **last_modifier** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
+**modified_at** | **datetime** |  | [optional] 
 **document_id** | **str** |  | [optional] 
+**created_at** | **datetime** |  | [optional] 
+**description** | **str** |  | [optional] 
 **microversion** | **str** |  | [optional] 
 **override_date** | **datetime** |  | [optional] 
 **parent** | **str** |  | [optional] 
-**creator** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

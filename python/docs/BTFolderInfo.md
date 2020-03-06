@@ -4,18 +4,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **json_type** | **str** |  | 
-**active** | **bool** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
 **trash** | **bool** |  | [optional] 
 **can_unshare** | **bool** |  | [optional] 
+**active** | **bool** |  | [optional] 
 **trashed_at** | **datetime** |  | [optional] 
 **is_orphaned** | **bool** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**has_pending_owner** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **is_container** | **bool** |  | [optional] 

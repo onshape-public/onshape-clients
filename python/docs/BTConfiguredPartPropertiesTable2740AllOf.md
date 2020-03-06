@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **part_deterministic_id** | **str** |  | [optional] 
+**property_node_id** | **str** |  | [optional] 
 **part_deterministic_ids** | **[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
