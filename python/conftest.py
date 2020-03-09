@@ -70,9 +70,7 @@ def tmp_dir():
 @pytest.fixture
 def new_document(request, client, name_factory):
     """Returns a blank new document."""
-    doc_params = BTDocumentParams(name=name_factory())
-    doc = client.documents_api.create_document(doc_params)
-    doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
+    doc = OnshapeElement.create(name_factory())
     yield doc
     doc.delete()
 

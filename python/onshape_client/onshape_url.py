@@ -4,12 +4,13 @@ import webbrowser
 
 from onshape_client.client import Client
 from onshape_client.compatible_imports import parse, parse_qs
-from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams
+from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams, BTDocumentParams
 from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
 from onshape_client.oas.models.configuration_entry import ConfigurationEntry
 from onshape_client.units import u
+import time
 
 
 class OnshapeElement(object):
@@ -35,6 +36,41 @@ class OnshapeElement(object):
         result = OnshapeElement(url)
         result.partid = partid
         return result
+
+    @staticmethod
+    def create(name="New Document"):
+        """Returns a blank new document."""
+        client = Client.get_client()
+        doc_params = BTDocumentParams(name)
+        doc = client.documents_api.create_document(doc_params)
+        doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
+        return doc
+
+    def import_file(self, file_path, **kwargs):
+        """Import a file from the local file system. Returns the URL of the resulting element if translated."""
+        client = Client.get_client()
+        result = client.blob_elements_api.upload_file_create_element(self.did, self.wvmid, file=open(file_path, 'rb'),
+                                                                     translate=True, encoded_filename=file_path.name, **kwargs)
+        translation_id = result.translation_id
+        print("The translationId is: {}.".format(translation_id))
+
+        state = 'ACTIVE'
+        while state == 'ACTIVE':
+            time.sleep(2)
+            result = client.translation_api.get_translation(translation_id)
+            state = result.request_state
+
+        element_id = result.result_element_ids[0]
+        # Make the actual download when the translation is done, otherwise report the error
+        if state == "DONE":
+            print("Translated document available at {host}/documents/{did}/w/{wid}/e/{eid}".format(
+                host=client.configuration.host,
+                did=result.document_id,
+                wid=result.workspace_id,
+                eid=element_id))
+        else:
+            print("An error ocurred on the server! Here is the response: \n")
+        return OnshapeElement.create_from_ids(self.did, 'w', self.wvmid, element_id)
 
     def __init__(self, url, *args, **kwargs):
         self.original_url = url
@@ -103,13 +139,15 @@ class OnshapeElement(object):
             if element.id == self.eid:
                 return element.type
 
-    def elements(self, filter_name=None, filter_type=None):
+    def elements(self, filter_name=None, filter_type=None, filter_data_type=None):
         result = []
         for e in self._get_element_infos():
             ands = []
             if filter_name and not filter_name == e.name:
                 ands.append(False)
             if filter_type and not filter_type == e.element_type:
+                ands.append(False)
+            if filter_data_type and not filter_data_type == e.data_type:
                 ands.append(False)
             if all(ands):
                 result.append(OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=e.id))
@@ -141,6 +179,10 @@ class OnshapeElement(object):
     @property
     def part_studios(self):
         return self.elements(filter_type="PARTSTUDIO")
+
+    @property
+    def drawings(self):
+        return self.elements(filter_type="APPLICATION", filter_data_type="onshape-app/drawing")
 
     def s_assembly_insert_message(self):
         e_type = self.element_type
