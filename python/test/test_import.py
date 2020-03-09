@@ -11,22 +11,22 @@ def import_file(file_path, did, wid):
     client = Client.get_client()
     file = open(file_path, 'rb').read()
     data_part = FormDataBodyPart()
-    r = client.blob_elements_api.upload_file_create_element(did, wid, file=open(file_path, 'rb'), translate=True, encoded_filename=file_path.name, _preload_content=False)
-    translation_id = get_field(r, 'translationId')
+    result = client.blob_elements_api.upload_file_create_element(did, wid, file=open(file_path, 'rb'), translate=True, encoded_filename=file_path.name)
+    translation_id = result.translation_id
     print("The translationId is: {}.".format(translation_id))
 
     state = 'ACTIVE'
     while state == 'ACTIVE':
         time.sleep(2)
-        r = client.translation_api.get_translation(translation_id, _preload_content=False)
-        state = get_field(r, "requestState")
+        result = client.translation_api.get_translation(translation_id)
+        state = result.request_state
 
-    element_id = get_field(r, 'resultElementIds')[0]
+    element_id = result.result_element_ids[0]
     # Make the actual download when the translation is done, otherwise report the error
     if state == "DONE":
         print("Translated document available at {host}/documents/{did}/w/{wid}/e/{eid}".format(host=client.configuration.host,
-                                                                                did=get_field(r, 'documentId'),
-                                                                                wid=get_field(r, 'workspaceId'),
+                                                                                did=result.document_id,
+                                                                                wid=result.workspace_id,
                                                                                 eid=element_id))
     else:
         print("An error ocurred on the server! Here is the response: \n")

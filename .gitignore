@@ -8,3 +8,5 @@ openapi-generator
 node_modules
 .npmrc
 **.env
+
+**build/**
