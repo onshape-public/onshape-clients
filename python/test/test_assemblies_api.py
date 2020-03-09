@@ -149,7 +149,7 @@ def test_assembly_definition_performance(client):
         client.assemblies_api.get_assembly_definition(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid,
                                                       _preload_content=False)
         calls.append(time.time() - start_time)
-    assert sum(calls) / len(calls) < 0.6
+    assert sum(calls) / len(calls) < 1
 
 
 @pytest.mark.skip("Not yet implemented")
@@ -158,7 +158,7 @@ def test_stl_performance(client):
         "https://cad.onshape.com/documents/ee5f3dea1b2b6196cba97e4a/v/6935ab731cfe24915c2b4ac8/e/23e18c935aaf18a2dcba486b")
     assert performance_test_calls(
         lambda: client.part_studios_api.get_(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid, partid="JHD",
-                                             _preload_content=False)) < 0.6
+                                             _preload_content=False)) < 1
 
 
 def test_metadata_performance(client):
@@ -167,7 +167,7 @@ def test_metadata_performance(client):
     assert performance_test_calls(
         lambda: client.parts_api.get_part_metadata(cube_asm.did, cube_asm.wvm, cube_asm.wvmid, cube_asm.eid,
                                                    partid="JHD",
-                                                   _preload_content=False)) < 0.6
+                                                   _preload_content=False)) < 1
 
 
 def performance_test_calls(call):

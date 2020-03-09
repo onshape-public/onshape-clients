@@ -73,7 +73,7 @@ class PartStudiosApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __add_feature1(
+        def __add_part_studio_feature(
             self,
             did,
             wvm,
@@ -85,7 +85,7 @@ class PartStudiosApi(object):
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
-            >>> thread = api.add_feature1(did, wvm, wvmid, eid, async_req=True)
+            >>> thread = api.add_part_studio_feature(did, wvm, wvmid, eid, async_req=True)
             >>> result = thread.get()
 
             Args:
@@ -150,14 +150,14 @@ class PartStudiosApi(object):
                 eid
             return self.call_with_http_info(**kwargs)
 
-        self.add_feature1 = Endpoint(
+        self.add_part_studio_feature = Endpoint(
             settings={
                 'response_type': (bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,),
                 'auth': [
                     'OAuth2'
                 ],
                 'endpoint_path': '/api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-                'operation_id': 'add_feature1',
+                'operation_id': 'add_part_studio_feature',
                 'http_method': 'POST',
                 'servers': [],
             },
@@ -222,13 +222,11 @@ class PartStudiosApi(object):
                     'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
                 ],
                 'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09',
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
                     'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
                 ]
             },
             api_client=api_client,
-            callable=__add_feature1
+            callable=__add_part_studio_feature
         )
 
         def __compare_part_studios(

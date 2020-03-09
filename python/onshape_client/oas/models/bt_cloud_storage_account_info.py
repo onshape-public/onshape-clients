@@ -110,6 +110,7 @@ class BTCloudStorageAccountInfo(ModelComposed):
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'has_pending_owner': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'is_container': (bool,),  # noqa: E501
@@ -141,6 +142,7 @@ class BTCloudStorageAccountInfo(ModelComposed):
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'href': 'href',  # noqa: E501
         'id': 'id',  # noqa: E501
         'is_container': 'isContainer',  # noqa: E501
@@ -197,6 +199,7 @@ class BTCloudStorageAccountInfo(ModelComposed):
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            has_pending_owner (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             is_container (bool): [optional]  # noqa: E501

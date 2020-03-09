@@ -85,6 +85,7 @@ class BTFeatureDefinitionCall1406(ModelNormal):
             'reject_microversion_skew': (bool,),  # noqa: E501
             'serialization_version': (str,),  # noqa: E501
             'source_microversion': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -98,6 +99,7 @@ class BTFeatureDefinitionCall1406(ModelNormal):
         'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
         'serialization_version': 'serializationVersion',  # noqa: E501
         'source_microversion': 'sourceMicroversion',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -136,6 +138,7 @@ class BTFeatureDefinitionCall1406(ModelNormal):
             reject_microversion_skew (bool): [optional]  # noqa: E501
             serialization_version (str): [optional]  # noqa: E501
             source_microversion (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

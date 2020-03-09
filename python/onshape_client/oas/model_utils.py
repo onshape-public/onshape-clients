@@ -296,20 +296,13 @@ class ModelComposed(OpenApiModel):
             values = set()
             for model_instance in model_instances:
                 if name in model_instance._data_store:
-                    values.add(model_instance._data_store[name])
-            if len(values) == 1:
-                return list(values)[0]
-            raise ApiValueError(
-                "Values stored for property {0} in {1} difffer when looking "
-                "at self and self's composed instances. All values must be "
-                "the same".format(name, type(self).__name__),
-                path_to_item
-            )
+                    return model_instance._data_store[name]
 
         raise ApiKeyError(
             "{0} has no key '{1}'".format(type(self).__name__, name),
             path_to_item
         )
+
 
     def to_dict(self):
         """Returns the model properties as a dict"""

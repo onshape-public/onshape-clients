@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
 **is_read_only** | **bool** |  | [optional] 
 **can_delete** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **thumbnail** | [**bt_thumbnail_info.BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 

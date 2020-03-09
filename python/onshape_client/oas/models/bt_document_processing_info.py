@@ -125,59 +125,60 @@ class BTDocumentProcessingInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'json_type': (str,),  # noqa: E501
             'translation_event_key': (str,),  # noqa: E501
             'translation_id': (str,),  # noqa: E501
-            'anonymous_access_allowed': (bool,),  # noqa: E501
-            'anonymous_allows_export': (bool,),  # noqa: E501
-            'beta_capability_ids': ([str],),  # noqa: E501
             'can_move': (bool,),  # noqa: E501
-            'can_unshare': (bool,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'created_with_education_plan': (bool,),  # noqa: E501
-            'default_element_id': (str,),  # noqa: E501
-            'default_workspace': (bt_workspace_info.BTWorkspaceInfo,),  # noqa: E501
             'description': (str,),  # noqa: E501
-            'document_labels': ([bt_document_label_info.BTDocumentLabelInfo],),  # noqa: E501
-            'document_thumbnail_element_id': (str,),  # noqa: E501
-            'duplicate_name_violation_error': (str,),  # noqa: E501
-            'has_release_revisionable_objects': (bool,),  # noqa: E501
-            'has_relevant_insertables': (bool,),  # noqa: E501
+            'has_pending_owner': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'is_container': (bool,),  # noqa: E501
             'is_enterprise_owned': (bool,),  # noqa: E501
             'is_mutable': (bool,),  # noqa: E501
-            'is_orphaned': (bool,),  # noqa: E501
-            'is_upgraded_to_latest_version': (bool,),  # noqa: E501
-            'is_using_managed_workflow': (bool,),  # noqa: E501
-            'json_type': (str,),  # noqa: E501
-            'liked_by_current_user': (bool,),  # noqa: E501
-            'likes': (int,),  # noqa: E501
             'modified_at': (datetime,),  # noqa: E501
             'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'not_revision_managed': (bool,),  # noqa: E501
-            'number_of_times_copied': (int,),  # noqa: E501
-            'number_of_times_referenced': (int,),  # noqa: E501
             'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
-            'permission': (str,),  # noqa: E501
-            'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
             'project_id': (str,),  # noqa: E501
-            'public': (bool,),  # noqa: E501
-            'recent_version': (bt_base_info.BTBaseInfo,),  # noqa: E501
             'resource_type': (str,),  # noqa: E501
-            'support_team_user_and_shared': (bool,),  # noqa: E501
-            'tags': ([str],),  # noqa: E501
-            'thumbnail': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
-            'total_workspaces_scheduled_for_update': (int,),  # noqa: E501
-            'total_workspaces_updating': (int,),  # noqa: E501
-            'trash': (bool,),  # noqa: E501
-            'trashed_at': (datetime,),  # noqa: E501
             'tree_href': (str,),  # noqa: E501
-            'user_account_limits_breached': (bool,),  # noqa: E501
             'view_ref': (str,),  # noqa: E501
+            'parent_id': (str,),  # noqa: E501
+            'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
+            'trash': (bool,),  # noqa: E501
+            'total_workspaces_updating': (int,),  # noqa: E501
+            'total_workspaces_scheduled_for_update': (int,),  # noqa: E501
+            'can_unshare': (bool,),  # noqa: E501
+            'thumbnail': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            'support_team_user_and_shared': (bool,),  # noqa: E501
+            'liked_by_current_user': (bool,),  # noqa: E501
+            'document_labels': ([bt_document_label_info.BTDocumentLabelInfo],),  # noqa: E501
+            'number_of_times_referenced': (int,),  # noqa: E501
+            'number_of_times_copied': (int,),  # noqa: E501
+            'likes': (int,),  # noqa: E501
+            'recent_version': (bt_base_info.BTBaseInfo,),  # noqa: E501
+            'has_relevant_insertables': (bool,),  # noqa: E501
+            'created_with_education_plan': (bool,),  # noqa: E501
+            'not_revision_managed': (bool,),  # noqa: E501
+            'anonymous_access_allowed': (bool,),  # noqa: E501
+            'anonymous_allows_export': (bool,),  # noqa: E501
+            'default_element_id': (str,),  # noqa: E501
+            'default_workspace': (bt_workspace_info.BTWorkspaceInfo,),  # noqa: E501
+            'trashed_at': (datetime,),  # noqa: E501
+            'is_orphaned': (bool,),  # noqa: E501
+            'tags': ([str],),  # noqa: E501
+            'has_release_revisionable_objects': (bool,),  # noqa: E501
+            'public': (bool,),  # noqa: E501
+            'user_account_limits_breached': (bool,),  # noqa: E501
+            'is_using_managed_workflow': (bool,),  # noqa: E501
+            'permission': (str,),  # noqa: E501
+            'beta_capability_ids': ([str],),  # noqa: E501
+            'document_thumbnail_element_id': (str,),  # noqa: E501
+            'duplicate_name_violation_error': (str,),  # noqa: E501
+            'is_upgraded_to_latest_version': (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -185,59 +186,60 @@ class BTDocumentProcessingInfo(ModelComposed):
         return None
 
     attribute_map = {
+        'json_type': 'jsonType',  # noqa: E501
         'translation_event_key': 'translationEventKey',  # noqa: E501
         'translation_id': 'translationId',  # noqa: E501
-        'anonymous_access_allowed': 'anonymousAccessAllowed',  # noqa: E501
-        'anonymous_allows_export': 'anonymousAllowsExport',  # noqa: E501
-        'beta_capability_ids': 'betaCapabilityIds',  # noqa: E501
         'can_move': 'canMove',  # noqa: E501
-        'can_unshare': 'canUnshare',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
-        'created_with_education_plan': 'createdWithEducationPlan',  # noqa: E501
-        'default_element_id': 'defaultElementId',  # noqa: E501
-        'default_workspace': 'defaultWorkspace',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'document_labels': 'documentLabels',  # noqa: E501
-        'document_thumbnail_element_id': 'documentThumbnailElementId',  # noqa: E501
-        'duplicate_name_violation_error': 'duplicateNameViolationError',  # noqa: E501
-        'has_release_revisionable_objects': 'hasReleaseRevisionableObjects',  # noqa: E501
-        'has_relevant_insertables': 'hasRelevantInsertables',  # noqa: E501
+        'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'href': 'href',  # noqa: E501
         'id': 'id',  # noqa: E501
         'is_container': 'isContainer',  # noqa: E501
         'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
         'is_mutable': 'isMutable',  # noqa: E501
-        'is_orphaned': 'isOrphaned',  # noqa: E501
-        'is_upgraded_to_latest_version': 'isUpgradedToLatestVersion',  # noqa: E501
-        'is_using_managed_workflow': 'isUsingManagedWorkflow',  # noqa: E501
-        'json_type': 'jsonType',  # noqa: E501
-        'liked_by_current_user': 'likedByCurrentUser',  # noqa: E501
-        'likes': 'likes',  # noqa: E501
         'modified_at': 'modifiedAt',  # noqa: E501
         'modified_by': 'modifiedBy',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'not_revision_managed': 'notRevisionManaged',  # noqa: E501
-        'number_of_times_copied': 'numberOfTimesCopied',  # noqa: E501
-        'number_of_times_referenced': 'numberOfTimesReferenced',  # noqa: E501
         'owner': 'owner',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
-        'permission': 'permission',  # noqa: E501
-        'permission_set': 'permissionSet',  # noqa: E501
         'project_id': 'projectId',  # noqa: E501
-        'public': 'public',  # noqa: E501
-        'recent_version': 'recentVersion',  # noqa: E501
         'resource_type': 'resourceType',  # noqa: E501
-        'support_team_user_and_shared': 'supportTeamUserAndShared',  # noqa: E501
-        'tags': 'tags',  # noqa: E501
-        'thumbnail': 'thumbnail',  # noqa: E501
-        'total_workspaces_scheduled_for_update': 'totalWorkspacesScheduledForUpdate',  # noqa: E501
-        'total_workspaces_updating': 'totalWorkspacesUpdating',  # noqa: E501
-        'trash': 'trash',  # noqa: E501
-        'trashed_at': 'trashedAt',  # noqa: E501
         'tree_href': 'treeHref',  # noqa: E501
-        'user_account_limits_breached': 'userAccountLimitsBreached',  # noqa: E501
         'view_ref': 'viewRef',  # noqa: E501
+        'parent_id': 'parentId',  # noqa: E501
+        'permission_set': 'permissionSet',  # noqa: E501
+        'trash': 'trash',  # noqa: E501
+        'total_workspaces_updating': 'totalWorkspacesUpdating',  # noqa: E501
+        'total_workspaces_scheduled_for_update': 'totalWorkspacesScheduledForUpdate',  # noqa: E501
+        'can_unshare': 'canUnshare',  # noqa: E501
+        'thumbnail': 'thumbnail',  # noqa: E501
+        'support_team_user_and_shared': 'supportTeamUserAndShared',  # noqa: E501
+        'liked_by_current_user': 'likedByCurrentUser',  # noqa: E501
+        'document_labels': 'documentLabels',  # noqa: E501
+        'number_of_times_referenced': 'numberOfTimesReferenced',  # noqa: E501
+        'number_of_times_copied': 'numberOfTimesCopied',  # noqa: E501
+        'likes': 'likes',  # noqa: E501
+        'recent_version': 'recentVersion',  # noqa: E501
+        'has_relevant_insertables': 'hasRelevantInsertables',  # noqa: E501
+        'created_with_education_plan': 'createdWithEducationPlan',  # noqa: E501
+        'not_revision_managed': 'notRevisionManaged',  # noqa: E501
+        'anonymous_access_allowed': 'anonymousAccessAllowed',  # noqa: E501
+        'anonymous_allows_export': 'anonymousAllowsExport',  # noqa: E501
+        'default_element_id': 'defaultElementId',  # noqa: E501
+        'default_workspace': 'defaultWorkspace',  # noqa: E501
+        'trashed_at': 'trashedAt',  # noqa: E501
+        'is_orphaned': 'isOrphaned',  # noqa: E501
+        'tags': 'tags',  # noqa: E501
+        'has_release_revisionable_objects': 'hasReleaseRevisionableObjects',  # noqa: E501
+        'public': 'public',  # noqa: E501
+        'user_account_limits_breached': 'userAccountLimitsBreached',  # noqa: E501
+        'is_using_managed_workflow': 'isUsingManagedWorkflow',  # noqa: E501
+        'permission': 'permission',  # noqa: E501
+        'beta_capability_ids': 'betaCapabilityIds',  # noqa: E501
+        'document_thumbnail_element_id': 'documentThumbnailElementId',  # noqa: E501
+        'duplicate_name_violation_error': 'duplicateNameViolationError',  # noqa: E501
+        'is_upgraded_to_latest_version': 'isUpgradedToLatestVersion',  # noqa: E501
     }
 
     required_properties = set([
@@ -251,9 +253,11 @@ class BTDocumentProcessingInfo(ModelComposed):
         '_additional_properties_model_instances',
     ])
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(self, json_type, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
         """bt_document_processing_info.BTDocumentProcessingInfo - a model defined in OpenAPI
 
+        Args:
+            json_type (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -271,57 +275,57 @@ class BTDocumentProcessingInfo(ModelComposed):
                                 If omitted no type conversion is done.
             translation_event_key (str): [optional]  # noqa: E501
             translation_id (str): [optional]  # noqa: E501
-            anonymous_access_allowed (bool): [optional]  # noqa: E501
-            anonymous_allows_export (bool): [optional]  # noqa: E501
-            beta_capability_ids ([str]): [optional]  # noqa: E501
             can_move (bool): [optional]  # noqa: E501
-            can_unshare (bool): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            created_with_education_plan (bool): [optional]  # noqa: E501
-            default_element_id (str): [optional]  # noqa: E501
-            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
-            document_labels ([bt_document_label_info.BTDocumentLabelInfo]): [optional]  # noqa: E501
-            document_thumbnail_element_id (str): [optional]  # noqa: E501
-            duplicate_name_violation_error (str): [optional]  # noqa: E501
-            has_release_revisionable_objects (bool): [optional]  # noqa: E501
-            has_relevant_insertables (bool): [optional]  # noqa: E501
+            has_pending_owner (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             is_container (bool): [optional]  # noqa: E501
             is_enterprise_owned (bool): [optional]  # noqa: E501
             is_mutable (bool): [optional]  # noqa: E501
-            is_orphaned (bool): [optional]  # noqa: E501
-            is_upgraded_to_latest_version (bool): [optional]  # noqa: E501
-            is_using_managed_workflow (bool): [optional]  # noqa: E501
-            json_type (str): [optional]  # noqa: E501
-            liked_by_current_user (bool): [optional]  # noqa: E501
-            likes (int): [optional]  # noqa: E501
             modified_at (datetime): [optional]  # noqa: E501
             modified_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            not_revision_managed (bool): [optional]  # noqa: E501
-            number_of_times_copied (int): [optional]  # noqa: E501
-            number_of_times_referenced (int): [optional]  # noqa: E501
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
-            parent_id (str): [optional]  # noqa: E501
-            permission (str): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             project_id (str): [optional]  # noqa: E501
-            public (bool): [optional]  # noqa: E501
-            recent_version (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
             resource_type (str): [optional]  # noqa: E501
-            support_team_user_and_shared (bool): [optional]  # noqa: E501
-            tags ([str]): [optional]  # noqa: E501
-            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
-            total_workspaces_scheduled_for_update (int): [optional]  # noqa: E501
-            total_workspaces_updating (int): [optional]  # noqa: E501
-            trash (bool): [optional]  # noqa: E501
-            trashed_at (datetime): [optional]  # noqa: E501
             tree_href (str): [optional]  # noqa: E501
-            user_account_limits_breached (bool): [optional]  # noqa: E501
             view_ref (str): [optional]  # noqa: E501
+            parent_id (str): [optional]  # noqa: E501
+            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            trash (bool): [optional]  # noqa: E501
+            total_workspaces_updating (int): [optional]  # noqa: E501
+            total_workspaces_scheduled_for_update (int): [optional]  # noqa: E501
+            can_unshare (bool): [optional]  # noqa: E501
+            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            support_team_user_and_shared (bool): [optional]  # noqa: E501
+            liked_by_current_user (bool): [optional]  # noqa: E501
+            document_labels ([bt_document_label_info.BTDocumentLabelInfo]): [optional]  # noqa: E501
+            number_of_times_referenced (int): [optional]  # noqa: E501
+            number_of_times_copied (int): [optional]  # noqa: E501
+            likes (int): [optional]  # noqa: E501
+            recent_version (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
+            has_relevant_insertables (bool): [optional]  # noqa: E501
+            created_with_education_plan (bool): [optional]  # noqa: E501
+            not_revision_managed (bool): [optional]  # noqa: E501
+            anonymous_access_allowed (bool): [optional]  # noqa: E501
+            anonymous_allows_export (bool): [optional]  # noqa: E501
+            default_element_id (str): [optional]  # noqa: E501
+            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
+            trashed_at (datetime): [optional]  # noqa: E501
+            is_orphaned (bool): [optional]  # noqa: E501
+            tags ([str]): [optional]  # noqa: E501
+            has_release_revisionable_objects (bool): [optional]  # noqa: E501
+            public (bool): [optional]  # noqa: E501
+            user_account_limits_breached (bool): [optional]  # noqa: E501
+            is_using_managed_workflow (bool): [optional]  # noqa: E501
+            permission (str): [optional]  # noqa: E501
+            beta_capability_ids ([str]): [optional]  # noqa: E501
+            document_thumbnail_element_id (str): [optional]  # noqa: E501
+            duplicate_name_violation_error (str): [optional]  # noqa: E501
+            is_upgraded_to_latest_version (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}
@@ -337,6 +341,7 @@ class BTDocumentProcessingInfo(ModelComposed):
             '_configuration': _configuration,
         }
         model_args = {
+            'json_type': json_type,
         }
         model_args.update(kwargs)
         composed_info = validate_get_composed_info(
@@ -345,6 +350,7 @@ class BTDocumentProcessingInfo(ModelComposed):
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
 
+        self.json_type = json_type
         for var_name, var_value in six.iteritems(kwargs):
             setattr(self, var_name, var_value)
 

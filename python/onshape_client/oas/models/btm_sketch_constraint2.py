@@ -113,6 +113,7 @@ class BTMSketchConstraint2(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'constraint_type': (str,),  # noqa: E501
             'driven_dimension': (bool,),  # noqa: E501
             'entity_id': (str,),  # noqa: E501
@@ -137,6 +138,7 @@ class BTMSketchConstraint2(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'constraint_type': 'constraintType',  # noqa: E501
         'driven_dimension': 'drivenDimension',  # noqa: E501
         'entity_id': 'entityId',  # noqa: E501
@@ -186,6 +188,7 @@ class BTMSketchConstraint2(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             constraint_type (str): [optional]  # noqa: E501
             driven_dimension (bool): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501

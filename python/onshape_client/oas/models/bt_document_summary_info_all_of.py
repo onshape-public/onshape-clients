@@ -44,6 +44,11 @@ try:
 except ImportError:
     bt_thumbnail_info = sys.modules[
         'onshape_client.oas.models.bt_thumbnail_info']
+try:
+    from onshape_client.oas.models import bt_workspace_info
+except ImportError:
+    bt_workspace_info = sys.modules[
+        'onshape_client.oas.models.bt_workspace_info']
 
 
 class BTDocumentSummaryInfoAllOf(ModelNormal):
@@ -120,7 +125,7 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
             'anonymous_access_allowed': (bool,),  # noqa: E501
             'anonymous_allows_export': (bool,),  # noqa: E501
             'default_element_id': (str,),  # noqa: E501
-            'default_workspace': (bt_base_info.BTBaseInfo,),  # noqa: E501
+            'default_workspace': (bt_workspace_info.BTWorkspaceInfo,),  # noqa: E501
             'trashed_at': (datetime,),  # noqa: E501
             'is_orphaned': (bool,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
@@ -217,7 +222,7 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
             anonymous_access_allowed (bool): [optional]  # noqa: E501
             anonymous_allows_export (bool): [optional]  # noqa: E501
             default_element_id (str): [optional]  # noqa: E501
-            default_workspace (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
+            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
             trashed_at (datetime): [optional]  # noqa: E501
             is_orphaned (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501

@@ -35,7 +35,7 @@ def test_get_variables(client):
                                                            element.wvm,
                                                            element.wvmid,
                                                            element.eid,
-                                                           bt_feature_script_eval_call=script_call,
+                                                           bt_feature_script_eval_call_2377=script_call,
                                                            _preload_content=False)
     measurements = json.loads(response.data.decode("utf-8"))["result"]["message"]["value"]
     parsed_measurements = parse_variables_from_map(measurements)

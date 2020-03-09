@@ -81,6 +81,7 @@ class BTFeatureState1688(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'feature_status': (str,),  # noqa: E501
         }
 
@@ -89,6 +90,7 @@ class BTFeatureState1688(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'feature_status': 'featureStatus',  # noqa: E501
     }
 
@@ -122,6 +124,7 @@ class BTFeatureState1688(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             feature_status (str): [optional]  # noqa: E501
         """
 

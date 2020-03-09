@@ -4,7 +4,7 @@ All URIs are relative to *https://cad.onshape.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_feature1**](PartStudiosApi.md#add_feature1) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
+[**add_part_studio_feature**](PartStudiosApi.md#add_part_studio_feature) | **POST** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features | Add Feature
 [**compare_part_studios**](PartStudiosApi.md#compare_part_studios) | **GET** /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare | Compare Part Studios
 [**create_part_studio**](PartStudiosApi.md#create_part_studio) | **POST** /api/partstudios/d/{did}/w/{wid} | Create Part Studio
 [**create_part_studio_translation**](PartStudiosApi.md#create_part_studio_translation) | **POST** /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Part Studio translation
@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**update_rollback**](PartStudiosApi.md#update_rollback) | **POST** /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/rollback | Update Feature Rollback
 
 
-# **add_feature1**
-> bt_feature_definition_response1617.BTFeatureDefinitionResponse1617 add_feature1(did, wvm, wvmid, eid)
+# **add_part_studio_feature**
+> bt_feature_definition_response1617.BTFeatureDefinitionResponse1617 add_part_studio_feature(did, wvm, wvmid, eid)
 
 Add Feature
 
@@ -61,19 +61,19 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Add Feature
-        api_response = api_instance.add_feature1(did, wvm, wvmid, eid)
+        api_response = api_instance.add_part_studio_feature(did, wvm, wvmid, eid)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartStudiosApi->add_feature1: %s\n" % e)
+        print("Exception when calling PartStudiosApi->add_part_studio_feature: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Add Feature
-        api_response = api_instance.add_feature1(did, wvm, wvmid, eid, bt_feature_definition_call_1406=bt_feature_definition_call_1406)
+        api_response = api_instance.add_part_studio_feature(did, wvm, wvmid, eid, bt_feature_definition_call_1406=bt_feature_definition_call_1406)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
-        print("Exception when calling PartStudiosApi->add_feature1: %s\n" % e)
+        print("Exception when calling PartStudiosApi->add_part_studio_feature: %s\n" % e)
 ```
 
 ### Parameters
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
+ - **Content-Type**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
  - **Accept**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details

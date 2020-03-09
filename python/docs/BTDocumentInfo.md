@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**json_type** | **str** |  | 
 **anonymous_access_allowed** | **bool** |  | [optional] 
 **anonymous_allows_export** | **bool** |  | [optional] 
 **beta_capability_ids** | **[str]** |  | [optional] 
@@ -54,6 +55,7 @@ Name | Type | Description | Notes
 **tree_href** | **str** |  | [optional] 
 **user_account_limits_breached** | **bool** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
+**has_pending_owner** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,7 +13,10 @@ There are in general two versions of each client at any point in time - the inte
 access and should be used with employee email credentials, and the external client that is only for partner access, and 
 only has access to the publicly documented, and publicly available APIs. From the code perspective, the only difference 
 between the two are the OAS package that is generated for each. However, the internal client has many more tests than
-external client, and handles setting up the necessary fixtures for a given test, internal or external.
+external client, and handles setting up the necessary fixtures for a given test, internal or external. The two
+different clients are versioned in code as two different branches. Since the internal client is always ahead of the
+external client, it will always be ahead of the external client. Therefore, at any given point in time, we have the
+internal client leading the charge on master, and the external trailing at master-external. 
 
 ## Client Versioning
 The client is a first citizen in the Onshape ecosystem, and needs to be tested regularly. The eventual goal is to build 

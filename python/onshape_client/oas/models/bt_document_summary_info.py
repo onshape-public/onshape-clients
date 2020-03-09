@@ -74,6 +74,11 @@ try:
 except ImportError:
     bt_user_basic_summary_info = sys.modules[
         'onshape_client.oas.models.bt_user_basic_summary_info']
+try:
+    from onshape_client.oas.models import bt_workspace_info
+except ImportError:
+    bt_workspace_info = sys.modules[
+        'onshape_client.oas.models.bt_workspace_info']
 
 
 class BTDocumentSummaryInfo(ModelComposed):
@@ -152,7 +157,7 @@ class BTDocumentSummaryInfo(ModelComposed):
             'anonymous_access_allowed': (bool,),  # noqa: E501
             'anonymous_allows_export': (bool,),  # noqa: E501
             'default_element_id': (str,),  # noqa: E501
-            'default_workspace': (bt_base_info.BTBaseInfo,),  # noqa: E501
+            'default_workspace': (bt_workspace_info.BTWorkspaceInfo,),  # noqa: E501
             'trashed_at': (datetime,),  # noqa: E501
             'is_orphaned': (bool,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
@@ -165,6 +170,7 @@ class BTDocumentSummaryInfo(ModelComposed):
             'created_at': (datetime,),  # noqa: E501
             'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'has_pending_owner': (bool,),  # noqa: E501
             'href': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'is_container': (bool,),  # noqa: E501
@@ -184,6 +190,7 @@ class BTDocumentSummaryInfo(ModelComposed):
     def discriminator():
         return {
             'json_type': {
+                'BTDocumentInfo': bt_document_info.BTDocumentInfo,
                 'BTDocumentSummarySearchInfo': bt_document_summary_search_info.BTDocumentSummarySearchInfo,
             },
         }
@@ -224,6 +231,7 @@ class BTDocumentSummaryInfo(ModelComposed):
         'created_at': 'createdAt',  # noqa: E501
         'created_by': 'createdBy',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'has_pending_owner': 'hasPendingOwner',  # noqa: E501
         'href': 'href',  # noqa: E501
         'id': 'id',  # noqa: E501
         'is_container': 'isContainer',  # noqa: E501
@@ -291,7 +299,7 @@ class BTDocumentSummaryInfo(ModelComposed):
             anonymous_access_allowed (bool): [optional]  # noqa: E501
             anonymous_allows_export (bool): [optional]  # noqa: E501
             default_element_id (str): [optional]  # noqa: E501
-            default_workspace (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
+            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
             trashed_at (datetime): [optional]  # noqa: E501
             is_orphaned (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
@@ -304,6 +312,7 @@ class BTDocumentSummaryInfo(ModelComposed):
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            has_pending_owner (bool): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             is_container (bool): [optional]  # noqa: E501

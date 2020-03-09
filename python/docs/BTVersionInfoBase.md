@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
 **type** | **str** |  | [optional] 
 **thumbnail** | [**bt_thumbnail_info.BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 
 **parents** | [**[bt_version_info.BTVersionInfo]**](BTVersionInfo.md) |  | [optional] 
@@ -18,6 +17,7 @@ Name | Type | Description | Notes
 **parent** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 

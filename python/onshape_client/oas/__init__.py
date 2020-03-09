@@ -192,6 +192,7 @@ from onshape_client.oas.models.bt_discount_info import BTDiscountInfo
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_element_processing_info import BTDocumentElementProcessingInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
+from onshape_client.oas.models.bt_document_info_all_of import BTDocumentInfoAllOf
 from onshape_client.oas.models.bt_document_label_info import BTDocumentLabelInfo
 from onshape_client.oas.models.bt_document_merge_info import BTDocumentMergeInfo
 from onshape_client.oas.models.bt_document_params import BTDocumentParams

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
 **purpose** | **int** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 **thumbnail** | [**bt_thumbnail_info.BTThumbnailInfo**](BTThumbnailInfo.md) |  | [optional] 

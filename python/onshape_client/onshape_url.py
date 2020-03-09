@@ -45,7 +45,7 @@ class OnshapeElement(object):
         self.wvmid = path_list[4]
         self.wvm = path_list[3]
         length = len(path_list)
-        if length > 7:
+        if length > 8:
             eid = path_list[8]
             optional_microversion = path_list[6]
         elif length > 5 and path_list[5] == 'e':
@@ -93,8 +93,8 @@ class OnshapeElement(object):
         if self.eid:
             url = url + "e/" + self.eid + "/"
         if self.configuration:
-            url = url + "?configuration=" + self.configuration
-        return url
+            url = url + "?configuration=" + self.configuration + "/"
+        return url[:-1]
 
     @property
     def element_type(self):
@@ -137,6 +137,10 @@ class OnshapeElement(object):
     @property
     def assemblies(self):
         return self.elements(filter_type="ASSEMBLY")
+
+    @property
+    def part_studios(self):
+        return self.elements(filter_type="PARTSTUDIO")
 
     def s_assembly_insert_message(self):
         e_type = self.element_type

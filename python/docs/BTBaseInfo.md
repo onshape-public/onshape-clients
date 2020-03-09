@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 

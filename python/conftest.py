@@ -78,6 +78,11 @@ def new_document(request, client, name_factory):
 
 
 @pytest.fixture
+def part_studio(new_document):
+    return new_document.part_studios[0]
+
+
+@pytest.fixture
 def new_copied_document_factory(client, name_factory):
     """Factory to copy elements that cleans up created elements when done."""
     created_docs = []

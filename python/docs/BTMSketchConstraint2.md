@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **constraint_type** | **str** |  | [optional] 
 **driven_dimension** | **bool** |  | [optional] 
 **entity_id** | **str** |  | [optional] 

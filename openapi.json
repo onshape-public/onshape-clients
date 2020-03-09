@@ -10950,7 +10950,7 @@
           "PartStudios"
         ],
         "summary": "Add Feature",
-        "operationId": "addFeature_1",
+        "operationId": "addPartStudioFeature",
         "parameters": [
           {
             "name": "did",
@@ -10988,16 +10988,6 @@
         "requestBody": {
           "description": "feature The serialized feature definition",
           "content": {
-            "application/json;charset=UTF-8; qs=0.09": {
-              "schema": {
-                "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
-              }
-            },
-            "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
-              "schema": {
-                "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
-              }
-            },
             "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
@@ -16604,9 +16594,6 @@
         }
       },
       "BTBaseInfo": {
-        "required": [
-          "jsonType"
-        ],
         "type": "object",
         "properties": {
           "href": {
@@ -18854,6 +18841,9 @@
       "BTFeatureState-1688": {
         "type": "object",
         "properties": {
+          "btType": {
+            "type": "string"
+          },
           "featureStatus": {
             "type": "string",
             "enum": [
@@ -20291,6 +20281,9 @@
       "BTMSketchConstraint-2": {
         "type": "object",
         "properties": {
+          "btType": {
+            "type": "string"
+          },
           "constraintType": {
             "type": "string",
             "enum": [
@@ -22435,6 +22428,9 @@
           },
           "sourceMicroversion": {
             "type": "string"
+          },
+          "btType": {
+            "type": "string"
           }
         }
       },
@@ -22837,6 +22833,9 @@
             "type": "string"
           },
           "sourceMicroversion": {
+            "type": "string"
+          },
+          "btType": {
             "type": "string"
           }
         }
@@ -25510,7 +25509,7 @@
           },
           "file": {
             "type": "string",
-            "format":  "binary"
+            "format": "binary"
           },
           "fileBodyWithDetails": {
             "$ref": "#/components/schemas/FormDataBodyPart"
@@ -26075,192 +26074,199 @@
         }
       },
       "BTDocumentInfo": {
-        "type": "object",
-        "properties": {
-          "anonymousAccessAllowed": {
-            "type": "boolean"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTDocumentSummaryInfo"
           },
-          "anonymousAllowsExport": {
-            "type": "boolean"
-          },
-          "betaCapabilityIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
+          {
+            "type": "object",
+            "properties": {
+              "anonymousAccessAllowed": {
+                "type": "boolean"
+              },
+              "anonymousAllowsExport": {
+                "type": "boolean"
+              },
+              "betaCapabilityIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "canMove": {
+                "type": "boolean"
+              },
+              "canUnshare": {
+                "type": "boolean"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              },
+              "createdWithEducationPlan": {
+                "type": "boolean"
+              },
+              "defaultElementId": {
+                "type": "string"
+              },
+              "defaultWorkspace": {
+                "$ref": "#/components/schemas/BTWorkspaceInfo"
+              },
+              "description": {
+                "type": "string"
+              },
+              "documentLabels": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTDocumentLabelInfo"
+                }
+              },
+              "documentThumbnailElementId": {
+                "type": "string"
+              },
+              "duplicateNameViolationError": {
+                "type": "string"
+              },
+              "hasReleaseRevisionableObjects": {
+                "type": "boolean"
+              },
+              "hasRelevantInsertables": {
+                "type": "boolean"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "id": {
+                "type": "string"
+              },
+              "isContainer": {
+                "type": "boolean"
+              },
+              "isEnterpriseOwned": {
+                "type": "boolean"
+              },
+              "isMutable": {
+                "type": "boolean"
+              },
+              "isOrphaned": {
+                "type": "boolean"
+              },
+              "isUpgradedToLatestVersion": {
+                "type": "boolean"
+              },
+              "isUsingManagedWorkflow": {
+                "type": "boolean"
+              },
+              "jsonType": {
+                "type": "string"
+              },
+              "likedByCurrentUser": {
+                "type": "boolean"
+              },
+              "likes": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "modifiedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "modifiedBy": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              },
+              "name": {
+                "type": "string"
+              },
+              "notRevisionManaged": {
+                "type": "boolean"
+              },
+              "numberOfTimesCopied": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "numberOfTimesReferenced": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "owner": {
+                "$ref": "#/components/schemas/BTOwnerInfo"
+              },
+              "parentId": {
+                "type": "string"
+              },
+              "permission": {
+                "type": "string",
+                "enum": [
+                  "NOACCESS",
+                  "ANONYMOUS_ACCESS",
+                  "READ",
+                  "READ_COPY_EXPORT",
+                  "COMMENT",
+                  "WRITE",
+                  "RESHARE",
+                  "FULL",
+                  "OWNER"
+                ]
+              },
+              "permissionSet": {
+                "$ref": "#/components/schemas/BTPermissionSet"
+              },
+              "projectId": {
+                "type": "string"
+              },
+              "public": {
+                "type": "boolean"
+              },
+              "recentVersion": {
+                "$ref": "#/components/schemas/BTBaseInfo"
+              },
+              "resourceType": {
+                "type": "string"
+              },
+              "supportTeamUserAndShared": {
+                "type": "boolean"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "thumbnail": {
+                "$ref": "#/components/schemas/BTThumbnailInfo"
+              },
+              "totalWorkspacesScheduledForUpdate": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "totalWorkspacesUpdating": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "trash": {
+                "type": "boolean"
+              },
+              "trashedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "treeHref": {
+                "type": "string"
+              },
+              "userAccountLimitsBreached": {
+                "type": "boolean"
+              },
+              "viewRef": {
+                "type": "string",
+                "format": "uri"
+              }
             }
-          },
-          "canMove": {
-            "type": "boolean"
-          },
-          "canUnshare": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "createdWithEducationPlan": {
-            "type": "boolean"
-          },
-          "defaultElementId": {
-            "type": "string"
-          },
-          "defaultWorkspace": {
-            "$ref": "#/components/schemas/BTWorkspaceInfo"
-          },
-          "description": {
-            "type": "string"
-          },
-          "documentLabels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BTDocumentLabelInfo"
-            }
-          },
-          "documentThumbnailElementId": {
-            "type": "string"
-          },
-          "duplicateNameViolationError": {
-            "type": "string"
-          },
-          "hasReleaseRevisionableObjects": {
-            "type": "boolean"
-          },
-          "hasRelevantInsertables": {
-            "type": "boolean"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isContainer": {
-            "type": "boolean"
-          },
-          "isEnterpriseOwned": {
-            "type": "boolean"
-          },
-          "isMutable": {
-            "type": "boolean"
-          },
-          "isOrphaned": {
-            "type": "boolean"
-          },
-          "isUpgradedToLatestVersion": {
-            "type": "boolean"
-          },
-          "isUsingManagedWorkflow": {
-            "type": "boolean"
-          },
-          "jsonType": {
-            "type": "string"
-          },
-          "likedByCurrentUser": {
-            "type": "boolean"
-          },
-          "likes": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "modifiedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modifiedBy": {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-          },
-          "name": {
-            "type": "string"
-          },
-          "notRevisionManaged": {
-            "type": "boolean"
-          },
-          "numberOfTimesCopied": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "numberOfTimesReferenced": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/BTOwnerInfo"
-          },
-          "parentId": {
-            "type": "string"
-          },
-          "permission": {
-            "type": "string",
-            "enum": [
-              "NOACCESS",
-              "ANONYMOUS_ACCESS",
-              "READ",
-              "READ_COPY_EXPORT",
-              "COMMENT",
-              "WRITE",
-              "RESHARE",
-              "FULL",
-              "OWNER"
-            ]
-          },
-          "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "public": {
-            "type": "boolean"
-          },
-          "recentVersion": {
-            "$ref": "#/components/schemas/BTBaseInfo"
-          },
-          "resourceType": {
-            "type": "string"
-          },
-          "supportTeamUserAndShared": {
-            "type": "boolean"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "thumbnail": {
-            "$ref": "#/components/schemas/BTThumbnailInfo"
-          },
-          "totalWorkspacesScheduledForUpdate": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalWorkspacesUpdating": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "trash": {
-            "type": "boolean"
-          },
-          "trashedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "treeHref": {
-            "type": "string"
-          },
-          "userAccountLimitsBreached": {
-            "type": "boolean"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
           }
-        },
+        ],
         "discriminator": {
           "propertyName": "jsonType",
           "mapping": {
@@ -26478,7 +26484,7 @@
                 "type": "string"
               },
               "defaultWorkspace": {
-                "$ref": "#/components/schemas/BTBaseInfo"
+                "$ref": "#/components/schemas/BTWorkspaceInfo"
               },
               "trashedAt": {
                 "type": "string",
@@ -26612,6 +26618,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "hasPendingOwner": {
+            "type": "boolean"
           },
           "href": {
             "type": "string",
