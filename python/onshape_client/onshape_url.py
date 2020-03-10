@@ -4,7 +4,7 @@ import webbrowser
 
 from onshape_client.client import Client
 from onshape_client.compatible_imports import parse, parse_qs
-from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams, BTDocumentParams
+from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams, BTDocumentParams, BTTranslateFormatParams
 from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
 from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
 from onshape_client.oas.models.bt_document_info import BTDocumentInfo
@@ -19,6 +19,8 @@ class OnshapeElement(object):
     https://cad.onshape.com/documents/c8f8013d34183b1de74fa930/w/574b77701d8b74987c273500/e/455ef770951fe37de0b8ff08
     https://cad.onshape.com/documents/c8f8013d34183b1de74fa930/w/574b77701d8b74987c273500/e/455ef770951fe37de0b8ff08?configuration=List_TOpkWtvolR0KY4%3Dewf
     """
+
+    DRAWING_DATA_TYPE = "onshape-app/drawing"
 
     @staticmethod
     def create_from_oas_models(oas_model, **kwargs):
@@ -41,10 +43,11 @@ class OnshapeElement(object):
     def create(name="New Document"):
         """Returns a blank new document."""
         client = Client.get_client()
-        doc_params = BTDocumentParams(name)
+        doc_params = BTDocumentParams(name =name)
         doc = client.documents_api.create_document(doc_params)
         doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
         return doc
+
 
     def import_file(self, file_path, **kwargs):
         """Import a file from the local file system. Returns the URL of the resulting element if translated."""
@@ -52,25 +55,49 @@ class OnshapeElement(object):
         result = client.blob_elements_api.upload_file_create_element(self.did, self.wvmid, file=open(file_path, 'rb'),
                                                                      translate=True, encoded_filename=file_path.name, **kwargs)
         translation_id = result.translation_id
-        print("The translationId is: {}.".format(translation_id))
-
-        state = 'ACTIVE'
-        while state == 'ACTIVE':
-            time.sleep(2)
-            result = client.translation_api.get_translation(translation_id)
-            state = result.request_state
+        result = OnshapeElement.poll_translation_result(translation_id)
 
         element_id = result.result_element_ids[0]
-        # Make the actual download when the translation is done, otherwise report the error
-        if state == "DONE":
-            print("Translated document available at {host}/documents/{did}/w/{wid}/e/{eid}".format(
-                host=client.configuration.host,
-                did=result.document_id,
-                wid=result.workspace_id,
-                eid=element_id))
-        else:
-            print("An error ocurred on the server! Here is the response: \n")
         return OnshapeElement.create_from_ids(self.did, 'w', self.wvmid, element_id)
+
+    @staticmethod
+    def poll_translation_result(translation_id):
+        def is_polling_done(response):
+            if response.request_state == "DONE":
+                return True
+            elif response.request_state == "ACTIVE":
+                return False
+            raise UserWarning(f"Translation failed")
+        polling_function = lambda: Client.get_client().translation_api.get_translation(translation_id)
+        return OnshapeElement.poll(polling_function, is_polling_done)
+
+
+    def export_file(self, file_path, **kwargs):
+        """Exports the element this class is pointing to"""
+        if self._get_element_info().data_type == OnshapeElement.DRAWING_DATA_TYPE:
+            result = Client.get_client().drawings_api.create_drawing_translation(did=self.did, wv=self.wvm,
+                                                                                 wvid=self.wvmid, eid=self.eid,
+                                                                                 bt_translate_format_params=BTTranslateFormatParams(
+                                                                                     element_id=self.eid,
+                                                                                     destination_name="exported_drawing",
+                                                                                     format_name="PDF", store_in_document=False))
+            translation_id = result.id
+            result = OnshapeElement.poll_translation_result(translation_id)
+            download_id = result.result_external_data_ids[0]
+            file_path.write_bytes(Client.get_client().documents_api.download_external_data(did=self.did, fid=download_id, _preload_content=False).data)
+
+
+    @staticmethod
+    def poll(polling_function, is_done_function):
+        """For long polling for long-running jobs like translation. polling_function is the function that gets called
+        every time step until is_done_function returns true."""
+
+        result = polling_function()
+        while not is_done_function(result):
+            time.sleep(2)
+            result = polling_function()
+        return result
+
 
     def __init__(self, url, *args, **kwargs):
         self.original_url = url
@@ -150,7 +177,7 @@ class OnshapeElement(object):
             if filter_data_type and not filter_data_type == e.data_type:
                 ands.append(False)
             if all(ands):
-                result.append(OnshapeElement.create_from_ids(did=self.did, wvm='w', wvmid=self.wvmid, eid=e.id))
+                result.append(OnshapeElement.create_from_ids(did=self.did, wvm=self.wvm, wvmid=self.wvmid, eid=e.id))
         return result
 
     @property
@@ -182,7 +209,7 @@ class OnshapeElement(object):
 
     @property
     def drawings(self):
-        return self.elements(filter_type="APPLICATION", filter_data_type="onshape-app/drawing")
+        return self.elements(filter_type="APPLICATION", filter_data_type=OnshapeElement.DRAWING_DATA_TYPE)
 
     def s_assembly_insert_message(self):
         e_type = self.element_type
