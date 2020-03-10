@@ -105,10 +105,10 @@ class BTPExpressionIs242(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'operand': (btp_expression9.BTPExpression9,),  # noqa: E501
             'type_name': (btp_type_name290.BTPTypeName290,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
+            'operand': (btp_expression9.BTPExpression9,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -124,10 +124,10 @@ class BTPExpressionIs242(ModelComposed):
         return None
 
     attribute_map = {
-        'operand': 'operand',  # noqa: E501
         'type_name': 'typeName',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
+        'operand': 'operand',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -167,10 +167,10 @@ class BTPExpressionIs242(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operand (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             type_name (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
+            operand (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

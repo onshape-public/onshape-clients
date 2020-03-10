@@ -101,6 +101,7 @@ class BTMMate64AllOf(ModelNormal):
             'secondary_axis_alignment': (str,),  # noqa: E501
             'mate_offset': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'mate_connectors': ([btm_mate_connector66.BTMMateConnector66],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -113,6 +114,7 @@ class BTMMate64AllOf(ModelNormal):
         'secondary_axis_alignment': 'secondaryAxisAlignment',  # noqa: E501
         'mate_offset': 'mateOffset',  # noqa: E501
         'mate_connectors': 'mateConnectors',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -150,6 +152,7 @@ class BTMMate64AllOf(ModelNormal):
             secondary_axis_alignment (str): [optional]  # noqa: E501
             mate_offset (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             mate_connectors ([btm_mate_connector66.BTMMateConnector66]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

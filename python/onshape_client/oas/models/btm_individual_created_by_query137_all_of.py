@@ -95,6 +95,7 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
             'body_type': (str,),  # noqa: E501
             'entity_type': (str,),  # noqa: E501
             'filter_construction': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -106,6 +107,7 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
         'body_type': 'bodyType',  # noqa: E501
         'entity_type': 'entityType',  # noqa: E501
         'filter_construction': 'filterConstruction',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -142,6 +144,7 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
             body_type (str): [optional]  # noqa: E501
             entity_type (str): [optional]  # noqa: E501
             filter_construction (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

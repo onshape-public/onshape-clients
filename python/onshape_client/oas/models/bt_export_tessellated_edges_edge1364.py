@@ -79,6 +79,7 @@ class BTExportTessellatedEdgesEdge1364(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'vertices': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
         }
@@ -88,6 +89,7 @@ class BTExportTessellatedEdgesEdge1364(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'id': 'id',  # noqa: E501
         'vertices': 'vertices',  # noqa: E501
     }
@@ -122,6 +124,7 @@ class BTExportTessellatedEdgesEdge1364(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             vertices ([bt_vector3d389.BTVector3d389]): [optional]  # noqa: E501
         """

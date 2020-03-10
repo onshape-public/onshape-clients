@@ -75,6 +75,7 @@ class BTStringMaximumLengthPattern2593AllOf(ModelNormal):
         """
         return {
             'maximum_length': (int,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTStringMaximumLengthPattern2593AllOf(ModelNormal):
 
     attribute_map = {
         'maximum_length': 'maximumLength',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTStringMaximumLengthPattern2593AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             maximum_length (int): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

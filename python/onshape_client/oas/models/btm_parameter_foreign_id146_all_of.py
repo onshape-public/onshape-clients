@@ -82,6 +82,7 @@ class BTMParameterForeignId146AllOf(ModelNormal):
             'foreign_id': (str,),  # noqa: E501
             'location_info': (bt_foreign_data_response1070.BTForeignDataResponse1070,),  # noqa: E501
             'foreign_name': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,6 +93,7 @@ class BTMParameterForeignId146AllOf(ModelNormal):
         'foreign_id': 'foreignId',  # noqa: E501
         'location_info': 'locationInfo',  # noqa: E501
         'foreign_name': 'foreignName',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,6 +129,7 @@ class BTMParameterForeignId146AllOf(ModelNormal):
             foreign_id (str): [optional]  # noqa: E501
             location_info (bt_foreign_data_response1070.BTForeignDataResponse1070): [optional]  # noqa: E501
             foreign_name (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -80,6 +80,7 @@ class BTExportTessellatedEdgesBody890AllOf(ModelNormal):
         """
         return {
             'edges': ([bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTExportTessellatedEdgesBody890AllOf(ModelNormal):
 
     attribute_map = {
         'edges': 'edges',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTExportTessellatedEdgesBody890AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             edges ([bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

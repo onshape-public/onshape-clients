@@ -96,8 +96,8 @@ class BTFSValueWithUnits1817(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'value_object': (float,),  # noqa: E501
             'quantity_type': (str,),  # noqa: E501
+            'value_object': (float,),  # noqa: E501
             'unit_to_power': ({str: (int,)},),  # noqa: E501
             'value': (float,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
@@ -110,8 +110,8 @@ class BTFSValueWithUnits1817(ModelComposed):
         return None
 
     attribute_map = {
-        'value_object': 'valueObject',  # noqa: E501
         'quantity_type': 'quantityType',  # noqa: E501
+        'value_object': 'valueObject',  # noqa: E501
         'unit_to_power': 'unitToPower',  # noqa: E501
         'value': 'value',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
@@ -148,8 +148,8 @@ class BTFSValueWithUnits1817(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value_object (float): [optional]  # noqa: E501
             quantity_type (str): [optional]  # noqa: E501
+            value_object (float): [optional]  # noqa: E501
             unit_to_power ({str: (int,)}): [optional]  # noqa: E501
             value (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501

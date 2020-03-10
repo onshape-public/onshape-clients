@@ -35,6 +35,11 @@ except ImportError:
     bt_allowed_mate_type_filter1511 = sys.modules[
         'onshape_client.oas.models.bt_allowed_mate_type_filter1511']
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_query_filter183
 except ImportError:
     bt_query_filter183 = sys.modules[
@@ -168,6 +173,7 @@ class BTMateFilter162(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               bt_query_filter183.BTQueryFilter183,
           ],
           'oneOf': [

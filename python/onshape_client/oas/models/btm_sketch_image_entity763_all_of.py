@@ -79,6 +79,7 @@ class BTMSketchImageEntity763AllOf(ModelNormal):
             'xaxis_x': (float,),  # noqa: E501
             'xaxis_y': (float,),  # noqa: E501
             'aspect_ratio': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,6 +92,7 @@ class BTMSketchImageEntity763AllOf(ModelNormal):
         'xaxis_x': 'xaxisX',  # noqa: E501
         'xaxis_y': 'xaxisY',  # noqa: E501
         'aspect_ratio': 'aspectRatio',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -128,6 +130,7 @@ class BTMSketchImageEntity763AllOf(ModelNormal):
             xaxis_x (float): [optional]  # noqa: E501
             xaxis_y (float): [optional]  # noqa: E501
             aspect_ratio (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -77,6 +77,7 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
             'namespace': (str,),  # noqa: E501
             'enum_value': (str,),  # noqa: E501
             'enum_name': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,6 +88,7 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
         'namespace': 'namespace',  # noqa: E501
         'enum_value': 'enumValue',  # noqa: E501
         'enum_name': 'enumName',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
             namespace (str): [optional]  # noqa: E501
             enum_value (str): [optional]  # noqa: E501
             enum_name (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

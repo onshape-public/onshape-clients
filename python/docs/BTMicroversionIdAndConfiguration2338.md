@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **cache_key** | **str** |  | [optional] 
 **configuration_parameter_id_to_value** | [**{str: (btfs_value1888.BTFSValue1888,)}**](BTFSValue1888.md) |  | [optional] 
 **deleted** | **bool** |  | [optional] 

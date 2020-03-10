@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_localized_strings** | **int** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **default_index** | **int** |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **entries** | [**[bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667]**](BTParameterLookupTableEntry1667.md) |  | [optional] 

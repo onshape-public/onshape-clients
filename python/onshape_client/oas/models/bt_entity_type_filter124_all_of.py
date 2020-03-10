@@ -83,6 +83,7 @@ class BTEntityTypeFilter124AllOf(ModelNormal):
         """
         return {
             'entity_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,6 +92,7 @@ class BTEntityTypeFilter124AllOf(ModelNormal):
 
     attribute_map = {
         'entity_type': 'entityType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTEntityTypeFilter124AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             entity_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

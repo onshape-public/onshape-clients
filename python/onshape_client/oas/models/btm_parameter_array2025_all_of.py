@@ -80,6 +80,7 @@ class BTMParameterArray2025AllOf(ModelNormal):
         """
         return {
             'items': ([btm_array_parameter_item1843.BTMArrayParameterItem1843],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTMParameterArray2025AllOf(ModelNormal):
 
     attribute_map = {
         'items': 'items',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTMParameterArray2025AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             items ([btm_array_parameter_item1843.BTMArrayParameterItem1843]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

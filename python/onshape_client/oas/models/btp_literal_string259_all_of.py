@@ -76,6 +76,7 @@ class BTPLiteralString259AllOf(ModelNormal):
         return {
             'text': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTPLiteralString259AllOf(ModelNormal):
     attribute_map = {
         'text': 'text',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTPLiteralString259AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             text (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

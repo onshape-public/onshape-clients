@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **indices** | **[int]** |  | [optional] 
 **normal** | [**bt_vector3d389.BTVector3d389**](BTVector3d389.md) |  | [optional] 
 **normals** | [**[bt_vector3d389.BTVector3d389]**](BTVector3d389.md) |  | [optional] 

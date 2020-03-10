@@ -76,6 +76,7 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
         return {
             'null_value': (str,),  # noqa: E501
             'is_null': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
     attribute_map = {
         'null_value': 'nullValue',  # noqa: E501
         'is_null': 'isNull',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             null_value (str): [optional]  # noqa: E501
             is_null (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

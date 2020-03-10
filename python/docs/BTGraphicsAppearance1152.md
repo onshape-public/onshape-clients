@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **color** | **[str]** |  | [optional] 
 **non_trivial** | **bool** |  | [optional] 
 **opacity** | **int** |  | [optional] 

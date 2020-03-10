@@ -136,11 +136,11 @@ class BTPConversionFunction1362(ModelComposed):
         """
         return {
             'to': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
-            '_from': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             'type_name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'space_after_type': (btp_space10.BTPSpace10,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
+            '_from': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -156,8 +156,8 @@ class BTPConversionFunction1362(ModelComposed):
             'for_export': (bool,),  # noqa: E501
             'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
             'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'precondition': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_arglist': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
@@ -170,11 +170,11 @@ class BTPConversionFunction1362(ModelComposed):
 
     attribute_map = {
         'to': 'to',  # noqa: E501
-        '_from': 'from',  # noqa: E501
         'type_name': 'typeName',  # noqa: E501
         'space_after_type': 'spaceAfterType',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
+        '_from': 'from',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -190,8 +190,8 @@ class BTPConversionFunction1362(ModelComposed):
         'for_export': 'forExport',  # noqa: E501
         'space_after_export': 'spaceAfterExport',  # noqa: E501
         'annotation': 'annotation',  # noqa: E501
-        'arguments': 'arguments',  # noqa: E501
         'body': 'body',  # noqa: E501
+        'arguments': 'arguments',  # noqa: E501
         'precondition': 'precondition',  # noqa: E501
         'space_after_arglist': 'spaceAfterArglist',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
@@ -228,11 +228,11 @@ class BTPConversionFunction1362(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             to (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
-            _from (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             type_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             space_after_type (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
+            _from (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
@@ -248,8 +248,8 @@ class BTPConversionFunction1362(ModelComposed):
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
             annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
+            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501

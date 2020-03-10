@@ -101,6 +101,7 @@ class BTPTopLevelNode286AllOf(ModelNormal):
             'for_export': (bool,),  # noqa: E501
             'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
             'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -115,6 +116,7 @@ class BTPTopLevelNode286AllOf(ModelNormal):
         'for_export': 'forExport',  # noqa: E501
         'space_after_export': 'spaceAfterExport',  # noqa: E501
         'annotation': 'annotation',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -154,6 +156,7 @@ class BTPTopLevelNode286AllOf(ModelNormal):
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
             annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -92,6 +92,7 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
             'space_after_version': (btp_space10.BTPSpace10,),  # noqa: E501
             'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,6 +103,7 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
         'space_after_version': 'spaceAfterVersion',  # noqa: E501
         'version': 'version',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,6 +139,7 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
             space_after_version (btp_space10.BTPSpace10): [optional]  # noqa: E501
             version (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

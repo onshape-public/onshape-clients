@@ -84,6 +84,7 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
             'parent_id': (str,),  # noqa: E501
             'parent_name': (str,),  # noqa: E501
             'parent_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,6 +95,7 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
         'parent_id': 'parentId',  # noqa: E501
         'parent_name': 'parentName',  # noqa: E501
         'parent_type': 'parentType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
             parent_id (str): [optional]  # noqa: E501
             parent_name (str): [optional]  # noqa: E501
             parent_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

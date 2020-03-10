@@ -80,6 +80,7 @@ class BTNotFilter165AllOf(ModelNormal):
         """
         return {
             'operand': (bt_query_filter183.BTQueryFilter183,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTNotFilter165AllOf(ModelNormal):
 
     attribute_map = {
         'operand': 'operand',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTNotFilter165AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             operand (bt_query_filter183.BTQueryFilter183): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

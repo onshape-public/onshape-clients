@@ -85,6 +85,7 @@ class BTExportTessellatedFacesFace1192(ModelNormal):
         """
         return {
             'appearance': (bt_graphics_appearance1152.BTGraphicsAppearance1152,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'error_message': (str,),  # noqa: E501
             'facets': ([bt_export_tessellated_faces_facet1417.BTExportTessellatedFacesFacet1417],),  # noqa: E501
             'id': (str,),  # noqa: E501
@@ -96,6 +97,7 @@ class BTExportTessellatedFacesFace1192(ModelNormal):
 
     attribute_map = {
         'appearance': 'appearance',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'error_message': 'errorMessage',  # noqa: E501
         'facets': 'facets',  # noqa: E501
         'id': 'id',  # noqa: E501
@@ -132,6 +134,7 @@ class BTExportTessellatedFacesFace1192(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             appearance (bt_graphics_appearance1152.BTGraphicsAppearance1152): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             error_message (str): [optional]  # noqa: E501
             facets ([bt_export_tessellated_faces_facet1417.BTExportTessellatedFacesFacet1417]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501

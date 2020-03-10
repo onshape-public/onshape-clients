@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **str** |  | [optional] 
 **invalid_identifier_for_test** | **str** |  | [optional] 
-**atomic** | **bool** |  | [optional] 
+**identifier** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

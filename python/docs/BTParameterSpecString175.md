@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **format_conditions** | [**[bt_string_format_condition683.BTStringFormatCondition683]**](BTStringFormatCondition683.md) |  | [optional] 
-**additional_localized_strings** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 
 **icon_uri** | **str** |  | [optional] 

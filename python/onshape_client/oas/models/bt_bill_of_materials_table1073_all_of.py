@@ -77,6 +77,7 @@ class BTBillOfMaterialsTable1073AllOf(ModelNormal):
             'indented': (bool,),  # noqa: E501
             'showing_excluded': (bool,),  # noqa: E501
             'failed_metadata_representative_occurrences': ([str],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,6 +88,7 @@ class BTBillOfMaterialsTable1073AllOf(ModelNormal):
         'indented': 'indented',  # noqa: E501
         'showing_excluded': 'showingExcluded',  # noqa: E501
         'failed_metadata_representative_occurrences': 'failedMetadataRepresentativeOccurrences',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTBillOfMaterialsTable1073AllOf(ModelNormal):
             indented (bool): [optional]  # noqa: E501
             showing_excluded (bool): [optional]  # noqa: E501
             failed_metadata_representative_occurrences ([str]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

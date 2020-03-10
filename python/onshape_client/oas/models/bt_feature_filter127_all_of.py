@@ -81,6 +81,7 @@ class BTFeatureFilter127AllOf(ModelNormal):
         return {
             'feature_id': (str,),  # noqa: E501
             'exclusion': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTFeatureFilter127AllOf(ModelNormal):
     attribute_map = {
         'feature_id': 'featureId',  # noqa: E501
         'exclusion': 'exclusion',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTFeatureFilter127AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             feature_id (str): [optional]  # noqa: E501
             exclusion (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

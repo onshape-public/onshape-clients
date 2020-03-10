@@ -82,6 +82,7 @@ class BTParameterSpecQuery174AllOf(ModelNormal):
             'max_number_of_picks': (int,),  # noqa: E501
             'additional_box_select_filter': (bt_query_filter183.BTQueryFilter183,),  # noqa: E501
             'filter': (bt_query_filter183.BTQueryFilter183,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,6 +93,7 @@ class BTParameterSpecQuery174AllOf(ModelNormal):
         'max_number_of_picks': 'maxNumberOfPicks',  # noqa: E501
         'additional_box_select_filter': 'additionalBoxSelectFilter',  # noqa: E501
         'filter': 'filter',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,6 +129,7 @@ class BTParameterSpecQuery174AllOf(ModelNormal):
             max_number_of_picks (int): [optional]  # noqa: E501
             additional_box_select_filter (bt_query_filter183.BTQueryFilter183): [optional]  # noqa: E501
             filter (bt_query_filter183.BTQueryFilter183): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

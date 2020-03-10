@@ -80,6 +80,7 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
         """
         return {
             'additional_localized_strings': (int,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'default_index': (int,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'entries': ([bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667],),  # noqa: E501
@@ -97,6 +98,7 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
 
     attribute_map = {
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'default_index': 'defaultIndex',  # noqa: E501
         'display_name': 'displayName',  # noqa: E501
         'entries': 'entries',  # noqa: E501
@@ -139,6 +141,7 @@ class BTParameterLookupTableListEntry1916(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             additional_localized_strings (int): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             default_index (int): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             entries ([bt_parameter_lookup_table_entry1667.BTParameterLookupTableEntry1667]): [optional]  # noqa: E501

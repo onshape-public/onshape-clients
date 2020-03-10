@@ -78,6 +78,7 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
             'part_studio_mate_connector_query': (bool,),  # noqa: E501
             'feature_id': (str,),  # noqa: E501
             'query_data': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,6 +90,7 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
         'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',  # noqa: E501
         'feature_id': 'featureId',  # noqa: E501
         'query_data': 'queryData',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -125,6 +127,7 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             query_data (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

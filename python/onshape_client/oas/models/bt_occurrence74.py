@@ -74,6 +74,7 @@ class BTOccurrence74(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'full_path_as_string': (str,),  # noqa: E501
             'head_instance_id': (str,),  # noqa: E501
             'occurrence_without_head': (BTOccurrence74,),  # noqa: E501
@@ -90,6 +91,7 @@ class BTOccurrence74(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'full_path_as_string': 'fullPathAsString',  # noqa: E501
         'head_instance_id': 'headInstanceId',  # noqa: E501
         'occurrence_without_head': 'occurrenceWithoutHead',  # noqa: E501
@@ -131,6 +133,7 @@ class BTOccurrence74(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             full_path_as_string (str): [optional]  # noqa: E501
             head_instance_id (str): [optional]  # noqa: E501
             occurrence_without_head (BTOccurrence74): [optional]  # noqa: E501

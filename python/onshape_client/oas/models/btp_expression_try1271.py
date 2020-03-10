@@ -104,8 +104,8 @@ class BTPExpressionTry1271(ModelComposed):
             'silent': (bool,),  # noqa: E501
             'space_after_silent': (btp_space10.BTPSpace10,),  # noqa: E501
             'expression': (btp_expression9.BTPExpression9,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -125,8 +125,8 @@ class BTPExpressionTry1271(ModelComposed):
         'silent': 'silent',  # noqa: E501
         'space_after_silent': 'spaceAfterSilent',  # noqa: E501
         'expression': 'expression',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -170,8 +170,8 @@ class BTPExpressionTry1271(ModelComposed):
             silent (bool): [optional]  # noqa: E501
             space_after_silent (btp_space10.BTPSpace10): [optional]  # noqa: E501
             expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

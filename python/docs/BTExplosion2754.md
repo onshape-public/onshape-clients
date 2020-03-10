@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**explode_steps** | [**[bt_explosion_step_feature3008.BTExplosionStepFeature3008]**](BTExplosionStepFeature3008.md) |  | [optional] 
 **starting_position_id** | [**bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338**](BTMicroversionIdAndConfiguration2338.md) |  | [optional] 
+**explode_steps** | [**[bt_explosion_step_feature3008.BTExplosionStepFeature3008]**](BTExplosionStepFeature3008.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **feature_id** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 

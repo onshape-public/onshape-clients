@@ -74,8 +74,9 @@ class BTPIdentifier8AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'identifier': (str,),  # noqa: E501
             'invalid_identifier_for_test': (str,),  # noqa: E501
+            'identifier': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,8 +84,9 @@ class BTPIdentifier8AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'identifier': 'identifier',  # noqa: E501
         'invalid_identifier_for_test': 'invalidIdentifierForTest',  # noqa: E501
+        'identifier': 'identifier',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -117,8 +119,9 @@ class BTPIdentifier8AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            identifier (str): [optional]  # noqa: E501
             invalid_identifier_for_test (str): [optional]  # noqa: E501
+            identifier (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

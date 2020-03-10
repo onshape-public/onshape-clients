@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **trailing_comma** | **bool** |  | [optional] 
 **space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

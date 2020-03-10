@@ -81,6 +81,7 @@ class BTFSTableRowMetadata2262AllOf(ModelNormal):
         return {
             'callout': (str,),  # noqa: E501
             'cross_highlight_data': (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTFSTableRowMetadata2262AllOf(ModelNormal):
     attribute_map = {
         'callout': 'callout',  # noqa: E501
         'cross_highlight_data': 'crossHighlightData',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTFSTableRowMetadata2262AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             callout (str): [optional]  # noqa: E501
             cross_highlight_data (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

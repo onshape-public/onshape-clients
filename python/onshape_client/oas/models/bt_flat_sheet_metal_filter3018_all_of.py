@@ -81,6 +81,7 @@ class BTFlatSheetMetalFilter3018AllOf(ModelNormal):
         """
         return {
             'allows': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,6 +90,7 @@ class BTFlatSheetMetalFilter3018AllOf(ModelNormal):
 
     attribute_map = {
         'allows': 'allows',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTFlatSheetMetalFilter3018AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             allows (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

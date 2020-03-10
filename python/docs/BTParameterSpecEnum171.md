@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enum_name** | **str** |  | [optional] 
 **option_names** | **[str]** |  | [optional] 
+**enum_name** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **options** | **[str]** |  | [optional] 
-**additional_localized_strings** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 
 **icon_uri** | **str** |  | [optional] 

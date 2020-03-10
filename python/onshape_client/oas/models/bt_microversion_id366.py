@@ -74,6 +74,7 @@ class BTMicroversionId366(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'deleted': (bool,),  # noqa: E501
             'the_id': (str,),  # noqa: E501
         }
@@ -83,6 +84,7 @@ class BTMicroversionId366(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'deleted': 'deleted',  # noqa: E501
         'the_id': 'theId',  # noqa: E501
     }
@@ -117,6 +119,7 @@ class BTMicroversionId366(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             deleted (bool): [optional]  # noqa: E501
             the_id (str): [optional]  # noqa: E501
         """

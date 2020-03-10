@@ -75,6 +75,7 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
         """
         return {
             'database_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
 
     attribute_map = {
         'database_id': 'databaseId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             database_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

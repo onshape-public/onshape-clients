@@ -100,10 +100,10 @@ class BTPIdentifier8(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'identifier': (str,),  # noqa: E501
             'invalid_identifier_for_test': (str,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
+            'identifier': (str,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -119,10 +119,10 @@ class BTPIdentifier8(ModelComposed):
         return None
 
     attribute_map = {
-        'identifier': 'identifier',  # noqa: E501
         'invalid_identifier_for_test': 'invalidIdentifierForTest',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
+        'identifier': 'identifier',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -162,10 +162,10 @@ class BTPIdentifier8(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            identifier (str): [optional]  # noqa: E501
             invalid_identifier_for_test (str): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
+            identifier (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

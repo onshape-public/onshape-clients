@@ -130,18 +130,18 @@ class BTPModule234(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'version_number': (int,),  # noqa: E501
-            'deep_imports': ({str: ([bt_import.BTImport],)},),  # noqa: E501
             'is_internal_module': (bool,),  # noqa: E501
             'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
+            'deep_imports': ({str: ([bt_import.BTImport],)},),  # noqa: E501
+            'version_number': (int,),  # noqa: E501
             'path_map': ({str: (bt_microversion_id366.BTMicroversionId366,)},),  # noqa: E501
             'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
-            'is_blob': (bool,),  # noqa: E501
             'top_level': ([btp_top_level_node286.BTPTopLevelNode286],),  # noqa: E501
             'path_to_cache': (bt_cache_data_path191.BTCacheDataPath191,),  # noqa: E501
+            'is_blob': (bool,),  # noqa: E501
             'may_have_implicit_imports': (bool,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -157,18 +157,18 @@ class BTPModule234(ModelComposed):
         return None
 
     attribute_map = {
-        'version_number': 'versionNumber',  # noqa: E501
-        'deep_imports': 'deepImports',  # noqa: E501
         'is_internal_module': 'isInternalModule',  # noqa: E501
         'imports': 'imports',  # noqa: E501
+        'deep_imports': 'deepImports',  # noqa: E501
+        'version_number': 'versionNumber',  # noqa: E501
         'path_map': 'pathMap',  # noqa: E501
         'version': 'version',  # noqa: E501
-        'is_blob': 'isBlob',  # noqa: E501
         'top_level': 'topLevel',  # noqa: E501
         'path_to_cache': 'pathToCache',  # noqa: E501
+        'is_blob': 'isBlob',  # noqa: E501
         'may_have_implicit_imports': 'mayHaveImplicitImports',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -208,18 +208,18 @@ class BTPModule234(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            version_number (int): [optional]  # noqa: E501
-            deep_imports ({str: ([bt_import.BTImport],)}): [optional]  # noqa: E501
             is_internal_module (bool): [optional]  # noqa: E501
             imports ([btp_top_level_import285.BTPTopLevelImport285]): [optional]  # noqa: E501
+            deep_imports ({str: ([bt_import.BTImport],)}): [optional]  # noqa: E501
+            version_number (int): [optional]  # noqa: E501
             path_map ({str: (bt_microversion_id366.BTMicroversionId366,)}): [optional]  # noqa: E501
             version (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
-            is_blob (bool): [optional]  # noqa: E501
             top_level ([btp_top_level_node286.BTPTopLevelNode286]): [optional]  # noqa: E501
             path_to_cache (bt_cache_data_path191.BTCacheDataPath191): [optional]  # noqa: E501
+            is_blob (bool): [optional]  # noqa: E501
             may_have_implicit_imports (bool): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

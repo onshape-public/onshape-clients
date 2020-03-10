@@ -84,6 +84,7 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'indices': ([int],),  # noqa: E501
             'normal': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'normals': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
@@ -96,6 +97,7 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'indices': 'indices',  # noqa: E501
         'normal': 'normal',  # noqa: E501
         'normals': 'normals',  # noqa: E501
@@ -133,6 +135,7 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             indices ([int]): [optional]  # noqa: E501
             normal (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             normals ([bt_vector3d389.BTVector3d389]): [optional]  # noqa: E501

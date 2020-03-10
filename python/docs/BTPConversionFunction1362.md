@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
-**_from** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
 **type_name** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
 **space_after_type** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
+**_from** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 
@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **for_export** | **bool** |  | [optional] 
 **space_after_export** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
-**arguments** | [**[btp_argument_declaration232.BTPArgumentDeclaration232]**](BTPArgumentDeclaration232.md) |  | [optional] 
 **body** | [**btp_statement_block271.BTPStatementBlock271**](BTPStatementBlock271.md) |  | [optional] 
+**arguments** | [**[btp_argument_declaration232.BTPArgumentDeclaration232]**](BTPArgumentDeclaration232.md) |  | [optional] 
 **precondition** | [**btp_statement269.BTPStatement269**](BTPStatement269.md) |  | [optional] 
 **space_after_arglist** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 

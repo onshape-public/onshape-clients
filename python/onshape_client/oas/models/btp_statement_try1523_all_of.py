@@ -105,11 +105,12 @@ class BTPStatementTry1523AllOf(ModelNormal):
             'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'type_name': (str,),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
-            'silent': (bool,),  # noqa: E501
             'catch_variable': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'space_before_silent': (btp_space10.BTPSpace10,),  # noqa: E501
             'catch_block': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
             'space_after_catch': (btp_space10.BTPSpace10,),  # noqa: E501
+            'silent': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -121,11 +122,12 @@ class BTPStatementTry1523AllOf(ModelNormal):
         'name': 'name',  # noqa: E501
         'type_name': 'typeName',  # noqa: E501
         'body': 'body',  # noqa: E501
-        'silent': 'silent',  # noqa: E501
         'catch_variable': 'catchVariable',  # noqa: E501
         'space_before_silent': 'spaceBeforeSilent',  # noqa: E501
         'catch_block': 'catchBlock',  # noqa: E501
         'space_after_catch': 'spaceAfterCatch',  # noqa: E501
+        'silent': 'silent',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -162,11 +164,12 @@ class BTPStatementTry1523AllOf(ModelNormal):
             name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             type_name (str): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
-            silent (bool): [optional]  # noqa: E501
             catch_variable (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             space_before_silent (btp_space10.BTPSpace10): [optional]  # noqa: E501
             catch_block (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
             space_after_catch (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            silent (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -86,6 +86,7 @@ class BTMSketch151AllOf(ModelNormal):
         return {
             'entities': ([btm_sketch_geom_entity5.BTMSketchGeomEntity5],),  # noqa: E501
             'constraints': ([btm_sketch_constraint2.BTMSketchConstraint2],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTMSketch151AllOf(ModelNormal):
     attribute_map = {
         'entities': 'entities',  # noqa: E501
         'constraints': 'constraints',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTMSketch151AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             entities ([btm_sketch_geom_entity5.BTMSketchGeomEntity5]): [optional]  # noqa: E501
             constraints ([btm_sketch_constraint2.BTMSketchConstraint2]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

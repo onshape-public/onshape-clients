@@ -111,12 +111,11 @@ class BTPStatementIf276(ModelComposed):
         """
         return {
             'condition': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'space_after_if': (btp_space10.BTPSpace10,),  # noqa: E501
             'then_body': (btp_statement269.BTPStatement269,),  # noqa: E501
             'else_body': (btp_statement269.BTPStatement269,),  # noqa: E501
-            'space_after_if': (btp_space10.BTPSpace10,),  # noqa: E501
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -125,6 +124,7 @@ class BTPStatementIf276(ModelComposed):
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
+            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
         }
 
     @staticmethod
@@ -133,12 +133,11 @@ class BTPStatementIf276(ModelComposed):
 
     attribute_map = {
         'condition': 'condition',  # noqa: E501
+        'space_after_if': 'spaceAfterIf',  # noqa: E501
         'then_body': 'thenBody',  # noqa: E501
         'else_body': 'elseBody',  # noqa: E501
-        'space_after_if': 'spaceAfterIf',  # noqa: E501
-        'annotation': 'annotation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -147,6 +146,7 @@ class BTPStatementIf276(ModelComposed):
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
+        'annotation': 'annotation',  # noqa: E501
     }
 
     required_properties = set([
@@ -179,12 +179,11 @@ class BTPStatementIf276(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            space_after_if (btp_space10.BTPSpace10): [optional]  # noqa: E501
             then_body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             else_body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            space_after_if (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
@@ -193,6 +192,7 @@ class BTPStatementIf276(ModelComposed):
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
         """
 
         self._data_store = {}

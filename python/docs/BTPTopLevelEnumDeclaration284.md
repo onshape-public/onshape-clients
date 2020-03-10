@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**annotations** | [**[btp_annotation231.BTPAnnotation231]**](BTPAnnotation231.md) |  | [optional] 
 **trailing_comma** | **bool** |  | [optional] 
+**annotations** | [**[btp_annotation231.BTPAnnotation231]**](BTPAnnotation231.md) |  | [optional] 
 **space_in_empty_list** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **values** | [**[btp_identifier8.BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_configured_values_column_info1025
 except ImportError:
     bt_configured_values_column_info1025 = sys.modules[
@@ -189,6 +194,7 @@ class BTConfiguredFeatureColumnInfo1014(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               bt_configured_values_column_info1025.BTConfiguredValuesColumnInfo1025,
           ],
           'oneOf': [

@@ -106,6 +106,7 @@ class BTPStatementConstantDeclaration273AllOf(ModelNormal):
             'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'type': (btp_type_name290.BTPTypeName290,),  # noqa: E501
             'value': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -118,6 +119,7 @@ class BTPStatementConstantDeclaration273AllOf(ModelNormal):
         'name': 'name',  # noqa: E501
         'type': 'type',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -155,6 +157,7 @@ class BTPStatementConstantDeclaration273AllOf(ModelNormal):
             name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
             value (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

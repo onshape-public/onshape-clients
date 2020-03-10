@@ -77,6 +77,7 @@ class BTMParameterReference2434AllOf(ModelNormal):
             'element_id': (str,),  # noqa: E501
             'feature_script_type': (str,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,6 +88,7 @@ class BTMParameterReference2434AllOf(ModelNormal):
         'element_id': 'elementId',  # noqa: E501
         'feature_script_type': 'featureScriptType',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTMParameterReference2434AllOf(ModelNormal):
             element_id (str): [optional]  # noqa: E501
             feature_script_type (str): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

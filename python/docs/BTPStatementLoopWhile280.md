@@ -4,9 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **condition** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
-**annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 
@@ -15,6 +14,7 @@ Name | Type | Description | Notes
 **space_before** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
+**annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
 **body** | [**btp_statement269.BTPStatement269**](BTPStatement269.md) |  | [optional] 
 **space_after_loop_type** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 

@@ -107,8 +107,8 @@ class BTPLValueBoxDereference251(ModelComposed):
         return {
             'box': (btp_expression9.BTPExpression9,),  # noqa: E501
             'space_inside': (btp_space10.BTPSpace10,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -126,8 +126,8 @@ class BTPLValueBoxDereference251(ModelComposed):
     attribute_map = {
         'box': 'box',  # noqa: E501
         'space_inside': 'spaceInside',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -169,8 +169,8 @@ class BTPLValueBoxDereference251(ModelComposed):
                                 If omitted no type conversion is done.
             box (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             space_inside (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

@@ -76,6 +76,7 @@ class BTCurveGeometryConic2284AllOf(ModelNormal):
         return {
             'points': ([float],),  # noqa: E501
             'rho': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTCurveGeometryConic2284AllOf(ModelNormal):
     attribute_map = {
         'points': 'points',  # noqa: E501
         'rho': 'rho',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTCurveGeometryConic2284AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             points ([float]): [optional]  # noqa: E501
             rho (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

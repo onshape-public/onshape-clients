@@ -81,6 +81,7 @@ class BTSpunDescription657AllOf(ModelNormal):
         return {
             'axis': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'origin': (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTSpunDescription657AllOf(ModelNormal):
     attribute_map = {
         'axis': 'axis',  # noqa: E501
         'origin': 'origin',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTSpunDescription657AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             axis (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             origin (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

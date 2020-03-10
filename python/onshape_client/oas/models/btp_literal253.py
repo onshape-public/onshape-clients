@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
     btp_expression9 = sys.modules[
@@ -142,10 +147,8 @@ class BTPLiteral253(ModelComposed):
         return {
             'bt_type': {
                 'BTPLiteralBoolean-255': btp_literal_boolean255.BTPLiteralBoolean255,
-                'BTPLiteralString-259': btp_literal_string259.BTPLiteralString259,
                 'BTPLiteralArray-254': btp_literal_array254.BTPLiteralArray254,
                 'BTPLiteralUndefined-260': btp_literal_undefined260.BTPLiteralUndefined260,
-                'BTPLiteralNumber-258': btp_literal_number258.BTPLiteralNumber258,
             },
         }
 
@@ -240,6 +243,7 @@ class BTPLiteral253(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               btp_expression9.BTPExpression9,
           ],
           'oneOf': [

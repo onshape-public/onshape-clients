@@ -75,6 +75,7 @@ class BTMConfiguredValueByBoolean1501AllOf(ModelNormal):
         """
         return {
             'boolean_value': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMConfiguredValueByBoolean1501AllOf(ModelNormal):
 
     attribute_map = {
         'boolean_value': 'booleanValue',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMConfiguredValueByBoolean1501AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             boolean_value (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

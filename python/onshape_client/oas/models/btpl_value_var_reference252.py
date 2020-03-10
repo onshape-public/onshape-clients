@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import btp_function_or_predicate_declaration247_all_of
+except ImportError:
+    btp_function_or_predicate_declaration247_all_of = sys.modules[
+        'onshape_client.oas.models.btp_function_or_predicate_declaration247_all_of']
+try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
     btp_identifier8 = sys.modules[
@@ -44,11 +49,6 @@ try:
 except ImportError:
     btpl_value249 = sys.modules[
         'onshape_client.oas.models.btpl_value249']
-try:
-    from onshape_client.oas.models import btpl_value_var_reference252_all_of
-except ImportError:
-    btpl_value_var_reference252_all_of = sys.modules[
-        'onshape_client.oas.models.btpl_value_var_reference252_all_of']
 
 
 class BTPLValueVarReference252(ModelComposed):
@@ -106,8 +106,8 @@ class BTPLValueVarReference252(ModelComposed):
         """
         return {
             'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -124,8 +124,8 @@ class BTPLValueVarReference252(ModelComposed):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -166,8 +166,8 @@ class BTPLValueVarReference252(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
@@ -215,8 +215,8 @@ class BTPLValueVarReference252(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              btp_function_or_predicate_declaration247_all_of.BTPFunctionOrPredicateDeclaration247AllOf,
               btpl_value249.BTPLValue249,
-              btpl_value_var_reference252_all_of.BTPLValueVarReference252AllOf,
           ],
           'oneOf': [
           ],

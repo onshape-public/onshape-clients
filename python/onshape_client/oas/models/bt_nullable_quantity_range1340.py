@@ -89,9 +89,9 @@ class BTNullableQuantityRange1340(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'has_min_value': (bool,),  # noqa: E501
             'has_default_value': (bool,),  # noqa: E501
             'has_max_value': (bool,),  # noqa: E501
-            'has_min_value': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'default_value': (float,),  # noqa: E501
             'location': (bt_location_info226.BTLocationInfo226,),  # noqa: E501
@@ -105,9 +105,9 @@ class BTNullableQuantityRange1340(ModelComposed):
         return None
 
     attribute_map = {
+        'has_min_value': 'hasMinValue',  # noqa: E501
         'has_default_value': 'hasDefaultValue',  # noqa: E501
         'has_max_value': 'hasMaxValue',  # noqa: E501
-        'has_min_value': 'hasMinValue',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'location': 'location',  # noqa: E501
@@ -145,9 +145,9 @@ class BTNullableQuantityRange1340(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            has_min_value (bool): [optional]  # noqa: E501
             has_default_value (bool): [optional]  # noqa: E501
             has_max_value (bool): [optional]  # noqa: E501
-            has_min_value (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             default_value (float): [optional]  # noqa: E501
             location (bt_location_info226.BTLocationInfo226): [optional]  # noqa: E501

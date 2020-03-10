@@ -76,6 +76,7 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
         return {
             'feature_id': (str,),  # noqa: E501
             'filter_inner_loops': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
     attribute_map = {
         'feature_id': 'featureId',  # noqa: E501
         'filter_inner_loops': 'filterInnerLoops',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             feature_id (str): [optional]  # noqa: E501
             filter_inner_loops (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

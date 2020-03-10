@@ -3,14 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**import_microversion** | **str** |  | [optional] 
+**for_export** | **bool** |  | [optional] 
+**global_namespace** | **bool** |  | [optional] 
+**namespace** | [**[btp_identifier8.BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 
+**identifier** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**for_export** | **bool** |  | [optional] 
-**global_namespace** | **bool** |  | [optional] 
-**identifier** | [**btp_identifier8.BTPIdentifier8**](BTPIdentifier8.md) |  | [optional] 
-**import_microversion** | **str** |  | [optional] 
-**namespace** | [**[btp_identifier8.BTPIdentifier8]**](BTPIdentifier8.md) |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
 **space_after** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 

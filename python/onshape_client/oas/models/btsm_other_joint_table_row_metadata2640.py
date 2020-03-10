@@ -35,6 +35,11 @@ except ImportError:
     bt_base_sm_joint_table_row_metadata2232 = sys.modules[
         'onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_table_cross_highlight_data1753
 except ImportError:
     bt_table_cross_highlight_data1753 = sys.modules[
@@ -171,6 +176,7 @@ class BTSMOtherJointTableRowMetadata2640(ModelComposed):
           ],
           'allOf': [
               bt_base_sm_joint_table_row_metadata2232.BTBaseSMJointTableRowMetadata2232,
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
           ],
           'oneOf': [
           ],

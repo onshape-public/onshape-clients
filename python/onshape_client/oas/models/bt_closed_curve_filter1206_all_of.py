@@ -75,6 +75,7 @@ class BTClosedCurveFilter1206AllOf(ModelNormal):
         """
         return {
             'is_closed': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTClosedCurveFilter1206AllOf(ModelNormal):
 
     attribute_map = {
         'is_closed': 'isClosed',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTClosedCurveFilter1206AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_closed (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

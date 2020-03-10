@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_editing_logic2350
 except ImportError:
     bt_editing_logic2350 = sys.modules[
@@ -127,9 +132,9 @@ class BTTableSpec915(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'additional_localized_strings': (int,),  # noqa: E501
             'all_parameters': ([bt_parameter_spec6.BTParameterSpec6],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
             'editing_logic': (bt_editing_logic2350.BTEditingLogic2350,),  # noqa: E501
             'feature_name_template': (str,),  # noqa: E501
             'feature_type': (str,),  # noqa: E501
@@ -161,9 +166,9 @@ class BTTableSpec915(ModelComposed):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'all_parameters': 'allParameters',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
         'editing_logic': 'editingLogic',  # noqa: E501
         'feature_name_template': 'featureNameTemplate',  # noqa: E501
         'feature_type': 'featureType',  # noqa: E501
@@ -219,9 +224,9 @@ class BTTableSpec915(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
             all_parameters ([bt_parameter_spec6.BTParameterSpec6]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             editing_logic (bt_editing_logic2350.BTEditingLogic2350): [optional]  # noqa: E501
             feature_name_template (str): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
@@ -285,6 +290,7 @@ class BTTableSpec915(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               bt_feature_spec129.BTFeatureSpec129,
           ],
           'oneOf': [

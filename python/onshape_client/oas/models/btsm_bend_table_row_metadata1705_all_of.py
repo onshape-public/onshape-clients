@@ -75,6 +75,7 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
         """
         return {
             'is_joint_type_editable': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
 
     attribute_map = {
         'is_joint_type_editable': 'isJointTypeEditable',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_joint_type_editable (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

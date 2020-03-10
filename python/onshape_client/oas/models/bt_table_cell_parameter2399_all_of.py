@@ -87,6 +87,7 @@ class BTTableCellParameter2399AllOf(ModelNormal):
             'error': (str,),  # noqa: E501
             'override_spec': (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
             'parameter': (btm_parameter1.BTMParameter1,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,6 +98,7 @@ class BTTableCellParameter2399AllOf(ModelNormal):
         'error': 'error',  # noqa: E501
         'override_spec': 'overrideSpec',  # noqa: E501
         'parameter': 'parameter',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -132,6 +134,7 @@ class BTTableCellParameter2399AllOf(ModelNormal):
             error (str): [optional]  # noqa: E501
             override_spec (bt_parameter_spec6.BTParameterSpec6): [optional]  # noqa: E501
             parameter (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

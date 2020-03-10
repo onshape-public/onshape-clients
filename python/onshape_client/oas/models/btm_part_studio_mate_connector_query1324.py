@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import btm_feature_query_with_occurrence157
 except ImportError:
     btm_feature_query_with_occurrence157 = sys.modules[
@@ -197,6 +202,7 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               btm_feature_query_with_occurrence157.BTMFeatureQueryWithOccurrence157,
           ],
           'oneOf': [

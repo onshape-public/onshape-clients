@@ -93,6 +93,7 @@ class BTParameterSpecNullableQuantity715AllOf(ModelNormal):
         return {
             'quantity_type': (str,),  # noqa: E501
             'ranges': ([bt_nullable_quantity_range1340.BTNullableQuantityRange1340],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,6 +103,7 @@ class BTParameterSpecNullableQuantity715AllOf(ModelNormal):
     attribute_map = {
         'quantity_type': 'quantityType',  # noqa: E501
         'ranges': 'ranges',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -136,6 +138,7 @@ class BTParameterSpecNullableQuantity715AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             quantity_type (str): [optional]  # noqa: E501
             ranges ([bt_nullable_quantity_range1340.BTNullableQuantityRange1340]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

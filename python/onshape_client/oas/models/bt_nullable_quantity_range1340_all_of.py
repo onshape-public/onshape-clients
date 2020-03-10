@@ -74,9 +74,10 @@ class BTNullableQuantityRange1340AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'has_min_value': (bool,),  # noqa: E501
             'has_default_value': (bool,),  # noqa: E501
             'has_max_value': (bool,),  # noqa: E501
-            'has_min_value': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,9 +85,10 @@ class BTNullableQuantityRange1340AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        'has_min_value': 'hasMinValue',  # noqa: E501
         'has_default_value': 'hasDefaultValue',  # noqa: E501
         'has_max_value': 'hasMaxValue',  # noqa: E501
-        'has_min_value': 'hasMinValue',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,9 +121,10 @@ class BTNullableQuantityRange1340AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            has_min_value (bool): [optional]  # noqa: E501
             has_default_value (bool): [optional]  # noqa: E501
             has_max_value (bool): [optional]  # noqa: E501
-            has_min_value (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

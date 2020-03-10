@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **full_path_as_string** | **str** |  | [optional] 
 **head_instance_id** | **str** |  | [optional] 
 **occurrence_without_head** | [**BTOccurrence74**](BTOccurrence74.md) |  | [optional] 

@@ -82,6 +82,7 @@ class BTMParameterReferencePartStudio3302AllOf(ModelNormal):
             'part_query': (btm_parameter_query_list148.BTMParameterQueryList148,),  # noqa: E501
             'block_build_function_access': (bool,),  # noqa: E501
             'standard_content_parameters_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,6 +93,7 @@ class BTMParameterReferencePartStudio3302AllOf(ModelNormal):
         'part_query': 'partQuery',  # noqa: E501
         'block_build_function_access': 'blockBuildFunctionAccess',  # noqa: E501
         'standard_content_parameters_id': 'standardContentParametersId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,6 +129,7 @@ class BTMParameterReferencePartStudio3302AllOf(ModelNormal):
             part_query (btm_parameter_query_list148.BTMParameterQueryList148): [optional]  # noqa: E501
             block_build_function_access (bool): [optional]  # noqa: E501
             standard_content_parameters_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

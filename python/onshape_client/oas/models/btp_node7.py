@@ -166,8 +166,17 @@ class BTPNode7(ModelNormal):
     def discriminator():
         return {
             'bt_type': {
+                'BTPStatement-269': btp_statement269.BTPStatement269,
                 'BTPModule-234': btp_module234.BTPModule234,
+                'BTPBuiltinIdentifier-233': btp_builtin_identifier233.BTPBuiltinIdentifier233,
+                'BTPLiteralMapEntry-257': btp_literal_map_entry257.BTPLiteralMapEntry257,
+                'BTPArgumentDeclaration-232': btp_argument_declaration232.BTPArgumentDeclaration232,
+                'BTPModuleId-235': btp_module_id235.BTPModuleId235,
                 'BTPTopLevelNode-286': btp_top_level_node286.BTPTopLevelNode286,
+                'BTPPropertyAccessor-23': btp_property_accessor23.BTPPropertyAccessor23,
+                'BTPTypeName-290': btp_type_name290.BTPTypeName290,
+                'BTPLValue-249': btpl_value249.BTPLValue249,
+                'BTPName-261': btp_name261.BTPName261,
             },
         }
 

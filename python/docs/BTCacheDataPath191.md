@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **document_id** | **str** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **expire_secs** | **str** |  | [optional] 

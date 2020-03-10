@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **json_type** | **str** |  | 
 **cloud_storage_account_id_** | **str** |  | [optional] 
-**cloud_storage_account_id** | **str** |  | [optional] 
-**cloud_storage_provider** | **int** |  | [optional] 
 **import_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
 **export_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
+**cloud_storage_provider** | **int** |  | [optional] 
+**cloud_storage_account_id** | **str** |  | [optional] 
 **enabled** | **bool** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

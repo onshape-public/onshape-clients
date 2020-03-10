@@ -75,6 +75,7 @@ class BTAllowFlattenedGeometryFilter2140AllOf(ModelNormal):
         """
         return {
             'allows_flattened_geometry': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTAllowFlattenedGeometryFilter2140AllOf(ModelNormal):
 
     attribute_map = {
         'allows_flattened_geometry': 'allowsFlattenedGeometry',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTAllowFlattenedGeometryFilter2140AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             allows_flattened_geometry (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

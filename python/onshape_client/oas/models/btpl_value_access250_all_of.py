@@ -86,6 +86,7 @@ class BTPLValueAccess250AllOf(ModelNormal):
         return {
             'accessor': (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
             'base': (btpl_value249.BTPLValue249,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTPLValueAccess250AllOf(ModelNormal):
     attribute_map = {
         'accessor': 'accessor',  # noqa: E501
         'base': 'base',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTPLValueAccess250AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             accessor (btp_property_accessor23.BTPPropertyAccessor23): [optional]  # noqa: E501
             base (btpl_value249.BTPLValue249): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

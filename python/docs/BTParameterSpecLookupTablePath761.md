@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lookup_table** | [**bt_parameter_lookup_table_list_entry1916.BTParameterLookupTableListEntry1916**](BTParameterLookupTableListEntry1916.md) |  | [optional] 
-**additional_localized_strings** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 
 **icon_uri** | **str** |  | [optional] 

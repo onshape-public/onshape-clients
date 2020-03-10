@@ -80,6 +80,7 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
         """
         return {
             'condition': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
 
     attribute_map = {
         'condition': 'condition',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

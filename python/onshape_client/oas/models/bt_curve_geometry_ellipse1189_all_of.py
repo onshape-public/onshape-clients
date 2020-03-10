@@ -75,6 +75,7 @@ class BTCurveGeometryEllipse1189AllOf(ModelNormal):
         """
         return {
             'minor_radius': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTCurveGeometryEllipse1189AllOf(ModelNormal):
 
     attribute_map = {
         'minor_radius': 'minorRadius',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTCurveGeometryEllipse1189AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             minor_radius (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

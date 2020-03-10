@@ -90,9 +90,10 @@ class BTPStatementIf276AllOf(ModelNormal):
         """
         return {
             'condition': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'space_after_if': (btp_space10.BTPSpace10,),  # noqa: E501
             'then_body': (btp_statement269.BTPStatement269,),  # noqa: E501
             'else_body': (btp_statement269.BTPStatement269,),  # noqa: E501
-            'space_after_if': (btp_space10.BTPSpace10,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,9 +102,10 @@ class BTPStatementIf276AllOf(ModelNormal):
 
     attribute_map = {
         'condition': 'condition',  # noqa: E501
+        'space_after_if': 'spaceAfterIf',  # noqa: E501
         'then_body': 'thenBody',  # noqa: E501
         'else_body': 'elseBody',  # noqa: E501
-        'space_after_if': 'spaceAfterIf',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,9 +139,10 @@ class BTPStatementIf276AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            space_after_if (btp_space10.BTPSpace10): [optional]  # noqa: E501
             then_body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             else_body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            space_after_if (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -96,6 +96,7 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
         return {
             'ambiguous_unique_id': (BTBillOfMaterialsUniqueItemId2029,),  # noqa: E501
             'api_configuration': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'document_version_element_id': (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'full_element_id': (bt_full_element_id756.BTFullElementId756,),  # noqa: E501
@@ -118,6 +119,7 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
     attribute_map = {
         'ambiguous_unique_id': 'ambiguousUniqueId',  # noqa: E501
         'api_configuration': 'apiConfiguration',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'document_version_element_id': 'documentVersionElementId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'full_element_id': 'fullElementId',  # noqa: E501
@@ -165,6 +167,7 @@ class BTBillOfMaterialsUniqueItemId2029(ModelNormal):
                                 If omitted no type conversion is done.
             ambiguous_unique_id (BTBillOfMaterialsUniqueItemId2029): [optional]  # noqa: E501
             api_configuration (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             document_version_element_id (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             full_element_id (bt_full_element_id756.BTFullElementId756): [optional]  # noqa: E501

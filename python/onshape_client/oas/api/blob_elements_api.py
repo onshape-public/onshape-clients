@@ -524,7 +524,7 @@ class BlobElementsApi(object):
             wid,
             **kwargs
         ):
-            """Upload File to New Blob Element.  # noqa: E501
+            """Upload file to new element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
@@ -541,7 +541,7 @@ class BlobElementsApi(object):
                 create_drawing_if_possible (bool): [optional]
                 encoded_filename (str): [optional]
                 extract_assembly_hierarchy (bool): [optional]
-                file (file_type): [optional]
+                file (bool, date, datetime, dict, float, int, list, str): [optional]
                 file_body_with_details (form_data_body_part.FormDataBodyPart): [optional]
                 file_content_length (int): [optional]
                 file_detail (form_data_content_disposition.FormDataContentDisposition): [optional]
@@ -697,7 +697,7 @@ class BlobElementsApi(object):
                     'extract_assembly_hierarchy':
                         (bool,),
                     'file':
-                        (file_type,),
+                        (bool, date, datetime, dict, float, int, list, str,),
                     'file_body_with_details':
                         (form_data_body_part.FormDataBodyPart,),
                     'file_content_length':

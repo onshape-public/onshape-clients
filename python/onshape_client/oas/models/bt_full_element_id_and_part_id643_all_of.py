@@ -75,6 +75,7 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
         """
         return {
             'part_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
 
     attribute_map = {
         'part_id': 'partId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             part_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

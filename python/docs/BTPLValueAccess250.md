@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accessor** | [**btp_property_accessor23.BTPPropertyAccessor23**](BTPPropertyAccessor23.md) |  | [optional] 
 **base** | [**btpl_value249.BTPLValue249**](BTPLValue249.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

@@ -76,6 +76,7 @@ class BTFSValueString1422AllOf(ModelNormal):
         return {
             'value_object': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTFSValueString1422AllOf(ModelNormal):
     attribute_map = {
         'value_object': 'valueObject',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTFSValueString1422AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             value_object (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

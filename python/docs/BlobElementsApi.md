@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**create_blob_translation**](BlobElementsApi.md#create_blob_translation) | **POST** /api/blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations | Create Translation.
 [**download_file_workspace**](BlobElementsApi.md#download_file_workspace) | **GET** /api/blobelements/d/{did}/w/{wid}/e/{eid} | Download File From Blob Element.
 [**update_units**](BlobElementsApi.md#update_units) | **POST** /api/blobelements/d/{did}/w/{wid}/e/{eid}/units | Update Mesh Units.
-[**upload_file_create_element**](BlobElementsApi.md#upload_file_create_element) | **POST** /api/blobelements/d/{did}/w/{wid} | Upload File to New Blob Element.
+[**upload_file_create_element**](BlobElementsApi.md#upload_file_create_element) | **POST** /api/blobelements/d/{did}/w/{wid} | Upload file to new element.
 [**upload_file_update_element**](BlobElementsApi.md#upload_file_update_element) | **POST** /api/blobelements/d/{did}/w/{wid}/e/{eid} | Update Blob Element.
 
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 # **upload_file_create_element**
 > bt_document_element_processing_info.BTDocumentElementProcessingInfo upload_file_create_element(did, wid)
 
-Upload File to New Blob Element.
+Upload file to new element.
 
 ### Example
 
@@ -254,7 +254,7 @@ create_composite = True # bool |  (optional)
 create_drawing_if_possible = True # bool |  (optional)
 encoded_filename = 'encoded_filename_example' # str |  (optional)
 extract_assembly_hierarchy = True # bool |  (optional)
-file = open('/path/to/file', 'rb') # file_type |  (optional)
+file = None # bool, date, datetime, dict, float, int, list, str |  (optional)
 file_body_with_details = onshape_client.oas.FormDataBodyPart() # form_data_body_part.FormDataBodyPart |  (optional)
 file_content_length = 56 # int |  (optional)
 file_detail = onshape_client.oas.FormDataContentDisposition() # form_data_content_disposition.FormDataContentDisposition |  (optional)
@@ -280,7 +280,7 @@ version_string = 'version_string_example' # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        # Upload File to New Blob Element.
+        # Upload file to new element.
         api_response = api_instance.upload_file_create_element(did, wid)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
@@ -289,7 +289,7 @@ version_string = 'version_string_example' # str |  (optional)
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Upload File to New Blob Element.
+        # Upload file to new element.
         api_response = api_instance.upload_file_create_element(did, wid, allow_faulty_parts=allow_faulty_parts, create_composite=create_composite, create_drawing_if_possible=create_drawing_if_possible, encoded_filename=encoded_filename, extract_assembly_hierarchy=extract_assembly_hierarchy, file=file, file_body_with_details=file_body_with_details, file_content_length=file_content_length, file_detail=file_detail, flatten_assemblies=flatten_assemblies, format_name=format_name, isy_axis_is_up=isy_axis_is_up, join_adjacent_surfaces=join_adjacent_surfaces, location_element_id=location_element_id, location_group_id=location_group_id, location_position=location_position, notify_user=notify_user, owner_id=owner_id, owner_type=owner_type, parent_id=parent_id, project_id=project_id, public=public, split_assemblies_into_multiple_documents=split_assemblies_into_multiple_documents, store_in_document=store_in_document, translate=translate, unit=unit, upload_id=upload_id, version_string=version_string)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
  **create_drawing_if_possible** | **bool**|  | [optional]
  **encoded_filename** | **str**|  | [optional]
  **extract_assembly_hierarchy** | **bool**|  | [optional]
- **file** | **file_type**|  | [optional]
+ **file** | **bool, date, datetime, dict, float, int, list, str**|  | [optional]
  **file_body_with_details** | [**form_data_body_part.FormDataBodyPart**](form_data_body_part.FormDataBodyPart.md)|  | [optional]
  **file_content_length** | **int**|  | [optional]
  **file_detail** | [**form_data_content_disposition.FormDataContentDisposition**](form_data_content_disposition.FormDataContentDisposition.md)|  | [optional]

@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **str** |  | [optional] 
-**value** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
@@ -15,6 +13,8 @@ Name | Type | Description | Notes
 **space_before** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
+**text** | **str** |  | [optional] 
+**value** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

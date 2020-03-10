@@ -81,6 +81,7 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
         return {
             'namespace': (str,),  # noqa: E501
             'blob_import': (btm_import136.BTMImport136,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
     attribute_map = {
         'namespace': 'namespace',  # noqa: E501
         'blob_import': 'blobImport',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             namespace (str): [optional]  # noqa: E501
             blob_import (btm_import136.BTMImport136): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

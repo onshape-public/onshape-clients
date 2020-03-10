@@ -80,6 +80,7 @@ class BTMParameterQueryList148AllOf(ModelNormal):
         """
         return {
             'queries': ([btm_individual_query_base139.BTMIndividualQueryBase139],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTMParameterQueryList148AllOf(ModelNormal):
 
     attribute_map = {
         'queries': 'queries',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTMParameterQueryList148AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             queries ([btm_individual_query_base139.BTMIndividualQueryBase139]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

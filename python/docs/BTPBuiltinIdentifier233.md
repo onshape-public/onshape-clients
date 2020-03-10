@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**identifier** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
-**identifier** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **short_descriptor** | **str** |  | [optional] 
 **space_after** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 

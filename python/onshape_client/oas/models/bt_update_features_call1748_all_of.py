@@ -81,6 +81,7 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
         return {
             'features': ([btm_feature134.BTMFeature134],),  # noqa: E501
             'update_suppression_attributes': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
     attribute_map = {
         'features': 'features',  # noqa: E501
         'update_suppression_attributes': 'updateSuppressionAttributes',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
             update_suppression_attributes (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

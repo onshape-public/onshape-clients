@@ -120,15 +120,15 @@ class BTPExpressionFunction1325(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
+            'space_after_function': (btp_space10.BTPSpace10,),  # noqa: E501
             'precondition': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_arglist': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_after_function': (btp_space10.BTPSpace10,),  # noqa: E501
             'return_type': (btp_type_name290.BTPTypeName290,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -144,15 +144,15 @@ class BTPExpressionFunction1325(ModelComposed):
         return None
 
     attribute_map = {
-        'arguments': 'arguments',  # noqa: E501
         'body': 'body',  # noqa: E501
+        'arguments': 'arguments',  # noqa: E501
+        'space_after_function': 'spaceAfterFunction',  # noqa: E501
         'precondition': 'precondition',  # noqa: E501
         'space_after_arglist': 'spaceAfterArglist',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
-        'space_after_function': 'spaceAfterFunction',  # noqa: E501
         'return_type': 'returnType',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -192,15 +192,15 @@ class BTPExpressionFunction1325(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
+            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
+            space_after_function (btp_space10.BTPSpace10): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_after_function (btp_space10.BTPSpace10): [optional]  # noqa: E501
             return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

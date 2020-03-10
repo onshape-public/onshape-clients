@@ -83,6 +83,7 @@ class BTForeignDataResponse1070(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'bucket_name': (str,),  # noqa: E501
             'bucket_path': (str,),  # noqa: E501
             'cache_chunk_list': ([str],),  # noqa: E501
@@ -99,6 +100,7 @@ class BTForeignDataResponse1070(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'bucket_name': 'bucketName',  # noqa: E501
         'bucket_path': 'bucketPath',  # noqa: E501
         'cache_chunk_list': 'cacheChunkList',  # noqa: E501
@@ -140,6 +142,7 @@ class BTForeignDataResponse1070(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             bucket_name (str): [optional]  # noqa: E501
             bucket_path (str): [optional]  # noqa: E501
             cache_chunk_list ([str]): [optional]  # noqa: E501

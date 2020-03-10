@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ambiguous_unique_id** | [**BTBillOfMaterialsUniqueItemId2029**](BTBillOfMaterialsUniqueItemId2029.md) |  | [optional] 
 **api_configuration** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **document_version_element_id** | [**bt_document_version_element_ids1897.BTDocumentVersionElementIds1897**](BTDocumentVersionElementIds1897.md) |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **full_element_id** | [**bt_full_element_id756.BTFullElementId756**](BTFullElementId756.md) |  | [optional] 

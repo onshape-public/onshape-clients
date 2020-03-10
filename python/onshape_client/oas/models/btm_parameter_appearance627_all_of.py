@@ -80,6 +80,7 @@ class BTMParameterAppearance627AllOf(ModelNormal):
         """
         return {
             'appearance': (bt_graphics_appearance1152.BTGraphicsAppearance1152,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTMParameterAppearance627AllOf(ModelNormal):
 
     attribute_map = {
         'appearance': 'appearance',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTMParameterAppearance627AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             appearance (bt_graphics_appearance1152.BTGraphicsAppearance1152): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

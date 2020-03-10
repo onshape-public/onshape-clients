@@ -82,8 +82,9 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
             'option_ids': ([str],),  # noqa: E501
             'enum_name': (str,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
-            'options': ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
             'default_value': (str,),  # noqa: E501
+            'options': ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,8 +95,9 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
         'option_ids': 'optionIds',  # noqa: E501
         'enum_name': 'enumName',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
-        'options': 'options',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
+        'options': 'options',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -131,8 +133,9 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
             option_ids ([str]): [optional]  # noqa: E501
             enum_name (str): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
-            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
             default_value (str): [optional]  # noqa: E501
+            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -80,10 +80,11 @@ class BTEllipseDescription866AllOf(ModelNormal):
         """
         return {
             'normal': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'major_axis': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'minor_radius': (float,),  # noqa: E501
+            'major_axis': (bt_vector3d389.BTVector3d389,),  # noqa: E501
             'major_radius': (float,),  # noqa: E501
             'origin': (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,10 +93,11 @@ class BTEllipseDescription866AllOf(ModelNormal):
 
     attribute_map = {
         'normal': 'normal',  # noqa: E501
-        'major_axis': 'majorAxis',  # noqa: E501
         'minor_radius': 'minorRadius',  # noqa: E501
+        'major_axis': 'majorAxis',  # noqa: E501
         'major_radius': 'majorRadius',  # noqa: E501
         'origin': 'origin',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,10 +131,11 @@ class BTEllipseDescription866AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             normal (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
-            major_axis (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             minor_radius (float): [optional]  # noqa: E501
+            major_axis (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             major_radius (float): [optional]  # noqa: E501
             origin (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **deleted** | **bool** |  | [optional] 
 **the_id** | **str** |  | [optional] 
 

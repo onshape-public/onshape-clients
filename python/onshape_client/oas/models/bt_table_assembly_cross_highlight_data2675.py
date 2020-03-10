@@ -80,6 +80,7 @@ class BTTableAssemblyCrossHighlightData2675(ModelNormal):
         """
         return {
             'assembly_cross_highlight_items': ([bt_table_assembly_cross_highlight_data_item2659.BTTableAssemblyCrossHighlightDataItem2659],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTTableAssemblyCrossHighlightData2675(ModelNormal):
 
     attribute_map = {
         'assembly_cross_highlight_items': 'assemblyCrossHighlightItems',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTTableAssemblyCrossHighlightData2675(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             assembly_cross_highlight_items ([bt_table_assembly_cross_highlight_data_item2659.BTTableAssemblyCrossHighlightDataItem2659]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -92,6 +92,7 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
             'selector': (btp_expression9.BTPExpression9,),  # noqa: E501
             'choices': (btp_literal_map256.BTPLiteralMap256,),  # noqa: E501
             'space_after_switch': (btp_space10.BTPSpace10,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,6 +103,7 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
         'selector': 'selector',  # noqa: E501
         'choices': 'choices',  # noqa: E501
         'space_after_switch': 'spaceAfterSwitch',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,6 +139,7 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
             selector (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             choices (btp_literal_map256.BTPLiteralMap256): [optional]  # noqa: E501
             space_after_switch (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

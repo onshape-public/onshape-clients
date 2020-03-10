@@ -101,10 +101,10 @@ class BTCloudStorageAccountInfo(ModelComposed):
         return {
             'json_type': (str,),  # noqa: E501
             'cloud_storage_account_id_': (str,),  # noqa: E501
-            'cloud_storage_account_id': (str,),  # noqa: E501
-            'cloud_storage_provider': (int,),  # noqa: E501
             'import_folder': (bt_cloud_storage_object_info.BTCloudStorageObjectInfo,),  # noqa: E501
             'export_folder': (bt_cloud_storage_object_info.BTCloudStorageObjectInfo,),  # noqa: E501
+            'cloud_storage_provider': (int,),  # noqa: E501
+            'cloud_storage_account_id': (str,),  # noqa: E501
             'enabled': (bool,),  # noqa: E501
             'can_move': (bool,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
@@ -133,10 +133,10 @@ class BTCloudStorageAccountInfo(ModelComposed):
     attribute_map = {
         'json_type': 'jsonType',  # noqa: E501
         'cloud_storage_account_id_': 'cloudStorageAccountId_',  # noqa: E501
-        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
-        'cloud_storage_provider': 'cloudStorageProvider',  # noqa: E501
         'import_folder': 'importFolder',  # noqa: E501
         'export_folder': 'exportFolder',  # noqa: E501
+        'cloud_storage_provider': 'cloudStorageProvider',  # noqa: E501
+        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
         'enabled': 'enabled',  # noqa: E501
         'can_move': 'canMove',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
@@ -190,10 +190,10 @@ class BTCloudStorageAccountInfo(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             cloud_storage_account_id_ (str): [optional]  # noqa: E501
-            cloud_storage_account_id (str): [optional]  # noqa: E501
-            cloud_storage_provider (int): [optional]  # noqa: E501
             import_folder (bt_cloud_storage_object_info.BTCloudStorageObjectInfo): [optional]  # noqa: E501
             export_folder (bt_cloud_storage_object_info.BTCloudStorageObjectInfo): [optional]  # noqa: E501
+            cloud_storage_provider (int): [optional]  # noqa: E501
+            cloud_storage_account_id (str): [optional]  # noqa: E501
             enabled (bool): [optional]  # noqa: E501
             can_move (bool): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501

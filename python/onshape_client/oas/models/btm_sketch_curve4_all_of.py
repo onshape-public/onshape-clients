@@ -82,6 +82,7 @@ class BTMSketchCurve4AllOf(ModelNormal):
             'geometry': (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
             'center_id': (str,),  # noqa: E501
             'internal_ids': ([str],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,6 +93,7 @@ class BTMSketchCurve4AllOf(ModelNormal):
         'geometry': 'geometry',  # noqa: E501
         'center_id': 'centerId',  # noqa: E501
         'internal_ids': 'internalIds',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,6 +129,7 @@ class BTMSketchCurve4AllOf(ModelNormal):
             geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
             center_id (str): [optional]  # noqa: E501
             internal_ids ([str]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

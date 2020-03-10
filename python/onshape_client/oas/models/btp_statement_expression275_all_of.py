@@ -80,6 +80,7 @@ class BTPStatementExpression275AllOf(ModelNormal):
         """
         return {
             'expression': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTPStatementExpression275AllOf(ModelNormal):
 
     attribute_map = {
         'expression': 'expression',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTPStatementExpression275AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

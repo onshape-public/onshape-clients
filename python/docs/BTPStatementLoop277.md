@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **bt_type** | **str** |  | [optional] 
 **body** | [**btp_statement269.BTPStatement269**](BTPStatement269.md) |  | [optional] 
 **space_after_loop_type** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
@@ -16,6 +15,7 @@ Name | Type | Description | Notes
 **space_before** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **space_default** | **bool** |  | [optional] 
 **start_source_location** | **int** |  | [optional] 
+**annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

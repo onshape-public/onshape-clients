@@ -84,8 +84,9 @@ class BTSweepDescription1473AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'profile': (bt_spline_description2118.BTSplineDescription2118,),  # noqa: E501
             'direction': (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            'profile': (bt_spline_description2118.BTSplineDescription2118,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,8 +94,9 @@ class BTSweepDescription1473AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'profile': 'profile',  # noqa: E501
         'direction': 'direction',  # noqa: E501
+        'profile': 'profile',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,8 +129,9 @@ class BTSweepDescription1473AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            profile (bt_spline_description2118.BTSplineDescription2118): [optional]  # noqa: E501
             direction (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
+            profile (bt_spline_description2118.BTSplineDescription2118): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

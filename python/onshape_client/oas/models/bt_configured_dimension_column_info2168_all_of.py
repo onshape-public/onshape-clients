@@ -76,6 +76,7 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
         return {
             'parameter_id': (str,),  # noqa: E501
             'dimension_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
     attribute_map = {
         'parameter_id': 'parameterId',  # noqa: E501
         'dimension_id': 'dimensionId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             parameter_id (str): [optional]  # noqa: E501
             dimension_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -80,6 +80,7 @@ class BTParameterSpecString175AllOf(ModelNormal):
         """
         return {
             'format_conditions': ([bt_string_format_condition683.BTStringFormatCondition683],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTParameterSpecString175AllOf(ModelNormal):
 
     attribute_map = {
         'format_conditions': 'formatConditions',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTParameterSpecString175AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             format_conditions ([bt_string_format_condition683.BTStringFormatCondition683]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

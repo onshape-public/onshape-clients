@@ -83,6 +83,7 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
             'configuration_parameter_id_field_index': (int,),  # noqa: E501
             'configuration_parameter_id': (str,),  # noqa: E501
             'values': ([btm_configured_value1341.BTMConfiguredValue1341],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,6 +95,7 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
         'configuration_parameter_id_field_index': 'configurationParameterIdFieldIndex',  # noqa: E501
         'configuration_parameter_id': 'configurationParameterId',  # noqa: E501
         'values': 'values',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -130,6 +132,7 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
             configuration_parameter_id_field_index (int): [optional]  # noqa: E501
             configuration_parameter_id (str): [optional]  # noqa: E501
             values ([btm_configured_value1341.BTMConfiguredValue1341]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **annotation** | [**btp_annotation231.BTPAnnotation231**](BTPAnnotation231.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

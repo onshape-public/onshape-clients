@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_parameter_visibility_on_equal180
 except ImportError:
     bt_parameter_visibility_on_equal180 = sys.modules[
@@ -177,6 +182,7 @@ class BTParameterVisibilityOnMateDOFType2114(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               bt_parameter_visibility_on_equal180.BTParameterVisibilityOnEqual180,
           ],
           'oneOf': [

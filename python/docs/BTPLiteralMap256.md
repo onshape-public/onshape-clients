@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **atomic** | **bool** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **entries** | [**[btp_literal_map_entry257.BTPLiteralMapEntry257]**](BTPLiteralMapEntry257.md) |  | [optional] 

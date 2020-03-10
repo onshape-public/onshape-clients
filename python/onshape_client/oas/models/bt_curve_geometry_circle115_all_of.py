@@ -80,6 +80,7 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
             'xdir': (float,),  # noqa: E501
             'ydir': (float,),  # noqa: E501
             'clockwise': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,6 +94,7 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
         'xdir': 'xdir',  # noqa: E501
         'ydir': 'ydir',  # noqa: E501
         'clockwise': 'clockwise',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -131,6 +133,7 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
             xdir (float): [optional]  # noqa: E501
             ydir (float): [optional]  # noqa: E501
             clockwise (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **all_parameters** | [**[bt_parameter_spec6.BTParameterSpec6]**](BTParameterSpec6.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **editing_logic** | [**bt_editing_logic2350.BTEditingLogic2350**](BTEditingLogic2350.md) |  | [optional] 
 **feature_name_template** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 

@@ -85,11 +85,11 @@ class BTCurveGeometrySpline118(ModelComposed):
         """
         return {
             'degree': (int,),  # noqa: E501
+            'is_periodic': (bool,),  # noqa: E501
             'is_rational': (bool,),  # noqa: E501
             'control_point_count': (int,),  # noqa: E501
             'control_points': ([float],),  # noqa: E501
             'knots': ([float],),  # noqa: E501
-            'is_periodic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
         }
 
@@ -99,11 +99,11 @@ class BTCurveGeometrySpline118(ModelComposed):
 
     attribute_map = {
         'degree': 'degree',  # noqa: E501
+        'is_periodic': 'isPeriodic',  # noqa: E501
         'is_rational': 'isRational',  # noqa: E501
         'control_point_count': 'controlPointCount',  # noqa: E501
         'control_points': 'controlPoints',  # noqa: E501
         'knots': 'knots',  # noqa: E501
-        'is_periodic': 'isPeriodic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
     }
 
@@ -137,11 +137,11 @@ class BTCurveGeometrySpline118(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             degree (int): [optional]  # noqa: E501
+            is_periodic (bool): [optional]  # noqa: E501
             is_rational (bool): [optional]  # noqa: E501
             control_point_count (int): [optional]  # noqa: E501
             control_points ([float]): [optional]  # noqa: E501
             knots ([float]): [optional]  # noqa: E501
-            is_periodic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
         """
 

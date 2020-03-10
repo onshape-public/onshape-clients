@@ -92,8 +92,8 @@ class BTMParameterNullableQuantity807(ModelComposed):
             'parameter_id': (str,),  # noqa: E501
             'units': (str,),  # noqa: E501
             'is_integer': (bool,),  # noqa: E501
-            'expression': (str,),  # noqa: E501
             'value': (float,),  # noqa: E501
+            'expression': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -109,8 +109,8 @@ class BTMParameterNullableQuantity807(ModelComposed):
         'parameter_id': 'parameterId',  # noqa: E501
         'units': 'units',  # noqa: E501
         'is_integer': 'isInteger',  # noqa: E501
-        'expression': 'expression',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'expression': 'expression',  # noqa: E501
     }
 
     required_properties = set([
@@ -150,8 +150,8 @@ class BTMParameterNullableQuantity807(ModelComposed):
             parameter_id (str): [optional]  # noqa: E501
             units (str): [optional]  # noqa: E501
             is_integer (bool): [optional]  # noqa: E501
-            expression (str): [optional]  # noqa: E501
             value (float): [optional]  # noqa: E501
+            expression (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

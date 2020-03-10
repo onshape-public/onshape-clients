@@ -86,6 +86,7 @@ class BTPStatementReturn281AllOf(ModelNormal):
         return {
             'space_after_return': (btp_space10.BTPSpace10,),  # noqa: E501
             'value': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTPStatementReturn281AllOf(ModelNormal):
     attribute_map = {
         'space_after_return': 'spaceAfterReturn',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTPStatementReturn281AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             space_after_return (btp_space10.BTPSpace10): [optional]  # noqa: E501
             value (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

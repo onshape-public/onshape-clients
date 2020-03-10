@@ -84,6 +84,7 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
             'start_handle_y': (float,),  # noqa: E501
             'end_handle_x': (float,),  # noqa: E501
             'end_handle_y': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,6 +102,7 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
         'start_handle_y': 'startHandleY',  # noqa: E501
         'end_handle_x': 'endHandleX',  # noqa: E501
         'end_handle_y': 'endHandleY',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -143,6 +145,7 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
             start_handle_y (float): [optional]  # noqa: E501
             end_handle_x (float): [optional]  # noqa: E501
             end_handle_y (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -95,6 +95,7 @@ class BTPStatementLoopFor3278AllOf(ModelNormal):
             'space_before_condition': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_before_increment': (btp_space10.BTPSpace10,),  # noqa: E501
             'increment': (btp_statement269.BTPStatement269,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -108,6 +109,7 @@ class BTPStatementLoopFor3278AllOf(ModelNormal):
         'space_before_condition': 'spaceBeforeCondition',  # noqa: E501
         'space_before_increment': 'spaceBeforeIncrement',  # noqa: E501
         'increment': 'increment',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -146,6 +148,7 @@ class BTPStatementLoopFor3278AllOf(ModelNormal):
             space_before_condition (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_before_increment (btp_space10.BTPSpace10): [optional]  # noqa: E501
             increment (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

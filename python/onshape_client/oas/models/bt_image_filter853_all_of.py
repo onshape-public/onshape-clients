@@ -75,6 +75,7 @@ class BTImageFilter853AllOf(ModelNormal):
         """
         return {
             'is_image': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTImageFilter853AllOf(ModelNormal):
 
     attribute_map = {
         'is_image': 'isImage',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTImageFilter853AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_image (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

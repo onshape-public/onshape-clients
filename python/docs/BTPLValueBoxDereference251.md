@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **box** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **space_inside** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
-**atomic** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 
 **node_id** | **str** |  | [optional] 

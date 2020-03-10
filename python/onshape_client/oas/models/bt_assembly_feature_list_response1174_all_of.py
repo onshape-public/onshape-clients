@@ -87,6 +87,7 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
             'features': ([btm_assembly_feature887.BTMAssemblyFeature887],),  # noqa: E501
             'is_complete': (bool,),  # noqa: E501
             'feature_states': ({str: (bt_feature_state1688.BTFeatureState1688,)},),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,6 +98,7 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
         'features': 'features',  # noqa: E501
         'is_complete': 'isComplete',  # noqa: E501
         'feature_states': 'featureStates',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -132,6 +134,7 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
             features ([btm_assembly_feature887.BTMAssemblyFeature887]): [optional]  # noqa: E501
             is_complete (bool): [optional]  # noqa: E501
             feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

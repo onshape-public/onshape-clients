@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **y** | **float** |  | [optional] 
-**x** | **float** |  | [optional] 
 **is_user_point** | **bool** |  | [optional] 
+**x** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 

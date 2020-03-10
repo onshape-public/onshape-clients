@@ -75,6 +75,7 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
         """
         return {
             'entity_query': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
 
     attribute_map = {
         'entity_query': 'entityQuery',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             entity_query (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

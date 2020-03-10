@@ -75,6 +75,7 @@ class BTInnerDerivedParameterLocation591AllOf(ModelNormal):
         """
         return {
             'outer_parameter_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTInnerDerivedParameterLocation591AllOf(ModelNormal):
 
     attribute_map = {
         'outer_parameter_id': 'outerParameterId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTInnerDerivedParameterLocation591AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             outer_parameter_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

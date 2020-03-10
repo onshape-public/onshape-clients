@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **option** | **str** |  | [optional] 

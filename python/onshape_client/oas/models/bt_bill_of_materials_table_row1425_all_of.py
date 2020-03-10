@@ -97,6 +97,7 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
             'exclusion_status': (str,),  # noqa: E501
             'exclude_is_editable': (bool,),  # noqa: E501
             'metadata_update_href': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -110,6 +111,7 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
         'exclusion_status': 'exclusionStatus',  # noqa: E501
         'exclude_is_editable': 'excludeIsEditable',  # noqa: E501
         'metadata_update_href': 'metadataUpdateHref',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -148,6 +150,7 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
             exclusion_status (str): [optional]  # noqa: E501
             exclude_is_editable (bool): [optional]  # noqa: E501
             metadata_update_href (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -81,6 +81,7 @@ class BTPLiteralArray254AllOf(ModelNormal):
         return {
             'trailing_comma': (bool,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTPLiteralArray254AllOf(ModelNormal):
     attribute_map = {
         'trailing_comma': 'trailingComma',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTPLiteralArray254AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             trailing_comma (bool): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

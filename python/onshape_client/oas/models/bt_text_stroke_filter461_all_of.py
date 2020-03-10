@@ -75,6 +75,7 @@ class BTTextStrokeFilter461AllOf(ModelNormal):
         """
         return {
             'is_stroke': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTTextStrokeFilter461AllOf(ModelNormal):
 
     attribute_map = {
         'is_stroke': 'isStroke',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTTextStrokeFilter461AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_stroke (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

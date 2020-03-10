@@ -79,6 +79,7 @@ class BTFSValueMapEntry2077(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'key': (btfs_value1888.BTFSValue1888,),  # noqa: E501
             'value': (btfs_value1888.BTFSValue1888,),  # noqa: E501
         }
@@ -88,6 +89,7 @@ class BTFSValueMapEntry2077(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'key': 'key',  # noqa: E501
         'value': 'value',  # noqa: E501
     }
@@ -122,6 +124,7 @@ class BTFSValueMapEntry2077(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             key (btfs_value1888.BTFSValue1888): [optional]  # noqa: E501
             value (btfs_value1888.BTFSValue1888): [optional]  # noqa: E501
         """

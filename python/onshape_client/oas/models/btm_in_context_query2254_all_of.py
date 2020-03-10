@@ -75,6 +75,7 @@ class BTMInContextQuery2254AllOf(ModelNormal):
         """
         return {
             'path': ([str],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMInContextQuery2254AllOf(ModelNormal):
 
     attribute_map = {
         'path': 'path',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMInContextQuery2254AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             path ([str]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

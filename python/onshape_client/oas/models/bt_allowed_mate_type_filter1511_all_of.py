@@ -86,6 +86,7 @@ class BTAllowedMateTypeFilter1511AllOf(ModelNormal):
         """
         return {
             'allowed_mate_types': ([str],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,6 +95,7 @@ class BTAllowedMateTypeFilter1511AllOf(ModelNormal):
 
     attribute_map = {
         'allowed_mate_types': 'allowedMateTypes',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -127,6 +129,7 @@ class BTAllowedMateTypeFilter1511AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             allowed_mate_types ([str]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -86,6 +86,7 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
         return {
             'configuration_parameters': ([btm_configuration_parameter819.BTMConfigurationParameter819],),  # noqa: E501
             'current_configuration': ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
     attribute_map = {
         'configuration_parameters': 'configurationParameters',  # noqa: E501
         'current_configuration': 'currentConfiguration',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             configuration_parameters ([btm_configuration_parameter819.BTMConfigurationParameter819]): [optional]  # noqa: E501
             current_configuration ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

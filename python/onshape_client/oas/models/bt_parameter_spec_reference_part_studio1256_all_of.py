@@ -94,6 +94,7 @@ class BTParameterSpecReferencePartStudio1256AllOf(ModelNormal):
             'max_number_of_picks': (int,),  # noqa: E501
             'allowed_insertable_types': ([str],),  # noqa: E501
             'computed_configuration_inputs': ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -104,6 +105,7 @@ class BTParameterSpecReferencePartStudio1256AllOf(ModelNormal):
         'max_number_of_picks': 'maxNumberOfPicks',  # noqa: E501
         'allowed_insertable_types': 'allowedInsertableTypes',  # noqa: E501
         'computed_configuration_inputs': 'computedConfigurationInputs',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -139,6 +141,7 @@ class BTParameterSpecReferencePartStudio1256AllOf(ModelNormal):
             max_number_of_picks (int): [optional]  # noqa: E501
             allowed_insertable_types ([str]): [optional]  # noqa: E501
             computed_configuration_inputs ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

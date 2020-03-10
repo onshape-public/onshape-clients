@@ -113,7 +113,6 @@ class BTCurveDescription1583(ModelNormal):
             'bt_type': {
                 'BTLineDescription-1559': bt_line_description1559.BTLineDescription1559,
                 'BTCircleDescription-1145': bt_circle_description1145.BTCircleDescription1145,
-                'BTSplineDescription-2118': bt_spline_description2118.BTSplineDescription2118,
                 'BTEllipseDescription-866': bt_ellipse_description866.BTEllipseDescription866,
             },
         }

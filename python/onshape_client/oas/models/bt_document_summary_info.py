@@ -190,7 +190,6 @@ class BTDocumentSummaryInfo(ModelComposed):
     def discriminator():
         return {
             'json_type': {
-                'BTDocumentInfo': bt_document_info.BTDocumentInfo,
                 'BTDocumentSummarySearchInfo': bt_document_summary_search_info.BTDocumentSummarySearchInfo,
             },
         }

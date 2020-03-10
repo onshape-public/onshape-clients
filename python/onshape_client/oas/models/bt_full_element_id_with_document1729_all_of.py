@@ -75,6 +75,7 @@ class BTFullElementIdWithDocument1729AllOf(ModelNormal):
         """
         return {
             'document_id': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTFullElementIdWithDocument1729AllOf(ModelNormal):
 
     attribute_map = {
         'document_id': 'documentId',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTFullElementIdWithDocument1729AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             document_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

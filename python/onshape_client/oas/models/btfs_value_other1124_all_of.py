@@ -87,6 +87,7 @@ class BTFSValueOther1124AllOf(ModelNormal):
         """
         return {
             'type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTFSValueOther1124AllOf(ModelNormal):
 
     attribute_map = {
         'type': 'type',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -128,6 +130,7 @@ class BTFSValueOther1124AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

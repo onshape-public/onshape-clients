@@ -80,6 +80,7 @@ class BTPTopLevelUserTypeDeclaration288AllOf(ModelNormal):
         """
         return {
             'typecheck': (btp_name261.BTPName261,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTPTopLevelUserTypeDeclaration288AllOf(ModelNormal):
 
     attribute_map = {
         'typecheck': 'typecheck',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTPTopLevelUserTypeDeclaration288AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             typecheck (btp_name261.BTPName261): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

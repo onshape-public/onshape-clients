@@ -128,8 +128,8 @@ class BTParameterSpecString175(ModelComposed):
         """
         return {
             'format_conditions': ([bt_string_format_condition683.BTStringFormatCondition683],),  # noqa: E501
-            'additional_localized_strings': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'additional_localized_strings': (int,),  # noqa: E501
             'column_name': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
             'icon_uri': (str,),  # noqa: E501
@@ -149,8 +149,8 @@ class BTParameterSpecString175(ModelComposed):
 
     attribute_map = {
         'format_conditions': 'formatConditions',  # noqa: E501
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'icon_uri': 'iconUri',  # noqa: E501
@@ -194,8 +194,8 @@ class BTParameterSpecString175(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             format_conditions ([bt_string_format_condition683.BTStringFormatCondition683]): [optional]  # noqa: E501
-            additional_localized_strings (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
             icon_uri (str): [optional]  # noqa: E501

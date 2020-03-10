@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
     btp_annotation231 = sys.modules[
@@ -125,8 +130,8 @@ class BTPFunctionDeclaration246(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -142,8 +147,8 @@ class BTPFunctionDeclaration246(ModelComposed):
             'for_export': (bool,),  # noqa: E501
             'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
             'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'precondition': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_arglist': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
@@ -156,8 +161,8 @@ class BTPFunctionDeclaration246(ModelComposed):
         return None
 
     attribute_map = {
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -173,8 +178,8 @@ class BTPFunctionDeclaration246(ModelComposed):
         'for_export': 'forExport',  # noqa: E501
         'space_after_export': 'spaceAfterExport',  # noqa: E501
         'annotation': 'annotation',  # noqa: E501
-        'arguments': 'arguments',  # noqa: E501
         'body': 'body',  # noqa: E501
+        'arguments': 'arguments',  # noqa: E501
         'precondition': 'precondition',  # noqa: E501
         'space_after_arglist': 'spaceAfterArglist',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
@@ -211,8 +216,8 @@ class BTPFunctionDeclaration246(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
@@ -228,8 +233,8 @@ class BTPFunctionDeclaration246(ModelComposed):
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
             annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
+            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
@@ -274,6 +279,7 @@ class BTPFunctionDeclaration246(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               btp_function_or_predicate_declaration247.BTPFunctionOrPredicateDeclaration247,
           ],
           'oneOf': [

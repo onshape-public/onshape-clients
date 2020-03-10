@@ -87,6 +87,7 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
         return {
             'operation': (str,),  # noqa: E501
             'children': ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,6 +97,7 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
     attribute_map = {
         'operation': 'operation',  # noqa: E501
         'children': 'children',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -130,6 +132,7 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             operation (str): [optional]  # noqa: E501
             children ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

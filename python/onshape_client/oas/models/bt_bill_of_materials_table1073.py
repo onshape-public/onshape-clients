@@ -97,8 +97,8 @@ class BTBillOfMaterialsTable1073(ModelComposed):
             'indented': (bool,),  # noqa: E501
             'showing_excluded': (bool,),  # noqa: E501
             'failed_metadata_representative_occurrences': ([str],),  # noqa: E501
-            'all_row_values': ([[str]],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'all_row_values': ([[str]],),  # noqa: E501
             'column_count': (int,),  # noqa: E501
             'frozen_columns': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -118,8 +118,8 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         'indented': 'indented',  # noqa: E501
         'showing_excluded': 'showingExcluded',  # noqa: E501
         'failed_metadata_representative_occurrences': 'failedMetadataRepresentativeOccurrences',  # noqa: E501
-        'all_row_values': 'allRowValues',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'all_row_values': 'allRowValues',  # noqa: E501
         'column_count': 'columnCount',  # noqa: E501
         'frozen_columns': 'frozenColumns',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -163,8 +163,8 @@ class BTBillOfMaterialsTable1073(ModelComposed):
             indented (bool): [optional]  # noqa: E501
             showing_excluded (bool): [optional]  # noqa: E501
             failed_metadata_representative_occurrences ([str]): [optional]  # noqa: E501
-            all_row_values ([[str]]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            all_row_values ([[str]]): [optional]  # noqa: E501
             column_count (int): [optional]  # noqa: E501
             frozen_columns (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

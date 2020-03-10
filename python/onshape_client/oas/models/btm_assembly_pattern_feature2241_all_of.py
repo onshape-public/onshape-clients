@@ -80,6 +80,7 @@ class BTMAssemblyPatternFeature2241AllOf(ModelNormal):
         """
         return {
             'pattern_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTMAssemblyPatternFeature2241AllOf(ModelNormal):
 
     attribute_map = {
         'pattern_type': 'patternType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTMAssemblyPatternFeature2241AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             pattern_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

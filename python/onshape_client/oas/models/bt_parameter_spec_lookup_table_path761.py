@@ -128,8 +128,8 @@ class BTParameterSpecLookupTablePath761(ModelComposed):
         """
         return {
             'lookup_table': (bt_parameter_lookup_table_list_entry1916.BTParameterLookupTableListEntry1916,),  # noqa: E501
-            'additional_localized_strings': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'additional_localized_strings': (int,),  # noqa: E501
             'column_name': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
             'icon_uri': (str,),  # noqa: E501
@@ -149,8 +149,8 @@ class BTParameterSpecLookupTablePath761(ModelComposed):
 
     attribute_map = {
         'lookup_table': 'lookupTable',  # noqa: E501
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'icon_uri': 'iconUri',  # noqa: E501
@@ -194,8 +194,8 @@ class BTParameterSpecLookupTablePath761(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             lookup_table (bt_parameter_lookup_table_list_entry1916.BTParameterLookupTableListEntry1916): [optional]  # noqa: E501
-            additional_localized_strings (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
             icon_uri (str): [optional]  # noqa: E501

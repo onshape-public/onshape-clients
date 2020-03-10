@@ -80,6 +80,7 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
         """
         return {
             'declaration': (btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
 
     attribute_map = {
         'declaration': 'declaration',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             declaration (btp_statement_constant_declaration273.BTPStatementConstantDeclaration273): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

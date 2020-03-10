@@ -96,6 +96,7 @@ class BTPAnnotation231(ModelNormal):
         """
         return {
             'atomic': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -113,6 +114,7 @@ class BTPAnnotation231(ModelNormal):
 
     attribute_map = {
         'atomic': 'atomic',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -155,6 +157,7 @@ class BTPAnnotation231(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             atomic (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

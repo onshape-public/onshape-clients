@@ -76,6 +76,7 @@ class BTExportModelArcEdgeGeometry1257AllOf(ModelNormal):
         return {
             'arc_is_clockwise': (bool,),  # noqa: E501
             'arc_sweep': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,6 +86,7 @@ class BTExportModelArcEdgeGeometry1257AllOf(ModelNormal):
     attribute_map = {
         'arc_is_clockwise': 'arcIsClockwise',  # noqa: E501
         'arc_sweep': 'arcSweep',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -119,6 +121,7 @@ class BTExportModelArcEdgeGeometry1257AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             arc_is_clockwise (bool): [optional]  # noqa: E501
             arc_sweep (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

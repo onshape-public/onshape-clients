@@ -75,16 +75,17 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
         """
         return {
             'top_level_only': (bool,),  # noqa: E501
-            'exclude_sketch': (bool,),  # noqa: E501
+            'include_pattern_occurrence': (bool,),  # noqa: E501
             'solid_or_composite_body_only': (bool,),  # noqa: E501
-            'exclude_sub_assemblies': (bool,),  # noqa: E501
             'exclude_suppressed': (bool,),  # noqa: E501
+            'exclude_studio_inserts': (bool,),  # noqa: E501
+            'exclude_sub_assemblies': (bool,),  # noqa: E501
             'exclude_flattened_parts': (bool,),  # noqa: E501
             'exclude_pattern_instances': (bool,),  # noqa: E501
-            'include_pattern_occurrence': (bool,),  # noqa: E501
-            'exclude_studio_inserts': (bool,),  # noqa: E501
             'exclude_standard_content': (bool,),  # noqa: E501
             'include_assembly_root': (bool,),  # noqa: E501
+            'exclude_sketch': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,16 +94,17 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
 
     attribute_map = {
         'top_level_only': 'topLevelOnly',  # noqa: E501
-        'exclude_sketch': 'excludeSketch',  # noqa: E501
+        'include_pattern_occurrence': 'includePatternOccurrence',  # noqa: E501
         'solid_or_composite_body_only': 'solidOrCompositeBodyOnly',  # noqa: E501
-        'exclude_sub_assemblies': 'excludeSubAssemblies',  # noqa: E501
         'exclude_suppressed': 'excludeSuppressed',  # noqa: E501
+        'exclude_studio_inserts': 'excludeStudioInserts',  # noqa: E501
+        'exclude_sub_assemblies': 'excludeSubAssemblies',  # noqa: E501
         'exclude_flattened_parts': 'excludeFlattenedParts',  # noqa: E501
         'exclude_pattern_instances': 'excludePatternInstances',  # noqa: E501
-        'include_pattern_occurrence': 'includePatternOccurrence',  # noqa: E501
-        'exclude_studio_inserts': 'excludeStudioInserts',  # noqa: E501
         'exclude_standard_content': 'excludeStandardContent',  # noqa: E501
         'include_assembly_root': 'includeAssemblyRoot',  # noqa: E501
+        'exclude_sketch': 'excludeSketch',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -136,16 +138,17 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             top_level_only (bool): [optional]  # noqa: E501
-            exclude_sketch (bool): [optional]  # noqa: E501
+            include_pattern_occurrence (bool): [optional]  # noqa: E501
             solid_or_composite_body_only (bool): [optional]  # noqa: E501
-            exclude_sub_assemblies (bool): [optional]  # noqa: E501
             exclude_suppressed (bool): [optional]  # noqa: E501
+            exclude_studio_inserts (bool): [optional]  # noqa: E501
+            exclude_sub_assemblies (bool): [optional]  # noqa: E501
             exclude_flattened_parts (bool): [optional]  # noqa: E501
             exclude_pattern_instances (bool): [optional]  # noqa: E501
-            include_pattern_occurrence (bool): [optional]  # noqa: E501
-            exclude_studio_inserts (bool): [optional]  # noqa: E501
             exclude_standard_content (bool): [optional]  # noqa: E501
             include_assembly_root (bool): [optional]  # noqa: E501
+            exclude_sketch (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

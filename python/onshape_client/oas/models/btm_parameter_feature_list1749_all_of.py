@@ -75,6 +75,7 @@ class BTMParameterFeatureList1749AllOf(ModelNormal):
         """
         return {
             'feature_ids': ([str],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMParameterFeatureList1749AllOf(ModelNormal):
 
     attribute_map = {
         'feature_ids': 'featureIds',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMParameterFeatureList1749AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             feature_ids ([str]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

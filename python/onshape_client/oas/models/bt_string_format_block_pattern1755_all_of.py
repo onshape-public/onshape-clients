@@ -75,6 +75,7 @@ class BTStringFormatBlockPattern1755AllOf(ModelNormal):
         """
         return {
             'reg_exp_to_block': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTStringFormatBlockPattern1755AllOf(ModelNormal):
 
     attribute_map = {
         'reg_exp_to_block': 'regExpToBlock',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTStringFormatBlockPattern1755AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             reg_exp_to_block (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

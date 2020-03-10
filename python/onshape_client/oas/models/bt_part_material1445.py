@@ -84,6 +84,7 @@ class BTPartMaterial1445(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'library_name': (str,),  # noqa: E501
             'library_reference': (bt_element_reference725.BTElementReference725,),  # noqa: E501
@@ -97,6 +98,7 @@ class BTPartMaterial1445(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'id': 'id',  # noqa: E501
         'library_name': 'libraryName',  # noqa: E501
         'library_reference': 'libraryReference',  # noqa: E501
@@ -135,6 +137,7 @@ class BTPartMaterial1445(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             library_name (str): [optional]  # noqa: E501
             library_reference (bt_element_reference725.BTElementReference725): [optional]  # noqa: E501

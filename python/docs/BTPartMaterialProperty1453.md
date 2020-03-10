@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **display_name** | **str** |  | [optional] 

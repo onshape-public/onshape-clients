@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **element_import** | **bool** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **imported_external_document_id** | **str** |  | [optional] 

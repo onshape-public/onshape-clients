@@ -90,8 +90,8 @@ class BTMSketchPoint158(ModelComposed):
         """
         return {
             'y': (float,),  # noqa: E501
-            'x': (float,),  # noqa: E501
             'is_user_point': (bool,),  # noqa: E501
+            'x': (float,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
             'control_box_ids': ([str],),  # noqa: E501
             'entity_id': (str,),  # noqa: E501
@@ -109,8 +109,8 @@ class BTMSketchPoint158(ModelComposed):
 
     attribute_map = {
         'y': 'y',  # noqa: E501
-        'x': 'x',  # noqa: E501
         'is_user_point': 'isUserPoint',  # noqa: E501
+        'x': 'x',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
         'control_box_ids': 'controlBoxIds',  # noqa: E501
         'entity_id': 'entityId',  # noqa: E501
@@ -152,8 +152,8 @@ class BTMSketchPoint158(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             y (float): [optional]  # noqa: E501
-            x (float): [optional]  # noqa: E501
             is_user_point (bool): [optional]  # noqa: E501
+            x (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501

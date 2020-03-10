@@ -75,6 +75,7 @@ class BTFeatureTypeFilter962AllOf(ModelNormal):
         """
         return {
             'feature_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTFeatureTypeFilter962AllOf(ModelNormal):
 
     attribute_map = {
         'feature_type': 'featureType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTFeatureTypeFilter962AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             feature_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

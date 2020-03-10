@@ -80,6 +80,7 @@ class BTPTypeNameUser292AllOf(ModelNormal):
         """
         return {
             'type': (btp_name261.BTPName261,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTPTypeNameUser292AllOf(ModelNormal):
 
     attribute_map = {
         'type': 'type',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTPTypeNameUser292AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             type (btp_name261.BTPName261): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

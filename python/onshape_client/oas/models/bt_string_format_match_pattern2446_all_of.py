@@ -75,6 +75,7 @@ class BTStringFormatMatchPattern2446AllOf(ModelNormal):
         """
         return {
             'reg_exp_to_match': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTStringFormatMatchPattern2446AllOf(ModelNormal):
 
     attribute_map = {
         'reg_exp_to_match': 'regExpToMatch',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTStringFormatMatchPattern2446AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             reg_exp_to_match (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

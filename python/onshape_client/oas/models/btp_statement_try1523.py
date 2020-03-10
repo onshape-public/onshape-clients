@@ -131,14 +131,13 @@ class BTPStatementTry1523(ModelComposed):
             'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'type_name': (str,),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
-            'silent': (bool,),  # noqa: E501
             'catch_variable': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             'space_before_silent': (btp_space10.BTPSpace10,),  # noqa: E501
             'catch_block': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
             'space_after_catch': (btp_space10.BTPSpace10,),  # noqa: E501
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
+            'silent': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -147,6 +146,7 @@ class BTPStatementTry1523(ModelComposed):
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
+            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
         }
 
     @staticmethod
@@ -158,14 +158,13 @@ class BTPStatementTry1523(ModelComposed):
         'name': 'name',  # noqa: E501
         'type_name': 'typeName',  # noqa: E501
         'body': 'body',  # noqa: E501
-        'silent': 'silent',  # noqa: E501
         'catch_variable': 'catchVariable',  # noqa: E501
         'space_before_silent': 'spaceBeforeSilent',  # noqa: E501
         'catch_block': 'catchBlock',  # noqa: E501
         'space_after_catch': 'spaceAfterCatch',  # noqa: E501
-        'annotation': 'annotation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
+        'silent': 'silent',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -174,6 +173,7 @@ class BTPStatementTry1523(ModelComposed):
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
+        'annotation': 'annotation',  # noqa: E501
     }
 
     required_properties = set([
@@ -209,14 +209,13 @@ class BTPStatementTry1523(ModelComposed):
             name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             type_name (str): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
-            silent (bool): [optional]  # noqa: E501
             catch_variable (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             space_before_silent (btp_space10.BTPSpace10): [optional]  # noqa: E501
             catch_block (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
             space_after_catch (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
+            silent (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
@@ -225,6 +224,7 @@ class BTPStatementTry1523(ModelComposed):
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
         """
 
         self._data_store = {}

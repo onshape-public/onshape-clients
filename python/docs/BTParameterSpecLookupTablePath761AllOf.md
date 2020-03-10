@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lookup_table** | [**bt_parameter_lookup_table_list_entry1916.BTParameterLookupTableListEntry1916**](BTParameterLookupTableListEntry1916.md) |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

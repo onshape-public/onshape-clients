@@ -75,6 +75,7 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
         """
         return {
             'is_text': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
 
     attribute_map = {
         'is_text': 'isText',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_text (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

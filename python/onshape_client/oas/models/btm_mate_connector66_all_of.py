@@ -77,6 +77,7 @@ class BTMMateConnector66AllOf(ModelNormal):
             'saved_feature_type': (str,),  # noqa: E501
             'is_hidden': (bool,),  # noqa: E501
             'implicit': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,6 +88,7 @@ class BTMMateConnector66AllOf(ModelNormal):
         'saved_feature_type': 'savedFeatureType',  # noqa: E501
         'is_hidden': 'isHidden',  # noqa: E501
         'implicit': 'implicit',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTMMateConnector66AllOf(ModelNormal):
             saved_feature_type (str): [optional]  # noqa: E501
             is_hidden (bool): [optional]  # noqa: E501
             implicit (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -89,6 +89,7 @@ class BTLocationInfo226(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'character': (int,),  # noqa: E501
             'column': (int,),  # noqa: E501
             'document': (str,),  # noqa: E501
@@ -112,6 +113,7 @@ class BTLocationInfo226(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'character': 'character',  # noqa: E501
         'column': 'column',  # noqa: E501
         'document': 'document',  # noqa: E501
@@ -160,6 +162,7 @@ class BTLocationInfo226(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             character (int): [optional]  # noqa: E501
             column (int): [optional]  # noqa: E501
             document (str): [optional]  # noqa: E501

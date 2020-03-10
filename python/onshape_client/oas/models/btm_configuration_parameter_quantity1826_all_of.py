@@ -93,6 +93,7 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
         return {
             'quantity_type': (str,),  # noqa: E501
             'range_and_default': (bt_quantity_range181.BTQuantityRange181,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,6 +103,7 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
     attribute_map = {
         'quantity_type': 'quantityType',  # noqa: E501
         'range_and_default': 'rangeAndDefault',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -136,6 +138,7 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             quantity_type (str): [optional]  # noqa: E501
             range_and_default (bt_quantity_range181.BTQuantityRange181): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

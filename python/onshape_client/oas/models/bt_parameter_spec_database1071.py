@@ -30,6 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 try:
+    from onshape_client.oas.models import bt_configured_feature_column_info1014_all_of
+except ImportError:
+    bt_configured_feature_column_info1014_all_of = sys.modules[
+        'onshape_client.oas.models.bt_configured_feature_column_info1014_all_of']
+try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
     bt_parameter_spec6 = sys.modules[
@@ -117,8 +122,8 @@ class BTParameterSpecDatabase1071(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'additional_localized_strings': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'additional_localized_strings': (int,),  # noqa: E501
             'column_name': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
             'icon_uri': (str,),  # noqa: E501
@@ -137,8 +142,8 @@ class BTParameterSpecDatabase1071(ModelComposed):
         return None
 
     attribute_map = {
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'icon_uri': 'iconUri',  # noqa: E501
@@ -181,8 +186,8 @@ class BTParameterSpecDatabase1071(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            additional_localized_strings (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
             icon_uri (str): [optional]  # noqa: E501
@@ -233,6 +238,7 @@ class BTParameterSpecDatabase1071(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              bt_configured_feature_column_info1014_all_of.BTConfiguredFeatureColumnInfo1014AllOf,
               bt_parameter_spec6.BTParameterSpec6,
           ],
           'oneOf': [

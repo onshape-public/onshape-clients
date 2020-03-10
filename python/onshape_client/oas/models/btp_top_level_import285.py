@@ -126,8 +126,8 @@ class BTPTopLevelImport285(ModelComposed):
             'module_id': (btp_module_id235.BTPModuleId235,),  # noqa: E501
             'space_before_import': (btp_space10.BTPSpace10,),  # noqa: E501
             'namespace': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -156,8 +156,8 @@ class BTPTopLevelImport285(ModelComposed):
         'module_id': 'moduleId',  # noqa: E501
         'space_before_import': 'spaceBeforeImport',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -210,8 +210,8 @@ class BTPTopLevelImport285(ModelComposed):
             module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
             space_before_import (btp_space10.BTPSpace10): [optional]  # noqa: E501
             namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
-            atomic (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

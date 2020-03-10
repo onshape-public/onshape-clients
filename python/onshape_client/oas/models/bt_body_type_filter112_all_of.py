@@ -84,6 +84,7 @@ class BTBodyTypeFilter112AllOf(ModelNormal):
         """
         return {
             'body_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,6 +93,7 @@ class BTBodyTypeFilter112AllOf(ModelNormal):
 
     attribute_map = {
         'body_type': 'bodyType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -125,6 +127,7 @@ class BTBodyTypeFilter112AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             body_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

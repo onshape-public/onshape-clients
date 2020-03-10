@@ -74,6 +74,7 @@ class BTTableAssemblyCrossHighlightDataItem2659(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'occurrence_path_id': (str,),  # noqa: E501
         }
 
@@ -82,6 +83,7 @@ class BTTableAssemblyCrossHighlightDataItem2659(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'occurrence_path_id': 'occurrencePathId',  # noqa: E501
     }
 
@@ -115,6 +117,7 @@ class BTTableAssemblyCrossHighlightDataItem2659(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             occurrence_path_id (str): [optional]  # noqa: E501
         """
 

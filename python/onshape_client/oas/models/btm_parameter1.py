@@ -179,6 +179,7 @@ class BTMParameter1(ModelNormal):
                 'BTMParameterBoolean-144': btm_parameter_boolean144.BTMParameterBoolean144,
                 'BTMParameterString-149': btm_parameter_string149.BTMParameterString149,
                 'BTMParameterQueryList-148': btm_parameter_query_list148.BTMParameterQueryList148,
+                'BTMParameterQueryWithOccurrenceList-67': btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
                 'BTMParameterAppearance-627': btm_parameter_appearance627.BTMParameterAppearance627,
                 'BTMParameterLookupTablePath-1419': btm_parameter_lookup_table_path1419.BTMParameterLookupTablePath1419,
                 'BTMParameterEnum-145': btm_parameter_enum145.BTMParameterEnum145,

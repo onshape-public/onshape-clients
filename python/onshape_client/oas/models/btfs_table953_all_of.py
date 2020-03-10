@@ -80,6 +80,7 @@ class BTFSTable953AllOf(ModelNormal):
         """
         return {
             'cross_highlight_data': (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,6 +89,7 @@ class BTFSTable953AllOf(ModelNormal):
 
     attribute_map = {
         'cross_highlight_data': 'crossHighlightData',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -121,6 +123,7 @@ class BTFSTable953AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             cross_highlight_data (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

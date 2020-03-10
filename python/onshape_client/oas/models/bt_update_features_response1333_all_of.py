@@ -86,6 +86,7 @@ class BTUpdateFeaturesResponse1333AllOf(ModelNormal):
         return {
             'features': ([btm_feature134.BTMFeature134],),  # noqa: E501
             'feature_states': ({str: (bt_feature_state1688.BTFeatureState1688,)},),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTUpdateFeaturesResponse1333AllOf(ModelNormal):
     attribute_map = {
         'features': 'features',  # noqa: E501
         'feature_states': 'featureStates',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTUpdateFeaturesResponse1333AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
             feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

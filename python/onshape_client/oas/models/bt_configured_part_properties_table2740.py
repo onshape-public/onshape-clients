@@ -97,8 +97,8 @@ class BTConfiguredPartPropertiesTable2740(ModelComposed):
             'part_deterministic_id': (str,),  # noqa: E501
             'property_node_id': (str,),  # noqa: E501
             'part_deterministic_ids': ([str],),  # noqa: E501
-            'all_row_values': ([[str]],),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'all_row_values': ([[str]],),  # noqa: E501
             'column_count': (int,),  # noqa: E501
             'frozen_columns': (int,),  # noqa: E501
             'node_id': (str,),  # noqa: E501
@@ -118,8 +118,8 @@ class BTConfiguredPartPropertiesTable2740(ModelComposed):
         'part_deterministic_id': 'partDeterministicId',  # noqa: E501
         'property_node_id': 'propertyNodeId',  # noqa: E501
         'part_deterministic_ids': 'partDeterministicIds',  # noqa: E501
-        'all_row_values': 'allRowValues',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'all_row_values': 'allRowValues',  # noqa: E501
         'column_count': 'columnCount',  # noqa: E501
         'frozen_columns': 'frozenColumns',  # noqa: E501
         'node_id': 'nodeId',  # noqa: E501
@@ -163,8 +163,8 @@ class BTConfiguredPartPropertiesTable2740(ModelComposed):
             part_deterministic_id (str): [optional]  # noqa: E501
             property_node_id (str): [optional]  # noqa: E501
             part_deterministic_ids ([str]): [optional]  # noqa: E501
-            all_row_values ([[str]]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            all_row_values ([[str]]): [optional]  # noqa: E501
             column_count (int): [optional]  # noqa: E501
             frozen_columns (int): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

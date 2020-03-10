@@ -81,6 +81,7 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
         return {
             'face_query': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
             'edge_query': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,6 +91,7 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
     attribute_map = {
         'face_query': 'faceQuery',  # noqa: E501
         'edge_query': 'edgeQuery',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -124,6 +126,7 @@ class BTMIndividualCoEdgeQuery1332AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             face_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             edge_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

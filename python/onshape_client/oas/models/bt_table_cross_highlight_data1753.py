@@ -74,6 +74,7 @@ class BTTableCrossHighlightData1753(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'deterministic_id_list': ([str],),  # noqa: E501
             'feature_id_list': ([str],),  # noqa: E501
         }
@@ -83,6 +84,7 @@ class BTTableCrossHighlightData1753(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'deterministic_id_list': 'deterministicIdList',  # noqa: E501
         'feature_id_list': 'featureIdList',  # noqa: E501
     }
@@ -117,6 +119,7 @@ class BTTableCrossHighlightData1753(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             deterministic_id_list ([str]): [optional]  # noqa: E501
             feature_id_list ([str]): [optional]  # noqa: E501
         """

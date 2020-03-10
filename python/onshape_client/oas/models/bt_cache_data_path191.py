@@ -74,6 +74,7 @@ class BTCacheDataPath191(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'document_id': (str,),  # noqa: E501
             'element_id': (str,),  # noqa: E501
             'expire_secs': (str,),  # noqa: E501
@@ -89,6 +90,7 @@ class BTCacheDataPath191(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'document_id': 'documentId',  # noqa: E501
         'element_id': 'elementId',  # noqa: E501
         'expire_secs': 'expireSecs',  # noqa: E501
@@ -129,6 +131,7 @@ class BTCacheDataPath191(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             document_id (str): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             expire_secs (str): [optional]  # noqa: E501

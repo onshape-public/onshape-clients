@@ -122,12 +122,12 @@ class BTParameterSpecEnum171(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'enum_name': (str,),  # noqa: E501
             'option_names': ([str],),  # noqa: E501
+            'enum_name': (str,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
             'options': ([str],),  # noqa: E501
-            'additional_localized_strings': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'additional_localized_strings': (int,),  # noqa: E501
             'column_name': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
             'icon_uri': (str,),  # noqa: E501
@@ -146,12 +146,12 @@ class BTParameterSpecEnum171(ModelComposed):
         return None
 
     attribute_map = {
-        'enum_name': 'enumName',  # noqa: E501
         'option_names': 'optionNames',  # noqa: E501
+        'enum_name': 'enumName',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
         'options': 'options',  # noqa: E501
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'icon_uri': 'iconUri',  # noqa: E501
@@ -194,12 +194,12 @@ class BTParameterSpecEnum171(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            enum_name (str): [optional]  # noqa: E501
             option_names ([str]): [optional]  # noqa: E501
+            enum_name (str): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
             options ([str]): [optional]  # noqa: E501
-            additional_localized_strings (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
             icon_uri (str): [optional]  # noqa: E501

@@ -74,6 +74,7 @@ class BTMImport136(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'element_import': (bool,),  # noqa: E501
             'import_microversion': (str,),  # noqa: E501
             'imported_external_document_id': (str,),  # noqa: E501
@@ -88,6 +89,7 @@ class BTMImport136(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'element_import': 'elementImport',  # noqa: E501
         'import_microversion': 'importMicroversion',  # noqa: E501
         'imported_external_document_id': 'importedExternalDocumentId',  # noqa: E501
@@ -127,6 +129,7 @@ class BTMImport136(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             element_import (bool): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             imported_external_document_id (str): [optional]  # noqa: E501

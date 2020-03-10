@@ -45,6 +45,11 @@ except ImportError:
     btp_function_declaration246 = sys.modules[
         'onshape_client.oas.models.btp_function_declaration246']
 try:
+    from onshape_client.oas.models import btp_function_or_predicate_declaration247_all_of
+except ImportError:
+    btp_function_or_predicate_declaration247_all_of = sys.modules[
+        'onshape_client.oas.models.btp_function_or_predicate_declaration247_all_of']
+try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
     btp_identifier8 = sys.modules[
@@ -79,11 +84,6 @@ try:
 except ImportError:
     btp_type_name290 = sys.modules[
         'onshape_client.oas.models.btp_type_name290']
-try:
-    from onshape_client.oas.models import btpl_value_var_reference252_all_of
-except ImportError:
-    btpl_value_var_reference252_all_of = sys.modules[
-        'onshape_client.oas.models.btpl_value_var_reference252_all_of']
 
 
 class BTPFunctionOrPredicateDeclaration247(ModelComposed):
@@ -158,8 +158,8 @@ class BTPFunctionOrPredicateDeclaration247(ModelComposed):
             'for_export': (bool,),  # noqa: E501
             'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
             'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            'arguments': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
             'precondition': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_arglist': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
@@ -194,8 +194,8 @@ class BTPFunctionOrPredicateDeclaration247(ModelComposed):
         'for_export': 'forExport',  # noqa: E501
         'space_after_export': 'spaceAfterExport',  # noqa: E501
         'annotation': 'annotation',  # noqa: E501
-        'arguments': 'arguments',  # noqa: E501
         'body': 'body',  # noqa: E501
+        'arguments': 'arguments',  # noqa: E501
         'precondition': 'precondition',  # noqa: E501
         'space_after_arglist': 'spaceAfterArglist',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
@@ -249,8 +249,8 @@ class BTPFunctionOrPredicateDeclaration247(ModelComposed):
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
             annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
+            arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
@@ -294,8 +294,8 @@ class BTPFunctionOrPredicateDeclaration247(ModelComposed):
           'anyOf': [
           ],
           'allOf': [
+              btp_function_or_predicate_declaration247_all_of.BTPFunctionOrPredicateDeclaration247AllOf,
               btp_procedure_declaration_base266.BTPProcedureDeclarationBase266,
-              btpl_value_var_reference252_all_of.BTPLValueVarReference252AllOf,
           ],
           'oneOf': [
           ],

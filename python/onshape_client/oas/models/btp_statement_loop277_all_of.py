@@ -86,6 +86,7 @@ class BTPStatementLoop277AllOf(ModelNormal):
         return {
             'body': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_loop_type': (btp_space10.BTPSpace10,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,6 +96,7 @@ class BTPStatementLoop277AllOf(ModelNormal):
     attribute_map = {
         'body': 'body',  # noqa: E501
         'space_after_loop_type': 'spaceAfterLoopType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -129,6 +131,7 @@ class BTPStatementLoop277AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_loop_type (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -77,6 +77,7 @@ class BTPLiteralNumber258AllOf(ModelNormal):
             'integer': (bool,),  # noqa: E501
             'text': (str,),  # noqa: E501
             'value': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,6 +88,7 @@ class BTPLiteralNumber258AllOf(ModelNormal):
         'integer': 'integer',  # noqa: E501
         'text': 'text',  # noqa: E501
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -122,6 +124,7 @@ class BTPLiteralNumber258AllOf(ModelNormal):
             integer (bool): [optional]  # noqa: E501
             text (str): [optional]  # noqa: E501
             value (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

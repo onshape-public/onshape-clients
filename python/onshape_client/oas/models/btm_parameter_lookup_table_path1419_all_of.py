@@ -75,6 +75,7 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
         """
         return {
             'value': ({str: (str,)},),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
 
     attribute_map = {
         'value': 'value',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             value ({str: (str,)}): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

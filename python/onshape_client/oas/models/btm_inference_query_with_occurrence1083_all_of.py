@@ -92,6 +92,7 @@ class BTMInferenceQueryWithOccurrence1083AllOf(ModelNormal):
             'second_deterministic_id': (str,),  # noqa: E501
             'second_entity_query': (str,),  # noqa: E501
             'inference_type': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,6 +103,7 @@ class BTMInferenceQueryWithOccurrence1083AllOf(ModelNormal):
         'second_deterministic_id': 'secondDeterministicId',  # noqa: E501
         'second_entity_query': 'secondEntityQuery',  # noqa: E501
         'inference_type': 'inferenceType',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -137,6 +139,7 @@ class BTMInferenceQueryWithOccurrence1083AllOf(ModelNormal):
             second_deterministic_id (str): [optional]  # noqa: E501
             second_entity_query (str): [optional]  # noqa: E501
             inference_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

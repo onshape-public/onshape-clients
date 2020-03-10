@@ -89,10 +89,11 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'annotations': ([btp_annotation231.BTPAnnotation231],),  # noqa: E501
             'trailing_comma': (bool,),  # noqa: E501
+            'annotations': ([btp_annotation231.BTPAnnotation231],),  # noqa: E501
             'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
             'values': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,10 +101,11 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'annotations': 'annotations',  # noqa: E501
         'trailing_comma': 'trailingComma',  # noqa: E501
+        'annotations': 'annotations',  # noqa: E501
         'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
         'values': 'values',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -136,10 +138,11 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            annotations ([btp_annotation231.BTPAnnotation231]): [optional]  # noqa: E501
             trailing_comma (bool): [optional]  # noqa: E501
+            annotations ([btp_annotation231.BTPAnnotation231]): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
             values ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -78,6 +78,7 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
             'end_point_id': (str,),  # noqa: E501
             'start_param': (float,),  # noqa: E501
             'end_param': (float,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,6 +90,7 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
         'end_point_id': 'endPointId',  # noqa: E501
         'start_param': 'startParam',  # noqa: E501
         'end_param': 'endParam',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -125,6 +127,7 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
             end_point_id (str): [optional]  # noqa: E501
             start_param (float): [optional]  # noqa: E501
             end_param (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

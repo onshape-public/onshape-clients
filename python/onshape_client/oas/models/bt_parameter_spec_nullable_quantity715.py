@@ -141,8 +141,8 @@ class BTParameterSpecNullableQuantity715(ModelComposed):
         return {
             'quantity_type': (str,),  # noqa: E501
             'ranges': ([bt_nullable_quantity_range1340.BTNullableQuantityRange1340],),  # noqa: E501
-            'additional_localized_strings': (int,),  # noqa: E501
             'bt_type': (str,),  # noqa: E501
+            'additional_localized_strings': (int,),  # noqa: E501
             'column_name': (str,),  # noqa: E501
             'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
             'icon_uri': (str,),  # noqa: E501
@@ -163,8 +163,8 @@ class BTParameterSpecNullableQuantity715(ModelComposed):
     attribute_map = {
         'quantity_type': 'quantityType',  # noqa: E501
         'ranges': 'ranges',  # noqa: E501
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'bt_type': 'btType',  # noqa: E501
+        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
         'column_name': 'columnName',  # noqa: E501
         'default_value': 'defaultValue',  # noqa: E501
         'icon_uri': 'iconUri',  # noqa: E501
@@ -209,8 +209,8 @@ class BTParameterSpecNullableQuantity715(ModelComposed):
                                 If omitted no type conversion is done.
             quantity_type (str): [optional]  # noqa: E501
             ranges ([bt_nullable_quantity_range1340.BTNullableQuantityRange1340]): [optional]  # noqa: E501
-            additional_localized_strings (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501
             icon_uri (str): [optional]  # noqa: E501

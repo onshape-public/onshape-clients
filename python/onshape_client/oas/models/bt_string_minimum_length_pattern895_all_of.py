@@ -75,6 +75,7 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
         """
         return {
             'minimum_length': (int,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
 
     attribute_map = {
         'minimum_length': 'minimumLength',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             minimum_length (int): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

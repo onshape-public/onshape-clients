@@ -75,6 +75,7 @@ class BTAllowEdgePointFilter2371AllOf(ModelNormal):
         """
         return {
             'allows_edge_point': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTAllowEdgePointFilter2371AllOf(ModelNormal):
 
     attribute_map = {
         'allows_edge_point': 'allowsEdgePoint',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTAllowEdgePointFilter2371AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             allows_edge_point (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -75,6 +75,7 @@ class BTModifiableEntityOnlyFilter1593AllOf(ModelNormal):
         """
         return {
             'modifiable_only': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTModifiableEntityOnlyFilter1593AllOf(ModelNormal):
 
     attribute_map = {
         'modifiable_only': 'modifiableOnly',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTModifiableEntityOnlyFilter1593AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             modifiable_only (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

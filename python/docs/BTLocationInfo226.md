@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **character** | **int** |  | [optional] 
 **column** | **int** |  | [optional] 
 **document** | **str** |  | [optional] 

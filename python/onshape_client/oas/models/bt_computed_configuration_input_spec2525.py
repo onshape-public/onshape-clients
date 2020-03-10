@@ -74,6 +74,7 @@ class BTComputedConfigurationInputSpec2525(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'input_id': (str,),  # noqa: E501
         }
 
@@ -82,6 +83,7 @@ class BTComputedConfigurationInputSpec2525(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'input_id': 'inputId',  # noqa: E501
     }
 
@@ -115,6 +117,7 @@ class BTComputedConfigurationInputSpec2525(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             input_id (str): [optional]  # noqa: E501
         """
 

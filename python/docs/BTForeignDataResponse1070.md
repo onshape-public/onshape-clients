@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **bucket_name** | **str** |  | [optional] 
 **bucket_path** | **str** |  | [optional] 
 **cache_chunk_list** | **[str]** |  | [optional] 

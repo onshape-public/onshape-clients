@@ -79,6 +79,7 @@ class BTOwner3114(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'bt_type': (str,),  # noqa: E501
             'owner_id': (str,),  # noqa: E501
             'owner_type': (str,),  # noqa: E501
             'owner_type_ordinal': (int,),  # noqa: E501
@@ -89,6 +90,7 @@ class BTOwner3114(ModelNormal):
         return None
 
     attribute_map = {
+        'bt_type': 'btType',  # noqa: E501
         'owner_id': 'ownerId',  # noqa: E501
         'owner_type': 'ownerType',  # noqa: E501
         'owner_type_ordinal': 'ownerTypeOrdinal',  # noqa: E501
@@ -124,6 +126,7 @@ class BTOwner3114(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             owner_id (str): [optional]  # noqa: E501
             owner_type (str): [optional]  # noqa: E501
             owner_type_ordinal (int): [optional]  # noqa: E501

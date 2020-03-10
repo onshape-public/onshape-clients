@@ -75,6 +75,7 @@ class BTConstructionObjectFilter113AllOf(ModelNormal):
         """
         return {
             'is_construction': (bool,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTConstructionObjectFilter113AllOf(ModelNormal):
 
     attribute_map = {
         'is_construction': 'isConstruction',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTConstructionObjectFilter113AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             is_construction (bool): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

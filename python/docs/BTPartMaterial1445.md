@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **library_name** | **str** |  | [optional] 
 **library_reference** | [**bt_element_reference725.BTElementReference725**](BTElementReference725.md) |  | [optional] 

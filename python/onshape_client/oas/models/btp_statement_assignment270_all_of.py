@@ -108,6 +108,7 @@ class BTPStatementAssignment270AllOf(ModelNormal):
             'operator': (str,),  # noqa: E501
             'lvalue': (btpl_value249.BTPLValue249,),  # noqa: E501
             'rvalue': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -118,6 +119,7 @@ class BTPStatementAssignment270AllOf(ModelNormal):
         'operator': 'operator',  # noqa: E501
         'lvalue': 'lvalue',  # noqa: E501
         'rvalue': 'rvalue',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -153,6 +155,7 @@ class BTPStatementAssignment270AllOf(ModelNormal):
             operator (str): [optional]  # noqa: E501
             lvalue (btpl_value249.BTPLValue249): [optional]  # noqa: E501
             rvalue (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **key** | [**btfs_value1888.BTFSValue1888**](BTFSValue1888.md) |  | [optional] 
 **value** | [**btfs_value1888.BTFSValue1888**](BTFSValue1888.md) |  | [optional] 
 

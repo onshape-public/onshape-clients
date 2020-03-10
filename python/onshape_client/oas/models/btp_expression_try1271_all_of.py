@@ -88,6 +88,7 @@ class BTPExpressionTry1271AllOf(ModelNormal):
             'silent': (bool,),  # noqa: E501
             'space_after_silent': (btp_space10.BTPSpace10,),  # noqa: E501
             'expression': (btp_expression9.BTPExpression9,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,6 +100,7 @@ class BTPExpressionTry1271AllOf(ModelNormal):
         'silent': 'silent',  # noqa: E501
         'space_after_silent': 'spaceAfterSilent',  # noqa: E501
         'expression': 'expression',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -135,6 +137,7 @@ class BTPExpressionTry1271AllOf(ModelNormal):
             silent (bool): [optional]  # noqa: E501
             space_after_silent (btp_space10.BTPSpace10): [optional]  # noqa: E501
             expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

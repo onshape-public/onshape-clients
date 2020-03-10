@@ -11028,16 +11028,6 @@
         "requestBody": {
           "description": "feature The serialized feature definition",
           "content": {
-            "application/json;charset=UTF-8; qs=0.09": {
-              "schema": {
-                "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
-              }
-            },
-            "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
-              "schema": {
-                "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
-              }
-            },
             "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
@@ -23674,6 +23664,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "hasPendingOwner": {
+            "type": "boolean"
           },
           "href": {
             "type": "string",

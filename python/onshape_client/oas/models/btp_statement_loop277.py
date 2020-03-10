@@ -123,7 +123,6 @@ class BTPStatementLoop277(ModelComposed):
             'bt_type': (str,),  # noqa: E501
             'body': (btp_statement269.BTPStatement269,),  # noqa: E501
             'space_after_loop_type': (btp_space10.BTPSpace10,),  # noqa: E501
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             'atomic': (bool,),  # noqa: E501
             'documentation_type': (str,),  # noqa: E501
             'end_source_location': (int,),  # noqa: E501
@@ -133,6 +132,7 @@ class BTPStatementLoop277(ModelComposed):
             'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_default': (bool,),  # noqa: E501
             'start_source_location': (int,),  # noqa: E501
+            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
         }
 
     @staticmethod
@@ -149,7 +149,6 @@ class BTPStatementLoop277(ModelComposed):
         'bt_type': 'btType',  # noqa: E501
         'body': 'body',  # noqa: E501
         'space_after_loop_type': 'spaceAfterLoopType',  # noqa: E501
-        'annotation': 'annotation',  # noqa: E501
         'atomic': 'atomic',  # noqa: E501
         'documentation_type': 'documentationType',  # noqa: E501
         'end_source_location': 'endSourceLocation',  # noqa: E501
@@ -159,6 +158,7 @@ class BTPStatementLoop277(ModelComposed):
         'space_before': 'spaceBefore',  # noqa: E501
         'space_default': 'spaceDefault',  # noqa: E501
         'start_source_location': 'startSourceLocation',  # noqa: E501
+        'annotation': 'annotation',  # noqa: E501
     }
 
     required_properties = set([
@@ -193,7 +193,6 @@ class BTPStatementLoop277(ModelComposed):
             bt_type (str): [optional]  # noqa: E501
             body (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_loop_type (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
@@ -203,6 +202,7 @@ class BTPStatementLoop277(ModelComposed):
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
         """
 
         self._data_store = {}

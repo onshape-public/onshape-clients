@@ -75,6 +75,7 @@ class BTTableTestCellString2112AllOf(ModelNormal):
         """
         return {
             'cell_value': (str,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,6 +84,7 @@ class BTTableTestCellString2112AllOf(ModelNormal):
 
     attribute_map = {
         'cell_value': 'cellValue',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -116,6 +118,7 @@ class BTTableTestCellString2112AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             cell_value (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

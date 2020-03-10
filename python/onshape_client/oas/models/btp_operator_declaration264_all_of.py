@@ -103,6 +103,7 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
             'operator': (str,),  # noqa: E501
             'space_before_operator': (btp_space10.BTPSpace10,),  # noqa: E501
             'space_after_operator': (btp_space10.BTPSpace10,),  # noqa: E501
+            'bt_type': (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -113,6 +114,7 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
         'operator': 'operator',  # noqa: E501
         'space_before_operator': 'spaceBeforeOperator',  # noqa: E501
         'space_after_operator': 'spaceAfterOperator',  # noqa: E501
+        'bt_type': 'btType',  # noqa: E501
     }
 
     @staticmethod
@@ -148,6 +150,7 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
             operator (str): [optional]  # noqa: E501
             space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
