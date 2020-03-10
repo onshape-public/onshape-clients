@@ -35,6 +35,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_and_convert_types
 )
+from onshape_client.oas.models import bt_drawing_params
+from onshape_client.oas.models import bt_document_element_info
 from onshape_client.oas.models import bt_translation_request_info
 from onshape_client.oas.models import bt_translate_format_params
 from onshape_client.oas.models import bt_model_format_info
@@ -51,6 +53,124 @@ class DrawingsApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
+
+        def __create_drawing_app_element(
+            self,
+            bt_drawing_params,
+            **kwargs
+        ):
+            """create_drawing_app_element  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+            >>> thread = api.create_drawing_app_element(bt_drawing_params, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                bt_drawing_params (bt_drawing_params.BTDrawingParams):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int): specifies the index of the server
+                    that we want to use.
+                    Default is 0.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                bt_document_element_info.BTDocumentElementInfo
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index', 0)
+            kwargs['bt_drawing_params'] = \
+                bt_drawing_params
+            return self.call_with_http_info(**kwargs)
+
+        self.create_drawing_app_element = Endpoint(
+            settings={
+                'response_type': (bt_document_element_info.BTDocumentElementInfo,),
+                'auth': [
+                    'OAuth2'
+                ],
+                'endpoint_path': '/api/drawings/create',
+                'operation_id': 'create_drawing_app_element',
+                'http_method': 'POST',
+                'servers': [],
+            },
+            params_map={
+                'all': [
+                    'bt_drawing_params',
+                ],
+                'required': [
+                    'bt_drawing_params',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'bt_drawing_params':
+                        (bt_drawing_params.BTDrawingParams,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'bt_drawing_params': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8; qs=0.09'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8; qs=0.09'
+                ]
+            },
+            api_client=api_client,
+            callable=__create_drawing_app_element
+        )
 
         def __create_drawing_translation(
             self,

@@ -5719,6 +5719,46 @@
         "x-BTVisibility": "PRODUCTION"
       }
     },
+        "/api/drawings/create": {
+      "post": {
+        "tags": [
+          "Drawings"
+        ],
+        "operationId": "createDrawingAppElement",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json;charset=UTF-8; qs=0.09": {
+              "schema": {
+                "$ref": "#/components/schemas/BTDrawingParams"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/json;charset=UTF-8; qs=0.09": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTDocumentElementInfo"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Write"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      }
+    },
     "/api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats": {
       "get": {
         "tags": [
@@ -27958,6 +27998,179 @@
               "LATEST",
               "LATEST_PER_HIT"
             ]
+          }
+        }
+      },
+      "BTDrawingParams": {
+        "type": "object",
+        "properties": {
+          "border": {
+            "type": "boolean"
+          },
+          "computeIntersection": {
+            "type": "boolean"
+          },
+          "decimalSeparator": {
+            "type": "string"
+          },
+          "documentId": {
+            "type": "string"
+          },
+          "documentMicroversionId": {
+            "type": "string"
+          },
+          "drawingName": {
+            "type": "string"
+          },
+          "elementConfiguration": {
+            "type": "string"
+          },
+          "elementId": {
+            "type": "string"
+          },
+          "elementMicroversionId": {
+            "type": "string"
+          },
+          "externalDocumentId": {
+            "type": "string"
+          },
+          "externalDocumentVersionId": {
+            "type": "string"
+          },
+          "hiddenLines": {
+            "type": "string",
+            "enum": [
+              "DRAFTING",
+              "EXCLUDED",
+              "MARKED"
+            ]
+          },
+          "includeSurfaces": {
+            "type": "boolean"
+          },
+          "isFlattenedPart": {
+            "type": "boolean"
+          },
+          "isSketchOnly": {
+            "type": "boolean"
+          },
+          "isSurface": {
+            "type": "boolean"
+          },
+          "language": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/BTElementLocationParams"
+          },
+          "modelType": {
+            "type": "string"
+          },
+          "numberHorizontalZones": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberVerticalZones": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partId": {
+            "type": "string"
+          },
+          "partNumber": {
+            "type": "string"
+          },
+          "partQuery": {
+            "type": "string"
+          },
+          "projection": {
+            "type": "string"
+          },
+          "pureSketch": {
+            "type": "boolean"
+          },
+          "qualityOption": {
+            "type": "string"
+          },
+          "referenceType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "referenceTypeEnum": {
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "PARTSTUDIO",
+              "ASSEMBLY",
+              "PART",
+              "FLATTENED_PART",
+              "COMPOSITE_PART",
+              "MESH_PART",
+              "SURFACE",
+              "SKETCH",
+              "CURVE"
+            ]
+          },
+          "revision": {
+            "type": "string"
+          },
+          "showCutGeomOnly": {
+            "type": "boolean"
+          },
+          "simplificationOption": {
+            "type": "string"
+          },
+          "simplificationThreshold": {
+            "type": "number",
+            "format": "double"
+          },
+          "size": {
+            "type": "string"
+          },
+          "sketchIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "standard": {
+            "type": "string"
+          },
+          "startZones": {
+            "type": "string"
+          },
+          "templateArgs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "templateDocumentId": {
+            "type": "string"
+          },
+          "templateElementId": {
+            "type": "string"
+          },
+          "templateName": {
+            "type": "string"
+          },
+          "templateVersionId": {
+            "type": "string"
+          },
+          "templateWorkspaceId": {
+            "type": "string"
+          },
+          "titleblock": {
+            "type": "boolean"
+          },
+          "units": {
+            "type": "string"
+          },
+          "views": {
+            "type": "string"
+          },
+          "workspaceId": {
+            "type": "string"
           }
         }
       },

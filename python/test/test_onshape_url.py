@@ -24,8 +24,8 @@ def test_configuration_update(element):
     element = ConfiguredOnshapeElement(element.get_url())
     assert element._get_default_configuration_map() == {'size': 500 * u.inch, 'edge_configuration': 'Default', 'show_cube': True}
     element.update_current_configuration({"size": 20*ureg.m})
-    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/c9b07497bec5975f317b0eb7/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3DDefault%3Bshow_cube%3DTrue%3Bsize%3D20%2Bmeter'
+    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3DDefault%3Bshow_cube%3DTrue%3Bsize%3D20%2Bmeter'
     element.update_current_configuration({'size': 40 * u.inch, 'edge_configuration': 'chamfered'})
-    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/c9b07497bec5975f317b0eb7/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3Dchamfered%3Bshow_cube%3DTrue%3Bsize%3D40%2Binch'
+    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3Dchamfered%3Bshow_cube%3DTrue%3Bsize%3D40%2Binch'
     element.update_current_configuration({'size': 10 * u.inch, 'edge_configuration': 'chamfered', 'show_cube': False})
-    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/c9b07497bec5975f317b0eb7/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3Dchamfered%3Bshow_cube%3DFalse%3Bsize%3D10%2Binch'
+    assert element.get_url_with_configuration() == 'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90?configuration=edge_configuration%3Dchamfered%3Bshow_cube%3DFalse%3Bsize%3D10%2Binch'

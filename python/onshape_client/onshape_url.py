@@ -1,16 +1,11 @@
 import copy
 import json
-import webbrowser
+import time
 
 from onshape_client.client import Client
 from onshape_client.compatible_imports import parse, parse_qs
-from onshape_client.oas import BTModelElementParams, BTAssemblyInstanceDefinitionParams, BTDocumentParams, BTTranslateFormatParams
-from onshape_client.oas.models.bt_configuration_params import BTConfigurationParams
-from onshape_client.oas.models.bt_document_element_info import BTDocumentElementInfo
-from onshape_client.oas.models.bt_document_info import BTDocumentInfo
-from onshape_client.oas.models.configuration_entry import ConfigurationEntry
+from onshape_client.oas import *
 from onshape_client.units import u
-import time
 
 
 class OnshapeElement(object):
@@ -30,8 +25,12 @@ class OnshapeElement(object):
             return OnshapeElement.create_from_ids(did=oas_model.id, **kwargs)
 
     @staticmethod
-    def create_from_ids(did=None, wvm=None, wvmid=None, eid=None, partid=None, configuration=None):
+    def create_from_ids(did=None, wvm=None, wvmid=None, eid=None, partid=None, configuration=None, sibling=None):
         client = Client.get_client()
+        did = did if did else sibling.did
+        wvm = wvm if wvm else sibling.wvm
+        wvmid = wvmid if wvmid else sibling.wvmid
+
         url = client.configuration.host + "/documents/" + did + "/" + wvm + "/" + wvmid
         url = url + "/e/" + eid if eid else url
         url = url + "?configuration=" + configuration if configuration else url
@@ -43,22 +42,22 @@ class OnshapeElement(object):
     def create(name="New Document"):
         """Returns a blank new document."""
         client = Client.get_client()
-        doc_params = BTDocumentParams(name =name)
+        doc_params = BTDocumentParams(name=name)
         doc = client.documents_api.create_document(doc_params)
         doc = OnshapeElement.create_from_ids(did=doc.id, wvm='w', wvmid=doc.default_workspace.id)
         return doc
-
 
     def import_file(self, file_path, **kwargs):
         """Import a file from the local file system. Returns the URL of the resulting element if translated."""
         client = Client.get_client()
         result = client.blob_elements_api.upload_file_create_element(self.did, self.wvmid, file=open(file_path, 'rb'),
-                                                                     translate=True, encoded_filename=file_path.name, **kwargs)
+                                                                     translate=True, encoded_filename=file_path.name,
+                                                                     **kwargs)
         translation_id = result.translation_id
         result = OnshapeElement.poll_translation_result(translation_id)
 
         element_id = result.result_element_ids[0]
-        return OnshapeElement.create_from_ids(self.did, 'w', self.wvmid, element_id)
+        return OnshapeElement.create_from_ids(eid=element_id, sibling=self)
 
     @staticmethod
     def poll_translation_result(translation_id):
@@ -68,9 +67,9 @@ class OnshapeElement(object):
             elif response.request_state == "ACTIVE":
                 return False
             raise UserWarning(f"Translation failed")
+
         polling_function = lambda: Client.get_client().translation_api.get_translation(translation_id)
         return OnshapeElement.poll(polling_function, is_polling_done)
-
 
     def export_file(self, file_path, **kwargs):
         """Exports the element this class is pointing to"""
@@ -80,12 +79,33 @@ class OnshapeElement(object):
                                                                                  bt_translate_format_params=BTTranslateFormatParams(
                                                                                      element_id=self.eid,
                                                                                      destination_name="exported_drawing",
-                                                                                     format_name="PDF", store_in_document=False))
+                                                                                     format_name="PDF",
+                                                                                     store_in_document=False))
             translation_id = result.id
             result = OnshapeElement.poll_translation_result(translation_id)
             download_id = result.result_external_data_ids[0]
-            file_path.write_bytes(Client.get_client().documents_api.download_external_data(did=self.did, fid=download_id, _preload_content=False).data)
+            file_path.write_bytes(
+                Client.get_client().documents_api.download_external_data(did=self.did, fid=download_id,
+                                                                         _preload_content=False).data)
 
+    def create_drawing(self, drawing_name="My Drawing"):
+        """Create a four view drawing of the current element"""
+        if self.wvm != 'w':
+            raise UserWarning("Can only create a drawing in a workspace - not a version.")
+        drawing = Client.get_client().drawings_api.create_drawing_app_element(
+            bt_drawing_params=BTDrawingParams(document_id=self.did, workspace_id=self.wvmid,
+                                              drawing_name=drawing_name, element_id=self.eid, views="four",
+                                              template_document_id="cbe6e776694549b5ba1a3e88",
+                                              template_workspace_id="24d08acf10234dbc8d3ab585",
+                                              template_element_id="17eef7862b224f6fb12cbc46",
+                                              projection="third",
+                                              hidden_lines="EXCLUDED",
+                                              is_surface=False,
+                                              element_configuration="default",
+                                              is_flattened_part=False,
+                                              reference_type=1))
+        drawing = OnshapeElement.create_from_ids(eid=drawing.id, sibling=self)
+        return drawing
 
     @staticmethod
     def poll(polling_function, is_done_function):
@@ -97,7 +117,6 @@ class OnshapeElement(object):
             time.sleep(2)
             result = polling_function()
         return result
-
 
     def __init__(self, url, *args, **kwargs):
         self.original_url = url
@@ -259,7 +278,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         # In the beginning, the current configuration is the default config
         self.current_configuration = self.default_configuration_map
 
-    def get_url_with_configuration(self, open_browser=False):
+    def get_url_with_configuration(self):
         """A configuration is applied on top of the current element.
 
         To be used like:
@@ -273,8 +292,6 @@ class ConfiguredOnshapeElement(OnshapeElement):
         https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3Dchamfered%3Bsize%3D20.0%2Bmeter
         """
         url = self.get_url() + "?" + self.get_configuration_query_param()
-        if open_browser:
-            webbrowser.open(url)
         return url
 
     def update_current_configuration(self, config):
