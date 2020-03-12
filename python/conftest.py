@@ -49,9 +49,14 @@ def client():
 
 
 @pytest.fixture
-def assets():
+def test_dir():
+    return Path(__file__).parent / "test"
+
+
+@pytest.fixture
+def assets(test_dir):
     """Returns the general test assets folder."""
-    return Path(__file__).parent / "test" / "assets"
+    return test_dir / "assets"
 
 
 @pytest.fixture
@@ -61,10 +66,12 @@ def json_assets(assets):
 
 
 @pytest.fixture
-def tmp_dir():
+def tmp_dir(test_dir):
     """Returns a temporary directory Path object."""
-    tmp = Path(__file__).parent / "test" / "tmp"
-    return Path(__file__).parent / "test" / "tmp"
+    tmp_dir = test_dir / "tmp"
+    if not tmp_dir.is_dir():
+        tmp_dir.mkdir()
+    return tmp_dir
 
 
 @pytest.fixture
@@ -86,7 +93,7 @@ def new_copied_document_factory(client, name_factory):
     created_docs = []
 
     def copy_workspace(copied_from):
-        params = BTCopyDocumentParams(new_name=name_factory())
+        params = BTCopyDocumentParams(new_name=name_factory(), is_public=True)
         doc = client.documents_api.copy_workspace(
             copied_from.did,
             copied_from.default_workspace,

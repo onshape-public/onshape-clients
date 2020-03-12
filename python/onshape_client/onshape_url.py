@@ -50,7 +50,7 @@ class OnshapeElement(object):
     def create(name="New Document"):
         """Returns a blank new document."""
         client = Client.get_client()
-        doc_params = BTDocumentParams(name=name)
+        doc_params = BTDocumentParams(name=name, is_public=True)
         doc = client.documents_api.create_document(doc_params)
         doc = OnshapeElement.create_from_ids(
             did=doc.id, wvm="w", wvmid=doc.default_workspace.id

@@ -270,7 +270,7 @@ def test_assembly_definition_performance(client):
             _preload_content=False,
         )
         calls.append(time.time() - start_time)
-    assert sum(calls) / len(calls) < 1
+    assert sum(calls) / len(calls) < 1.5
 
 
 @pytest.mark.skip("Not yet implemented")

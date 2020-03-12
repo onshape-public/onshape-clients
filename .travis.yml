@@ -9,6 +9,6 @@ matrix:
     script:
     - pipenv run pytest
 before_install:
-- openssl aes-256-cbc -K $encrypted_a6d606fa6cad_key -iv $encrypted_a6d606fa6cad_iv
+- openssl aes-256-cbc -K $encrypted_823a8aeaad18_key -iv $encrypted_823a8aeaad18_iv
   -in secrets.sh.enc -out secrets.sh -d
 - source environment.sh

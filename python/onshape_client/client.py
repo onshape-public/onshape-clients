@@ -76,9 +76,10 @@ class Client:
 
     prod_base_url = "https://cad.onshape.com"
 
+    # Mapping from configuration property to shell variable in order to allow passing from environment context.
     add_defaults(
         config_vars,
-        access_key="ONSHAPE_API_ACCESS",
+        access_key="ONSHAPE_API_ACCESS_KEY",
         authorization_uri="ONSHAPE_AUTHORIZATION_URI",
         base_url="ONSHAPE_BASE_URL",
         client_id="ONSHAPE_CLIENT_ID",
@@ -86,6 +87,7 @@ class Client:
         oauth_authorization_method="ONSHAPE_AUTHORIZATION_METHOD",
         redirect_uri="ONSHAPE_REDIRECT_URI",
         scope="ONSHAPE_SCOPE",
+        secret_key="ONSHAPE_API_SECRET_KEY",
         token_uri="ONSHAPE_TOKEN_URI",
     )
 
@@ -114,6 +116,7 @@ class Client:
 
     @staticmethod
     def _get_configuration_from_keys_file(keys_file, stack_key):
+        config = {}
         try:
             yaml = YAML()
             configurations_file = yaml.load(Path(keys_file))
@@ -127,6 +130,8 @@ class Client:
                     e
                 )
             )
+        except FileNotFoundError:
+            pass
         return config
 
     def __init__(
@@ -135,10 +140,10 @@ class Client:
         configuration=None,
         stack_key=None,
         open_authorize_grant_callback=None,
-        save=True,
     ):
         """Configuration values can come from setting directly, with configuration= or from environment variables, or
-        from the configuration file specified with key_file in that order without overwriting. Generally, those in the key_file are considered defaults.
+        from the configuration file specified with key_file in that order without overwriting. Those in the key_file are
+        considered defaults.
 
         :param keys_file:
         :param configuration:

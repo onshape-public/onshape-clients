@@ -27,7 +27,6 @@ requests-oauthlib = "*"
 ruamel-yaml = "*"
 pathlib = "*"
 pint = "*"
-onshape-client = {path = "."}
 numpy = "*"
 
 [pipenv]

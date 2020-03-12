@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0595de0ddb8e9d95404ef88b8a598f4c2903bac25d98f821798c0b0c84cd7b89"
+            "sha256": "bbf35261d84221a79caf5ca3393f763bc0afe699a5857d39ff383bc0a25afba7"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -69,9 +69,6 @@
                 "sha256:df884cd6cbe20e32633f1db1072e9356f53638e4361bef4e8b03c9127c9328ea"
             ],
             "version": "==3.1.0"
-        },
-        "onshape-client": {
-            "path": "."
         },
         "pathlib": {
             "hashes": [
@@ -387,6 +384,7 @@
             "version": "==3.1.0"
         },
         "onshape-client": {
+            "editable": true,
             "path": "."
         },
         "packaging": {
@@ -463,11 +461,11 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:0d5fe9189a148acc3c3eb2ac8e1ac0742cb7618c084f3d228baaec0c254b318d",
-                "sha256:ff615c761e25eb25df19edddc0b970302d2a9091fbce0e7213298d85fb61fef6"
+                "sha256:48c891b40d391ec824477c13d10d5eadf698c83a1671aba491f6db222035d6da",
+                "sha256:76418969e4b9db462a393f1baa13eeb39ba32eccf6013657f4f8295baa234842"
             ],
             "index": "pypi",
-            "version": "==5.3.5"
+            "version": "==5.4.0"
         },
         "pytest-console-scripts": {
             "hashes": [
