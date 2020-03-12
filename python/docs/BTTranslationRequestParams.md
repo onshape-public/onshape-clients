@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **create_drawing_if_possible** | **bool** |  | [optional] 
 **encoded_filename** | **str** |  | [optional] 
 **extract_assembly_hierarchy** | **bool** |  | [optional] 
-**file** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**file** | **file_type** |  | [optional] 
 **file_body_with_details** | [**form_data_body_part.FormDataBodyPart**](FormDataBodyPart.md) |  | [optional] 
 **file_content_length** | **int** |  | [optional] 
 **file_detail** | [**form_data_content_disposition.FormDataContentDisposition**](FormDataContentDisposition.md) |  | [optional] 

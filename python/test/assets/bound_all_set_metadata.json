@@ -1,62 +1,67 @@
 {
-    "type" : 134,
-    "typeName" : "BTMFeature",
-    "message" : {
-      "featureType" : "myFeature",
-      "featureId" : "FKaDjORLYsD3ZNU_112",
-      "name" : "Bounding box 1",
-      "parameters" : [ {
-        "type" : 145,
-        "typeName" : "BTMParameterEnum",
-        "message" : {
-          "enumName" : "LengthUnits",
-          "value" : "mm",
-          "namespace" : "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
-          "parameterId" : "lengthUnits",
-          "hasUserCode" : false,
-          "nodeId" : "QPArFcyqX8uOn0Np"
+  "type": 134,
+  "typeName": "BTMFeature",
+  "message": {
+    "featureType": "myFeature",
+    "featureId": "FKaDjORLYsD3ZNU_112",
+    "name": "Bounding box 1",
+    "parameters": [
+      {
+        "type": 145,
+        "typeName": "BTMParameterEnum",
+        "message": {
+          "enumName": "LengthUnits",
+          "value": "mm",
+          "namespace": "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
+          "parameterId": "lengthUnits",
+          "hasUserCode": false,
+          "nodeId": "QPArFcyqX8uOn0Np"
         }
-      }, {
-        "type" : 145,
-        "typeName" : "BTMParameterEnum",
-        "message" : {
-          "enumName" : "Precision",
-          "value" : "hun",
-          "namespace" : "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
-          "parameterId" : "precision",
-          "hasUserCode" : false,
-          "nodeId" : "os89f00PNFeuK6AM"
-        }
-      }, {
-        "type" : 144,
-        "typeName" : "BTMParameterBoolean",
-        "message" : {
-          "value" : false,
-          "parameterId" : "extra",
-          "hasUserCode" : false,
-          "nodeId" : "AQpx9wg9YGlwwSy+"
-        }
-      }, {
-        "type" : 147,
-        "typeName" : "BTMParameterQuantity",
-        "message" : {
-          "units" : "",
-          "value" : 0.0,
-          "expression" : "1",
-          "isInteger" : false,
-          "parameterId" : "scale",
-          "hasUserCode" : false,
-          "nodeId" : "zFkM8fF9b60Tybnq"
-        }
-      } ],
-      "suppressed" : false,
-      "namespace" : "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
-      "subFeatures" : [ ],
-      "returnAfterSubfeatures" : false,
-      "suppressionState" : {
-        "type" : 0
       },
-      "hasUserCode" : false,
-      "nodeId" : "MfHTpCaowjcE773ki"
-    }
+      {
+        "type": 145,
+        "typeName": "BTMParameterEnum",
+        "message": {
+          "enumName": "Precision",
+          "value": "hun",
+          "namespace": "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
+          "parameterId": "precision",
+          "hasUserCode": false,
+          "nodeId": "os89f00PNFeuK6AM"
+        }
+      },
+      {
+        "type": 144,
+        "typeName": "BTMParameterBoolean",
+        "message": {
+          "value": false,
+          "parameterId": "extra",
+          "hasUserCode": false,
+          "nodeId": "AQpx9wg9YGlwwSy+"
+        }
+      },
+      {
+        "type": 147,
+        "typeName": "BTMParameterQuantity",
+        "message": {
+          "units": "",
+          "value": 0.0,
+          "expression": "1",
+          "isInteger": false,
+          "parameterId": "scale",
+          "hasUserCode": false,
+          "nodeId": "zFkM8fF9b60Tybnq"
+        }
+      }
+    ],
+    "suppressed": false,
+    "namespace": "d9ccada9888fce6fdc8dc3196::v453103ce3d1d6cc08a185ed9::e9e6e33ee18d0684e6ccf638b::m3f7a930058baae391eba5530",
+    "subFeatures": [],
+    "returnAfterSubfeatures": false,
+    "suppressionState": {
+      "type": 0
+    },
+    "hasUserCode": false,
+    "nodeId": "MfHTpCaowjcE773ki"
   }
+}

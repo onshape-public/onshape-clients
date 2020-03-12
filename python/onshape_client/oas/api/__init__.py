@@ -1,7 +1,5 @@
 from __future__ import absolute_import
 
-# flake8: noqa
-
 # import apis into api package
 from onshape_client.oas.api.accounts_api import AccountsApi
 from onshape_client.oas.api.app_elements_api import AppElementsApi
@@ -10,6 +8,7 @@ from onshape_client.oas.api.assemblies_api import AssembliesApi
 from onshape_client.oas.api.billing_api import BillingApi
 from onshape_client.oas.api.blob_elements_api import BlobElementsApi
 from onshape_client.oas.api.companies_api import CompaniesApi
+from onshape_client.oas.api.default_api import DefaultApi
 from onshape_client.oas.api.documents_api import DocumentsApi
 from onshape_client.oas.api.drawings_api import DrawingsApi
 from onshape_client.oas.api.elements_api import ElementsApi
@@ -27,4 +26,5 @@ from onshape_client.oas.api.users_api import UsersApi
 from onshape_client.oas.api.versions_api import VersionsApi
 from onshape_client.oas.api.webhooks_api import WebhooksApi
 from onshape_client.oas.api.workflow_api import WorkflowApi
-from onshape_client.oas.api.default_api import DefaultApi
+
+# flake8: noqa

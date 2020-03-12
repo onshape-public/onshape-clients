@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**arguments** | [**[btp_expression9.BTPExpression9]**](BTPExpression9.md) |  | [optional] 
 **function_name** | [**btp_name261.BTPName261**](BTPName261.md) |  | [optional] 
 **function_name_string** | **str** |  | [optional] 
 **function_expression** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 

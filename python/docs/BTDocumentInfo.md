@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **document_labels** | [**[bt_document_label_info.BTDocumentLabelInfo]**](BTDocumentLabelInfo.md) |  | [optional] 
 **document_thumbnail_element_id** | **str** |  | [optional] 
 **duplicate_name_violation_error** | **str** |  | [optional] 
+**has_pending_owner** | **bool** |  | [optional] 
 **has_release_revisionable_objects** | **bool** |  | [optional] 
 **has_relevant_insertables** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 

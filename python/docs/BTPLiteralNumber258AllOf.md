@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**integer** | **bool** |  | [optional] 
 **text** | **str** |  | [optional] 
 **value** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 

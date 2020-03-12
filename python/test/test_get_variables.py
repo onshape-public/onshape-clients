@@ -13,14 +13,13 @@ This will return all the variables defined under "m", ie, m.radius, m.my_custom_
 3. Now use the resulting map from measurements feature name to value within your code.
 """
 
-from onshape_client.client import Client
-from onshape_client.onshape_url import OnshapeElement
-from onshape_client.oas import BTFeatureScriptEvalCall2377
-from onshape_client.utility import parse_quantity
 import json
 
-script = \
-    r"""
+from onshape_client.oas import BTFeatureScriptEvalCall2377
+from onshape_client.onshape_url import OnshapeElement
+from onshape_client.utility import parse_quantity
+
+script = r"""
     function(context, queries) {
             return getAllVariables(context);
         }
@@ -29,15 +28,20 @@ script = \
 
 def test_get_variables(client):
     element = OnshapeElement(
-        "https://cad.onshape.com/documents/78aa66ffe6f1daceb9cfad3d/v/e36c0bd857c2a2a8b2107a40/e/92549789b92e9aa35f676f4e")
+        "https://cad.onshape.com/documents/78aa66ffe6f1daceb9cfad3d/v/e36c0bd857c2a2a8b2107a40/e/92549789b92e9aa35f676f4e"
+    )
     script_call = BTFeatureScriptEvalCall2377(script=script)
-    response = client.part_studios_api.eval_feature_script(element.did,
-                                                           element.wvm,
-                                                           element.wvmid,
-                                                           element.eid,
-                                                           bt_feature_script_eval_call_2377=script_call,
-                                                           _preload_content=False)
-    measurements = json.loads(response.data.decode("utf-8"))["result"]["message"]["value"]
+    response = client.part_studios_api.eval_feature_script(
+        element.did,
+        element.wvm,
+        element.wvmid,
+        element.eid,
+        bt_feature_script_eval_call_2377=script_call,
+        _preload_content=False,
+    )
+    measurements = json.loads(response.data.decode("utf-8"))["result"]["message"][
+        "value"
+    ]
     parsed_measurements = parse_variables_from_map(measurements)
 
     print("Measurements: \n" + str(parsed_measurements))
@@ -47,12 +51,12 @@ def parse_variables_from_map(unparsed):
     parsed_variables = {}
     value = None
     for to_parse in unparsed:
-        if is_fs_type(to_parse, 'BTFSValueMapEntry'):
+        if is_fs_type(to_parse, "BTFSValueMapEntry"):
             key = to_parse["message"]["key"]["message"]["value"]
-            candidate_message = to_parse['message']['value']
-            if is_fs_type(candidate_message, ['BTFSValueMap', 'BTFSValueArray']):
+            candidate_message = to_parse["message"]["value"]
+            if is_fs_type(candidate_message, ["BTFSValueMap", "BTFSValueArray"]):
                 value = parse_variables_from_map(candidate_message["message"]["value"])
-            elif is_fs_type(candidate_message, 'BTFSValueWithUnits'):
+            elif is_fs_type(candidate_message, "BTFSValueWithUnits"):
                 value = parse_quantity(candidate_message["message"])
             parsed_variables[key] = value
     return parsed_variables
@@ -62,12 +66,15 @@ def is_fs_type(candidate, type_name):
     result = False
     try:
         if isinstance(type_name, str):
-            result = type_name == candidate['typeName']
+            result = type_name == candidate["typeName"]
         elif isinstance(type_name, list):
-            result = any([type_name_one == candidate['typeName'] for type_name_one in type_name])
+            result = any(
+                [type_name_one == candidate["typeName"] for type_name_one in type_name]
+            )
     except Exception:
         result = False
     return result
+
 
 """
 Measurements: 

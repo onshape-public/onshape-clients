@@ -2,7 +2,6 @@
 """
 
 import json
-import webbrowser
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
@@ -10,16 +9,17 @@ from pathlib import Path
 import pytest
 from onshape_client.client import Client
 from onshape_client.oas import BTCopyDocumentParams
-from onshape_client.oas.models.bt_document_params import BTDocumentParams
 from onshape_client.onshape_url import OnshapeElement
 
 collect_ignore = ["setup.py"]
 
 prod_element_bank = OrderedDict(
     asm_three_axes=OnshapeElement(
-        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079"),
+        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079"
+    ),
     ps_configurable_cube=OnshapeElement(
-        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90"),
+        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90"
+    ),
 )
 
 
@@ -37,34 +37,34 @@ def element(request, client):
         raise KeyError(f"Cannot find '{element_key}' in the element bank.")
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope="session")
 def client():
     """Client needed to make API calls."""
     try:
         client = Client.get_client()
     except Exception as e:
         # client = Client(stack_key='local')
-        client = Client(stack_key='onshape_client_test')
+        client = Client(stack_key="onshape_client_test")
     return client
 
 
 @pytest.fixture
 def assets():
     """Returns the general test assets folder."""
-    return Path(__file__).parent / 'test' / 'assets'
+    return Path(__file__).parent / "test" / "assets"
 
 
 @pytest.fixture
 def json_assets(assets):
     """Returns the JSON assets folder."""
-    return assets / 'json'
+    return assets / "json"
 
 
 @pytest.fixture
 def tmp_dir():
     """Returns a temporary directory Path object."""
-    tmp = Path(__file__).parent / 'test' / 'tmp'
-    return Path(__file__).parent / 'test' / 'tmp'
+    tmp = Path(__file__).parent / "test" / "tmp"
+    return Path(__file__).parent / "test" / "tmp"
 
 
 @pytest.fixture
@@ -87,10 +87,16 @@ def new_copied_document_factory(client, name_factory):
 
     def copy_workspace(copied_from):
         params = BTCopyDocumentParams(new_name=name_factory())
-        doc = client.documents_api.copy_workspace(copied_from.did, copied_from.default_workspace,
-                                                  bt_copy_document_params=params, _preload_content=False)
-        doc = json.loads(doc.data.decode('utf-8'))
-        doc = OnshapeElement.create_from_ids(did=doc["newDocumentId"], wvm='w', wvmid=doc['newWorkspaceId'])
+        doc = client.documents_api.copy_workspace(
+            copied_from.did,
+            copied_from.default_workspace,
+            bt_copy_document_params=params,
+            _preload_content=False,
+        )
+        doc = json.loads(doc.data.decode("utf-8"))
+        doc = OnshapeElement.create_from_ids(
+            did=doc["newDocumentId"], wvm="w", wvmid=doc["newWorkspaceId"]
+        )
         created_docs.append(doc)
         return doc
 

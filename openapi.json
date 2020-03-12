@@ -18135,6 +18135,9 @@
           "duplicateNameViolationError": {
             "type": "string"
           },
+          "hasPendingOwner": {
+            "type": "boolean"
+          },
           "hasReleaseRevisionableObjects": {
             "type": "boolean"
           },
@@ -27864,6 +27867,12 @@
           {
             "type": "object",
             "properties": {
+              "arguments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTPExpression-9"
+                }
+              },
               "functionName": {
                 "$ref": "#/components/schemas/BTPName-261"
               },
@@ -28456,62 +28465,26 @@
         ]
       },
       "BTPLiteralNumber-258": {
-        "type": "object",
-        "properties": {
-          "atomic": {
-            "type": "boolean"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTPLiteral-253"
           },
-          "btType": {
-            "type": "string"
-          },
-          "documentationType": {
-            "type": "string",
-            "enum": [
-              "FUNCTION",
-              "PREDICATE",
-              "CONSTANT",
-              "ENUM",
-              "USER_TYPE",
-              "FEATURE_DEFINITION",
-              "FILE_HEADER",
-              "UNDOCUMENTABLE",
-              "UNKNOWN"
-            ]
-          },
-          "endSourceLocation": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "integer": {
-            "type": "boolean"
-          },
-          "nodeId": {
-            "type": "string"
-          },
-          "shortDescriptor": {
-            "type": "string"
-          },
-          "spaceAfter": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceBefore": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceDefault": {
-            "type": "boolean"
-          },
-          "startSourceLocation": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "text": {
-            "type": "string"
-          },
-          "value": {
-            "type": "number",
-            "format": "double"
+          {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number",
+                "format": "double"
+              },
+              "btType": {
+                "type": "string"
+              }
+            }
           }
-        }
+        ]
       },
       "BTPLiteralString-259": {
         "type": "object",
@@ -33457,7 +33430,8 @@
             "type": "boolean"
           },
           "file": {
-            "type": "object"
+            "type": "string",
+            "format":  "binary"
           },
           "fileBodyWithDetails": {
             "$ref": "#/components/schemas/FormDataBodyPart"

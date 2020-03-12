@@ -13,13 +13,11 @@ from __future__ import absolute_import
 
 import json
 import mimetypes
-from multiprocessing.pool import ThreadPool
 import os
+from multiprocessing.pool import ThreadPool
 
 # python 2 and python 3 compatibility library
 import six
-from six.moves.urllib.parse import quote
-
 from onshape_client.oas import rest
 from onshape_client.oas.configuration import Configuration
 from onshape_client.oas.exceptions import ApiValueError
@@ -33,8 +31,9 @@ from onshape_client.oas.model_utils import (
     file_type,
     model_to_dict,
     str,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
+from six.moves.urllib.parse import quote
 
 
 class ApiClient(object):
@@ -61,13 +60,17 @@ class ApiClient(object):
 
     # six.binary_type python2=str, python3=bytes
     # six.text_type python2=unicode, python3=str
-    PRIMITIVE_TYPES = (
-        (float, bool, six.binary_type, six.text_type) + six.integer_types
-    )
+    PRIMITIVE_TYPES = (float, bool, six.binary_type, six.text_type) + six.integer_types
     _pool = None
 
-    def __init__(self, configuration=None, header_name=None, header_value=None,
-                 cookie=None, pool_threads=1):
+    def __init__(
+        self,
+        configuration=None,
+        header_name=None,
+        header_value=None,
+        cookie=None,
+        pool_threads=1,
+    ):
         if configuration is None:
             configuration = Configuration()
         self.configuration = configuration
@@ -79,7 +82,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/0.0.20/python'
+        self.user_agent = "OpenAPI-Generator/0.0.20/python"
 
     def __del__(self):
         if self._pool:
@@ -99,22 +102,34 @@ class ApiClient(object):
     @property
     def user_agent(self):
         """User agent for this API client"""
-        return self.default_headers['User-Agent']
+        return self.default_headers["User-Agent"]
 
     @user_agent.setter
     def user_agent(self, value):
-        self.default_headers['User-Agent'] = value
+        self.default_headers["User-Agent"] = value
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
 
     def __call_api(
-            self, resource_path, method, path_params=None,
-            query_params=None, header_params=None, body=None, post_params=None,
-            files=None, response_type=None, auth_settings=None,
-            _return_http_data_only=None, collection_formats=None,
-            _preload_content=True, _request_timeout=None, _host=None,
-            _check_type=None):
+        self,
+        resource_path,
+        method,
+        path_params=None,
+        query_params=None,
+        header_params=None,
+        body=None,
+        post_params=None,
+        files=None,
+        response_type=None,
+        auth_settings=None,
+        _return_http_data_only=None,
+        collection_formats=None,
+        _preload_content=True,
+        _request_timeout=None,
+        _host=None,
+        _check_type=None,
+    ):
 
         config = self.configuration
 
@@ -122,36 +137,33 @@ class ApiClient(object):
         header_params = header_params or {}
         header_params.update(self.default_headers)
         if self.cookie:
-            header_params['Cookie'] = self.cookie
+            header_params["Cookie"] = self.cookie
         if header_params:
             header_params = self.sanitize_for_serialization(header_params)
-            header_params = dict(self.parameters_to_tuples(header_params,
-                                                           collection_formats))
+            header_params = dict(
+                self.parameters_to_tuples(header_params, collection_formats)
+            )
 
         # path parameters
         if path_params:
             path_params = self.sanitize_for_serialization(path_params)
-            path_params = self.parameters_to_tuples(path_params,
-                                                    collection_formats)
+            path_params = self.parameters_to_tuples(path_params, collection_formats)
             for k, v in path_params:
                 # specified safe chars, encode everything
                 resource_path = resource_path.replace(
-                    '{%s}' % k,
-                    quote(str(v), safe=config.safe_chars_for_path_param)
+                    "{%s}" % k, quote(str(v), safe=config.safe_chars_for_path_param)
                 )
 
         # query parameters
         if query_params:
             query_params = self.sanitize_for_serialization(query_params)
-            query_params = self.parameters_to_tuples(query_params,
-                                                     collection_formats)
+            query_params = self.parameters_to_tuples(query_params, collection_formats)
 
         # post parameters
         if post_params or files:
             post_params = post_params if post_params else []
             post_params = self.sanitize_for_serialization(post_params)
-            post_params = self.parameters_to_tuples(post_params,
-                                                    collection_formats)
+            post_params = self.parameters_to_tuples(post_params, collection_formats)
             post_params.extend(self.files_parameters(files))
 
         # auth setting
@@ -170,10 +182,15 @@ class ApiClient(object):
 
         # perform request and return response
         response_data = self.request(
-            method, url, query_params=query_params, headers=header_params,
-            post_params=post_params, body=body,
+            method,
+            url,
+            query_params=query_params,
+            headers=header_params,
+            post_params=post_params,
+            body=body,
             _preload_content=_preload_content,
-            _request_timeout=_request_timeout)
+            _request_timeout=_request_timeout,
+        )
 
         self.last_response = response_data
 
@@ -182,18 +199,15 @@ class ApiClient(object):
             # deserialize response data
             if response_type:
                 return_data = self.deserialize(
-                    response_data,
-                    response_type,
-                    _check_type
+                    response_data, response_type, _check_type
                 )
             else:
                 return_data = None
 
         if _return_http_data_only:
-            return (return_data)
+            return return_data
         else:
-            return (return_data, response_data.status,
-                    response_data.getheaders())
+            return (return_data, response_data.status, response_data.getheaders())
 
     def sanitize_for_serialization(self, obj):
         """Builds a JSON POST object.
@@ -214,11 +228,9 @@ class ApiClient(object):
         elif isinstance(obj, self.PRIMITIVE_TYPES):
             return obj
         elif isinstance(obj, list):
-            return [self.sanitize_for_serialization(sub_obj)
-                    for sub_obj in obj]
+            return [self.sanitize_for_serialization(sub_obj) for sub_obj in obj]
         elif isinstance(obj, tuple):
-            return tuple(self.sanitize_for_serialization(sub_obj)
-                         for sub_obj in obj)
+            return tuple(self.sanitize_for_serialization(sub_obj) for sub_obj in obj)
         elif isinstance(obj, (datetime, date)):
             return obj.isoformat()
 
@@ -232,8 +244,10 @@ class ApiClient(object):
         elif isinstance(obj, ModelSimple):
             return self.sanitize_for_serialization(obj.value)
 
-        return {key: self.sanitize_for_serialization(val)
-                for key, val in six.iteritems(obj_dict)}
+        return {
+            key: self.sanitize_for_serialization(val)
+            for key, val in six.iteritems(obj_dict)
+        }
 
     def deserialize(self, response, response_type, _check_type):
         """Deserializes response into an object.
@@ -258,8 +272,11 @@ class ApiClient(object):
         # save response body into a tmp file and return the instance
         if response_type == (file_type,):
             content_disposition = response.getheader("Content-Disposition")
-            return deserialize_file(response.data, self.configuration,
-                                    content_disposition=content_disposition)
+            return deserialize_file(
+                response.data,
+                self.configuration,
+                content_disposition=content_disposition,
+            )
 
         # fetch data from response object
         try:
@@ -272,20 +289,33 @@ class ApiClient(object):
         deserialized_data = validate_and_convert_types(
             received_data,
             response_type,
-            ['received_data'],
+            ["received_data"],
             True,
             _check_type,
-            configuration=self.configuration
+            configuration=self.configuration,
         )
         return deserialized_data
 
-    def call_api(self, resource_path, method,
-                 path_params=None, query_params=None, header_params=None,
-                 body=None, post_params=None, files=None,
-                 response_type=None, auth_settings=None, async_req=None,
-                 _return_http_data_only=None, collection_formats=None,
-                 _preload_content=True, _request_timeout=None, _host=None,
-                 _check_type=None):
+    def call_api(
+        self,
+        resource_path,
+        method,
+        path_params=None,
+        query_params=None,
+        header_params=None,
+        body=None,
+        post_params=None,
+        files=None,
+        response_type=None,
+        auth_settings=None,
+        async_req=None,
+        _return_http_data_only=None,
+        collection_formats=None,
+        _preload_content=True,
+        _request_timeout=None,
+        _host=None,
+        _check_type=None,
+    ):
         """Makes the HTTP request (synchronous) and returns deserialized data.
 
         To make an async_req request, set the async_req parameter.
@@ -334,82 +364,124 @@ class ApiClient(object):
             then the method will return the response directly.
         """
         if not async_req:
-            return self.__call_api(resource_path, method,
-                                   path_params, query_params, header_params,
-                                   body, post_params, files,
-                                   response_type, auth_settings,
-                                   _return_http_data_only, collection_formats,
-                                   _preload_content, _request_timeout, _host,
-                                   _check_type)
+            return self.__call_api(
+                resource_path,
+                method,
+                path_params,
+                query_params,
+                header_params,
+                body,
+                post_params,
+                files,
+                response_type,
+                auth_settings,
+                _return_http_data_only,
+                collection_formats,
+                _preload_content,
+                _request_timeout,
+                _host,
+                _check_type,
+            )
 
-        return self.pool.apply_async(self.__call_api, (resource_path,
-                                                       method, path_params,
-                                                       query_params,
-                                                       header_params, body,
-                                                       post_params, files,
-                                                       response_type,
-                                                       auth_settings,
-                                                       _return_http_data_only,
-                                                       collection_formats,
-                                                       _preload_content,
-                                                       _request_timeout,
-                                                       _host, _check_type))
+        return self.pool.apply_async(
+            self.__call_api,
+            (
+                resource_path,
+                method,
+                path_params,
+                query_params,
+                header_params,
+                body,
+                post_params,
+                files,
+                response_type,
+                auth_settings,
+                _return_http_data_only,
+                collection_formats,
+                _preload_content,
+                _request_timeout,
+                _host,
+                _check_type,
+            ),
+        )
 
-    def request(self, method, url, query_params=None, headers=None,
-                post_params=None, body=None, _preload_content=True,
-                _request_timeout=None):
+    def request(
+        self,
+        method,
+        url,
+        query_params=None,
+        headers=None,
+        post_params=None,
+        body=None,
+        _preload_content=True,
+        _request_timeout=None,
+    ):
         """Makes the HTTP request using RESTClient."""
         if method == "GET":
-            return self.rest_client.GET(url,
-                                        query_params=query_params,
-                                        _preload_content=_preload_content,
-                                        _request_timeout=_request_timeout,
-                                        headers=headers)
+            return self.rest_client.GET(
+                url,
+                query_params=query_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                headers=headers,
+            )
         elif method == "HEAD":
-            return self.rest_client.HEAD(url,
-                                         query_params=query_params,
-                                         _preload_content=_preload_content,
-                                         _request_timeout=_request_timeout,
-                                         headers=headers)
+            return self.rest_client.HEAD(
+                url,
+                query_params=query_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                headers=headers,
+            )
         elif method == "OPTIONS":
-            return self.rest_client.OPTIONS(url,
-                                            query_params=query_params,
-                                            headers=headers,
-                                            post_params=post_params,
-                                            _preload_content=_preload_content,
-                                            _request_timeout=_request_timeout,
-                                            body=body)
+            return self.rest_client.OPTIONS(
+                url,
+                query_params=query_params,
+                headers=headers,
+                post_params=post_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                body=body,
+            )
         elif method == "POST":
-            return self.rest_client.POST(url,
-                                         query_params=query_params,
-                                         headers=headers,
-                                         post_params=post_params,
-                                         _preload_content=_preload_content,
-                                         _request_timeout=_request_timeout,
-                                         body=body)
+            return self.rest_client.POST(
+                url,
+                query_params=query_params,
+                headers=headers,
+                post_params=post_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                body=body,
+            )
         elif method == "PUT":
-            return self.rest_client.PUT(url,
-                                        query_params=query_params,
-                                        headers=headers,
-                                        post_params=post_params,
-                                        _preload_content=_preload_content,
-                                        _request_timeout=_request_timeout,
-                                        body=body)
+            return self.rest_client.PUT(
+                url,
+                query_params=query_params,
+                headers=headers,
+                post_params=post_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                body=body,
+            )
         elif method == "PATCH":
-            return self.rest_client.PATCH(url,
-                                          query_params=query_params,
-                                          headers=headers,
-                                          post_params=post_params,
-                                          _preload_content=_preload_content,
-                                          _request_timeout=_request_timeout,
-                                          body=body)
+            return self.rest_client.PATCH(
+                url,
+                query_params=query_params,
+                headers=headers,
+                post_params=post_params,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                body=body,
+            )
         elif method == "DELETE":
-            return self.rest_client.DELETE(url,
-                                           query_params=query_params,
-                                           headers=headers,
-                                           _preload_content=_preload_content,
-                                           _request_timeout=_request_timeout,
-                                           body=body)
+            return self.rest_client.DELETE(
+                url,
+                query_params=query_params,
+                headers=headers,
+                _preload_content=_preload_content,
+                _request_timeout=_request_timeout,
+                body=body,
+            )
         else:
             raise ApiValueError(
                 "http method must be `GET`, `HEAD`, `OPTIONS`,"
@@ -426,22 +498,23 @@ class ApiClient(object):
         new_params = []
         if collection_formats is None:
             collection_formats = {}
-        for k, v in six.iteritems(params) if isinstance(params, dict) else params:  # noqa: E501
+        for k, v in (
+            six.iteritems(params) if isinstance(params, dict) else params
+        ):  # noqa: E501
             if k in collection_formats:
                 collection_format = collection_formats[k]
-                if collection_format == 'multi':
+                if collection_format == "multi":
                     new_params.extend((k, value) for value in v)
                 else:
-                    if collection_format == 'ssv':
-                        delimiter = ' '
-                    elif collection_format == 'tsv':
-                        delimiter = '\t'
-                    elif collection_format == 'pipes':
-                        delimiter = '|'
+                    if collection_format == "ssv":
+                        delimiter = " "
+                    elif collection_format == "tsv":
+                        delimiter = "\t"
+                    elif collection_format == "pipes":
+                        delimiter = "|"
                     else:  # csv is the default
-                        delimiter = ','
-                    new_params.append(
-                        (k, delimiter.join(str(value) for value in v)))
+                        delimiter = ","
+                    new_params.append((k, delimiter.join(str(value) for value in v)))
             else:
                 new_params.append((k, v))
         return new_params
@@ -472,10 +545,12 @@ class ApiClient(object):
                     )
                 filename = os.path.basename(file_instance.name)
                 filedata = file_instance.read()
-                mimetype = (mimetypes.guess_type(filename)[0] or
-                            'application/octet-stream')
+                mimetype = (
+                    mimetypes.guess_type(filename)[0] or "application/octet-stream"
+                )
                 params.append(
-                    tuple([param_name, tuple([filename, filedata, mimetype])]))
+                    tuple([param_name, tuple([filename, filedata, mimetype])])
+                )
                 file_instance.close()
 
         return params
@@ -491,10 +566,10 @@ class ApiClient(object):
 
         accepts = [x.lower() for x in accepts]
 
-        if 'application/json' in accepts:
-            return 'application/json'
+        if "application/json" in accepts:
+            return "application/json"
         else:
-            return ', '.join(accepts)
+            return ", ".join(accepts)
 
     def select_header_content_type(self, content_types):
         """Returns `Content-Type` based on an array of content_types provided.
@@ -503,12 +578,12 @@ class ApiClient(object):
         :return: Content-Type (e.g. application/json).
         """
         if not content_types:
-            return 'application/json'
+            return "application/json"
 
         content_types = [x.lower() for x in content_types]
 
-        if 'application/json' in content_types or '*/*' in content_types:
-            return 'application/json'
+        if "application/json" in content_types or "*/*" in content_types:
+            return "application/json"
         else:
             return content_types[0]
 
@@ -525,15 +600,15 @@ class ApiClient(object):
         for auth in auth_settings:
             auth_setting = self.configuration.auth_settings().get(auth)
             if auth_setting:
-                if not auth_setting['value']:
+                if not auth_setting["value"]:
                     continue
-                elif auth_setting['in'] == 'cookie':
-                    headers['Cookie'] = auth_setting['value']
-                elif auth_setting['in'] == 'header':
-                    headers[auth_setting['key']] = auth_setting['value']
-                elif auth_setting['in'] == 'query':
-                    querys.append((auth_setting['key'], auth_setting['value']))
+                elif auth_setting["in"] == "cookie":
+                    headers["Cookie"] = auth_setting["value"]
+                elif auth_setting["in"] == "header":
+                    headers[auth_setting["key"]] = auth_setting["value"]
+                elif auth_setting["in"] == "query":
+                    querys.append((auth_setting["key"], auth_setting["value"]))
                 else:
                     raise ApiValueError(
-                        'Authentication token must be in `query` or `header`'
+                        "Authentication token must be in `query` or `header`"
                     )

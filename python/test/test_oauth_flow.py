@@ -1,5 +1,5 @@
-from onshape_client.client import Client, OAuthAuthorizationMethods
 import pytest
+from onshape_client.client import OAuthAuthorizationMethods
 
 
 @pytest.mark.skip(reason="no way of currently testing this")

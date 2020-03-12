@@ -1,7 +1,7 @@
 """A collection of utility functions"""
 import json
-from onshape_client.client import Client
 import os
+
 
 def parse_quantity(q):
     """
@@ -31,10 +31,10 @@ def parse_quantity(q):
     >>> parse_quantity(d)
     '0.1414213562373095*millimeter**3'
     """
-    units_s = str(q['value'])
-    for u in q['unitToPower']:
-        units_s = units_s + "*" + u['key'].lower()
-        power = u['value']
+    units_s = str(q["value"])
+    for u in q["unitToPower"]:
+        units_s = units_s + "*" + u["key"].lower()
+        power = u["value"]
         if not power == 1:
             units_s = units_s + "**" + str(power)
     return units_s

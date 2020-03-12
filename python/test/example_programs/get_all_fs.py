@@ -1,13 +1,11 @@
 """Get all the FeatureScripts within a given document and save them to a local folder.
 """
 
-from onshape_client.client import Client
-from onshape_client.onshape_url import OnshapeElement
-from onshape_client.oas.models.bt_translate_format_params import BTTranslateFormatParams
-import time
-import json
 import os.path
 from pathlib import Path
+
+from onshape_client.onshape_url import OnshapeElement
+
 
 def test_get_all_fs(client):
     # We're saving these files to the home directory ("~")
@@ -19,9 +17,15 @@ def test_get_all_fs(client):
 
     my_elements = client.documents_api.get_elements3(cube.did, cube.wvm, cube.wvmid)
     for element in my_elements:
-        if element.element_type == 'FEATURESTUDIO' :
-            fs_contents = client.feature_studios_api.get_feature_studio_contents1(cube.did, cube.wvm, cube.wvmid, element.id)
-            file_path = Path(__file__).parent / 'tmp'/("{name}::{id}.fs".format(name=element.name, id=element.id))
-            file = file_path.open(mode='w')
+        if element.element_type == "FEATURESTUDIO":
+            fs_contents = client.feature_studios_api.get_feature_studio_contents1(
+                cube.did, cube.wvm, cube.wvmid, element.id
+            )
+            file_path = (
+                Path(__file__).parent
+                / "tmp"
+                / ("{name}::{id}.fs".format(name=element.name, id=element.id))
+            )
+            file = file_path.open(mode="w")
             file.write(fs_contents.contents)
             file.close()
