@@ -1,8 +1,12 @@
 import json
+import string
+import time
 from urllib.parse import urlparse, parse_qs
 
 import pytest
+import random
 from onshape_client.oas import BTCopyDocumentParams, BTDocumentSearchParams
+from onshape_client.onshape_url import OnshapeElement
 
 
 def test_copy_workspace(client, new_document):
@@ -15,6 +19,18 @@ def test_copy_workspace(client, new_document):
         ),
     )
     assert new_doc_info.new_document_name == NEW_DOCUMENT_NAME
+
+
+def test_get_documents_simple(client):
+    unique_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=8))
+    doc = OnshapeElement.create(unique_name)
+    time.sleep(5)
+    documents = client.documents_api.get_documents(
+        q=unique_name, _preload_content=False
+    )
+    documents = json.loads(documents.data)
+    doc.delete()
+    assert len(documents["items"]) == 1
 
 
 @pytest.mark.skip(reason="Not done")

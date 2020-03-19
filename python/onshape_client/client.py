@@ -328,6 +328,7 @@ class Client:
 
     def _create_apis(self):
         api_client = ApiClient(configuration=self.configuration)
+        self.api_client = api_client
         self.accounts_api = api.AccountsApi(api_client)
         self.app_elements_api = api.AppElementsApi(api_client)
         self.assemblies_api = api.AssembliesApi(api_client)
