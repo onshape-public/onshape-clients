@@ -1,0 +1,6 @@
+onshape_client_test:
+  asm_three_axes: https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079
+  ps_configurable_cube: https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90
+local:
+  asm_three_axes: https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079
+  ps_configurable_cube: http://localhost.dev.onshape.com:8080/documents/159cbd2683fde2c91de33608/w/728c945f6507eaa570f41ef0/e/bd38b32a7c5d354f80d641cf

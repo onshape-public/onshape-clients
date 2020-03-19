@@ -168,7 +168,7 @@ class Client:
                 final_configuration,
                 Client._get_configuration_from_keys_file(keys_file, stack_key),
             )
-
+        self.stack_key = stack_key
         self._set_configuration(final_configuration)
         self._create_apis()
         self.open_authorize_grant_callback = open_authorize_grant_callback

@@ -10,29 +10,35 @@ import pytest
 from onshape_client.client import Client
 from onshape_client.oas import BTCopyDocumentParams
 from onshape_client.onshape_url import OnshapeElement
+from ruamel.yaml import YAML
 
 collect_ignore = ["setup.py"]
 
-prod_element_bank = OrderedDict(
-    asm_three_axes=OnshapeElement(
-        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/3395c071ca9534c3b1151e4b/e/19fb95609c4cb02622ca9079"
-    ),
-    ps_configurable_cube=OnshapeElement(
-        "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/6ccf88eb92d55be180c06cf9/e/69c9eedda86512966b20bc90"
-    ),
-)
+
+@pytest.fixture
+def element_bank(client, assets):
+    yaml = YAML()
+    urls_by_stack = yaml.load((assets / "urls.yaml").open())
+    try:
+        return urls_by_stack[client.stack_key]
+    except KeyError as e:
+        raise KeyError(
+            f"Cannot find element bank for stack {client.stack_key}. Please instantiate the bank manually by uploading "
+            f"the needed docs to the stack and updating the url.yaml file."
+        )
 
 
 @pytest.fixture
-def element(request, client):
-    """ Get a particular element from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly', ['three_axes'], indirect=True)`
+def element(request, client, element_bank):
+    """ Get a particular element from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly',
+    ['three_axes'], indirect=True)`
     :param request:
     :param client:
     :return: OnshapeElement
     """
     element_key = request.param
     try:
-        return prod_element_bank[element_key]
+        return OnshapeElement(element_bank[element_key])
     except KeyError as e:
         raise KeyError(f"Cannot find '{element_key}' in the element bank.")
 
@@ -43,7 +49,6 @@ def client():
     try:
         client = Client.get_client()
     except Exception as e:
-        # client = Client(stack_key='local')
         client = Client(stack_key="onshape_client_test")
     return client
 

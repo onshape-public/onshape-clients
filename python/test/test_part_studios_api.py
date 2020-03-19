@@ -44,6 +44,14 @@ def test_get_features(element, client):
     assert result.features[0].name == "Sketch 1"
 
 
+@pytest.mark.parametrize("element", ["ps_configurable_cube"], indirect=True)
+def test_export_stl(element, client):
+    result = client.part_studios_api.export_stl1(
+        element.did, element.wvm, element.wvmid, element.eid, _preload_content=False
+    )
+    assert len(result.data) > 1000
+
+
 def test_insert_point_sketch(client, part_studio):
     PLANE_ID = "JDC"  # The plane deterministic ID for the sketch
     plane_query = BTMParameterQueryList148(
