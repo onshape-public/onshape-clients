@@ -1,14 +1,24 @@
 matrix:
   include:
-  - language: python
-    python: 3.7
-    before_script:
-    - cd python
-    - pip install pipenv
-    - pipenv install --dev
-    script:
-    - pipenv run pytest
+    - language: python
+      stage: test
+      python: 3.7
+      install:
+        - cd python
+        - pip install pipenv
+        - pipenv install --dev
+      script:
+        - pipenv run pytest && cd -
+    - language: node_js
+      stage: deploy
+      node_js: 12
+      script:
+        - npm install --dev
+        - npx semantic-release
+stages:
+  - test
+  - deploy
 before_install:
-- openssl aes-256-cbc -K $encrypted_823a8aeaad18_key -iv $encrypted_823a8aeaad18_iv
-  -in secrets.sh.enc -out secrets.sh -d
-- source environment.sh
+  - openssl aes-256-cbc -K $encrypted_823a8aeaad18_key -iv $encrypted_823a8aeaad18_iv
+    -in secrets.sh.enc -out secrets.sh -d
+  - source environment.sh

@@ -11,6 +11,7 @@
 """
 
 from setuptools import setup, find_packages  # noqa: H301
+import os
 
 NAME = "onshape_client"
 # To install the library, run the following
@@ -33,7 +34,7 @@ REQUIRES = [
 
 setup(
     name=NAME,
-    version="0.0.36",  # os.environ["ONSHAPE_CLIENT_VERSION"],
+    version="0.0.38",
     description="Onshape REST API",
     author_email="api-support@onshape.zendesk.com",
     url="",

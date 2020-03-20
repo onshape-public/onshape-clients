@@ -43,4 +43,4 @@ We use Commitizen and semantic-release to bump versions and publish all the pack
 2. Make your changes
 3. Commit changes with `git cz` instead of `git commit`. This should bring you through a step-by-step process for making
  your structured commit message. Once pushed, our CI will analyze the commit, and make and publish the necessary 
- releases. 
+ releases according to semantic-release principles.

@@ -1,9 +1,16 @@
-release:
-  branch: next
+extends: @semantic-release/github-config
 plugins: [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    ["@semantic-release/exec", {
-      "publishCmd": "./publish.sh ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
-    }],
-  ]
+  "@semantic-release/commit-analyzer",
+  "@semantic-release/release-notes-generator",
+  "@semantic-release/github",
+  ["@semantic-release/exec", {
+    "prepareCmd": "set_version ${nextRelease.version}",
+    "publishCmd": "publish ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
+  }],
+]
+
+
+# Semantic release will release all clients even if only one changed. It does this so that all client versions can be
+# kept in sync. Unfortunately, this means that the Git history is a bit overlapping, with changes to the Python client,
+# for instance, showing up as commits even though you may be interested in only the changes to the Java client.
+# Therefore, to separate the changelogs

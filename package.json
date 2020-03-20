@@ -1,10 +1,10 @@
 {
   "name": "onshape-clients",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "The meta package for creating the various Onshape clients",
   "main": "index.js",
   "scripts": {
-    "test": "echo hi"
+    "test": "cd python && pytest"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,9 @@
     "commitizen": "^4.0.3"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^3.3.7",
-    "cz-conventional-changelog": "^3.0.2",
-    "semantic-release": "^15.13.24"
+    "@semantic-release/exec": "^3.3.8",
+    "cz-conventional-changelog": "^3.1.0",
+    "semantic-release": "^15.14.0"
   },
   "config": {
     "commitizen": {
