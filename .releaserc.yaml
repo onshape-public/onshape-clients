@@ -13,4 +13,3 @@ plugins:
 # Semantic release will release all clients even if only one changed. It does this so that all client versions can be
 # kept in sync. Unfortunately, this means that the Git history is a bit overlapping, with changes to the Python client,
 # for instance, showing up as commits even though you may be interested in only the changes to the Java client.
-# Therefore, to separate the changelogs
