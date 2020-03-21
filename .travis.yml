@@ -16,6 +16,8 @@ matrix:
         - pyenv install 3.6.3
         - npm install --dev
         - npx semantic-release
+        - source release_vars.sh
+        - ./python/publish.sh
 stages:
   - test
   - deploy
