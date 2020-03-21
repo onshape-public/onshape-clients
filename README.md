@@ -1,4 +1,4 @@
-# Onshape Clients [![Build Status](https://travis-ci.org/onshape-public/onshape-clients.svg?branch=master)](https://travis-ci.org/onshape-public/onshape-clients)
+# Onshape Clients [![Build Status](https://travis-ci.org/onshape-public/onshape-clients.svg?branch=master)](https://travis-ci.org/onshape-public/onshape-clients) [![PyPI version](https://badge.fury.io/py/onshape-client.svg)](https://badge.fury.io/py/onshape-client)
 
 **NOTE**
 This repo is in beta status and is still under development. Please note that it can change in non-backwards-compatible 

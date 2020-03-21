@@ -5,8 +5,8 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   -   - "@semantic-release/exec"
-      - prepareCmd: source environment.sh && set_version ${nextRelease.version}
-        publishCmd: source environment.sh && publish ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}
+      - prepareCmd: . environment.sh && set_version ${nextRelease.version}
+        publishCmd: . environment.sh && publish ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}
 
 
 
