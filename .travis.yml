@@ -13,7 +13,8 @@ matrix:
       stage: deploy
       node_js: 12
       script:
-        - pyenv install 3.5.5
+        - python --version
+        - pyenv install --list
         - npm install --dev
         - npx semantic-release
 stages:
