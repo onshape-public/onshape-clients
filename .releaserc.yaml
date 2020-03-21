@@ -5,7 +5,7 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   -   - "@semantic-release/exec"
-      - prepareCmd: export ONSHAPE_CLIENT_VERSION=${nextRelease.version} && python build_tools/scripts.py
+      - prepareCmd: export ONSHAPE_CLIENT_VERSION=${nextRelease.version} && /opt/pyenv/versions/3.6.3/bin/python build_tools/scripts.py
         publishCmd: export ONSHAPE_CLIENT_VERSION=${nextRelease.version} && ./python/publish.sh
 
 
