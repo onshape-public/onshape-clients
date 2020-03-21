@@ -34,7 +34,7 @@ REQUIRES = [
 
 setup(
     name=NAME,
-    version="0.0.38",
+    version="0.0.0",
     description="Onshape REST API",
     author_email="api-support@onshape.zendesk.com",
     url="",

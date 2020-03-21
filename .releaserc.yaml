@@ -5,7 +5,7 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   -   - "@semantic-release/exec"
-      - publishCmd: echo export ONSHAPE_CLIENT_VERSION=${nextRelease.version} > release_vars.sh
+      - publishCmd: echo export ONSHAPE_CLIENT_VERSION=${nextRelease.version} > release_vars.sh && pwd
 
 
 
