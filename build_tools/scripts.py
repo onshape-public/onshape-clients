@@ -33,12 +33,23 @@ class ClientPackage:
         self.file_path_to_version_identifier.open(mode="w").write(result)
 
 
+version = (
+    os.environ["ONSHAPE_CLIENT_VERSION"]
+    if "ONSHAPE_CLIENT_VERSION" in os.environ
+    else "0.0.0"
+)
+repo_path = (
+    os.environ["REPO_ONSHAPE_CLIENTS"]
+    if "REPO_ONSHAPE_CLIENTS" in os.environ
+    else Path(__file__).parent
+)
+
 python_package_path = Path(os.environ["REPO_ONSHAPE_CLIENTS"]) / "python"
 python_package = ClientPackage(
     python_package_path,
     "python",
     python_package_path / "setup.py",
-    r"""(?<=\s*version=")\w*\.\w*\.[\w-]*(?=",)""",
-    os.environ["ONSHAPE_CLIENT_VERSION"],
+    r"""(?<=version=")\w*\.\w*\.[\w-]*(?=",)""",
+    version,
 )
 python_package.set_version()
