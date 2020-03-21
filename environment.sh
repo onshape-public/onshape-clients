@@ -14,4 +14,5 @@ function publish() {
     $REPO_ONSHAPE_CLIENTS/python/publish.sh
 }
 
+export -f set_version
 export -f publish
