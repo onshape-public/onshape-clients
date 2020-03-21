@@ -38,7 +38,7 @@ python_package = ClientPackage(
     python_package_path,
     "python",
     python_package_path / "setup.py",
-    r"""version="(\w*\.\w*\.[\w-]*)",""",
-    f"""version="{os.environ["ONSHAPE_CLIENT_VERSION"]}",""",
+    r"""(?<=\s*version=")\w*\.\w*\.[\w-]*(?=",)""",
+    os.environ["ONSHAPE_CLIENT_VERSION"],
 )
 python_package.set_version()
