@@ -1,13 +1,13 @@
-extends: @semantic-release/github-config
-plugins: [
-  "@semantic-release/commit-analyzer",
-  "@semantic-release/release-notes-generator",
-  "@semantic-release/github",
-  ["@semantic-release/exec", {
-    "prepareCmd": "set_version ${nextRelease.version}",
-    "publishCmd": "publish ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
-  }],
-]
+publish:
+  - "@semantic-release/github"
+  - "@semantic-release/exec"
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
+  -   - "@semantic-release/exec"
+      - prepareCmd: set_version ${nextRelease.version}
+        publishCmd: publish ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}
+
 
 
 # Semantic release will release all clients even if only one changed. It does this so that all client versions can be
