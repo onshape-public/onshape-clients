@@ -14,12 +14,12 @@ matrix:
       node_js: 12
       script:
         - pyenv install 3.6.3
+        - cd cli
+        - pip install twine
+        - pip install click
+        - pipenv install --dev
         - npm install --dev
         - npx semantic-release
-        - ls
-        - pwd
-        - source release_vars.sh
-        - ./python/publish.sh
 stages:
   - test
   - deploy
