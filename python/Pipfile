@@ -28,6 +28,7 @@ ruamel-yaml = "*"
 pathlib = "*"
 pint = "*"
 numpy = "*"
+onshape-client = {path = "."}
 
 [pipenv]
 allow_prereleases = true

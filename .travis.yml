@@ -11,11 +11,15 @@ matrix:
       script:
         - pipenv run pytest
         # END TESTING THE CLI
+        - cd ..
+        - pip install ./cli
+        - which onshape-clients
     - language: python
       stage: test_clients
       python: 3.7
       install:
         - pip install ./cli
+        - onshape-clients install
       script:
         - onshape-clients test
     - language: node_js
@@ -25,12 +29,10 @@ matrix:
         - pyenv install 3.6.3
         - pyenv global 3.6.3
         - pip install ./cli
+        - which onshape-clients
         - npm install --dev
       script:
         - npx semantic-release
-        - cat release_var.sh
-        - source release_var.sh
-        - onshape-clients publish
 stages:
   - test_cli
   - test_clients

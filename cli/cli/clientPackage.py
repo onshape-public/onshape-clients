@@ -78,4 +78,4 @@ class PythonPackage(ClientPackage):
             raise CliError("Error testing client.")
 
     def install(self):
-        self.run(f"pipenv install {self.root_path}")
+        self.run(f"pipenv install {self.root_path} --dev")

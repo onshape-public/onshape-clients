@@ -36,7 +36,9 @@ def test_test_function():
     """ The "fast" tests should take no more than 20 seconds per client.
     onshape-clients test fast
     """
+    result = invoke("install")
+    assert result.exit_code == 0
     start = time.time()
-    result = invoke("test")
+    result = invoke("test -m fast")
     assert result.exit_code == 0
     assert time.time() - start < 20
