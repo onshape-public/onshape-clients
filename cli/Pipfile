@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 click = "*"
 twine = "*"
+pytest = "*"
+cli = {editable = true,path = "."}
 
 [requires]
 python_version = "3.7"

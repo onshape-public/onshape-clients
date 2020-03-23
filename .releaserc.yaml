@@ -5,8 +5,8 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   -   - "@semantic-release/exec"
-      - publishCmd: /opt/pyenv/versions/3.6.3/bin/python cli/cli.py python ${nextRelease.version}
-
+      - publishCmd: echo export ONSHAPE_CLIENTS_PUBLISH_VERSION=${nextRelease.version} > release_var.sh
+      - cwd: $HOME
 
 
 # Semantic release will release all clients even if only one changed. It does this so that all client versions can be
