@@ -11,9 +11,6 @@ matrix:
       script:
         - pipenv run pytest
         # END TESTING THE CLI
-        - cd ..
-        - pip install ./cli
-        - which onshape-clients
     - language: python
       stage: test_clients
       python: 3.7
@@ -22,21 +19,21 @@ matrix:
         - onshape-clients install
       script:
         - onshape-clients test
-    - language: node_js
+    - language: python
       stage: deploy
-      node_js: 12
+      python: 3.7
       install:
-        - pyenv install 3.6.3
-        - pyenv global 3.6.3
+        - nvm install 12
         - pip install ./cli
         - which onshape-clients
-        - npm install --dev
+        - npm install -g semantic-release
+        - npm install -g @semantic-release/exec
       script:
-        - npx semantic-release
+        - semantic-release
 stages:
+  - deploy
   - test_cli
   - test_clients
-  - deploy
 before_install:
   - openssl aes-256-cbc -K $encrypted_823a8aeaad18_key -iv $encrypted_823a8aeaad18_iv
     -in secrets.sh.enc -out secrets.sh -d

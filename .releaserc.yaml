@@ -5,8 +5,7 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   -   - "@semantic-release/exec"
-      - publishCmd: echo export ONSHAPE_CLIENTS_PUBLISH_VERSION=${nextRelease.version} > release_var.sh
-        cwd: $TRAVIS_BUILD_DIR
+      - prepareCmd: onshape-clients publish -v ${nextRelease.version}
         shell: true
 
 

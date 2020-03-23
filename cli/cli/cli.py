@@ -1,7 +1,7 @@
 """CLI interface."""
 
 import click
-from .clientPackage import ClientPackage, PythonPackage
+from .clientPackage import PythonPackage
 from pathlib import Path
 
 all_viable_clients = [PythonPackage]
@@ -15,7 +15,10 @@ def do_client_function(function_name, *args, **kwargs):
         fun(*args, **kwargs)
 
 
-@click.group("onshape-clients")
+@click.group(
+    "onshape-clients",
+    help="CLI for managing the generating, installing, testing and publishing Onshape clients.",
+)
 @click.option(
     "-c",
     "--client",
@@ -38,12 +41,14 @@ def entry(clients, repo):
         client_instances.append(name_to_client[client](repo=repo))
 
 
-@entry.command()
+@entry.command(
+    help="Publish the clients to the appropriate distribution channels - npm, pypi, etc..."
+)
 @click.option(
     "-v",
     "--version",
     type=click.STRING,
-    help="version to publish.",
+    help="Version to publish.",
     envvar="ONSHAPE_CLIENTS_PUBLISH_VERSION",
 )
 def publish(version):
@@ -51,12 +56,14 @@ def publish(version):
     do_client_function("publish")
 
 
-@entry.command()
+@entry.command(help="Generate the client from the OAS definition.")
 def generate():
     pass
 
 
-@entry.command()
+@entry.command(
+    help="Test each client using its native test suite. Make sure to install first."
+)
 @click.option(
     "-m", "--marker", type=click.Choice(["fast"]), help="Group of tests to test.",
 )
@@ -64,6 +71,6 @@ def test(marker):
     do_client_function("test", marker)
 
 
-@entry.command()
+@entry.command(help="Install the clients for testing.")
 def install():
     do_client_function("install")
