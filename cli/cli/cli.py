@@ -68,7 +68,15 @@ def generate():
     "-m", "--marker", type=click.Choice(["fast"]), help="Group of tests to test.",
 )
 def test(marker):
-    do_client_function("test", marker)
+    do_client_function("test", marker=marker)
+
+
+@entry.command(help="Lint each client according to its standard linter.")
+@click.option(
+    "-f/", "--fix/--no-fix", help="Make linting changes.", default=False,
+)
+def lint(fix):
+    do_client_function("lint", fix=fix)
 
 
 @entry.command(help="Install the clients for testing.")

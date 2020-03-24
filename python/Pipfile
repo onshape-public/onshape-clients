@@ -15,8 +15,8 @@ sphinx-rtd-theme = "*"
 pytest-console-scripts = "*"
 tox-pipenv = "*"
 tox = "*"
-onshape-client = {path = ".",editable = true}
 black = "*"
+onshape-client = {path = ".",editable = true}
 
 [packages]
 urllib3 = "*"
@@ -28,7 +28,6 @@ ruamel-yaml = "*"
 pathlib = "*"
 pint = "*"
 numpy = "*"
-onshape-client = {path = "."}
 
 [pipenv]
 allow_prereleases = true

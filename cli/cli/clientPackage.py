@@ -79,3 +79,7 @@ class PythonPackage(ClientPackage):
 
     def install(self):
         self.run(f"pipenv install {self.root_path} --dev")
+
+    def lint(self, fix=False):
+        """Lint files. If fix is given, write the files back."""
+        self.run(f"black {self.root_path}{' --check' if not fix else ''}")

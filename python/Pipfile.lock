@@ -383,10 +383,6 @@
             ],
             "version": "==3.1.0"
         },
-        "onshape-client": {
-            "editable": true,
-            "path": "."
-        },
         "packaging": {
             "hashes": [
                 "sha256:3c292b474fda1671ec57d46d739d072bfd495a4f51ad01a055121d81e952b7a3",

@@ -11,7 +11,7 @@ import os
 
 NAME = "cli"
 
-REQUIRES = ["click", "twine"]
+REQUIRES = ["click", "twine", "black"]
 
 setup(
     name=NAME,
@@ -28,4 +28,5 @@ setup(
     """,
     summary="Onshape Clients CLI",
     entry_points={"console_scripts": ["onshape-clients=cli.cli:entry"],},
+    python_requires=">3.6.3",
 )

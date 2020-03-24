@@ -2,9 +2,8 @@ from click.testing import CliRunner
 from cli.cli import entry
 from cli.clientPackage import CliError
 from pathlib import Path
-import os
-import pytest
 import time
+import subprocess
 
 runner = CliRunner()
 repo = Path(__file__).parent.parent.parent.absolute()
@@ -15,6 +14,13 @@ def invoke(command):
     command.insert(0, "-r")
     command.insert(1, str(repo))
     return runner.invoke(entry, command)
+
+
+def test_linted():
+    """Ensure the cli package itelf is properly linted.
+    """
+    result = subprocess.run(f"black {Path(__file__).parent.parent}".split(" "))
+    assert result.returncode == 0
 
 
 def test_entry_no_version():

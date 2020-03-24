@@ -45,4 +45,5 @@ setup(
     long_description="""\
     The Onshape REST API consumed by all clients.  # noqa: E501
     """,
+    python_requires=">3.6.3",
 )
