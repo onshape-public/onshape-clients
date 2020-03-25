@@ -1,0 +1,15 @@
+# BtCustomPropertyDefinitionInfo
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Description** | **string** |  | [optional] 
+**EnumDefinition** | **[]string** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**Template** | **string** |  | [optional] 
+**Type** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
