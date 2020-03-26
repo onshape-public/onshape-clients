@@ -1,10 +1,10 @@
 """CLI interface."""
 
 import click
-from .clientPackage import PythonPackage
+from .clientPackage import PythonPackage, GoPackage
 from pathlib import Path
 
-all_viable_clients = [PythonPackage]
+all_viable_clients = [PythonPackage, GoPackage]
 name_to_client = {clazz.name: clazz for clazz in all_viable_clients}
 client_instances = []
 
@@ -34,11 +34,17 @@ def do_client_function(function_name, *args, **kwargs):
     help="Path to the onshape clients repo",
     default=Path.cwd().absolute(),
 )
-def entry(clients, repo):
+@click.option(
+    "-d/",
+    "--dry-run/--no-dry-run",
+    help="If set, the command won't actually run any commands.",
+    default=False,
+)
+def entry(clients, repo, dry_run):
     if len(clients) == 0:
         clients = name_to_client.keys()
     for client in clients:
-        client_instances.append(name_to_client[client](repo=repo))
+        client_instances.append(name_to_client[client](repo=repo, dry_run=dry_run))
 
 
 @entry.command(
@@ -50,15 +56,16 @@ def entry(clients, repo):
     type=click.STRING,
     help="Version to publish.",
     envvar="ONSHAPE_CLIENTS_PUBLISH_VERSION",
+    default="0.0.0",
 )
 def publish(version):
-    do_client_function("set_version", version)
+    do_client_function("set_version", version=version)
     do_client_function("publish")
 
 
 @entry.command(help="Generate the client from the OAS definition.")
 def generate():
-    pass
+    do_client_function("generate")
 
 
 @entry.command(
