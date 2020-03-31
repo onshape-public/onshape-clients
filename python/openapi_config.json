@@ -1,7 +1,6 @@
 {
   "packageName": "onshape_client.oas",
   "projectName": "oas",
-  "packageVersion": "0.0.20",
   "packageUrl": "",
   "sortParamsByRequiredFlag": true,
   "hideGenerationTimestamp": true,

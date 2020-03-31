@@ -342,6 +342,7 @@ class Client:
         self.part_studios_api = api.PartStudiosApi(api_client)
         self.translation_api = api.TranslationsApi(api_client)
         self.users_api = api.UsersApi(api_client)
+        self.webhooks_api = api.WebhooksApi(api_client)
 
 
 class OAuthAuthorizationMethods(Enum):
