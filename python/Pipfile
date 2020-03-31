@@ -17,6 +17,7 @@ tox-pipenv = "*"
 tox = "*"
 black = "*"
 onshape-client = {path = ".",editable = true}
+pytest-timeout = "*"
 
 [packages]
 urllib3 = "*"
@@ -28,6 +29,7 @@ ruamel-yaml = "*"
 pathlib = "*"
 pint = "*"
 numpy = "*"
+pyngrok = "*"
 
 [pipenv]
 allow_prereleases = true

@@ -64,14 +64,15 @@ class OnshapeElement(object):
             self.did,
             self.wvmid,
             file=open(file_path, "rb"),
-            translate=True,
             encoded_filename=file_path.name,
             **kwargs,
         )
-        translation_id = result.translation_id
-        result = OnshapeElement.poll_translation_result(translation_id)
-
-        element_id = result.result_element_ids[0]
+        if "translate" in kwargs and kwargs["translate"]:
+            translation_id = result.translation_id
+            result = OnshapeElement.poll_translation_result(translation_id)
+            element_id = result.result_element_ids[0]
+        else:
+            element_id = result.id
         return OnshapeElement.create_from_ids(eid=element_id, sibling=self)
 
     @staticmethod
@@ -112,6 +113,34 @@ class OnshapeElement(object):
                     did=self.did, fid=download_id, _preload_content=False
                 )
                 .data
+            )
+        elif self.element_type == "Assembly":
+            bt_translate_format_params = BTTranslateFormatParams(
+                element_id=self.eid,
+                destination_name="exported_assembly",
+                format_name="STL",
+                store_in_document=False,
+            )
+            result = Client.get_client().assemblies_api.translate_format(
+                did=self.did,
+                wv=self.wvm,
+                wvid=self.wvmid,
+                eid=self.eid,
+                bt_translate_format_params=bt_translate_format_params,
+            )
+            translation_id = result.id
+            result = OnshapeElement.poll_translation_result(translation_id)
+            download_id = result.result_external_data_ids[0]
+            file_path.write_bytes(
+                Client.get_client()
+                .documents_api.download_external_data(
+                    did=self.did, fid=download_id, _preload_content=False
+                )
+                .data
+            )
+        else:
+            raise NotImplemented(
+                f"Export for {self.element_type} through the OnshapeElement isn't supported yet."
             )
 
     def create_drawing(self, drawing_name="My Drawing"):
@@ -215,6 +244,9 @@ class OnshapeElement(object):
 
     @property
     def element_type(self):
+        """
+        :return:String "APPLICATION" (for a drawing or 3rd party application), "PARTSTUDIO" or "ASSEMBLY"
+        """
         elements = Client.get_client().documents_api.get_elements_in_document(
             self.did, self.wvm, self.wvmid
         )
@@ -270,6 +302,18 @@ class OnshapeElement(object):
     def drawings(self):
         return self.elements(
             filter_type="APPLICATION", filter_data_type=OnshapeElement.DRAWING_DATA_TYPE
+        )
+
+    def make_version(self, name, **kwargs):
+        result = Client.get_client().documents_api.create_version(
+            self.did,
+            bt_version_or_workspace_params=BTVersionOrWorkspaceParams(
+                name=name, document_id=self.did, **kwargs
+            ),
+            _preload_content=False,
+        )
+        return self.create_from_ids(
+            wvmid=json.loads(result.data)["id"], wvm="v", sibling=self
         )
 
     def s_assembly_insert_message(self):

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin="anonymous"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-jsonschema-form/dist/react-jsonschema-form.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
+    <title>Set Metadata And Add Bounding Box</title>
+</head>
+<body id="my_body" style="padding: 20px">
+
+</body>
+<script type="text/babel">
+
+    const Form = JSONSchemaForm.default;
+    const schema = {
+        "title": "Import Items:",
+        "type": "object",
+        "required": [
+            "doc_name"
+        ],
+        "properties": {
+            "doc_name": {
+                "type": "string",
+                "title": "New document name:",
+                "default": "Imported items"
+            },
+            "import_items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "file": {
+                            "type": "string",
+                            "format": "data-url"
+                        },
+                        "bounding_box": {
+                            "type": "boolean",
+                            "title": "Add bounding box.",
+                            "default": true
+                        },
+                        "part_metadata": {
+                            "type": "object",
+                            "title": "Part properties to be set on imported part",
+                            "properties": {
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "Number": {
+                                    "type": "string"
+                                },
+                                "Tool Number": {
+                                    "type": "string"
+                                },
+                                "Customer": {
+                                    "type": "string"
+                                },
+                                "additionalItems": {
+                                    "title": "Additional properties to be set:",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "property_name": {
+                                                "type": "string",
+                                                "default": "Title 1"
+                                            },
+                                            "new_value": {
+                                                "type": "string",
+                                                "default": "A new title!"
+                                            },
+                                            "part_id": {
+                                                "type": "string",
+                                                "default": "JFD"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        },
+                        "element_metadata": {
+                            "type": "object",
+                            "title": "Element properties to be set on the imported part:",
+                            "properties": {
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "additionalItems": {
+                                    "type": "array",
+                                    "title": "Additional Element properties to be set:",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "property_name": {
+                                                "type": "string"
+                                            },
+                                            "new_value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+    };
+
+    const log = (type) => console.log.bind(console, type);
+
+    const onSubmit = ({formData}, e) => {
+        jQuery(":submit").attr("disabled", true);
+        jQuery.post("http://localhost:9000/", JSON.stringify(formData)).then((response) => replaceWithUrl(response));
+    };
+
+    const replaceWithUrl = (response) => {
+        jQuery("#my_body").replaceWith('<a href=' + response.document_href + ' class="btn btn-primary btn-lg" style="margin: 20px" role="button" aria-disabled="true">Link to new document</a>')
+    };
+
+    ReactDOM.render((
+        <Form schema={schema}
+              onChange={log("changed")}
+              onSubmit={onSubmit}
+              onError={log("errors")}/>
+    ), document.getElementById("my_body"));
+
+
+</script>
+</html>
