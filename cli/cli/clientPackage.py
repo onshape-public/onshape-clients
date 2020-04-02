@@ -107,7 +107,12 @@ class ClientPackage:
 
 class CppPackage(ClientPackage):
     name = "cpp"
-    oas_client_name = "cpp-qt5"
+    oas_client_name = "cpp-restsdk"
+
+    def generate(self):
+        shutil.rmtree(str(self.root_path / "api"))
+        shutil.rmtree(str(self.root_path / "model"))
+        return super().generate()
 
 
 class GoPackage(ClientPackage):
