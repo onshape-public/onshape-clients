@@ -3,10 +3,12 @@ from pathlib import Path
 import re
 import subprocess
 import shutil
+from cli.command_runner import CommandRunner
+from cli.exceptions import CliError
 
 
-class CliError(Exception):
-    pass
+def get_all_client_classes():
+    return [PythonPackage, GoPackage, CppPackage]
 
 
 class ClientPackageMeta:
@@ -17,7 +19,7 @@ class ClientPackageMeta:
         """Decorator to mark the method as an action that can be taken on this client. Only for instance methods."""
 
         def wrapper(self, *args, **kwargs):
-            self.print_divider(f"{func.__name__}ing the {self.name} client.")
+            CommandRunner.print_divider(f"{func.__name__}ing the {self.name} client.")
             func(self, *args, **kwargs)
 
         return wrapper
@@ -29,11 +31,7 @@ class ClientPackage:
     name = "generic"
 
     def __init__(
-        self,
-        repo=Path.cwd(),
-        version_regex=r"\d*\.\d*\.\d*[\w-]",
-        oas_client_name=None,
-        dry_run=False,
+        self, repo=None, version_regex=r"\d*\.\d*\.\d*[\w-]", dry_run=False,
     ):
         """ The base class for client packages. Only things necessary for all clients should go here.
         :param String version_regex: ex "\d*\.\d*\.\d*[\w-]" valid version regex
@@ -42,16 +40,13 @@ class ClientPackage:
         :param Boolean dry_run: If set to true, no commands are actually ran, but it will show which commands would be
         ran.
         """
-        repo = Path(repo)
-        if repo.name != "onshape-clients":
-            raise CliError(
-                f"Most likely calling from the wrong location. Should be in a directory named 'onshape-clients' but "
-                f"instead in '{repo.name}'"
-            )
+        self.repo = (
+            Path(repo) if repo else CommandRunner.get_onshape_clients_path(Path.cwd())
+        )
         name = self.name
-        self.root_path = repo / name
+        self.root_path = self.repo / name
         self.version_regex = version_regex
-        self.oas_client_name = oas_client_name if oas_client_name else name
+        self.oas_client_name = self.oas_client_name if self.oas_client_name else name
         self.dry_run = dry_run
         self.version_to_publish = None
         self.cwd = self.root_path
@@ -66,11 +61,16 @@ class ClientPackage:
     def generate(self):
         """Generate the client with default options. Per client options should be set in
         ./<CLIENT_FOLDER>/openapi_config.json"""
-        self.run(
-            f"openapi-generator-cli generate -i ./openapi.json --skip-validate-spec -g {self.oas_client_name} -o {self.root_path} "
-            f"-c {self.root_path / 'openapi_config.json'}",
-            cwd=self.root_path.parent,
-        )
+        try:
+            self.run(
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.root_path} "
+                f"-c {self.root_path / 'openapi_config.json'}",
+                cwd=self.root_path.parent,
+            )
+        except Exception:
+            raise CliError(
+                "Please install openapi-generator-cli by running $onshape-clients setup -tools openapi-generator-cli"
+            )
 
     @ClientPackageMeta.action
     def set_version(self, version="0.0.0"):
@@ -109,8 +109,10 @@ class ClientPackage:
             return subprocess.CompletedProcess(command, 0)
         return subprocess.run(command, cwd=cwd if cwd else self.cwd)
 
-    def print_divider(self, message):
-        print(f"============= {message} ===============")
+
+class CppPackage(ClientPackage):
+    name = "cpp"
+    oas_client_name = "cpp-qt5"
 
 
 class GoPackage(ClientPackage):
@@ -139,11 +141,7 @@ class GoPackage(ClientPackage):
 
 class PythonPackage(ClientPackage):
     name = "python"
-
-    def __init__(self, **kwargs):
-        super().__init__(
-            oas_client_name="python-experimental", **kwargs,
-        )
+    oas_client_name = "python-experimental"
 
     def set_version(
         self, **kwargs,

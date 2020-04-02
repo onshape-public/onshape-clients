@@ -1,12 +1,23 @@
 """CLI interface."""
 
 import click
-from .clientPackage import PythonPackage, GoPackage
+from .clientPackage import get_all_client_classes, ClientPackage
 from pathlib import Path
+from cli.command_runner import CommandRunner
+from dotenv import load_dotenv
+import os
 
-all_viable_clients = [PythonPackage, GoPackage]
-name_to_client = {clazz.name: clazz for clazz in all_viable_clients}
+
+name_to_client = {clazz.name: clazz for clazz in get_all_client_classes()}
 client_instances = []
+command_runner = {}
+
+
+def get_command_runner() -> CommandRunner:
+    """
+    :return: CommandRunner
+    """
+    return command_runner["root"]
 
 
 def do_client_function(function_name, *args, **kwargs):
@@ -32,7 +43,6 @@ def do_client_function(function_name, *args, **kwargs):
     "--repo",
     envvar="ONSHAPE_CLIENTS_REPO",
     help="Path to the onshape clients repo",
-    default=Path.cwd().absolute(),
 )
 @click.option(
     "-d/",
@@ -45,6 +55,11 @@ def entry(clients, repo, dry_run):
         clients = name_to_client.keys()
     for client in clients:
         client_instances.append(name_to_client[client](repo=repo, dry_run=dry_run))
+    command_runner["root"] = CommandRunner(dry_run=dry_run, cwd=repo)
+    load_dotenv(
+        dotenv_path=CommandRunner.get_onshape_clients_path(Path.cwd()) / "secrets.sh",
+        verbose=True,
+    )
 
 
 @entry.command(
@@ -89,3 +104,32 @@ def lint(fix):
 @entry.command(help="Install the clients for testing.")
 def install():
     do_client_function("install")
+
+
+available_tools = ["openapi-generator-cli"]
+
+
+@entry.command(help="Automate the setup and installation of tools that this CLI uses.")
+@click.option(
+    "--tool",
+    "-t",
+    "tools",
+    help="Select the tool to install and set up.",
+    multiple=True,
+    type=click.Choice(available_tools),
+)
+def setup(tools):
+    if not tools:
+        tools = available_tools
+    if "openapi-generator-cli" in tools:
+        open_api_dir = Path("~/bin/openapitools").expanduser()
+        print(
+            f"Please run the following script: \n\n\
+            \n    mkdir -p {open_api_dir} && \
+            \n    curl https://raw.githubusercontent.com/OpenAPITools/openapi-generator/master/bin/utils/openapi-generator-cli.sh > ~/bin/openapitools/openapi-generator-cli && \
+            \n    chmod u+x {open_api_dir / 'openapi-generator-cli'} && \
+            \n    export PATH=$PATH:{open_api_dir}"
+        )
+        print(
+            "\n\nThen add export PATH=$PATH:~/bin/openapitools/ to your bash_profile to persist changes."
+        )
