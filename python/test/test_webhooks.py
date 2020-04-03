@@ -36,7 +36,7 @@ def tunnel(port):
 
 
 @pytest.fixture
-def webhook_server_factory(html_assets, free_port):
+def webhook_server_factory(free_port):
     """For making a server that can accept Onshape webhooks."""
 
     servers = []
@@ -125,7 +125,6 @@ def webhook_server_factory(html_assets, free_port):
 
 def test_create_version_with_webhook(client, webhook_server_factory, new_document):
     server = webhook_server_factory()
-    client.users_api.session_info().id
 
     params = BTWebhookParams(
         events=["onshape.model.lifecycle.createversion",],
