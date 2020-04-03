@@ -25,10 +25,7 @@ def test_get_documents_simple(client):
     unique_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=8))
     doc = OnshapeElement.create(unique_name)
     time.sleep(5)
-    documents = client.documents_api.get_documents(
-        q=unique_name, _preload_content=False
-    )
-    documents = json.loads(documents.data)
+    documents = client.documents_api.get_documents(q=unique_name)
     doc.delete()
     assert len(documents["items"]) == 1
 

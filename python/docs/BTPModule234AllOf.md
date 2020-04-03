@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**version_number** | **int** |  | [optional] 
+**deep_imports** | **{str: ([bt_import.BTImport],)}** |  | [optional] 
 **is_internal_module** | **bool** |  | [optional] 
 **imports** | [**[btp_top_level_import285.BTPTopLevelImport285]**](BTPTopLevelImport285.md) |  | [optional] 
-**deep_imports** | **{str: ([bt_import.BTImport],)}** |  | [optional] 
-**version_number** | **int** |  | [optional] 
 **path_map** | [**{str: (bt_microversion_id366.BTMicroversionId366,)}**](BTMicroversionId366.md) |  | [optional] 
 **version** | [**btp_literal_number258.BTPLiteralNumber258**](BTPLiteralNumber258.md) |  | [optional] 
 **top_level** | [**[btp_top_level_node286.BTPTopLevelNode286]**](BTPTopLevelNode286.md) |  | [optional] 

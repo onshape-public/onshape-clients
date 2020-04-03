@@ -43,6 +43,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -51,7 +52,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     wvm = 'wvm_example' # str | 
     wvmid = 'wvmid_example' # str | 
     eid = 'eid_example' # str | 
-    body = 'body_example' # str |  (optional)
+    bt_feature_definition_call_1406 = onshape_client.oas.BTFeatureDefinitionCall1406() # bt_feature_definition_call1406.BTFeatureDefinitionCall1406 |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -63,7 +64,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.add_feature(did, wvm, wvmid, eid, body=body)
+        api_response = api_instance.add_feature(did, wvm, wvmid, eid, bt_feature_definition_call_1406=bt_feature_definition_call_1406)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling AssembliesApi->add_feature: %s\n" % e)
@@ -77,7 +78,7 @@ Name | Type | Description  | Notes
  **wvm** | **str**|  |
  **wvmid** | **str**|  |
  **eid** | **str**|  |
- **body** | **str**|  | [optional]
+ **bt_feature_definition_call_1406** | [**bt_feature_definition_call1406.BTFeatureDefinitionCall1406**](BTFeatureDefinitionCall1406.md)|  | [optional]
 
 ### Return type
 
@@ -90,7 +91,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -118,6 +119,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -154,7 +156,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -182,6 +184,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -220,7 +223,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -248,6 +251,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -286,7 +290,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -314,6 +318,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -351,7 +356,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -379,6 +384,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -464,6 +470,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -523,7 +530,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -551,6 +558,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -620,7 +628,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -648,6 +656,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -709,7 +718,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -737,6 +746,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -774,7 +784,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -802,6 +812,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -881,6 +892,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -926,7 +938,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -954,6 +966,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -990,7 +1003,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1013,7 +1026,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.AssembliesApi(api_client)
     did = 'did_example' # str | 
@@ -1059,7 +1072,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1087,6 +1100,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -1125,7 +1139,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1153,6 +1167,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -1190,7 +1205,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1218,6 +1233,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -1258,7 +1274,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1286,6 +1302,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -1333,7 +1350,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |

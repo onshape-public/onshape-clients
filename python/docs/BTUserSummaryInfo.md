@@ -3,19 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**source** | **int** |  | [optional] 
 **company** | [**bt_company_summary_info.BTCompanySummaryInfo**](BTCompanySummaryInfo.md) |  | [optional] 
-**email** | **str** |  | [optional] 
-**first_name** | **str** |  | [optional] 
 **global_permissions** | [**global_permission_info.GlobalPermissionInfo**](GlobalPermissionInfo.md) |  | [optional] 
-**href** | **str** |  | [optional] 
-**id** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
 **is_guest** | **bool** |  | [optional] 
 **is_light** | **bool** |  | [optional] 
 **last_login_time** | **datetime** |  | [optional] 
+**first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
+**href** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**source** | **int** |  | [optional] 
 **state** | **int** |  | [optional] 
 **view_ref** | **str** |  | [optional] 
 

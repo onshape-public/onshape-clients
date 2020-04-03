@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invalid_identifier_for_test** | **str** |  | [optional] 
 **identifier** | **str** |  | [optional] 
+**invalid_identifier_for_test** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 

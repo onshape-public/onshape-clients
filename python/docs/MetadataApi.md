@@ -35,6 +35,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -47,6 +48,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     pid = 'pid_example' # str | 
     configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -57,7 +59,7 @@ link_document_id = 'link_document_id_example' # str |  (optional)
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id)
+        api_instance.get_veop_standard_content_metadata(did, vid, eid, otype, oid, pid, configuration=configuration, link_document_id=link_document_id, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_veop_standard_content_metadata: %s\n" % e)
 ```
@@ -74,6 +76,7 @@ Name | Type | Description  | Notes
  **pid** | **str**|  |
  **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -86,7 +89,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -114,6 +117,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -123,6 +127,8 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     wvmid = 'wvmid_example' # str | 
     link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+depth = '1' # str |  (optional) if omitted the server will use the default value of '1'
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -133,7 +139,7 @@ infer_metadata_owner = False # bool |  (optional) if omitted the server will use
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_wmv_es_metadata(did, wvm, wvmid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+        api_instance.get_wmv_es_metadata(did, wvm, wvmid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner, depth=depth, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_wmv_es_metadata: %s\n" % e)
 ```
@@ -147,6 +153,8 @@ Name | Type | Description  | Notes
  **wvmid** | **str**|  |
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **depth** | **str**|  | [optional] if omitted the server will use the default value of '1'
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -159,7 +167,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -187,6 +195,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -198,6 +207,8 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+depth = '1' # str |  (optional) if omitted the server will use the default value of '1'
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -208,7 +219,7 @@ infer_metadata_owner = False # bool |  (optional) if omitted the server will use
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_wmve_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+        api_instance.get_wmve_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner, depth=depth, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_wmve_metadata: %s\n" % e)
 ```
@@ -224,6 +235,8 @@ Name | Type | Description  | Notes
  **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **depth** | **str**|  | [optional] if omitted the server will use the default value of '1'
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -236,7 +249,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -264,6 +277,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -275,6 +289,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -285,7 +300,7 @@ infer_metadata_owner = False # bool |  (optional) if omitted the server will use
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+        api_instance.get_wmve_ps_metadata(did, wvm, wvmid, eid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_wmve_ps_metadata: %s\n" % e)
 ```
@@ -301,6 +316,7 @@ Name | Type | Description  | Notes
  **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -313,7 +329,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -341,6 +357,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -353,6 +370,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     configuration = 'configuration_example' # str |  (optional)
 link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -363,7 +381,7 @@ infer_metadata_owner = False # bool |  (optional) if omitted the server will use
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+        api_instance.get_wmvep_metadata(did, wvm, wvmid, eid, pid, configuration=configuration, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_wmvep_metadata: %s\n" % e)
 ```
@@ -380,6 +398,7 @@ Name | Type | Description  | Notes
  **configuration** | **str**|  | [optional]
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -392,7 +411,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -420,6 +439,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -429,6 +449,8 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     wvid = 'wvid_example' # str | 
     link_document_id = 'link_document_id_example' # str |  (optional)
 infer_metadata_owner = False # bool |  (optional) if omitted the server will use the default value of False
+depth = '1' # str |  (optional) if omitted the server will use the default value of '1'
+thumbnail = False # bool |  (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     try:
@@ -439,7 +461,7 @@ infer_metadata_owner = False # bool |  (optional) if omitted the server will use
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_instance.get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner)
+        api_instance.get_wv_metadata(did, wv, wvid, link_document_id=link_document_id, infer_metadata_owner=infer_metadata_owner, depth=depth, thumbnail=thumbnail)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling MetadataApi->get_wv_metadata: %s\n" % e)
 ```
@@ -453,6 +475,8 @@ Name | Type | Description  | Notes
  **wvid** | **str**|  |
  **link_document_id** | **str**|  | [optional]
  **infer_metadata_owner** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **depth** | **str**|  | [optional] if omitted the server will use the default value of '1'
+ **thumbnail** | **bool**|  | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -465,7 +489,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -493,6 +517,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -544,7 +569,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -572,6 +597,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -608,7 +634,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -636,6 +662,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -683,7 +710,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -711,6 +738,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://cad.onshape.com
 configuration.host = "https://cad.onshape.com"
+
 # Enter a context with an instance of the API client
 with onshape_client.oas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -762,7 +790,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=UTF-8; qs=0.09
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
