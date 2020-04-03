@@ -57,7 +57,7 @@ class OnshapeElement(object):
         )
         return doc
 
-    def import_file(self, file_path, **kwargs):
+    def import_file(self, file_path, translate=True, **kwargs):
         """Import a file from the local file system. Returns the URL of the resulting element if translated."""
         client = Client.get_client()
         result = client.blob_elements_api.upload_file_create_element(
@@ -67,7 +67,7 @@ class OnshapeElement(object):
             encoded_filename=file_path.name,
             **kwargs,
         )
-        if "translate" in kwargs and kwargs["translate"]:
+        if translate:
             translation_id = result.translation_id
             result = OnshapeElement.poll_translation_result(translation_id)
             element_id = result.result_element_ids[0]
@@ -116,10 +116,7 @@ class OnshapeElement(object):
             )
         elif self.element_type == "Assembly":
             bt_translate_format_params = BTTranslateFormatParams(
-                element_id=self.eid,
-                destination_name="exported_assembly",
-                format_name="STL",
-                store_in_document=False,
+                format_name="PARASOLID", store_in_document=False,
             )
             result = Client.get_client().assemblies_api.translate_format(
                 did=self.did,

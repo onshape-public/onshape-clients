@@ -55,7 +55,7 @@ def client():
 
 @pytest.fixture
 def test_dir():
-    return Path(__file__).parent / "test"
+    return Path(__file__).parent
 
 
 @pytest.fixture

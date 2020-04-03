@@ -8,29 +8,10 @@ ways while it has a major version number of 0. If you run into any issues, feel 
 This repo is responsible for generating and disseminating Onshape clients in multiple languages. These clients are for 
 use by Onshape developer partners. To learn more, visit the [Onshape Developer Portal](https://dev-portal.onshape.com).
 
-## Internal and External Clients
-There are in general two versions of each client at any point in time - the internal facing client, that has full API 
-access and should be used with employee email credentials, and the external client that is only for partner access, and 
-only has access to the publicly documented, and publicly available APIs. From the code perspective, the only difference 
-between the two are the OAS package that is generated for each. However, the internal client has many more tests than
-external client, and handles setting up the necessary fixtures for a given test, internal or external. The two
-different clients are versioned in code as two different branches. Since the internal client is always ahead of the
-external client, it will always be ahead of the external client. Therefore, at any given point in time, we have the
-internal client leading the charge on master, and the external trailing at master-external. 
-
-## Client Versioning
-The client is a first citizen in the Onshape ecosystem, and needs to be tested regularly. The eventual goal is to build 
-the updated client with each API change, and rerun the tests. Ideally, failing tests at that point should break the
-build. Additionally, there needs to be a Jenkins pipeline whereby the clients get built and sent off to their respective
-package managers after each Onshape release.
-
-## Example Applications
-
-This repo also features example client applications for each of the client target languages.  To view these, go to the 
-folder for your language of choice and select the 'example_programs' folder. Within, there will be several brief scripts
-along with a README explaining how to setup and run the client. To view more examples, see the 'tests' folder.
-
-## Development
+### Authentication
+All clients use the same authentication, read by default from `~/.onshape_client_config.yaml`. To add your credentials,
+copy [`.onshape_client_config.yaml`](/.onshape_client_config.yaml) to your home directory, and fill in, at the very least,
+you own api key credentials from the [Onshape Developer Portal](https://dev-portal.onshape.com).
 
 ### Install
 The install steps are different for each client. Navigate to the root directory of the client, and follow the README
