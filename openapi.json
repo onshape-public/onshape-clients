@@ -16623,9 +16623,6 @@
           {
             "type": "object",
             "properties": {
-              "cloudStorageAccountId_": {
-                "type": "string"
-              },
               "importFolder": {
                 "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
               },
@@ -19027,10 +19024,6 @@
           },
           "queryParam": {
             "type": "string"
-          },
-          "queryParam_": {
-            "type": "string",
-            "writeOnly": true
           }
         }
       },
