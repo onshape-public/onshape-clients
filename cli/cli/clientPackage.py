@@ -110,6 +110,13 @@ class ClientPackage:
 class GoPackage(ClientPackage):
     name = "go"
 
+    @ClientPackageMeta.action
+    def publish(self):
+        """Copy the contents of the GO package to a new Github repo to get distributed to the broader GO community.
+        """
+        self.run(f"cp -R {self.root_path} ~/{self.name}")
+        return
+
 
 class PythonPackage(ClientPackage):
     name = "python"
@@ -142,7 +149,7 @@ class PythonPackage(ClientPackage):
 
     @ClientPackageMeta.action
     def test(self, marker=None):
-        result = self.run(f"pipenv run pytest {f'-m {marker}' if marker else ''}")
+        result = self.run(f"pipenv run pytest {f'-m {marker}' if marker else ''} -n 2")
         if result.returncode != 0:
             raise CliError("Error testing client.")
 

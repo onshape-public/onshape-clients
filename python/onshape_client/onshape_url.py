@@ -6,6 +6,7 @@ from onshape_client.client import Client
 from onshape_client.compatible_imports import parse, parse_qs
 from onshape_client.oas import *
 from onshape_client.units import u
+from pathlib import Path
 
 
 class OnshapeElement(object):
@@ -89,56 +90,51 @@ class OnshapeElement(object):
         )
         return OnshapeElement.poll(polling_function, is_polling_done)
 
-    def export_file(self, file_path, **kwargs):
+    def export_file(
+        self, file_path: Path, bt_translate_format_params: BTTranslateFormatParams
+    ):
         """Exports the element this class is pointing to"""
-        if self._get_element_info().data_type == OnshapeElement.DRAWING_DATA_TYPE:
-            result = Client.get_client().drawings_api.create_drawing_translation(
-                did=self.did,
-                wv=self.wvm,
-                wvid=self.wvmid,
-                eid=self.eid,
-                bt_translate_format_params=BTTranslateFormatParams(
-                    element_id=self.eid,
-                    destination_name="exported_drawing",
-                    format_name="PDF",
-                    store_in_document=False,
-                ),
-            )
-            translation_id = result.id
-            result = OnshapeElement.poll_translation_result(translation_id)
-            download_id = result.result_external_data_ids[0]
-            file_path.write_bytes(
-                Client.get_client()
-                .documents_api.download_external_data(
-                    did=self.did, fid=download_id, _preload_content=False
-                )
-                .data
-            )
-        elif self.element_type == "Assembly":
-            bt_translate_format_params = BTTranslateFormatParams(
-                format_name="PARASOLID", store_in_document=False,
-            )
-            result = Client.get_client().assemblies_api.translate_format(
+        bt_translate_format_params.element_id = self.eid
+        kwargs = {}
+        kwargs.update(
+            dict(
                 did=self.did,
                 wv=self.wvm,
                 wvid=self.wvmid,
                 eid=self.eid,
                 bt_translate_format_params=bt_translate_format_params,
             )
-            translation_id = result.id
-            result = OnshapeElement.poll_translation_result(translation_id)
-            download_id = result.result_external_data_ids[0]
-            file_path.write_bytes(
-                Client.get_client()
-                .documents_api.download_external_data(
-                    did=self.did, fid=download_id, _preload_content=False
-                )
-                .data
-            )
+        )
+        if self._get_element_info().data_type == OnshapeElement.DRAWING_DATA_TYPE:
+            func = Client.get_client().drawings_api.create_drawing_translation
+        elif self.element_type == "Assembly":
+            func = Client.get_client().assemblies_api.translate_format
+        elif self.element_type == "Part Studio":
+            func = Client.get_client().part_studios_api.create_part_studio_translation
         else:
             raise NotImplemented(
                 f"Export for {self.element_type} through the OnshapeElement isn't supported yet."
             )
+        result = func(**kwargs)
+        if (
+            "store_in_document" in bt_translate_format_params.to_dict()
+            and bt_translate_format_params.store_in_document
+        ):
+            return
+        translation_id = result.id
+        result = OnshapeElement.poll_translation_result(translation_id)
+        if result.result_external_data_ids:
+            count = 0
+            for download_id in result.result_external_data_ids:
+                file_path.write_bytes(
+                    Client.get_client()
+                    .documents_api.download_external_data(
+                        did=self.did, fid=download_id, _preload_content=False
+                    )
+                    .data
+                )
+                count = count+1
+                file_path.with_name(f"{file_path.name}-{count}")
 
     def create_drawing(self, drawing_name="My Drawing"):
         """Create a four view drawing of the current element"""

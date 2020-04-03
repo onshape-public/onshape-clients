@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_open_api**
-> open_api.OpenAPI get_open_api()
+> get_open_api()
 
 OpenAPI spec documentation for the Onshape REST API.
 
@@ -21,7 +21,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.OpenAPIApi(api_client)
     excluded_tags = 'excluded_tags_example' # str | If an operation contains an excluded tag, it is not returned from this endpoint. (optional)
@@ -33,8 +33,7 @@ documentation_status = ['documentation_status_example'] # [str] | Only return en
     # and optional values
     try:
         # OpenAPI spec documentation for the Onshape REST API.
-        api_response = api_instance.get_open_api(excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
-        pprint(api_response)
+        api_instance.get_open_api(excluded_tags=excluded_tags, included_tags=included_tags, include_deprecated=include_deprecated, documentation_status=documentation_status)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling OpenAPIApi->get_open_api: %s\n" % e)
 ```
@@ -50,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**open_api.OpenAPI**](OpenAPI.md)
+void (empty response body)
 
 ### Authorization
 
@@ -59,7 +58,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v1+yaml;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2, application/json;charset=UTF-8; qs=0.09, application/yaml;charset=UTF-8; qs=0.09
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

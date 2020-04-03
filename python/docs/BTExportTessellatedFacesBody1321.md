@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**faces** | [**[bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192]**](BTExportTessellatedFacesFace1192.md) |  | [optional] 
 **body_type** | **str** |  | [optional] 
 **appearance** | [**bt_graphics_appearance1152.BTGraphicsAppearance1152**](BTGraphicsAppearance1152.md) |  | [optional] 
-**faces** | [**[bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192]**](BTExportTessellatedFacesFace1192.md) |  | [optional] 
 **facet_points** | [**[bt_vector3d389.BTVector3d389]**](BTVector3d389.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **constituents** | **[str]** |  | [optional] 

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **max_number_of_picks** | **int** |  | [optional] 
-**allow_assemblies** | **bool** |  | [optional] 
 **allowed_insertable_types** | **[str]** |  | [optional] 
+**allow_assemblies** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 

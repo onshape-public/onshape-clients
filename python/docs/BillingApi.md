@@ -21,7 +21,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.BillingApi(api_client)
     cid = 'cid_example' # str | 

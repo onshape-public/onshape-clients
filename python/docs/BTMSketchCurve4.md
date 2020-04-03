@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
-**geometry** | [**bt_curve_geometry114.BTCurveGeometry114**](BTCurveGeometry114.md) |  | [optional] 
 **center_id** | **str** |  | [optional] 
 **internal_ids** | **[str]** |  | [optional] 
+**geometry** | [**bt_curve_geometry114.BTCurveGeometry114**](BTCurveGeometry114.md) |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 

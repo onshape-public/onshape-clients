@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **type** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
+**standard_type_name** | **str** |  | [optional] 
 **type_tag** | **str** |  | [optional] 
 **value_object** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
 

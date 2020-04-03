@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **namespace** | **str** |  | [optional] 
-**enum_value** | **str** |  | [optional] 
 **enum_name** | **str** |  | [optional] 
+**enum_value** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

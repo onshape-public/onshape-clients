@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **is_included** | **bool** |  | [optional] 
-**not_editable_in_version_properties** | [**bt_release_package_item_params_not_editable_in_version_properties.BTReleasePackageItemParamsNotEditableInVersionProperties**](BTReleasePackageItemParamsNotEditableInVersionProperties.md) |  | [optional] 
 **part_id** | **str** |  | [optional] 
 **part_number** | **str** |  | [optional] 
 **properties** | [**[bt_property_value_param.BTPropertyValueParam]**](BTPropertyValueParam.md) |  | [optional] 

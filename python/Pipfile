@@ -16,8 +16,9 @@ pytest-console-scripts = "*"
 tox-pipenv = "*"
 tox = "*"
 black = "*"
-onshape-client = {path = ".",editable = true}
+onshape-client = {editable = true,path = "."}
 pytest-timeout = "*"
+pytest-xdist = "*"
 
 [packages]
 urllib3 = "*"

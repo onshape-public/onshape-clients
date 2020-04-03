@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **import_microversion** | **str** |  | [optional] 
 **for_export** | **bool** |  | [optional] 
-**operator** | **str** |  | [optional] 
 **operand1** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **operand2** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
+**operator** | **str** |  | [optional] 
 **global_namespace** | **bool** |  | [optional] 
 **written_as_function_call** | **bool** |  | [optional] 
 **space_after_namespace** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 

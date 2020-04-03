@@ -23,7 +23,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.UsersApi(api_client)
     uid = 'uid_example' # str | 
@@ -63,7 +63,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -86,7 +86,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.UsersApi(api_client)
     includematerials = True # bool |  (optional) if omitted the server will use the default value of True
@@ -117,7 +117,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -140,7 +140,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.UsersApi(api_client)
     
@@ -166,7 +166,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/json;charset=UTF-8; qs=0.09
+ - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1
 
 ### HTTP response details
 | Status code | Description | Response headers |

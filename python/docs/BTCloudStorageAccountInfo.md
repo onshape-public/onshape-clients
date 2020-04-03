@@ -3,23 +3,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_type** | **str** |  | 
-**cloud_storage_account_id_** | **str** |  | [optional] 
+**enabled** | **bool** |  | [optional] 
 **import_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
 **export_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
 **cloud_storage_provider** | **int** |  | [optional] 
 **cloud_storage_account_id** | **str** |  | [optional] 
-**enabled** | **bool** |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**has_pending_owner** | **bool** |  | [optional] 
 **href** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **is_container** | **bool** |  | [optional] 
 **is_enterprise_owned** | **bool** |  | [optional] 
 **is_mutable** | **bool** |  | [optional] 
+**json_type** | **str** |  | [optional] 
 **modified_at** | **datetime** |  | [optional] 
 **modified_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 
 **name** | **str** |  | [optional] 

@@ -14,7 +14,6 @@ from ruamel.yaml import YAML
 
 collect_ignore = ["setup.py"]
 
-
 @pytest.fixture
 def element_bank(client, assets):
     yaml = YAML()
@@ -29,7 +28,7 @@ def element_bank(client, assets):
 
 
 @pytest.fixture
-def element(request, client, element_bank):
+def element(request, client, element_bank) -> OnshapeElement:
     """ Get a particular element from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly',
     ['three_axes'], indirect=True)`
     :param request:
@@ -51,6 +50,16 @@ def client():
     except Exception as e:
         client = Client(stack_key="onshape_client_test")
     return client
+
+
+@pytest.fixture
+def translator_formats(client):
+    return client.translation_api.get_all_translator_formats()
+
+
+@pytest.fixture
+def translator_format_to_extension():
+    return {"PARASOLID": "x_t", "PDF": "pdf"}
 
 
 @pytest.fixture

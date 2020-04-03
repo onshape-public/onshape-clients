@@ -22,7 +22,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.VersionsApi(api_client)
     body = 'body_example' # str |  (optional)
@@ -51,8 +51,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2, application/json;charset=UTF-8; qs=0.09
+ - **Content-Type**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -75,7 +75,7 @@ import onshape_client.oas
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with onshape_client.oas.ApiClient(configuration) as api_client:
+with onshape_client.oas.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = onshape_client.oas.VersionsApi(api_client)
     body = 'body_example' # str |  (optional)
@@ -104,8 +104,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=UTF-8; qs=0.09, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
- - **Accept**: application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1, application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2, application/json;charset=UTF-8; qs=0.09
+ - **Content-Type**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
+ - **Accept**: application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2
 
 ### HTTP response details
 | Status code | Description | Response headers |
