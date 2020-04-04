@@ -53,6 +53,8 @@ class ClientPackage:
         self.version_regex = version_regex
         self.oas_client_name = oas_client_name if oas_client_name else name
         self.dry_run = dry_run
+        self.version_to_publish = None
+        self.cwd = self.root_path
 
     def __getattr__(self, name):
         def skip_func(*args, **kwargs):
@@ -69,6 +71,10 @@ class ClientPackage:
             f"-c {self.root_path / 'openapi_config.json'}",
             cwd=self.root_path.parent,
         )
+
+    @ClientPackageMeta.action
+    def set_version(self, version="0.0.0"):
+        self.version_to_publish=version
 
     def set_version_in_source(
         self,
@@ -101,7 +107,7 @@ class ClientPackage:
         # Dry runs should pretend the command succeeded.
         if self.dry_run:
             return subprocess.CompletedProcess(command, 0)
-        return subprocess.run(command, cwd=cwd if cwd else self.root_path)
+        return subprocess.run(command, cwd=cwd if cwd else self.cwd)
 
     def print_divider(self, message):
         print(f"============= {message} ===============")
@@ -114,8 +120,21 @@ class GoPackage(ClientPackage):
     def publish(self):
         """Copy the contents of the GO package to a new Github repo to get distributed to the broader GO community.
         """
-        self.run(f"cp -R {self.root_path} ~/{self.name}")
+        source = self.root_path
+        destination = Path.home()/self.name
+        if destination.exists():
+            shutil.rmtree(destination)
+        shutil.copytree(str(source), str(destination))
+        self.cwd = destination
+        self.run("git init")
+        self.run("git remote add origin https://github.com/onshape-public/onshape-go-client.git")
+        self.run("git add .")
+        self.run(f'git commit -m "v{self.version_to_publish}"')
+        self.run(f"git tag v{self.version_to_publish}")
+        self.run("git push --set-upstream origin master -f --tags")
         return
+
+
 
 
 class PythonPackage(ClientPackage):
