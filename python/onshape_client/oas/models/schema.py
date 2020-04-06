@@ -29,21 +29,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import discriminator
 except ImportError:
-    discriminator = sys.modules[
-        'onshape_client.oas.models.discriminator']
+    discriminator = sys.modules["onshape_client.oas.models.discriminator"]
 try:
     from onshape_client.oas.models import external_documentation
 except ImportError:
     external_documentation = sys.modules[
-        'onshape_client.oas.models.external_documentation']
+        "onshape_client.oas.models.external_documentation"
+    ]
 try:
     from onshape_client.oas.models import xml
 except ImportError:
-    xml = sys.modules[
-        'onshape_client.oas.models.xml']
+    xml = sys.modules["onshape_client.oas.models.xml"]
 
 
 class Schema(ModelNormal):
@@ -70,11 +70,9 @@ class Schema(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -89,39 +87,72 @@ class Schema(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'additional_properties': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'default': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'deprecated': (bool,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'discriminator': (discriminator.Discriminator,),  # noqa: E501
-            'enum': ([bool, date, datetime, dict, float, int, list, str],),  # noqa: E501
-            'example': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'exclusive_maximum': (bool,),  # noqa: E501
-            'exclusive_minimum': (bool,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'external_docs': (external_documentation.ExternalDocumentation,),  # noqa: E501
-            'format': (str,),  # noqa: E501
-            'getref': (str,),  # noqa: E501
-            'max_items': (int,),  # noqa: E501
-            'max_length': (int,),  # noqa: E501
-            'max_properties': (int,),  # noqa: E501
-            'maximum': (float,),  # noqa: E501
-            'min_items': (int,),  # noqa: E501
-            'min_length': (int,),  # noqa: E501
-            'min_properties': (int,),  # noqa: E501
-            'minimum': (float,),  # noqa: E501
-            'multiple_of': (float,),  # noqa: E501
-            '_not': (Schema,),  # noqa: E501
-            'nullable': (bool,),  # noqa: E501
-            'pattern': (str,),  # noqa: E501
-            'properties': ({str: (Schema,)},),  # noqa: E501
-            'read_only': (bool,),  # noqa: E501
-            'required': ([str],),  # noqa: E501
-            'title': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
-            'unique_items': (bool,),  # noqa: E501
-            'write_only': (bool,),  # noqa: E501
-            'xml': (xml.XML,),  # noqa: E501
+            "additional_properties": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "default": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "discriminator": (discriminator.Discriminator,),  # noqa: E501
+            "enum": (
+                [bool, date, datetime, dict, float, int, list, str],
+            ),  # noqa: E501
+            "example": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "exclusive_maximum": (bool,),  # noqa: E501
+            "exclusive_minimum": (bool,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "external_docs": (
+                external_documentation.ExternalDocumentation,
+            ),  # noqa: E501
+            "format": (str,),  # noqa: E501
+            "getref": (str,),  # noqa: E501
+            "max_items": (int,),  # noqa: E501
+            "max_length": (int,),  # noqa: E501
+            "max_properties": (int,),  # noqa: E501
+            "maximum": (float,),  # noqa: E501
+            "min_items": (int,),  # noqa: E501
+            "min_length": (int,),  # noqa: E501
+            "min_properties": (int,),  # noqa: E501
+            "minimum": (float,),  # noqa: E501
+            "multiple_of": (float,),  # noqa: E501
+            "_not": (Schema,),  # noqa: E501
+            "nullable": (bool,),  # noqa: E501
+            "pattern": (str,),  # noqa: E501
+            "properties": ({str: (Schema,)},),  # noqa: E501
+            "read_only": (bool,),  # noqa: E501
+            "required": ([str],),  # noqa: E501
+            "title": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "unique_items": (bool,),  # noqa: E501
+            "write_only": (bool,),  # noqa: E501
+            "xml": (xml.XML,),  # noqa: E501
         }
 
     @staticmethod
@@ -129,54 +160,63 @@ class Schema(ModelNormal):
         return None
 
     attribute_map = {
-        'additional_properties': 'additionalProperties',  # noqa: E501
-        'default': 'default',  # noqa: E501
-        'deprecated': 'deprecated',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'discriminator': 'discriminator',  # noqa: E501
-        'enum': 'enum',  # noqa: E501
-        'example': 'example',  # noqa: E501
-        'exclusive_maximum': 'exclusiveMaximum',  # noqa: E501
-        'exclusive_minimum': 'exclusiveMinimum',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'external_docs': 'externalDocs',  # noqa: E501
-        'format': 'format',  # noqa: E501
-        'getref': 'get$ref',  # noqa: E501
-        'max_items': 'maxItems',  # noqa: E501
-        'max_length': 'maxLength',  # noqa: E501
-        'max_properties': 'maxProperties',  # noqa: E501
-        'maximum': 'maximum',  # noqa: E501
-        'min_items': 'minItems',  # noqa: E501
-        'min_length': 'minLength',  # noqa: E501
-        'min_properties': 'minProperties',  # noqa: E501
-        'minimum': 'minimum',  # noqa: E501
-        'multiple_of': 'multipleOf',  # noqa: E501
-        '_not': 'not',  # noqa: E501
-        'nullable': 'nullable',  # noqa: E501
-        'pattern': 'pattern',  # noqa: E501
-        'properties': 'properties',  # noqa: E501
-        'read_only': 'readOnly',  # noqa: E501
-        'required': 'required',  # noqa: E501
-        'title': 'title',  # noqa: E501
-        'type': 'type',  # noqa: E501
-        'unique_items': 'uniqueItems',  # noqa: E501
-        'write_only': 'writeOnly',  # noqa: E501
-        'xml': 'xml',  # noqa: E501
+        "additional_properties": "additionalProperties",  # noqa: E501
+        "default": "default",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "discriminator": "discriminator",  # noqa: E501
+        "enum": "enum",  # noqa: E501
+        "example": "example",  # noqa: E501
+        "exclusive_maximum": "exclusiveMaximum",  # noqa: E501
+        "exclusive_minimum": "exclusiveMinimum",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "external_docs": "externalDocs",  # noqa: E501
+        "format": "format",  # noqa: E501
+        "getref": "get$ref",  # noqa: E501
+        "max_items": "maxItems",  # noqa: E501
+        "max_length": "maxLength",  # noqa: E501
+        "max_properties": "maxProperties",  # noqa: E501
+        "maximum": "maximum",  # noqa: E501
+        "min_items": "minItems",  # noqa: E501
+        "min_length": "minLength",  # noqa: E501
+        "min_properties": "minProperties",  # noqa: E501
+        "minimum": "minimum",  # noqa: E501
+        "multiple_of": "multipleOf",  # noqa: E501
+        "_not": "not",  # noqa: E501
+        "nullable": "nullable",  # noqa: E501
+        "pattern": "pattern",  # noqa: E501
+        "properties": "properties",  # noqa: E501
+        "read_only": "readOnly",  # noqa: E501
+        "required": "required",  # noqa: E501
+        "title": "title",  # noqa: E501
+        "type": "type",  # noqa: E501
+        "unique_items": "uniqueItems",  # noqa: E501
+        "write_only": "writeOnly",  # noqa: E501
+        "xml": "xml",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """schema.Schema - a model defined in OpenAPI
 
 

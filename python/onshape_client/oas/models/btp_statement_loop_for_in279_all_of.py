@@ -30,21 +30,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules[
-        'onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules["onshape_client.oas.models.btp_expression9"]
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules[
-        'onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules["onshape_client.oas.models.btp_identifier8"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPStatementLoopForIn279AllOf(ModelNormal):
@@ -72,22 +70,21 @@ class BTPStatementLoopForIn279AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('standard_type',): {
-            'UNDEFINED': "UNDEFINED",
-            'BOOLEAN': "BOOLEAN",
-            'NUMBER': "NUMBER",
-            'STRING': "STRING",
-            'ARRAY': "ARRAY",
-            'MAP': "MAP",
-            'BOX': "BOX",
-            'BUILTIN': "BUILTIN",
-            'FUNCTION': "FUNCTION",
-            'UNKNOWN': "UNKNOWN",
+        ("standard_type",): {
+            "UNDEFINED": "UNDEFINED",
+            "BOOLEAN": "BOOLEAN",
+            "NUMBER": "NUMBER",
+            "STRING": "STRING",
+            "ARRAY": "ARRAY",
+            "MAP": "MAP",
+            "BOX": "BOX",
+            "BUILTIN": "BUILTIN",
+            "FUNCTION": "FUNCTION",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -102,14 +99,14 @@ class BTPStatementLoopForIn279AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'standard_type': (str,),  # noqa: E501
-            'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'type_name': (str,),  # noqa: E501
-            'container': (btp_expression9.BTPExpression9,),  # noqa: E501
-            'var': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'is_var_declared_here': (bool,),  # noqa: E501
-            'space_before_var': (btp_space10.BTPSpace10,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "standard_type": (str,),  # noqa: E501
+            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "type_name": (str,),  # noqa: E501
+            "container": (btp_expression9.BTPExpression9,),  # noqa: E501
+            "var": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "is_var_declared_here": (bool,),  # noqa: E501
+            "space_before_var": (btp_space10.BTPSpace10,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -117,29 +114,38 @@ class BTPStatementLoopForIn279AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'standard_type': 'standardType',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'type_name': 'typeName',  # noqa: E501
-        'container': 'container',  # noqa: E501
-        'var': 'var',  # noqa: E501
-        'is_var_declared_here': 'isVarDeclaredHere',  # noqa: E501
-        'space_before_var': 'spaceBeforeVar',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "standard_type": "standardType",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "type_name": "typeName",  # noqa: E501
+        "container": "container",  # noqa: E501
+        "var": "var",  # noqa: E501
+        "is_var_declared_here": "isVarDeclaredHere",  # noqa: E501
+        "space_before_var": "spaceBeforeVar",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_statement_loop_for_in279_all_of.BTPStatementLoopForIn279AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -173,10 +179,12 @@ class BTPStatementLoopForIn279AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

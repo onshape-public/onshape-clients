@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_feature_state1688
 except ImportError:
-    bt_feature_state1688 = sys.modules[
-        'onshape_client.oas.models.bt_feature_state1688']
+    bt_feature_state1688 = sys.modules["onshape_client.oas.models.bt_feature_state1688"]
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
     btm_assembly_feature887 = sys.modules[
-        'onshape_client.oas.models.btm_assembly_feature887']
+        "onshape_client.oas.models.btm_assembly_feature887"
+    ]
 
 
 class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
@@ -66,11 +67,9 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,10 +84,14 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'features': ([btm_assembly_feature887.BTMAssemblyFeature887],),  # noqa: E501
-            'is_complete': (bool,),  # noqa: E501
-            'feature_states': ({str: (bt_feature_state1688.BTFeatureState1688,)},),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "features": (
+                [btm_assembly_feature887.BTMAssemblyFeature887],
+            ),  # noqa: E501
+            "is_complete": (bool,),  # noqa: E501
+            "feature_states": (
+                {str: (bt_feature_state1688.BTFeatureState1688,)},
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,25 +99,34 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'features': 'features',  # noqa: E501
-        'is_complete': 'isComplete',  # noqa: E501
-        'feature_states': 'featureStates',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "features": "features",  # noqa: E501
+        "is_complete": "isComplete",  # noqa: E501
+        "feature_states": "featureStates",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_assembly_feature_list_response1174_all_of.BTAssemblyFeatureListResponse1174AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -144,10 +156,12 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

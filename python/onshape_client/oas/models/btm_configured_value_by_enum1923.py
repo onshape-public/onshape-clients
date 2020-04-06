@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_configured_value1341
 except ImportError:
     btm_configured_value1341 = sys.modules[
-        'onshape_client.oas.models.btm_configured_value1341']
+        "onshape_client.oas.models.btm_configured_value1341"
+    ]
 try:
     from onshape_client.oas.models import btm_configured_value_by_enum1923_all_of
 except ImportError:
     btm_configured_value_by_enum1923_all_of = sys.modules[
-        'onshape_client.oas.models.btm_configured_value_by_enum1923_all_of']
+        "onshape_client.oas.models.btm_configured_value_by_enum1923_all_of"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTMConfiguredValueByEnum1923(ModelComposed):
@@ -71,11 +73,9 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,14 +90,14 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'namespace': (str,),  # noqa: E501
-            'enum_name': (str,),  # noqa: E501
-            'enum_value': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'configuration_value_string': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'value': (btm_parameter1.BTMParameter1,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "enum_name": (str,),  # noqa: E501
+            "enum_value": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "configuration_value_string": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "value": (btm_parameter1.BTMParameter1,),  # noqa: E501
         }
 
     @staticmethod
@@ -105,28 +105,37 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
         return None
 
     attribute_map = {
-        'namespace': 'namespace',  # noqa: E501
-        'enum_name': 'enumName',  # noqa: E501
-        'enum_value': 'enumValue',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'configuration_value_string': 'configurationValueString',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'value': 'value',  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "enum_name": "enumName",  # noqa: E501
+        "enum_value": "enumValue",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "configuration_value_string": "configurationValueString",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "value": "value",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_configured_value_by_enum1923.BTMConfiguredValueByEnum1923 - a model defined in OpenAPI
 
         Keyword Args:
@@ -160,13 +169,12 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -175,8 +183,7 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -185,10 +192,12 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -203,12 +212,10 @@ class BTMConfiguredValueByEnum1923(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btm_configured_value1341.BTMConfiguredValue1341,
-              btm_configured_value_by_enum1923_all_of.BTMConfiguredValueByEnum1923AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btm_configured_value1341.BTMConfiguredValue1341,
+                btm_configured_value_by_enum1923_all_of.BTMConfiguredValueByEnum1923AllOf,
+            ],
+            "oneOf": [],
         }

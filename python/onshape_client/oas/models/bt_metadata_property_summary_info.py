@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_metadata_property_config_summary_info
 except ImportError:
     bt_metadata_property_config_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_metadata_property_config_summary_info']
+        "onshape_client.oas.models.bt_metadata_property_config_summary_info"
+    ]
 
 
 class BTMetadataPropertySummaryInfo(ModelNormal):
@@ -61,11 +63,9 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,20 +80,24 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'description': (str,),  # noqa: E501
-            'editable_in_microversion': (bool,),  # noqa: E501
-            'editable_in_version': (bool,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'owner_id': (str,),  # noqa: E501
-            'owner_type': (int,),  # noqa: E501
-            'property_config_summary_info_list': ([bt_metadata_property_config_summary_info.BTMetadataPropertyConfigSummaryInfo],),  # noqa: E501
-            'ui_readonly_in_microversion': (bool,),  # noqa: E501
-            'ui_readonly_in_version': (bool,),  # noqa: E501
-            'value_type': (int,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "editable_in_microversion": (bool,),  # noqa: E501
+            "editable_in_version": (bool,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "owner_id": (str,),  # noqa: E501
+            "owner_type": (int,),  # noqa: E501
+            "property_config_summary_info_list": (
+                [
+                    bt_metadata_property_config_summary_info.BTMetadataPropertyConfigSummaryInfo
+                ],
+            ),  # noqa: E501
+            "ui_readonly_in_microversion": (bool,),  # noqa: E501
+            "ui_readonly_in_version": (bool,),  # noqa: E501
+            "value_type": (int,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,35 +105,44 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'description': 'description',  # noqa: E501
-        'editable_in_microversion': 'editableInMicroversion',  # noqa: E501
-        'editable_in_version': 'editableInVersion',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'owner_id': 'ownerId',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
-        'property_config_summary_info_list': 'propertyConfigSummaryInfoList',  # noqa: E501
-        'ui_readonly_in_microversion': 'uiReadonlyInMicroversion',  # noqa: E501
-        'ui_readonly_in_version': 'uiReadonlyInVersion',  # noqa: E501
-        'value_type': 'valueType',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "description": "description",  # noqa: E501
+        "editable_in_microversion": "editableInMicroversion",  # noqa: E501
+        "editable_in_version": "editableInVersion",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "owner_id": "ownerId",  # noqa: E501
+        "owner_type": "ownerType",  # noqa: E501
+        "property_config_summary_info_list": "propertyConfigSummaryInfoList",  # noqa: E501
+        "ui_readonly_in_microversion": "uiReadonlyInMicroversion",  # noqa: E501
+        "ui_readonly_in_version": "uiReadonlyInVersion",  # noqa: E501
+        "value_type": "valueType",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_metadata_property_summary_info.BTMetadataPropertySummaryInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -169,10 +182,12 @@ class BTMetadataPropertySummaryInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

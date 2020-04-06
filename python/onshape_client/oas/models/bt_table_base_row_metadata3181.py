@@ -30,26 +30,31 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_base_sm_joint_table_row_metadata2232
 except ImportError:
     bt_base_sm_joint_table_row_metadata2232 = sys.modules[
-        'onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232']
+        "onshape_client.oas.models.bt_base_sm_joint_table_row_metadata2232"
+    ]
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table_row_metadata1300
 except ImportError:
     bt_bill_of_materials_table_row_metadata1300 = sys.modules[
-        'onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300']
+        "onshape_client.oas.models.bt_bill_of_materials_table_row_metadata1300"
+    ]
 try:
     from onshape_client.oas.models import bt_table_base_cross_highlight_data2609
 except ImportError:
     bt_table_base_cross_highlight_data2609 = sys.modules[
-        'onshape_client.oas.models.bt_table_base_cross_highlight_data2609']
+        "onshape_client.oas.models.bt_table_base_cross_highlight_data2609"
+    ]
 try:
     from onshape_client.oas.models import btfs_table_row_metadata2262
 except ImportError:
     btfs_table_row_metadata2262 = sys.modules[
-        'onshape_client.oas.models.btfs_table_row_metadata2262']
+        "onshape_client.oas.models.btfs_table_row_metadata2262"
+    ]
 
 
 class BTTableBaseRowMetadata3181(ModelNormal):
@@ -76,11 +81,9 @@ class BTTableBaseRowMetadata3181(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,38 +98,49 @@ class BTTableBaseRowMetadata3181(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'cross_highlight_data_if_any': (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "cross_highlight_data_if_any": (
+                bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,
+            ),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTFSTableRowMetadata-2262': btfs_table_row_metadata2262.BTFSTableRowMetadata2262,
-                'BTBillOfMaterialsTableRowMetadata-1300': bt_bill_of_materials_table_row_metadata1300.BTBillOfMaterialsTableRowMetadata1300,
-                'BTBaseSMJointTableRowMetadata-2232': bt_base_sm_joint_table_row_metadata2232.BTBaseSMJointTableRowMetadata2232,
+            "bt_type": {
+                "BTFSTableRowMetadata-2262": btfs_table_row_metadata2262.BTFSTableRowMetadata2262,
+                "BTBillOfMaterialsTableRowMetadata-1300": bt_bill_of_materials_table_row_metadata1300.BTBillOfMaterialsTableRowMetadata1300,
+                "BTBaseSMJointTableRowMetadata-2232": bt_base_sm_joint_table_row_metadata2232.BTBaseSMJointTableRowMetadata2232,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'cross_highlight_data_if_any': 'crossHighlightDataIfAny',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "cross_highlight_data_if_any": "crossHighlightDataIfAny",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_table_base_row_metadata3181.BTTableBaseRowMetadata3181 - a model defined in OpenAPI
 
         Keyword Args:
@@ -154,10 +168,12 @@ class BTTableBaseRowMetadata3181(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

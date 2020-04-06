@@ -56,11 +56,9 @@ class BTMoveElementInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,13 +73,13 @@ class BTMoveElementInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'element_original_to_new_map': ({str: (str,)},),  # noqa: E501
-            'error_message': (str,),  # noqa: E501
-            'is_new_document': (bool,),  # noqa: E501
-            'new_document_id': (str,),  # noqa: E501
-            'new_document_name': (str,),  # noqa: E501
-            'new_document_version_id': (str,),  # noqa: E501
-            'new_workspace_id': (str,),  # noqa: E501
+            "element_original_to_new_map": ({str: (str,)},),  # noqa: E501
+            "error_message": (str,),  # noqa: E501
+            "is_new_document": (bool,),  # noqa: E501
+            "new_document_id": (str,),  # noqa: E501
+            "new_document_name": (str,),  # noqa: E501
+            "new_document_version_id": (str,),  # noqa: E501
+            "new_workspace_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,28 +87,37 @@ class BTMoveElementInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'element_original_to_new_map': 'elementOriginalToNewMap',  # noqa: E501
-        'error_message': 'errorMessage',  # noqa: E501
-        'is_new_document': 'isNewDocument',  # noqa: E501
-        'new_document_id': 'newDocumentId',  # noqa: E501
-        'new_document_name': 'newDocumentName',  # noqa: E501
-        'new_document_version_id': 'newDocumentVersionId',  # noqa: E501
-        'new_workspace_id': 'newWorkspaceId',  # noqa: E501
+        "element_original_to_new_map": "elementOriginalToNewMap",  # noqa: E501
+        "error_message": "errorMessage",  # noqa: E501
+        "is_new_document": "isNewDocument",  # noqa: E501
+        "new_document_id": "newDocumentId",  # noqa: E501
+        "new_document_name": "newDocumentName",  # noqa: E501
+        "new_document_version_id": "newDocumentVersionId",  # noqa: E501
+        "new_workspace_id": "newWorkspaceId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_move_element_info.BTMoveElementInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -143,10 +150,12 @@ class BTMoveElementInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

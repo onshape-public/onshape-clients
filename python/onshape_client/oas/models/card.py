@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import three_d_secure
 except ImportError:
-    three_d_secure = sys.modules[
-        'onshape_client.oas.models.three_d_secure']
+    three_d_secure = sys.modules["onshape_client.oas.models.three_d_secure"]
 
 
 class Card(ModelNormal):
@@ -61,11 +61,9 @@ class Card(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,41 +78,41 @@ class Card(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'account': (str,),  # noqa: E501
-            'address_city': (str,),  # noqa: E501
-            'address_country': (str,),  # noqa: E501
-            'address_line1': (str,),  # noqa: E501
-            'address_line1_check': (str,),  # noqa: E501
-            'address_line2': (str,),  # noqa: E501
-            'address_state': (str,),  # noqa: E501
-            'address_zip': (str,),  # noqa: E501
-            'address_zip_check': (str,),  # noqa: E501
-            'available_payout_methods': ([str],),  # noqa: E501
-            'brand': (str,),  # noqa: E501
-            'country': (str,),  # noqa: E501
-            'currency': (str,),  # noqa: E501
-            'customer': (str,),  # noqa: E501
-            'cvc_check': (str,),  # noqa: E501
-            'default_for_currency': (bool,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'dynamic_last4': (str,),  # noqa: E501
-            'exp_month': (int,),  # noqa: E501
-            'exp_year': (int,),  # noqa: E501
-            'fingerprint': (str,),  # noqa: E501
-            'funding': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'iin': (str,),  # noqa: E501
-            'instance_url': (str,),  # noqa: E501
-            'issuer': (str,),  # noqa: E501
-            'last4': (str,),  # noqa: E501
-            'metadata': ({str: (str,)},),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'object': (str,),  # noqa: E501
-            'recipient': (str,),  # noqa: E501
-            'status': (str,),  # noqa: E501
-            'three_d_secure': (three_d_secure.ThreeDSecure,),  # noqa: E501
-            'tokenization_method': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "account": (str,),  # noqa: E501
+            "address_city": (str,),  # noqa: E501
+            "address_country": (str,),  # noqa: E501
+            "address_line1": (str,),  # noqa: E501
+            "address_line1_check": (str,),  # noqa: E501
+            "address_line2": (str,),  # noqa: E501
+            "address_state": (str,),  # noqa: E501
+            "address_zip": (str,),  # noqa: E501
+            "address_zip_check": (str,),  # noqa: E501
+            "available_payout_methods": ([str],),  # noqa: E501
+            "brand": (str,),  # noqa: E501
+            "country": (str,),  # noqa: E501
+            "currency": (str,),  # noqa: E501
+            "customer": (str,),  # noqa: E501
+            "cvc_check": (str,),  # noqa: E501
+            "default_for_currency": (bool,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "dynamic_last4": (str,),  # noqa: E501
+            "exp_month": (int,),  # noqa: E501
+            "exp_year": (int,),  # noqa: E501
+            "fingerprint": (str,),  # noqa: E501
+            "funding": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "iin": (str,),  # noqa: E501
+            "instance_url": (str,),  # noqa: E501
+            "issuer": (str,),  # noqa: E501
+            "last4": (str,),  # noqa: E501
+            "metadata": ({str: (str,)},),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "object": (str,),  # noqa: E501
+            "recipient": (str,),  # noqa: E501
+            "status": (str,),  # noqa: E501
+            "three_d_secure": (three_d_secure.ThreeDSecure,),  # noqa: E501
+            "tokenization_method": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -122,56 +120,65 @@ class Card(ModelNormal):
         return None
 
     attribute_map = {
-        'account': 'account',  # noqa: E501
-        'address_city': 'addressCity',  # noqa: E501
-        'address_country': 'addressCountry',  # noqa: E501
-        'address_line1': 'addressLine1',  # noqa: E501
-        'address_line1_check': 'addressLine1Check',  # noqa: E501
-        'address_line2': 'addressLine2',  # noqa: E501
-        'address_state': 'addressState',  # noqa: E501
-        'address_zip': 'addressZip',  # noqa: E501
-        'address_zip_check': 'addressZipCheck',  # noqa: E501
-        'available_payout_methods': 'availablePayoutMethods',  # noqa: E501
-        'brand': 'brand',  # noqa: E501
-        'country': 'country',  # noqa: E501
-        'currency': 'currency',  # noqa: E501
-        'customer': 'customer',  # noqa: E501
-        'cvc_check': 'cvcCheck',  # noqa: E501
-        'default_for_currency': 'defaultForCurrency',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'dynamic_last4': 'dynamicLast4',  # noqa: E501
-        'exp_month': 'expMonth',  # noqa: E501
-        'exp_year': 'expYear',  # noqa: E501
-        'fingerprint': 'fingerprint',  # noqa: E501
-        'funding': 'funding',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'iin': 'iin',  # noqa: E501
-        'instance_url': 'instanceURL',  # noqa: E501
-        'issuer': 'issuer',  # noqa: E501
-        'last4': 'last4',  # noqa: E501
-        'metadata': 'metadata',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'object': 'object',  # noqa: E501
-        'recipient': 'recipient',  # noqa: E501
-        'status': 'status',  # noqa: E501
-        'three_d_secure': 'threeDSecure',  # noqa: E501
-        'tokenization_method': 'tokenizationMethod',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "account": "account",  # noqa: E501
+        "address_city": "addressCity",  # noqa: E501
+        "address_country": "addressCountry",  # noqa: E501
+        "address_line1": "addressLine1",  # noqa: E501
+        "address_line1_check": "addressLine1Check",  # noqa: E501
+        "address_line2": "addressLine2",  # noqa: E501
+        "address_state": "addressState",  # noqa: E501
+        "address_zip": "addressZip",  # noqa: E501
+        "address_zip_check": "addressZipCheck",  # noqa: E501
+        "available_payout_methods": "availablePayoutMethods",  # noqa: E501
+        "brand": "brand",  # noqa: E501
+        "country": "country",  # noqa: E501
+        "currency": "currency",  # noqa: E501
+        "customer": "customer",  # noqa: E501
+        "cvc_check": "cvcCheck",  # noqa: E501
+        "default_for_currency": "defaultForCurrency",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "dynamic_last4": "dynamicLast4",  # noqa: E501
+        "exp_month": "expMonth",  # noqa: E501
+        "exp_year": "expYear",  # noqa: E501
+        "fingerprint": "fingerprint",  # noqa: E501
+        "funding": "funding",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "iin": "iin",  # noqa: E501
+        "instance_url": "instanceURL",  # noqa: E501
+        "issuer": "issuer",  # noqa: E501
+        "last4": "last4",  # noqa: E501
+        "metadata": "metadata",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "object": "object",  # noqa: E501
+        "recipient": "recipient",  # noqa: E501
+        "status": "status",  # noqa: E501
+        "three_d_secure": "threeDSecure",  # noqa: E501
+        "tokenization_method": "tokenizationMethod",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """card.Card - a model defined in OpenAPI
 
         Keyword Args:
@@ -232,10 +239,12 @@ class Card(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

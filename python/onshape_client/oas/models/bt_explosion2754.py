@@ -30,41 +30,45 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_explosion2754_all_of
 except ImportError:
     bt_explosion2754_all_of = sys.modules[
-        'onshape_client.oas.models.bt_explosion2754_all_of']
+        "onshape_client.oas.models.bt_explosion2754_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_explosion_step_feature3008
 except ImportError:
     bt_explosion_step_feature3008 = sys.modules[
-        'onshape_client.oas.models.bt_explosion_step_feature3008']
+        "onshape_client.oas.models.bt_explosion_step_feature3008"
+    ]
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
     bt_microversion_id_and_configuration2338 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+        "onshape_client.oas.models.bt_microversion_id_and_configuration2338"
+    ]
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
     btm_assembly_feature887 = sys.modules[
-        'onshape_client.oas.models.btm_assembly_feature887']
+        "onshape_client.oas.models.btm_assembly_feature887"
+    ]
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules[
-        'onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules["onshape_client.oas.models.btm_feature134"]
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence_base904
 except ImportError:
     btm_individual_query_with_occurrence_base904 = sys.modules[
-        'onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
+        "onshape_client.oas.models.btm_individual_query_with_occurrence_base904"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTExplosion2754(ModelComposed):
@@ -91,11 +95,9 @@ class BTExplosion2754(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -110,23 +112,31 @@ class BTExplosion2754(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'explode_steps': ([bt_explosion_step_feature3008.BTExplosionStepFeature3008],),  # noqa: E501
-            'starting_position_id': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
-            'feature_type': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
-            'return_after_subfeatures': (bool,),  # noqa: E501
-            'sub_features': ([btm_feature134.BTMFeature134],),  # noqa: E501
-            'suppressed': (bool,),  # noqa: E501
-            'auxiliary_assembly_feature': (bool,),  # noqa: E501
-            'feature_list_field_index': (int,),  # noqa: E501
-            'occurrence_queries_from_all_configurations': ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904],),  # noqa: E501
-            'version': (int,),  # noqa: E501
+            "explode_steps": (
+                [bt_explosion_step_feature3008.BTExplosionStepFeature3008],
+            ),  # noqa: E501
+            "starting_position_id": (
+                bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
+            "feature_type": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameters": ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            "return_after_subfeatures": (bool,),  # noqa: E501
+            "sub_features": ([btm_feature134.BTMFeature134],),  # noqa: E501
+            "suppressed": (bool,),  # noqa: E501
+            "auxiliary_assembly_feature": (bool,),  # noqa: E501
+            "feature_list_field_index": (int,),  # noqa: E501
+            "occurrence_queries_from_all_configurations": (
+                [
+                    btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904
+                ],
+            ),  # noqa: E501
+            "version": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -134,37 +144,46 @@ class BTExplosion2754(ModelComposed):
         return None
 
     attribute_map = {
-        'explode_steps': 'explodeSteps',  # noqa: E501
-        'starting_position_id': 'startingPositionId',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
-        'feature_type': 'featureType',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameters': 'parameters',  # noqa: E501
-        'return_after_subfeatures': 'returnAfterSubfeatures',  # noqa: E501
-        'sub_features': 'subFeatures',  # noqa: E501
-        'suppressed': 'suppressed',  # noqa: E501
-        'auxiliary_assembly_feature': 'auxiliaryAssemblyFeature',  # noqa: E501
-        'feature_list_field_index': 'featureListFieldIndex',  # noqa: E501
-        'occurrence_queries_from_all_configurations': 'occurrenceQueriesFromAllConfigurations',  # noqa: E501
-        'version': 'version',  # noqa: E501
+        "explode_steps": "explodeSteps",  # noqa: E501
+        "starting_position_id": "startingPositionId",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
+        "feature_type": "featureType",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameters": "parameters",  # noqa: E501
+        "return_after_subfeatures": "returnAfterSubfeatures",  # noqa: E501
+        "sub_features": "subFeatures",  # noqa: E501
+        "suppressed": "suppressed",  # noqa: E501
+        "auxiliary_assembly_feature": "auxiliaryAssemblyFeature",  # noqa: E501
+        "feature_list_field_index": "featureListFieldIndex",  # noqa: E501
+        "occurrence_queries_from_all_configurations": "occurrenceQueriesFromAllConfigurations",  # noqa: E501
+        "version": "version",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_explosion2754.BTExplosion2754 - a model defined in OpenAPI
 
         Keyword Args:
@@ -207,13 +226,12 @@ class BTExplosion2754(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -222,8 +240,7 @@ class BTExplosion2754(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -232,10 +249,12 @@ class BTExplosion2754(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -250,12 +269,10 @@ class BTExplosion2754(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_explosion2754_all_of.BTExplosion2754AllOf,
-              btm_assembly_feature887.BTMAssemblyFeature887,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_explosion2754_all_of.BTExplosion2754AllOf,
+                btm_assembly_feature887.BTMAssemblyFeature887,
+            ],
+            "oneOf": [],
         }

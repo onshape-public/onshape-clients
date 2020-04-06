@@ -30,26 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import body_part
 except ImportError:
-    body_part = sys.modules[
-        'onshape_client.oas.models.body_part']
+    body_part = sys.modules["onshape_client.oas.models.body_part"]
 try:
     from onshape_client.oas.models import body_part_media_type
 except ImportError:
-    body_part_media_type = sys.modules[
-        'onshape_client.oas.models.body_part_media_type']
+    body_part_media_type = sys.modules["onshape_client.oas.models.body_part_media_type"]
 try:
     from onshape_client.oas.models import content_disposition
 except ImportError:
-    content_disposition = sys.modules[
-        'onshape_client.oas.models.content_disposition']
+    content_disposition = sys.modules["onshape_client.oas.models.content_disposition"]
 try:
     from onshape_client.oas.models import parameterized_header
 except ImportError:
-    parameterized_header = sys.modules[
-        'onshape_client.oas.models.parameterized_header']
+    parameterized_header = sys.modules["onshape_client.oas.models.parameterized_header"]
 
 
 class MultiPart(ModelNormal):
@@ -76,11 +73,9 @@ class MultiPart(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,15 +90,46 @@ class MultiPart(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'body_parts': ([body_part.BodyPart],),  # noqa: E501
-            'content_disposition': (content_disposition.ContentDisposition,),  # noqa: E501
-            'entity': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'headers': ({str: ([str],)},),  # noqa: E501
-            'media_type': (body_part_media_type.BodyPartMediaType,),  # noqa: E501
-            'message_body_workers': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'parameterized_headers': ({str: ([parameterized_header.ParameterizedHeader],)},),  # noqa: E501
-            'parent': (MultiPart,),  # noqa: E501
-            'providers': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
+            "body_parts": ([body_part.BodyPart],),  # noqa: E501
+            "content_disposition": (
+                content_disposition.ContentDisposition,
+            ),  # noqa: E501
+            "entity": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "headers": ({str: ([str],)},),  # noqa: E501
+            "media_type": (body_part_media_type.BodyPartMediaType,),  # noqa: E501
+            "message_body_workers": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "parameterized_headers": (
+                {str: ([parameterized_header.ParameterizedHeader],)},
+            ),  # noqa: E501
+            "parent": (MultiPart,),  # noqa: E501
+            "providers": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -111,30 +137,39 @@ class MultiPart(ModelNormal):
         return None
 
     attribute_map = {
-        'body_parts': 'bodyParts',  # noqa: E501
-        'content_disposition': 'contentDisposition',  # noqa: E501
-        'entity': 'entity',  # noqa: E501
-        'headers': 'headers',  # noqa: E501
-        'media_type': 'mediaType',  # noqa: E501
-        'message_body_workers': 'messageBodyWorkers',  # noqa: E501
-        'parameterized_headers': 'parameterizedHeaders',  # noqa: E501
-        'parent': 'parent',  # noqa: E501
-        'providers': 'providers',  # noqa: E501
+        "body_parts": "bodyParts",  # noqa: E501
+        "content_disposition": "contentDisposition",  # noqa: E501
+        "entity": "entity",  # noqa: E501
+        "headers": "headers",  # noqa: E501
+        "media_type": "mediaType",  # noqa: E501
+        "message_body_workers": "messageBodyWorkers",  # noqa: E501
+        "parameterized_headers": "parameterizedHeaders",  # noqa: E501
+        "parent": "parent",  # noqa: E501
+        "providers": "providers",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """multi_part.MultiPart - a model defined in OpenAPI
 
         Keyword Args:
@@ -169,10 +204,12 @@ class MultiPart(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

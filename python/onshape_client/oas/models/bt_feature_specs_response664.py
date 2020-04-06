@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_feature_spec129
 except ImportError:
-    bt_feature_spec129 = sys.modules[
-        'onshape_client.oas.models.bt_feature_spec129']
+    bt_feature_spec129 = sys.modules["onshape_client.oas.models.bt_feature_spec129"]
 
 
 class BTFeatureSpecsResponse664(ModelNormal):
@@ -61,11 +61,9 @@ class BTFeatureSpecsResponse664(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,12 +78,12 @@ class BTFeatureSpecsResponse664(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'feature_specs': ([bt_feature_spec129.BTFeatureSpec129],),  # noqa: E501
-            'library_version': (int,),  # noqa: E501
-            'microversion_skew': (bool,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
-            'serialization_version': (str,),  # noqa: E501
-            'source_microversion': (str,),  # noqa: E501
+            "feature_specs": ([bt_feature_spec129.BTFeatureSpec129],),  # noqa: E501
+            "library_version": (int,),  # noqa: E501
+            "microversion_skew": (bool,),  # noqa: E501
+            "reject_microversion_skew": (bool,),  # noqa: E501
+            "serialization_version": (str,),  # noqa: E501
+            "source_microversion": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,27 +91,36 @@ class BTFeatureSpecsResponse664(ModelNormal):
         return None
 
     attribute_map = {
-        'feature_specs': 'featureSpecs',  # noqa: E501
-        'library_version': 'libraryVersion',  # noqa: E501
-        'microversion_skew': 'microversionSkew',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
-        'serialization_version': 'serializationVersion',  # noqa: E501
-        'source_microversion': 'sourceMicroversion',  # noqa: E501
+        "feature_specs": "featureSpecs",  # noqa: E501
+        "library_version": "libraryVersion",  # noqa: E501
+        "microversion_skew": "microversionSkew",  # noqa: E501
+        "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
+        "serialization_version": "serializationVersion",  # noqa: E501
+        "source_microversion": "sourceMicroversion",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_feature_specs_response664.BTFeatureSpecsResponse664 - a model defined in OpenAPI
 
         Keyword Args:
@@ -145,10 +152,12 @@ class BTFeatureSpecsResponse664(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

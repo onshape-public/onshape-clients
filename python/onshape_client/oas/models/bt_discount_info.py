@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_user_summary_info
 except ImportError:
-    bt_user_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_user_summary_info']
+    bt_user_summary_info = sys.modules["onshape_client.oas.models.bt_user_summary_info"]
 
 
 class BTDiscountInfo(ModelNormal):
@@ -61,11 +61,9 @@ class BTDiscountInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,22 +78,22 @@ class BTDiscountInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'account_balance': (int,),  # noqa: E501
-            'amount_off': (int,),  # noqa: E501
-            'coupon_type': (int,),  # noqa: E501
-            'coupon_valid_months': (int,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
-            'expires_at': (datetime,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'owner_id': (str,),  # noqa: E501
-            'percent_off': (int,),  # noqa: E501
-            'plan_id': (str,),  # noqa: E501
-            'trial_end_date': (str,),  # noqa: E501
-            'used_at': (datetime,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "account_balance": (int,),  # noqa: E501
+            "amount_off": (int,),  # noqa: E501
+            "coupon_type": (int,),  # noqa: E501
+            "coupon_valid_months": (int,),  # noqa: E501
+            "created_at": (datetime,),  # noqa: E501
+            "created_by": (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
+            "expires_at": (datetime,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "owner_id": (str,),  # noqa: E501
+            "percent_off": (int,),  # noqa: E501
+            "plan_id": (str,),  # noqa: E501
+            "trial_end_date": (str,),  # noqa: E501
+            "used_at": (datetime,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -103,37 +101,46 @@ class BTDiscountInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'account_balance': 'accountBalance',  # noqa: E501
-        'amount_off': 'amountOff',  # noqa: E501
-        'coupon_type': 'couponType',  # noqa: E501
-        'coupon_valid_months': 'couponValidMonths',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'expires_at': 'expiresAt',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'owner_id': 'ownerId',  # noqa: E501
-        'percent_off': 'percentOff',  # noqa: E501
-        'plan_id': 'planId',  # noqa: E501
-        'trial_end_date': 'trialEndDate',  # noqa: E501
-        'used_at': 'usedAt',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "account_balance": "accountBalance",  # noqa: E501
+        "amount_off": "amountOff",  # noqa: E501
+        "coupon_type": "couponType",  # noqa: E501
+        "coupon_valid_months": "couponValidMonths",  # noqa: E501
+        "created_at": "createdAt",  # noqa: E501
+        "created_by": "createdBy",  # noqa: E501
+        "expires_at": "expiresAt",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "owner_id": "ownerId",  # noqa: E501
+        "percent_off": "percentOff",  # noqa: E501
+        "plan_id": "planId",  # noqa: E501
+        "trial_end_date": "trialEndDate",  # noqa: E501
+        "used_at": "usedAt",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_discount_info.BTDiscountInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -175,10 +182,12 @@ class BTDiscountInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

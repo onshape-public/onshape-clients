@@ -57,17 +57,16 @@ class BTFeatureState1688(ModelNormal):
     """
 
     allowed_values = {
-        ('feature_status',): {
-            'OK': "OK",
-            'INFO': "INFO",
-            'WARNING': "WARNING",
-            'ERROR': "ERROR",
-            'UNKNOWN': "UNKNOWN",
+        ("feature_status",): {
+            "OK": "OK",
+            "INFO": "INFO",
+            "WARNING": "WARNING",
+            "ERROR": "ERROR",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -82,8 +81,8 @@ class BTFeatureState1688(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'feature_status': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "feature_status": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,23 +90,32 @@ class BTFeatureState1688(ModelNormal):
         return None
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'feature_status': 'featureStatus',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "feature_status": "featureStatus",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_feature_state1688.BTFeatureState1688 - a model defined in OpenAPI
 
         Keyword Args:
@@ -135,10 +143,12 @@ class BTFeatureState1688(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -56,11 +56,9 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,15 +73,15 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'max': (float,),  # noqa: E501
-            'max_count': (int,),  # noqa: E501
-            'max_date': (datetime,),  # noqa: E501
-            'max_length': (int,),  # noqa: E501
-            'min': (float,),  # noqa: E501
-            'min_count': (int,),  # noqa: E501
-            'min_date': (datetime,),  # noqa: E501
-            'min_length': (int,),  # noqa: E501
-            'pattern': (str,),  # noqa: E501
+            "max": (float,),  # noqa: E501
+            "max_count": (int,),  # noqa: E501
+            "max_date": (datetime,),  # noqa: E501
+            "max_length": (int,),  # noqa: E501
+            "min": (float,),  # noqa: E501
+            "min_count": (int,),  # noqa: E501
+            "min_date": (datetime,),  # noqa: E501
+            "min_length": (int,),  # noqa: E501
+            "pattern": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,30 +89,39 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'max': 'max',  # noqa: E501
-        'max_count': 'maxCount',  # noqa: E501
-        'max_date': 'maxDate',  # noqa: E501
-        'max_length': 'maxLength',  # noqa: E501
-        'min': 'min',  # noqa: E501
-        'min_count': 'minCount',  # noqa: E501
-        'min_date': 'minDate',  # noqa: E501
-        'min_length': 'minLength',  # noqa: E501
-        'pattern': 'pattern',  # noqa: E501
+        "max": "max",  # noqa: E501
+        "max_count": "maxCount",  # noqa: E501
+        "max_date": "maxDate",  # noqa: E501
+        "max_length": "maxLength",  # noqa: E501
+        "min": "min",  # noqa: E501
+        "min_count": "minCount",  # noqa: E501
+        "min_date": "minDate",  # noqa: E501
+        "min_length": "minLength",  # noqa: E501
+        "pattern": "pattern",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_metadata_property_validator_info.BTMetadataPropertyValidatorInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -149,10 +156,12 @@ class BTMetadataPropertyValidatorInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

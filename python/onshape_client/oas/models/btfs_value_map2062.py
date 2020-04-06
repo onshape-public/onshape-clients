@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btfs_value1888
 except ImportError:
-    btfs_value1888 = sys.modules[
-        'onshape_client.oas.models.btfs_value1888']
+    btfs_value1888 = sys.modules["onshape_client.oas.models.btfs_value1888"]
 try:
     from onshape_client.oas.models import btfs_value_map_entry2077
 except ImportError:
     btfs_value_map_entry2077 = sys.modules[
-        'onshape_client.oas.models.btfs_value_map_entry2077']
+        "onshape_client.oas.models.btfs_value_map_entry2077"
+    ]
 
 
 class BTFSValueMap2062(ModelNormal):
@@ -66,11 +67,9 @@ class BTFSValueMap2062(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,12 +84,16 @@ class BTFSValueMap2062(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'configuration_value_string': (str,),  # noqa: E501
-            'fsvalues_keyed_by_strings': ({str: (btfs_value1888.BTFSValue1888,)},),  # noqa: E501
-            'standard_type_name': (str,),  # noqa: E501
-            'type_tag': (str,),  # noqa: E501
-            'value': ([btfs_value_map_entry2077.BTFSValueMapEntry2077],),  # noqa: E501
-            'value_object': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
+            "configuration_value_string": (str,),  # noqa: E501
+            "fsvalues_keyed_by_strings": (
+                {str: (btfs_value1888.BTFSValue1888,)},
+            ),  # noqa: E501
+            "standard_type_name": (str,),  # noqa: E501
+            "type_tag": (str,),  # noqa: E501
+            "value": ([btfs_value_map_entry2077.BTFSValueMapEntry2077],),  # noqa: E501
+            "value_object": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -98,27 +101,36 @@ class BTFSValueMap2062(ModelNormal):
         return None
 
     attribute_map = {
-        'configuration_value_string': 'configurationValueString',  # noqa: E501
-        'fsvalues_keyed_by_strings': 'fsvaluesKeyedByStrings',  # noqa: E501
-        'standard_type_name': 'standardTypeName',  # noqa: E501
-        'type_tag': 'typeTag',  # noqa: E501
-        'value': 'value',  # noqa: E501
-        'value_object': 'valueObject',  # noqa: E501
+        "configuration_value_string": "configurationValueString",  # noqa: E501
+        "fsvalues_keyed_by_strings": "fsvaluesKeyedByStrings",  # noqa: E501
+        "standard_type_name": "standardTypeName",  # noqa: E501
+        "type_tag": "typeTag",  # noqa: E501
+        "value": "value",  # noqa: E501
+        "value_object": "valueObject",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btfs_value_map2062.BTFSValueMap2062 - a model defined in OpenAPI
 
         Keyword Args:
@@ -150,10 +162,12 @@ class BTFSValueMap2062(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

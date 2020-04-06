@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_webhook_options
 except ImportError:
-    bt_webhook_options = sys.modules[
-        'onshape_client.oas.models.bt_webhook_options']
+    bt_webhook_options = sys.modules["onshape_client.oas.models.bt_webhook_options"]
 
 
 class BTWebhookInfo(ModelNormal):
@@ -61,11 +61,9 @@ class BTWebhookInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,19 +78,19 @@ class BTWebhookInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'company_id': (str,),  # noqa: E501
-            'data': (str,),  # noqa: E501
-            'dropped_event_count': (int,),  # noqa: E501
-            'events': ([str],),  # noqa: E501
-            'filter': (str,),  # noqa: E501
-            'folder_id': (str,),  # noqa: E501
-            'getproject_id': (str,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'options': (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
-            'url': (str,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "company_id": (str,),  # noqa: E501
+            "data": (str,),  # noqa: E501
+            "dropped_event_count": (int,),  # noqa: E501
+            "events": ([str],),  # noqa: E501
+            "filter": (str,),  # noqa: E501
+            "folder_id": (str,),  # noqa: E501
+            "getproject_id": (str,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "options": (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
+            "url": (str,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,34 +98,43 @@ class BTWebhookInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'company_id': 'companyId',  # noqa: E501
-        'data': 'data',  # noqa: E501
-        'dropped_event_count': 'droppedEventCount',  # noqa: E501
-        'events': 'events',  # noqa: E501
-        'filter': 'filter',  # noqa: E501
-        'folder_id': 'folderId',  # noqa: E501
-        'getproject_id': 'getprojectId',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'options': 'options',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "company_id": "companyId",  # noqa: E501
+        "data": "data",  # noqa: E501
+        "dropped_event_count": "droppedEventCount",  # noqa: E501
+        "events": "events",  # noqa: E501
+        "filter": "filter",  # noqa: E501
+        "folder_id": "folderId",  # noqa: E501
+        "getproject_id": "getprojectId",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "options": "options",  # noqa: E501
+        "url": "url",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_webhook_info.BTWebhookInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -166,10 +173,12 @@ class BTWebhookInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

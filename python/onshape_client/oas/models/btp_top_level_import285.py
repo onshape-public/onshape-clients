@@ -30,41 +30,41 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules[
-        'onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules["onshape_client.oas.models.btp_annotation231"]
 try:
     from onshape_client.oas.models import btp_argument_declaration232
 except ImportError:
     btp_argument_declaration232 = sys.modules[
-        'onshape_client.oas.models.btp_argument_declaration232']
+        "onshape_client.oas.models.btp_argument_declaration232"
+    ]
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules[
-        'onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules["onshape_client.oas.models.btp_identifier8"]
 try:
     from onshape_client.oas.models import btp_module_id235
 except ImportError:
-    btp_module_id235 = sys.modules[
-        'onshape_client.oas.models.btp_module_id235']
+    btp_module_id235 = sys.modules["onshape_client.oas.models.btp_module_id235"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 try:
     from onshape_client.oas.models import btp_top_level_import285_all_of
 except ImportError:
     btp_top_level_import285_all_of = sys.modules[
-        'onshape_client.oas.models.btp_top_level_import285_all_of']
+        "onshape_client.oas.models.btp_top_level_import285_all_of"
+    ]
 try:
     from onshape_client.oas.models import btp_top_level_node286
 except ImportError:
     btp_top_level_node286 = sys.modules[
-        'onshape_client.oas.models.btp_top_level_node286']
+        "onshape_client.oas.models.btp_top_level_node286"
+    ]
 
 
 class BTPTopLevelImport285(ModelComposed):
@@ -92,21 +92,20 @@ class BTPTopLevelImport285(ModelComposed):
     """
 
     allowed_values = {
-        ('documentation_type',): {
-            'FUNCTION': "FUNCTION",
-            'PREDICATE': "PREDICATE",
-            'CONSTANT': "CONSTANT",
-            'ENUM': "ENUM",
-            'USER_TYPE': "USER_TYPE",
-            'FEATURE_DEFINITION': "FEATURE_DEFINITION",
-            'FILE_HEADER': "FILE_HEADER",
-            'UNDOCUMENTABLE': "UNDOCUMENTABLE",
-            'UNKNOWN': "UNKNOWN",
+        ("documentation_type",): {
+            "FUNCTION": "FUNCTION",
+            "PREDICATE": "PREDICATE",
+            "CONSTANT": "CONSTANT",
+            "ENUM": "ENUM",
+            "USER_TYPE": "USER_TYPE",
+            "FEATURE_DEFINITION": "FEATURE_DEFINITION",
+            "FILE_HEADER": "FILE_HEADER",
+            "UNDOCUMENTABLE": "UNDOCUMENTABLE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -121,29 +120,31 @@ class BTPTopLevelImport285(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'import_microversion': (str,),  # noqa: E501
-            'namespace_string': (str,),  # noqa: E501
-            'combined_namespace_path_and_version': (str,),  # noqa: E501
-            'module_id': (btp_module_id235.BTPModuleId235,),  # noqa: E501
-            'space_before_import': (btp_space10.BTPSpace10,),  # noqa: E501
-            'namespace': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
-            'documentation_type': (str,),  # noqa: E501
-            'end_source_location': (int,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'short_descriptor': (str,),  # noqa: E501
-            'space_after': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_default': (bool,),  # noqa: E501
-            'start_source_location': (int,),  # noqa: E501
-            'deprecated': (bool,),  # noqa: E501
-            'symbol_name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'arguments_to_document': ([btp_argument_declaration232.BTPArgumentDeclaration232],),  # noqa: E501
-            'deprecated_explanation': (str,),  # noqa: E501
-            'for_export': (bool,),  # noqa: E501
-            'space_after_export': (btp_space10.BTPSpace10,),  # noqa: E501
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "namespace_string": (str,),  # noqa: E501
+            "combined_namespace_path_and_version": (str,),  # noqa: E501
+            "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
+            "space_before_import": (btp_space10.BTPSpace10,),  # noqa: E501
+            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "atomic": (bool,),  # noqa: E501
+            "documentation_type": (str,),  # noqa: E501
+            "end_source_location": (int,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "short_descriptor": (str,),  # noqa: E501
+            "space_after": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_default": (bool,),  # noqa: E501
+            "start_source_location": (int,),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
+            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "arguments_to_document": (
+                [btp_argument_declaration232.BTPArgumentDeclaration232],
+            ),  # noqa: E501
+            "deprecated_explanation": (str,),  # noqa: E501
+            "for_export": (bool,),  # noqa: E501
+            "space_after_export": (btp_space10.BTPSpace10,),  # noqa: E501
+            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
         }
 
     @staticmethod
@@ -151,43 +152,52 @@ class BTPTopLevelImport285(ModelComposed):
         return None
 
     attribute_map = {
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'namespace_string': 'namespaceString',  # noqa: E501
-        'combined_namespace_path_and_version': 'combinedNamespacePathAndVersion',  # noqa: E501
-        'module_id': 'moduleId',  # noqa: E501
-        'space_before_import': 'spaceBeforeImport',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
-        'documentation_type': 'documentationType',  # noqa: E501
-        'end_source_location': 'endSourceLocation',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'short_descriptor': 'shortDescriptor',  # noqa: E501
-        'space_after': 'spaceAfter',  # noqa: E501
-        'space_before': 'spaceBefore',  # noqa: E501
-        'space_default': 'spaceDefault',  # noqa: E501
-        'start_source_location': 'startSourceLocation',  # noqa: E501
-        'deprecated': 'deprecated',  # noqa: E501
-        'symbol_name': 'symbolName',  # noqa: E501
-        'arguments_to_document': 'argumentsToDocument',  # noqa: E501
-        'deprecated_explanation': 'deprecatedExplanation',  # noqa: E501
-        'for_export': 'forExport',  # noqa: E501
-        'space_after_export': 'spaceAfterExport',  # noqa: E501
-        'annotation': 'annotation',  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "namespace_string": "namespaceString",  # noqa: E501
+        "combined_namespace_path_and_version": "combinedNamespacePathAndVersion",  # noqa: E501
+        "module_id": "moduleId",  # noqa: E501
+        "space_before_import": "spaceBeforeImport",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "atomic": "atomic",  # noqa: E501
+        "documentation_type": "documentationType",  # noqa: E501
+        "end_source_location": "endSourceLocation",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "short_descriptor": "shortDescriptor",  # noqa: E501
+        "space_after": "spaceAfter",  # noqa: E501
+        "space_before": "spaceBefore",  # noqa: E501
+        "space_default": "spaceDefault",  # noqa: E501
+        "start_source_location": "startSourceLocation",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
+        "symbol_name": "symbolName",  # noqa: E501
+        "arguments_to_document": "argumentsToDocument",  # noqa: E501
+        "deprecated_explanation": "deprecatedExplanation",  # noqa: E501
+        "for_export": "forExport",  # noqa: E501
+        "space_after_export": "spaceAfterExport",  # noqa: E501
+        "annotation": "annotation",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_top_level_import285.BTPTopLevelImport285 - a model defined in OpenAPI
 
         Keyword Args:
@@ -236,13 +246,12 @@ class BTPTopLevelImport285(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -251,8 +260,7 @@ class BTPTopLevelImport285(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -261,10 +269,12 @@ class BTPTopLevelImport285(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -279,12 +289,10 @@ class BTPTopLevelImport285(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btp_top_level_import285_all_of.BTPTopLevelImport285AllOf,
-              btp_top_level_node286.BTPTopLevelNode286,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btp_top_level_import285_all_of.BTPTopLevelImport285AllOf,
+                btp_top_level_node286.BTPTopLevelNode286,
+            ],
+            "oneOf": [],
         }

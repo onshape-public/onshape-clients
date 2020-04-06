@@ -30,26 +30,29 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_spline_description2118
 except ImportError:
     bt_spline_description2118 = sys.modules[
-        'onshape_client.oas.models.bt_spline_description2118']
+        "onshape_client.oas.models.bt_spline_description2118"
+    ]
 try:
     from onshape_client.oas.models import bt_surface_description1564
 except ImportError:
     bt_surface_description1564 = sys.modules[
-        'onshape_client.oas.models.bt_surface_description1564']
+        "onshape_client.oas.models.bt_surface_description1564"
+    ]
 try:
     from onshape_client.oas.models import bt_sweep_description1473_all_of
 except ImportError:
     bt_sweep_description1473_all_of = sys.modules[
-        'onshape_client.oas.models.bt_sweep_description1473_all_of']
+        "onshape_client.oas.models.bt_sweep_description1473_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTSweepDescription1473(ModelComposed):
@@ -77,24 +80,23 @@ class BTSweepDescription1473(ModelComposed):
     """
 
     allowed_values = {
-        ('type',): {
-            'PLANE': "PLANE",
-            'CYLINDER': "CYLINDER",
-            'CONE': "CONE",
-            'SPHERE': "SPHERE",
-            'TORUS': "TORUS",
-            'SPUN': "SPUN",
-            'SWEEP': "SWEEP",
-            'OFFSET': "OFFSET",
-            'BLEND': "BLEND",
-            'BSURFACE': "BSURFACE",
-            'OTHER': "OTHER",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "PLANE": "PLANE",
+            "CYLINDER": "CYLINDER",
+            "CONE": "CONE",
+            "SPHERE": "SPHERE",
+            "TORUS": "TORUS",
+            "SPUN": "SPUN",
+            "SWEEP": "SWEEP",
+            "OFFSET": "OFFSET",
+            "BLEND": "BLEND",
+            "BSURFACE": "BSURFACE",
+            "OTHER": "OTHER",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -109,10 +111,12 @@ class BTSweepDescription1473(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'profile': (bt_spline_description2118.BTSplineDescription2118,),  # noqa: E501
-            'direction': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "profile": (
+                bt_spline_description2118.BTSplineDescription2118,
+            ),  # noqa: E501
+            "direction": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -120,24 +124,33 @@ class BTSweepDescription1473(ModelComposed):
         return None
 
     attribute_map = {
-        'profile': 'profile',  # noqa: E501
-        'direction': 'direction',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "profile": "profile",  # noqa: E501
+        "direction": "direction",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_sweep_description1473.BTSweepDescription1473 - a model defined in OpenAPI
 
         Keyword Args:
@@ -167,13 +180,12 @@ class BTSweepDescription1473(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -182,8 +194,7 @@ class BTSweepDescription1473(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -192,10 +203,12 @@ class BTSweepDescription1473(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -210,12 +223,10 @@ class BTSweepDescription1473(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_surface_description1564.BTSurfaceDescription1564,
-              bt_sweep_description1473_all_of.BTSweepDescription1473AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_surface_description1564.BTSurfaceDescription1564,
+                bt_sweep_description1473_all_of.BTSweepDescription1473AllOf,
+            ],
+            "oneOf": [],
         }

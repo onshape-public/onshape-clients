@@ -57,22 +57,21 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('allowed_insertable_types',): {
-            'SOLID': "SOLID",
-            'SURFACE': "SURFACE",
-            'WIRE': "WIRE",
-            'MESH': "MESH",
-            'SKETCH': "SKETCH",
-            'FLATTENED_SHEET_METAL': "FLATTENED_SHEET_METAL",
-            'ENTIRE_PART_STUDIO': "ENTIRE_PART_STUDIO",
-            'CONSTRUCTION_PLANE': "CONSTRUCTION_PLANE",
-            'COMPOSITE_PART': "COMPOSITE_PART",
-            'UNKNOWN': "UNKNOWN",
+        ("allowed_insertable_types",): {
+            "SOLID": "SOLID",
+            "SURFACE": "SURFACE",
+            "WIRE": "WIRE",
+            "MESH": "MESH",
+            "SKETCH": "SKETCH",
+            "FLATTENED_SHEET_METAL": "FLATTENED_SHEET_METAL",
+            "ENTIRE_PART_STUDIO": "ENTIRE_PART_STUDIO",
+            "CONSTRUCTION_PLANE": "CONSTRUCTION_PLANE",
+            "COMPOSITE_PART": "COMPOSITE_PART",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -87,10 +86,10 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'max_number_of_picks': (int,),  # noqa: E501
-            'allowed_insertable_types': ([str],),  # noqa: E501
-            'allow_assemblies': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "max_number_of_picks": (int,),  # noqa: E501
+            "allowed_insertable_types": ([str],),  # noqa: E501
+            "allow_assemblies": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -98,25 +97,34 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'max_number_of_picks': 'maxNumberOfPicks',  # noqa: E501
-        'allowed_insertable_types': 'allowedInsertableTypes',  # noqa: E501
-        'allow_assemblies': 'allowAssemblies',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
+        "allowed_insertable_types": "allowedInsertableTypes",  # noqa: E501
+        "allow_assemblies": "allowAssemblies",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_parameter_spec_reference_with_configuration2950_all_of.BTParameterSpecReferenceWithConfiguration2950AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -146,10 +154,12 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

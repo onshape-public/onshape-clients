@@ -56,11 +56,9 @@ class BodyPartMediaType(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,11 +73,11 @@ class BodyPartMediaType(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'type': (str,),  # noqa: E501
-            'subtype': (str,),  # noqa: E501
-            'parameters': ({str: (str,)},),  # noqa: E501
-            'wildcard_type': (bool,),  # noqa: E501
-            'wildcard_subtype': (bool,),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "subtype": (str,),  # noqa: E501
+            "parameters": ({str: (str,)},),  # noqa: E501
+            "wildcard_type": (bool,),  # noqa: E501
+            "wildcard_subtype": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,26 +85,35 @@ class BodyPartMediaType(ModelNormal):
         return None
 
     attribute_map = {
-        'type': 'type',  # noqa: E501
-        'subtype': 'subtype',  # noqa: E501
-        'parameters': 'parameters',  # noqa: E501
-        'wildcard_type': 'wildcardType',  # noqa: E501
-        'wildcard_subtype': 'wildcardSubtype',  # noqa: E501
+        "type": "type",  # noqa: E501
+        "subtype": "subtype",  # noqa: E501
+        "parameters": "parameters",  # noqa: E501
+        "wildcard_type": "wildcardType",  # noqa: E501
+        "wildcard_subtype": "wildcardSubtype",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """body_part_media_type.BodyPartMediaType - a model defined in OpenAPI
 
         Keyword Args:
@@ -137,10 +144,12 @@ class BodyPartMediaType(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

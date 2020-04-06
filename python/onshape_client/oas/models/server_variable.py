@@ -55,11 +55,9 @@ class ServerVariable(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -74,10 +72,12 @@ class ServerVariable(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'default': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'enum': ([str],),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
+            "default": (str,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "enum": ([str],),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -85,25 +85,34 @@ class ServerVariable(ModelNormal):
         return None
 
     attribute_map = {
-        'default': 'default',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'enum': 'enum',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
+        "default": "default",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "enum": "enum",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """server_variable.ServerVariable - a model defined in OpenAPI
 
 

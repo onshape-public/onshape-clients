@@ -56,11 +56,9 @@ class BTPublishedWorkflowInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,20 +73,20 @@ class BTPublishedWorkflowInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'active_state': (int,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'image_src': (str,),  # noqa: E501
-            'is_obsoletion': (bool,),  # noqa: E501
-            'is_pickable': (bool,),  # noqa: E501
-            'json': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'object_type': (int,),  # noqa: E501
-            'owner_type': (int,),  # noqa: E501
-            'version_id': (str,),  # noqa: E501
+            "active_state": (int,),  # noqa: E501
+            "company_id": (str,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "image_src": (str,),  # noqa: E501
+            "is_obsoletion": (bool,),  # noqa: E501
+            "is_pickable": (bool,),  # noqa: E501
+            "json": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "object_type": (int,),  # noqa: E501
+            "owner_type": (int,),  # noqa: E501
+            "version_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,35 +94,44 @@ class BTPublishedWorkflowInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'active_state': 'activeState',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'image_src': 'imageSrc',  # noqa: E501
-        'is_obsoletion': 'isObsoletion',  # noqa: E501
-        'is_pickable': 'isPickable',  # noqa: E501
-        'json': 'json',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'object_type': 'objectType',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
-        'version_id': 'versionId',  # noqa: E501
+        "active_state": "activeState",  # noqa: E501
+        "company_id": "companyId",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "image_src": "imageSrc",  # noqa: E501
+        "is_obsoletion": "isObsoletion",  # noqa: E501
+        "is_pickable": "isPickable",  # noqa: E501
+        "json": "json",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "object_type": "objectType",  # noqa: E501
+        "owner_type": "ownerType",  # noqa: E501
+        "version_id": "versionId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_published_workflow_info.BTPublishedWorkflowInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -164,10 +171,12 @@ class BTPublishedWorkflowInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

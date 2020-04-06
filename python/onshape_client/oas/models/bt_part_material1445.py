@@ -30,16 +30,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_element_reference725
 except ImportError:
     bt_element_reference725 = sys.modules[
-        'onshape_client.oas.models.bt_element_reference725']
+        "onshape_client.oas.models.bt_element_reference725"
+    ]
 try:
     from onshape_client.oas.models import bt_part_material_property1453
 except ImportError:
     bt_part_material_property1453 = sys.modules[
-        'onshape_client.oas.models.bt_part_material_property1453']
+        "onshape_client.oas.models.bt_part_material_property1453"
+    ]
 
 
 class BTPartMaterial1445(ModelNormal):
@@ -66,11 +69,9 @@ class BTPartMaterial1445(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,13 +86,17 @@ class BTPartMaterial1445(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'library_name': (str,),  # noqa: E501
-            'library_reference': (bt_element_reference725.BTElementReference725,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'properties': ({str: (bt_part_material_property1453.BTPartMaterialProperty1453,)},),  # noqa: E501
-            'version': (int,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "library_name": (str,),  # noqa: E501
+            "library_reference": (
+                bt_element_reference725.BTElementReference725,
+            ),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "properties": (
+                {str: (bt_part_material_property1453.BTPartMaterialProperty1453,)},
+            ),  # noqa: E501
+            "version": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,28 +104,37 @@ class BTPartMaterial1445(ModelNormal):
         return None
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'library_name': 'libraryName',  # noqa: E501
-        'library_reference': 'libraryReference',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'properties': 'properties',  # noqa: E501
-        'version': 'version',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "library_name": "libraryName",  # noqa: E501
+        "library_reference": "libraryReference",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "properties": "properties",  # noqa: E501
+        "version": "version",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_part_material1445.BTPartMaterial1445 - a model defined in OpenAPI
 
         Keyword Args:
@@ -153,10 +167,12 @@ class BTPartMaterial1445(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

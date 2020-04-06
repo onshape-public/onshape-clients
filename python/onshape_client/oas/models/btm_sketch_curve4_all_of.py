@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_curve_geometry114
 except ImportError:
-    bt_curve_geometry114 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry114']
+    bt_curve_geometry114 = sys.modules["onshape_client.oas.models.bt_curve_geometry114"]
 
 
 class BTMSketchCurve4AllOf(ModelNormal):
@@ -61,11 +61,9 @@ class BTMSketchCurve4AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,10 +78,10 @@ class BTMSketchCurve4AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'center_id': (str,),  # noqa: E501
-            'internal_ids': ([str],),  # noqa: E501
-            'geometry': (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "center_id": (str,),  # noqa: E501
+            "internal_ids": ([str],),  # noqa: E501
+            "geometry": (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,25 +89,34 @@ class BTMSketchCurve4AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'center_id': 'centerId',  # noqa: E501
-        'internal_ids': 'internalIds',  # noqa: E501
-        'geometry': 'geometry',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "center_id": "centerId",  # noqa: E501
+        "internal_ids": "internalIds",  # noqa: E501
+        "geometry": "geometry",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_sketch_curve4_all_of.BTMSketchCurve4AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -139,10 +146,12 @@ class BTMSketchCurve4AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

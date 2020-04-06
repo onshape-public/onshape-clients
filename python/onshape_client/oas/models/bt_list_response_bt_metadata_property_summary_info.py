@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_metadata_property_summary_info
 except ImportError:
     bt_metadata_property_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_metadata_property_summary_info']
+        "onshape_client.oas.models.bt_metadata_property_summary_info"
+    ]
 
 
 class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):
@@ -61,11 +63,9 @@ class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,10 +80,12 @@ class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'href': (str,),  # noqa: E501
-            'items': ([bt_metadata_property_summary_info.BTMetadataPropertySummaryInfo],),  # noqa: E501
-            'next': (str,),  # noqa: E501
-            'previous': (str,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "items": (
+                [bt_metadata_property_summary_info.BTMetadataPropertySummaryInfo],
+            ),  # noqa: E501
+            "next": (str,),  # noqa: E501
+            "previous": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,25 +93,34 @@ class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'href': 'href',  # noqa: E501
-        'items': 'items',  # noqa: E501
-        'next': 'next',  # noqa: E501
-        'previous': 'previous',  # noqa: E501
+        "href": "href",  # noqa: E501
+        "items": "items",  # noqa: E501
+        "next": "next",  # noqa: E501
+        "previous": "previous",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_list_response_bt_metadata_property_summary_info.BTListResponseBTMetadataPropertySummaryInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -139,10 +150,12 @@ class BTListResponseBTMetadataPropertySummaryInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -56,11 +56,9 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,17 +73,17 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'is_periodic': (bool,),  # noqa: E501
-            'interpolation_points': ([float],),  # noqa: E501
-            'start_derivative_x': (float,),  # noqa: E501
-            'start_derivative_y': (float,),  # noqa: E501
-            'end_derivative_x': (float,),  # noqa: E501
-            'end_derivative_y': (float,),  # noqa: E501
-            'start_handle_x': (float,),  # noqa: E501
-            'start_handle_y': (float,),  # noqa: E501
-            'end_handle_x': (float,),  # noqa: E501
-            'end_handle_y': (float,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "is_periodic": (bool,),  # noqa: E501
+            "interpolation_points": ([float],),  # noqa: E501
+            "start_derivative_x": (float,),  # noqa: E501
+            "start_derivative_y": (float,),  # noqa: E501
+            "end_derivative_x": (float,),  # noqa: E501
+            "end_derivative_y": (float,),  # noqa: E501
+            "start_handle_x": (float,),  # noqa: E501
+            "start_handle_y": (float,),  # noqa: E501
+            "end_handle_x": (float,),  # noqa: E501
+            "end_handle_y": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,32 +91,41 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'is_periodic': 'isPeriodic',  # noqa: E501
-        'interpolation_points': 'interpolationPoints',  # noqa: E501
-        'start_derivative_x': 'startDerivativeX',  # noqa: E501
-        'start_derivative_y': 'startDerivativeY',  # noqa: E501
-        'end_derivative_x': 'endDerivativeX',  # noqa: E501
-        'end_derivative_y': 'endDerivativeY',  # noqa: E501
-        'start_handle_x': 'startHandleX',  # noqa: E501
-        'start_handle_y': 'startHandleY',  # noqa: E501
-        'end_handle_x': 'endHandleX',  # noqa: E501
-        'end_handle_y': 'endHandleY',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "is_periodic": "isPeriodic",  # noqa: E501
+        "interpolation_points": "interpolationPoints",  # noqa: E501
+        "start_derivative_x": "startDerivativeX",  # noqa: E501
+        "start_derivative_y": "startDerivativeY",  # noqa: E501
+        "end_derivative_x": "endDerivativeX",  # noqa: E501
+        "end_derivative_y": "endDerivativeY",  # noqa: E501
+        "start_handle_x": "startHandleX",  # noqa: E501
+        "start_handle_y": "startHandleY",  # noqa: E501
+        "end_handle_x": "endHandleX",  # noqa: E501
+        "end_handle_y": "endHandleY",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_curve_geometry_interpolated_spline116_all_of.BTCurveGeometryInterpolatedSpline116AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -155,10 +162,12 @@ class BTCurveGeometryInterpolatedSpline116AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -29,11 +29,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import o_auth_flows
 except ImportError:
-    o_auth_flows = sys.modules[
-        'onshape_client.oas.models.o_auth_flows']
+    o_auth_flows = sys.modules["onshape_client.oas.models.o_auth_flows"]
 
 
 class SecurityScheme(ModelNormal):
@@ -61,21 +61,16 @@ class SecurityScheme(ModelNormal):
     """
 
     allowed_values = {
-        ('_in',): {
-            'COOKIE': "COOKIE",
-            'HEADER': "HEADER",
-            'QUERY': "QUERY",
-        },
-        ('type',): {
-            'APIKEY': "APIKEY",
-            'HTTP': "HTTP",
-            'OAUTH2': "OAUTH2",
-            'OPENIDCONNECT': "OPENIDCONNECT",
+        ("_in",): {"COOKIE": "COOKIE", "HEADER": "HEADER", "QUERY": "QUERY",},
+        ("type",): {
+            "APIKEY": "APIKEY",
+            "HTTP": "HTTP",
+            "OAUTH2": "OAUTH2",
+            "OPENIDCONNECT": "OPENIDCONNECT",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,16 +85,18 @@ class SecurityScheme(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bearer_format': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'flows': (o_auth_flows.OAuthFlows,),  # noqa: E501
-            'getref': (str,),  # noqa: E501
-            '_in': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'open_id_connect_url': (str,),  # noqa: E501
-            'scheme': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "bearer_format": (str,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "flows": (o_auth_flows.OAuthFlows,),  # noqa: E501
+            "getref": (str,),  # noqa: E501
+            "_in": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "open_id_connect_url": (str,),  # noqa: E501
+            "scheme": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -107,31 +104,40 @@ class SecurityScheme(ModelNormal):
         return None
 
     attribute_map = {
-        'bearer_format': 'bearerFormat',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'flows': 'flows',  # noqa: E501
-        'getref': 'get$ref',  # noqa: E501
-        '_in': 'in',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'open_id_connect_url': 'openIdConnectUrl',  # noqa: E501
-        'scheme': 'scheme',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "bearer_format": "bearerFormat",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "flows": "flows",  # noqa: E501
+        "getref": "get$ref",  # noqa: E501
+        "_in": "in",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "open_id_connect_url": "openIdConnectUrl",  # noqa: E501
+        "scheme": "scheme",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """security_scheme.SecurityScheme - a model defined in OpenAPI
 
 

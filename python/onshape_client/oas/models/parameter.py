@@ -29,21 +29,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import example
 except ImportError:
-    example = sys.modules[
-        'onshape_client.oas.models.example']
+    example = sys.modules["onshape_client.oas.models.example"]
 try:
     from onshape_client.oas.models import media_type
 except ImportError:
-    media_type = sys.modules[
-        'onshape_client.oas.models.media_type']
+    media_type = sys.modules["onshape_client.oas.models.media_type"]
 try:
     from onshape_client.oas.models import schema
 except ImportError:
-    schema = sys.modules[
-        'onshape_client.oas.models.schema']
+    schema = sys.modules["onshape_client.oas.models.schema"]
 
 
 class Parameter(ModelNormal):
@@ -71,19 +69,18 @@ class Parameter(ModelNormal):
     """
 
     allowed_values = {
-        ('style',): {
-            'MATRIX': "MATRIX",
-            'LABEL': "LABEL",
-            'FORM': "FORM",
-            'SIMPLE': "SIMPLE",
-            'SPACEDELIMITED': "SPACEDELIMITED",
-            'PIPEDELIMITED': "PIPEDELIMITED",
-            'DEEPOBJECT': "DEEPOBJECT",
+        ("style",): {
+            "MATRIX": "MATRIX",
+            "LABEL": "LABEL",
+            "FORM": "FORM",
+            "SIMPLE": "SIMPLE",
+            "SPACEDELIMITED": "SPACEDELIMITED",
+            "PIPEDELIMITED": "PIPEDELIMITED",
+            "DEEPOBJECT": "DEEPOBJECT",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -98,21 +95,32 @@ class Parameter(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'allow_empty_value': (bool,),  # noqa: E501
-            'allow_reserved': (bool,),  # noqa: E501
-            'content': ({str: (media_type.MediaType,)},),  # noqa: E501
-            'deprecated': (bool,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'example': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'examples': ({str: (example.Example,)},),  # noqa: E501
-            'explode': (bool,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'getref': (str,),  # noqa: E501
-            '_in': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'required': (bool,),  # noqa: E501
-            'schema': (schema.Schema,),  # noqa: E501
-            'style': (str,),  # noqa: E501
+            "allow_empty_value": (bool,),  # noqa: E501
+            "allow_reserved": (bool,),  # noqa: E501
+            "content": ({str: (media_type.MediaType,)},),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "example": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "examples": ({str: (example.Example,)},),  # noqa: E501
+            "explode": (bool,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "getref": (str,),  # noqa: E501
+            "_in": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "required": (bool,),  # noqa: E501
+            "schema": (schema.Schema,),  # noqa: E501
+            "style": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -120,36 +128,45 @@ class Parameter(ModelNormal):
         return None
 
     attribute_map = {
-        'allow_empty_value': 'allowEmptyValue',  # noqa: E501
-        'allow_reserved': 'allowReserved',  # noqa: E501
-        'content': 'content',  # noqa: E501
-        'deprecated': 'deprecated',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'example': 'example',  # noqa: E501
-        'examples': 'examples',  # noqa: E501
-        'explode': 'explode',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'getref': 'get$ref',  # noqa: E501
-        '_in': 'in',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'required': 'required',  # noqa: E501
-        'schema': 'schema',  # noqa: E501
-        'style': 'style',  # noqa: E501
+        "allow_empty_value": "allowEmptyValue",  # noqa: E501
+        "allow_reserved": "allowReserved",  # noqa: E501
+        "content": "content",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "example": "example",  # noqa: E501
+        "examples": "examples",  # noqa: E501
+        "explode": "explode",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "getref": "get$ref",  # noqa: E501
+        "_in": "in",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "required": "required",  # noqa: E501
+        "schema": "schema",  # noqa: E501
+        "style": "style",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """parameter.Parameter - a model defined in OpenAPI
 
 

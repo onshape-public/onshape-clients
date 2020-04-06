@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_webhook_options
 except ImportError:
-    bt_webhook_options = sys.modules[
-        'onshape_client.oas.models.bt_webhook_options']
+    bt_webhook_options = sys.modules["onshape_client.oas.models.bt_webhook_options"]
 
 
 class BTWebhookParams(ModelNormal):
@@ -61,11 +61,9 @@ class BTWebhookParams(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,22 +78,22 @@ class BTWebhookParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'client_id': (str,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'data': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'events': ([str],),  # noqa: E501
-            'filter': (str,),  # noqa: E501
-            'folder_id': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'options': (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'url': (str,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
-            'version_id': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
+            "client_id": (str,),  # noqa: E501
+            "company_id": (str,),  # noqa: E501
+            "data": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "events": ([str],),  # noqa: E501
+            "filter": (str,),  # noqa: E501
+            "folder_id": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "options": (bt_webhook_options.BTWebhookOptions,),  # noqa: E501
+            "part_id": (str,),  # noqa: E501
+            "project_id": (str,),  # noqa: E501
+            "url": (str,),  # noqa: E501
+            "user_id": (str,),  # noqa: E501
+            "version_id": (str,),  # noqa: E501
+            "workspace_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -103,37 +101,46 @@ class BTWebhookParams(ModelNormal):
         return None
 
     attribute_map = {
-        'client_id': 'clientId',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'data': 'data',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'events': 'events',  # noqa: E501
-        'filter': 'filter',  # noqa: E501
-        'folder_id': 'folderId',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'options': 'options',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'user_id': 'userId',  # noqa: E501
-        'version_id': 'versionId',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
+        "client_id": "clientId",  # noqa: E501
+        "company_id": "companyId",  # noqa: E501
+        "data": "data",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "events": "events",  # noqa: E501
+        "filter": "filter",  # noqa: E501
+        "folder_id": "folderId",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "options": "options",  # noqa: E501
+        "part_id": "partId",  # noqa: E501
+        "project_id": "projectId",  # noqa: E501
+        "url": "url",  # noqa: E501
+        "user_id": "userId",  # noqa: E501
+        "version_id": "versionId",  # noqa: E501
+        "workspace_id": "workspaceId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_webhook_params.BTWebhookParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -175,10 +182,12 @@ class BTWebhookParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

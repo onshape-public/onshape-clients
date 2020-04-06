@@ -30,31 +30,33 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table1073
 except ImportError:
     bt_bill_of_materials_table1073 = sys.modules[
-        'onshape_client.oas.models.bt_bill_of_materials_table1073']
+        "onshape_client.oas.models.bt_bill_of_materials_table1073"
+    ]
 try:
     from onshape_client.oas.models import bt_configured_part_properties_table2740
 except ImportError:
     bt_configured_part_properties_table2740 = sys.modules[
-        'onshape_client.oas.models.bt_configured_part_properties_table2740']
+        "onshape_client.oas.models.bt_configured_part_properties_table2740"
+    ]
 try:
     from onshape_client.oas.models import bt_table_column_info1222
 except ImportError:
     bt_table_column_info1222 = sys.modules[
-        'onshape_client.oas.models.bt_table_column_info1222']
+        "onshape_client.oas.models.bt_table_column_info1222"
+    ]
 try:
     from onshape_client.oas.models import bt_table_row1054
 except ImportError:
-    bt_table_row1054 = sys.modules[
-        'onshape_client.oas.models.bt_table_row1054']
+    bt_table_row1054 = sys.modules["onshape_client.oas.models.bt_table_row1054"]
 try:
     from onshape_client.oas.models import btfs_table953
 except ImportError:
-    btfs_table953 = sys.modules[
-        'onshape_client.oas.models.btfs_table953']
+    btfs_table953 = sys.modules["onshape_client.oas.models.btfs_table953"]
 
 
 class BTTable1825(ModelNormal):
@@ -81,11 +83,9 @@ class BTTable1825(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -100,56 +100,67 @@ class BTTable1825(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'all_row_values': ([[str]],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'column_count': (int,),  # noqa: E501
-            'frozen_columns': (int,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'read_only': (bool,),  # noqa: E501
-            'row_count': (int,),  # noqa: E501
-            'table_columns': ([bt_table_column_info1222.BTTableColumnInfo1222],),  # noqa: E501
-            'table_id': (str,),  # noqa: E501
-            'table_rows': ([bt_table_row1054.BTTableRow1054],),  # noqa: E501
-            'title': (str,),  # noqa: E501
+            "all_row_values": ([[str]],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "column_count": (int,),  # noqa: E501
+            "frozen_columns": (int,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "read_only": (bool,),  # noqa: E501
+            "row_count": (int,),  # noqa: E501
+            "table_columns": (
+                [bt_table_column_info1222.BTTableColumnInfo1222],
+            ),  # noqa: E501
+            "table_id": (str,),  # noqa: E501
+            "table_rows": ([bt_table_row1054.BTTableRow1054],),  # noqa: E501
+            "title": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTFSTable-953': btfs_table953.BTFSTable953,
-                'BTConfiguredPartPropertiesTable-2740': bt_configured_part_properties_table2740.BTConfiguredPartPropertiesTable2740,
-                'BTBillOfMaterialsTable-1073': bt_bill_of_materials_table1073.BTBillOfMaterialsTable1073,
+            "bt_type": {
+                "BTFSTable-953": btfs_table953.BTFSTable953,
+                "BTConfiguredPartPropertiesTable-2740": bt_configured_part_properties_table2740.BTConfiguredPartPropertiesTable2740,
+                "BTBillOfMaterialsTable-1073": bt_bill_of_materials_table1073.BTBillOfMaterialsTable1073,
             },
         }
 
     attribute_map = {
-        'all_row_values': 'allRowValues',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'column_count': 'columnCount',  # noqa: E501
-        'frozen_columns': 'frozenColumns',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'read_only': 'readOnly',  # noqa: E501
-        'row_count': 'rowCount',  # noqa: E501
-        'table_columns': 'tableColumns',  # noqa: E501
-        'table_id': 'tableId',  # noqa: E501
-        'table_rows': 'tableRows',  # noqa: E501
-        'title': 'title',  # noqa: E501
+        "all_row_values": "allRowValues",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "column_count": "columnCount",  # noqa: E501
+        "frozen_columns": "frozenColumns",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "read_only": "readOnly",  # noqa: E501
+        "row_count": "rowCount",  # noqa: E501
+        "table_columns": "tableColumns",  # noqa: E501
+        "table_id": "tableId",  # noqa: E501
+        "table_rows": "tableRows",  # noqa: E501
+        "title": "title",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_table1825.BTTable1825 - a model defined in OpenAPI
 
         Keyword Args:
@@ -186,10 +197,12 @@ class BTTable1825(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

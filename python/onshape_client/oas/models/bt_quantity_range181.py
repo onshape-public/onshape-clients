@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules[
-        'onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules["onshape_client.oas.models.bt_location_info226"]
 try:
     from onshape_client.oas.models import bt_nullable_quantity_range1340
 except ImportError:
     bt_nullable_quantity_range1340 = sys.modules[
-        'onshape_client.oas.models.bt_nullable_quantity_range1340']
+        "onshape_client.oas.models.bt_nullable_quantity_range1340"
+    ]
 
 
 class BTQuantityRange181(ModelNormal):
@@ -66,11 +67,9 @@ class BTQuantityRange181(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,44 +84,53 @@ class BTQuantityRange181(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'default_value': (float,),  # noqa: E501
-            'location': (bt_location_info226.BTLocationInfo226,),  # noqa: E501
-            'max_value': (float,),  # noqa: E501
-            'min_value': (float,),  # noqa: E501
-            'units': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "default_value": (float,),  # noqa: E501
+            "location": (bt_location_info226.BTLocationInfo226,),  # noqa: E501
+            "max_value": (float,),  # noqa: E501
+            "min_value": (float,),  # noqa: E501
+            "units": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTNullableQuantityRange-1340': bt_nullable_quantity_range1340.BTNullableQuantityRange1340,
+            "bt_type": {
+                "BTNullableQuantityRange-1340": bt_nullable_quantity_range1340.BTNullableQuantityRange1340,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'default_value': 'defaultValue',  # noqa: E501
-        'location': 'location',  # noqa: E501
-        'max_value': 'maxValue',  # noqa: E501
-        'min_value': 'minValue',  # noqa: E501
-        'units': 'units',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "location": "location",  # noqa: E501
+        "max_value": "maxValue",  # noqa: E501
+        "min_value": "minValue",  # noqa: E501
+        "units": "units",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_quantity_range181.BTQuantityRange181 - a model defined in OpenAPI
 
         Keyword Args:
@@ -154,10 +162,12 @@ class BTQuantityRange181(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

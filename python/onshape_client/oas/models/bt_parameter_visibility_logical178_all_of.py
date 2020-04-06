@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
     bt_parameter_visibility_condition177 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_visibility_condition177']
+        "onshape_client.oas.models.bt_parameter_visibility_condition177"
+    ]
 
 
 class BTParameterVisibilityLogical178AllOf(ModelNormal):
@@ -62,16 +64,10 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('operation',): {
-            'NOT': "NOT",
-            'AND': "AND",
-            'OR': "OR",
-            'UNKNOWN': "UNKNOWN",
-        },
+        ("operation",): {"NOT": "NOT", "AND": "AND", "OR": "OR", "UNKNOWN": "UNKNOWN",},
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -86,9 +82,13 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'operation': (str,),  # noqa: E501
-            'children': ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "operation": (str,),  # noqa: E501
+            "children": (
+                [
+                    bt_parameter_visibility_condition177.BTParameterVisibilityCondition177
+                ],
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,24 +96,33 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'operation': 'operation',  # noqa: E501
-        'children': 'children',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "operation": "operation",  # noqa: E501
+        "children": "children",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_parameter_visibility_logical178_all_of.BTParameterVisibilityLogical178AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -142,10 +151,12 @@ class BTParameterVisibilityLogical178AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

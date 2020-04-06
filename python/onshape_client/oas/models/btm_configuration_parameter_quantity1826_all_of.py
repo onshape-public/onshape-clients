@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_quantity_range181
 except ImportError:
-    bt_quantity_range181 = sys.modules[
-        'onshape_client.oas.models.bt_quantity_range181']
+    bt_quantity_range181 = sys.modules["onshape_client.oas.models.bt_quantity_range181"]
 
 
 class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
@@ -62,22 +62,21 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('quantity_type',): {
-            'UNKNOWN': "UNKNOWN",
-            'INTEGER': "INTEGER",
-            'REAL': "REAL",
-            'LENGTH': "LENGTH",
-            'ANGLE': "ANGLE",
-            'MASS': "MASS",
-            'TIME': "TIME",
-            'TEMPERATURE': "TEMPERATURE",
-            'CURRENT': "CURRENT",
-            'ANYTHING': "ANYTHING",
+        ("quantity_type",): {
+            "UNKNOWN": "UNKNOWN",
+            "INTEGER": "INTEGER",
+            "REAL": "REAL",
+            "LENGTH": "LENGTH",
+            "ANGLE": "ANGLE",
+            "MASS": "MASS",
+            "TIME": "TIME",
+            "TEMPERATURE": "TEMPERATURE",
+            "CURRENT": "CURRENT",
+            "ANYTHING": "ANYTHING",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -92,9 +91,11 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'quantity_type': (str,),  # noqa: E501
-            'range_and_default': (bt_quantity_range181.BTQuantityRange181,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "quantity_type": (str,),  # noqa: E501
+            "range_and_default": (
+                bt_quantity_range181.BTQuantityRange181,
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,24 +103,33 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'quantity_type': 'quantityType',  # noqa: E501
-        'range_and_default': 'rangeAndDefault',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "quantity_type": "quantityType",  # noqa: E501
+        "range_and_default": "rangeAndDefault",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_configuration_parameter_quantity1826_all_of.BTMConfigurationParameterQuantity1826AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -148,10 +158,12 @@ class BTMConfigurationParameterQuantity1826AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

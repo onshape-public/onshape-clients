@@ -74,7 +74,7 @@ class ClientPackage:
 
     @ClientPackageMeta.action
     def set_version(self, version="0.0.0"):
-        self.version_to_publish=version
+        self.version_to_publish = version
 
     def set_version_in_source(
         self,
@@ -123,20 +123,20 @@ class GoPackage(ClientPackage):
         """Copy the contents of the GO package to a new Github repo to get distributed to the broader GO community.
         """
         source = self.root_path
-        destination = Path.home()/self.name
+        destination = Path.home() / self.name
         if destination.exists():
             shutil.rmtree(destination)
         shutil.copytree(str(source), str(destination))
         self.cwd = destination
         self.run("git init")
-        self.run("git remote add origin https://github.com/onshape-public/onshape-go-client.git")
+        self.run(
+            "git remote add origin https://github.com/onshape-public/onshape-go-client.git"
+        )
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
         self.run("git push --set-upstream origin master -f --tags")
         return
-
-
 
 
 class PythonPackage(ClientPackage):

@@ -56,11 +56,9 @@ class BTExportModelParams(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,64 +73,64 @@ class BTExportModelParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'angle_tolerance': (float,),  # noqa: E501
-            'batch_flat_patterns': (bool,),  # noqa: E501
-            'chord_tolerance': (float,),  # noqa: E501
-            'cloud_object_id': (str,),  # noqa: E501
-            'cloud_storage_account_id': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'deep_search_for_foreign_data': (bool,),  # noqa: E501
-            'destination_name': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'document_version_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'element_ids': (str,),  # noqa: E501
-            'email_link': (bool,),  # noqa: E501
-            'email_message': (str,),  # noqa: E501
-            'email_subject': (str,),  # noqa: E501
-            'email_to': (str,),  # noqa: E501
-            'extract_to_s3': (bool,),  # noqa: E501
-            'feature_ids': (str,),  # noqa: E501
-            'flatten': (bool,),  # noqa: E501
-            'format': (str,),  # noqa: E501
-            'from_user_id': (str,),  # noqa: E501
-            'grouping': (str,),  # noqa: E501
-            'include_bend_centerlines': (bool,),  # noqa: E501
-            'include_bend_lines': (bool,),  # noqa: E501
-            'include_custom_properties': (bool,),  # noqa: E501
-            'include_custom_properties_data': (bool,),  # noqa: E501
-            'include_export_ids': (bool,),  # noqa: E501
-            'include_foreign_data': (bool,),  # noqa: E501
-            'include_items_data': (bool,),  # noqa: E501
-            'include_linked_documents': (bool,),  # noqa: E501
-            'include_release_management_data': (bool,),  # noqa: E501
-            'include_sketches': (bool,),  # noqa: E501
-            'include_std': (bool,),  # noqa: E501
-            'is_parting_out': (bool,),  # noqa: E501
-            'link_document_id': (str,),  # noqa: E501
-            'link_document_workspace_id': (str,),  # noqa: E501
-            'max_facet_width': (float,),  # noqa: E501
-            'microversion': (str,),  # noqa: E501
-            'min_facet_width': (float,),  # noqa: E501
-            'mode': (str,),  # noqa: E501
-            'part_ids': (str,),  # noqa: E501
-            'part_query': (str,),  # noqa: E501
-            'password': (str,),  # noqa: E501
-            'password_required': (bool,),  # noqa: E501
-            'resolution': (str,),  # noqa: E501
-            'scale': (float,),  # noqa: E501
-            'send_copy_to_me': (bool,),  # noqa: E501
-            'sheet_metal_flat': (bool,),  # noqa: E501
-            'splines_as_polylines': (bool,),  # noqa: E501
-            'store_in_document': (bool,),  # noqa: E501
-            'trigger_auto_download': (bool,),  # noqa: E501
-            'units': (str,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
-            'valid_for_days': (int,),  # noqa: E501
-            'version': (str,),  # noqa: E501
-            'view': (str,),  # noqa: E501
-            'workspace_id': (str,),  # noqa: E501
-            'zip_single_file_output': (bool,),  # noqa: E501
+            "angle_tolerance": (float,),  # noqa: E501
+            "batch_flat_patterns": (bool,),  # noqa: E501
+            "chord_tolerance": (float,),  # noqa: E501
+            "cloud_object_id": (str,),  # noqa: E501
+            "cloud_storage_account_id": (str,),  # noqa: E501
+            "configuration": (str,),  # noqa: E501
+            "deep_search_for_foreign_data": (bool,),  # noqa: E501
+            "destination_name": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "document_version_id": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "element_ids": (str,),  # noqa: E501
+            "email_link": (bool,),  # noqa: E501
+            "email_message": (str,),  # noqa: E501
+            "email_subject": (str,),  # noqa: E501
+            "email_to": (str,),  # noqa: E501
+            "extract_to_s3": (bool,),  # noqa: E501
+            "feature_ids": (str,),  # noqa: E501
+            "flatten": (bool,),  # noqa: E501
+            "format": (str,),  # noqa: E501
+            "from_user_id": (str,),  # noqa: E501
+            "grouping": (str,),  # noqa: E501
+            "include_bend_centerlines": (bool,),  # noqa: E501
+            "include_bend_lines": (bool,),  # noqa: E501
+            "include_custom_properties": (bool,),  # noqa: E501
+            "include_custom_properties_data": (bool,),  # noqa: E501
+            "include_export_ids": (bool,),  # noqa: E501
+            "include_foreign_data": (bool,),  # noqa: E501
+            "include_items_data": (bool,),  # noqa: E501
+            "include_linked_documents": (bool,),  # noqa: E501
+            "include_release_management_data": (bool,),  # noqa: E501
+            "include_sketches": (bool,),  # noqa: E501
+            "include_std": (bool,),  # noqa: E501
+            "is_parting_out": (bool,),  # noqa: E501
+            "link_document_id": (str,),  # noqa: E501
+            "link_document_workspace_id": (str,),  # noqa: E501
+            "max_facet_width": (float,),  # noqa: E501
+            "microversion": (str,),  # noqa: E501
+            "min_facet_width": (float,),  # noqa: E501
+            "mode": (str,),  # noqa: E501
+            "part_ids": (str,),  # noqa: E501
+            "part_query": (str,),  # noqa: E501
+            "password": (str,),  # noqa: E501
+            "password_required": (bool,),  # noqa: E501
+            "resolution": (str,),  # noqa: E501
+            "scale": (float,),  # noqa: E501
+            "send_copy_to_me": (bool,),  # noqa: E501
+            "sheet_metal_flat": (bool,),  # noqa: E501
+            "splines_as_polylines": (bool,),  # noqa: E501
+            "store_in_document": (bool,),  # noqa: E501
+            "trigger_auto_download": (bool,),  # noqa: E501
+            "units": (str,),  # noqa: E501
+            "user_id": (str,),  # noqa: E501
+            "valid_for_days": (int,),  # noqa: E501
+            "version": (str,),  # noqa: E501
+            "view": (str,),  # noqa: E501
+            "workspace_id": (str,),  # noqa: E501
+            "zip_single_file_output": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -140,79 +138,88 @@ class BTExportModelParams(ModelNormal):
         return None
 
     attribute_map = {
-        'angle_tolerance': 'angleTolerance',  # noqa: E501
-        'batch_flat_patterns': 'batchFlatPatterns',  # noqa: E501
-        'chord_tolerance': 'chordTolerance',  # noqa: E501
-        'cloud_object_id': 'cloudObjectId',  # noqa: E501
-        'cloud_storage_account_id': 'cloudStorageAccountId',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'deep_search_for_foreign_data': 'deepSearchForForeignData',  # noqa: E501
-        'destination_name': 'destinationName',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'document_version_id': 'documentVersionId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'element_ids': 'elementIds',  # noqa: E501
-        'email_link': 'emailLink',  # noqa: E501
-        'email_message': 'emailMessage',  # noqa: E501
-        'email_subject': 'emailSubject',  # noqa: E501
-        'email_to': 'emailTo',  # noqa: E501
-        'extract_to_s3': 'extractToS3',  # noqa: E501
-        'feature_ids': 'featureIds',  # noqa: E501
-        'flatten': 'flatten',  # noqa: E501
-        'format': 'format',  # noqa: E501
-        'from_user_id': 'fromUserId',  # noqa: E501
-        'grouping': 'grouping',  # noqa: E501
-        'include_bend_centerlines': 'includeBendCenterlines',  # noqa: E501
-        'include_bend_lines': 'includeBendLines',  # noqa: E501
-        'include_custom_properties': 'includeCustomProperties',  # noqa: E501
-        'include_custom_properties_data': 'includeCustomPropertiesData',  # noqa: E501
-        'include_export_ids': 'includeExportIds',  # noqa: E501
-        'include_foreign_data': 'includeForeignData',  # noqa: E501
-        'include_items_data': 'includeItemsData',  # noqa: E501
-        'include_linked_documents': 'includeLinkedDocuments',  # noqa: E501
-        'include_release_management_data': 'includeReleaseManagementData',  # noqa: E501
-        'include_sketches': 'includeSketches',  # noqa: E501
-        'include_std': 'includeStd',  # noqa: E501
-        'is_parting_out': 'isPartingOut',  # noqa: E501
-        'link_document_id': 'linkDocumentId',  # noqa: E501
-        'link_document_workspace_id': 'linkDocumentWorkspaceId',  # noqa: E501
-        'max_facet_width': 'maxFacetWidth',  # noqa: E501
-        'microversion': 'microversion',  # noqa: E501
-        'min_facet_width': 'minFacetWidth',  # noqa: E501
-        'mode': 'mode',  # noqa: E501
-        'part_ids': 'partIds',  # noqa: E501
-        'part_query': 'partQuery',  # noqa: E501
-        'password': 'password',  # noqa: E501
-        'password_required': 'passwordRequired',  # noqa: E501
-        'resolution': 'resolution',  # noqa: E501
-        'scale': 'scale',  # noqa: E501
-        'send_copy_to_me': 'sendCopyToMe',  # noqa: E501
-        'sheet_metal_flat': 'sheetMetalFlat',  # noqa: E501
-        'splines_as_polylines': 'splinesAsPolylines',  # noqa: E501
-        'store_in_document': 'storeInDocument',  # noqa: E501
-        'trigger_auto_download': 'triggerAutoDownload',  # noqa: E501
-        'units': 'units',  # noqa: E501
-        'user_id': 'userId',  # noqa: E501
-        'valid_for_days': 'validForDays',  # noqa: E501
-        'version': 'version',  # noqa: E501
-        'view': 'view',  # noqa: E501
-        'workspace_id': 'workspaceId',  # noqa: E501
-        'zip_single_file_output': 'zipSingleFileOutput',  # noqa: E501
+        "angle_tolerance": "angleTolerance",  # noqa: E501
+        "batch_flat_patterns": "batchFlatPatterns",  # noqa: E501
+        "chord_tolerance": "chordTolerance",  # noqa: E501
+        "cloud_object_id": "cloudObjectId",  # noqa: E501
+        "cloud_storage_account_id": "cloudStorageAccountId",  # noqa: E501
+        "configuration": "configuration",  # noqa: E501
+        "deep_search_for_foreign_data": "deepSearchForForeignData",  # noqa: E501
+        "destination_name": "destinationName",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "document_version_id": "documentVersionId",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "element_ids": "elementIds",  # noqa: E501
+        "email_link": "emailLink",  # noqa: E501
+        "email_message": "emailMessage",  # noqa: E501
+        "email_subject": "emailSubject",  # noqa: E501
+        "email_to": "emailTo",  # noqa: E501
+        "extract_to_s3": "extractToS3",  # noqa: E501
+        "feature_ids": "featureIds",  # noqa: E501
+        "flatten": "flatten",  # noqa: E501
+        "format": "format",  # noqa: E501
+        "from_user_id": "fromUserId",  # noqa: E501
+        "grouping": "grouping",  # noqa: E501
+        "include_bend_centerlines": "includeBendCenterlines",  # noqa: E501
+        "include_bend_lines": "includeBendLines",  # noqa: E501
+        "include_custom_properties": "includeCustomProperties",  # noqa: E501
+        "include_custom_properties_data": "includeCustomPropertiesData",  # noqa: E501
+        "include_export_ids": "includeExportIds",  # noqa: E501
+        "include_foreign_data": "includeForeignData",  # noqa: E501
+        "include_items_data": "includeItemsData",  # noqa: E501
+        "include_linked_documents": "includeLinkedDocuments",  # noqa: E501
+        "include_release_management_data": "includeReleaseManagementData",  # noqa: E501
+        "include_sketches": "includeSketches",  # noqa: E501
+        "include_std": "includeStd",  # noqa: E501
+        "is_parting_out": "isPartingOut",  # noqa: E501
+        "link_document_id": "linkDocumentId",  # noqa: E501
+        "link_document_workspace_id": "linkDocumentWorkspaceId",  # noqa: E501
+        "max_facet_width": "maxFacetWidth",  # noqa: E501
+        "microversion": "microversion",  # noqa: E501
+        "min_facet_width": "minFacetWidth",  # noqa: E501
+        "mode": "mode",  # noqa: E501
+        "part_ids": "partIds",  # noqa: E501
+        "part_query": "partQuery",  # noqa: E501
+        "password": "password",  # noqa: E501
+        "password_required": "passwordRequired",  # noqa: E501
+        "resolution": "resolution",  # noqa: E501
+        "scale": "scale",  # noqa: E501
+        "send_copy_to_me": "sendCopyToMe",  # noqa: E501
+        "sheet_metal_flat": "sheetMetalFlat",  # noqa: E501
+        "splines_as_polylines": "splinesAsPolylines",  # noqa: E501
+        "store_in_document": "storeInDocument",  # noqa: E501
+        "trigger_auto_download": "triggerAutoDownload",  # noqa: E501
+        "units": "units",  # noqa: E501
+        "user_id": "userId",  # noqa: E501
+        "valid_for_days": "validForDays",  # noqa: E501
+        "version": "version",  # noqa: E501
+        "view": "view",  # noqa: E501
+        "workspace_id": "workspaceId",  # noqa: E501
+        "zip_single_file_output": "zipSingleFileOutput",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_export_model_params.BTExportModelParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -296,10 +303,12 @@ class BTExportModelParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

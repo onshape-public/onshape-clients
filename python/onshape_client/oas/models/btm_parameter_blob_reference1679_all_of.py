@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_import136
 except ImportError:
-    btm_import136 = sys.modules[
-        'onshape_client.oas.models.btm_import136']
+    btm_import136 = sys.modules["onshape_client.oas.models.btm_import136"]
 
 
 class BTMParameterBlobReference1679AllOf(ModelNormal):
@@ -61,11 +61,9 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,9 +78,9 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'namespace': (str,),  # noqa: E501
-            'blob_import': (btm_import136.BTMImport136,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "blob_import": (btm_import136.BTMImport136,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,24 +88,33 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'namespace': 'namespace',  # noqa: E501
-        'blob_import': 'blobImport',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "blob_import": "blobImport",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_parameter_blob_reference1679_all_of.BTMParameterBlobReference1679AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -136,10 +143,12 @@ class BTMParameterBlobReference1679AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

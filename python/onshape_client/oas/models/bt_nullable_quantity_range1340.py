@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules[
-        'onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules["onshape_client.oas.models.bt_location_info226"]
 try:
     from onshape_client.oas.models import bt_nullable_quantity_range1340_all_of
 except ImportError:
     bt_nullable_quantity_range1340_all_of = sys.modules[
-        'onshape_client.oas.models.bt_nullable_quantity_range1340_all_of']
+        "onshape_client.oas.models.bt_nullable_quantity_range1340_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_quantity_range181
 except ImportError:
-    bt_quantity_range181 = sys.modules[
-        'onshape_client.oas.models.bt_quantity_range181']
+    bt_quantity_range181 = sys.modules["onshape_client.oas.models.bt_quantity_range181"]
 
 
 class BTNullableQuantityRange1340(ModelComposed):
@@ -71,11 +71,9 @@ class BTNullableQuantityRange1340(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,15 +88,15 @@ class BTNullableQuantityRange1340(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'has_min_value': (bool,),  # noqa: E501
-            'has_default_value': (bool,),  # noqa: E501
-            'has_max_value': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'default_value': (float,),  # noqa: E501
-            'location': (bt_location_info226.BTLocationInfo226,),  # noqa: E501
-            'max_value': (float,),  # noqa: E501
-            'min_value': (float,),  # noqa: E501
-            'units': (str,),  # noqa: E501
+            "has_min_value": (bool,),  # noqa: E501
+            "has_default_value": (bool,),  # noqa: E501
+            "has_max_value": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "default_value": (float,),  # noqa: E501
+            "location": (bt_location_info226.BTLocationInfo226,),  # noqa: E501
+            "max_value": (float,),  # noqa: E501
+            "min_value": (float,),  # noqa: E501
+            "units": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -106,29 +104,38 @@ class BTNullableQuantityRange1340(ModelComposed):
         return None
 
     attribute_map = {
-        'has_min_value': 'hasMinValue',  # noqa: E501
-        'has_default_value': 'hasDefaultValue',  # noqa: E501
-        'has_max_value': 'hasMaxValue',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'default_value': 'defaultValue',  # noqa: E501
-        'location': 'location',  # noqa: E501
-        'max_value': 'maxValue',  # noqa: E501
-        'min_value': 'minValue',  # noqa: E501
-        'units': 'units',  # noqa: E501
+        "has_min_value": "hasMinValue",  # noqa: E501
+        "has_default_value": "hasDefaultValue",  # noqa: E501
+        "has_max_value": "hasMaxValue",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "location": "location",  # noqa: E501
+        "max_value": "maxValue",  # noqa: E501
+        "min_value": "minValue",  # noqa: E501
+        "units": "units",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_nullable_quantity_range1340.BTNullableQuantityRange1340 - a model defined in OpenAPI
 
         Keyword Args:
@@ -163,13 +170,12 @@ class BTNullableQuantityRange1340(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -178,8 +184,7 @@ class BTNullableQuantityRange1340(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -188,10 +193,12 @@ class BTNullableQuantityRange1340(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -206,12 +213,10 @@ class BTNullableQuantityRange1340(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_nullable_quantity_range1340_all_of.BTNullableQuantityRange1340AllOf,
-              bt_quantity_range181.BTQuantityRange181,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_nullable_quantity_range1340_all_of.BTNullableQuantityRange1340AllOf,
+                bt_quantity_range181.BTQuantityRange181,
+            ],
+            "oneOf": [],
         }

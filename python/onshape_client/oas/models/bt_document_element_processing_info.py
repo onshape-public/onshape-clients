@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_thumbnail_info
 except ImportError:
-    bt_thumbnail_info = sys.modules[
-        'onshape_client.oas.models.bt_thumbnail_info']
+    bt_thumbnail_info = sys.modules["onshape_client.oas.models.bt_thumbnail_info"]
 
 
 class BTDocumentElementProcessingInfo(ModelNormal):
@@ -62,21 +62,20 @@ class BTDocumentElementProcessingInfo(ModelNormal):
     """
 
     allowed_values = {
-        ('element_type',): {
-            'PARTSTUDIO': "PARTSTUDIO",
-            'ASSEMBLY': "ASSEMBLY",
-            'DRAWING': "DRAWING",
-            'FEATURESTUDIO': "FEATURESTUDIO",
-            'BLOB': "BLOB",
-            'APPLICATION': "APPLICATION",
-            'TABLE': "TABLE",
-            'BILLOFMATERIALS': "BILLOFMATERIALS",
-            'UNKNOWN': "UNKNOWN",
+        ("element_type",): {
+            "PARTSTUDIO": "PARTSTUDIO",
+            "ASSEMBLY": "ASSEMBLY",
+            "DRAWING": "DRAWING",
+            "FEATURESTUDIO": "FEATURESTUDIO",
+            "BLOB": "BLOB",
+            "APPLICATION": "APPLICATION",
+            "TABLE": "TABLE",
+            "BILLOFMATERIALS": "BILLOFMATERIALS",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -91,23 +90,23 @@ class BTDocumentElementProcessingInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'angle_units': (str,),  # noqa: E501
-            'data_type': (str,),  # noqa: E501
-            'element_type': (str,),  # noqa: E501
-            'filename': (str,),  # noqa: E501
-            'foreign_data_id': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'length_units': (str,),  # noqa: E501
-            'mass_units': (str,),  # noqa: E501
-            'microversion_id': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'specified_unit': (str,),  # noqa: E501
-            'thumbnail_info': (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
-            'thumbnails': (str,),  # noqa: E501
-            'translation_event_key': (str,),  # noqa: E501
-            'translation_id': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
-            'unupdatable': (bool,),  # noqa: E501
+            "angle_units": (str,),  # noqa: E501
+            "data_type": (str,),  # noqa: E501
+            "element_type": (str,),  # noqa: E501
+            "filename": (str,),  # noqa: E501
+            "foreign_data_id": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "length_units": (str,),  # noqa: E501
+            "mass_units": (str,),  # noqa: E501
+            "microversion_id": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "specified_unit": (str,),  # noqa: E501
+            "thumbnail_info": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            "thumbnails": (str,),  # noqa: E501
+            "translation_event_key": (str,),  # noqa: E501
+            "translation_id": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "unupdatable": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -115,38 +114,47 @@ class BTDocumentElementProcessingInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'angle_units': 'angleUnits',  # noqa: E501
-        'data_type': 'dataType',  # noqa: E501
-        'element_type': 'elementType',  # noqa: E501
-        'filename': 'filename',  # noqa: E501
-        'foreign_data_id': 'foreignDataId',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'length_units': 'lengthUnits',  # noqa: E501
-        'mass_units': 'massUnits',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'specified_unit': 'specifiedUnit',  # noqa: E501
-        'thumbnail_info': 'thumbnailInfo',  # noqa: E501
-        'thumbnails': 'thumbnails',  # noqa: E501
-        'translation_event_key': 'translationEventKey',  # noqa: E501
-        'translation_id': 'translationId',  # noqa: E501
-        'type': 'type',  # noqa: E501
-        'unupdatable': 'unupdatable',  # noqa: E501
+        "angle_units": "angleUnits",  # noqa: E501
+        "data_type": "dataType",  # noqa: E501
+        "element_type": "elementType",  # noqa: E501
+        "filename": "filename",  # noqa: E501
+        "foreign_data_id": "foreignDataId",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "length_units": "lengthUnits",  # noqa: E501
+        "mass_units": "massUnits",  # noqa: E501
+        "microversion_id": "microversionId",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "specified_unit": "specifiedUnit",  # noqa: E501
+        "thumbnail_info": "thumbnailInfo",  # noqa: E501
+        "thumbnails": "thumbnails",  # noqa: E501
+        "translation_event_key": "translationEventKey",  # noqa: E501
+        "translation_id": "translationId",  # noqa: E501
+        "type": "type",  # noqa: E501
+        "unupdatable": "unupdatable",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_document_element_processing_info.BTDocumentElementProcessingInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -189,10 +197,12 @@ class BTDocumentElementProcessingInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

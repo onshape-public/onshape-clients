@@ -30,26 +30,29 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_folder_info_all_of
 except ImportError:
     bt_folder_info_all_of = sys.modules[
-        'onshape_client.oas.models.bt_folder_info_all_of']
+        "onshape_client.oas.models.bt_folder_info_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_global_tree_node_info
 except ImportError:
     bt_global_tree_node_info = sys.modules[
-        'onshape_client.oas.models.bt_global_tree_node_info']
+        "onshape_client.oas.models.bt_global_tree_node_info"
+    ]
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules[
-        'onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules["onshape_client.oas.models.bt_owner_info"]
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
     bt_user_basic_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_user_basic_summary_info']
+        "onshape_client.oas.models.bt_user_basic_summary_info"
+    ]
 
 
 class BTFolderInfo(ModelComposed):
@@ -76,11 +79,9 @@ class BTFolderInfo(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,31 +96,44 @@ class BTFolderInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'parent_id': (str,),  # noqa: E501
-            'permission_set': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'trash': (bool,),  # noqa: E501
-            'can_unshare': (bool,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
-            'trashed_at': (datetime,),  # noqa: E501
-            'is_orphaned': (bool,),  # noqa: E501
-            'can_move': (bool,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
-            'is_enterprise_owned': (bool,),  # noqa: E501
-            'is_mutable': (bool,),  # noqa: E501
-            'json_type': (str,),  # noqa: E501
-            'modified_at': (datetime,),  # noqa: E501
-            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'resource_type': (str,),  # noqa: E501
-            'tree_href': (str,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "permission_set": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "trash": (bool,),  # noqa: E501
+            "can_unshare": (bool,),  # noqa: E501
+            "active": (bool,),  # noqa: E501
+            "trashed_at": (datetime,),  # noqa: E501
+            "is_orphaned": (bool,),  # noqa: E501
+            "can_move": (bool,),  # noqa: E501
+            "created_at": (datetime,),  # noqa: E501
+            "created_by": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "is_container": (bool,),  # noqa: E501
+            "is_enterprise_owned": (bool,),  # noqa: E501
+            "is_mutable": (bool,),  # noqa: E501
+            "json_type": (str,),  # noqa: E501
+            "modified_at": (datetime,),  # noqa: E501
+            "modified_by": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "owner": (bt_owner_info.BTOwnerInfo,),  # noqa: E501
+            "project_id": (str,),  # noqa: E501
+            "resource_type": (str,),  # noqa: E501
+            "tree_href": (str,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -127,45 +141,54 @@ class BTFolderInfo(ModelComposed):
         return None
 
     attribute_map = {
-        'parent_id': 'parentId',  # noqa: E501
-        'permission_set': 'permissionSet',  # noqa: E501
-        'trash': 'trash',  # noqa: E501
-        'can_unshare': 'canUnshare',  # noqa: E501
-        'active': 'active',  # noqa: E501
-        'trashed_at': 'trashedAt',  # noqa: E501
-        'is_orphaned': 'isOrphaned',  # noqa: E501
-        'can_move': 'canMove',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
-        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
-        'is_mutable': 'isMutable',  # noqa: E501
-        'json_type': 'jsonType',  # noqa: E501
-        'modified_at': 'modifiedAt',  # noqa: E501
-        'modified_by': 'modifiedBy',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'owner': 'owner',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'resource_type': 'resourceType',  # noqa: E501
-        'tree_href': 'treeHref',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "permission_set": "permissionSet",  # noqa: E501
+        "trash": "trash",  # noqa: E501
+        "can_unshare": "canUnshare",  # noqa: E501
+        "active": "active",  # noqa: E501
+        "trashed_at": "trashedAt",  # noqa: E501
+        "is_orphaned": "isOrphaned",  # noqa: E501
+        "can_move": "canMove",  # noqa: E501
+        "created_at": "createdAt",  # noqa: E501
+        "created_by": "createdBy",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "is_container": "isContainer",  # noqa: E501
+        "is_enterprise_owned": "isEnterpriseOwned",  # noqa: E501
+        "is_mutable": "isMutable",  # noqa: E501
+        "json_type": "jsonType",  # noqa: E501
+        "modified_at": "modifiedAt",  # noqa: E501
+        "modified_by": "modifiedBy",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "owner": "owner",  # noqa: E501
+        "project_id": "projectId",  # noqa: E501
+        "resource_type": "resourceType",  # noqa: E501
+        "tree_href": "treeHref",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_folder_info.BTFolderInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -216,13 +239,12 @@ class BTFolderInfo(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -231,8 +253,7 @@ class BTFolderInfo(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -241,10 +262,12 @@ class BTFolderInfo(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -259,12 +282,10 @@ class BTFolderInfo(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_folder_info_all_of.BTFolderInfoAllOf,
-              bt_global_tree_node_info.BTGlobalTreeNodeInfo,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_folder_info_all_of.BTFolderInfoAllOf,
+                bt_global_tree_node_info.BTGlobalTreeNodeInfo,
+            ],
+            "oneOf": [],
         }

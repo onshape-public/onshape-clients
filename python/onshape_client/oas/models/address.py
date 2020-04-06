@@ -56,11 +56,9 @@ class Address(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,12 +73,12 @@ class Address(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'city': (str,),  # noqa: E501
-            'country': (str,),  # noqa: E501
-            'line1': (str,),  # noqa: E501
-            'line2': (str,),  # noqa: E501
-            'postal_code': (str,),  # noqa: E501
-            'state': (str,),  # noqa: E501
+            "city": (str,),  # noqa: E501
+            "country": (str,),  # noqa: E501
+            "line1": (str,),  # noqa: E501
+            "line2": (str,),  # noqa: E501
+            "postal_code": (str,),  # noqa: E501
+            "state": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,27 +86,36 @@ class Address(ModelNormal):
         return None
 
     attribute_map = {
-        'city': 'city',  # noqa: E501
-        'country': 'country',  # noqa: E501
-        'line1': 'line1',  # noqa: E501
-        'line2': 'line2',  # noqa: E501
-        'postal_code': 'postalCode',  # noqa: E501
-        'state': 'state',  # noqa: E501
+        "city": "city",  # noqa: E501
+        "country": "country",  # noqa: E501
+        "line1": "line1",  # noqa: E501
+        "line2": "line2",  # noqa: E501
+        "postal_code": "postalCode",  # noqa: E501
+        "state": "state",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """address.Address - a model defined in OpenAPI
 
         Keyword Args:
@@ -140,10 +147,12 @@ class Address(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

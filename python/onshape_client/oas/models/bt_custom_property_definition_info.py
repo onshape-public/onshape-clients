@@ -57,22 +57,21 @@ class BTCustomPropertyDefinitionInfo(ModelNormal):
     """
 
     allowed_values = {
-        ('type',): {
-            'STRING': "STRING",
-            'NUMBER': "NUMBER",
-            'INTEGER': "INTEGER",
-            'BOOLEAN': "BOOLEAN",
-            'DATE': "DATE",
-            'ENUM': "ENUM",
-            'BLOB': "BLOB",
-            'OBJECT': "OBJECT",
-            'ARRAY': "ARRAY",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "STRING": "STRING",
+            "NUMBER": "NUMBER",
+            "INTEGER": "INTEGER",
+            "BOOLEAN": "BOOLEAN",
+            "DATE": "DATE",
+            "ENUM": "ENUM",
+            "BLOB": "BLOB",
+            "OBJECT": "OBJECT",
+            "ARRAY": "ARRAY",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -87,11 +86,11 @@ class BTCustomPropertyDefinitionInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'description': (str,),  # noqa: E501
-            'enum_definition': ([str],),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'template': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "enum_definition": ([str],),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "template": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,26 +98,35 @@ class BTCustomPropertyDefinitionInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'description': 'description',  # noqa: E501
-        'enum_definition': 'enumDefinition',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'template': 'template',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "description": "description",  # noqa: E501
+        "enum_definition": "enumDefinition",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "template": "template",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_custom_property_definition_info.BTCustomPropertyDefinitionInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -149,10 +157,12 @@ class BTCustomPropertyDefinitionInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

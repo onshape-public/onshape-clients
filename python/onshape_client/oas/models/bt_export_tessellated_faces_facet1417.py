@@ -30,16 +30,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_vector2d1812
 except ImportError:
-    bt_vector2d1812 = sys.modules[
-        'onshape_client.oas.models.bt_vector2d1812']
+    bt_vector2d1812 = sys.modules["onshape_client.oas.models.bt_vector2d1812"]
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTExportTessellatedFacesFacet1417(ModelNormal):
@@ -66,11 +65,9 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,12 +82,12 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'indices': ([int],),  # noqa: E501
-            'normal': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'normals': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
-            'texture_coordinates': ([bt_vector2d1812.BTVector2d1812],),  # noqa: E501
-            'vertices': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "indices": ([int],),  # noqa: E501
+            "normal": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "normals": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
+            "texture_coordinates": ([bt_vector2d1812.BTVector2d1812],),  # noqa: E501
+            "vertices": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
         }
 
     @staticmethod
@@ -98,27 +95,36 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
         return None
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'indices': 'indices',  # noqa: E501
-        'normal': 'normal',  # noqa: E501
-        'normals': 'normals',  # noqa: E501
-        'texture_coordinates': 'textureCoordinates',  # noqa: E501
-        'vertices': 'vertices',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "indices": "indices",  # noqa: E501
+        "normal": "normal",  # noqa: E501
+        "normals": "normals",  # noqa: E501
+        "texture_coordinates": "textureCoordinates",  # noqa: E501
+        "vertices": "vertices",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_export_tessellated_faces_facet1417.BTExportTessellatedFacesFacet1417 - a model defined in OpenAPI
 
         Keyword Args:
@@ -150,10 +156,12 @@ class BTExportTessellatedFacesFacet1417(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

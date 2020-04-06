@@ -57,16 +57,15 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('object_type',): {
-            'NOT_SKETCH_OBJECT': "NOT_SKETCH_OBJECT",
-            'ANY_SKETCH_OBJECT': "ANY_SKETCH_OBJECT",
-            'USER_ENTITY': "USER_ENTITY",
-            'UNKNOWN': "UNKNOWN",
+        ("object_type",): {
+            "NOT_SKETCH_OBJECT": "NOT_SKETCH_OBJECT",
+            "ANY_SKETCH_OBJECT": "ANY_SKETCH_OBJECT",
+            "USER_ENTITY": "USER_ENTITY",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -81,9 +80,9 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'object_type': (str,),  # noqa: E501
-            'is_sketch_object': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "object_type": (str,),  # noqa: E501
+            "is_sketch_object": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,24 +90,33 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'object_type': 'objectType',  # noqa: E501
-        'is_sketch_object': 'isSketchObject',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "object_type": "objectType",  # noqa: E501
+        "is_sketch_object": "isSketchObject",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_sketch_object_filter184_all_of.BTSketchObjectFilter184AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -137,10 +145,12 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

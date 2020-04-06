@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPLiteralNumber258(ModelNormal):
@@ -62,21 +62,20 @@ class BTPLiteralNumber258(ModelNormal):
     """
 
     allowed_values = {
-        ('documentation_type',): {
-            'FUNCTION': "FUNCTION",
-            'PREDICATE': "PREDICATE",
-            'CONSTANT': "CONSTANT",
-            'ENUM': "ENUM",
-            'USER_TYPE': "USER_TYPE",
-            'FEATURE_DEFINITION': "FEATURE_DEFINITION",
-            'FILE_HEADER': "FILE_HEADER",
-            'UNDOCUMENTABLE': "UNDOCUMENTABLE",
-            'UNKNOWN': "UNKNOWN",
+        ("documentation_type",): {
+            "FUNCTION": "FUNCTION",
+            "PREDICATE": "PREDICATE",
+            "CONSTANT": "CONSTANT",
+            "ENUM": "ENUM",
+            "USER_TYPE": "USER_TYPE",
+            "FEATURE_DEFINITION": "FEATURE_DEFINITION",
+            "FILE_HEADER": "FILE_HEADER",
+            "UNDOCUMENTABLE": "UNDOCUMENTABLE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -91,19 +90,19 @@ class BTPLiteralNumber258(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'atomic': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'documentation_type': (str,),  # noqa: E501
-            'end_source_location': (int,),  # noqa: E501
-            'integer': (bool,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'short_descriptor': (str,),  # noqa: E501
-            'space_after': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_default': (bool,),  # noqa: E501
-            'start_source_location': (int,),  # noqa: E501
-            'text': (str,),  # noqa: E501
-            'value': (float,),  # noqa: E501
+            "atomic": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "documentation_type": (str,),  # noqa: E501
+            "end_source_location": (int,),  # noqa: E501
+            "integer": (bool,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "short_descriptor": (str,),  # noqa: E501
+            "space_after": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_default": (bool,),  # noqa: E501
+            "start_source_location": (int,),  # noqa: E501
+            "text": (str,),  # noqa: E501
+            "value": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,34 +110,43 @@ class BTPLiteralNumber258(ModelNormal):
         return None
 
     attribute_map = {
-        'atomic': 'atomic',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'documentation_type': 'documentationType',  # noqa: E501
-        'end_source_location': 'endSourceLocation',  # noqa: E501
-        'integer': 'integer',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'short_descriptor': 'shortDescriptor',  # noqa: E501
-        'space_after': 'spaceAfter',  # noqa: E501
-        'space_before': 'spaceBefore',  # noqa: E501
-        'space_default': 'spaceDefault',  # noqa: E501
-        'start_source_location': 'startSourceLocation',  # noqa: E501
-        'text': 'text',  # noqa: E501
-        'value': 'value',  # noqa: E501
+        "atomic": "atomic",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "documentation_type": "documentationType",  # noqa: E501
+        "end_source_location": "endSourceLocation",  # noqa: E501
+        "integer": "integer",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "short_descriptor": "shortDescriptor",  # noqa: E501
+        "space_after": "spaceAfter",  # noqa: E501
+        "space_before": "spaceBefore",  # noqa: E501
+        "space_default": "spaceDefault",  # noqa: E501
+        "start_source_location": "startSourceLocation",  # noqa: E501
+        "text": "text",  # noqa: E501
+        "value": "value",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_literal_number258.BTPLiteralNumber258 - a model defined in OpenAPI
 
         Keyword Args:
@@ -177,10 +185,12 @@ class BTPLiteralNumber258(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_revision_approver_info
 except ImportError:
     bt_revision_approver_info = sys.modules[
-        'onshape_client.oas.models.bt_revision_approver_info']
+        "onshape_client.oas.models.bt_revision_approver_info"
+    ]
 try:
     from onshape_client.oas.models import bt_user_summary_info
 except ImportError:
-    bt_user_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_user_summary_info']
+    bt_user_summary_info = sys.modules["onshape_client.oas.models.bt_user_summary_info"]
 
 
 class BTRevisionInfo(ModelNormal):
@@ -66,11 +67,9 @@ class BTRevisionInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,41 +84,43 @@ class BTRevisionInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'approvers': ([bt_revision_approver_info.BTRevisionApproverInfo],),  # noqa: E501
-            'auto_obsoletion_release_id': (str,),  # noqa: E501
-            'auto_obsoletion_release_name': (str,),  # noqa: E501
-            'can_current_user_obsolete': (bool,),  # noqa: E501
-            'can_export': (bool,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'document_name': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'element_type': (int,),  # noqa: E501
-            'error_message': (str,),  # noqa: E501
-            'file_name': (str,),  # noqa: E501
-            'flat_part_insertable_id': (str,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'insertable_id': (str,),  # noqa: E501
-            'is_obsolete': (bool,),  # noqa: E501
-            'is_translatable': (bool,),  # noqa: E501
-            'mime_type': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'next_revision_id': (str,),  # noqa: E501
-            'obsoletion_package_id': (str,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'previous_revision_id': (str,),  # noqa: E501
-            'release_created_date': (datetime,),  # noqa: E501
-            'release_id': (str,),  # noqa: E501
-            'release_name': (str,),  # noqa: E501
-            'released_by': (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
-            'revision': (str,),  # noqa: E501
-            'revision_rule_id': (str,),  # noqa: E501
-            'version_id': (str,),  # noqa: E501
-            'version_name': (str,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "approvers": (
+                [bt_revision_approver_info.BTRevisionApproverInfo],
+            ),  # noqa: E501
+            "auto_obsoletion_release_id": (str,),  # noqa: E501
+            "auto_obsoletion_release_name": (str,),  # noqa: E501
+            "can_current_user_obsolete": (bool,),  # noqa: E501
+            "can_export": (bool,),  # noqa: E501
+            "company_id": (str,),  # noqa: E501
+            "configuration": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "document_name": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "element_type": (int,),  # noqa: E501
+            "error_message": (str,),  # noqa: E501
+            "file_name": (str,),  # noqa: E501
+            "flat_part_insertable_id": (str,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "insertable_id": (str,),  # noqa: E501
+            "is_obsolete": (bool,),  # noqa: E501
+            "is_translatable": (bool,),  # noqa: E501
+            "mime_type": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "next_revision_id": (str,),  # noqa: E501
+            "obsoletion_package_id": (str,),  # noqa: E501
+            "part_id": (str,),  # noqa: E501
+            "part_number": (str,),  # noqa: E501
+            "previous_revision_id": (str,),  # noqa: E501
+            "release_created_date": (datetime,),  # noqa: E501
+            "release_id": (str,),  # noqa: E501
+            "release_name": (str,),  # noqa: E501
+            "released_by": (bt_user_summary_info.BTUserSummaryInfo,),  # noqa: E501
+            "revision": (str,),  # noqa: E501
+            "revision_rule_id": (str,),  # noqa: E501
+            "version_id": (str,),  # noqa: E501
+            "version_name": (str,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -127,56 +128,65 @@ class BTRevisionInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'approvers': 'approvers',  # noqa: E501
-        'auto_obsoletion_release_id': 'autoObsoletionReleaseId',  # noqa: E501
-        'auto_obsoletion_release_name': 'autoObsoletionReleaseName',  # noqa: E501
-        'can_current_user_obsolete': 'canCurrentUserObsolete',  # noqa: E501
-        'can_export': 'canExport',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'document_name': 'documentName',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'element_type': 'elementType',  # noqa: E501
-        'error_message': 'errorMessage',  # noqa: E501
-        'file_name': 'fileName',  # noqa: E501
-        'flat_part_insertable_id': 'flatPartInsertableId',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'insertable_id': 'insertableId',  # noqa: E501
-        'is_obsolete': 'isObsolete',  # noqa: E501
-        'is_translatable': 'isTranslatable',  # noqa: E501
-        'mime_type': 'mimeType',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'next_revision_id': 'nextRevisionId',  # noqa: E501
-        'obsoletion_package_id': 'obsoletionPackageId',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'previous_revision_id': 'previousRevisionId',  # noqa: E501
-        'release_created_date': 'releaseCreatedDate',  # noqa: E501
-        'release_id': 'releaseId',  # noqa: E501
-        'release_name': 'releaseName',  # noqa: E501
-        'released_by': 'releasedBy',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
-        'revision_rule_id': 'revisionRuleId',  # noqa: E501
-        'version_id': 'versionId',  # noqa: E501
-        'version_name': 'versionName',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "approvers": "approvers",  # noqa: E501
+        "auto_obsoletion_release_id": "autoObsoletionReleaseId",  # noqa: E501
+        "auto_obsoletion_release_name": "autoObsoletionReleaseName",  # noqa: E501
+        "can_current_user_obsolete": "canCurrentUserObsolete",  # noqa: E501
+        "can_export": "canExport",  # noqa: E501
+        "company_id": "companyId",  # noqa: E501
+        "configuration": "configuration",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "document_name": "documentName",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "element_type": "elementType",  # noqa: E501
+        "error_message": "errorMessage",  # noqa: E501
+        "file_name": "fileName",  # noqa: E501
+        "flat_part_insertable_id": "flatPartInsertableId",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "insertable_id": "insertableId",  # noqa: E501
+        "is_obsolete": "isObsolete",  # noqa: E501
+        "is_translatable": "isTranslatable",  # noqa: E501
+        "mime_type": "mimeType",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "next_revision_id": "nextRevisionId",  # noqa: E501
+        "obsoletion_package_id": "obsoletionPackageId",  # noqa: E501
+        "part_id": "partId",  # noqa: E501
+        "part_number": "partNumber",  # noqa: E501
+        "previous_revision_id": "previousRevisionId",  # noqa: E501
+        "release_created_date": "releaseCreatedDate",  # noqa: E501
+        "release_id": "releaseId",  # noqa: E501
+        "release_name": "releaseName",  # noqa: E501
+        "released_by": "releasedBy",  # noqa: E501
+        "revision": "revision",  # noqa: E501
+        "revision_rule_id": "revisionRuleId",  # noqa: E501
+        "version_id": "versionId",  # noqa: E501
+        "version_name": "versionName",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_revision_info.BTRevisionInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -237,10 +247,12 @@ class BTRevisionInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

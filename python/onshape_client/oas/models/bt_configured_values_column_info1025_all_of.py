@@ -57,17 +57,16 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('parent_type',): {
-            'FEATURE': "FEATURE",
-            'INSTANCE': "INSTANCE",
-            'MATE': "MATE",
-            'MATE_CONNECTOR': "MATE_CONNECTOR",
-            'UNKNOWN': "UNKNOWN",
+        ("parent_type",): {
+            "FEATURE": "FEATURE",
+            "INSTANCE": "INSTANCE",
+            "MATE": "MATE",
+            "MATE_CONNECTOR": "MATE_CONNECTOR",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -82,10 +81,10 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parent_name': (str,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
-            'parent_type': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "parent_name": (str,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "parent_type": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,25 +92,34 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'parent_name': 'parentName',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
-        'parent_type': 'parentType',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "parent_name": "parentName",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "parent_type": "parentType",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_configured_values_column_info1025_all_of.BTConfiguredValuesColumnInfo1025AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -141,10 +149,12 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

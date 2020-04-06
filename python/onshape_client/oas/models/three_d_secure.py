@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import card
 except ImportError:
-    card = sys.modules[
-        'onshape_client.oas.models.card']
+    card = sys.modules["onshape_client.oas.models.card"]
 
 
 class ThreeDSecure(ModelNormal):
@@ -61,11 +61,9 @@ class ThreeDSecure(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,16 +78,16 @@ class ThreeDSecure(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'amount': (int,),  # noqa: E501
-            'authenticated': (bool,),  # noqa: E501
-            'card': (card.Card,),  # noqa: E501
-            'created': (int,),  # noqa: E501
-            'currency': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'livemode': (bool,),  # noqa: E501
-            'object': (str,),  # noqa: E501
-            'redirect_url': (str,),  # noqa: E501
-            'status': (str,),  # noqa: E501
+            "amount": (int,),  # noqa: E501
+            "authenticated": (bool,),  # noqa: E501
+            "card": (card.Card,),  # noqa: E501
+            "created": (int,),  # noqa: E501
+            "currency": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "livemode": (bool,),  # noqa: E501
+            "object": (str,),  # noqa: E501
+            "redirect_url": (str,),  # noqa: E501
+            "status": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,31 +95,40 @@ class ThreeDSecure(ModelNormal):
         return None
 
     attribute_map = {
-        'amount': 'amount',  # noqa: E501
-        'authenticated': 'authenticated',  # noqa: E501
-        'card': 'card',  # noqa: E501
-        'created': 'created',  # noqa: E501
-        'currency': 'currency',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'livemode': 'livemode',  # noqa: E501
-        'object': 'object',  # noqa: E501
-        'redirect_url': 'redirectURL',  # noqa: E501
-        'status': 'status',  # noqa: E501
+        "amount": "amount",  # noqa: E501
+        "authenticated": "authenticated",  # noqa: E501
+        "card": "card",  # noqa: E501
+        "created": "created",  # noqa: E501
+        "currency": "currency",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "livemode": "livemode",  # noqa: E501
+        "object": "object",  # noqa: E501
+        "redirect_url": "redirectURL",  # noqa: E501
+        "status": "status",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """three_d_secure.ThreeDSecure - a model defined in OpenAPI
 
         Keyword Args:
@@ -157,10 +164,12 @@ class ThreeDSecure(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

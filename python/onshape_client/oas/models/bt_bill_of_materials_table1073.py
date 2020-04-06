@@ -30,26 +30,27 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_bill_of_materials_table1073_all_of
 except ImportError:
     bt_bill_of_materials_table1073_all_of = sys.modules[
-        'onshape_client.oas.models.bt_bill_of_materials_table1073_all_of']
+        "onshape_client.oas.models.bt_bill_of_materials_table1073_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_table1825
 except ImportError:
-    bt_table1825 = sys.modules[
-        'onshape_client.oas.models.bt_table1825']
+    bt_table1825 = sys.modules["onshape_client.oas.models.bt_table1825"]
 try:
     from onshape_client.oas.models import bt_table_column_info1222
 except ImportError:
     bt_table_column_info1222 = sys.modules[
-        'onshape_client.oas.models.bt_table_column_info1222']
+        "onshape_client.oas.models.bt_table_column_info1222"
+    ]
 try:
     from onshape_client.oas.models import bt_table_row1054
 except ImportError:
-    bt_table_row1054 = sys.modules[
-        'onshape_client.oas.models.bt_table_row1054']
+    bt_table_row1054 = sys.modules["onshape_client.oas.models.bt_table_row1054"]
 
 
 class BTBillOfMaterialsTable1073(ModelComposed):
@@ -76,11 +77,9 @@ class BTBillOfMaterialsTable1073(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,20 +94,22 @@ class BTBillOfMaterialsTable1073(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'indented': (bool,),  # noqa: E501
-            'showing_excluded': (bool,),  # noqa: E501
-            'failed_metadata_representative_occurrences': ([str],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'all_row_values': ([[str]],),  # noqa: E501
-            'column_count': (int,),  # noqa: E501
-            'frozen_columns': (int,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'read_only': (bool,),  # noqa: E501
-            'row_count': (int,),  # noqa: E501
-            'table_columns': ([bt_table_column_info1222.BTTableColumnInfo1222],),  # noqa: E501
-            'table_id': (str,),  # noqa: E501
-            'table_rows': ([bt_table_row1054.BTTableRow1054],),  # noqa: E501
-            'title': (str,),  # noqa: E501
+            "indented": (bool,),  # noqa: E501
+            "showing_excluded": (bool,),  # noqa: E501
+            "failed_metadata_representative_occurrences": ([str],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "all_row_values": ([[str]],),  # noqa: E501
+            "column_count": (int,),  # noqa: E501
+            "frozen_columns": (int,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "read_only": (bool,),  # noqa: E501
+            "row_count": (int,),  # noqa: E501
+            "table_columns": (
+                [bt_table_column_info1222.BTTableColumnInfo1222],
+            ),  # noqa: E501
+            "table_id": (str,),  # noqa: E501
+            "table_rows": ([bt_table_row1054.BTTableRow1054],),  # noqa: E501
+            "title": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -116,34 +117,43 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         return None
 
     attribute_map = {
-        'indented': 'indented',  # noqa: E501
-        'showing_excluded': 'showingExcluded',  # noqa: E501
-        'failed_metadata_representative_occurrences': 'failedMetadataRepresentativeOccurrences',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'all_row_values': 'allRowValues',  # noqa: E501
-        'column_count': 'columnCount',  # noqa: E501
-        'frozen_columns': 'frozenColumns',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'read_only': 'readOnly',  # noqa: E501
-        'row_count': 'rowCount',  # noqa: E501
-        'table_columns': 'tableColumns',  # noqa: E501
-        'table_id': 'tableId',  # noqa: E501
-        'table_rows': 'tableRows',  # noqa: E501
-        'title': 'title',  # noqa: E501
+        "indented": "indented",  # noqa: E501
+        "showing_excluded": "showingExcluded",  # noqa: E501
+        "failed_metadata_representative_occurrences": "failedMetadataRepresentativeOccurrences",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "all_row_values": "allRowValues",  # noqa: E501
+        "column_count": "columnCount",  # noqa: E501
+        "frozen_columns": "frozenColumns",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "read_only": "readOnly",  # noqa: E501
+        "row_count": "rowCount",  # noqa: E501
+        "table_columns": "tableColumns",  # noqa: E501
+        "table_id": "tableId",  # noqa: E501
+        "table_rows": "tableRows",  # noqa: E501
+        "title": "title",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_bill_of_materials_table1073.BTBillOfMaterialsTable1073 - a model defined in OpenAPI
 
         Keyword Args:
@@ -183,13 +193,12 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -198,8 +207,7 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -208,10 +216,12 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -226,12 +236,10 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_bill_of_materials_table1073_all_of.BTBillOfMaterialsTable1073AllOf,
-              bt_table1825.BTTable1825,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_bill_of_materials_table1073_all_of.BTBillOfMaterialsTable1073AllOf,
+                bt_table1825.BTTable1825,
+            ],
+            "oneOf": [],
         }
