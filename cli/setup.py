@@ -11,7 +11,7 @@ import os
 
 NAME = "cli"
 
-REQUIRES = ["click", "twine", "black"]
+REQUIRES = ["click", "twine", "black", "python-dotenv"]
 
 setup(
     name=NAME,
