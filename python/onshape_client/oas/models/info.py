@@ -29,16 +29,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import contact
 except ImportError:
-    contact = sys.modules[
-        'onshape_client.oas.models.contact']
+    contact = sys.modules["onshape_client.oas.models.contact"]
 try:
     from onshape_client.oas.models import license
 except ImportError:
-    license = sys.modules[
-        'onshape_client.oas.models.license']
+    license = sys.modules["onshape_client.oas.models.license"]
 
 
 class Info(ModelNormal):
@@ -65,11 +64,9 @@ class Info(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -84,13 +81,15 @@ class Info(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'contact': (contact.Contact,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'license': (license.License,),  # noqa: E501
-            'terms_of_service': (str,),  # noqa: E501
-            'title': (str,),  # noqa: E501
-            'version': (str,),  # noqa: E501
+            "contact": (contact.Contact,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "license": (license.License,),  # noqa: E501
+            "terms_of_service": (str,),  # noqa: E501
+            "title": (str,),  # noqa: E501
+            "version": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -98,28 +97,37 @@ class Info(ModelNormal):
         return None
 
     attribute_map = {
-        'contact': 'contact',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'license': 'license',  # noqa: E501
-        'terms_of_service': 'termsOfService',  # noqa: E501
-        'title': 'title',  # noqa: E501
-        'version': 'version',  # noqa: E501
+        "contact": "contact",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "license": "license",  # noqa: E501
+        "terms_of_service": "termsOfService",  # noqa: E501
+        "title": "title",  # noqa: E501
+        "version": "version",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """info.Info - a model defined in OpenAPI
 
 

@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules[
-        'onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules["onshape_client.oas.models.bt_owner_info"]
 try:
     from onshape_client.oas.models import bt_user_basic_summary_info
 except ImportError:
     bt_user_basic_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_user_basic_summary_info']
+        "onshape_client.oas.models.bt_user_basic_summary_info"
+    ]
 
 
 class BTDocumentLabelInfo(ModelNormal):
@@ -66,11 +67,9 @@ class BTDocumentLabelInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,25 +84,29 @@ class BTDocumentLabelInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'can_move': (bool,),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
-            'created_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'href': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'is_container': (bool,),  # noqa: E501
-            'is_enterprise_owned': (bool,),  # noqa: E501
-            'is_mutable': (bool,),  # noqa: E501
-            'modified_at': (datetime,),  # noqa: E501
-            'modified_by': (bt_user_basic_summary_info.BTUserBasicSummaryInfo,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'parent_label_id': (str,),  # noqa: E501
-            'path': (str,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'resource_type': (str,),  # noqa: E501
-            'tree_href': (str,),  # noqa: E501
-            'view_ref': (str,),  # noqa: E501
+            "can_move": (bool,),  # noqa: E501
+            "created_at": (datetime,),  # noqa: E501
+            "created_by": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "href": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "is_container": (bool,),  # noqa: E501
+            "is_enterprise_owned": (bool,),  # noqa: E501
+            "is_mutable": (bool,),  # noqa: E501
+            "modified_at": (datetime,),  # noqa: E501
+            "modified_by": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "owner": (bt_owner_info.BTOwnerInfo,),  # noqa: E501
+            "parent_label_id": (str,),  # noqa: E501
+            "path": (str,),  # noqa: E501
+            "project_id": (str,),  # noqa: E501
+            "resource_type": (str,),  # noqa: E501
+            "tree_href": (str,),  # noqa: E501
+            "view_ref": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,40 +114,49 @@ class BTDocumentLabelInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'can_move': 'canMove',  # noqa: E501
-        'created_at': 'createdAt',  # noqa: E501
-        'created_by': 'createdBy',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'href': 'href',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'is_container': 'isContainer',  # noqa: E501
-        'is_enterprise_owned': 'isEnterpriseOwned',  # noqa: E501
-        'is_mutable': 'isMutable',  # noqa: E501
-        'modified_at': 'modifiedAt',  # noqa: E501
-        'modified_by': 'modifiedBy',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'owner': 'owner',  # noqa: E501
-        'parent_label_id': 'parentLabelId',  # noqa: E501
-        'path': 'path',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'resource_type': 'resourceType',  # noqa: E501
-        'tree_href': 'treeHref',  # noqa: E501
-        'view_ref': 'viewRef',  # noqa: E501
+        "can_move": "canMove",  # noqa: E501
+        "created_at": "createdAt",  # noqa: E501
+        "created_by": "createdBy",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "href": "href",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "is_container": "isContainer",  # noqa: E501
+        "is_enterprise_owned": "isEnterpriseOwned",  # noqa: E501
+        "is_mutable": "isMutable",  # noqa: E501
+        "modified_at": "modifiedAt",  # noqa: E501
+        "modified_by": "modifiedBy",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "owner": "owner",  # noqa: E501
+        "parent_label_id": "parentLabelId",  # noqa: E501
+        "path": "path",  # noqa: E501
+        "project_id": "projectId",  # noqa: E501
+        "resource_type": "resourceType",  # noqa: E501
+        "tree_href": "treeHref",  # noqa: E501
+        "view_ref": "viewRef",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_document_label_info.BTDocumentLabelInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -189,10 +201,12 @@ class BTDocumentLabelInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

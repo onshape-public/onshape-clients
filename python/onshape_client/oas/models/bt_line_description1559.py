@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_curve_description1583
 except ImportError:
     bt_curve_description1583 = sys.modules[
-        'onshape_client.oas.models.bt_curve_description1583']
+        "onshape_client.oas.models.bt_curve_description1583"
+    ]
 try:
     from onshape_client.oas.models import bt_line_description1559_all_of
 except ImportError:
     bt_line_description1559_all_of = sys.modules[
-        'onshape_client.oas.models.bt_line_description1559_all_of']
+        "onshape_client.oas.models.bt_line_description1559_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTLineDescription1559(ModelComposed):
@@ -72,19 +74,18 @@ class BTLineDescription1559(ModelComposed):
     """
 
     allowed_values = {
-        ('type',): {
-            'OTHER': "OTHER",
-            'LINE': "LINE",
-            'CIRCLE': "CIRCLE",
-            'ELLIPSE': "ELLIPSE",
-            'BCURVE': "BCURVE",
-            'ICURVE': "ICURVE",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "OTHER": "OTHER",
+            "LINE": "LINE",
+            "CIRCLE": "CIRCLE",
+            "ELLIPSE": "ELLIPSE",
+            "BCURVE": "BCURVE",
+            "ICURVE": "ICURVE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -99,10 +100,10 @@ class BTLineDescription1559(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'direction': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'origin': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "direction": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "origin": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -110,24 +111,33 @@ class BTLineDescription1559(ModelComposed):
         return None
 
     attribute_map = {
-        'direction': 'direction',  # noqa: E501
-        'origin': 'origin',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "direction": "direction",  # noqa: E501
+        "origin": "origin",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_line_description1559.BTLineDescription1559 - a model defined in OpenAPI
 
         Keyword Args:
@@ -157,13 +167,12 @@ class BTLineDescription1559(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -172,8 +181,7 @@ class BTLineDescription1559(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -182,10 +190,12 @@ class BTLineDescription1559(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -200,12 +210,10 @@ class BTLineDescription1559(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_curve_description1583.BTCurveDescription1583,
-              bt_line_description1559_all_of.BTLineDescription1559AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_curve_description1583.BTCurveDescription1583,
+                bt_line_description1559_all_of.BTLineDescription1559AllOf,
+            ],
+            "oneOf": [],
         }

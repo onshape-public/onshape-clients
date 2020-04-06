@@ -30,26 +30,29 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_table_base_cross_highlight_data2609
 except ImportError:
     bt_table_base_cross_highlight_data2609 = sys.modules[
-        'onshape_client.oas.models.bt_table_base_cross_highlight_data2609']
+        "onshape_client.oas.models.bt_table_base_cross_highlight_data2609"
+    ]
 try:
     from onshape_client.oas.models import bt_table_column_info1222
 except ImportError:
     bt_table_column_info1222 = sys.modules[
-        'onshape_client.oas.models.bt_table_column_info1222']
+        "onshape_client.oas.models.bt_table_column_info1222"
+    ]
 try:
     from onshape_client.oas.models import bt_table_column_spec1967
 except ImportError:
     bt_table_column_spec1967 = sys.modules[
-        'onshape_client.oas.models.bt_table_column_spec1967']
+        "onshape_client.oas.models.bt_table_column_spec1967"
+    ]
 try:
     from onshape_client.oas.models import btfs_table953_all_of
 except ImportError:
-    btfs_table953_all_of = sys.modules[
-        'onshape_client.oas.models.btfs_table953_all_of']
+    btfs_table953_all_of = sys.modules["onshape_client.oas.models.btfs_table953_all_of"]
 
 
 class BTFSTableColumnInfo623(ModelComposed):
@@ -76,11 +79,9 @@ class BTFSTableColumnInfo623(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,11 +96,15 @@ class BTFSTableColumnInfo623(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'cross_highlight_data': (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'specification': (bt_table_column_spec1967.BTTableColumnSpec1967,),  # noqa: E501
+            "cross_highlight_data": (
+                bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "specification": (
+                bt_table_column_spec1967.BTTableColumnSpec1967,
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -107,25 +112,34 @@ class BTFSTableColumnInfo623(ModelComposed):
         return None
 
     attribute_map = {
-        'cross_highlight_data': 'crossHighlightData',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'specification': 'specification',  # noqa: E501
+        "cross_highlight_data": "crossHighlightData",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "specification": "specification",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btfs_table_column_info623.BTFSTableColumnInfo623 - a model defined in OpenAPI
 
         Keyword Args:
@@ -156,13 +170,12 @@ class BTFSTableColumnInfo623(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -171,8 +184,7 @@ class BTFSTableColumnInfo623(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -181,10 +193,12 @@ class BTFSTableColumnInfo623(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -199,12 +213,10 @@ class BTFSTableColumnInfo623(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_table_column_info1222.BTTableColumnInfo1222,
-              btfs_table953_all_of.BTFSTable953AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_table_column_info1222.BTTableColumnInfo1222,
+                btfs_table953_all_of.BTFSTable953AllOf,
+            ],
+            "oneOf": [],
         }

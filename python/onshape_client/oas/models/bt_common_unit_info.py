@@ -56,11 +56,9 @@ class BTCommonUnitInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,11 +73,11 @@ class BTCommonUnitInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'abbreviation': (str,),  # noqa: E501
-            'unit': (str,),  # noqa: E501
-            'unit_name': (str,),  # noqa: E501
-            'unit_type': (str,),  # noqa: E501
-            'value_in_base_units': (float,),  # noqa: E501
+            "abbreviation": (str,),  # noqa: E501
+            "unit": (str,),  # noqa: E501
+            "unit_name": (str,),  # noqa: E501
+            "unit_type": (str,),  # noqa: E501
+            "value_in_base_units": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,26 +85,35 @@ class BTCommonUnitInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'abbreviation': 'abbreviation',  # noqa: E501
-        'unit': 'unit',  # noqa: E501
-        'unit_name': 'unitName',  # noqa: E501
-        'unit_type': 'unitType',  # noqa: E501
-        'value_in_base_units': 'valueInBaseUnits',  # noqa: E501
+        "abbreviation": "abbreviation",  # noqa: E501
+        "unit": "unit",  # noqa: E501
+        "unit_name": "unitName",  # noqa: E501
+        "unit_type": "unitType",  # noqa: E501
+        "value_in_base_units": "valueInBaseUnits",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_common_unit_info.BTCommonUnitInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -137,10 +144,12 @@ class BTCommonUnitInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

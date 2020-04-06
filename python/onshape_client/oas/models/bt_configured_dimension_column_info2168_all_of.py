@@ -56,11 +56,9 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,9 +73,9 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parameter_id': (str,),  # noqa: E501
-            'dimension_id': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "dimension_id": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,24 +83,33 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'parameter_id': 'parameterId',  # noqa: E501
-        'dimension_id': 'dimensionId',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "dimension_id": "dimensionId",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_configured_dimension_column_info2168_all_of.BTConfiguredDimensionColumnInfo2168AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -131,10 +138,12 @@ class BTConfiguredDimensionColumnInfo2168AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

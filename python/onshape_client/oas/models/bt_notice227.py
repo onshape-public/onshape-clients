@@ -30,16 +30,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_location_info226
 except ImportError:
-    bt_location_info226 = sys.modules[
-        'onshape_client.oas.models.bt_location_info226']
+    bt_location_info226 = sys.modules["onshape_client.oas.models.bt_location_info226"]
 try:
     from onshape_client.oas.models import bt_node_reference21
 except ImportError:
-    bt_node_reference21 = sys.modules[
-        'onshape_client.oas.models.bt_node_reference21']
+    bt_node_reference21 = sys.modules["onshape_client.oas.models.bt_node_reference21"]
 
 
 class BTNotice227(ModelNormal):
@@ -67,26 +66,25 @@ class BTNotice227(ModelNormal):
     """
 
     allowed_values = {
-        ('level',): {
-            'INTERNAL': "INTERNAL",
-            'ERROR': "ERROR",
-            'WARNING': "WARNING",
-            'INFO': "INFO",
-            'UNKNOWN': "UNKNOWN",
+        ("level",): {
+            "INTERNAL": "INTERNAL",
+            "ERROR": "ERROR",
+            "WARNING": "WARNING",
+            "INFO": "INFO",
+            "UNKNOWN": "UNKNOWN",
         },
-        ('type',): {
-            'PARSE': "PARSE",
-            'SEMANTIC': "SEMANTIC",
-            'EXECUTION': "EXECUTION",
-            'GEOMETRY': "GEOMETRY",
-            'TEST': "TEST",
-            'OTHER': "OTHER",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "PARSE": "PARSE",
+            "SEMANTIC": "SEMANTIC",
+            "EXECUTION": "EXECUTION",
+            "GEOMETRY": "GEOMETRY",
+            "TEST": "TEST",
+            "OTHER": "OTHER",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -101,14 +99,14 @@ class BTNotice227(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'level': (str,),  # noqa: E501
-            'location_infos': ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
-            'message': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameter_id': (str,),  # noqa: E501
-            'stack_trace': ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
-            'try_node': (bt_node_reference21.BTNodeReference21,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "level": (str,),  # noqa: E501
+            "location_infos": ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
+            "message": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "stack_trace": ([bt_location_info226.BTLocationInfo226],),  # noqa: E501
+            "try_node": (bt_node_reference21.BTNodeReference21,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -116,29 +114,38 @@ class BTNotice227(ModelNormal):
         return None
 
     attribute_map = {
-        'level': 'level',  # noqa: E501
-        'location_infos': 'locationInfos',  # noqa: E501
-        'message': 'message',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameter_id': 'parameterId',  # noqa: E501
-        'stack_trace': 'stackTrace',  # noqa: E501
-        'try_node': 'tryNode',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "level": "level",  # noqa: E501
+        "location_infos": "locationInfos",  # noqa: E501
+        "message": "message",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "stack_trace": "stackTrace",  # noqa: E501
+        "try_node": "tryNode",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_notice227.BTNotice227 - a model defined in OpenAPI
 
         Keyword Args:
@@ -172,10 +179,12 @@ class BTNotice227(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

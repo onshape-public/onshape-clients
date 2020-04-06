@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
-    bt_parameter_spec6 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec6']
+    bt_parameter_spec6 = sys.modules["onshape_client.oas.models.bt_parameter_spec6"]
 
 
 class BTTableColumnSpec1967(ModelNormal):
@@ -62,22 +62,21 @@ class BTTableColumnSpec1967(ModelNormal):
     """
 
     allowed_values = {
-        ('default_column_width_units',): {
-            'PERCENT': "PERCENT",
-            'CHARS': "CHARS",
-            'PIXELS': "PIXELS",
-            'UNKNOWN': "UNKNOWN",
+        ("default_column_width_units",): {
+            "PERCENT": "PERCENT",
+            "CHARS": "CHARS",
+            "PIXELS": "PIXELS",
+            "UNKNOWN": "UNKNOWN",
         },
-        ('default_text_alignment',): {
-            'LEFT': "LEFT",
-            'CENTER': "CENTER",
-            'RIGHT': "RIGHT",
-            'UNKNOWN': "UNKNOWN",
+        ("default_text_alignment",): {
+            "LEFT": "LEFT",
+            "CENTER": "CENTER",
+            "RIGHT": "RIGHT",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -92,12 +91,12 @@ class BTTableColumnSpec1967(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'default_cell_spec': (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
-            'default_column_width_units': (str,),  # noqa: E501
-            'default_column_width_value': (int,),  # noqa: E501
-            'default_header_name': (str,),  # noqa: E501
-            'default_text_alignment': (str,),  # noqa: E501
-            'read_only': (bool,),  # noqa: E501
+            "default_cell_spec": (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
+            "default_column_width_units": (str,),  # noqa: E501
+            "default_column_width_value": (int,),  # noqa: E501
+            "default_header_name": (str,),  # noqa: E501
+            "default_text_alignment": (str,),  # noqa: E501
+            "read_only": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -105,27 +104,36 @@ class BTTableColumnSpec1967(ModelNormal):
         return None
 
     attribute_map = {
-        'default_cell_spec': 'defaultCellSpec',  # noqa: E501
-        'default_column_width_units': 'defaultColumnWidthUnits',  # noqa: E501
-        'default_column_width_value': 'defaultColumnWidthValue',  # noqa: E501
-        'default_header_name': 'defaultHeaderName',  # noqa: E501
-        'default_text_alignment': 'defaultTextAlignment',  # noqa: E501
-        'read_only': 'readOnly',  # noqa: E501
+        "default_cell_spec": "defaultCellSpec",  # noqa: E501
+        "default_column_width_units": "defaultColumnWidthUnits",  # noqa: E501
+        "default_column_width_value": "defaultColumnWidthValue",  # noqa: E501
+        "default_header_name": "defaultHeaderName",  # noqa: E501
+        "default_text_alignment": "defaultTextAlignment",  # noqa: E501
+        "read_only": "readOnly",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_table_column_spec1967.BTTableColumnSpec1967 - a model defined in OpenAPI
 
         Keyword Args:
@@ -157,10 +165,12 @@ class BTTableColumnSpec1967(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

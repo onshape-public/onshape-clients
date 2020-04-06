@@ -30,31 +30,31 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 try:
     from onshape_client.oas.models import btm_sketch_curve4
 except ImportError:
-    btm_sketch_curve4 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_curve4']
+    btm_sketch_curve4 = sys.modules["onshape_client.oas.models.btm_sketch_curve4"]
 try:
     from onshape_client.oas.models import btm_sketch_image_entity763
 except ImportError:
     btm_sketch_image_entity763 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_image_entity763']
+        "onshape_client.oas.models.btm_sketch_image_entity763"
+    ]
 try:
     from onshape_client.oas.models import btm_sketch_point158
 except ImportError:
-    btm_sketch_point158 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_point158']
+    btm_sketch_point158 = sys.modules["onshape_client.oas.models.btm_sketch_point158"]
 try:
     from onshape_client.oas.models import btm_sketch_text_entity1761
 except ImportError:
     btm_sketch_text_entity1761 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_text_entity1761']
+        "onshape_client.oas.models.btm_sketch_text_entity1761"
+    ]
 
 
 class BTMSketchGeomEntity5(ModelNormal):
@@ -81,11 +81,9 @@ class BTMSketchGeomEntity5(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -100,53 +98,62 @@ class BTMSketchGeomEntity5(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'control_box_ids': ([str],),  # noqa: E501
-            'entity_id': (str,),  # noqa: E501
-            'entity_id_and_replace_in_dependent_fields': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'is_construction': (bool,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "control_box_ids": ([str],),  # noqa: E501
+            "entity_id": (str,),  # noqa: E501
+            "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "is_construction": (bool,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameters": ([btm_parameter1.BTMParameter1],),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTMSketchImageEntity-763': btm_sketch_image_entity763.BTMSketchImageEntity763,
-                'BTMSketchCurve-4': btm_sketch_curve4.BTMSketchCurve4,
-                'BTMSketchTextEntity-1761': btm_sketch_text_entity1761.BTMSketchTextEntity1761,
-                'BTMSketchPoint-158': btm_sketch_point158.BTMSketchPoint158,
+            "bt_type": {
+                "BTMSketchImageEntity-763": btm_sketch_image_entity763.BTMSketchImageEntity763,
+                "BTMSketchCurve-4": btm_sketch_curve4.BTMSketchCurve4,
+                "BTMSketchTextEntity-1761": btm_sketch_text_entity1761.BTMSketchTextEntity1761,
+                "BTMSketchPoint-158": btm_sketch_point158.BTMSketchPoint158,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'control_box_ids': 'controlBoxIds',  # noqa: E501
-        'entity_id': 'entityId',  # noqa: E501
-        'entity_id_and_replace_in_dependent_fields': 'entityIdAndReplaceInDependentFields',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'is_construction': 'isConstruction',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameters': 'parameters',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "control_box_ids": "controlBoxIds",  # noqa: E501
+        "entity_id": "entityId",  # noqa: E501
+        "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "is_construction": "isConstruction",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameters": "parameters",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_sketch_geom_entity5.BTMSketchGeomEntity5 - a model defined in OpenAPI
 
         Keyword Args:
@@ -181,10 +188,12 @@ class BTMSketchGeomEntity5(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

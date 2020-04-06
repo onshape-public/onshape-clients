@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
     bt_microversion_id366 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id366']
+        "onshape_client.oas.models.bt_microversion_id366"
+    ]
 
 
 class BTSetFeatureRollbackResponse1042(ModelNormal):
@@ -61,11 +63,9 @@ class BTSetFeatureRollbackResponse1042(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,13 +80,15 @@ class BTSetFeatureRollbackResponse1042(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'library_version': (int,),  # noqa: E501
-            'microversion_id': (bt_microversion_id366.BTMicroversionId366,),  # noqa: E501
-            'microversion_skew': (bool,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
-            'rollback_index': (int,),  # noqa: E501
-            'serialization_version': (str,),  # noqa: E501
-            'source_microversion': (str,),  # noqa: E501
+            "library_version": (int,),  # noqa: E501
+            "microversion_id": (
+                bt_microversion_id366.BTMicroversionId366,
+            ),  # noqa: E501
+            "microversion_skew": (bool,),  # noqa: E501
+            "reject_microversion_skew": (bool,),  # noqa: E501
+            "rollback_index": (int,),  # noqa: E501
+            "serialization_version": (str,),  # noqa: E501
+            "source_microversion": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,28 +96,37 @@ class BTSetFeatureRollbackResponse1042(ModelNormal):
         return None
 
     attribute_map = {
-        'library_version': 'libraryVersion',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
-        'microversion_skew': 'microversionSkew',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
-        'rollback_index': 'rollbackIndex',  # noqa: E501
-        'serialization_version': 'serializationVersion',  # noqa: E501
-        'source_microversion': 'sourceMicroversion',  # noqa: E501
+        "library_version": "libraryVersion",  # noqa: E501
+        "microversion_id": "microversionId",  # noqa: E501
+        "microversion_skew": "microversionSkew",  # noqa: E501
+        "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
+        "rollback_index": "rollbackIndex",  # noqa: E501
+        "serialization_version": "serializationVersion",  # noqa: E501
+        "source_microversion": "sourceMicroversion",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_set_feature_rollback_response1042.BTSetFeatureRollbackResponse1042 - a model defined in OpenAPI
 
         Keyword Args:
@@ -148,10 +159,12 @@ class BTSetFeatureRollbackResponse1042(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

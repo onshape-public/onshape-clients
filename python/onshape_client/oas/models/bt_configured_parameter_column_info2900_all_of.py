@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_inner_parameter_location1715
 except ImportError:
     bt_inner_parameter_location1715 = sys.modules[
-        'onshape_client.oas.models.bt_inner_parameter_location1715']
+        "onshape_client.oas.models.bt_inner_parameter_location1715"
+    ]
 
 
 class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
@@ -61,11 +63,9 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,9 +80,11 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parameter_id': (str,),  # noqa: E501
-            'inner_parameter_location': (bt_inner_parameter_location1715.BTInnerParameterLocation1715,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "inner_parameter_location": (
+                bt_inner_parameter_location1715.BTInnerParameterLocation1715,
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,24 +92,33 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'parameter_id': 'parameterId',  # noqa: E501
-        'inner_parameter_location': 'innerParameterLocation',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "inner_parameter_location": "innerParameterLocation",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_configured_parameter_column_info2900_all_of.BTConfiguredParameterColumnInfo2900AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -136,10 +147,12 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

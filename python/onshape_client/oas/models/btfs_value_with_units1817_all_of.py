@@ -57,22 +57,21 @@ class BTFSValueWithUnits1817AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('quantity_type',): {
-            'UNKNOWN': "UNKNOWN",
-            'INTEGER': "INTEGER",
-            'REAL': "REAL",
-            'LENGTH': "LENGTH",
-            'ANGLE': "ANGLE",
-            'MASS': "MASS",
-            'TIME': "TIME",
-            'TEMPERATURE': "TEMPERATURE",
-            'CURRENT': "CURRENT",
-            'ANYTHING': "ANYTHING",
+        ("quantity_type",): {
+            "UNKNOWN": "UNKNOWN",
+            "INTEGER": "INTEGER",
+            "REAL": "REAL",
+            "LENGTH": "LENGTH",
+            "ANGLE": "ANGLE",
+            "MASS": "MASS",
+            "TIME": "TIME",
+            "TEMPERATURE": "TEMPERATURE",
+            "CURRENT": "CURRENT",
+            "ANYTHING": "ANYTHING",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -87,11 +86,11 @@ class BTFSValueWithUnits1817AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'value_object': (float,),  # noqa: E501
-            'quantity_type': (str,),  # noqa: E501
-            'unit_to_power': ({str: (int,)},),  # noqa: E501
-            'value': (float,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "value_object": (float,),  # noqa: E501
+            "quantity_type": (str,),  # noqa: E501
+            "unit_to_power": ({str: (int,)},),  # noqa: E501
+            "value": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,26 +98,35 @@ class BTFSValueWithUnits1817AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'value_object': 'valueObject',  # noqa: E501
-        'quantity_type': 'quantityType',  # noqa: E501
-        'unit_to_power': 'unitToPower',  # noqa: E501
-        'value': 'value',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "value_object": "valueObject",  # noqa: E501
+        "quantity_type": "quantityType",  # noqa: E501
+        "unit_to_power": "unitToPower",  # noqa: E501
+        "value": "value",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btfs_value_with_units1817_all_of.BTFSValueWithUnits1817AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -149,10 +157,12 @@ class BTFSValueWithUnits1817AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

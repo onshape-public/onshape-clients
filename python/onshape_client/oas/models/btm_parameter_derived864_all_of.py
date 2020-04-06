@@ -30,16 +30,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_import136
 except ImportError:
-    btm_import136 = sys.modules[
-        'onshape_client.oas.models.btm_import136']
+    btm_import136 = sys.modules["onshape_client.oas.models.btm_import136"]
 try:
     from onshape_client.oas.models import btp_module_id235
 except ImportError:
-    btp_module_id235 = sys.modules[
-        'onshape_client.oas.models.btp_module_id235']
+    btp_module_id235 = sys.modules["onshape_client.oas.models.btp_module_id235"]
 
 
 class BTMParameterDerived864AllOf(ModelNormal):
@@ -66,11 +65,9 @@ class BTMParameterDerived864AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,10 +82,10 @@ class BTMParameterDerived864AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'module_id': (btp_module_id235.BTPModuleId235,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'imports': ([btm_import136.BTMImport136],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "imports": ([btm_import136.BTMImport136],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,25 +93,34 @@ class BTMParameterDerived864AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'module_id': 'moduleId',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'imports': 'imports',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "module_id": "moduleId",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "imports": "imports",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_parameter_derived864_all_of.BTMParameterDerived864AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -144,10 +150,12 @@ class BTMParameterDerived864AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

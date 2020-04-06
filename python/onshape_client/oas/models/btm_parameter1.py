@@ -30,96 +30,115 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_database_parameter2229
 except ImportError:
     btm_database_parameter2229 = sys.modules[
-        'onshape_client.oas.models.btm_database_parameter2229']
+        "onshape_client.oas.models.btm_database_parameter2229"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_appearance627
 except ImportError:
     btm_parameter_appearance627 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_appearance627']
+        "onshape_client.oas.models.btm_parameter_appearance627"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_array2025
 except ImportError:
     btm_parameter_array2025 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_array2025']
+        "onshape_client.oas.models.btm_parameter_array2025"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_blob_reference1679
 except ImportError:
     btm_parameter_blob_reference1679 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_blob_reference1679']
+        "onshape_client.oas.models.btm_parameter_blob_reference1679"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_boolean144
 except ImportError:
     btm_parameter_boolean144 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_boolean144']
+        "onshape_client.oas.models.btm_parameter_boolean144"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_configured2222
 except ImportError:
     btm_parameter_configured2222 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_configured2222']
+        "onshape_client.oas.models.btm_parameter_configured2222"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_derived864
 except ImportError:
     btm_parameter_derived864 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_derived864']
+        "onshape_client.oas.models.btm_parameter_derived864"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_enum145
 except ImportError:
     btm_parameter_enum145 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_enum145']
+        "onshape_client.oas.models.btm_parameter_enum145"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_feature_list1749
 except ImportError:
     btm_parameter_feature_list1749 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_feature_list1749']
+        "onshape_client.oas.models.btm_parameter_feature_list1749"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_foreign_id146
 except ImportError:
     btm_parameter_foreign_id146 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_foreign_id146']
+        "onshape_client.oas.models.btm_parameter_foreign_id146"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_invalid1664
 except ImportError:
     btm_parameter_invalid1664 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_invalid1664']
+        "onshape_client.oas.models.btm_parameter_invalid1664"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_lookup_table_path1419
 except ImportError:
     btm_parameter_lookup_table_path1419 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_lookup_table_path1419']
+        "onshape_client.oas.models.btm_parameter_lookup_table_path1419"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_material1388
 except ImportError:
     btm_parameter_material1388 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_material1388']
+        "onshape_client.oas.models.btm_parameter_material1388"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_quantity147
 except ImportError:
     btm_parameter_quantity147 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_quantity147']
+        "onshape_client.oas.models.btm_parameter_quantity147"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_query_list148
 except ImportError:
     btm_parameter_query_list148 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_query_list148']
+        "onshape_client.oas.models.btm_parameter_query_list148"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_query_with_occurrence_list67
 except ImportError:
     btm_parameter_query_with_occurrence_list67 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
+        "onshape_client.oas.models.btm_parameter_query_with_occurrence_list67"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_reference2434
 except ImportError:
     btm_parameter_reference2434 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_reference2434']
+        "onshape_client.oas.models.btm_parameter_reference2434"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter_string149
 except ImportError:
     btm_parameter_string149 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_string149']
+        "onshape_client.oas.models.btm_parameter_string149"
+    ]
 
 
 class BTMParameter1(ModelNormal):
@@ -146,11 +165,9 @@ class BTMParameter1(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -165,57 +182,66 @@ class BTMParameter1(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameter_id': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTMParameterQuantity-147': btm_parameter_quantity147.BTMParameterQuantity147,
-                'BTMParameterLookupTablePath-1419': btm_parameter_lookup_table_path1419.BTMParameterLookupTablePath1419,
-                'BTMParameterMaterial-1388': btm_parameter_material1388.BTMParameterMaterial1388,
-                'BTMParameterEnum-145': btm_parameter_enum145.BTMParameterEnum145,
-                'BTMParameterDerived-864': btm_parameter_derived864.BTMParameterDerived864,
-                'BTMParameterBoolean-144': btm_parameter_boolean144.BTMParameterBoolean144,
-                'BTMParameterFeatureList-1749': btm_parameter_feature_list1749.BTMParameterFeatureList1749,
-                'BTMParameterConfigured-2222': btm_parameter_configured2222.BTMParameterConfigured2222,
-                'BTMParameterString-149': btm_parameter_string149.BTMParameterString149,
-                'BTMDatabaseParameter-2229': btm_database_parameter2229.BTMDatabaseParameter2229,
-                'BTMParameterReference-2434': btm_parameter_reference2434.BTMParameterReference2434,
-                'BTMParameterForeignId-146': btm_parameter_foreign_id146.BTMParameterForeignId146,
-                'BTMParameterQueryList-148': btm_parameter_query_list148.BTMParameterQueryList148,
-                'BTMParameterBlobReference-1679': btm_parameter_blob_reference1679.BTMParameterBlobReference1679,
-                'BTMParameterQueryWithOccurrenceList-67': btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
-                'BTMParameterArray-2025': btm_parameter_array2025.BTMParameterArray2025,
-                'BTMParameterInvalid-1664': btm_parameter_invalid1664.BTMParameterInvalid1664,
-                'BTMParameterAppearance-627': btm_parameter_appearance627.BTMParameterAppearance627,
+            "bt_type": {
+                "BTMParameterQuantity-147": btm_parameter_quantity147.BTMParameterQuantity147,
+                "BTMParameterLookupTablePath-1419": btm_parameter_lookup_table_path1419.BTMParameterLookupTablePath1419,
+                "BTMParameterMaterial-1388": btm_parameter_material1388.BTMParameterMaterial1388,
+                "BTMParameterEnum-145": btm_parameter_enum145.BTMParameterEnum145,
+                "BTMParameterDerived-864": btm_parameter_derived864.BTMParameterDerived864,
+                "BTMParameterBoolean-144": btm_parameter_boolean144.BTMParameterBoolean144,
+                "BTMParameterFeatureList-1749": btm_parameter_feature_list1749.BTMParameterFeatureList1749,
+                "BTMParameterConfigured-2222": btm_parameter_configured2222.BTMParameterConfigured2222,
+                "BTMParameterString-149": btm_parameter_string149.BTMParameterString149,
+                "BTMDatabaseParameter-2229": btm_database_parameter2229.BTMDatabaseParameter2229,
+                "BTMParameterReference-2434": btm_parameter_reference2434.BTMParameterReference2434,
+                "BTMParameterForeignId-146": btm_parameter_foreign_id146.BTMParameterForeignId146,
+                "BTMParameterQueryList-148": btm_parameter_query_list148.BTMParameterQueryList148,
+                "BTMParameterBlobReference-1679": btm_parameter_blob_reference1679.BTMParameterBlobReference1679,
+                "BTMParameterQueryWithOccurrenceList-67": btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
+                "BTMParameterArray-2025": btm_parameter_array2025.BTMParameterArray2025,
+                "BTMParameterInvalid-1664": btm_parameter_invalid1664.BTMParameterInvalid1664,
+                "BTMParameterAppearance-627": btm_parameter_appearance627.BTMParameterAppearance627,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameter_id': 'parameterId',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_parameter1.BTMParameter1 - a model defined in OpenAPI
 
         Keyword Args:
@@ -245,10 +271,12 @@ class BTMParameter1(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

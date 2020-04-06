@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTBoundingBox1052(ModelNormal):
@@ -61,11 +61,9 @@ class BTBoundingBox1052(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,9 +78,9 @@ class BTBoundingBox1052(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'max_corner': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'min_corner': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'valid': (bool,),  # noqa: E501
+            "max_corner": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "min_corner": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "valid": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,24 +88,33 @@ class BTBoundingBox1052(ModelNormal):
         return None
 
     attribute_map = {
-        'max_corner': 'maxCorner',  # noqa: E501
-        'min_corner': 'minCorner',  # noqa: E501
-        'valid': 'valid',  # noqa: E501
+        "max_corner": "maxCorner",  # noqa: E501
+        "min_corner": "minCorner",  # noqa: E501
+        "valid": "valid",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_bounding_box1052.BTBoundingBox1052 - a model defined in OpenAPI
 
         Keyword Args:
@@ -136,10 +143,12 @@ class BTBoundingBox1052(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_owner_info
 except ImportError:
-    bt_owner_info = sys.modules[
-        'onshape_client.oas.models.bt_owner_info']
+    bt_owner_info = sys.modules["onshape_client.oas.models.bt_owner_info"]
 
 
 class BTCopyDocumentInfo(ModelNormal):
@@ -61,11 +61,9 @@ class BTCopyDocumentInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,12 +78,12 @@ class BTCopyDocumentInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'new_document_id': (str,),  # noqa: E501
-            'new_document_name': (str,),  # noqa: E501
-            'new_owner': (bt_owner_info.BTOwnerInfo,),  # noqa: E501
-            'new_parent_id': (str,),  # noqa: E501
-            'new_project_id': (str,),  # noqa: E501
-            'new_workspace_id': (str,),  # noqa: E501
+            "new_document_id": (str,),  # noqa: E501
+            "new_document_name": (str,),  # noqa: E501
+            "new_owner": (bt_owner_info.BTOwnerInfo,),  # noqa: E501
+            "new_parent_id": (str,),  # noqa: E501
+            "new_project_id": (str,),  # noqa: E501
+            "new_workspace_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,27 +91,36 @@ class BTCopyDocumentInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'new_document_id': 'newDocumentId',  # noqa: E501
-        'new_document_name': 'newDocumentName',  # noqa: E501
-        'new_owner': 'newOwner',  # noqa: E501
-        'new_parent_id': 'newParentId',  # noqa: E501
-        'new_project_id': 'newProjectId',  # noqa: E501
-        'new_workspace_id': 'newWorkspaceId',  # noqa: E501
+        "new_document_id": "newDocumentId",  # noqa: E501
+        "new_document_name": "newDocumentName",  # noqa: E501
+        "new_owner": "newOwner",  # noqa: E501
+        "new_parent_id": "newParentId",  # noqa: E501
+        "new_project_id": "newProjectId",  # noqa: E501
+        "new_workspace_id": "newWorkspaceId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_copy_document_info.BTCopyDocumentInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -145,10 +152,12 @@ class BTCopyDocumentInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

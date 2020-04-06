@@ -55,11 +55,9 @@ class XML(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -74,12 +72,14 @@ class XML(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'attribute': (bool,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'prefix': (str,),  # noqa: E501
-            'wrapped': (bool,),  # noqa: E501
+            "attribute": (bool,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "prefix": (str,),  # noqa: E501
+            "wrapped": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,27 +87,36 @@ class XML(ModelNormal):
         return None
 
     attribute_map = {
-        'attribute': 'attribute',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'prefix': 'prefix',  # noqa: E501
-        'wrapped': 'wrapped',  # noqa: E501
+        "attribute": "attribute",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "prefix": "prefix",  # noqa: E501
+        "wrapped": "wrapped",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """xml.XML - a model defined in OpenAPI
 
 

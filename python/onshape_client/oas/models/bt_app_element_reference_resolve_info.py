@@ -57,16 +57,15 @@ class BTAppElementReferenceResolveInfo(ModelNormal):
     """
 
     allowed_values = {
-        ('error_value',): {
-            'OK': "OK",
-            'TRANSACTION_CONFLICT': "TRANSACTION_CONFLICT",
-            'NOT_FOUND': "NOT_FOUND",
-            'INCONSISTENT_CHANGES': "INCONSISTENT_CHANGES",
+        ("error_value",): {
+            "OK": "OK",
+            "TRANSACTION_CONFLICT": "TRANSACTION_CONFLICT",
+            "NOT_FOUND": "NOT_FOUND",
+            "INCONSISTENT_CHANGES": "INCONSISTENT_CHANGES",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -81,30 +80,30 @@ class BTAppElementReferenceResolveInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'change_id': (str,),  # noqa: E501
-            'error_code': (int,),  # noqa: E501
-            'error_description': (str,),  # noqa: E501
-            'error_value': (str,),  # noqa: E501
-            'id_tag': (str,),  # noqa: E501
-            'id_tag_is_valid': (bool,),  # noqa: E501
-            'is_configurable': (bool,),  # noqa: E501
-            'is_flattened_part': (bool,),  # noqa: E501
-            'is_sketch_only': (bool,),  # noqa: E501
-            'is_surface': (bool,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'reference_id': (str,),  # noqa: E501
-            'reference_type': (int,),  # noqa: E501
-            'resolved_document_microversion_id': (str,),  # noqa: E501
-            'resolved_element_microversion_id': (str,),  # noqa: E501
-            'revision': (str,),  # noqa: E501
-            'sketch_ids': ([str],),  # noqa: E501
-            'target_configuration': (str,),  # noqa: E501
-            'target_document_id': (str,),  # noqa: E501
-            'target_document_microversion_id': (str,),  # noqa: E501
-            'target_element_id': (str,),  # noqa: E501
-            'target_element_microversion_id': (str,),  # noqa: E501
-            'target_version_id': (str,),  # noqa: E501
-            'track_new_versions': (bool,),  # noqa: E501
+            "change_id": (str,),  # noqa: E501
+            "error_code": (int,),  # noqa: E501
+            "error_description": (str,),  # noqa: E501
+            "error_value": (str,),  # noqa: E501
+            "id_tag": (str,),  # noqa: E501
+            "id_tag_is_valid": (bool,),  # noqa: E501
+            "is_configurable": (bool,),  # noqa: E501
+            "is_flattened_part": (bool,),  # noqa: E501
+            "is_sketch_only": (bool,),  # noqa: E501
+            "is_surface": (bool,),  # noqa: E501
+            "part_number": (str,),  # noqa: E501
+            "reference_id": (str,),  # noqa: E501
+            "reference_type": (int,),  # noqa: E501
+            "resolved_document_microversion_id": (str,),  # noqa: E501
+            "resolved_element_microversion_id": (str,),  # noqa: E501
+            "revision": (str,),  # noqa: E501
+            "sketch_ids": ([str],),  # noqa: E501
+            "target_configuration": (str,),  # noqa: E501
+            "target_document_id": (str,),  # noqa: E501
+            "target_document_microversion_id": (str,),  # noqa: E501
+            "target_element_id": (str,),  # noqa: E501
+            "target_element_microversion_id": (str,),  # noqa: E501
+            "target_version_id": (str,),  # noqa: E501
+            "track_new_versions": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -112,45 +111,54 @@ class BTAppElementReferenceResolveInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'change_id': 'changeId',  # noqa: E501
-        'error_code': 'errorCode',  # noqa: E501
-        'error_description': 'errorDescription',  # noqa: E501
-        'error_value': 'errorValue',  # noqa: E501
-        'id_tag': 'idTag',  # noqa: E501
-        'id_tag_is_valid': 'idTagIsValid',  # noqa: E501
-        'is_configurable': 'isConfigurable',  # noqa: E501
-        'is_flattened_part': 'isFlattenedPart',  # noqa: E501
-        'is_sketch_only': 'isSketchOnly',  # noqa: E501
-        'is_surface': 'isSurface',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'reference_id': 'referenceId',  # noqa: E501
-        'reference_type': 'referenceType',  # noqa: E501
-        'resolved_document_microversion_id': 'resolvedDocumentMicroversionId',  # noqa: E501
-        'resolved_element_microversion_id': 'resolvedElementMicroversionId',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
-        'sketch_ids': 'sketchIds',  # noqa: E501
-        'target_configuration': 'targetConfiguration',  # noqa: E501
-        'target_document_id': 'targetDocumentId',  # noqa: E501
-        'target_document_microversion_id': 'targetDocumentMicroversionId',  # noqa: E501
-        'target_element_id': 'targetElementId',  # noqa: E501
-        'target_element_microversion_id': 'targetElementMicroversionId',  # noqa: E501
-        'target_version_id': 'targetVersionId',  # noqa: E501
-        'track_new_versions': 'trackNewVersions',  # noqa: E501
+        "change_id": "changeId",  # noqa: E501
+        "error_code": "errorCode",  # noqa: E501
+        "error_description": "errorDescription",  # noqa: E501
+        "error_value": "errorValue",  # noqa: E501
+        "id_tag": "idTag",  # noqa: E501
+        "id_tag_is_valid": "idTagIsValid",  # noqa: E501
+        "is_configurable": "isConfigurable",  # noqa: E501
+        "is_flattened_part": "isFlattenedPart",  # noqa: E501
+        "is_sketch_only": "isSketchOnly",  # noqa: E501
+        "is_surface": "isSurface",  # noqa: E501
+        "part_number": "partNumber",  # noqa: E501
+        "reference_id": "referenceId",  # noqa: E501
+        "reference_type": "referenceType",  # noqa: E501
+        "resolved_document_microversion_id": "resolvedDocumentMicroversionId",  # noqa: E501
+        "resolved_element_microversion_id": "resolvedElementMicroversionId",  # noqa: E501
+        "revision": "revision",  # noqa: E501
+        "sketch_ids": "sketchIds",  # noqa: E501
+        "target_configuration": "targetConfiguration",  # noqa: E501
+        "target_document_id": "targetDocumentId",  # noqa: E501
+        "target_document_microversion_id": "targetDocumentMicroversionId",  # noqa: E501
+        "target_element_id": "targetElementId",  # noqa: E501
+        "target_element_microversion_id": "targetElementMicroversionId",  # noqa: E501
+        "target_version_id": "targetVersionId",  # noqa: E501
+        "track_new_versions": "trackNewVersions",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_app_element_reference_resolve_info.BTAppElementReferenceResolveInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -200,10 +208,12 @@ class BTAppElementReferenceResolveInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

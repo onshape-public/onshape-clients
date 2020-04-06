@@ -20,10 +20,7 @@ import sys  # noqa: F401
 import six
 
 from onshape_client.oas.api_client import ApiClient
-from onshape_client.oas.exceptions import (
-    ApiTypeError,
-    ApiValueError
-)
+from onshape_client.oas.exceptions import ApiTypeError, ApiValueError
 from onshape_client.oas.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
@@ -33,7 +30,7 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     int,
     none_type,
     str,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
 from onshape_client.oas.models import bt_feature_definition_response1617
 from onshape_client.oas.models import bt_feature_definition_call1406
@@ -51,7 +48,9 @@ from onshape_client.oas.models import bt_assembly_feature_list_response1174
 from onshape_client.oas.models import bt_named_views_info
 from onshape_client.oas.models import bt_model_format_info
 from onshape_client.oas.models import bt_assembly_insert_transformed_instances_response
-from onshape_client.oas.models import bt_assembly_transformed_instances_definition_params
+from onshape_client.oas.models import (
+    bt_assembly_transformed_instances_definition_params,
+)
 from onshape_client.oas.models import bt_assembly_transform_definition_params
 from onshape_client.oas.models import bt_translation_request_info
 from onshape_client.oas.models import bt_translate_format_params
@@ -69,14 +68,7 @@ class AssembliesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __add_feature(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __add_feature(self, did, wvm, wvmid, eid, **kwargs):
             """add_feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -117,119 +109,81 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.add_feature = Endpoint(
             settings={
-                'response_type': (bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-                'operation_id': 'add_feature',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features",
+                "operation_id": "add_feature",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'bt_feature_definition_call_1406',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "bt_feature_definition_call_1406",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "bt_feature_definition_call_1406": (
+                        bt_feature_definition_call1406.BTFeatureDefinitionCall1406,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'bt_feature_definition_call_1406':
-                        (bt_feature_definition_call1406.BTFeatureDefinitionCall1406,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "bt_feature_definition_call_1406": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'bt_feature_definition_call_1406': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__add_feature
+            callable=__add_feature,
         )
 
-        def __create_assembly(
-            self,
-            did,
-            wid,
-            bt_model_element_params,
-            **kwargs
-        ):
+        def __create_assembly(self, did, wid, bt_model_element_params, **kwargs):
             """Create Assembly  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -268,106 +222,64 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['bt_model_element_params'] = \
-                bt_model_element_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["bt_model_element_params"] = bt_model_element_params
             return self.call_with_http_info(**kwargs)
 
         self.create_assembly = Endpoint(
             settings={
-                'response_type': (bt_document_element_info.BTDocumentElementInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}',
-                'operation_id': 'create_assembly',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_document_element_info.BTDocumentElementInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}",
+                "operation_id": "create_assembly",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'bt_model_element_params',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'bt_model_element_params',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "bt_model_element_params",],
+                "required": ["did", "wid", "bt_model_element_params",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "bt_model_element_params": (
+                        bt_model_element_params.BTModelElementParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "wid": "wid",},
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "bt_model_element_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'bt_model_element_params':
-                        (bt_model_element_params.BTModelElementParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'bt_model_element_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__create_assembly
+            callable=__create_assembly,
         )
 
         def __create_instance(
-            self,
-            did,
-            wid,
-            eid,
-            bt_assembly_instance_definition_params,
-            **kwargs
+            self, did, wid, eid, bt_assembly_instance_definition_params, **kwargs
         ):
             """Create assembly instance  # noqa: E501
 
@@ -408,115 +320,73 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['eid'] = \
-                eid
-            kwargs['bt_assembly_instance_definition_params'] = \
-                bt_assembly_instance_definition_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["eid"] = eid
+            kwargs[
+                "bt_assembly_instance_definition_params"
+            ] = bt_assembly_instance_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.create_instance = Endpoint(
             settings={
-                'response_type': ([bt_occurrence74.BTOccurrence74],),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-                'operation_id': 'create_instance',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": ([bt_occurrence74.BTOccurrence74],),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/instances",
+                "operation_id": "create_instance",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'bt_assembly_instance_definition_params',
+                "all": ["did", "wid", "eid", "bt_assembly_instance_definition_params",],
+                "required": [
+                    "did",
+                    "wid",
+                    "eid",
+                    "bt_assembly_instance_definition_params",
                 ],
-                'required': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'bt_assembly_instance_definition_params',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "eid": (str,),
+                    "bt_assembly_instance_definition_params": (
+                        bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "wid": "wid", "eid": "eid",},
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "eid": "path",
+                    "bt_assembly_instance_definition_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'bt_assembly_instance_definition_params':
-                        (bt_assembly_instance_definition_params.BTAssemblyInstanceDefinitionParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                    'eid': 'eid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'eid': 'path',
-                    'bt_assembly_instance_definition_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__create_instance
+            callable=__create_instance,
         )
 
-        def __delete_feature(
-            self,
-            did,
-            wid,
-            eid,
-            fid,
-            **kwargs
-        ):
+        def __delete_feature(self, did, wid, eid, fid, **kwargs):
             """Delete Feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -556,114 +426,69 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['eid'] = \
-                eid
-            kwargs['fid'] = \
-                fid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["eid"] = eid
+            kwargs["fid"] = fid
             return self.call_with_http_info(**kwargs)
 
         self.delete_feature = Endpoint(
             settings={
-                'response_type': (bt_feature_api_base1430.BTFeatureApiBase1430,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-                'operation_id': 'delete_feature',
-                'http_method': 'DELETE',
-                'servers': [],
+                "response_type": (bt_feature_api_base1430.BTFeatureApiBase1430,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}",
+                "operation_id": "delete_feature",
+                "http_method": "DELETE",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'fid',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'fid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "eid", "fid",],
+                "required": ["did", "wid", "eid", "fid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "eid": (str,),
+                    "fid": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wid": "wid",
+                    "eid": "eid",
+                    "fid": "fid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'fid':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "eid": "path",
+                    "fid": "path",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                    'eid': 'eid',
-                    'fid': 'fid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'eid': 'path',
-                    'fid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__delete_feature
+            callable=__delete_feature,
         )
 
-        def __delete_instance(
-            self,
-            did,
-            eid,
-            wid,
-            nid,
-            **kwargs
-        ):
+        def __delete_instance(self, did, eid, wid, nid, **kwargs):
             """Delete assembly instance.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -703,114 +528,69 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wid'] = \
-                wid
-            kwargs['nid'] = \
-                nid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wid"] = wid
+            kwargs["nid"] = nid
             return self.call_with_http_info(**kwargs)
 
         self.delete_instance = Endpoint(
             settings={
-                'response_type': None,
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
-                'operation_id': 'delete_instance',
-                'http_method': 'DELETE',
-                'servers': [],
+                "response_type": None,
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}",
+                "operation_id": "delete_instance",
+                "http_method": "DELETE",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'nid',
-                ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'nid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "eid", "wid", "nid",],
+                "required": ["did", "eid", "wid", "nid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wid": (str,),
+                    "nid": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wid": "wid",
+                    "nid": "nid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'nid':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wid": "path",
+                    "nid": "path",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wid': 'wid',
-                    'nid': 'nid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wid': 'path',
-                    'nid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__delete_instance
+            callable=__delete_instance,
         )
 
-        def __get_assembly_bounding_boxes(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_assembly_bounding_boxes(self, did, wvm, wvmid, eid, **kwargs):
             """Bounding Boxes.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -855,139 +635,94 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_bounding_boxes = Endpoint(
             settings={
-                'response_type': (bt_bounding_box_info.BTBoundingBoxInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
-                'operation_id': 'get_assembly_bounding_boxes',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_bounding_box_info.BTBoundingBoxInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes",
+                "operation_id": "get_assembly_bounding_boxes",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'link_document_id',
-                    'include_hidden',
-                    'display_state_id',
-                    'configuration',
-                    'exploded_view_id',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "link_document_id",
+                    "include_hidden",
+                    "display_state_id",
+                    "configuration",
+                    "exploded_view_id",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "link_document_id": (str,),
+                    "include_hidden": (bool,),
+                    "display_state_id": (str,),
+                    "configuration": (str,),
+                    "exploded_view_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
+                    "link_document_id": "linkDocumentId",
+                    "include_hidden": "includeHidden",
+                    "display_state_id": "displayStateId",
+                    "configuration": "configuration",
+                    "exploded_view_id": "explodedViewId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'link_document_id':
-                        (str,),
-                    'include_hidden':
-                        (bool,),
-                    'display_state_id':
-                        (str,),
-                    'configuration':
-                        (str,),
-                    'exploded_view_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "link_document_id": "query",
+                    "include_hidden": "query",
+                    "display_state_id": "query",
+                    "configuration": "query",
+                    "exploded_view_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                    'link_document_id': 'linkDocumentId',
-                    'include_hidden': 'includeHidden',
-                    'display_state_id': 'displayStateId',
-                    'configuration': 'configuration',
-                    'exploded_view_id': 'explodedViewId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'link_document_id': 'query',
-                    'include_hidden': 'query',
-                    'display_state_id': 'query',
-                    'configuration': 'query',
-                    'exploded_view_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_assembly_bounding_boxes
+            callable=__get_assembly_bounding_boxes,
         )
 
-        def __get_assembly_definition(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_assembly_definition(self, did, wvm, wvmid, eid, **kwargs):
             """Assembly Definition.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1033,144 +768,100 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_definition = Endpoint(
             settings={
-                'response_type': (bt_assembly_definition_info.BTAssemblyDefinitionInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
-                'operation_id': 'get_assembly_definition',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_assembly_definition_info.BTAssemblyDefinitionInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}",
+                "operation_id": "get_assembly_definition",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'link_document_id',
-                    'include_mate_features',
-                    'include_non_solids',
-                    'include_mate_connectors',
-                    'configuration',
-                    'exploded_view_id',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "link_document_id",
+                    "include_mate_features",
+                    "include_non_solids",
+                    "include_mate_connectors",
+                    "configuration",
+                    "exploded_view_id",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "link_document_id": (str,),
+                    "include_mate_features": (bool,),
+                    "include_non_solids": (bool,),
+                    "include_mate_connectors": (bool,),
+                    "configuration": (str,),
+                    "exploded_view_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
+                    "link_document_id": "linkDocumentId",
+                    "include_mate_features": "includeMateFeatures",
+                    "include_non_solids": "includeNonSolids",
+                    "include_mate_connectors": "includeMateConnectors",
+                    "configuration": "configuration",
+                    "exploded_view_id": "explodedViewId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'link_document_id':
-                        (str,),
-                    'include_mate_features':
-                        (bool,),
-                    'include_non_solids':
-                        (bool,),
-                    'include_mate_connectors':
-                        (bool,),
-                    'configuration':
-                        (str,),
-                    'exploded_view_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "link_document_id": "query",
+                    "include_mate_features": "query",
+                    "include_non_solids": "query",
+                    "include_mate_connectors": "query",
+                    "configuration": "query",
+                    "exploded_view_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                    'link_document_id': 'linkDocumentId',
-                    'include_mate_features': 'includeMateFeatures',
-                    'include_non_solids': 'includeNonSolids',
-                    'include_mate_connectors': 'includeMateConnectors',
-                    'configuration': 'configuration',
-                    'exploded_view_id': 'explodedViewId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'link_document_id': 'query',
-                    'include_mate_features': 'query',
-                    'include_non_solids': 'query',
-                    'include_mate_connectors': 'query',
-                    'configuration': 'query',
-                    'exploded_view_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_assembly_definition
+            callable=__get_assembly_definition,
         )
 
-        def __get_assembly_shaded_views(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_assembly_shaded_views(self, did, wvm, wvmid, eid, **kwargs):
             """get_assembly_shaded_views  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1222,174 +913,122 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_assembly_shaded_views = Endpoint(
             settings={
-                'response_type': (bt_shaded_views_info.BTShadedViewsInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
-                'operation_id': 'get_assembly_shaded_views',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_shaded_views_info.BTShadedViewsInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews",
+                "operation_id": "get_assembly_shaded_views",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'link_document_id',
-                    'view_matrix',
-                    'output_height',
-                    'output_width',
-                    'pixel_size',
-                    'edges',
-                    'show_all_parts',
-                    'include_surfaces',
-                    'use_anti_aliasing',
-                    'display_state_id',
-                    'configuration',
-                    'exploded_view_id',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "link_document_id",
+                    "view_matrix",
+                    "output_height",
+                    "output_width",
+                    "pixel_size",
+                    "edges",
+                    "show_all_parts",
+                    "include_surfaces",
+                    "use_anti_aliasing",
+                    "display_state_id",
+                    "configuration",
+                    "exploded_view_id",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "link_document_id": (str,),
+                    "view_matrix": (str,),
+                    "output_height": (int,),
+                    "output_width": (int,),
+                    "pixel_size": (float,),
+                    "edges": (str,),
+                    "show_all_parts": (bool,),
+                    "include_surfaces": (bool,),
+                    "use_anti_aliasing": (bool,),
+                    "display_state_id": (str,),
+                    "configuration": (str,),
+                    "exploded_view_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
+                    "link_document_id": "linkDocumentId",
+                    "view_matrix": "viewMatrix",
+                    "output_height": "outputHeight",
+                    "output_width": "outputWidth",
+                    "pixel_size": "pixelSize",
+                    "edges": "edges",
+                    "show_all_parts": "showAllParts",
+                    "include_surfaces": "includeSurfaces",
+                    "use_anti_aliasing": "useAntiAliasing",
+                    "display_state_id": "displayStateId",
+                    "configuration": "configuration",
+                    "exploded_view_id": "explodedViewId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'link_document_id':
-                        (str,),
-                    'view_matrix':
-                        (str,),
-                    'output_height':
-                        (int,),
-                    'output_width':
-                        (int,),
-                    'pixel_size':
-                        (float,),
-                    'edges':
-                        (str,),
-                    'show_all_parts':
-                        (bool,),
-                    'include_surfaces':
-                        (bool,),
-                    'use_anti_aliasing':
-                        (bool,),
-                    'display_state_id':
-                        (str,),
-                    'configuration':
-                        (str,),
-                    'exploded_view_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "link_document_id": "query",
+                    "view_matrix": "query",
+                    "output_height": "query",
+                    "output_width": "query",
+                    "pixel_size": "query",
+                    "edges": "query",
+                    "show_all_parts": "query",
+                    "include_surfaces": "query",
+                    "use_anti_aliasing": "query",
+                    "display_state_id": "query",
+                    "configuration": "query",
+                    "exploded_view_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                    'link_document_id': 'linkDocumentId',
-                    'view_matrix': 'viewMatrix',
-                    'output_height': 'outputHeight',
-                    'output_width': 'outputWidth',
-                    'pixel_size': 'pixelSize',
-                    'edges': 'edges',
-                    'show_all_parts': 'showAllParts',
-                    'include_surfaces': 'includeSurfaces',
-                    'use_anti_aliasing': 'useAntiAliasing',
-                    'display_state_id': 'displayStateId',
-                    'configuration': 'configuration',
-                    'exploded_view_id': 'explodedViewId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'link_document_id': 'query',
-                    'view_matrix': 'query',
-                    'output_height': 'query',
-                    'output_width': 'query',
-                    'pixel_size': 'query',
-                    'edges': 'query',
-                    'show_all_parts': 'query',
-                    'include_surfaces': 'query',
-                    'use_anti_aliasing': 'query',
-                    'display_state_id': 'query',
-                    'configuration': 'query',
-                    'exploded_view_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_assembly_shaded_views
+            callable=__get_assembly_shaded_views,
         )
 
-        def __get_bill_of_materials(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_bill_of_materials(self, did, wvm, wvmid, eid, **kwargs):
             """Get Bill of Materials  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1436,150 +1075,102 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_bill_of_materials = Endpoint(
             settings={
-                'response_type': (json_node.JsonNode,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
-                'operation_id': 'get_bill_of_materials',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (json_node.JsonNode,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom",
+                "operation_id": "get_bill_of_materials",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'metadata_workspace_id',
-                    'bom_column_ids',
-                    'indented',
-                    'multi_level',
-                    'generate_if_absent',
-                    'link_document_id',
-                    'configuration',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "metadata_workspace_id",
+                    "bom_column_ids",
+                    "indented",
+                    "multi_level",
+                    "generate_if_absent",
+                    "link_document_id",
+                    "configuration",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "metadata_workspace_id": (str,),
+                    "bom_column_ids": ([str],),
+                    "indented": (bool,),
+                    "multi_level": (bool,),
+                    "generate_if_absent": (bool,),
+                    "link_document_id": (str,),
+                    "configuration": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
+                    "metadata_workspace_id": "metadataWorkspaceId",
+                    "bom_column_ids": "bomColumnIds",
+                    "indented": "indented",
+                    "multi_level": "multiLevel",
+                    "generate_if_absent": "generateIfAbsent",
+                    "link_document_id": "linkDocumentId",
+                    "configuration": "configuration",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'metadata_workspace_id':
-                        (str,),
-                    'bom_column_ids':
-                        ([str],),
-                    'indented':
-                        (bool,),
-                    'multi_level':
-                        (bool,),
-                    'generate_if_absent':
-                        (bool,),
-                    'link_document_id':
-                        (str,),
-                    'configuration':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "metadata_workspace_id": "query",
+                    "bom_column_ids": "query",
+                    "indented": "query",
+                    "multi_level": "query",
+                    "generate_if_absent": "query",
+                    "link_document_id": "query",
+                    "configuration": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                    'metadata_workspace_id': 'metadataWorkspaceId',
-                    'bom_column_ids': 'bomColumnIds',
-                    'indented': 'indented',
-                    'multi_level': 'multiLevel',
-                    'generate_if_absent': 'generateIfAbsent',
-                    'link_document_id': 'linkDocumentId',
-                    'configuration': 'configuration',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'metadata_workspace_id': 'query',
-                    'bom_column_ids': 'query',
-                    'indented': 'query',
-                    'multi_level': 'query',
-                    'generate_if_absent': 'query',
-                    'link_document_id': 'query',
-                    'configuration': 'query',
-                },
-                'collection_format_map': {
-                    'bom_column_ids': 'multi',
-                }
+                "collection_format_map": {"bom_column_ids": "multi",},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_bill_of_materials
+            callable=__get_bill_of_materials,
         )
 
-        def __get_feature_specs(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_feature_specs(self, did, wvm, wvmid, eid, **kwargs):
             """get_feature_specs  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1619,114 +1210,71 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_feature_specs = Endpoint(
             settings={
-                'response_type': (bt_feature_specs_response664.BTFeatureSpecsResponse664,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
-                'operation_id': 'get_feature_specs',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_feature_specs_response664.BTFeatureSpecsResponse664,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs",
+                "operation_id": "get_feature_specs",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wvm", "wvmid", "eid",],
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_feature_specs
+            callable=__get_feature_specs,
         )
 
-        def __get_features(
-            self,
-            did,
-            wvm,
-            wvmid,
-            eid,
-            **kwargs
-        ):
+        def __get_features(self, did, wvm, wvmid, eid, **kwargs):
             """Get Feature List  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1768,123 +1316,84 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_features = Endpoint(
             settings={
-                'response_type': (bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-                'operation_id': 'get_features',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_assembly_feature_list_response1174.BTAssemblyFeatureListResponse1174,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features",
+                "operation_id": "get_features",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                    'feature_id',
-                    'link_document_id',
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "feature_id",
+                    "link_document_id",
                 ],
-                'required': [
-                    'did',
-                    'wvm',
-                    'wvmid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "wvm", "wvmid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "eid": (str,),
+                    "feature_id": ([str],),
+                    "link_document_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "eid": "eid",
+                    "feature_id": "featureId",
+                    "link_document_id": "linkDocumentId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'feature_id':
-                        ([str],),
-                    'link_document_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "eid": "path",
+                    "feature_id": "query",
+                    "link_document_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'eid': 'eid',
-                    'feature_id': 'featureId',
-                    'link_document_id': 'linkDocumentId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'eid': 'path',
-                    'feature_id': 'query',
-                    'link_document_id': 'query',
-                },
-                'collection_format_map': {
-                    'feature_id': 'multi',
-                }
+                "collection_format_map": {"feature_id": "multi",},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_features
+            callable=__get_features,
         )
 
-        def __get_named_views(
-            self,
-            did,
-            eid,
-            **kwargs
-        ):
+        def __get_named_views(self, did, eid, **kwargs):
             """get_named_views  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1924,107 +1433,67 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_named_views = Endpoint(
             settings={
-                'response_type': (bt_named_views_info.BTNamedViewsInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/e/{eid}/namedViews',
-                'operation_id': 'get_named_views',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_named_views_info.BTNamedViewsInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/e/{eid}/namedViews",
+                "operation_id": "get_named_views",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'skip_perspective',
-                    'link_document_id',
-                ],
-                'required': [
-                    'did',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "eid", "skip_perspective", "link_document_id",],
+                "required": ["did", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "skip_perspective": (bool,),
+                    "link_document_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "skip_perspective": "skipPerspective",
+                    "link_document_id": "linkDocumentId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'skip_perspective':
-                        (bool,),
-                    'link_document_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "skip_perspective": "query",
+                    "link_document_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'skip_perspective': 'skipPerspective',
-                    'link_document_id': 'linkDocumentId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'skip_perspective': 'query',
-                    'link_document_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_named_views
+            callable=__get_named_views,
         )
 
-        def __get_or_create_bill_of_materials_element(
-            self,
-            did,
-            wid,
-            eid,
-            **kwargs
-        ):
+        def __get_or_create_bill_of_materials_element(self, did, wid, eid, **kwargs):
             """Get or Create Bill of Materials Element  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2063,105 +1532,53 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_or_create_bill_of_materials_element = Endpoint(
             settings={
-                'response_type': (bt_document_element_info.BTDocumentElementInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
-                'operation_id': 'get_or_create_bill_of_materials_element',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_document_element_info.BTDocumentElementInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement",
+                "operation_id": "get_or_create_bill_of_materials_element",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'eid',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "eid",],
+                "required": ["did", "wid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'eid':
-                        (str,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                    'eid': 'eid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'eid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {"did": (str,), "wid": (str,), "eid": (str,),},
+                "attribute_map": {"did": "did", "wid": "wid", "eid": "eid",},
+                "location_map": {"did": "path", "wid": "path", "eid": "path",},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_or_create_bill_of_materials_element
+            callable=__get_or_create_bill_of_materials_element,
         )
 
-        def __get_translator_formats(
-            self,
-            did,
-            wid,
-            eid,
-            **kwargs
-        ):
+        def __get_translator_formats(self, did, wid, eid, **kwargs):
             """Get Translation Formats  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2201,99 +1618,65 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['eid'] = \
-                eid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["eid"] = eid
             return self.call_with_http_info(**kwargs)
 
         self.get_translator_formats = Endpoint(
             settings={
-                'response_type': ([bt_model_format_info.BTModelFormatInfo],),
-                'auth': [],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/translationformats',
-                'operation_id': 'get_translator_formats',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": ([bt_model_format_info.BTModelFormatInfo],),
+                "auth": [],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/translationformats",
+                "operation_id": "get_translator_formats",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'check_content',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'eid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "eid", "check_content",],
+                "required": ["did", "wid", "eid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "eid": (str,),
+                    "check_content": (bool,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wid": "wid",
+                    "eid": "eid",
+                    "check_content": "checkContent",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'check_content':
-                        (bool,),
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "eid": "path",
+                    "check_content": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                    'eid': 'eid',
-                    'check_content': 'checkContent',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'eid': 'path',
-                    'check_content': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_translator_formats
+            callable=__get_translator_formats,
         )
 
         def __insert_transformed_instances(
@@ -2343,114 +1726,81 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wid'] = \
-                wid
-            kwargs['bt_assembly_transformed_instances_definition_params'] = \
-                bt_assembly_transformed_instances_definition_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wid"] = wid
+            kwargs[
+                "bt_assembly_transformed_instances_definition_params"
+            ] = bt_assembly_transformed_instances_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.insert_transformed_instances = Endpoint(
             settings={
-                'response_type': (bt_assembly_insert_transformed_instances_response.BTAssemblyInsertTransformedInstancesResponse,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
-                'operation_id': 'insert_transformed_instances',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_assembly_insert_transformed_instances_response.BTAssemblyInsertTransformedInstancesResponse,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances",
+                "operation_id": "insert_transformed_instances",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_assembly_transformed_instances_definition_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_assembly_transformed_instances_definition_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_assembly_transformed_instances_definition_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_assembly_transformed_instances_definition_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wid": (str,),
+                    "bt_assembly_transformed_instances_definition_params": (
+                        bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "eid": "eid", "wid": "wid",},
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wid": "path",
+                    "bt_assembly_transformed_instances_definition_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'bt_assembly_transformed_instances_definition_params':
-                        (bt_assembly_transformed_instances_definition_params.BTAssemblyTransformedInstancesDefinitionParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wid': 'path',
-                    'bt_assembly_transformed_instances_definition_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__insert_transformed_instances
+            callable=__insert_transformed_instances,
         )
 
         def __transform_occurrences(
-            self,
-            did,
-            eid,
-            wid,
-            bt_assembly_transform_definition_params,
-            **kwargs
+            self, did, eid, wid, bt_assembly_transform_definition_params, **kwargs
         ):
             """Transform assembly occurrences.  # noqa: E501
 
@@ -2491,115 +1841,79 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wid'] = \
-                wid
-            kwargs['bt_assembly_transform_definition_params'] = \
-                bt_assembly_transform_definition_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wid"] = wid
+            kwargs[
+                "bt_assembly_transform_definition_params"
+            ] = bt_assembly_transform_definition_params
             return self.call_with_http_info(**kwargs)
 
         self.transform_occurrences = Endpoint(
             settings={
-                'response_type': None,
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
-                'operation_id': 'transform_occurrences',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": None,
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms",
+                "operation_id": "transform_occurrences",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_assembly_transform_definition_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_assembly_transform_definition_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_assembly_transform_definition_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_assembly_transform_definition_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wid": (str,),
+                    "bt_assembly_transform_definition_params": (
+                        bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "eid": "eid", "wid": "wid",},
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wid": "path",
+                    "bt_assembly_transform_definition_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'bt_assembly_transform_definition_params':
-                        (bt_assembly_transform_definition_params.BTAssemblyTransformDefinitionParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wid': 'path',
-                    'bt_assembly_transform_definition_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__transform_occurrences
+            callable=__transform_occurrences,
         )
 
         def __translate_format(
-            self,
-            did,
-            wv,
-            wvid,
-            eid,
-            bt_translate_format_params,
-            **kwargs
+            self, did, wv, wvid, eid, bt_translate_format_params, **kwargs
         ):
             """Create Assembly translation.  # noqa: E501
 
@@ -2641,123 +1955,76 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wv'] = \
-                wv
-            kwargs['wvid'] = \
-                wvid
-            kwargs['eid'] = \
-                eid
-            kwargs['bt_translate_format_params'] = \
-                bt_translate_format_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wv"] = wv
+            kwargs["wvid"] = wvid
+            kwargs["eid"] = eid
+            kwargs["bt_translate_format_params"] = bt_translate_format_params
             return self.call_with_http_info(**kwargs)
 
         self.translate_format = Endpoint(
             settings={
-                'response_type': (bt_translation_request_info.BTTranslationRequestInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-                'operation_id': 'translate_format',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_translation_request_info.BTTranslationRequestInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations",
+                "operation_id": "translate_format",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wv',
-                    'wvid',
-                    'eid',
-                    'bt_translate_format_params',
-                ],
-                'required': [
-                    'did',
-                    'wv',
-                    'wvid',
-                    'eid',
-                    'bt_translate_format_params',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wv", "wvid", "eid", "bt_translate_format_params",],
+                "required": ["did", "wv", "wvid", "eid", "bt_translate_format_params",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wv": (str,),
+                    "wvid": (str,),
+                    "eid": (str,),
+                    "bt_translate_format_params": (
+                        bt_translate_format_params.BTTranslateFormatParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wv": "wv",
+                    "wvid": "wvid",
+                    "eid": "eid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wv':
-                        (str,),
-                    'wvid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'bt_translate_format_params':
-                        (bt_translate_format_params.BTTranslateFormatParams,),
+                "location_map": {
+                    "did": "path",
+                    "wv": "path",
+                    "wvid": "path",
+                    "eid": "path",
+                    "bt_translate_format_params": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wv': 'wv',
-                    'wvid': 'wvid',
-                    'eid': 'eid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wv': 'path',
-                    'wvid': 'path',
-                    'eid': 'path',
-                    'bt_translate_format_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__translate_format
+            callable=__translate_format,
         )
 
-        def __update_feature(
-            self,
-            did,
-            wid,
-            eid,
-            fid,
-            **kwargs
-        ):
+        def __update_feature(self, did, wid, eid, fid, **kwargs):
             """update_feature  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -2798,116 +2065,83 @@ class AssembliesApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['eid'] = \
-                eid
-            kwargs['fid'] = \
-                fid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["eid"] = eid
+            kwargs["fid"] = fid
             return self.call_with_http_info(**kwargs)
 
         self.update_feature = Endpoint(
             settings={
-                'response_type': (bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-                'operation_id': 'update_feature',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_feature_definition_response1617.BTFeatureDefinitionResponse1617,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}",
+                "operation_id": "update_feature",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'fid',
-                    'body',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'eid',
-                    'fid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "eid", "fid", "body",],
+                "required": ["did", "wid", "eid", "fid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "eid": (str,),
+                    "fid": (str,),
+                    "body": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "wid": "wid",
+                    "eid": "eid",
+                    "fid": "fid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'fid':
-                        (str,),
-                    'body':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "eid": "path",
+                    "fid": "path",
+                    "body": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                    'eid': 'eid',
-                    'fid': 'fid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'eid': 'path',
-                    'fid': 'path',
-                    'body': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__update_feature
+            callable=__update_feature,
         )
 
 
 class Endpoint(object):
-    def __init__(self, settings=None, params_map=None, root_map=None,
-                 headers_map=None, api_client=None, callable=None):
+    def __init__(
+        self,
+        settings=None,
+        params_map=None,
+        root_map=None,
+        headers_map=None,
+        api_client=None,
+        callable=None,
+    ):
         """Creates an endpoint
 
         Args:
@@ -2943,54 +2177,48 @@ class Endpoint(object):
         """
         self.settings = settings
         self.params_map = params_map
-        self.params_map['all'].extend([
-            'async_req',
-            '_host_index',
-            '_preload_content',
-            '_request_timeout',
-            '_return_http_data_only',
-            '_check_input_type',
-            '_check_return_type'
-        ])
-        self.params_map['nullable'].extend(['_request_timeout'])
-        self.validations = root_map['validations']
-        self.allowed_values = root_map['allowed_values']
-        self.openapi_types = root_map['openapi_types']
+        self.params_map["all"].extend(
+            [
+                "async_req",
+                "_host_index",
+                "_preload_content",
+                "_request_timeout",
+                "_return_http_data_only",
+                "_check_input_type",
+                "_check_return_type",
+            ]
+        )
+        self.params_map["nullable"].extend(["_request_timeout"])
+        self.validations = root_map["validations"]
+        self.allowed_values = root_map["allowed_values"]
+        self.openapi_types = root_map["openapi_types"]
         extra_types = {
-            'async_req': (bool,),
-            '_host_index': (int,),
-            '_preload_content': (bool,),
-            '_request_timeout': (none_type, int, (int,), [int]),
-            '_return_http_data_only': (bool,),
-            '_check_input_type': (bool,),
-            '_check_return_type': (bool,)
+            "async_req": (bool,),
+            "_host_index": (int,),
+            "_preload_content": (bool,),
+            "_request_timeout": (none_type, int, (int,), [int]),
+            "_return_http_data_only": (bool,),
+            "_check_input_type": (bool,),
+            "_check_return_type": (bool,),
         }
         self.openapi_types.update(extra_types)
-        self.attribute_map = root_map['attribute_map']
-        self.location_map = root_map['location_map']
-        self.collection_format_map = root_map['collection_format_map']
+        self.attribute_map = root_map["attribute_map"]
+        self.location_map = root_map["location_map"]
+        self.collection_format_map = root_map["collection_format_map"]
         self.headers_map = headers_map
         self.api_client = api_client
         self.callable = callable
 
     def __validate_inputs(self, kwargs):
-        for param in self.params_map['enum']:
+        for param in self.params_map["enum"]:
             if param in kwargs:
-                check_allowed_values(
-                    self.allowed_values,
-                    (param,),
-                    kwargs[param]
-                )
+                check_allowed_values(self.allowed_values, (param,), kwargs[param])
 
-        for param in self.params_map['validation']:
+        for param in self.params_map["validation"]:
             if param in kwargs:
-                check_validations(
-                    self.validations,
-                    (param,),
-                    kwargs[param]
-                )
+                check_validations(self.validations, (param,), kwargs[param])
 
-        if kwargs['_check_input_type'] is False:
+        if kwargs["_check_input_type"] is False:
             return
 
         for key, value in six.iteritems(kwargs):
@@ -2999,20 +2227,20 @@ class Endpoint(object):
                 self.openapi_types[key],
                 [key],
                 False,
-                kwargs['_check_input_type'],
-                configuration=self.api_client.configuration
+                kwargs["_check_input_type"],
+                configuration=self.api_client.configuration,
             )
             kwargs[key] = fixed_val
 
     def __gather_params(self, kwargs):
         params = {
-            'body': None,
-            'collection_format': {},
-            'file': {},
-            'form': [],
-            'header': {},
-            'path': {},
-            'query': []
+            "body": None,
+            "collection_format": {},
+            "file": {},
+            "form": [],
+            "header": {},
+            "path": {},
+            "query": [],
         }
 
         for param_name, param_value in six.iteritems(kwargs):
@@ -3020,25 +2248,27 @@ class Endpoint(object):
             if param_location is None:
                 continue
             if param_location:
-                if param_location == 'body':
-                    params['body'] = param_value
+                if param_location == "body":
+                    params["body"] = param_value
                     continue
                 base_name = self.attribute_map[param_name]
-                if (param_location == 'form' and
-                        self.openapi_types[param_name] == (file_type,)):
-                    params['file'][param_name] = [param_value]
-                elif (param_location == 'form' and
-                        self.openapi_types[param_name] == ([file_type],)):
+                if param_location == "form" and self.openapi_types[param_name] == (
+                    file_type,
+                ):
+                    params["file"][param_name] = [param_value]
+                elif param_location == "form" and self.openapi_types[param_name] == (
+                    [file_type],
+                ):
                     # param_value is already a list
-                    params['file'][param_name] = param_value
-                elif param_location in {'form', 'query'}:
+                    params["file"][param_name] = param_value
+                elif param_location in {"form", "query"}:
                     param_value_full = (base_name, param_value)
                     params[param_location].append(param_value_full)
-                if param_location not in {'form', 'query'}:
+                if param_location not in {"form", "query"}:
                     params[param_location][base_name] = param_value
                 collection_format = self.collection_format_map.get(param_name)
                 if collection_format:
-                    params['collection_format'][base_name] = collection_format
+                    params["collection_format"][base_name] = collection_format
 
         return params
 
@@ -3056,69 +2286,74 @@ class Endpoint(object):
     def call_with_http_info(self, **kwargs):
 
         try:
-            _host = self.settings['servers'][kwargs['_host_index']]
+            _host = self.settings["servers"][kwargs["_host_index"]]
         except IndexError:
-            if self.settings['servers']:
+            if self.settings["servers"]:
                 raise ApiValueError(
-                    "Invalid host index. Must be 0 <= index < %s" %
-                    len(self.settings['servers'])
+                    "Invalid host index. Must be 0 <= index < %s"
+                    % len(self.settings["servers"])
                 )
             _host = None
 
         for key, value in six.iteritems(kwargs):
-            if key not in self.params_map['all']:
+            if key not in self.params_map["all"]:
                 raise ApiTypeError(
                     "Got an unexpected parameter '%s'"
-                    " to method `%s`" %
-                    (key, self.settings['operation_id'])
+                    " to method `%s`" % (key, self.settings["operation_id"])
                 )
             # only throw this nullable ApiValueError if _check_input_type
             # is False, if _check_input_type==True we catch this case
             # in self.__validate_inputs
-            if (key not in self.params_map['nullable'] and value is None
-                    and kwargs['_check_input_type'] is False):
+            if (
+                key not in self.params_map["nullable"]
+                and value is None
+                and kwargs["_check_input_type"] is False
+            ):
                 raise ApiValueError(
                     "Value may not be None for non-nullable parameter `%s`"
-                    " when calling `%s`" %
-                    (key, self.settings['operation_id'])
+                    " when calling `%s`" % (key, self.settings["operation_id"])
                 )
 
-        for key in self.params_map['required']:
+        for key in self.params_map["required"]:
             if key not in kwargs.keys():
                 raise ApiValueError(
                     "Missing the required parameter `%s` when calling "
-                    "`%s`" % (key, self.settings['operation_id'])
+                    "`%s`" % (key, self.settings["operation_id"])
                 )
 
         self.__validate_inputs(kwargs)
 
         params = self.__gather_params(kwargs)
 
-        accept_headers_list = self.headers_map['accept']
+        accept_headers_list = self.headers_map["accept"]
         if accept_headers_list:
-            params['header']['Accept'] = self.api_client.select_header_accept(
-                accept_headers_list)
+            params["header"]["Accept"] = self.api_client.select_header_accept(
+                accept_headers_list
+            )
 
-        content_type_headers_list = self.headers_map['content_type']
+        content_type_headers_list = self.headers_map["content_type"]
         if content_type_headers_list:
             header_list = self.api_client.select_header_content_type(
-                content_type_headers_list)
-            params['header']['Content-Type'] = header_list
+                content_type_headers_list
+            )
+            params["header"]["Content-Type"] = header_list
 
         return self.api_client.call_api(
-            self.settings['endpoint_path'], self.settings['http_method'],
-            params['path'],
-            params['query'],
-            params['header'],
-            body=params['body'],
-            post_params=params['form'],
-            files=params['file'],
-            response_type=self.settings['response_type'],
-            auth_settings=self.settings['auth'],
-            async_req=kwargs['async_req'],
-            _check_type=kwargs['_check_return_type'],
-            _return_http_data_only=kwargs['_return_http_data_only'],
-            _preload_content=kwargs['_preload_content'],
-            _request_timeout=kwargs['_request_timeout'],
+            self.settings["endpoint_path"],
+            self.settings["http_method"],
+            params["path"],
+            params["query"],
+            params["header"],
+            body=params["body"],
+            post_params=params["form"],
+            files=params["file"],
+            response_type=self.settings["response_type"],
+            auth_settings=self.settings["auth"],
+            async_req=kwargs["async_req"],
+            _check_type=kwargs["_check_return_type"],
+            _return_http_data_only=kwargs["_return_http_data_only"],
+            _preload_content=kwargs["_preload_content"],
+            _request_timeout=kwargs["_request_timeout"],
             _host=_host,
-            collection_formats=params['collection_format'])
+            collection_formats=params["collection_format"],
+        )

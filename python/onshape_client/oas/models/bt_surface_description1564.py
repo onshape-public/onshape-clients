@@ -30,41 +30,49 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_cone_description860
 except ImportError:
     bt_cone_description860 = sys.modules[
-        'onshape_client.oas.models.bt_cone_description860']
+        "onshape_client.oas.models.bt_cone_description860"
+    ]
 try:
     from onshape_client.oas.models import bt_cylinder_description686
 except ImportError:
     bt_cylinder_description686 = sys.modules[
-        'onshape_client.oas.models.bt_cylinder_description686']
+        "onshape_client.oas.models.bt_cylinder_description686"
+    ]
 try:
     from onshape_client.oas.models import bt_plane_description692
 except ImportError:
     bt_plane_description692 = sys.modules[
-        'onshape_client.oas.models.bt_plane_description692']
+        "onshape_client.oas.models.bt_plane_description692"
+    ]
 try:
     from onshape_client.oas.models import bt_sphere_description1263
 except ImportError:
     bt_sphere_description1263 = sys.modules[
-        'onshape_client.oas.models.bt_sphere_description1263']
+        "onshape_client.oas.models.bt_sphere_description1263"
+    ]
 try:
     from onshape_client.oas.models import bt_spun_description657
 except ImportError:
     bt_spun_description657 = sys.modules[
-        'onshape_client.oas.models.bt_spun_description657']
+        "onshape_client.oas.models.bt_spun_description657"
+    ]
 try:
     from onshape_client.oas.models import bt_sweep_description1473
 except ImportError:
     bt_sweep_description1473 = sys.modules[
-        'onshape_client.oas.models.bt_sweep_description1473']
+        "onshape_client.oas.models.bt_sweep_description1473"
+    ]
 try:
     from onshape_client.oas.models import bt_torus_description1834
 except ImportError:
     bt_torus_description1834 = sys.modules[
-        'onshape_client.oas.models.bt_torus_description1834']
+        "onshape_client.oas.models.bt_torus_description1834"
+    ]
 
 
 class BTSurfaceDescription1564(ModelNormal):
@@ -92,24 +100,23 @@ class BTSurfaceDescription1564(ModelNormal):
     """
 
     allowed_values = {
-        ('type',): {
-            'PLANE': "PLANE",
-            'CYLINDER': "CYLINDER",
-            'CONE': "CONE",
-            'SPHERE': "SPHERE",
-            'TORUS': "TORUS",
-            'SPUN': "SPUN",
-            'SWEEP': "SWEEP",
-            'OFFSET': "OFFSET",
-            'BLEND': "BLEND",
-            'BSURFACE': "BSURFACE",
-            'OTHER': "OTHER",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "PLANE": "PLANE",
+            "CYLINDER": "CYLINDER",
+            "CONE": "CONE",
+            "SPHERE": "SPHERE",
+            "TORUS": "TORUS",
+            "SPUN": "SPUN",
+            "SWEEP": "SWEEP",
+            "OFFSET": "OFFSET",
+            "BLEND": "BLEND",
+            "BSURFACE": "BSURFACE",
+            "OTHER": "OTHER",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -124,42 +131,51 @@ class BTSurfaceDescription1564(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTCylinderDescription-686': bt_cylinder_description686.BTCylinderDescription686,
-                'BTSweepDescription-1473': bt_sweep_description1473.BTSweepDescription1473,
-                'BTTorusDescription-1834': bt_torus_description1834.BTTorusDescription1834,
-                'BTSpunDescription-657': bt_spun_description657.BTSpunDescription657,
-                'BTPlaneDescription-692': bt_plane_description692.BTPlaneDescription692,
-                'BTConeDescription-860': bt_cone_description860.BTConeDescription860,
-                'BTSphereDescription-1263': bt_sphere_description1263.BTSphereDescription1263,
+            "bt_type": {
+                "BTCylinderDescription-686": bt_cylinder_description686.BTCylinderDescription686,
+                "BTSweepDescription-1473": bt_sweep_description1473.BTSweepDescription1473,
+                "BTTorusDescription-1834": bt_torus_description1834.BTTorusDescription1834,
+                "BTSpunDescription-657": bt_spun_description657.BTSpunDescription657,
+                "BTPlaneDescription-692": bt_plane_description692.BTPlaneDescription692,
+                "BTConeDescription-860": bt_cone_description860.BTConeDescription860,
+                "BTSphereDescription-1263": bt_sphere_description1263.BTSphereDescription1263,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_surface_description1564.BTSurfaceDescription1564 - a model defined in OpenAPI
 
         Keyword Args:
@@ -187,10 +203,12 @@ class BTSurfaceDescription1564(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

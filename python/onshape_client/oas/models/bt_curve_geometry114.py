@@ -30,31 +30,37 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_curve_geometry_circle115
 except ImportError:
     bt_curve_geometry_circle115 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry_circle115']
+        "onshape_client.oas.models.bt_curve_geometry_circle115"
+    ]
 try:
     from onshape_client.oas.models import bt_curve_geometry_conic2284
 except ImportError:
     bt_curve_geometry_conic2284 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry_conic2284']
+        "onshape_client.oas.models.bt_curve_geometry_conic2284"
+    ]
 try:
     from onshape_client.oas.models import bt_curve_geometry_interpolated_spline116
 except ImportError:
     bt_curve_geometry_interpolated_spline116 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry_interpolated_spline116']
+        "onshape_client.oas.models.bt_curve_geometry_interpolated_spline116"
+    ]
 try:
     from onshape_client.oas.models import bt_curve_geometry_line117
 except ImportError:
     bt_curve_geometry_line117 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry_line117']
+        "onshape_client.oas.models.bt_curve_geometry_line117"
+    ]
 try:
     from onshape_client.oas.models import bt_curve_geometry_spline118
 except ImportError:
     bt_curve_geometry_spline118 = sys.modules[
-        'onshape_client.oas.models.bt_curve_geometry_spline118']
+        "onshape_client.oas.models.bt_curve_geometry_spline118"
+    ]
 
 
 class BTCurveGeometry114(ModelNormal):
@@ -81,11 +87,9 @@ class BTCurveGeometry114(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -100,38 +104,47 @@ class BTCurveGeometry114(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTCurveGeometryLine-117': bt_curve_geometry_line117.BTCurveGeometryLine117,
-                'BTCurveGeometryInterpolatedSpline-116': bt_curve_geometry_interpolated_spline116.BTCurveGeometryInterpolatedSpline116,
-                'BTCurveGeometryCircle-115': bt_curve_geometry_circle115.BTCurveGeometryCircle115,
-                'BTCurveGeometrySpline-118': bt_curve_geometry_spline118.BTCurveGeometrySpline118,
-                'BTCurveGeometryConic-2284': bt_curve_geometry_conic2284.BTCurveGeometryConic2284,
+            "bt_type": {
+                "BTCurveGeometryLine-117": bt_curve_geometry_line117.BTCurveGeometryLine117,
+                "BTCurveGeometryInterpolatedSpline-116": bt_curve_geometry_interpolated_spline116.BTCurveGeometryInterpolatedSpline116,
+                "BTCurveGeometryCircle-115": bt_curve_geometry_circle115.BTCurveGeometryCircle115,
+                "BTCurveGeometrySpline-118": bt_curve_geometry_spline118.BTCurveGeometrySpline118,
+                "BTCurveGeometryConic-2284": bt_curve_geometry_conic2284.BTCurveGeometryConic2284,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_curve_geometry114.BTCurveGeometry114 - a model defined in OpenAPI
 
         Keyword Args:
@@ -158,10 +171,12 @@ class BTCurveGeometry114(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

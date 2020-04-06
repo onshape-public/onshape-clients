@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_published_workflow_info
 except ImportError:
     bt_published_workflow_info = sys.modules[
-        'onshape_client.oas.models.bt_published_workflow_info']
+        "onshape_client.oas.models.bt_published_workflow_info"
+    ]
 
 
 class BTActiveWorkflowInfo(ModelNormal):
@@ -61,11 +63,9 @@ class BTActiveWorkflowInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,20 +80,26 @@ class BTActiveWorkflowInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'can_create_releases': (bool,),  # noqa: E501
-            'can_current_user_create_releases': (bool,),  # noqa: E501
-            'company_id': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'drawing_can_duplicate_part_number': (bool,),  # noqa: E501
-            'enabled_active_multiple_workflows': (bool,),  # noqa: E501
-            'obsoletion_workflow': (bt_published_workflow_info.BTPublishedWorkflowInfo,),  # noqa: E501
-            'obsoletion_workflow_id': (str,),  # noqa: E501
-            'pickable_workflows': ([bt_published_workflow_info.BTPublishedWorkflowInfo],),  # noqa: E501
-            'release_workflow': (bt_published_workflow_info.BTPublishedWorkflowInfo,),  # noqa: E501
-            'release_workflow_id': (str,),  # noqa: E501
-            'using_auto_part_numbering': (bool,),  # noqa: E501
-            'using_auto_part_numbering_scheme': (bool,),  # noqa: E501
-            'using_managed_workflow': (bool,),  # noqa: E501
+            "can_create_releases": (bool,),  # noqa: E501
+            "can_current_user_create_releases": (bool,),  # noqa: E501
+            "company_id": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "drawing_can_duplicate_part_number": (bool,),  # noqa: E501
+            "enabled_active_multiple_workflows": (bool,),  # noqa: E501
+            "obsoletion_workflow": (
+                bt_published_workflow_info.BTPublishedWorkflowInfo,
+            ),  # noqa: E501
+            "obsoletion_workflow_id": (str,),  # noqa: E501
+            "pickable_workflows": (
+                [bt_published_workflow_info.BTPublishedWorkflowInfo],
+            ),  # noqa: E501
+            "release_workflow": (
+                bt_published_workflow_info.BTPublishedWorkflowInfo,
+            ),  # noqa: E501
+            "release_workflow_id": (str,),  # noqa: E501
+            "using_auto_part_numbering": (bool,),  # noqa: E501
+            "using_auto_part_numbering_scheme": (bool,),  # noqa: E501
+            "using_managed_workflow": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,35 +107,44 @@ class BTActiveWorkflowInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'can_create_releases': 'canCreateReleases',  # noqa: E501
-        'can_current_user_create_releases': 'canCurrentUserCreateReleases',  # noqa: E501
-        'company_id': 'companyId',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'drawing_can_duplicate_part_number': 'drawingCanDuplicatePartNumber',  # noqa: E501
-        'enabled_active_multiple_workflows': 'enabledActiveMultipleWorkflows',  # noqa: E501
-        'obsoletion_workflow': 'obsoletionWorkflow',  # noqa: E501
-        'obsoletion_workflow_id': 'obsoletionWorkflowId',  # noqa: E501
-        'pickable_workflows': 'pickableWorkflows',  # noqa: E501
-        'release_workflow': 'releaseWorkflow',  # noqa: E501
-        'release_workflow_id': 'releaseWorkflowId',  # noqa: E501
-        'using_auto_part_numbering': 'usingAutoPartNumbering',  # noqa: E501
-        'using_auto_part_numbering_scheme': 'usingAutoPartNumberingScheme',  # noqa: E501
-        'using_managed_workflow': 'usingManagedWorkflow',  # noqa: E501
+        "can_create_releases": "canCreateReleases",  # noqa: E501
+        "can_current_user_create_releases": "canCurrentUserCreateReleases",  # noqa: E501
+        "company_id": "companyId",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "drawing_can_duplicate_part_number": "drawingCanDuplicatePartNumber",  # noqa: E501
+        "enabled_active_multiple_workflows": "enabledActiveMultipleWorkflows",  # noqa: E501
+        "obsoletion_workflow": "obsoletionWorkflow",  # noqa: E501
+        "obsoletion_workflow_id": "obsoletionWorkflowId",  # noqa: E501
+        "pickable_workflows": "pickableWorkflows",  # noqa: E501
+        "release_workflow": "releaseWorkflow",  # noqa: E501
+        "release_workflow_id": "releaseWorkflowId",  # noqa: E501
+        "using_auto_part_numbering": "usingAutoPartNumbering",  # noqa: E501
+        "using_auto_part_numbering_scheme": "usingAutoPartNumberingScheme",  # noqa: E501
+        "using_managed_workflow": "usingManagedWorkflow",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_active_workflow_info.BTActiveWorkflowInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -169,10 +184,12 @@ class BTActiveWorkflowInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

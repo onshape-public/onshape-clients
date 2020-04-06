@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_face1192
 except ImportError:
     bt_export_tessellated_faces_face1192 = sys.modules[
-        'onshape_client.oas.models.bt_export_tessellated_faces_face1192']
+        "onshape_client.oas.models.bt_export_tessellated_faces_face1192"
+    ]
 try:
     from onshape_client.oas.models import bt_graphics_appearance1152
 except ImportError:
     bt_graphics_appearance1152 = sys.modules[
-        'onshape_client.oas.models.bt_graphics_appearance1152']
+        "onshape_client.oas.models.bt_graphics_appearance1152"
+    ]
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTExportTessellatedFacesBody1321AllOf(ModelNormal):
@@ -72,19 +74,18 @@ class BTExportTessellatedFacesBody1321AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('body_type',): {
-            'SOLID': "SOLID",
-            'SHEET': "SHEET",
-            'WIRE': "WIRE",
-            'POINT': "POINT",
-            'MATE_CONNECTOR': "MATE_CONNECTOR",
-            'COMPOSITE': "COMPOSITE",
-            'UNKNOWN': "UNKNOWN",
+        ("body_type",): {
+            "SOLID": "SOLID",
+            "SHEET": "SHEET",
+            "WIRE": "WIRE",
+            "POINT": "POINT",
+            "MATE_CONNECTOR": "MATE_CONNECTOR",
+            "COMPOSITE": "COMPOSITE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -99,11 +100,15 @@ class BTExportTessellatedFacesBody1321AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'faces': ([bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],),  # noqa: E501
-            'body_type': (str,),  # noqa: E501
-            'appearance': (bt_graphics_appearance1152.BTGraphicsAppearance1152,),  # noqa: E501
-            'facet_points': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "faces": (
+                [bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],
+            ),  # noqa: E501
+            "body_type": (str,),  # noqa: E501
+            "appearance": (
+                bt_graphics_appearance1152.BTGraphicsAppearance1152,
+            ),  # noqa: E501
+            "facet_points": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,26 +116,35 @@ class BTExportTessellatedFacesBody1321AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'faces': 'faces',  # noqa: E501
-        'body_type': 'bodyType',  # noqa: E501
-        'appearance': 'appearance',  # noqa: E501
-        'facet_points': 'facetPoints',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "faces": "faces",  # noqa: E501
+        "body_type": "bodyType",  # noqa: E501
+        "appearance": "appearance",  # noqa: E501
+        "facet_points": "facetPoints",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_export_tessellated_faces_body1321_all_of.BTExportTessellatedFacesBody1321AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -161,10 +175,12 @@ class BTExportTessellatedFacesBody1321AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

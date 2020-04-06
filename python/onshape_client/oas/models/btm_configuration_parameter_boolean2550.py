@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_tree_node20
 except ImportError:
-    bt_tree_node20 = sys.modules[
-        'onshape_client.oas.models.bt_tree_node20']
+    bt_tree_node20 = sys.modules["onshape_client.oas.models.bt_tree_node20"]
 try:
     from onshape_client.oas.models import btm_configuration_parameter819
 except ImportError:
     btm_configuration_parameter819 = sys.modules[
-        'onshape_client.oas.models.btm_configuration_parameter819']
+        "onshape_client.oas.models.btm_configuration_parameter819"
+    ]
 try:
     from onshape_client.oas.models import btm_configuration_parameter_boolean2550_all_of
 except ImportError:
     btm_configuration_parameter_boolean2550_all_of = sys.modules[
-        'onshape_client.oas.models.btm_configuration_parameter_boolean2550_all_of']
+        "onshape_client.oas.models.btm_configuration_parameter_boolean2550_all_of"
+    ]
 
 
 class BTMConfigurationParameterBoolean2550(ModelComposed):
@@ -72,16 +74,15 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
     """
 
     allowed_values = {
-        ('parameter_type',): {
-            'ENUM': "ENUM",
-            'BOOLEAN': "BOOLEAN",
-            'STRING': "STRING",
-            'QUANTITY': "QUANTITY",
+        ("parameter_type",): {
+            "ENUM": "ENUM",
+            "BOOLEAN": "BOOLEAN",
+            "STRING": "STRING",
+            "QUANTITY": "QUANTITY",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -96,15 +97,15 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'default_value': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'generated_parameter_id': (bt_tree_node20.BTTreeNode20,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameter_id': (str,),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
-            'parameter_type': (str,),  # noqa: E501
-            'valid': (bool,),  # noqa: E501
+            "default_value": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "generated_parameter_id": (bt_tree_node20.BTTreeNode20,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "parameter_name": (str,),  # noqa: E501
+            "parameter_type": (str,),  # noqa: E501
+            "valid": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -112,29 +113,38 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
         return None
 
     attribute_map = {
-        'default_value': 'defaultValue',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'generated_parameter_id': 'generatedParameterId',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameter_id': 'parameterId',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
-        'parameter_type': 'parameterType',  # noqa: E501
-        'valid': 'valid',  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "generated_parameter_id": "generatedParameterId",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "parameter_name": "parameterName",  # noqa: E501
+        "parameter_type": "parameterType",  # noqa: E501
+        "valid": "valid",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_configuration_parameter_boolean2550.BTMConfigurationParameterBoolean2550 - a model defined in OpenAPI
 
         Keyword Args:
@@ -169,13 +179,12 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -184,8 +193,7 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -194,10 +202,12 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -212,12 +222,10 @@ class BTMConfigurationParameterBoolean2550(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btm_configuration_parameter819.BTMConfigurationParameter819,
-              btm_configuration_parameter_boolean2550_all_of.BTMConfigurationParameterBoolean2550AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btm_configuration_parameter819.BTMConfigurationParameter819,
+                btm_configuration_parameter_boolean2550_all_of.BTMConfigurationParameterBoolean2550AllOf,
+            ],
+            "oneOf": [],
         }

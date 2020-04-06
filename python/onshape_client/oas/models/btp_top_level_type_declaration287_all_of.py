@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules[
-        'onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules["onshape_client.oas.models.btp_identifier8"]
 try:
     from onshape_client.oas.models import btp_literal_number258
 except ImportError:
     btp_literal_number258 = sys.modules[
-        'onshape_client.oas.models.btp_literal_number258']
+        "onshape_client.oas.models.btp_literal_number258"
+    ]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
@@ -71,11 +71,9 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,10 +88,10 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'space_after_version': (btp_space10.BTPSpace10,),  # noqa: E501
-            'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
-            'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "space_after_version": (btp_space10.BTPSpace10,),  # noqa: E501
+            "version": (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
+            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,25 +99,34 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'space_after_version': 'spaceAfterVersion',  # noqa: E501
-        'version': 'version',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "space_after_version": "spaceAfterVersion",  # noqa: E501
+        "version": "version",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_top_level_type_declaration287_all_of.BTPTopLevelTypeDeclaration287AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -149,10 +156,12 @@ class BTPTopLevelTypeDeclaration287AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,36 +30,41 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_cache_data_path191
 except ImportError:
     bt_cache_data_path191 = sys.modules[
-        'onshape_client.oas.models.bt_cache_data_path191']
+        "onshape_client.oas.models.bt_cache_data_path191"
+    ]
 try:
     from onshape_client.oas.models import bt_import
 except ImportError:
-    bt_import = sys.modules[
-        'onshape_client.oas.models.bt_import']
+    bt_import = sys.modules["onshape_client.oas.models.bt_import"]
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
     bt_microversion_id366 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id366']
+        "onshape_client.oas.models.bt_microversion_id366"
+    ]
 try:
     from onshape_client.oas.models import btp_literal_number258
 except ImportError:
     btp_literal_number258 = sys.modules[
-        'onshape_client.oas.models.btp_literal_number258']
+        "onshape_client.oas.models.btp_literal_number258"
+    ]
 try:
     from onshape_client.oas.models import btp_top_level_import285
 except ImportError:
     btp_top_level_import285 = sys.modules[
-        'onshape_client.oas.models.btp_top_level_import285']
+        "onshape_client.oas.models.btp_top_level_import285"
+    ]
 try:
     from onshape_client.oas.models import btp_top_level_node286
 except ImportError:
     btp_top_level_node286 = sys.modules[
-        'onshape_client.oas.models.btp_top_level_node286']
+        "onshape_client.oas.models.btp_top_level_node286"
+    ]
 
 
 class BTPModule234AllOf(ModelNormal):
@@ -86,11 +91,9 @@ class BTPModule234AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -105,17 +108,19 @@ class BTPModule234AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'version_number': (int,),  # noqa: E501
-            'deep_imports': ({str: ([bt_import.BTImport],)},),  # noqa: E501
-            'is_internal_module': (bool,),  # noqa: E501
-            'imports': ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
-            'path_map': ({str: (bt_microversion_id366.BTMicroversionId366,)},),  # noqa: E501
-            'version': (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
-            'top_level': ([btp_top_level_node286.BTPTopLevelNode286],),  # noqa: E501
-            'path_to_cache': (bt_cache_data_path191.BTCacheDataPath191,),  # noqa: E501
-            'is_blob': (bool,),  # noqa: E501
-            'may_have_implicit_imports': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "version_number": (int,),  # noqa: E501
+            "deep_imports": ({str: ([bt_import.BTImport],)},),  # noqa: E501
+            "is_internal_module": (bool,),  # noqa: E501
+            "imports": ([btp_top_level_import285.BTPTopLevelImport285],),  # noqa: E501
+            "path_map": (
+                {str: (bt_microversion_id366.BTMicroversionId366,)},
+            ),  # noqa: E501
+            "version": (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
+            "top_level": ([btp_top_level_node286.BTPTopLevelNode286],),  # noqa: E501
+            "path_to_cache": (bt_cache_data_path191.BTCacheDataPath191,),  # noqa: E501
+            "is_blob": (bool,),  # noqa: E501
+            "may_have_implicit_imports": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -123,32 +128,41 @@ class BTPModule234AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'version_number': 'versionNumber',  # noqa: E501
-        'deep_imports': 'deepImports',  # noqa: E501
-        'is_internal_module': 'isInternalModule',  # noqa: E501
-        'imports': 'imports',  # noqa: E501
-        'path_map': 'pathMap',  # noqa: E501
-        'version': 'version',  # noqa: E501
-        'top_level': 'topLevel',  # noqa: E501
-        'path_to_cache': 'pathToCache',  # noqa: E501
-        'is_blob': 'isBlob',  # noqa: E501
-        'may_have_implicit_imports': 'mayHaveImplicitImports',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "version_number": "versionNumber",  # noqa: E501
+        "deep_imports": "deepImports",  # noqa: E501
+        "is_internal_module": "isInternalModule",  # noqa: E501
+        "imports": "imports",  # noqa: E501
+        "path_map": "pathMap",  # noqa: E501
+        "version": "version",  # noqa: E501
+        "top_level": "topLevel",  # noqa: E501
+        "path_to_cache": "pathToCache",  # noqa: E501
+        "is_blob": "isBlob",  # noqa: E501
+        "may_have_implicit_imports": "mayHaveImplicitImports",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_module234_all_of.BTPModule234AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -185,10 +199,12 @@ class BTPModule234AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

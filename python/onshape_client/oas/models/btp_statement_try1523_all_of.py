@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules[
-        'onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules["onshape_client.oas.models.btp_identifier8"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 try:
     from onshape_client.oas.models import btp_statement_block271
 except ImportError:
     btp_statement_block271 = sys.modules[
-        'onshape_client.oas.models.btp_statement_block271']
+        "onshape_client.oas.models.btp_statement_block271"
+    ]
 
 
 class BTPStatementTry1523AllOf(ModelNormal):
@@ -72,22 +72,21 @@ class BTPStatementTry1523AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('standard_type',): {
-            'UNDEFINED': "UNDEFINED",
-            'BOOLEAN': "BOOLEAN",
-            'NUMBER': "NUMBER",
-            'STRING': "STRING",
-            'ARRAY': "ARRAY",
-            'MAP': "MAP",
-            'BOX': "BOX",
-            'BUILTIN': "BUILTIN",
-            'FUNCTION': "FUNCTION",
-            'UNKNOWN': "UNKNOWN",
+        ("standard_type",): {
+            "UNDEFINED": "UNDEFINED",
+            "BOOLEAN": "BOOLEAN",
+            "NUMBER": "NUMBER",
+            "STRING": "STRING",
+            "ARRAY": "ARRAY",
+            "MAP": "MAP",
+            "BOX": "BOX",
+            "BUILTIN": "BUILTIN",
+            "FUNCTION": "FUNCTION",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -102,16 +101,16 @@ class BTPStatementTry1523AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'standard_type': (str,),  # noqa: E501
-            'name': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'type_name': (str,),  # noqa: E501
-            'body': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
-            'silent': (bool,),  # noqa: E501
-            'catch_variable': (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            'space_before_silent': (btp_space10.BTPSpace10,),  # noqa: E501
-            'catch_block': (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
-            'space_after_catch': (btp_space10.BTPSpace10,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "standard_type": (str,),  # noqa: E501
+            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "type_name": (str,),  # noqa: E501
+            "body": (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            "silent": (bool,),  # noqa: E501
+            "catch_variable": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "space_before_silent": (btp_space10.BTPSpace10,),  # noqa: E501
+            "catch_block": (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
+            "space_after_catch": (btp_space10.BTPSpace10,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -119,31 +118,40 @@ class BTPStatementTry1523AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'standard_type': 'standardType',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'type_name': 'typeName',  # noqa: E501
-        'body': 'body',  # noqa: E501
-        'silent': 'silent',  # noqa: E501
-        'catch_variable': 'catchVariable',  # noqa: E501
-        'space_before_silent': 'spaceBeforeSilent',  # noqa: E501
-        'catch_block': 'catchBlock',  # noqa: E501
-        'space_after_catch': 'spaceAfterCatch',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "standard_type": "standardType",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "type_name": "typeName",  # noqa: E501
+        "body": "body",  # noqa: E501
+        "silent": "silent",  # noqa: E501
+        "catch_variable": "catchVariable",  # noqa: E501
+        "space_before_silent": "spaceBeforeSilent",  # noqa: E501
+        "catch_block": "catchBlock",  # noqa: E501
+        "space_after_catch": "spaceAfterCatch",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_statement_try1523_all_of.BTPStatementTry1523AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -179,10 +187,12 @@ class BTPStatementTry1523AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

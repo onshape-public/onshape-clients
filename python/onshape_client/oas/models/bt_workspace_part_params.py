@@ -30,26 +30,27 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_custom_property_definition_params
 except ImportError:
     bt_custom_property_definition_params = sys.modules[
-        'onshape_client.oas.models.bt_custom_property_definition_params']
+        "onshape_client.oas.models.bt_custom_property_definition_params"
+    ]
 try:
     from onshape_client.oas.models import bt_material_params
 except ImportError:
-    bt_material_params = sys.modules[
-        'onshape_client.oas.models.bt_material_params']
+    bt_material_params = sys.modules["onshape_client.oas.models.bt_material_params"]
 try:
     from onshape_client.oas.models import bt_name_value_pair
 except ImportError:
-    bt_name_value_pair = sys.modules[
-        'onshape_client.oas.models.bt_name_value_pair']
+    bt_name_value_pair = sys.modules["onshape_client.oas.models.bt_name_value_pair"]
 try:
     from onshape_client.oas.models import bt_part_appearance_params
 except ImportError:
     bt_part_appearance_params = sys.modules[
-        'onshape_client.oas.models.bt_part_appearance_params']
+        "onshape_client.oas.models.bt_part_appearance_params"
+    ]
 
 
 class BTWorkspacePartParams(ModelNormal):
@@ -76,11 +77,9 @@ class BTWorkspacePartParams(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,25 +94,29 @@ class BTWorkspacePartParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'appearance': (bt_part_appearance_params.BTPartAppearanceParams,),  # noqa: E501
-            'apply_update_to_all_configurations': (bool,),  # noqa: E501
-            'configuration': (str,),  # noqa: E501
-            'connection_id': (str,),  # noqa: E501
-            'custom_properties': ([bt_name_value_pair.BTNameValuePair],),  # noqa: E501
-            'custom_property_definitions': ([bt_custom_property_definition_params.BTCustomPropertyDefinitionParams],),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'material': (bt_material_params.BTMaterialParams,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'part_id': (str,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'product_line': (str,),  # noqa: E501
-            'project': (str,),  # noqa: E501
-            'revision': (str,),  # noqa: E501
-            'title1': (str,),  # noqa: E501
-            'title2': (str,),  # noqa: E501
-            'title3': (str,),  # noqa: E501
-            'vendor': (str,),  # noqa: E501
+            "appearance": (
+                bt_part_appearance_params.BTPartAppearanceParams,
+            ),  # noqa: E501
+            "apply_update_to_all_configurations": (bool,),  # noqa: E501
+            "configuration": (str,),  # noqa: E501
+            "connection_id": (str,),  # noqa: E501
+            "custom_properties": ([bt_name_value_pair.BTNameValuePair],),  # noqa: E501
+            "custom_property_definitions": (
+                [bt_custom_property_definition_params.BTCustomPropertyDefinitionParams],
+            ),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "material": (bt_material_params.BTMaterialParams,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "part_id": (str,),  # noqa: E501
+            "part_number": (str,),  # noqa: E501
+            "product_line": (str,),  # noqa: E501
+            "project": (str,),  # noqa: E501
+            "revision": (str,),  # noqa: E501
+            "title1": (str,),  # noqa: E501
+            "title2": (str,),  # noqa: E501
+            "title3": (str,),  # noqa: E501
+            "vendor": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -121,40 +124,49 @@ class BTWorkspacePartParams(ModelNormal):
         return None
 
     attribute_map = {
-        'appearance': 'appearance',  # noqa: E501
-        'apply_update_to_all_configurations': 'applyUpdateToAllConfigurations',  # noqa: E501
-        'configuration': 'configuration',  # noqa: E501
-        'connection_id': 'connectionId',  # noqa: E501
-        'custom_properties': 'customProperties',  # noqa: E501
-        'custom_property_definitions': 'customPropertyDefinitions',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'material': 'material',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'part_id': 'partId',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'product_line': 'productLine',  # noqa: E501
-        'project': 'project',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
-        'title1': 'title1',  # noqa: E501
-        'title2': 'title2',  # noqa: E501
-        'title3': 'title3',  # noqa: E501
-        'vendor': 'vendor',  # noqa: E501
+        "appearance": "appearance",  # noqa: E501
+        "apply_update_to_all_configurations": "applyUpdateToAllConfigurations",  # noqa: E501
+        "configuration": "configuration",  # noqa: E501
+        "connection_id": "connectionId",  # noqa: E501
+        "custom_properties": "customProperties",  # noqa: E501
+        "custom_property_definitions": "customPropertyDefinitions",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "material": "material",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "part_id": "partId",  # noqa: E501
+        "part_number": "partNumber",  # noqa: E501
+        "product_line": "productLine",  # noqa: E501
+        "project": "project",  # noqa: E501
+        "revision": "revision",  # noqa: E501
+        "title1": "title1",  # noqa: E501
+        "title2": "title2",  # noqa: E501
+        "title3": "title3",  # noqa: E501
+        "vendor": "vendor",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_workspace_part_params.BTWorkspacePartParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -199,10 +211,12 @@ class BTWorkspacePartParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

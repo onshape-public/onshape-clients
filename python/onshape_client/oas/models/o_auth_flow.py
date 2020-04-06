@@ -55,11 +55,9 @@ class OAuthFlow(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -74,11 +72,13 @@ class OAuthFlow(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'authorization_url': (str,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'refresh_url': (str,),  # noqa: E501
-            'scopes': ({str: (str,)},),  # noqa: E501
-            'token_url': (str,),  # noqa: E501
+            "authorization_url": (str,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "refresh_url": (str,),  # noqa: E501
+            "scopes": ({str: (str,)},),  # noqa: E501
+            "token_url": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -86,26 +86,35 @@ class OAuthFlow(ModelNormal):
         return None
 
     attribute_map = {
-        'authorization_url': 'authorizationUrl',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'refresh_url': 'refreshUrl',  # noqa: E501
-        'scopes': 'scopes',  # noqa: E501
-        'token_url': 'tokenUrl',  # noqa: E501
+        "authorization_url": "authorizationUrl",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "refresh_url": "refreshUrl",  # noqa: E501
+        "scopes": "scopes",  # noqa: E501
+        "token_url": "tokenUrl",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """o_auth_flow.OAuthFlow - a model defined in OpenAPI
 
 

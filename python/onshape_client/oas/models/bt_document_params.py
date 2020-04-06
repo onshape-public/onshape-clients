@@ -56,11 +56,9 @@ class BTDocumentParams(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,19 +73,19 @@ class BTDocumentParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'beta_capability_ids': ([str],),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'generate_unknown_messages': (bool,),  # noqa: E501
-            'is_empty_content': (bool,),  # noqa: E501
-            'is_public': (bool,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'not_revision_managed': (bool,),  # noqa: E501
-            'owner_email': (str,),  # noqa: E501
-            'owner_id': (str,),  # noqa: E501
-            'owner_type': (int,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'tags': ([str],),  # noqa: E501
+            "beta_capability_ids": ([str],),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "generate_unknown_messages": (bool,),  # noqa: E501
+            "is_empty_content": (bool,),  # noqa: E501
+            "is_public": (bool,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "not_revision_managed": (bool,),  # noqa: E501
+            "owner_email": (str,),  # noqa: E501
+            "owner_id": (str,),  # noqa: E501
+            "owner_type": (int,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "project_id": (str,),  # noqa: E501
+            "tags": ([str],),  # noqa: E501
         }
 
     @staticmethod
@@ -95,34 +93,43 @@ class BTDocumentParams(ModelNormal):
         return None
 
     attribute_map = {
-        'beta_capability_ids': 'betaCapabilityIds',  # noqa: E501
-        'description': 'description',  # noqa: E501
-        'generate_unknown_messages': 'generateUnknownMessages',  # noqa: E501
-        'is_empty_content': 'isEmptyContent',  # noqa: E501
-        'is_public': 'isPublic',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'not_revision_managed': 'notRevisionManaged',  # noqa: E501
-        'owner_email': 'ownerEmail',  # noqa: E501
-        'owner_id': 'ownerId',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'tags': 'tags',  # noqa: E501
+        "beta_capability_ids": "betaCapabilityIds",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "generate_unknown_messages": "generateUnknownMessages",  # noqa: E501
+        "is_empty_content": "isEmptyContent",  # noqa: E501
+        "is_public": "isPublic",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "not_revision_managed": "notRevisionManaged",  # noqa: E501
+        "owner_email": "ownerEmail",  # noqa: E501
+        "owner_id": "ownerId",  # noqa: E501
+        "owner_type": "ownerType",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "project_id": "projectId",  # noqa: E501
+        "tags": "tags",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_document_params.BTDocumentParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -161,10 +168,12 @@ class BTDocumentParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

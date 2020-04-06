@@ -30,21 +30,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules[
-        'onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules["onshape_client.oas.models.btp_annotation231"]
 try:
     from onshape_client.oas.models import btp_identifier8
 except ImportError:
-    btp_identifier8 = sys.modules[
-        'onshape_client.oas.models.btp_identifier8']
+    btp_identifier8 = sys.modules["onshape_client.oas.models.btp_identifier8"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
@@ -71,11 +69,9 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,11 +86,11 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'annotations': ([btp_annotation231.BTPAnnotation231],),  # noqa: E501
-            'space_in_empty_list': (btp_space10.BTPSpace10,),  # noqa: E501
-            'trailing_comma': (bool,),  # noqa: E501
-            'values': ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "annotations": ([btp_annotation231.BTPAnnotation231],),  # noqa: E501
+            "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
+            "trailing_comma": (bool,),  # noqa: E501
+            "values": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,26 +98,35 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'annotations': 'annotations',  # noqa: E501
-        'space_in_empty_list': 'spaceInEmptyList',  # noqa: E501
-        'trailing_comma': 'trailingComma',  # noqa: E501
-        'values': 'values',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "annotations": "annotations",  # noqa: E501
+        "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
+        "trailing_comma": "trailingComma",  # noqa: E501
+        "values": "values",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_top_level_enum_declaration284_all_of.BTPTopLevelEnumDeclaration284AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -152,10 +157,12 @@ class BTPTopLevelEnumDeclaration284AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

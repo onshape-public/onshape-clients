@@ -30,16 +30,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_expression9
 except ImportError:
-    btp_expression9 = sys.modules[
-        'onshape_client.oas.models.btp_expression9']
+    btp_expression9 = sys.modules["onshape_client.oas.models.btp_expression9"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPExpressionTry1271AllOf(ModelNormal):
@@ -66,11 +65,9 @@ class BTPExpressionTry1271AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,11 +82,11 @@ class BTPExpressionTry1271AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'space_after_try': (btp_space10.BTPSpace10,),  # noqa: E501
-            'silent': (bool,),  # noqa: E501
-            'space_after_silent': (btp_space10.BTPSpace10,),  # noqa: E501
-            'expression': (btp_expression9.BTPExpression9,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "space_after_try": (btp_space10.BTPSpace10,),  # noqa: E501
+            "silent": (bool,),  # noqa: E501
+            "space_after_silent": (btp_space10.BTPSpace10,),  # noqa: E501
+            "expression": (btp_expression9.BTPExpression9,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,26 +94,35 @@ class BTPExpressionTry1271AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'space_after_try': 'spaceAfterTry',  # noqa: E501
-        'silent': 'silent',  # noqa: E501
-        'space_after_silent': 'spaceAfterSilent',  # noqa: E501
-        'expression': 'expression',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "space_after_try": "spaceAfterTry",  # noqa: E501
+        "silent": "silent",  # noqa: E501
+        "space_after_silent": "spaceAfterSilent",  # noqa: E501
+        "expression": "expression",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_expression_try1271_all_of.BTPExpressionTry1271AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -147,10 +153,12 @@ class BTPExpressionTry1271AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

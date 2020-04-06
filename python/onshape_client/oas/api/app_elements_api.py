@@ -20,10 +20,7 @@ import sys  # noqa: F401
 import six
 
 from onshape_client.oas.api_client import ApiClient
-from onshape_client.oas.exceptions import (
-    ApiTypeError,
-    ApiValueError
-)
+from onshape_client.oas.exceptions import ApiTypeError, ApiValueError
 from onshape_client.oas.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
@@ -33,7 +30,7 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     int,
     none_type,
     str,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
 from onshape_client.oas.models import bt_app_element_modify_info
 from onshape_client.oas.models import bt_app_element_commit_transaction_params
@@ -61,13 +58,7 @@ class AppElementsApi(object):
         self.api_client = api_client
 
         def __commit_transaction(
-            self,
-            did,
-            eid,
-            wid,
-            tid,
-            bt_app_element_commit_transaction_params,
-            **kwargs
+            self, did, eid, wid, tid, bt_app_element_commit_transaction_params, **kwargs
         ):
             """Commit Transaction  # noqa: E501
 
@@ -109,122 +100,88 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wid'] = \
-                wid
-            kwargs['tid'] = \
-                tid
-            kwargs['bt_app_element_commit_transaction_params'] = \
-                bt_app_element_commit_transaction_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wid"] = wid
+            kwargs["tid"] = tid
+            kwargs[
+                "bt_app_element_commit_transaction_params"
+            ] = bt_app_element_commit_transaction_params
             return self.call_with_http_info(**kwargs)
 
         self.commit_transaction = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
-                'operation_id': 'commit_transaction',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}",
+                "operation_id": "commit_transaction",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'tid',
-                    'bt_app_element_commit_transaction_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "tid",
+                    "bt_app_element_commit_transaction_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'tid',
-                    'bt_app_element_commit_transaction_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "tid",
+                    "bt_app_element_commit_transaction_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wid": (str,),
+                    "tid": (str,),
+                    "bt_app_element_commit_transaction_params": (
+                        bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wid": "wid",
+                    "tid": "tid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'tid':
-                        (str,),
-                    'bt_app_element_commit_transaction_params':
-                        (bt_app_element_commit_transaction_params.BTAppElementCommitTransactionParams,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wid": "path",
+                    "tid": "path",
+                    "bt_app_element_commit_transaction_params": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wid': 'wid',
-                    'tid': 'tid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wid': 'path',
-                    'tid': 'path',
-                    'bt_app_element_commit_transaction_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__commit_transaction
+            callable=__commit_transaction,
         )
 
-        def __create_element(
-            self,
-            did,
-            wid,
-            bt_app_element_params,
-            **kwargs
-        ):
+        def __create_element(self, did, wid, bt_app_element_params, **kwargs):
             """Create Element.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -263,107 +220,64 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
-            kwargs['bt_app_element_params'] = \
-                bt_app_element_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
+            kwargs["bt_app_element_params"] = bt_app_element_params
             return self.call_with_http_info(**kwargs)
 
         self.create_element = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/w/{wid}',
-                'operation_id': 'create_element',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/w/{wid}",
+                "operation_id": "create_element",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                    'bt_app_element_params',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                    'bt_app_element_params',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid", "bt_app_element_params",],
+                "required": ["did", "wid", "bt_app_element_params",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "bt_app_element_params": (
+                        bt_app_element_params.BTAppElementParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "wid": "wid",},
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "bt_app_element_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'bt_app_element_params':
-                        (bt_app_element_params.BTAppElementParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                    'bt_app_element_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__create_element
+            callable=__create_element,
         )
 
         def __create_reference(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            bt_app_element_reference_params,
-            **kwargs
+            self, did, eid, wvm, wvmid, bt_app_element_reference_params, **kwargs
         ):
             """Create Reference  # noqa: E501
 
@@ -405,124 +319,88 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['bt_app_element_reference_params'] = \
-                bt_app_element_reference_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["bt_app_element_reference_params"] = bt_app_element_reference_params
             return self.call_with_http_info(**kwargs)
 
         self.create_reference = Endpoint(
             settings={
-                'response_type': (bt_app_element_reference_info.BTAppElementReferenceInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references',
-                'operation_id': 'create_reference',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_app_element_reference_info.BTAppElementReferenceInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references",
+                "operation_id": "create_reference",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'bt_app_element_reference_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "bt_app_element_reference_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'bt_app_element_reference_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "bt_app_element_reference_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "bt_app_element_reference_params": (
+                        bt_app_element_reference_params.BTAppElementReferenceParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'bt_app_element_reference_params':
-                        (bt_app_element_reference_params.BTAppElementReferenceParams,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "bt_app_element_reference_params": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'bt_app_element_reference_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__create_reference
+            callable=__create_reference,
         )
 
-        def __delete_app_element_content(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            sid,
-            **kwargs
-        ):
+        def __delete_app_element_content(self, did, eid, wvm, wvmid, sid, **kwargs):
             """Delete a Sub-element  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -566,138 +444,91 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['sid'] = \
-                sid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["sid"] = sid
             return self.call_with_http_info(**kwargs)
 
         self.delete_app_element_content = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
-                'operation_id': 'delete_app_element_content',
-                'http_method': 'DELETE',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}",
+                "operation_id": "delete_app_element_content",
+                "http_method": "DELETE",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'sid',
-                    'transaction_id',
-                    'parent_change_id',
-                    'description',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "sid",
+                    "transaction_id",
+                    "parent_change_id",
+                    "description",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'sid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "eid", "wvm", "wvmid", "sid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "sid": (str,),
+                    "transaction_id": (str,),
+                    "parent_change_id": (str,),
+                    "description": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "sid": "sid",
+                    "transaction_id": "transactionId",
+                    "parent_change_id": "parentChangeId",
+                    "description": "description",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'sid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'parent_change_id':
-                        (str,),
-                    'description':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "sid": "path",
+                    "transaction_id": "query",
+                    "parent_change_id": "query",
+                    "description": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'sid': 'sid',
-                    'transaction_id': 'transactionId',
-                    'parent_change_id': 'parentChangeId',
-                    'description': 'description',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'sid': 'path',
-                    'transaction_id': 'query',
-                    'parent_change_id': 'query',
-                    'description': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__delete_app_element_content
+            callable=__delete_app_element_content,
         )
 
-        def __delete_reference(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            rid,
-            **kwargs
-        ):
+        def __delete_reference(self, did, eid, wvm, wvmid, rid, **kwargs):
             """Delete Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -741,137 +572,93 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['rid'] = \
-                rid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["rid"] = rid
             return self.call_with_http_info(**kwargs)
 
         self.delete_reference = Endpoint(
             settings={
-                'response_type': (bt_app_element_reference_info.BTAppElementReferenceInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-                'operation_id': 'delete_reference',
-                'http_method': 'DELETE',
-                'servers': [],
+                "response_type": (
+                    bt_app_element_reference_info.BTAppElementReferenceInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}",
+                "operation_id": "delete_reference",
+                "http_method": "DELETE",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                    'transaction_id',
-                    'parent_change_id',
-                    'description',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "rid",
+                    "transaction_id",
+                    "parent_change_id",
+                    "description",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "eid", "wvm", "wvmid", "rid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "rid": (str,),
+                    "transaction_id": (str,),
+                    "parent_change_id": (str,),
+                    "description": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "rid": "rid",
+                    "transaction_id": "transactionId",
+                    "parent_change_id": "parentChangeId",
+                    "description": "description",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'rid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'parent_change_id':
-                        (str,),
-                    'description':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "rid": "path",
+                    "transaction_id": "query",
+                    "parent_change_id": "query",
+                    "description": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'rid': 'rid',
-                    'transaction_id': 'transactionId',
-                    'parent_change_id': 'parentChangeId',
-                    'description': 'description',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'rid': 'path',
-                    'transaction_id': 'query',
-                    'parent_change_id': 'query',
-                    'description': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__delete_reference
+            callable=__delete_reference,
         )
 
-        def __get_app_element_history(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            **kwargs
-        ):
+        def __get_app_element_history(self, did, eid, wvm, wvmid, **kwargs):
             """Get History  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -911,114 +698,69 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_app_element_history = Endpoint(
             settings={
-                'response_type': (bt_app_element_history_info.BTAppElementHistoryInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
-                'operation_id': 'get_app_element_history',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_app_element_history_info.BTAppElementHistoryInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history",
+                "operation_id": "get_app_element_history",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "eid", "wvm", "wvmid",],
+                "required": ["did", "eid", "wvm", "wvmid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_app_element_history
+            callable=__get_app_element_history,
         )
 
-        def __get_sub_element_content(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            **kwargs
-        ):
+        def __get_sub_element_content(self, did, eid, wvm, wvmid, **kwargs):
             """Get Content  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1063,139 +805,94 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_sub_element_content = Endpoint(
             settings={
-                'response_type': (bt_app_element_content_info.BTAppElementContentInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-                'operation_id': 'get_sub_element_content',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_app_element_content_info.BTAppElementContentInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content",
+                "operation_id": "get_sub_element_content",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'transaction_id',
-                    'change_id',
-                    'base_change_id',
-                    'subelement_id',
-                    'link_document_id',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "transaction_id",
+                    "change_id",
+                    "base_change_id",
+                    "subelement_id",
+                    "link_document_id",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "eid", "wvm", "wvmid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "transaction_id": (str,),
+                    "change_id": (str,),
+                    "base_change_id": (str,),
+                    "subelement_id": (str,),
+                    "link_document_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "transaction_id": "transactionId",
+                    "change_id": "changeId",
+                    "base_change_id": "baseChangeId",
+                    "subelement_id": "subelementId",
+                    "link_document_id": "linkDocumentId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'change_id':
-                        (str,),
-                    'base_change_id':
-                        (str,),
-                    'subelement_id':
-                        (str,),
-                    'link_document_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "transaction_id": "query",
+                    "change_id": "query",
+                    "base_change_id": "query",
+                    "subelement_id": "query",
+                    "link_document_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'transaction_id': 'transactionId',
-                    'change_id': 'changeId',
-                    'base_change_id': 'baseChangeId',
-                    'subelement_id': 'subelementId',
-                    'link_document_id': 'linkDocumentId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'transaction_id': 'query',
-                    'change_id': 'query',
-                    'base_change_id': 'query',
-                    'subelement_id': 'query',
-                    'link_document_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_sub_element_content
+            callable=__get_sub_element_content,
         )
 
-        def __get_subelement_ids(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            **kwargs
-        ):
+        def __get_subelement_ids(self, did, eid, wvm, wvmid, **kwargs):
             """Get Sub-element IDs  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1237,125 +934,75 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
             return self.call_with_http_info(**kwargs)
 
         self.get_subelement_ids = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids',
-                'operation_id': 'get_subelement_ids',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids",
+                "operation_id": "get_subelement_ids",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'transaction_id',
-                    'change_id',
-                ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "eid", "wvm", "wvmid", "transaction_id", "change_id",],
+                "required": ["did", "eid", "wvm", "wvmid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "transaction_id": (str,),
+                    "change_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "transaction_id": "transactionId",
+                    "change_id": "changeId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'change_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "transaction_id": "query",
+                    "change_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'transaction_id': 'transactionId',
-                    'change_id': 'changeId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'transaction_id': 'query',
-                    'change_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_subelement_ids
+            callable=__get_subelement_ids,
         )
 
-        def __resolve_reference(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            rid,
-            **kwargs
-        ):
+        def __resolve_reference(self, did, eid, wvm, wvmid, rid, **kwargs):
             """Resolve Reference  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1400,142 +1047,97 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['rid'] = \
-                rid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["rid"] = rid
             return self.call_with_http_info(**kwargs)
 
         self.resolve_reference = Endpoint(
             settings={
-                'response_type': (bt_app_element_reference_resolve_info.BTAppElementReferenceResolveInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-                'operation_id': 'resolve_reference',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_app_element_reference_resolve_info.BTAppElementReferenceResolveInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}",
+                "operation_id": "resolve_reference",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                    'transaction_id',
-                    'parent_change_id',
-                    'include_internal',
-                    'link_document_id',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "rid",
+                    "transaction_id",
+                    "parent_change_id",
+                    "include_internal",
+                    "link_document_id",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "eid", "wvm", "wvmid", "rid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "rid": (str,),
+                    "transaction_id": (str,),
+                    "parent_change_id": (str,),
+                    "include_internal": (bool,),
+                    "link_document_id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "rid": "rid",
+                    "transaction_id": "transactionId",
+                    "parent_change_id": "parentChangeId",
+                    "include_internal": "includeInternal",
+                    "link_document_id": "linkDocumentId",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'rid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'parent_change_id':
-                        (str,),
-                    'include_internal':
-                        (bool,),
-                    'link_document_id':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "rid": "path",
+                    "transaction_id": "query",
+                    "parent_change_id": "query",
+                    "include_internal": "query",
+                    "link_document_id": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'rid': 'rid',
-                    'transaction_id': 'transactionId',
-                    'parent_change_id': 'parentChangeId',
-                    'include_internal': 'includeInternal',
-                    'link_document_id': 'linkDocumentId',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'rid': 'path',
-                    'transaction_id': 'query',
-                    'parent_change_id': 'query',
-                    'include_internal': 'query',
-                    'link_document_id': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__resolve_reference
+            callable=__resolve_reference,
         )
 
-        def __resolve_references(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            **kwargs
-        ):
+        def __resolve_references(self, did, eid, wvm, wvmid, **kwargs):
             """Resolve references.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -1580,138 +1182,97 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
             return self.call_with_http_info(**kwargs)
 
         self.resolve_references = Endpoint(
             settings={
-                'response_type': (bt_app_element_references_resolve_info.BTAppElementReferencesResolveInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences',
-                'operation_id': 'resolve_references',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_app_element_references_resolve_info.BTAppElementReferencesResolveInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences",
+                "operation_id": "resolve_references",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'transaction_id',
-                    'parent_change_id',
-                    'include_internal',
-                    'link_document_id',
-                    'reference_ids',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "transaction_id",
+                    "parent_change_id",
+                    "include_internal",
+                    "link_document_id",
+                    "reference_ids",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": ["did", "eid", "wvm", "wvmid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "transaction_id": (str,),
+                    "parent_change_id": (str,),
+                    "include_internal": (bool,),
+                    "link_document_id": (str,),
+                    "reference_ids": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "transaction_id": "transactionId",
+                    "parent_change_id": "parentChangeId",
+                    "include_internal": "includeInternal",
+                    "link_document_id": "linkDocumentId",
+                    "reference_ids": "referenceIds",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'transaction_id':
-                        (str,),
-                    'parent_change_id':
-                        (str,),
-                    'include_internal':
-                        (bool,),
-                    'link_document_id':
-                        (str,),
-                    'reference_ids':
-                        (str,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "transaction_id": "query",
+                    "parent_change_id": "query",
+                    "include_internal": "query",
+                    "link_document_id": "query",
+                    "reference_ids": "query",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'transaction_id': 'transactionId',
-                    'parent_change_id': 'parentChangeId',
-                    'include_internal': 'includeInternal',
-                    'link_document_id': 'linkDocumentId',
-                    'reference_ids': 'referenceIds',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'transaction_id': 'query',
-                    'parent_change_id': 'query',
-                    'include_internal': 'query',
-                    'link_document_id': 'query',
-                    'reference_ids': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__resolve_references
+            callable=__resolve_references,
         )
 
         def __start_transaction(
-            self,
-            did,
-            eid,
-            wid,
-            bt_app_element_start_transaction_params,
-            **kwargs
+            self, did, eid, wid, bt_app_element_start_transaction_params, **kwargs
         ):
             """Start Transaction  # noqa: E501
 
@@ -1752,115 +1313,79 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wid'] = \
-                wid
-            kwargs['bt_app_element_start_transaction_params'] = \
-                bt_app_element_start_transaction_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wid"] = wid
+            kwargs[
+                "bt_app_element_start_transaction_params"
+            ] = bt_app_element_start_transaction_params
             return self.call_with_http_info(**kwargs)
 
         self.start_transaction = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/w/{wid}/e/{eid}/transactions',
-                'operation_id': 'start_transaction',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/w/{wid}/e/{eid}/transactions",
+                "operation_id": "start_transaction",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_app_element_start_transaction_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_app_element_start_transaction_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wid',
-                    'bt_app_element_start_transaction_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wid",
+                    "bt_app_element_start_transaction_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wid": (str,),
+                    "bt_app_element_start_transaction_params": (
+                        bt_app_element_start_transaction_params.BTAppElementStartTransactionParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {"did": "did", "eid": "eid", "wid": "wid",},
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wid": "path",
+                    "bt_app_element_start_transaction_params": "body",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wid':
-                        (str,),
-                    'bt_app_element_start_transaction_params':
-                        (bt_app_element_start_transaction_params.BTAppElementStartTransactionParams,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wid': 'path',
-                    'bt_app_element_start_transaction_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__start_transaction
+            callable=__start_transaction,
         )
 
         def __update_app_element(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            bt_app_element_update_params,
-            **kwargs
+            self, did, eid, wvm, wvmid, bt_app_element_update_params, **kwargs
         ):
             """Update Element  # noqa: E501
 
@@ -1902,124 +1427,81 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['bt_app_element_update_params'] = \
-                bt_app_element_update_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["bt_app_element_update_params"] = bt_app_element_update_params
             return self.call_with_http_info(**kwargs)
 
         self.update_app_element = Endpoint(
             settings={
-                'response_type': (bt_app_element_modify_info.BTAppElementModifyInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-                'operation_id': 'update_app_element',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (bt_app_element_modify_info.BTAppElementModifyInfo,),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content",
+                "operation_id": "update_app_element",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'bt_app_element_update_params',
+                "all": ["did", "eid", "wvm", "wvmid", "bt_app_element_update_params",],
+                "required": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "bt_app_element_update_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'bt_app_element_update_params',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "bt_app_element_update_params": (
+                        bt_app_element_update_params.BTAppElementUpdateParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'bt_app_element_update_params':
-                        (bt_app_element_update_params.BTAppElementUpdateParams,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "bt_app_element_update_params": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'bt_app_element_update_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__update_app_element
+            callable=__update_app_element,
         )
 
         def __update_reference(
-            self,
-            did,
-            eid,
-            wvm,
-            wvmid,
-            rid,
-            bt_app_element_reference_params,
-            **kwargs
+            self, did, eid, wvm, wvmid, rid, bt_app_element_reference_params, **kwargs
         ):
             """Update Reference  # noqa: E501
 
@@ -2062,127 +1544,104 @@ class AppElementsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['eid'] = \
-                eid
-            kwargs['wvm'] = \
-                wvm
-            kwargs['wvmid'] = \
-                wvmid
-            kwargs['rid'] = \
-                rid
-            kwargs['bt_app_element_reference_params'] = \
-                bt_app_element_reference_params
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["eid"] = eid
+            kwargs["wvm"] = wvm
+            kwargs["wvmid"] = wvmid
+            kwargs["rid"] = rid
+            kwargs["bt_app_element_reference_params"] = bt_app_element_reference_params
             return self.call_with_http_info(**kwargs)
 
         self.update_reference = Endpoint(
             settings={
-                'response_type': (bt_app_element_reference_info.BTAppElementReferenceInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-                'operation_id': 'update_reference',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_app_element_reference_info.BTAppElementReferenceInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}",
+                "operation_id": "update_reference",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                    'bt_app_element_reference_params',
+                "all": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "rid",
+                    "bt_app_element_reference_params",
                 ],
-                'required': [
-                    'did',
-                    'eid',
-                    'wvm',
-                    'wvmid',
-                    'rid',
-                    'bt_app_element_reference_params',
+                "required": [
+                    "did",
+                    "eid",
+                    "wvm",
+                    "wvmid",
+                    "rid",
+                    "bt_app_element_reference_params",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "did": (str,),
+                    "eid": (str,),
+                    "wvm": (str,),
+                    "wvmid": (str,),
+                    "rid": (str,),
+                    "bt_app_element_reference_params": (
+                        bt_app_element_reference_params.BTAppElementReferenceParams,
+                    ),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "did": "did",
+                    "eid": "eid",
+                    "wvm": "wvm",
+                    "wvmid": "wvmid",
+                    "rid": "rid",
                 },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'eid':
-                        (str,),
-                    'wvm':
-                        (str,),
-                    'wvmid':
-                        (str,),
-                    'rid':
-                        (str,),
-                    'bt_app_element_reference_params':
-                        (bt_app_element_reference_params.BTAppElementReferenceParams,),
+                "location_map": {
+                    "did": "path",
+                    "eid": "path",
+                    "wvm": "path",
+                    "wvmid": "path",
+                    "rid": "path",
+                    "bt_app_element_reference_params": "body",
                 },
-                'attribute_map': {
-                    'did': 'did',
-                    'eid': 'eid',
-                    'wvm': 'wvm',
-                    'wvmid': 'wvmid',
-                    'rid': 'rid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'eid': 'path',
-                    'wvm': 'path',
-                    'wvmid': 'path',
-                    'rid': 'path',
-                    'bt_app_element_reference_params': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8; qs=0.09'
-                ]
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": ["application/json;charset=UTF-8; qs=0.09"],
             },
             api_client=api_client,
-            callable=__update_reference
+            callable=__update_reference,
         )
 
 
 class Endpoint(object):
-    def __init__(self, settings=None, params_map=None, root_map=None,
-                 headers_map=None, api_client=None, callable=None):
+    def __init__(
+        self,
+        settings=None,
+        params_map=None,
+        root_map=None,
+        headers_map=None,
+        api_client=None,
+        callable=None,
+    ):
         """Creates an endpoint
 
         Args:
@@ -2218,54 +1677,48 @@ class Endpoint(object):
         """
         self.settings = settings
         self.params_map = params_map
-        self.params_map['all'].extend([
-            'async_req',
-            '_host_index',
-            '_preload_content',
-            '_request_timeout',
-            '_return_http_data_only',
-            '_check_input_type',
-            '_check_return_type'
-        ])
-        self.params_map['nullable'].extend(['_request_timeout'])
-        self.validations = root_map['validations']
-        self.allowed_values = root_map['allowed_values']
-        self.openapi_types = root_map['openapi_types']
+        self.params_map["all"].extend(
+            [
+                "async_req",
+                "_host_index",
+                "_preload_content",
+                "_request_timeout",
+                "_return_http_data_only",
+                "_check_input_type",
+                "_check_return_type",
+            ]
+        )
+        self.params_map["nullable"].extend(["_request_timeout"])
+        self.validations = root_map["validations"]
+        self.allowed_values = root_map["allowed_values"]
+        self.openapi_types = root_map["openapi_types"]
         extra_types = {
-            'async_req': (bool,),
-            '_host_index': (int,),
-            '_preload_content': (bool,),
-            '_request_timeout': (none_type, int, (int,), [int]),
-            '_return_http_data_only': (bool,),
-            '_check_input_type': (bool,),
-            '_check_return_type': (bool,)
+            "async_req": (bool,),
+            "_host_index": (int,),
+            "_preload_content": (bool,),
+            "_request_timeout": (none_type, int, (int,), [int]),
+            "_return_http_data_only": (bool,),
+            "_check_input_type": (bool,),
+            "_check_return_type": (bool,),
         }
         self.openapi_types.update(extra_types)
-        self.attribute_map = root_map['attribute_map']
-        self.location_map = root_map['location_map']
-        self.collection_format_map = root_map['collection_format_map']
+        self.attribute_map = root_map["attribute_map"]
+        self.location_map = root_map["location_map"]
+        self.collection_format_map = root_map["collection_format_map"]
         self.headers_map = headers_map
         self.api_client = api_client
         self.callable = callable
 
     def __validate_inputs(self, kwargs):
-        for param in self.params_map['enum']:
+        for param in self.params_map["enum"]:
             if param in kwargs:
-                check_allowed_values(
-                    self.allowed_values,
-                    (param,),
-                    kwargs[param]
-                )
+                check_allowed_values(self.allowed_values, (param,), kwargs[param])
 
-        for param in self.params_map['validation']:
+        for param in self.params_map["validation"]:
             if param in kwargs:
-                check_validations(
-                    self.validations,
-                    (param,),
-                    kwargs[param]
-                )
+                check_validations(self.validations, (param,), kwargs[param])
 
-        if kwargs['_check_input_type'] is False:
+        if kwargs["_check_input_type"] is False:
             return
 
         for key, value in six.iteritems(kwargs):
@@ -2274,20 +1727,20 @@ class Endpoint(object):
                 self.openapi_types[key],
                 [key],
                 False,
-                kwargs['_check_input_type'],
-                configuration=self.api_client.configuration
+                kwargs["_check_input_type"],
+                configuration=self.api_client.configuration,
             )
             kwargs[key] = fixed_val
 
     def __gather_params(self, kwargs):
         params = {
-            'body': None,
-            'collection_format': {},
-            'file': {},
-            'form': [],
-            'header': {},
-            'path': {},
-            'query': []
+            "body": None,
+            "collection_format": {},
+            "file": {},
+            "form": [],
+            "header": {},
+            "path": {},
+            "query": [],
         }
 
         for param_name, param_value in six.iteritems(kwargs):
@@ -2295,25 +1748,27 @@ class Endpoint(object):
             if param_location is None:
                 continue
             if param_location:
-                if param_location == 'body':
-                    params['body'] = param_value
+                if param_location == "body":
+                    params["body"] = param_value
                     continue
                 base_name = self.attribute_map[param_name]
-                if (param_location == 'form' and
-                        self.openapi_types[param_name] == (file_type,)):
-                    params['file'][param_name] = [param_value]
-                elif (param_location == 'form' and
-                        self.openapi_types[param_name] == ([file_type],)):
+                if param_location == "form" and self.openapi_types[param_name] == (
+                    file_type,
+                ):
+                    params["file"][param_name] = [param_value]
+                elif param_location == "form" and self.openapi_types[param_name] == (
+                    [file_type],
+                ):
                     # param_value is already a list
-                    params['file'][param_name] = param_value
-                elif param_location in {'form', 'query'}:
+                    params["file"][param_name] = param_value
+                elif param_location in {"form", "query"}:
                     param_value_full = (base_name, param_value)
                     params[param_location].append(param_value_full)
-                if param_location not in {'form', 'query'}:
+                if param_location not in {"form", "query"}:
                     params[param_location][base_name] = param_value
                 collection_format = self.collection_format_map.get(param_name)
                 if collection_format:
-                    params['collection_format'][base_name] = collection_format
+                    params["collection_format"][base_name] = collection_format
 
         return params
 
@@ -2331,69 +1786,74 @@ class Endpoint(object):
     def call_with_http_info(self, **kwargs):
 
         try:
-            _host = self.settings['servers'][kwargs['_host_index']]
+            _host = self.settings["servers"][kwargs["_host_index"]]
         except IndexError:
-            if self.settings['servers']:
+            if self.settings["servers"]:
                 raise ApiValueError(
-                    "Invalid host index. Must be 0 <= index < %s" %
-                    len(self.settings['servers'])
+                    "Invalid host index. Must be 0 <= index < %s"
+                    % len(self.settings["servers"])
                 )
             _host = None
 
         for key, value in six.iteritems(kwargs):
-            if key not in self.params_map['all']:
+            if key not in self.params_map["all"]:
                 raise ApiTypeError(
                     "Got an unexpected parameter '%s'"
-                    " to method `%s`" %
-                    (key, self.settings['operation_id'])
+                    " to method `%s`" % (key, self.settings["operation_id"])
                 )
             # only throw this nullable ApiValueError if _check_input_type
             # is False, if _check_input_type==True we catch this case
             # in self.__validate_inputs
-            if (key not in self.params_map['nullable'] and value is None
-                    and kwargs['_check_input_type'] is False):
+            if (
+                key not in self.params_map["nullable"]
+                and value is None
+                and kwargs["_check_input_type"] is False
+            ):
                 raise ApiValueError(
                     "Value may not be None for non-nullable parameter `%s`"
-                    " when calling `%s`" %
-                    (key, self.settings['operation_id'])
+                    " when calling `%s`" % (key, self.settings["operation_id"])
                 )
 
-        for key in self.params_map['required']:
+        for key in self.params_map["required"]:
             if key not in kwargs.keys():
                 raise ApiValueError(
                     "Missing the required parameter `%s` when calling "
-                    "`%s`" % (key, self.settings['operation_id'])
+                    "`%s`" % (key, self.settings["operation_id"])
                 )
 
         self.__validate_inputs(kwargs)
 
         params = self.__gather_params(kwargs)
 
-        accept_headers_list = self.headers_map['accept']
+        accept_headers_list = self.headers_map["accept"]
         if accept_headers_list:
-            params['header']['Accept'] = self.api_client.select_header_accept(
-                accept_headers_list)
+            params["header"]["Accept"] = self.api_client.select_header_accept(
+                accept_headers_list
+            )
 
-        content_type_headers_list = self.headers_map['content_type']
+        content_type_headers_list = self.headers_map["content_type"]
         if content_type_headers_list:
             header_list = self.api_client.select_header_content_type(
-                content_type_headers_list)
-            params['header']['Content-Type'] = header_list
+                content_type_headers_list
+            )
+            params["header"]["Content-Type"] = header_list
 
         return self.api_client.call_api(
-            self.settings['endpoint_path'], self.settings['http_method'],
-            params['path'],
-            params['query'],
-            params['header'],
-            body=params['body'],
-            post_params=params['form'],
-            files=params['file'],
-            response_type=self.settings['response_type'],
-            auth_settings=self.settings['auth'],
-            async_req=kwargs['async_req'],
-            _check_type=kwargs['_check_return_type'],
-            _return_http_data_only=kwargs['_return_http_data_only'],
-            _preload_content=kwargs['_preload_content'],
-            _request_timeout=kwargs['_request_timeout'],
+            self.settings["endpoint_path"],
+            self.settings["http_method"],
+            params["path"],
+            params["query"],
+            params["header"],
+            body=params["body"],
+            post_params=params["form"],
+            files=params["file"],
+            response_type=self.settings["response_type"],
+            auth_settings=self.settings["auth"],
+            async_req=kwargs["async_req"],
+            _check_type=kwargs["_check_return_type"],
+            _return_http_data_only=kwargs["_return_http_data_only"],
+            _preload_content=kwargs["_preload_content"],
+            _request_timeout=kwargs["_request_timeout"],
             _host=_host,
-            collection_formats=params['collection_format'])
+            collection_formats=params["collection_format"],
+        )

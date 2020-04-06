@@ -29,11 +29,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import server_variable
 except ImportError:
-    server_variable = sys.modules[
-        'onshape_client.oas.models.server_variable']
+    server_variable = sys.modules["onshape_client.oas.models.server_variable"]
 
 
 class Server(ModelNormal):
@@ -60,11 +60,9 @@ class Server(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -79,10 +77,12 @@ class Server(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'description': (str,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'url': (str,),  # noqa: E501
-            'variables': ({str: (server_variable.ServerVariable,)},),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "url": (str,),  # noqa: E501
+            "variables": ({str: (server_variable.ServerVariable,)},),  # noqa: E501
         }
 
     @staticmethod
@@ -90,25 +90,34 @@ class Server(ModelNormal):
         return None
 
     attribute_map = {
-        'description': 'description',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'variables': 'variables',  # noqa: E501
+        "description": "description",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "url": "url",  # noqa: E501
+        "variables": "variables",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """server.Server - a model defined in OpenAPI
 
 

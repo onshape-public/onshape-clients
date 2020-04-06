@@ -30,16 +30,15 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_parameter_spec6
 except ImportError:
-    bt_parameter_spec6 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec6']
+    bt_parameter_spec6 = sys.modules["onshape_client.oas.models.bt_parameter_spec6"]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTTableCellParameter2399AllOf(ModelNormal):
@@ -66,11 +65,9 @@ class BTTableCellParameter2399AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,10 +82,10 @@ class BTTableCellParameter2399AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'error': (str,),  # noqa: E501
-            'override_spec': (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
-            'parameter': (btm_parameter1.BTMParameter1,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "error": (str,),  # noqa: E501
+            "override_spec": (bt_parameter_spec6.BTParameterSpec6,),  # noqa: E501
+            "parameter": (btm_parameter1.BTMParameter1,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,25 +93,34 @@ class BTTableCellParameter2399AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'error': 'error',  # noqa: E501
-        'override_spec': 'overrideSpec',  # noqa: E501
-        'parameter': 'parameter',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "error": "error",  # noqa: E501
+        "override_spec": "overrideSpec",  # noqa: E501
+        "parameter": "parameter",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_table_cell_parameter2399_all_of.BTTableCellParameter2399AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -144,10 +150,12 @@ class BTTableCellParameter2399AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

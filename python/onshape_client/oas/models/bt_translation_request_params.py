@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import form_data_body_part
 except ImportError:
-    form_data_body_part = sys.modules[
-        'onshape_client.oas.models.form_data_body_part']
+    form_data_body_part = sys.modules["onshape_client.oas.models.form_data_body_part"]
 try:
     from onshape_client.oas.models import form_data_content_disposition
 except ImportError:
     form_data_content_disposition = sys.modules[
-        'onshape_client.oas.models.form_data_content_disposition']
+        "onshape_client.oas.models.form_data_content_disposition"
+    ]
 
 
 class BTTranslationRequestParams(ModelNormal):
@@ -67,15 +68,10 @@ class BTTranslationRequestParams(ModelNormal):
     """
 
     allowed_values = {
-        ('owner_type',): {
-            'USER': "USER",
-            'COMPANY': "COMPANY",
-            'ONSHAPE': "ONSHAPE",
-        },
+        ("owner_type",): {"USER": "USER", "COMPANY": "COMPANY", "ONSHAPE": "ONSHAPE",},
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,34 +86,38 @@ class BTTranslationRequestParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'allow_faulty_parts': (bool,),  # noqa: E501
-            'create_composite': (bool,),  # noqa: E501
-            'create_drawing_if_possible': (bool,),  # noqa: E501
-            'encoded_filename': (str,),  # noqa: E501
-            'extract_assembly_hierarchy': (bool,),  # noqa: E501
-            'file': (file_type,),  # noqa: E501
-            'file_body_with_details': (form_data_body_part.FormDataBodyPart,),  # noqa: E501
-            'file_content_length': (int,),  # noqa: E501
-            'file_detail': (form_data_content_disposition.FormDataContentDisposition,),  # noqa: E501
-            'flatten_assemblies': (bool,),  # noqa: E501
-            'format_name': (str,),  # noqa: E501
-            'isy_axis_is_up': (bool,),  # noqa: E501
-            'join_adjacent_surfaces': (bool,),  # noqa: E501
-            'location_element_id': (str,),  # noqa: E501
-            'location_group_id': (str,),  # noqa: E501
-            'location_position': (int,),  # noqa: E501
-            'notify_user': (bool,),  # noqa: E501
-            'owner_id': (str,),  # noqa: E501
-            'owner_type': (str,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
-            'project_id': (str,),  # noqa: E501
-            'public': (bool,),  # noqa: E501
-            'split_assemblies_into_multiple_documents': (bool,),  # noqa: E501
-            'store_in_document': (bool,),  # noqa: E501
-            'translate': (bool,),  # noqa: E501
-            'unit': (str,),  # noqa: E501
-            'upload_id': (str,),  # noqa: E501
-            'version_string': (str,),  # noqa: E501
+            "allow_faulty_parts": (bool,),  # noqa: E501
+            "create_composite": (bool,),  # noqa: E501
+            "create_drawing_if_possible": (bool,),  # noqa: E501
+            "encoded_filename": (str,),  # noqa: E501
+            "extract_assembly_hierarchy": (bool,),  # noqa: E501
+            "file": (file_type,),  # noqa: E501
+            "file_body_with_details": (
+                form_data_body_part.FormDataBodyPart,
+            ),  # noqa: E501
+            "file_content_length": (int,),  # noqa: E501
+            "file_detail": (
+                form_data_content_disposition.FormDataContentDisposition,
+            ),  # noqa: E501
+            "flatten_assemblies": (bool,),  # noqa: E501
+            "format_name": (str,),  # noqa: E501
+            "isy_axis_is_up": (bool,),  # noqa: E501
+            "join_adjacent_surfaces": (bool,),  # noqa: E501
+            "location_element_id": (str,),  # noqa: E501
+            "location_group_id": (str,),  # noqa: E501
+            "location_position": (int,),  # noqa: E501
+            "notify_user": (bool,),  # noqa: E501
+            "owner_id": (str,),  # noqa: E501
+            "owner_type": (str,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "project_id": (str,),  # noqa: E501
+            "public": (bool,),  # noqa: E501
+            "split_assemblies_into_multiple_documents": (bool,),  # noqa: E501
+            "store_in_document": (bool,),  # noqa: E501
+            "translate": (bool,),  # noqa: E501
+            "unit": (str,),  # noqa: E501
+            "upload_id": (str,),  # noqa: E501
+            "version_string": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -125,49 +125,58 @@ class BTTranslationRequestParams(ModelNormal):
         return None
 
     attribute_map = {
-        'allow_faulty_parts': 'allowFaultyParts',  # noqa: E501
-        'create_composite': 'createComposite',  # noqa: E501
-        'create_drawing_if_possible': 'createDrawingIfPossible',  # noqa: E501
-        'encoded_filename': 'encodedFilename',  # noqa: E501
-        'extract_assembly_hierarchy': 'extractAssemblyHierarchy',  # noqa: E501
-        'file': 'file',  # noqa: E501
-        'file_body_with_details': 'fileBodyWithDetails',  # noqa: E501
-        'file_content_length': 'fileContentLength',  # noqa: E501
-        'file_detail': 'fileDetail',  # noqa: E501
-        'flatten_assemblies': 'flattenAssemblies',  # noqa: E501
-        'format_name': 'formatName',  # noqa: E501
-        'isy_axis_is_up': 'isyAxisIsUp',  # noqa: E501
-        'join_adjacent_surfaces': 'joinAdjacentSurfaces',  # noqa: E501
-        'location_element_id': 'locationElementId',  # noqa: E501
-        'location_group_id': 'locationGroupId',  # noqa: E501
-        'location_position': 'locationPosition',  # noqa: E501
-        'notify_user': 'notifyUser',  # noqa: E501
-        'owner_id': 'ownerId',  # noqa: E501
-        'owner_type': 'ownerType',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
-        'project_id': 'projectId',  # noqa: E501
-        'public': 'public',  # noqa: E501
-        'split_assemblies_into_multiple_documents': 'splitAssembliesIntoMultipleDocuments',  # noqa: E501
-        'store_in_document': 'storeInDocument',  # noqa: E501
-        'translate': 'translate',  # noqa: E501
-        'unit': 'unit',  # noqa: E501
-        'upload_id': 'uploadId',  # noqa: E501
-        'version_string': 'versionString',  # noqa: E501
+        "allow_faulty_parts": "allowFaultyParts",  # noqa: E501
+        "create_composite": "createComposite",  # noqa: E501
+        "create_drawing_if_possible": "createDrawingIfPossible",  # noqa: E501
+        "encoded_filename": "encodedFilename",  # noqa: E501
+        "extract_assembly_hierarchy": "extractAssemblyHierarchy",  # noqa: E501
+        "file": "file",  # noqa: E501
+        "file_body_with_details": "fileBodyWithDetails",  # noqa: E501
+        "file_content_length": "fileContentLength",  # noqa: E501
+        "file_detail": "fileDetail",  # noqa: E501
+        "flatten_assemblies": "flattenAssemblies",  # noqa: E501
+        "format_name": "formatName",  # noqa: E501
+        "isy_axis_is_up": "isyAxisIsUp",  # noqa: E501
+        "join_adjacent_surfaces": "joinAdjacentSurfaces",  # noqa: E501
+        "location_element_id": "locationElementId",  # noqa: E501
+        "location_group_id": "locationGroupId",  # noqa: E501
+        "location_position": "locationPosition",  # noqa: E501
+        "notify_user": "notifyUser",  # noqa: E501
+        "owner_id": "ownerId",  # noqa: E501
+        "owner_type": "ownerType",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "project_id": "projectId",  # noqa: E501
+        "public": "public",  # noqa: E501
+        "split_assemblies_into_multiple_documents": "splitAssembliesIntoMultipleDocuments",  # noqa: E501
+        "store_in_document": "storeInDocument",  # noqa: E501
+        "translate": "translate",  # noqa: E501
+        "unit": "unit",  # noqa: E501
+        "upload_id": "uploadId",  # noqa: E501
+        "version_string": "versionString",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_translation_request_params.BTTranslationRequestParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -221,10 +230,12 @@ class BTTranslationRequestParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,31 +30,37 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_document_with_version_and_element_id
 except ImportError:
     bt_document_with_version_and_element_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_and_element_id']
+        "onshape_client.oas.models.bt_document_with_version_and_element_id"
+    ]
 try:
     from onshape_client.oas.models import bt_document_with_version_id
 except ImportError:
     bt_document_with_version_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_id']
+        "onshape_client.oas.models.bt_document_with_version_id"
+    ]
 try:
     from onshape_client.oas.models import bt_external_reference1936
 except ImportError:
     bt_external_reference1936 = sys.modules[
-        'onshape_client.oas.models.bt_external_reference1936']
+        "onshape_client.oas.models.bt_external_reference1936"
+    ]
 try:
     from onshape_client.oas.models import bt_full_element_id756
 except ImportError:
     bt_full_element_id756 = sys.modules[
-        'onshape_client.oas.models.bt_full_element_id756']
+        "onshape_client.oas.models.bt_full_element_id756"
+    ]
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
     bt_microversion_id_and_configuration2338 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+        "onshape_client.oas.models.bt_microversion_id_and_configuration2338"
+    ]
 
 
 class BTElementReference725(ModelNormal):
@@ -81,11 +87,9 @@ class BTElementReference725(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -100,50 +104,67 @@ class BTElementReference725(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'configured': (bool,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'external_document_with_version': (bt_document_with_version_id.BTDocumentWithVersionId,),  # noqa: E501
-            'external_document_with_version_and_element_id': (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,),  # noqa: E501
-            'external_reference': (bool,),  # noqa: E501
-            'full_element_id': (bt_full_element_id756.BTFullElementId756,),  # noqa: E501
-            'microversion_id_and_configuration': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "configured": (bool,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "external_document_with_version": (
+                bt_document_with_version_id.BTDocumentWithVersionId,
+            ),  # noqa: E501
+            "external_document_with_version_and_element_id": (
+                bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,
+            ),  # noqa: E501
+            "external_reference": (bool,),  # noqa: E501
+            "full_element_id": (
+                bt_full_element_id756.BTFullElementId756,
+            ),  # noqa: E501
+            "microversion_id_and_configuration": (
+                bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
+            ),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTExternalReference-1936': bt_external_reference1936.BTExternalReference1936,
+            "bt_type": {
+                "BTExternalReference-1936": bt_external_reference1936.BTExternalReference1936,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'configured': 'configured',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'external_document_with_version': 'externalDocumentWithVersion',  # noqa: E501
-        'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',  # noqa: E501
-        'external_reference': 'externalReference',  # noqa: E501
-        'full_element_id': 'fullElementId',  # noqa: E501
-        'microversion_id_and_configuration': 'microversionIdAndConfiguration',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "configured": "configured",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "external_document_with_version": "externalDocumentWithVersion",  # noqa: E501
+        "external_document_with_version_and_element_id": "externalDocumentWithVersionAndElementId",  # noqa: E501
+        "external_reference": "externalReference",  # noqa: E501
+        "full_element_id": "fullElementId",  # noqa: E501
+        "microversion_id_and_configuration": "microversionIdAndConfiguration",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_element_reference725.BTElementReference725 - a model defined in OpenAPI
 
         Keyword Args:
@@ -178,10 +199,12 @@ class BTElementReference725(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

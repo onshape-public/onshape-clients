@@ -20,10 +20,7 @@ import sys  # noqa: F401
 import six
 
 from onshape_client.oas.api_client import ApiClient
-from onshape_client.oas.exceptions import (
-    ApiTypeError,
-    ApiValueError
-)
+from onshape_client.oas.exceptions import ApiTypeError, ApiValueError
 from onshape_client.oas.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
@@ -33,7 +30,7 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     int,
     none_type,
     str,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
 from onshape_client.oas.models import bt_translation_request_info
 from onshape_client.oas.models import bt_model_format_full_info
@@ -52,12 +49,7 @@ class TranslationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __create_translation(
-            self,
-            did,
-            wid,
-            **kwargs
-        ):
+        def __create_translation(self, did, wid, **kwargs):
             """create_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -95,95 +87,54 @@ class TranslationsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
-            kwargs['wid'] = \
-                wid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
+            kwargs["wid"] = wid
             return self.call_with_http_info(**kwargs)
 
         self.create_translation = Endpoint(
             settings={
-                'response_type': (bt_translation_request_info.BTTranslationRequestInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/translations/d/{did}/w/{wid}',
-                'operation_id': 'create_translation',
-                'http_method': 'POST',
-                'servers': [],
+                "response_type": (
+                    bt_translation_request_info.BTTranslationRequestInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/translations/d/{did}/w/{wid}",
+                "operation_id": "create_translation",
+                "http_method": "POST",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'wid',
-                ],
-                'required': [
-                    'did',
-                    'wid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "wid",],
+                "required": ["did", "wid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'wid':
-                        (str,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'wid': 'wid',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'wid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {"did": (str,), "wid": (str,),},
+                "attribute_map": {"did": "did", "wid": "wid",},
+                "location_map": {"did": "path", "wid": "path",},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__create_translation
+            callable=__create_translation,
         )
 
-        def __delete_translation(
-            self,
-            tid,
-            **kwargs
-        ):
+        def __delete_translation(self, tid, **kwargs):
             """delete_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -220,86 +171,51 @@ class TranslationsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['tid'] = \
-                tid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["tid"] = tid
             return self.call_with_http_info(**kwargs)
 
         self.delete_translation = Endpoint(
             settings={
-                'response_type': None,
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/translations/{tid}',
-                'operation_id': 'delete_translation',
-                'http_method': 'DELETE',
-                'servers': [],
+                "response_type": None,
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/translations/{tid}",
+                "operation_id": "delete_translation",
+                "http_method": "DELETE",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'tid',
-                ],
-                'required': [
-                    'tid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["tid",],
+                "required": ["tid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'tid':
-                        (str,),
-                },
-                'attribute_map': {
-                    'tid': 'tid',
-                },
-                'location_map': {
-                    'tid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {"tid": (str,),},
+                "attribute_map": {"tid": "tid",},
+                "location_map": {"tid": "path",},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__delete_translation
+            callable=__delete_translation,
         )
 
-        def __get_all_translator_formats(
-            self,
-            **kwargs
-        ):
+        def __get_all_translator_formats(self, **kwargs):
             """get_all_translator_formats  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -334,76 +250,50 @@ class TranslationsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
             return self.call_with_http_info(**kwargs)
 
         self.get_all_translator_formats = Endpoint(
             settings={
-                'response_type': ([bt_model_format_full_info.BTModelFormatFullInfo],),
-                'auth': [],
-                'endpoint_path': '/api/translations/translationformats',
-                'operation_id': 'get_all_translator_formats',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": ([bt_model_format_full_info.BTModelFormatFullInfo],),
+                "auth": [],
+                "endpoint_path": "/api/translations/translationformats",
+                "operation_id": "get_all_translator_formats",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                ],
-                'required': [],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": [],
+                "required": [],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {},
+                "attribute_map": {},
+                "location_map": {},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_all_translator_formats
+            callable=__get_all_translator_formats,
         )
 
-        def __get_document_translations(
-            self,
-            did,
-            **kwargs
-        ):
+        def __get_document_translations(self, did, **kwargs):
             """get_document_translations  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -442,97 +332,53 @@ class TranslationsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['did'] = \
-                did
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["did"] = did
             return self.call_with_http_info(**kwargs)
 
         self.get_document_translations = Endpoint(
             settings={
-                'response_type': (bt_list_response_bt_translation_request_info.BTListResponseBTTranslationRequestInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/translations/d/{did}',
-                'operation_id': 'get_document_translations',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_list_response_bt_translation_request_info.BTListResponseBTTranslationRequestInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/translations/d/{did}",
+                "operation_id": "get_document_translations",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'did',
-                    'offset',
-                    'limit',
-                ],
-                'required': [
-                    'did',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["did", "offset", "limit",],
+                "required": ["did",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'did':
-                        (str,),
-                    'offset':
-                        (int,),
-                    'limit':
-                        (int,),
-                },
-                'attribute_map': {
-                    'did': 'did',
-                    'offset': 'offset',
-                    'limit': 'limit',
-                },
-                'location_map': {
-                    'did': 'path',
-                    'offset': 'query',
-                    'limit': 'query',
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {"did": (str,), "offset": (int,), "limit": (int,),},
+                "attribute_map": {"did": "did", "offset": "offset", "limit": "limit",},
+                "location_map": {"did": "path", "offset": "query", "limit": "query",},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_document_translations
+            callable=__get_document_translations,
         )
 
-        def __get_translation(
-            self,
-            tid,
-            **kwargs
-        ):
+        def __get_translation(self, tid, **kwargs):
             """get_translation  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -569,86 +415,63 @@ class TranslationsApi(object):
                     If the method is called asynchronously, returns the request
                     thread.
             """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
+            kwargs["async_req"] = kwargs.get("async_req", False)
+            kwargs["_return_http_data_only"] = kwargs.get(
+                "_return_http_data_only", True
             )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index', 0)
-            kwargs['tid'] = \
-                tid
+            kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+            kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+            kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+            kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+            kwargs["_host_index"] = kwargs.get("_host_index", 0)
+            kwargs["tid"] = tid
             return self.call_with_http_info(**kwargs)
 
         self.get_translation = Endpoint(
             settings={
-                'response_type': (bt_translation_request_info.BTTranslationRequestInfo,),
-                'auth': [
-                    'OAuth2'
-                ],
-                'endpoint_path': '/api/translations/{tid}',
-                'operation_id': 'get_translation',
-                'http_method': 'GET',
-                'servers': [],
+                "response_type": (
+                    bt_translation_request_info.BTTranslationRequestInfo,
+                ),
+                "auth": ["OAuth2"],
+                "endpoint_path": "/api/translations/{tid}",
+                "operation_id": "get_translation",
+                "http_method": "GET",
+                "servers": [],
             },
             params_map={
-                'all': [
-                    'tid',
-                ],
-                'required': [
-                    'tid',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "all": ["tid",],
+                "required": ["tid",],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'tid':
-                        (str,),
-                },
-                'attribute_map': {
-                    'tid': 'tid',
-                },
-                'location_map': {
-                    'tid': 'path',
-                },
-                'collection_format_map': {
-                }
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {"tid": (str,),},
+                "attribute_map": {"tid": "tid",},
+                "location_map": {"tid": "path",},
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1'
-                ],
-                'content_type': [],
+                "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
+                "content_type": [],
             },
             api_client=api_client,
-            callable=__get_translation
+            callable=__get_translation,
         )
 
 
 class Endpoint(object):
-    def __init__(self, settings=None, params_map=None, root_map=None,
-                 headers_map=None, api_client=None, callable=None):
+    def __init__(
+        self,
+        settings=None,
+        params_map=None,
+        root_map=None,
+        headers_map=None,
+        api_client=None,
+        callable=None,
+    ):
         """Creates an endpoint
 
         Args:
@@ -684,54 +507,48 @@ class Endpoint(object):
         """
         self.settings = settings
         self.params_map = params_map
-        self.params_map['all'].extend([
-            'async_req',
-            '_host_index',
-            '_preload_content',
-            '_request_timeout',
-            '_return_http_data_only',
-            '_check_input_type',
-            '_check_return_type'
-        ])
-        self.params_map['nullable'].extend(['_request_timeout'])
-        self.validations = root_map['validations']
-        self.allowed_values = root_map['allowed_values']
-        self.openapi_types = root_map['openapi_types']
+        self.params_map["all"].extend(
+            [
+                "async_req",
+                "_host_index",
+                "_preload_content",
+                "_request_timeout",
+                "_return_http_data_only",
+                "_check_input_type",
+                "_check_return_type",
+            ]
+        )
+        self.params_map["nullable"].extend(["_request_timeout"])
+        self.validations = root_map["validations"]
+        self.allowed_values = root_map["allowed_values"]
+        self.openapi_types = root_map["openapi_types"]
         extra_types = {
-            'async_req': (bool,),
-            '_host_index': (int,),
-            '_preload_content': (bool,),
-            '_request_timeout': (none_type, int, (int,), [int]),
-            '_return_http_data_only': (bool,),
-            '_check_input_type': (bool,),
-            '_check_return_type': (bool,)
+            "async_req": (bool,),
+            "_host_index": (int,),
+            "_preload_content": (bool,),
+            "_request_timeout": (none_type, int, (int,), [int]),
+            "_return_http_data_only": (bool,),
+            "_check_input_type": (bool,),
+            "_check_return_type": (bool,),
         }
         self.openapi_types.update(extra_types)
-        self.attribute_map = root_map['attribute_map']
-        self.location_map = root_map['location_map']
-        self.collection_format_map = root_map['collection_format_map']
+        self.attribute_map = root_map["attribute_map"]
+        self.location_map = root_map["location_map"]
+        self.collection_format_map = root_map["collection_format_map"]
         self.headers_map = headers_map
         self.api_client = api_client
         self.callable = callable
 
     def __validate_inputs(self, kwargs):
-        for param in self.params_map['enum']:
+        for param in self.params_map["enum"]:
             if param in kwargs:
-                check_allowed_values(
-                    self.allowed_values,
-                    (param,),
-                    kwargs[param]
-                )
+                check_allowed_values(self.allowed_values, (param,), kwargs[param])
 
-        for param in self.params_map['validation']:
+        for param in self.params_map["validation"]:
             if param in kwargs:
-                check_validations(
-                    self.validations,
-                    (param,),
-                    kwargs[param]
-                )
+                check_validations(self.validations, (param,), kwargs[param])
 
-        if kwargs['_check_input_type'] is False:
+        if kwargs["_check_input_type"] is False:
             return
 
         for key, value in six.iteritems(kwargs):
@@ -740,20 +557,20 @@ class Endpoint(object):
                 self.openapi_types[key],
                 [key],
                 False,
-                kwargs['_check_input_type'],
-                configuration=self.api_client.configuration
+                kwargs["_check_input_type"],
+                configuration=self.api_client.configuration,
             )
             kwargs[key] = fixed_val
 
     def __gather_params(self, kwargs):
         params = {
-            'body': None,
-            'collection_format': {},
-            'file': {},
-            'form': [],
-            'header': {},
-            'path': {},
-            'query': []
+            "body": None,
+            "collection_format": {},
+            "file": {},
+            "form": [],
+            "header": {},
+            "path": {},
+            "query": [],
         }
 
         for param_name, param_value in six.iteritems(kwargs):
@@ -761,25 +578,27 @@ class Endpoint(object):
             if param_location is None:
                 continue
             if param_location:
-                if param_location == 'body':
-                    params['body'] = param_value
+                if param_location == "body":
+                    params["body"] = param_value
                     continue
                 base_name = self.attribute_map[param_name]
-                if (param_location == 'form' and
-                        self.openapi_types[param_name] == (file_type,)):
-                    params['file'][param_name] = [param_value]
-                elif (param_location == 'form' and
-                        self.openapi_types[param_name] == ([file_type],)):
+                if param_location == "form" and self.openapi_types[param_name] == (
+                    file_type,
+                ):
+                    params["file"][param_name] = [param_value]
+                elif param_location == "form" and self.openapi_types[param_name] == (
+                    [file_type],
+                ):
                     # param_value is already a list
-                    params['file'][param_name] = param_value
-                elif param_location in {'form', 'query'}:
+                    params["file"][param_name] = param_value
+                elif param_location in {"form", "query"}:
                     param_value_full = (base_name, param_value)
                     params[param_location].append(param_value_full)
-                if param_location not in {'form', 'query'}:
+                if param_location not in {"form", "query"}:
                     params[param_location][base_name] = param_value
                 collection_format = self.collection_format_map.get(param_name)
                 if collection_format:
-                    params['collection_format'][base_name] = collection_format
+                    params["collection_format"][base_name] = collection_format
 
         return params
 
@@ -797,69 +616,74 @@ class Endpoint(object):
     def call_with_http_info(self, **kwargs):
 
         try:
-            _host = self.settings['servers'][kwargs['_host_index']]
+            _host = self.settings["servers"][kwargs["_host_index"]]
         except IndexError:
-            if self.settings['servers']:
+            if self.settings["servers"]:
                 raise ApiValueError(
-                    "Invalid host index. Must be 0 <= index < %s" %
-                    len(self.settings['servers'])
+                    "Invalid host index. Must be 0 <= index < %s"
+                    % len(self.settings["servers"])
                 )
             _host = None
 
         for key, value in six.iteritems(kwargs):
-            if key not in self.params_map['all']:
+            if key not in self.params_map["all"]:
                 raise ApiTypeError(
                     "Got an unexpected parameter '%s'"
-                    " to method `%s`" %
-                    (key, self.settings['operation_id'])
+                    " to method `%s`" % (key, self.settings["operation_id"])
                 )
             # only throw this nullable ApiValueError if _check_input_type
             # is False, if _check_input_type==True we catch this case
             # in self.__validate_inputs
-            if (key not in self.params_map['nullable'] and value is None
-                    and kwargs['_check_input_type'] is False):
+            if (
+                key not in self.params_map["nullable"]
+                and value is None
+                and kwargs["_check_input_type"] is False
+            ):
                 raise ApiValueError(
                     "Value may not be None for non-nullable parameter `%s`"
-                    " when calling `%s`" %
-                    (key, self.settings['operation_id'])
+                    " when calling `%s`" % (key, self.settings["operation_id"])
                 )
 
-        for key in self.params_map['required']:
+        for key in self.params_map["required"]:
             if key not in kwargs.keys():
                 raise ApiValueError(
                     "Missing the required parameter `%s` when calling "
-                    "`%s`" % (key, self.settings['operation_id'])
+                    "`%s`" % (key, self.settings["operation_id"])
                 )
 
         self.__validate_inputs(kwargs)
 
         params = self.__gather_params(kwargs)
 
-        accept_headers_list = self.headers_map['accept']
+        accept_headers_list = self.headers_map["accept"]
         if accept_headers_list:
-            params['header']['Accept'] = self.api_client.select_header_accept(
-                accept_headers_list)
+            params["header"]["Accept"] = self.api_client.select_header_accept(
+                accept_headers_list
+            )
 
-        content_type_headers_list = self.headers_map['content_type']
+        content_type_headers_list = self.headers_map["content_type"]
         if content_type_headers_list:
             header_list = self.api_client.select_header_content_type(
-                content_type_headers_list)
-            params['header']['Content-Type'] = header_list
+                content_type_headers_list
+            )
+            params["header"]["Content-Type"] = header_list
 
         return self.api_client.call_api(
-            self.settings['endpoint_path'], self.settings['http_method'],
-            params['path'],
-            params['query'],
-            params['header'],
-            body=params['body'],
-            post_params=params['form'],
-            files=params['file'],
-            response_type=self.settings['response_type'],
-            auth_settings=self.settings['auth'],
-            async_req=kwargs['async_req'],
-            _check_type=kwargs['_check_return_type'],
-            _return_http_data_only=kwargs['_return_http_data_only'],
-            _preload_content=kwargs['_preload_content'],
-            _request_timeout=kwargs['_request_timeout'],
+            self.settings["endpoint_path"],
+            self.settings["http_method"],
+            params["path"],
+            params["query"],
+            params["header"],
+            body=params["body"],
+            post_params=params["form"],
+            files=params["file"],
+            response_type=self.settings["response_type"],
+            auth_settings=self.settings["auth"],
+            async_req=kwargs["async_req"],
+            _check_type=kwargs["_check_return_type"],
+            _return_http_data_only=kwargs["_return_http_data_only"],
+            _preload_content=kwargs["_preload_content"],
+            _request_timeout=kwargs["_request_timeout"],
             _host=_host,
-            collection_formats=params['collection_format'])
+            collection_formats=params["collection_format"],
+        )

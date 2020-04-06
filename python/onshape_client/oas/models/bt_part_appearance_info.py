@@ -30,11 +30,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_color_info
 except ImportError:
-    bt_color_info = sys.modules[
-        'onshape_client.oas.models.bt_color_info']
+    bt_color_info = sys.modules["onshape_client.oas.models.bt_color_info"]
 
 
 class BTPartAppearanceInfo(ModelNormal):
@@ -61,11 +61,9 @@ class BTPartAppearanceInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,9 +78,9 @@ class BTPartAppearanceInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'color': (bt_color_info.BTColorInfo,),  # noqa: E501
-            'is_generated': (bool,),  # noqa: E501
-            'opacity': (int,),  # noqa: E501
+            "color": (bt_color_info.BTColorInfo,),  # noqa: E501
+            "is_generated": (bool,),  # noqa: E501
+            "opacity": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,24 +88,33 @@ class BTPartAppearanceInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'color': 'color',  # noqa: E501
-        'is_generated': 'isGenerated',  # noqa: E501
-        'opacity': 'opacity',  # noqa: E501
+        "color": "color",  # noqa: E501
+        "is_generated": "isGenerated",  # noqa: E501
+        "opacity": "opacity",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_part_appearance_info.BTPartAppearanceInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -136,10 +143,12 @@ class BTPartAppearanceInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

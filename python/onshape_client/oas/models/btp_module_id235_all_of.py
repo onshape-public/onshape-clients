@@ -30,26 +30,29 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_document_with_version_and_element_id
 except ImportError:
     bt_document_with_version_and_element_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_and_element_id']
+        "onshape_client.oas.models.bt_document_with_version_and_element_id"
+    ]
 try:
     from onshape_client.oas.models import bt_document_with_version_id
 except ImportError:
     bt_document_with_version_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_id']
+        "onshape_client.oas.models.bt_document_with_version_id"
+    ]
 try:
     from onshape_client.oas.models import btp_literal_string259
 except ImportError:
     btp_literal_string259 = sys.modules[
-        'onshape_client.oas.models.btp_literal_string259']
+        "onshape_client.oas.models.btp_literal_string259"
+    ]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 
 
 class BTPModuleId235AllOf(ModelNormal):
@@ -76,11 +79,9 @@ class BTPModuleId235AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,31 +96,35 @@ class BTPModuleId235AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'external_document_with_version_and_element_id': (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,),  # noqa: E501
-            'element_import': (bool,),  # noqa: E501
-            'imported_element_id': (str,),  # noqa: E501
-            'version_and_microversion': (str,),  # noqa: E501
-            'external_import': (bool,),  # noqa: E501
-            'imported_document_id': (str,),  # noqa: E501
-            'legacy': (bool,),  # noqa: E501
-            'path_potentially_valid': (bool,),  # noqa: E501
-            'version_potentially_valid': (bool,),  # noqa: E501
-            'valid_legacy_version': (bool,),  # noqa: E501
-            'path_version': (str,),  # noqa: E501
-            'imported_version_id': (str,),  # noqa: E501
-            'potentially_valid': (bool,),  # noqa: E501
-            'standard_library_common': (bool,),  # noqa: E501
-            'external_document_with_version': (bt_document_with_version_id.BTDocumentWithVersionId,),  # noqa: E501
-            'dbimport_string': (str,),  # noqa: E501
-            'standard_library': (bool,),  # noqa: E501
-            'microversion': (str,),  # noqa: E501
-            'space_before_path': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_after_path': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_before_version': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_after_version': (btp_space10.BTPSpace10,),  # noqa: E501
-            'version': (btp_literal_string259.BTPLiteralString259,),  # noqa: E501
-            'path': (btp_literal_string259.BTPLiteralString259,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "external_document_with_version_and_element_id": (
+                bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,
+            ),  # noqa: E501
+            "element_import": (bool,),  # noqa: E501
+            "imported_element_id": (str,),  # noqa: E501
+            "version_and_microversion": (str,),  # noqa: E501
+            "external_import": (bool,),  # noqa: E501
+            "imported_document_id": (str,),  # noqa: E501
+            "legacy": (bool,),  # noqa: E501
+            "path_potentially_valid": (bool,),  # noqa: E501
+            "version_potentially_valid": (bool,),  # noqa: E501
+            "valid_legacy_version": (bool,),  # noqa: E501
+            "path_version": (str,),  # noqa: E501
+            "imported_version_id": (str,),  # noqa: E501
+            "potentially_valid": (bool,),  # noqa: E501
+            "standard_library_common": (bool,),  # noqa: E501
+            "external_document_with_version": (
+                bt_document_with_version_id.BTDocumentWithVersionId,
+            ),  # noqa: E501
+            "dbimport_string": (str,),  # noqa: E501
+            "standard_library": (bool,),  # noqa: E501
+            "microversion": (str,),  # noqa: E501
+            "space_before_path": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_after_path": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before_version": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_after_version": (btp_space10.BTPSpace10,),  # noqa: E501
+            "version": (btp_literal_string259.BTPLiteralString259,),  # noqa: E501
+            "path": (btp_literal_string259.BTPLiteralString259,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -127,46 +132,55 @@ class BTPModuleId235AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',  # noqa: E501
-        'element_import': 'elementImport',  # noqa: E501
-        'imported_element_id': 'importedElementId',  # noqa: E501
-        'version_and_microversion': 'versionAndMicroversion',  # noqa: E501
-        'external_import': 'externalImport',  # noqa: E501
-        'imported_document_id': 'importedDocumentId',  # noqa: E501
-        'legacy': 'legacy',  # noqa: E501
-        'path_potentially_valid': 'pathPotentiallyValid',  # noqa: E501
-        'version_potentially_valid': 'versionPotentiallyValid',  # noqa: E501
-        'valid_legacy_version': 'validLegacyVersion',  # noqa: E501
-        'path_version': 'pathVersion',  # noqa: E501
-        'imported_version_id': 'importedVersionId',  # noqa: E501
-        'potentially_valid': 'potentiallyValid',  # noqa: E501
-        'standard_library_common': 'standardLibraryCommon',  # noqa: E501
-        'external_document_with_version': 'externalDocumentWithVersion',  # noqa: E501
-        'dbimport_string': 'dbimportString',  # noqa: E501
-        'standard_library': 'standardLibrary',  # noqa: E501
-        'microversion': 'microversion',  # noqa: E501
-        'space_before_path': 'spaceBeforePath',  # noqa: E501
-        'space_after_path': 'spaceAfterPath',  # noqa: E501
-        'space_before_version': 'spaceBeforeVersion',  # noqa: E501
-        'space_after_version': 'spaceAfterVersion',  # noqa: E501
-        'version': 'version',  # noqa: E501
-        'path': 'path',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "external_document_with_version_and_element_id": "externalDocumentWithVersionAndElementId",  # noqa: E501
+        "element_import": "elementImport",  # noqa: E501
+        "imported_element_id": "importedElementId",  # noqa: E501
+        "version_and_microversion": "versionAndMicroversion",  # noqa: E501
+        "external_import": "externalImport",  # noqa: E501
+        "imported_document_id": "importedDocumentId",  # noqa: E501
+        "legacy": "legacy",  # noqa: E501
+        "path_potentially_valid": "pathPotentiallyValid",  # noqa: E501
+        "version_potentially_valid": "versionPotentiallyValid",  # noqa: E501
+        "valid_legacy_version": "validLegacyVersion",  # noqa: E501
+        "path_version": "pathVersion",  # noqa: E501
+        "imported_version_id": "importedVersionId",  # noqa: E501
+        "potentially_valid": "potentiallyValid",  # noqa: E501
+        "standard_library_common": "standardLibraryCommon",  # noqa: E501
+        "external_document_with_version": "externalDocumentWithVersion",  # noqa: E501
+        "dbimport_string": "dbimportString",  # noqa: E501
+        "standard_library": "standardLibrary",  # noqa: E501
+        "microversion": "microversion",  # noqa: E501
+        "space_before_path": "spaceBeforePath",  # noqa: E501
+        "space_after_path": "spaceAfterPath",  # noqa: E501
+        "space_before_version": "spaceBeforeVersion",  # noqa: E501
+        "space_after_version": "spaceAfterVersion",  # noqa: E501
+        "version": "version",  # noqa: E501
+        "path": "path",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_module_id235_all_of.BTPModuleId235AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -217,10 +231,12 @@ class BTPModuleId235AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

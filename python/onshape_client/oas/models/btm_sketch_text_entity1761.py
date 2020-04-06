@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 try:
     from onshape_client.oas.models import btm_sketch_geom_entity5
 except ImportError:
     btm_sketch_geom_entity5 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_geom_entity5']
+        "onshape_client.oas.models.btm_sketch_geom_entity5"
+    ]
 try:
     from onshape_client.oas.models import btm_sketch_text_entity1761_all_of
 except ImportError:
     btm_sketch_text_entity1761_all_of = sys.modules[
-        'onshape_client.oas.models.btm_sketch_text_entity1761_all_of']
+        "onshape_client.oas.models.btm_sketch_text_entity1761_all_of"
+    ]
 
 
 class BTMSketchTextEntity1761(ModelComposed):
@@ -71,11 +73,9 @@ class BTMSketchTextEntity1761(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,22 +90,22 @@ class BTMSketchTextEntity1761(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'font_name': (str,),  # noqa: E501
-            'text': (str,),  # noqa: E501
-            'ascent': (float,),  # noqa: E501
-            'baseline_start_x': (float,),  # noqa: E501
-            'baseline_start_y': (float,),  # noqa: E501
-            'baseline_direction_x': (float,),  # noqa: E501
-            'baseline_direction_y': (float,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'control_box_ids': ([str],),  # noqa: E501
-            'entity_id': (str,),  # noqa: E501
-            'entity_id_and_replace_in_dependent_fields': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'is_construction': (bool,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            "font_name": (str,),  # noqa: E501
+            "text": (str,),  # noqa: E501
+            "ascent": (float,),  # noqa: E501
+            "baseline_start_x": (float,),  # noqa: E501
+            "baseline_start_y": (float,),  # noqa: E501
+            "baseline_direction_x": (float,),  # noqa: E501
+            "baseline_direction_y": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "control_box_ids": ([str],),  # noqa: E501
+            "entity_id": (str,),  # noqa: E501
+            "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "is_construction": (bool,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameters": ([btm_parameter1.BTMParameter1],),  # noqa: E501
         }
 
     @staticmethod
@@ -113,36 +113,45 @@ class BTMSketchTextEntity1761(ModelComposed):
         return None
 
     attribute_map = {
-        'font_name': 'fontName',  # noqa: E501
-        'text': 'text',  # noqa: E501
-        'ascent': 'ascent',  # noqa: E501
-        'baseline_start_x': 'baselineStartX',  # noqa: E501
-        'baseline_start_y': 'baselineStartY',  # noqa: E501
-        'baseline_direction_x': 'baselineDirectionX',  # noqa: E501
-        'baseline_direction_y': 'baselineDirectionY',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'control_box_ids': 'controlBoxIds',  # noqa: E501
-        'entity_id': 'entityId',  # noqa: E501
-        'entity_id_and_replace_in_dependent_fields': 'entityIdAndReplaceInDependentFields',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'is_construction': 'isConstruction',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameters': 'parameters',  # noqa: E501
+        "font_name": "fontName",  # noqa: E501
+        "text": "text",  # noqa: E501
+        "ascent": "ascent",  # noqa: E501
+        "baseline_start_x": "baselineStartX",  # noqa: E501
+        "baseline_start_y": "baselineStartY",  # noqa: E501
+        "baseline_direction_x": "baselineDirectionX",  # noqa: E501
+        "baseline_direction_y": "baselineDirectionY",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "control_box_ids": "controlBoxIds",  # noqa: E501
+        "entity_id": "entityId",  # noqa: E501
+        "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "is_construction": "isConstruction",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameters": "parameters",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_sketch_text_entity1761.BTMSketchTextEntity1761 - a model defined in OpenAPI
 
         Keyword Args:
@@ -184,13 +193,12 @@ class BTMSketchTextEntity1761(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -199,8 +207,7 @@ class BTMSketchTextEntity1761(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -209,10 +216,12 @@ class BTMSketchTextEntity1761(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -227,12 +236,10 @@ class BTMSketchTextEntity1761(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btm_sketch_geom_entity5.BTMSketchGeomEntity5,
-              btm_sketch_text_entity1761_all_of.BTMSketchTextEntity1761AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btm_sketch_geom_entity5.BTMSketchGeomEntity5,
+                btm_sketch_text_entity1761_all_of.BTMSketchTextEntity1761AllOf,
+            ],
+            "oneOf": [],
         }

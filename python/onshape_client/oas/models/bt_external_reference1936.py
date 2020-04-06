@@ -30,36 +30,43 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_document_with_version_and_element_id
 except ImportError:
     bt_document_with_version_and_element_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_and_element_id']
+        "onshape_client.oas.models.bt_document_with_version_and_element_id"
+    ]
 try:
     from onshape_client.oas.models import bt_document_with_version_id
 except ImportError:
     bt_document_with_version_id = sys.modules[
-        'onshape_client.oas.models.bt_document_with_version_id']
+        "onshape_client.oas.models.bt_document_with_version_id"
+    ]
 try:
     from onshape_client.oas.models import bt_element_reference725
 except ImportError:
     bt_element_reference725 = sys.modules[
-        'onshape_client.oas.models.bt_element_reference725']
+        "onshape_client.oas.models.bt_element_reference725"
+    ]
 try:
     from onshape_client.oas.models import bt_external_reference1936_all_of
 except ImportError:
     bt_external_reference1936_all_of = sys.modules[
-        'onshape_client.oas.models.bt_external_reference1936_all_of']
+        "onshape_client.oas.models.bt_external_reference1936_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_full_element_id756
 except ImportError:
     bt_full_element_id756 = sys.modules[
-        'onshape_client.oas.models.bt_full_element_id756']
+        "onshape_client.oas.models.bt_full_element_id756"
+    ]
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
     bt_microversion_id_and_configuration2338 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+        "onshape_client.oas.models.bt_microversion_id_and_configuration2338"
+    ]
 
 
 class BTExternalReference1936(ModelComposed):
@@ -86,11 +93,9 @@ class BTExternalReference1936(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -105,16 +110,24 @@ class BTExternalReference1936(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'document_version_id': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'configured': (bool,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'external_document_with_version': (bt_document_with_version_id.BTDocumentWithVersionId,),  # noqa: E501
-            'external_document_with_version_and_element_id': (bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,),  # noqa: E501
-            'external_reference': (bool,),  # noqa: E501
-            'full_element_id': (bt_full_element_id756.BTFullElementId756,),  # noqa: E501
-            'microversion_id_and_configuration': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
+            "document_version_id": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "configured": (bool,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "external_document_with_version": (
+                bt_document_with_version_id.BTDocumentWithVersionId,
+            ),  # noqa: E501
+            "external_document_with_version_and_element_id": (
+                bt_document_with_version_and_element_id.BTDocumentWithVersionAndElementId,
+            ),  # noqa: E501
+            "external_reference": (bool,),  # noqa: E501
+            "full_element_id": (
+                bt_full_element_id756.BTFullElementId756,
+            ),  # noqa: E501
+            "microversion_id_and_configuration": (
+                bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
+            ),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -122,30 +135,39 @@ class BTExternalReference1936(ModelComposed):
         return None
 
     attribute_map = {
-        'document_version_id': 'documentVersionId',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'configured': 'configured',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'external_document_with_version': 'externalDocumentWithVersion',  # noqa: E501
-        'external_document_with_version_and_element_id': 'externalDocumentWithVersionAndElementId',  # noqa: E501
-        'external_reference': 'externalReference',  # noqa: E501
-        'full_element_id': 'fullElementId',  # noqa: E501
-        'microversion_id_and_configuration': 'microversionIdAndConfiguration',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
+        "document_version_id": "documentVersionId",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "configured": "configured",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "external_document_with_version": "externalDocumentWithVersion",  # noqa: E501
+        "external_document_with_version_and_element_id": "externalDocumentWithVersionAndElementId",  # noqa: E501
+        "external_reference": "externalReference",  # noqa: E501
+        "full_element_id": "fullElementId",  # noqa: E501
+        "microversion_id_and_configuration": "microversionIdAndConfiguration",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_external_reference1936.BTExternalReference1936 - a model defined in OpenAPI
 
         Keyword Args:
@@ -181,13 +203,12 @@ class BTExternalReference1936(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -196,8 +217,7 @@ class BTExternalReference1936(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -206,10 +226,12 @@ class BTExternalReference1936(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -224,12 +246,10 @@ class BTExternalReference1936(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_element_reference725.BTElementReference725,
-              bt_external_reference1936_all_of.BTExternalReference1936AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_element_reference725.BTElementReference725,
+                bt_external_reference1936_all_of.BTExternalReference1936AllOf,
+            ],
+            "oneOf": [],
         }

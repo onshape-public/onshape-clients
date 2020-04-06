@@ -56,11 +56,9 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,11 +73,11 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'feature_id_with_occurrence': (str,),  # noqa: E501
-            'part_studio_mate_connector_query': (bool,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
-            'query_data': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "feature_id_with_occurrence": (str,),  # noqa: E501
+            "part_studio_mate_connector_query": (bool,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
+            "query_data": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,26 +85,35 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'feature_id_with_occurrence': 'featureIdWithOccurrence',  # noqa: E501
-        'part_studio_mate_connector_query': 'partStudioMateConnectorQuery',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
-        'query_data': 'queryData',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "feature_id_with_occurrence": "featureIdWithOccurrence",  # noqa: E501
+        "part_studio_mate_connector_query": "partStudioMateConnectorQuery",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
+        "query_data": "queryData",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_feature_query_with_occurrence157_all_of.BTMFeatureQueryWithOccurrence157AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -137,10 +144,12 @@ class BTMFeatureQueryWithOccurrence157AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

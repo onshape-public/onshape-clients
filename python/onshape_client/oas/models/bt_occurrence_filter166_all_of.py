@@ -56,11 +56,9 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,18 +73,18 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'top_level_only': (bool,),  # noqa: E501
-            'exclude_sketch': (bool,),  # noqa: E501
-            'solid_or_composite_body_only': (bool,),  # noqa: E501
-            'exclude_sub_assemblies': (bool,),  # noqa: E501
-            'exclude_suppressed': (bool,),  # noqa: E501
-            'exclude_flattened_parts': (bool,),  # noqa: E501
-            'exclude_pattern_instances': (bool,),  # noqa: E501
-            'include_pattern_occurrence': (bool,),  # noqa: E501
-            'exclude_studio_inserts': (bool,),  # noqa: E501
-            'exclude_standard_content': (bool,),  # noqa: E501
-            'include_assembly_root': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "top_level_only": (bool,),  # noqa: E501
+            "exclude_sketch": (bool,),  # noqa: E501
+            "solid_or_composite_body_only": (bool,),  # noqa: E501
+            "exclude_sub_assemblies": (bool,),  # noqa: E501
+            "exclude_suppressed": (bool,),  # noqa: E501
+            "exclude_flattened_parts": (bool,),  # noqa: E501
+            "exclude_pattern_instances": (bool,),  # noqa: E501
+            "include_pattern_occurrence": (bool,),  # noqa: E501
+            "exclude_studio_inserts": (bool,),  # noqa: E501
+            "exclude_standard_content": (bool,),  # noqa: E501
+            "include_assembly_root": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,33 +92,42 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'top_level_only': 'topLevelOnly',  # noqa: E501
-        'exclude_sketch': 'excludeSketch',  # noqa: E501
-        'solid_or_composite_body_only': 'solidOrCompositeBodyOnly',  # noqa: E501
-        'exclude_sub_assemblies': 'excludeSubAssemblies',  # noqa: E501
-        'exclude_suppressed': 'excludeSuppressed',  # noqa: E501
-        'exclude_flattened_parts': 'excludeFlattenedParts',  # noqa: E501
-        'exclude_pattern_instances': 'excludePatternInstances',  # noqa: E501
-        'include_pattern_occurrence': 'includePatternOccurrence',  # noqa: E501
-        'exclude_studio_inserts': 'excludeStudioInserts',  # noqa: E501
-        'exclude_standard_content': 'excludeStandardContent',  # noqa: E501
-        'include_assembly_root': 'includeAssemblyRoot',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "top_level_only": "topLevelOnly",  # noqa: E501
+        "exclude_sketch": "excludeSketch",  # noqa: E501
+        "solid_or_composite_body_only": "solidOrCompositeBodyOnly",  # noqa: E501
+        "exclude_sub_assemblies": "excludeSubAssemblies",  # noqa: E501
+        "exclude_suppressed": "excludeSuppressed",  # noqa: E501
+        "exclude_flattened_parts": "excludeFlattenedParts",  # noqa: E501
+        "exclude_pattern_instances": "excludePatternInstances",  # noqa: E501
+        "include_pattern_occurrence": "includePatternOccurrence",  # noqa: E501
+        "exclude_studio_inserts": "excludeStudioInserts",  # noqa: E501
+        "exclude_standard_content": "excludeStandardContent",  # noqa: E501
+        "include_assembly_root": "includeAssemblyRoot",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_occurrence_filter166_all_of.BTOccurrenceFilter166AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -158,10 +165,12 @@ class BTOccurrenceFilter166AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

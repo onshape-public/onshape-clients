@@ -30,26 +30,27 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_feature_api_base1430
 except ImportError:
     bt_feature_api_base1430 = sys.modules[
-        'onshape_client.oas.models.bt_feature_api_base1430']
+        "onshape_client.oas.models.bt_feature_api_base1430"
+    ]
 try:
     from onshape_client.oas.models import bt_feature_definition_response1617_all_of
 except ImportError:
     bt_feature_definition_response1617_all_of = sys.modules[
-        'onshape_client.oas.models.bt_feature_definition_response1617_all_of']
+        "onshape_client.oas.models.bt_feature_definition_response1617_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_feature_state1688
 except ImportError:
-    bt_feature_state1688 = sys.modules[
-        'onshape_client.oas.models.bt_feature_state1688']
+    bt_feature_state1688 = sys.modules["onshape_client.oas.models.bt_feature_state1688"]
 try:
     from onshape_client.oas.models import btm_feature134
 except ImportError:
-    btm_feature134 = sys.modules[
-        'onshape_client.oas.models.btm_feature134']
+    btm_feature134 = sys.modules["onshape_client.oas.models.btm_feature134"]
 
 
 class BTFeatureDefinitionResponse1617(ModelComposed):
@@ -76,11 +77,9 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,14 +94,14 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'feature_state': (bt_feature_state1688.BTFeatureState1688,),  # noqa: E501
-            'feature': (btm_feature134.BTMFeature134,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'library_version': (int,),  # noqa: E501
-            'microversion_skew': (bool,),  # noqa: E501
-            'reject_microversion_skew': (bool,),  # noqa: E501
-            'serialization_version': (str,),  # noqa: E501
-            'source_microversion': (str,),  # noqa: E501
+            "feature_state": (bt_feature_state1688.BTFeatureState1688,),  # noqa: E501
+            "feature": (btm_feature134.BTMFeature134,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "library_version": (int,),  # noqa: E501
+            "microversion_skew": (bool,),  # noqa: E501
+            "reject_microversion_skew": (bool,),  # noqa: E501
+            "serialization_version": (str,),  # noqa: E501
+            "source_microversion": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -110,28 +109,37 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
         return None
 
     attribute_map = {
-        'feature_state': 'featureState',  # noqa: E501
-        'feature': 'feature',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'library_version': 'libraryVersion',  # noqa: E501
-        'microversion_skew': 'microversionSkew',  # noqa: E501
-        'reject_microversion_skew': 'rejectMicroversionSkew',  # noqa: E501
-        'serialization_version': 'serializationVersion',  # noqa: E501
-        'source_microversion': 'sourceMicroversion',  # noqa: E501
+        "feature_state": "featureState",  # noqa: E501
+        "feature": "feature",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "library_version": "libraryVersion",  # noqa: E501
+        "microversion_skew": "microversionSkew",  # noqa: E501
+        "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
+        "serialization_version": "serializationVersion",  # noqa: E501
+        "source_microversion": "sourceMicroversion",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_feature_definition_response1617.BTFeatureDefinitionResponse1617 - a model defined in OpenAPI
 
         Keyword Args:
@@ -165,13 +173,12 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -180,8 +187,7 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -190,10 +196,12 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -208,12 +216,10 @@ class BTFeatureDefinitionResponse1617(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_feature_api_base1430.BTFeatureApiBase1430,
-              bt_feature_definition_response1617_all_of.BTFeatureDefinitionResponse1617AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_feature_api_base1430.BTFeatureApiBase1430,
+                bt_feature_definition_response1617_all_of.BTFeatureDefinitionResponse1617AllOf,
+            ],
+            "oneOf": [],
         }

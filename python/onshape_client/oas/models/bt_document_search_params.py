@@ -57,20 +57,19 @@ class BTDocumentSearchParams(ModelNormal):
     """
 
     allowed_values = {
-        ('found_in',): {
-            'ALL': "ALL",
-            'WORKSPACES': "WORKSPACES",
-            'VERSIONS': "VERSIONS",
+        ("found_in",): {
+            "ALL": "ALL",
+            "WORKSPACES": "WORKSPACES",
+            "VERSIONS": "VERSIONS",
         },
-        ('when',): {
-            'ALL': "ALL",
-            'LATEST': "LATEST",
-            'LATEST_PER_HIT': "LATEST_PER_HIT",
+        ("when",): {
+            "ALL": "ALL",
+            "LATEST": "LATEST",
+            "LATEST_PER_HIT": "LATEST_PER_HIT",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,17 +84,17 @@ class BTDocumentSearchParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'document_filter': (int,),  # noqa: E501
-            'found_in': (str,),  # noqa: E501
-            'limit': (int,),  # noqa: E501
-            'offset': (int,),  # noqa: E501
-            'owner_id': (str,),  # noqa: E501
-            'parent_id': (str,),  # noqa: E501
-            'raw_query': (str,),  # noqa: E501
-            'sort_column': (str,),  # noqa: E501
-            'sort_order': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
-            'when': (str,),  # noqa: E501
+            "document_filter": (int,),  # noqa: E501
+            "found_in": (str,),  # noqa: E501
+            "limit": (int,),  # noqa: E501
+            "offset": (int,),  # noqa: E501
+            "owner_id": (str,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "raw_query": (str,),  # noqa: E501
+            "sort_column": (str,),  # noqa: E501
+            "sort_order": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "when": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -103,32 +102,41 @@ class BTDocumentSearchParams(ModelNormal):
         return None
 
     attribute_map = {
-        'document_filter': 'documentFilter',  # noqa: E501
-        'found_in': 'foundIn',  # noqa: E501
-        'limit': 'limit',  # noqa: E501
-        'offset': 'offset',  # noqa: E501
-        'owner_id': 'ownerId',  # noqa: E501
-        'parent_id': 'parentId',  # noqa: E501
-        'raw_query': 'rawQuery',  # noqa: E501
-        'sort_column': 'sortColumn',  # noqa: E501
-        'sort_order': 'sortOrder',  # noqa: E501
-        'type': 'type',  # noqa: E501
-        'when': 'when',  # noqa: E501
+        "document_filter": "documentFilter",  # noqa: E501
+        "found_in": "foundIn",  # noqa: E501
+        "limit": "limit",  # noqa: E501
+        "offset": "offset",  # noqa: E501
+        "owner_id": "ownerId",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "raw_query": "rawQuery",  # noqa: E501
+        "sort_column": "sortColumn",  # noqa: E501
+        "sort_order": "sortOrder",  # noqa: E501
+        "type": "type",  # noqa: E501
+        "when": "when",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_document_search_params.BTDocumentSearchParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -165,10 +173,12 @@ class BTDocumentSearchParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

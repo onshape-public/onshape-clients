@@ -30,26 +30,27 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_assembly_feature887
 except ImportError:
     btm_assembly_feature887 = sys.modules[
-        'onshape_client.oas.models.btm_assembly_feature887']
+        "onshape_client.oas.models.btm_assembly_feature887"
+    ]
 try:
     from onshape_client.oas.models import btm_feature_invalid1031
 except ImportError:
     btm_feature_invalid1031 = sys.modules[
-        'onshape_client.oas.models.btm_feature_invalid1031']
+        "onshape_client.oas.models.btm_feature_invalid1031"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 try:
     from onshape_client.oas.models import btm_sketch151
 except ImportError:
-    btm_sketch151 = sys.modules[
-        'onshape_client.oas.models.btm_sketch151']
+    btm_sketch151 = sys.modules["onshape_client.oas.models.btm_sketch151"]
 
 
 class BTMFeature134(ModelNormal):
@@ -76,11 +77,9 @@ class BTMFeature134(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,56 +94,65 @@ class BTMFeature134(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'feature_id': (str,),  # noqa: E501
-            'feature_type': (str,),  # noqa: E501
-            'import_microversion': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'namespace': (str,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parameters': ([btm_parameter1.BTMParameter1],),  # noqa: E501
-            'return_after_subfeatures': (bool,),  # noqa: E501
-            'sub_features': ([BTMFeature134],),  # noqa: E501
-            'suppressed': (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
+            "feature_type": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parameters": ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            "return_after_subfeatures": (bool,),  # noqa: E501
+            "sub_features": ([BTMFeature134],),  # noqa: E501
+            "suppressed": (bool,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTMFeatureInvalid-1031': btm_feature_invalid1031.BTMFeatureInvalid1031,
-                'BTMSketch-151': btm_sketch151.BTMSketch151,
-                'BTMAssemblyFeature-887': btm_assembly_feature887.BTMAssemblyFeature887,
+            "bt_type": {
+                "BTMFeatureInvalid-1031": btm_feature_invalid1031.BTMFeatureInvalid1031,
+                "BTMSketch-151": btm_sketch151.BTMSketch151,
+                "BTMAssemblyFeature-887": btm_assembly_feature887.BTMAssemblyFeature887,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'feature_id': 'featureId',  # noqa: E501
-        'feature_type': 'featureType',  # noqa: E501
-        'import_microversion': 'importMicroversion',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'namespace': 'namespace',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parameters': 'parameters',  # noqa: E501
-        'return_after_subfeatures': 'returnAfterSubfeatures',  # noqa: E501
-        'sub_features': 'subFeatures',  # noqa: E501
-        'suppressed': 'suppressed',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
+        "feature_type": "featureType",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parameters": "parameters",  # noqa: E501
+        "return_after_subfeatures": "returnAfterSubfeatures",  # noqa: E501
+        "sub_features": "subFeatures",  # noqa: E501
+        "suppressed": "suppressed",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_feature134.BTMFeature134 - a model defined in OpenAPI
 
         Keyword Args:
@@ -181,10 +189,12 @@ class BTMFeature134(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

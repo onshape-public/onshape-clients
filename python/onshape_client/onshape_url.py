@@ -133,7 +133,7 @@ class OnshapeElement(object):
                     )
                     .data
                 )
-                count = count+1
+                count = count + 1
                 file_path.with_name(f"{file_path.name}-{count}")
 
     def create_drawing(self, drawing_name="My Drawing"):

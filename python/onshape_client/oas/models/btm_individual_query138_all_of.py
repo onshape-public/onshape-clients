@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_individual_query138
 except ImportError:
     btm_individual_query138 = sys.modules[
-        'onshape_client.oas.models.btm_individual_query138']
+        "onshape_client.oas.models.btm_individual_query138"
+    ]
 try:
     from onshape_client.oas.models import btp_statement269
 except ImportError:
-    btp_statement269 = sys.modules[
-        'onshape_client.oas.models.btp_statement269']
+    btp_statement269 = sys.modules["onshape_client.oas.models.btp_statement269"]
 
 
 class BTMIndividualQuery138AllOf(ModelNormal):
@@ -66,11 +67,9 @@ class BTMIndividualQuery138AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,10 +84,12 @@ class BTMIndividualQuery138AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'persistent_query': (btp_statement269.BTPStatement269,),  # noqa: E501
-            'variable_name': (btm_individual_query138.BTMIndividualQuery138,),  # noqa: E501
-            'query_statement': (btp_statement269.BTPStatement269,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "persistent_query": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "variable_name": (
+                btm_individual_query138.BTMIndividualQuery138,
+            ),  # noqa: E501
+            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,25 +97,34 @@ class BTMIndividualQuery138AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'persistent_query': 'persistentQuery',  # noqa: E501
-        'variable_name': 'variableName',  # noqa: E501
-        'query_statement': 'queryStatement',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "persistent_query": "persistentQuery",  # noqa: E501
+        "variable_name": "variableName",  # noqa: E501
+        "query_statement": "queryStatement",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_individual_query138_all_of.BTMIndividualQuery138AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -144,10 +154,12 @@ class BTMIndividualQuery138AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

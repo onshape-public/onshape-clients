@@ -30,26 +30,31 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_circle_description1145
 except ImportError:
     bt_circle_description1145 = sys.modules[
-        'onshape_client.oas.models.bt_circle_description1145']
+        "onshape_client.oas.models.bt_circle_description1145"
+    ]
 try:
     from onshape_client.oas.models import bt_ellipse_description866
 except ImportError:
     bt_ellipse_description866 = sys.modules[
-        'onshape_client.oas.models.bt_ellipse_description866']
+        "onshape_client.oas.models.bt_ellipse_description866"
+    ]
 try:
     from onshape_client.oas.models import bt_line_description1559
 except ImportError:
     bt_line_description1559 = sys.modules[
-        'onshape_client.oas.models.bt_line_description1559']
+        "onshape_client.oas.models.bt_line_description1559"
+    ]
 try:
     from onshape_client.oas.models import bt_spline_description2118
 except ImportError:
     bt_spline_description2118 = sys.modules[
-        'onshape_client.oas.models.bt_spline_description2118']
+        "onshape_client.oas.models.bt_spline_description2118"
+    ]
 
 
 class BTCurveDescription1583(ModelNormal):
@@ -77,19 +82,18 @@ class BTCurveDescription1583(ModelNormal):
     """
 
     allowed_values = {
-        ('type',): {
-            'OTHER': "OTHER",
-            'LINE': "LINE",
-            'CIRCLE': "CIRCLE",
-            'ELLIPSE': "ELLIPSE",
-            'BCURVE': "BCURVE",
-            'ICURVE': "ICURVE",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "OTHER": "OTHER",
+            "LINE": "LINE",
+            "CIRCLE": "CIRCLE",
+            "ELLIPSE": "ELLIPSE",
+            "BCURVE": "BCURVE",
+            "ICURVE": "ICURVE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -104,39 +108,48 @@ class BTCurveDescription1583(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTLineDescription-1559': bt_line_description1559.BTLineDescription1559,
-                'BTCircleDescription-1145': bt_circle_description1145.BTCircleDescription1145,
-                'BTEllipseDescription-866': bt_ellipse_description866.BTEllipseDescription866,
-                'BTSplineDescription-2118': bt_spline_description2118.BTSplineDescription2118,
+            "bt_type": {
+                "BTLineDescription-1559": bt_line_description1559.BTLineDescription1559,
+                "BTCircleDescription-1145": bt_circle_description1145.BTCircleDescription1145,
+                "BTEllipseDescription-866": bt_ellipse_description866.BTEllipseDescription866,
+                "BTSplineDescription-2118": bt_spline_description2118.BTSplineDescription2118,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'type': 'type',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_curve_description1583.BTCurveDescription1583 - a model defined in OpenAPI
 
         Keyword Args:
@@ -164,10 +177,12 @@ class BTCurveDescription1583(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

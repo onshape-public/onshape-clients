@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btfs_value_other1124_all_of
 except ImportError:
     btfs_value_other1124_all_of = sys.modules[
-        'onshape_client.oas.models.btfs_value_other1124_all_of']
+        "onshape_client.oas.models.btfs_value_other1124_all_of"
+    ]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 try:
     from onshape_client.oas.models import btp_type_name290
 except ImportError:
-    btp_type_name290 = sys.modules[
-        'onshape_client.oas.models.btp_type_name290']
+    btp_type_name290 = sys.modules["onshape_client.oas.models.btp_type_name290"]
 
 
 class BTPTypeNameStandard291(ModelComposed):
@@ -72,33 +72,32 @@ class BTPTypeNameStandard291(ModelComposed):
     """
 
     allowed_values = {
-        ('type',): {
-            'UNDEFINED': "UNDEFINED",
-            'BOOLEAN': "BOOLEAN",
-            'NUMBER': "NUMBER",
-            'STRING': "STRING",
-            'ARRAY': "ARRAY",
-            'MAP': "MAP",
-            'BOX': "BOX",
-            'BUILTIN': "BUILTIN",
-            'FUNCTION': "FUNCTION",
-            'UNKNOWN': "UNKNOWN",
+        ("type",): {
+            "UNDEFINED": "UNDEFINED",
+            "BOOLEAN": "BOOLEAN",
+            "NUMBER": "NUMBER",
+            "STRING": "STRING",
+            "ARRAY": "ARRAY",
+            "MAP": "MAP",
+            "BOX": "BOX",
+            "BUILTIN": "BUILTIN",
+            "FUNCTION": "FUNCTION",
+            "UNKNOWN": "UNKNOWN",
         },
-        ('documentation_type',): {
-            'FUNCTION': "FUNCTION",
-            'PREDICATE': "PREDICATE",
-            'CONSTANT': "CONSTANT",
-            'ENUM': "ENUM",
-            'USER_TYPE': "USER_TYPE",
-            'FEATURE_DEFINITION': "FEATURE_DEFINITION",
-            'FILE_HEADER': "FILE_HEADER",
-            'UNDOCUMENTABLE': "UNDOCUMENTABLE",
-            'UNKNOWN': "UNKNOWN",
+        ("documentation_type",): {
+            "FUNCTION": "FUNCTION",
+            "PREDICATE": "PREDICATE",
+            "CONSTANT": "CONSTANT",
+            "ENUM": "ENUM",
+            "USER_TYPE": "USER_TYPE",
+            "FEATURE_DEFINITION": "FEATURE_DEFINITION",
+            "FILE_HEADER": "FILE_HEADER",
+            "UNDOCUMENTABLE": "UNDOCUMENTABLE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -113,17 +112,17 @@ class BTPTypeNameStandard291(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'type': (str,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
-            'documentation_type': (str,),  # noqa: E501
-            'end_source_location': (int,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'short_descriptor': (str,),  # noqa: E501
-            'space_after': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_default': (bool,),  # noqa: E501
-            'start_source_location': (int,),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "atomic": (bool,),  # noqa: E501
+            "documentation_type": (str,),  # noqa: E501
+            "end_source_location": (int,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "short_descriptor": (str,),  # noqa: E501
+            "space_after": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_default": (bool,),  # noqa: E501
+            "start_source_location": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -131,31 +130,40 @@ class BTPTypeNameStandard291(ModelComposed):
         return None
 
     attribute_map = {
-        'type': 'type',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
-        'documentation_type': 'documentationType',  # noqa: E501
-        'end_source_location': 'endSourceLocation',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'short_descriptor': 'shortDescriptor',  # noqa: E501
-        'space_after': 'spaceAfter',  # noqa: E501
-        'space_before': 'spaceBefore',  # noqa: E501
-        'space_default': 'spaceDefault',  # noqa: E501
-        'start_source_location': 'startSourceLocation',  # noqa: E501
+        "type": "type",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "atomic": "atomic",  # noqa: E501
+        "documentation_type": "documentationType",  # noqa: E501
+        "end_source_location": "endSourceLocation",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "short_descriptor": "shortDescriptor",  # noqa: E501
+        "space_after": "spaceAfter",  # noqa: E501
+        "space_before": "spaceBefore",  # noqa: E501
+        "space_default": "spaceDefault",  # noqa: E501
+        "start_source_location": "startSourceLocation",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_type_name_standard291.BTPTypeNameStandard291 - a model defined in OpenAPI
 
         Keyword Args:
@@ -192,13 +200,12 @@ class BTPTypeNameStandard291(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -207,8 +214,7 @@ class BTPTypeNameStandard291(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -217,10 +223,12 @@ class BTPTypeNameStandard291(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -235,12 +243,10 @@ class BTPTypeNameStandard291(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btfs_value_other1124_all_of.BTFSValueOther1124AllOf,
-              btp_type_name290.BTPTypeName290,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btfs_value_other1124_all_of.BTFSValueOther1124AllOf,
+                btp_type_name290.BTPTypeName290,
+            ],
+            "oneOf": [],
         }

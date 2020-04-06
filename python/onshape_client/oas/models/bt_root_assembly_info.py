@@ -30,21 +30,25 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_assembly_feature_info
 except ImportError:
     bt_assembly_feature_info = sys.modules[
-        'onshape_client.oas.models.bt_assembly_feature_info']
+        "onshape_client.oas.models.bt_assembly_feature_info"
+    ]
 try:
     from onshape_client.oas.models import bt_assembly_instance_info
 except ImportError:
     bt_assembly_instance_info = sys.modules[
-        'onshape_client.oas.models.bt_assembly_instance_info']
+        "onshape_client.oas.models.bt_assembly_instance_info"
+    ]
 try:
     from onshape_client.oas.models import bt_assembly_occurrence_info
 except ImportError:
     bt_assembly_occurrence_info = sys.modules[
-        'onshape_client.oas.models.bt_assembly_occurrence_info']
+        "onshape_client.oas.models.bt_assembly_occurrence_info"
+    ]
 
 
 class BTRootAssemblyInfo(ModelNormal):
@@ -71,11 +75,9 @@ class BTRootAssemblyInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,16 +92,22 @@ class BTRootAssemblyInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'configuration': (str,),  # noqa: E501
-            'document_id': (str,),  # noqa: E501
-            'document_microversion': (str,),  # noqa: E501
-            'document_version': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'features': ([bt_assembly_feature_info.BTAssemblyFeatureInfo],),  # noqa: E501
-            'full_configuration': (str,),  # noqa: E501
-            'instances': ([bt_assembly_instance_info.BTAssemblyInstanceInfo],),  # noqa: E501
-            'occurrences': ([bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo],),  # noqa: E501
-            'revision': (str,),  # noqa: E501
+            "configuration": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "document_microversion": (str,),  # noqa: E501
+            "document_version": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "features": (
+                [bt_assembly_feature_info.BTAssemblyFeatureInfo],
+            ),  # noqa: E501
+            "full_configuration": (str,),  # noqa: E501
+            "instances": (
+                [bt_assembly_instance_info.BTAssemblyInstanceInfo],
+            ),  # noqa: E501
+            "occurrences": (
+                [bt_assembly_occurrence_info.BTAssemblyOccurrenceInfo],
+            ),  # noqa: E501
+            "revision": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -107,31 +115,40 @@ class BTRootAssemblyInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'configuration': 'configuration',  # noqa: E501
-        'document_id': 'documentId',  # noqa: E501
-        'document_microversion': 'documentMicroversion',  # noqa: E501
-        'document_version': 'documentVersion',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'features': 'features',  # noqa: E501
-        'full_configuration': 'fullConfiguration',  # noqa: E501
-        'instances': 'instances',  # noqa: E501
-        'occurrences': 'occurrences',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
+        "configuration": "configuration",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "document_microversion": "documentMicroversion",  # noqa: E501
+        "document_version": "documentVersion",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "features": "features",  # noqa: E501
+        "full_configuration": "fullConfiguration",  # noqa: E501
+        "instances": "instances",  # noqa: E501
+        "occurrences": "occurrences",  # noqa: E501
+        "revision": "revision",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_root_assembly_info.BTRootAssemblyInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -167,10 +184,12 @@ class BTRootAssemblyInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

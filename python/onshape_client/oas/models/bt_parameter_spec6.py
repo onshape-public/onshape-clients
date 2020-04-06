@@ -30,91 +30,107 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_parameter_spec_appearance1740
 except ImportError:
     bt_parameter_spec_appearance1740 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_appearance1740']
+        "onshape_client.oas.models.bt_parameter_spec_appearance1740"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_array2600
 except ImportError:
     bt_parameter_spec_array2600 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_array2600']
+        "onshape_client.oas.models.bt_parameter_spec_array2600"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_boolean170
 except ImportError:
     bt_parameter_spec_boolean170 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_boolean170']
+        "onshape_client.oas.models.bt_parameter_spec_boolean170"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_database1071
 except ImportError:
     bt_parameter_spec_database1071 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_database1071']
+        "onshape_client.oas.models.bt_parameter_spec_database1071"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_derived736
 except ImportError:
     bt_parameter_spec_derived736 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_derived736']
+        "onshape_client.oas.models.bt_parameter_spec_derived736"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_enum171
 except ImportError:
     bt_parameter_spec_enum171 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_enum171']
+        "onshape_client.oas.models.bt_parameter_spec_enum171"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_feature_list703
 except ImportError:
     bt_parameter_spec_feature_list703 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_feature_list703']
+        "onshape_client.oas.models.bt_parameter_spec_feature_list703"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_foreign_id172
 except ImportError:
     bt_parameter_spec_foreign_id172 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_foreign_id172']
+        "onshape_client.oas.models.bt_parameter_spec_foreign_id172"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_lookup_table_path761
 except ImportError:
     bt_parameter_spec_lookup_table_path761 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_lookup_table_path761']
+        "onshape_client.oas.models.bt_parameter_spec_lookup_table_path761"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_material2700
 except ImportError:
     bt_parameter_spec_material2700 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_material2700']
+        "onshape_client.oas.models.bt_parameter_spec_material2700"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_nullable_quantity715
 except ImportError:
     bt_parameter_spec_nullable_quantity715 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_nullable_quantity715']
+        "onshape_client.oas.models.bt_parameter_spec_nullable_quantity715"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_quantity173
 except ImportError:
     bt_parameter_spec_quantity173 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_quantity173']
+        "onshape_client.oas.models.bt_parameter_spec_quantity173"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_query174
 except ImportError:
     bt_parameter_spec_query174 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_query174']
+        "onshape_client.oas.models.bt_parameter_spec_query174"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference2789
 except ImportError:
     bt_parameter_spec_reference2789 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_reference2789']
+        "onshape_client.oas.models.bt_parameter_spec_reference2789"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_string175
 except ImportError:
     bt_parameter_spec_string175 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_string175']
+        "onshape_client.oas.models.bt_parameter_spec_string175"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
     bt_parameter_visibility_condition177 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_visibility_condition177']
+        "onshape_client.oas.models.bt_parameter_visibility_condition177"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTParameterSpec6(ModelNormal):
@@ -142,38 +158,37 @@ class BTParameterSpec6(ModelNormal):
     """
 
     allowed_values = {
-        ('ui_hints',): {
-            'OPPOSITE_DIRECTION': "OPPOSITE_DIRECTION",
-            'ALWAYS_HIDDEN': "ALWAYS_HIDDEN",
-            'SHOW_CREATE_SELECTION': "SHOW_CREATE_SELECTION",
-            'CONTROL_VISIBILITY': "CONTROL_VISIBILITY",
-            'NO_PREVIEW_PROVIDED': "NO_PREVIEW_PROVIDED",
-            'REMEMBER_PREVIOUS_VALUE': "REMEMBER_PREVIOUS_VALUE",
-            'DISPLAY_SHORT': "DISPLAY_SHORT",
-            'ALLOW_FEATURE_SELECTION': "ALLOW_FEATURE_SELECTION",
-            'MATE_CONNECTOR_AXIS_TYPE': "MATE_CONNECTOR_AXIS_TYPE",
-            'PRIMARY_AXIS': "PRIMARY_AXIS",
-            'SHOW_EXPRESSION': "SHOW_EXPRESSION",
-            'OPPOSITE_DIRECTION_CIRCULAR': "OPPOSITE_DIRECTION_CIRCULAR",
-            'SHOW_LABEL': "SHOW_LABEL",
-            'HORIZONTAL_ENUM': "HORIZONTAL_ENUM",
-            'UNCONFIGURABLE': "UNCONFIGURABLE",
-            'MATCH_LAST_ARRAY_ITEM': "MATCH_LAST_ARRAY_ITEM",
-            'COLLAPSE_ARRAY_ITEMS': "COLLAPSE_ARRAY_ITEMS",
-            'INITIAL_FOCUS_ON_EDIT': "INITIAL_FOCUS_ON_EDIT",
-            'INITIAL_FOCUS': "INITIAL_FOCUS",
-            'DISPLAY_CURRENT_VALUE_ONLY': "DISPLAY_CURRENT_VALUE_ONLY",
-            'READ_ONLY': "READ_ONLY",
-            'PREVENT_CREATING_NEW_MATE_CONNECTORS': "PREVENT_CREATING_NEW_MATE_CONNECTORS",
-            'FIRST_IN_ROW': "FIRST_IN_ROW",
-            'ALLOW_QUERY_ORDER': "ALLOW_QUERY_ORDER",
-            'PREVENT_ARRAY_REORDER': "PREVENT_ARRAY_REORDER",
-            'UNKNOWN': "UNKNOWN",
+        ("ui_hints",): {
+            "OPPOSITE_DIRECTION": "OPPOSITE_DIRECTION",
+            "ALWAYS_HIDDEN": "ALWAYS_HIDDEN",
+            "SHOW_CREATE_SELECTION": "SHOW_CREATE_SELECTION",
+            "CONTROL_VISIBILITY": "CONTROL_VISIBILITY",
+            "NO_PREVIEW_PROVIDED": "NO_PREVIEW_PROVIDED",
+            "REMEMBER_PREVIOUS_VALUE": "REMEMBER_PREVIOUS_VALUE",
+            "DISPLAY_SHORT": "DISPLAY_SHORT",
+            "ALLOW_FEATURE_SELECTION": "ALLOW_FEATURE_SELECTION",
+            "MATE_CONNECTOR_AXIS_TYPE": "MATE_CONNECTOR_AXIS_TYPE",
+            "PRIMARY_AXIS": "PRIMARY_AXIS",
+            "SHOW_EXPRESSION": "SHOW_EXPRESSION",
+            "OPPOSITE_DIRECTION_CIRCULAR": "OPPOSITE_DIRECTION_CIRCULAR",
+            "SHOW_LABEL": "SHOW_LABEL",
+            "HORIZONTAL_ENUM": "HORIZONTAL_ENUM",
+            "UNCONFIGURABLE": "UNCONFIGURABLE",
+            "MATCH_LAST_ARRAY_ITEM": "MATCH_LAST_ARRAY_ITEM",
+            "COLLAPSE_ARRAY_ITEMS": "COLLAPSE_ARRAY_ITEMS",
+            "INITIAL_FOCUS_ON_EDIT": "INITIAL_FOCUS_ON_EDIT",
+            "INITIAL_FOCUS": "INITIAL_FOCUS",
+            "DISPLAY_CURRENT_VALUE_ONLY": "DISPLAY_CURRENT_VALUE_ONLY",
+            "READ_ONLY": "READ_ONLY",
+            "PREVENT_CREATING_NEW_MATE_CONNECTORS": "PREVENT_CREATING_NEW_MATE_CONNECTORS",
+            "FIRST_IN_ROW": "FIRST_IN_ROW",
+            "ALLOW_QUERY_ORDER": "ALLOW_QUERY_ORDER",
+            "PREVENT_ARRAY_REORDER": "PREVENT_ARRAY_REORDER",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -188,72 +203,83 @@ class BTParameterSpec6(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'additional_localized_strings': (int,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'column_name': (str,),  # noqa: E501
-            'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
-            'icon_uri': (str,),  # noqa: E501
-            'localizable_name': (str,),  # noqa: E501
-            'localized_name': (str,),  # noqa: E501
-            'parameter_id': (str,),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
-            'strings_to_localize': ([str],),  # noqa: E501
-            'ui_hint': (str,),  # noqa: E501
-            'ui_hints': ([str],),  # noqa: E501
-            'visibility_condition': (bt_parameter_visibility_condition177.BTParameterVisibilityCondition177,),  # noqa: E501
+            "additional_localized_strings": (int,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "column_name": (str,),  # noqa: E501
+            "default_value": (btm_parameter1.BTMParameter1,),  # noqa: E501
+            "icon_uri": (str,),  # noqa: E501
+            "localizable_name": (str,),  # noqa: E501
+            "localized_name": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "parameter_name": (str,),  # noqa: E501
+            "strings_to_localize": ([str],),  # noqa: E501
+            "ui_hint": (str,),  # noqa: E501
+            "ui_hints": ([str],),  # noqa: E501
+            "visibility_condition": (
+                bt_parameter_visibility_condition177.BTParameterVisibilityCondition177,
+            ),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTParameterSpecAppearance-1740': bt_parameter_spec_appearance1740.BTParameterSpecAppearance1740,
-                'BTParameterSpecForeignId-172': bt_parameter_spec_foreign_id172.BTParameterSpecForeignId172,
-                'BTParameterSpecMaterial-2700': bt_parameter_spec_material2700.BTParameterSpecMaterial2700,
-                'BTParameterSpecQuantity-173': bt_parameter_spec_quantity173.BTParameterSpecQuantity173,
-                'BTParameterSpecNullableQuantity-715': bt_parameter_spec_nullable_quantity715.BTParameterSpecNullableQuantity715,
-                'BTParameterSpecString-175': bt_parameter_spec_string175.BTParameterSpecString175,
-                'BTParameterSpecReference-2789': bt_parameter_spec_reference2789.BTParameterSpecReference2789,
-                'BTParameterSpecDatabase-1071': bt_parameter_spec_database1071.BTParameterSpecDatabase1071,
-                'BTParameterSpecArray-2600': bt_parameter_spec_array2600.BTParameterSpecArray2600,
-                'BTParameterSpecLookupTablePath-761': bt_parameter_spec_lookup_table_path761.BTParameterSpecLookupTablePath761,
-                'BTParameterSpecBoolean-170': bt_parameter_spec_boolean170.BTParameterSpecBoolean170,
-                'BTParameterSpecEnum-171': bt_parameter_spec_enum171.BTParameterSpecEnum171,
-                'BTParameterSpecFeatureList-703': bt_parameter_spec_feature_list703.BTParameterSpecFeatureList703,
-                'BTParameterSpecQuery-174': bt_parameter_spec_query174.BTParameterSpecQuery174,
-                'BTParameterSpecDerived-736': bt_parameter_spec_derived736.BTParameterSpecDerived736,
+            "bt_type": {
+                "BTParameterSpecAppearance-1740": bt_parameter_spec_appearance1740.BTParameterSpecAppearance1740,
+                "BTParameterSpecForeignId-172": bt_parameter_spec_foreign_id172.BTParameterSpecForeignId172,
+                "BTParameterSpecMaterial-2700": bt_parameter_spec_material2700.BTParameterSpecMaterial2700,
+                "BTParameterSpecQuantity-173": bt_parameter_spec_quantity173.BTParameterSpecQuantity173,
+                "BTParameterSpecNullableQuantity-715": bt_parameter_spec_nullable_quantity715.BTParameterSpecNullableQuantity715,
+                "BTParameterSpecString-175": bt_parameter_spec_string175.BTParameterSpecString175,
+                "BTParameterSpecReference-2789": bt_parameter_spec_reference2789.BTParameterSpecReference2789,
+                "BTParameterSpecDatabase-1071": bt_parameter_spec_database1071.BTParameterSpecDatabase1071,
+                "BTParameterSpecArray-2600": bt_parameter_spec_array2600.BTParameterSpecArray2600,
+                "BTParameterSpecLookupTablePath-761": bt_parameter_spec_lookup_table_path761.BTParameterSpecLookupTablePath761,
+                "BTParameterSpecBoolean-170": bt_parameter_spec_boolean170.BTParameterSpecBoolean170,
+                "BTParameterSpecEnum-171": bt_parameter_spec_enum171.BTParameterSpecEnum171,
+                "BTParameterSpecFeatureList-703": bt_parameter_spec_feature_list703.BTParameterSpecFeatureList703,
+                "BTParameterSpecQuery-174": bt_parameter_spec_query174.BTParameterSpecQuery174,
+                "BTParameterSpecDerived-736": bt_parameter_spec_derived736.BTParameterSpecDerived736,
             },
         }
 
     attribute_map = {
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'column_name': 'columnName',  # noqa: E501
-        'default_value': 'defaultValue',  # noqa: E501
-        'icon_uri': 'iconUri',  # noqa: E501
-        'localizable_name': 'localizableName',  # noqa: E501
-        'localized_name': 'localizedName',  # noqa: E501
-        'parameter_id': 'parameterId',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
-        'strings_to_localize': 'stringsToLocalize',  # noqa: E501
-        'ui_hint': 'uiHint',  # noqa: E501
-        'ui_hints': 'uiHints',  # noqa: E501
-        'visibility_condition': 'visibilityCondition',  # noqa: E501
+        "additional_localized_strings": "additionalLocalizedStrings",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "column_name": "columnName",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "icon_uri": "iconUri",  # noqa: E501
+        "localizable_name": "localizableName",  # noqa: E501
+        "localized_name": "localizedName",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "parameter_name": "parameterName",  # noqa: E501
+        "strings_to_localize": "stringsToLocalize",  # noqa: E501
+        "ui_hint": "uiHint",  # noqa: E501
+        "ui_hints": "uiHints",  # noqa: E501
+        "visibility_condition": "visibilityCondition",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_parameter_spec6.BTParameterSpec6 - a model defined in OpenAPI
 
         Keyword Args:
@@ -292,10 +318,12 @@ class BTParameterSpec6(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

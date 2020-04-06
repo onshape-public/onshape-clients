@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_statement_constant_declaration273
 except ImportError:
     btp_statement_constant_declaration273 = sys.modules[
-        'onshape_client.oas.models.btp_statement_constant_declaration273']
+        "onshape_client.oas.models.btp_statement_constant_declaration273"
+    ]
 
 
 class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
@@ -61,11 +63,9 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,8 +80,10 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'declaration': (btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "declaration": (
+                btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,23 +91,32 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'declaration': 'declaration',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "declaration": "declaration",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_top_level_constant_declaration283_all_of.BTPTopLevelConstantDeclaration283AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -133,10 +144,12 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

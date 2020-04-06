@@ -56,11 +56,9 @@ class BTAppElementReferenceParams(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,25 +73,25 @@ class BTAppElementReferenceParams(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'has_document_microversions': (bool,),  # noqa: E501
-            'id_tag': (str,),  # noqa: E501
-            'id_tag_microversion_id': (str,),  # noqa: E501
-            'is_sketch_only': (bool,),  # noqa: E501
-            'parent_change_id': (str,),  # noqa: E501
-            'part_number': (str,),  # noqa: E501
-            'pure_sketch': (bool,),  # noqa: E501
-            'reference_type': (int,),  # noqa: E501
-            'return_error': (bool,),  # noqa: E501
-            'revision': (str,),  # noqa: E501
-            'sketch_ids': ([str],),  # noqa: E501
-            'target_configuration': (str,),  # noqa: E501
-            'target_document_id': (str,),  # noqa: E501
-            'target_element_id': (str,),  # noqa: E501
-            'target_microversion_id': (str,),  # noqa: E501
-            'target_version_id': (str,),  # noqa: E501
-            'track_new_versions': (bool,),  # noqa: E501
-            'transaction_id': (str,),  # noqa: E501
-            'update_sketch_info': (bool,),  # noqa: E501
+            "has_document_microversions": (bool,),  # noqa: E501
+            "id_tag": (str,),  # noqa: E501
+            "id_tag_microversion_id": (str,),  # noqa: E501
+            "is_sketch_only": (bool,),  # noqa: E501
+            "parent_change_id": (str,),  # noqa: E501
+            "part_number": (str,),  # noqa: E501
+            "pure_sketch": (bool,),  # noqa: E501
+            "reference_type": (int,),  # noqa: E501
+            "return_error": (bool,),  # noqa: E501
+            "revision": (str,),  # noqa: E501
+            "sketch_ids": ([str],),  # noqa: E501
+            "target_configuration": (str,),  # noqa: E501
+            "target_document_id": (str,),  # noqa: E501
+            "target_element_id": (str,),  # noqa: E501
+            "target_microversion_id": (str,),  # noqa: E501
+            "target_version_id": (str,),  # noqa: E501
+            "track_new_versions": (bool,),  # noqa: E501
+            "transaction_id": (str,),  # noqa: E501
+            "update_sketch_info": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,40 +99,49 @@ class BTAppElementReferenceParams(ModelNormal):
         return None
 
     attribute_map = {
-        'has_document_microversions': 'hasDocumentMicroversions',  # noqa: E501
-        'id_tag': 'idTag',  # noqa: E501
-        'id_tag_microversion_id': 'idTagMicroversionId',  # noqa: E501
-        'is_sketch_only': 'isSketchOnly',  # noqa: E501
-        'parent_change_id': 'parentChangeId',  # noqa: E501
-        'part_number': 'partNumber',  # noqa: E501
-        'pure_sketch': 'pureSketch',  # noqa: E501
-        'reference_type': 'referenceType',  # noqa: E501
-        'return_error': 'returnError',  # noqa: E501
-        'revision': 'revision',  # noqa: E501
-        'sketch_ids': 'sketchIds',  # noqa: E501
-        'target_configuration': 'targetConfiguration',  # noqa: E501
-        'target_document_id': 'targetDocumentId',  # noqa: E501
-        'target_element_id': 'targetElementId',  # noqa: E501
-        'target_microversion_id': 'targetMicroversionId',  # noqa: E501
-        'target_version_id': 'targetVersionId',  # noqa: E501
-        'track_new_versions': 'trackNewVersions',  # noqa: E501
-        'transaction_id': 'transactionId',  # noqa: E501
-        'update_sketch_info': 'updateSketchInfo',  # noqa: E501
+        "has_document_microversions": "hasDocumentMicroversions",  # noqa: E501
+        "id_tag": "idTag",  # noqa: E501
+        "id_tag_microversion_id": "idTagMicroversionId",  # noqa: E501
+        "is_sketch_only": "isSketchOnly",  # noqa: E501
+        "parent_change_id": "parentChangeId",  # noqa: E501
+        "part_number": "partNumber",  # noqa: E501
+        "pure_sketch": "pureSketch",  # noqa: E501
+        "reference_type": "referenceType",  # noqa: E501
+        "return_error": "returnError",  # noqa: E501
+        "revision": "revision",  # noqa: E501
+        "sketch_ids": "sketchIds",  # noqa: E501
+        "target_configuration": "targetConfiguration",  # noqa: E501
+        "target_document_id": "targetDocumentId",  # noqa: E501
+        "target_element_id": "targetElementId",  # noqa: E501
+        "target_microversion_id": "targetMicroversionId",  # noqa: E501
+        "target_version_id": "targetVersionId",  # noqa: E501
+        "track_new_versions": "trackNewVersions",  # noqa: E501
+        "transaction_id": "transactionId",  # noqa: E501
+        "update_sketch_info": "updateSketchInfo",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_app_element_reference_params.BTAppElementReferenceParams - a model defined in OpenAPI
 
         Keyword Args:
@@ -179,10 +186,12 @@ class BTAppElementReferenceParams(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

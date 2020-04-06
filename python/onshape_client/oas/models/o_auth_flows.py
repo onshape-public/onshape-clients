@@ -29,11 +29,11 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import o_auth_flow
 except ImportError:
-    o_auth_flow = sys.modules[
-        'onshape_client.oas.models.o_auth_flow']
+    o_auth_flow = sys.modules["onshape_client.oas.models.o_auth_flow"]
 
 
 class OAuthFlows(ModelNormal):
@@ -60,11 +60,9 @@ class OAuthFlows(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -79,11 +77,13 @@ class OAuthFlows(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'authorization_code': (o_auth_flow.OAuthFlow,),  # noqa: E501
-            'client_credentials': (o_auth_flow.OAuthFlow,),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'implicit': (o_auth_flow.OAuthFlow,),  # noqa: E501
-            'password': (o_auth_flow.OAuthFlow,),  # noqa: E501
+            "authorization_code": (o_auth_flow.OAuthFlow,),  # noqa: E501
+            "client_credentials": (o_auth_flow.OAuthFlow,),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "implicit": (o_auth_flow.OAuthFlow,),  # noqa: E501
+            "password": (o_auth_flow.OAuthFlow,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,26 +91,35 @@ class OAuthFlows(ModelNormal):
         return None
 
     attribute_map = {
-        'authorization_code': 'authorizationCode',  # noqa: E501
-        'client_credentials': 'clientCredentials',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'implicit': 'implicit',  # noqa: E501
-        'password': 'password',  # noqa: E501
+        "authorization_code": "authorizationCode",  # noqa: E501
+        "client_credentials": "clientCredentials",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "implicit": "implicit",  # noqa: E501
+        "password": "password",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """o_auth_flows.OAuthFlows - a model defined in OpenAPI
 
 

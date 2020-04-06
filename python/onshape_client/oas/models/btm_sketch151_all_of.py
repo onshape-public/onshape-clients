@@ -30,16 +30,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_sketch_constraint2
 except ImportError:
     btm_sketch_constraint2 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_constraint2']
+        "onshape_client.oas.models.btm_sketch_constraint2"
+    ]
 try:
     from onshape_client.oas.models import btm_sketch_geom_entity5
 except ImportError:
     btm_sketch_geom_entity5 = sys.modules[
-        'onshape_client.oas.models.btm_sketch_geom_entity5']
+        "onshape_client.oas.models.btm_sketch_geom_entity5"
+    ]
 
 
 class BTMSketch151AllOf(ModelNormal):
@@ -66,11 +69,9 @@ class BTMSketch151AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,9 +86,11 @@ class BTMSketch151AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'entities': ([btm_sketch_geom_entity5.BTMSketchGeomEntity5],),  # noqa: E501
-            'constraints': ([btm_sketch_constraint2.BTMSketchConstraint2],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "entities": ([btm_sketch_geom_entity5.BTMSketchGeomEntity5],),  # noqa: E501
+            "constraints": (
+                [btm_sketch_constraint2.BTMSketchConstraint2],
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,24 +98,33 @@ class BTMSketch151AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'entities': 'entities',  # noqa: E501
-        'constraints': 'constraints',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "entities": "entities",  # noqa: E501
+        "constraints": "constraints",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_sketch151_all_of.BTMSketch151AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -141,10 +153,12 @@ class BTMSketch151AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

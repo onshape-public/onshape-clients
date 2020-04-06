@@ -29,21 +29,19 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import encoding
 except ImportError:
-    encoding = sys.modules[
-        'onshape_client.oas.models.encoding']
+    encoding = sys.modules["onshape_client.oas.models.encoding"]
 try:
     from onshape_client.oas.models import example
 except ImportError:
-    example = sys.modules[
-        'onshape_client.oas.models.example']
+    example = sys.modules["onshape_client.oas.models.example"]
 try:
     from onshape_client.oas.models import schema
 except ImportError:
-    schema = sys.modules[
-        'onshape_client.oas.models.schema']
+    schema = sys.modules["onshape_client.oas.models.schema"]
 
 
 class MediaType(ModelNormal):
@@ -70,11 +68,9 @@ class MediaType(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -89,11 +85,22 @@ class MediaType(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'encoding': ({str: (encoding.Encoding,)},),  # noqa: E501
-            'example': (bool, date, datetime, dict, float, int, list, str,),  # noqa: E501
-            'examples': ({str: (example.Example,)},),  # noqa: E501
-            'extensions': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'schema': (schema.Schema,),  # noqa: E501
+            "encoding": ({str: (encoding.Encoding,)},),  # noqa: E501
+            "example": (
+                bool,
+                date,
+                datetime,
+                dict,
+                float,
+                int,
+                list,
+                str,
+            ),  # noqa: E501
+            "examples": ({str: (example.Example,)},),  # noqa: E501
+            "extensions": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "schema": (schema.Schema,),  # noqa: E501
         }
 
     @staticmethod
@@ -101,26 +108,35 @@ class MediaType(ModelNormal):
         return None
 
     attribute_map = {
-        'encoding': 'encoding',  # noqa: E501
-        'example': 'example',  # noqa: E501
-        'examples': 'examples',  # noqa: E501
-        'extensions': 'extensions',  # noqa: E501
-        'schema': 'schema',  # noqa: E501
+        "encoding": "encoding",  # noqa: E501
+        "example": "example",  # noqa: E501
+        "examples": "examples",  # noqa: E501
+        "extensions": "extensions",  # noqa: E501
+        "schema": "schema",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """media_type.MediaType - a model defined in OpenAPI
 
 

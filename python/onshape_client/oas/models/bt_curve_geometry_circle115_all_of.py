@@ -56,11 +56,9 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,13 +73,13 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'radius': (float,),  # noqa: E501
-            'xcenter': (float,),  # noqa: E501
-            'ycenter': (float,),  # noqa: E501
-            'xdir': (float,),  # noqa: E501
-            'ydir': (float,),  # noqa: E501
-            'clockwise': (bool,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "radius": (float,),  # noqa: E501
+            "xcenter": (float,),  # noqa: E501
+            "ycenter": (float,),  # noqa: E501
+            "xdir": (float,),  # noqa: E501
+            "ydir": (float,),  # noqa: E501
+            "clockwise": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,28 +87,37 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'radius': 'radius',  # noqa: E501
-        'xcenter': 'xcenter',  # noqa: E501
-        'ycenter': 'ycenter',  # noqa: E501
-        'xdir': 'xdir',  # noqa: E501
-        'ydir': 'ydir',  # noqa: E501
-        'clockwise': 'clockwise',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "radius": "radius",  # noqa: E501
+        "xcenter": "xcenter",  # noqa: E501
+        "ycenter": "ycenter",  # noqa: E501
+        "xdir": "xdir",  # noqa: E501
+        "ydir": "ydir",  # noqa: E501
+        "clockwise": "clockwise",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_curve_geometry_circle115_all_of.BTCurveGeometryCircle115AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -143,10 +150,12 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,21 +30,25 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_full_element_id_with_document1729
 except ImportError:
     bt_full_element_id_with_document1729 = sys.modules[
-        'onshape_client.oas.models.bt_full_element_id_with_document1729']
+        "onshape_client.oas.models.bt_full_element_id_with_document1729"
+    ]
 try:
     from onshape_client.oas.models import bt_microversion_id366
 except ImportError:
     bt_microversion_id366 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id366']
+        "onshape_client.oas.models.bt_microversion_id366"
+    ]
 try:
     from onshape_client.oas.models import bt_microversion_id_and_configuration2338
 except ImportError:
     bt_microversion_id_and_configuration2338 = sys.modules[
-        'onshape_client.oas.models.bt_microversion_id_and_configuration2338']
+        "onshape_client.oas.models.bt_microversion_id_and_configuration2338"
+    ]
 
 
 class BTFullElementId756(ModelNormal):
@@ -71,11 +75,9 @@ class BTFullElementId756(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,44 +92,59 @@ class BTFullElementId756(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'configured': (bool,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'microversion_id': (bt_microversion_id366.BTMicroversionId366,),  # noqa: E501
-            'microversion_id_and_configuration': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
-            'target': (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "configured": (bool,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "microversion_id": (
+                bt_microversion_id366.BTMicroversionId366,
+            ),  # noqa: E501
+            "microversion_id_and_configuration": (
+                bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
+            ),  # noqa: E501
+            "target": (
+                bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
+            ),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTFullElementIdWithDocument-1729': bt_full_element_id_with_document1729.BTFullElementIdWithDocument1729,
+            "bt_type": {
+                "BTFullElementIdWithDocument-1729": bt_full_element_id_with_document1729.BTFullElementIdWithDocument1729,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'configured': 'configured',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'microversion_id': 'microversionId',  # noqa: E501
-        'microversion_id_and_configuration': 'microversionIdAndConfiguration',  # noqa: E501
-        'target': 'target',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "configured": "configured",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "microversion_id": "microversionId",  # noqa: E501
+        "microversion_id_and_configuration": "microversionIdAndConfiguration",  # noqa: E501
+        "target": "target",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_full_element_id756.BTFullElementId756 - a model defined in OpenAPI
 
         Keyword Args:
@@ -159,10 +176,12 @@ class BTFullElementId756(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

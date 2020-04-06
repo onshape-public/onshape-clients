@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_property_accessor23
 except ImportError:
     btp_property_accessor23 = sys.modules[
-        'onshape_client.oas.models.btp_property_accessor23']
+        "onshape_client.oas.models.btp_property_accessor23"
+    ]
 try:
     from onshape_client.oas.models import btpl_value249
 except ImportError:
-    btpl_value249 = sys.modules[
-        'onshape_client.oas.models.btpl_value249']
+    btpl_value249 = sys.modules["onshape_client.oas.models.btpl_value249"]
 
 
 class BTPLValueAccess250AllOf(ModelNormal):
@@ -66,11 +67,9 @@ class BTPLValueAccess250AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,9 +84,9 @@ class BTPLValueAccess250AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'accessor': (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
-            'base': (btpl_value249.BTPLValue249,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "accessor": (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
+            "base": (btpl_value249.BTPLValue249,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,24 +94,33 @@ class BTPLValueAccess250AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'accessor': 'accessor',  # noqa: E501
-        'base': 'base',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "accessor": "accessor",  # noqa: E501
+        "base": "base",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btpl_value_access250_all_of.BTPLValueAccess250AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -141,10 +149,12 @@ class BTPLValueAccess250AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

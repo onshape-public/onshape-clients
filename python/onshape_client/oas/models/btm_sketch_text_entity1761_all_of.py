@@ -56,11 +56,9 @@ class BTMSketchTextEntity1761AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,14 +73,14 @@ class BTMSketchTextEntity1761AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'font_name': (str,),  # noqa: E501
-            'text': (str,),  # noqa: E501
-            'ascent': (float,),  # noqa: E501
-            'baseline_start_x': (float,),  # noqa: E501
-            'baseline_start_y': (float,),  # noqa: E501
-            'baseline_direction_x': (float,),  # noqa: E501
-            'baseline_direction_y': (float,),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "font_name": (str,),  # noqa: E501
+            "text": (str,),  # noqa: E501
+            "ascent": (float,),  # noqa: E501
+            "baseline_start_x": (float,),  # noqa: E501
+            "baseline_start_y": (float,),  # noqa: E501
+            "baseline_direction_x": (float,),  # noqa: E501
+            "baseline_direction_y": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,29 +88,38 @@ class BTMSketchTextEntity1761AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'font_name': 'fontName',  # noqa: E501
-        'text': 'text',  # noqa: E501
-        'ascent': 'ascent',  # noqa: E501
-        'baseline_start_x': 'baselineStartX',  # noqa: E501
-        'baseline_start_y': 'baselineStartY',  # noqa: E501
-        'baseline_direction_x': 'baselineDirectionX',  # noqa: E501
-        'baseline_direction_y': 'baselineDirectionY',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "font_name": "fontName",  # noqa: E501
+        "text": "text",  # noqa: E501
+        "ascent": "ascent",  # noqa: E501
+        "baseline_start_x": "baselineStartX",  # noqa: E501
+        "baseline_start_y": "baselineStartY",  # noqa: E501
+        "baseline_direction_x": "baselineDirectionX",  # noqa: E501
+        "baseline_direction_y": "baselineDirectionY",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_sketch_text_entity1761_all_of.BTMSketchTextEntity1761AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -146,10 +153,12 @@ class BTMSketchTextEntity1761AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

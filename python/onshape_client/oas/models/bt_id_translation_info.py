@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_id_translation_result_info
 except ImportError:
     bt_id_translation_result_info = sys.modules[
-        'onshape_client.oas.models.bt_id_translation_result_info']
+        "onshape_client.oas.models.bt_id_translation_result_info"
+    ]
 
 
 class BTIdTranslationInfo(ModelNormal):
@@ -61,11 +63,9 @@ class BTIdTranslationInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,11 +80,13 @@ class BTIdTranslationInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'document_id': (str,),  # noqa: E501
-            'element_id': (str,),  # noqa: E501
-            'ids': ([bt_id_translation_result_info.BTIdTranslationResultInfo],),  # noqa: E501
-            'source_document_microversion': (str,),  # noqa: E501
-            'target_document_microversion': (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "element_id": (str,),  # noqa: E501
+            "ids": (
+                [bt_id_translation_result_info.BTIdTranslationResultInfo],
+            ),  # noqa: E501
+            "source_document_microversion": (str,),  # noqa: E501
+            "target_document_microversion": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,26 +94,35 @@ class BTIdTranslationInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'document_id': 'documentId',  # noqa: E501
-        'element_id': 'elementId',  # noqa: E501
-        'ids': 'ids',  # noqa: E501
-        'source_document_microversion': 'sourceDocumentMicroversion',  # noqa: E501
-        'target_document_microversion': 'targetDocumentMicroversion',  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "element_id": "elementId",  # noqa: E501
+        "ids": "ids",  # noqa: E501
+        "source_document_microversion": "sourceDocumentMicroversion",  # noqa: E501
+        "target_document_microversion": "targetDocumentMicroversion",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_id_translation_info.BTIdTranslationInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -142,10 +153,12 @@ class BTIdTranslationInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

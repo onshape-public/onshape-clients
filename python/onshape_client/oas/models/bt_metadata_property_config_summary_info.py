@@ -30,11 +30,13 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_metadata_category_summary_info
 except ImportError:
     bt_metadata_category_summary_info = sys.modules[
-        'onshape_client.oas.models.bt_metadata_category_summary_info']
+        "onshape_client.oas.models.bt_metadata_category_summary_info"
+    ]
 
 
 class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
@@ -61,11 +63,9 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -80,13 +80,15 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'category_id': (str,),  # noqa: E501
-            'category_summary_info': (bt_metadata_category_summary_info.BTMetadataCategorySummaryInfo,),  # noqa: E501
-            'display_name': (str,),  # noqa: E501
-            'object_type': (int,),  # noqa: E501
-            'property_id': (str,),  # noqa: E501
-            'publish_state': (int,),  # noqa: E501
-            'schema_id': (str,),  # noqa: E501
+            "category_id": (str,),  # noqa: E501
+            "category_summary_info": (
+                bt_metadata_category_summary_info.BTMetadataCategorySummaryInfo,
+            ),  # noqa: E501
+            "display_name": (str,),  # noqa: E501
+            "object_type": (int,),  # noqa: E501
+            "property_id": (str,),  # noqa: E501
+            "publish_state": (int,),  # noqa: E501
+            "schema_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,28 +96,37 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'category_id': 'categoryId',  # noqa: E501
-        'category_summary_info': 'categorySummaryInfo',  # noqa: E501
-        'display_name': 'displayName',  # noqa: E501
-        'object_type': 'objectType',  # noqa: E501
-        'property_id': 'propertyId',  # noqa: E501
-        'publish_state': 'publishState',  # noqa: E501
-        'schema_id': 'schemaId',  # noqa: E501
+        "category_id": "categoryId",  # noqa: E501
+        "category_summary_info": "categorySummaryInfo",  # noqa: E501
+        "display_name": "displayName",  # noqa: E501
+        "object_type": "objectType",  # noqa: E501
+        "property_id": "propertyId",  # noqa: E501
+        "publish_state": "publishState",  # noqa: E501
+        "schema_id": "schemaId",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_metadata_property_config_summary_info.BTMetadataPropertyConfigSummaryInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -148,10 +159,12 @@ class BTMetadataPropertyConfigSummaryInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

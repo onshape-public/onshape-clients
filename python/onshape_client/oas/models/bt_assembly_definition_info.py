@@ -30,26 +30,29 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_assembly_parts_info
 except ImportError:
     bt_assembly_parts_info = sys.modules[
-        'onshape_client.oas.models.bt_assembly_parts_info']
+        "onshape_client.oas.models.bt_assembly_parts_info"
+    ]
 try:
     from onshape_client.oas.models import bt_assembly_ps_feature_info
 except ImportError:
     bt_assembly_ps_feature_info = sys.modules[
-        'onshape_client.oas.models.bt_assembly_ps_feature_info']
+        "onshape_client.oas.models.bt_assembly_ps_feature_info"
+    ]
 try:
     from onshape_client.oas.models import bt_root_assembly_info
 except ImportError:
     bt_root_assembly_info = sys.modules[
-        'onshape_client.oas.models.bt_root_assembly_info']
+        "onshape_client.oas.models.bt_root_assembly_info"
+    ]
 try:
     from onshape_client.oas.models import bt_sub_assembly_info
 except ImportError:
-    bt_sub_assembly_info = sys.modules[
-        'onshape_client.oas.models.bt_sub_assembly_info']
+    bt_sub_assembly_info = sys.modules["onshape_client.oas.models.bt_sub_assembly_info"]
 
 
 class BTAssemblyDefinitionInfo(ModelNormal):
@@ -76,11 +79,9 @@ class BTAssemblyDefinitionInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -95,10 +96,12 @@ class BTAssemblyDefinitionInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'part_studio_features': ([bt_assembly_ps_feature_info.BTAssemblyPSFeatureInfo],),  # noqa: E501
-            'parts': ([bt_assembly_parts_info.BTAssemblyPartsInfo],),  # noqa: E501
-            'root_assembly': (bt_root_assembly_info.BTRootAssemblyInfo,),  # noqa: E501
-            'sub_assemblies': ([bt_sub_assembly_info.BTSubAssemblyInfo],),  # noqa: E501
+            "part_studio_features": (
+                [bt_assembly_ps_feature_info.BTAssemblyPSFeatureInfo],
+            ),  # noqa: E501
+            "parts": ([bt_assembly_parts_info.BTAssemblyPartsInfo],),  # noqa: E501
+            "root_assembly": (bt_root_assembly_info.BTRootAssemblyInfo,),  # noqa: E501
+            "sub_assemblies": ([bt_sub_assembly_info.BTSubAssemblyInfo],),  # noqa: E501
         }
 
     @staticmethod
@@ -106,25 +109,34 @@ class BTAssemblyDefinitionInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'part_studio_features': 'partStudioFeatures',  # noqa: E501
-        'parts': 'parts',  # noqa: E501
-        'root_assembly': 'rootAssembly',  # noqa: E501
-        'sub_assemblies': 'subAssemblies',  # noqa: E501
+        "part_studio_features": "partStudioFeatures",  # noqa: E501
+        "parts": "parts",  # noqa: E501
+        "root_assembly": "rootAssembly",  # noqa: E501
+        "sub_assemblies": "subAssemblies",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_assembly_definition_info.BTAssemblyDefinitionInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -154,10 +166,12 @@ class BTAssemblyDefinitionInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

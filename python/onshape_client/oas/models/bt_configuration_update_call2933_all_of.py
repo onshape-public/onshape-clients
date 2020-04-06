@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btm_configuration_parameter819
 except ImportError:
     btm_configuration_parameter819 = sys.modules[
-        'onshape_client.oas.models.btm_configuration_parameter819']
+        "onshape_client.oas.models.btm_configuration_parameter819"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTConfigurationUpdateCall2933AllOf(ModelNormal):
@@ -66,11 +67,9 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,9 +84,11 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'configuration_parameters': ([btm_configuration_parameter819.BTMConfigurationParameter819],),  # noqa: E501
-            'current_configuration': ([btm_parameter1.BTMParameter1],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "configuration_parameters": (
+                [btm_configuration_parameter819.BTMConfigurationParameter819],
+            ),  # noqa: E501
+            "current_configuration": ([btm_parameter1.BTMParameter1],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,24 +96,33 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'configuration_parameters': 'configurationParameters',  # noqa: E501
-        'current_configuration': 'currentConfiguration',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "configuration_parameters": "configurationParameters",  # noqa: E501
+        "current_configuration": "currentConfiguration",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_configuration_update_call2933_all_of.BTConfigurationUpdateCall2933AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -141,10 +151,12 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

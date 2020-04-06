@@ -30,16 +30,17 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_occurrence74
 except ImportError:
-    bt_occurrence74 = sys.modules[
-        'onshape_client.oas.models.bt_occurrence74']
+    bt_occurrence74 = sys.modules["onshape_client.oas.models.bt_occurrence74"]
 try:
     from onshape_client.oas.models import btm_individual_query_with_occurrence_base904
 except ImportError:
     btm_individual_query_with_occurrence_base904 = sys.modules[
-        'onshape_client.oas.models.btm_individual_query_with_occurrence_base904']
+        "onshape_client.oas.models.btm_individual_query_with_occurrence_base904"
+    ]
 
 
 class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
@@ -66,11 +67,9 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -85,9 +84,13 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'occurrences': ([bt_occurrence74.BTOccurrence74],),  # noqa: E501
-            'queries': ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "occurrences": ([bt_occurrence74.BTOccurrence74],),  # noqa: E501
+            "queries": (
+                [
+                    btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904
+                ],
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -95,24 +98,33 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'occurrences': 'occurrences',  # noqa: E501
-        'queries': 'queries',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "occurrences": "occurrences",  # noqa: E501
+        "queries": "queries",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_parameter_query_with_occurrence_list67_all_of.BTMParameterQueryWithOccurrenceList67AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -141,10 +153,12 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

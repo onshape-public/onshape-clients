@@ -30,31 +30,35 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_export_tessellated_body3398
 except ImportError:
     bt_export_tessellated_body3398 = sys.modules[
-        'onshape_client.oas.models.bt_export_tessellated_body3398']
+        "onshape_client.oas.models.bt_export_tessellated_body3398"
+    ]
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_body1321_all_of
 except ImportError:
     bt_export_tessellated_faces_body1321_all_of = sys.modules[
-        'onshape_client.oas.models.bt_export_tessellated_faces_body1321_all_of']
+        "onshape_client.oas.models.bt_export_tessellated_faces_body1321_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_export_tessellated_faces_face1192
 except ImportError:
     bt_export_tessellated_faces_face1192 = sys.modules[
-        'onshape_client.oas.models.bt_export_tessellated_faces_face1192']
+        "onshape_client.oas.models.bt_export_tessellated_faces_face1192"
+    ]
 try:
     from onshape_client.oas.models import bt_graphics_appearance1152
 except ImportError:
     bt_graphics_appearance1152 = sys.modules[
-        'onshape_client.oas.models.bt_graphics_appearance1152']
+        "onshape_client.oas.models.bt_graphics_appearance1152"
+    ]
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 
 
 class BTExportTessellatedFacesBody1321(ModelComposed):
@@ -82,19 +86,18 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
     """
 
     allowed_values = {
-        ('body_type',): {
-            'SOLID': "SOLID",
-            'SHEET': "SHEET",
-            'WIRE': "WIRE",
-            'POINT': "POINT",
-            'MATE_CONNECTOR': "MATE_CONNECTOR",
-            'COMPOSITE': "COMPOSITE",
-            'UNKNOWN': "UNKNOWN",
+        ("body_type",): {
+            "SOLID": "SOLID",
+            "SHEET": "SHEET",
+            "WIRE": "WIRE",
+            "POINT": "POINT",
+            "MATE_CONNECTOR": "MATE_CONNECTOR",
+            "COMPOSITE": "COMPOSITE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -109,13 +112,17 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'faces': ([bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],),  # noqa: E501
-            'body_type': (str,),  # noqa: E501
-            'appearance': (bt_graphics_appearance1152.BTGraphicsAppearance1152,),  # noqa: E501
-            'facet_points': ([bt_vector3d389.BTVector3d389],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'constituents': ([str],),  # noqa: E501
-            'id': (str,),  # noqa: E501
+            "faces": (
+                [bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],
+            ),  # noqa: E501
+            "body_type": (str,),  # noqa: E501
+            "appearance": (
+                bt_graphics_appearance1152.BTGraphicsAppearance1152,
+            ),  # noqa: E501
+            "facet_points": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "constituents": ([str],),  # noqa: E501
+            "id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -123,27 +130,36 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         return None
 
     attribute_map = {
-        'faces': 'faces',  # noqa: E501
-        'body_type': 'bodyType',  # noqa: E501
-        'appearance': 'appearance',  # noqa: E501
-        'facet_points': 'facetPoints',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'constituents': 'constituents',  # noqa: E501
-        'id': 'id',  # noqa: E501
+        "faces": "faces",  # noqa: E501
+        "body_type": "bodyType",  # noqa: E501
+        "appearance": "appearance",  # noqa: E501
+        "facet_points": "facetPoints",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "constituents": "constituents",  # noqa: E501
+        "id": "id",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_export_tessellated_faces_body1321.BTExportTessellatedFacesBody1321 - a model defined in OpenAPI
 
         Keyword Args:
@@ -176,13 +192,12 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -191,8 +206,7 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -201,10 +215,12 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -219,12 +235,10 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_export_tessellated_body3398.BTExportTessellatedBody3398,
-              bt_export_tessellated_faces_body1321_all_of.BTExportTessellatedFacesBody1321AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_export_tessellated_body3398.BTExportTessellatedBody3398,
+                bt_export_tessellated_faces_body1321_all_of.BTExportTessellatedFacesBody1321AllOf,
+            ],
+            "oneOf": [],
         }

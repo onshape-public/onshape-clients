@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_document_version_element_ids1897
 except ImportError:
     bt_document_version_element_ids1897 = sys.modules[
-        'onshape_client.oas.models.bt_document_version_element_ids1897']
+        "onshape_client.oas.models.bt_document_version_element_ids1897"
+    ]
 try:
     from onshape_client.oas.models import bt_object_id
 except ImportError:
-    bt_object_id = sys.modules[
-        'onshape_client.oas.models.bt_object_id']
+    bt_object_id = sys.modules["onshape_client.oas.models.bt_object_id"]
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules[
-        'onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules["onshape_client.oas.models.btp_node7"]
 
 
 class BTLocationInfo226(ModelNormal):
@@ -71,11 +71,9 @@ class BTLocationInfo226(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,23 +88,25 @@ class BTLocationInfo226(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'character': (int,),  # noqa: E501
-            'column': (int,),  # noqa: E501
-            'document': (str,),  # noqa: E501
-            'element_microversion': (str,),  # noqa: E501
-            'end_character': (int,),  # noqa: E501
-            'end_column': (int,),  # noqa: E501
-            'end_line': (int,),  # noqa: E501
-            'from_node': (btp_node7.BTPNode7,),  # noqa: E501
-            'language_version': (int,),  # noqa: E501
-            'line': (int,),  # noqa: E501
-            'module_ids': (bt_document_version_element_ids1897.BTDocumentVersionElementIds1897,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'parse_node_id': (str,),  # noqa: E501
-            'parse_node_id_raw': (bt_object_id.BTObjectId,),  # noqa: E501
-            'top_level': (str,),  # noqa: E501
-            'version': (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "character": (int,),  # noqa: E501
+            "column": (int,),  # noqa: E501
+            "document": (str,),  # noqa: E501
+            "element_microversion": (str,),  # noqa: E501
+            "end_character": (int,),  # noqa: E501
+            "end_column": (int,),  # noqa: E501
+            "end_line": (int,),  # noqa: E501
+            "from_node": (btp_node7.BTPNode7,),  # noqa: E501
+            "language_version": (int,),  # noqa: E501
+            "line": (int,),  # noqa: E501
+            "module_ids": (
+                bt_document_version_element_ids1897.BTDocumentVersionElementIds1897,
+            ),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "parse_node_id": (str,),  # noqa: E501
+            "parse_node_id_raw": (bt_object_id.BTObjectId,),  # noqa: E501
+            "top_level": (str,),  # noqa: E501
+            "version": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -114,38 +114,47 @@ class BTLocationInfo226(ModelNormal):
         return None
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'character': 'character',  # noqa: E501
-        'column': 'column',  # noqa: E501
-        'document': 'document',  # noqa: E501
-        'element_microversion': 'elementMicroversion',  # noqa: E501
-        'end_character': 'endCharacter',  # noqa: E501
-        'end_column': 'endColumn',  # noqa: E501
-        'end_line': 'endLine',  # noqa: E501
-        'from_node': 'fromNode',  # noqa: E501
-        'language_version': 'languageVersion',  # noqa: E501
-        'line': 'line',  # noqa: E501
-        'module_ids': 'moduleIds',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'parse_node_id': 'parseNodeId',  # noqa: E501
-        'parse_node_id_raw': 'parseNodeIdRaw',  # noqa: E501
-        'top_level': 'topLevel',  # noqa: E501
-        'version': 'version',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "character": "character",  # noqa: E501
+        "column": "column",  # noqa: E501
+        "document": "document",  # noqa: E501
+        "element_microversion": "elementMicroversion",  # noqa: E501
+        "end_character": "endCharacter",  # noqa: E501
+        "end_column": "endColumn",  # noqa: E501
+        "end_line": "endLine",  # noqa: E501
+        "from_node": "fromNode",  # noqa: E501
+        "language_version": "languageVersion",  # noqa: E501
+        "line": "line",  # noqa: E501
+        "module_ids": "moduleIds",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "parse_node_id": "parseNodeId",  # noqa: E501
+        "parse_node_id_raw": "parseNodeIdRaw",  # noqa: E501
+        "top_level": "topLevel",  # noqa: E501
+        "version": "version",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_location_info226.BTLocationInfo226 - a model defined in OpenAPI
 
         Keyword Args:
@@ -188,10 +197,12 @@ class BTLocationInfo226(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

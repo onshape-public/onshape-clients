@@ -30,21 +30,23 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_bounding_box1052
 except ImportError:
-    bt_bounding_box1052 = sys.modules[
-        'onshape_client.oas.models.bt_bounding_box1052']
+    bt_bounding_box1052 = sys.modules["onshape_client.oas.models.bt_bounding_box1052"]
 try:
     from onshape_client.oas.models import bt_export_model_loop1182
 except ImportError:
     bt_export_model_loop1182 = sys.modules[
-        'onshape_client.oas.models.bt_export_model_loop1182']
+        "onshape_client.oas.models.bt_export_model_loop1182"
+    ]
 try:
     from onshape_client.oas.models import bt_surface_description1564
 except ImportError:
     bt_surface_description1564 = sys.modules[
-        'onshape_client.oas.models.bt_surface_description1564']
+        "onshape_client.oas.models.bt_surface_description1564"
+    ]
 
 
 class BTExportModelFace1363(ModelNormal):
@@ -71,11 +73,9 @@ class BTExportModelFace1363(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -90,12 +90,14 @@ class BTExportModelFace1363(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'area': (float,),  # noqa: E501
-            'box': (bt_bounding_box1052.BTBoundingBox1052,),  # noqa: E501
-            'id': (str,),  # noqa: E501
-            'loops': ([bt_export_model_loop1182.BTExportModelLoop1182],),  # noqa: E501
-            'orientation': (bool,),  # noqa: E501
-            'surface': (bt_surface_description1564.BTSurfaceDescription1564,),  # noqa: E501
+            "area": (float,),  # noqa: E501
+            "box": (bt_bounding_box1052.BTBoundingBox1052,),  # noqa: E501
+            "id": (str,),  # noqa: E501
+            "loops": ([bt_export_model_loop1182.BTExportModelLoop1182],),  # noqa: E501
+            "orientation": (bool,),  # noqa: E501
+            "surface": (
+                bt_surface_description1564.BTSurfaceDescription1564,
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -103,27 +105,36 @@ class BTExportModelFace1363(ModelNormal):
         return None
 
     attribute_map = {
-        'area': 'area',  # noqa: E501
-        'box': 'box',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'loops': 'loops',  # noqa: E501
-        'orientation': 'orientation',  # noqa: E501
-        'surface': 'surface',  # noqa: E501
+        "area": "area",  # noqa: E501
+        "box": "box",  # noqa: E501
+        "id": "id",  # noqa: E501
+        "loops": "loops",  # noqa: E501
+        "orientation": "orientation",  # noqa: E501
+        "surface": "surface",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_export_model_face1363.BTExportModelFace1363 - a model defined in OpenAPI
 
         Keyword Args:
@@ -155,10 +166,12 @@ class BTExportModelFace1363(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

@@ -30,91 +30,101 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import btp_annotation231
 except ImportError:
-    btp_annotation231 = sys.modules[
-        'onshape_client.oas.models.btp_annotation231']
+    btp_annotation231 = sys.modules["onshape_client.oas.models.btp_annotation231"]
 try:
     from onshape_client.oas.models import btp_node7
 except ImportError:
-    btp_node7 = sys.modules[
-        'onshape_client.oas.models.btp_node7']
+    btp_node7 = sys.modules["onshape_client.oas.models.btp_node7"]
 try:
     from onshape_client.oas.models import btp_space10
 except ImportError:
-    btp_space10 = sys.modules[
-        'onshape_client.oas.models.btp_space10']
+    btp_space10 = sys.modules["onshape_client.oas.models.btp_space10"]
 try:
     from onshape_client.oas.models import btp_statement269_all_of
 except ImportError:
     btp_statement269_all_of = sys.modules[
-        'onshape_client.oas.models.btp_statement269_all_of']
+        "onshape_client.oas.models.btp_statement269_all_of"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_assignment270
 except ImportError:
     btp_statement_assignment270 = sys.modules[
-        'onshape_client.oas.models.btp_statement_assignment270']
+        "onshape_client.oas.models.btp_statement_assignment270"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_block271
 except ImportError:
     btp_statement_block271 = sys.modules[
-        'onshape_client.oas.models.btp_statement_block271']
+        "onshape_client.oas.models.btp_statement_block271"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_break272
 except ImportError:
     btp_statement_break272 = sys.modules[
-        'onshape_client.oas.models.btp_statement_break272']
+        "onshape_client.oas.models.btp_statement_break272"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_compressed_query1237
 except ImportError:
     btp_statement_compressed_query1237 = sys.modules[
-        'onshape_client.oas.models.btp_statement_compressed_query1237']
+        "onshape_client.oas.models.btp_statement_compressed_query1237"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_constant_declaration273
 except ImportError:
     btp_statement_constant_declaration273 = sys.modules[
-        'onshape_client.oas.models.btp_statement_constant_declaration273']
+        "onshape_client.oas.models.btp_statement_constant_declaration273"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_continue274
 except ImportError:
     btp_statement_continue274 = sys.modules[
-        'onshape_client.oas.models.btp_statement_continue274']
+        "onshape_client.oas.models.btp_statement_continue274"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_expression275
 except ImportError:
     btp_statement_expression275 = sys.modules[
-        'onshape_client.oas.models.btp_statement_expression275']
+        "onshape_client.oas.models.btp_statement_expression275"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_if276
 except ImportError:
-    btp_statement_if276 = sys.modules[
-        'onshape_client.oas.models.btp_statement_if276']
+    btp_statement_if276 = sys.modules["onshape_client.oas.models.btp_statement_if276"]
 try:
     from onshape_client.oas.models import btp_statement_loop277
 except ImportError:
     btp_statement_loop277 = sys.modules[
-        'onshape_client.oas.models.btp_statement_loop277']
+        "onshape_client.oas.models.btp_statement_loop277"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_return281
 except ImportError:
     btp_statement_return281 = sys.modules[
-        'onshape_client.oas.models.btp_statement_return281']
+        "onshape_client.oas.models.btp_statement_return281"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_throw1080
 except ImportError:
     btp_statement_throw1080 = sys.modules[
-        'onshape_client.oas.models.btp_statement_throw1080']
+        "onshape_client.oas.models.btp_statement_throw1080"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_try1523
 except ImportError:
     btp_statement_try1523 = sys.modules[
-        'onshape_client.oas.models.btp_statement_try1523']
+        "onshape_client.oas.models.btp_statement_try1523"
+    ]
 try:
     from onshape_client.oas.models import btp_statement_var_declaration282
 except ImportError:
     btp_statement_var_declaration282 = sys.modules[
-        'onshape_client.oas.models.btp_statement_var_declaration282']
+        "onshape_client.oas.models.btp_statement_var_declaration282"
+    ]
 
 
 class BTPStatement269(ModelComposed):
@@ -142,21 +152,20 @@ class BTPStatement269(ModelComposed):
     """
 
     allowed_values = {
-        ('documentation_type',): {
-            'FUNCTION': "FUNCTION",
-            'PREDICATE': "PREDICATE",
-            'CONSTANT': "CONSTANT",
-            'ENUM': "ENUM",
-            'USER_TYPE': "USER_TYPE",
-            'FEATURE_DEFINITION': "FEATURE_DEFINITION",
-            'FILE_HEADER': "FILE_HEADER",
-            'UNDOCUMENTABLE': "UNDOCUMENTABLE",
-            'UNKNOWN': "UNKNOWN",
+        ("documentation_type",): {
+            "FUNCTION": "FUNCTION",
+            "PREDICATE": "PREDICATE",
+            "CONSTANT": "CONSTANT",
+            "ENUM": "ENUM",
+            "USER_TYPE": "USER_TYPE",
+            "FEATURE_DEFINITION": "FEATURE_DEFINITION",
+            "FILE_HEADER": "FILE_HEADER",
+            "UNDOCUMENTABLE": "UNDOCUMENTABLE",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -171,65 +180,74 @@ class BTPStatement269(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'bt_type': (str,),  # noqa: E501
-            'annotation': (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            'atomic': (bool,),  # noqa: E501
-            'documentation_type': (str,),  # noqa: E501
-            'end_source_location': (int,),  # noqa: E501
-            'node_id': (str,),  # noqa: E501
-            'short_descriptor': (str,),  # noqa: E501
-            'space_after': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_before': (btp_space10.BTPSpace10,),  # noqa: E501
-            'space_default': (bool,),  # noqa: E501
-            'start_source_location': (int,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
+            "atomic": (bool,),  # noqa: E501
+            "documentation_type": (str,),  # noqa: E501
+            "end_source_location": (int,),  # noqa: E501
+            "node_id": (str,),  # noqa: E501
+            "short_descriptor": (str,),  # noqa: E501
+            "space_after": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_default": (bool,),  # noqa: E501
+            "start_source_location": (int,),  # noqa: E501
         }
 
     @staticmethod
     def discriminator():
         return {
-            'bt_type': {
-                'BTPStatementTry-1523': btp_statement_try1523.BTPStatementTry1523,
-                'BTPStatementThrow-1080': btp_statement_throw1080.BTPStatementThrow1080,
-                'BTPStatementConstantDeclaration-273': btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
-                'BTPStatementBreak-272': btp_statement_break272.BTPStatementBreak272,
-                'BTPStatementCompressedQuery-1237': btp_statement_compressed_query1237.BTPStatementCompressedQuery1237,
-                'BTPStatementContinue-274': btp_statement_continue274.BTPStatementContinue274,
-                'BTPStatementExpression-275': btp_statement_expression275.BTPStatementExpression275,
-                'BTPStatementReturn-281': btp_statement_return281.BTPStatementReturn281,
-                'BTPStatementAssignment-270': btp_statement_assignment270.BTPStatementAssignment270,
-                'BTPStatementLoop-277': btp_statement_loop277.BTPStatementLoop277,
-                'BTPStatementBlock-271': btp_statement_block271.BTPStatementBlock271,
-                'BTPStatementIf-276': btp_statement_if276.BTPStatementIf276,
-                'BTPStatementVarDeclaration-282': btp_statement_var_declaration282.BTPStatementVarDeclaration282,
+            "bt_type": {
+                "BTPStatementTry-1523": btp_statement_try1523.BTPStatementTry1523,
+                "BTPStatementThrow-1080": btp_statement_throw1080.BTPStatementThrow1080,
+                "BTPStatementConstantDeclaration-273": btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
+                "BTPStatementBreak-272": btp_statement_break272.BTPStatementBreak272,
+                "BTPStatementCompressedQuery-1237": btp_statement_compressed_query1237.BTPStatementCompressedQuery1237,
+                "BTPStatementContinue-274": btp_statement_continue274.BTPStatementContinue274,
+                "BTPStatementExpression-275": btp_statement_expression275.BTPStatementExpression275,
+                "BTPStatementReturn-281": btp_statement_return281.BTPStatementReturn281,
+                "BTPStatementAssignment-270": btp_statement_assignment270.BTPStatementAssignment270,
+                "BTPStatementLoop-277": btp_statement_loop277.BTPStatementLoop277,
+                "BTPStatementBlock-271": btp_statement_block271.BTPStatementBlock271,
+                "BTPStatementIf-276": btp_statement_if276.BTPStatementIf276,
+                "BTPStatementVarDeclaration-282": btp_statement_var_declaration282.BTPStatementVarDeclaration282,
             },
         }
 
     attribute_map = {
-        'bt_type': 'btType',  # noqa: E501
-        'annotation': 'annotation',  # noqa: E501
-        'atomic': 'atomic',  # noqa: E501
-        'documentation_type': 'documentationType',  # noqa: E501
-        'end_source_location': 'endSourceLocation',  # noqa: E501
-        'node_id': 'nodeId',  # noqa: E501
-        'short_descriptor': 'shortDescriptor',  # noqa: E501
-        'space_after': 'spaceAfter',  # noqa: E501
-        'space_before': 'spaceBefore',  # noqa: E501
-        'space_default': 'spaceDefault',  # noqa: E501
-        'start_source_location': 'startSourceLocation',  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "annotation": "annotation",  # noqa: E501
+        "atomic": "atomic",  # noqa: E501
+        "documentation_type": "documentationType",  # noqa: E501
+        "end_source_location": "endSourceLocation",  # noqa: E501
+        "node_id": "nodeId",  # noqa: E501
+        "short_descriptor": "shortDescriptor",  # noqa: E501
+        "space_after": "spaceAfter",  # noqa: E501
+        "space_before": "spaceBefore",  # noqa: E501
+        "space_default": "spaceDefault",  # noqa: E501
+        "start_source_location": "startSourceLocation",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btp_statement269.BTPStatement269 - a model defined in OpenAPI
 
         Keyword Args:
@@ -266,13 +284,12 @@ class BTPStatement269(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -281,8 +298,7 @@ class BTPStatement269(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -291,10 +307,12 @@ class BTPStatement269(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -309,14 +327,12 @@ class BTPStatement269(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              btp_node7.BTPNode7,
-              btp_statement269_all_of.BTPStatement269AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                btp_node7.BTPNode7,
+                btp_statement269_all_of.BTPStatement269AllOf,
+            ],
+            "oneOf": [],
         }
 
     @classmethod

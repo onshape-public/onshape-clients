@@ -30,21 +30,21 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_vector3d389
 except ImportError:
-    bt_vector3d389 = sys.modules[
-        'onshape_client.oas.models.bt_vector3d389']
+    bt_vector3d389 = sys.modules["onshape_client.oas.models.bt_vector3d389"]
 try:
     from onshape_client.oas.models import btm_mate_connector66
 except ImportError:
-    btm_mate_connector66 = sys.modules[
-        'onshape_client.oas.models.btm_mate_connector66']
+    btm_mate_connector66 = sys.modules["onshape_client.oas.models.btm_mate_connector66"]
 try:
     from onshape_client.oas.models import btm_parameter_query_with_occurrence_list67
 except ImportError:
     btm_parameter_query_with_occurrence_list67 = sys.modules[
-        'onshape_client.oas.models.btm_parameter_query_with_occurrence_list67']
+        "onshape_client.oas.models.btm_parameter_query_with_occurrence_list67"
+    ]
 
 
 class BTMMate64AllOf(ModelNormal):
@@ -72,17 +72,16 @@ class BTMMate64AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ('secondary_axis_alignment',): {
-            'PLUS_X': "PLUS_X",
-            'PLUS_Y': "PLUS_Y",
-            'MINUS_X': "MINUS_X",
-            'MINUS_Y': "MINUS_Y",
-            'UNKNOWN': "UNKNOWN",
+        ("secondary_axis_alignment",): {
+            "PLUS_X": "PLUS_X",
+            "PLUS_Y": "PLUS_Y",
+            "MINUS_X": "MINUS_X",
+            "MINUS_Y": "MINUS_Y",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -97,12 +96,16 @@ class BTMMate64AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'mate_connector_query_list': (btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,),  # noqa: E501
-            'primary_axis_alignment': (bool,),  # noqa: E501
-            'secondary_axis_alignment': (str,),  # noqa: E501
-            'mate_offset': (bt_vector3d389.BTVector3d389,),  # noqa: E501
-            'mate_connectors': ([btm_mate_connector66.BTMMateConnector66],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
+            "mate_connector_query_list": (
+                btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
+            ),  # noqa: E501
+            "primary_axis_alignment": (bool,),  # noqa: E501
+            "secondary_axis_alignment": (str,),  # noqa: E501
+            "mate_offset": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "mate_connectors": (
+                [btm_mate_connector66.BTMMateConnector66],
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -110,27 +113,36 @@ class BTMMate64AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        'mate_connector_query_list': 'mateConnectorQueryList',  # noqa: E501
-        'primary_axis_alignment': 'primaryAxisAlignment',  # noqa: E501
-        'secondary_axis_alignment': 'secondaryAxisAlignment',  # noqa: E501
-        'mate_offset': 'mateOffset',  # noqa: E501
-        'mate_connectors': 'mateConnectors',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
+        "mate_connector_query_list": "mateConnectorQueryList",  # noqa: E501
+        "primary_axis_alignment": "primaryAxisAlignment",  # noqa: E501
+        "secondary_axis_alignment": "secondaryAxisAlignment",  # noqa: E501
+        "mate_offset": "mateOffset",  # noqa: E501
+        "mate_connectors": "mateConnectors",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """btm_mate64_all_of.BTMMate64AllOf - a model defined in OpenAPI
 
         Keyword Args:
@@ -162,10 +174,12 @@ class BTMMate64AllOf(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

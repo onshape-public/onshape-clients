@@ -56,11 +56,9 @@ class BTDocumentSearchHitInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,13 +73,15 @@ class BTDocumentSearchHitInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'document_id': (str,),  # noqa: E501
-            'element_name': (str,),  # noqa: E501
-            'highlighted_fields': ({str: ([str],)},),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'source_map': ({str: (bool, date, datetime, dict, float, int, list, str,)},),  # noqa: E501
-            'type': (str,),  # noqa: E501
-            'version_or_workspace_name': (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "element_name": (str,),  # noqa: E501
+            "highlighted_fields": ({str: ([str],)},),  # noqa: E501
+            "name": (str,),  # noqa: E501
+            "source_map": (
+                {str: (bool, date, datetime, dict, float, int, list, str,)},
+            ),  # noqa: E501
+            "type": (str,),  # noqa: E501
+            "version_or_workspace_name": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -89,28 +89,37 @@ class BTDocumentSearchHitInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'document_id': 'documentId',  # noqa: E501
-        'element_name': 'elementName',  # noqa: E501
-        'highlighted_fields': 'highlightedFields',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'source_map': 'sourceMap',  # noqa: E501
-        'type': 'type',  # noqa: E501
-        'version_or_workspace_name': 'versionOrWorkspaceName',  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "element_name": "elementName",  # noqa: E501
+        "highlighted_fields": "highlightedFields",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "source_map": "sourceMap",  # noqa: E501
+        "type": "type",  # noqa: E501
+        "version_or_workspace_name": "versionOrWorkspaceName",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_document_search_hit_info.BTDocumentSearchHitInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -143,10 +152,12 @@ class BTDocumentSearchHitInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

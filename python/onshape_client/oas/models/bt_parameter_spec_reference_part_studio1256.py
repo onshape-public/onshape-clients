@@ -30,31 +30,37 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     str,
     validate_get_composed_info,
 )
+
 try:
     from onshape_client.oas.models import bt_computed_configuration_input_spec2525
 except ImportError:
     bt_computed_configuration_input_spec2525 = sys.modules[
-        'onshape_client.oas.models.bt_computed_configuration_input_spec2525']
+        "onshape_client.oas.models.bt_computed_configuration_input_spec2525"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_spec_reference2789
 except ImportError:
     bt_parameter_spec_reference2789 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_reference2789']
+        "onshape_client.oas.models.bt_parameter_spec_reference2789"
+    ]
 try:
-    from onshape_client.oas.models import bt_parameter_spec_reference_part_studio1256_all_of
+    from onshape_client.oas.models import (
+        bt_parameter_spec_reference_part_studio1256_all_of,
+    )
 except ImportError:
     bt_parameter_spec_reference_part_studio1256_all_of = sys.modules[
-        'onshape_client.oas.models.bt_parameter_spec_reference_part_studio1256_all_of']
+        "onshape_client.oas.models.bt_parameter_spec_reference_part_studio1256_all_of"
+    ]
 try:
     from onshape_client.oas.models import bt_parameter_visibility_condition177
 except ImportError:
     bt_parameter_visibility_condition177 = sys.modules[
-        'onshape_client.oas.models.bt_parameter_visibility_condition177']
+        "onshape_client.oas.models.bt_parameter_visibility_condition177"
+    ]
 try:
     from onshape_client.oas.models import btm_parameter1
 except ImportError:
-    btm_parameter1 = sys.modules[
-        'onshape_client.oas.models.btm_parameter1']
+    btm_parameter1 = sys.modules["onshape_client.oas.models.btm_parameter1"]
 
 
 class BTParameterSpecReferencePartStudio1256(ModelComposed):
@@ -82,50 +88,49 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
     """
 
     allowed_values = {
-        ('allowed_insertable_types',): {
-            'SOLID': "SOLID",
-            'SURFACE': "SURFACE",
-            'WIRE': "WIRE",
-            'MESH': "MESH",
-            'SKETCH': "SKETCH",
-            'FLATTENED_SHEET_METAL': "FLATTENED_SHEET_METAL",
-            'ENTIRE_PART_STUDIO': "ENTIRE_PART_STUDIO",
-            'CONSTRUCTION_PLANE': "CONSTRUCTION_PLANE",
-            'COMPOSITE_PART': "COMPOSITE_PART",
-            'UNKNOWN': "UNKNOWN",
+        ("allowed_insertable_types",): {
+            "SOLID": "SOLID",
+            "SURFACE": "SURFACE",
+            "WIRE": "WIRE",
+            "MESH": "MESH",
+            "SKETCH": "SKETCH",
+            "FLATTENED_SHEET_METAL": "FLATTENED_SHEET_METAL",
+            "ENTIRE_PART_STUDIO": "ENTIRE_PART_STUDIO",
+            "CONSTRUCTION_PLANE": "CONSTRUCTION_PLANE",
+            "COMPOSITE_PART": "COMPOSITE_PART",
+            "UNKNOWN": "UNKNOWN",
         },
-        ('ui_hints',): {
-            'OPPOSITE_DIRECTION': "OPPOSITE_DIRECTION",
-            'ALWAYS_HIDDEN': "ALWAYS_HIDDEN",
-            'SHOW_CREATE_SELECTION': "SHOW_CREATE_SELECTION",
-            'CONTROL_VISIBILITY': "CONTROL_VISIBILITY",
-            'NO_PREVIEW_PROVIDED': "NO_PREVIEW_PROVIDED",
-            'REMEMBER_PREVIOUS_VALUE': "REMEMBER_PREVIOUS_VALUE",
-            'DISPLAY_SHORT': "DISPLAY_SHORT",
-            'ALLOW_FEATURE_SELECTION': "ALLOW_FEATURE_SELECTION",
-            'MATE_CONNECTOR_AXIS_TYPE': "MATE_CONNECTOR_AXIS_TYPE",
-            'PRIMARY_AXIS': "PRIMARY_AXIS",
-            'SHOW_EXPRESSION': "SHOW_EXPRESSION",
-            'OPPOSITE_DIRECTION_CIRCULAR': "OPPOSITE_DIRECTION_CIRCULAR",
-            'SHOW_LABEL': "SHOW_LABEL",
-            'HORIZONTAL_ENUM': "HORIZONTAL_ENUM",
-            'UNCONFIGURABLE': "UNCONFIGURABLE",
-            'MATCH_LAST_ARRAY_ITEM': "MATCH_LAST_ARRAY_ITEM",
-            'COLLAPSE_ARRAY_ITEMS': "COLLAPSE_ARRAY_ITEMS",
-            'INITIAL_FOCUS_ON_EDIT': "INITIAL_FOCUS_ON_EDIT",
-            'INITIAL_FOCUS': "INITIAL_FOCUS",
-            'DISPLAY_CURRENT_VALUE_ONLY': "DISPLAY_CURRENT_VALUE_ONLY",
-            'READ_ONLY': "READ_ONLY",
-            'PREVENT_CREATING_NEW_MATE_CONNECTORS': "PREVENT_CREATING_NEW_MATE_CONNECTORS",
-            'FIRST_IN_ROW': "FIRST_IN_ROW",
-            'ALLOW_QUERY_ORDER': "ALLOW_QUERY_ORDER",
-            'PREVENT_ARRAY_REORDER': "PREVENT_ARRAY_REORDER",
-            'UNKNOWN': "UNKNOWN",
+        ("ui_hints",): {
+            "OPPOSITE_DIRECTION": "OPPOSITE_DIRECTION",
+            "ALWAYS_HIDDEN": "ALWAYS_HIDDEN",
+            "SHOW_CREATE_SELECTION": "SHOW_CREATE_SELECTION",
+            "CONTROL_VISIBILITY": "CONTROL_VISIBILITY",
+            "NO_PREVIEW_PROVIDED": "NO_PREVIEW_PROVIDED",
+            "REMEMBER_PREVIOUS_VALUE": "REMEMBER_PREVIOUS_VALUE",
+            "DISPLAY_SHORT": "DISPLAY_SHORT",
+            "ALLOW_FEATURE_SELECTION": "ALLOW_FEATURE_SELECTION",
+            "MATE_CONNECTOR_AXIS_TYPE": "MATE_CONNECTOR_AXIS_TYPE",
+            "PRIMARY_AXIS": "PRIMARY_AXIS",
+            "SHOW_EXPRESSION": "SHOW_EXPRESSION",
+            "OPPOSITE_DIRECTION_CIRCULAR": "OPPOSITE_DIRECTION_CIRCULAR",
+            "SHOW_LABEL": "SHOW_LABEL",
+            "HORIZONTAL_ENUM": "HORIZONTAL_ENUM",
+            "UNCONFIGURABLE": "UNCONFIGURABLE",
+            "MATCH_LAST_ARRAY_ITEM": "MATCH_LAST_ARRAY_ITEM",
+            "COLLAPSE_ARRAY_ITEMS": "COLLAPSE_ARRAY_ITEMS",
+            "INITIAL_FOCUS_ON_EDIT": "INITIAL_FOCUS_ON_EDIT",
+            "INITIAL_FOCUS": "INITIAL_FOCUS",
+            "DISPLAY_CURRENT_VALUE_ONLY": "DISPLAY_CURRENT_VALUE_ONLY",
+            "READ_ONLY": "READ_ONLY",
+            "PREVENT_CREATING_NEW_MATE_CONNECTORS": "PREVENT_CREATING_NEW_MATE_CONNECTORS",
+            "FIRST_IN_ROW": "FIRST_IN_ROW",
+            "ALLOW_QUERY_ORDER": "ALLOW_QUERY_ORDER",
+            "PREVENT_ARRAY_REORDER": "PREVENT_ARRAY_REORDER",
+            "UNKNOWN": "UNKNOWN",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -140,22 +145,28 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            'max_number_of_picks': (int,),  # noqa: E501
-            'allowed_insertable_types': ([str],),  # noqa: E501
-            'computed_configuration_inputs': ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525],),  # noqa: E501
-            'bt_type': (str,),  # noqa: E501
-            'additional_localized_strings': (int,),  # noqa: E501
-            'column_name': (str,),  # noqa: E501
-            'default_value': (btm_parameter1.BTMParameter1,),  # noqa: E501
-            'icon_uri': (str,),  # noqa: E501
-            'localizable_name': (str,),  # noqa: E501
-            'localized_name': (str,),  # noqa: E501
-            'parameter_id': (str,),  # noqa: E501
-            'parameter_name': (str,),  # noqa: E501
-            'strings_to_localize': ([str],),  # noqa: E501
-            'ui_hint': (str,),  # noqa: E501
-            'ui_hints': ([str],),  # noqa: E501
-            'visibility_condition': (bt_parameter_visibility_condition177.BTParameterVisibilityCondition177,),  # noqa: E501
+            "max_number_of_picks": (int,),  # noqa: E501
+            "allowed_insertable_types": ([str],),  # noqa: E501
+            "computed_configuration_inputs": (
+                [
+                    bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525
+                ],
+            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "additional_localized_strings": (int,),  # noqa: E501
+            "column_name": (str,),  # noqa: E501
+            "default_value": (btm_parameter1.BTMParameter1,),  # noqa: E501
+            "icon_uri": (str,),  # noqa: E501
+            "localizable_name": (str,),  # noqa: E501
+            "localized_name": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
+            "parameter_name": (str,),  # noqa: E501
+            "strings_to_localize": ([str],),  # noqa: E501
+            "ui_hint": (str,),  # noqa: E501
+            "ui_hints": ([str],),  # noqa: E501
+            "visibility_condition": (
+                bt_parameter_visibility_condition177.BTParameterVisibilityCondition177,
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -163,36 +174,45 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         return None
 
     attribute_map = {
-        'max_number_of_picks': 'maxNumberOfPicks',  # noqa: E501
-        'allowed_insertable_types': 'allowedInsertableTypes',  # noqa: E501
-        'computed_configuration_inputs': 'computedConfigurationInputs',  # noqa: E501
-        'bt_type': 'btType',  # noqa: E501
-        'additional_localized_strings': 'additionalLocalizedStrings',  # noqa: E501
-        'column_name': 'columnName',  # noqa: E501
-        'default_value': 'defaultValue',  # noqa: E501
-        'icon_uri': 'iconUri',  # noqa: E501
-        'localizable_name': 'localizableName',  # noqa: E501
-        'localized_name': 'localizedName',  # noqa: E501
-        'parameter_id': 'parameterId',  # noqa: E501
-        'parameter_name': 'parameterName',  # noqa: E501
-        'strings_to_localize': 'stringsToLocalize',  # noqa: E501
-        'ui_hint': 'uiHint',  # noqa: E501
-        'ui_hints': 'uiHints',  # noqa: E501
-        'visibility_condition': 'visibilityCondition',  # noqa: E501
+        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
+        "allowed_insertable_types": "allowedInsertableTypes",  # noqa: E501
+        "computed_configuration_inputs": "computedConfigurationInputs",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "additional_localized_strings": "additionalLocalizedStrings",  # noqa: E501
+        "column_name": "columnName",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "icon_uri": "iconUri",  # noqa: E501
+        "localizable_name": "localizableName",  # noqa: E501
+        "localized_name": "localizedName",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
+        "parameter_name": "parameterName",  # noqa: E501
+        "strings_to_localize": "stringsToLocalize",  # noqa: E501
+        "ui_hint": "uiHint",  # noqa: E501
+        "ui_hints": "uiHints",  # noqa: E501
+        "visibility_condition": "visibilityCondition",  # noqa: E501
     }
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-        '_composed_instances',
-        '_var_name_to_model_instances',
-        '_additional_properties_model_instances',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+            "_composed_instances",
+            "_var_name_to_model_instances",
+            "_additional_properties_model_instances",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_parameter_spec_reference_part_studio1256.BTParameterSpecReferencePartStudio1256 - a model defined in OpenAPI
 
         Keyword Args:
@@ -234,13 +254,12 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         self._configuration = _configuration
 
         constant_args = {
-            '_check_type': _check_type,
-            '_path_to_item': _path_to_item,
-            '_from_server': _from_server,
-            '_configuration': _configuration,
+            "_check_type": _check_type,
+            "_path_to_item": _path_to_item,
+            "_from_server": _from_server,
+            "_configuration": _configuration,
         }
-        required_args = {
-        }
+        required_args = {}
         # remove args whose value is Null because they are unset
         required_arg_names = list(required_args.keys())
         for required_arg_name in required_arg_names:
@@ -249,8 +268,7 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         model_args = {}
         model_args.update(required_args)
         model_args.update(kwargs)
-        composed_info = validate_get_composed_info(
-            constant_args, model_args, self)
+        composed_info = validate_get_composed_info(constant_args, model_args, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
@@ -259,10 +277,12 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         for var_name, var_value in required_args.items():
             setattr(self, var_name, var_value)
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name in unused_args and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        not self._additional_properties_model_instances:
+            if (
+                var_name in unused_args
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and not self._additional_properties_model_instances
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
@@ -277,12 +297,10 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         # classes don't exist yet because their module has not finished
         # loading
         return {
-          'anyOf': [
-          ],
-          'allOf': [
-              bt_parameter_spec_reference2789.BTParameterSpecReference2789,
-              bt_parameter_spec_reference_part_studio1256_all_of.BTParameterSpecReferencePartStudio1256AllOf,
-          ],
-          'oneOf': [
-          ],
+            "anyOf": [],
+            "allOf": [
+                bt_parameter_spec_reference2789.BTParameterSpecReference2789,
+                bt_parameter_spec_reference_part_studio1256_all_of.BTParameterSpecReferencePartStudio1256AllOf,
+            ],
+            "oneOf": [],
         }

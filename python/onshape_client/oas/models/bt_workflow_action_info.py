@@ -56,11 +56,9 @@ class BTWorkflowActionInfo(ModelNormal):
           as additional properties values.
     """
 
-    allowed_values = {
-    }
+    allowed_values = {}
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -75,16 +73,16 @@ class BTWorkflowActionInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'action': (str,),  # noqa: E501
-            'allow_if_approvers': (bool,),  # noqa: E501
-            'allow_if_no_approvers': (bool,),  # noqa: E501
-            'always_allow': (bool,),  # noqa: E501
-            'is_admin_override': (bool,),  # noqa: E501
-            'is_approver_action': (bool,),  # noqa: E501
-            'label': (str,),  # noqa: E501
-            'required_properties': ([str],),  # noqa: E501
-            'tooltip': (str,),  # noqa: E501
-            'ui_hint': (str,),  # noqa: E501
+            "action": (str,),  # noqa: E501
+            "allow_if_approvers": (bool,),  # noqa: E501
+            "allow_if_no_approvers": (bool,),  # noqa: E501
+            "always_allow": (bool,),  # noqa: E501
+            "is_admin_override": (bool,),  # noqa: E501
+            "is_approver_action": (bool,),  # noqa: E501
+            "label": (str,),  # noqa: E501
+            "required_properties": ([str],),  # noqa: E501
+            "tooltip": (str,),  # noqa: E501
+            "ui_hint": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,31 +90,40 @@ class BTWorkflowActionInfo(ModelNormal):
         return None
 
     attribute_map = {
-        'action': 'action',  # noqa: E501
-        'allow_if_approvers': 'allowIfApprovers',  # noqa: E501
-        'allow_if_no_approvers': 'allowIfNoApprovers',  # noqa: E501
-        'always_allow': 'alwaysAllow',  # noqa: E501
-        'is_admin_override': 'isAdminOverride',  # noqa: E501
-        'is_approver_action': 'isApproverAction',  # noqa: E501
-        'label': 'label',  # noqa: E501
-        'required_properties': 'requiredProperties',  # noqa: E501
-        'tooltip': 'tooltip',  # noqa: E501
-        'ui_hint': 'uiHint',  # noqa: E501
+        "action": "action",  # noqa: E501
+        "allow_if_approvers": "allowIfApprovers",  # noqa: E501
+        "allow_if_no_approvers": "allowIfNoApprovers",  # noqa: E501
+        "always_allow": "alwaysAllow",  # noqa: E501
+        "is_admin_override": "isAdminOverride",  # noqa: E501
+        "is_approver_action": "isApproverAction",  # noqa: E501
+        "label": "label",  # noqa: E501
+        "required_properties": "requiredProperties",  # noqa: E501
+        "tooltip": "tooltip",  # noqa: E501
+        "ui_hint": "uiHint",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """bt_workflow_action_info.BTWorkflowActionInfo - a model defined in OpenAPI
 
         Keyword Args:
@@ -152,10 +159,12 @@ class BTWorkflowActionInfo(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)

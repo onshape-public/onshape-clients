@@ -57,21 +57,20 @@ class JsonNode(ModelNormal):
     """
 
     allowed_values = {
-        ('node_type',): {
-            'ARRAY': "ARRAY",
-            'BINARY': "BINARY",
-            'BOOLEAN': "BOOLEAN",
-            'MISSING': "MISSING",
-            'NULL': "NULL",
-            'NUMBER': "NUMBER",
-            'OBJECT': "OBJECT",
-            'POJO': "POJO",
-            'STRING': "STRING",
+        ("node_type",): {
+            "ARRAY": "ARRAY",
+            "BINARY": "BINARY",
+            "BOOLEAN": "BOOLEAN",
+            "MISSING": "MISSING",
+            "NULL": "NULL",
+            "NUMBER": "NUMBER",
+            "OBJECT": "OBJECT",
+            "POJO": "POJO",
+            "STRING": "STRING",
         },
     }
 
-    validations = {
-    }
+    validations = {}
 
     additional_properties_type = None
 
@@ -86,28 +85,28 @@ class JsonNode(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'array': (bool,),  # noqa: E501
-            'big_decimal': (bool,),  # noqa: E501
-            'big_integer': (bool,),  # noqa: E501
-            'binary': (bool,),  # noqa: E501
-            'boolean': (bool,),  # noqa: E501
-            'container_node': (bool,),  # noqa: E501
-            'double': (bool,),  # noqa: E501
-            'empty': (bool,),  # noqa: E501
-            'float': (bool,),  # noqa: E501
-            'floating_point_number': (bool,),  # noqa: E501
-            'int': (bool,),  # noqa: E501
-            'integral_number': (bool,),  # noqa: E501
-            'long': (bool,),  # noqa: E501
-            'missing_node': (bool,),  # noqa: E501
-            'node_type': (str,),  # noqa: E501
-            'null': (bool,),  # noqa: E501
-            'number': (bool,),  # noqa: E501
-            'object': (bool,),  # noqa: E501
-            'pojo': (bool,),  # noqa: E501
-            'short': (bool,),  # noqa: E501
-            'textual': (bool,),  # noqa: E501
-            'value_node': (bool,),  # noqa: E501
+            "array": (bool,),  # noqa: E501
+            "big_decimal": (bool,),  # noqa: E501
+            "big_integer": (bool,),  # noqa: E501
+            "binary": (bool,),  # noqa: E501
+            "boolean": (bool,),  # noqa: E501
+            "container_node": (bool,),  # noqa: E501
+            "double": (bool,),  # noqa: E501
+            "empty": (bool,),  # noqa: E501
+            "float": (bool,),  # noqa: E501
+            "floating_point_number": (bool,),  # noqa: E501
+            "int": (bool,),  # noqa: E501
+            "integral_number": (bool,),  # noqa: E501
+            "long": (bool,),  # noqa: E501
+            "missing_node": (bool,),  # noqa: E501
+            "node_type": (str,),  # noqa: E501
+            "null": (bool,),  # noqa: E501
+            "number": (bool,),  # noqa: E501
+            "object": (bool,),  # noqa: E501
+            "pojo": (bool,),  # noqa: E501
+            "short": (bool,),  # noqa: E501
+            "textual": (bool,),  # noqa: E501
+            "value_node": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -115,43 +114,52 @@ class JsonNode(ModelNormal):
         return None
 
     attribute_map = {
-        'array': 'array',  # noqa: E501
-        'big_decimal': 'bigDecimal',  # noqa: E501
-        'big_integer': 'bigInteger',  # noqa: E501
-        'binary': 'binary',  # noqa: E501
-        'boolean': 'boolean',  # noqa: E501
-        'container_node': 'containerNode',  # noqa: E501
-        'double': 'double',  # noqa: E501
-        'empty': 'empty',  # noqa: E501
-        'float': 'float',  # noqa: E501
-        'floating_point_number': 'floatingPointNumber',  # noqa: E501
-        'int': 'int',  # noqa: E501
-        'integral_number': 'integralNumber',  # noqa: E501
-        'long': 'long',  # noqa: E501
-        'missing_node': 'missingNode',  # noqa: E501
-        'node_type': 'nodeType',  # noqa: E501
-        'null': 'null',  # noqa: E501
-        'number': 'number',  # noqa: E501
-        'object': 'object',  # noqa: E501
-        'pojo': 'pojo',  # noqa: E501
-        'short': 'short',  # noqa: E501
-        'textual': 'textual',  # noqa: E501
-        'value_node': 'valueNode',  # noqa: E501
+        "array": "array",  # noqa: E501
+        "big_decimal": "bigDecimal",  # noqa: E501
+        "big_integer": "bigInteger",  # noqa: E501
+        "binary": "binary",  # noqa: E501
+        "boolean": "boolean",  # noqa: E501
+        "container_node": "containerNode",  # noqa: E501
+        "double": "double",  # noqa: E501
+        "empty": "empty",  # noqa: E501
+        "float": "float",  # noqa: E501
+        "floating_point_number": "floatingPointNumber",  # noqa: E501
+        "int": "int",  # noqa: E501
+        "integral_number": "integralNumber",  # noqa: E501
+        "long": "long",  # noqa: E501
+        "missing_node": "missingNode",  # noqa: E501
+        "node_type": "nodeType",  # noqa: E501
+        "null": "null",  # noqa: E501
+        "number": "number",  # noqa: E501
+        "object": "object",  # noqa: E501
+        "pojo": "pojo",  # noqa: E501
+        "short": "short",  # noqa: E501
+        "textual": "textual",  # noqa: E501
+        "value_node": "valueNode",  # noqa: E501
     }
 
     @staticmethod
     def _composed_schemas():
         return None
 
-    required_properties = set([
-        '_data_store',
-        '_check_type',
-        '_from_server',
-        '_path_to_item',
-        '_configuration',
-    ])
+    required_properties = set(
+        [
+            "_data_store",
+            "_check_type",
+            "_from_server",
+            "_path_to_item",
+            "_configuration",
+        ]
+    )
 
-    def __init__(self, _check_type=True, _from_server=False, _path_to_item=(), _configuration=None, **kwargs):  # noqa: E501
+    def __init__(
+        self,
+        _check_type=True,
+        _from_server=False,
+        _path_to_item=(),
+        _configuration=None,
+        **kwargs
+    ):  # noqa: E501
         """json_node.JsonNode - a model defined in OpenAPI
 
         Keyword Args:
@@ -199,10 +207,12 @@ class JsonNode(ModelNormal):
         self._configuration = _configuration
 
         for var_name, var_value in six.iteritems(kwargs):
-            if var_name not in self.attribute_map and \
-                        self._configuration is not None and \
-                        self._configuration.discard_unknown_keys and \
-                        self.additional_properties_type is None:
+            if (
+                var_name not in self.attribute_map
+                and self._configuration is not None
+                and self._configuration.discard_unknown_keys
+                and self.additional_properties_type is None
+            ):
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
