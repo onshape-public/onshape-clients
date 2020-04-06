@@ -14,6 +14,7 @@ from ruamel.yaml import YAML
 
 collect_ignore = ["setup.py"]
 
+
 @pytest.fixture
 def element_bank(client, assets):
     yaml = YAML()
@@ -59,7 +60,7 @@ def translator_formats(client):
 
 @pytest.fixture
 def translator_format_to_extension():
-    return {"PARASOLID": "x_t", "PDF": "pdf", "STL": "stl"}
+    return {"PARASOLID": "x_t", "PDF": "pdf", "STL": "stl", "STEP": "stp"}
 
 
 @pytest.fixture

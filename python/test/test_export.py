@@ -11,6 +11,7 @@ from pathlib import Path
         ("drawing_configurable_cube", "PDF"),
         ("asm_three_axes", "PARASOLID"),
         ("ps_configurable_cube", "PARASOLID"),
+        ("ps_configurable_cube", "STEP"),
     ],
     indirect=["element"],
 )
