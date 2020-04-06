@@ -2,11 +2,16 @@ import pytest
 from onshape_client.client import Client
 from onshape_client.oas import BTTranslateFormatParams
 from onshape_client.onshape_url import OnshapeElement
+from pathlib import Path
 
 
 @pytest.mark.parametrize(
     ["element", "format_name"],
-    [("drawing_configurable_cube", "PDF"), ("asm_three_axes", "PARASOLID")],
+    [
+        ("drawing_configurable_cube", "PDF"),
+        ("asm_three_axes", "PARASOLID"),
+        ("ps_configurable_cube", "PARASOLID"),
+    ],
     indirect=["element"],
 )
 def test_export(
@@ -25,3 +30,16 @@ def test_export(
             store_in_document=False,
         ),
     )
+
+
+@pytest.mark.parametrize(
+    "element", ["ps_configurable_cube"], indirect=True,
+)
+def test_export_ps_stl(client: Client, element: OnshapeElement, tmp_dir: Path):
+    file = tmp_dir / f"{element.name}.stl"
+    response = client.part_studios_api.export_stl1(
+        element.did, element.wvm, element.wvmid, element.eid, _preload_content=False
+    )
+    with file.open(mode="wb") as f:
+        f.write(response.data)
+    assert file.stat().st_size > 1000

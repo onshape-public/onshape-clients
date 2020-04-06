@@ -59,7 +59,7 @@ def translator_formats(client):
 
 @pytest.fixture
 def translator_format_to_extension():
-    return {"PARASOLID": "x_t", "PDF": "pdf"}
+    return {"PARASOLID": "x_t", "PDF": "pdf", "STL": "stl"}
 
 
 @pytest.fixture
