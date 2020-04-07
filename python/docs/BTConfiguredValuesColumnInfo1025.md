@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
-**parent_name** | **str** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
+**parent_name** | **str** |  | [optional] 
 **parent_type** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

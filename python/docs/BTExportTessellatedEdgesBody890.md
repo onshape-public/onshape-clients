@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**edges** | [**[bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364]**](BTExportTessellatedEdgesEdge1364.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**edges** | [**[bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364]**](BTExportTessellatedEdgesEdge1364.md) |  | [optional] 
 **constituents** | **[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 

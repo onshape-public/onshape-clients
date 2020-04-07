@@ -82,9 +82,9 @@ class BTPStatementReturn281AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "space_after_return": (btp_space10.BTPSpace10,),  # noqa: E501
             "value": (btp_expression9.BTPExpression9,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,9 +92,9 @@ class BTPStatementReturn281AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "space_after_return": "spaceAfterReturn",  # noqa: E501
         "value": "value",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -135,9 +135,9 @@ class BTPStatementReturn281AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             space_after_return (btp_space10.BTPSpace10): [optional]  # noqa: E501
             value (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

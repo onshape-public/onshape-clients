@@ -84,8 +84,8 @@ class BTMParameterFeatureList1749(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "feature_ids": ([str],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "feature_ids": ([str],),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -96,8 +96,8 @@ class BTMParameterFeatureList1749(ModelComposed):
         return None
 
     attribute_map = {
-        "feature_ids": "featureIds",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "feature_ids": "featureIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -140,8 +140,8 @@ class BTMParameterFeatureList1749(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            feature_ids ([str]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            feature_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

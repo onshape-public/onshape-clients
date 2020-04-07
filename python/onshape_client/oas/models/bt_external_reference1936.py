@@ -110,8 +110,8 @@ class BTExternalReference1936(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "document_version_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "document_version_id": (str,),  # noqa: E501
             "configured": (bool,),  # noqa: E501
             "element_id": (str,),  # noqa: E501
             "external_document_with_version": (
@@ -135,8 +135,8 @@ class BTExternalReference1936(ModelComposed):
         return None
 
     attribute_map = {
-        "document_version_id": "documentVersionId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "document_version_id": "documentVersionId",  # noqa: E501
         "configured": "configured",  # noqa: E501
         "element_id": "elementId",  # noqa: E501
         "external_document_with_version": "externalDocumentWithVersion",  # noqa: E501
@@ -184,8 +184,8 @@ class BTExternalReference1936(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            document_version_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            document_version_id (str): [optional]  # noqa: E501
             configured (bool): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             external_document_with_version (bt_document_with_version_id.BTDocumentWithVersionId): [optional]  # noqa: E501

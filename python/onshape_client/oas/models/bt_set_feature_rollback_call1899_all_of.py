@@ -73,8 +73,8 @@ class BTSetFeatureRollbackCall1899AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "rollback_index": (int,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "rollback_index": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTSetFeatureRollbackCall1899AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "rollback_index": "rollbackIndex",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "rollback_index": "rollbackIndex",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTSetFeatureRollbackCall1899AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            rollback_index (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            rollback_index (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}

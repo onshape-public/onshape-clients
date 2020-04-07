@@ -80,10 +80,10 @@ class BTParameterSpecString175AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "format_conditions": (
                 [bt_string_format_condition683.BTStringFormatCondition683],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,8 +91,8 @@ class BTParameterSpecString175AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "format_conditions": "formatConditions",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "format_conditions": "formatConditions",  # noqa: E501
     }
 
     @staticmethod
@@ -133,8 +133,8 @@ class BTParameterSpecString175AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            format_conditions ([bt_string_format_condition683.BTStringFormatCondition683]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            format_conditions ([bt_string_format_condition683.BTStringFormatCondition683]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

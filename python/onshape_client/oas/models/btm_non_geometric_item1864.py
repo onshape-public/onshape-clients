@@ -100,8 +100,8 @@ class BTMNonGeometricItem1864(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "item_definition_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "item_definition_id": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "feature_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
@@ -127,8 +127,8 @@ class BTMNonGeometricItem1864(ModelComposed):
         return None
 
     attribute_map = {
-        "item_definition_id": "itemDefinitionId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "item_definition_id": "itemDefinitionId",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "feature_type": "featureType",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -182,8 +182,8 @@ class BTMNonGeometricItem1864(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            item_definition_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            item_definition_id (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501

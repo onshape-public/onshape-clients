@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**values_field_index** | **int** |  | [optional] 
-**configuration_parameter_id_field_index** | **int** |  | [optional] 
-**configuration_parameter_id** | **str** |  | [optional] 
-**values** | [**[btm_configured_value1341.BTMConfiguredValue1341]**](BTMConfiguredValue1341.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**configuration_parameter_id** | **str** |  | [optional] 
+**configuration_parameter_id_field_index** | **int** |  | [optional] 
+**values** | [**[btm_configured_value1341.BTMConfiguredValue1341]**](BTMConfiguredValue1341.md) |  | [optional] 
+**values_field_index** | **int** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

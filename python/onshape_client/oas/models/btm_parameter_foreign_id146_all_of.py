@@ -80,12 +80,12 @@ class BTMParameterForeignId146AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "foreign_id": (str,),  # noqa: E501
+            "foreign_name": (str,),  # noqa: E501
             "location_info": (
                 bt_foreign_data_response1070.BTForeignDataResponse1070,
             ),  # noqa: E501
-            "foreign_name": (str,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,10 +93,10 @@ class BTMParameterForeignId146AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "foreign_id": "foreignId",  # noqa: E501
-        "location_info": "locationInfo",  # noqa: E501
-        "foreign_name": "foreignName",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "foreign_id": "foreignId",  # noqa: E501
+        "foreign_name": "foreignName",  # noqa: E501
+        "location_info": "locationInfo",  # noqa: E501
     }
 
     @staticmethod
@@ -137,10 +137,10 @@ class BTMParameterForeignId146AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            foreign_id (str): [optional]  # noqa: E501
-            location_info (bt_foreign_data_response1070.BTForeignDataResponse1070): [optional]  # noqa: E501
-            foreign_name (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            foreign_id (str): [optional]  # noqa: E501
+            foreign_name (str): [optional]  # noqa: E501
+            location_info (bt_foreign_data_response1070.BTForeignDataResponse1070): [optional]  # noqa: E501
         """
 
         self._data_store = {}

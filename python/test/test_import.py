@@ -1,10 +1,9 @@
 import pytest
 
 
-@pytest.mark.parametrize("file", ["Cube.x_t", "Cube.step"])
+@pytest.mark.parametrize("file", ["bracelet.x_t", "Cube.x_t", "Cube.step"])
 def test_import_file(new_document, client, assets, file):
-    files_to_import = ["Cube.x_t", "Cube.step"]
-    imported_ps = new_document.import_file(assets / file)
+    imported_ps = new_document.import_file(assets / file, allow_faulty_parts=True)
     response = client.parts_api.get_mass_properties(
         imported_ps.did,
         imported_ps.wvm,

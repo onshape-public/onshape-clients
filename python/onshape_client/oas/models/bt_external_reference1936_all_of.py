@@ -73,8 +73,8 @@ class BTExternalReference1936AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "document_version_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "document_version_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTExternalReference1936AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "document_version_id": "documentVersionId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "document_version_id": "documentVersionId",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTExternalReference1936AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            document_version_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            document_version_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

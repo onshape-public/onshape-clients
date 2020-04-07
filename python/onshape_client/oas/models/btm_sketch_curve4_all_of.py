@@ -78,10 +78,10 @@ class BTMSketchCurve4AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "center_id": (str,),  # noqa: E501
-            "internal_ids": ([str],),  # noqa: E501
-            "geometry": (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "center_id": (str,),  # noqa: E501
+            "geometry": (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
+            "internal_ids": ([str],),  # noqa: E501
         }
 
     @staticmethod
@@ -89,10 +89,10 @@ class BTMSketchCurve4AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "center_id": "centerId",  # noqa: E501
-        "internal_ids": "internalIds",  # noqa: E501
-        "geometry": "geometry",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "center_id": "centerId",  # noqa: E501
+        "geometry": "geometry",  # noqa: E501
+        "internal_ids": "internalIds",  # noqa: E501
     }
 
     @staticmethod
@@ -133,10 +133,10 @@ class BTMSketchCurve4AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            center_id (str): [optional]  # noqa: E501
-            internal_ids ([str]): [optional]  # noqa: E501
-            geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            center_id (str): [optional]  # noqa: E501
+            geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
+            internal_ids ([str]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

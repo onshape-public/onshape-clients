@@ -73,8 +73,8 @@ class BTFeatureStudioContents2239AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "contents": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "contents": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTFeatureStudioContents2239AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "contents": "contents",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "contents": "contents",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTFeatureStudioContents2239AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            contents (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            contents (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

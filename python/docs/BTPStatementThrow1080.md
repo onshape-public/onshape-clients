@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**value** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

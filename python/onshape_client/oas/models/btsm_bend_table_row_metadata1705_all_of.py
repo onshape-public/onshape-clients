@@ -73,8 +73,8 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "is_joint_type_editable": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_joint_type_editable": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "is_joint_type_editable": "isJointTypeEditable",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_joint_type_editable": "isJointTypeEditable",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTSMBendTableRowMetadata1705AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_joint_type_editable (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_joint_type_editable (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

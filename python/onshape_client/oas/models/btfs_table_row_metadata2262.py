@@ -92,11 +92,11 @@ class BTFSTableRowMetadata2262(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "callout": (str,),  # noqa: E501
             "cross_highlight_data": (
                 bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "cross_highlight_data_if_any": (
                 bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,
             ),  # noqa: E501
@@ -107,9 +107,9 @@ class BTFSTableRowMetadata2262(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "callout": "callout",  # noqa: E501
         "cross_highlight_data": "crossHighlightData",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "cross_highlight_data_if_any": "crossHighlightDataIfAny",  # noqa: E501
     }
 
@@ -150,9 +150,9 @@ class BTFSTableRowMetadata2262(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             callout (str): [optional]  # noqa: E501
             cross_highlight_data (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             cross_highlight_data_if_any (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
         """
 

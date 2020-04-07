@@ -96,16 +96,16 @@ class BTMMate64AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "mate_connector_query_list": (
                 btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67,
             ),  # noqa: E501
-            "primary_axis_alignment": (bool,),  # noqa: E501
-            "secondary_axis_alignment": (str,),  # noqa: E501
-            "mate_offset": (bt_vector3d389.BTVector3d389,),  # noqa: E501
             "mate_connectors": (
                 [btm_mate_connector66.BTMMateConnector66],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "mate_offset": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "primary_axis_alignment": (bool,),  # noqa: E501
+            "secondary_axis_alignment": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -113,12 +113,12 @@ class BTMMate64AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "mate_connector_query_list": "mateConnectorQueryList",  # noqa: E501
+        "mate_connectors": "mateConnectors",  # noqa: E501
+        "mate_offset": "mateOffset",  # noqa: E501
         "primary_axis_alignment": "primaryAxisAlignment",  # noqa: E501
         "secondary_axis_alignment": "secondaryAxisAlignment",  # noqa: E501
-        "mate_offset": "mateOffset",  # noqa: E501
-        "mate_connectors": "mateConnectors",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -159,12 +159,12 @@ class BTMMate64AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             mate_connector_query_list (btm_parameter_query_with_occurrence_list67.BTMParameterQueryWithOccurrenceList67): [optional]  # noqa: E501
+            mate_connectors ([btm_mate_connector66.BTMMateConnector66]): [optional]  # noqa: E501
+            mate_offset (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             primary_axis_alignment (bool): [optional]  # noqa: E501
             secondary_axis_alignment (str): [optional]  # noqa: E501
-            mate_offset (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
-            mate_connectors ([btm_mate_connector66.BTMMateConnector66]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

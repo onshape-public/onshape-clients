@@ -82,10 +82,10 @@ class BTMParameterDerived864AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "imports": ([btm_import136.BTMImport136],),  # noqa: E501
             "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
             "namespace": (str,),  # noqa: E501
-            "imports": ([btm_import136.BTMImport136],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,10 +93,10 @@ class BTMParameterDerived864AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "imports": "imports",  # noqa: E501
         "module_id": "moduleId",  # noqa: E501
         "namespace": "namespace",  # noqa: E501
-        "imports": "imports",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -137,10 +137,10 @@ class BTMParameterDerived864AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
             module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
-            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

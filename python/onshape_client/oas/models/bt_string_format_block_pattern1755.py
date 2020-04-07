@@ -86,8 +86,8 @@ class BTStringFormatBlockPattern1755(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "reg_exp_to_block": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "reg_exp_to_block": (str,),  # noqa: E501
             "error_message": (str,),  # noqa: E501
             "should_reset_value_when_confirmed": (bool,),  # noqa: E501
         }
@@ -97,8 +97,8 @@ class BTStringFormatBlockPattern1755(ModelComposed):
         return None
 
     attribute_map = {
-        "reg_exp_to_block": "regExpToBlock",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "reg_exp_to_block": "regExpToBlock",  # noqa: E501
         "error_message": "errorMessage",  # noqa: E501
         "should_reset_value_when_confirmed": "shouldResetValueWhenConfirmed",  # noqa: E501
     }
@@ -140,8 +140,8 @@ class BTStringFormatBlockPattern1755(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            reg_exp_to_block (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            reg_exp_to_block (str): [optional]  # noqa: E501
             error_message (str): [optional]  # noqa: E501
             should_reset_value_when_confirmed (bool): [optional]  # noqa: E501
         """

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**second_entity_query** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **inference_type** | **str** |  | [optional] 
 **second_deterministic_id** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
+**second_entity_query** | **str** |  | [optional] 
 **deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **deterministic_ids** | **[str]** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

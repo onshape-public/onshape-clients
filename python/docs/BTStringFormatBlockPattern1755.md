@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reg_exp_to_block** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**reg_exp_to_block** | **str** |  | [optional] 
 **error_message** | **str** |  | [optional] 
 **should_reset_value_when_confirmed** | **bool** |  | [optional] 
 

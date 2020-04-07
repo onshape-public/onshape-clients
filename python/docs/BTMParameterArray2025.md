@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[btm_array_parameter_item1843.BTMArrayParameterItem1843]**](BTMArrayParameterItem1843.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**items** | [**[btm_array_parameter_item1843.BTMArrayParameterItem1843]**](BTMArrayParameterItem1843.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

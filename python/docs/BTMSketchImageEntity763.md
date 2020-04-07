@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**aspect_ratio** | **float** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **origin_x** | **float** |  | [optional] 
 **origin_y** | **float** |  | [optional] 
 **xaxis_x** | **float** |  | [optional] 
 **xaxis_y** | **float** |  | [optional] 
-**aspect_ratio** | **float** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 

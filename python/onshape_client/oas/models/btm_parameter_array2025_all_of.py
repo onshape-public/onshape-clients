@@ -80,10 +80,10 @@ class BTMParameterArray2025AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "items": (
                 [btm_array_parameter_item1843.BTMArrayParameterItem1843],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,8 +91,8 @@ class BTMParameterArray2025AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "items": "items",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "items": "items",  # noqa: E501
     }
 
     @staticmethod
@@ -133,8 +133,8 @@ class BTMParameterArray2025AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            items ([btm_array_parameter_item1843.BTMArrayParameterItem1843]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            items ([btm_array_parameter_item1843.BTMArrayParameterItem1843]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

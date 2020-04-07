@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max_number_of_picks** | **int** |  | [optional] 
 **allowed_insertable_types** | **[str]** |  | [optional] 
-**computed_configuration_inputs** | [**[bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]**](BTComputedConfigurationInputSpec2525.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**computed_configuration_inputs** | [**[bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]**](BTComputedConfigurationInputSpec2525.md) |  | [optional] 
+**max_number_of_picks** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

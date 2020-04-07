@@ -89,9 +89,9 @@ class BTPExpressionBuiltinCall239AllOf(ModelNormal):
         """
         return {
             "arguments": ([btp_expression9.BTPExpression9],),  # noqa: E501
-            "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
-            "name": (btp_builtin_identifier233.BTPBuiltinIdentifier233,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "name": (btp_builtin_identifier233.BTPBuiltinIdentifier233,),  # noqa: E501
+            "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,9 +100,9 @@ class BTPExpressionBuiltinCall239AllOf(ModelNormal):
 
     attribute_map = {
         "arguments": "arguments",  # noqa: E501
-        "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
-        "name": "name",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
     }
 
     @staticmethod
@@ -144,9 +144,9 @@ class BTPExpressionBuiltinCall239AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             arguments ([btp_expression9.BTPExpression9]): [optional]  # noqa: E501
-            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            name (btp_builtin_identifier233.BTPBuiltinIdentifier233): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            name (btp_builtin_identifier233.BTPBuiltinIdentifier233): [optional]  # noqa: E501
+            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -73,8 +73,8 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "minimum_length": (int,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "minimum_length": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "minimum_length": "minimumLength",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "minimum_length": "minimumLength",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTStringMinimumLengthPattern895AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            minimum_length (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            minimum_length (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}

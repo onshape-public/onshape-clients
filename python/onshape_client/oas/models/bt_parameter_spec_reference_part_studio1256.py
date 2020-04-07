@@ -145,14 +145,14 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "max_number_of_picks": (int,),  # noqa: E501
             "allowed_insertable_types": ([str],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "computed_configuration_inputs": (
                 [
                     bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525
                 ],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "max_number_of_picks": (int,),  # noqa: E501
             "additional_localized_strings": (int,),  # noqa: E501
             "column_name": (str,),  # noqa: E501
             "default_value": (btm_parameter1.BTMParameter1,),  # noqa: E501
@@ -174,10 +174,10 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
         return None
 
     attribute_map = {
-        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
         "allowed_insertable_types": "allowedInsertableTypes",  # noqa: E501
-        "computed_configuration_inputs": "computedConfigurationInputs",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "computed_configuration_inputs": "computedConfigurationInputs",  # noqa: E501
+        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
         "additional_localized_strings": "additionalLocalizedStrings",  # noqa: E501
         "column_name": "columnName",  # noqa: E501
         "default_value": "defaultValue",  # noqa: E501
@@ -229,10 +229,10 @@ class BTParameterSpecReferencePartStudio1256(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            max_number_of_picks (int): [optional]  # noqa: E501
             allowed_insertable_types ([str]): [optional]  # noqa: E501
-            computed_configuration_inputs ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            computed_configuration_inputs ([bt_computed_configuration_input_spec2525.BTComputedConfigurationInputSpec2525]): [optional]  # noqa: E501
+            max_number_of_picks (int): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501

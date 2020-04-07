@@ -102,12 +102,12 @@ class BTPName261(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "import_microversion": (str,),  # noqa: E501
-            "for_export": (bool,),  # noqa: E501
-            "identifier": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            "global_namespace": (bool,),  # noqa: E501
-            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "for_export": (bool,),  # noqa: E501
+            "global_namespace": (bool,),  # noqa: E501
+            "identifier": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -124,12 +124,12 @@ class BTPName261(ModelComposed):
         return None
 
     attribute_map = {
-        "import_microversion": "importMicroversion",  # noqa: E501
-        "for_export": "forExport",  # noqa: E501
-        "identifier": "identifier",  # noqa: E501
-        "global_namespace": "globalNamespace",  # noqa: E501
-        "namespace": "namespace",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "for_export": "forExport",  # noqa: E501
+        "global_namespace": "globalNamespace",  # noqa: E501
+        "identifier": "identifier",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -178,12 +178,12 @@ class BTPName261(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            import_microversion (str): [optional]  # noqa: E501
-            for_export (bool): [optional]  # noqa: E501
-            identifier (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
-            global_namespace (bool): [optional]  # noqa: E501
-            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            for_export (bool): [optional]  # noqa: E501
+            global_namespace (bool): [optional]  # noqa: E501
+            identifier (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            import_microversion (str): [optional]  # noqa: E501
+            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

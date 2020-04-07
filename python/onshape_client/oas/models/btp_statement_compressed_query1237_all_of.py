@@ -73,8 +73,8 @@ class BTPStatementCompressedQuery1237AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "query": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "query": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTPStatementCompressedQuery1237AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "query": "query",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "query": "query",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTPStatementCompressedQuery1237AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            query (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            query (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

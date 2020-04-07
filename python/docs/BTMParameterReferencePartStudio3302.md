@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**part_query** | [**btm_parameter_query_list148.BTMParameterQueryList148**](BTMParameterQueryList148.md) |  | [optional] 
 **block_build_function_access** | **bool** |  | [optional] 
-**standard_content_parameters_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**part_query** | [**btm_parameter_query_list148.BTMParameterQueryList148**](BTMParameterQueryList148.md) |  | [optional] 
+**standard_content_parameters_id** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

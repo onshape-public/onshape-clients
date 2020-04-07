@@ -86,17 +86,17 @@ class BTCurveGeometryInterpolatedSpline116(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "is_periodic": (bool,),  # noqa: E501
-            "interpolation_points": ([float],),  # noqa: E501
-            "start_derivative_x": (float,),  # noqa: E501
-            "start_derivative_y": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "end_derivative_x": (float,),  # noqa: E501
             "end_derivative_y": (float,),  # noqa: E501
-            "start_handle_x": (float,),  # noqa: E501
-            "start_handle_y": (float,),  # noqa: E501
             "end_handle_x": (float,),  # noqa: E501
             "end_handle_y": (float,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "interpolation_points": ([float],),  # noqa: E501
+            "is_periodic": (bool,),  # noqa: E501
+            "start_derivative_x": (float,),  # noqa: E501
+            "start_derivative_y": (float,),  # noqa: E501
+            "start_handle_x": (float,),  # noqa: E501
+            "start_handle_y": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -104,17 +104,17 @@ class BTCurveGeometryInterpolatedSpline116(ModelComposed):
         return None
 
     attribute_map = {
-        "is_periodic": "isPeriodic",  # noqa: E501
-        "interpolation_points": "interpolationPoints",  # noqa: E501
-        "start_derivative_x": "startDerivativeX",  # noqa: E501
-        "start_derivative_y": "startDerivativeY",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "end_derivative_x": "endDerivativeX",  # noqa: E501
         "end_derivative_y": "endDerivativeY",  # noqa: E501
-        "start_handle_x": "startHandleX",  # noqa: E501
-        "start_handle_y": "startHandleY",  # noqa: E501
         "end_handle_x": "endHandleX",  # noqa: E501
         "end_handle_y": "endHandleY",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "interpolation_points": "interpolationPoints",  # noqa: E501
+        "is_periodic": "isPeriodic",  # noqa: E501
+        "start_derivative_x": "startDerivativeX",  # noqa: E501
+        "start_derivative_y": "startDerivativeY",  # noqa: E501
+        "start_handle_x": "startHandleX",  # noqa: E501
+        "start_handle_y": "startHandleY",  # noqa: E501
     }
 
     required_properties = set(
@@ -154,17 +154,17 @@ class BTCurveGeometryInterpolatedSpline116(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_periodic (bool): [optional]  # noqa: E501
-            interpolation_points ([float]): [optional]  # noqa: E501
-            start_derivative_x (float): [optional]  # noqa: E501
-            start_derivative_y (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             end_derivative_x (float): [optional]  # noqa: E501
             end_derivative_y (float): [optional]  # noqa: E501
-            start_handle_x (float): [optional]  # noqa: E501
-            start_handle_y (float): [optional]  # noqa: E501
             end_handle_x (float): [optional]  # noqa: E501
             end_handle_y (float): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            interpolation_points ([float]): [optional]  # noqa: E501
+            is_periodic (bool): [optional]  # noqa: E501
+            start_derivative_x (float): [optional]  # noqa: E501
+            start_derivative_y (float): [optional]  # noqa: E501
+            start_handle_x (float): [optional]  # noqa: E501
+            start_handle_y (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

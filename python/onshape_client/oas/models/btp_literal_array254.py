@@ -100,9 +100,9 @@ class BTPLiteralArray254(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
             "trailing_comma": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -119,9 +119,9 @@ class BTPLiteralArray254(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
         "trailing_comma": "trailingComma",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -170,9 +170,9 @@ class BTPLiteralArray254(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
             trailing_comma (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

@@ -73,8 +73,8 @@ class BTTableTestCellDouble2509AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "cell_value": (float,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "cell_value": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTTableTestCellDouble2509AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "cell_value": "cellValue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "cell_value": "cellValue",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTTableTestCellDouble2509AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            cell_value (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            cell_value (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

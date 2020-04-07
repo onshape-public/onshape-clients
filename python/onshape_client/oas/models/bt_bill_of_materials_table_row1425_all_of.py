@@ -64,16 +64,16 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
     """
 
     allowed_values = {
-        ("expansion_status",): {
-            "NOT_EXPANDABLE": "NOT_EXPANDABLE",
-            "EXPANDED": "EXPANDED",
-            "COLLAPSED": "COLLAPSED",
-            "UNKNOWN": "UNKNOWN",
-        },
         ("exclusion_status",): {
             "NOT_EXCLUDED": "NOT_EXCLUDED",
             "PARENT_EXCLUDED": "PARENT_EXCLUDED",
             "EXCLUDED": "EXCLUDED",
+            "UNKNOWN": "UNKNOWN",
+        },
+        ("expansion_status",): {
+            "NOT_EXPANDABLE": "NOT_EXPANDABLE",
+            "EXPANDED": "EXPANDED",
+            "COLLAPSED": "COLLAPSED",
             "UNKNOWN": "UNKNOWN",
         },
     }
@@ -93,15 +93,15 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "exclude_is_editable": (bool,),  # noqa: E501
+            "exclusion_status": (str,),  # noqa: E501
+            "expansion_status": (str,),  # noqa: E501
+            "indent_level": (int,),  # noqa: E501
+            "metadata_update_href": (str,),  # noqa: E501
             "unique_item_id": (
                 bt_bill_of_materials_unique_item_id2029.BTBillOfMaterialsUniqueItemId2029,
             ),  # noqa: E501
-            "indent_level": (int,),  # noqa: E501
-            "expansion_status": (str,),  # noqa: E501
-            "exclusion_status": (str,),  # noqa: E501
-            "exclude_is_editable": (bool,),  # noqa: E501
-            "metadata_update_href": (str,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -109,13 +109,13 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "unique_item_id": "uniqueItemId",  # noqa: E501
-        "indent_level": "indentLevel",  # noqa: E501
-        "expansion_status": "expansionStatus",  # noqa: E501
-        "exclusion_status": "exclusionStatus",  # noqa: E501
-        "exclude_is_editable": "excludeIsEditable",  # noqa: E501
-        "metadata_update_href": "metadataUpdateHref",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "exclude_is_editable": "excludeIsEditable",  # noqa: E501
+        "exclusion_status": "exclusionStatus",  # noqa: E501
+        "expansion_status": "expansionStatus",  # noqa: E501
+        "indent_level": "indentLevel",  # noqa: E501
+        "metadata_update_href": "metadataUpdateHref",  # noqa: E501
+        "unique_item_id": "uniqueItemId",  # noqa: E501
     }
 
     @staticmethod
@@ -156,13 +156,13 @@ class BTBillOfMaterialsTableRow1425AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            unique_item_id (bt_bill_of_materials_unique_item_id2029.BTBillOfMaterialsUniqueItemId2029): [optional]  # noqa: E501
-            indent_level (int): [optional]  # noqa: E501
-            expansion_status (str): [optional]  # noqa: E501
-            exclusion_status (str): [optional]  # noqa: E501
-            exclude_is_editable (bool): [optional]  # noqa: E501
-            metadata_update_href (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            exclude_is_editable (bool): [optional]  # noqa: E501
+            exclusion_status (str): [optional]  # noqa: E501
+            expansion_status (str): [optional]  # noqa: E501
+            indent_level (int): [optional]  # noqa: E501
+            metadata_update_href (str): [optional]  # noqa: E501
+            unique_item_id (bt_bill_of_materials_unique_item_id2029.BTBillOfMaterialsUniqueItemId2029): [optional]  # noqa: E501
         """
 
         self._data_store = {}

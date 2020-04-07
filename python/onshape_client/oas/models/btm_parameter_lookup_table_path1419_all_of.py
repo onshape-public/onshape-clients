@@ -73,8 +73,8 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "value": ({str: (str,)},),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "value": ({str: (str,)},),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "value": "value",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "value": "value",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMParameterLookupTablePath1419AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value ({str: (str,)}): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            value ({str: (str,)}): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -80,11 +80,11 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "parameter_id": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "inner_parameter_location": (
                 bt_inner_parameter_location1715.BTInnerParameterLocation1715,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "parameter_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,9 +92,9 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "parameter_id": "parameterId",  # noqa: E501
-        "inner_parameter_location": "innerParameterLocation",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "inner_parameter_location": "innerParameterLocation",  # noqa: E501
+        "parameter_id": "parameterId",  # noqa: E501
     }
 
     @staticmethod
@@ -135,9 +135,9 @@ class BTConfiguredParameterColumnInfo2900AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            parameter_id (str): [optional]  # noqa: E501
-            inner_parameter_location (bt_inner_parameter_location1715.BTInnerParameterLocation1715): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            inner_parameter_location (bt_inner_parameter_location1715.BTInnerParameterLocation1715): [optional]  # noqa: E501
+            parameter_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

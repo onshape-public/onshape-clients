@@ -88,11 +88,11 @@ class BTPConversionFunction1362AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "to": (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
-            "type_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "_from": (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
             "space_after_type": (btp_space10.BTPSpace10,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "to": (btp_literal_number258.BTPLiteralNumber258,),  # noqa: E501
+            "type_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,11 +100,11 @@ class BTPConversionFunction1362AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "to": "to",  # noqa: E501
-        "type_name": "typeName",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "_from": "from",  # noqa: E501
         "space_after_type": "spaceAfterType",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "to": "to",  # noqa: E501
+        "type_name": "typeName",  # noqa: E501
     }
 
     @staticmethod
@@ -145,11 +145,11 @@ class BTPConversionFunction1362AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            to (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
-            type_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             _from (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
             space_after_type (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            to (btp_literal_number258.BTPLiteralNumber258): [optional]  # noqa: E501
+            type_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
         """
 
         self._data_store = {}

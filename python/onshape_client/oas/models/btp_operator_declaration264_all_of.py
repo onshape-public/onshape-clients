@@ -100,10 +100,10 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "operator": (str,),  # noqa: E501
-            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "operator": (str,),  # noqa: E501
+            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,10 +111,10 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "operator": "operator",  # noqa: E501
-        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
-        "space_after_operator": "spaceAfterOperator",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "operator": "operator",  # noqa: E501
+        "space_after_operator": "spaceAfterOperator",  # noqa: E501
+        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
     }
 
     @staticmethod
@@ -155,10 +155,10 @@ class BTPOperatorDeclaration264AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operator (str): [optional]  # noqa: E501
-            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            operator (str): [optional]  # noqa: E501
+            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cell_value** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**cell_value** | **float** |  | [optional] 
 **is_ever_visible** | **bool** |  | [optional] 
 **is_read_only** | **bool** |  | [optional] 
 

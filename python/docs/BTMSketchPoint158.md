@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**y** | **float** |  | [optional] 
-**x** | **float** |  | [optional] 
-**is_user_point** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**is_user_point** | **bool** |  | [optional] 
+**x** | **float** |  | [optional] 
+**y** | **float** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 

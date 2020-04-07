@@ -84,11 +84,11 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "configuration_parameters": (
                 [btm_configuration_parameter819.BTMConfigurationParameter819],
             ),  # noqa: E501
             "current_configuration": ([btm_parameter1.BTMParameter1],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -96,9 +96,9 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "configuration_parameters": "configurationParameters",  # noqa: E501
         "current_configuration": "currentConfiguration",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -139,9 +139,9 @@ class BTConfigurationUpdateCall2933AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             configuration_parameters ([btm_configuration_parameter819.BTMConfigurationParameter819]): [optional]  # noqa: E501
             current_configuration ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

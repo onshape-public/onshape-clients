@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value_object** | **bool** |  | [optional] 
-**value** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**value** | **bool** |  | [optional] 
+**value_object** | **bool** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **standard_type_name** | **str** |  | [optional] 
 **type_tag** | **str** |  | [optional] 

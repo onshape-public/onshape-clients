@@ -92,12 +92,12 @@ class BTMParameterReferencePartStudio3302(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "block_build_function_access": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "part_query": (
                 btm_parameter_query_list148.BTMParameterQueryList148,
             ),  # noqa: E501
-            "block_build_function_access": (bool,),  # noqa: E501
             "standard_content_parameters_id": (str,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -111,10 +111,10 @@ class BTMParameterReferencePartStudio3302(ModelComposed):
         return None
 
     attribute_map = {
-        "part_query": "partQuery",  # noqa: E501
         "block_build_function_access": "blockBuildFunctionAccess",  # noqa: E501
-        "standard_content_parameters_id": "standardContentParametersId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "part_query": "partQuery",  # noqa: E501
+        "standard_content_parameters_id": "standardContentParametersId",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -160,10 +160,10 @@ class BTMParameterReferencePartStudio3302(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            part_query (btm_parameter_query_list148.BTMParameterQueryList148): [optional]  # noqa: E501
             block_build_function_access (bool): [optional]  # noqa: E501
-            standard_content_parameters_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            part_query (btm_parameter_query_list148.BTMParameterQueryList148): [optional]  # noqa: E501
+            standard_content_parameters_id (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

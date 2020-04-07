@@ -73,8 +73,8 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "is_text": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_text": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "is_text": "isText",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_text": "isText",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTTextObjectFilter1515AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_text (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_text (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

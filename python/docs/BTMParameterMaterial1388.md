@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**material** | [**bt_part_material1445.BTPartMaterial1445**](BTPartMaterial1445.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**material** | [**bt_part_material1445.BTPartMaterial1445**](BTPartMaterial1445.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

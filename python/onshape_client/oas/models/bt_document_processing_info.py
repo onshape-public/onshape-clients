@@ -124,8 +124,8 @@ class BTDocumentProcessingInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "translation_id": (str,),  # noqa: E501
             "translation_event_key": (str,),  # noqa: E501
+            "translation_id": (str,),  # noqa: E501
             "anonymous_access_allowed": (bool,),  # noqa: E501
             "anonymous_allows_export": (bool,),  # noqa: E501
             "beta_capability_ids": ([str],),  # noqa: E501
@@ -199,8 +199,8 @@ class BTDocumentProcessingInfo(ModelComposed):
         return None
 
     attribute_map = {
-        "translation_id": "translationId",  # noqa: E501
         "translation_event_key": "translationEventKey",  # noqa: E501
+        "translation_id": "translationId",  # noqa: E501
         "anonymous_access_allowed": "anonymousAccessAllowed",  # noqa: E501
         "anonymous_allows_export": "anonymousAllowsExport",  # noqa: E501
         "beta_capability_ids": "betaCapabilityIds",  # noqa: E501
@@ -291,8 +291,8 @@ class BTDocumentProcessingInfo(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            translation_id (str): [optional]  # noqa: E501
             translation_event_key (str): [optional]  # noqa: E501
+            translation_id (str): [optional]  # noqa: E501
             anonymous_access_allowed (bool): [optional]  # noqa: E501
             anonymous_allows_export (bool): [optional]  # noqa: E501
             beta_capability_ids ([str]): [optional]  # noqa: E501

@@ -73,10 +73,10 @@ class BTParameterSpecArray2600AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "item_name": (str,),  # noqa: E501
-            "item_label_template": (str,),  # noqa: E501
-            "driven_query": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "driven_query": (str,),  # noqa: E501
+            "item_label_template": (str,),  # noqa: E501
+            "item_name": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,10 +84,10 @@ class BTParameterSpecArray2600AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "item_name": "itemName",  # noqa: E501
-        "item_label_template": "itemLabelTemplate",  # noqa: E501
-        "driven_query": "drivenQuery",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "driven_query": "drivenQuery",  # noqa: E501
+        "item_label_template": "itemLabelTemplate",  # noqa: E501
+        "item_name": "itemName",  # noqa: E501
     }
 
     @staticmethod
@@ -128,10 +128,10 @@ class BTParameterSpecArray2600AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            item_name (str): [optional]  # noqa: E501
-            item_label_template (str): [optional]  # noqa: E501
-            driven_query (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            driven_query (str): [optional]  # noqa: E501
+            item_label_template (str): [optional]  # noqa: E501
+            item_name (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

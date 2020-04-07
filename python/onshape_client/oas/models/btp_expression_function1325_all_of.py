@@ -102,12 +102,12 @@ class BTPExpressionFunction1325AllOf(ModelNormal):
                 [btp_argument_declaration232.BTPArgumentDeclaration232],
             ),  # noqa: E501
             "body": (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
-            "precondition": (btp_statement269.BTPStatement269,),  # noqa: E501
-            "space_after_arglist": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_after_function": (btp_space10.BTPSpace10,),  # noqa: E501
-            "return_type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "precondition": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "return_type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
+            "space_after_arglist": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_after_function": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
         }
 
     @staticmethod
@@ -117,12 +117,12 @@ class BTPExpressionFunction1325AllOf(ModelNormal):
     attribute_map = {
         "arguments": "arguments",  # noqa: E501
         "body": "body",  # noqa: E501
-        "precondition": "precondition",  # noqa: E501
-        "space_after_arglist": "spaceAfterArglist",  # noqa: E501
-        "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
-        "space_after_function": "spaceAfterFunction",  # noqa: E501
-        "return_type": "returnType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "precondition": "precondition",  # noqa: E501
+        "return_type": "returnType",  # noqa: E501
+        "space_after_arglist": "spaceAfterArglist",  # noqa: E501
+        "space_after_function": "spaceAfterFunction",  # noqa: E501
+        "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
     }
 
     @staticmethod
@@ -165,12 +165,12 @@ class BTPExpressionFunction1325AllOf(ModelNormal):
                                 If omitted no type conversion is done.
             arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
-            precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_after_function (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
+            space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_after_function (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
         """
 
         self._data_store = {}

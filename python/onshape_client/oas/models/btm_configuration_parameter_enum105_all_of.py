@@ -78,12 +78,12 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "option_ids": ([str],),  # noqa: E501
-            "enum_name": (str,),  # noqa: E501
-            "options": ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
-            "namespace": (str,),  # noqa: E501
-            "default_value": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "default_value": (str,),  # noqa: E501
+            "enum_name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "option_ids": ([str],),  # noqa: E501
+            "options": ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
         }
 
     @staticmethod
@@ -91,12 +91,12 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "option_ids": "optionIds",  # noqa: E501
-        "enum_name": "enumName",  # noqa: E501
-        "options": "options",  # noqa: E501
-        "namespace": "namespace",  # noqa: E501
-        "default_value": "defaultValue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "enum_name": "enumName",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "option_ids": "optionIds",  # noqa: E501
+        "options": "options",  # noqa: E501
     }
 
     @staticmethod
@@ -137,12 +137,12 @@ class BTMConfigurationParameterEnum105AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            option_ids ([str]): [optional]  # noqa: E501
-            enum_name (str): [optional]  # noqa: E501
-            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
-            namespace (str): [optional]  # noqa: E501
-            default_value (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            default_value (str): [optional]  # noqa: E501
+            enum_name (str): [optional]  # noqa: E501
+            namespace (str): [optional]  # noqa: E501
+            option_ids ([str]): [optional]  # noqa: E501
+            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
         """
 
         self._data_store = {}
