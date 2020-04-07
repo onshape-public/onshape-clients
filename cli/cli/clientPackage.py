@@ -31,7 +31,7 @@ class ClientPackage:
     name = "generic"
 
     def __init__(
-        self, repo=None, version_regex=r"\d*\.\d*\.\d*[\w-]", dry_run=False,
+        self, repo=None, version_regex=r"\d*\.\d*\.\d*[\w-]", command_runner=None,
     ):
         """ The base class for client packages. Only things necessary for all clients should go here.
         :param String version_regex: ex "\d*\.\d*\.\d*[\w-]" valid version regex
@@ -47,9 +47,11 @@ class ClientPackage:
         self.root_path = self.repo / name
         self.version_regex = version_regex
         self.oas_client_name = self.oas_client_name if self.oas_client_name else name
-        self.dry_run = dry_run
         self.version_to_publish = None
-        self.cwd = self.root_path
+        self.command_runner = (
+            command_runner if command_runner else CommandRunner(cwd=self.root_path)
+        )
+        self.command_runner.cwd = self.root_path
 
     def __getattr__(self, name):
         def skip_func(*args, **kwargs):
@@ -98,16 +100,9 @@ class ClientPackage:
         result = re.sub(regex_for_version_number, version, f)
         file_path_to_version_identifier.open(mode="w").write(result)
 
-    def run(self, command, cwd=None):
+    def run(self, command, **kwargs):
         """Run a command in the shell for this client."""
-        self.print_divider(
-            f'{"Running" if not self.dry_run else "Would run"} command "{command}"'
-        )
-        command = command.split(" ")
-        # Dry runs should pretend the command succeeded.
-        if self.dry_run:
-            return subprocess.CompletedProcess(command, 0)
-        return subprocess.run(command, cwd=cwd if cwd else self.cwd)
+        return self.command_runner.run(command, **kwargs)
 
 
 class CppPackage(ClientPackage):
@@ -127,7 +122,7 @@ class GoPackage(ClientPackage):
         if destination.exists():
             shutil.rmtree(destination)
         shutil.copytree(str(source), str(destination))
-        self.cwd = destination
+        self.command_runner.cwd = destination
         self.run("git init")
         self.run(
             "git remote add origin https://github.com/onshape-public/onshape-go-client.git"

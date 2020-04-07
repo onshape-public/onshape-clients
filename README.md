@@ -15,7 +15,8 @@ you own api key credentials from the [Onshape Developer Portal](https://dev-port
 
 ### Install
 The install steps are different for each client. Navigate to the root directory of the client, and follow the README
-posted there.
+posted there. Most likely, you'll want to download the client from a specific distribution channel. For instance, if 
+using Python, you should get it from pypa.
 
 ### Commit
 We use Commitizen and semantic-release to bump versions and publish all the packages to the various package distributors.
