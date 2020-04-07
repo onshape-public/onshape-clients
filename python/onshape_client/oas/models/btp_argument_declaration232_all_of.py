@@ -95,11 +95,11 @@ class BTPArgumentDeclaration232AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "standard_type": (str,),  # noqa: E501
-            "type_name": (str,),  # noqa: E501
-            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            "type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "standard_type": (str,),  # noqa: E501
+            "type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
+            "type_name": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -107,11 +107,11 @@ class BTPArgumentDeclaration232AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "standard_type": "standardType",  # noqa: E501
-        "type_name": "typeName",  # noqa: E501
-        "name": "name",  # noqa: E501
-        "type": "type",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "standard_type": "standardType",  # noqa: E501
+        "type": "type",  # noqa: E501
+        "type_name": "typeName",  # noqa: E501
     }
 
     @staticmethod
@@ -152,11 +152,11 @@ class BTPArgumentDeclaration232AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            standard_type (str): [optional]  # noqa: E501
-            type_name (str): [optional]  # noqa: E501
-            name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
-            type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            standard_type (str): [optional]  # noqa: E501
+            type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
+            type_name (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

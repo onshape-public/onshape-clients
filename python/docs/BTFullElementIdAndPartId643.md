@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**part_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**part_id** | **str** |  | [optional] 
 **configured** | **bool** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **microversion_id** | [**bt_microversion_id366.BTMicroversionId366**](BTMicroversionId366.md) |  | [optional] 

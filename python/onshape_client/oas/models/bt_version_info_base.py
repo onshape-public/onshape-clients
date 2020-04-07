@@ -103,21 +103,21 @@ class BTVersionInfoBase(ModelComposed):
         """
         return {
             "type": (str,),  # noqa: E501
-            "description": (str,),  # noqa: E501
-            "modified_at": (datetime,),  # noqa: E501
             "created_at": (datetime,),  # noqa: E501
-            "last_modifier": (
-                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
-            ),  # noqa: E501
-            "document_id": (str,),  # noqa: E501
             "creator": (
                 bt_user_basic_summary_info.BTUserBasicSummaryInfo,
             ),  # noqa: E501
-            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "last_modifier": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
             "microversion": (str,),  # noqa: E501
-            "parents": ([bt_version_info.BTVersionInfo],),  # noqa: E501
+            "modified_at": (datetime,),  # noqa: E501
             "override_date": (datetime,),  # noqa: E501
             "parent": (str,),  # noqa: E501
+            "parents": ([bt_version_info.BTVersionInfo],),  # noqa: E501
+            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
             "href": (str,),  # noqa: E501
             "id": (str,),  # noqa: E501
             "json_type": (str,),  # noqa: E501
@@ -128,25 +128,22 @@ class BTVersionInfoBase(ModelComposed):
     @staticmethod
     def discriminator():
         return {
-            "type": {
-                "BTWorkspaceInfo": bt_workspace_info.BTWorkspaceInfo,
-                "BTVersionInfo": bt_version_info.BTVersionInfo,
-            },
+            "type": {"BTVersionInfo": bt_version_info.BTVersionInfo,},
         }
 
     attribute_map = {
         "type": "type",  # noqa: E501
-        "description": "description",  # noqa: E501
-        "modified_at": "modifiedAt",  # noqa: E501
         "created_at": "createdAt",  # noqa: E501
-        "last_modifier": "lastModifier",  # noqa: E501
-        "document_id": "documentId",  # noqa: E501
         "creator": "creator",  # noqa: E501
-        "thumbnail": "thumbnail",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "last_modifier": "lastModifier",  # noqa: E501
         "microversion": "microversion",  # noqa: E501
-        "parents": "parents",  # noqa: E501
+        "modified_at": "modifiedAt",  # noqa: E501
         "override_date": "overrideDate",  # noqa: E501
         "parent": "parent",  # noqa: E501
+        "parents": "parents",  # noqa: E501
+        "thumbnail": "thumbnail",  # noqa: E501
         "href": "href",  # noqa: E501
         "id": "id",  # noqa: E501
         "json_type": "jsonType",  # noqa: E501
@@ -192,17 +189,17 @@ class BTVersionInfoBase(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             type (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            modified_at (datetime): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            last_modifier (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             creator (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            last_modifier (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             microversion (str): [optional]  # noqa: E501
-            parents ([bt_version_info.BTVersionInfo]): [optional]  # noqa: E501
+            modified_at (datetime): [optional]  # noqa: E501
             override_date (datetime): [optional]  # noqa: E501
             parent (str): [optional]  # noqa: E501
+            parents ([bt_version_info.BTVersionInfo]): [optional]  # noqa: E501
+            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             json_type (str): [optional]  # noqa: E501

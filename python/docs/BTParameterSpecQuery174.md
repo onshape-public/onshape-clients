@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max_number_of_picks** | **int** |  | [optional] 
 **additional_box_select_filter** | [**bt_query_filter183.BTQueryFilter183**](BTQueryFilter183.md) |  | [optional] 
-**filter** | [**bt_query_filter183.BTQueryFilter183**](BTQueryFilter183.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**filter** | [**bt_query_filter183.BTQueryFilter183**](BTQueryFilter183.md) |  | [optional] 
+**max_number_of_picks** | **int** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 

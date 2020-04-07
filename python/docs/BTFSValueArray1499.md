@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value_object** | **[bool, date, datetime, dict, float, int, list, str]** |  | [optional] 
-**value** | [**[btfs_value1888.BTFSValue1888]**](BTFSValue1888.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**value** | [**[btfs_value1888.BTFSValue1888]**](BTFSValue1888.md) |  | [optional] 
+**value_object** | **[bool, date, datetime, dict, float, int, list, str]** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **standard_type_name** | **str** |  | [optional] 
 **type_tag** | **str** |  | [optional] 

@@ -92,10 +92,10 @@ class BTMParameterDerived864(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "imports": ([btm_import136.BTMImport136],),  # noqa: E501
             "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
             "namespace": (str,),  # noqa: E501
-            "imports": ([btm_import136.BTMImport136],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -106,10 +106,10 @@ class BTMParameterDerived864(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "imports": "imports",  # noqa: E501
         "module_id": "moduleId",  # noqa: E501
         "namespace": "namespace",  # noqa: E501
-        "imports": "imports",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -152,10 +152,10 @@ class BTMParameterDerived864(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
             module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
             namespace (str): [optional]  # noqa: E501
-            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

@@ -73,10 +73,10 @@ class BTMMateConnector66AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "saved_feature_type": (str,),  # noqa: E501
-            "is_hidden": (bool,),  # noqa: E501
-            "implicit": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "implicit": (bool,),  # noqa: E501
+            "is_hidden": (bool,),  # noqa: E501
+            "saved_feature_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,10 +84,10 @@ class BTMMateConnector66AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "saved_feature_type": "savedFeatureType",  # noqa: E501
-        "is_hidden": "isHidden",  # noqa: E501
-        "implicit": "implicit",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "implicit": "implicit",  # noqa: E501
+        "is_hidden": "isHidden",  # noqa: E501
+        "saved_feature_type": "savedFeatureType",  # noqa: E501
     }
 
     @staticmethod
@@ -128,10 +128,10 @@ class BTMMateConnector66AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            saved_feature_type (str): [optional]  # noqa: E501
-            is_hidden (bool): [optional]  # noqa: E501
-            implicit (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            implicit (bool): [optional]  # noqa: E501
+            is_hidden (bool): [optional]  # noqa: E501
+            saved_feature_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

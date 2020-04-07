@@ -96,11 +96,11 @@ class BTConfigurationUpdateCall2933(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "configuration_parameters": (
                 [btm_configuration_parameter819.BTMConfigurationParameter819],
             ),  # noqa: E501
             "current_configuration": ([btm_parameter1.BTMParameter1],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "library_version": (int,),  # noqa: E501
             "microversion_skew": (bool,),  # noqa: E501
             "reject_microversion_skew": (bool,),  # noqa: E501
@@ -113,9 +113,9 @@ class BTConfigurationUpdateCall2933(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "configuration_parameters": "configurationParameters",  # noqa: E501
         "current_configuration": "currentConfiguration",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "library_version": "libraryVersion",  # noqa: E501
         "microversion_skew": "microversionSkew",  # noqa: E501
         "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
@@ -160,9 +160,9 @@ class BTConfigurationUpdateCall2933(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             configuration_parameters ([btm_configuration_parameter819.BTMConfigurationParameter819]): [optional]  # noqa: E501
             current_configuration ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
             reject_microversion_skew (bool): [optional]  # noqa: E501

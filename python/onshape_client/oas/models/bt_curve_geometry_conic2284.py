@@ -84,9 +84,9 @@ class BTCurveGeometryConic2284(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "points": ([float],),  # noqa: E501
             "rho": (float,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,9 +94,9 @@ class BTCurveGeometryConic2284(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "points": "points",  # noqa: E501
         "rho": "rho",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     required_properties = set(
@@ -136,9 +136,9 @@ class BTCurveGeometryConic2284(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             points ([float]): [optional]  # noqa: E501
             rho (float): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

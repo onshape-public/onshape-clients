@@ -93,8 +93,8 @@ class BTEntityTypeFilter124(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "entity_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "entity_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,8 +102,8 @@ class BTEntityTypeFilter124(ModelComposed):
         return None
 
     attribute_map = {
-        "entity_type": "entityType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "entity_type": "entityType",  # noqa: E501
     }
 
     required_properties = set(
@@ -143,8 +143,8 @@ class BTEntityTypeFilter124(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entity_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            entity_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -96,10 +96,10 @@ class BTFSTableColumnInfo623(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "cross_highlight_data": (
                 bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "id": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "specification": (
@@ -112,8 +112,8 @@ class BTFSTableColumnInfo623(ModelComposed):
         return None
 
     attribute_map = {
-        "cross_highlight_data": "crossHighlightData",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "cross_highlight_data": "crossHighlightData",  # noqa: E501
         "id": "id",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "specification": "specification",  # noqa: E501
@@ -156,8 +156,8 @@ class BTFSTableColumnInfo623(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            cross_highlight_data (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            cross_highlight_data (bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             specification (bt_table_column_spec1967.BTTableColumnSpec1967): [optional]  # noqa: E501

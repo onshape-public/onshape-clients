@@ -149,6 +149,7 @@ class BTPLiteral253(ModelComposed):
         return {
             "bt_type": {
                 "BTPLiteralBoolean-255": btp_literal_boolean255.BTPLiteralBoolean255,
+                "BTPLiteralString-259": btp_literal_string259.BTPLiteralString259,
                 "BTPLiteralArray-254": btp_literal_array254.BTPLiteralArray254,
                 "BTPLiteralUndefined-260": btp_literal_undefined260.BTPLiteralUndefined260,
             },

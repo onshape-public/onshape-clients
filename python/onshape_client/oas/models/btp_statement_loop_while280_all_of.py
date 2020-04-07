@@ -78,8 +78,8 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "condition": (btp_expression9.BTPExpression9,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "condition": (btp_expression9.BTPExpression9,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "condition": "condition",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "condition": "condition",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTPStatementLoopWhile280AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
         """
 
         self._data_store = {}

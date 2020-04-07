@@ -86,10 +86,10 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "max_number_of_picks": (int,),  # noqa: E501
-            "allowed_insertable_types": ([str],),  # noqa: E501
             "allow_assemblies": (bool,),  # noqa: E501
+            "allowed_insertable_types": ([str],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "max_number_of_picks": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,10 +97,10 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
-        "allowed_insertable_types": "allowedInsertableTypes",  # noqa: E501
         "allow_assemblies": "allowAssemblies",  # noqa: E501
+        "allowed_insertable_types": "allowedInsertableTypes",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "max_number_of_picks": "maxNumberOfPicks",  # noqa: E501
     }
 
     @staticmethod
@@ -141,10 +141,10 @@ class BTParameterSpecReferenceWithConfiguration2950AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            max_number_of_picks (int): [optional]  # noqa: E501
-            allowed_insertable_types ([str]): [optional]  # noqa: E501
             allow_assemblies (bool): [optional]  # noqa: E501
+            allowed_insertable_types ([str]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            max_number_of_picks (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_joint_type_editable** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**is_joint_type_editable** | **bool** |  | [optional] 
 **cross_highlight_data_if_any** | [**bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753**](BTTableCrossHighlightData1753.md) |  | [optional] 
 **cross_highlight_data** | [**bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753**](BTTableCrossHighlightData1753.md) |  | [optional] 
 

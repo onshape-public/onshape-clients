@@ -73,11 +73,11 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "start_point_id": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "end_param": (float,),  # noqa: E501
             "end_point_id": (str,),  # noqa: E501
             "start_param": (float,),  # noqa: E501
-            "end_param": (float,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "start_point_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,11 +85,11 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "start_point_id": "startPointId",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "end_param": "endParam",  # noqa: E501
         "end_point_id": "endPointId",  # noqa: E501
         "start_param": "startParam",  # noqa: E501
-        "end_param": "endParam",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "start_point_id": "startPointId",  # noqa: E501
     }
 
     @staticmethod
@@ -130,11 +130,11 @@ class BTMSketchCurveSegment155AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            start_point_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
+            end_param (float): [optional]  # noqa: E501
             end_point_id (str): [optional]  # noqa: E501
             start_param (float): [optional]  # noqa: E501
-            end_param (float): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            start_point_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

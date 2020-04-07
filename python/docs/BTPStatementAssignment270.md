@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operator** | **str** |  | [optional] 
-**lvalue** | [**btpl_value249.BTPLValue249**](BTPLValue249.md) |  | [optional] 
-**rvalue** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**lvalue** | [**btpl_value249.BTPLValue249**](BTPLValue249.md) |  | [optional] 
+**operator** | **str** |  | [optional] 
+**rvalue** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

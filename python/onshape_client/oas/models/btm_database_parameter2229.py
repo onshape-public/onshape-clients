@@ -84,8 +84,8 @@ class BTMDatabaseParameter2229(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "database_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "database_id": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -96,8 +96,8 @@ class BTMDatabaseParameter2229(ModelComposed):
         return None
 
     attribute_map = {
-        "database_id": "databaseId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "database_id": "databaseId",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -140,8 +140,8 @@ class BTMDatabaseParameter2229(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            database_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            database_id (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

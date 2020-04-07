@@ -94,8 +94,8 @@ class BTTableCellPropertyParameter2983(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "is_unchanged": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_unchanged": (bool,),  # noqa: E501
             "is_ever_visible": (bool,),  # noqa: E501
             "is_read_only": (bool,),  # noqa: E501
             "error": (str,),  # noqa: E501
@@ -108,8 +108,8 @@ class BTTableCellPropertyParameter2983(ModelComposed):
         return None
 
     attribute_map = {
-        "is_unchanged": "isUnchanged",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_unchanged": "isUnchanged",  # noqa: E501
         "is_ever_visible": "isEverVisible",  # noqa: E501
         "is_read_only": "isReadOnly",  # noqa: E501
         "error": "error",  # noqa: E501
@@ -154,8 +154,8 @@ class BTTableCellPropertyParameter2983(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_unchanged (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_unchanged (bool): [optional]  # noqa: E501
             is_ever_visible (bool): [optional]  # noqa: E501
             is_read_only (bool): [optional]  # noqa: E501
             error (str): [optional]  # noqa: E501

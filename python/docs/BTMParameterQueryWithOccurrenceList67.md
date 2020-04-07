@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **occurrences** | [**[bt_occurrence74.BTOccurrence74]**](BTOccurrence74.md) |  | [optional] 
 **queries** | [**[btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]**](BTMIndividualQueryWithOccurrenceBase904.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

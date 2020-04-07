@@ -78,8 +78,8 @@ class BTPExpressionGroup241AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "content": (btp_expression9.BTPExpression9,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "content": (btp_expression9.BTPExpression9,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTPExpressionGroup241AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "content": "content",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "content": "content",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTPExpressionGroup241AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            content (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            content (btp_expression9.BTPExpression9): [optional]  # noqa: E501
         """
 
         self._data_store = {}

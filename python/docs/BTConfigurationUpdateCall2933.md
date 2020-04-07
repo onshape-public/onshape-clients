@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **configuration_parameters** | [**[btm_configuration_parameter819.BTMConfigurationParameter819]**](BTMConfigurationParameter819.md) |  | [optional] 
 **current_configuration** | [**[btm_parameter1.BTMParameter1]**](BTMParameter1.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

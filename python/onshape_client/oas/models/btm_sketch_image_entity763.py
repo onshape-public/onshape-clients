@@ -90,12 +90,12 @@ class BTMSketchImageEntity763(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "aspect_ratio": (float,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "origin_x": (float,),  # noqa: E501
             "origin_y": (float,),  # noqa: E501
             "xaxis_x": (float,),  # noqa: E501
             "xaxis_y": (float,),  # noqa: E501
-            "aspect_ratio": (float,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "control_box_ids": ([str],),  # noqa: E501
             "entity_id": (str,),  # noqa: E501
             "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
@@ -111,12 +111,12 @@ class BTMSketchImageEntity763(ModelComposed):
         return None
 
     attribute_map = {
+        "aspect_ratio": "aspectRatio",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "origin_x": "originX",  # noqa: E501
         "origin_y": "originY",  # noqa: E501
         "xaxis_x": "xaxisX",  # noqa: E501
         "xaxis_y": "xaxisY",  # noqa: E501
-        "aspect_ratio": "aspectRatio",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "control_box_ids": "controlBoxIds",  # noqa: E501
         "entity_id": "entityId",  # noqa: E501
         "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
@@ -164,12 +164,12 @@ class BTMSketchImageEntity763(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            aspect_ratio (float): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             origin_x (float): [optional]  # noqa: E501
             origin_y (float): [optional]  # noqa: E501
             xaxis_x (float): [optional]  # noqa: E501
             xaxis_y (float): [optional]  # noqa: E501
-            aspect_ratio (float): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501
             entity_id_and_replace_in_dependent_fields (str): [optional]  # noqa: E501

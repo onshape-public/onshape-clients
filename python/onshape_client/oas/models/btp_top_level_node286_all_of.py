@@ -92,16 +92,16 @@ class BTPTopLevelNode286AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "deprecated": (bool,),  # noqa: E501
-            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             "arguments_to_document": (
                 [btp_argument_declaration232.BTPArgumentDeclaration232],
             ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
             "deprecated_explanation": (str,),  # noqa: E501
             "for_export": (bool,),  # noqa: E501
             "space_after_export": (btp_space10.BTPSpace10,),  # noqa: E501
-            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
         }
 
     @staticmethod
@@ -109,14 +109,14 @@ class BTPTopLevelNode286AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "deprecated": "deprecated",  # noqa: E501
-        "symbol_name": "symbolName",  # noqa: E501
+        "annotation": "annotation",  # noqa: E501
         "arguments_to_document": "argumentsToDocument",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
         "deprecated_explanation": "deprecatedExplanation",  # noqa: E501
         "for_export": "forExport",  # noqa: E501
         "space_after_export": "spaceAfterExport",  # noqa: E501
-        "annotation": "annotation",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "symbol_name": "symbolName",  # noqa: E501
     }
 
     @staticmethod
@@ -157,14 +157,14 @@ class BTPTopLevelNode286AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            deprecated (bool): [optional]  # noqa: E501
-            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             arguments_to_document ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
+            deprecated (bool): [optional]  # noqa: E501
             deprecated_explanation (str): [optional]  # noqa: E501
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
         """
 
         self._data_store = {}

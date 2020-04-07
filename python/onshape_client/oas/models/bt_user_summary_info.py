@@ -98,17 +98,17 @@ class BTUserSummaryInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "source": (int,),  # noqa: E501
             "company": (bt_company_summary_info.BTCompanySummaryInfo,),  # noqa: E501
+            "email": (str,),  # noqa: E501
+            "first_name": (str,),  # noqa: E501
             "global_permissions": (
                 global_permission_info.GlobalPermissionInfo,
             ),  # noqa: E501
             "is_guest": (bool,),  # noqa: E501
             "is_light": (bool,),  # noqa: E501
             "last_login_time": (datetime,),  # noqa: E501
-            "first_name": (str,),  # noqa: E501
             "last_name": (str,),  # noqa: E501
-            "email": (str,),  # noqa: E501
+            "source": (int,),  # noqa: E501
             "href": (str,),  # noqa: E501
             "id": (str,),  # noqa: E501
             "image": (str,),  # noqa: E501
@@ -123,15 +123,15 @@ class BTUserSummaryInfo(ModelComposed):
         return None
 
     attribute_map = {
-        "source": "source",  # noqa: E501
         "company": "company",  # noqa: E501
+        "email": "email",  # noqa: E501
+        "first_name": "firstName",  # noqa: E501
         "global_permissions": "globalPermissions",  # noqa: E501
         "is_guest": "isGuest",  # noqa: E501
         "is_light": "isLight",  # noqa: E501
         "last_login_time": "lastLoginTime",  # noqa: E501
-        "first_name": "firstName",  # noqa: E501
         "last_name": "lastName",  # noqa: E501
-        "email": "email",  # noqa: E501
+        "source": "source",  # noqa: E501
         "href": "href",  # noqa: E501
         "id": "id",  # noqa: E501
         "image": "image",  # noqa: E501
@@ -178,15 +178,15 @@ class BTUserSummaryInfo(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            source (int): [optional]  # noqa: E501
             company (bt_company_summary_info.BTCompanySummaryInfo): [optional]  # noqa: E501
+            email (str): [optional]  # noqa: E501
+            first_name (str): [optional]  # noqa: E501
             global_permissions (global_permission_info.GlobalPermissionInfo): [optional]  # noqa: E501
             is_guest (bool): [optional]  # noqa: E501
             is_light (bool): [optional]  # noqa: E501
             last_login_time (datetime): [optional]  # noqa: E501
-            first_name (str): [optional]  # noqa: E501
             last_name (str): [optional]  # noqa: E501
-            email (str): [optional]  # noqa: E501
+            source (int): [optional]  # noqa: E501
             href (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             image (str): [optional]  # noqa: E501

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
+**failed_metadata_representative_occurrences** | **[str]** |  | [optional] 
 **indented** | **bool** |  | [optional] 
 **showing_excluded** | **bool** |  | [optional] 
-**failed_metadata_representative_occurrences** | **[str]** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

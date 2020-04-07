@@ -98,15 +98,15 @@ class BTFeatureListResponse2457(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "rollback_index": (int,),  # noqa: E501
-            "features": ([btm_feature134.BTMFeature134],),  # noqa: E501
-            "is_complete": (bool,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "default_features": ([btm_feature134.BTMFeature134],),  # noqa: E501
             "feature_states": (
                 {str: (bt_feature_state1688.BTFeatureState1688,)},
             ),  # noqa: E501
-            "default_features": ([btm_feature134.BTMFeature134],),  # noqa: E501
+            "features": ([btm_feature134.BTMFeature134],),  # noqa: E501
             "imports": ([btm_import136.BTMImport136],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "is_complete": (bool,),  # noqa: E501
+            "rollback_index": (int,),  # noqa: E501
             "library_version": (int,),  # noqa: E501
             "microversion_skew": (bool,),  # noqa: E501
             "reject_microversion_skew": (bool,),  # noqa: E501
@@ -119,13 +119,13 @@ class BTFeatureListResponse2457(ModelComposed):
         return None
 
     attribute_map = {
-        "rollback_index": "rollbackIndex",  # noqa: E501
-        "features": "features",  # noqa: E501
-        "is_complete": "isComplete",  # noqa: E501
-        "feature_states": "featureStates",  # noqa: E501
-        "default_features": "defaultFeatures",  # noqa: E501
-        "imports": "imports",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "default_features": "defaultFeatures",  # noqa: E501
+        "feature_states": "featureStates",  # noqa: E501
+        "features": "features",  # noqa: E501
+        "imports": "imports",  # noqa: E501
+        "is_complete": "isComplete",  # noqa: E501
+        "rollback_index": "rollbackIndex",  # noqa: E501
         "library_version": "libraryVersion",  # noqa: E501
         "microversion_skew": "microversionSkew",  # noqa: E501
         "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
@@ -170,13 +170,13 @@ class BTFeatureListResponse2457(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            rollback_index (int): [optional]  # noqa: E501
-            features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
-            is_complete (bool): [optional]  # noqa: E501
-            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
-            default_features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
-            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            default_features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
+            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
+            features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
+            imports ([btm_import136.BTMImport136]): [optional]  # noqa: E501
+            is_complete (bool): [optional]  # noqa: E501
+            rollback_index (int): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
             reject_microversion_skew (bool): [optional]  # noqa: E501

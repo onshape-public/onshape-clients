@@ -120,13 +120,13 @@ class BTPTopLevelImport285(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "import_microversion": (str,),  # noqa: E501
-            "namespace_string": (str,),  # noqa: E501
-            "combined_namespace_path_and_version": (str,),  # noqa: E501
-            "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
-            "space_before_import": (btp_space10.BTPSpace10,),  # noqa: E501
-            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "combined_namespace_path_and_version": (str,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "module_id": (btp_module_id235.BTPModuleId235,),  # noqa: E501
+            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
+            "namespace_string": (str,),  # noqa: E501
+            "space_before_import": (btp_space10.BTPSpace10,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -136,15 +136,15 @@ class BTPTopLevelImport285(ModelComposed):
             "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
             "space_default": (bool,),  # noqa: E501
             "start_source_location": (int,),  # noqa: E501
-            "deprecated": (bool,),  # noqa: E501
-            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             "arguments_to_document": (
                 [btp_argument_declaration232.BTPArgumentDeclaration232],
             ),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
             "deprecated_explanation": (str,),  # noqa: E501
             "for_export": (bool,),  # noqa: E501
             "space_after_export": (btp_space10.BTPSpace10,),  # noqa: E501
-            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
+            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
         }
 
     @staticmethod
@@ -152,13 +152,13 @@ class BTPTopLevelImport285(ModelComposed):
         return None
 
     attribute_map = {
-        "import_microversion": "importMicroversion",  # noqa: E501
-        "namespace_string": "namespaceString",  # noqa: E501
-        "combined_namespace_path_and_version": "combinedNamespacePathAndVersion",  # noqa: E501
-        "module_id": "moduleId",  # noqa: E501
-        "space_before_import": "spaceBeforeImport",  # noqa: E501
-        "namespace": "namespace",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "combined_namespace_path_and_version": "combinedNamespacePathAndVersion",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "module_id": "moduleId",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "namespace_string": "namespaceString",  # noqa: E501
+        "space_before_import": "spaceBeforeImport",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -168,13 +168,13 @@ class BTPTopLevelImport285(ModelComposed):
         "space_before": "spaceBefore",  # noqa: E501
         "space_default": "spaceDefault",  # noqa: E501
         "start_source_location": "startSourceLocation",  # noqa: E501
-        "deprecated": "deprecated",  # noqa: E501
-        "symbol_name": "symbolName",  # noqa: E501
+        "annotation": "annotation",  # noqa: E501
         "arguments_to_document": "argumentsToDocument",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
         "deprecated_explanation": "deprecatedExplanation",  # noqa: E501
         "for_export": "forExport",  # noqa: E501
         "space_after_export": "spaceAfterExport",  # noqa: E501
-        "annotation": "annotation",  # noqa: E501
+        "symbol_name": "symbolName",  # noqa: E501
     }
 
     required_properties = set(
@@ -214,13 +214,13 @@ class BTPTopLevelImport285(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            import_microversion (str): [optional]  # noqa: E501
-            namespace_string (str): [optional]  # noqa: E501
-            combined_namespace_path_and_version (str): [optional]  # noqa: E501
-            module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
-            space_before_import (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            combined_namespace_path_and_version (str): [optional]  # noqa: E501
+            import_microversion (str): [optional]  # noqa: E501
+            module_id (btp_module_id235.BTPModuleId235): [optional]  # noqa: E501
+            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
+            namespace_string (str): [optional]  # noqa: E501
+            space_before_import (btp_space10.BTPSpace10): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
@@ -230,13 +230,13 @@ class BTPTopLevelImport285(ModelComposed):
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
-            deprecated (bool): [optional]  # noqa: E501
-            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             arguments_to_document ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
+            deprecated (bool): [optional]  # noqa: E501
             deprecated_explanation (str): [optional]  # noqa: E501
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
+            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
         """
 
         self._data_store = {}

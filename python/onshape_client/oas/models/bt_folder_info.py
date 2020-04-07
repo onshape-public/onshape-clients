@@ -96,6 +96,9 @@ class BTFolderInfo(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "active": (bool,),  # noqa: E501
+            "can_unshare": (bool,),  # noqa: E501
+            "is_orphaned": (bool,),  # noqa: E501
             "parent_id": (str,),  # noqa: E501
             "permission_set": (
                 bool,
@@ -108,10 +111,7 @@ class BTFolderInfo(ModelComposed):
                 str,
             ),  # noqa: E501
             "trash": (bool,),  # noqa: E501
-            "can_unshare": (bool,),  # noqa: E501
-            "active": (bool,),  # noqa: E501
             "trashed_at": (datetime,),  # noqa: E501
-            "is_orphaned": (bool,),  # noqa: E501
             "can_move": (bool,),  # noqa: E501
             "created_at": (datetime,),  # noqa: E501
             "created_by": (
@@ -141,13 +141,13 @@ class BTFolderInfo(ModelComposed):
         return None
 
     attribute_map = {
+        "active": "active",  # noqa: E501
+        "can_unshare": "canUnshare",  # noqa: E501
+        "is_orphaned": "isOrphaned",  # noqa: E501
         "parent_id": "parentId",  # noqa: E501
         "permission_set": "permissionSet",  # noqa: E501
         "trash": "trash",  # noqa: E501
-        "can_unshare": "canUnshare",  # noqa: E501
-        "active": "active",  # noqa: E501
         "trashed_at": "trashedAt",  # noqa: E501
-        "is_orphaned": "isOrphaned",  # noqa: E501
         "can_move": "canMove",  # noqa: E501
         "created_at": "createdAt",  # noqa: E501
         "created_by": "createdBy",  # noqa: E501
@@ -205,13 +205,13 @@ class BTFolderInfo(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            active (bool): [optional]  # noqa: E501
+            can_unshare (bool): [optional]  # noqa: E501
+            is_orphaned (bool): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
             permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
             trash (bool): [optional]  # noqa: E501
-            can_unshare (bool): [optional]  # noqa: E501
-            active (bool): [optional]  # noqa: E501
             trashed_at (datetime): [optional]  # noqa: E501
-            is_orphaned (bool): [optional]  # noqa: E501
             can_move (bool): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             created_by (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501

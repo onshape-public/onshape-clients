@@ -73,9 +73,9 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "null_value": (str,),  # noqa: E501
-            "is_null": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_null": (bool,),  # noqa: E501
+            "null_value": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,9 +83,9 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "null_value": "nullValue",  # noqa: E501
-        "is_null": "isNull",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_null": "isNull",  # noqa: E501
+        "null_value": "nullValue",  # noqa: E501
     }
 
     @staticmethod
@@ -126,9 +126,9 @@ class BTMParameterNullableQuantity807AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            null_value (str): [optional]  # noqa: E501
-            is_null (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_null (bool): [optional]  # noqa: E501
+            null_value (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

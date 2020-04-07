@@ -78,8 +78,8 @@ class BTNotFilter165AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "operand": (bt_query_filter183.BTQueryFilter183,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "operand": (bt_query_filter183.BTQueryFilter183,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTNotFilter165AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "operand": "operand",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "operand": "operand",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTNotFilter165AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operand (bt_query_filter183.BTQueryFilter183): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            operand (bt_query_filter183.BTQueryFilter183): [optional]  # noqa: E501
         """
 
         self._data_store = {}

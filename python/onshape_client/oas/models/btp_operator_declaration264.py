@@ -151,10 +151,10 @@ class BTPOperatorDeclaration264(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "operator": (str,),  # noqa: E501
-            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "operator": (str,),  # noqa: E501
+            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -164,23 +164,23 @@ class BTPOperatorDeclaration264(ModelComposed):
             "space_before": (btp_space10.BTPSpace10,),  # noqa: E501
             "space_default": (bool,),  # noqa: E501
             "start_source_location": (int,),  # noqa: E501
-            "deprecated": (bool,),  # noqa: E501
-            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
             "arguments_to_document": (
                 [btp_argument_declaration232.BTPArgumentDeclaration232],
             ),  # noqa: E501
+            "deprecated": (bool,),  # noqa: E501
             "deprecated_explanation": (str,),  # noqa: E501
             "for_export": (bool,),  # noqa: E501
             "space_after_export": (btp_space10.BTPSpace10,),  # noqa: E501
-            "annotation": (btp_annotation231.BTPAnnotation231,),  # noqa: E501
+            "symbol_name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             "arguments": (
                 [btp_argument_declaration232.BTPArgumentDeclaration232],
             ),  # noqa: E501
             "body": (btp_statement_block271.BTPStatementBlock271,),  # noqa: E501
             "precondition": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "return_type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
             "space_after_arglist": (btp_space10.BTPSpace10,),  # noqa: E501
             "space_in_empty_list": (btp_space10.BTPSpace10,),  # noqa: E501
-            "return_type": (btp_type_name290.BTPTypeName290,),  # noqa: E501
         }
 
     @staticmethod
@@ -188,10 +188,10 @@ class BTPOperatorDeclaration264(ModelComposed):
         return None
 
     attribute_map = {
-        "operator": "operator",  # noqa: E501
-        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
-        "space_after_operator": "spaceAfterOperator",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "operator": "operator",  # noqa: E501
+        "space_after_operator": "spaceAfterOperator",  # noqa: E501
+        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -201,19 +201,19 @@ class BTPOperatorDeclaration264(ModelComposed):
         "space_before": "spaceBefore",  # noqa: E501
         "space_default": "spaceDefault",  # noqa: E501
         "start_source_location": "startSourceLocation",  # noqa: E501
-        "deprecated": "deprecated",  # noqa: E501
-        "symbol_name": "symbolName",  # noqa: E501
+        "annotation": "annotation",  # noqa: E501
         "arguments_to_document": "argumentsToDocument",  # noqa: E501
+        "deprecated": "deprecated",  # noqa: E501
         "deprecated_explanation": "deprecatedExplanation",  # noqa: E501
         "for_export": "forExport",  # noqa: E501
         "space_after_export": "spaceAfterExport",  # noqa: E501
-        "annotation": "annotation",  # noqa: E501
+        "symbol_name": "symbolName",  # noqa: E501
         "arguments": "arguments",  # noqa: E501
         "body": "body",  # noqa: E501
         "precondition": "precondition",  # noqa: E501
+        "return_type": "returnType",  # noqa: E501
         "space_after_arglist": "spaceAfterArglist",  # noqa: E501
         "space_in_empty_list": "spaceInEmptyList",  # noqa: E501
-        "return_type": "returnType",  # noqa: E501
     }
 
     required_properties = set(
@@ -253,10 +253,10 @@ class BTPOperatorDeclaration264(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operator (str): [optional]  # noqa: E501
-            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            operator (str): [optional]  # noqa: E501
+            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501
@@ -266,19 +266,19 @@ class BTPOperatorDeclaration264(ModelComposed):
             space_before (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_default (bool): [optional]  # noqa: E501
             start_source_location (int): [optional]  # noqa: E501
-            deprecated (bool): [optional]  # noqa: E501
-            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
             arguments_to_document ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
+            deprecated (bool): [optional]  # noqa: E501
             deprecated_explanation (str): [optional]  # noqa: E501
             for_export (bool): [optional]  # noqa: E501
             space_after_export (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            annotation (btp_annotation231.BTPAnnotation231): [optional]  # noqa: E501
+            symbol_name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             arguments ([btp_argument_declaration232.BTPArgumentDeclaration232]): [optional]  # noqa: E501
             body (btp_statement_block271.BTPStatementBlock271): [optional]  # noqa: E501
             precondition (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
             space_after_arglist (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_in_empty_list (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            return_type (btp_type_name290.BTPTypeName290): [optional]  # noqa: E501
         """
 
         self._data_store = {}

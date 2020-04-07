@@ -80,10 +80,10 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "declaration": (
                 btp_statement_constant_declaration273.BTPStatementConstantDeclaration273,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,8 +91,8 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "declaration": "declaration",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "declaration": "declaration",  # noqa: E501
     }
 
     @staticmethod
@@ -133,8 +133,8 @@ class BTPTopLevelConstantDeclaration283AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            declaration (btp_statement_constant_declaration273.BTPStatementConstantDeclaration273): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            declaration (btp_statement_constant_declaration273.BTPStatementConstantDeclaration273): [optional]  # noqa: E501
         """
 
         self._data_store = {}

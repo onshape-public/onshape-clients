@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**font_name** | **str** |  | [optional] 
-**text** | **str** |  | [optional] 
 **ascent** | **float** |  | [optional] 
-**baseline_start_x** | **float** |  | [optional] 
-**baseline_start_y** | **float** |  | [optional] 
 **baseline_direction_x** | **float** |  | [optional] 
 **baseline_direction_y** | **float** |  | [optional] 
+**baseline_start_x** | **float** |  | [optional] 
+**baseline_start_y** | **float** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**font_name** | **str** |  | [optional] 
+**text** | **str** |  | [optional] 
 **control_box_ids** | **[str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **entity_id_and_replace_in_dependent_fields** | **str** |  | [optional] 

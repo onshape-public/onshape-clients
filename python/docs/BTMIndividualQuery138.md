@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
 **persistent_query** | [**btp_statement269.BTPStatement269**](BTPStatement269.md) |  | [optional] 
-**variable_name** | [**BTMIndividualQuery138**](BTMIndividualQuery138.md) |  | [optional] 
 **query_statement** | [**btp_statement269.BTPStatement269**](BTPStatement269.md) |  | [optional] 
+**variable_name** | [**BTMIndividualQuery138**](BTMIndividualQuery138.md) |  | [optional] 
 **deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **deterministic_ids** | **[str]** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

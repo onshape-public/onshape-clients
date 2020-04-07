@@ -91,8 +91,8 @@ class BTGeometryFilter130AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "geometry_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "geometry_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,8 +100,8 @@ class BTGeometryFilter130AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "geometry_type": "geometryType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "geometry_type": "geometryType",  # noqa: E501
     }
 
     @staticmethod
@@ -142,8 +142,8 @@ class BTGeometryFilter130AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            geometry_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            geometry_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -101,12 +101,12 @@ class BTMConfigurationParameterEnum105(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "option_ids": ([str],),  # noqa: E501
-            "enum_name": (str,),  # noqa: E501
-            "options": ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
-            "namespace": (str,),  # noqa: E501
-            "default_value": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "default_value": (str,),  # noqa: E501
+            "enum_name": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
+            "option_ids": ([str],),  # noqa: E501
+            "options": ([btm_enum_option592.BTMEnumOption592],),  # noqa: E501
             "generated_parameter_id": (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
@@ -121,12 +121,12 @@ class BTMConfigurationParameterEnum105(ModelComposed):
         return None
 
     attribute_map = {
-        "option_ids": "optionIds",  # noqa: E501
-        "enum_name": "enumName",  # noqa: E501
-        "options": "options",  # noqa: E501
-        "namespace": "namespace",  # noqa: E501
-        "default_value": "defaultValue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
+        "enum_name": "enumName",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
+        "option_ids": "optionIds",  # noqa: E501
+        "options": "options",  # noqa: E501
         "generated_parameter_id": "generatedParameterId",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
@@ -173,12 +173,12 @@ class BTMConfigurationParameterEnum105(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            option_ids ([str]): [optional]  # noqa: E501
-            enum_name (str): [optional]  # noqa: E501
-            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
-            namespace (str): [optional]  # noqa: E501
-            default_value (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            default_value (str): [optional]  # noqa: E501
+            enum_name (str): [optional]  # noqa: E501
+            namespace (str): [optional]  # noqa: E501
+            option_ids ([str]): [optional]  # noqa: E501
+            options ([btm_enum_option592.BTMEnumOption592]): [optional]  # noqa: E501
             generated_parameter_id (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

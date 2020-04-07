@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
+**feature_states** | [**{str: (bt_feature_state1688.BTFeatureState1688,)}**](BTFeatureState1688.md) |  | [optional] 
 **features** | [**[btm_assembly_feature887.BTMAssemblyFeature887]**](BTMAssemblyFeature887.md) |  | [optional] 
 **is_complete** | **bool** |  | [optional] 
-**feature_states** | [**{str: (bt_feature_state1688.BTFeatureState1688,)}**](BTFeatureState1688.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

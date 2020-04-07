@@ -73,8 +73,8 @@ class BTImageFilter853AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "is_image": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_image": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTImageFilter853AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "is_image": "isImage",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_image": "isImage",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTImageFilter853AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_image (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_image (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

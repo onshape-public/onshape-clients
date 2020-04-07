@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enabled** | **bool** |  | [optional] 
-**import_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
-**export_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
-**cloud_storage_provider** | **int** |  | [optional] 
 **cloud_storage_account_id** | **str** |  | [optional] 
+**cloud_storage_provider** | **int** |  | [optional] 
+**enabled** | **bool** |  | [optional] 
+**export_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
+**import_folder** | [**bt_cloud_storage_object_info.BTCloudStorageObjectInfo**](BTCloudStorageObjectInfo.md) |  | [optional] 
 **can_move** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **created_by** | [**bt_user_basic_summary_info.BTUserBasicSummaryInfo**](BTUserBasicSummaryInfo.md) |  | [optional] 

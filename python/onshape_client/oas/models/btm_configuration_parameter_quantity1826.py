@@ -115,11 +115,11 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "quantity_type": (str,),  # noqa: E501
             "range_and_default": (
                 bt_quantity_range181.BTQuantityRange181,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "generated_parameter_id": (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
@@ -134,9 +134,9 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "quantity_type": "quantityType",  # noqa: E501
         "range_and_default": "rangeAndDefault",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "generated_parameter_id": "generatedParameterId",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
@@ -183,9 +183,9 @@ class BTMConfigurationParameterQuantity1826(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             quantity_type (str): [optional]  # noqa: E501
             range_and_default (bt_quantity_range181.BTQuantityRange181): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             generated_parameter_id (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

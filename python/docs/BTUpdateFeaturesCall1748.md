@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **features** | [**[btm_feature134.BTMFeature134]**](BTMFeature134.md) |  | [optional] 
 **update_suppression_attributes** | **bool** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

@@ -88,8 +88,8 @@ class BTMParameterMaterial1388(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "material": (bt_part_material1445.BTPartMaterial1445,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "material": (bt_part_material1445.BTPartMaterial1445,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -100,8 +100,8 @@ class BTMParameterMaterial1388(ModelComposed):
         return None
 
     attribute_map = {
-        "material": "material",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "material": "material",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -144,8 +144,8 @@ class BTMParameterMaterial1388(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            material (bt_part_material1445.BTPartMaterial1445): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            material (bt_part_material1445.BTPartMaterial1445): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

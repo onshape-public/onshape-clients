@@ -123,10 +123,10 @@ class BTParameterSpecArray2600(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "item_name": (str,),  # noqa: E501
-            "item_label_template": (str,),  # noqa: E501
-            "driven_query": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "driven_query": (str,),  # noqa: E501
+            "item_label_template": (str,),  # noqa: E501
+            "item_name": (str,),  # noqa: E501
             "additional_localized_strings": (int,),  # noqa: E501
             "column_name": (str,),  # noqa: E501
             "default_value": (btm_parameter1.BTMParameter1,),  # noqa: E501
@@ -148,10 +148,10 @@ class BTParameterSpecArray2600(ModelComposed):
         return None
 
     attribute_map = {
-        "item_name": "itemName",  # noqa: E501
-        "item_label_template": "itemLabelTemplate",  # noqa: E501
-        "driven_query": "drivenQuery",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "driven_query": "drivenQuery",  # noqa: E501
+        "item_label_template": "itemLabelTemplate",  # noqa: E501
+        "item_name": "itemName",  # noqa: E501
         "additional_localized_strings": "additionalLocalizedStrings",  # noqa: E501
         "column_name": "columnName",  # noqa: E501
         "default_value": "defaultValue",  # noqa: E501
@@ -203,10 +203,10 @@ class BTParameterSpecArray2600(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            item_name (str): [optional]  # noqa: E501
-            item_label_template (str): [optional]  # noqa: E501
-            driven_query (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            driven_query (str): [optional]  # noqa: E501
+            item_label_template (str): [optional]  # noqa: E501
+            item_name (str): [optional]  # noqa: E501
             additional_localized_strings (int): [optional]  # noqa: E501
             column_name (str): [optional]  # noqa: E501
             default_value (btm_parameter1.BTMParameter1): [optional]  # noqa: E501

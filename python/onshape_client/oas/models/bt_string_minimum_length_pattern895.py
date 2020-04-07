@@ -86,8 +86,8 @@ class BTStringMinimumLengthPattern895(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "minimum_length": (int,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "minimum_length": (int,),  # noqa: E501
             "error_message": (str,),  # noqa: E501
             "should_reset_value_when_confirmed": (bool,),  # noqa: E501
         }
@@ -97,8 +97,8 @@ class BTStringMinimumLengthPattern895(ModelComposed):
         return None
 
     attribute_map = {
-        "minimum_length": "minimumLength",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "minimum_length": "minimumLength",  # noqa: E501
         "error_message": "errorMessage",  # noqa: E501
         "should_reset_value_when_confirmed": "shouldResetValueWhenConfirmed",  # noqa: E501
     }
@@ -140,8 +140,8 @@ class BTStringMinimumLengthPattern895(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            minimum_length (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            minimum_length (int): [optional]  # noqa: E501
             error_message (str): [optional]  # noqa: E501
             should_reset_value_when_confirmed (bool): [optional]  # noqa: E501
         """

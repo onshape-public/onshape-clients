@@ -88,13 +88,13 @@ class BTParameterVisibilityLogical178(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "operation": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "children": (
                 [
                     bt_parameter_visibility_condition177.BTParameterVisibilityCondition177
                 ],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "operation": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -102,9 +102,9 @@ class BTParameterVisibilityLogical178(ModelComposed):
         return None
 
     attribute_map = {
-        "operation": "operation",  # noqa: E501
-        "children": "children",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "children": "children",  # noqa: E501
+        "operation": "operation",  # noqa: E501
     }
 
     required_properties = set(
@@ -144,9 +144,9 @@ class BTParameterVisibilityLogical178(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operation (str): [optional]  # noqa: E501
-            children ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            children ([bt_parameter_visibility_condition177.BTParameterVisibilityCondition177]): [optional]  # noqa: E501
+            operation (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

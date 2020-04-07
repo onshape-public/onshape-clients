@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **space_after_return** | [**btp_space10.BTPSpace10**](BTPSpace10.md) |  | [optional] 
 **value** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

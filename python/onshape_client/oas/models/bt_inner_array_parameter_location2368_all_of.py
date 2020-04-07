@@ -73,9 +73,9 @@ class BTInnerArrayParameterLocation2368AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "outer_parameter_id": (str,),  # noqa: E501
-            "index": (int,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "index": (int,),  # noqa: E501
+            "outer_parameter_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,9 +83,9 @@ class BTInnerArrayParameterLocation2368AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "outer_parameter_id": "outerParameterId",  # noqa: E501
-        "index": "index",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "index": "index",  # noqa: E501
+        "outer_parameter_id": "outerParameterId",  # noqa: E501
     }
 
     @staticmethod
@@ -126,9 +126,9 @@ class BTInnerArrayParameterLocation2368AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            outer_parameter_id (str): [optional]  # noqa: E501
-            index (int): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            index (int): [optional]  # noqa: E501
+            outer_parameter_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

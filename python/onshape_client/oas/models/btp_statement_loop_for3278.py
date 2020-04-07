@@ -114,13 +114,13 @@ class BTPStatementLoopFor3278(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "condition": (btp_expression9.BTPExpression9,),  # noqa: E501
+            "increment": (btp_statement269.BTPStatement269,),  # noqa: E501
             "initialization": (btp_statement269.BTPStatement269,),  # noqa: E501
             "space_after_initialization": (btp_space10.BTPSpace10,),  # noqa: E501
             "space_before_condition": (btp_space10.BTPSpace10,),  # noqa: E501
             "space_before_increment": (btp_space10.BTPSpace10,),  # noqa: E501
-            "increment": (btp_statement269.BTPStatement269,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -140,13 +140,13 @@ class BTPStatementLoopFor3278(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "condition": "condition",  # noqa: E501
+        "increment": "increment",  # noqa: E501
         "initialization": "initialization",  # noqa: E501
         "space_after_initialization": "spaceAfterInitialization",  # noqa: E501
         "space_before_condition": "spaceBeforeCondition",  # noqa: E501
         "space_before_increment": "spaceBeforeIncrement",  # noqa: E501
-        "increment": "increment",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -198,13 +198,13 @@ class BTPStatementLoopFor3278(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            increment (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             initialization (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             space_after_initialization (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_before_condition (btp_space10.BTPSpace10): [optional]  # noqa: E501
             space_before_increment (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            increment (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

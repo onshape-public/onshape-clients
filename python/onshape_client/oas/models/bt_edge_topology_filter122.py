@@ -84,8 +84,8 @@ class BTEdgeTopologyFilter122(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "is_internal_edge": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_internal_edge": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,8 +93,8 @@ class BTEdgeTopologyFilter122(ModelComposed):
         return None
 
     attribute_map = {
-        "is_internal_edge": "isInternalEdge",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_internal_edge": "isInternalEdge",  # noqa: E501
     }
 
     required_properties = set(
@@ -134,8 +134,8 @@ class BTEdgeTopologyFilter122(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_internal_edge (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_internal_edge (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

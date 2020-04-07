@@ -78,8 +78,8 @@ class BTPExpressionVarReference245AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "name": (btp_name261.BTPName261,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "name": (btp_name261.BTPName261,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTPExpressionVarReference245AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "name": "name",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "name": "name",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTPExpressionVarReference245AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            name (btp_name261.BTPName261): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            name (btp_name261.BTPName261): [optional]  # noqa: E501
         """
 
         self._data_store = {}

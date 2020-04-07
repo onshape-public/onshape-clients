@@ -1088,7 +1088,6 @@ from onshape_client.oas.models.bt_workflowable_test_object_info import (
     BTWorkflowableTestObjectInfo,
 )
 from onshape_client.oas.models.bt_workspace_info import BTWorkspaceInfo
-from onshape_client.oas.models.bt_workspace_info_all_of import BTWorkspaceInfoAllOf
 from onshape_client.oas.models.bt_workspace_part_params import BTWorkspacePartParams
 from onshape_client.oas.models.btapi_application_summary_info import (
     BTAPIApplicationSummaryInfo,
@@ -1507,6 +1506,9 @@ from onshape_client.oas.models.btp_literal_map_entry257_all_of import (
 )
 from onshape_client.oas.models.btp_literal_number258 import BTPLiteralNumber258
 from onshape_client.oas.models.btp_literal_string259 import BTPLiteralString259
+from onshape_client.oas.models.btp_literal_string259_all_of import (
+    BTPLiteralString259AllOf,
+)
 from onshape_client.oas.models.btp_literal_undefined260 import BTPLiteralUndefined260
 from onshape_client.oas.models.btp_module234 import BTPModule234
 from onshape_client.oas.models.btp_module234_all_of import BTPModule234AllOf

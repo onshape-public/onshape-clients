@@ -78,11 +78,11 @@ class BTFSValueArray1499AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "value": ([btfs_value1888.BTFSValue1888],),  # noqa: E501
             "value_object": (
                 [bool, date, datetime, dict, float, int, list, str],
             ),  # noqa: E501
-            "value": ([btfs_value1888.BTFSValue1888],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,9 +90,9 @@ class BTFSValueArray1499AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "value_object": "valueObject",  # noqa: E501
-        "value": "value",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "value": "value",  # noqa: E501
+        "value_object": "valueObject",  # noqa: E501
     }
 
     @staticmethod
@@ -133,9 +133,9 @@ class BTFSValueArray1499AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value_object ([bool, date, datetime, dict, float, int, list, str]): [optional]  # noqa: E501
-            value ([btfs_value1888.BTFSValue1888]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            value ([btfs_value1888.BTFSValue1888]): [optional]  # noqa: E501
+            value_object ([bool, date, datetime, dict, float, int, list, str]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

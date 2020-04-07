@@ -84,14 +84,14 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "feature_states": (
+                {str: (bt_feature_state1688.BTFeatureState1688,)},
+            ),  # noqa: E501
             "features": (
                 [btm_assembly_feature887.BTMAssemblyFeature887],
             ),  # noqa: E501
             "is_complete": (bool,),  # noqa: E501
-            "feature_states": (
-                {str: (bt_feature_state1688.BTFeatureState1688,)},
-            ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,10 +99,10 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "feature_states": "featureStates",  # noqa: E501
         "features": "features",  # noqa: E501
         "is_complete": "isComplete",  # noqa: E501
-        "feature_states": "featureStates",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -143,10 +143,10 @@ class BTAssemblyFeatureListResponse1174AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
             features ([btm_assembly_feature887.BTMAssemblyFeature887]): [optional]  # noqa: E501
             is_complete (bool): [optional]  # noqa: E501
-            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

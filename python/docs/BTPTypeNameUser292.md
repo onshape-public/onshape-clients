@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**btp_name261.BTPName261**](BTPName261.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**type** | [**btp_name261.BTPName261**](BTPName261.md) |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

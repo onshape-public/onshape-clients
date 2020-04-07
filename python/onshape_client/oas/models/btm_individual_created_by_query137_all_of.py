@@ -92,10 +92,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
         """
         return {
             "body_type": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "entity_type": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "filter_construction": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -104,10 +104,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
 
     attribute_map = {
         "body_type": "bodyType",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "entity_type": "entityType",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "filter_construction": "filterConstruction",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -149,10 +149,10 @@ class BTMIndividualCreatedByQuery137AllOf(ModelNormal):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             body_type (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             entity_type (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             filter_construction (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

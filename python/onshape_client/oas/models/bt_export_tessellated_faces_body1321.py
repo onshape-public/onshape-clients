@@ -112,15 +112,15 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "faces": (
-                [bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],
-            ),  # noqa: E501
-            "body_type": (str,),  # noqa: E501
             "appearance": (
                 bt_graphics_appearance1152.BTGraphicsAppearance1152,
             ),  # noqa: E501
-            "facet_points": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
+            "body_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "faces": (
+                [bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192],
+            ),  # noqa: E501
+            "facet_points": ([bt_vector3d389.BTVector3d389],),  # noqa: E501
             "constituents": ([str],),  # noqa: E501
             "id": (str,),  # noqa: E501
         }
@@ -130,11 +130,11 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
         return None
 
     attribute_map = {
-        "faces": "faces",  # noqa: E501
-        "body_type": "bodyType",  # noqa: E501
         "appearance": "appearance",  # noqa: E501
-        "facet_points": "facetPoints",  # noqa: E501
+        "body_type": "bodyType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "faces": "faces",  # noqa: E501
+        "facet_points": "facetPoints",  # noqa: E501
         "constituents": "constituents",  # noqa: E501
         "id": "id",  # noqa: E501
     }
@@ -176,11 +176,11 @@ class BTExportTessellatedFacesBody1321(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            faces ([bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192]): [optional]  # noqa: E501
-            body_type (str): [optional]  # noqa: E501
             appearance (bt_graphics_appearance1152.BTGraphicsAppearance1152): [optional]  # noqa: E501
-            facet_points ([bt_vector3d389.BTVector3d389]): [optional]  # noqa: E501
+            body_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            faces ([bt_export_tessellated_faces_face1192.BTExportTessellatedFacesFace1192]): [optional]  # noqa: E501
+            facet_points ([bt_vector3d389.BTVector3d389]): [optional]  # noqa: E501
             constituents ([str]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
         """

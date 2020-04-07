@@ -73,8 +73,8 @@ class BTMIndividualSketchUniqueVerticesQuery1472AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "feature_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMIndividualSketchUniqueVerticesQuery1472AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "feature_id": "featureId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMIndividualSketchUniqueVerticesQuery1472AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            feature_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}
