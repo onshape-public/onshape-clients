@@ -21,7 +21,7 @@ class CommandRunner:
             )
         return new_path
 
-    def run(self, command, cwd=None):
+    def run(self, command, cwd=None, capture_output=False):
         """Run a command in the shell for this client."""
         cwd = cwd if cwd else self.cwd
         self.print_divider(
@@ -31,7 +31,7 @@ class CommandRunner:
         # Dry runs should pretend the command succeeded.
         if self.dry_run:
             return subprocess.CompletedProcess(command, 0)
-        return subprocess.run(command, cwd=cwd)
+        return subprocess.run(command, cwd=cwd, capture_output=capture_output)
 
     @staticmethod
     def print_divider(message):
