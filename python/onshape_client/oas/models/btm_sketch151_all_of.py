@@ -86,11 +86,11 @@ class BTMSketch151AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "entities": ([btm_sketch_geom_entity5.BTMSketchGeomEntity5],),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "constraints": (
                 [btm_sketch_constraint2.BTMSketchConstraint2],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "entities": ([btm_sketch_geom_entity5.BTMSketchGeomEntity5],),  # noqa: E501
         }
 
     @staticmethod
@@ -98,9 +98,9 @@ class BTMSketch151AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "entities": "entities",  # noqa: E501
-        "constraints": "constraints",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "constraints": "constraints",  # noqa: E501
+        "entities": "entities",  # noqa: E501
     }
 
     @staticmethod
@@ -141,9 +141,9 @@ class BTMSketch151AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entities ([btm_sketch_geom_entity5.BTMSketchGeomEntity5]): [optional]  # noqa: E501
-            constraints ([btm_sketch_constraint2.BTMSketchConstraint2]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            constraints ([btm_sketch_constraint2.BTMSketchConstraint2]): [optional]  # noqa: E501
+            entities ([btm_sketch_geom_entity5.BTMSketchGeomEntity5]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

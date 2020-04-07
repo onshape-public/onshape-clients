@@ -84,8 +84,8 @@ class BTModifiableEntityOnlyFilter1593(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "modifiable_only": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "modifiable_only": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,8 +93,8 @@ class BTModifiableEntityOnlyFilter1593(ModelComposed):
         return None
 
     attribute_map = {
-        "modifiable_only": "modifiableOnly",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "modifiable_only": "modifiableOnly",  # noqa: E501
     }
 
     required_properties = set(
@@ -134,8 +134,8 @@ class BTModifiableEntityOnlyFilter1593(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            modifiable_only (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            modifiable_only (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

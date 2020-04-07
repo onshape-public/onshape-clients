@@ -84,12 +84,12 @@ class BTMIndividualQuery138AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "persistent_query": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
             "variable_name": (
                 btm_individual_query138.BTMIndividualQuery138,
             ),  # noqa: E501
-            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,10 +97,10 @@ class BTMIndividualQuery138AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "persistent_query": "persistentQuery",  # noqa: E501
-        "variable_name": "variableName",  # noqa: E501
-        "query_statement": "queryStatement",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "persistent_query": "persistentQuery",  # noqa: E501
+        "query_statement": "queryStatement",  # noqa: E501
+        "variable_name": "variableName",  # noqa: E501
     }
 
     @staticmethod
@@ -141,10 +141,10 @@ class BTMIndividualQuery138AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
-            query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
         """
 
         self._data_store = {}

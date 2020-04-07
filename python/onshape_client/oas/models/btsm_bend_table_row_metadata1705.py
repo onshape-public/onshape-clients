@@ -92,8 +92,8 @@ class BTSMBendTableRowMetadata1705(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "is_joint_type_editable": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_joint_type_editable": (bool,),  # noqa: E501
             "cross_highlight_data_if_any": (
                 bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753,
             ),  # noqa: E501
@@ -107,8 +107,8 @@ class BTSMBendTableRowMetadata1705(ModelComposed):
         return None
 
     attribute_map = {
-        "is_joint_type_editable": "isJointTypeEditable",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_joint_type_editable": "isJointTypeEditable",  # noqa: E501
         "cross_highlight_data_if_any": "crossHighlightDataIfAny",  # noqa: E501
         "cross_highlight_data": "crossHighlightData",  # noqa: E501
     }
@@ -150,8 +150,8 @@ class BTSMBendTableRowMetadata1705(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_joint_type_editable (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_joint_type_editable (bool): [optional]  # noqa: E501
             cross_highlight_data_if_any (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753): [optional]  # noqa: E501
             cross_highlight_data (bt_table_cross_highlight_data1753.BTTableCrossHighlightData1753): [optional]  # noqa: E501
         """

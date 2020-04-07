@@ -88,22 +88,22 @@ class BTVersionInfoBaseAllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "description": (str,),  # noqa: E501
-            "modified_at": (datetime,),  # noqa: E501
             "created_at": (datetime,),  # noqa: E501
-            "last_modifier": (
-                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
-            ),  # noqa: E501
-            "document_id": (str,),  # noqa: E501
             "creator": (
                 bt_user_basic_summary_info.BTUserBasicSummaryInfo,
             ),  # noqa: E501
-            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            "description": (str,),  # noqa: E501
+            "document_id": (str,),  # noqa: E501
+            "last_modifier": (
+                bt_user_basic_summary_info.BTUserBasicSummaryInfo,
+            ),  # noqa: E501
             "microversion": (str,),  # noqa: E501
-            "parents": ([bt_version_info.BTVersionInfo],),  # noqa: E501
+            "modified_at": (datetime,),  # noqa: E501
             "override_date": (datetime,),  # noqa: E501
-            "type": (str,),  # noqa: E501
             "parent": (str,),  # noqa: E501
+            "parents": ([bt_version_info.BTVersionInfo],),  # noqa: E501
+            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            "type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -111,18 +111,18 @@ class BTVersionInfoBaseAllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "description": "description",  # noqa: E501
-        "modified_at": "modifiedAt",  # noqa: E501
         "created_at": "createdAt",  # noqa: E501
-        "last_modifier": "lastModifier",  # noqa: E501
-        "document_id": "documentId",  # noqa: E501
         "creator": "creator",  # noqa: E501
-        "thumbnail": "thumbnail",  # noqa: E501
+        "description": "description",  # noqa: E501
+        "document_id": "documentId",  # noqa: E501
+        "last_modifier": "lastModifier",  # noqa: E501
         "microversion": "microversion",  # noqa: E501
-        "parents": "parents",  # noqa: E501
+        "modified_at": "modifiedAt",  # noqa: E501
         "override_date": "overrideDate",  # noqa: E501
-        "type": "type",  # noqa: E501
         "parent": "parent",  # noqa: E501
+        "parents": "parents",  # noqa: E501
+        "thumbnail": "thumbnail",  # noqa: E501
+        "type": "type",  # noqa: E501
     }
 
     @staticmethod
@@ -163,18 +163,18 @@ class BTVersionInfoBaseAllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            description (str): [optional]  # noqa: E501
-            modified_at (datetime): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            last_modifier (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            document_id (str): [optional]  # noqa: E501
             creator (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
-            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            description (str): [optional]  # noqa: E501
+            document_id (str): [optional]  # noqa: E501
+            last_modifier (bt_user_basic_summary_info.BTUserBasicSummaryInfo): [optional]  # noqa: E501
             microversion (str): [optional]  # noqa: E501
-            parents ([bt_version_info.BTVersionInfo]): [optional]  # noqa: E501
+            modified_at (datetime): [optional]  # noqa: E501
             override_date (datetime): [optional]  # noqa: E501
-            type (str): [optional]  # noqa: E501
             parent (str): [optional]  # noqa: E501
+            parents ([bt_version_info.BTVersionInfo]): [optional]  # noqa: E501
+            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

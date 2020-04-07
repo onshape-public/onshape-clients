@@ -86,8 +86,8 @@ class BTMInContextQuery2254(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "path": ([str],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "path": ([str],),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
@@ -105,8 +105,8 @@ class BTMInContextQuery2254(ModelComposed):
         return None
 
     attribute_map = {
-        "path": "path",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "path": "path",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -152,8 +152,8 @@ class BTMInContextQuery2254(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            path ([str]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            path ([str]): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501

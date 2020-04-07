@@ -86,13 +86,13 @@ class BTExplosion2754AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "explode_steps": (
                 [bt_explosion_step_feature3008.BTExplosionStepFeature3008],
             ),  # noqa: E501
             "starting_position_id": (
                 bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -100,9 +100,9 @@ class BTExplosion2754AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "explode_steps": "explodeSteps",  # noqa: E501
         "starting_position_id": "startingPositionId",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -143,9 +143,9 @@ class BTExplosion2754AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             explode_steps ([bt_explosion_step_feature3008.BTExplosionStepFeature3008]): [optional]  # noqa: E501
             starting_position_id (bt_microversion_id_and_configuration2338.BTMicroversionIdAndConfiguration2338): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

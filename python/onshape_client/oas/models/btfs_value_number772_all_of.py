@@ -73,9 +73,9 @@ class BTFSValueNumber772AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "value_object": (float,),  # noqa: E501
-            "value": (float,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "value": (float,),  # noqa: E501
+            "value_object": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,9 +83,9 @@ class BTFSValueNumber772AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "value_object": "valueObject",  # noqa: E501
-        "value": "value",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "value": "value",  # noqa: E501
+        "value_object": "valueObject",  # noqa: E501
     }
 
     @staticmethod
@@ -126,9 +126,9 @@ class BTFSValueNumber772AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value_object (float): [optional]  # noqa: E501
-            value (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            value (float): [optional]  # noqa: E501
+            value_object (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

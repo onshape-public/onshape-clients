@@ -108,19 +108,19 @@ class BTPExpressionOperator244AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "import_microversion": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "for_export": (bool,),  # noqa: E501
+            "global_namespace": (bool,),  # noqa: E501
+            "import_microversion": (str,),  # noqa: E501
+            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
             "operand1": (btp_expression9.BTPExpression9,),  # noqa: E501
             "operand2": (btp_expression9.BTPExpression9,),  # noqa: E501
-            "operator": (str,),  # noqa: E501
-            "global_namespace": (bool,),  # noqa: E501
-            "written_as_function_call": (bool,),  # noqa: E501
-            "space_after_namespace": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
-            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
             "operand3": (btp_expression9.BTPExpression9,),  # noqa: E501
-            "namespace": ([btp_identifier8.BTPIdentifier8],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "operator": (str,),  # noqa: E501
+            "space_after_namespace": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_after_operator": (btp_space10.BTPSpace10,),  # noqa: E501
+            "space_before_operator": (btp_space10.BTPSpace10,),  # noqa: E501
+            "written_as_function_call": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -128,19 +128,19 @@ class BTPExpressionOperator244AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "import_microversion": "importMicroversion",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "for_export": "forExport",  # noqa: E501
+        "global_namespace": "globalNamespace",  # noqa: E501
+        "import_microversion": "importMicroversion",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
         "operand1": "operand1",  # noqa: E501
         "operand2": "operand2",  # noqa: E501
-        "operator": "operator",  # noqa: E501
-        "global_namespace": "globalNamespace",  # noqa: E501
-        "written_as_function_call": "writtenAsFunctionCall",  # noqa: E501
-        "space_after_namespace": "spaceAfterNamespace",  # noqa: E501
-        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
-        "space_after_operator": "spaceAfterOperator",  # noqa: E501
         "operand3": "operand3",  # noqa: E501
-        "namespace": "namespace",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "operator": "operator",  # noqa: E501
+        "space_after_namespace": "spaceAfterNamespace",  # noqa: E501
+        "space_after_operator": "spaceAfterOperator",  # noqa: E501
+        "space_before_operator": "spaceBeforeOperator",  # noqa: E501
+        "written_as_function_call": "writtenAsFunctionCall",  # noqa: E501
     }
 
     @staticmethod
@@ -181,19 +181,19 @@ class BTPExpressionOperator244AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            import_microversion (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             for_export (bool): [optional]  # noqa: E501
+            global_namespace (bool): [optional]  # noqa: E501
+            import_microversion (str): [optional]  # noqa: E501
+            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
             operand1 (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             operand2 (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            operator (str): [optional]  # noqa: E501
-            global_namespace (bool): [optional]  # noqa: E501
-            written_as_function_call (bool): [optional]  # noqa: E501
-            space_after_namespace (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
             operand3 (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            namespace ([btp_identifier8.BTPIdentifier8]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            operator (str): [optional]  # noqa: E501
+            space_after_namespace (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_after_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            space_before_operator (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            written_as_function_call (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

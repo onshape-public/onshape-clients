@@ -133,10 +133,10 @@ class BTPStatementAssignment270(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "operator": (str,),  # noqa: E501
-            "lvalue": (btpl_value249.BTPLValue249,),  # noqa: E501
-            "rvalue": (btp_expression9.BTPExpression9,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "lvalue": (btpl_value249.BTPLValue249,),  # noqa: E501
+            "operator": (str,),  # noqa: E501
+            "rvalue": (btp_expression9.BTPExpression9,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -154,10 +154,10 @@ class BTPStatementAssignment270(ModelComposed):
         return None
 
     attribute_map = {
-        "operator": "operator",  # noqa: E501
-        "lvalue": "lvalue",  # noqa: E501
-        "rvalue": "rvalue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "lvalue": "lvalue",  # noqa: E501
+        "operator": "operator",  # noqa: E501
+        "rvalue": "rvalue",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -207,10 +207,10 @@ class BTPStatementAssignment270(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            operator (str): [optional]  # noqa: E501
-            lvalue (btpl_value249.BTPLValue249): [optional]  # noqa: E501
-            rvalue (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            lvalue (btpl_value249.BTPLValue249): [optional]  # noqa: E501
+            operator (str): [optional]  # noqa: E501
+            rvalue (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**default_value** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**default_value** | **bool** |  | [optional] 
 **generated_parameter_id** | [**bt_tree_node20.BTTreeNode20**](BTTreeNode20.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

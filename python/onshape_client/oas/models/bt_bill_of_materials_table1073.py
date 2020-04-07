@@ -94,10 +94,10 @@ class BTBillOfMaterialsTable1073(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "failed_metadata_representative_occurrences": ([str],),  # noqa: E501
             "indented": (bool,),  # noqa: E501
             "showing_excluded": (bool,),  # noqa: E501
-            "failed_metadata_representative_occurrences": ([str],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "all_row_values": ([[str]],),  # noqa: E501
             "column_count": (int,),  # noqa: E501
             "frozen_columns": (int,),  # noqa: E501
@@ -117,10 +117,10 @@ class BTBillOfMaterialsTable1073(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "failed_metadata_representative_occurrences": "failedMetadataRepresentativeOccurrences",  # noqa: E501
         "indented": "indented",  # noqa: E501
         "showing_excluded": "showingExcluded",  # noqa: E501
-        "failed_metadata_representative_occurrences": "failedMetadataRepresentativeOccurrences",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "all_row_values": "allRowValues",  # noqa: E501
         "column_count": "columnCount",  # noqa: E501
         "frozen_columns": "frozenColumns",  # noqa: E501
@@ -170,10 +170,10 @@ class BTBillOfMaterialsTable1073(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            failed_metadata_representative_occurrences ([str]): [optional]  # noqa: E501
             indented (bool): [optional]  # noqa: E501
             showing_excluded (bool): [optional]  # noqa: E501
-            failed_metadata_representative_occurrences ([str]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             all_row_values ([[str]]): [optional]  # noqa: E501
             column_count (int): [optional]  # noqa: E501
             frozen_columns (int): [optional]  # noqa: E501

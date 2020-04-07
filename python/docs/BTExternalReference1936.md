@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**document_version_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**document_version_id** | **str** |  | [optional] 
 **configured** | **bool** |  | [optional] 
 **element_id** | **str** |  | [optional] 
 **external_document_with_version** | [**bt_document_with_version_id.BTDocumentWithVersionId**](BTDocumentWithVersionId.md) |  | [optional] 

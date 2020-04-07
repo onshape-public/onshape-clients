@@ -104,9 +104,9 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
             "query_string": (str,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
             "feature_id_with_occurrence": (str,),  # noqa: E501
             "part_studio_mate_connector_query": (bool,),  # noqa: E501
-            "feature_id": (str,),  # noqa: E501
             "query_data": (str,),  # noqa: E501
         }
 
@@ -123,9 +123,9 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
         "path": "path",  # noqa: E501
         "query": "query",  # noqa: E501
         "query_string": "queryString",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
         "feature_id_with_occurrence": "featureIdWithOccurrence",  # noqa: E501
         "part_studio_mate_connector_query": "partStudioMateConnectorQuery",  # noqa: E501
-        "feature_id": "featureId",  # noqa: E501
         "query_data": "queryData",  # noqa: E501
     }
 
@@ -174,9 +174,9 @@ class BTMPartStudioMateConnectorQuery1324(ModelComposed):
             path ([str]): [optional]  # noqa: E501
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             query_string (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
             feature_id_with_occurrence (str): [optional]  # noqa: E501
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
-            feature_id (str): [optional]  # noqa: E501
             query_data (str): [optional]  # noqa: E501
         """
 

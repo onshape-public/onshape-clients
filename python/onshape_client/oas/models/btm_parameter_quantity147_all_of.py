@@ -73,11 +73,11 @@ class BTMParameterQuantity147AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "units": (str,),  # noqa: E501
-            "is_integer": (bool,),  # noqa: E501
-            "expression": (str,),  # noqa: E501
-            "value": (float,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "expression": (str,),  # noqa: E501
+            "is_integer": (bool,),  # noqa: E501
+            "units": (str,),  # noqa: E501
+            "value": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,11 +85,11 @@ class BTMParameterQuantity147AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "units": "units",  # noqa: E501
-        "is_integer": "isInteger",  # noqa: E501
-        "expression": "expression",  # noqa: E501
-        "value": "value",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "expression": "expression",  # noqa: E501
+        "is_integer": "isInteger",  # noqa: E501
+        "units": "units",  # noqa: E501
+        "value": "value",  # noqa: E501
     }
 
     @staticmethod
@@ -130,11 +130,11 @@ class BTMParameterQuantity147AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            units (str): [optional]  # noqa: E501
-            is_integer (bool): [optional]  # noqa: E501
-            expression (str): [optional]  # noqa: E501
-            value (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            expression (str): [optional]  # noqa: E501
+            is_integer (bool): [optional]  # noqa: E501
+            units (str): [optional]  # noqa: E501
+            value (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

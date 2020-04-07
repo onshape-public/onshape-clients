@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**saved_feature_type** | **str** |  | [optional] 
-**is_hidden** | **bool** |  | [optional] 
-**implicit** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**implicit** | **bool** |  | [optional] 
+**is_hidden** | **bool** |  | [optional] 
+**saved_feature_type** | **str** |  | [optional] 
 **feature_id** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

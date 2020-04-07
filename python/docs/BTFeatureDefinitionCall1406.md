@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature** | [**btm_feature134.BTMFeature134**](BTMFeature134.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**feature** | [**btm_feature134.BTMFeature134**](BTMFeature134.md) |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

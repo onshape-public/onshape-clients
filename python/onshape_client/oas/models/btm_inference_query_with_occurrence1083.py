@@ -108,10 +108,10 @@ class BTMInferenceQueryWithOccurrence1083(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "second_entity_query": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "inference_type": (str,),  # noqa: E501
             "second_deterministic_id": (str,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "second_entity_query": (str,),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
@@ -131,10 +131,10 @@ class BTMInferenceQueryWithOccurrence1083(ModelComposed):
         return None
 
     attribute_map = {
-        "second_entity_query": "secondEntityQuery",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "inference_type": "inferenceType",  # noqa: E501
         "second_deterministic_id": "secondDeterministicId",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "second_entity_query": "secondEntityQuery",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -182,10 +182,10 @@ class BTMInferenceQueryWithOccurrence1083(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            second_entity_query (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             inference_type (str): [optional]  # noqa: E501
             second_deterministic_id (str): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            second_entity_query (str): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501

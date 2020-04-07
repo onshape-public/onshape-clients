@@ -86,10 +86,10 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "choices": (btp_literal_map256.BTPLiteralMap256,),  # noqa: E501
             "selector": (btp_expression9.BTPExpression9,),  # noqa: E501
             "space_after_switch": (btp_space10.BTPSpace10,),  # noqa: E501
-            "choices": (btp_literal_map256.BTPLiteralMap256,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -97,10 +97,10 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "choices": "choices",  # noqa: E501
         "selector": "selector",  # noqa: E501
         "space_after_switch": "spaceAfterSwitch",  # noqa: E501
-        "choices": "choices",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -141,10 +141,10 @@ class BTPExpressionSwitch2632AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            choices (btp_literal_map256.BTPLiteralMap256): [optional]  # noqa: E501
             selector (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             space_after_switch (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            choices (btp_literal_map256.BTPLiteralMap256): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

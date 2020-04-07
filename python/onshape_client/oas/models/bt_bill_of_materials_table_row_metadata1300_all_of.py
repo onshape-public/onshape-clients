@@ -80,13 +80,13 @@ class BTBillOfMaterialsTableRowMetadata1300AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "cross_highlight_data_if_any": (
-                bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675,
-            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "cross_highlight_data": (
                 bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "cross_highlight_data_if_any": (
+                bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675,
+            ),  # noqa: E501
         }
 
     @staticmethod
@@ -94,9 +94,9 @@ class BTBillOfMaterialsTableRowMetadata1300AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "cross_highlight_data_if_any": "crossHighlightDataIfAny",  # noqa: E501
-        "cross_highlight_data": "crossHighlightData",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "cross_highlight_data": "crossHighlightData",  # noqa: E501
+        "cross_highlight_data_if_any": "crossHighlightDataIfAny",  # noqa: E501
     }
 
     @staticmethod
@@ -137,9 +137,9 @@ class BTBillOfMaterialsTableRowMetadata1300AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            cross_highlight_data_if_any (bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675): [optional]  # noqa: E501
-            cross_highlight_data (bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            cross_highlight_data (bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675): [optional]  # noqa: E501
+            cross_highlight_data_if_any (bt_table_assembly_cross_highlight_data2675.BTTableAssemblyCrossHighlightData2675): [optional]  # noqa: E501
         """
 
         self._data_store = {}

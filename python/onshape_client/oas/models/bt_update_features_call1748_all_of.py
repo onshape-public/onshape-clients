@@ -78,9 +78,9 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "features": ([btm_feature134.BTMFeature134],),  # noqa: E501
             "update_suppression_attributes": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,9 +88,9 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "features": "features",  # noqa: E501
         "update_suppression_attributes": "updateSuppressionAttributes",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -131,9 +131,9 @@ class BTUpdateFeaturesCall1748AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             features ([btm_feature134.BTMFeature134]): [optional]  # noqa: E501
             update_suppression_attributes (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

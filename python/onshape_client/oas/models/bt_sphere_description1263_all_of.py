@@ -78,9 +78,9 @@ class BTSphereDescription1263AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "radius": (float,),  # noqa: E501
-            "origin": (bt_vector3d389.BTVector3d389,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "origin": (bt_vector3d389.BTVector3d389,),  # noqa: E501
+            "radius": (float,),  # noqa: E501
         }
 
     @staticmethod
@@ -88,9 +88,9 @@ class BTSphereDescription1263AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "radius": "radius",  # noqa: E501
-        "origin": "origin",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "origin": "origin",  # noqa: E501
+        "radius": "radius",  # noqa: E501
     }
 
     @staticmethod
@@ -131,9 +131,9 @@ class BTSphereDescription1263AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            radius (float): [optional]  # noqa: E501
-            origin (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            origin (bt_vector3d389.BTVector3d389): [optional]  # noqa: E501
+            radius (float): [optional]  # noqa: E501
         """
 
         self._data_store = {}

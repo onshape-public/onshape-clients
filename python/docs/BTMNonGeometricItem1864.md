@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_definition_id** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**item_definition_id** | **str** |  | [optional] 
 **feature_id** | **str** |  | [optional] 
 **feature_type** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

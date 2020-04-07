@@ -81,10 +81,10 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "parent_name": (str,),  # noqa: E501
-            "parent_id": (str,),  # noqa: E501
-            "parent_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "parent_id": (str,),  # noqa: E501
+            "parent_name": (str,),  # noqa: E501
+            "parent_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -92,10 +92,10 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "parent_name": "parentName",  # noqa: E501
-        "parent_id": "parentId",  # noqa: E501
-        "parent_type": "parentType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
+        "parent_name": "parentName",  # noqa: E501
+        "parent_type": "parentType",  # noqa: E501
     }
 
     @staticmethod
@@ -136,10 +136,10 @@ class BTConfiguredValuesColumnInfo1025AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            parent_name (str): [optional]  # noqa: E501
-            parent_id (str): [optional]  # noqa: E501
-            parent_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            parent_id (str): [optional]  # noqa: E501
+            parent_name (str): [optional]  # noqa: E501
+            parent_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

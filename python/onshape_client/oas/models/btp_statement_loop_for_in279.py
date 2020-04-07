@@ -130,14 +130,14 @@ class BTPStatementLoopForIn279(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "standard_type": (str,),  # noqa: E501
-            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            "type_name": (str,),  # noqa: E501
-            "container": (btp_expression9.BTPExpression9,),  # noqa: E501
-            "var": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
-            "is_var_declared_here": (bool,),  # noqa: E501
-            "space_before_var": (btp_space10.BTPSpace10,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "container": (btp_expression9.BTPExpression9,),  # noqa: E501
+            "is_var_declared_here": (bool,),  # noqa: E501
+            "name": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
+            "space_before_var": (btp_space10.BTPSpace10,),  # noqa: E501
+            "standard_type": (str,),  # noqa: E501
+            "type_name": (str,),  # noqa: E501
+            "var": (btp_identifier8.BTPIdentifier8,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -157,14 +157,14 @@ class BTPStatementLoopForIn279(ModelComposed):
         return None
 
     attribute_map = {
-        "standard_type": "standardType",  # noqa: E501
-        "name": "name",  # noqa: E501
-        "type_name": "typeName",  # noqa: E501
-        "container": "container",  # noqa: E501
-        "var": "var",  # noqa: E501
-        "is_var_declared_here": "isVarDeclaredHere",  # noqa: E501
-        "space_before_var": "spaceBeforeVar",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "container": "container",  # noqa: E501
+        "is_var_declared_here": "isVarDeclaredHere",  # noqa: E501
+        "name": "name",  # noqa: E501
+        "space_before_var": "spaceBeforeVar",  # noqa: E501
+        "standard_type": "standardType",  # noqa: E501
+        "type_name": "typeName",  # noqa: E501
+        "var": "var",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -216,14 +216,14 @@ class BTPStatementLoopForIn279(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            standard_type (str): [optional]  # noqa: E501
-            name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
-            type_name (str): [optional]  # noqa: E501
-            container (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            var (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
-            is_var_declared_here (bool): [optional]  # noqa: E501
-            space_before_var (btp_space10.BTPSpace10): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            container (btp_expression9.BTPExpression9): [optional]  # noqa: E501
+            is_var_declared_here (bool): [optional]  # noqa: E501
+            name (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
+            space_before_var (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            standard_type (str): [optional]  # noqa: E501
+            type_name (str): [optional]  # noqa: E501
+            var (btp_identifier8.BTPIdentifier8): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

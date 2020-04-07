@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
+**imports** | [**[btm_import136.BTMImport136]**](BTMImport136.md) |  | [optional] 
 **module_id** | [**btp_module_id235.BTPModuleId235**](BTPModuleId235.md) |  | [optional] 
 **namespace** | **str** |  | [optional] 
-**imports** | [**[btm_import136.BTMImport136]**](BTMImport136.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

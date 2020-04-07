@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **operand** | [**btp_expression9.BTPExpression9**](BTPExpression9.md) |  | [optional] 
 **type_name** | [**btp_type_name290.BTPTypeName290**](BTPTypeName290.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **atomic** | **bool** |  | [optional] 
 **documentation_type** | **str** |  | [optional] 
 **end_source_location** | **int** |  | [optional] 

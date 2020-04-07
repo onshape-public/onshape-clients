@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**path** | **[str]** |  | [optional] 
 **deterministic_id_list** | [**btm_individual_query_base139.BTMIndividualQueryBase139**](BTMIndividualQueryBase139.md) |  | [optional] 
 **deterministic_ids** | **[str]** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 

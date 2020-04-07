@@ -78,8 +78,8 @@ class BTMParameterMaterial1388AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "material": (bt_part_material1445.BTPartMaterial1445,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "material": (bt_part_material1445.BTPartMaterial1445,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTMParameterMaterial1388AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "material": "material",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "material": "material",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTMParameterMaterial1388AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            material (bt_part_material1445.BTPartMaterial1445): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            material (bt_part_material1445.BTPartMaterial1445): [optional]  # noqa: E501
         """
 
         self._data_store = {}

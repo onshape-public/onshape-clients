@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**maximum_length** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**maximum_length** | **int** |  | [optional] 
 **error_message** | **str** |  | [optional] 
 **should_reset_value_when_confirmed** | **bool** |  | [optional] 
 

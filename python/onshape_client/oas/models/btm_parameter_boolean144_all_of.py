@@ -73,8 +73,8 @@ class BTMParameterBoolean144AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "value": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "value": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMParameterBoolean144AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "value": "value",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "value": "value",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMParameterBoolean144AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            value (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            value (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

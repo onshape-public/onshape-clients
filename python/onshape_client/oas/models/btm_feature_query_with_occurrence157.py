@@ -99,9 +99,9 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
         """
         return {
             "bt_type": (str,),  # noqa: E501
+            "feature_id": (str,),  # noqa: E501
             "feature_id_with_occurrence": (str,),  # noqa: E501
             "part_studio_mate_connector_query": (bool,),  # noqa: E501
-            "feature_id": (str,),  # noqa: E501
             "query_data": (str,),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
@@ -126,9 +126,9 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
 
     attribute_map = {
         "bt_type": "btType",  # noqa: E501
+        "feature_id": "featureId",  # noqa: E501
         "feature_id_with_occurrence": "featureIdWithOccurrence",  # noqa: E501
         "part_studio_mate_connector_query": "partStudioMateConnectorQuery",  # noqa: E501
-        "feature_id": "featureId",  # noqa: E501
         "query_data": "queryData",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
@@ -177,9 +177,9 @@ class BTMFeatureQueryWithOccurrence157(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             bt_type (str): [optional]  # noqa: E501
+            feature_id (str): [optional]  # noqa: E501
             feature_id_with_occurrence (str): [optional]  # noqa: E501
             part_studio_mate_connector_query (bool): [optional]  # noqa: E501
-            feature_id (str): [optional]  # noqa: E501
             query_data (str): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501

@@ -96,9 +96,9 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "filter_inner_loops": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
@@ -110,10 +110,10 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
             ),  # noqa: E501
             "query_string": (str,),  # noqa: E501
             "persistent_query": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
             "variable_name": (
                 btm_individual_query138.BTMIndividualQuery138,
             ),  # noqa: E501
-            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
         }
 
     @staticmethod
@@ -121,9 +121,9 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "filter_inner_loops": "filterInnerLoops",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -131,8 +131,8 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
         "query": "query",  # noqa: E501
         "query_string": "queryString",  # noqa: E501
         "persistent_query": "persistentQuery",  # noqa: E501
-        "variable_name": "variableName",  # noqa: E501
         "query_statement": "queryStatement",  # noqa: E501
+        "variable_name": "variableName",  # noqa: E501
     }
 
     required_properties = set(
@@ -172,9 +172,9 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             filter_inner_loops (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
@@ -182,8 +182,8 @@ class BTMIndividualSketchRegionQuery140(ModelComposed):
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             query_string (str): [optional]  # noqa: E501
             persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
         """
 
         self._data_store = {}

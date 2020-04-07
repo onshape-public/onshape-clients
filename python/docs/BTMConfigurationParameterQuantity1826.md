@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **quantity_type** | **str** |  | [optional] 
 **range_and_default** | [**bt_quantity_range181.BTQuantityRange181**](BTQuantityRange181.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **generated_parameter_id** | [**bt_tree_node20.BTTreeNode20**](BTTreeNode20.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

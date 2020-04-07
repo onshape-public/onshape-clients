@@ -104,9 +104,26 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "anonymous_access_allowed": (bool,),  # noqa: E501
+            "anonymous_allows_export": (bool,),  # noqa: E501
+            "can_unshare": (bool,),  # noqa: E501
+            "created_with_education_plan": (bool,),  # noqa: E501
             "default_element_id": (str,),  # noqa: E501
             "default_workspace": (bt_workspace_info.BTWorkspaceInfo,),  # noqa: E501
+            "document_labels": (
+                [bt_document_label_info.BTDocumentLabelInfo],
+            ),  # noqa: E501
+            "has_release_revisionable_objects": (bool,),  # noqa: E501
+            "has_relevant_insertables": (bool,),  # noqa: E501
+            "is_orphaned": (bool,),  # noqa: E501
+            "is_using_managed_workflow": (bool,),  # noqa: E501
+            "liked_by_current_user": (bool,),  # noqa: E501
+            "likes": (int,),  # noqa: E501
+            "not_revision_managed": (bool,),  # noqa: E501
+            "number_of_times_copied": (int,),  # noqa: E501
+            "number_of_times_referenced": (int,),  # noqa: E501
             "parent_id": (str,),  # noqa: E501
+            "permission": (str,),  # noqa: E501
             "permission_set": (
                 bool,
                 date,
@@ -117,33 +134,16 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
                 list,
                 str,
             ),  # noqa: E501
-            "trash": (bool,),  # noqa: E501
-            "total_workspaces_updating": (int,),  # noqa: E501
-            "total_workspaces_scheduled_for_update": (int,),  # noqa: E501
-            "can_unshare": (bool,),  # noqa: E501
-            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
-            "support_team_user_and_shared": (bool,),  # noqa: E501
-            "liked_by_current_user": (bool,),  # noqa: E501
-            "document_labels": (
-                [bt_document_label_info.BTDocumentLabelInfo],
-            ),  # noqa: E501
-            "number_of_times_referenced": (int,),  # noqa: E501
-            "number_of_times_copied": (int,),  # noqa: E501
-            "likes": (int,),  # noqa: E501
-            "recent_version": (bt_base_info.BTBaseInfo,),  # noqa: E501
-            "has_relevant_insertables": (bool,),  # noqa: E501
-            "created_with_education_plan": (bool,),  # noqa: E501
-            "not_revision_managed": (bool,),  # noqa: E501
-            "anonymous_access_allowed": (bool,),  # noqa: E501
-            "anonymous_allows_export": (bool,),  # noqa: E501
-            "trashed_at": (datetime,),  # noqa: E501
-            "is_orphaned": (bool,),  # noqa: E501
-            "tags": ([str],),  # noqa: E501
-            "has_release_revisionable_objects": (bool,),  # noqa: E501
             "public": (bool,),  # noqa: E501
+            "recent_version": (bt_base_info.BTBaseInfo,),  # noqa: E501
+            "support_team_user_and_shared": (bool,),  # noqa: E501
+            "tags": ([str],),  # noqa: E501
+            "thumbnail": (bt_thumbnail_info.BTThumbnailInfo,),  # noqa: E501
+            "total_workspaces_scheduled_for_update": (int,),  # noqa: E501
+            "total_workspaces_updating": (int,),  # noqa: E501
+            "trash": (bool,),  # noqa: E501
+            "trashed_at": (datetime,),  # noqa: E501
             "user_account_limits_breached": (bool,),  # noqa: E501
-            "is_using_managed_workflow": (bool,),  # noqa: E501
-            "permission": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -151,35 +151,35 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "default_element_id": "defaultElementId",  # noqa: E501
-        "default_workspace": "defaultWorkspace",  # noqa: E501
-        "parent_id": "parentId",  # noqa: E501
-        "permission_set": "permissionSet",  # noqa: E501
-        "trash": "trash",  # noqa: E501
-        "total_workspaces_updating": "totalWorkspacesUpdating",  # noqa: E501
-        "total_workspaces_scheduled_for_update": "totalWorkspacesScheduledForUpdate",  # noqa: E501
-        "can_unshare": "canUnshare",  # noqa: E501
-        "thumbnail": "thumbnail",  # noqa: E501
-        "support_team_user_and_shared": "supportTeamUserAndShared",  # noqa: E501
-        "liked_by_current_user": "likedByCurrentUser",  # noqa: E501
-        "document_labels": "documentLabels",  # noqa: E501
-        "number_of_times_referenced": "numberOfTimesReferenced",  # noqa: E501
-        "number_of_times_copied": "numberOfTimesCopied",  # noqa: E501
-        "likes": "likes",  # noqa: E501
-        "recent_version": "recentVersion",  # noqa: E501
-        "has_relevant_insertables": "hasRelevantInsertables",  # noqa: E501
-        "created_with_education_plan": "createdWithEducationPlan",  # noqa: E501
-        "not_revision_managed": "notRevisionManaged",  # noqa: E501
         "anonymous_access_allowed": "anonymousAccessAllowed",  # noqa: E501
         "anonymous_allows_export": "anonymousAllowsExport",  # noqa: E501
-        "trashed_at": "trashedAt",  # noqa: E501
-        "is_orphaned": "isOrphaned",  # noqa: E501
-        "tags": "tags",  # noqa: E501
+        "can_unshare": "canUnshare",  # noqa: E501
+        "created_with_education_plan": "createdWithEducationPlan",  # noqa: E501
+        "default_element_id": "defaultElementId",  # noqa: E501
+        "default_workspace": "defaultWorkspace",  # noqa: E501
+        "document_labels": "documentLabels",  # noqa: E501
         "has_release_revisionable_objects": "hasReleaseRevisionableObjects",  # noqa: E501
-        "public": "public",  # noqa: E501
-        "user_account_limits_breached": "userAccountLimitsBreached",  # noqa: E501
+        "has_relevant_insertables": "hasRelevantInsertables",  # noqa: E501
+        "is_orphaned": "isOrphaned",  # noqa: E501
         "is_using_managed_workflow": "isUsingManagedWorkflow",  # noqa: E501
+        "liked_by_current_user": "likedByCurrentUser",  # noqa: E501
+        "likes": "likes",  # noqa: E501
+        "not_revision_managed": "notRevisionManaged",  # noqa: E501
+        "number_of_times_copied": "numberOfTimesCopied",  # noqa: E501
+        "number_of_times_referenced": "numberOfTimesReferenced",  # noqa: E501
+        "parent_id": "parentId",  # noqa: E501
         "permission": "permission",  # noqa: E501
+        "permission_set": "permissionSet",  # noqa: E501
+        "public": "public",  # noqa: E501
+        "recent_version": "recentVersion",  # noqa: E501
+        "support_team_user_and_shared": "supportTeamUserAndShared",  # noqa: E501
+        "tags": "tags",  # noqa: E501
+        "thumbnail": "thumbnail",  # noqa: E501
+        "total_workspaces_scheduled_for_update": "totalWorkspacesScheduledForUpdate",  # noqa: E501
+        "total_workspaces_updating": "totalWorkspacesUpdating",  # noqa: E501
+        "trash": "trash",  # noqa: E501
+        "trashed_at": "trashedAt",  # noqa: E501
+        "user_account_limits_breached": "userAccountLimitsBreached",  # noqa: E501
     }
 
     @staticmethod
@@ -220,35 +220,35 @@ class BTDocumentSummaryInfoAllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            default_element_id (str): [optional]  # noqa: E501
-            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
-            parent_id (str): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
-            trash (bool): [optional]  # noqa: E501
-            total_workspaces_updating (int): [optional]  # noqa: E501
-            total_workspaces_scheduled_for_update (int): [optional]  # noqa: E501
-            can_unshare (bool): [optional]  # noqa: E501
-            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
-            support_team_user_and_shared (bool): [optional]  # noqa: E501
-            liked_by_current_user (bool): [optional]  # noqa: E501
-            document_labels ([bt_document_label_info.BTDocumentLabelInfo]): [optional]  # noqa: E501
-            number_of_times_referenced (int): [optional]  # noqa: E501
-            number_of_times_copied (int): [optional]  # noqa: E501
-            likes (int): [optional]  # noqa: E501
-            recent_version (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
-            has_relevant_insertables (bool): [optional]  # noqa: E501
-            created_with_education_plan (bool): [optional]  # noqa: E501
-            not_revision_managed (bool): [optional]  # noqa: E501
             anonymous_access_allowed (bool): [optional]  # noqa: E501
             anonymous_allows_export (bool): [optional]  # noqa: E501
-            trashed_at (datetime): [optional]  # noqa: E501
-            is_orphaned (bool): [optional]  # noqa: E501
-            tags ([str]): [optional]  # noqa: E501
+            can_unshare (bool): [optional]  # noqa: E501
+            created_with_education_plan (bool): [optional]  # noqa: E501
+            default_element_id (str): [optional]  # noqa: E501
+            default_workspace (bt_workspace_info.BTWorkspaceInfo): [optional]  # noqa: E501
+            document_labels ([bt_document_label_info.BTDocumentLabelInfo]): [optional]  # noqa: E501
             has_release_revisionable_objects (bool): [optional]  # noqa: E501
-            public (bool): [optional]  # noqa: E501
-            user_account_limits_breached (bool): [optional]  # noqa: E501
+            has_relevant_insertables (bool): [optional]  # noqa: E501
+            is_orphaned (bool): [optional]  # noqa: E501
             is_using_managed_workflow (bool): [optional]  # noqa: E501
+            liked_by_current_user (bool): [optional]  # noqa: E501
+            likes (int): [optional]  # noqa: E501
+            not_revision_managed (bool): [optional]  # noqa: E501
+            number_of_times_copied (int): [optional]  # noqa: E501
+            number_of_times_referenced (int): [optional]  # noqa: E501
+            parent_id (str): [optional]  # noqa: E501
             permission (str): [optional]  # noqa: E501
+            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            public (bool): [optional]  # noqa: E501
+            recent_version (bt_base_info.BTBaseInfo): [optional]  # noqa: E501
+            support_team_user_and_shared (bool): [optional]  # noqa: E501
+            tags ([str]): [optional]  # noqa: E501
+            thumbnail (bt_thumbnail_info.BTThumbnailInfo): [optional]  # noqa: E501
+            total_workspaces_scheduled_for_update (int): [optional]  # noqa: E501
+            total_workspaces_updating (int): [optional]  # noqa: E501
+            trash (bool): [optional]  # noqa: E501
+            trashed_at (datetime): [optional]  # noqa: E501
+            user_account_limits_breached (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

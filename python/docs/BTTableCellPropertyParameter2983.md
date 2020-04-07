@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_unchanged** | **bool** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**is_unchanged** | **bool** |  | [optional] 
 **is_ever_visible** | **bool** |  | [optional] 
 **is_read_only** | **bool** |  | [optional] 
 **error** | **str** |  | [optional] 

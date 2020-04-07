@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**translation_id** | **str** |  | [optional] 
 **translation_event_key** | **str** |  | [optional] 
+**translation_id** | **str** |  | [optional] 
 **anonymous_access_allowed** | **bool** |  | [optional] 
 **anonymous_allows_export** | **bool** |  | [optional] 
 **beta_capability_ids** | **[str]** |  | [optional] 

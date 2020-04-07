@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cross_highlight_data** | [**bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609**](BTTableBaseCrossHighlightData2609.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**cross_highlight_data** | [**bt_table_base_cross_highlight_data2609.BTTableBaseCrossHighlightData2609**](BTTableBaseCrossHighlightData2609.md) |  | [optional] 
 **all_row_values** | **[[str]]** |  | [optional] 
 **column_count** | **int** |  | [optional] 
 **frozen_columns** | **int** |  | [optional] 

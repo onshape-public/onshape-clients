@@ -88,10 +88,10 @@ class BTPExpressionAccess237AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "space_in_accessor": (btp_space10.BTPSpace10,),  # noqa: E501
             "accessor": (btp_property_accessor23.BTPPropertyAccessor23,),  # noqa: E501
             "base": (btp_expression9.BTPExpression9,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "space_in_accessor": (btp_space10.BTPSpace10,),  # noqa: E501
         }
 
     @staticmethod
@@ -99,10 +99,10 @@ class BTPExpressionAccess237AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "space_in_accessor": "spaceInAccessor",  # noqa: E501
         "accessor": "accessor",  # noqa: E501
         "base": "base",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "space_in_accessor": "spaceInAccessor",  # noqa: E501
     }
 
     @staticmethod
@@ -143,10 +143,10 @@ class BTPExpressionAccess237AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            space_in_accessor (btp_space10.BTPSpace10): [optional]  # noqa: E501
             accessor (btp_property_accessor23.BTPPropertyAccessor23): [optional]  # noqa: E501
             base (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            space_in_accessor (btp_space10.BTPSpace10): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -33,6 +33,8 @@ from onshape_client.oas.model_utils import (  # noqa: F401
     validate_and_convert_types,
 )
 from onshape_client.oas.models import bt_translation_request_info
+from onshape_client.oas.models import form_data_body_part
+from onshape_client.oas.models import form_data_content_disposition
 from onshape_client.oas.models import bt_model_format_full_info
 from onshape_client.oas.models import bt_list_response_bt_translation_request_info
 
@@ -50,7 +52,7 @@ class TranslationsApi(object):
         self.api_client = api_client
 
         def __create_translation(self, did, wid, **kwargs):
-            """create_translation  # noqa: E501
+            """Create translation from upload.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
@@ -62,6 +64,34 @@ class TranslationsApi(object):
                 wid (str):
 
             Keyword Args:
+                allow_faulty_parts (bool): [optional]
+                create_composite (bool): [optional]
+                create_drawing_if_possible (bool): [optional]
+                encoded_filename (str): [optional]
+                extract_assembly_hierarchy (bool): [optional]
+                file (file_type): [optional]
+                file_body_with_details (form_data_body_part.FormDataBodyPart): [optional]
+                file_content_length (int): [optional]
+                file_detail (form_data_content_disposition.FormDataContentDisposition): [optional]
+                flatten_assemblies (bool): [optional]
+                format_name (str): [optional]
+                isy_axis_is_up (bool): [optional]
+                join_adjacent_surfaces (bool): [optional]
+                location_element_id (str): [optional]
+                location_group_id (str): [optional]
+                location_position (int): [optional]
+                notify_user (bool): [optional]
+                owner_id (str): [optional]
+                owner_type (str): [optional]
+                parent_id (str): [optional]
+                project_id (str): [optional]
+                public (bool): [optional]
+                split_assemblies_into_multiple_documents (bool): [optional]
+                store_in_document (bool): [optional]
+                translate (bool): [optional]
+                unit (str): [optional]
+                upload_id (str): [optional]
+                version_string (str): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -112,23 +142,155 @@ class TranslationsApi(object):
                 "servers": [],
             },
             params_map={
-                "all": ["did", "wid",],
+                "all": [
+                    "did",
+                    "wid",
+                    "allow_faulty_parts",
+                    "create_composite",
+                    "create_drawing_if_possible",
+                    "encoded_filename",
+                    "extract_assembly_hierarchy",
+                    "file",
+                    "file_body_with_details",
+                    "file_content_length",
+                    "file_detail",
+                    "flatten_assemblies",
+                    "format_name",
+                    "isy_axis_is_up",
+                    "join_adjacent_surfaces",
+                    "location_element_id",
+                    "location_group_id",
+                    "location_position",
+                    "notify_user",
+                    "owner_id",
+                    "owner_type",
+                    "parent_id",
+                    "project_id",
+                    "public",
+                    "split_assemblies_into_multiple_documents",
+                    "store_in_document",
+                    "translate",
+                    "unit",
+                    "upload_id",
+                    "version_string",
+                ],
                 "required": ["did", "wid",],
                 "nullable": [],
-                "enum": [],
+                "enum": ["owner_type",],
                 "validation": [],
             },
             root_map={
                 "validations": {},
-                "allowed_values": {},
-                "openapi_types": {"did": (str,), "wid": (str,),},
-                "attribute_map": {"did": "did", "wid": "wid",},
-                "location_map": {"did": "path", "wid": "path",},
+                "allowed_values": {
+                    ("owner_type",): {
+                        "USER": "USER",
+                        "COMPANY": "COMPANY",
+                        "ONSHAPE": "ONSHAPE",
+                    },
+                },
+                "openapi_types": {
+                    "did": (str,),
+                    "wid": (str,),
+                    "allow_faulty_parts": (bool,),
+                    "create_composite": (bool,),
+                    "create_drawing_if_possible": (bool,),
+                    "encoded_filename": (str,),
+                    "extract_assembly_hierarchy": (bool,),
+                    "file": (file_type,),
+                    "file_body_with_details": (form_data_body_part.FormDataBodyPart,),
+                    "file_content_length": (int,),
+                    "file_detail": (
+                        form_data_content_disposition.FormDataContentDisposition,
+                    ),
+                    "flatten_assemblies": (bool,),
+                    "format_name": (str,),
+                    "isy_axis_is_up": (bool,),
+                    "join_adjacent_surfaces": (bool,),
+                    "location_element_id": (str,),
+                    "location_group_id": (str,),
+                    "location_position": (int,),
+                    "notify_user": (bool,),
+                    "owner_id": (str,),
+                    "owner_type": (str,),
+                    "parent_id": (str,),
+                    "project_id": (str,),
+                    "public": (bool,),
+                    "split_assemblies_into_multiple_documents": (bool,),
+                    "store_in_document": (bool,),
+                    "translate": (bool,),
+                    "unit": (str,),
+                    "upload_id": (str,),
+                    "version_string": (str,),
+                },
+                "attribute_map": {
+                    "did": "did",
+                    "wid": "wid",
+                    "allow_faulty_parts": "allowFaultyParts",
+                    "create_composite": "createComposite",
+                    "create_drawing_if_possible": "createDrawingIfPossible",
+                    "encoded_filename": "encodedFilename",
+                    "extract_assembly_hierarchy": "extractAssemblyHierarchy",
+                    "file": "file",
+                    "file_body_with_details": "fileBodyWithDetails",
+                    "file_content_length": "fileContentLength",
+                    "file_detail": "fileDetail",
+                    "flatten_assemblies": "flattenAssemblies",
+                    "format_name": "formatName",
+                    "isy_axis_is_up": "isyAxisIsUp",
+                    "join_adjacent_surfaces": "joinAdjacentSurfaces",
+                    "location_element_id": "locationElementId",
+                    "location_group_id": "locationGroupId",
+                    "location_position": "locationPosition",
+                    "notify_user": "notifyUser",
+                    "owner_id": "ownerId",
+                    "owner_type": "ownerType",
+                    "parent_id": "parentId",
+                    "project_id": "projectId",
+                    "public": "public",
+                    "split_assemblies_into_multiple_documents": "splitAssembliesIntoMultipleDocuments",
+                    "store_in_document": "storeInDocument",
+                    "translate": "translate",
+                    "unit": "unit",
+                    "upload_id": "uploadId",
+                    "version_string": "versionString",
+                },
+                "location_map": {
+                    "did": "path",
+                    "wid": "path",
+                    "allow_faulty_parts": "form",
+                    "create_composite": "form",
+                    "create_drawing_if_possible": "form",
+                    "encoded_filename": "form",
+                    "extract_assembly_hierarchy": "form",
+                    "file": "form",
+                    "file_body_with_details": "form",
+                    "file_content_length": "form",
+                    "file_detail": "form",
+                    "flatten_assemblies": "form",
+                    "format_name": "form",
+                    "isy_axis_is_up": "form",
+                    "join_adjacent_surfaces": "form",
+                    "location_element_id": "form",
+                    "location_group_id": "form",
+                    "location_position": "form",
+                    "notify_user": "form",
+                    "owner_id": "form",
+                    "owner_type": "form",
+                    "parent_id": "form",
+                    "project_id": "form",
+                    "public": "form",
+                    "split_assemblies_into_multiple_documents": "form",
+                    "store_in_document": "form",
+                    "translate": "form",
+                    "unit": "form",
+                    "upload_id": "form",
+                    "version_string": "form",
+                },
                 "collection_format_map": {},
             },
             headers_map={
                 "accept": ["application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1"],
-                "content_type": [],
+                "content_type": ["multipart/form-data"],
             },
             api_client=api_client,
             callable=__create_translation,

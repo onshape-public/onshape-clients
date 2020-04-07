@@ -73,10 +73,10 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "namespace": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "enum_name": (str,),  # noqa: E501
             "enum_value": (str,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "namespace": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,10 +84,10 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "namespace": "namespace",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
         "enum_name": "enumName",  # noqa: E501
         "enum_value": "enumValue",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "namespace": "namespace",  # noqa: E501
     }
 
     @staticmethod
@@ -128,10 +128,10 @@ class BTMConfiguredValueByEnum1923AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            namespace (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
             enum_name (str): [optional]  # noqa: E501
             enum_value (str): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            namespace (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

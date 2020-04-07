@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
 **quantity_type** | **str** |  | [optional] 
 **ranges** | [**[bt_nullable_quantity_range1340.BTNullableQuantityRange1340]**](BTNullableQuantityRange1340.md) |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**namespace** | **str** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **enum_name** | **str** |  | [optional] 
 **enum_value** | **str** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**material** | [**bt_part_material1445.BTPartMaterial1445**](BTPartMaterial1445.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**material** | [**bt_part_material1445.BTPartMaterial1445**](BTPartMaterial1445.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

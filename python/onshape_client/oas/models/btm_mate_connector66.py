@@ -100,10 +100,10 @@ class BTMMateConnector66(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "saved_feature_type": (str,),  # noqa: E501
-            "is_hidden": (bool,),  # noqa: E501
-            "implicit": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "implicit": (bool,),  # noqa: E501
+            "is_hidden": (bool,),  # noqa: E501
+            "saved_feature_type": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "feature_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
@@ -129,10 +129,10 @@ class BTMMateConnector66(ModelComposed):
         return None
 
     attribute_map = {
-        "saved_feature_type": "savedFeatureType",  # noqa: E501
-        "is_hidden": "isHidden",  # noqa: E501
-        "implicit": "implicit",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "implicit": "implicit",  # noqa: E501
+        "is_hidden": "isHidden",  # noqa: E501
+        "saved_feature_type": "savedFeatureType",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "feature_type": "featureType",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -186,10 +186,10 @@ class BTMMateConnector66(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            saved_feature_type (str): [optional]  # noqa: E501
-            is_hidden (bool): [optional]  # noqa: E501
-            implicit (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            implicit (bool): [optional]  # noqa: E501
+            is_hidden (bool): [optional]  # noqa: E501
+            saved_feature_type (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501

@@ -84,8 +84,8 @@ class BTClosedCurveFilter1206(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "is_closed": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_closed": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,8 +93,8 @@ class BTClosedCurveFilter1206(ModelComposed):
         return None
 
     attribute_map = {
-        "is_closed": "isClosed",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_closed": "isClosed",  # noqa: E501
     }
 
     required_properties = set(
@@ -134,8 +134,8 @@ class BTClosedCurveFilter1206(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            is_closed (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_closed (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

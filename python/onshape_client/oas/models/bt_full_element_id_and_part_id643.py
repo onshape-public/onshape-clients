@@ -98,8 +98,8 @@ class BTFullElementIdAndPartId643(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "part_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "part_id": (str,),  # noqa: E501
             "configured": (bool,),  # noqa: E501
             "element_id": (str,),  # noqa: E501
             "microversion_id": (
@@ -119,8 +119,8 @@ class BTFullElementIdAndPartId643(ModelComposed):
         return None
 
     attribute_map = {
-        "part_id": "partId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "part_id": "partId",  # noqa: E501
         "configured": "configured",  # noqa: E501
         "element_id": "elementId",  # noqa: E501
         "microversion_id": "microversionId",  # noqa: E501
@@ -166,8 +166,8 @@ class BTFullElementIdAndPartId643(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            part_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
             configured (bool): [optional]  # noqa: E501
             element_id (str): [optional]  # noqa: E501
             microversion_id (bt_microversion_id366.BTMicroversionId366): [optional]  # noqa: E501

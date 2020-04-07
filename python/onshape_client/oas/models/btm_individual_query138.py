@@ -118,8 +118,8 @@ class BTMIndividualQuery138(ModelComposed):
         return {
             "bt_type": (str,),  # noqa: E501
             "persistent_query": (btp_statement269.BTPStatement269,),  # noqa: E501
-            "variable_name": (BTMIndividualQuery138,),  # noqa: E501
             "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "variable_name": (BTMIndividualQuery138,),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
@@ -146,8 +146,8 @@ class BTMIndividualQuery138(ModelComposed):
     attribute_map = {
         "bt_type": "btType",  # noqa: E501
         "persistent_query": "persistentQuery",  # noqa: E501
-        "variable_name": "variableName",  # noqa: E501
         "query_statement": "queryStatement",  # noqa: E501
+        "variable_name": "variableName",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -195,8 +195,8 @@ class BTMIndividualQuery138(ModelComposed):
                                 If omitted no type conversion is done.
             bt_type (str): [optional]  # noqa: E501
             persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            variable_name (BTMIndividualQuery138): [optional]  # noqa: E501
             query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            variable_name (BTMIndividualQuery138): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
