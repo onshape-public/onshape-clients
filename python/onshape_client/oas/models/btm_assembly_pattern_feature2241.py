@@ -106,8 +106,8 @@ class BTMAssemblyPatternFeature2241(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "pattern_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "pattern_type": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "feature_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
@@ -133,8 +133,8 @@ class BTMAssemblyPatternFeature2241(ModelComposed):
         return None
 
     attribute_map = {
-        "pattern_type": "patternType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "pattern_type": "patternType",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "feature_type": "featureType",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -188,8 +188,8 @@ class BTMAssemblyPatternFeature2241(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            pattern_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            pattern_type (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             feature_type (str): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501

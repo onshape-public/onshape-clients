@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bt_type** | **str** |  | [optional] 
-**units** | **str** |  | [optional] 
-**is_integer** | **bool** |  | [optional] 
 **expression** | **str** |  | [optional] 
+**is_integer** | **bool** |  | [optional] 
+**units** | **str** |  | [optional] 
 **value** | **float** |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 

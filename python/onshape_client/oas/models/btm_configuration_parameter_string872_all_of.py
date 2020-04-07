@@ -73,8 +73,8 @@ class BTMConfigurationParameterString872AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "default_value": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "default_value": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMConfigurationParameterString872AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "default_value": "defaultValue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMConfigurationParameterString872AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            default_value (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            default_value (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

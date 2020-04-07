@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**part_deterministic_id** | **str** |  | [optional] 
-**property_node_id** | **str** |  | [optional] 
-**part_deterministic_ids** | **[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**part_deterministic_id** | **str** |  | [optional] 
+**part_deterministic_ids** | **[str]** |  | [optional] 
+**property_node_id** | **str** |  | [optional] 
 **all_row_values** | **[[str]]** |  | [optional] 
 **column_count** | **int** |  | [optional] 
 **frozen_columns** | **int** |  | [optional] 

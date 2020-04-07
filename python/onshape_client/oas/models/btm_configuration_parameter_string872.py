@@ -97,8 +97,8 @@ class BTMConfigurationParameterString872(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "default_value": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "default_value": (str,),  # noqa: E501
             "generated_parameter_id": (bt_tree_node20.BTTreeNode20,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
@@ -113,8 +113,8 @@ class BTMConfigurationParameterString872(ModelComposed):
         return None
 
     attribute_map = {
-        "default_value": "defaultValue",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "default_value": "defaultValue",  # noqa: E501
         "generated_parameter_id": "generatedParameterId",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
@@ -161,8 +161,8 @@ class BTMConfigurationParameterString872(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            default_value (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            default_value (str): [optional]  # noqa: E501
             generated_parameter_id (bt_tree_node20.BTTreeNode20): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

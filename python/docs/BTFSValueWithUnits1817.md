@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value_object** | **float** |  | [optional] 
+**bt_type** | **str** |  | [optional] 
 **quantity_type** | **str** |  | [optional] 
 **unit_to_power** | **{str: (int,)}** |  | [optional] 
 **value** | **float** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
+**value_object** | **float** |  | [optional] 
 **configuration_value_string** | **str** |  | [optional] 
 **standard_type_name** | **str** |  | [optional] 
 **type_tag** | **str** |  | [optional] 

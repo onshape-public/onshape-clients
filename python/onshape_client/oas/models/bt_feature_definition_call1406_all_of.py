@@ -78,8 +78,8 @@ class BTFeatureDefinitionCall1406AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "feature": (btm_feature134.BTMFeature134,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "feature": (btm_feature134.BTMFeature134,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,8 +87,8 @@ class BTFeatureDefinitionCall1406AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "feature": "feature",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "feature": "feature",  # noqa: E501
     }
 
     @staticmethod
@@ -129,8 +129,8 @@ class BTFeatureDefinitionCall1406AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            feature (btm_feature134.BTMFeature134): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            feature (btm_feature134.BTMFeature134): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -13106,6 +13106,7 @@
         "tags": [
           "Translations"
         ],
+        "summary": "Create translation from upload.",
         "operationId": "createTranslation",
         "parameters": [
           {
@@ -13125,6 +13126,15 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/BTTranslationRequestParams"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "default response",
@@ -14034,11 +14044,11 @@
           {
             "type": "object",
             "properties": {
-              "isFromActiveSheetMetal": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isFromActiveSheetMetal": {
+                "type": "boolean"
               }
             }
           }
@@ -14222,14 +14232,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "operand1": {
                 "$ref": "#/components/schemas/BTQueryFilter-183"
               },
               "operand2": {
                 "$ref": "#/components/schemas/BTQueryFilter-183"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -14829,6 +14839,15 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "featureStates": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/BTFeatureState-1688"
+                }
+              },
               "features": {
                 "type": "array",
                 "items": {
@@ -14837,15 +14856,6 @@
               },
               "isComplete": {
                 "type": "boolean"
-              },
-              "featureStates": {
-                "type": "object",
-                "additionalProperties": {
-                  "$ref": "#/components/schemas/BTFeatureState-1688"
-                }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -15184,14 +15194,14 @@
           {
             "type": "object",
             "properties": {
-              "crossHighlightDataIfAny": {
-                "$ref": "#/components/schemas/BTTableCrossHighlightData-1753"
+              "btType": {
+                "type": "string"
               },
               "crossHighlightData": {
                 "$ref": "#/components/schemas/BTTableCrossHighlightData-1753"
               },
-              "btType": {
-                "type": "string"
+              "crossHighlightDataIfAny": {
+                "$ref": "#/components/schemas/BTTableCrossHighlightData-1753"
               }
             }
           }
@@ -15206,11 +15216,8 @@
           {
             "type": "object",
             "properties": {
-              "indented": {
-                "type": "boolean"
-              },
-              "showingExcluded": {
-                "type": "boolean"
+              "btType": {
+                "type": "string"
               },
               "failedMetadataRepresentativeOccurrences": {
                 "type": "array",
@@ -15218,8 +15225,11 @@
                   "type": "string"
                 }
               },
-              "btType": {
-                "type": "string"
+              "indented": {
+                "type": "boolean"
+              },
+              "showingExcluded": {
+                "type": "boolean"
               }
             }
           }
@@ -15234,21 +15244,11 @@
           {
             "type": "object",
             "properties": {
-              "uniqueItemId": {
-                "$ref": "#/components/schemas/BTBillOfMaterialsUniqueItemId-2029"
+              "btType": {
+                "type": "string"
               },
-              "indentLevel": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "expansionStatus": {
-                "type": "string",
-                "enum": [
-                  "NOT_EXPANDABLE",
-                  "EXPANDED",
-                  "COLLAPSED",
-                  "UNKNOWN"
-                ]
+              "excludeIsEditable": {
+                "type": "boolean"
               },
               "exclusionStatus": {
                 "type": "string",
@@ -15259,14 +15259,24 @@
                   "UNKNOWN"
                 ]
               },
-              "excludeIsEditable": {
-                "type": "boolean"
+              "expansionStatus": {
+                "type": "string",
+                "enum": [
+                  "NOT_EXPANDABLE",
+                  "EXPANDED",
+                  "COLLAPSED",
+                  "UNKNOWN"
+                ]
+              },
+              "indentLevel": {
+                "type": "integer",
+                "format": "int32"
               },
               "metadataUpdateHref": {
                 "type": "string"
               },
-              "btType": {
-                "type": "string"
+              "uniqueItemId": {
+                "$ref": "#/components/schemas/BTBillOfMaterialsUniqueItemId-2029"
               }
             }
           }
@@ -15281,14 +15291,14 @@
           {
             "type": "object",
             "properties": {
-              "crossHighlightDataIfAny": {
-                "$ref": "#/components/schemas/BTTableAssemblyCrossHighlightData-2675"
+              "btType": {
+                "type": "string"
               },
               "crossHighlightData": {
                 "$ref": "#/components/schemas/BTTableAssemblyCrossHighlightData-2675"
               },
-              "btType": {
-                "type": "string"
+              "crossHighlightDataIfAny": {
+                "$ref": "#/components/schemas/BTTableAssemblyCrossHighlightData-2675"
               }
             }
           }
@@ -15546,18 +15556,18 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "normal": {
+                "$ref": "#/components/schemas/BTVector3d-389"
+              },
+              "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
               "radius": {
                 "type": "number",
                 "format": "double"
-              },
-              "origin": {
-                "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -15572,11 +15582,11 @@
           {
             "type": "object",
             "properties": {
-              "isClosed": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isClosed": {
+                "type": "boolean"
               }
             }
           }
@@ -15591,21 +15601,21 @@
           {
             "type": "object",
             "properties": {
-              "enabled": {
-                "type": "boolean"
-              },
-              "importFolder": {
-                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
-              },
-              "exportFolder": {
-                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
+              "cloudStorageAccountId": {
+                "type": "string"
               },
               "cloudStorageProvider": {
                 "type": "integer",
                 "format": "int32"
               },
-              "cloudStorageAccountId": {
-                "type": "string"
+              "enabled": {
+                "type": "boolean"
+              },
+              "exportFolder": {
+                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
+              },
+              "importFolder": {
+                "$ref": "#/components/schemas/BTCloudStorageObjectInfo"
               }
             }
           }
@@ -16048,12 +16058,11 @@
           {
             "type": "object",
             "properties": {
-              "radius": {
-                "type": "number",
-                "format": "double"
-              },
               "axis": {
                 "$ref": "#/components/schemas/BTVector3d-389"
+              },
+              "btType": {
+                "type": "string"
               },
               "halfAngle": {
                 "type": "number",
@@ -16062,8 +16071,9 @@
               "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "btType": {
-                "type": "string"
+              "radius": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -16139,6 +16149,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "configurationParameters": {
                 "type": "array",
                 "items": {
@@ -16150,9 +16163,6 @@
                 "items": {
                   "$ref": "#/components/schemas/BTMParameter-1"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16167,13 +16177,13 @@
           {
             "type": "object",
             "properties": {
-              "parameterId": {
+              "btType": {
                 "type": "string"
               },
               "dimensionId": {
                 "type": "string"
               },
-              "btType": {
+              "parameterId": {
                 "type": "string"
               }
             }
@@ -16205,13 +16215,13 @@
           {
             "type": "object",
             "properties": {
-              "parameterId": {
+              "btType": {
                 "type": "string"
               },
               "innerParameterLocation": {
                 "$ref": "#/components/schemas/BTInnerParameterLocation-1715"
               },
-              "btType": {
+              "parameterId": {
                 "type": "string"
               }
             }
@@ -16227,10 +16237,10 @@
           {
             "type": "object",
             "properties": {
-              "partDeterministicId": {
+              "btType": {
                 "type": "string"
               },
-              "propertyNodeId": {
+              "partDeterministicId": {
                 "type": "string"
               },
               "partDeterministicIds": {
@@ -16239,7 +16249,7 @@
                   "type": "string"
                 }
               },
-              "btType": {
+              "propertyNodeId": {
                 "type": "string"
               }
             }
@@ -16285,10 +16295,13 @@
           {
             "type": "object",
             "properties": {
-              "parentName": {
+              "btType": {
                 "type": "string"
               },
               "parentId": {
+                "type": "string"
+              },
+              "parentName": {
                 "type": "string"
               },
               "parentType": {
@@ -16300,9 +16313,6 @@
                   "MATE_CONNECTOR",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16317,11 +16327,11 @@
           {
             "type": "object",
             "properties": {
-              "isConstruction": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isConstruction": {
+                "type": "boolean"
               }
             }
           }
@@ -16467,6 +16477,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "clockwise": {
+                "type": "boolean"
+              },
               "radius": {
                 "type": "number",
                 "format": "double"
@@ -16475,23 +16491,17 @@
                 "type": "number",
                 "format": "double"
               },
-              "ycenter": {
+              "xdir": {
                 "type": "number",
                 "format": "double"
               },
-              "xdir": {
+              "ycenter": {
                 "type": "number",
                 "format": "double"
               },
               "ydir": {
                 "type": "number",
                 "format": "double"
-              },
-              "clockwise": {
-                "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16506,6 +16516,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "points": {
                 "type": "array",
                 "items": {
@@ -16516,9 +16529,6 @@
               "rho": {
                 "type": "number",
                 "format": "double"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16533,12 +16543,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "minorRadius": {
                 "type": "number",
                 "format": "double"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16553,37 +16563,14 @@
           {
             "type": "object",
             "properties": {
-              "isPeriodic": {
-                "type": "boolean"
-              },
-              "interpolationPoints": {
-                "type": "array",
-                "items": {
-                  "type": "number",
-                  "format": "double"
-                }
-              },
-              "startDerivativeX": {
-                "type": "number",
-                "format": "double"
-              },
-              "startDerivativeY": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
               },
               "endDerivativeX": {
                 "type": "number",
                 "format": "double"
               },
               "endDerivativeY": {
-                "type": "number",
-                "format": "double"
-              },
-              "startHandleX": {
-                "type": "number",
-                "format": "double"
-              },
-              "startHandleY": {
                 "type": "number",
                 "format": "double"
               },
@@ -16595,8 +16582,31 @@
                 "type": "number",
                 "format": "double"
               },
-              "btType": {
-                "type": "string"
+              "interpolationPoints": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "isPeriodic": {
+                "type": "boolean"
+              },
+              "startDerivativeX": {
+                "type": "number",
+                "format": "double"
+              },
+              "startDerivativeY": {
+                "type": "number",
+                "format": "double"
+              },
+              "startHandleX": {
+                "type": "number",
+                "format": "double"
+              },
+              "startHandleY": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -16611,13 +16621,8 @@
           {
             "type": "object",
             "properties": {
-              "pntX": {
-                "type": "number",
-                "format": "double"
-              },
-              "pntY": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
               },
               "dirX": {
                 "type": "number",
@@ -16627,8 +16632,13 @@
                 "type": "number",
                 "format": "double"
               },
-              "btType": {
-                "type": "string"
+              "pntX": {
+                "type": "number",
+                "format": "double"
+              },
+              "pntY": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -16643,15 +16653,8 @@
           {
             "type": "object",
             "properties": {
-              "degree": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "isPeriodic": {
-                "type": "boolean"
-              },
-              "isRational": {
-                "type": "boolean"
+              "btType": {
+                "type": "string"
               },
               "controlPointCount": {
                 "type": "integer",
@@ -16664,15 +16667,22 @@
                   "format": "double"
                 }
               },
+              "degree": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "isPeriodic": {
+                "type": "boolean"
+              },
+              "isRational": {
+                "type": "boolean"
+              },
               "knots": {
                 "type": "array",
                 "items": {
                   "type": "number",
                   "format": "double"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -16757,18 +16767,18 @@
           {
             "type": "object",
             "properties": {
-              "radius": {
-                "type": "number",
-                "format": "double"
-              },
               "axis": {
-                "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
               "btType": {
                 "type": "string"
+              },
+              "origin": {
+                "$ref": "#/components/schemas/BTVector3d-389"
+              },
+              "radius": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -16802,13 +16812,10 @@
       "BTDiffInfo": {
         "type": "object",
         "properties": {
-          "collectionChanges": {
+          "changes": {
             "type": "object",
             "additionalProperties": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/BTDiffInfo"
-              }
+              "$ref": "#/components/schemas/BTDiffInfo"
             }
           },
           "entityType": {
@@ -17382,10 +17389,10 @@
           {
             "type": "object",
             "properties": {
-              "translationId": {
+              "translationEventKey": {
                 "type": "string"
               },
-              "translationEventKey": {
+              "translationId": {
                 "type": "string"
               }
             }
@@ -17499,40 +17506,23 @@
           {
             "type": "object",
             "properties": {
+              "anonymousAccessAllowed": {
+                "type": "boolean"
+              },
+              "anonymousAllowsExport": {
+                "type": "boolean"
+              },
+              "canUnshare": {
+                "type": "boolean"
+              },
+              "createdWithEducationPlan": {
+                "type": "boolean"
+              },
               "defaultElementId": {
                 "type": "string"
               },
               "defaultWorkspace": {
                 "$ref": "#/components/schemas/BTWorkspaceInfo"
-              },
-              "parentId": {
-                "type": "string"
-              },
-              "permissionSet": {
-                "$ref": "#/components/schemas/BTPermissionSet"
-              },
-              "trash": {
-                "type": "boolean"
-              },
-              "totalWorkspacesUpdating": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "totalWorkspacesScheduledForUpdate": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "canUnshare": {
-                "type": "boolean"
-              },
-              "thumbnail": {
-                "$ref": "#/components/schemas/BTThumbnailInfo"
-              },
-              "supportTeamUserAndShared": {
-                "type": "boolean"
-              },
-              "likedByCurrentUser": {
-                "type": "boolean"
               },
               "documentLabels": {
                 "type": "array",
@@ -17540,60 +17530,38 @@
                   "$ref": "#/components/schemas/BTDocumentLabelInfo"
                 }
               },
-              "numberOfTimesReferenced": {
-                "type": "integer",
-                "format": "int64"
+              "hasReleaseRevisionableObjects": {
+                "type": "boolean"
               },
-              "numberOfTimesCopied": {
-                "type": "integer",
-                "format": "int64"
+              "hasRelevantInsertables": {
+                "type": "boolean"
+              },
+              "isOrphaned": {
+                "type": "boolean"
+              },
+              "isUsingManagedWorkflow": {
+                "type": "boolean"
+              },
+              "likedByCurrentUser": {
+                "type": "boolean"
               },
               "likes": {
                 "type": "integer",
                 "format": "int64"
               },
-              "recentVersion": {
-                "$ref": "#/components/schemas/BTBaseInfo"
-              },
-              "hasRelevantInsertables": {
-                "type": "boolean"
-              },
-              "createdWithEducationPlan": {
-                "type": "boolean"
-              },
               "notRevisionManaged": {
                 "type": "boolean"
               },
-              "anonymousAccessAllowed": {
-                "type": "boolean"
+              "numberOfTimesCopied": {
+                "type": "integer",
+                "format": "int64"
               },
-              "anonymousAllowsExport": {
-                "type": "boolean"
+              "numberOfTimesReferenced": {
+                "type": "integer",
+                "format": "int64"
               },
-              "trashedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "isOrphaned": {
-                "type": "boolean"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "hasReleaseRevisionableObjects": {
-                "type": "boolean"
-              },
-              "public": {
-                "type": "boolean"
-              },
-              "userAccountLimitsBreached": {
-                "type": "boolean"
-              },
-              "isUsingManagedWorkflow": {
-                "type": "boolean"
+              "parentId": {
+                "type": "string"
               },
               "permission": {
                 "type": "string",
@@ -17608,6 +17576,45 @@
                   "FULL",
                   "OWNER"
                 ]
+              },
+              "permissionSet": {
+                "$ref": "#/components/schemas/BTPermissionSet"
+              },
+              "public": {
+                "type": "boolean"
+              },
+              "recentVersion": {
+                "$ref": "#/components/schemas/BTBaseInfo"
+              },
+              "supportTeamUserAndShared": {
+                "type": "boolean"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "thumbnail": {
+                "$ref": "#/components/schemas/BTThumbnailInfo"
+              },
+              "totalWorkspacesScheduledForUpdate": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "totalWorkspacesUpdating": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "trash": {
+                "type": "boolean"
+              },
+              "trashedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "userAccountLimitsBreached": {
+                "type": "boolean"
               }
             }
           }
@@ -17868,11 +17875,11 @@
           {
             "type": "object",
             "properties": {
-              "isInternalEdge": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isInternalEdge": {
+                "type": "boolean"
               }
             }
           }
@@ -17957,8 +17964,8 @@
           {
             "type": "object",
             "properties": {
-              "normal": {
-                "$ref": "#/components/schemas/BTVector3d-389"
+              "btType": {
+                "type": "string"
               },
               "majorAxis": {
                 "$ref": "#/components/schemas/BTVector3d-389"
@@ -17971,11 +17978,11 @@
                 "type": "number",
                 "format": "double"
               },
-              "origin": {
+              "normal": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "btType": {
-                "type": "string"
+              "origin": {
+                "$ref": "#/components/schemas/BTVector3d-389"
               }
             }
           }
@@ -18001,6 +18008,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "entityType": {
                 "type": "string",
                 "enum": [
@@ -18011,9 +18021,6 @@
                   "DEGENERATE_EDGE",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -18028,6 +18035,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "explodeSteps": {
                 "type": "array",
                 "items": {
@@ -18036,9 +18046,6 @@
               },
               "startingPositionId": {
                 "$ref": "#/components/schemas/BTMicroversionIdAndConfiguration-2338"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -19446,14 +19453,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "edges": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTExportTessellatedEdgesEdge-1364"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -20466,11 +20473,8 @@
           {
             "type": "object",
             "properties": {
-              "faces": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTExportTessellatedFacesFace-1192"
-                }
+              "appearance": {
+                "$ref": "#/components/schemas/BTGraphicsAppearance-1152"
               },
               "bodyType": {
                 "type": "string",
@@ -20484,17 +20488,20 @@
                   "UNKNOWN"
                 ]
               },
-              "appearance": {
-                "$ref": "#/components/schemas/BTGraphicsAppearance-1152"
+              "btType": {
+                "type": "string"
+              },
+              "faces": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTExportTessellatedFacesFace-1192"
+                }
               },
               "facetPoints": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTVector3d-389"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -21572,10 +21579,10 @@
           {
             "type": "object",
             "properties": {
-              "documentVersionId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "documentVersionId": {
                 "type": "string"
               }
             }
@@ -21591,11 +21598,11 @@
           {
             "type": "object",
             "properties": {
-              "crossHighlightData": {
-                "$ref": "#/components/schemas/BTTableBaseCrossHighlightData-2609"
-              },
               "btType": {
                 "type": "string"
+              },
+              "crossHighlightData": {
+                "$ref": "#/components/schemas/BTTableBaseCrossHighlightData-2609"
               }
             }
           }
@@ -21610,11 +21617,11 @@
           {
             "type": "object",
             "properties": {
-              "crossHighlightData": {
-                "$ref": "#/components/schemas/BTTableBaseCrossHighlightData-2609"
-              },
               "btType": {
                 "type": "string"
+              },
+              "crossHighlightData": {
+                "$ref": "#/components/schemas/BTTableBaseCrossHighlightData-2609"
               }
             }
           }
@@ -21629,14 +21636,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "callout": {
                 "type": "string"
               },
               "crossHighlightData": {
                 "$ref": "#/components/schemas/BTTableBaseCrossHighlightData-2609"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -21685,11 +21692,8 @@
           {
             "type": "object",
             "properties": {
-              "valueObject": {
-                "type": "array",
-                "items": {
-                  "type": "object"
-                }
+              "btType": {
+                "type": "string"
               },
               "value": {
                 "type": "array",
@@ -21697,8 +21701,11 @@
                   "$ref": "#/components/schemas/BTFSValue-1888"
                 }
               },
-              "btType": {
-                "type": "string"
+              "valueObject": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
               }
             }
           }
@@ -21713,14 +21720,14 @@
           {
             "type": "object",
             "properties": {
-              "valueObject": {
-                "type": "boolean"
+              "btType": {
+                "type": "string"
               },
               "value": {
                 "type": "boolean"
               },
-              "btType": {
-                "type": "string"
+              "valueObject": {
+                "type": "boolean"
               }
             }
           }
@@ -21781,16 +21788,16 @@
           {
             "type": "object",
             "properties": {
-              "valueObject": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
               },
               "value": {
                 "type": "number",
                 "format": "double"
               },
-              "btType": {
-                "type": "string"
+              "valueObject": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -21805,6 +21812,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "type": {
                 "type": "string",
                 "enum": [
@@ -21819,9 +21829,6 @@
                   "FUNCTION",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -21836,13 +21843,13 @@
           {
             "type": "object",
             "properties": {
-              "valueObject": {
+              "btType": {
                 "type": "string"
               },
               "value": {
                 "type": "string"
               },
-              "btType": {
+              "valueObject": {
                 "type": "string"
               }
             }
@@ -21890,9 +21897,8 @@
           {
             "type": "object",
             "properties": {
-              "valueObject": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
               },
               "quantityType": {
                 "type": "string",
@@ -21920,8 +21926,9 @@
                 "type": "number",
                 "format": "double"
               },
-              "btType": {
-                "type": "string"
+              "valueObject": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -21979,11 +21986,11 @@
           {
             "type": "object",
             "properties": {
-              "feature": {
-                "$ref": "#/components/schemas/BTMFeature-134"
-              },
               "btType": {
                 "type": "string"
+              },
+              "feature": {
+                "$ref": "#/components/schemas/BTMFeature-134"
               }
             }
           }
@@ -21998,14 +22005,14 @@
           {
             "type": "object",
             "properties": {
-              "featureState": {
-                "$ref": "#/components/schemas/BTFeatureState-1688"
+              "btType": {
+                "type": "string"
               },
               "feature": {
                 "$ref": "#/components/schemas/BTMFeature-134"
               },
-              "btType": {
-                "type": "string"
+              "featureState": {
+                "$ref": "#/components/schemas/BTFeatureState-1688"
               }
             }
           }
@@ -22020,7 +22027,7 @@
           {
             "type": "object",
             "properties": {
-              "featureId": {
+              "btType": {
                 "type": "string"
               },
               "exclusion": {
@@ -22031,7 +22038,7 @@
                   "UNKNOWN"
                 ]
               },
-              "btType": {
+              "featureId": {
                 "type": "string"
               }
             }
@@ -22047,18 +22054,14 @@
           {
             "type": "object",
             "properties": {
-              "rollbackIndex": {
-                "type": "integer",
-                "format": "int32"
+              "btType": {
+                "type": "string"
               },
-              "features": {
+              "defaultFeatures": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTMFeature-134"
                 }
-              },
-              "isComplete": {
-                "type": "boolean"
               },
               "featureStates": {
                 "type": "object",
@@ -22066,7 +22069,7 @@
                   "$ref": "#/components/schemas/BTFeatureState-1688"
                 }
               },
-              "defaultFeatures": {
+              "features": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTMFeature-134"
@@ -22078,8 +22081,12 @@
                   "$ref": "#/components/schemas/BTMImport-136"
                 }
               },
-              "btType": {
-                "type": "string"
+              "isComplete": {
+                "type": "boolean"
+              },
+              "rollbackIndex": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -22351,10 +22358,10 @@
           {
             "type": "object",
             "properties": {
-              "contents": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "contents": {
                 "type": "string"
               }
             }
@@ -22370,10 +22377,10 @@
           {
             "type": "object",
             "properties": {
-              "featureType": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "featureType": {
                 "type": "string"
               }
             }
@@ -22414,6 +22421,15 @@
           {
             "type": "object",
             "properties": {
+              "active": {
+                "type": "boolean"
+              },
+              "canUnshare": {
+                "type": "boolean"
+              },
+              "isOrphaned": {
+                "type": "boolean"
+              },
               "parentId": {
                 "type": "string"
               },
@@ -22423,18 +22439,9 @@
               "trash": {
                 "type": "boolean"
               },
-              "canUnshare": {
-                "type": "boolean"
-              },
-              "active": {
-                "type": "boolean"
-              },
               "trashedAt": {
                 "type": "string",
                 "format": "date-time"
-              },
-              "isOrphaned": {
-                "type": "boolean"
               }
             }
           }
@@ -22526,10 +22533,10 @@
           {
             "type": "object",
             "properties": {
-              "partId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "partId": {
                 "type": "string"
               }
             }
@@ -22556,10 +22563,10 @@
           {
             "type": "object",
             "properties": {
-              "documentId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "documentId": {
                 "type": "string"
               }
             }
@@ -22575,6 +22582,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "geometryType": {
                 "type": "string",
                 "enum": [
@@ -22594,9 +22604,6 @@
                   "EXTRUDED",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -22883,11 +22890,11 @@
           {
             "type": "object",
             "properties": {
-              "isImage": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isImage": {
+                "type": "boolean"
               }
             }
           }
@@ -22973,14 +22980,14 @@
           {
             "type": "object",
             "properties": {
-              "outerParameterId": {
+              "btType": {
                 "type": "string"
               },
               "index": {
                 "type": "integer",
                 "format": "int32"
               },
-              "btType": {
+              "outerParameterId": {
                 "type": "string"
               }
             }
@@ -22996,10 +23003,10 @@
           {
             "type": "object",
             "properties": {
-              "outerParameterId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "outerParameterId": {
                 "type": "string"
               }
             }
@@ -23220,14 +23227,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "direction": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
               "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -23527,6 +23534,9 @@
               "auxiliaryAssemblyFeature": {
                 "type": "boolean"
               },
+              "btType": {
+                "type": "string"
+              },
               "featureListFieldIndex": {
                 "type": "integer",
                 "format": "int32"
@@ -23540,9 +23550,6 @@
               "version": {
                 "type": "integer",
                 "format": "int32"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -23589,6 +23596,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "patternType": {
                 "type": "string",
                 "enum": [
@@ -23596,9 +23606,6 @@
                   "CIRCULAR",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -23658,11 +23665,11 @@
           {
             "type": "object",
             "properties": {
-              "defaultValue": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "defaultValue": {
+                "type": "boolean"
               }
             }
           }
@@ -23677,6 +23684,18 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "defaultValue": {
+                "type": "string"
+              },
+              "enumName": {
+                "type": "string"
+              },
+              "namespace": {
+                "type": "string"
+              },
               "optionIds": {
                 "uniqueItems": true,
                 "type": "array",
@@ -23684,23 +23703,11 @@
                   "type": "string"
                 }
               },
-              "enumName": {
-                "type": "string"
-              },
               "options": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTMEnumOption-592"
                 }
-              },
-              "namespace": {
-                "type": "string"
-              },
-              "defaultValue": {
-                "type": "string"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -23715,6 +23722,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "quantityType": {
                 "type": "string",
                 "enum": [
@@ -23732,9 +23742,6 @@
               },
               "rangeAndDefault": {
                 "$ref": "#/components/schemas/BTQuantityRange-181"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -23749,10 +23756,10 @@
           {
             "type": "object",
             "properties": {
-              "defaultValue": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "defaultValue": {
                 "type": "string"
               }
             }
@@ -23815,7 +23822,7 @@
           {
             "type": "object",
             "properties": {
-              "namespace": {
+              "btType": {
                 "type": "string"
               },
               "enumName": {
@@ -23824,7 +23831,7 @@
               "enumValue": {
                 "type": "string"
               },
-              "btType": {
+              "namespace": {
                 "type": "string"
               }
             }
@@ -23840,10 +23847,10 @@
           {
             "type": "object",
             "properties": {
-              "databaseId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "databaseId": {
                 "type": "string"
               }
             }
@@ -23960,19 +23967,19 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "featureId": {
+                "type": "string"
+              },
               "featureIdWithOccurrence": {
                 "type": "string"
               },
               "partStudioMateConnectorQuery": {
                 "type": "boolean"
               },
-              "featureId": {
-                "type": "string"
-              },
               "queryData": {
-                "type": "string"
-              },
-              "btType": {
                 "type": "string"
               }
             }
@@ -24034,14 +24041,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "path": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24056,14 +24063,14 @@
           {
             "type": "object",
             "properties": {
-              "faceQuery": {
-                "$ref": "#/components/schemas/BTMIndividualQuery-138"
+              "btType": {
+                "type": "string"
               },
               "edgeQuery": {
                 "$ref": "#/components/schemas/BTMIndividualQuery-138"
               },
-              "btType": {
-                "type": "string"
+              "faceQuery": {
+                "$ref": "#/components/schemas/BTMIndividualQuery-138"
               }
             }
           }
@@ -24090,6 +24097,9 @@
                   "UNKNOWN"
                 ]
               },
+              "btType": {
+                "type": "string"
+              },
               "entityType": {
                 "type": "string",
                 "enum": [
@@ -24106,9 +24116,6 @@
               },
               "filterConstruction": {
                 "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24153,17 +24160,17 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "persistentQuery": {
                 "$ref": "#/components/schemas/BTPStatement-269"
-              },
-              "variableName": {
-                "$ref": "#/components/schemas/BTMIndividualQuery-138"
               },
               "queryStatement": {
                 "$ref": "#/components/schemas/BTPStatement-269"
               },
-              "btType": {
-                "type": "string"
+              "variableName": {
+                "$ref": "#/components/schemas/BTMIndividualQuery-138"
               }
             }
           }
@@ -24227,10 +24234,10 @@
           {
             "type": "object",
             "properties": {
-              "entityQuery": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "entityQuery": {
                 "type": "string"
               }
             }
@@ -24290,14 +24297,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "featureId": {
                 "type": "string"
               },
               "filterInnerLoops": {
                 "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24312,10 +24319,10 @@
           {
             "type": "object",
             "properties": {
-              "featureId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "featureId": {
                 "type": "string"
               }
             }
@@ -24331,7 +24338,7 @@
           {
             "type": "object",
             "properties": {
-              "secondEntityQuery": {
+              "btType": {
                 "type": "string"
               },
               "inferenceType": {
@@ -24355,7 +24362,7 @@
               "secondDeterministicId": {
                 "type": "string"
               },
-              "btType": {
+              "secondEntityQuery": {
                 "type": "string"
               }
             }
@@ -24371,8 +24378,20 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "mateConnectorQueryList": {
                 "$ref": "#/components/schemas/BTMParameterQueryWithOccurrenceList-67"
+              },
+              "mateConnectors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTMMateConnector-66"
+                }
+              },
+              "mateOffset": {
+                "$ref": "#/components/schemas/BTVector3d-389"
               },
               "primaryAxisAlignment": {
                 "type": "boolean"
@@ -24386,18 +24405,6 @@
                   "MINUS_Y",
                   "UNKNOWN"
                 ]
-              },
-              "mateOffset": {
-                "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "mateConnectors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTMMateConnector-66"
-                }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24412,16 +24419,16 @@
           {
             "type": "object",
             "properties": {
-              "savedFeatureType": {
+              "btType": {
                 "type": "string"
-              },
-              "isHidden": {
-                "type": "boolean"
               },
               "implicit": {
                 "type": "boolean"
               },
-              "btType": {
+              "isHidden": {
+                "type": "boolean"
+              },
+              "savedFeatureType": {
                 "type": "string"
               }
             }
@@ -24469,10 +24476,10 @@
           {
             "type": "object",
             "properties": {
-              "itemDefinitionId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "itemDefinitionId": {
                 "type": "string"
               }
             }
@@ -24548,14 +24555,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "items": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTMArrayParameterItem-1843"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24570,13 +24577,13 @@
           {
             "type": "object",
             "properties": {
-              "namespace": {
-                "type": "string"
-              },
               "blobImport": {
                 "$ref": "#/components/schemas/BTMImport-136"
               },
               "btType": {
+                "type": "string"
+              },
+              "namespace": {
                 "type": "string"
               }
             }
@@ -24592,11 +24599,11 @@
           {
             "type": "object",
             "properties": {
-              "value": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "value": {
+                "type": "boolean"
               }
             }
           }
@@ -24611,16 +24618,15 @@
           {
             "type": "object",
             "properties": {
-              "valuesFieldIndex": {
-                "type": "integer",
-                "format": "int32"
+              "btType": {
+                "type": "string"
+              },
+              "configurationParameterId": {
+                "type": "string"
               },
               "configurationParameterIdFieldIndex": {
                 "type": "integer",
                 "format": "int32"
-              },
-              "configurationParameterId": {
-                "type": "string"
               },
               "values": {
                 "type": "array",
@@ -24628,8 +24634,9 @@
                   "$ref": "#/components/schemas/BTMConfiguredValue-1341"
                 }
               },
-              "btType": {
-                "type": "string"
+              "valuesFieldIndex": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -24644,10 +24651,7 @@
           {
             "type": "object",
             "properties": {
-              "moduleId": {
-                "$ref": "#/components/schemas/BTPModuleId-235"
-              },
-              "namespace": {
+              "btType": {
                 "type": "string"
               },
               "imports": {
@@ -24656,7 +24660,10 @@
                   "$ref": "#/components/schemas/BTMImport-136"
                 }
               },
-              "btType": {
+              "moduleId": {
+                "$ref": "#/components/schemas/BTPModuleId-235"
+              },
+              "namespace": {
                 "type": "string"
               }
             }
@@ -24672,16 +24679,16 @@
           {
             "type": "object",
             "properties": {
-              "namespace": {
+              "btType": {
                 "type": "string"
               },
               "enumName": {
                 "type": "string"
               },
-              "value": {
+              "namespace": {
                 "type": "string"
               },
-              "btType": {
+              "value": {
                 "type": "string"
               }
             }
@@ -24697,14 +24704,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "featureIds": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24719,17 +24726,17 @@
           {
             "type": "object",
             "properties": {
-              "foreignId": {
+              "btType": {
                 "type": "string"
               },
-              "locationInfo": {
-                "$ref": "#/components/schemas/BTForeignDataResponse-1070"
+              "foreignId": {
+                "type": "string"
               },
               "foreignName": {
                 "type": "string"
               },
-              "btType": {
-                "type": "string"
+              "locationInfo": {
+                "$ref": "#/components/schemas/BTForeignDataResponse-1070"
               }
             }
           }
@@ -24760,14 +24767,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "value": {
                 "type": "object",
                 "additionalProperties": {
                   "type": "string"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24782,11 +24789,11 @@
           {
             "type": "object",
             "properties": {
-              "material": {
-                "$ref": "#/components/schemas/BTPartMaterial-1445"
-              },
               "btType": {
                 "type": "string"
+              },
+              "material": {
+                "$ref": "#/components/schemas/BTPartMaterial-1445"
               }
             }
           }
@@ -24801,13 +24808,13 @@
           {
             "type": "object",
             "properties": {
-              "nullValue": {
+              "btType": {
                 "type": "string"
               },
               "isNull": {
                 "type": "boolean"
               },
-              "btType": {
+              "nullValue": {
                 "type": "string"
               }
             }
@@ -24834,21 +24841,21 @@
           {
             "type": "object",
             "properties": {
-              "units": {
+              "btType": {
+                "type": "string"
+              },
+              "expression": {
                 "type": "string"
               },
               "isInteger": {
                 "type": "boolean"
               },
-              "expression": {
+              "units": {
                 "type": "string"
               },
               "value": {
                 "type": "number",
                 "format": "double"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24863,14 +24870,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "queries": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTMIndividualQueryBase-139"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24885,6 +24892,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "occurrences": {
                 "type": "array",
                 "items": {
@@ -24896,9 +24906,6 @@
                 "items": {
                   "$ref": "#/components/schemas/BTMIndividualQueryWithOccurrenceBase-904"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -24925,6 +24932,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "elementId": {
                 "type": "string"
               },
@@ -24932,9 +24942,6 @@
                 "type": "string"
               },
               "namespace": {
-                "type": "string"
-              },
-              "btType": {
                 "type": "string"
               }
             }
@@ -25044,17 +25051,17 @@
           {
             "type": "object",
             "properties": {
-              "partQuery": {
-                "$ref": "#/components/schemas/BTMParameterQueryList-148"
-              },
               "blockBuildFunctionAccess": {
                 "type": "boolean",
                 "writeOnly": true
               },
-              "standardContentParametersId": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "partQuery": {
+                "$ref": "#/components/schemas/BTMParameterQueryList-148"
+              },
+              "standardContentParametersId": {
                 "type": "string"
               }
             }
@@ -25114,10 +25121,10 @@
           {
             "type": "object",
             "properties": {
-              "value": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "value": {
                 "type": "string"
               }
             }
@@ -25149,11 +25156,8 @@
           {
             "type": "object",
             "properties": {
-              "entities": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTMSketchGeomEntity-5"
-                }
+              "btType": {
+                "type": "string"
               },
               "constraints": {
                 "type": "array",
@@ -25161,8 +25165,11 @@
                   "$ref": "#/components/schemas/BTMSketchConstraint-2"
                 }
               },
-              "btType": {
-                "type": "string"
+              "entities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTMSketchGeomEntity-5"
+                }
               }
             }
           }
@@ -25293,20 +25300,20 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "centerId": {
                 "type": "string"
+              },
+              "geometry": {
+                "$ref": "#/components/schemas/BTCurveGeometry-114"
               },
               "internalIds": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "geometry": {
-                "$ref": "#/components/schemas/BTCurveGeometry-114"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -25321,8 +25328,12 @@
           {
             "type": "object",
             "properties": {
-              "startPointId": {
+              "btType": {
                 "type": "string"
+              },
+              "endParam": {
+                "type": "number",
+                "format": "double"
               },
               "endPointId": {
                 "type": "string"
@@ -25331,11 +25342,7 @@
                 "type": "number",
                 "format": "double"
               },
-              "endParam": {
-                "type": "number",
-                "format": "double"
-              },
-              "btType": {
+              "startPointId": {
                 "type": "string"
               }
             }
@@ -25400,6 +25407,13 @@
           {
             "type": "object",
             "properties": {
+              "aspectRatio": {
+                "type": "number",
+                "format": "double"
+              },
+              "btType": {
+                "type": "string"
+              },
               "originX": {
                 "type": "number",
                 "format": "double"
@@ -25415,13 +25429,6 @@
               "xaxisY": {
                 "type": "number",
                 "format": "double"
-              },
-              "aspectRatio": {
-                "type": "number",
-                "format": "double"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -25436,19 +25443,19 @@
           {
             "type": "object",
             "properties": {
-              "y": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
+              },
+              "isUserPoint": {
+                "type": "boolean"
               },
               "x": {
                 "type": "number",
                 "format": "double"
               },
-              "isUserPoint": {
-                "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
+              "y": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -25463,21 +25470,7 @@
           {
             "type": "object",
             "properties": {
-              "fontName": {
-                "type": "string"
-              },
-              "text": {
-                "type": "string"
-              },
               "ascent": {
-                "type": "number",
-                "format": "double"
-              },
-              "baselineStartX": {
-                "type": "number",
-                "format": "double"
-              },
-              "baselineStartY": {
                 "type": "number",
                 "format": "double"
               },
@@ -25489,7 +25482,21 @@
                 "type": "number",
                 "format": "double"
               },
+              "baselineStartX": {
+                "type": "number",
+                "format": "double"
+              },
+              "baselineStartY": {
+                "type": "number",
+                "format": "double"
+              },
               "btType": {
+                "type": "string"
+              },
+              "fontName": {
+                "type": "string"
+              },
+              "text": {
                 "type": "string"
               }
             }
@@ -25612,11 +25619,11 @@
           {
             "type": "object",
             "properties": {
-              "requiresOccurrence": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "requiresOccurrence": {
+                "type": "boolean"
               }
             }
           }
@@ -26099,11 +26106,11 @@
           {
             "type": "object",
             "properties": {
-              "modifiableOnly": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "modifiableOnly": {
+                "type": "boolean"
               }
             }
           }
@@ -26306,11 +26313,11 @@
           {
             "type": "object",
             "properties": {
-              "operand": {
-                "$ref": "#/components/schemas/BTQueryFilter-183"
-              },
               "btType": {
                 "type": "string"
+              },
+              "operand": {
+                "$ref": "#/components/schemas/BTQueryFilter-183"
               }
             }
           }
@@ -26376,8 +26383,8 @@
           {
             "type": "object",
             "properties": {
-              "hasMinValue": {
-                "type": "boolean"
+              "btType": {
+                "type": "string"
               },
               "hasDefaultValue": {
                 "type": "boolean"
@@ -26385,8 +26392,8 @@
               "hasMaxValue": {
                 "type": "boolean"
               },
-              "btType": {
-                "type": "string"
+              "hasMinValue": {
+                "type": "boolean"
               }
             }
           }
@@ -26447,13 +26454,22 @@
           {
             "type": "object",
             "properties": {
-              "topLevelOnly": {
+              "btType": {
+                "type": "string"
+              },
+              "excludeFlattenedParts": {
+                "type": "boolean"
+              },
+              "excludePatternInstances": {
                 "type": "boolean"
               },
               "excludeSketch": {
                 "type": "boolean"
               },
-              "solidOrCompositeBodyOnly": {
+              "excludeStandardContent": {
+                "type": "boolean"
+              },
+              "excludeStudioInserts": {
                 "type": "boolean"
               },
               "excludeSubAssemblies": {
@@ -26462,26 +26478,17 @@
               "excludeSuppressed": {
                 "type": "boolean"
               },
-              "excludeFlattenedParts": {
-                "type": "boolean"
-              },
-              "excludePatternInstances": {
+              "includeAssemblyRoot": {
                 "type": "boolean"
               },
               "includePatternOccurrence": {
                 "type": "boolean"
               },
-              "excludeStudioInserts": {
+              "solidOrCompositeBodyOnly": {
                 "type": "boolean"
               },
-              "excludeStandardContent": {
+              "topLevelOnly": {
                 "type": "boolean"
-              },
-              "includeAssemblyRoot": {
-                "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26496,14 +26503,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "operand1": {
                 "$ref": "#/components/schemas/BTQueryFilter-183"
               },
               "operand2": {
                 "$ref": "#/components/schemas/BTQueryFilter-183"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26630,6 +26637,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
               "standardType": {
                 "type": "string",
                 "enum": [
@@ -26645,16 +26658,10 @@
                   "UNKNOWN"
                 ]
               },
-              "typeName": {
-                "type": "string"
-              },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "type": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
               },
-              "btType": {
+              "typeName": {
                 "type": "string"
               }
             }
@@ -26670,10 +26677,10 @@
           {
             "type": "object",
             "properties": {
-              "identifier": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "identifier": {
                 "type": "string"
               }
             }
@@ -26689,11 +26696,8 @@
           {
             "type": "object",
             "properties": {
-              "to": {
-                "$ref": "#/components/schemas/BTPLiteralNumber-258"
-              },
-              "typeName": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
+              "btType": {
+                "type": "string"
               },
               "from": {
                 "$ref": "#/components/schemas/BTPLiteralNumber-258"
@@ -26701,8 +26705,11 @@
               "spaceAfterType": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "btType": {
-                "type": "string"
+              "to": {
+                "$ref": "#/components/schemas/BTPLiteralNumber-258"
+              },
+              "typeName": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
               }
             }
           }
@@ -26756,9 +26763,6 @@
           {
             "type": "object",
             "properties": {
-              "spaceInAccessor": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "accessor": {
                 "$ref": "#/components/schemas/BTPPropertyAccessor-23"
               },
@@ -26767,6 +26771,9 @@
               },
               "btType": {
                 "type": "string"
+              },
+              "spaceInAccessor": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -26781,14 +26788,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "operand": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
               "typeName": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26809,14 +26816,14 @@
                   "$ref": "#/components/schemas/BTPExpression-9"
                 }
               },
-              "spaceInEmptyList": {
-                "$ref": "#/components/schemas/BTPSpace-10"
+              "btType": {
+                "type": "string"
               },
               "name": {
                 "$ref": "#/components/schemas/BTPBuiltinIdentifier-233"
               },
-              "btType": {
-                "type": "string"
+              "spaceInEmptyList": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -26831,20 +26838,20 @@
           {
             "type": "object",
             "properties": {
-              "functionNameString": {
+              "btType": {
                 "type": "string"
-              },
-              "functionName": {
-                "$ref": "#/components/schemas/BTPName-261"
               },
               "functionExpression": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
+              "functionName": {
+                "$ref": "#/components/schemas/BTPName-261"
+              },
+              "functionNameString": {
+                "type": "string"
+              },
               "spaceInEmptyList": {
                 "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26868,23 +26875,23 @@
               "body": {
                 "$ref": "#/components/schemas/BTPStatementBlock-271"
               },
+              "btType": {
+                "type": "string"
+              },
               "precondition": {
                 "$ref": "#/components/schemas/BTPStatement-269"
               },
-              "spaceAfterArglist": {
-                "$ref": "#/components/schemas/BTPSpace-10"
+              "returnType": {
+                "$ref": "#/components/schemas/BTPTypeName-290"
               },
-              "spaceInEmptyList": {
+              "spaceAfterArglist": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "spaceAfterFunction": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "returnType": {
-                "$ref": "#/components/schemas/BTPTypeName-290"
-              },
-              "btType": {
-                "type": "string"
+              "spaceInEmptyList": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -26899,11 +26906,11 @@
           {
             "type": "object",
             "properties": {
-              "content": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "btType": {
                 "type": "string"
+              },
+              "content": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -26918,14 +26925,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "operand": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
               "typeName": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26940,17 +26947,17 @@
           {
             "type": "object",
             "properties": {
-              "spaceBetweenNewBox": {
-                "$ref": "#/components/schemas/BTPSpace-10"
+              "btType": {
+                "type": "string"
               },
               "spaceAfterBox": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
+              "spaceBetweenNewBox": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
               "value": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -26965,17 +26972,32 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "forExport": {
+                "type": "boolean"
+              },
+              "globalNamespace": {
+                "type": "boolean"
+              },
               "importMicroversion": {
                 "type": "string",
                 "writeOnly": true
               },
-              "forExport": {
-                "type": "boolean"
+              "namespace": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTPIdentifier-8"
+                }
               },
               "operand1": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
               "operand2": {
+                "$ref": "#/components/schemas/BTPExpression-9"
+              },
+              "operand3": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
               "operator": {
@@ -27002,32 +27024,17 @@
                   "CONDITIONAL"
                 ]
               },
-              "globalNamespace": {
-                "type": "boolean"
-              },
-              "writtenAsFunctionCall": {
-                "type": "boolean"
-              },
               "spaceAfterNamespace": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "spaceBeforeOperator": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "spaceAfterOperator": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "operand3": {
-                "$ref": "#/components/schemas/BTPExpression-9"
+              "spaceBeforeOperator": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "namespace": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTPIdentifier-8"
-                }
-              },
-              "btType": {
-                "type": "string"
+              "writtenAsFunctionCall": {
+                "type": "boolean"
               }
             }
           }
@@ -27042,17 +27049,17 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "choices": {
+                "$ref": "#/components/schemas/BTPLiteralMap-256"
+              },
               "selector": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
               "spaceAfterSwitch": {
                 "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "choices": {
-                "$ref": "#/components/schemas/BTPLiteralMap-256"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -27067,8 +27074,11 @@
           {
             "type": "object",
             "properties": {
-              "spaceAfterTry": {
-                "$ref": "#/components/schemas/BTPSpace-10"
+              "btType": {
+                "type": "string"
+              },
+              "expression": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               },
               "silent": {
                 "type": "boolean"
@@ -27076,11 +27086,8 @@
               "spaceAfterSilent": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "expression": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
+              "spaceAfterTry": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -27095,11 +27102,11 @@
           {
             "type": "object",
             "properties": {
-              "name": {
-                "$ref": "#/components/schemas/BTPName-261"
-              },
               "btType": {
                 "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPName-261"
               }
             }
           }
@@ -27142,11 +27149,11 @@
           {
             "type": "object",
             "properties": {
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "btType": {
                 "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
               }
             }
           }
@@ -27161,15 +27168,15 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "identifier": {
                 "type": "string"
               },
               "invalidIdentifierForTest": {
                 "type": "string",
                 "writeOnly": true
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -27238,11 +27245,11 @@
               "box": {
                 "$ref": "#/components/schemas/BTPExpression-9"
               },
-              "spaceInside": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "btType": {
                 "type": "string"
+              },
+              "spaceInside": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -27257,11 +27264,11 @@
           {
             "type": "object",
             "properties": {
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "btType": {
                 "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
               }
             }
           }
@@ -27308,14 +27315,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "spaceInEmptyList": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "trailingComma": {
                 "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -27330,11 +27337,11 @@
           {
             "type": "object",
             "properties": {
-              "value": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "value": {
+                "type": "boolean"
               }
             }
           }
@@ -27409,14 +27416,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "key": {
                 "$ref": "#/components/schemas/BTPPropertyAccessor-23"
               },
               "value": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -27482,57 +27489,25 @@
       },
       "BTPLiteralString-259": {
         "type": "object",
-        "properties": {
-          "atomic": {
-            "type": "boolean"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTPLiteral-253"
           },
-          "btType": {
-            "type": "string"
-          },
-          "documentationType": {
-            "type": "string",
-            "enum": [
-              "FUNCTION",
-              "PREDICATE",
-              "CONSTANT",
-              "ENUM",
-              "USER_TYPE",
-              "FEATURE_DEFINITION",
-              "FILE_HEADER",
-              "UNDOCUMENTABLE",
-              "UNKNOWN"
-            ]
-          },
-          "endSourceLocation": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nodeId": {
-            "type": "string"
-          },
-          "shortDescriptor": {
-            "type": "string"
-          },
-          "spaceAfter": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceBefore": {
-            "$ref": "#/components/schemas/BTPSpace-10"
-          },
-          "spaceDefault": {
-            "type": "boolean"
-          },
-          "startSourceLocation": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "text": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
+          {
+            "type": "object",
+            "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
-        }
+        ]
       },
       "BTPLiteralUndefined-260": {
         "type": "object",
@@ -27559,9 +27534,8 @@
           {
             "type": "object",
             "properties": {
-              "versionNumber": {
-                "type": "integer",
-                "format": "int32"
+              "btType": {
+                "type": "string"
               },
               "deepImports": {
                 "type": "object",
@@ -27572,14 +27546,20 @@
                   }
                 }
               },
-              "isInternalModule": {
-                "type": "boolean"
-              },
               "imports": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTPTopLevelImport-285"
                 }
+              },
+              "isBlob": {
+                "type": "boolean"
+              },
+              "isInternalModule": {
+                "type": "boolean"
+              },
+              "mayHaveImplicitImports": {
+                "type": "boolean"
               },
               "pathMap": {
                 "type": "object",
@@ -27587,8 +27567,8 @@
                   "$ref": "#/components/schemas/BTMicroversionId-366"
                 }
               },
-              "version": {
-                "$ref": "#/components/schemas/BTPLiteralNumber-258"
+              "pathToCache": {
+                "$ref": "#/components/schemas/BTCacheDataPath-191"
               },
               "topLevel": {
                 "type": "array",
@@ -27596,17 +27576,12 @@
                   "$ref": "#/components/schemas/BTPTopLevelNode-286"
                 }
               },
-              "pathToCache": {
-                "$ref": "#/components/schemas/BTCacheDataPath-191"
+              "version": {
+                "$ref": "#/components/schemas/BTPLiteralNumber-258"
               },
-              "isBlob": {
-                "type": "boolean"
-              },
-              "mayHaveImplicitImports": {
-                "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
+              "versionNumber": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -27621,17 +27596,20 @@
           {
             "type": "object",
             "properties": {
-              "externalDocumentWithVersionAndElementId": {
-                "$ref": "#/components/schemas/BTDocumentWithVersionAndElementId"
+              "btType": {
+                "type": "string"
+              },
+              "dbimportString": {
+                "type": "string"
               },
               "elementImport": {
                 "type": "boolean"
               },
-              "importedElementId": {
-                "type": "string"
+              "externalDocumentWithVersion": {
+                "$ref": "#/components/schemas/BTDocumentWithVersionId"
               },
-              "versionAndMicroversion": {
-                "type": "string"
+              "externalDocumentWithVersionAndElementId": {
+                "$ref": "#/components/schemas/BTDocumentWithVersionAndElementId"
               },
               "externalImport": {
                 "type": "boolean"
@@ -27639,62 +27617,59 @@
               "importedDocumentId": {
                 "type": "string"
               },
-              "legacy": {
-                "type": "boolean"
-              },
-              "pathPotentiallyValid": {
-                "type": "boolean"
-              },
-              "versionPotentiallyValid": {
-                "type": "boolean"
-              },
-              "validLegacyVersion": {
-                "type": "boolean"
-              },
-              "pathVersion": {
+              "importedElementId": {
                 "type": "string"
               },
               "importedVersionId": {
                 "type": "string"
               },
-              "potentiallyValid": {
-                "type": "boolean"
-              },
-              "standardLibraryCommon": {
-                "type": "boolean"
-              },
-              "externalDocumentWithVersion": {
-                "$ref": "#/components/schemas/BTDocumentWithVersionId"
-              },
-              "dbimportString": {
-                "type": "string"
-              },
-              "standardLibrary": {
+              "legacy": {
                 "type": "boolean"
               },
               "microversion": {
                 "type": "string"
               },
-              "spaceBeforePath": {
-                "$ref": "#/components/schemas/BTPSpace-10"
+              "path": {
+                "$ref": "#/components/schemas/BTPLiteralString-259"
+              },
+              "pathPotentiallyValid": {
+                "type": "boolean"
+              },
+              "pathVersion": {
+                "type": "string"
+              },
+              "potentiallyValid": {
+                "type": "boolean"
               },
               "spaceAfterPath": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "spaceBeforeVersion": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "spaceAfterVersion": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
+              "spaceBeforePath": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
+              "spaceBeforeVersion": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
+              "standardLibrary": {
+                "type": "boolean"
+              },
+              "standardLibraryCommon": {
+                "type": "boolean"
+              },
+              "validLegacyVersion": {
+                "type": "boolean"
+              },
               "version": {
                 "$ref": "#/components/schemas/BTPLiteralString-259"
               },
-              "path": {
-                "$ref": "#/components/schemas/BTPLiteralString-259"
-              },
-              "btType": {
+              "versionAndMicroversion": {
                 "type": "string"
+              },
+              "versionPotentiallyValid": {
+                "type": "boolean"
               }
             }
           }
@@ -27709,27 +27684,27 @@
           {
             "type": "object",
             "properties": {
-              "importMicroversion": {
-                "type": "string",
-                "writeOnly": true
+              "btType": {
+                "type": "string"
               },
               "forExport": {
+                "type": "boolean"
+              },
+              "globalNamespace": {
                 "type": "boolean"
               },
               "identifier": {
                 "$ref": "#/components/schemas/BTPIdentifier-8"
               },
-              "globalNamespace": {
-                "type": "boolean"
+              "importMicroversion": {
+                "type": "string",
+                "writeOnly": true
               },
               "namespace": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTPIdentifier-8"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -27809,6 +27784,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "operator": {
                 "type": "string",
                 "enum": [
@@ -27833,14 +27811,11 @@
                   "CONDITIONAL"
                 ]
               },
-              "spaceBeforeOperator": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "spaceAfterOperator": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "btType": {
-                "type": "string"
+              "spaceBeforeOperator": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -27893,20 +27868,20 @@
               "body": {
                 "$ref": "#/components/schemas/BTPStatementBlock-271"
               },
+              "btType": {
+                "type": "string"
+              },
               "precondition": {
                 "$ref": "#/components/schemas/BTPStatement-269"
+              },
+              "returnType": {
+                "$ref": "#/components/schemas/BTPTypeName-290"
               },
               "spaceAfterArglist": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "spaceInEmptyList": {
                 "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "returnType": {
-                "$ref": "#/components/schemas/BTPTypeName-290"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28011,6 +27986,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "lvalue": {
+                "$ref": "#/components/schemas/BTPLValue-249"
+              },
               "operator": {
                 "type": "string",
                 "enum": [
@@ -28035,14 +28016,8 @@
                   "CONDITIONAL"
                 ]
               },
-              "lvalue": {
-                "$ref": "#/components/schemas/BTPLValue-249"
-              },
               "rvalue": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28057,11 +28032,11 @@
           {
             "type": "object",
             "properties": {
-              "spaceAfterOpen": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "btType": {
                 "type": "string"
+              },
+              "spaceAfterOpen": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -28076,11 +28051,11 @@
           {
             "type": "object",
             "properties": {
-              "spaceAfterBreak": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "btType": {
                 "type": "string"
+              },
+              "spaceAfterBreak": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -28095,10 +28070,10 @@
           {
             "type": "object",
             "properties": {
-              "query": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "query": {
                 "type": "string"
               }
             }
@@ -28114,6 +28089,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
               "standardType": {
                 "type": "string",
                 "enum": [
@@ -28129,20 +28110,14 @@
                   "UNKNOWN"
                 ]
               },
-              "typeName": {
-                "type": "string"
-              },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "type": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
               },
+              "typeName": {
+                "type": "string"
+              },
               "value": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28157,11 +28132,11 @@
           {
             "type": "object",
             "properties": {
-              "spaceAfterContinue": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "btType": {
                 "type": "string"
+              },
+              "spaceAfterContinue": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -28176,11 +28151,11 @@
           {
             "type": "object",
             "properties": {
-              "expression": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "btType": {
                 "type": "string"
+              },
+              "expression": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -28195,20 +28170,20 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "condition": {
                 "$ref": "#/components/schemas/BTPExpression-9"
+              },
+              "elseBody": {
+                "$ref": "#/components/schemas/BTPStatement-269"
               },
               "spaceAfterIf": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "thenBody": {
                 "$ref": "#/components/schemas/BTPStatement-269"
-              },
-              "elseBody": {
-                "$ref": "#/components/schemas/BTPStatement-269"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28239,11 +28214,11 @@
               "body": {
                 "$ref": "#/components/schemas/BTPStatement-269"
               },
-              "spaceAfterLoopType": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
               "btType": {
                 "type": "string"
+              },
+              "spaceAfterLoopType": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -28258,8 +28233,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "condition": {
                 "$ref": "#/components/schemas/BTPExpression-9"
+              },
+              "increment": {
+                "$ref": "#/components/schemas/BTPStatement-269"
               },
               "initialization": {
                 "$ref": "#/components/schemas/BTPStatement-269"
@@ -28272,12 +28253,6 @@
               },
               "spaceBeforeIncrement": {
                 "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "increment": {
-                "$ref": "#/components/schemas/BTPStatement-269"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28292,6 +28267,21 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "container": {
+                "$ref": "#/components/schemas/BTPExpression-9"
+              },
+              "isVarDeclaredHere": {
+                "type": "boolean"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
+              "spaceBeforeVar": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
               "standardType": {
                 "type": "string",
                 "enum": [
@@ -28307,26 +28297,11 @@
                   "UNKNOWN"
                 ]
               },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "typeName": {
                 "type": "string"
               },
-              "container": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "var": {
                 "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
-              "isVarDeclaredHere": {
-                "type": "boolean"
-              },
-              "spaceBeforeVar": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28341,11 +28316,11 @@
           {
             "type": "object",
             "properties": {
-              "condition": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "btType": {
                 "type": "string"
+              },
+              "condition": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -28360,14 +28335,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "spaceAfterReturn": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "value": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28382,11 +28357,11 @@
           {
             "type": "object",
             "properties": {
-              "value": {
-                "$ref": "#/components/schemas/BTPExpression-9"
-              },
               "btType": {
                 "type": "string"
+              },
+              "value": {
+                "$ref": "#/components/schemas/BTPExpression-9"
               }
             }
           }
@@ -28401,6 +28376,30 @@
           {
             "type": "object",
             "properties": {
+              "body": {
+                "$ref": "#/components/schemas/BTPStatementBlock-271"
+              },
+              "btType": {
+                "type": "string"
+              },
+              "catchBlock": {
+                "$ref": "#/components/schemas/BTPStatementBlock-271"
+              },
+              "catchVariable": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
+              "silent": {
+                "type": "boolean"
+              },
+              "spaceAfterCatch": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
+              "spaceBeforeSilent": {
+                "$ref": "#/components/schemas/BTPSpace-10"
+              },
               "standardType": {
                 "type": "string",
                 "enum": [
@@ -28416,31 +28415,7 @@
                   "UNKNOWN"
                 ]
               },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "typeName": {
-                "type": "string"
-              },
-              "body": {
-                "$ref": "#/components/schemas/BTPStatementBlock-271"
-              },
-              "silent": {
-                "type": "boolean"
-              },
-              "catchVariable": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
-              "spaceBeforeSilent": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "catchBlock": {
-                "$ref": "#/components/schemas/BTPStatementBlock-271"
-              },
-              "spaceAfterCatch": {
-                "$ref": "#/components/schemas/BTPSpace-10"
-              },
-              "btType": {
                 "type": "string"
               }
             }
@@ -28456,6 +28431,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
               "standardType": {
                 "type": "string",
                 "enum": [
@@ -28471,20 +28452,14 @@
                   "UNKNOWN"
                 ]
               },
-              "typeName": {
-                "type": "string"
-              },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
               "type": {
                 "$ref": "#/components/schemas/BTPTypeName-290"
               },
+              "typeName": {
+                "type": "string"
+              },
               "value": {
                 "$ref": "#/components/schemas/BTPExpression-9"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28499,11 +28474,11 @@
           {
             "type": "object",
             "properties": {
-              "declaration": {
-                "$ref": "#/components/schemas/BTPStatementConstantDeclaration-273"
-              },
               "btType": {
                 "type": "string"
+              },
+              "declaration": {
+                "$ref": "#/components/schemas/BTPStatementConstantDeclaration-273"
               }
             }
           }
@@ -28524,6 +28499,9 @@
                   "$ref": "#/components/schemas/BTPAnnotation-231"
                 }
               },
+              "btType": {
+                "type": "string"
+              },
               "spaceInEmptyList": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
@@ -28535,9 +28513,6 @@
                 "items": {
                   "$ref": "#/components/schemas/BTPIdentifier-8"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28552,21 +28527,18 @@
           {
             "type": "object",
             "properties": {
-              "importMicroversion": {
-                "type": "string",
-                "writeOnly": true
-              },
-              "namespaceString": {
+              "btType": {
                 "type": "string"
               },
               "combinedNamespacePathAndVersion": {
                 "type": "string"
               },
+              "importMicroversion": {
+                "type": "string",
+                "writeOnly": true
+              },
               "moduleId": {
                 "$ref": "#/components/schemas/BTPModuleId-235"
-              },
-              "spaceBeforeImport": {
-                "$ref": "#/components/schemas/BTPSpace-10"
               },
               "namespace": {
                 "type": "array",
@@ -28574,8 +28546,11 @@
                   "$ref": "#/components/schemas/BTPIdentifier-8"
                 }
               },
-              "btType": {
+              "namespaceString": {
                 "type": "string"
+              },
+              "spaceBeforeImport": {
+                "$ref": "#/components/schemas/BTPSpace-10"
               }
             }
           }
@@ -28604,17 +28579,20 @@
           {
             "type": "object",
             "properties": {
-              "deprecated": {
-                "type": "boolean"
-              },
-              "symbolName": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
+              "annotation": {
+                "$ref": "#/components/schemas/BTPAnnotation-231"
               },
               "argumentsToDocument": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTPArgumentDeclaration-232"
                 }
+              },
+              "btType": {
+                "type": "string"
+              },
+              "deprecated": {
+                "type": "boolean"
               },
               "deprecatedExplanation": {
                 "type": "string"
@@ -28625,11 +28603,8 @@
               "spaceAfterExport": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
-              "annotation": {
-                "$ref": "#/components/schemas/BTPAnnotation-231"
-              },
-              "btType": {
-                "type": "string"
+              "symbolName": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
               }
             }
           }
@@ -28656,17 +28631,17 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "name": {
+                "$ref": "#/components/schemas/BTPIdentifier-8"
+              },
               "spaceAfterVersion": {
                 "$ref": "#/components/schemas/BTPSpace-10"
               },
               "version": {
                 "$ref": "#/components/schemas/BTPLiteralNumber-258"
-              },
-              "name": {
-                "$ref": "#/components/schemas/BTPIdentifier-8"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28681,11 +28656,11 @@
           {
             "type": "object",
             "properties": {
-              "typecheck": {
-                "$ref": "#/components/schemas/BTPName-261"
-              },
               "btType": {
                 "type": "string"
+              },
+              "typecheck": {
+                "$ref": "#/components/schemas/BTPName-261"
               }
             }
           }
@@ -28728,6 +28703,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "type": {
                 "type": "string",
                 "enum": [
@@ -28742,9 +28720,6 @@
                   "FUNCTION",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -28759,11 +28734,11 @@
           {
             "type": "object",
             "properties": {
-              "type": {
-                "$ref": "#/components/schemas/BTPName-261"
-              },
               "btType": {
                 "type": "string"
+              },
+              "type": {
+                "$ref": "#/components/schemas/BTPName-261"
               }
             }
           }
@@ -29022,16 +28997,16 @@
           {
             "type": "object",
             "properties": {
-              "itemName": {
-                "type": "string"
-              },
-              "itemLabelTemplate": {
+              "btType": {
                 "type": "string"
               },
               "drivenQuery": {
                 "type": "string"
               },
-              "btType": {
+              "itemLabelTemplate": {
+                "type": "string"
+              },
+              "itemName": {
                 "type": "string"
               }
             }
@@ -29095,7 +29070,13 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "enumName": {
+                "type": "string"
+              },
+              "namespace": {
                 "type": "string"
               },
               "optionNames": {
@@ -29109,12 +29090,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "namespace": {
-                "type": "string"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -29161,11 +29136,11 @@
           {
             "type": "object",
             "properties": {
-              "lookupTable": {
-                "$ref": "#/components/schemas/BTParameterLookupTableListEntry-1916"
-              },
               "btType": {
                 "type": "string"
+              },
+              "lookupTable": {
+                "$ref": "#/components/schemas/BTParameterLookupTableListEntry-1916"
               }
             }
           }
@@ -29196,6 +29171,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "quantityType": {
                 "type": "string",
                 "enum": [
@@ -29216,9 +29194,6 @@
                 "items": {
                   "$ref": "#/components/schemas/BTNullableQuantityRange-1340"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -29233,6 +29208,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "quantityType": {
                 "type": "string",
                 "enum": [
@@ -29253,9 +29231,6 @@
                 "items": {
                   "$ref": "#/components/schemas/BTQuantityRange-181"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -29270,18 +29245,18 @@
           {
             "type": "object",
             "properties": {
-              "maxNumberOfPicks": {
-                "type": "integer",
-                "format": "int32"
-              },
               "additionalBoxSelectFilter": {
-                "$ref": "#/components/schemas/BTQueryFilter-183"
-              },
-              "filter": {
                 "$ref": "#/components/schemas/BTQueryFilter-183"
               },
               "btType": {
                 "type": "string"
+              },
+              "filter": {
+                "$ref": "#/components/schemas/BTQueryFilter-183"
+              },
+              "maxNumberOfPicks": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -29420,10 +29395,6 @@
           {
             "type": "object",
             "properties": {
-              "maxNumberOfPicks": {
-                "type": "integer",
-                "format": "int32"
-              },
               "allowedInsertableTypes": {
                 "type": "array",
                 "items": {
@@ -29442,14 +29413,18 @@
                   ]
                 }
               },
+              "btType": {
+                "type": "string"
+              },
               "computedConfigurationInputs": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTComputedConfigurationInputSpec-2525"
                 }
               },
-              "btType": {
-                "type": "string"
+              "maxNumberOfPicks": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -29480,9 +29455,8 @@
           {
             "type": "object",
             "properties": {
-              "maxNumberOfPicks": {
-                "type": "integer",
-                "format": "int32"
+              "allowAssemblies": {
+                "type": "boolean"
               },
               "allowedInsertableTypes": {
                 "type": "array",
@@ -29502,11 +29476,12 @@
                   ]
                 }
               },
-              "allowAssemblies": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "maxNumberOfPicks": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -29521,14 +29496,14 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "formatConditions": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/BTStringFormatCondition-683"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -29575,6 +29550,15 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTParameterVisibilityCondition-177"
+                }
+              },
               "operation": {
                 "type": "string",
                 "enum": [
@@ -29583,15 +29567,6 @@
                   "OR",
                   "UNKNOWN"
                 ]
-              },
-              "children": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTParameterVisibilityCondition-177"
-                }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -29617,13 +29592,13 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "parameterId": {
                 "type": "string"
               },
               "value": {
-                "type": "string"
-              },
-              "btType": {
                 "type": "string"
               }
             }
@@ -29963,17 +29938,17 @@
           {
             "type": "object",
             "properties": {
-              "normal": {
-                "$ref": "#/components/schemas/BTVector3d-389"
+              "btType": {
+                "type": "string"
               },
               "isOrientedWithFace": {
                 "type": "boolean"
               },
-              "origin": {
+              "normal": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "btType": {
-                "type": "string"
+              "origin": {
+                "$ref": "#/components/schemas/BTVector3d-389"
               }
             }
           }
@@ -29988,11 +29963,11 @@
           {
             "type": "object",
             "properties": {
-              "normal": {
-                "$ref": "#/components/schemas/BTVector3d-389"
-              },
               "btType": {
                 "type": "string"
+              },
+              "normal": {
+                "$ref": "#/components/schemas/BTVector3d-389"
               }
             }
           }
@@ -31000,11 +30975,11 @@
           {
             "type": "object",
             "properties": {
-              "isJointTypeEditable": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isJointTypeEditable": {
+                "type": "boolean"
               }
             }
           }
@@ -31019,6 +30994,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "smDefinitionEntityType": {
                 "type": "string",
                 "enum": [
@@ -31029,9 +31007,6 @@
                   "DEGENERATE_EDGE",
                   "UNKNOWN"
                 ]
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31088,12 +31063,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "rollbackIndex": {
                 "type": "integer",
                 "format": "int32"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31236,6 +31211,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "isSketchObject": {
+                "type": "boolean"
+              },
               "objectType": {
                 "type": "string",
                 "enum": [
@@ -31244,12 +31225,6 @@
                   "USER_ENTITY",
                   "UNKNOWN"
                 ]
-              },
-              "isSketchObject": {
-                "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31264,15 +31239,15 @@
           {
             "type": "object",
             "properties": {
-              "radius": {
-                "type": "number",
-                "format": "double"
+              "btType": {
+                "type": "string"
               },
               "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "btType": {
-                "type": "string"
+              "radius": {
+                "type": "number",
+                "format": "double"
               }
             }
           }
@@ -31287,6 +31262,16 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
+              "controlPoints": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
               "degree": {
                 "type": "integer",
                 "format": "int32"
@@ -31297,22 +31282,12 @@
               "isRational": {
                 "type": "boolean"
               },
-              "controlPoints": {
-                "type": "array",
-                "items": {
-                  "type": "number",
-                  "format": "double"
-                }
-              },
               "knots": {
                 "type": "array",
                 "items": {
                   "type": "number",
                   "format": "double"
                 }
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31330,11 +31305,11 @@
               "axis": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "origin": {
-                "$ref": "#/components/schemas/BTVector3d-389"
-              },
               "btType": {
                 "type": "string"
+              },
+              "origin": {
+                "$ref": "#/components/schemas/BTVector3d-389"
               }
             }
           }
@@ -31349,10 +31324,10 @@
           {
             "type": "object",
             "properties": {
-              "regExpToBlock": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "regExpToBlock": {
                 "type": "string"
               }
             }
@@ -31391,10 +31366,10 @@
           {
             "type": "object",
             "properties": {
-              "regExpToMatch": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "regExpToMatch": {
                 "type": "string"
               }
             }
@@ -31410,12 +31385,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "maximumLength": {
                 "type": "integer",
                 "format": "int32"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31430,12 +31405,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "minimumLength": {
                 "type": "integer",
                 "format": "int32"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31539,14 +31514,14 @@
           {
             "type": "object",
             "properties": {
-              "profile": {
-                "$ref": "#/components/schemas/BTSplineDescription-2118"
+              "btType": {
+                "type": "string"
               },
               "direction": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
-              "btType": {
-                "type": "string"
+              "profile": {
+                "$ref": "#/components/schemas/BTSplineDescription-2118"
               }
             }
           }
@@ -31714,6 +31689,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "error": {
                 "type": "string"
               },
@@ -31722,9 +31700,6 @@
               },
               "parameter": {
                 "$ref": "#/components/schemas/BTMParameter-1"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31739,11 +31714,11 @@
           {
             "type": "object",
             "properties": {
-              "isUnchanged": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isUnchanged": {
+                "type": "boolean"
               }
             }
           }
@@ -31897,12 +31872,12 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "cellValue": {
                 "type": "number",
                 "format": "double"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -31917,10 +31892,10 @@
           {
             "type": "object",
             "properties": {
-              "cellValue": {
+              "btType": {
                 "type": "string"
               },
-              "btType": {
+              "cellValue": {
                 "type": "string"
               }
             }
@@ -32035,11 +32010,11 @@
           {
             "type": "object",
             "properties": {
-              "isText": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isText": {
+                "type": "boolean"
               }
             }
           }
@@ -32054,11 +32029,11 @@
           {
             "type": "object",
             "properties": {
-              "isStroke": {
-                "type": "boolean"
-              },
               "btType": {
                 "type": "string"
+              },
+              "isStroke": {
+                "type": "boolean"
               }
             }
           }
@@ -32130,6 +32105,9 @@
               "axis": {
                 "$ref": "#/components/schemas/BTVector3d-389"
               },
+              "btType": {
+                "type": "string"
+              },
               "majorRadius": {
                 "type": "number",
                 "format": "double"
@@ -32140,9 +32118,6 @@
               },
               "origin": {
                 "$ref": "#/components/schemas/BTVector3d-389"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -32604,6 +32579,9 @@
           {
             "type": "object",
             "properties": {
+              "btType": {
+                "type": "string"
+              },
               "features": {
                 "type": "array",
                 "items": {
@@ -32612,9 +32590,6 @@
               },
               "updateSuppressionAttributes": {
                 "type": "boolean"
-              },
-              "btType": {
-                "type": "string"
               }
             }
           }
@@ -32629,11 +32604,8 @@
           {
             "type": "object",
             "properties": {
-              "features": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BTMFeature-134"
-                }
+              "btType": {
+                "type": "string"
               },
               "featureStates": {
                 "type": "object",
@@ -32641,8 +32613,11 @@
                   "$ref": "#/components/schemas/BTFeatureState-1688"
                 }
               },
-              "btType": {
-                "type": "string"
+              "features": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BTMFeature-134"
+                }
               }
             }
           }
@@ -32935,12 +32910,14 @@
           {
             "type": "object",
             "properties": {
-              "source": {
-                "type": "integer",
-                "format": "int32"
-              },
               "company": {
                 "$ref": "#/components/schemas/BTCompanySummaryInfo"
+              },
+              "email": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
               },
               "globalPermissions": {
                 "$ref": "#/components/schemas/GlobalPermissionInfo"
@@ -32955,14 +32932,12 @@
                 "type": "string",
                 "format": "date-time"
               },
-              "firstName": {
-                "type": "string"
-              },
               "lastName": {
                 "type": "string"
               },
-              "email": {
-                "type": "string"
+              "source": {
+                "type": "integer",
+                "format": "int32"
               }
             }
           }
@@ -33042,30 +33017,34 @@
           {
             "type": "object",
             "properties": {
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "creator": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              },
               "description": {
+                "type": "string"
+              },
+              "documentId": {
+                "type": "string"
+              },
+              "lastModifier": {
+                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+              },
+              "microversion": {
                 "type": "string"
               },
               "modifiedAt": {
                 "type": "string",
                 "format": "date-time"
               },
-              "createdAt": {
+              "overrideDate": {
                 "type": "string",
                 "format": "date-time"
               },
-              "lastModifier": {
-                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-              },
-              "documentId": {
-                "type": "string"
-              },
-              "creator": {
-                "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
-              },
-              "thumbnail": {
-                "$ref": "#/components/schemas/BTThumbnailInfo"
-              },
-              "microversion": {
+              "parent": {
                 "type": "string"
               },
               "parents": {
@@ -33074,14 +33053,10 @@
                   "$ref": "#/components/schemas/BTVersionInfo"
                 }
               },
-              "overrideDate": {
-                "type": "string",
-                "format": "date-time"
+              "thumbnail": {
+                "$ref": "#/components/schemas/BTThumbnailInfo"
               },
               "type": {
-                "type": "string"
-              },
-              "parent": {
                 "type": "string"
               }
             }
@@ -33553,22 +33528,70 @@
       },
       "BTWorkspaceInfo": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTVersionInfoBase"
+        "properties": {
+          "canDelete": {
+            "type": "boolean"
           },
-          {
-            "type": "object",
-            "properties": {
-              "isReadOnly": {
-                "type": "boolean"
-              },
-              "canDelete": {
-                "type": "boolean"
-              }
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "creator": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "description": {
+            "type": "string"
+          },
+          "documentId": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isReadOnly": {
+            "type": "boolean"
+          },
+          "lastModifier": {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+          },
+          "microversion": {
+            "type": "string"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "overrideDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "parent": {
+            "type": "string"
+          },
+          "parents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTVersionInfo"
             }
+          },
+          "thumbnail": {
+            "$ref": "#/components/schemas/BTThumbnailInfo"
+          },
+          "type": {
+            "type": "string"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
           }
-        ]
+        }
       },
       "BTWorkspacePartParams": {
         "type": "object",

@@ -73,10 +73,10 @@ class BTConfiguredPartPropertiesTable2740AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "part_deterministic_id": (str,),  # noqa: E501
-            "property_node_id": (str,),  # noqa: E501
-            "part_deterministic_ids": ([str],),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "part_deterministic_id": (str,),  # noqa: E501
+            "part_deterministic_ids": ([str],),  # noqa: E501
+            "property_node_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -84,10 +84,10 @@ class BTConfiguredPartPropertiesTable2740AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "part_deterministic_id": "partDeterministicId",  # noqa: E501
-        "property_node_id": "propertyNodeId",  # noqa: E501
-        "part_deterministic_ids": "partDeterministicIds",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "part_deterministic_id": "partDeterministicId",  # noqa: E501
+        "part_deterministic_ids": "partDeterministicIds",  # noqa: E501
+        "property_node_id": "propertyNodeId",  # noqa: E501
     }
 
     @staticmethod
@@ -128,10 +128,10 @@ class BTConfiguredPartPropertiesTable2740AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            part_deterministic_id (str): [optional]  # noqa: E501
-            property_node_id (str): [optional]  # noqa: E501
-            part_deterministic_ids ([str]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            part_deterministic_id (str): [optional]  # noqa: E501
+            part_deterministic_ids ([str]): [optional]  # noqa: E501
+            property_node_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

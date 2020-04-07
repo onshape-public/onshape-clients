@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**foreign_id** | **str** |  | [optional] 
-**location_info** | [**bt_foreign_data_response1070.BTForeignDataResponse1070**](BTForeignDataResponse1070.md) |  | [optional] 
-**foreign_name** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**foreign_id** | **str** |  | [optional] 
+**foreign_name** | **str** |  | [optional] 
+**location_info** | [**bt_foreign_data_response1070.BTForeignDataResponse1070**](BTForeignDataResponse1070.md) |  | [optional] 
 **import_microversion** | **str** |  | [optional] 
 **node_id** | **str** |  | [optional] 
 **parameter_id** | **str** |  | [optional] 

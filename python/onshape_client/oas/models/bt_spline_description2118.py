@@ -96,12 +96,12 @@ class BTSplineDescription2118(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "control_points": ([float],),  # noqa: E501
             "degree": (int,),  # noqa: E501
             "is_periodic": (bool,),  # noqa: E501
             "is_rational": (bool,),  # noqa: E501
-            "control_points": ([float],),  # noqa: E501
             "knots": ([float],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "type": (str,),  # noqa: E501
         }
 
@@ -110,12 +110,12 @@ class BTSplineDescription2118(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "control_points": "controlPoints",  # noqa: E501
         "degree": "degree",  # noqa: E501
         "is_periodic": "isPeriodic",  # noqa: E501
         "is_rational": "isRational",  # noqa: E501
-        "control_points": "controlPoints",  # noqa: E501
         "knots": "knots",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "type": "type",  # noqa: E501
     }
 
@@ -156,12 +156,12 @@ class BTSplineDescription2118(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            control_points ([float]): [optional]  # noqa: E501
             degree (int): [optional]  # noqa: E501
             is_periodic (bool): [optional]  # noqa: E501
             is_rational (bool): [optional]  # noqa: E501
-            control_points ([float]): [optional]  # noqa: E501
             knots ([float]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

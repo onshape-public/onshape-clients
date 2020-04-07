@@ -73,12 +73,12 @@ class BTSplineDescription2118AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "control_points": ([float],),  # noqa: E501
             "degree": (int,),  # noqa: E501
             "is_periodic": (bool,),  # noqa: E501
             "is_rational": (bool,),  # noqa: E501
-            "control_points": ([float],),  # noqa: E501
             "knots": ([float],),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -86,12 +86,12 @@ class BTSplineDescription2118AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "control_points": "controlPoints",  # noqa: E501
         "degree": "degree",  # noqa: E501
         "is_periodic": "isPeriodic",  # noqa: E501
         "is_rational": "isRational",  # noqa: E501
-        "control_points": "controlPoints",  # noqa: E501
         "knots": "knots",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -132,12 +132,12 @@ class BTSplineDescription2118AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            control_points ([float]): [optional]  # noqa: E501
             degree (int): [optional]  # noqa: E501
             is_periodic (bool): [optional]  # noqa: E501
             is_rational (bool): [optional]  # noqa: E501
-            control_points ([float]): [optional]  # noqa: E501
             knots ([float]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

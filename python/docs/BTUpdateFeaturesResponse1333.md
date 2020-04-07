@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**features** | [**[btm_feature134.BTMFeature134]**](BTMFeature134.md) |  | [optional] 
-**feature_states** | [**{str: (bt_feature_state1688.BTFeatureState1688,)}**](BTFeatureState1688.md) |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**feature_states** | [**{str: (bt_feature_state1688.BTFeatureState1688,)}**](BTFeatureState1688.md) |  | [optional] 
+**features** | [**[btm_feature134.BTMFeature134]**](BTMFeature134.md) |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

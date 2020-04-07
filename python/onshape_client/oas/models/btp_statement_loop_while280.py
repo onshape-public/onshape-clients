@@ -114,8 +114,8 @@ class BTPStatementLoopWhile280(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "condition": (btp_expression9.BTPExpression9,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "condition": (btp_expression9.BTPExpression9,),  # noqa: E501
             "atomic": (bool,),  # noqa: E501
             "documentation_type": (str,),  # noqa: E501
             "end_source_location": (int,),  # noqa: E501
@@ -135,8 +135,8 @@ class BTPStatementLoopWhile280(ModelComposed):
         return None
 
     attribute_map = {
-        "condition": "condition",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "condition": "condition",  # noqa: E501
         "atomic": "atomic",  # noqa: E501
         "documentation_type": "documentationType",  # noqa: E501
         "end_source_location": "endSourceLocation",  # noqa: E501
@@ -188,8 +188,8 @@ class BTPStatementLoopWhile280(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            condition (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             atomic (bool): [optional]  # noqa: E501
             documentation_type (str): [optional]  # noqa: E501
             end_source_location (int): [optional]  # noqa: E501

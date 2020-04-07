@@ -82,8 +82,8 @@ class BTSMDefinitionEntityTypeFilter1651AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "sm_definition_entity_type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "sm_definition_entity_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -91,8 +91,8 @@ class BTSMDefinitionEntityTypeFilter1651AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "sm_definition_entity_type": "smDefinitionEntityType",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "sm_definition_entity_type": "smDefinitionEntityType",  # noqa: E501
     }
 
     @staticmethod
@@ -133,8 +133,8 @@ class BTSMDefinitionEntityTypeFilter1651AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            sm_definition_entity_type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            sm_definition_entity_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

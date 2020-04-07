@@ -80,13 +80,13 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "values_field_index": (int,),  # noqa: E501
-            "configuration_parameter_id_field_index": (int,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "configuration_parameter_id": (str,),  # noqa: E501
+            "configuration_parameter_id_field_index": (int,),  # noqa: E501
             "values": (
                 [btm_configured_value1341.BTMConfiguredValue1341],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "values_field_index": (int,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,11 +94,11 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "values_field_index": "valuesFieldIndex",  # noqa: E501
-        "configuration_parameter_id_field_index": "configurationParameterIdFieldIndex",  # noqa: E501
-        "configuration_parameter_id": "configurationParameterId",  # noqa: E501
-        "values": "values",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "configuration_parameter_id": "configurationParameterId",  # noqa: E501
+        "configuration_parameter_id_field_index": "configurationParameterIdFieldIndex",  # noqa: E501
+        "values": "values",  # noqa: E501
+        "values_field_index": "valuesFieldIndex",  # noqa: E501
     }
 
     @staticmethod
@@ -139,11 +139,11 @@ class BTMParameterConfigured2222AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            values_field_index (int): [optional]  # noqa: E501
-            configuration_parameter_id_field_index (int): [optional]  # noqa: E501
-            configuration_parameter_id (str): [optional]  # noqa: E501
-            values ([btm_configured_value1341.BTMConfiguredValue1341]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            configuration_parameter_id (str): [optional]  # noqa: E501
+            configuration_parameter_id_field_index (int): [optional]  # noqa: E501
+            values ([btm_configured_value1341.BTMConfiguredValue1341]): [optional]  # noqa: E501
+            values_field_index (int): [optional]  # noqa: E501
         """
 
         self._data_store = {}

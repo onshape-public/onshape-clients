@@ -73,8 +73,8 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "part_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "part_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "part_id": "partId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "part_id": "partId",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTFullElementIdAndPartId643AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            part_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            part_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

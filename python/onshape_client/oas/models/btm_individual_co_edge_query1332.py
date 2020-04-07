@@ -96,13 +96,13 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "face_query": (
-                btm_individual_query138.BTMIndividualQuery138,
-            ),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
             "edge_query": (
                 btm_individual_query138.BTMIndividualQuery138,
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "face_query": (
+                btm_individual_query138.BTMIndividualQuery138,
+            ),  # noqa: E501
             "deterministic_id_list": (
                 btm_individual_query_base139.BTMIndividualQueryBase139,
             ),  # noqa: E501
@@ -114,10 +114,10 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
             ),  # noqa: E501
             "query_string": (str,),  # noqa: E501
             "persistent_query": (btp_statement269.BTPStatement269,),  # noqa: E501
+            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
             "variable_name": (
                 btm_individual_query138.BTMIndividualQuery138,
             ),  # noqa: E501
-            "query_statement": (btp_statement269.BTPStatement269,),  # noqa: E501
         }
 
     @staticmethod
@@ -125,9 +125,9 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
         return None
 
     attribute_map = {
-        "face_query": "faceQuery",  # noqa: E501
-        "edge_query": "edgeQuery",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "edge_query": "edgeQuery",  # noqa: E501
+        "face_query": "faceQuery",  # noqa: E501
         "deterministic_id_list": "deterministicIdList",  # noqa: E501
         "deterministic_ids": "deterministicIds",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
@@ -135,8 +135,8 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
         "query": "query",  # noqa: E501
         "query_string": "queryString",  # noqa: E501
         "persistent_query": "persistentQuery",  # noqa: E501
-        "variable_name": "variableName",  # noqa: E501
         "query_statement": "queryStatement",  # noqa: E501
+        "variable_name": "variableName",  # noqa: E501
     }
 
     required_properties = set(
@@ -176,9 +176,9 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            face_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
-            edge_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            edge_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
+            face_query (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             deterministic_id_list (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             deterministic_ids ([str]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
@@ -186,8 +186,8 @@ class BTMIndividualCoEdgeQuery1332(ModelComposed):
             query (btm_individual_query_base139.BTMIndividualQueryBase139): [optional]  # noqa: E501
             query_string (str): [optional]  # noqa: E501
             persistent_query (btp_statement269.BTPStatement269): [optional]  # noqa: E501
-            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
             query_statement (btp_statement269.BTPStatement269): [optional]  # noqa: E501
+            variable_name (btm_individual_query138.BTMIndividualQuery138): [optional]  # noqa: E501
         """
 
         self._data_store = {}

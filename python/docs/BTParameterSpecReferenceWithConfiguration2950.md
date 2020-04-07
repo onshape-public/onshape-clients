@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max_number_of_picks** | **int** |  | [optional] 
-**allowed_insertable_types** | **[str]** |  | [optional] 
 **allow_assemblies** | **bool** |  | [optional] 
+**allowed_insertable_types** | **[str]** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**max_number_of_picks** | **int** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 

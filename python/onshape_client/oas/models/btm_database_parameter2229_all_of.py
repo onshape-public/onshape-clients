@@ -73,8 +73,8 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "database_id": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "database_id": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "database_id": "databaseId",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "database_id": "databaseId",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMDatabaseParameter2229AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            database_id (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            database_id (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

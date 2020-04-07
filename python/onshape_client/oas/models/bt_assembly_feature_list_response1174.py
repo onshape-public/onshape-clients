@@ -96,14 +96,14 @@ class BTAssemblyFeatureListResponse1174(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "feature_states": (
+                {str: (bt_feature_state1688.BTFeatureState1688,)},
+            ),  # noqa: E501
             "features": (
                 [btm_assembly_feature887.BTMAssemblyFeature887],
             ),  # noqa: E501
             "is_complete": (bool,),  # noqa: E501
-            "feature_states": (
-                {str: (bt_feature_state1688.BTFeatureState1688,)},
-            ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "library_version": (int,),  # noqa: E501
             "microversion_skew": (bool,),  # noqa: E501
             "reject_microversion_skew": (bool,),  # noqa: E501
@@ -116,10 +116,10 @@ class BTAssemblyFeatureListResponse1174(ModelComposed):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "feature_states": "featureStates",  # noqa: E501
         "features": "features",  # noqa: E501
         "is_complete": "isComplete",  # noqa: E501
-        "feature_states": "featureStates",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
         "library_version": "libraryVersion",  # noqa: E501
         "microversion_skew": "microversionSkew",  # noqa: E501
         "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
@@ -164,10 +164,10 @@ class BTAssemblyFeatureListResponse1174(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
             features ([btm_assembly_feature887.BTMAssemblyFeature887]): [optional]  # noqa: E501
             is_complete (bool): [optional]  # noqa: E501
-            feature_states ({str: (bt_feature_state1688.BTFeatureState1688,)}): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
             reject_microversion_skew (bool): [optional]  # noqa: E501

@@ -90,14 +90,14 @@ class BTMSketchTextEntity1761(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "font_name": (str,),  # noqa: E501
-            "text": (str,),  # noqa: E501
             "ascent": (float,),  # noqa: E501
-            "baseline_start_x": (float,),  # noqa: E501
-            "baseline_start_y": (float,),  # noqa: E501
             "baseline_direction_x": (float,),  # noqa: E501
             "baseline_direction_y": (float,),  # noqa: E501
+            "baseline_start_x": (float,),  # noqa: E501
+            "baseline_start_y": (float,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "font_name": (str,),  # noqa: E501
+            "text": (str,),  # noqa: E501
             "control_box_ids": ([str],),  # noqa: E501
             "entity_id": (str,),  # noqa: E501
             "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
@@ -113,14 +113,14 @@ class BTMSketchTextEntity1761(ModelComposed):
         return None
 
     attribute_map = {
-        "font_name": "fontName",  # noqa: E501
-        "text": "text",  # noqa: E501
         "ascent": "ascent",  # noqa: E501
-        "baseline_start_x": "baselineStartX",  # noqa: E501
-        "baseline_start_y": "baselineStartY",  # noqa: E501
         "baseline_direction_x": "baselineDirectionX",  # noqa: E501
         "baseline_direction_y": "baselineDirectionY",  # noqa: E501
+        "baseline_start_x": "baselineStartX",  # noqa: E501
+        "baseline_start_y": "baselineStartY",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "font_name": "fontName",  # noqa: E501
+        "text": "text",  # noqa: E501
         "control_box_ids": "controlBoxIds",  # noqa: E501
         "entity_id": "entityId",  # noqa: E501
         "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
@@ -168,14 +168,14 @@ class BTMSketchTextEntity1761(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            font_name (str): [optional]  # noqa: E501
-            text (str): [optional]  # noqa: E501
             ascent (float): [optional]  # noqa: E501
-            baseline_start_x (float): [optional]  # noqa: E501
-            baseline_start_y (float): [optional]  # noqa: E501
             baseline_direction_x (float): [optional]  # noqa: E501
             baseline_direction_y (float): [optional]  # noqa: E501
+            baseline_start_x (float): [optional]  # noqa: E501
+            baseline_start_y (float): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            font_name (str): [optional]  # noqa: E501
+            text (str): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501
             entity_id_and_replace_in_dependent_fields (str): [optional]  # noqa: E501

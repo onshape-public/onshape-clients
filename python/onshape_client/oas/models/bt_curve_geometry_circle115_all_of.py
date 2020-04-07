@@ -73,13 +73,13 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
+            "clockwise": (bool,),  # noqa: E501
             "radius": (float,),  # noqa: E501
             "xcenter": (float,),  # noqa: E501
-            "ycenter": (float,),  # noqa: E501
             "xdir": (float,),  # noqa: E501
+            "ycenter": (float,),  # noqa: E501
             "ydir": (float,),  # noqa: E501
-            "clockwise": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -87,13 +87,13 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
+        "clockwise": "clockwise",  # noqa: E501
         "radius": "radius",  # noqa: E501
         "xcenter": "xcenter",  # noqa: E501
-        "ycenter": "ycenter",  # noqa: E501
         "xdir": "xdir",  # noqa: E501
+        "ycenter": "ycenter",  # noqa: E501
         "ydir": "ydir",  # noqa: E501
-        "clockwise": "clockwise",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -134,13 +134,13 @@ class BTCurveGeometryCircle115AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
+            clockwise (bool): [optional]  # noqa: E501
             radius (float): [optional]  # noqa: E501
             xcenter (float): [optional]  # noqa: E501
-            ycenter (float): [optional]  # noqa: E501
             xdir (float): [optional]  # noqa: E501
+            ycenter (float): [optional]  # noqa: E501
             ydir (float): [optional]  # noqa: E501
-            clockwise (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

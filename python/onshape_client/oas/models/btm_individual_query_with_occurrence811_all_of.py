@@ -73,8 +73,8 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "entity_query": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "entity_query": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -82,8 +82,8 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "entity_query": "entityQuery",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "entity_query": "entityQuery",  # noqa: E501
     }
 
     @staticmethod
@@ -124,8 +124,8 @@ class BTMIndividualQueryWithOccurrence811AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            entity_query (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            entity_query (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

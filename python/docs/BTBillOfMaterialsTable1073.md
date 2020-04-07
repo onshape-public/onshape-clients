@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bt_type** | **str** |  | [optional] 
+**failed_metadata_representative_occurrences** | **[str]** |  | [optional] 
 **indented** | **bool** |  | [optional] 
 **showing_excluded** | **bool** |  | [optional] 
-**failed_metadata_representative_occurrences** | **[str]** |  | [optional] 
-**bt_type** | **str** |  | [optional] 
 **all_row_values** | **[[str]]** |  | [optional] 
 **column_count** | **int** |  | [optional] 
 **frozen_columns** | **int** |  | [optional] 

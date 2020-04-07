@@ -125,8 +125,8 @@ class BTConfiguredValuesColumnInfo1025(ModelComposed):
         """
         return {
             "bt_type": (str,),  # noqa: E501
-            "parent_name": (str,),  # noqa: E501
             "parent_id": (str,),  # noqa: E501
+            "parent_name": (str,),  # noqa: E501
             "parent_type": (str,),  # noqa: E501
             "id": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
@@ -148,8 +148,8 @@ class BTConfiguredValuesColumnInfo1025(ModelComposed):
 
     attribute_map = {
         "bt_type": "btType",  # noqa: E501
-        "parent_name": "parentName",  # noqa: E501
         "parent_id": "parentId",  # noqa: E501
+        "parent_name": "parentName",  # noqa: E501
         "parent_type": "parentType",  # noqa: E501
         "id": "id",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
@@ -194,8 +194,8 @@ class BTConfiguredValuesColumnInfo1025(ModelComposed):
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
             bt_type (str): [optional]  # noqa: E501
-            parent_name (str): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
+            parent_name (str): [optional]  # noqa: E501
             parent_type (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501

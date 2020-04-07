@@ -75,7 +75,6 @@ class BTEncodedConfigurationInfo(ModelNormal):
         return {
             "encoded_id": (str,),  # noqa: E501
             "query_param": (str,),  # noqa: E501
-            "query_param_": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -85,7 +84,6 @@ class BTEncodedConfigurationInfo(ModelNormal):
     attribute_map = {
         "encoded_id": "encodedId",  # noqa: E501
         "query_param": "queryParam",  # noqa: E501
-        "query_param_": "queryParam_",  # noqa: E501
     }
 
     @staticmethod
@@ -128,7 +126,6 @@ class BTEncodedConfigurationInfo(ModelNormal):
                                 If omitted no type conversion is done.
             encoded_id (str): [optional]  # noqa: E501
             query_param (str): [optional]  # noqa: E501
-            query_param_ (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

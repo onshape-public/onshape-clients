@@ -90,8 +90,8 @@ class BTFeatureDefinitionCall1406(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "feature": (btm_feature134.BTMFeature134,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "feature": (btm_feature134.BTMFeature134,),  # noqa: E501
             "library_version": (int,),  # noqa: E501
             "microversion_skew": (bool,),  # noqa: E501
             "reject_microversion_skew": (bool,),  # noqa: E501
@@ -104,8 +104,8 @@ class BTFeatureDefinitionCall1406(ModelComposed):
         return None
 
     attribute_map = {
-        "feature": "feature",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "feature": "feature",  # noqa: E501
         "library_version": "libraryVersion",  # noqa: E501
         "microversion_skew": "microversionSkew",  # noqa: E501
         "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
@@ -150,8 +150,8 @@ class BTFeatureDefinitionCall1406(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            feature (btm_feature134.BTMFeature134): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            feature (btm_feature134.BTMFeature134): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
             reject_microversion_skew (bool): [optional]  # noqa: E501

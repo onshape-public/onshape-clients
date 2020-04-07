@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**collection_changes** | **{str: ([bt_diff_info.BTDiffInfo],)}** |  | [optional] 
+**changes** | [**{str: (BTDiffInfo,)}**](BTDiffInfo.md) |  | [optional] 
 **entity_type** | **str** |  | [optional] 
 **geometry_change_messages** | **[str]** |  | [optional] 
 **source_id** | **str** |  | [optional] 

@@ -73,9 +73,9 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "feature_id": (str,),  # noqa: E501
             "filter_inner_loops": (bool,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -83,9 +83,9 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "feature_id": "featureId",  # noqa: E501
         "filter_inner_loops": "filterInnerLoops",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -126,9 +126,9 @@ class BTMIndividualSketchRegionQuery140AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             feature_id (str): [optional]  # noqa: E501
             filter_inner_loops (bool): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

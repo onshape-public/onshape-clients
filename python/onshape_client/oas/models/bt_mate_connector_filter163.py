@@ -84,8 +84,8 @@ class BTMateConnectorFilter163(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "requires_occurrence": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "requires_occurrence": (bool,),  # noqa: E501
         }
 
     @staticmethod
@@ -93,8 +93,8 @@ class BTMateConnectorFilter163(ModelComposed):
         return None
 
     attribute_map = {
-        "requires_occurrence": "requiresOccurrence",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "requires_occurrence": "requiresOccurrence",  # noqa: E501
     }
 
     required_properties = set(
@@ -134,8 +134,8 @@ class BTMateConnectorFilter163(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            requires_occurrence (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            requires_occurrence (bool): [optional]  # noqa: E501
         """
 
         self._data_store = {}

@@ -86,8 +86,8 @@ class BTFeatureStudioContents2239(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "contents": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "contents": (str,),  # noqa: E501
             "library_version": (int,),  # noqa: E501
             "microversion_skew": (bool,),  # noqa: E501
             "reject_microversion_skew": (bool,),  # noqa: E501
@@ -100,8 +100,8 @@ class BTFeatureStudioContents2239(ModelComposed):
         return None
 
     attribute_map = {
-        "contents": "contents",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "contents": "contents",  # noqa: E501
         "library_version": "libraryVersion",  # noqa: E501
         "microversion_skew": "microversionSkew",  # noqa: E501
         "reject_microversion_skew": "rejectMicroversionSkew",  # noqa: E501
@@ -146,8 +146,8 @@ class BTFeatureStudioContents2239(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            contents (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            contents (str): [optional]  # noqa: E501
             library_version (int): [optional]  # noqa: E501
             microversion_skew (bool): [optional]  # noqa: E501
             reject_microversion_skew (bool): [optional]  # noqa: E501

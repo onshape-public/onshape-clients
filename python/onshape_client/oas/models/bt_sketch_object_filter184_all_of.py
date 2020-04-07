@@ -80,9 +80,9 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "object_type": (str,),  # noqa: E501
-            "is_sketch_object": (bool,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "is_sketch_object": (bool,),  # noqa: E501
+            "object_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -90,9 +90,9 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "object_type": "objectType",  # noqa: E501
-        "is_sketch_object": "isSketchObject",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "is_sketch_object": "isSketchObject",  # noqa: E501
+        "object_type": "objectType",  # noqa: E501
     }
 
     @staticmethod
@@ -133,9 +133,9 @@ class BTSketchObjectFilter184AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            object_type (str): [optional]  # noqa: E501
-            is_sketch_object (bool): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            is_sketch_object (bool): [optional]  # noqa: E501
+            object_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

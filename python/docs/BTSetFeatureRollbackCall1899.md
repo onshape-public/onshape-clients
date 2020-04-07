@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rollback_index** | **int** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**rollback_index** | **int** |  | [optional] 
 **library_version** | **int** |  | [optional] 
 **microversion_skew** | **bool** |  | [optional] 
 **reject_microversion_skew** | **bool** |  | [optional] 

@@ -90,10 +90,10 @@ class BTMParameterArray2025(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "items": (
                 [btm_array_parameter_item1843.BTMArrayParameterItem1843],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "import_microversion": (str,),  # noqa: E501
             "node_id": (str,),  # noqa: E501
             "parameter_id": (str,),  # noqa: E501
@@ -104,8 +104,8 @@ class BTMParameterArray2025(ModelComposed):
         return None
 
     attribute_map = {
-        "items": "items",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "items": "items",  # noqa: E501
         "import_microversion": "importMicroversion",  # noqa: E501
         "node_id": "nodeId",  # noqa: E501
         "parameter_id": "parameterId",  # noqa: E501
@@ -148,8 +148,8 @@ class BTMParameterArray2025(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            items ([btm_array_parameter_item1843.BTMArrayParameterItem1843]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            items ([btm_array_parameter_item1843.BTMArrayParameterItem1843]): [optional]  # noqa: E501
             import_microversion (str): [optional]  # noqa: E501
             node_id (str): [optional]  # noqa: E501
             parameter_id (str): [optional]  # noqa: E501

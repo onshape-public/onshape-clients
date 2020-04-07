@@ -97,8 +97,8 @@ class BTFSValueOther1124(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "type": (str,),  # noqa: E501
             "bt_type": (str,),  # noqa: E501
+            "type": (str,),  # noqa: E501
             "configuration_value_string": (str,),  # noqa: E501
             "standard_type_name": (str,),  # noqa: E501
             "type_tag": (str,),  # noqa: E501
@@ -119,8 +119,8 @@ class BTFSValueOther1124(ModelComposed):
         return None
 
     attribute_map = {
-        "type": "type",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "type": "type",  # noqa: E501
         "configuration_value_string": "configurationValueString",  # noqa: E501
         "standard_type_name": "standardTypeName",  # noqa: E501
         "type_tag": "typeTag",  # noqa: E501
@@ -164,8 +164,8 @@ class BTFSValueOther1124(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            type (str): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            type (str): [optional]  # noqa: E501
             configuration_value_string (str): [optional]  # noqa: E501
             standard_type_name (str): [optional]  # noqa: E501
             type_tag (str): [optional]  # noqa: E501

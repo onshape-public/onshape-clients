@@ -102,8 +102,8 @@ class BTMSketchCurve4(ModelComposed):
         return {
             "bt_type": (str,),  # noqa: E501
             "center_id": (str,),  # noqa: E501
-            "internal_ids": ([str],),  # noqa: E501
             "geometry": (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
+            "internal_ids": ([str],),  # noqa: E501
             "control_box_ids": ([str],),  # noqa: E501
             "entity_id": (str,),  # noqa: E501
             "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
@@ -125,8 +125,8 @@ class BTMSketchCurve4(ModelComposed):
     attribute_map = {
         "bt_type": "btType",  # noqa: E501
         "center_id": "centerId",  # noqa: E501
-        "internal_ids": "internalIds",  # noqa: E501
         "geometry": "geometry",  # noqa: E501
+        "internal_ids": "internalIds",  # noqa: E501
         "control_box_ids": "controlBoxIds",  # noqa: E501
         "entity_id": "entityId",  # noqa: E501
         "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
@@ -176,8 +176,8 @@ class BTMSketchCurve4(ModelComposed):
                                 If omitted no type conversion is done.
             bt_type (str): [optional]  # noqa: E501
             center_id (str): [optional]  # noqa: E501
-            internal_ids ([str]): [optional]  # noqa: E501
             geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
+            internal_ids ([str]): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501
             entity_id_and_replace_in_dependent_fields (str): [optional]  # noqa: E501

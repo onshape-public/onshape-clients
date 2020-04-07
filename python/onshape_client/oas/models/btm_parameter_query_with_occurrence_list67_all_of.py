@@ -84,13 +84,13 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "occurrences": ([bt_occurrence74.BTOccurrence74],),  # noqa: E501
             "queries": (
                 [
                     btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904
                 ],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
         }
 
     @staticmethod
@@ -98,9 +98,9 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
         return None
 
     attribute_map = {
+        "bt_type": "btType",  # noqa: E501
         "occurrences": "occurrences",  # noqa: E501
         "queries": "queries",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
     }
 
     @staticmethod
@@ -141,9 +141,9 @@ class BTMParameterQueryWithOccurrenceList67AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
+            bt_type (str): [optional]  # noqa: E501
             occurrences ([bt_occurrence74.BTOccurrence74]): [optional]  # noqa: E501
             queries ([btm_individual_query_with_occurrence_base904.BTMIndividualQueryWithOccurrenceBase904]): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
         """
 
         self._data_store = {}

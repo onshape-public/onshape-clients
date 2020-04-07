@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_name** | **str** |  | [optional] 
-**item_label_template** | **str** |  | [optional] 
-**driven_query** | **str** |  | [optional] 
 **bt_type** | **str** |  | [optional] 
+**driven_query** | **str** |  | [optional] 
+**item_label_template** | **str** |  | [optional] 
+**item_name** | **str** |  | [optional] 
 **additional_localized_strings** | **int** |  | [optional] 
 **column_name** | **str** |  | [optional] 
 **default_value** | [**btm_parameter1.BTMParameter1**](BTMParameter1.md) |  | [optional] 

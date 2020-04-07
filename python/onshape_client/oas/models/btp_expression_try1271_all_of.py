@@ -82,11 +82,11 @@ class BTPExpressionTry1271AllOf(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "space_after_try": (btp_space10.BTPSpace10,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "expression": (btp_expression9.BTPExpression9,),  # noqa: E501
             "silent": (bool,),  # noqa: E501
             "space_after_silent": (btp_space10.BTPSpace10,),  # noqa: E501
-            "expression": (btp_expression9.BTPExpression9,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "space_after_try": (btp_space10.BTPSpace10,),  # noqa: E501
         }
 
     @staticmethod
@@ -94,11 +94,11 @@ class BTPExpressionTry1271AllOf(ModelNormal):
         return None
 
     attribute_map = {
-        "space_after_try": "spaceAfterTry",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "expression": "expression",  # noqa: E501
         "silent": "silent",  # noqa: E501
         "space_after_silent": "spaceAfterSilent",  # noqa: E501
-        "expression": "expression",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "space_after_try": "spaceAfterTry",  # noqa: E501
     }
 
     @staticmethod
@@ -139,11 +139,11 @@ class BTPExpressionTry1271AllOf(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            space_after_try (btp_space10.BTPSpace10): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
+            expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
             silent (bool): [optional]  # noqa: E501
             space_after_silent (btp_space10.BTPSpace10): [optional]  # noqa: E501
-            expression (btp_expression9.BTPExpression9): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            space_after_try (btp_space10.BTPSpace10): [optional]  # noqa: E501
         """
 
         self._data_store = {}

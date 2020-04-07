@@ -92,11 +92,11 @@ class BTMSketchCurveSegment155(ModelComposed):
                 and the value is attribute type.
         """
         return {
-            "start_point_id": (str,),  # noqa: E501
+            "bt_type": (str,),  # noqa: E501
+            "end_param": (float,),  # noqa: E501
             "end_point_id": (str,),  # noqa: E501
             "start_param": (float,),  # noqa: E501
-            "end_param": (float,),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
+            "start_point_id": (str,),  # noqa: E501
             "control_box_ids": ([str],),  # noqa: E501
             "entity_id": (str,),  # noqa: E501
             "entity_id_and_replace_in_dependent_fields": (str,),  # noqa: E501
@@ -106,8 +106,8 @@ class BTMSketchCurveSegment155(ModelComposed):
             "node_id": (str,),  # noqa: E501
             "parameters": ([btm_parameter1.BTMParameter1],),  # noqa: E501
             "center_id": (str,),  # noqa: E501
-            "internal_ids": ([str],),  # noqa: E501
             "geometry": (bt_curve_geometry114.BTCurveGeometry114,),  # noqa: E501
+            "internal_ids": ([str],),  # noqa: E501
         }
 
     @staticmethod
@@ -115,11 +115,11 @@ class BTMSketchCurveSegment155(ModelComposed):
         return None
 
     attribute_map = {
-        "start_point_id": "startPointId",  # noqa: E501
+        "bt_type": "btType",  # noqa: E501
+        "end_param": "endParam",  # noqa: E501
         "end_point_id": "endPointId",  # noqa: E501
         "start_param": "startParam",  # noqa: E501
-        "end_param": "endParam",  # noqa: E501
-        "bt_type": "btType",  # noqa: E501
+        "start_point_id": "startPointId",  # noqa: E501
         "control_box_ids": "controlBoxIds",  # noqa: E501
         "entity_id": "entityId",  # noqa: E501
         "entity_id_and_replace_in_dependent_fields": "entityIdAndReplaceInDependentFields",  # noqa: E501
@@ -129,8 +129,8 @@ class BTMSketchCurveSegment155(ModelComposed):
         "node_id": "nodeId",  # noqa: E501
         "parameters": "parameters",  # noqa: E501
         "center_id": "centerId",  # noqa: E501
-        "internal_ids": "internalIds",  # noqa: E501
         "geometry": "geometry",  # noqa: E501
+        "internal_ids": "internalIds",  # noqa: E501
     }
 
     required_properties = set(
@@ -170,11 +170,11 @@ class BTMSketchCurveSegment155(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            start_point_id (str): [optional]  # noqa: E501
+            bt_type (str): [optional]  # noqa: E501
+            end_param (float): [optional]  # noqa: E501
             end_point_id (str): [optional]  # noqa: E501
             start_param (float): [optional]  # noqa: E501
-            end_param (float): [optional]  # noqa: E501
-            bt_type (str): [optional]  # noqa: E501
+            start_point_id (str): [optional]  # noqa: E501
             control_box_ids ([str]): [optional]  # noqa: E501
             entity_id (str): [optional]  # noqa: E501
             entity_id_and_replace_in_dependent_fields (str): [optional]  # noqa: E501
@@ -184,8 +184,8 @@ class BTMSketchCurveSegment155(ModelComposed):
             node_id (str): [optional]  # noqa: E501
             parameters ([btm_parameter1.BTMParameter1]): [optional]  # noqa: E501
             center_id (str): [optional]  # noqa: E501
-            internal_ids ([str]): [optional]  # noqa: E501
             geometry (bt_curve_geometry114.BTCurveGeometry114): [optional]  # noqa: E501
+            internal_ids ([str]): [optional]  # noqa: E501
         """
 
         self._data_store = {}

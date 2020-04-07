@@ -92,10 +92,10 @@ class BTExportTessellatedEdgesBody890(ModelComposed):
                 and the value is attribute type.
         """
         return {
+            "bt_type": (str,),  # noqa: E501
             "edges": (
                 [bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364],
             ),  # noqa: E501
-            "bt_type": (str,),  # noqa: E501
             "constituents": ([str],),  # noqa: E501
             "id": (str,),  # noqa: E501
         }
@@ -105,8 +105,8 @@ class BTExportTessellatedEdgesBody890(ModelComposed):
         return None
 
     attribute_map = {
-        "edges": "edges",  # noqa: E501
         "bt_type": "btType",  # noqa: E501
+        "edges": "edges",  # noqa: E501
         "constituents": "constituents",  # noqa: E501
         "id": "id",  # noqa: E501
     }
@@ -148,8 +148,8 @@ class BTExportTessellatedEdgesBody890(ModelComposed):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            edges ([bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364]): [optional]  # noqa: E501
             bt_type (str): [optional]  # noqa: E501
+            edges ([bt_export_tessellated_edges_edge1364.BTExportTessellatedEdgesEdge1364]): [optional]  # noqa: E501
             constituents ([str]): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
         """
