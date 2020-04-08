@@ -161,7 +161,7 @@ class PythonPackage(ClientPackage):
 
     @ClientPackageMeta.action
     def test(self, marker=None):
-        result = self.run(f"pipenv run pytest {f'-m {marker}' if marker else ''} -n 2")
+        result = self.run(f"pipenv run pytest {f'-m {marker}' if marker else ''} -n 8")
         if result.returncode != 0:
             raise CliError("Error testing client.")
 
