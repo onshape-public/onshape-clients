@@ -1,7 +1,7 @@
 import json
 
 import numpy as np
-from onshape_client.client import Client
+from onshape_client.client import get_client
 from onshape_client.oas import BTAssemblyInstanceDefinitionParams, TransformGroup
 
 
@@ -28,7 +28,7 @@ class AssemblyDefinition:
     def make_sub_assembly_definition(self, sa_occurrence_path):
         """Get the AssemblyDefinition representing the subassembly."""
         sa = self.get_instance(sa_occurrence_path)
-        result = Client.get_client().assemblies_api.get_assembly_definition(
+        get_client().assemblies_api.get_assembly_definition(
             sa["documentId"],
             "v",
             sa["documentVersion"],

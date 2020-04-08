@@ -345,6 +345,14 @@ class Client:
         self.webhooks_api = api.WebhooksApi(api_client)
 
 
+def get_client() -> Client:
+    """ get an singleton_instance of the client class singleton. """
+    client = Client.singleton_instance
+    if not client:
+        raise Exception("Please manually instantiate the client.")
+    return client
+
+
 class OAuthAuthorizationMethods(Enum):
     # This is fully implemented, and meant for locally hosted applications (desktop apps)
     LOCALHOST_SERVER = "localhost_server"

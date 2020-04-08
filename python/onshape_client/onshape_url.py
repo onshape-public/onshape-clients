@@ -2,7 +2,7 @@ import copy
 import json
 import time
 
-from onshape_client.client import Client
+from onshape_client.client import get_client
 from onshape_client.compatible_imports import parse, parse_qs
 from onshape_client.oas import *
 from onshape_client.units import u
@@ -35,7 +35,7 @@ class OnshapeElement(object):
         configuration=None,
         sibling=None,
     ):
-        client = Client.get_client()
+        client = get_client()
         did = did if did else sibling.did
         wvm = wvm if wvm else sibling.wvm
         wvmid = wvmid if wvmid else sibling.wvmid
@@ -50,7 +50,7 @@ class OnshapeElement(object):
     @staticmethod
     def create(name="New Document"):
         """Returns a blank new document."""
-        client = Client.get_client()
+        client = get_client()
         doc_params = BTDocumentParams(name=name, is_public=True)
         doc = client.documents_api.create_document(doc_params)
         doc = OnshapeElement.create_from_ids(
@@ -60,7 +60,7 @@ class OnshapeElement(object):
 
     def import_file(self, file_path, translate=True, **kwargs):
         """Import a file from the local file system. Returns the URL of the resulting element if translated."""
-        client = Client.get_client()
+        client = get_client()
         result = client.blob_elements_api.upload_file_create_element(
             self.did,
             self.wvmid,
@@ -85,7 +85,7 @@ class OnshapeElement(object):
                 return False
             raise UserWarning(f"Translation failed")
 
-        polling_function = lambda: Client.get_client().translation_api.get_translation(
+        polling_function = lambda: get_client().translation_api.get_translation(
             translation_id
         )
         return OnshapeElement.poll(polling_function, is_polling_done)
@@ -106,11 +106,11 @@ class OnshapeElement(object):
             )
         )
         if self._get_element_info().data_type == OnshapeElement.DRAWING_DATA_TYPE:
-            func = Client.get_client().drawings_api.create_drawing_translation
+            func = get_client().drawings_api.create_drawing_translation
         elif self.element_type == "Assembly":
-            func = Client.get_client().assemblies_api.translate_format
+            func = get_client().assemblies_api.translate_format
         elif self.element_type == "Part Studio":
-            func = Client.get_client().part_studios_api.create_part_studio_translation
+            func = get_client().part_studios_api.create_part_studio_translation
         else:
             raise NotImplemented(
                 f"Export for {self.element_type} through the OnshapeElement isn't supported yet."
@@ -127,7 +127,7 @@ class OnshapeElement(object):
             count = 0
             for download_id in result.result_external_data_ids:
                 file_path.write_bytes(
-                    Client.get_client()
+                    get_client()
                     .documents_api.download_external_data(
                         did=self.did, fid=download_id, _preload_content=False
                     )
@@ -142,7 +142,7 @@ class OnshapeElement(object):
             raise UserWarning(
                 "Can only create a drawing in a workspace - not a version."
             )
-        drawing = Client.get_client().drawings_api.create_drawing_app_element(
+        drawing = get_client().drawings_api.create_drawing_app_element(
             bt_drawing_params=BTDrawingParams(
                 document_id=self.did,
                 workspace_id=self.wvmid,
@@ -206,13 +206,19 @@ class OnshapeElement(object):
             self.configuration = None
         self.optional_microversion = optional_microversion
 
+    @property
+    def mass_properties(self) -> BTMassPropertiesBulkInfo:
+        return get_client().part_studios_api.get_part_studio_mass_properties(
+            **self._get_DWMVE()
+        )
+
     def get_microversion_url(self):
         """Determine the microversion from the current version/workspace and return the path to that microversion. This
         will call the API to get the current microversion if the microversion is not already specified."""
         if self.optional_microversion:
             return self.get_url()
         else:
-            res = Client.get_client().documents_api.get_current_microversion(
+            res = get_client().documents_api.get_current_microversion(
                 self.did, self.wvm, self.wvmid, _preload_content=False
             )
             microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
@@ -240,7 +246,7 @@ class OnshapeElement(object):
         """
         :return:String "APPLICATION" (for a drawing or 3rd party application), "PARTSTUDIO" or "ASSEMBLY"
         """
-        elements = Client.get_client().documents_api.get_elements_in_document(
+        elements = get_client().documents_api.get_elements_in_document(
             self.did, self.wvm, self.wvmid
         )
         for element in elements:
@@ -267,7 +273,7 @@ class OnshapeElement(object):
 
     @property
     def microversion(self):
-        res = Client.get_client().documents_api.get_current_microversion(
+        res = get_client().documents_api.get_current_microversion(
             self.did, self.wvm, self.wvmid, _preload_content=False
         )
         microversion = json.loads(res.data.decode("UTF-8"))["microversion"]
@@ -298,7 +304,7 @@ class OnshapeElement(object):
         )
 
     def make_version(self, name, **kwargs):
-        result = Client.get_client().documents_api.create_version(
+        result = get_client().documents_api.create_version(
             self.did,
             bt_version_or_workspace_params=BTVersionOrWorkspaceParams(
                 name=name, document_id=self.did, **kwargs
@@ -326,7 +332,7 @@ class OnshapeElement(object):
         return message
 
     def new_assembly(self, name="Assembly"):
-        asm = Client.get_client().assemblies_api.create_assembly(
+        asm = get_client().assemblies_api.create_assembly(
             self.did,
             self.wvmid,
             BTModelElementParams(name=name),
@@ -338,7 +344,7 @@ class OnshapeElement(object):
         )
 
     def delete(self):
-        Client.get_client().documents_api.delete_document(self.did)
+        get_client().documents_api.delete_document(self.did)
 
     ########## Below methods call API methods and are not cached.
 
@@ -346,12 +352,15 @@ class OnshapeElement(object):
         return next(i for i in self._get_element_infos() if i.id == self.eid)
 
     def _get_document_info(self):
-        return Client.get_client().documents_api.get_document(self.did)
+        return get_client().documents_api.get_document(self.did)
 
     def _get_element_infos(self):
-        return Client.get_client().documents_api.get_elements_in_document(
+        return get_client().documents_api.get_elements_in_document(
             self.did, self.wvm, self.wvmid
         )
+
+    def _get_DWMVE(self):
+        return dict(did=self.did, wvm=self.wvm, wvmid=self.wvmid, eid=self.eid)
 
 
 class ConfiguredOnshapeElement(OnshapeElement):
@@ -371,14 +380,16 @@ class ConfiguredOnshapeElement(OnshapeElement):
         """A configuration is applied on top of the current element.
 
         To be used like:
+        >>> from onshape_client import Client
         >>> url = "https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90"
+        >>> client = Client()
         >>> my_element = ConfiguredOnshapeElement(url)
         >>> my_element.update_current_configuration({"size": 20*u.m})
         >>> my_element.get_url_with_configuration()
-        https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3DDefault%3Bsize%3D20.0%2Bmeter
+        'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3DDefault%3Bsize%3D20%2Bmeter'
         >>> my_element.update_current_configuration({"Configuration": "chamfered"})
         >>> my_element.get_url_with_configuration()
-        https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3Dchamfered%3Bsize%3D20.0%2Bmeter
+        'https://cad.onshape.com/documents/cca81d10f239db0db9481e6f/v/ca51b7554314d6aab254d2e6/e/69c9eedda86512966b20bc90?configuration=List_UKkGODiz574chc%3Dchamfered%3Bsize%3D20%2Bmeter'
         """
         url = self.get_url() + "?" + self.get_configuration_query_param()
         return url
@@ -395,7 +406,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return encoded_val["queryParam"]
 
     def _get_configuration_encoding_response(self):
-        res = Client.get_client().elements_api.encode_configuration_map(
+        res = get_client().elements_api.encode_configuration_map(
             self.did,
             self.eid,
             self._get_bt_configuration_params_for_current_configuration(),
@@ -461,7 +472,7 @@ class ConfiguredOnshapeElement(OnshapeElement):
         return parameter_map
 
     def _get_raw_configuration_params(self):
-        response = Client.get_client().elements_api.get_configuration(
+        response = get_client().elements_api.get_configuration(
             self.did, self.wvm, self.wvmid, self.eid, _preload_content=False
         )
         return json.loads(response.data.decode("utf-8"))
