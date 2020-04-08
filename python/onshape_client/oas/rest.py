@@ -282,9 +282,9 @@ class RESTClientObject(object):
             )
 
         if r.status == 403 or r.status == 401:
-            from onshape_client.client import Client
+            from onshape_client.client import get_client
 
-            client = Client.get_client()
+            client = get_client()
             if client.get_authentication_method() == "oauth":
                 client.do_oauth_flow()
                 headers["Authorization"] = "Bearer {}".format(

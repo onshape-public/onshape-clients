@@ -15,12 +15,13 @@ from ruamel.yaml import YAML
 collect_ignore = ["setup.py"]
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def element_bank(client, assets):
     yaml = YAML()
     urls_by_stack = yaml.load((assets / "urls.yaml").open())
+    stack_key = client.stack_key if client.stack_key else "onshape_client_test"
     try:
-        return urls_by_stack[client.stack_key]
+        return urls_by_stack[stack_key]
     except KeyError as e:
         raise KeyError(
             f"Cannot find element bank for stack {client.stack_key}. Please instantiate the bank manually by uploading "
@@ -28,7 +29,7 @@ def element_bank(client, assets):
         )
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def element(request, client, element_bank) -> OnshapeElement:
     """ Get a particular element from the bank by parametrizing the test with: `@pytest.mark.parametrize('assembly',
     ['three_axes'], indirect=True)`
@@ -63,24 +64,24 @@ def translator_format_to_extension():
     return {"PARASOLID": "x_t", "PDF": "pdf", "STL": "stl", "STEP": "stp"}
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def test_dir():
     return Path(__file__).parent
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def assets(test_dir):
     """Returns the general test assets folder."""
     return test_dir / "assets"
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def json_assets(assets):
     """Returns the JSON assets folder."""
     return assets / "json"
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def tmp_dir(test_dir):
     """Returns a temporary directory Path object."""
     tmp_dir = test_dir / "tmp"
@@ -127,7 +128,7 @@ def new_copied_document_factory(client, name_factory):
         d.delete()
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def name_factory():
     """Factory to generate a doc name."""
 
