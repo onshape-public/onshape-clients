@@ -27,7 +27,7 @@ Upload And Translate
 ~~~~~~~~~~~~~~~~~~~~
 >>> from pathlib import Path
 >>> new_doc = OnshapeElement.create("Engine")
->>> imported_part_studio = new_doc.import_file(Path().cwd() / "test" / "assets" / "bracelet.x_t")
+>>> imported_part_studio = new_doc.import_file(Path().cwd() / "test" / "assets" / "bracelet.x_t", allow_faulty_parts=True)
 >>> imported_part_studio.name
 'bracelet'
 
