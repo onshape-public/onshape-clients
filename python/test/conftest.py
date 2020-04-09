@@ -45,7 +45,7 @@ def element(request, client, element_bank) -> OnshapeElement:
 
 
 @pytest.fixture(scope="session")
-def client():
+def client() -> Client:
     """Client needed to make API calls."""
     try:
         client = Client.get_client()
@@ -79,6 +79,12 @@ def assets(test_dir):
 def json_assets(assets):
     """Returns the JSON assets folder."""
     return assets / "json"
+
+
+@pytest.fixture(scope="session")
+def translated_geometry(assets):
+    """Returns the translated geometry assets folder."""
+    return assets / "translated_geometry"
 
 
 @pytest.fixture(scope="session")

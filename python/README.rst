@@ -25,11 +25,23 @@ refer to our tests.
 
 Upload And Translate
 ~~~~~~~~~~~~~~~~~~~~
+Synchronous uploads:
+
 >>> from pathlib import Path
 >>> new_doc = OnshapeElement.create("Engine")
->>> imported_part_studio = new_doc.import_file(Path().cwd() / "test" / "assets" / "Cube.x_t")
+>>> translated_geometry = Path().cwd() / "test" / "assets"/ "translated_geometry"
+>>> imported_part_studio = new_doc.import_file(translated_geometry / "Cube.x_t", allow_faulty_parts=True)
 >>> imported_part_studio.name
 'Cube'
+
+Batch parallel uploads:
+
+>>> new_doc = OnshapeElement.create("Batch Uploads")
+>>> files_to_upload = [translated_geometry / "Cube.x_t", translated_geometry / "Cube.step"]
+>>> threads = [client.api_client.pool.apply_async(new_doc.import_file, [file]) for file in files_to_upload]
+>>> [t.get().name for t in threads]
+['Cube', 'Cube (1)']
+
 
 Data Inspection
 ~~~~~~~~~~~~~~~~
