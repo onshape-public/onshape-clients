@@ -261,7 +261,6 @@ class Client:
         configuration.api_key["ACCESS_KEY"] = configuration_dictionary.get(
             "access_key", ""
         )
-
         self.client_id = configuration_dictionary.get("client_id", None)
         self.client_secret = configuration_dictionary.get("client_secret", None)
         configuration.access_token = configuration_dictionary.get("access_token", "")
@@ -327,7 +326,8 @@ class Client:
         return
 
     def _create_apis(self):
-        api_client = ApiClient(configuration=self.configuration)
+        api_client = ApiClient(configuration=self.configuration, pool_threads=5)
+        self.api_client = api_client
         self.api_client = api_client
         self.accounts_api = api.AccountsApi(api_client)
         self.app_elements_api = api.AppElementsApi(api_client)
