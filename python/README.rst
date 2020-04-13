@@ -39,7 +39,7 @@ Batch parallel uploads:
 >>> new_doc = OnshapeElement.create("Batch Uploads")
 >>> files_to_upload = [translated_geometry / "Cube.x_t", translated_geometry / "Cube.step"]
 >>> threads = [client.api_client.pool.apply_async(new_doc.import_file, [file]) for file in files_to_upload]
->>> [t.get().name for t in threads]
+>>> sorted([t.get().name for t in threads])
 ['Cube', 'Cube (1)']
 
 

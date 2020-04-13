@@ -87,16 +87,7 @@ class BTShareParams(ModelNormal):
             "folder_id": (str,),  # noqa: E501
             "message": (str,),  # noqa: E501
             "permission": (int,),  # noqa: E501
-            "permission_set": (
-                bool,
-                date,
-                datetime,
-                dict,
-                float,
-                int,
-                list,
-                str,
-            ),  # noqa: E501
+            "permission_set": ([str],),  # noqa: E501
             "update": (bool,),  # noqa: E501
             "workspace_id": (str,),  # noqa: E501
         }
@@ -163,7 +154,7 @@ class BTShareParams(ModelNormal):
             folder_id (str): [optional]  # noqa: E501
             message (str): [optional]  # noqa: E501
             permission (int): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            permission_set ([str]): [optional]  # noqa: E501
             update (bool): [optional]  # noqa: E501
             workspace_id (str): [optional]  # noqa: E501
         """

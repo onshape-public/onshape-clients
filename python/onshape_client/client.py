@@ -340,6 +340,7 @@ class Client:
         self.metadata_api = api.MetadataApi(api_client)
         self.parts_api = api.PartsApi(api_client)
         self.part_studios_api = api.PartStudiosApi(api_client)
+        self.thumbnails_api = api.ThumbnailsApi(api_client)
         self.translation_api = api.TranslationsApi(api_client)
         self.users_api = api.UsersApi(api_client)
         self.webhooks_api = api.WebhooksApi(api_client)

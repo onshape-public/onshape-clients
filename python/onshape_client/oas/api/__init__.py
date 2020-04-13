@@ -22,6 +22,7 @@ from onshape_client.oas.api.parts_api import PartsApi
 from onshape_client.oas.api.release_management_api import ReleaseManagementApi
 from onshape_client.oas.api.revisions_api import RevisionsApi
 from onshape_client.oas.api.teams_api import TeamsApi
+from onshape_client.oas.api.thumbnails_api import ThumbnailsApi
 from onshape_client.oas.api.translations_api import TranslationsApi
 from onshape_client.oas.api.users_api import UsersApi
 from onshape_client.oas.api.versions_api import VersionsApi

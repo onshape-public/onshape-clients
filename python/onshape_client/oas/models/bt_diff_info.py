@@ -92,7 +92,7 @@ class BTDiffInfo(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "changes": ({str: (BTDiffInfo,)},),  # noqa: E501
+            "collection_changes": ({str: ([bt_diff_info.BTDiffInfo],)},),  # noqa: E501
             "entity_type": (str,),  # noqa: E501
             "geometry_change_messages": ([str],),  # noqa: E501
             "source_id": (str,),  # noqa: E501
@@ -107,7 +107,7 @@ class BTDiffInfo(ModelNormal):
         return None
 
     attribute_map = {
-        "changes": "changes",  # noqa: E501
+        "collection_changes": "collectionChanges",  # noqa: E501
         "entity_type": "entityType",  # noqa: E501
         "geometry_change_messages": "geometryChangeMessages",  # noqa: E501
         "source_id": "sourceId",  # noqa: E501
@@ -155,7 +155,7 @@ class BTDiffInfo(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            changes ({str: (BTDiffInfo,)}): [optional]  # noqa: E501
+            collection_changes ({str: ([bt_diff_info.BTDiffInfo],)}): [optional]  # noqa: E501
             entity_type (str): [optional]  # noqa: E501
             geometry_change_messages ([str]): [optional]  # noqa: E501
             source_id (str): [optional]  # noqa: E501

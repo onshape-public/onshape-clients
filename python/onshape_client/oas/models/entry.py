@@ -78,16 +78,7 @@ class Entry(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            "permission_set": (
-                bool,
-                date,
-                datetime,
-                dict,
-                float,
-                int,
-                list,
-                str,
-            ),  # noqa: E501
+            "permission_set": ([str],),  # noqa: E501
             "role": (bt_rbac_role_info.BTRbacRoleInfo,),  # noqa: E501
         }
 
@@ -138,7 +129,7 @@ class Entry(ModelNormal):
                                 deserializing a file_type parameter.
                                 If passed, type conversion is attempted
                                 If omitted no type conversion is done.
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            permission_set ([str]): [optional]  # noqa: E501
             role (bt_rbac_role_info.BTRbacRoleInfo): [optional]  # noqa: E501
         """
 

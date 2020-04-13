@@ -168,16 +168,7 @@ class BTDocumentProcessingInfo(ModelComposed):
             "owner": (bt_owner_info.BTOwnerInfo,),  # noqa: E501
             "parent_id": (str,),  # noqa: E501
             "permission": (str,),  # noqa: E501
-            "permission_set": (
-                bool,
-                date,
-                datetime,
-                dict,
-                float,
-                int,
-                list,
-                str,
-            ),  # noqa: E501
+            "permission_set": ([str],),  # noqa: E501
             "project_id": (str,),  # noqa: E501
             "public": (bool,),  # noqa: E501
             "recent_version": (bt_base_info.BTBaseInfo,),  # noqa: E501
@@ -329,7 +320,7 @@ class BTDocumentProcessingInfo(ModelComposed):
             owner (bt_owner_info.BTOwnerInfo): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
             permission (str): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            permission_set ([str]): [optional]  # noqa: E501
             project_id (str): [optional]  # noqa: E501
             public (bool): [optional]  # noqa: E501
             recent_version (bt_base_info.BTBaseInfo): [optional]  # noqa: E501

@@ -37,6 +37,7 @@ from onshape_client.oas.api.parts_api import PartsApi
 from onshape_client.oas.api.release_management_api import ReleaseManagementApi
 from onshape_client.oas.api.revisions_api import RevisionsApi
 from onshape_client.oas.api.teams_api import TeamsApi
+from onshape_client.oas.api.thumbnails_api import ThumbnailsApi
 from onshape_client.oas.api.translations_api import TranslationsApi
 from onshape_client.oas.api.users_api import UsersApi
 from onshape_client.oas.api.versions_api import VersionsApi
@@ -1060,7 +1061,6 @@ from onshape_client.oas.models.bt_user_o_auth2_summary_info import (
 )
 from onshape_client.oas.models.bt_user_settings_info import BTUserSettingsInfo
 from onshape_client.oas.models.bt_user_summary_info import BTUserSummaryInfo
-from onshape_client.oas.models.bt_user_summary_info_all_of import BTUserSummaryInfoAllOf
 from onshape_client.oas.models.bt_vector2d1812 import BTVector2d1812
 from onshape_client.oas.models.bt_vector3d389 import BTVector3d389
 from onshape_client.oas.models.bt_version_info import BTVersionInfo

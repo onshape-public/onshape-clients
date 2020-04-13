@@ -39,7 +39,7 @@ Name | Type | Description | Notes
 **owner** | [**bt_owner_info.BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **permission** | **str** |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**permission_set** | **[str]** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **public** | **bool** |  | [optional] 
 **recent_version** | [**bt_base_info.BTBaseInfo**](BTBaseInfo.md) |  | [optional] 

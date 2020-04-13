@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **folder_id** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **permission** | **int** |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**permission_set** | **[str]** |  | [optional] 
 **update** | **bool** |  | [optional] 
 **workspace_id** | **str** |  | [optional] 
 

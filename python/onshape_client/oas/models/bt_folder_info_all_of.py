@@ -77,16 +77,7 @@ class BTFolderInfoAllOf(ModelNormal):
             "can_unshare": (bool,),  # noqa: E501
             "is_orphaned": (bool,),  # noqa: E501
             "parent_id": (str,),  # noqa: E501
-            "permission_set": (
-                bool,
-                date,
-                datetime,
-                dict,
-                float,
-                int,
-                list,
-                str,
-            ),  # noqa: E501
+            "permission_set": ([str],),  # noqa: E501
             "trash": (bool,),  # noqa: E501
             "trashed_at": (datetime,),  # noqa: E501
         }
@@ -147,7 +138,7 @@ class BTFolderInfoAllOf(ModelNormal):
             can_unshare (bool): [optional]  # noqa: E501
             is_orphaned (bool): [optional]  # noqa: E501
             parent_id (str): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            permission_set ([str]): [optional]  # noqa: E501
             trash (bool): [optional]  # noqa: E501
             trashed_at (datetime): [optional]  # noqa: E501
         """
