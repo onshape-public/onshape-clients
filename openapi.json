@@ -103,6 +103,10 @@
       "description": "Access team details."
     },
     {
+      "name": "Thumbnails",
+      "description": "Get Thumbnails."
+    },
+    {
       "name": "Translations",
       "description": "Create and manage translations."
     },
@@ -5085,7 +5089,11 @@
             "content": {
               "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
-                  "$ref": "#/components/schemas/BTPermissionSet"
+                  "type": "array",
+                  "items": {
+                    "title": "Permission Name",
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -12366,6 +12374,9 @@
     },
     "/api/thumbnails/d/{did}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getThumbnailForDocument",
         "parameters": [
           {
@@ -12402,6 +12413,9 @@
     },
     "/api/thumbnails/d/{did}/v/{vid}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getThumbnailForDocumentAndVersion",
         "parameters": [
           {
@@ -12449,6 +12463,9 @@
     },
     "/api/thumbnails/d/{did}/w/{wid}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getDocumentThumbnail",
         "parameters": [
           {
@@ -12493,6 +12510,9 @@
     },
     "/api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getElementThumbnailWithApiConfiguration",
         "parameters": [
           {
@@ -12572,6 +12592,9 @@
     },
     "/api/thumbnails/d/{did}/w/{wid}/e/{eid}/c/{cid}/s/{sz}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getConfiguredElementThumbnailWithSize",
         "parameters": [
           {
@@ -12651,6 +12674,9 @@
     },
     "/api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getElementThumbnailWithSize",
         "parameters": [
           {
@@ -12722,6 +12748,9 @@
     },
     "/api/thumbnails/d/{did}/w/{wid}/s/{sz}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getDocumentThumbnailWithSize",
         "parameters": [
           {
@@ -12777,6 +12806,9 @@
     },
     "/api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getElementThumbnail",
         "parameters": [
           {
@@ -12842,6 +12874,9 @@
         "x-BTVisibility": "PRODUCTION"
       },
       "post": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "setApplicationElementThumbnail",
         "parameters": [
           {
@@ -12914,6 +12949,9 @@
         "x-BTVisibility": "PRODUCTION"
       },
       "delete": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "deleteApplicationThumbnails",
         "parameters": [
           {
@@ -12970,6 +13008,9 @@
     },
     "/api/thumbnails/document/{did}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getThumbnailForDocumentOld",
         "parameters": [
           {
@@ -13006,6 +13047,9 @@
     },
     "/api/thumbnails/document/{did}/version/{vid}": {
       "get": {
+        "tags": [
+          "Thumbnails"
+        ],
         "operationId": "getThumbnailForDocumentAndVersionOld",
         "parameters": [
           {
@@ -13975,7 +14019,11 @@
             "format": "int64"
           },
           "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
+            "type": "array",
+            "items": {
+              "title": "Permission Name",
+              "type": "string"
+            }
           },
           "teamName": {
             "type": "string"
@@ -16812,10 +16860,13 @@
       "BTDiffInfo": {
         "type": "object",
         "properties": {
-          "changes": {
+          "collectionChanges": {
             "type": "object",
             "additionalProperties": {
-              "$ref": "#/components/schemas/BTDiffInfo"
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BTDiffInfo"
+              }
             }
           },
           "entityType": {
@@ -17190,7 +17241,11 @@
             ]
           },
           "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
+            "type": "array",
+            "items": {
+              "title": "Permission Name",
+              "type": "string"
+            }
           },
           "projectId": {
             "type": "string"
@@ -17578,7 +17633,11 @@
                 ]
               },
               "permissionSet": {
-                "$ref": "#/components/schemas/BTPermissionSet"
+                "type": "array",
+                "items": {
+                  "title": "Permission Name",
+                  "type": "string"
+                }
               },
               "public": {
                 "type": "boolean"
@@ -22434,7 +22493,11 @@
                 "type": "string"
               },
               "permissionSet": {
-                "$ref": "#/components/schemas/BTPermissionSet"
+                "type": "array",
+                "items": {
+                  "title": "Permission Name",
+                  "type": "string"
+                }
               },
               "trash": {
                 "type": "boolean"
@@ -29891,9 +29954,6 @@
           }
         }
       },
-      "BTPermissionSet": {
-        "type": "object"
-      },
       "BTPlanSubscriberInfo": {
         "type": "object",
         "properties": {
@@ -30022,7 +30082,11 @@
             "$ref": "#/components/schemas/BTRbacPermissionSchemeInfo"
           },
           "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
+            "type": "array",
+            "items": {
+              "title": "Permission Name",
+              "type": "string"
+            }
           },
           "projectId": {
             "type": "string"
@@ -31192,7 +31256,11 @@
             "format": "int64"
           },
           "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
+            "type": "array",
+            "items": {
+              "title": "Permission Name",
+              "type": "string"
+            }
           },
           "update": {
             "type": "boolean"
@@ -32903,45 +32971,58 @@
       },
       "BTUserSummaryInfo": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
+        "properties": {
+          "company": {
+            "$ref": "#/components/schemas/BTCompanySummaryInfo"
           },
-          {
-            "type": "object",
-            "properties": {
-              "company": {
-                "$ref": "#/components/schemas/BTCompanySummaryInfo"
-              },
-              "email": {
-                "type": "string"
-              },
-              "firstName": {
-                "type": "string"
-              },
-              "globalPermissions": {
-                "$ref": "#/components/schemas/GlobalPermissionInfo"
-              },
-              "isGuest": {
-                "type": "boolean"
-              },
-              "isLight": {
-                "type": "boolean"
-              },
-              "lastLoginTime": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "lastName": {
-                "type": "string"
-              },
-              "source": {
-                "type": "integer",
-                "format": "int32"
-              }
-            }
+          "email": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "globalPermissions": {
+            "$ref": "#/components/schemas/GlobalPermissionInfo"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "isGuest": {
+            "type": "boolean"
+          },
+          "isLight": {
+            "type": "boolean"
+          },
+          "lastLoginTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "source": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "viewRef": {
+            "type": "string",
+            "format": "uri"
           }
-        ]
+        }
       },
       "BTVector2d-1812": {
         "type": "object",
@@ -34151,7 +34232,11 @@
         "type": "object",
         "properties": {
           "permissionSet": {
-            "$ref": "#/components/schemas/BTPermissionSet"
+            "type": "array",
+            "items": {
+              "title": "Permission Name",
+              "type": "string"
+            }
           },
           "role": {
             "$ref": "#/components/schemas/BTRbacRoleInfo"

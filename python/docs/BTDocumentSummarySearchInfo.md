@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 **number_of_times_referenced** | **int** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **permission** | **str** |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**permission_set** | **[str]** |  | [optional] 
 **public** | **bool** |  | [optional] 
 **recent_version** | [**bt_base_info.BTBaseInfo**](BTBaseInfo.md) |  | [optional] 
 **support_team_user_and_shared** | **bool** |  | [optional] 

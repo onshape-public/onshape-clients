@@ -1077,7 +1077,7 @@ class DocumentsApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                bool, date, datetime, dict, float, int, list, str
+                [str]
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -1095,7 +1095,7 @@ class DocumentsApi(object):
 
         self.get_document_permission_set = Endpoint(
             settings={
-                "response_type": (bool, date, datetime, dict, float, int, list, str,),
+                "response_type": ([str],),
                 "auth": ["OAuth2"],
                 "endpoint_path": "/api/documents/{did}/permissionset",
                 "operation_id": "get_document_permission_set",

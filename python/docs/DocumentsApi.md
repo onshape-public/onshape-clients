@@ -771,7 +771,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_permission_set**
-> bool, date, datetime, dict, float, int, list, str get_document_permission_set(did)
+> [str] get_document_permission_set(did)
 
 Get Document Permissions
 
@@ -813,7 +813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str**
+**[str]**
 
 ### Authorization
 

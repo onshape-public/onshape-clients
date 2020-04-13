@@ -96,16 +96,7 @@ class BTAclEntryInfo(ModelNormal):
             "object_id": (str,),  # noqa: E501
             "pending_owner_transfer": (bool,),  # noqa: E501
             "permission": (int,),  # noqa: E501
-            "permission_set": (
-                bool,
-                date,
-                datetime,
-                dict,
-                float,
-                int,
-                list,
-                str,
-            ),  # noqa: E501
+            "permission_set": ([str],),  # noqa: E501
             "team_name": (str,),  # noqa: E501
         }
 
@@ -180,7 +171,7 @@ class BTAclEntryInfo(ModelNormal):
             object_id (str): [optional]  # noqa: E501
             pending_owner_transfer (bool): [optional]  # noqa: E501
             permission (int): [optional]  # noqa: E501
-            permission_set (bool, date, datetime, dict, float, int, list, str): [optional]  # noqa: E501
+            permission_set ([str]): [optional]  # noqa: E501
             team_name (str): [optional]  # noqa: E501
         """
 

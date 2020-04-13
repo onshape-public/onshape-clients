@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **owner** | [**bt_owner_info.BTOwnerInfo**](BTOwnerInfo.md) |  | [optional] 
 **permission_scheme** | [**bt_rbac_permission_scheme_info.BTRbacPermissionSchemeInfo**](BTRbacPermissionSchemeInfo.md) |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**permission_set** | **[str]** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **resource_type** | **str** |  | [optional] 
 **role_map_entries** | [**[role_map_entry.RoleMapEntry]**](RoleMapEntry.md) |  | [optional] 

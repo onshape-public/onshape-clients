@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **can_unshare** | **bool** |  | [optional] 
 **is_orphaned** | **bool** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
-**permission_set** | **bool, date, datetime, dict, float, int, list, str** |  | [optional] 
+**permission_set** | **[str]** |  | [optional] 
 **trash** | **bool** |  | [optional] 
 **trashed_at** | **datetime** |  | [optional] 
 
