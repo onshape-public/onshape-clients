@@ -8536,7 +8536,7 @@
           "content": {
             "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/BTWorkspacePartParams"
               }
             }
           }
@@ -32971,58 +32971,45 @@
       },
       "BTUserSummaryInfo": {
         "type": "object",
-        "properties": {
-          "company": {
-            "$ref": "#/components/schemas/BTCompanySummaryInfo"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BTUserBasicSummaryInfo"
           },
-          "email": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "globalPermissions": {
-            "$ref": "#/components/schemas/GlobalPermissionInfo"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "isGuest": {
-            "type": "boolean"
-          },
-          "isLight": {
-            "type": "boolean"
-          },
-          "lastLoginTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "source": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "state": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "viewRef": {
-            "type": "string",
-            "format": "uri"
+          {
+            "type": "object",
+            "properties": {
+              "company": {
+                "$ref": "#/components/schemas/BTCompanySummaryInfo"
+              },
+              "email": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "globalPermissions": {
+                "$ref": "#/components/schemas/GlobalPermissionInfo"
+              },
+              "isGuest": {
+                "type": "boolean"
+              },
+              "isLight": {
+                "type": "boolean"
+              },
+              "lastLoginTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "source": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           }
-        }
+        ]
       },
       "BTVector2d-1812": {
         "type": "object",

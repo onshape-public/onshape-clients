@@ -1698,7 +1698,7 @@ class PartsApi(object):
                 partid (str):
 
             Keyword Args:
-                body (str): [optional]
+                bt_workspace_part_params (bt_workspace_part_params.BTWorkspacePartParams): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1750,7 +1750,14 @@ class PartsApi(object):
                 "servers": [],
             },
             params_map={
-                "all": ["did", "wvm", "wvmid", "eid", "partid", "body",],
+                "all": [
+                    "did",
+                    "wvm",
+                    "wvmid",
+                    "eid",
+                    "partid",
+                    "bt_workspace_part_params",
+                ],
                 "required": ["did", "wvm", "wvmid", "eid", "partid",],
                 "nullable": [],
                 "enum": [],
@@ -1765,7 +1772,9 @@ class PartsApi(object):
                     "wvmid": (str,),
                     "eid": (str,),
                     "partid": (str,),
-                    "body": (str,),
+                    "bt_workspace_part_params": (
+                        bt_workspace_part_params.BTWorkspacePartParams,
+                    ),
                 },
                 "attribute_map": {
                     "did": "did",
@@ -1780,7 +1789,7 @@ class PartsApi(object):
                     "wvmid": "path",
                     "eid": "path",
                     "partid": "path",
-                    "body": "body",
+                    "bt_workspace_part_params": "body",
                 },
                 "collection_format_map": {},
             },

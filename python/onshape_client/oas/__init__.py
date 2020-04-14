@@ -1061,6 +1061,7 @@ from onshape_client.oas.models.bt_user_o_auth2_summary_info import (
 )
 from onshape_client.oas.models.bt_user_settings_info import BTUserSettingsInfo
 from onshape_client.oas.models.bt_user_summary_info import BTUserSummaryInfo
+from onshape_client.oas.models.bt_user_summary_info_all_of import BTUserSummaryInfoAllOf
 from onshape_client.oas.models.bt_vector2d1812 import BTVector2d1812
 from onshape_client.oas.models.bt_vector3d389 import BTVector3d389
 from onshape_client.oas.models.bt_version_info import BTVersionInfo

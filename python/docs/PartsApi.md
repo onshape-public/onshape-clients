@@ -1081,7 +1081,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     wvmid = 'wvmid_example' # str | 
     eid = 'eid_example' # str | 
     partid = 'partid_example' # str | 
-    body = 'body_example' # str |  (optional)
+    bt_workspace_part_params = onshape_client.oas.BTWorkspacePartParams() # bt_workspace_part_params.BTWorkspacePartParams |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1093,7 +1093,7 @@ with onshape_client.oas.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid, body=body)
+        api_response = api_instance.update_part_metadata(did, wvm, wvmid, eid, partid, bt_workspace_part_params=bt_workspace_part_params)
         pprint(api_response)
     except onshape_client.oas.ApiException as e:
         print("Exception when calling PartsApi->update_part_metadata: %s\n" % e)
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
  **wvmid** | **str**|  |
  **eid** | **str**|  |
  **partid** | **str**|  |
- **body** | **str**|  | [optional]
+ **bt_workspace_part_params** | [**bt_workspace_part_params.BTWorkspacePartParams**](BTWorkspacePartParams.md)|  | [optional]
 
 ### Return type
 
