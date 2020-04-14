@@ -90,7 +90,7 @@ class BTUserBasicSummaryInfo(ModelNormal):
     @staticmethod
     def discriminator():
         return {
-            "json_type": {"user-summary": bt_user_summary_info.BTUserSummaryInfo,},
+            "json_type": {"BTUserSummaryInfo": bt_user_summary_info.BTUserSummaryInfo,},
         }
 
     attribute_map = {
