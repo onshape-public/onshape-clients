@@ -121,8 +121,17 @@ class GoPackage(ClientPackage):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.oas_client_name = "go-experimental"
-        self.output_path = self.get_tmp_dest()
+        self.oas_client_name="go-experimental"
+        self.destination = self.get_tmp_dest()
+        self.output_path = self.destination / "onshape"
+
+    @ClientPackageMeta.action
+    def setup(self):
+        """Stub for Setup function to make sure Go and tools are properly installed
+        TODO Find a way to check and install Go/Go tools: could be
+             anything from https://github.com/travis-ci/gimme to installing from source: https://golang.org/doc/install/source
+        """
+        pass
 
     @ClientPackageMeta.action
     def generate(self):
@@ -142,15 +151,10 @@ class GoPackage(ClientPackage):
         """
 
         try:
-            destination = self.get_tmp_dest()
-            if destination.exists():
-                shutil.rmtree(destination)
-            source = self.root_path
-            self.output_path = destination / "onshape"
-            shutil.copytree(
-                str(source), str(destination), ignore=shutil.ignore_patterns("*.json")
-            )
-            self.command_runner.cwd = destination
+            if self.destination.exists():
+                shutil.rmtree(self.destination)
+            shutil.copytree(str(self.root_path), str(self.destination), ignore=shutil.ignore_patterns('*.json'))
+            self.command_runner.cwd = self.destination
             self.run("git init")
             self.run("git add .")
             self.run('git commit -m "Initial_commit"')
@@ -165,12 +169,13 @@ class GoPackage(ClientPackage):
             )
 
     @ClientPackageMeta.action
-    def setup(self):
-        """Stub for Setup function to make sure Go and tools are properly installed
-        TODO Find a way to check and install Go/Go tools: could be
-             anything from https://github.com/travis-ci/gimme to installing from source: https://golang.org/doc/install/source
-        """
-        pass
+    def test(self, marker=None):
+        test_modules = ["onshape", "test"]
+        for t_module in test_modules:
+            self.command_runner.cwd = self.destination / t_module
+            result = self.run("go test -v")
+            if result.returncode != 0:
+                raise CliError("Error testing Go client.")
 
     @ClientPackageMeta.action
     def publish(self):
@@ -178,18 +183,14 @@ class GoPackage(ClientPackage):
 
         TODO Make sure we get a correct version: probably from openapi_config.json
         """
-        source = self.root_path
-        destination = self.get_tmp_dest()
-        dot_git = destination / ".git"
-        if not destination.exists():
+        dot_git = self.destination / ".git"
+        if not dot_git.exists():
             CliError("Trying to publish incomplete repo ...")
-        self.command_runner.cwd = destination
+        self.command_runner.cwd = self.destination
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
-        self.run(
-            "git remote add origin https://github.com/onshape-public/go-client.git"
-        )
+        self.run("git remote add origin https://github.com/onshape-public/go-client.git")
         self.run("git push --set-upstream origin master -f --tags")
         return
 

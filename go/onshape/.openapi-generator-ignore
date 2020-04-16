@@ -26,7 +26,7 @@ go.mod
 go.sum
 *_test.go
 utils_static.go
-# Next three files need to be merged manually
-# client.go
-# model_bt_mass_properties_info_null.go
-# model_btm_sketch_constraint_2.go
+# Next three files need to verified manually
+client.go
+model_bt_mass_properties_info_null.go
+model_btm_sketch_constraint_2.go
