@@ -1,1 +1,5 @@
-{}
+{
+    "_comment":"A minimal set of the openapi gen parameters, to see all: `openapi-generator config-help -g go`",
+    "packageName": "onshape",
+    "packageVersion":"0.0.0"
+}
