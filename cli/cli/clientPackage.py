@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 import subprocess
 import shutil
+
 from cli.command_runner import CommandRunner
 from cli.exceptions import CliError
 
@@ -45,6 +46,7 @@ class ClientPackage:
         )
         name = self.name
         self.root_path = self.repo / name
+        self.output_path = self.root_path
         self.version_regex = version_regex
         self.oas_client_name = self.oas_client_name if self.oas_client_name else name
         self.version_to_publish = None
@@ -65,7 +67,7 @@ class ClientPackage:
         ./<CLIENT_FOLDER>/openapi_config.json"""
         try:
             self.run(
-                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.root_path} "
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path} "
                 f"-c {self.root_path / 'openapi_config.json'}",
                 cwd=self.root_path.parent,
             )
@@ -104,6 +106,10 @@ class ClientPackage:
         """Run a command in the shell for this client."""
         return self.command_runner.run(command, **kwargs)
 
+    def get_tmp_dest(self):
+        destination = Path.home() / self.name
+        return destination
+
 
 class CppPackage(ClientPackage):
     name = "cpp"
@@ -113,23 +119,73 @@ class CppPackage(ClientPackage):
 class GoPackage(ClientPackage):
     name = "go"
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.oas_client_name="go-experimental"
+        self.output_path = self.get_tmp_dest()
+
+    @ClientPackageMeta.action
+    def generate(self):
+        """Generate the client with default options. Per client options should be set in
+        ./<CLIENT_FOLDER>/openapi_config.json
+
+        The code generation preliminary steps (some are manual (m-) at the moment):
+         -- Create/Clean an output folder
+         -- Init the git repository
+         -- Copy static portion from the source
+         -- Add and commit
+         -- Run openapi-generator command
+         -- m- Review all changed files (git ls-files -m) by running 'git add -p'. Don't forget to git checkout at the end
+         -- m- go build -v ./...
+         -- m- Run go mod tidy
+         ----- The rest of git commands are in publish()
+        """
+
+        try:
+            destination = self.get_tmp_dest()
+            if destination.exists():
+                shutil.rmtree(destination)
+            source = self.root_path
+            self.output_path = destination / "onshape"
+            shutil.copytree(str(source), str(destination), ignore=shutil.ignore_patterns('*.json'))
+            self.command_runner.cwd = destination
+            self.run("git init")
+            self.run("git add .")
+            self.run('git commit -m "Initial_commit"')
+            self.run(
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path} --type-mappings DateTime=JSONTime "
+                f"-c {self.root_path / 'openapi_config.json'}",
+                cwd=self.root_path.parent,
+            )
+        except Exception:
+            raise CliError(
+                "Please install openapi-generator-cli by running $onshape-clients setup -tools openapi-generator-cli"
+            )
+
+    @ClientPackageMeta.action
+    def setup(self):
+        """Stub for Setup function to make sure Go and tools are properly installed
+        TODO Find a way to check and install Go/Go tools: could be
+             anything from https://github.com/travis-ci/gimme to installing from source: https://golang.org/doc/install/source
+        """
+        pass
+
     @ClientPackageMeta.action
     def publish(self):
         """Copy the contents of the GO package to a new Github repo to get distributed to the broader GO community.
+
+        TODO Make sure we get a correct version: probably from openapi_config.json
         """
         source = self.root_path
-        destination = Path.home() / self.name
-        if destination.exists():
-            shutil.rmtree(destination)
-        shutil.copytree(str(source), str(destination))
+        destination = self.get_tmp_dest()
+        dot_git = destination / ".git"
+        if not destination.exists():
+            CliError("Trying to publish incomplete repo ...")
         self.command_runner.cwd = destination
-        self.run("git init")
-        self.run(
-            "git remote add origin https://github.com/onshape-public/onshape-go-client.git"
-        )
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
+        self.run("git remote add origin https://github.com/onshape-public/go-client.git")
         self.run("git push --set-upstream origin master -f --tags")
         return
 
