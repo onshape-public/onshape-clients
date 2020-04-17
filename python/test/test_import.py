@@ -40,4 +40,5 @@ def test_batch_import_file(client, translated_geometry):
         "Many Many Cubes.step": 1.0,
         "Cube.x_t": 0.0004425,
         "Cube.step": 1.0,
+        "Cube.stl": 61023.5329527,
     }
