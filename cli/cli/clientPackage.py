@@ -121,7 +121,7 @@ class GoPackage(ClientPackage):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.oas_client_name="go-experimental"
+        self.oas_client_name = "go-experimental"
         self.output_path = self.get_tmp_dest()
 
     @ClientPackageMeta.action
@@ -147,7 +147,9 @@ class GoPackage(ClientPackage):
                 shutil.rmtree(destination)
             source = self.root_path
             self.output_path = destination / "onshape"
-            shutil.copytree(str(source), str(destination), ignore=shutil.ignore_patterns('*.json'))
+            shutil.copytree(
+                str(source), str(destination), ignore=shutil.ignore_patterns("*.json")
+            )
             self.command_runner.cwd = destination
             self.run("git init")
             self.run("git add .")
@@ -185,7 +187,9 @@ class GoPackage(ClientPackage):
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
-        self.run("git remote add origin https://github.com/onshape-public/go-client.git")
+        self.run(
+            "git remote add origin https://github.com/onshape-public/go-client.git"
+        )
         self.run("git push --set-upstream origin master -f --tags")
         return
 
