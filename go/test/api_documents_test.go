@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"ptc.com/onshape-go-test/onshape"
+	"github.com/onshape-public/go-client/onshape"
 
 	uuid "github.com/satori/go.uuid"
 )

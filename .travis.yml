@@ -24,6 +24,7 @@ matrix:
       script:
         - onshape-clients setup
         - PATH=$PATH:~/bin/openapitools/
+        - go env
         - onshape-clients -c go generate
         - onshape-clients -c go test
     - name: lint_clients

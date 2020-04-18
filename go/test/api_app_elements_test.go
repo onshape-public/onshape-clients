@@ -4,8 +4,8 @@ import (
 	h "net/http"
 	"testing"
 
+	"github.com/onshape-public/go-client/onshape"
 	uuid "github.com/satori/go.uuid"
-	"ptc.com/onshape-go-test/onshape"
 )
 
 func setupDocument(t *testing.T, docInfo *onshape.BTDocumentInfo) func(t *testing.T, docId string) {
