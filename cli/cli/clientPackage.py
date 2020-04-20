@@ -171,6 +171,12 @@ class GoPackage(ClientPackage):
     @ClientPackageMeta.action
     def test(self, marker=None):
         test_modules = ["onshape", "test"]
+        self.command_runner.cwd = self.destination / "onshape"
+        result = self.run("go env")
+        for t_module in test_modules:
+            self.command_runner.cwd = self.destination / t_module
+        result = self.run("go build -v")
+
         for t_module in test_modules:
             self.command_runner.cwd = self.destination / t_module
             result = self.run("go test -v")
