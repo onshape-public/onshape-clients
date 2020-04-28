@@ -102,6 +102,20 @@ class ClientPackage:
         result = re.sub(regex_for_version_number, version, f)
         file_path_to_version_identifier.open(mode="w").write(result)
 
+    @ClientPackageMeta.action
+    def set_output(self, output=Path("")):
+        if not output.name:
+            self.output_path = self.root_path
+        else:
+            self.output_path = output
+
+    @ClientPackageMeta.action
+    def set_pub_source(self, source=Path("")):
+        if not source.name:
+            self.pub_source = self.root_path()
+        else:
+            self.pub_source = source
+
     def run(self, command, **kwargs):
         """Run a command in the shell for this client."""
         return self.command_runner.run(command, **kwargs)
@@ -122,8 +136,6 @@ class GoPackage(ClientPackage):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.oas_client_name="go-experimental"
-        self.destination = self.get_tmp_dest()
-        self.output_path = self.destination / "onshape"
 
     @ClientPackageMeta.action
     def setup(self):
@@ -132,6 +144,22 @@ class GoPackage(ClientPackage):
              anything from https://github.com/travis-ci/gimme to installing from source: https://golang.org/doc/install/source
         """
         pass
+
+    #Have to override two next methods here because in case of Go we would never want to write into the original repo folder
+    @ClientPackageMeta.action
+    def set_output(self, output=Path("")):
+        if not output.name:
+            self.output_path = self.get_tmp_dest()
+        else:
+            self.output_path = output
+
+    @ClientPackageMeta.action
+    def set_pub_source(self, source=Path("")):
+        if not source.name:
+            self.pub_source = self.get_tmp_dest()
+        else:
+            self.pub_source = source
+
 
     @ClientPackageMeta.action
     def generate(self):
@@ -151,15 +179,15 @@ class GoPackage(ClientPackage):
         """
 
         try:
-            if self.destination.exists():
-                shutil.rmtree(self.destination)
-            shutil.copytree(str(self.root_path), str(self.destination), ignore=shutil.ignore_patterns('*.json'))
-            self.command_runner.cwd = self.destination
+            if self.output_path.exists():
+                shutil.rmtree(self.output_path)
+            shutil.copytree(str(self.root_path), str(self.output_path), ignore=shutil.ignore_patterns('*.json'))
+            self.command_runner.cwd = self.output_path
             self.run("git init")
             self.run("git add .")
             self.run('git commit -m "Initial_commit"')
             self.run(
-                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path} --type-mappings DateTime=JSONTime "
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path / 'onshape'} --type-mappings DateTime=JSONTime "
                 f"-c {self.root_path / 'openapi_config.json'}",
                 cwd=self.root_path.parent,
             )
@@ -169,30 +197,15 @@ class GoPackage(ClientPackage):
             )
 
     @ClientPackageMeta.action
-    def test(self, marker=None):
-        test_modules = ["onshape", "test"]
-        self.command_runner.cwd = self.destination / "onshape"
-        result = self.run("go env")
-        for t_module in test_modules:
-            self.command_runner.cwd = self.destination / t_module
-        result = self.run("go build -v")
-
-        for t_module in test_modules:
-            self.command_runner.cwd = self.destination / t_module
-            result = self.run("go test -v")
-            if result.returncode != 0:
-                raise CliError("Error testing Go client.")
-
-    @ClientPackageMeta.action
     def publish(self):
         """Copy the contents of the GO package to a new Github repo to get distributed to the broader GO community.
 
         TODO Make sure we get a correct version: probably from openapi_config.json
         """
-        dot_git = self.destination / ".git"
+        dot_git = self.pub_source / ".git"
         if not dot_git.exists():
             CliError("Trying to publish incomplete repo ...")
-        self.command_runner.cwd = self.destination
+        self.command_runner.cwd = self.pub_source
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")

@@ -16,18 +16,19 @@ matrix:
         - onshape-clients -c python install
         - onshape-clients -c python test
     - name: test_go_client
-      os: osx
       language: go
       go:
-      - "1.14"
+        - 1.14.x
       stage: test
       script:
+        - go env
         - onshape-clients setup
         - PATH=$PATH:~/bin/openapitools/
-        - export GO111MODULE=on
-        - go env
-        - onshape-clients -c go generate
-        - onshape-clients -c go test
+        - make go-test
+      env:
+        global:
+          - GO111MODULE=on
+          - GOARCH=amd64
     - name: lint_clients
       stage: test
       script:
@@ -35,9 +36,6 @@ matrix:
     - name: deploy_clients
       stage: deploy
       install:
-        - onshape-clients setup
-        - PATH=$PATH:~/bin/openapitools/
-        - onshape-clients -c go generate
         - nvm install 12
         - npm install .
       script:

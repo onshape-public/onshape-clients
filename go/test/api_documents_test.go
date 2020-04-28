@@ -22,20 +22,14 @@ func TestMain(m *testing.M) {
 }
 
 func setup() {
-	testSecretKey := os.Getenv("ONSHAPE_API_SECRET_KEY")
-	testAccessKey := os.Getenv("ONSHAPE_API_ACCESS_KEY")
+	var err error
 
-	if testSecretKey == "" || testAccessKey == "" {
-		fmt.Println("Expected test to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
+	client, ctx, err = onshape.NewAPIClientFromEnv(false)
+
+	if err != nil {
+		fmt.Println(err)
 		os.Exit(1)
 	}
-	config := onshape.NewConfiguration()
-	//config.Debug = true
-
-	client = onshape.NewAPIClient(config)
-
-	ctx = context.WithValue(context.Background(), onshape.ContextAPIKeys,
-		onshape.APIKeys{SecretKey: testSecretKey, AccessKey: testAccessKey})
 }
 
 //TODO: check if default workspace is also created

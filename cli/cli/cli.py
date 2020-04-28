@@ -72,13 +72,31 @@ def entry(clients, repo, dry_run):
     envvar="ONSHAPE_CLIENTS_PUBLISH_VERSION",
     default="0.0.0",
 )
-def publish(version):
+@click.option(
+    "-s",
+    "--source",
+    type=click.Path(exists=True),
+    help="Source tree to be published.",
+    envvar="ONSHAPE_CLIENTS_PUBLISH_SOURCE",
+    default=Path(""),
+)
+def publish(source, version):
     do_client_function("set_version", version=version)
+    do_client_function("set_pub_source", source=Path(source))
     do_client_function("publish")
 
 
 @entry.command(help="Generate the client from the OAS definition.")
-def generate():
+@click.option(
+    "-o",
+    "--output",
+    type=click.Path(),
+    help="Output folder for generated files.",
+    envvar="ONSHAPE_CLIENTS_CODEGEN_PATH",
+    default=Path(""),
+)
+def generate(output):
+    do_client_function("set_output", output=Path(output))
     do_client_function("generate")
 
 

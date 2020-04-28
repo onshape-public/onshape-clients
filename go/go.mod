@@ -1,4 +1,4 @@
-module github.com/onshape-public/go-client/onshape
+module github.com/onshape-public/go-client
 
 go 1.14
 
