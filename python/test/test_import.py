@@ -3,7 +3,7 @@ from onshape_client import OnshapeElement
 from pathlib import Path
 
 
-@pytest.mark.parametrize("file", ["Cube.x_t", "Cube.step"])
+@pytest.mark.parametrize("file", ["Cube.x_t", "Cube.step", "Cube.stl"])
 def test_import_file(new_document, client, translated_geometry, file):
     imported_ps = new_document.import_file(
         translated_geometry / file, allow_faulty_parts=True
@@ -40,4 +40,5 @@ def test_batch_import_file(client, translated_geometry):
         "Many Many Cubes.step": 1.0,
         "Cube.x_t": 0.0004425,
         "Cube.step": 1.0,
+        "Cube.stl": 61023.5329527,
     }

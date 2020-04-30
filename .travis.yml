@@ -10,11 +10,25 @@ matrix:
       script:
         - pipenv run pytest
         # END TESTING THE CLI
-    - name: test_clients
+    - name: test_python_client
       stage: test
       script:
-        - onshape-clients install
-        - onshape-clients test
+        - onshape-clients -c python install
+        - onshape-clients -c python test
+    - name: test_go_client
+      language: go
+      go:
+        - 1.14.x
+      stage: test
+      script:
+        - go env
+        - onshape-clients setup
+        - PATH=$PATH:~/bin/openapitools/
+        - make go-test
+      env:
+        global:
+          - GO111MODULE=on
+          - GOARCH=amd64
     - name: lint_clients
       stage: test
       script:
