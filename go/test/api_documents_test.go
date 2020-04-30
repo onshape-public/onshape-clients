@@ -24,7 +24,7 @@ func TestMain(m *testing.M) {
 func setup() {
 	var err error
 
-	client, ctx, err = onshape.NewAPIClientFromEnv(false)
+	client, ctx, err = onshape.NewAPIClientFromEnv(true)
 
 	if err != nil {
 		fmt.Println(err)
@@ -53,7 +53,9 @@ func TestCreateAndGetDocument(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			docParams := onshape.NewBTDocumentParams()
 			docParams.SetName(tt.args.docName)
-			//create document
+			docParams.SetIsPublic(true)
+
+			t.Log("Creating document")
 			docInfo, rawResp, err := client.DocumentsApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
@@ -67,7 +69,8 @@ func TestCreateAndGetDocument(t *testing.T) {
 				t.Error("Create Document should have created a default workspace ")
 				return
 			}
-			//get document
+
+			t.Log("Getting a document")
 			getDocInfo, rawResp, err := client.DocumentsApi.GetDocument(ctx, *docInfo.Id).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
@@ -75,6 +78,15 @@ func TestCreateAndGetDocument(t *testing.T) {
 				if getDocInfo.GetName() != tt.want {
 					t.Errorf("GetDocument() got = %s, want %s", getDocInfo.GetName(), tt.want)
 				}
+			}
+
+			t.Log("Deleting a document")
+			rawResp, err = client.DocumentsApi.DeleteDocument(ctx, getDocInfo.GetId()).Execute()
+
+			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
+				t.Error("err: ", err, " -- Response status: ", rawResp)
+			} else {
+				t.Log("Deleted successfully document w/the name: ", docInfo.GetName())
 			}
 		})
 	}

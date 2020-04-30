@@ -14,6 +14,7 @@ func setupDocument(t *testing.T, docInfo *onshape.BTDocumentInfo) func(t *testin
 	document1Name := "App-Elements-testDoc-1-" + uid
 	docParams := onshape.NewBTDocumentParams()
 	docParams.SetName(document1Name)
+	docParams.SetIsPublic(true)
 	//create document
 	var rawResp *h.Response
 	var err error

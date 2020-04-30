@@ -1,4 +1,4 @@
-GEN_DIR = "$(HOME)/go"
+GEN_DIR = "$(HOME)/onshape-clients-codegen"
 
 .PHONY: go-all go-info go-test go-vet go-lint go-fmt go-gen
 
@@ -8,19 +8,19 @@ go-info:
 	@echo Will be generating in $(GEN_DIR)
 
 go-gen: go-info
-	@onshape-clients -c go generate -o $(GEN_DIR)
+	@onshape-clients -s $(GEN_DIR) -c go generate
 
 go-test: go-gen
-	@cd $(GEN_DIR); go mod tidy; go test -v ./...
+	@cd "$(GEN_DIR)/go"; go mod tidy; go test -v ./...
 
 go-vet:
-	@cd $(GEN_DIR); go vet -all ./onshape
+	@cd "$(GEN_DIR)/go"; go vet -all ./onshape
 
 go-lint:
-	@cd $(GEN_DIR); golint -set_exit_status ./...
+	@cd "$(GEN_DIR)/go"; golint -set_exit_status ./...
 
 go-fmt:
-	@cd $(GEN_DIR); test -z $$(go fmt ./...)
+	@cd "$(GEN_DIR)/go"; test -z $$(go fmt ./...)
 
 go-publish:
-	@onshape-clients -c go publish -s $(GEN_DIR)
+	@onshape-clients -c go  -s $(GEN_DIR) publish

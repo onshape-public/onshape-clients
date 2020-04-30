@@ -41,7 +41,14 @@ def do_client_function(function_name, *args, **kwargs):
     "-r",
     "--repo",
     envvar="ONSHAPE_CLIENTS_REPO",
-    help="Path to the onshape clients repo",
+    help="Path to the onshape clients repo.",
+)
+@click.option(
+    "-s",
+    "--source",
+    type=click.Path(),
+    envvar="ONSHAPE_CLIENTS_SOURCE",
+    help="Path to the generated source code.",
 )
 @click.option(
     "-d/",
@@ -49,13 +56,13 @@ def do_client_function(function_name, *args, **kwargs):
     help="If set, the command won't actually run any commands.",
     default=False,
 )
-def entry(clients, repo, dry_run):
+def entry(clients, repo, source, dry_run):
     if len(clients) == 0:
         clients = name_to_client.keys()
     for client in clients:
         client_instances.append(
             name_to_client[client](
-                repo=repo, command_runner=CommandRunner(dry_run=dry_run)
+                repo=repo, source=source, command_runner=CommandRunner(dry_run=dry_run)
             )
         )
     command_runner["root"] = CommandRunner(dry_run=dry_run, cwd=repo)
@@ -72,31 +79,13 @@ def entry(clients, repo, dry_run):
     envvar="ONSHAPE_CLIENTS_PUBLISH_VERSION",
     default="0.0.0",
 )
-@click.option(
-    "-s",
-    "--source",
-    type=click.Path(exists=True),
-    help="Source tree to be published.",
-    envvar="ONSHAPE_CLIENTS_PUBLISH_SOURCE",
-    default=Path(""),
-)
-def publish(source, version):
+def publish(version):
     do_client_function("set_version", version=version)
-    do_client_function("set_pub_source", source=Path(source))
     do_client_function("publish")
 
 
 @entry.command(help="Generate the client from the OAS definition.")
-@click.option(
-    "-o",
-    "--output",
-    type=click.Path(),
-    help="Output folder for generated files.",
-    envvar="ONSHAPE_CLIENTS_CODEGEN_PATH",
-    default=Path(""),
-)
-def generate(output):
-    do_client_function("set_output", output=Path(output))
+def generate():
     do_client_function("generate")
 
 
