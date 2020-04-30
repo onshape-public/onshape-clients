@@ -32,7 +32,7 @@ class ClientPackage:
     name = "generic"
 
     def __init__(
-        self, repo=None, version_regex=r"\d*\.\d*\.\d*[\w-]", command_runner=None,
+        self, repo=None, source=None, version_regex=r"\d*\.\d*\.\d*[\w-]", command_runner=None,
     ):
         """ The base class for client packages. Only things necessary for all clients should go here.
         :param String version_regex: ex "\d*\.\d*\.\d*[\w-]" valid version regex
@@ -46,7 +46,10 @@ class ClientPackage:
         )
         name = self.name
         self.root_path = self.repo / name
-        self.output_path = self.root_path
+        if not source:
+            self.source_path = self.get_default_source()
+        else:
+            self.source_path = Path(source) / name
         self.version_regex = version_regex
         self.oas_client_name = self.oas_client_name if self.oas_client_name else name
         self.version_to_publish = None
@@ -67,7 +70,7 @@ class ClientPackage:
         ./<CLIENT_FOLDER>/openapi_config.json"""
         try:
             self.run(
-                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path} "
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.source_path} "
                 f"-c {self.root_path / 'openapi_config.json'}",
                 cwd=self.root_path.parent,
             )
@@ -106,8 +109,8 @@ class ClientPackage:
         """Run a command in the shell for this client."""
         return self.command_runner.run(command, **kwargs)
 
-    def get_tmp_dest(self):
-        destination = Path.home() / self.name
+    def get_default_source(self):
+        destination = Path.home() / 'onshape-clients-codegen' / self.name
         return destination
 
 
@@ -118,20 +121,7 @@ class CppPackage(ClientPackage):
 
 class GoPackage(ClientPackage):
     name = "go"
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.oas_client_name="go-experimental"
-        self.destination = self.get_tmp_dest()
-        self.output_path = self.destination / "onshape"
-
-    @ClientPackageMeta.action
-    def setup(self):
-        """Stub for Setup function to make sure Go and tools are properly installed
-        TODO Find a way to check and install Go/Go tools: could be
-             anything from https://github.com/travis-ci/gimme to installing from source: https://golang.org/doc/install/source
-        """
-        pass
+    oas_client_name = "go-experimental"
 
     @ClientPackageMeta.action
     def generate(self):
@@ -151,15 +141,15 @@ class GoPackage(ClientPackage):
         """
 
         try:
-            if self.destination.exists():
-                shutil.rmtree(self.destination)
-            shutil.copytree(str(self.root_path), str(self.destination), ignore=shutil.ignore_patterns('*.json'))
-            self.command_runner.cwd = self.destination
+            if self.source_path.exists():
+                shutil.rmtree(self.source_path)
+            shutil.copytree(str(self.root_path), str(self.source_path), ignore=shutil.ignore_patterns('*.json'))
+            self.command_runner.cwd = self.source_path
             self.run("git init")
             self.run("git add .")
             self.run('git commit -m "Initial_commit"')
             self.run(
-                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.output_path} --type-mappings DateTime=JSONTime "
+                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.source_path / 'onshape'} --type-mappings DateTime=JSONTime "
                 f"-c {self.root_path / 'openapi_config.json'}",
                 cwd=self.root_path.parent,
             )
@@ -170,12 +160,8 @@ class GoPackage(ClientPackage):
 
     @ClientPackageMeta.action
     def test(self, marker=None):
-        test_modules = ["onshape", "test"]
-        for t_module in test_modules:
-            self.command_runner.cwd = self.destination / t_module
-            result = self.run("go test -v")
-            if result.returncode != 0:
-                raise CliError("Error testing Go client.")
+        self.command_runner.cwd = self.root_path.parent
+        self.run('make go-test')
 
     @ClientPackageMeta.action
     def publish(self):
@@ -183,10 +169,10 @@ class GoPackage(ClientPackage):
 
         TODO Make sure we get a correct version: probably from openapi_config.json
         """
-        dot_git = self.destination / ".git"
+        dot_git = self.source_path / ".git"
         if not dot_git.exists():
             CliError("Trying to publish incomplete repo ...")
-        self.command_runner.cwd = self.destination
+        self.command_runner.cwd = self.source_path
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
@@ -198,6 +184,10 @@ class GoPackage(ClientPackage):
 class PythonPackage(ClientPackage):
     name = "python"
     oas_client_name = "python-experimental"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.source_path = self.root_path
 
     def set_version(
         self, **kwargs,

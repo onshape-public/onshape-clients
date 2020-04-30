@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"ptc.com/onshape-go-test/onshape"
+	"github.com/onshape-public/go-client/onshape"
 
 	uuid "github.com/satori/go.uuid"
 )
@@ -22,20 +22,14 @@ func TestMain(m *testing.M) {
 }
 
 func setup() {
-	testSecretKey := os.Getenv("ONSHAPE_API_SECRET_KEY")
-	testAccessKey := os.Getenv("ONSHAPE_API_ACCESS_KEY")
+	var err error
 
-	if testSecretKey == "" || testAccessKey == "" {
-		fmt.Println("Expected test to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
+	client, ctx, err = onshape.NewAPIClientFromEnv(true)
+
+	if err != nil {
+		fmt.Println(err)
 		os.Exit(1)
 	}
-	config := onshape.NewConfiguration()
-	//config.Debug = true
-
-	client = onshape.NewAPIClient(config)
-
-	ctx = context.WithValue(context.Background(), onshape.ContextAPIKeys,
-		onshape.APIKeys{SecretKey: testSecretKey, AccessKey: testAccessKey})
 }
 
 //TODO: check if default workspace is also created
@@ -59,7 +53,9 @@ func TestCreateAndGetDocument(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			docParams := onshape.NewBTDocumentParams()
 			docParams.SetName(tt.args.docName)
-			//create document
+			docParams.SetIsPublic(true)
+
+			t.Log("Creating document")
 			docInfo, rawResp, err := client.DocumentsApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
@@ -73,7 +69,8 @@ func TestCreateAndGetDocument(t *testing.T) {
 				t.Error("Create Document should have created a default workspace ")
 				return
 			}
-			//get document
+
+			t.Log("Getting a document")
 			getDocInfo, rawResp, err := client.DocumentsApi.GetDocument(ctx, *docInfo.Id).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
@@ -81,6 +78,15 @@ func TestCreateAndGetDocument(t *testing.T) {
 				if getDocInfo.GetName() != tt.want {
 					t.Errorf("GetDocument() got = %s, want %s", getDocInfo.GetName(), tt.want)
 				}
+			}
+
+			t.Log("Deleting a document")
+			rawResp, err = client.DocumentsApi.DeleteDocument(ctx, getDocInfo.GetId()).Execute()
+
+			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
+				t.Error("err: ", err, " -- Response status: ", rawResp)
+			} else {
+				t.Log("Deleted successfully document w/the name: ", docInfo.GetName())
 			}
 		})
 	}
