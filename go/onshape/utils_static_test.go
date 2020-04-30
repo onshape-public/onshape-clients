@@ -14,6 +14,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"testing"
 	"time"
 
@@ -72,4 +73,35 @@ func TestParseDateFromResponse(t *testing.T) {
 	fmt.Println(string(fakeStr))
 	err = json.Unmarshal([]byte(fakeStr), &tt)
 	assert.Nil(t, err, "Should not be an error parsing", fakeStr)
+}
+
+func TestNewConfigurationFromEnv(t *testing.T) {
+	tests := []struct {
+		name, secretKey, accessKey, baseUrl, want string
+	}{
+		{"TestNewConfigurationFromEnv001",
+			"", "", "", "Doesn't matter becuase of the Error",
+		},
+		{"TestNewConfigurationFromEnv002",
+			"SK", "AK", "https://check.onshape.com",
+			"https://check.onshape.com",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			os.Setenv("ONSHAPE_API_SECRET_KEY", tt.secretKey)
+			os.Setenv("ONSHAPE_API_ACCESS_KEY", tt.accessKey)
+			os.Setenv("ONSHAPE_BASE_URL", tt.baseUrl)
+
+			if tt.accessKey == "" || tt.secretKey == "" {
+				_, _, err := NewAPIClientFromEnv(false)
+				assert.Error(t, err)
+			} else {
+				client, _, err := NewAPIClientFromEnv(false)
+				assert.NoError(t, err)
+				cfg := client.GetConfig()
+				assert.Equal(t, cfg.Servers[0].URL, tt.want)
+			}
+		})
+	}
 }

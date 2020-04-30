@@ -41,7 +41,14 @@ def do_client_function(function_name, *args, **kwargs):
     "-r",
     "--repo",
     envvar="ONSHAPE_CLIENTS_REPO",
-    help="Path to the onshape clients repo",
+    help="Path to the onshape clients repo.",
+)
+@click.option(
+    "-s",
+    "--source",
+    type=click.Path(),
+    envvar="ONSHAPE_CLIENTS_SOURCE",
+    help="Path to the generated source code.",
 )
 @click.option(
     "-d/",
@@ -49,13 +56,13 @@ def do_client_function(function_name, *args, **kwargs):
     help="If set, the command won't actually run any commands.",
     default=False,
 )
-def entry(clients, repo, dry_run):
+def entry(clients, repo, source, dry_run):
     if len(clients) == 0:
         clients = name_to_client.keys()
     for client in clients:
         client_instances.append(
             name_to_client[client](
-                repo=repo, command_runner=CommandRunner(dry_run=dry_run)
+                repo=repo, source=source, command_runner=CommandRunner(dry_run=dry_run)
             )
         )
     command_runner["root"] = CommandRunner(dry_run=dry_run, cwd=repo)
