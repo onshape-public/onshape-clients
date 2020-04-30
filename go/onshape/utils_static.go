@@ -15,10 +15,12 @@ import (
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/base64"
+	"errors"
 	"fmt"
 	"math/rand"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 	"time"
 
@@ -88,4 +90,26 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 			httpHeader.Add("On-Nonce", nonce)
 		}
 	}
+}
+
+func NewAPIClientFromEnv(isDebug bool) (*APIClient, context.Context, error) {
+	testSecretKey := os.Getenv("ONSHAPE_API_SECRET_KEY")
+	testAccessKey := os.Getenv("ONSHAPE_API_ACCESS_KEY")
+	baseUrl := os.Getenv("ONSHAPE_BASE_URL")
+
+	if testSecretKey == "" || testAccessKey == "" {
+		return nil, nil, errors.New("Expected test to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
+	}
+	cfg := NewConfiguration()
+	if baseUrl != "" {
+		cfg.Servers[0].URL = baseUrl
+	}
+	if isDebug {
+		cfg.Debug = true
+	}
+
+	return NewAPIClient(cfg),
+		context.WithValue(context.Background(), ContextAPIKeys,
+			APIKeys{SecretKey: testSecretKey, AccessKey: testAccessKey}),
+		nil
 }
