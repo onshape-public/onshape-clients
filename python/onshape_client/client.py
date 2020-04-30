@@ -350,7 +350,7 @@ def get_client() -> Client:
     """ get an singleton_instance of the client class singleton. """
     client = Client.singleton_instance
     if not client:
-        raise Exception("Please manually instantiate the client.")
+        client = Client()
     return client
 
 

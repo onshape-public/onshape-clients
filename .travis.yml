@@ -36,6 +36,9 @@ matrix:
     - name: deploy_clients
       stage: deploy
       install:
+        - onshape-clients setup
+        - PATH=$PATH:~/bin/openapitools/
+        - onshape-clients -c go generate
         - nvm install 12
         - npm install .
       script:
