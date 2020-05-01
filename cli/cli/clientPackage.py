@@ -1,8 +1,8 @@
 """All client package classes."""
-from pathlib import Path
+import os
 import re
-import subprocess
 import shutil
+from pathlib import Path
 
 from cli.command_runner import CommandRunner
 from cli.exceptions import CliError
@@ -32,7 +32,7 @@ class ClientPackage:
     name = "generic"
 
     def __init__(
-        self, repo=None, source=None, version_regex=r"\d*\.\d*\.\d*[\w-]", command_runner=None,
+            self, repo=None, source=None, version_regex=r"\d*\.\d*\.\d*[\w-]", command_runner=None,
     ):
         """ The base class for client packages. Only things necessary for all clients should go here.
         :param String version_regex: ex "\d*\.\d*\.\d*[\w-]" valid version regex
@@ -84,17 +84,17 @@ class ClientPackage:
         self.version_to_publish = version
 
     def set_version_in_source(
-        self,
-        version="0.0.0",
-        file_path_to_version_identifier=None,
-        regex_for_version_number=None,
+            self,
+            version="0.0.0",
+            file_path_to_version_identifier=None,
+            regex_for_version_number=None,
     ):
         """Set the version for clients that include the version number in their source files.
         :param version: String The version to update to: ex "1.1.2"
         :param file_path_to_version_identifier: Path ex "setup.py"
         :param regex_for_version_number: String ex r'version=".*"'"""
         if not all(
-            [version, file_path_to_version_identifier, regex_for_version_number]
+                [version, file_path_to_version_identifier, regex_for_version_number]
         ):
             raise CliError("Must specify all parameters.")
         if not version or not re.match(self.version_regex, version):
@@ -176,7 +176,7 @@ class GoPackage(ClientPackage):
         self.run("git add .")
         self.run(f'git commit -m "v{self.version_to_publish}"')
         self.run(f"git tag v{self.version_to_publish}")
-        self.run("git remote add origin https://github.com/onshape-public/go-client.git")
+        self.run(f"git remote add origin https://{os.environ.get('GH_TOKEN')}@github.com/onshape-public/go-client.git", print_divider=False)
         self.run("git push --set-upstream origin master -f --tags")
         return
 
@@ -190,7 +190,7 @@ class PythonPackage(ClientPackage):
         self.source_path = self.root_path
 
     def set_version(
-        self, **kwargs,
+            self, **kwargs,
     ):
         return self.set_version_in_source(
             file_path_to_version_identifier=self.root_path / "setup.py",
@@ -204,8 +204,8 @@ class PythonPackage(ClientPackage):
         dist = self.root_path / "dist"
         dist.mkdir(exist_ok=True, parents=True)
 
-        self.run(f"python {setup} sdist bdist_wheel -d {str(dist)}",)
-        result = self.run(f"twine upload {str(dist)}/*",)
+        self.run(f"python {setup} sdist bdist_wheel -d {str(dist)}", )
+        result = self.run(f"twine upload {str(dist)}/*", )
         if result.returncode != 0:
             raise CliError("Error uploading client to pypi.")
         shutil.rmtree(str(dist))

@@ -3,13 +3,11 @@ matrix:
     - name: test_cli
       stage: test
       install:
-        # START TESTING THE CLI
         - cd cli
         - pip install pipenv
         - pipenv install --dev
       script:
         - pipenv run pytest
-        # END TESTING THE CLI
     - name: test_python_client
       stage: test
       script:
@@ -36,6 +34,8 @@ matrix:
     - name: deploy_clients
       stage: deploy
       install:
+        - git config credential.helper "store --file=.git/credentials"
+        - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
         - onshape-clients setup
         - PATH=$PATH:~/bin/openapitools/
         - onshape-clients -c go generate
