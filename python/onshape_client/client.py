@@ -135,11 +135,11 @@ class Client:
         return config
 
     def __init__(
-        self,
-        keys_file="~/.onshape_client_config.yaml",
-        configuration=None,
-        stack_key=None,
-        open_authorize_grant_callback=None,
+            self,
+            keys_file="~/.onshape_client_config.yaml",
+            configuration=None,
+            stack_key=None,
+            open_authorize_grant_callback=None,
     ):
         """Configuration values can come from setting directly, with configuration= or from environment variables, or
         from the configuration file specified with key_file in that order without overwriting. Those in the key_file are
@@ -180,15 +180,15 @@ class Client:
 
     def set_grant_authorization_url_response(self, authorization_url_response):
         """ This is the redirected-to url, for example: https:localhost/oauth_redirect?code=XraRXPYGSWfZmBvUIiNHvSlZ&state=kgZQJbVp731CgNxAeKJN7TIoOlo5bz"""
-        self.fetch_access_token(authorization_url_response)
+        self.fetch_access_token(authorization_response=authorization_url_response)
 
     def get_authentication_method(self):
         # Prefer OAUTH if specified, otherwise try for apikeys
-        if self.client_secret and self.client_id:
+        if self.configuration.access_token or (self.client_secret and self.client_id):
             return "oauth"
         elif (
-            self.configuration.api_key["SECRET_KEY"]
-            and self.configuration.api_key["ACCESS_KEY"]
+                self.configuration.api_key["SECRET_KEY"]
+                and self.configuration.api_key["ACCESS_KEY"]
         ):
             return "api_keys"
         else:
@@ -204,10 +204,10 @@ class Client:
             self.refresh_access_token()
             # InvalidClientIdError : when the refresh token isn't valid
         except (
-            UnauthorizedClientError,
-            UnsupportedGrantTypeError,
-            MissingTokenError,
-            InvalidClientIdError,
+                UnauthorizedClientError,
+                UnsupportedGrantTypeError,
+                MissingTokenError,
+                InvalidClientIdError,
         ) as e:
             authorization_method = OAuthAuthorizationMethods(
                 self.oauth_authorization_method

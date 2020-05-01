@@ -21,12 +21,13 @@ class CommandRunner:
             )
         return new_path
 
-    def run(self, command, cwd=None, capture_output=False):
+    def run(self, command, cwd=None, capture_output=False, print_divider=True):
         """Run a command in the shell for this client."""
         cwd = cwd if cwd else self.cwd
-        self.print_divider(
-            f'{"Running" if not self.dry_run else "Would run"} command "{command}" in {cwd}'
-        )
+        if print_divider:
+            self.print_divider(
+                f'{"Running" if not self.dry_run else "Would run"} command "{command}" in {cwd}'
+            )
         command = command.split(" ")
         # Dry runs should pretend the command succeeded.
         if self.dry_run:

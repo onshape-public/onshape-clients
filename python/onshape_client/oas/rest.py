@@ -165,10 +165,17 @@ class RESTClientObject(object):
         if "Content-Type" not in headers:
             headers["Content-Type"] = "application/json"
 
-        # Ethan added:
-        headers, multipart_boundary = add_onshape_specific_headers(
-            method, url, self.configuration, query_params=query_params, headers=headers
-        )
+        from onshape_client.client import get_client
+        if get_client().get_authentication_method() == "api_keys":
+            # Ethan added:
+            headers, multipart_boundary = add_onshape_specific_headers(
+                method, url, self.configuration, query_params=query_params, headers=headers
+            )
+        else:
+            multipart_boundary = None
+            headers["Authorization"] = "Bearer {}".format(
+                get_client().configuration.access_token
+            )
 
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
