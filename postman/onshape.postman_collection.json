@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "522d61b5-e987-476c-99ae-135743863948",
+		"name": "Onshape APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get My Docs (max 20)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cad.onshape.com/api/documents?filter=0&limit=20",
+					"protocol": "https",
+					"host": [
+						"cad",
+						"onshape",
+						"com"
+					],
+					"path": [
+						"api",
+						"documents"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Blob Content",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9248d4d4-c2d4-4e5f-90fa-e868ee22cec0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data; boundary=----WebKitFormBoundaryzuW5nPZQFQCwQtg4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "translate",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cad.onshape.com/api/blobelements/d/{{did}}/w/{{wid}}",
+					"protocol": "https",
+					"host": [
+						"cad",
+						"onshape",
+						"com"
+					],
+					"path": [
+						"api",
+						"blobelements",
+						"d",
+						"{{did}}",
+						"w",
+						"{{wid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "aa668c33-2692-4bd8-a546-eb0a60fc0d00",
+				"type": "text/javascript",
+				"exec": [
+					"var CryptoJS  = require('crypto-js');",
+					"var u = require('url');",
+					"",
+					"// creates random 25-character string",
+					"var buildNonce = function() {",
+					"  var chars = [",
+					"    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',",
+					"    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',",
+					"    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0',",
+					"    '1', '2', '3', '4', '5', '6', '7', '8', '9'",
+					"  ];",
+					"  var nonce = '';",
+					"  for (var i = 0; i < 25; i++) {",
+					"    nonce += chars[Math.floor(Math.random()*chars.length)];",
+					"  }",
+					"  return nonce;",
+					"}",
+					"",
+					"var buildHeaders = function (method, url, headers, accessKey, secretKey) {",
+					"  //If most important collection variables were not set in url, make an effort to replace",
+					"  var rurl = url.toString().replace(\"{{did}}\", pm.collectionVariables.get('did')).replace(\"{{wid}}\", pm.collectionVariables.get('wid')).replace(\"{{eid}}\", pm.collectionVariables.get('eid'));",
+					"  var urlObj = u.parse(rurl);",
+					"    var path = urlObj.pathname;",
+					"    var queryString = urlObj.query ? urlObj.query : ''; // if no query, use empty string",
+					"\t// the Date header needs to be reasonably (5 minutes) close to the server time when the request is received",
+					"\tvar authDate = (new Date()).toUTCString();",
+					"\t// the On-Nonce header is a random (unique) string that serves to identify the request",
+					"\tvar onNonce = buildNonce();",
+					"",
+					"    if(!headers.has('Content-Type')) headers.upsert({key:'Content-Type', value:'application/json'});",
+					"    console.log('content-type: '+headers.get('Content-Type'));",
+					"\t// the Authorization header needs to have this very particular format, which the server uses to validate the request",
+					"\t// the access key is provided for the server to retrieve the API key; the signature is encrypted with the secret key",
+					"\tvar hmacString = (method + '\\n' + onNonce + '\\n' + authDate + '\\n' +",
+					"\t  headers.get('Content-Type') + '\\n' + path + '\\n' + queryString + '\\n').toLowerCase();",
+					"",
+					"\tvar signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(hmacString, secretKey));",
+					"",
+					"\tvar asign = 'On ' + accessKey + ':HmacSHA256:' + signature;",
+					"",
+					"    headers.upsert({key:'On-Nonce', value:onNonce});",
+					"    headers.upsert({key:'Date', value:authDate});",
+					"    headers.upsert({key:'Authorization', value:asign});",
+					"    if(!headers.has('Accept')) headers.upsert({key:'Accept', value:'application/vnd.onshape.v1+json'});",
+					"}",
+					"",
+					"buildHeaders( pm.request.method, pm.request.url, pm.request.headers, ",
+					"        pm.variables.get('accessKey'), pm.variables.get('secretKey') );",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8f04a033-8fc4-439a-83ac-236090ce5621",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fe84c855-8e75-4436-a107-f32ca01522a7",
+			"key": "accessKey",
+			"value": "ACCESS_KEY",
+			"type": "string"
+		},
+		{
+			"id": "a9bb58f3-60f8-4281-ae47-8bcb02e66687",
+			"key": "secretKey",
+			"value": "SECRET_KEY",
+			"type": "string"
+		},
+		{
+			"id": "2276804f-f095-4652-8195-4105d89f80bd",
+			"key": "did",
+			"value": "DID",
+			"type": "string"
+		},
+		{
+			"id": "569171fc-0423-4dbc-aa61-0a7dd6623f4f",
+			"key": "wid",
+			"value": "WID",
+			"type": "string"
+		},
+		{
+			"id": "7146a04c-419c-4f2e-8ff0-2b1d63d95789",
+			"key": "eid",
+			"value": "EID",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
