@@ -74,6 +74,11 @@
 							"key": "translate",
 							"value": "true",
 							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/xxx/Desktop/xyz.stp"
 						}
 					]
 				},
@@ -124,8 +129,9 @@
 					"}",
 					"",
 					"var buildHeaders = function (method, url, headers, accessKey, secretKey) {",
-					"  //If most important collection variables were not set in url, make an effort to replace",
-					"  var rurl = url.toString().replace(\"{{did}}\", pm.collectionVariables.get('did')).replace(\"{{wid}}\", pm.collectionVariables.get('wid')).replace(\"{{eid}}\", pm.collectionVariables.get('eid'));",
+					"  //To replace ANY variables (env, collection, global) in the url us pm.variables.replaceIn()",
+					"  //you may want to do that for headers below as well (only needed if you use variables in headers as well)",
+					"  var rurl = pm.variables.replaceIn(url).toString();",
 					"  var urlObj = u.parse(rurl);",
 					"    var path = urlObj.pathname;",
 					"    var queryString = urlObj.query ? urlObj.query : ''; // if no query, use empty string",
