@@ -55,6 +55,23 @@ To print this violin will take 609.95 cm^3 of SLA solution.
 | All the parameters declared in a given test function are brought in from ```onshape_clients/python/test/conftest.py`` </onshape_clients/python/test/conftest.py>`__.
 | So, to create a simple script that replicates a test, just recursively include the code brought in from each "fixture".
 
+Gotchas and Additional Caveats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Endpoint call throwing ``ApiValueError``: most likely this is caused by an incorrectly typed endpoint. Please submit an issue to the onshape-clients repository, and in the meantime you can use the ``_preload_content=False`` argument to avoid deserialization entirely. Here is an example where the standard serialization and deserialization are entirely avoided:
+
+Deserialize manually:
+
+>>> response=client.part_studios_api.get_part_studio_mass_properties(_preload_content=False, **violin._get_DWMVE())
+>>> import json
+>>> response_dict = json.loads(response.data)
+>>> print(f"{response_dict['bodies']['-all-']['volume'][0]*1000000:4.2f}")
+609.95
+
+Serialize manually:
+
+>>> response = client.documents_api.create_document(_check_input_type=False, _preload_content=False, bt_document_params={'name':'self-serialized test'})
+>>> assert response.status==200
+
 Running tests locally
 ---------------------
 
