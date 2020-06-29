@@ -74,6 +74,11 @@
 							"key": "translate",
 							"value": "true",
 							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/xxx/Desktop/xyz.stp"
 						}
 					]
 				},
@@ -124,9 +129,10 @@
 					"}",
 					"",
 					"var buildHeaders = function (method, url, headers, accessKey, secretKey) {",
-					"  //If most important collection variables were not set in url, make an effort to replace",
-					"  var rurl = url.toString().replace(\"{{did}}\", pm.collectionVariables.get('did')).replace(\"{{wid}}\", pm.collectionVariables.get('wid')).replace(\"{{eid}}\", pm.collectionVariables.get('eid'));",
-					"  var urlObj = u.parse(rurl);",
+					"  //To replace ANY variables (env, collection, global) in the url use pm.variables.replaceIn()",
+					"  //you may want to do that for headers below as well (only needed if you use variables in headers)",
+					"  var rurl = pm.variables.replaceIn(url);",
+					"  var urlObj = u.parse(rurl.toString());",
 					"    var path = urlObj.pathname;",
 					"    var queryString = urlObj.query ? urlObj.query : ''; // if no query, use empty string",
 					"\t// the Date header needs to be reasonably (5 minutes) close to the server time when the request is received",
