@@ -141,9 +141,13 @@ class GoPackage(ClientPackage):
         """
 
         try:
-            if self.source_path.exists():
-                shutil.rmtree(self.source_path)
-            shutil.copytree(str(self.root_path), str(self.source_path), ignore=shutil.ignore_patterns('*.json'))
+            if self.command_runner.dry_run:
+                print(f"============= Would remove '{self.source_path}' and copy tree from '{self.root_path}'")
+            else:
+                if self.source_path.exists():
+                    shutil.rmtree(self.source_path)
+                shutil.copytree(str(self.root_path), str(self.source_path), ignore=shutil.ignore_patterns('*.json'))
+                shutil.copyfile( self.root_path.parent / 'LICENSE', self.source_path / 'LICENSE')
             self.command_runner.cwd = self.source_path
             self.run("git init")
             self.run("git add .")

@@ -51,9 +51,12 @@ The Python client gives you programmatic access to document data.
 >>> print(f"To print this violin will take {violin.mass_properties.bodies['-all-'].volume[0]*1000000:4.2f} cm^3 of SLA solution.")
 To print this violin will take 609.95 cm^3 of SLA solution.
 
-| The best place to see intended use and supported functionality is within ```onshape_clients/python/test`` </python/test>`__.
-| All the parameters declared in a given test function are brought in from ```onshape_clients/python/test/conftest.py`` </onshape_clients/python/test/conftest.py>`__.
-| So, to create a simple script that replicates a test, just recursively include the code brought in from each "fixture".
+The best place to see intended use and supported functionality is within `onshape_clients/python/test </python/test>`__. All the parameters declared in a given test function are brought in from `onshape_clients/python/test/conftest.py </onshape_clients/python/test/conftest.py>`__. So, to create a simple script that replicates a test, just recursively include the code brought in from each "fixture".
+
+Troubleshooting
+---------------
+- **The client returns None instead of the expected type.**
+  This is caused by a deserialization error in the response because not all responses are 100% described by the spec while still in beta. In the meantime, you can still get the response by adding `_preload_content=False` to the request method. Please file an issue mentioning the problematic endpoint on this repo.
 
 Gotchas and Additional Caveats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
