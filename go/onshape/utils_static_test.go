@@ -105,3 +105,32 @@ func TestNewConfigurationFromEnv(t *testing.T) {
 		})
 	}
 }
+
+func makeRandomStrMap(num int) map[string]bool {
+	retMap := make(map[string]bool)
+	for i := 0; i < num; i++ {
+		retMap[MakeRandomStr(16, true)] = true
+	}
+	return retMap
+}
+
+func TestMakeRandomStr(t *testing.T) {
+	mc1 := make(chan map[string]bool, 1)
+	mc2 := make(chan map[string]bool, 1)
+
+	go func() {
+		mc1 <- makeRandomStrMap(10000)
+	}()
+	go func() {
+		mc2 <- makeRandomStrMap(10000)
+	}()
+
+	m1 := <-mc1
+	m2 := <-mc2
+
+	for k := range m1 {
+		if _, ok := m2[k]; ok {
+			t.Errorf("Found a duplicate key: %v", k)
+		}
+	}
+}

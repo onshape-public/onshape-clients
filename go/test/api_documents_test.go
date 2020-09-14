@@ -6,13 +6,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/onshape-public/go-client/onshape"
-
 	uuid "github.com/satori/go.uuid"
+	"gitlab.rd-services.aws.ptc.com/creo/cgm/go-client/onshape"
 )
 
-var ctx context.Context
+var propMap map[string]interface{}
 var client *onshape.APIClient
+var ctx context.Context
 
 //TestMain is a common method for all tests in package onshape_test
 func TestMain(m *testing.M) {
@@ -24,7 +24,8 @@ func TestMain(m *testing.M) {
 func setup() {
 	var err error
 
-	client, ctx, err = onshape.NewAPIClientFromEnv(true)
+	client, propMap, err = onshape.NewAPIClientFromEnv(false)
+	ctx = context.WithValue(context.Background(), onshape.ContextAPIKeys, propMap)
 
 	if err != nil {
 		fmt.Println(err)

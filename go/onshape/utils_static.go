@@ -21,10 +21,19 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"golang.org/x/exp/utf8string"
+)
+
+const (
+	ONSHAPE_API_SECRET_KEY = "ONSHAPE_API_SECRET_KEY"
+	ONSHAPE_API_ACCESS_KEY = "ONSHAPE_API_ACCESS_KEY"
+	ONSHAPE_BASE_URL       = "ONSHAPE_BASE_URL"
+	ONSHAPE_HTTP_DEBUG     = "ONSHAPE_HTTP_DEBUG"
 )
 
 type JSONTime struct {
@@ -43,13 +52,30 @@ func (jt *JSONTime) UnmarshalJSON(b []byte) (err error) {
 }
 
 func makeNonce() string {
+	return MakeRandomStr(25, false)
+}
+
+var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
+var randomMutex sync.Mutex
+
+func getRandomNum(len int) int {
+	randomMutex.Lock()
+	defer randomMutex.Unlock()
+	return seededRand.Intn(len)
+}
+
+func MakeRandomStr(len int, isValidID bool) string {
 	const charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	const charsetLen = 62
-	var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
 
-	b := make([]byte, 25)
+	b := make([]byte, len)
 	for i := range b {
-		b[i] = charset[seededRand.Intn(charsetLen)]
+		b[i] = charset[getRandomNum(charsetLen)]
+		if i == 0 && isValidID {
+			if _, err := strconv.Atoi(string(b[i])); err == nil {
+				b[i] = '_'
+			}
+		}
 	}
 	return string(b)
 }
@@ -70,19 +96,14 @@ func makeAuthKey(method, date, nonce, secretKey, accessKey, ctype, path, query s
 	return "On " + accessKeyUtf8.String() + ":HmacSHA256:" + utf8string.NewString(signature).String()
 }
 
-type APIKeys struct {
-	SecretKey string
-	AccessKey string
-}
-
 func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType string,
 	queryParams *url.Values, httpHeader *http.Header) {
-	if apiKeys, ok := ctx.Value(ContextAPIKeys).(APIKeys); ok {
+	if properties, ok := ctx.Value(ContextAPIKeys).(map[string]interface{}); ok {
 		nonce := makeNonce()
 		date := time.Now().UTC().Format(http.TimeFormat)
 
 		if parsedURL, err := url.Parse(urlPath); err == nil {
-			auth := makeAuthKey(method, date, nonce, apiKeys.SecretKey, apiKeys.AccessKey,
+			auth := makeAuthKey(method, date, nonce, properties[ONSHAPE_API_SECRET_KEY].(string), properties[ONSHAPE_API_ACCESS_KEY].(string),
 				contentType, parsedURL.Path, queryParams.Encode())
 
 			httpHeader.Add("Authorization", auth)
@@ -92,13 +113,13 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 	}
 }
 
-func NewAPIClientFromEnv(isDebug bool) (*APIClient, context.Context, error) {
-	testSecretKey := os.Getenv("ONSHAPE_API_SECRET_KEY")
-	testAccessKey := os.Getenv("ONSHAPE_API_ACCESS_KEY")
-	baseUrl := os.Getenv("ONSHAPE_BASE_URL")
+func NewAPIClientFromEnv(isDebug bool) (*APIClient, map[string]interface{}, error) {
+	secretKeyVal := os.Getenv(ONSHAPE_API_SECRET_KEY)
+	accessKeyVal := os.Getenv(ONSHAPE_API_ACCESS_KEY)
+	baseUrl := os.Getenv(ONSHAPE_BASE_URL)
 
-	if testSecretKey == "" || testAccessKey == "" {
-		return nil, nil, errors.New("Expected test to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
+	if secretKeyVal == "" || accessKeyVal == "" {
+		return nil, nil, errors.New("Expected to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
 	}
 	cfg := NewConfiguration()
 	if baseUrl != "" {
@@ -108,8 +129,8 @@ func NewAPIClientFromEnv(isDebug bool) (*APIClient, context.Context, error) {
 		cfg.Debug = true
 	}
 
-	return NewAPIClient(cfg),
-		context.WithValue(context.Background(), ContextAPIKeys,
-			APIKeys{SecretKey: testSecretKey, AccessKey: testAccessKey}),
-		nil
+	propMap := make(map[string]interface{})
+	propMap[ONSHAPE_API_SECRET_KEY] = secretKeyVal
+	propMap[ONSHAPE_API_ACCESS_KEY] = accessKeyVal
+	return NewAPIClient(cfg), propMap, nil
 }
