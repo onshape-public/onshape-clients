@@ -11309,6 +11309,44 @@
           "PartStudios"
         ],
         "operationId": "evalFeatureScript",
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "description": "Document ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvm",
+            "in": "path",
+            "description": "One of w or v or m corresponding to whether a workspace or version or microversion was entered.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wvmid",
+            "in": "path",
+            "description": "Workspace (w), Version (v) or Microversion (m) ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "eid",
+            "in": "path",
+            "description": "Element ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
