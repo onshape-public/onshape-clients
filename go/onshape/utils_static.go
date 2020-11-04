@@ -30,11 +30,27 @@ import (
 )
 
 const (
-	ONSHAPE_API_SECRET_KEY = "ONSHAPE_API_SECRET_KEY"
-	ONSHAPE_API_ACCESS_KEY = "ONSHAPE_API_ACCESS_KEY"
-	ONSHAPE_BASE_URL       = "ONSHAPE_BASE_URL"
-	ONSHAPE_HTTP_DEBUG     = "ONSHAPE_HTTP_DEBUG"
+	onshapeAPISecretKey = "ONSHAPE_API_SECRET_KEY"
+	onshapeAPIAccessKey = "ONSHAPE_API_ACCESS_KEY"
+	onshapeBaseURL      = "ONSHAPE_BASE_URL"
+	onshapeHTTPDebug    = "ONSHAPE_HTTP_DEBUG"
 )
+
+// BTJEditInterface non-generated interface for BTJEdit3734
+type BTJEditInterface interface {
+	GetBtType() string
+	GetBtTypeOk() (*string, bool)
+	HasBtType() bool
+	SetBtType(v string)
+}
+
+// BTJPathElementInterface non-generated interface for BTJPathElement2297
+type BTJPathElementInterface interface {
+	GetBtType() string
+	GetBtTypeOk() (*string, bool)
+	HasBtType() bool
+	SetBtType(v string)
+}
 
 type JSONTime struct {
 	time.Time
@@ -103,7 +119,7 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 		date := time.Now().UTC().Format(http.TimeFormat)
 
 		if parsedURL, err := url.Parse(urlPath); err == nil {
-			auth := makeAuthKey(method, date, nonce, properties[ONSHAPE_API_SECRET_KEY].(string), properties[ONSHAPE_API_ACCESS_KEY].(string),
+			auth := makeAuthKey(method, date, nonce, properties[onshapeAPISecretKey].(string), properties[onshapeAPIAccessKey].(string),
 				contentType, parsedURL.Path, queryParams.Encode())
 
 			httpHeader.Add("Authorization", auth)
@@ -113,24 +129,32 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 	}
 }
 
+// NewAPIClientFromEnv - create new Onshape Client based on Env. varibles
 func NewAPIClientFromEnv(isDebug bool) (*APIClient, map[string]interface{}, error) {
-	secretKeyVal := os.Getenv(ONSHAPE_API_SECRET_KEY)
-	accessKeyVal := os.Getenv(ONSHAPE_API_ACCESS_KEY)
-	baseUrl := os.Getenv(ONSHAPE_BASE_URL)
+	secretKeyVal := os.Getenv(onshapeAPISecretKey)
+	accessKeyVal := os.Getenv(onshapeAPIAccessKey)
+	baseURL := os.Getenv(onshapeBaseURL)
 
 	if secretKeyVal == "" || accessKeyVal == "" {
 		return nil, nil, errors.New("Expected to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
 	}
 	cfg := NewConfiguration()
-	if baseUrl != "" {
-		cfg.Servers[0].URL = baseUrl
+	if baseURL != "" {
+		cfg.Servers[0].URL = baseURL
 	}
-	if isDebug {
+
+	isDebugLocal := false
+	if debugFromEnv, isDebugEnvSet := os.LookupEnv(onshapeHTTPDebug); isDebugEnvSet {
+		isDebugLocal, _ = strconv.ParseBool(debugFromEnv)
+	}
+	if isDebugLocal {
 		cfg.Debug = true
+	} else {
+		cfg.Debug = isDebug
 	}
 
 	propMap := make(map[string]interface{})
-	propMap[ONSHAPE_API_SECRET_KEY] = secretKeyVal
-	propMap[ONSHAPE_API_ACCESS_KEY] = accessKeyVal
+	propMap[onshapeAPISecretKey] = secretKeyVal
+	propMap[onshapeAPIAccessKey] = accessKeyVal
 	return NewAPIClient(cfg), propMap, nil
 }

@@ -77,7 +77,7 @@ func TestParseDateFromResponse(t *testing.T) {
 
 func TestNewConfigurationFromEnv(t *testing.T) {
 	tests := []struct {
-		name, secretKey, accessKey, baseUrl, want string
+		name, secretKey, accessKey, baseURL, want string
 	}{
 		{"TestNewConfigurationFromEnv001",
 			"", "", "", "Doesn't matter becuase of the Error",
@@ -91,7 +91,7 @@ func TestNewConfigurationFromEnv(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			os.Setenv("ONSHAPE_API_SECRET_KEY", tt.secretKey)
 			os.Setenv("ONSHAPE_API_ACCESS_KEY", tt.accessKey)
-			os.Setenv("ONSHAPE_BASE_URL", tt.baseUrl)
+			os.Setenv("ONSHAPE_BASE_URL", tt.baseURL)
 
 			if tt.accessKey == "" || tt.secretKey == "" {
 				_, _, err := NewAPIClientFromEnv(false)

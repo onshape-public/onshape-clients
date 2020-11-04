@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/onshape-public/go-client/onshape"
 	uuid "github.com/satori/go.uuid"
-	"gitlab.rd-services.aws.ptc.com/creo/cgm/go-client/onshape"
 )
 
 var propMap map[string]interface{}
@@ -57,7 +57,7 @@ func TestCreateAndGetDocument(t *testing.T) {
 			docParams.SetIsPublic(true)
 
 			t.Log("Creating document")
-			docInfo, rawResp, err := client.DocumentsApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
+			docInfo, rawResp, err := client.DocumentApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
 			} else {
@@ -72,7 +72,7 @@ func TestCreateAndGetDocument(t *testing.T) {
 			}
 
 			t.Log("Getting a document")
-			getDocInfo, rawResp, err := client.DocumentsApi.GetDocument(ctx, *docInfo.Id).Execute()
+			getDocInfo, rawResp, err := client.DocumentApi.GetDocument(ctx, *docInfo.Id).Execute()
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
 			} else {
@@ -82,7 +82,7 @@ func TestCreateAndGetDocument(t *testing.T) {
 			}
 
 			t.Log("Deleting a document")
-			rawResp, err = client.DocumentsApi.DeleteDocument(ctx, getDocInfo.GetId()).Execute()
+			rawResp, err = client.DocumentApi.DeleteDocument(ctx, getDocInfo.GetId()).Execute()
 
 			if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 				t.Error("err: ", err, " -- Response status: ", rawResp)
