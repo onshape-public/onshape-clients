@@ -179,7 +179,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTPurchaseInfo"
                 }
@@ -220,7 +220,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -254,7 +254,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTPurchaseUserParams"
               }
@@ -265,7 +265,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTPurchaseInfo"
                 }
@@ -321,7 +321,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -533,7 +533,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementParams"
               }
@@ -545,7 +545,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementModifyInfo"
                 }
@@ -881,7 +881,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8;qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementStartTransactionParams"
               }
@@ -893,7 +893,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementModifyInfo"
                 }
@@ -1157,7 +1157,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppAssociativeDataInfoArray"
                 }
@@ -1213,7 +1213,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -1225,7 +1225,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppAssociativeDataInfoArray"
                 }
@@ -1374,7 +1374,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementBasicInfo"
                 }
@@ -1649,7 +1649,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementContentInfo"
                 }
@@ -1709,7 +1709,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementUpdateParams"
               }
@@ -1720,7 +1720,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementModifyInfo"
                 }
@@ -1863,7 +1863,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementIdsInfo"
                 }
@@ -2017,7 +2017,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTGetJsonPaths-1697"
               }
@@ -2121,7 +2121,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementModifyInfo"
                 }
@@ -2183,7 +2183,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementReferenceParams"
               }
@@ -2195,7 +2195,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementReferenceInfo"
                 }
@@ -2297,7 +2297,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementReferenceResolveInfo"
                 }
@@ -2365,7 +2365,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementReferenceParams"
               }
@@ -2377,7 +2377,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementReferenceInfo"
                 }
@@ -2469,7 +2469,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementReferenceInfo"
                 }
@@ -2570,7 +2570,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementReferencesResolveInfo"
                 }
@@ -2766,7 +2766,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTUserAppSettingsInfo"
                 }
@@ -2803,7 +2803,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUserAppSettingsParams"
               }
@@ -2908,7 +2908,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTNamedViewsInfo"
                 }
@@ -2954,7 +2954,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTModelElementParams"
               }
@@ -2966,7 +2966,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -3022,7 +3022,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -3083,7 +3083,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
               }
@@ -3094,7 +3094,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureDefinitionResponse-1617"
                 }
@@ -3156,7 +3156,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureApiBase-1430"
                 }
@@ -3220,7 +3220,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -3270,7 +3270,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAssemblyInstanceDefinitionParams"
               }
@@ -3281,7 +3281,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -3339,7 +3339,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAssemblyTransformDefinitionParams"
               }
@@ -3350,7 +3350,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -3401,7 +3401,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTAssemblyTransformedInstancesDefinitionParams"
               }
@@ -3412,7 +3412,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAssemblyInsertTransformedInstancesResponse"
                 }
@@ -3519,7 +3519,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAssemblyDefinitionInfo"
                 }
@@ -3746,7 +3746,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTBoundingBoxInfo"
                 }
@@ -3886,7 +3886,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
               }
@@ -3897,7 +3897,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureDefinitionResponse-1617"
                 }
@@ -4126,7 +4126,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTShadedViewsInfo"
                 }
@@ -4188,7 +4188,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTTranslateFormatParams"
               }
@@ -4200,7 +4200,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -4283,7 +4283,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementProcessingInfo"
                 }
@@ -4422,7 +4422,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementProcessingInfo"
                 }
@@ -4476,7 +4476,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUpdateMeshUnitsParams"
               }
@@ -4488,7 +4488,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementProcessingInfo"
                 }
@@ -4550,7 +4550,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTTranslateFormatParams"
               }
@@ -4562,7 +4562,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -4617,7 +4617,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTCompanyInfo"
                 }
@@ -4650,7 +4650,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTCompanyInfo"
                 }
@@ -4763,7 +4763,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTGlobalTreeNodeListResponse"
                 }
@@ -4789,7 +4789,7 @@
         "operationId": "createDocument",
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTDocumentParams"
               }
@@ -4801,7 +4801,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentInfo"
                 }
@@ -4915,7 +4915,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -4954,7 +4954,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTVersionOrWorkspaceParams"
               }
@@ -4966,7 +4966,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTVersionInfo"
                 }
@@ -5029,7 +5029,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTVersionInfo"
                 }
@@ -5083,7 +5083,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTLinkToLatestDocumentParams"
               }
@@ -5094,7 +5094,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTLinkToLatestDocumentInfo"
                 }
@@ -5140,7 +5140,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTMoveElementParams"
               }
@@ -5152,7 +5152,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMoveElementInfo"
                 }
@@ -5245,7 +5245,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -5284,7 +5284,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTVersionOrWorkspaceParams"
               }
@@ -5295,7 +5295,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWorkspaceInfo"
                 }
@@ -5343,7 +5343,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -5484,7 +5484,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -5699,7 +5699,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTInsertablesListResponse"
                 }
@@ -5755,7 +5755,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMicroversionInfo"
                 }
@@ -5816,7 +5816,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTExportModelParams"
               }
@@ -5850,7 +5850,7 @@
         "operationId": "search",
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTDocumentSearchParams"
               }
@@ -5862,7 +5862,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -5898,7 +5898,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentInfo"
                 }
@@ -5934,7 +5934,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTDocumentParams"
               }
@@ -5946,7 +5946,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -5988,7 +5988,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -6024,7 +6024,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAclInfo"
                 }
@@ -6064,7 +6064,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -6105,7 +6105,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTShareParams"
               }
@@ -6117,7 +6117,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAclInfo"
                 }
@@ -6175,7 +6175,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -6236,7 +6236,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -6278,7 +6278,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTCopyDocumentParams"
               }
@@ -6289,7 +6289,7 @@
           "200": {
             "description": "Success!",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTCopyDocumentInfo"
                 }
@@ -6335,7 +6335,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTVersionOrWorkspaceInfo"
               }
@@ -6347,7 +6347,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentMergeInfo"
                 }
@@ -6374,7 +6374,7 @@
         "operationId": "createDrawingAppElement",
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTDrawingParams"
               }
@@ -6386,7 +6386,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -6441,7 +6441,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -6499,7 +6499,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTTranslateFormatParams"
               }
@@ -6511,7 +6511,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -6557,7 +6557,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTCopyElementParams"
               }
@@ -6569,7 +6569,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -6629,7 +6629,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTConfigurationParams"
               }
@@ -6641,7 +6641,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTEncodedConfigurationInfo"
                 }
@@ -6697,7 +6697,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -6747,7 +6747,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUpdateReferenceParams"
               }
@@ -6759,7 +6759,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -6820,7 +6820,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTConfigurationResponse-2019"
                 }
@@ -6880,7 +6880,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTConfigurationUpdateCall-2933"
               }
@@ -6891,7 +6891,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTConfigurationResponse-2019"
                 }
@@ -6986,7 +6986,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTConfigurationInfo"
                 }
@@ -7066,7 +7066,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -7134,7 +7134,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTModelElementParams"
               }
@@ -7146,7 +7146,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -7210,7 +7210,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureStudioContents-2239"
                 }
@@ -7270,7 +7270,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureStudioContents-2239"
               }
@@ -7281,7 +7281,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureStudioContents-2239"
                 }
@@ -7345,7 +7345,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureSpecsResponse-664"
                 }
@@ -7385,7 +7385,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAclInfo"
                 }
@@ -7423,7 +7423,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTShareParams"
               }
@@ -7435,7 +7435,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAclInfo"
                 }
@@ -7493,7 +7493,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -7683,7 +7683,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTInsertableInfo"
                 }
@@ -7769,7 +7769,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectListInfoBTMetadataElementInfo"
                 }
@@ -7870,7 +7870,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectInfo"
                 }
@@ -7936,7 +7936,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -7948,7 +7948,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -8037,7 +8037,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectListInfoBTMetadataPartInfo"
                 }
@@ -8138,7 +8138,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectInfo"
                 }
@@ -8220,7 +8220,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -8232,7 +8232,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -8314,7 +8314,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectInfo"
                 }
@@ -8365,7 +8365,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -8377,7 +8377,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -8474,7 +8474,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataObjectInfo"
                 }
@@ -8556,7 +8556,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8;qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -8568,7 +8568,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -8625,7 +8625,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataSchemaInfo"
                 }
@@ -8725,7 +8725,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTMetadataPropertySummaryInfo"
                 }
@@ -8799,7 +8799,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataPropertyInfo"
                 }
@@ -8842,7 +8842,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMetadataSchemaInfo"
                 }
@@ -9012,7 +9012,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -9124,7 +9124,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -9212,7 +9212,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportModelBodiesResponse-734"
                 }
@@ -9305,7 +9305,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTBoundingBoxInfo"
                 }
@@ -9398,7 +9398,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMassPropertiesBulkInfo"
                 }
@@ -9507,7 +9507,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTPartMetadataInfo"
                 }
@@ -9574,7 +9574,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTWorkspacePartParams"
               }
@@ -9585,7 +9585,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTPartMetadataInfo"
                 }
@@ -9817,7 +9817,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTShadedViewsInfo"
                 }
@@ -9896,7 +9896,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTableResponse-1546"
                 }
@@ -10006,7 +10006,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string",
                 "enum": [
@@ -10022,7 +10022,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportTessellatedEdgesResponse-327"
                 }
@@ -10188,7 +10188,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string",
                 "enum": [
@@ -10204,7 +10204,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportTessellatedFacesResponse-898"
                 }
@@ -10305,7 +10305,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTPartMetadataInfo"
                 }
@@ -10395,7 +10395,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTWorkspacePartParams"
               }
@@ -10406,7 +10406,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTPartMetadataInfo"
                 }
@@ -10481,7 +10481,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTNamedViewsInfo"
                 }
@@ -10522,7 +10522,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTModelElementParams"
               }
@@ -10534,7 +10534,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTDocumentElementInfo"
                 }
@@ -10601,7 +10601,7 @@
         "requestBody": {
           "description": "feature The serialized feature definition",
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureDefinitionCall-1406"
               }
@@ -10612,7 +10612,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureDefinitionResponse-1617"
                 }
@@ -10678,7 +10678,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureApiBase-1430"
                 }
@@ -10736,7 +10736,7 @@
         "requestBody": {
           "description": "The index at which the rollback index should be placed. Features\n with entry index (0-based) higher than or equal to the value are rolled back. Value of -1 is treated\n as an alias for \"end of feature list\". Otherwise the value must be in the range 0 to the number of\n entries in the feature list",
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "type": "string"
               }
@@ -10748,7 +10748,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTSetFeatureRollbackResponse-1042"
                 }
@@ -10806,7 +10806,7 @@
         "requestBody": {
           "description": "feature The serialized feature definition",
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUpdateFeaturesCall-1748"
               }
@@ -10817,7 +10817,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTUpdateFeaturesResponse-1333"
                 }
@@ -10904,7 +10904,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportModelBodiesResponse-734"
                 }
@@ -11006,7 +11006,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTBoundingBoxInfo"
                 }
@@ -11116,7 +11116,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTRootDiffInfo"
                 }
@@ -11349,7 +11349,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTFeatureScriptEvalCall-2377"
               }
@@ -11360,7 +11360,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureScriptEvalResponse-1859"
                 }
@@ -11428,7 +11428,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTFeatureSpecsResponse-664"
                 }
@@ -11494,7 +11494,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTIdTranslationParams"
               }
@@ -11506,7 +11506,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTIdTranslationInfo"
                 }
@@ -11610,7 +11610,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTMassPropertiesBulkInfo"
                 }
@@ -11880,7 +11880,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTShadedViewsInfo"
                 }
@@ -11988,7 +11988,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -12066,7 +12066,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTBoundingBoxInfo"
                 }
@@ -12174,7 +12174,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -12441,7 +12441,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportTessellatedEdgesResponse-327"
                 }
@@ -12603,7 +12603,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTExportTessellatedFacesResponse-898"
                 }
@@ -12669,7 +12669,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTTranslateFormatParams"
               }
@@ -12681,7 +12681,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8; qs=0.09": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -12719,7 +12719,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTActiveWorkflowInfo"
                 }
@@ -12766,7 +12766,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -12799,7 +12799,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTReleasePackageParams"
               }
@@ -12811,7 +12811,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -12854,7 +12854,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTReleasePackageInfo"
                 }
@@ -12904,7 +12904,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUpdateReleasePackageParams"
               }
@@ -12916,7 +12916,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTReleasePackageInfo"
                 }
@@ -12998,7 +12998,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTRevisionInfo"
                 }
@@ -13107,7 +13107,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTRevisionListResponse"
                 }
@@ -13402,7 +13402,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTRevisionInfo"
                 }
@@ -13463,7 +13463,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTGlobalTreeNodeListResponseBTTeamInfo"
                 }
@@ -13502,7 +13502,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTeamInfo"
                 }
@@ -13541,7 +13541,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -13595,7 +13595,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.2": {}
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -13642,7 +13642,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -14016,7 +14016,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -14083,7 +14083,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTApplicationElementThumbnailParamsArray"
               }
@@ -14095,7 +14095,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -14152,7 +14152,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -14187,7 +14187,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -14234,7 +14234,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.2": {}
                 "schema": {
                   "$ref": "#/components/schemas/BTThumbnailInfo"
                 }
@@ -14291,7 +14291,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTTranslationRequestInfo"
                 }
@@ -14339,7 +14339,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -14368,7 +14368,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -14403,7 +14403,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTTranslationRequestInfo"
                 }
@@ -14440,7 +14440,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -14465,7 +14465,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTUserOAuth2SummaryInfo"
                 }
@@ -14497,7 +14497,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTUserSettingsInfo"
                 }
@@ -14537,7 +14537,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTUserSettingsInfo"
                 }
@@ -14656,7 +14656,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTListResponseBTWebhookInfo"
                 }
@@ -14681,7 +14681,7 @@
         "operationId": "createWebhook",
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTWebhookParams"
               }
@@ -14692,7 +14692,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWebhookInfo"
                 }
@@ -14731,7 +14731,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWebhookInfo"
                 }
@@ -14766,7 +14766,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTWebhookParams"
               }
@@ -14777,7 +14777,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWebhookInfo"
                 }
@@ -14814,7 +14814,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -14849,7 +14849,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {}
             }
           }
         },
@@ -14884,7 +14884,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTActiveWorkflowInfo"
                 }
@@ -14920,7 +14920,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWorkflowableTestObjectInfo"
                 }
@@ -14956,7 +14956,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWorkflowableTestObjectInfo"
                 }
@@ -14988,7 +14988,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8; qs=0.09": {
               "schema": {
                 "$ref": "#/components/schemas/BTUpdateWorkflowableTestObjectParams"
               }
@@ -15000,7 +15000,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWorkflowableTestObjectInfo"
                 }
@@ -15044,7 +15044,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1": {
                 "schema": {
                   "$ref": "#/components/schemas/BTWorkflowableTestObjectInfo"
                 }
