@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/onshape-public/go-client/onshape"
 	uuid "github.com/satori/go.uuid"
 	"github.com/stretchr/testify/assert"
-	"gitlab.rd-services.aws.ptc.com/creo/cgm/go-client/onshape"
 )
 
 func setupDocument(t *testing.T, docInfo *onshape.BTDocumentInfo) func(t *testing.T, docId string) {
@@ -22,13 +22,13 @@ func setupDocument(t *testing.T, docInfo *onshape.BTDocumentInfo) func(t *testin
 	//create document
 	var rawResp *h.Response
 	var err error
-	*docInfo, rawResp, err = client.DocumentsApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
+	*docInfo, rawResp, err = client.DocumentApi.CreateDocument(ctx).BTDocumentParams(*docParams).Execute()
 	if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 		t.Fatal("err: ", err, " -- Response status: ", rawResp)
 	}
 	return func(t *testing.T, docId string) {
 		t.Log("teardown document")
-		rawResp, err := client.DocumentsApi.DeleteDocument(ctx, docId).Execute()
+		rawResp, err := client.DocumentApi.DeleteDocument(ctx, docId).Execute()
 
 		if err != nil || (rawResp != nil && rawResp.StatusCode >= 300) {
 			t.Error("err: ", err, " -- Response status: ", rawResp)
@@ -147,25 +147,25 @@ func TestCreateAndGetAppElement(t *testing.T) {
 			btjEditInsert := onshape.NewBTJEditInsert2523()
 			btjEditInsert.SetBtType("BTJEditInsert-2523")
 			//Path Element of the Edit
-			path := onshape.NewBTJPath3073()
+			path := onshape.NewBTJPath3073("master")
 			pathType := string("BTJPath-3073")
 			path.BtType = &pathType
-			path.SetStartNode("master")
+			// path.SetStartNode("master") -- not needed any more, passing it in the constructor
 			//Path.path element
 			pathKey := onshape.NewBTJPathKey3221()
 			pathKey.SetBtType("BTJPathKey-3221")
 			pathKey.SetKey("chapterProperties")
-			path.SetPath([]interface{}{
+			path.SetPath([]onshape.BTJPathElementInterface{
 				pathKey,
 			})
 			btjEditInsert.SetPath(*path)
-			value := onshape.BTJNode3407{map[string]interface{}{
+			value := map[string]interface{}{
 				"_nodeId": "chapterProperties",
 				"chp1":    "v1",
 				"chp2":    "v2",
-			}}
+			}
 			btjEditInsert.SetValue(value)
-			bTAppElementUpdateParams.SetJsonTreeEdit(*btjEditInsert)
+			bTAppElementUpdateParams.SetJsonTreeEdit(btjEditInsert)
 			client.AppElementsApi.UpdateAppElement(ctx, did, eid, "w", wid).BTAppElementUpdateParams(*bTAppElementUpdateParams).Execute()
 
 			//Now get the JSONTree data again and see if the "chapterProperties" are there ...
