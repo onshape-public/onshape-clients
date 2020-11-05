@@ -30,10 +30,10 @@ import (
 )
 
 const (
-	onshapeAPISecretKey = "ONSHAPE_API_SECRET_KEY"
-	onshapeAPIAccessKey = "ONSHAPE_API_ACCESS_KEY"
-	onshapeBaseURL      = "ONSHAPE_BASE_URL"
-	onshapeHTTPDebug    = "ONSHAPE_HTTP_DEBUG"
+	APISecretKey = "ONSHAPE_API_SECRET_KEY"
+	APIAccessKey = "ONSHAPE_API_ACCESS_KEY"
+	BaseURL      = "ONSHAPE_BASE_URL"
+	HTTPDebug    = "ONSHAPE_HTTP_DEBUG"
 )
 
 // BTJEditInterface non-generated interface for BTJEdit3734
@@ -119,7 +119,7 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 		date := time.Now().UTC().Format(http.TimeFormat)
 
 		if parsedURL, err := url.Parse(urlPath); err == nil {
-			auth := makeAuthKey(method, date, nonce, properties[onshapeAPISecretKey].(string), properties[onshapeAPIAccessKey].(string),
+			auth := makeAuthKey(method, date, nonce, properties[APISecretKey].(string), properties[APIAccessKey].(string),
 				contentType, parsedURL.Path, queryParams.Encode())
 
 			httpHeader.Add("Authorization", auth)
@@ -131,9 +131,9 @@ func addOnshapeSpecificHeaders(ctx context.Context, method, urlPath, contentType
 
 // NewAPIClientFromEnv - create new Onshape Client based on Env. varibles
 func NewAPIClientFromEnv(isDebug bool) (*APIClient, map[string]interface{}, error) {
-	secretKeyVal := os.Getenv(onshapeAPISecretKey)
-	accessKeyVal := os.Getenv(onshapeAPIAccessKey)
-	baseURL := os.Getenv(onshapeBaseURL)
+	secretKeyVal := os.Getenv(APISecretKey)
+	accessKeyVal := os.Getenv(APIAccessKey)
+	baseURL := os.Getenv(BaseURL)
 
 	if secretKeyVal == "" || accessKeyVal == "" {
 		return nil, nil, errors.New("Expected to have environment variables ONSHAPE_API_SECRET_KEY and ONSHAPE_API_ACCESS_KEY set")
@@ -144,7 +144,7 @@ func NewAPIClientFromEnv(isDebug bool) (*APIClient, map[string]interface{}, erro
 	}
 
 	isDebugLocal := false
-	if debugFromEnv, isDebugEnvSet := os.LookupEnv(onshapeHTTPDebug); isDebugEnvSet {
+	if debugFromEnv, isDebugEnvSet := os.LookupEnv(HTTPDebug); isDebugEnvSet {
 		isDebugLocal, _ = strconv.ParseBool(debugFromEnv)
 	}
 	if isDebugLocal {
@@ -154,7 +154,7 @@ func NewAPIClientFromEnv(isDebug bool) (*APIClient, map[string]interface{}, erro
 	}
 
 	propMap := make(map[string]interface{})
-	propMap[onshapeAPISecretKey] = secretKeyVal
-	propMap[onshapeAPIAccessKey] = accessKeyVal
+	propMap[APISecretKey] = secretKeyVal
+	propMap[APIAccessKey] = accessKeyVal
 	return NewAPIClient(cfg), propMap, nil
 }
