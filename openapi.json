@@ -984,7 +984,26 @@
         "tags": [
           "AppElements"
         ],
+        "summary": "Commit set of transactions across multiple AppElements",
         "operationId": "commitTransactions",
+         "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "wid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
