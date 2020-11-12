@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1.122",
+    "version": "1.123",
     "x-logo": {
       "backgroundColor": "#ffffff",
       "altText": "Onshape",
@@ -913,78 +913,6 @@
       }
     },
     "/api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}": {
-      "post": {
-        "tags": [
-          "AppElements"
-        ],
-        "summary": "Commit Transaction",
-        "operationId": "commitTransaction",
-        "parameters": [
-          {
-            "name": "did",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "eid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "wid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "tid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
-              "schema": {
-                "$ref": "#/components/schemas/BTAppElementCommitTransactionParams"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
-                "schema": {
-                  "$ref": "#/components/schemas/BTAppElementModifyInfo"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": false,
-        "security": [
-          {
-            "OAuth2": [
-              "OAuth2Write"
-            ]
-          }
-        ],
-        "x-BTVisibility": "PRODUCTION"
-      },
       "delete": {
         "tags": [
           "AppElements"
@@ -1037,6 +965,45 @@
             "description": "default response",
             "content": {
               "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Write"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      }
+    },
+    "/api/appelements/d/{did}/w/{wid}/transactions": {
+      "post": {
+        "tags": [
+          "AppElements"
+        ],
+        "operationId": "commitTransactions",
+        "requestBody": {
+          "content": {
+            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "schema": {
+                "$ref": "#/components/schemas/BTAppElementCommitTransactionParams"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTAppElementModifyInfo"
+                }
+              }
             }
           }
         },
@@ -7114,6 +7081,32 @@
         "x-BTVisibility": "PRODUCTION"
       }
     },
+    "/api/exportrules/options": {
+      "get": {
+        "operationId": "getValidRuleOptions",
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTExportRuleValidOptionsInfo"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Read"
+            ]
+          }
+        ],
+        "x-BTVisibility": "PRODUCTION"
+      }
+    },
     "/api/featurestudios/d/{did}/w/{wid}": {
       "post": {
         "tags": [
@@ -12581,6 +12574,13 @@
           }
         },
         "deprecated": false,
+        "security": [
+          {
+            "OAuth2": [
+              "OAuth2Read"
+            ]
+          }
+        ],
         "x-BTVisibility": "PRODUCTION"
       }
     },
@@ -13557,7 +13557,11 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTThumbnailInfo"
+                }
+              }
             }
           }
         },
@@ -14192,7 +14196,11 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {}
+              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTThumbnailInfo"
+                }
+              }
             }
           }
         },
@@ -15592,8 +15600,11 @@
           "returnError": {
             "type": "boolean"
           },
-          "transactionId": {
-            "type": "string"
+          "transactionIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -15735,6 +15746,12 @@
           },
           "elementId": {
             "type": "string"
+          },
+          "elementIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "errorCode": {
             "type": "integer",
@@ -20467,6 +20484,7 @@
               "SKETCH_TANGENT_CONSTRAINT_SPLINE_AND_HANDLE",
               "SKETCH_CURVATURE_CONSTRAINT_SPLINE_AND_HANDLE",
               "EXPLODE_LINE_NOT_ON_EXPLODED_INSTANCE",
+              "LOFT_CONNECTION_MATCHING",
               "UNKNOWN"
             ]
           },
@@ -20845,6 +20863,30 @@
           },
           "point": {
             "$ref": "#/components/schemas/BTVector3d-389"
+          }
+        }
+      },
+      "BTExportRuleValidOptionsInfo": {
+        "type": "object",
+        "properties": {
+          "validDocumentProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "validExportOptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "validObjectTypes": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         }
       },
@@ -21914,6 +21956,7 @@
               "SKETCH_TANGENT_CONSTRAINT_SPLINE_AND_HANDLE",
               "SKETCH_CURVATURE_CONSTRAINT_SPLINE_AND_HANDLE",
               "EXPLODE_LINE_NOT_ON_EXPLODED_INSTANCE",
+              "LOFT_CONNECTION_MATCHING",
               "UNKNOWN"
             ]
           }
@@ -23024,6 +23067,7 @@
               "SKETCH_TANGENT_CONSTRAINT_SPLINE_AND_HANDLE",
               "SKETCH_CURVATURE_CONSTRAINT_SPLINE_AND_HANDLE",
               "EXPLODE_LINE_NOT_ON_EXPLODED_INSTANCE",
+              "LOFT_CONNECTION_MATCHING",
               "UNKNOWN"
             ]
           },
@@ -28004,6 +28048,17 @@
               "V1401_DISAMBIGUATION",
               "V1402_FLAT_OP_ALIGNMENT",
               "V1403_BODY_NET",
+              "SKIP_1404",
+              "SKIP_1405",
+              "SKIP_1406",
+              "SKIP_1407",
+              "SKIP_1408",
+              "SKIP_1409",
+              "SKIP_1410",
+              "SKIP_1411",
+              "SKIP_1412",
+              "SKIP_1413",
+              "V1414_LOFT_CONNECTORS",
               "UNKNOWN"
             ]
           },
