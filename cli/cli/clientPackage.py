@@ -121,7 +121,7 @@ class CppPackage(ClientPackage):
 
 class GoPackage(ClientPackage):
     name = "go"
-    oas_client_name = "go-experimental"
+    oas_client_name = "go"
 
     @ClientPackageMeta.action
     def generate(self):
