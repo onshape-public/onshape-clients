@@ -3,7 +3,7 @@
  *
  * The Onshape REST API consumed by all clients.
  *
- * API version: 1.122
+ * API version: 1.123
  * Contact: api-support@onshape.zendesk.com
  */
 
@@ -41,7 +41,7 @@ var (
 	xmlCheck  = regexp.MustCompile(`(?i:(?:application|text)/xml)`)
 )
 
-// APIClient manages communication with the Onshape REST API API v1.122
+// APIClient manages communication with the Onshape REST API API v1.123
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -232,6 +232,7 @@ func parameterToJson(obj interface{}) (string, error) {
 	}
 	return string(jsonBuf), err
 }
+
 
 // callAPI do the request.
 func (c *APIClient) callAPI(request *http.Request) (*http.Response, error) {

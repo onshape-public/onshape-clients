@@ -3,7 +3,7 @@
  *
  * The Onshape REST API consumed by all clients.
  *
- * API version: 1.122
+ * API version: 1.123
  * Contact: api-support@onshape.zendesk.com
  */
 
@@ -106,7 +106,7 @@ func (o *BTJPath3073) SetPath(v []BTJPathElementInterface) {
 
 // GetStartNode returns the StartNode field value
 func (o *BTJPath3073) GetStartNode() string {
-	if o == nil {
+	if o == nil  {
 		var ret string
 		return ret
 	}
@@ -117,7 +117,7 @@ func (o *BTJPath3073) GetStartNode() string {
 // GetStartNodeOk returns a tuple with the StartNode field value
 // and a boolean to check if the value has been set.
 func (o *BTJPath3073) GetStartNodeOk() (*string, bool) {
-	if o == nil {
+	if o == nil  {
 		return nil, false
 	}
 	return &o.StartNode, true
@@ -177,3 +177,5 @@ func (v *NullableBTJPath3073) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

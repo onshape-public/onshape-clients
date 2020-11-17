@@ -3,7 +3,7 @@
  *
  * The Onshape REST API consumed by all clients.
  *
- * API version: 1.122
+ * API version: 1.123
  * Contact: api-support@onshape.zendesk.com
  */
 
@@ -724,3 +724,5 @@ func (v *NullableGlobalPermissionInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+
