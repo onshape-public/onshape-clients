@@ -1006,7 +1006,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+            "application/json;charset=UTF-8": {
               "schema": {
                 "$ref": "#/components/schemas/BTAppElementCommitTransactionParams"
               }
@@ -1018,7 +1018,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/json;charset=UTF-8": {
                 "schema": {
                   "$ref": "#/components/schemas/BTAppElementModifyInfo"
                 }
@@ -5413,7 +5413,7 @@
           "default": {
             "description": "default response",
             "content": {
-              "application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2": {
+              "application/vnd.onshape.v1+json;charset=UTF-8;qs=0.2": {
                 "schema": {
                   "type": "array",
                   "items": {
