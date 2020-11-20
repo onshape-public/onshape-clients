@@ -27,6 +27,35 @@ def test_get_surface_area(element: OnshapeElement, client: Client):
 
 
 @pytest.mark.parametrize("element", ["ps_configurable_cube"], indirect=True)
+def test_get_bounding_box(element: OnshapeElement, client: Client):
+    script = """
+    function(context is Context, queries is map)
+    {
+        const boundingBox = evBox3d(context, {
+                    "topology" : qBodyType(qEverything(EntityType.BODY), BodyType.SOLID),
+                    "tight" : true
+                });
+        var resultArray = "[";
+        const coordArray = concatenateArrays([boundingBox.maxCorner, boundingBox.minCorner]);
+        const n = size(coordArray);
+        for (var i = 0; i < n; i += 1)
+        {
+            var value = coordArray[i];
+            resultArray = resultArray ~ value / meter ~ (n-1==i? "" : ", ") ;
+        }
+        resultArray = resultArray ~ "]";
+        print(resultArray);
+    }
+    """
+    result = client.part_studios_api.eval_feature_script(
+        **element._get_DWMVE(),
+        bt_feature_script_eval_call_2377=BTFeatureScriptEvalCall2377(script=script),
+        _check_return_type=False,
+    )
+    assert json.loads(result.console)[5] == 0
+
+
+@pytest.mark.parametrize("element", ["ps_configurable_cube"], indirect=True)
 def test_get_edges_and_faces_stats(element: OnshapeElement, client: Client):
     script = """
     function (context is Context, queries is map)
