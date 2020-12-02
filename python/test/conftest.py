@@ -2,7 +2,7 @@
 """
 
 import json
-from collections import OrderedDict
+from urllib.parse import urlparse
 from datetime import datetime
 from pathlib import Path
 
@@ -19,9 +19,9 @@ collect_ignore = ["setup.py"]
 def element_bank(client, assets):
     yaml = YAML()
     urls_by_stack = yaml.load((assets / "urls.yaml").open())
-    stack_key = client.stack_key if client.stack_key else "onshape_client_test"
+    domain = urlparse(client.configuration.host)[1]
     try:
-        return urls_by_stack[stack_key]
+        return urls_by_stack[domain]
     except KeyError as e:
         raise KeyError(
             f"Cannot find element bank for stack {client.stack_key}. Please instantiate the bank manually by uploading "
