@@ -6,8 +6,8 @@ With a little tweaking, Postman can also support API key authentication.
 
 ## Import
  
-Importing collection: Import->Link-> select this link: [https://www.postman.com/collections/8c1af83901556a2c0695](https://www.postman.com/collections/8c1af83901556a2c0695).
-Importing the production environment: Import->Link-> select this link:[Onshape Production Environment](./onshape-production.postman-environment.json).
+1. Importing collection: Import->Link-> select this link: [https://www.postman.com/collections/8c1af83901556a2c0695](https://www.postman.com/collections/8c1af83901556a2c0695).
+1. Importing the production environment: Import->Link-> select this link:[Onshape Production Environment](./onshape-production.postman-environment.json).
 
 ## API Keys
 
