@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 from onshape_client.client import Client
-from onshape_client.oas import BTCopyDocumentParams
+from onshape_client.oas import BTCopyDocumentParams, BTDocumentElementInfo, BTModelElementParams
 from onshape_client.onshape_url import OnshapeElement
 from ruamel.yaml import YAML
 
@@ -107,6 +107,10 @@ def new_document(request, client, name_factory):
 @pytest.fixture
 def part_studio(new_document):
     return new_document.part_studios[0]
+
+@pytest.fixture
+def feature_studio(client: Client, new_document, name_factory):
+    return client.feature_studios_api.create_feature_studio(did=new_document.did, wid=new_document.default_workspace, bt_model_element_params=BTModelElementParams(name=name_factory()))
 
 
 @pytest.fixture
