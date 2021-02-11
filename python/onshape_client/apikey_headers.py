@@ -56,7 +56,7 @@ def add_onshape_specific_headers(
             urlparse(url).path,
             access_key,
             secret_key,
-            query_string=urlencode(query_params),
+            query_string=urlencode(query_params) if query_params else "",
             ctype=ctype,
         )
 
