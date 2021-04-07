@@ -33,7 +33,8 @@ move_example = (
 list_example = (
     {},
     {"btType": "BTJEditList-2707", "edits": [
-        {"btType": "BTJEditInsert-2523", "path": {"btType": "BTJPath-3073", "startNode": "", "path": [{"btType": "BTJPathKey-3221", "key": "myKey"}]},
+        {"btType": "BTJEditInsert-2523",
+         "path": {"btType": "BTJPath-3073", "startNode": "", "path": [{"btType": "BTJPathKey-3221", "key": "myKey"}]},
          "value": "myValue"},
         {"btType": "BTJEditChange-2636", "path": {"btType": "BTJPath-3073", "startNode": "",
                                                   "path": [{"btType": "BTJPathKey-3221", "key": "myKey"}]},
@@ -97,3 +98,38 @@ def get_json_tree(client, did, wid, eid):
     )
     # strip the _nodeId values
     return {k: v for k, v in json.loads(result.data)["tree"].items() if not k == "_nodeId"}
+
+
+def get_json_tree_paths(client, did, wid, eid, paths):
+    """Currently not supported by the client, but will be soon. In the meantime, this creates the request."""
+    result = client.api_client.request(
+        method="POST",
+        url=f"{client.configuration.host}/api/appelements/d/{did}/w/{wid}/e/{eid}/content/jsonpaths",
+        headers={
+            "Accept": "application/vnd.onshape.v2+json;charset=utf-8;qs=0.1"
+        },
+        body={"paths": paths}
+    )
+    return json.loads(result.data)["results"][0][0]['node']
+
+
+def test_get_json_tree_by_path(client, new_document):
+    start_json = {"my_object": {"my_list": [{"my_int": 1}]}}
+    new_element = create_app_element(client, new_document.did, new_document.default_workspace, start_json)
+    tree = get_json_tree(client, new_document.did, new_document.default_workspace,
+                         new_element["elementId"])
+    result = get_json_tree_paths(client, new_document.did, new_document.default_workspace, new_element["elementId"],
+                                 ["$"])
+    assert result["my_object"]["my_list"][0]["my_int"] == 1
+    result = get_json_tree_paths(client, new_document.did, new_document.default_workspace, new_element["elementId"],
+                                 ["$.my_object"])
+    assert result["my_list"][0]["my_int"] == 1
+    result = get_json_tree_paths(client, new_document.did, new_document.default_workspace, new_element["elementId"],
+                                 ["$.my_object.my_list"])
+    assert result[0]["my_int"] == 1
+    result = get_json_tree_paths(client, new_document.did, new_document.default_workspace, new_element["elementId"],
+                                 ["$.my_object.my_list[0]"])
+    assert result["my_int"] == 1
+    result = get_json_tree_paths(client, new_document.did, new_document.default_workspace, new_element["elementId"],
+                                 ["$.my_object.my_list[0].my_int"])
+    assert result == 1
