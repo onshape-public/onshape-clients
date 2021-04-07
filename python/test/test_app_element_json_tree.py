@@ -15,6 +15,14 @@ insert_example = (
      "value": "myValue"},
     {"insertedKey": "myValue"}
 )
+insert_into_list_example = (
+    {"my_list": [0, 2, 3]},
+    {"btType": "BTJEditInsert-2523",
+     "path": {"btType": "BTJPath-3073", "startNode": "", "path": [{"btType": "BTJPathKey-3221", "key": "my_list"},
+                                                                  {"btType": "BTJPathIndex-1871", "index": 1}]},
+     "value": 1},
+    {"my_list": [0., 1., 2., 3., 3.]}
+)
 change_example = (
     {"myKey": "myValue"},
     {"btType": "BTJEditChange-2636",
@@ -52,8 +60,8 @@ list_example = (
 
 
 @pytest.mark.parametrize("start_json, edit_json, expected_json",
-                         [delete_example, insert_example, change_example, move_example, list_example],
-                         ids=["delete_example", "insert_example", "change_example", "move_example", "list_example"])
+                         [delete_example, insert_example, insert_into_list_example, change_example, move_example, list_example],
+                         ids=["delete_example", "insert_example", "insert_into_list_example", "change_example", "move_example", "list_example"])
 def test_documentation_examples(start_json, edit_json, expected_json, new_document, client):
     new_element = create_app_element(client, new_document.did, new_document.default_workspace, start_json)
     update_app_element(client, new_document.did, new_document.default_workspace, new_element["elementId"], edit_json)
