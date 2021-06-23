@@ -26,7 +26,12 @@ go.mod
 go.sum
 *_test.go
 utils_static.go
-# Next three files need to verified manually
-client.go
+# Next set of files should be verified manually at least from time to time
+configuration.go
+model_bt_app_element_update_params.go
+model_bt_get_json_response_2137.go
 model_bt_mass_properties_info_null.go
+model_btj_edit_insert_2523.go
+model_btj_path_3073.go
 model_btm_sketch_constraint_2.go
+model_global_permission_info.go

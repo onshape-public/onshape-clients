@@ -77,7 +77,7 @@ func TestParseDateFromResponse(t *testing.T) {
 
 func TestNewConfigurationFromEnv(t *testing.T) {
 	tests := []struct {
-		name, secretKey, accessKey, baseUrl, want string
+		name, secretKey, accessKey, baseURL, want string
 	}{
 		{"TestNewConfigurationFromEnv001",
 			"", "", "", "Doesn't matter becuase of the Error",
@@ -91,17 +91,46 @@ func TestNewConfigurationFromEnv(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			os.Setenv("ONSHAPE_API_SECRET_KEY", tt.secretKey)
 			os.Setenv("ONSHAPE_API_ACCESS_KEY", tt.accessKey)
-			os.Setenv("ONSHAPE_BASE_URL", tt.baseUrl)
+			os.Setenv("ONSHAPE_BASE_URL", tt.baseURL)
 
 			if tt.accessKey == "" || tt.secretKey == "" {
-				_, _, err := NewAPIClientFromEnv(false)
-				assert.Error(t, err)
+				_, err := NewAPIClientFromEnv()
+				assert.NoError(t, err)
 			} else {
-				client, _, err := NewAPIClientFromEnv(false)
+				client, err := NewAPIClientFromEnv()
 				assert.NoError(t, err)
 				cfg := client.GetConfig()
 				assert.Equal(t, cfg.Servers[0].URL, tt.want)
 			}
 		})
+	}
+}
+
+func makeRandomStrMap(num int) map[string]bool {
+	retMap := make(map[string]bool)
+	for i := 0; i < num; i++ {
+		retMap[MakeRandomStr(16, true)] = true
+	}
+	return retMap
+}
+
+func TestMakeRandomStr(t *testing.T) {
+	mc1 := make(chan map[string]bool, 1)
+	mc2 := make(chan map[string]bool, 1)
+
+	go func() {
+		mc1 <- makeRandomStrMap(10000)
+	}()
+	go func() {
+		mc2 <- makeRandomStrMap(10000)
+	}()
+
+	m1 := <-mc1
+	m2 := <-mc2
+
+	for k := range m1 {
+		if _, ok := m2[k]; ok {
+			t.Errorf("Found a duplicate key: %v", k)
+		}
 	}
 }
