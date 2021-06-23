@@ -22019,20 +22019,7 @@
         "type": "object",
         "properties": {
           "tree": {
-            "type": "object",
-            "properties": {
-              "btType": {
-                "type": "string"
-              }
-            },
-            "additionalProperties": {
-              "type": "object",
-              "properties": {
-                "btType": {
-                  "type": "string"
-                }
-              }
-            }
+            "type": "object"
           },
           "changeId": {
             "type": "string"
