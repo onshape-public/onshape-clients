@@ -21542,12 +21542,7 @@
             "type": "object",
             "properties": {
               "value": {
-                "type": "object",
-                "properties": {
-                  "btType": {
-                    "type": "string"
-                  }
-                }
+                "type": "object"
               },
               "path": {
                 "$ref": "#/components/schemas/BTJPath-3073"
