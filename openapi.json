@@ -2277,7 +2277,7 @@
                     "type": "string"
                   },
                   "file": {
-                    "type": "object",
+                    "type": "string",
                     "description": "File to upload.",
                     "format": "binary"
                   },
