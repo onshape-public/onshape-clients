@@ -21513,6 +21513,11 @@
       },
       "BTJEdit-3734": {
         "type": "object",
+        "properties": {
+          "btType": {
+            "type": "string"
+          }
+        },
         "discriminator": {
           "propertyName": "btType",
           "mapping": {
@@ -32547,6 +32552,11 @@
       },
       "BTParameterVisibilityCondition-177": {
         "type": "object",
+        "properties": {
+          "btType": {
+            "type": "string"
+          }
+        },
         "discriminator": {
           "propertyName": "btType",
           "mapping": {
