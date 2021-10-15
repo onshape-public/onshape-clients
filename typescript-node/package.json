@@ -1,0 +1,19 @@
+{
+  "name": "onshape-typescript-fetch",
+  "version": "1.135.27708.5c0c5c86fba2",
+  "description": "OpenAPI client for onshape-typescript-fetch",
+  "author": "OpenAPI-Generator",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.12",
+    "node-fetch": "^2.6.1"
+  }
+}
