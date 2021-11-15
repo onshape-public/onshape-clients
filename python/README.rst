@@ -57,6 +57,8 @@ Troubleshooting
 ---------------
 - **The client returns None instead of the expected type.**
   This is caused by a deserialization error in the response because not all responses are 100% described by the spec while still in beta. In the meantime, you can still get the response by adding `_preload_content=False` to the request method. Please file an issue mentioning the problematic endpoint on this repo.
+- **ApiTypeError.**
+  Could be caused by the client type checking on either the response or the request. You can ignore such an error by setting `_check_return_type=False` to turn off return type checking and `_check_input_type=False` to turn off input type checking.
 
 Running tests locally
 ---------------------
