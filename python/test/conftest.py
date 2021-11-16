@@ -2,13 +2,13 @@
 """
 
 import json
-from collections import OrderedDict
+from urllib.parse import urlparse
 from datetime import datetime
 from pathlib import Path
 
 import pytest
 from onshape_client.client import Client
-from onshape_client.oas import BTCopyDocumentParams
+from onshape_client.oas import BTCopyDocumentParams, BTDocumentElementInfo, BTModelElementParams
 from onshape_client.onshape_url import OnshapeElement
 from ruamel.yaml import YAML
 
@@ -19,9 +19,9 @@ collect_ignore = ["setup.py"]
 def element_bank(client, assets):
     yaml = YAML()
     urls_by_stack = yaml.load((assets / "urls.yaml").open())
-    stack_key = client.stack_key if client.stack_key else "onshape_client_test"
+    domain = urlparse(client.configuration.host)[1]
     try:
-        return urls_by_stack[stack_key]
+        return urls_by_stack[domain]
     except KeyError as e:
         raise KeyError(
             f"Cannot find element bank for stack {client.stack_key}. Please instantiate the bank manually by uploading "
@@ -107,6 +107,10 @@ def new_document(request, client, name_factory):
 @pytest.fixture
 def part_studio(new_document):
     return new_document.part_studios[0]
+
+@pytest.fixture
+def feature_studio(client: Client, new_document, name_factory):
+    return client.feature_studios_api.create_feature_studio(did=new_document.did, wid=new_document.default_workspace, bt_model_element_params=BTModelElementParams(name=name_factory()))
 
 
 @pytest.fixture
