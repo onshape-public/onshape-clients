@@ -9,7 +9,7 @@ verify_ssl = true
 click = "*"
 twine = "*"
 pytest = "*"
-cli = {editable = true,path = "."}
+cli = {editable = true, path = "."}
 black = "*"
 python-dotenv = "*"
 

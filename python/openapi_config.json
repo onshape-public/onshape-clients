@@ -1,8 +1,0 @@
-{
-  "packageName": "onshape_client.oas",
-  "projectName": "oas",
-  "packageUrl": "",
-  "sortParamsByRequiredFlag": true,
-  "hideGenerationTimestamp": true,
-  "library": "urllib3"
-}

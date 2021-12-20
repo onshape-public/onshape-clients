@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: onshape-client
+Version: 0.0.0
+Summary: Onshape REST API
+Home-page: UNKNOWN
+Author-email: api-support@onshape.zendesk.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Onshape REST API
+Platform: UNKNOWN
+Requires-Python: >3.6.3
+
+    The Onshape REST API consumed by all clients.  # noqa: E501
+    
+

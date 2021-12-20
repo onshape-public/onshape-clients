@@ -1,0 +1,81 @@
+Usage: onshape-clients [OPTIONS] COMMAND [ARGS]...
+
+  CLI for managing the generating, installing, testing and publishing Onshape
+  clients.
+
+Options:
+  -c, --client [python|go|cpp]  Clients to perform this action with. Defaults
+                                to all. Specify many by: -c python -c java,
+                                etc...
+  -r, --repo TEXT               Path to the onshape clients repo.
+  -s, --source PATH             Path to the generated source code.
+  -d, --dry-run / --no-dry-run  If set, the command won't actually run any
+                                commands.
+  --help                        Show this message and exit.
+
+Commands:
+  dumphelp  Dump all of the help documentation
+  generate  Generate the client from the OAS definition.
+  install   Install the clients for testing.
+  lint      Lint each client according to its standard linter.
+  publish   Publish the clients to the appropriate distribution channels...
+  setup     Automate the setup and installation of tools that this CLI uses.
+  test      Test each client using its native test suite.
+
+Usage: onshape-clients publish [OPTIONS]
+
+  Publish the clients to the appropriate distribution channels - npm, pypi,
+  etc...
+
+Options:
+  -v, --version TEXT  Version to publish.
+  --help              Show this message and exit.
+
+Usage: onshape-clients generate [OPTIONS]
+
+  Generate the client from the OAS definition.
+
+Options:
+  --help  Show this message and exit.
+
+Usage: onshape-clients test [OPTIONS]
+
+  Test each client using its native test suite. Make sure to install first.
+
+Options:
+  -m, --marker [fast]  Group of tests to test.
+  --help               Show this message and exit.
+
+Usage: onshape-clients lint [OPTIONS]
+
+  Lint each client according to its standard linter.
+
+Options:
+  -f, --fix / --no-fix  Make linting changes.
+  --help                Show this message and exit.
+
+Usage: onshape-clients install [OPTIONS]
+
+  Install the clients for testing.
+
+Options:
+  --help  Show this message and exit.
+
+Usage: onshape-clients setup [OPTIONS]
+
+  Automate the setup and installation of tools that this CLI uses.
+
+Options:
+  -t, --tool [openapi-generator-cli]
+                                  Select the tool to install and set up.
+  -f, --force / --no-force        Force install the tool even if it overwrites
+                                  a past install.
+  --help                          Show this message and exit.
+
+Usage: onshape-clients dumphelp [OPTIONS]
+
+  Dump all of the help documentation
+
+Options:
+  --help  Show this message and exit.
+

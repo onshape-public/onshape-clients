@@ -70,8 +70,7 @@ class ClientPackage:
         ./<CLIENT_FOLDER>/openapi_config.json"""
         try:
             self.run(
-                f"openapi-generator-cli generate -i ./openapi.json -g {self.oas_client_name} -o {self.source_path} "
-                f"-c {self.root_path / 'openapi_config.json'}",
+                f"openapi-generator-cli generate -i https://cad.onshape.com/api/openapi --skip-validate-spec -g {self.oas_client_name} -o {self.source_path}",
                 cwd=self.root_path.parent,
             )
         except Exception:
@@ -187,11 +186,10 @@ class GoPackage(ClientPackage):
 
 class PythonPackage(ClientPackage):
     name = "python"
-    oas_client_name = "python-experimental"
+    oas_client_name = "python"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.source_path = self.root_path
 
     def set_version(
             self, **kwargs,

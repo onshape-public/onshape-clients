@@ -165,3 +165,17 @@ def setup(tools, force):
         print(
             "\nAdd export PATH=$PATH:~/bin/openapitools/ to your bash_profile to persist changes."
         )
+
+def recursive_help(cmd, parent=None):
+    ctx = click.core.Context(cmd, info_name=cmd.name, parent=parent)
+    print(cmd.get_help(ctx))
+    print()
+    commands = getattr(cmd, 'commands', {})
+    for sub in commands.values():
+        recursive_help(sub, ctx)
+
+@entry.command(
+    help="Dump all of the help documentation"
+)
+def dumphelp():
+    recursive_help(entry)
