@@ -15078,13 +15078,13 @@
           "bodyType": {
             "type": "string",
             "enum": [
-              "SOLID",
-              "SHEET",
-              "WIRE",
-              "POINT",
-              "MATE_CONNECTOR",
-              "COMPOSITE",
-              "UNKNOWN"
+              "solid",
+              "sheet",
+              "wire",
+              "point",
+              "mate_connector",
+              "composite",
+              "unknown"
             ]
           },
           "configuration": {
@@ -15482,13 +15482,13 @@
               "bodyType": {
                 "type": "string",
                 "enum": [
-                  "SOLID",
-                  "SHEET",
-                  "WIRE",
-                  "POINT",
-                  "MATE_CONNECTOR",
-                  "COMPOSITE",
-                  "UNKNOWN"
+                  "solid",
+                  "sheet",
+                  "wire",
+                  "point",
+                  "mate_connector",
+                  "composite",
+                  "unknown"
                 ]
               },
               "btType": {
@@ -19154,13 +19154,13 @@
           "type": {
             "type": "string",
             "enum": [
-              "SOLID",
-              "SHEET",
-              "WIRE",
-              "POINT",
-              "MATE_CONNECTOR",
-              "COMPOSITE",
-              "UNKNOWN"
+              "solid",
+              "sheet",
+              "wire",
+              "point",
+              "mate_connector",
+              "composite",
+              "unknown"
             ]
           },
           "vertices": {
@@ -20538,13 +20538,13 @@
               "bodyType": {
                 "type": "string",
                 "enum": [
-                  "SOLID",
-                  "SHEET",
-                  "WIRE",
-                  "POINT",
-                  "MATE_CONNECTOR",
-                  "COMPOSITE",
-                  "UNKNOWN"
+                  "solid",
+                  "sheet",
+                  "wire",
+                  "point",
+                  "mate_connector",
+                  "composite",
+                  "unknown"
                 ]
               },
               "btType": {
@@ -23097,13 +23097,13 @@
           "bodyType": {
             "type": "string",
             "enum": [
-              "SOLID",
-              "SHEET",
-              "WIRE",
-              "POINT",
-              "MATE_CONNECTOR",
-              "COMPOSITE",
-              "UNKNOWN"
+              "solid",
+              "sheet",
+              "wire",
+              "point",
+              "mate_connector",
+              "composite",
+              "unknown"
             ]
           },
           "classType": {
@@ -24151,13 +24151,13 @@
               "bodyType": {
                 "type": "string",
                 "enum": [
-                  "SOLID",
-                  "SHEET",
-                  "WIRE",
-                  "POINT",
-                  "MATE_CONNECTOR",
-                  "COMPOSITE",
-                  "UNKNOWN"
+                  "solid",
+                  "sheet",
+                  "wire",
+                  "point",
+                  "mate_connector",
+                  "composite",
+                  "unknown"
                 ]
               },
               "btType": {
