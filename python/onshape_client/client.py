@@ -276,6 +276,8 @@ class Client:
         self.oauth_authorization_method = configuration_dictionary.get(
             "oauth_authorization_method", OAuthAuthorizationMethods.MANUAL_FLOW
         )
+        # Default to True to make it robust to addition to parameters
+        self.discard_unknown_keys = configuration_dictionary.get("discard_unknown_keys", True)
         # Default to prod
         configuration.host = configuration_dictionary.get(
             "base_url", "https://cad.onshape.com"
